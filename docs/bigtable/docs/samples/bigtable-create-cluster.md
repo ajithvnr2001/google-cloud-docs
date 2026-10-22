@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-create-cluster/
 title: Create a cluster \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:25:00.719718+00:00
+fetched_at: 2026-10-22T09:35:23.798845+00:00
 ---
 
 # Create a cluster  |  Bigtable  |  Google Cloud Documentation

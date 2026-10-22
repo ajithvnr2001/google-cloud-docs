@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/analysis/custom-analysis/
 title: Define a custom analysis \u00a0|\u00a0 Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:49.022233+00:00
+fetched_at: 2026-10-22T08:26:27.184866+00:00
 ---
 
 # Define a custom analysis  |  Cloud Deploy  |  Google Cloud Documentation

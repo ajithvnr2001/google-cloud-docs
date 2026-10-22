@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/notebooks/workbench/instances/create-confidential-computing/
 title: Create an instance with Confidential Computing \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:00.417871+00:00
+fetched_at: 2026-10-22T10:26:28.188800+00:00
 ---
 
 # Create an instance with Confidential Computing  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

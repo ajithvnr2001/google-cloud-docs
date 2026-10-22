@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataform/docs/quickstart-create-workflow/
 title: Quickstart: Create and run a workflow \u00a0|\u00a0 Dataform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:21.318332+00:00
+fetched_at: 2026-10-22T08:25:40.288867+00:00
 ---
 
 # Quickstart: Create and run a workflow  |  Dataform  |  Google Cloud Documentation

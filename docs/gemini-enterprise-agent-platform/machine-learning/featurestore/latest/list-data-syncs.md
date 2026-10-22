@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/featurestore/latest/list-data-syncs/
 title: List sync operations \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:05.301013+00:00
+fetched_at: 2026-10-22T10:24:07.382038+00:00
 ---
 
 # List sync operations  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

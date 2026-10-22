@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/perspectives/fsi/security/
 title: Financial services perspective: Security, privacy, and compliance \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:18.841784+00:00
+fetched_at: 2026-10-22T09:02:57.278266+00:00
 ---
 
 # Financial services perspective: Security, privacy, and compliance  |  Cloud Architecture Center  |  Google Cloud Documentation

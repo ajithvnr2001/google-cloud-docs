@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-transfer-manager-download-chunks-concurrently/
 title: Download a file in chunks concurrently \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:14.945986+00:00
+fetched_at: 2026-10-22T10:29:20.157825+00:00
 ---
 
 # Download a file in chunks concurrently  |  Cloud Storage  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/pre-built-containers/
 title: Prebuilt containers for serverless training \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:42.383391+00:00
+fetched_at: 2026-10-22T10:24:40.909101+00:00
 ---
 
 # Prebuilt containers for serverless training  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/configure-your-source-mysql-database/
 title: Configure a source MySQL database \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:35.188701+00:00
+fetched_at: 2026-10-22T08:25:08.877983+00:00
 ---
 
 # Configure a source MySQL database  |  Datastream  |  Google Cloud Documentation

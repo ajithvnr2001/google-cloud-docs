@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/automation-resource/
 title: About the automation resource \u00a0|\u00a0 Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:00.324783+00:00
+fetched_at: 2026-10-22T08:26:05.314802+00:00
 ---
 
 # About the automation resource  |  Cloud Deploy  |  Google Cloud Documentation

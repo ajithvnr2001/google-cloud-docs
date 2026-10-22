@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/cross-region-replication/about-cross-region-replication/
 title: Cross-region replication overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:03.446171+00:00
+fetched_at: 2026-10-22T09:45:09.774235+00:00
 ---
 
 # Cross-region replication overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

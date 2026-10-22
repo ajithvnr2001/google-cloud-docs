@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/featurestore/latest/featureview-direct-write/
 title: Update features in a feature view \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:06.983512+00:00
+fetched_at: 2026-10-22T10:23:17.611184+00:00
 ---
 
 # Update features in a feature view  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataform/docs/terraform/
 title: Use Terraform with Dataform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:19.436741+00:00
+fetched_at: 2026-10-22T08:26:04.993797+00:00
 ---
 
 # Use Terraform with Dataform  |  Google Cloud Documentation

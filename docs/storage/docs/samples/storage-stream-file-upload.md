@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-stream-file-upload/
 title: Upload an object by streaming \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:54:48.026790+00:00
+fetched_at: 2026-10-22T10:31:02.379450+00:00
 ---
 
 # Upload an object by streaming  |  Cloud Storage  |  Google Cloud Documentation

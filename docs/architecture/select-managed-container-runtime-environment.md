@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/select-managed-container-runtime-environment/
 title: Select a managed container runtime environment \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:04.974678+00:00
+fetched_at: 2026-10-22T09:38:01.183670+00:00
 ---
 
 # Select a managed container runtime environment  |  Cloud Architecture Center  |  Google Cloud Documentation

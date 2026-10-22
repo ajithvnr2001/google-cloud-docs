@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/connect-instance-compute-engine/
 title: Quickstart: Connect to Cloud SQL for PostgreSQL from a Compute Engine VM instance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:31:32.569801+00:00
+fetched_at: 2026-10-22T10:44:46.966275+00:00
 ---
 
 # Quickstart: Connect to Cloud SQL for PostgreSQL from a Compute Engine VM instance  |  Google Cloud Documentation
@@ -82,6 +82,9 @@ This command enables the following API:
 
      * Cloud SQL Admin API
 
+  8. If your Compute Engine VM or VPC network restricts outbound traffic, verify that your firewall rules allow outgoing TCP connections on the required destination ports: 
+     * **Direct connections over public IP, private IP, or Private Service Connect:** Port `5432`, the default PostgreSQL port, on your Cloud SQL instance's IP address. For direct connections to a [Managed Connection Pooling](https://docs.cloud.google.com/sql/docs/postgres/managed-connection-pooling#ports) server, allow outbound TCP connections to port `6432`. 
+     * **Cloud SQL Auth Proxy or Cloud SQL Language Connectors:** Port `3307` on your Cloud SQL instance's IP address and port `443` for `sqladmin.googleapis.com` API requests.
 
 
 
@@ -1638,6 +1641,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

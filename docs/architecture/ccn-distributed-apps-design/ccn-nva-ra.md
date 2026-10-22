@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/ccn-distributed-apps-design/ccn-nva-ra/
 title: VPC Network Peering Cross-Cloud Network with NVAs and regional affinity \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:27.759208+00:00
+fetched_at: 2026-10-22T09:38:54.291168+00:00
 ---
 
 # VPC Network Peering Cross-Cloud Network with NVAs and regional affinity  |  Cloud Architecture Center  |  Google Cloud Documentation

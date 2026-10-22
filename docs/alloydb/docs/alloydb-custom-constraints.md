@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/alloydb-custom-constraints/
 title: Use custom organization policies \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:37.720993+00:00
+fetched_at: 2026-10-22T09:10:49.008330+00:00
 ---
 
 # Use custom organization policies  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

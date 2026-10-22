@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/publish-data-products-sap/
 title: Publish data products to SAP \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:14:30.964595+00:00
+fetched_at: 2026-10-22T09:49:28.569462+00:00
 ---
 
 # Publish data products to SAP  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -23,9 +23,7 @@ Send feedback
 
 #  Publish data products to SAP Stay organized with collections  Save and categorize content based on your preferences. 
 
-Publish a Knowledge Catalog (formerly Dataplex Universal Catalog) data product to SAP Business Data Cloud (BDC) using BigLake Delta Sharing.
-
-Publishing a data product to SAP enables users within the SAP ecosystem to discover and consume Google Cloud data assets seamlessly. This integration leverages Delta Sharing to expose underlying data assets such as Apache Iceberg REST catalog tables as read-only federated tables. Because the data remains in its original location, there is no data movement or replication, ensuring lower latency and maintaining a single source of truth.
+Knowledge Catalog (formerly Dataplex Universal Catalog) lets you publish data products to SAP Business Data Cloud (BDC) by using BigLake Delta Sharing. Users in the SAP ecosystem can then discover and consume your Google Cloud data assets as read-only federated tables without moving or replicating data.
 
 ## Overview
 
@@ -33,9 +31,9 @@ The integration between Knowledge Catalog and SAP BDC relies on an open-protocol
 
 Key technical aspects of this integration include the following:
 
-  * **Federated access** : Assets are presented in SAP as federated tables, meaning they are queried in real-time from Google Cloud storage.
+  * **Federated access** : Underlying data assets, such as Apache Iceberg REST catalog tables, are presented in SAP as read-only federated tables and queried in real-time from Google Cloud storage.
   * **Delta Sharing** : Knowledge Catalog acts as a Delta Sharing server, providing a standard interface for external clients like SAP to access BigLake and Iceberg tables.
-  * **No data movement** : Your data stays in Google Cloud. Only the metadata and secure access protocols are shared with the SAP environment.
+  * **No data movement** : Your data stays in its original location in Google Cloud without replication, which helps lower latency and maintain a single source of truth. Only the metadata and secure access protocols are shared with the SAP environment.
   * **Security** : Authentication and authorization are handled using Workload Identity Federation, ensuring that only authorized SAP users can access the data based on the permissions granted in Google Cloud.
 
 
@@ -129,6 +127,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

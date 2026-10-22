@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/transfer-custom-constraints/
 title: Use custom organization policies \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:28.277993+00:00
+fetched_at: 2026-10-22T09:08:48.416064+00:00
 ---
 
 # Use custom organization policies  |  BigQuery  |  Google Cloud Documentation

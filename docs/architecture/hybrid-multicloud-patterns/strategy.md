@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/hybrid-multicloud-patterns/strategy/
 title: Plan a hybrid and multicloud strategy \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:28:07.076364+00:00
+fetched_at: 2026-10-22T09:02:26.491707+00:00
 ---
 
 # Plan a hybrid and multicloud strategy  |  Cloud Architecture Center  |  Google Cloud Documentation

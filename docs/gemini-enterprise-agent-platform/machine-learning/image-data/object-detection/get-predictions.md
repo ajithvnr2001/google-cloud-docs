@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/image-data/object-detection/get-predictions/
 title: Get inferences from an image object detection model \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:52.396476+00:00
+fetched_at: 2026-10-22T08:35:37.539910+00:00
 ---
 
 # Get inferences from an image object detection model  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

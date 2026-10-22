@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-setup-client-create-async/
 title: Creating a Firestore client (async) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:59:01.634211+00:00
+fetched_at: 2026-10-22T10:28:18.749735+00:00
 ---
 
 # Creating a Firestore client (async)  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/alloydb-predefined-constraints/
 title: Use predefined organization policies \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:57.300986+00:00
+fetched_at: 2026-10-22T09:10:44.633510+00:00
 ---
 
 # Use predefined organization policies  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

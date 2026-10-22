@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/latest/docs/vm-runtime/compute-configurations/
 title: Create a VM with specific CPU and memory resources \u00a0|\u00a0 Google Distributed Cloud connected \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:25.302679+00:00
+fetched_at: 2026-10-22T08:26:20.717765+00:00
 ---
 
 # Create a VM with specific CPU and memory resources  |  Google Distributed Cloud connected  |  Google Cloud Documentation

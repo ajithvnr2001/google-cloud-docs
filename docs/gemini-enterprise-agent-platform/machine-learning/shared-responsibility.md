@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/shared-responsibility/
 title: Gemini Enterprise Agent Platform shared responsibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:43.391757+00:00
+fetched_at: 2026-10-22T10:26:18.620526+00:00
 ---
 
 # Gemini Enterprise Agent Platform shared responsibility  |  Google Cloud Documentation

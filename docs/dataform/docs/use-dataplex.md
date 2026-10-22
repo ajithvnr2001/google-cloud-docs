@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataform/docs/use-dataplex/
 title: Manage metadata of Dataform repositories with Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:19.041111+00:00
+fetched_at: 2026-10-22T08:26:03.078261+00:00
 ---
 
 # Manage metadata of Dataform repositories with Knowledge Catalog  |  Google Cloud Documentation

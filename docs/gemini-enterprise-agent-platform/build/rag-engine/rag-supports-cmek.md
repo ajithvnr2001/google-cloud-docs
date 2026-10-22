@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/rag-supports-cmek/
 title: Use CMEK with RAG Engine on Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:18.761877+00:00
+fetched_at: 2026-10-22T10:24:43.697342+00:00
 ---
 
 # Use CMEK with RAG Engine on Gemini Enterprise Agent Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-v1-generated-AlloyDBAdmin-FailoverInstance-sync-flattened/
 title: Initiate a failover \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:00.055067+00:00
+fetched_at: 2026-10-22T09:26:02.662788+00:00
 ---
 
 # Initiate a failover  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

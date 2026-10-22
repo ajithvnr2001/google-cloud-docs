@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tabular-data/forecasting-prophet/
 title: Forecasting with Prophet \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:25.944082+00:00
+fetched_at: 2026-10-22T10:28:52.707068+00:00
 ---
 
 # Forecasting with Prophet  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -57,7 +57,7 @@ This workflow uses the following APIs:
 
 Prophet is designed for a single time series. Agent Platform aggregates data by time series ID and trains a Prophet model for each time series. The model training pipeline performs hyperparameter tuning using [grid search](https://en.wikipedia.org/wiki/Hyperparameter_optimization#Grid_search) and Prophet's built-in backtesting logic.
 
-To support multiple time series, the pipeline uses an Agent Platform [Custom Training Job](https://cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/create-custom-job) and [Dataflow](https://cloud.google.com/dataflow/docs/about-dataflow) to train multiple Prophet models in parallel. Overall, the number of models trained is the product of the number of time series and the number of hyperparameter tuning trials.
+To support multiple time series, the pipeline uses an Agent Platform [Custom Training Job](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/create-custom-job) and [Dataflow](https://cloud.google.com/dataflow/docs/about-dataflow) to train multiple Prophet models in parallel. Overall, the number of models trained is the product of the number of time series and the number of hyperparameter tuning trials.
 
 The following sample code demonstrates how to run a Prophet model training pipeline:
     

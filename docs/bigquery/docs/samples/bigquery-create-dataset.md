@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-create-dataset/
 title: Create a dataset in BigQuery. \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:43:41.976547+00:00
+fetched_at: 2026-10-22T09:16:59.516235+00:00
 ---
 
 # Create a dataset in BigQuery.  |  Google Cloud Documentation

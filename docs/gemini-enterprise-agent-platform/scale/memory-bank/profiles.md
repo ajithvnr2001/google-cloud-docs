@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/memory-bank/profiles/
 title: Memory Profiles \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:06.936620+00:00
+fetched_at: 2026-10-22T10:26:11.821328+00:00
 ---
 
 # Memory Profiles  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

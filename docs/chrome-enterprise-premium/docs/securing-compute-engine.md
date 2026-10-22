@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/securing-compute-engine/
 title: Securing Compute Engine apps and resources with IAP \u00a0|\u00a0 Chrome Enterprise Premium \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:11:50.025961+00:00
+fetched_at: 2026-10-22T08:28:03.064904+00:00
 ---
 
 # Securing Compute Engine apps and resources with IAP  |  Chrome Enterprise Premium  |  Google Cloud Documentation

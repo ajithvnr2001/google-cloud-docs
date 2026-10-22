@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/metrics/
 title: View pipeline metrics \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:39.957771+00:00
+fetched_at: 2026-10-22T10:23:08.870902+00:00
 ---
 
 # View pipeline metrics  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

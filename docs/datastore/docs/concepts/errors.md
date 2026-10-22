@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/concepts/errors/
 title: Errors and Error Handling \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:20.733352+00:00
+fetched_at: 2026-10-22T08:25:02.621359+00:00
 ---
 
 # Errors and Error Handling  |  Firestore in Datastore mode  |  Google Cloud Documentation

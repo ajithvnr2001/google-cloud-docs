@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-quickstart-hbase/
 title: Bigtable quickstart (HBase) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:11:29.081144+00:00
+fetched_at: 2026-10-22T08:57:53.352301+00:00
 ---
 
 # Bigtable quickstart (HBase)  |  Google Cloud Documentation

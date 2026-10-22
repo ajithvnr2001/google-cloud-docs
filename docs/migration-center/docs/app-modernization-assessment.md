@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/app-modernization-assessment/
 title: Create an App Modernization Assessment \u00a0|\u00a0 Migration Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:16:59.699575+00:00
+fetched_at: 2026-10-22T10:45:05.312006+00:00
 ---
 
 # Create an App Modernization Assessment  |  Migration Center  |  Google Cloud Documentation
@@ -47,7 +47,7 @@ The `codmod` tool requires the following prerequisites:
 
   * A **Linux** or **Windows** (10 or newer) workstation.
   * Access to a Google Cloud project that has the Vertex AI API enabled.
-  * A gcloud CLI installation on your workstation. For more information, see [Install the gcloud CLI CLI](https://docs.cloud.google.com/sdk/docs/install).
+  * A gcloud CLI installation on your workstation. For more information, see [Install the gcloud CLI](https://docs.cloud.google.com/sdk/docs/install).
 
 
 
@@ -57,10 +57,10 @@ The cost of using Gemini for code assessment is primarily driven by the size of 
 
 **Codebase** | **Lines of Code (LOC)** | **Estimated Cost**  
 ---|---|---  
-**adaptive** | **2.0-flash** | **2.5-pro (default)** | **2.5-flash**  
-[Spring Petclinic](https://github.com/spring-projects/spring-petclinic) | ~6,500 | $20 | $2 | $30 | $4  
-[James Project](https://github.com/apache/james-project) | ~1,000,000 | $60 | $30 | $500 | $40  
-[Elasticsearch](https://github.com/elastic/elasticsearch) | ~5,000,000 | $200 | $200 | $3000 | $200  
+**adaptive** | **2.5-flash** | **2.5-pro** | **3.5-flash** | **3.8-flash (default)**  
+[Spring Petclinic](https://github.com/spring-projects/spring-petclinic) | ~6,500 | $20 | $3 | $20 | $3 | $9  
+[James Project](https://github.com/apache/james-project) | ~1,000,000 | $40 | $30 | $200 | $200 | $200  
+[Elasticsearch](https://github.com/elastic/elasticsearch) | ~5,000,000 | $200 | $200 | $900 | $500 | $500  
   
 These values might be an overestimate because they don't take into account possible savings due to the following:
 
@@ -197,7 +197,7 @@ You can override the default project and region with the `-p "PROJECT_ID"` and `
 
 You can also specify the following optional flags:
 
-  * `--modelset [2.0-flash|2.5-flash|2.5-pro|adaptive]`: specifies which Gemini models to use. The default value is `2.5-pro`. Adaptive provides a significant cost reduction with a potential trade-off in report quality compared to `2.5-pro`.
+  * `--modelset [2.5-flash|2.5-pro|3.5-flash|3.8-flash|adaptive]`: specifies which Gemini models to use. The default value is `3.8-flash`. Adaptive provides a significant cost reduction with a potential trade-off in report quality compared to `2.5-pro`.
   * `--format <html|markdown|odt|json>`: the format used for the generated report. The default is HTML.
   * `--allow-large-codebase`: by default `codmod` will ask for confirmation before analyzing on codebases larger than 1 million lines of code - to avoid high costs. This option serves as a non-interactive confirmation. You can also enable this by default by running `codmod config set allow_large_codebase true`.
   * `--improve-fidelity`: when set, `codmod` generates sections serially instead of in parallel. This improves consistency between different sections of the final report, but requires a longer run time.
@@ -420,7 +420,7 @@ Make sure to restart your shell or source your profile (for example, `source ~/.
 ## Troubleshooting
 
   * **Permission denied:** if you encounter a "permission denied" error, then ensure that you granted the execution permission to the `codmod` binary by running the`chmod +x codmod` command.
-  * **CLI appears to hang:** analysis can take a long time, but you can typically see the progress in the progress bar in the CLI. If the progress bar remains at 0% after 15 minutes, then verify that you have sufficient quota for the relevant model. By default, `codmod` uses the `gemini-2.5-pro` model. However, this is subject to change as different modelsets use different models for different purposes.
+  * **CLI appears to hang:** analysis can take a long time, but you can typically see the progress in the progress bar in the CLI. If the progress bar remains at 0% after 15 minutes, then verify that you have sufficient quota for the relevant model. By default, `codmod` uses the `gemini-3.8-flash` model. However, this is subject to change as different modelsets use different models for different purposes.
   * **Reporting errors:** in the event of an error needing investigation, collect the debug information to assist our development team. Logs provide crucial details for troubleshooting. Run the following command to collect the logs, then zip and share the resulting archive with the team at [codmod-feedback-external@google.com](mailto:codmod-feedback-external@google.com).
         
         codmod collect-logs -o "codmod_logs.zip"
@@ -457,6 +457,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

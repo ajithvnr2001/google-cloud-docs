@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/samples/functions-env-vars/
 title: Environment variables \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:51:45.914641+00:00
+fetched_at: 2026-10-22T08:51:22.999121+00:00
 ---
 
 # Environment variables  |  Cloud Run functions  |  Google Cloud Documentation

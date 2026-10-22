@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/use-gemini-cloud-assist-mcp/
 title: Use the Gemini Cloud Assist remote MCP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:22:31.086514+00:00
+fetched_at: 2026-10-22T10:43:29.789754+00:00
 ---
 
 # Use the Gemini Cloud Assist remote MCP server  |  Google Cloud Documentation
@@ -27,7 +27,7 @@ This feature is subject to the "Pre-GA Offerings Terms" in the General Service T
 
 Use of this Preview offering of Gemini Cloud Assist is subject to the Google Cloud Agreement, including the Pre-GA Offering Terms of the [Google Cloud Specific Service Terms](https://cloud.google.com/terms/services?e=48754805), as supplemented by the terms for the [Gemini for Google Cloud Trusted Tester Program](https://cloud.google.com/trusted-tester/gemini-for-google-cloud-preview?e=48754805).
 
-This document shows you how to use the Gemini Cloud Assist remote Model Context Protocol (MCP) server to connect with AI applications including Gemini CLI, ChatGPT, Claude, and custom applications you are developing. The Gemini Cloud Assist remote MCP server helps you design infrastructure, investigate issues, manage resources, and optimize costs. 
+This document shows you how to use the Gemini Cloud Assist remote Model Context Protocol (MCP) server to connect with AI applications including Antigravity, ChatGPT, Claude, and custom applications you are developing. The Gemini Cloud Assist remote MCP server helps you design infrastructure, investigate issues, manage resources, and optimize costs. 
 
 We recommend that you use the [App Design Center](https://docs.cloud.google.com/application-design-center/docs/use-app-design-center-mcp) MCP server and the Gemini Cloud Assist MCP server together to design and deploy applications.
 
@@ -353,6 +353,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

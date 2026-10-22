@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/tables/
 title: Create and use tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:01:34.916332+00:00
+fetched_at: 2026-10-22T09:11:56.563545+00:00
 ---
 
 # Create and use tables  |  BigQuery  |  Google Cloud Documentation
@@ -738,7 +738,7 @@ To authenticate to BigQuery, set up Application Default Credentials. For more in
     require "google/cloud/bigquery"
     
     def create_table dataset_id = "my_dataset"
-      bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-data_policies-v1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html)
+      bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-data_policies-v1beta1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html)
       dataset  = bigquery.dataset dataset_id
       table_id = "my_table"
     
@@ -1827,6 +1827,12 @@ If a `STRING` or `ARRAY<STRING>` is passed in, the collation specification is re
 `column_default` | `STRING` |  The [default value](https://docs.cloud.google.com/bigquery/docs/default-values) of the column if it exists; otherwise, the value is `NULL`.   
 `rounding_mode` | `STRING` |  The mode of rounding that's used for values written to the field if its type is a parameterized `NUMERIC` or `BIGNUMERIC`; otherwise, the value is `NULL`.   
 `data_policies.name` | `STRING` |  The list of data policies that are attached to the column to control access and masking. This field is in ([Preview](https://cloud.google.com/products#product-launch-stages)).   
+`data_governance_tags` | `ARRAY<STRUCT>` |  The list of [data governance tags](https://docs.cloud.google.com/bigquery/docs/tags#data-governance-tags) that are attached to the column to control access and masking. Each `STRUCT` contains the following `STRING` fields: 
+
+  * `key`: the namespaced tag key, in the format `PROJECT_ID/TAG_KEY` or `ORGANIZATION_ID/TAG_KEY`.
+  * `value`: the short name of the tag value.
+
+For `STRUCT` (or `RECORD`) columns, data governance tags that are attached to nested fields are available in the [`INFORMATION_SCHEMA.COLUMN_FIELD_PATHS`](https://docs.cloud.google.com/bigquery/docs/information-schema-column-field-paths) view.   
 `policy_tags` | `ARRAY<STRING>` |  The list of policy tags that are attached to the column.   
 `is_identity` | `STRING` |  `YES` or `NO` depending on whether the column is an identity column.   
 `identity_generation` | `STRING` |  One of `ALWAYS` or `BY DEFAULT`, depending on the generation mode of the identity column. If the column isn't an identity column, then the value is `NULL`.   
@@ -1891,6 +1897,12 @@ Column name | Data type | Value
 If a `STRING`, `ARRAY<STRING>`, or `STRING` field in a `STRUCT` is passed in, the collation specification is returned if it exists; otherwise, `NULL` is returned.   
 `rounding_mode` | `STRING` |  The mode of rounding that's used when applying precision and scale to parameterized `NUMERIC` or `BIGNUMERIC` values; otherwise, the value is `NULL`.   
 `data_policies.name` | `STRING` |  The list of data policies that are attached to the column to control access and masking. This field is in ([Preview](https://cloud.google.com/products#product-launch-stages)).   
+`data_governance_tags` | `ARRAY<STRUCT>` |  The list of [data governance tags](https://docs.cloud.google.com/bigquery/docs/tags#data-governance-tags) that are attached to the column or nested field to control access and masking. Each `STRUCT` contains the following `STRING` fields: 
+
+  * `key`: the namespaced tag key, in the format `PROJECT_ID/TAG_KEY` or `ORGANIZATION_ID/TAG_KEY`.
+  * `value`: the short name of the tag value.
+
+  
 `policy_tags` | `ARRAY<STRING>` |  The list of policy tags that are attached to the column.   
   
 #### Examples
@@ -2006,7 +2018,7 @@ The result is similar to the following:
 
 ##### Example 2:
 
-The following example shows different storage bytes in GiB at the dataset(s) level for current project.
+The following example shows different storage bytes in GiB at the dataset(s) level for the current project.
     
     
     SELECT
@@ -2106,7 +2118,7 @@ The result is similar to the following:
     
     
     +--------------+--------------------+-----------------------+---------------------+------------------------+--------------------------+-----------------------------+------------------------------+----------------------------------+-------------------------------+----------------------------------+--------------------------------+
-    | dataset_name | active_logical_gib | long_term_logical_gib | active_physical_gib | long_term_physical_gib | active_compression_ratio | long_term_compression_ratio | forecast_active_logical_cost | forecaset_long_term_logical_cost | forecast_active_physical_cost | forecast_long_term_physical_cost | forecast_total_cost_difference |
+    | dataset_name | active_logical_gib | long_term_logical_gib | active_physical_gib | long_term_physical_gib | active_compression_ratio | long_term_compression_ratio | forecast_active_logical_cost | forecast_long_term_logical_cost | forecast_active_physical_cost | forecast_long_term_physical_cost | forecast_total_cost_difference |
     +--------------+--------------------+-----------------------+---------------------+------------------------+--------------------------+-----------------------------+------------------------------+----------------------------------+-------------------------------+----------------------------------+--------------------------------+
     | dataset1     |               10.0 |                  10.0 |                 1.0 |                    1.0 |                     10.0 |                        10.0 |                          0.2 |                              0.1 |                          0.04 |                             0.02 |                           0.24 |
     
@@ -2429,7 +2441,7 @@ To authenticate to BigQuery, set up Application Default Credentials. For more in
     require "google/cloud/bigquery"
     
     def list_tables dataset_id = "your_dataset_id"
-      bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-data_policies-v1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html)
+      bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-data_policies-v1beta1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html)
       dataset  = bigquery.dataset dataset_id
     
       puts "Tables in dataset #{dataset_id}:"
@@ -2534,6 +2546,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-19 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

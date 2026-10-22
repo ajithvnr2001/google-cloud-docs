@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ull-solution/participants/u4-machines/
 title: U4 Ultra Low Latency (ULL) machine family \u00a0|\u00a0 Ultra Low Latency Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:29.355930+00:00
+fetched_at: 2026-10-22T10:13:57.182186+00:00
 ---
 
 # U4 Ultra Low Latency (ULL) machine family  |  Ultra Low Latency Solution  |  Google Cloud Documentation
@@ -603,7 +603,7 @@ This difference in behavior applies to image versions `v20260911` and later. If 
 
 While Google Cloud builds and supports the public images in the preceding sections, you can alternatively use a custom image based on another Linux distribution.
 
-To use a custom image, the image must be configured with the required OOT gVNIC driver. Custom images can be functionally configured to work with U4 machines; however, they haven't been validated for performance or stability.
+To use a custom image, the image must be configured with the required OOT gVNIC driver and must use a [distribution supported by the driver](https://github.com/GoogleCloudPlatform/compute-virtual-ethernet-linux/tree/gve-u4-support#supported-kernels). Custom images can be functionally configured to work with U4 machines; however, they haven't been validated for performance or stability.
 
 #### Red Hat-based distributions
 
@@ -629,22 +629,12 @@ Replace the following values:
          gcloud compute ssh INSTANCE_NAME --project=PROJECT_ID --zone=ZONE
          
 
-  3. Install the required kernel packages, Artifact Registry plugin, and Extra Packages for Enterprise Linux (EPEL) release package. Running this as a single transaction helps avoid repository mirror synchronization issues:
+  3. Install the Artifact Registry DNF plugin:
          
-         sudo dnf makecache && sudo dnf install -y dnf-plugin-artifact-registry kernel kernel-devel kernel-headers https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm
-         
-
-  4. Reboot the instance to ensure that any kernel updates take effect before installing the driver:
-         
-         sudo reboot
+         sudo dnf makecache && sudo dnf install -y dnf-plugin-artifact-registry
          
 
-  5. Reconnect to the instance by using SSH:
-         
-         gcloud compute ssh INSTANCE_NAME --project=PROJECT_ID --zone=ZONE
-         
-
-  6. Install the OOT driver by using the Google-provided RPM. The following commands compile the GVE kernel module and stage it to load on the next boot, but don't load the new driver immediately:
+  4. Configure the YUM repository and install the pre-compiled OOT driver package (`kmod-gve`) by using the Google-provided RPM:
          
          cat << 'EOF' | sudo tee /etc/yum.repos.d/gve-rpm.repo
          [gve-el10-stable]
@@ -656,22 +646,105 @@ Replace the following values:
          gpgkey=https://packages.cloud.google.com/yum/doc/rpm-package-key-v10.gpg
          EOF
          
-         sudo dnf -y --refresh --enablerepo=gve-el10-stable install gve
+         sudo dnf -y --refresh --enablerepo=gve-el10-stable install kmod-gve
          
 
-  7. Reboot the instance to load the OOT driver:
-         
-         sudo reboot
-         
-
-  8. Stop the instance:
+  5. Stop the instance:
          
          gcloud compute instances stop INSTANCE_NAME \
              --project=PROJECT_ID \
              --zone=ZONE
          
 
-  9. Create an image from the disk of the instance:
+  6. Create an image from the disk of the instance:
+         
+         gcloud compute images create IMAGE_NAME \
+             --source-disk=INSTANCE_NAME \
+             --source-disk-zone=ZONE \
+             --source-disk-project=PROJECT_ID \
+             --guest-os-features=UEFI_COMPATIBLE,VIRTIO_SCSI_MULTIQUEUE,GVNIC,SEV_CAPABLE,SEV_SNP_CAPABLE,SEV_LIVE_MIGRATABLE,SEV_LIVE_MIGRATABLE_V2,IDPF,TDX_CAPABLE \
+             --family=IMAGE_FAMILY \
+             --project=IMAGE_PROJECT
+         
+
+Replace the following values:
+
+     * `IMAGE_NAME`: a name for your custom image
+     * `INSTANCE_NAME`: the name of the instance
+     * `ZONE`: the zone of the instance
+     * `PROJECT_ID`: the ID of your project
+     * `IMAGE_FAMILY`: an image family for your custom image
+     * `IMAGE_PROJECT`: the project ID where you want to store the custom image
+
+
+
+#### Debian-based distributions
+
+The following procedure is adapted from the general procedure for [creating custom images](https://docs.cloud.google.com/compute/docs/images/create-custom), and includes the additional steps that are necessary to install the required driver on Debian-based distributions. This example uses [Ubuntu 26.04 LTS](https://docs.cloud.google.com/compute/docs/images/os-details#ubuntu_lts).
+
+  1. Create a temporary VM instance by using an Ubuntu 26.04 LTS base image. You can use any machine type _except_ for U4P and U4C machines. The following example uses `n4-highcpu-2`.
+         
+         gcloud compute instances create INSTANCE_NAME \
+             --image-project=ubuntu-os-cloud \
+             --image-family=ubuntu-2604-lts-amd64 \
+             --machine-type=n4-highcpu-2 \
+             --project=PROJECT_ID \
+             --zone=ZONE
+         
+
+Replace the following values:
+
+     * `INSTANCE_NAME`: a name for the instance
+     * `PROJECT_ID`: the ID of your project
+     * `ZONE`: the zone in which to create the instance
+  2. Connect to the instance by using SSH:
+         
+         gcloud compute ssh INSTANCE_NAME --project=PROJECT_ID --zone=ZONE
+         
+
+  3. Disable automatic background package updates so that unattended upgrades don't lock the package manager, update the kernel, or reset network configurations and static routes in the background:
+         
+         sudo systemctl stop apt-daily.timer apt-daily-upgrade.timer \
+             apt-daily.service apt-daily-upgrade.service \
+             unattended-upgrades.service
+         sudo systemctl disable apt-daily.timer apt-daily-upgrade.timer \
+             unattended-upgrades.service
+         sudo systemctl mask apt-daily.service apt-daily-upgrade.service \
+             unattended-upgrades.service
+         
+
+  4. Install the required packages and kernel headers for the running kernel:
+         
+         sudo apt-get update && sudo apt-get install -y curl gnupg dkms linux-headers-$(uname -r)
+         
+
+  5. Fetch the Google Cloud package signing key and configure the APT repository for the OOT driver:
+         
+         sudo mkdir -p /usr/share/keyrings
+         curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /usr/share/keyrings/gve-archive-keyring.gpg
+         
+         cat << 'EOF' | sudo tee /etc/apt/sources.list.d/gve.sources
+         Types: deb
+         URIs: https://packages.cloud.google.com/apt
+         Suites: gve-ubuntu2604-stable
+         Components: main
+         Signed-By: /usr/share/keyrings/gve-archive-keyring.gpg
+         EOF
+         
+
+  6. Install the OOT driver by using the Google-provided DEB package:
+         
+         sudo apt-get update && sudo apt-get install -y gve
+         
+
+  7. Stop the instance:
+         
+         gcloud compute instances stop INSTANCE_NAME \
+             --project=PROJECT_ID \
+             --zone=ZONE
+         
+
+  8. Create an image from the disk of the instance:
          
          gcloud compute images create IMAGE_NAME \
              --source-disk=INSTANCE_NAME \
@@ -706,6 +779,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

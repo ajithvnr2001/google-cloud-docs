@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/psc-endpoints/
 title: About accessing Gemini Enterprise Agent Platform services through Private Service Connect endpoints \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:40.221266+00:00
+fetched_at: 2026-10-22T10:24:46.960463+00:00
 ---
 
 # About accessing Gemini Enterprise Agent Platform services through Private Service Connect endpoints  |  Google Cloud Documentation

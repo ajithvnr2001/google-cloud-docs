@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-query-filter-array-contains-any-async/
 title: Query a Firestore collection with an array_contains_any filter (async) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:58:49.143307+00:00
+fetched_at: 2026-10-22T10:28:25.579777+00:00
 ---
 
 # Query a Firestore collection with an array_contains_any filter (async)  |  Google Cloud Documentation

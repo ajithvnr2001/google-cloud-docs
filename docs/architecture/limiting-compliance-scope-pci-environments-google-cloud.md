@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/limiting-compliance-scope-pci-environments-google-cloud/
 title: Limiting scope of compliance for PCI environments in Google Cloud \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:26:38.362880+00:00
+fetched_at: 2026-10-22T09:38:37.682010+00:00
 ---
 
 # Limiting scope of compliance for PCI environments in Google Cloud  |  Cloud Architecture Center  |  Google Cloud Documentation

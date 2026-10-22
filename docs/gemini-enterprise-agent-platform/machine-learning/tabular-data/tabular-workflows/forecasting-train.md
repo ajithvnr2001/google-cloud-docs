@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tabular-data/tabular-workflows/forecasting-train/
 title: Train a model with Tabular Workflow for Forecasting \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:46:27.631116+00:00
+fetched_at: 2026-10-22T10:24:56.474035+00:00
 ---
 
 # Train a model with Tabular Workflow for Forecasting  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

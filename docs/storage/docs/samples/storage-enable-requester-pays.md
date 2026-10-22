@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-enable-requester-pays/
 title: Enable Requester Pays for a bucket \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:20.507345+00:00
+fetched_at: 2026-10-22T10:31:15.599328+00:00
 ---
 
 # Enable Requester Pays for a bucket  |  Cloud Storage  |  Google Cloud Documentation

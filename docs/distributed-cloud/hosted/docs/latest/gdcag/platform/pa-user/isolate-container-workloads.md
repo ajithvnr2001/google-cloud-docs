@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/isolate-container-workloads/
 title: Isolate your workloads in dedicated node pools \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T13:32:55.643847+00:00
+fetched_at: 2026-10-22T10:20:50.987985+00:00
 ---
 
 # Isolate your workloads in dedicated node pools  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -24,20 +24,9 @@ Send feedback
 
 [ Shared ](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/cluster-configs#shared-cluster) [ Standard ](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/cluster-configs#standard-cluster)
 
-This document explains how to enhance the security and management of your Kubernetes cluster by isolating container workloads within dedicated node pools in Google Distributed Cloud (GDC) air-gapped. Isolating your workloads gives you greater control over your pods and reduces the risk of privilege escalation attacks in your Kubernetes cluster. For more information about the benefits and limitations of dedicated node pools, see [Node isolation overview](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/node-isolation-overview).
+Dedicated node pools in Google Distributed Cloud (GDC) air-gapped let you isolate container workloads to strengthen Kubernetes cluster security and control pod placement. This separation helps reduce the risk of privilege escalation attacks. To set up dedicated pools, you apply taints and labels, match them with workload tolerations and node affinity rules, and verify scheduling.
 
-There are several workflows involved with isolating your container workloads, which include the following:
-
-  * **Taint and label a node pool** : Apply a taint and label to a node pool so it repels pods away from the node pool unless they're specifically labeled to run there.
-
-  * **Add a toleration and a node affinity rule** : Apply tolerations and rules to your pods to force them to run on the designated node pool only.
-
-  * **Verify that the separation works** : Confirm your tainted node pools are only running the pods you labeled to run there.
-
-
-
-
-These workflows are intended for audiences such as IT administrators within the platform administrator group who are responsible for managing the node pools of a Kubernetes cluster, and application developers within the application operator group who are responsible for managing container workloads. For more information, see [Audiences for GDC air-gapped documentation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/audiences).
+This document is for IT administrators in the platform administrator group who manage Kubernetes clusters and developers in the application operator group who run containers. For more information, see [Node isolation overview](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/node-isolation-overview) and [Audiences for GDC air-gapped documentation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/audiences).
 
 ## Before you begin
 
@@ -49,7 +38,7 @@ You must have specific roles to get the permissions you need to isolate containe
 
 #### Shared cluster roles
 
-Contact your Organization IAM Admin to request the following roles to taint and label a node pool in a shared cluster:
+Contact your IAM Org Admin to request the following roles to taint and label a node pool in a shared cluster:
 
   * **User Cluster Admin** (`user-cluster-admin`): create, delete, edit, or view the resources of a shared cluster hosted on the management API server. This role provides access to the node pools of the shared cluster.
 
@@ -62,7 +51,7 @@ These roles are not bound to a namespace.
 
 #### Standard cluster roles
 
-Contact your Project IAM Admin to request the following roles to taint and label a node pool in a standard cluster:
+Contact your IAM Project Admin to request the following roles to taint and label a node pool in a standard cluster:
 
   * **Cluster Admin** (`cluster-admin`): create, delete, edit, or view all resources in a standard cluster. This role provides access to the data plane APIs hosted within the standard cluster that govern the cluster's resources.
 
@@ -319,6 +308,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

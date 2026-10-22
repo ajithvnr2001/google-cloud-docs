@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/notebooks/workbench/instances/change-machine-type/
 title: Change machine type and configure GPUs of an Agent Platform Workbench instance \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:43:25.793009+00:00
+fetched_at: 2026-10-22T10:25:53.015268+00:00
 ---
 
 # Change machine type and configure GPUs of an Agent Platform Workbench instance  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

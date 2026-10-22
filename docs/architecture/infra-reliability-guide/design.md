@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/infra-reliability-guide/design/
 title: Design reliable infrastructure for your workloads in Google Cloud \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T19:07:03.501382+00:00
+fetched_at: 2026-10-22T09:17:53.688777+00:00
 ---
 
 # Design reliable infrastructure for your workloads in Google Cloud  |  Cloud Architecture Center  |  Google Cloud Documentation

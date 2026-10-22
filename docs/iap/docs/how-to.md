@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/how-to/
 title: How-to guides \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:11:55.019013+00:00
+fetched_at: 2026-10-22T08:27:24.909286+00:00
 ---
 
 # How-to guides  |  Identity-Aware Proxy  |  Google Cloud Documentation

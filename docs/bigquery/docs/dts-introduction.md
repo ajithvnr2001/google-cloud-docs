@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/dts-introduction/
 title: Introduction to the BigQuery Data Transfer Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:37:08.191660+00:00
+fetched_at: 2026-10-22T08:56:47.077039+00:00
 ---
 
 # Introduction to the BigQuery Data Transfer Service  |  Google Cloud Documentation

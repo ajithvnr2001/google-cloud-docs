@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/audit/best-practices/
 title: Best practices for Cloud Audit Logs \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:37.096623+00:00
+fetched_at: 2026-10-22T10:44:02.594302+00:00
 ---
 
 # Best practices for Cloud Audit Logs  |  Cloud Logging  |  Google Cloud Documentation
@@ -21,11 +21,7 @@ Send feedback
 
 #  Best practices for Cloud Audit Logs Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document recommends a sequence of audit logging tasks to help your organization maintain security and minimize risk.
-
-This document isn't an exhaustive list of recommendations. Instead, its goal is to help you understand the scope of audit logging activities and plan accordingly.
-
-Each section provides key actions and includes links for further reading.
+Following best practices for Cloud Audit Logs helps your organization maintain security, control access to sensitive log data, and minimize risk. Although not exhaustive, the recommended sequence of tasks in this document helps you understand the scope of audit logging activities and plan your logging configuration.
 
 ## Understand Cloud Audit Logs
 

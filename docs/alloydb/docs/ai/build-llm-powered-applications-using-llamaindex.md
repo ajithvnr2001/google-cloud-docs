@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/build-llm-powered-applications-using-llamaindex/
 title: Build LLM-powered applications using LlamaIndex \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:23.964754+00:00
+fetched_at: 2026-10-22T09:27:53.217436+00:00
 ---
 
 # Build LLM-powered applications using LlamaIndex  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

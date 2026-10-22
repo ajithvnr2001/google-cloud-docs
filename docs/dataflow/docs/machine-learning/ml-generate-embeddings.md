@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/machine-learning/ml-generate-embeddings/
 title: Generate embeddings with MLTransform \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:38:51.772957+00:00
+fetched_at: 2026-10-22T08:25:07.505583+00:00
 ---
 
 # Generate embeddings with MLTransform  |  Cloud Dataflow  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-download-file-requester-pays/
 title: Requester Pays: Download an object \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:17:00.586387+00:00
+fetched_at: 2026-10-22T10:31:40.510805+00:00
 ---
 
 # Requester Pays: Download an object  |  Cloud Storage  |  Google Cloud Documentation

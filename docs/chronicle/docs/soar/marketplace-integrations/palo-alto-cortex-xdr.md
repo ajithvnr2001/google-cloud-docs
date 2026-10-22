@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/palo-alto-cortex-xdr/
 title: Integrate Palo Alto Cortex XDR with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-16T13:28:36.688365+00:00
+fetched_at: 2026-10-22T08:42:29.687906+00:00
 ---
 
 # Integrate Palo Alto Cortex XDR with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation
@@ -1120,7 +1120,13 @@ If no value is provided, the connector ingests incidents with all severity level
 `Alerts Count Limit` | Required. The maximum number of incidents the connector processes for every iteration. The maximum value is `100`. The default value is `10`.  
 `Use dynamic list as a blocklist` | Required. If selected, the connector uses the dynamic list as a blocklist. Disabled by default.  
 `Include Historical Artifacts` | Optional. If selected, the connector retrieves all historical artifacts associated with an alert during initial ingestion. **Note:** Enabling this option may increase the volume of data ingested during the first run.   
-`Artifacts To Ignore` | Optional. A comma-separated list of artifacts to exclude from Google SecOps event creation.  
+`Artifacts To Ignore` | Optional. A comma-separated list of artifacts to exclude from Google SecOps event creation. The possible values are as follows:
+
+  * `file_artifact`
+  * `network_artifact`
+
+  
+`Entities To Ignore` | Optional. A comma-separated list of entities (IP addresses, CIDR ranges, domains, file hashes, hostnames, and usernames) to exclude from ingestion. If an incident or alert contains an entity specified in this parameter, it isn't ingested. Supports IP range (CIDR) notation.  
 `Disable Overflow` | Optional. If selected, the connector ignores the Google SecOps overflow mechanism. Enabled by default.  
 `Verify SSL` | Required. If selected, the integration validates the SSL certificate when connecting to the Palo Alto Cortex XDR server. Enabled by default.  
 `Proxy Server Address` | Optional. The address of the proxy server to use.  
@@ -1200,6 +1206,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

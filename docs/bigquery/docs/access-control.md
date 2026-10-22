@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/access-control/
 title: BigQuery IAM roles and permissions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T23:54:51.067330+00:00
+fetched_at: 2026-10-22T08:27:18.405703+00:00
 ---
 
 # BigQuery IAM roles and permissions  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/notebooks/workbench/instances/restore-snapshot/
 title: Back up and restore data by using a snapshot \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:59.663344+00:00
+fetched_at: 2026-10-22T10:23:30.507555+00:00
 ---
 
 # Back up and restore data by using a snapshot  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

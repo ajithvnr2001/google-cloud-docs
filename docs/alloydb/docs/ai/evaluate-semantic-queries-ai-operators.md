@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/evaluate-semantic-queries-ai-operators/
 title: Perform intelligent SQL queries using AI functions \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:44:46.608336+00:00
+fetched_at: 2026-10-22T09:32:21.994057+00:00
 ---
 
 # Perform intelligent SQL queries using AI functions  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

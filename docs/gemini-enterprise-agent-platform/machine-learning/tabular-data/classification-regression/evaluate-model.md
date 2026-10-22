@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tabular-data/classification-regression/evaluate-model/
 title: Evaluate AutoML classification and regression models \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:37.724081+00:00
+fetched_at: 2026-10-22T10:23:16.194052+00:00
 ---
 
 # Evaluate AutoML classification and regression models  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

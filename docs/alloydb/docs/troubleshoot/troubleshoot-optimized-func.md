@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/troubleshoot/troubleshoot-optimized-func/
 title: Troubleshoot optimized functions \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:21.227039+00:00
+fetched_at: 2026-10-22T09:34:53.603288+00:00
 ---
 
 # Troubleshoot optimized functions  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/developer-connect/docs/set-up-insights/
 title: Set up Developer Connect insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:06.139413+00:00
+fetched_at: 2026-10-22T08:32:32.664407+00:00
 ---
 
 # Set up Developer Connect insights  |  Google Cloud Documentation

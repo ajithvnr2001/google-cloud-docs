@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/quickstarts/notebook-gallery-quickstart/
 title: Quickstart: Create and run a notebook using the notebook gallery \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T23:54:44.295476+00:00
+fetched_at: 2026-10-22T08:57:37.843045+00:00
 ---
 
 # Quickstart: Create and run a notebook using the notebook gallery  |  BigQuery  |  Google Cloud Documentation

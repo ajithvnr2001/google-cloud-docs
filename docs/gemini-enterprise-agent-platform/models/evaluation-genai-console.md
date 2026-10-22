@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/evaluation-genai-console/
 title: Tutorial: Perform evaluation using the console \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:40:57.080648+00:00
+fetched_at: 2026-10-22T10:28:48.012631+00:00
 ---
 
 # Tutorial: Perform evaluation using the console  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

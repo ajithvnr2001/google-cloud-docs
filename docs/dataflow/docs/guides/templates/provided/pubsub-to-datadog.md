@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/guides/templates/provided/pubsub-to-datadog/
 title: Pub/Sub to Datadog template \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:38:54.640953+00:00
+fetched_at: 2026-10-22T08:24:59.244675+00:00
 ---
 
 # Pub/Sub to Datadog template  |  Cloud Dataflow  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-service-account-for-instances-parent-tag/
 title: Create a Compute Engine instance with a dedicated service account \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:20:41.536447+00:00
+fetched_at: 2026-10-22T09:17:04.398054+00:00
 ---
 
 # Create a Compute Engine instance with a dedicated service account  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/safety/
 title: Safety classifiers for Claude in Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:13.934241+00:00
+fetched_at: 2026-10-22T10:28:48.671129+00:00
 ---
 
 # Safety classifiers for Claude in Gemini Enterprise Agent Platform  |  Google Cloud Documentation

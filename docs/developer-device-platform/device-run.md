@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/developer-device-platform/device-run/
 title: Developer Device Platform Device Run Overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:45:25.459012+00:00
+fetched_at: 2026-10-22T09:55:35.339890+00:00
 ---
 
 # Developer Device Platform Device Run Overview  |  Google Cloud Documentation
@@ -25,7 +25,7 @@ Send feedback
 
 This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
-Welcome to Developer Device Platform Device Run, which lets you run tests and executables on physical and virtual Android devices and physical iOS devices in the cloud. This page summarizes capabilities and describes commonalities between running Android instrumentation tests, Android executables, and iOS tests. See [Device Run for Android](https://docs.cloud.google.com/developer-device-platform/device-run/android) and [Device Run for iOS](https://docs.cloud.google.com/developer-device-platform/device-run/ios) for platform-specific steps.
+Welcome to Developer Device Platform Device Run, which lets you run tests and executables on physical and virtual Android devices and physical iOS devices in the cloud. This page summarizes capabilities and describes commonalities between running [Android instrumentation tests](https://docs.cloud.google.com/developer-device-platform/device-run/android-instrument), [Android executables](https://docs.cloud.google.com/developer-device-platform/device-run/android-executable), and [iOS XCTest](https://docs.cloud.google.com/developer-device-platform/device-run/ios) tests.
 
 If you are migrating from [Firebase Test Lab](https://firebase.google.com/docs/test-lab) to Developer Device Platform, see our [migration guide](https://docs.cloud.google.com/developer-device-platform/device-run/migrate), [command and flag translation](https://docs.cloud.google.com/developer-device-platform/device-run/migrate/flag-command-translation), and [migration skill](https://docs.cloud.google.com/developer-device-platform/device-run/migrate/migration-skill) for AI agents.
 
@@ -187,12 +187,12 @@ Which results in output resembling:
 
 ## What's next
 
-[Run an Android test or executable](https://docs.cloud.google.com/developer-device-platform/device-run/android) or [Run an iOS test](https://docs.cloud.google.com/developer-device-platform/device-run/ios) with Developer Device Platform.
+[Run an Android instrumentation test](https://docs.cloud.google.com/developer-device-platform/device-run/android-instrument), an [Android executable](https://docs.cloud.google.com/developer-device-platform/device-run/android-executable) or an [iOS XCTest](https://docs.cloud.google.com/developer-device-platform/device-run/ios) with Developer Device Platform.
 
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

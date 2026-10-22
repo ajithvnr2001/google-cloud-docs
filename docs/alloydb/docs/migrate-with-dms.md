@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/migrate-with-dms/
 title: Migrate to AlloyDB for PostgreSQL using Database Migration Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:48.065028+00:00
+fetched_at: 2026-10-22T09:27:15.126443+00:00
 ---
 
 # Migrate to AlloyDB for PostgreSQL using Database Migration Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/index-advisor-overview/
 title: Index advisor overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:50.350600+00:00
+fetched_at: 2026-10-22T09:31:34.652139+00:00
 ---
 
 # Index advisor overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

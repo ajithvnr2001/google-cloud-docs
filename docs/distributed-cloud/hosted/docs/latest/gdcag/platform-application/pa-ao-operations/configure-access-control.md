@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/configure-access-control/
 title: Configure access control \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:59:06.590515+00:00
+fetched_at: 2026-10-22T10:23:12.701827+00:00
 ---
 
 # Configure access control  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -34,9 +34,9 @@ Managed Harbor Service provides predefined roles that grant access to related AP
 
 Use the following predefined roles for managing the Harbor Instance resources and creating Harbor Project resources:
 
-  * Harbor Instance Viewer: views and gets the Harbor instance. Ask your Organization IAM Admin to grant you the Harbor Instance Viewer (`harbor-instance-viewer`) role.
-  * Harbor Instance Admin: creates and manages the Harbor instance, and creates Harbor projects in the Harbor instance. Ask your Organization IAM Admin to grant you the Harbor Instance Admin (`harbor-instance-admin`) role.
-  * Harbor Project Creator: creates Harbor projects in the Harbor instance. Ask your Organization IAM Admin to grant you the Harbor Project Creator (`harbor-project-creator`) role.
+  * Harbor Instance Viewer: views and gets the Harbor instance. Ask your IAM Org Admin to grant you the Harbor Instance Viewer (`harbor-instance-viewer`) role.
+  * Harbor Instance Admin: creates and manages the Harbor instance, and creates Harbor projects in the Harbor instance. Ask your IAM Org Admin to grant you the Harbor Instance Admin (`harbor-instance-admin`) role.
+  * Harbor Project Creator: creates Harbor projects in the Harbor instance. Ask your IAM Org Admin to grant you the Harbor Project Creator (`harbor-project-creator`) role.
 
 
 
@@ -66,6 +66,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

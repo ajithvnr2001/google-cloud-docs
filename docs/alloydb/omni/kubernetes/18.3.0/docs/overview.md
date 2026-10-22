@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/overview/
 title: AlloyDB Omni using the container orchestrator overview \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 18.3.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:25:44.302637+00:00
+fetched_at: 2026-10-22T09:49:20.208781+00:00
 ---
 
 # AlloyDB Omni using the container orchestrator overview  |  AlloyDB Omni using the container orchestrator: 18.3.0  |  Google Cloud Documentation
@@ -97,13 +97,18 @@ This database lifecycle includes the following Day 0 and Day 1 operations:
 
 The AlloyDB Omni operator is available through different packaging, including Helm Charts and OLM bundles for Kubernetes and OpenShift. For more information, see [Available AlloyDB Omni download and installation options](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/available-download-install-options).
 
+### Observability with the web UI
+
+You can deploy the optional [AlloyDB Omni web user interface](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/install-web-ui) as a Kubernetes Pod or outside your cluster to monitor the health, performance, and configuration of your database clusters. The web UI provides dashboards for cluster instances, system telemetry charts (using metrics exported by the AlloyDB Omni operator and scraped by Prometheus), database sizes, active database flags, columnar engine statistics, and query insights.
+
 ## What's next
 
   * [Subscribe to AlloyDB Omni](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/run-alloydb-omni-production#subscribe).
   * Choose an [AlloyDB for PostgreSQL download or installation option](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/available-download-install-options).
   * [Choose compatible Kubernetes operator and database cluster versions](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/choose-compatible-versions).
   * Choose an [AlloyDB Omni availability reference architecture](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/database-availability-reference-architecture-overview).
-  * [Install AlloyDB Omni on Kubernetes](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/deploy-kubernetes). 
+  * [Install AlloyDB Omni on Kubernetes](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/deploy-kubernetes).
+  * [Install the web UI](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/install-web-ui). 
 
 
 
@@ -111,6 +116,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/prompts/prompt-design-strategies/
 title: Overview of prompting strategies \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:14.504393+00:00
+fetched_at: 2026-10-22T10:28:40.704626+00:00
 ---
 
 # Overview of prompting strategies  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

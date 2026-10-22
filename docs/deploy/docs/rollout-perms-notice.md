@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/rollout-perms-notice/
 title: New permission required for rollbacks \u00a0|\u00a0 Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:44.224996+00:00
+fetched_at: 2026-10-22T08:24:48.387342+00:00
 ---
 
 # New permission required for rollbacks  |  Cloud Deploy  |  Google Cloud Documentation

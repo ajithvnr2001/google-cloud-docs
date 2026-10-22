@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/linux/current/docs/database-availability-reference-architecture-overview/
 title: AlloyDB Omni availability reference architecture overview \u00a0|\u00a0 AlloyDB Omni using RPM: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:49:28.374700+00:00
+fetched_at: 2026-10-22T10:43:04.673663+00:00
 ---
 
 # AlloyDB Omni availability reference architecture overview  |  AlloyDB Omni using RPM: Current (18.4.0)  |  Google Cloud Documentation

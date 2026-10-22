@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/enabling-on-prem-howto/
 title: Enabling IAP for on-premises apps \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:11:55.926191+00:00
+fetched_at: 2026-10-22T08:27:25.908496+00:00
 ---
 
 # Enabling IAP for on-premises apps  |  Identity-Aware Proxy  |  Google Cloud Documentation

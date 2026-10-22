@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-mirrormaker-connector/
 title: Create a MirrorMaker 2.0 Source connector \u00a0|\u00a0 Managed Service for Apache Kafka \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:15:49.917049+00:00
+fetched_at: 2026-10-22T10:44:55.145817+00:00
 ---
 
 # Create a MirrorMaker 2.0 Source connector  |  Managed Service for Apache Kafka  |  Google Cloud Documentation
@@ -21,24 +21,24 @@ Send feedback
 
 #  Create a MirrorMaker 2.0 Source connector Stay organized with collections  Save and categorize content based on your preferences. 
 
-The MirrorMaker 2.0 Source connector replicates topics and data from one Kafka cluster (the source) to another Kafka cluster (the target).
+A MirrorMaker 2.0 Source connector lets you replicate topics and data from one Kafka cluster (the source) to another Kafka cluster (the target).
 
-Use this connector for the following scenarios:
+Typical use cases for this connector include:
 
-  * **Data migration**. Move your Kafka workload to a new Managed Service for Apache Kafka cluster.
+  * Data migration. Move your Kafka workload to a new Managed Service for Apache Kafka cluster.
 
-  * **Disaster recovery**. Create a backup cluster to ensure business continuity in case of failures.
+  * Disaster recovery. Create a backup cluster to ensure business continuity in case of failures.
 
-  * **Data aggregation**. Consolidate data from multiple Kafka clusters into a central Managed Service for Apache Kafka cluster to perform analytics.
-
-
+  * Data aggregation. Consolidate data from multiple Kafka clusters into a central Managed Service for Apache Kafka cluster to perform analytics.
 
 
-For basic data replication between Kafka clusters, you can use the MirrorMaker 2.0 Source connector by itself. To ensure more robust disaster recovery, use the following connectors in conjunction with the MirrorMaker 2.0 Source connector:
 
-  * Use the [MirrorMaker 2.0 Checkpoint](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-mirrormaker-checkpoint-connector) connector to replicate consumer offsets, so that consumers can fail over to the target cluster without losing data.
 
-  * Use the [MirrorMaker 2.0 Heartbeat](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-mirrormaker-heartbeat-connector) connector to generates periodic heartbeat messages, and use these to monitor connectivity and replication lag.
+This connector performs basic data replication between Kafka clusters. To help ensure more robust disaster recovery, use the following connectors in conjunction with the MirrorMaker 2.0 Source connector:
+
+  * [MirrorMaker 2.0 Checkpoint](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-mirrormaker-checkpoint-connector) connector. Replicates consumers offsets, so that consumers can fail over to the target cluster without losing data.
+
+  * [MirrorMaker 2.0 Heartbeat](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-mirrormaker-heartbeat-connector) connector. Generates periodic heartbeat messages, which lets you monitor connectivity and replication lag.
 
 
 
@@ -640,6 +640,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

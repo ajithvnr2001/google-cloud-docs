@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-dataframes-regression-model/
 title: Create a regression model with BigQuery DataFrames \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:40:50.813359+00:00
+fetched_at: 2026-10-22T09:17:48.169752+00:00
 ---
 
 # Create a regression model with BigQuery DataFrames  |  Google Cloud Documentation

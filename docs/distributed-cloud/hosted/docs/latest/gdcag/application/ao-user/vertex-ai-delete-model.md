@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-delete-model/
 title: Delete an online prediction model \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T13:15:55.915778+00:00
+fetched_at: 2026-10-22T10:24:44.654877+00:00
 ---
 
 # Delete an online prediction model  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -28,11 +28,11 @@ This page describes the process to delete an online prediction model and all the
 
 ## Before you begin
 
-To get the permissions that you need to access Online Prediction, ask your Project IAM Admin to grant you the Vertex AI Prediction User (`vertex-ai-prediction-user`) role.
+To get the permissions that you need to access Online Prediction, ask your IAM Project Admin to grant you the Vertex AI Prediction User (`vertex-ai-prediction-user`) role.
 
 For information about this role, see [Prepare IAM permissions](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-ao-permissions).
 
-Additionally, to get the permissions that you need to delete objects in a bucket, ask your Project IAM Admin to grant you the Project Bucket Object Admin (`project-bucket-object-admin`) role in the project.
+Additionally, to get the permissions that you need to delete objects in a bucket, ask your IAM Project Admin to grant you the Project Bucket Object Admin (`project-bucket-object-admin`) role in the project.
 
 ## Delete resources
 
@@ -78,6 +78,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

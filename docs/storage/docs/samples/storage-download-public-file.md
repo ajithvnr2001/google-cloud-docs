@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-download-public-file/
 title: Download a public object without credentials \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:16:58.654073+00:00
+fetched_at: 2026-10-22T10:31:08.654673+00:00
 ---
 
 # Download a public object without credentials  |  Cloud Storage  |  Google Cloud Documentation

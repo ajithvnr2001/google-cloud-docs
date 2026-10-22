@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/customize-gke-inference-gateway-configurations/
 title: Customize GKE Inference Gateway configuration \u00a0|\u00a0 GKE networking \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:26:51.353685+00:00
+fetched_at: 2026-10-22T10:39:29.413751+00:00
 ---
 
 # Customize GKE Inference Gateway configuration  |  GKE networking  |  Google Cloud Documentation
@@ -338,7 +338,7 @@ Google Cloud provides the following Cloud Monitoring dashboards that offer infer
 
 ### View GKE Inference Gateway dashboard
 
-To view GKE Inference Gateway dashboard, perform the following steps:
+To view the unified [llm-d Overview](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/llm-d#monitoring-dashboard) dashboard for GKE Inference Gateway, perform the following steps:
 
   1. In the Google Cloud console, go to the **Monitoring** page.
 
@@ -348,14 +348,14 @@ To view GKE Inference Gateway dashboard, perform the following steps:
 
   3. In the **Integrations** section, select **GMP**.
 
-  4. In the **Cloud Monitoring Dashboard Templates** page, search for "Gateway".
+  4. In the **Cloud Monitoring Dashboard Templates** page, search for "llm-d".
 
-  5. View [GKE Inference Gateway](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/inference-optimized-gateway) dashboard.
+  5. Select the [llm-d Overview](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/llm-d#monitoring-dashboard) dashboard, which monitors Application Load Balancer, GPU networking, llm-d EPP (`llm_d_epp_*`), and vLLM metrics across both Standalone Mode and Gateway Mode.
+
+  6. Click **Add dashboard to your list** and complete the required fields. Then, click **Add to dashboard list**.
 
 
-
-
-Alternately, you can follow the instructions in [Monitoring dashboard](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/inference-optimized-gateway#monitoring-dashboard).
+**Note:** For legacy standalone Gateway API Inference Extension (v1.5.0 and earlier) or llm-d deployments earlier than v0.8.0 that emit `inference_objective_*` metrics, search for "Gateway" to view the legacy [GKE Inference Gateway Prometheus Overview](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/inference-optimized-gateway#monitoring-dashboard) dashboard.
 
 ### View AI/ML models observability dashboards
 
@@ -849,6 +849,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-15 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/upgrade-db-inplace-major-version/
 title: Perform an in-place major version database upgrade \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:52.373706+00:00
+fetched_at: 2026-10-22T10:42:25.163982+00:00
 ---
 
 # Perform an in-place major version database upgrade  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Perform an in-place major version database upgrade Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to perform a database in-place major version upgrade of an AlloyDB for PostgreSQL cluster. To learn about database in-place major version upgrade use cases, workflow, and automatic backups, see [Database in-place major version upgrade overview](https://docs.cloud.google.com/alloydb/docs/major-version-upgrade-inplace-overview).
+To upgrade an AlloyDB for PostgreSQL cluster to a higher PostgreSQL major version while preserving your existing instance names, IP addresses, and connection strings, you can plan, validate, and run an in-place major version upgrade. To learn about in-place major version upgrade use cases, workflow stages, and automatic backups, see [Database in-place major version upgrade overview](https://docs.cloud.google.com/alloydb/docs/major-version-upgrade-inplace-overview).
 
 ## Plan a major database version upgrade
 
@@ -135,10 +135,9 @@ To connect to the database, use one of the following options:
   * [psql](https://docs.cloud.google.com/alloydb/docs/connect-psql)
   * [Other connection methods](https://docs.cloud.google.com/alloydb/docs/connection-overview)
 
+1\. Drop or promote your cross-region replicas. Database In-place major version upgrades don't support cross-region replicas. For more information, see [Cross-region replication](https://docs.cloud.google.com/alloydb/docs/cross-region-replication/about-cross-region-replication). 
 
-  1. Drop or promote your cross-region replicas. Database In-place major version upgrades don't support cross-region replicas. For more information, see [Cross-region replication](https://docs.cloud.google.com/alloydb/docs/cross-region-replication/about-cross-region-replication).
-
-  2. If your AlloyDB cluster is a [logical replication](https://www.postgresql.org/docs/current/logical-replication.html) source, disable downstream subscriptions and drop all logical replication slots. You can re-enable the subscriptions and recreate the logical replication slots after the upgrade. If the AlloyDB instance is only a logical replication target, these steps are not required. To disable subscriptions and drop logical replication slots, follow these steps:
+  1. If your AlloyDB cluster is a [logical replication](https://www.postgresql.org/docs/current/logical-replication.html) source, disable downstream subscriptions and drop all logical replication slots. You can re-enable the subscriptions and recreate the logical replication slots after the upgrade. If the AlloyDB instance is only a logical replication target, these steps are not required. To disable subscriptions and drop logical replication slots, follow these steps:
 
      1. Disable each downstream subscription on the subscriber or downstream replication target. Don't disable the downstream subscriptions on the AlloyDB instance being upgraded:
 
@@ -171,7 +170,7 @@ For example:
 
 Replace `REPLICATION_SLOT_NAME` in the query with the name of the replication slot.
 
-  3. Manage your PostgreSQL extensions. For more information, see [Configure database extensions](https://docs.cloud.google.com/alloydb/docs/instance-configure-extensions).
+  2. Manage your PostgreSQL extensions. For more information, see [Configure database extensions](https://docs.cloud.google.com/alloydb/docs/instance-configure-extensions).
 
 Pre-upgrade checks detect extension incompatibilities and surface those violations in the logs, along with suggested actions. For more information, see [View pre-upgrade check failures](https://docs.cloud.google.com/alloydb/docs/troubleshoot/troubleshoot-database-inplace-major-version-upgrade#pg-upgrade-check-failures).
 
@@ -194,7 +193,7 @@ For example, if your PostGIS version is 3.1.x and you want to upgrade from POSTG
             SELECT PostGIS_Version();
             
 
-  4. Verify that your clusters don't contain orphaned role memberships. In-place major version upgrades don't preserve role memberships where the original grantor no longer exists. If any cluster contains orphaned memberships in the `pg_auth_members` catalog, these role memberships are lost after the upgrade.
+  3. Verify that your clusters don't contain orphaned role memberships. In-place major version upgrades don't preserve role memberships where the original grantor no longer exists. If any cluster contains orphaned memberships in the `pg_auth_members` catalog, these role memberships are lost after the upgrade.
 
 To detect orphaned memberships, run the following query:
          
@@ -215,7 +214,7 @@ Run the following transaction block for each orphaned membership:
 
 Replace ROLE_NAME and MEMBER_NAME with the roles from the query results.
 
-  5. Verify that connections are allowed for each database, except for `template0`, by running the following query and checking the `datallowconn` field for each database:
+  4. Verify that connections are allowed for each database, except for `template0`, by running the following query and checking the `datallowconn` field for each database:
          
          SELECT datname,datallowconn from pg_database;
          
@@ -227,7 +226,7 @@ To allow connections to a database, run the following command:
          ALTER DATABASE DATABASE_NAME WITH ALLOW_CONNECTIONS = true;
          
 
-  6. Verify that `template1` is a template database, by running the following command:
+  5. Verify that `template1` is a template database, by running the following command:
          
          SELECT datname, datistemplate FROM pg_database WHERE datname = 'template1';
          
@@ -304,19 +303,26 @@ Sample request JSON body:
     "version": "POSTGRES_16"
     }
 
-###  Terraform 
-
-**Warning:** To keep your Terraform state consistent, update configurations directly in your Terraform files. If you make manual changes using the Google Cloud console, gcloud CLI, or REST API, the following issues can occur: 
-
-  * API errors
-  * Perpetual diffs
-  * Overwritten changes during `terraform apply`
-
-
-
-To upgrade an instance within your database cluster to a PostgreSQL version, use a [Terraform resource](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/alloydb_instance) and set the `database_version` to a [supported target major version](https://docs.cloud.google.com/alloydb/docs/upgrade-db-inplace-major-version#plan-upgrade).
+* { Terraform } 
     
     
+    **Warning :** To keep your Terraform state consistent, update configurations directly in your Terraform files. If you make manual changes using the Google Cloud console, gcloud CLI, or REST API, the following issues can occur:
+    
+    
+    
+      
+        * API errors
+    
+      
+        * Perpetual diffs
+    
+      
+        * Overwritten changes during terraform apply
+    
+    
+    To upgrade an instance within your database cluster to a PostgreSQL version, use a [Terraform resource](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/alloydb_instance) and set the `database_version` to a [supported target major version](/alloydb/docs/upgrade-db-inplace-major-version#plan-upgrade).
+    
+    ```none
     resource "google_alloydb_instance" "default" {
     cluster       = google_alloydb_cluster.default.name
     instance_id   = "alloydb-instance"
@@ -361,9 +367,10 @@ To upgrade an instance within your database cluster to a PostgreSQL version, use
       service                 = "servicenetworking.googleapis.com"
       reserved_peering_ranges = [google_compute_global_address.private_ip_alloc.name]
     }
+    ```
     
-
-To learn how to apply or remove a Terraform configuration, see [Basic Terraform commands](https://docs.cloud.google.com/docs/terraform/basic-commands).
+    To learn how to apply or remove a Terraform configuration, see [Basic Terraform commands](/docs/terraform/basic-commands).
+    
 
 ## Monitor the cluster major version upgrade
 
@@ -400,7 +407,7 @@ The following is an example command:
          
          gcloud alloydb operations list --cluster=my-cluster --region=us-central1 --filter=metadata.verb:upgrade
 
-  2. Monitor the status of the upgrade by running the [`gcloud alloydb operations describe`](https://cloud.google.com/sdk/gcloud/reference/alloydb/operations/describe) command:
+  2. Monitor the status of the upgrade by running the [`gcloud alloydb operations describe`](https://docs.cloud.google.com/sdk/gcloud/reference/alloydb/operations/describe) command:
          
          gcloud alloydb operations describe OPERATION_ID
          --region=REGION
@@ -846,16 +853,7 @@ You can also perform a point-in-time recovery to a pre-upgrade point in time. Fo
 
 The following limitations affect in-place major version upgrades for AlloyDB:
 
-  * You can't perform an in-place major version upgrade on a [secondary cluster](https://docs.cloud.google.com/alloydb/docs/cross-region-replication/about-cross-region-replication).
-  * When you perform a in-place major version upgrade, note that upgrading instances with more than 1,000 databases or 1 million objects (like tables and views) takes a long time, and the upgrade might time out. This limitation is independent of actual data size.
-  * AlloyDB doesn't support upgrading clusters that use `pg_largeobject_metadata`. If `select count(*) from pg_largeobject_metadata;` is non-zero, then the upgrade fails.
-  * AlloyDB doesn't preserve role memberships where the original grantor no longer exists. If your database contains these orphaned memberships, resolve them before you upgrade. For more information, see Prepare the cluster.
-  * The in-place major version upgrade operation might complete before the pre-upgrade backup or before the post-upgrade backups completes, especially when you have a large database with fewer schema objects.
-  * There might be a short delay between the time when writes start again on the upgraded instance and when the post-upgrade backup is created. This means that post-upgrade backup contents might not match the contents of the database from before the major version upgrade.
-  * Pre-upgrade backups might still be created when an in-place major version upgrade fails.
-  * Because automatic upgrade backups are continuous, you can't delete them until they reach the continuous backups and recovery maximum retention. When maximum retention is reached, the backups are garbage collected; alternatively, you can use the gcloud CLI to [manually delete the backups](https://docs.cloud.google.com/alloydb/docs/backup/delete#procedure). For more information, see [Restrictions on deleting backups](https://docs.cloud.google.com/alloydb/docs/backup/delete#restrictions).
-
-
+\- You can't perform an in-place major version upgrade on a [secondary cluster](https://docs.cloud.google.com/alloydb/docs/cross-region-replication/about-cross-region-replication). \- When you perform a in-place major version upgrade, note that upgrading instances with more than 1,000 databases or 1 million objects (like tables and views) takes a long time, and the upgrade might time out. This limitation is independent of actual data size. \- AlloyDB doesn't support upgrading clusters that use `pg_largeobject_metadata`. If `select count(*) from pg_largeobject_metadata;` is non-zero, then the upgrade fails. \- AlloyDB doesn't preserve role memberships where the original grantor no longer exists. If your database contains these orphaned memberships, resolve them before you upgrade. For more information, see Prepare the cluster. \- The in-place major version upgrade operation might complete before the pre-upgrade backup or before the post-upgrade backups completes, especially when you have a large database with fewer schema objects. \- There might be a short delay between the time when writes start again on the upgraded instance and when the post-upgrade backup is created. This means that post-upgrade backup contents might not match the contents of the database from before the major version upgrade. \- Pre-upgrade backups might still be created when an in-place major version upgrade fails. \- Because automatic upgrade backups are continuous, you can't delete them until they reach the continuous backups and recovery maximum retention. When maximum retention is reached, the backups are garbage collected; alternatively, you can use the gcloud CLI to [manually delete the backups](https://docs.cloud.google.com/alloydb/docs/backup/delete#procedure). For more information, see [Restrictions on deleting backups](https://docs.cloud.google.com/alloydb/docs/backup/delete#restrictions). 
 
 ## What's next
 
@@ -869,6 +867,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

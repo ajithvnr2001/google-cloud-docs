@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/committed-use-discounts/purchase-license-commitments/
 title: Purchase software commitments for OS licenses \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:20.958345+00:00
+fetched_at: 2026-10-22T09:02:34.859257+00:00
 ---
 
 # Purchase software commitments for OS licenses  |  Compute Engine  |  Google Cloud Documentation

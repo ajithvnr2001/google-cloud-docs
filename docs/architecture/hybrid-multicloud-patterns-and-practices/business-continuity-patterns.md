@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/hybrid-multicloud-patterns-and-practices/business-continuity-patterns/
 title: Business continuity hybrid and multicloud patterns \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:28:02.677817+00:00
+fetched_at: 2026-10-22T09:02:54.379140+00:00
 ---
 
 # Business continuity hybrid and multicloud patterns  |  Cloud Architecture Center  |  Google Cloud Documentation

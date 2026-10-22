@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/docs/overview/
 title: AlloyDB Omni overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:26:02.182980+00:00
+fetched_at: 2026-10-22T10:11:10.968290+00:00
 ---
 
 # AlloyDB Omni overview  |  Google Cloud Documentation
@@ -54,6 +54,8 @@ AlloyDB Omni is well-suited to the following scenarios:
 For example, AlloyDB Omni supports automatic memory management and adaptive autovacuum of stale data.
 
   * The AlloyDB Omni columnar engine, which keeps relevant data in an in-memory columnar format for faster analytical queries, reporting, and hybrid transactional and analytical processing (HTAP) workloads.
+
+  * The AlloyDB Omni web user interface, which enables graphical telemetry monitoring and configuration audits for your self-managed clusters.
 
 
 
@@ -199,13 +201,28 @@ Adaptive autovacuum uses the following factors to determine the frequency and in
 
 In AlloyDB Omni, the AI/ML background worker provides the capabilities necessary for calling Vertex AI models directly from the database. The AI/ML worker runs as a process called `omni ml worker`.
 
+### The web UI
+
+The optional web UI is a self-managed web console that gives you observability into your database instances.
+
+This interface maps graphical dashboards for custom features—like the columnar engine and model endpoint integrations—that typical open-source PostgreSQL visualizers can't track.
+
+Complete the following optional setups to install and connect to the web UI:
+
+  * [Install using containers](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/install-web-ui)
+  * [Install using the container orchestrator](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/install-web-ui)
+  * [Install using RPM](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/install-web-ui)
+  * [Install using the RPM orchestrator](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/install-web-ui)
+
+
+
 ### Orchestrator control plane
 
 The RPM orchestrator deployment option uses a centralized cluster manager to automate cluster-wide operations, including bootstrapping and failover.
 
 ### Management interfaces
 
-The RPM orchestrator deployment option provides both a command-line utility (`alloydbctl`) and Ansible roles for managing one or more clusters at scale.
+The RPM orchestrator deployment option provides a command-line utility (`alloydbctl`) and Ansible roles to let you manage one or more clusters at scale.
 
 ### Performance optimization
 
@@ -215,12 +232,18 @@ The RPM orchestrator deployment option includes integrated support for PgBouncer
 
   * [Choose an AlloyDB Omni deployment option](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment).
 
-  * Get started with the following AlloyDB Omni deployment choices:
+  * Get started with the following AlloyDB Omni deployment options:
 
     * [AlloyDB Omni using containers](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/overview)
     * [AlloyDB Omni using the container orchestrator](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/overview)
     * [AlloyDB Omni using RPM](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/overview)
     * [AlloyDB Omni using the RPM orchestrator](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/overview)
+  * Learn how to install and connect to the web UI:
+
+    * [Install using containers](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/install-web-ui)
+    * [Install using the container orchestrator](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/install-web-ui)
+    * [Install using RPM](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/install-web-ui)
+    * [Install using the RPM orchestrator](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/install-web-ui)
   * [Manage AlloyDB Omni subscriptions in the Google Cloud console](https://console.cloud.google.com/alloydb/omni/subscriptions).
 
 
@@ -230,6 +253,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

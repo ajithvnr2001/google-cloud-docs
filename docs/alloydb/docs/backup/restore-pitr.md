@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/backup/restore-pitr/
 title: Use point-in-time recovery (PITR) \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:38.304999+00:00
+fetched_at: 2026-10-22T09:44:15.628032+00:00
 ---
 
 # Use point-in-time recovery (PITR)  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

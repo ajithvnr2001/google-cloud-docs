@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/intra-project-traffic/
 title: Create intra-project network policies \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:59:27.462016+00:00
+fetched_at: 2026-10-22T10:30:44.137725+00:00
 ---
 
 # Create intra-project network policies  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -42,17 +42,19 @@ To configure intra-project traffic network policies, you must have the following
 
 ## Create an intra-project policy
 
-For traffic within a project, GDC applies a predefined project network policy, the intra-project policy, to each project by default. By default, workloads in a project namespace have the ability to communicate with each other without exposing anything to external resources.
+For traffic within a project, GDC applies a predefined project network policy, the default intra-project policy, to each project. By default, workloads in a project namespace have the ability to communicate with each other without exposing anything to external resources.
 
-By default, there is no egress policy, so outbound traffic is allowed for all intra-project traffic. However, when you set a single egress policy, only the traffic that the policy specifies is allowed.
+By default, there is no egress policy, so outbound traffic is allowed for all intra-project traffic. However, after you apply an egress policy, the workloads that it selects can send only the traffic that your egress policies allow. To keep connectivity to other workloads and services in the same project, create an egress intra-project policy before you apply the egress policy. If data exfiltration protection is still enabled, create the egress intra-project policy before data exfiltration protection is disabled, because existing egress policies take effect at that point. For more information, see [Default intra-project policy](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/pnp-overview#default-intra-project-policy).
 
 **Note:** The policies defined in this section apply to both shared and standard clusters.
 
 ### Create an ingress intra-project policy
 
-When you create a project, you implicitly create a default base `ProjectNetworkPolicy` resource that allows intra-project communication. This policy allows inbound traffic from other workloads in the same project.
+When you create a project, GDC automatically creates a default `ProjectNetworkPolicy` resource named `base-policy-allow-intra-project-traffic` in the project namespace. This `Ingress` policy selects all user workloads in the project and allows inbound traffic to them from other workloads in the same project. GDC creates this policy only once and doesn't restore it if you change or delete it.
 
-You can remove the default policy, but be aware that this removal results in denying intra-project communication for all services and workloads within the project. To remove the policy, use the `kubectl delete` command:
+**Caution:** Deleting the default policy denies all inbound traffic between workloads in the project, in every zone, unless another ingress policy allows it. Before you delete the default policy, apply any replacement ingress policies and verify that they're ready. To add the default policy back, apply the manifest in this section.
+
+To remove the default policy, use the `kubectl delete` command:
     
     
     kubectl --kubeconfig GLOBAL_API_SERVER delete pnp base-policy-allow-intra-project-traffic -n PROJECT
@@ -77,6 +79,8 @@ You can add the default policy back by applying the following manifest:
               - PROJECT
     EOF
     
+
+The manifest omits `spec.subject`, so the policy applies to all user workloads in the project, like the original default policy.
 
 Replace the following:
 
@@ -124,16 +128,11 @@ Workload-level network policies offer granular control over communication betwee
 
 ### Create an ingress workload-level intra-project policy
 
-When you create a project, you implicitly create a default base `ProjectNetworkPolicy` resource that allows intra-project communication between all workloads. This policy allows inbound traffic from other workloads in the same project.
+When you create a project, GDC automatically creates a default `ProjectNetworkPolicy` resource named `base-policy-allow-intra-project-traffic` that allows inbound traffic between all workloads in the project.
 
-To create an ingress workload-level intra-project policy, the default base policy must first be deleted. Otherwise, unexpected behavior may occur.
+A workload-level intra-project policy restricts traffic only after you delete the default base policy. To avoid an interruption, create the policy and verify that it's ready, and then delete the default base policy:
 
-  1. To delete the default base policy, run the following command:
-         
-         kubectl --kubeconfig GLOBAL_API_SERVER delete pnp base-policy-allow-intra-project-traffic -n PROJECT
-         
-
-  2. To create an ingress workload-level intra-project policy, create and apply the following custom resource:
+  1. To create an ingress workload-level intra-project policy, create and apply the following custom resource:
          
          kubectl --kubeconfig GLOBAL_API_SERVER apply -f - <<EOF
          apiVersion: networking.global.gdc.goog/v1
@@ -176,6 +175,11 @@ Replace the following:
 
 To verify the policy is ready, see Verify policy readiness.
 
+  2. After the policy is ready, delete the default base policy so that the policy takes effect:
+         
+         kubectl --kubeconfig GLOBAL_API_SERVER delete pnp base-policy-allow-intra-project-traffic -n PROJECT
+         
+
 
 
 
@@ -195,7 +199,7 @@ To verify the policy is ready, see Verify policy readiness.
             subjectType: UserWorkload
             userWorkloadSelector:
               labelSelector:
-                workloads
+                workloads:
                   matchLabels:
                     SUBJECT_LABEL_KEY: SUBJECT_LABEL_VALUE
           egress:
@@ -233,16 +237,11 @@ Workload-level network policies can enforce PNP along a single zone. Specific la
 
 ### Create a single zone ingress workload-level intra-project policy
 
-When you create a project, you implicitly create a default base `ProjectNetworkPolicy` resource that allows intra-project communication between all workloads. This policy allows inbound traffic from other workloads in the same project.
+When you create a project, GDC automatically creates a default `ProjectNetworkPolicy` resource named `base-policy-allow-intra-project-traffic` that allows inbound traffic between all workloads in the project.
 
-To create a single zone ingress workload-level intra-project policy, the default base policy must first be deleted. Otherwise, unexpected behavior may occur.
+A single zone workload-level intra-project policy restricts traffic only after you delete the default base policy. To avoid an interruption, create the policy and verify that it's ready, and then delete the default base policy:
 
-  1. To delete the default base policy, run the following command:
-         
-         kubectl --kubeconfig GLOBAL_API_SERVER delete pnp base-policy-allow-intra-project-traffic -n PROJECT
-         
-
-  2. To create a single zone ingress workload-level intra-project traffic network policy, create and apply the following custom resource:
+  1. To create a single zone ingress workload-level intra-project traffic network policy, create and apply the following custom resource:
          
          kubectl --kubeconfig GLOBAL_API_SERVER apply -f - <<EOF
          apiVersion: networking.global.gdc.goog/v1
@@ -292,6 +291,11 @@ Replace the following:
 **Warning:** When referencing VM labels in the `workloadSelector` or `workloads` fields, you must prepend the prefix `user-label.gpc.gke.io/` to the label key. For example, if you assign the label `app: backend` to a VM, you must specify it as `user-label.gpc.gke.io/app: backend` to successfully match the workload. This prefix is specific to VMs and does not apply to any other workloads.
 
 To verify the policy is ready, see Verify policy readiness.
+
+  2. After the policy is ready, delete the default base policy so that the policy takes effect:
+         
+         kubectl --kubeconfig GLOBAL_API_SERVER delete pnp base-policy-allow-intra-project-traffic -n PROJECT
+         
 
 
 
@@ -358,42 +362,11 @@ Standard Clusters are project-scoped Kubernetes clusters that provide greater co
 
 ### Create an ingress intra-project policy for standard clusters
 
-When you create a project, you implicitly create a default base `ProjectNetworkPolicy` resource that allows intra-project communication between all workloads. This policy allows inbound traffic from other workloads in the same project and also allows intra-cluster communication between all workloads in the standard clusters within the project.
+When you create a project, GDC automatically creates a default `ProjectNetworkPolicy` resource named `base-policy-allow-intra-project-traffic` that allows inbound traffic between all workloads in the project, including intra-cluster communication between all workloads in the standard clusters within the project.
 
-To create an ingress intra-project policy for standard clusters, the default base policy must first be deleted. Otherwise, unexpected behavior may occur.
+An ingress intra-project policy for standard clusters restricts traffic only after you delete the default base policy. To avoid an interruption, create the policies in the following steps and verify that they're ready, and then delete the default base policy:
 
-  1. To delete the default base policy, run the following command:
-         
-         kubectl --kubeconfig GLOBAL_API_SERVER delete pnp base-policy-allow-intra-project-traffic -n PROJECT
-         
-
-You can add the default policy back by applying the following manifest:
-         
-         kubectl --kubeconfig GLOBAL_API_SERVER apply -f - <<EOF
-         apiVersion: networking.global.gdc.goog/v1
-         kind: ProjectNetworkPolicy
-         metadata:
-           namespace: PROJECT
-           name: base-policy-allow-intra-project-traffic
-         spec:
-           policyType: Ingress
-           ingress:
-           - from:
-             - projectSelector:
-                 projects:
-                   matchNames:
-                   - PROJECT
-         EOF
-         
-
-Replace the following:
-
-     * `GLOBAL_API_SERVER`: the global API server's kubeconfig path. For more information, see [Global and zonal API servers](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/multi-zone/api-servers). If you have not yet generated a kubeconfig file for the API server, see [Sign in](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/sign-in#cli) for details.
-     * `PROJECT`: the name of your project.
-
-To verify the policy is ready, see Verify policy readiness.
-
-  2. To create an ingress intra-cluster pod-to-pod policy in standard clusters, create and apply the following custom resource
+  1. To create an ingress intra-cluster pod-to-pod policy in standard clusters, create and apply the following custom resource
          
          kubectl --kubeconfig GLOBAL_API_SERVER apply -f - <<EOF
          apiVersion: networking.global.gdc.goog/v1
@@ -451,7 +424,7 @@ Replace the following:
 
 To verify the policy is ready, see Verify policy readiness.
 
-  3. Controlling traffic between pods and specific cluster nodes using the `ipBlocks` field is a [Preview](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/feature-stages#preview) feature. For details and scale considerations, see [Target cluster nodes using IP blocks](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/pnp-overview#node-selection-considerations). To create an ingress intra-cluster node-to-pod policy in standard clusters, create and apply the following custom resource:
+  2. Controlling traffic between pods and specific cluster nodes using the `ipBlocks` field is a [Preview](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/feature-stages#preview) feature. For details and scale considerations, see [Target cluster nodes using IP blocks](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/pnp-overview#node-selection-considerations). To create an ingress intra-cluster node-to-pod policy in standard clusters, create and apply the following custom resource:
          
          kubectl --kubeconfig GLOBAL_API_SERVER apply -f - <<EOF
          apiVersion: networking.global.gdc.goog/v1
@@ -497,8 +470,44 @@ Replace the following:
 
 To verify the policy is ready, see Verify policy readiness.
 
+  3. After the policies are ready, delete the default base policy so that they take effect:
+         
+         kubectl --kubeconfig GLOBAL_API_SERVER delete pnp base-policy-allow-intra-project-traffic -n PROJECT
+         
 
 
+
+
+#### Restore the default policy
+
+If your new policies cause issues with your services, you can restore the default policy while you investigate and develop your solution. To restore the default policy, apply the following manifest:
+    
+    
+    kubectl --kubeconfig GLOBAL_API_SERVER apply -f - <<EOF
+    apiVersion: networking.global.gdc.goog/v1
+    kind: ProjectNetworkPolicy
+    metadata:
+      namespace: PROJECT
+      name: base-policy-allow-intra-project-traffic
+    spec:
+      policyType: Ingress
+      ingress:
+      - from:
+        - projectSelector:
+            projects:
+              matchNames:
+              - PROJECT
+    EOF
+    
+
+Replace the following:
+
+  * `GLOBAL_API_SERVER`: the global API server's kubeconfig path. For more information, see [Global and zonal API servers](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/multi-zone/api-servers). If you have not yet generated a kubeconfig file for the API server, see [Sign in](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/sign-in#cli) for details.
+  * `PROJECT`: the name of your project.
+
+
+
+To verify the policy is ready, see Verify policy readiness.
 
 ### Create an egress intra-project policy for standard clusters
 
@@ -639,6 +648,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

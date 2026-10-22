@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/columnar-engine/about/
 title: About the AlloyDB columnar engine \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:25.721444+00:00
+fetched_at: 2026-10-22T09:27:01.877658+00:00
 ---
 
 # About the AlloyDB columnar engine  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

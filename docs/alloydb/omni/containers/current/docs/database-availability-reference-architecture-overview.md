@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/current/docs/database-availability-reference-architecture-overview/
 title: AlloyDB Omni availability reference architecture overview \u00a0|\u00a0 AlloyDB Omni using containers: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:49:31.191469+00:00
+fetched_at: 2026-10-22T09:51:21.639932+00:00
 ---
 
 # AlloyDB Omni availability reference architecture overview  |  AlloyDB Omni using containers: Current (18.4.0)  |  Google Cloud Documentation

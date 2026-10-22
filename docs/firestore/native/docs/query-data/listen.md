@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/query-data/listen/
 title: Get real-time updates \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:58:42.880942+00:00
+fetched_at: 2026-10-22T08:50:57.460124+00:00
 ---
 
 # Get real-time updates  |  Firestore in Native mode  |  Google Cloud Documentation
@@ -107,7 +107,7 @@ Android
         }
     }
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L525-L537)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L525-L537)
 
 ##### Java  
 Android
@@ -131,7 +131,7 @@ Android
         }
     });
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L681-L697)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L681-L697)
 
 ### Dart
     
@@ -230,7 +230,7 @@ Often, you want your UI to react to changes in the contents of a Firestore docum
     # Watch the document
     doc_watch = doc_ref.on_snapshot(on_snapshot)
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L676-L689)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L676-L689)
 
 ##### C++
     
@@ -311,7 +311,7 @@ Often, you want your UI to react to changes in the contents of a Firestore docum
     }
     
     
-    [listen_document.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/listen_document.go#L18-L61)
+    [listen_document.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/listen_document.go#L18-L61)
 
 ##### PHP
     
@@ -350,7 +350,7 @@ Often, you want your UI to react to changes in the contents of a Firestore docum
         }
     });
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/ListenData/Program.cs#L40-L54)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/ListenData/Program.cs#L40-L54)
 
 ##### Ruby
     
@@ -364,7 +364,7 @@ Often, you want your UI to react to changes in the contents of a Firestore docum
       snapshots << snapshot
     end
     
-    [query_watch.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_watch.rb#L24-L31)
+    [query_watch.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_watch.rb#L24-L31)
 
 ### Events for local changes
 
@@ -455,7 +455,7 @@ Android
         }
     }
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L543-L561)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L543-L561)
 
 ##### Java  
 Android
@@ -482,7 +482,7 @@ Android
         }
     });
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L703-L722)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L703-L722)
 
 ### Dart
     
@@ -660,7 +660,7 @@ Android
         // ...
     }
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L567-L571)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L567-L571)
 
 ##### Java  
 Android
@@ -676,7 +676,7 @@ Android
         }
     });
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L728-L736)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L728-L736)
 
 ### Dart
     
@@ -975,7 +975,7 @@ Android
             Log.d(TAG, "Current cites in CA: $cities")
         }
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L625-L640)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L625-L640)
 
 ##### Java  
 Android
@@ -1002,7 +1002,7 @@ Android
                 }
             });
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L802-L821)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L802-L821)
 
 ### Dart
     
@@ -1068,7 +1068,7 @@ Android
     query_watch = col_query.on_snapshot(on_snapshot)
     
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L712-L728)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L712-L728)
 
 ##### C++
     
@@ -1158,7 +1158,7 @@ Android
     }
     
     
-    [listen_multiple.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/listen_multiple.go#L18-L67)
+    [listen_multiple.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/listen_multiple.go#L18-L67)
 
 ##### PHP
     
@@ -1194,7 +1194,7 @@ Android
         }
     });
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/ListenData/Program.cs#L81-L92)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/ListenData/Program.cs#L81-L92)
 
 ##### Ruby
     
@@ -1212,7 +1212,7 @@ Android
       end
     end
     
-    [query_watch.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_watch.rb#L146-L157)
+    [query_watch.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_watch.rb#L146-L157)
 
 The snapshot handler will receive a new query snapshot every time the query results change (that is, when a document is added, removed, or modified).
 
@@ -1339,7 +1339,7 @@ Android
             }
         }
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L646-L661)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L646-L661)
 
 ##### Java  
 Android
@@ -1373,7 +1373,7 @@ Android
                 }
             });
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L827-L853)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L827-L853)
 
 ### Dart
     
@@ -1490,7 +1490,7 @@ Android
     query_watch = col_query.on_snapshot(on_snapshot)
     
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L747-L768)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L747-L768)
 
 ##### Node.js
     
@@ -1564,7 +1564,7 @@ Android
     }
     
     
-    [listen_changes.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/listen_changes.go#L18-L65)
+    [listen_changes.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/listen_changes.go#L18-L65)
 
 ##### PHP
     
@@ -1620,7 +1620,7 @@ Android
         }
     });
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/ListenData/Program.cs#L118-L138)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/ListenData/Program.cs#L118-L138)
 
 ##### Ruby
     
@@ -1648,7 +1648,7 @@ Android
       end
     end
     
-    [query_watch.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_watch.rb#L59-L80)
+    [query_watch.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_watch.rb#L59-L80)
 
 **Important:** The first query snapshot contains `added` events for all existing documents that match the query. This is because you're getting a set of changes that bring your query snapshot current with the initial state of the query. This allows you, for instance, to directly populate your UI from the changes you receive in the first query snapshot, without needing to add special logic for handling the initial state.
 
@@ -1740,7 +1740,7 @@ Android
     // Stop listening to changes
     registration.remove()
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L690-L698)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L690-L698)
 
 ##### Java  
 Android
@@ -1757,7 +1757,7 @@ Android
     // Stop listening to changes
     registration.remove();
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L887-L902)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L887-L902)
 
 ### Dart
     
@@ -1793,7 +1793,7 @@ Android
     # Terminate watch on a document
     doc_watch.unsubscribe()
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L704-L705)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L704-L705)
 
 ##### C++
     
@@ -1827,7 +1827,7 @@ Android
     ctx, cancel := context.WithTimeout(ctx, 30*time.Second)
     defer cancel()
     
-    [listen_document.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/listen_document.go#L33-L35)
+    [listen_document.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/listen_document.go#L33-L35)
 
 ##### PHP
     
@@ -1844,14 +1844,14 @@ Android
     
     await listener.StopAsync();
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/ListenData/Program.cs#L73-L73)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/ListenData/Program.cs#L73-L73)
 
 ##### Ruby
     
     
     listener.stop
     
-    [query_watch.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_watch.rb#L49-L49)
+    [query_watch.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_watch.rb#L49-L49)
 
 ## Handle listen errors
 
@@ -1933,7 +1933,7 @@ Android
             }
         }
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L704-L716)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L704-L716)
 
 ##### Java  
 Android
@@ -1958,7 +1958,7 @@ Android
                 }
             });
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L908-L925)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L908-L925)
 
 ### Dart
     
@@ -2065,7 +2065,7 @@ Android
     }
     
     
-    [listen_errors.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/d82de36e538a4cb88a7524e135753522415591d6/firestore/listen_errors.go#L18-L61)
+    [listen_errors.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/listen_errors.go#L18-L61)
 
 ##### PHP
     
@@ -2113,7 +2113,7 @@ Android
       puts "Listen failed: #{error.message}"
     end
     
-    [query_watch.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_watch.rb#L125-L134)
+    [query_watch.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_watch.rb#L125-L134)
 
 ## Pricing
 
@@ -2136,6 +2136,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-19 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

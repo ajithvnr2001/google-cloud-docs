@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/custom-quotas/
 title: Create custom query quotas \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T18:22:44.830112+00:00
+fetched_at: 2026-10-22T09:49:24.099203+00:00
 ---
 
 # Create custom query quotas  |  BigQuery  |  Google Cloud Documentation
@@ -85,24 +85,14 @@ For more information about viewing and managing quotas, see [View and manage quo
 
 ## Returned error messages
 
-After you set a custom quota, BigQuery returns an error when you exceed it:
+After you set a custom quota, BigQuery returns a [`quotaExceeded`](https://docs.cloud.google.com/bigquery/docs/error-messages#errortable) error when you exceed it. The message names the quota that you exceeded: `QueryUsagePerDay` for a project-level custom quota, or `QueryUsagePerUserPerDay` for a user-level custom quota:
 
-  * If you exceed a project-level custom quota, BigQuery returns the [`usageQuotaExceeded`](https://docs.cloud.google.com/bigquery/troubleshooting-errors#quotaExceeded) error:
-        
-        Custom quota exceeded: Your usage exceeded the custom quota for
-        QueryUsagePerDay, which is set by your administrator. For more information,
-        see https://cloud.google.com/bigquery/cost-controls
-
-  * If the user exceeds a user-level custom quota, BigQuery returns a [`usageQuotaExceeded`](https://docs.cloud.google.com/bigquery/troubleshooting-errors#quotaExceeded) error with a different error message:
-        
-        Custom quota exceeded: Your usage exceeded the custom quota for
-        QueryUsagePerUserPerDay, which is set by your administrator. For more
-        information, see https://cloud.google.com/bigquery/cost-controls
+  * `Custom quota exceeded: Your usage exceeded the custom quota for QueryUsagePerDay, which is set by your administrator.`
+  * `Custom quota exceeded: Your usage exceeded the custom quota for QueryUsagePerUserPerDay, which is set by your administrator.`
 
 
 
-
-You can run your query from another project that has access to your datasets and that doesn't have a custom quota or hasn't yet exceeded it.
+To diagnose and resolve these errors, see [Troubleshoot custom daily query quota errors](https://docs.cloud.google.com/bigquery/docs/troubleshoot-quotas#ts-custom-daily-query-quota).
 
 ## Example
 
@@ -145,6 +135,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

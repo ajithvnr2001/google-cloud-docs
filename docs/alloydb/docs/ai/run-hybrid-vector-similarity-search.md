@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/run-hybrid-vector-similarity-search/
 title: Run a hybrid vector similarity search \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:56.365130+00:00
+fetched_at: 2026-10-22T09:26:00.546047+00:00
 ---
 
 # Run a hybrid vector similarity search  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/configure-self-managed-psql/
 title: Configure a self-managed PostgreSQL database for CDC \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:36.191795+00:00
+fetched_at: 2026-10-22T08:25:32.567358+00:00
 ---
 
 # Configure a self-managed PostgreSQL database for CDC  |  Datastream  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/use-index-advisor-with-query-insights/
 title: Use the AlloyDB for PostgreSQL index advisor with query insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:00.764807+00:00
+fetched_at: 2026-10-22T09:31:35.385810+00:00
 ---
 
 # Use the AlloyDB for PostgreSQL index advisor with query insights  |  Google Cloud Documentation

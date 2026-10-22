@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tabular-data/classification-regression/logging/
 title: View model architecture \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:46.554975+00:00
+fetched_at: 2026-10-22T10:22:36.886365+00:00
 ---
 
 # View model architecture  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

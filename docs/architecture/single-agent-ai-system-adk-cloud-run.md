@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/single-agent-ai-system-adk-cloud-run/
 title: Single-agent AI system using ADK and Cloud Run \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:33:20.512231+00:00
+fetched_at: 2026-10-22T10:41:10.893594+00:00
 ---
 
 # Single-agent AI system using ADK and Cloud Run  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -52,7 +52,7 @@ AI model and model runtime
 MCP Toolbox
     [MCP Toolbox for Databases](https://mcp-toolbox.dev/) provides database-specific tools for the agent. It can handle complexities such as connection pooling and authentication.
 MCP clients, servers, and tools
-    [MCP](https://modelcontextprotocol.io/docs/getting-started/intro) facilitates access to tools by standardizing the interaction between agents and tools. For each agent-tool pair, an MCP client sends requests to an MCP server through which the agent accesses a tool such as a file system or an API. For example, external tools like the StackOverflow LangChain Tool and the Google Search tool can provide data and grounding.
+    [MCP](https://modelcontextprotocol.io/docs/getting-started/intro) facilitates access to tools by standardizing the interaction between agents and tools. For each agent-tool pair, an MCP client sends requests to an MCP server through which the agent accesses a tool such as a file system or an API. For example, external tools and the Google Search tool can provide data and grounding.
 Observability
     The agent is monitored by using Google Cloud Observability for logging, monitoring, and tracing.
 
@@ -102,7 +102,7 @@ For this use case, the architecture provides the following benefits:
 
 
 
-This architecture is ideal for any organization that develops software and that wants to improve the efficiency and effectiveness of its bug resolution process. For more information and deployment options, see [Software Bug Assistant - ADK Python Sample Agent](https://github.com/google/adk-samples/tree/main/python/agents/software-bug-assistant) and [Tools Make an Agent: From Zero to Assistant with ADK](https://cloud.google.com/blog/topics/developers-practitioners/tools-make-an-agent-from-zero-to-assistant-with-adk).
+This architecture is ideal for any organization that develops software and that wants to improve the efficiency and effectiveness of its bug resolution process. For information about how to configure tools for this use case, see [Custom tools for ADK](https://adk.dev/tools-custom/) and [ADK tools and integrations](https://adk.dev/integrations/).
 
 ### Customer service
 
@@ -119,7 +119,7 @@ For this use case, the architecture provides the following benefits:
 
 
 
-This architecture is ideal for any retail organization that wants to improve their customer experience, increase sales, and simplify their order management and scheduling. For more information and deployment options, see [Cymbal Home & Garden Customer Service Agent](https://github.com/google/adk-samples/tree/main/python/agents/customer-service).
+This architecture is ideal for any retail organization that wants to improve their customer experience, increase sales, and simplify their order management and scheduling. For more information and deployment options, see [Retail Product Search Agent](https://github.com/google/adk-recipes/tree/main/contrib/python/retail-product-search).
 
 ### Time-series forecasting
 
@@ -133,7 +133,7 @@ This use case can benefit organizations in many scenarios, such as the following
 
 
 
-This architecture is ideal for any organization that needs to adapt to changing patterns based on established trends. It's also ideal for organizations whose customers can benefit from proactive insights that help them plan for the future. For more information and deployment options, see [Time Series Forecasting Agent with Google's ADK and MCP Toolbox](https://github.com/google/adk-samples/tree/main/java/agents/time-series-forecasting).
+This architecture is ideal for any organization that needs to adapt to changing patterns based on established trends. It's also ideal for organizations whose customers can benefit from proactive insights that help them plan for the future. For more information, see [Forecast time series with TimesFM](https://github.com/google/adk-recipes/tree/main/contrib/java/time-series-forecasting) and [MCP Toolbox for Databases](https://mcp-toolbox.dev/).
 
 ### Document retrieval
 
@@ -141,7 +141,7 @@ You can adapt this reference architecture to use [RAG Engine on Gemini Enterpris
 
 With a document-retrieval agent, you can help ensure that customers and internal users get informed and context-aware responses to their queries. This implementation can help reduce mistakes and inaccuracies by helping to ensure that answers are based on the information that you validated.
 
-A document-retrieval architecture is ideal for knowledge bases about policy and process, technical infrastructure, product capabilities, and other fact-based documentation. For information about how to develop a retrieval-augmented generation (RAG)-powered document retrieval agent, see [Documentation Retrieval Agent](https://github.com/google/adk-samples/tree/main/python/agents/RAG).
+A document-retrieval architecture is ideal for knowledge bases about policy and process, technical infrastructure, product capabilities, and other fact-based documentation. For information about how to develop a retrieval-augmented generation (RAG)-powered document retrieval agent, see [RAG with Agent Platform Search](https://github.com/google/adk-recipes/tree/main/core/python/rag-agent-search) and [RAG with Vector Search](https://github.com/google/adk-recipes/tree/main/core/python/rag-vector-search).
 
 ## Design alternatives
 
@@ -220,7 +220,7 @@ This section describes design considerations and recommendations to design a top
 
 #### Security considerations for agents
 
-AI agents introduce certain unique and critical security risks that conventional, deterministic security practices might not be able to mitigate adequately. Google recommends an [approach](https://research.google/pubs/an-introduction-to-googles-approach-for-secure-ai-agents/) that combines the strengths of deterministic security controls with dynamic, reasoning-based defenses. This approach is grounded in three core principles: human oversight, carefully defined agent autonomy, and observability. The following are specific recommendations that are aligned with these core principles.
+AI agents introduce certain unique and critical security risks that conventional, deterministic security practices might not be able to mitigate adequately. Google recommends an [approach for securing AI](https://cloud.google.com/security/securing-ai) that combines the strengths of deterministic security controls with dynamic, reasoning-based defenses. This approach is grounded in three core principles: human oversight, carefully defined agent autonomy, and observability. The following are specific recommendations that are aligned with these core principles.
 
   * **Human oversight** : An agentic AI system might sometimes fail or not perform as expected. For example, the model might generate inaccurate content or an agent might select inappropriate tools. In business-critical agentic AI systems, incorporate a human-in-the-loop flow to let human supervisors monitor, override, and pause agents. For example, human users can review the output of agents, approve or reject the outputs, and provide further guidance to correct errors or to make strategic decisions. This approach combines the efficiency of agentic AI systems with the critical thinking and domain expertise of human users.
   * **Agent identity and least-privilege access** : 
@@ -253,7 +253,7 @@ To help ensure that your Agent Platform configurations and usage meet your secur
     * To enhance safety and mitigate potential misuse of the agentic AI system, you can configure content filters to act as barriers to harmful inputs and responses. For more information, see [Safety and content filters](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/configure-safety-filters).
     * To inspect and sanitize inference requests, agent prompts, tool calls, and responses for threats like prompt injection and harmful content, you can use [Model Armor](https://docs.cloud.google.com/model-armor/overview) for direct model API calls _and_ for requests that are routed through [Agent Gateway](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/configure-model-armor). Model Armor helps you prevent malicious input, verify content safety, protect sensitive data, maintain compliance, and enforce safety and security policies consistently.
   * **Model access** : You can set up organization policies to limit the type and versions of AI models that can be used in a Google Cloud project. For more information, see [Control access to Model Garden models](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/control-model-access).
-  * **Data protection** : To discover and de-identify sensitive data in the prompts and responses and in log data, use the [Cloud Data Loss Prevention API](https://docs.cloud.google.com/sensitive-data-protection/docs/apis). For more information, see this video: [Protecting sensitive data in AI apps](https://www.youtube.com/watch?v=ct1nuLS-wlA).
+  * **Data protection** : To discover and de-identify sensitive data in the prompts and responses and in log data, use the [Cloud Data Loss Prevention API](https://docs.cloud.google.com/sensitive-data-protection/docs/apis). For more information, see [De-identifying sensitive data](https://docs.cloud.google.com/sensitive-data-protection/docs/deidentify-sensitive-data).
 
 
 
@@ -312,12 +312,7 @@ To help ensure that your architecture meets your security requirements, consider
 
 
 
-#### More security recommendations
-
-  * [Well-Architected Framework AI and ML perspective: Security](https://docs.cloud.google.com/architecture/framework/perspectives/ai-ml/security)
-  * [Google's Approach for Secure AI Agents: An Introduction](https://storage.googleapis.com/gweb-research2023-media/pubtools/1018686.pdf)
-
-
+For security principles and recommendations that are specific to AI and ML workloads, see [AI and ML perspective: Security](https://docs.cloud.google.com/architecture/framework/perspectives/ai-ml/security) in the Well-Architected Framework. 
 
 ### Reliability
 
@@ -419,7 +414,7 @@ To help ensure that your Agent Platform configurations and usage meet your cost 
 
 To help ensure that your Cloud Run implementation meets your cost requirements, consider the following recommendations:
 
-  * **Resource allocation** : When you create a Cloud Run service, you can specify the amount of memory and CPU to be allocated. Start with the default CPU and memory allocations. Observe the resource usage and cost over time, and adjust the allocation as necessary. For more information, see [Configure memory limits for services](https://docs.cloud.google.com/run/docs/configuring/services/memory-limits) and [Configure CPU limits for services](https://docs.cloud.google.com/run/docs/configuring/services/cpu)
+  * **Resource allocation** : When you create a Cloud Run service, you can specify the amount of memory and CPU to be allocated. Start with the default CPU and memory allocations. Observe the resource usage and cost over time, and adjust the allocation as necessary. For more information, see [Configure memory limits for services](https://docs.cloud.google.com/run/docs/configuring/services/memory-limits) and [Configure CPU limits for services](https://docs.cloud.google.com/run/docs/configuring/services/cpu).
   * **Rate optimization** : If you can predict the CPU and memory requirements, you can save money with [committed use discounts (CUDs)](https://docs.cloud.google.com/run/cud).
 
 
@@ -457,7 +452,7 @@ To help ensure that your Agent Platform configurations and usage meet your perfo
 
 #### Cloud Run performance considerations
 
-Depending on your performance requirements, configure the memory and CPU to be allocated to the Cloud Run service. For more information, see [Configure memory limits for services](https://docs.cloud.google.com/run/docs/configuring/services/memory-limits) and [Configure CPU limits for services](https://docs.cloud.google.com/run/docs/configuring/services/cpu)
+Depending on your performance requirements, configure the memory and CPU to be allocated to the Cloud Run service. For more information, see [Configure memory limits for services](https://docs.cloud.google.com/run/docs/configuring/services/memory-limits) and [Configure CPU limits for services](https://docs.cloud.google.com/run/docs/configuring/services/cpu).
 
 For more performance optimization guidance, see [General Cloud Run development tips](https://docs.cloud.google.com/run/docs/tips/general#optimize_performance).
 
@@ -471,8 +466,8 @@ For performance optimization principles and recommendations that are specific to
 
 Automated deployment for this reference architecture isn't available. Use the following code samples to help you build a single-agent architecture:
 
-  * Deploy a similar architecture by deploying the [Software Bug Assistant - ADK Python Sample Agent](https://github.com/google/adk-samples/tree/main/python/agents/software-bug-assistant).
-  * Learn more about memory and state with [Python Tutor - ADK State and Memory Example](https://github.com/GoogleCloudPlatform/devrel-demos/tree/main/ai-ml/python-tutor).
+  * Learn how to implement cross-session memory and state with [Cross-session memory](https://github.com/google/adk-recipes/tree/main/core/python/cross-session-memory).
+  * Learn how to implement runner-wide safety guardrails with [Safety guardrails using plugins](https://github.com/google/adk-recipes/tree/main/core/python/safety-plugins).
 
 
 

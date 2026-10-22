@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/krmapihosting/
 title: KRM API Hosting roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:42:08.491416+00:00
+fetched_at: 2026-10-22T08:31:22.725155+00:00
 ---
 
 # KRM API Hosting roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

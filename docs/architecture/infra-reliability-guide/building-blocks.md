@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/infra-reliability-guide/building-blocks/
 title: Building blocks of reliability in Google Cloud \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:25:40.601142+00:00
+fetched_at: 2026-10-22T10:44:54.258039+00:00
 ---
 
 # Building blocks of reliability in Google Cloud  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -209,7 +209,7 @@ Regional resources are deployed redundantly across multiple zones within a regio
 
   * Regional MIGs
   * Regional Cloud Storage buckets
-  * Hyperdisk Balanced High Availability volumes
+  * Google Cloud Hyperdisk Balanced High Availability volumes
   * Regional GKE clusters with the default (multi-zone) configuration
   * VPC subnets
   * Regional external Application Load Balancers
@@ -250,7 +250,7 @@ Global resources are available across all Google Cloud locations. The following 
 
   * Global external Application Load Balancers
 
-  * Global key rings in Cloud Key Management Service
+  * Global key rings in Cloud KMS
 
   * Pub/Sub topics
 
@@ -310,7 +310,7 @@ Cloud SQL instances | The Cloud SQL deployment in this architecture is configure
 
   
 Multi-region Cloud Storage bucket | Data that's stored in multi-region Cloud Storage buckets is resilient to single-region outages.  
-Hyperdisk volumes | Hyperdisk volumes are zonal resources. For HA, you can use Hyperdisk Balanced High Availability volumes. Data is replicated synchronously across two zones in the same region.To prepare for recovery from region outages, you can schedule snapshots of Hyperdisk volumes and store the snapshots in a multi-region Cloud Storage bucket.  
+Hyperdisk volumes | Hyperdisk volumes are zonal resources. For HA, you can use Hyperdisk Balanced High Availability volumes. Data is replicated synchronously across two zones in the same region. To prepare for recovery from region outages, you can schedule snapshots of Hyperdisk volumes and store the snapshots in a multi-region Cloud Storage bucket.  
 **Note:** For more information about region-specific considerations, see [Geography and regions](https://docs.cloud.google.com/docs/geography-and-regions#regions_and_zones). 
 
 [ Previous arrow_back  Overview of reliability  ](https://docs.cloud.google.com/architecture/infra-reliability-guide)

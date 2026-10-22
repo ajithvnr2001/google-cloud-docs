@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/private-service-connect/
 title: Use dedicated private endpoints based on Private Service Connect for online inference \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:43:13.383185+00:00
+fetched_at: 2026-10-22T10:24:49.418021+00:00
 ---
 
 # Use dedicated private endpoints based on Private Service Connect for online inference  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

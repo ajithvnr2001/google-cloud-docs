@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/blueprints/enterprise-application-blueprint/manage-costs-attributions/
 title: Manage costs and attributions for the developer platform \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:27:26.108815+00:00
+fetched_at: 2026-10-22T09:38:09.593412+00:00
 ---
 
 # Manage costs and attributions for the developer platform  |  Cloud Architecture Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/speech-adaptation/
 title: Speech adaptation \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:25.897080+00:00
+fetched_at: 2026-10-22T08:26:08.032482+00:00
 ---
 
 # Speech adaptation  |  Dialogflow ES  |  Google Cloud Documentation

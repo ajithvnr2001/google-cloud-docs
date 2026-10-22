@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/access-control/
 title: Access control with IAM \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:41.194971+00:00
+fetched_at: 2026-10-22T08:31:42.062452+00:00
 ---
 
 # Access control with IAM  |  Cloud Logging  |  Google Cloud Documentation

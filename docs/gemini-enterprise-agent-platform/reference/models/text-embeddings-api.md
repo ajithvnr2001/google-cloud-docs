@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/text-embeddings-api/
 title: Text embeddings API \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:09.385339+00:00
+fetched_at: 2026-10-22T08:35:08.471228+00:00
 ---
 
 # Text embeddings API  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -65,13 +65,13 @@ For superior embedding quality, `gemini-embedding-001` is our large model design
     REGION = us-central1
     MODEL_ID = MODEL_ID
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
     from vertexai.language_models import TextEmbeddingModel
     
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=PROJECT_ID, location=REGION)
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=PROJECT_ID, location=REGION)
     
     model = TextEmbeddingModel.from_pretrained(MODEL_ID)
-    embeddings = model.[get_embeddings](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.preview.vision_models.MultiModalEmbeddingModel.html#vertexai_preview_vision_models_MultiModalEmbeddingModel_get_embeddings)(...)
+    embeddings = model.[get_embeddings](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.preview.vision_models.MultiModalEmbeddingModel.html#vertexai_preview_vision_models_MultiModalEmbeddingModel_get_embeddings)(...)
 
 ## Parameter list
 

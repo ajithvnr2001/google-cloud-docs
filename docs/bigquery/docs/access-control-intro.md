@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/access-control-intro/
 title: Introduction to security and access controls in BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:15:20.107971+00:00
+fetched_at: 2026-10-22T09:16:53.041289+00:00
 ---
 
 # Introduction to security and access controls in BigQuery  |  Google Cloud Documentation

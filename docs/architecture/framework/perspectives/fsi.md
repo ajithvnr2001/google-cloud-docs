@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/perspectives/fsi/
 title: Well-Architected Framework: Financial services (FS) perspective \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:22.513090+00:00
+fetched_at: 2026-10-22T09:38:05.712445+00:00
 ---
 
 # Well-Architected Framework: Financial services (FS) perspective  |  Cloud Architecture Center  |  Google Cloud Documentation

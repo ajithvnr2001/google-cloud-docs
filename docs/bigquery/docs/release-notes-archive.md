@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/release-notes-archive/
 title: BigQuery release notes archive \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:47:17.664648+00:00
+fetched_at: 2026-10-22T09:18:16.361135+00:00
 ---
 
 # BigQuery release notes archive  |  Google Cloud Documentation

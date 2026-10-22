@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/accelerate-with-ce/
 title: Accelerate vector search with the columnar engine \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:04.194976+00:00
+fetched_at: 2026-10-22T09:27:41.627300+00:00
 ---
 
 # Accelerate vector search with the columnar engine  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tabular-data/data-splits/
 title: Data splits for tabular data \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:45.360833+00:00
+fetched_at: 2026-10-22T10:23:18.680662+00:00
 ---
 
 # Data splits for tabular data  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

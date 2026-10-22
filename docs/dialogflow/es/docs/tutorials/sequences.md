@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/tutorials/sequences/
 title: Build a webhook for iterative confirmation of spoken sequences \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:13.436730+00:00
+fetched_at: 2026-10-22T08:34:00.829948+00:00
 ---
 
 # Build a webhook for iterative confirmation of spoken sequences  |  Dialogflow ES  |  Google Cloud Documentation

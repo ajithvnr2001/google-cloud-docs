@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/intents-manage/
 title: Create and manage intents \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:27.702593+00:00
+fetched_at: 2026-10-22T08:33:17.898955+00:00
 ---
 
 # Create and manage intents  |  Dialogflow ES  |  Google Cloud Documentation

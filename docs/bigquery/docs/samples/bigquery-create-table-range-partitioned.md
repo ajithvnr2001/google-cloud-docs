@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-create-table-range-partitioned/
 title: Create an integer-range partitioned table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:43:42.477333+00:00
+fetched_at: 2026-10-22T09:17:01.222130+00:00
 ---
 
 # Create an integer-range partitioned table  |  BigQuery  |  Google Cloud Documentation
@@ -249,7 +249,7 @@ To authenticate to BigQuery, set up Application Default Credentials. For more in
     # @param dataset_id [String] The ID of the dataset to create the table in.
     # @param table_id   [String] The ID of the table to create.
     def create_range_partitioned_table dataset_id, table_id
-      bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-data_policies-v1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html)
+      bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-data_policies-v1beta1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html)
       dataset = bigquery.dataset dataset_id
     
       table = dataset.create_table table_id do |t|

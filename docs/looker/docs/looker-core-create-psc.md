@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/looker-core-create-psc/
 title: Create a Looker (Google Cloud core) Private Service Connect instance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:09:25.346066+00:00
+fetched_at: 2026-10-22T10:44:44.951322+00:00
 ---
 
 # Create a Looker (Google Cloud core) Private Service Connect instance  |  Google Cloud Documentation
@@ -121,7 +121,6 @@ To add additional service attachments, click **Add Item** to add each service at
 
      * In the **Knowledge Catalog integration** section, you can optionally select the **Opt out of Knowledge Catalog integration** checkbox if you want Looker (Google Cloud core) to disable the [integration with Knowledge Catalog](https://docs.cloud.google.com/looker/docs/looker-core-dataplex). The integration between Looker (Google Cloud core) and Knowledge Catalog is enabled by default.
 
-**Note:** The integration between Looker (Google Cloud core) and Knowledge Catalog is in preview. Pre-GA products and features are available "as is" and might have limited support.
      * Click **Create**.
 
 
@@ -203,7 +202,7 @@ The following flags enable other settings:
 
   * `--accelerated-security-patch-enabled` and `--no-accelerated-security-patch-enabled`: Include one of these flags if your instance is on the `regular` channel and you want to receive or disable security patches bi-weekly. This feature is in [preview](https://cloud.google.com/products#product-launch-stages).
   * `--fips-enabled`: [enable FIPS 140-3 level 1 compliance](https://docs.cloud.google.com/looker/docs/looker-core-fips-mode).
-  * replace the `--catalog-integration-enabled` flag with the `--no-catalog-integration-enabled` flag to disable the [ Looker (Google Cloud core) and Knowledge Catalog integration](https://docs.cloud.google.com/looker/docs/looker-core-dataplex). This feature is in [preview](https://cloud.google.com/products#product-launch-stages).
+  * Replace the `--catalog-integration-enabled` flag with the `--no-catalog-integration-enabled` flag to disable the [ Looker (Google Cloud core) and Knowledge Catalog integration](https://docs.cloud.google.com/looker/docs/looker-core-dataplex).
 
 
 
@@ -610,6 +609,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

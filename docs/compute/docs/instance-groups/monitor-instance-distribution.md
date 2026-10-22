@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution/
 title: Monitor instance distribution in MIGs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T09:52:33.298039+00:00
+fetched_at: 2026-10-22T10:19:50.369112+00:00
 ---
 
 # Monitor instance distribution in MIGs  |  Compute Engine  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback
 
 #  Monitor instance distribution in MIGs Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document describes the benefits, use cases, and procedures for monitoring virtual machine (VM) instance distribution in managed instance groups (MIGs). The procedures include how to view, customize, and query the **GCE MIG Instance Distribution Monitoring** dashboard in Cloud Monitoring.
+This document describes the benefits, use cases, and the dashboard for monitoring virtual machine (VM) instance distribution in managed instance groups (MIGs). It also describes how to view the instance distribution for a specific MIG or across multiple MIGs, as well as how to customize and query the dashboard.
 
-When your MIG uses [location flexibility](https://docs.cloud.google.com/compute/docs/instance-groups/regional-migs) to distribute instances across multiple zones, [instance flexibility](https://docs.cloud.google.com/compute/docs/instance-groups/about-instance-flexibility) to specify multiple compatible machine types, or both, the MIG dynamically selects and provisions instances based on real-time resource availability. To observe this dynamic behavior at runtime across all your MIGs, you can use the **GCE MIG Instance Distribution Monitoring** dashboard. This preconfigured dashboard provides real-time visibility into how your instances are distributed across zones and machine types over time. The dashboard also shows you running (active) and not running (inactive) instances and the total instance count over the period. For example, you can interpret the dashboard metrics to diagnose capacity allocation, zonal balance, and fallback behavior.
+When your MIG uses [location flexibility](https://docs.cloud.google.com/compute/docs/instance-groups/regional-migs) to distribute instances across multiple zones, [instance flexibility](https://docs.cloud.google.com/compute/docs/instance-groups/about-instance-flexibility) to specify multiple compatible machine types, or both, the MIG dynamically selects and provisions instances based on real-time resource availability. To monitor this behavior in real-time, you can use a dashboard to track how your instances are distributed across zones and machine types over time. You can view this data for a single MIG or aggregated across multiple MIGs. The dashboard also shows you both the running (active) and not running (inactive) instances, and the total instance count over the period. You can interpret the dashboard metrics to diagnose capacity allocation, zonal balance, and fallback behavior.
 
 ## Benefits of monitoring instance distribution in MIGs
 
@@ -44,20 +44,22 @@ To learn more about how the monitoring dashboard helps with observability questi
 
 ## Monitor MIG instance distribution
 
-You can monitor the instance distribution in a MIG by using one of the following ways:
+You can monitor the instance distribution in MIGs by using one of the following ways:
 
-  * **Use the Cloud Monitoring dashboard** to view a visual representation of the instance distribution. For more information, see About the monitoring dashboard in this document.
+  * **To view the instance distribution for a specific MIG** , use the **Monitoring** tab on the MIG page. For instructions, see View instance distribution for a specific MIG.
 
-  * **Query the underlying metrics programmatically** by using PromQL as a code-based alternative that lets you integrate the instance distribution data into your custom observability dashboards or external monitoring tools, such as Grafana. For more information, see Programmatically query using PromQL in this document.
+  * **To view the instance distribution across multiple MIGs** , use the Cloud Monitoring dashboard for an aggregated view. For instructions, see View instance distribution across multiple MIGs.
+
+  * **To integrate instance distribution data into custom dashboards** , query the underlying metrics programmatically by using PromQL. This code-based alternative lets you export data to external monitoring tools, such as Grafana. For instructions, see Programmatically query using PromQL.
 
 
 
 
-## About the monitoring dashboard
+## About the instance distribution dashboard
 
-Cloud Monitoring provides preconfigured dashboards under the **Google Services** category. For MIGs, the **GCE MIG Instance Distribution Monitoring** dashboard provides the following four specialized charts:
+**Important:** The MIG instance distribution monitoring dashboard is intended for observability, not for troubleshooting. To identify the underlying causes of creation failures or capacity constraints, instead see [Troubleshooting resource availability errors](https://docs.cloud.google.com/compute/docs/troubleshooting/troubleshooting-resource-availability).
 
-**Important:** The **GCE MIG Instance Distribution Monitoring** dashboard is intended for observability, not for troubleshooting. To identify the underlying causes of creation failures or capacity constraints, instead see [Troubleshooting resource availability errors](https://docs.cloud.google.com/compute/docs/troubleshooting/troubleshooting-resource-availability).
+The MIG instance distribution monitoring dashboard provides the following four specialized charts:
 
   * **Instance distribution by zone** : A chart displaying instance count grouped by zone, showing location flexibility and zonal distribution across your regions.
 
@@ -70,15 +72,20 @@ Cloud Monitoring provides preconfigured dashboards under the **Google Services**
 
 
 
-By default, the dashboard aggregates data across all MIGs in your project. To view a single MIG, you can filter by MIGs (`instance_group`). If your project contains identically named MIGs in multiple locations, then apply a region (`region`) or zone (`zone`) filter to target a specific MIG.
+These charts rely on standard Compute Engine system metadata labels and metrics, such as `compute.googleapis.com/instance/cpu/utilization` and `metadata.system_labels.machine_type`. Cloud Monitoring automatically collects these system metrics and metadata labels for all Compute Engine instances. You don't need to install the Ops Agent or configure custom guest telemetry inside your instances to view these charts on the dashboard.
 
-**Note:** The **GCE MIG Instance Distribution Monitoring** dashboard is designed specifically for MIGs. You cannot use this dashboard to monitor location or instance flexibility of independent instances created using the [`bulkInsert` method](https://docs.cloud.google.com/compute/docs/instances/multiple/about-bulk-creation).
+**Note:** The **GCE MIG Instance Distribution Monitoring** dashboard in Cloud Monitoring is designed specifically for MIGs. You cannot use this dashboard to monitor location or instance flexibility of independent instances created using the [`bulkInsert` method](https://docs.cloud.google.com/compute/docs/instances/multiple/about-bulk-creation).
 
-The charts in the **GCE MIG Instance Distribution Monitoring** dashboard rely on standard Compute Engine system metadata labels and metrics, such as `compute.googleapis.com/instance/cpu/utilization` and `metadata.system_labels.machine_type`. These system metrics and metadata labels are automatically collected by Cloud Monitoring for all Compute Engine instances. You don't need to install the Ops Agent or configure custom guest telemetry inside your instances to view the instance distribution, zone, machine type, or state charts in this dashboard.
+To view instance distribution data scoped to a specific MIG or across multiple MIGs, see View instance distribution.
 
 ### Required roles
 
-  * To get the permissions that you need to view dashboards by using the Google Cloud console, ask your administrator to grant you the [Monitoring Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/monitoring#monitoring.viewer) (`roles/monitoring.viewer`) IAM role on your project. For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+  * To get the permissions that you need to view dashboards by using the Google Cloud console, ask your administrator to grant you the following IAM roles on your project: 
+
+    * To view the dashboard in Cloud Monitoring: [Monitoring Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/monitoring#monitoring.viewer) (`roles/monitoring.viewer`) 
+    * To navigate to a MIG's Monitoring tab in Compute Engine: [Compute Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/compute#compute.viewer) (`roles/compute.viewer`) 
+
+For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
 
 You might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
 
@@ -87,36 +94,66 @@ For more information about roles, see [Control access with Identity and Access M
 
 
 
-## View and customize the dashboard
+## View instance distribution
 
-You can view the **GCE MIG Instance Distribution Monitoring** dashboard from the Google Cloud console, and then, optionally, copy and customize it to monitor specific regions, zones, or MIGs.
+You can view the instance distribution dashboard for a specific MIG or aggregated data across multiple MIGs.
 
-  1. To view the preconfigured **GCE MIG Instance Distribution Monitoring** dashboard, do the following:
+### View instance distribution for a specific MIG
 
-     1. In the Google Cloud console, go to the **Monitoring** > **Dashboards** page. 
+  1. In the Google Cloud console, go to the **Instance groups** page.
+
+[Go to Instance groups](https://console.cloud.google.com/compute/instanceGroups)
+
+  2. Click the name of the MIG that you want to monitor.
+
+  3. Click the **Monitoring** tab.
+
+  4. In the navigation panel of the **Monitoring** tab, select **Instance distribution**.
+
+
+
+
+### View instance distribution across multiple MIGs
+
+To observe the instance distribution across all your MIGs at once, use the preconfigured dashboard in Cloud Monitoring. By default, this dashboard aggregates data across all MIGs in your project.
+
+  1. In the Google Cloud console, go to the **Monitoring** > **Dashboards** page. 
 
 [Go to Dashboards](https://console.cloud.google.com/monitoring/dashboards)
 
-     2. In the **Filter** , search for **GCE MIG Instance Distribution Monitoring** dashboard and select the dashboard. You can also find this dashboard in the **Type** menu > **Google Services** category.
+  2. In the **Filter** , search for **GCE MIG Instance Distribution Monitoring** dashboard and select it. You can also find this dashboard in the **Type** menu > **Google Services** category.
 
-You can either use the dashboard as it is or copy to customize it further.
-
-  2. Optional: To customize the dashboard, you must first copy it and then edit as follows:
-
-     1. To copy, click **Copy dashboard**.
-
-     2. Edit the copied dashboard and modify its name, charts, apply filters, and configure custom layout structures as required.
-
-You can view the copied or customized dashboard in the **Type** menu > **Custom** category.
+  3. Optional: If your project contains multiple MIGs and you want to narrow down the aggregated view, then use the dashboard's filter variables to filter by region, zone, or instance_group.
 
 
 
+
+## Customize the Cloud Monitoring dashboard
+
+You can customize the instance distribution dashboard in Cloud Monitoring, but you cannot modify the view within a specific MIG's **Monitoring** tab.
+
+In Cloud Monitoring, to modify the dashboard's charts, apply filters, or configure custom layout structures, you must first copy the preconfigured dashboard.
+
+  1. In the Google Cloud console, go to the **Monitoring** > **Dashboards** page.
+
+[Go to Dashboards](https://console.cloud.google.com/monitoring/dashboards)
+
+  2. In the **Filter** , search for the **GCE MIG Instance Distribution Monitoring** dashboard and select it. You can also find this dashboard in the **Type** menu > **Google Services** category.
+
+  3. Click **Copy dashboard**.
+
+  4. Edit the copied dashboard to modify its name, charts, layout, or to apply filters as required.
+
+
+
+
+You can view your copied or customized dashboard in the **Type** menu > **Custom** category.
 
 For more information about customizing the dashboard, see the following pages in the Cloud Monitoring documentation:
 
   * To modify the data that each chart displays, see [Update the query of a widget](https://docs.cloud.google.com/monitoring/dashboards/filter-permanent#apply-permanent-filter).
 
-  * To customize the dashboard, see [Create a custom dashboard by copying a Google Cloud service dashboard](https://docs.cloud.google.com/monitoring/charts/predefined-dashboards#customize-gc-dashboards)
+  * To customize the dashboard, see [Create a custom dashboard by copying a Google Cloud service dashboard](https://docs.cloud.google.com/monitoring/charts/predefined-dashboards#customize-gc-dashboards).
 
 
 
@@ -134,7 +171,7 @@ The **GCE MIG Instance Distribution Monitoring** dashboard includes built-in fil
 
 
 
-To apply a filter in the Google Cloud console, click the **Filter** button at the top of your copied dashboard, select the filter property (such as `region`, `zone`, or `instance_group`), and select the chosen values.
+To apply a filter in the Google Cloud console, on your copied dashboard, click **Filter** , select the filter property (such as `region`, `zone`, or `instance_group`), and select the chosen values.
 
 For more information on using filters, see [Add temporary filters to a custom dashboard](https://docs.cloud.google.com/monitoring/charts/filter-dashboard) in the Cloud Monitoring documentation.
 
@@ -170,7 +207,7 @@ When viewing your MIG instance distribution dashboard, use the following guidanc
 
 If the **Instance distribution by zone** chart indicates an uneven distribution across zones in a regional MIG or sudden capacity shifts across locations, check the following location flexibility factors:
 
-  * **Target distribution shape** : Verify your configured [target distribution shape](https://docs.cloud.google.com/compute/docs/instance-groups/regional-mig-distribution-shape). If your MIG is configured with `ANY` or `ANY_SINGLE_ZONE`, the MIG prioritizes zones where capacity or unused reservations are most readily available rather than balancing instances evenly. If your MIG uses `BALANCED`, the group attempts to keep instances counts balanced across zones, but might temporarily place instances in alternate zones if a specific zone experiences a temporary capacity shortage.
+  * **Target distribution shape** : Verify your configured [target distribution shape](https://docs.cloud.google.com/compute/docs/instance-groups/regional-mig-distribution-shape). If your MIG is configured with `ANY` or `ANY_SINGLE_ZONE`, the MIG prioritizes zones where capacity or unused reservations are most readily available rather than balancing instances evenly. If your MIG uses `BALANCED`, the group attempts to keep instance counts balanced across zones, but might temporarily place instances in alternate zones if a specific zone experiences a temporary capacity shortage.
 
   * **Regional capacity redistribution** : During a temporary capacity shortage, due to events such as a localized zonal outage, a regional MIG configured for high availability automatically finds and allocates replacement instances in alternate zones within the region. The dashboard will reflect this location flexibility as a drop in instance count for the affected zone and a corresponding rise in alternate zones.
 
@@ -190,11 +227,11 @@ If your MIG uses instance flexibility and the **Instance distribution by machine
 
 For more information, see [How a MIG selects machine types](https://docs.cloud.google.com/compute/docs/instance-groups/about-instance-flexibility#how_a_mig_selects_machine_types).
 
-**Note:** When a MIG shifts across zones or falls back to a lower-preference machine type due to capacity or quota constraints, this dynamic behavior is normal and intended. It doesn't indicate an application or configuration error. To investigate the exact reason for individual instance creation attempts or fallback triggers, inspect the MIG error logs or activity log entries. For more information about logs, see [Compute Engine audit logging](https://docs.cloud.google.com/compute/docs/logging/audit-logging)
+**Note:** When a MIG shifts across zones or falls back to a lower-preference machine type due to capacity or quota constraints, this dynamic behavior is normal and intended. It doesn't indicate an application or configuration error. To investigate the exact reason for individual instance creation attempts or fallback triggers, inspect the MIG error logs or activity log entries. For more information about logs, see [Compute Engine audit logging](https://docs.cloud.google.com/compute/docs/logging/audit-logging).
 
 ## Programmatically query using PromQL
 
-To monitor the instance distribution in a MIG, you can also query the underlying metrics programmatically by using [PromQL for Cloud Monitoring](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/promql). Querying programmatically lets you integrate the instance distribution data into your custom observability dashboards or external monitoring tools, such as Grafana. You can use PromQL to query instances by zone, or by machine type.
+To monitor the instance distribution in a MIG, you can also query the underlying metrics programmatically by using [PromQL for Cloud Monitoring](https://docs.cloud.google.com/monitoring/promql). Querying programmatically lets you integrate the instance distribution data into your custom observability dashboards or external monitoring tools, such as Grafana. You can use PromQL to query instances by zone, or by machine type.
 
 Run the PromQL queries in the code editor as described in the following section.
 
@@ -258,6 +295,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

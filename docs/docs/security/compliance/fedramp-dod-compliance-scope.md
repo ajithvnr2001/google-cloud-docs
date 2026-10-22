@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/compliance/fedramp-dod-compliance-scope/
 title: FedRAMP and DoD compliance scope for Google Cloud and Google Workspace \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:25:12.781966+00:00
+fetched_at: 2026-10-22T10:40:49.799363+00:00
 ---
 
 # FedRAMP and DoD compliance scope for Google Cloud and Google Workspace  |  Security  |  Google Cloud Documentation
@@ -210,7 +210,8 @@ Service | FedRAMP High | DoD IL2 | DoD IL4 | DoD IL5
 [Identity and Access Management (IAM)](https://docs.cloud.google.com/iam/docs) |  |  |  |   
 [Workforce Identity Federation](https://docs.cloud.google.com/iam/docs/workforce-identity-federation) |  |  |  |   
 [Identity Platform](https://cloud.google.com/security/products/identity-platform) |  |  |  |   
-[Identity-Aware Proxy (IAP)](https://cloud.google.com/security/products/iap) (excluding [IAP for TCP](https://docs.cloud.google.com/iap/docs/using-tcp-forwarding)) |  |  |  |   
+[Identity-Aware Proxy (IAP)](https://cloud.google.com/security/products/iap) |  |  |  |   
+[IAP for TCP](https://docs.cloud.google.com/iap/docs/using-tcp-forwarding) |  |  |  |   
 [Infrastructure Manager](https://docs.cloud.google.com/infrastructure-manager/docs/overview) |  |  | DISA review | DISA review  
 Service | FedRAMP High | DoD IL2 | DoD IL4 | DoD IL5  
 [Integration Connectors](https://docs.cloud.google.com/integration-connectors/docs/overview) |  |  | DISA review | DISA review  

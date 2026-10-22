@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/maas/e5/multilingual-e5-small/
 title: Multilingual E5 Small \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:37.154187+00:00
+fetched_at: 2026-10-22T10:28:48.126776+00:00
 ---
 
 # Multilingual E5 Small  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

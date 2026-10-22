@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/batch-inference/new-job-from-bigquery/
 title: Batch inference for BigQuery \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:17.407528+00:00
+fetched_at: 2026-10-22T10:23:48.364612+00:00
 ---
 
 # Batch inference for BigQuery  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-print-pubsub-bucket-notification/
 title: Get a Pub/Sub notification \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:19.502420+00:00
+fetched_at: 2026-10-22T10:31:40.903357+00:00
 ---
 
 # Get a Pub/Sub notification  |  Cloud Storage  |  Google Cloud Documentation

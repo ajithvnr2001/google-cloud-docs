@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-add-file-owner/
 title: Add an owner ACL to an object \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:06:35.479030+00:00
+fetched_at: 2026-10-22T10:31:43.270160+00:00
 ---
 
 # Add an owner ACL to an object  |  Cloud Storage  |  Google Cloud Documentation

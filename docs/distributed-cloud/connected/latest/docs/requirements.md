@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/latest/docs/requirements/
 title: Installation requirements \u00a0|\u00a0 Google Distributed Cloud connected \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:32.872724+00:00
+fetched_at: 2026-10-22T08:25:05.400009+00:00
 ---
 
 # Installation requirements  |  Google Distributed Cloud connected  |  Google Cloud Documentation

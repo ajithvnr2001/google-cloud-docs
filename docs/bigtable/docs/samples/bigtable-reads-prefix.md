@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-reads-prefix/
 title: Read rows with a prefix \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:43:43.813835+00:00
+fetched_at: 2026-10-22T08:56:39.803242+00:00
 ---
 
 # Read rows with a prefix  |  Bigtable  |  Google Cloud Documentation

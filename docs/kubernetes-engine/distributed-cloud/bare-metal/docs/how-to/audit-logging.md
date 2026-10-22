@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/how-to/audit-logging/
 title: Use Kubernetes audit logging \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:57:27.314001+00:00
+fetched_at: 2026-10-22T10:13:50.325193+00:00
 ---
 
 # Use Kubernetes audit logging  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -24,7 +24,7 @@ Send feedback
 
 This document describes how to use Cloud Audit Logs for Google Distributed Cloud (software only). Google Distributed Cloud uses [Kubernetes Audit Logging](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/), which keeps a chronological record of calls made to a cluster Kubernetes API server. Audit logs are useful for investigating suspicious API requests and for collecting statistics. For information about audit logging for the GKE On-Prem API, see [Cloud API audit logging](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/how-to/audit-logging-api).
 
-**Note:** Starting with Google Distributed Cloud release 1.9.0, Cloud Audit Logs is enabled by default. Cloud Audit Logs is automatically enabled for 1.8.x clusters that are upgraded to 1.36.100-gke.144 unless it was explicitly disabled for the 1.8.x cluster by setting `disableCloudAuditLogging` to `true`.
+**Note:** Starting with Google Distributed Cloud release 1.9.0, Cloud Audit Logs is enabled by default. Cloud Audit Logs is automatically enabled for 1.8.x clusters that are upgraded to 1.36.200-gke.118 unless it was explicitly disabled for the 1.8.x cluster by setting `disableCloudAuditLogging` to `true`.
 
 ## About Cloud Audit Logs
 
@@ -143,6 +143,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

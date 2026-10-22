@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/policies/iam-overview/
 title: IAM policies overview \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:46:43.333088+00:00
+fetched_at: 2026-10-22T10:03:05.887869+00:00
 ---
 
 # IAM policies overview  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -20,8 +20,6 @@ fetched_at: 2026-10-21T15:46:43.333088+00:00
 Send feedback 
 
 #  IAM policies overview Stay organized with collections  Save and categorize content based on your preferences. 
-
-**Note:** This feature does not support VPC Service Controls.
 
 You can create IAM allow policies and deny policies that Agent Gateway uses to securely govern agentic communication between your agents and other services, including other agents, MCP servers, and endpoints. Agent Gateway uses Identity-Aware Proxy (IAP) to enforce the policies. IAP also enforces end-to-end agent identity authentication and authorization security.
 

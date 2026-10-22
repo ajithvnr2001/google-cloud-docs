@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/linux/18.1.1/docs/manage/
 title: Manage and monitor AlloyDB Omni \u00a0|\u00a0 AlloyDB Omni using RPM: 18.1.1 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:37:33.994853+00:00
+fetched_at: 2026-10-22T10:21:22.417474+00:00
 ---
 
 # Manage and monitor AlloyDB Omni  |  AlloyDB Omni using RPM: 18.1.1  |  Google Cloud Documentation
@@ -177,6 +177,27 @@ To retrieve AlloyDB Omni logs, run:
     
       sudo journalctl -u alloydbomni18
 
+### View system metrics using System Insights
+
+You can monitor real-time and historical infrastructure metrics for your AlloyDB Omni instances using **System Insights** in the AlloyDB Omni web user interface. **System Insights** queries the Prometheus metrics exported by the AlloyDB Omni monitoring agent to display resource utilization charts.
+
+**Note:** **System Insights** isn't supported when deploying AlloyDB Omni using containers because a containerized monitoring agent isn't available for container deployments.
+
+To view system metrics in the web UI, complete the following steps:
+
+  1. [Connect to the web UI](https://docs.cloud.google.com/alloydb/omni/linux/18.1.1/docs/connect-web-ui) and select your cluster.
+  2. In the navigation menu, click **System Insights**.
+  3. Optional: In a multi-node cluster, use the **Filter by: Instances** list to select a specific instance endpoint (for example, `localhost:9187`).
+  4. Select a time window (**1 hour** , **6 hours** , **1 day** , or **7 days**) to adjust the observation period across all charts.
+  5. Review the system telemetry charts: 
+     * **CPU Usage** : Displays the percentage of CPU utilization over time.
+     * **Memory Usage** : Displays the percentage of allocated memory in use over time.
+     * **Memory Available** : Displays the percentage of free memory available over time.
+     * **Memory Limit** : Displays the configured memory quota (in GB) for the instance.
+     * **Storage and disk I/O** : Displays six additional charts tracking storage usage, storage limit, number of disk reads, bytes read, number of disk writes, and bytes written.
+
+
+
 ## Uninstall AlloyDB Omni
 
 **Caution:** Following these steps permanently deletes all AlloyDB Omni databases from your machine.
@@ -190,6 +211,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

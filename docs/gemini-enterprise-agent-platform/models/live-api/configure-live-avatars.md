@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api/configure-live-avatars/
 title: Configure live avatars \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:28.801076+00:00
+fetched_at: 2026-10-22T10:23:49.745825+00:00
 ---
 
 # Configure live avatars  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

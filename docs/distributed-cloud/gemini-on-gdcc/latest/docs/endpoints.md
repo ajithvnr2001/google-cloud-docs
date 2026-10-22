@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/gemini-on-gdcc/latest/docs/endpoints/
 title: Create and manage endpoints \u00a0|\u00a0 Gemini on GDC API on GDC connected \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:24.216774+00:00
+fetched_at: 2026-10-22T08:26:21.202419+00:00
 ---
 
 # Create and manage endpoints  |  Gemini on GDC API on GDC connected  |  Google Cloud Documentation

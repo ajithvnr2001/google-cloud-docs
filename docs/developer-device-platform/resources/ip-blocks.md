@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/developer-device-platform/resources/ip-blocks/
 title: Developer Device Platform IP Blocks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:04.033956+00:00
+fetched_at: 2026-10-22T08:26:26.347123+00:00
 ---
 
 # Developer Device Platform IP Blocks  |  Google Cloud Documentation

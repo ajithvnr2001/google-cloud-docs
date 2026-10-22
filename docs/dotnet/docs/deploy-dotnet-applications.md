@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dotnet/docs/deploy-dotnet-applications/
 title: Deploying .NET apps on Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:46:26.326733+00:00
+fetched_at: 2026-10-22T08:22:41.639524+00:00
 ---
 
 # Deploying .NET apps on Google Cloud  |  Google Cloud Documentation

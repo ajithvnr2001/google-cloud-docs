@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/write-api-streaming/
 title: Stream data using the Storage Write API (gRPC) \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:38:50.108508+00:00
+fetched_at: 2026-10-22T09:11:52.896230+00:00
 ---
 
 # Stream data using the Storage Write API (gRPC)  |  BigQuery  |  Google Cloud Documentation

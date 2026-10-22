@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/pubsub/
 title: Pub/Sub roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:41:57.094523+00:00
+fetched_at: 2026-10-22T08:31:55.909172+00:00
 ---
 
 # Pub/Sub roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

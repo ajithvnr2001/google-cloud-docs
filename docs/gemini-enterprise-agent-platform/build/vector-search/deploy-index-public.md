@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/vector-search/deploy-index-public/
 title: Deploy and manage public index endpoints \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:46:01.625430+00:00
+fetched_at: 2026-10-22T10:23:11.137666+00:00
 ---
 
 # Deploy and manage public index endpoints  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

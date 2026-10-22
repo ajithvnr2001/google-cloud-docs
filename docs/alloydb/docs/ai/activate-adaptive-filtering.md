@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/activate-adaptive-filtering/
 title: Activate adaptive filtering in AlloyDB AI \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:27.254768+00:00
+fetched_at: 2026-10-22T09:27:42.296075+00:00
 ---
 
 # Activate adaptive filtering in AlloyDB AI  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

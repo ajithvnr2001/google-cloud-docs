@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/vector-search/private-service-connect/
 title: Set up Vector Search with Private Service Connect \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:43.215214+00:00
+fetched_at: 2026-10-22T10:22:46.341628+00:00
 ---
 
 # Set up Vector Search with Private Service Connect  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/create-user-cluster-topology-domains/
 title: Create a user cluster for use with topology domains \u00a0|\u00a0 Google Distributed Cloud software only for VMware \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:57:27.073801+00:00
+fetched_at: 2026-10-22T10:14:29.071181+00:00
 ---
 
 # Create a user cluster for use with topology domains  |  Google Distributed Cloud software only for VMware  |  Google Cloud Documentation
@@ -96,7 +96,7 @@ Replace the following:
 
 `OUTPUT_FILENAME`: a path of your choice for the generated template. If you omit this flag, `gkectl` names the file `user-cluster.yaml` and puts it in the current directory.
 
-`VERSION`: the desired version number. For example: `gkectl create-config cluster --gke-on-prem-version=1.36.100-gke.144`.
+`VERSION`: the desired version number. For example: `gkectl create-config cluster --gke-on-prem-version=1.36.200-gke.118`.
 
 Familiarize yourself with the configuration file by scanning the [user cluster configuration file](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/user-cluster-configuration-file-latest) document. You might want to keep this document open in a separate tab or window, because you will refer to it as you complete the following steps.
 
@@ -106,7 +106,7 @@ Set the [`name`](https://docs.cloud.google.com/kubernetes-engine/distributed-clo
 
 ### `gkeOnPremVersion`
 
-This field is already filled in for you. It specifies the version of Google Distributed Cloud. For example, `1.36.100-gke.144`.
+This field is already filled in for you. It specifies the version of Google Distributed Cloud. For example, `1.36.200-gke.118`.
 
 ### `enableAdvancedCluster`
 
@@ -318,7 +318,7 @@ Here is an example of an IP block file and a user cluster configuration file:
     apiVersion: v1
     kind: UserCluster
     name: "my-user-cluster"
-    gkeOnPremVersion: 1.36.100-gke.144
+    gkeOnPremVersion: 1.36.200-gke.118
     enableAdvancedCluster: true
     enableControlplaneV2: true
     enableDataplaneV2: true
@@ -457,6 +457,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

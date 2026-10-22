@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-export-model-artifacts/
 title: Export model artifacts for prediction \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:58:18.276103+00:00
+fetched_at: 2026-10-22T10:30:17.201019+00:00
 ---
 
 # Export model artifacts for prediction  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -49,9 +49,9 @@ The IO creates the cluster for you, associates it with your project, and assigns
 
   6. Grant the Project Bucket Object Viewer (`project-bucket-object-viewer`) role to the Vertex AI Default Serving (`vai-default-serving-sa`) service account for the storage bucket you created. For information about granting bucket access to service accounts, see [Grant bucket access](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/grant-obtain-storage-access#grant_bucket_access).
 
-  7. To get the permissions that you need to access Online Prediction, ask your Project IAM Admin to grant you the Vertex AI Prediction User (`vertex-ai-prediction-user`) role. For information about this role, see [Prepare IAM permissions](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-ao-permissions).
+  7. To get the permissions that you need to access Online Prediction, ask your IAM Project Admin to grant you the Vertex AI Prediction User (`vertex-ai-prediction-user`) role. For information about this role, see [Prepare IAM permissions](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-ao-permissions).
 
-  8. To get the permissions that you need to deploy Online Prediction models, ask your Project IAM Admin to grant you the Vertex AI Prediction Admin (`vertex-ai-prediction-Admin`) role. For information about this role, see [Prepare IAM permissions](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-ao-permissions).
+  8. To get the permissions that you need to deploy Online Prediction models, ask your IAM Project Admin to grant you the Vertex AI Prediction Admin (`vertex-ai-prediction-Admin`) role. For information about this role, see [Prepare IAM permissions](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-ao-permissions).
 
 
 
@@ -103,6 +103,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

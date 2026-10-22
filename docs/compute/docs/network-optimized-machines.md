@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/network-optimized-machines/
 title: Network-optimized machine family for Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T23:39:01.104324+00:00
+fetched_at: 2026-10-22T10:41:39.799047+00:00
 ---
 
 # Network-optimized machine family for Compute Engine  |  Google Cloud Documentation
@@ -328,16 +328,19 @@ Machine types | vCPUs1 | Memory (GB) | Titanium SSD | Physical NIC count | NUMA 
 (Gbps)2 | Maximum external network bandwidth  
 (Gbps)2  
 ---|---|---|---|---|---|---|---  
-`m4n-hypermem-16` | 16 | 248 | Not available | 1 | 1 shared | Up to 50 | Up to 7  
+`m4n-hypermem-2` | 2 | 31 | Not available | 1 | 1 shared | ? | ?  
+`m4n-hypermem-4` | 4 | 62 | Not available | 1 | 1 shared | ? | ?  
+`m4n-hypermem-8` | 8 | 124 | Not available | 1 | 1 shared | 32 | 7  
+`m4n-hypermem-16` | 16 | 248 | Not available | 1 | 1 shared | 50 | 7  
 `m4n-hypermem-32` | 32 | 496 | Not available | 1 | 1 shared | 57 | 7  
 `m4n-hypermem-64` | 64 | 992 | Not available | 1 | 2 shared | 114 | 7  
 `m4n-megamem-28` | 28 | 372 | Not available | 1 | 1 shared | 50 | 7  
 `m4n-megamem-56` | 56 | 744 | Not available | 1 | 1 isolated | 100 | 7  
-`m4n-megamem-112` | 112 | 1,488 | Not available | 1 | 2 isolated | 200 | 7  
-`m4n-megamem-224` | 224 | 2,976 | Not available | 2 | 4 (full server) | 100 | 7  
+`m4n-megamem-112` | 112 | 1,488 | Not available | 1 | 2 isolated | 100 | 7  
+`m4n-megamem-224` | 224 | 2,976 | Not available | 2 | 4 (full server) | 200 | 7  
 `m4n-ultramem-56` | 56 | 1,488 | Not available | 1 | 2 shared | 100 | 7  
-`m4n-ultramem-112` | 112 | 2,976 | Not available | 1 | 4 shared | 200 | 7  
-`m4n-ultramem-224` | 224 | 5,952 | Not available | 2 | 4 (full server) | 100 | 7  
+`m4n-ultramem-112` | 112 | 2,976 | Not available | 1 | 4 shared | 100 | 7  
+`m4n-ultramem-224` | 224 | 5,952 | Not available | 2 | 4 (full server) | 200 | 7  
   
 1 Each virtual CPU (vCPU) is implemented as a single hardware multithread, and two vCPUs share each physical CPU core by default.  
 2 Maximum egress bandwidth cannot exceed the number given. Actual egress bandwidth depends on the destination IP address and other factors. See [Network bandwidth](https://docs.cloud.google.com/compute/docs/network-bandwidth).  
@@ -372,6 +375,9 @@ M4N storage limits are described in the following table:
 ---|---|---  
 Machine types | Hyperdisk  
 per VM | Hyperdisk Balanced1 | Hyperdisk Throughput | Hyperdisk Extreme | Hyperdisk ML  
+`m4n-hypermem-2` | 8 | 8 | 8 | 8 | 8  
+`m4n-hypermem-4` | 8 | 8 | 8 | 8 | 8  
+`m4n-hypermem-8` | 8 | 8 | 8 | 8 | 8  
 `m4n-hypermem-16` | 16 | 16 | 16 | 8 | 16  
 `m4n-hypermem-32` | 32 | 32 | 32 | 8 | 32  
 `m4n-hypermem-64` | 32 | 32 | 32 | 8 | 32  
@@ -420,6 +426,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

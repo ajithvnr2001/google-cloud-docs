@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-jupyter-magic-gender-by-year/
 title: Tutorial: Visualizing BigQuery Data in a Jupyter Notebook \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:20:30.968122+00:00
+fetched_at: 2026-10-22T09:17:07.303870+00:00
 ---
 
 # Tutorial: Visualizing BigQuery Data in a Jupyter Notebook  |  Google Cloud Documentation

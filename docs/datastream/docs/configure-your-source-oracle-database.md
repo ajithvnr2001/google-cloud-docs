@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/configure-your-source-oracle-database/
 title: Configure a source Oracle database \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:34.978294+00:00
+fetched_at: 2026-10-22T08:25:30.613467+00:00
 ---
 
 # Configure a source Oracle database  |  Datastream  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/deploy-an-agent/
 title: Deploy an agent \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:52.322120+00:00
+fetched_at: 2026-10-22T10:03:19.245899+00:00
 ---
 
 # Deploy an agent  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -311,9 +311,9 @@ You also need to follow the instructions in [Set up the identity and permissions
 
 This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
-You can specify runtime resource controls for the agent, such as the minimum and maximum number of application instances, resource limits for each container, and concurrency for each container.
+You can specify runtime resource controls for the agent, such as the minimum and maximum number of application instances, resource limits for each container, and concurrency for each container. For more information about deployment parameters, see the [`ReasoningEngineSpec`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1beta1/ReasoningEngineSpec#DeploymentSpec) REST reference.
 
-  * `min_instances`: The minimum number of application instances to keep running at all times, with a range of `[0, 10]`. The default value is 1.
+  * `min_instances`: The minimum number of application instances to keep running at all times, with a range of `[0, 75]`. The default value is 1.
 
 **Note:** While this feature is in Preview, even if you configure a higher number of minimum instances, you won't be billed for time when an agent is idle. This billing behavior is subject to change in the future. 
   * `max_instances`: The maximum number of application instances that can be launched to handle increased traffic, with a range of `[1, 1000]`. The default value is 100. If VPC-SC or PSC-I is enabled, the acceptable range is `[1, 100]` per Agent Platform resource.

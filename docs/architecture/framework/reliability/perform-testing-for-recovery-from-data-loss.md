@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/reliability/perform-testing-for-recovery-from-data-loss/
 title: Perform testing for recovery from data loss \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:18.114148+00:00
+fetched_at: 2026-10-22T09:08:28.776981+00:00
 ---
 
 # Perform testing for recovery from data loss  |  Cloud Architecture Center  |  Google Cloud Documentation

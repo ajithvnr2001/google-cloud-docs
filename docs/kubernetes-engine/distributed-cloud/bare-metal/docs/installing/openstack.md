@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/openstack/
 title: Configure your clusters to use OpenStack \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:57:23.224723+00:00
+fetched_at: 2026-10-22T10:12:37.720942+00:00
 ---
 
 # Configure your clusters to use OpenStack  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -22,29 +22,9 @@ Send feedback
 
 #  Configure your clusters to use OpenStack Stay organized with collections  Save and categorize content based on your preferences. 
 
-Google Distributed Cloud software-only supports using OpenStack as a private cloud platform. This guide describes how to configure a cluster to work with an external cloud provider. Running an installation of Google Distributed Cloud software-only clusters on OpenStack lets you use the following OpenStack services:
+Running Distributed Cloud software only for bare metal on OpenStack lets you integrate your clusters with OpenStack Infrastructure as a Service (IaaS), Load Balancing as a Service (LBaaS), and Storage. Configuring your clusters for an external cloud provider delegates the node initialization process to OpenStack.
 
-  * Infrastructure as a Service (IaaS)
-
-  * Load balancing as a Service (LBaaS)
-
-  * Storage
-
-
-
-
-Configuring a cluster to work with OpenStack consists of the following:
-
-  * When you create the cluster, you add a `baremetal.cluster.gke.io/external-cloud-provider` annotation
-
-  * This annotation causes Google Distributed Cloud to add a kubelet flag `cloud-provider=external`
-
-  * The kubelet then adds `node.cloudprovider.kubernetes.io/uninitialized:NoSchedule` taints to the cluster nodes
-
-
-
-
-This configuration allows you and OpenStack to own the node init processes. For example, you can deploy Google Distributed Cloud software on OpenStack to automatically provision OpenStack Load Balancing as a Service (LBaaS) resources or to make use of other OpenStack capabilities. The LBaaS resources can replace the MetalLB resources to expose Services running on your clusters to other OpenStack tenants or outside the OpenStack network. For more information about OpenStack features and benefits, see the [OpenStack documentation](https://docs.openstack.org/2023.2/).
+You can automatically provision OpenStack LBaaS resources instead of MetalLB to expose Services running on your clusters to other OpenStack tenants or outside the OpenStack network. For more information about OpenStack features and benefits, see the [OpenStack documentation](https://docs.openstack.org/2023.2/).
 
 ## Related examples
 
@@ -173,6 +153,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

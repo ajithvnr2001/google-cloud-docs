@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-get-bucket-metadata/
 title: Get a bucket's metadata \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:19.873949+00:00
+fetched_at: 2026-10-22T10:32:02.926994+00:00
 ---
 
 # Get a bucket's metadata  |  Cloud Storage  |  Google Cloud Documentation

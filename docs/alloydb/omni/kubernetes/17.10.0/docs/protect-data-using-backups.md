@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/17.10.0/docs/protect-data-using-backups/
 title: Protect your data using backups \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 17.10.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:25:14.340334+00:00
+fetched_at: 2026-10-22T09:49:46.424059+00:00
 ---
 
 # Protect your data using backups  |  AlloyDB Omni using the container orchestrator: 17.10.0  |  Google Cloud Documentation

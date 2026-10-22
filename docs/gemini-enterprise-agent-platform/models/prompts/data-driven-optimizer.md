@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/prompts/data-driven-optimizer/
 title: Data-driven prompt optimizer \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:46:10.390942+00:00
+fetched_at: 2026-10-22T08:37:16.238762+00:00
 ---
 
 # Data-driven prompt optimizer  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -749,11 +749,11 @@ Make the following replacements:
     SERVICE_ACCOUNT = f"{PROJECT_NUMBER}-compute@developer.gserviceaccount.com"
     
     # Import Agent Platform SDK and Setup
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=PROJECT_ID, location=LOCATION)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=PROJECT_ID, location=LOCATION)
     
     #Create the Agent Platform Client
-    client = [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).Client(project=PROJECT_ID, location=LOCATION)
+    client = [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).Client(project=PROJECT_ID, location=LOCATION)
     
     # Setup the job dictionary
     vapo_config = {
@@ -763,7 +763,7 @@ Make the following replacements:
     }
     
     #Start the Agent Platform Prompt Optimizer
-    client = client.[prompt_optimizer](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.prompt_optimizer.html).optimize(method=[vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).[types](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.html).[PromptOptimizerMethod](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.PromptOptimizerMethod.html).VAPO, config=vapo_config)
+    client = client.[prompt_optimizer](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.prompt_optimizer.html).optimize(method=[vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).[types](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.html).[PromptOptimizerMethod](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.PromptOptimizerMethod.html).VAPO, config=vapo_config)
     
 
 To use Gemma model as the target model, make the following changes:

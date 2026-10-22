@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tpu/docs/samples/
 title: Samples \u00a0|\u00a0 Cloud TPU \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:27.793408+00:00
+fetched_at: 2026-10-22T10:02:45.048355+00:00
 ---
 
 # Samples  |  Cloud TPU  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Samples Stay organized with collections  Save and categorize content based on your preferences. 
 
-## Training
+## Training with JAX
 
   * ### [Train Llama 3-8B using JAX, Ray, and GKE on Trillium Perform distributed training of the Llama 3-8B model on GKE using JAX, Ray Train, and TPU v6e (Trillium) with MaxText for optimized multi-host scaling.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/distributed-training-tpu)
   * ### [Pretrain Llama 3.1-70B using GKE clusters on Ironwood Train the Llama 3.1-70B model on TPU7x (Ironwood) using the MaxText framework. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/llama3.1-70b)
@@ -42,7 +42,18 @@ Send feedback
 
 
 
-## Inference
+## Training with PyTorch
+
+  * ### [Pretrain Qwen 3-32B with TorchTitan using GKE clusters on Ironwood Train the Qwen 3-32B model on TPU7x (Ironwood) using PyTorch, TorchTPU, and the TorchTitan framework. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/qwen3-32b/tpu7x-4x4x4/cluster_toolkit)
+  * ### [Pretrain Qwen 3-30B-A3B with TorchTitan using GKE clusters on Ironwood Train the Qwen 3-30B-A3B Mixture-of-Experts (MoE) model on TPU7x using PyTorch, TorchTPU, and TorchTitan. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/qwen3-30b-a3b/tpu7x-4x4x4/cluster_toolkit)
+  * ### [Pretrain Qwen 3-8B with TorchTitan using GKE clusters on Ironwood Train the Qwen 3-8B model on TPU7x using PyTorch, TorchTPU, and TorchTitan for scalable distributed training. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/qwen3-8b/tpu7x-2x2x2/cluster_toolkit)
+  * ### [Pretrain Muse Glimmer 30B with TorchTitan using GKE clusters on Ironwood Train the Muse Glimmer 30B model on TPU7x using PyTorch, TorchTPU, and TorchTitan. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/muse_glimmer_30b/tpu7x-4x4x4/cluster_toolkit)
+  * ### [Pretrain Llama 3-70B with TorchTitan on Ironwood Train the Llama 3-70B model on TPU7x (Ironwood) using PyTorch, TorchTPU, and TorchTitan. ](https://github.com/google-pytorch/torchtitan/tree/main/torchtitan/experiments/tpu/recipes/ironwood/llama3-70b/tpu7x-64)
+  * ### [Pretrain Llama 3-8B with TorchTitan on Trillium Train the Llama 3-8B model on TPU v6e (Trillium) using PyTorch, TorchTPU, and TorchTitan. ](https://github.com/google-pytorch/torchtitan/tree/main/torchtitan/experiments/tpu/recipes/trillium/llama3-8b/v6e-8)
+
+
+
+## Inference with JAX
 
   * ### [Serve Llama 3.1-70B using GKE and vLLM on Trillium Serve LLMs on GKE using TPU v6e and vLLM, featuring optimized autoscaling and high-performance model serving on Google Cloud.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu)
   * ### [Serve LLMs using GKE with KubeRay Serve an LLM using TPUs on GKE with the Ray Operator add-on and the vLLM serving framework.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-llm-tpu-ray)
@@ -54,6 +65,17 @@ Send feedback
   * ### [Serve Qwen 3 with vLLM on Trillium Serve Qwen 3 models on TPU v6e using vLLM for high-performance, scalable inference and optimized throughput. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Qwen3)
   * ### [Serve Qwen2.5-32B with vLLM on Trillium Serve the Qwen2.5-32B model on TPU v6e using vLLM for optimized, high-throughput inference. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Qwen2.5-32B)
   * ### [Serve Qwen2.5-VL with v﻿LLM on Trillium Serve Qwen2.5-VL vision-language models on TPU v6e using vLLM for optimized, high-performance multimodal inference. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Qwen2.5-VL)
+
+
+
+## Inference with PyTorch
+
+  * ### [Serve Qwen 3.5-397B with vLLM-TorchTPU using GKE clusters on Ironwood Serve the Qwen 3.5-397B model on TPU7x using PyTorch and vLLM-TorchTPU for multi-host distributed inference. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/vLLM-TorchTPU/Qwen3.5-397B/multi-host)
+  * ### [Serve Gemma 4-26B with vLLM-TorchTPU on Ironwood Serve the Gemma 4-26B model on TPU7x using PyTorch and the vLLM-TorchTPU backend for high-throughput inference. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/vLLM-TorchTPU/Gemma4-26B)
+  * ### [Serve GLM-5.2 with vLLM-TorchTPU on Ironwood Serve the GLM-5.2 model on TPU7x using PyTorch and the vLLM-TorchTPU backend. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/vLLM-TorchTPU/GLM-5.2)
+  * ### [Serve Qwen 3-32B with vLLM-TorchTPU on Trillium Serve the Qwen 3-32B model on TPU v6e (Trillium) using PyTorch and the vLLM-TorchTPU backend. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/vLLM-TorchTPU/Qwen3-32B/single-host)
+  * ### [Serve Qwen 3.5-35B-A3B with vLLM-TorchTPU on Trillium Serve the Qwen 3.5-35B-A3B Mixture-of-Experts (MoE) model on TPU v6e using PyTorch and the vLLM-TorchTPU backend. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/vLLM-TorchTPU/Qwen3.5-35B-A3B/single-host)
+  * ### [Serve Gemma 4-26B with vLLM-TorchTPU on Trillium Serve the Gemma 4-26B model on TPU v6e using PyTorch and the vLLM-TorchTPU backend. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/vLLM-TorchTPU/Gemma4-26B)
 
 
 

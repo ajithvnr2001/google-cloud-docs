@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.13.0/docs/benchmarks/
 title: CIS Benchmarks \u00a0|\u00a0 Google Distributed Cloud connected \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:49.873168+00:00
+fetched_at: 2026-10-22T08:26:06.338267+00:00
 ---
 
 # CIS Benchmarks  |  Google Distributed Cloud connected  |  Google Cloud Documentation

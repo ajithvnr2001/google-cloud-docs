@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/data-manipulation-language/
 title: Transform data with data manipulation language (DML) \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:48:53.795083+00:00
+fetched_at: 2026-10-22T10:37:19.205670+00:00
 ---
 
 # Transform data with data manipulation language (DML)  |  BigQuery  |  Google Cloud Documentation
@@ -166,6 +166,8 @@ Mutating DML statements that run concurrently on a table cause DML statement con
   * An `INSERT` DML statement that inserts rows to a table doesn't conflict with any other concurrently running DML statement.
 
   * A `MERGE` DML statement does not conflict with other concurrently running DML statements as long as the statement only inserts rows and does not delete or update any existing rows. This can include `MERGE` statements with `UPDATE` or `DELETE` clauses, as long as those clauses aren't invoked when the query runs.
+
+  * Automatic DML queuing applies only to standalone DML statements that run outside of a [multi-statement transaction](https://docs.cloud.google.com/bigquery/docs/transactions). Mutating DML statements inside a multi-statement transaction acquire a table-level lock rather than locking individual partitions. Concurrent multi-statement transactions that modify the same table aren't queued and fail immediately, even if they target different partitions. If a stored procedure or multi-statement query runs only a single mutating DML statement, such as a `MERGE` statement, then don't wrap the statement in `BEGIN TRANSACTION` and `COMMIT TRANSACTION` statements. For more information, see [Transaction concurrency](https://docs.cloud.google.com/bigquery/docs/transactions#transaction_concurrency).
 
 
 
@@ -357,6 +359,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

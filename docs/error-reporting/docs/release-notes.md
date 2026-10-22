@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/error-reporting/docs/release-notes/
 title: Error Reporting release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:17:42.039289+00:00
+fetched_at: 2026-10-22T08:53:09.401505+00:00
 ---
 
 # Error Reporting release notes  |  Google Cloud Documentation

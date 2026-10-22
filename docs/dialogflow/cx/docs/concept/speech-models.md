@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/speech-models/
 title: Speech models \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:28.187182+00:00
+fetched_at: 2026-10-22T08:33:50.281279+00:00
 ---
 
 # Speech models  |  Dialogflow CX  |  Google Cloud Documentation

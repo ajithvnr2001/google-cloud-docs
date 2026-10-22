@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/features/
 title: Features \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:54:27.335796+00:00
+fetched_at: 2026-10-22T08:36:56.709540+00:00
 ---
 
 # Features  |  Agent Assist  |  Google Cloud Documentation

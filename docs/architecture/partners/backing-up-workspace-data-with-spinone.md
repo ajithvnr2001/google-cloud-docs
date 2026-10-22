@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/partners/backing-up-workspace-data-with-spinone/
 title: Configuring SaaS data protection for Google Workspace data with Spin.AI \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:11:09.429436+00:00
+fetched_at: 2026-10-22T09:19:48.649344+00:00
 ---
 
 # Configuring SaaS data protection for Google Workspace data with Spin.AI  |  Cloud Architecture Center  |  Google Cloud Documentation

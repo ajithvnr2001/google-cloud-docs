@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/guides/templates/provided/cloud-spanner-change-streams-to-bigquery/
 title: Spanner change streams to BigQuery template \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:43:19.004366+00:00
+fetched_at: 2026-10-22T08:23:30.626378+00:00
 ---
 
 # Spanner change streams to BigQuery template  |  Cloud Dataflow  |  Google Cloud Documentation
@@ -653,7 +653,7 @@ You can use the following values:
                   .apply(
                       "Write To BigQuery",
                       BigQueryIO.<TableRow>write()
-                          .[to](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner-jdbc/latest/com.google.cloud.spanner.ValueBinder.html#com_google_cloud_spanner_ValueBinder_to_boolean_)(BigQueryDynamicDestinations.of(bigQueryDynamicDestinationsOptions))
+                          .[to](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.ValueBinder.html#com_google_cloud_spanner_ValueBinder_to_boolean_)(BigQueryDynamicDestinations.of(bigQueryDynamicDestinationsOptions))
                           .withFormatFunction(element -> removeIntermediateMetadataFields(element))
                           .withFormatRecordOnFailureFunction(element -> element)
                           .withCreateDisposition([CreateDisposition](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquery/latest/com.google.cloud.bigquery.JobInfo.CreateDisposition.html).CREATE_IF_NEEDED)
@@ -667,7 +667,7 @@ You can use the following values:
                   .apply(
                       "Write To BigQuery",
                       BigQueryIO.<TableRow>write()
-                          .[to](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner-jdbc/latest/com.google.cloud.spanner.ValueBinder.html#com_google_cloud_spanner_ValueBinder_to_boolean_)(BigQueryDynamicDestinations.of(bigQueryDynamicDestinationsOptions))
+                          .[to](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.ValueBinder.html#com_google_cloud_spanner_ValueBinder_to_boolean_)(BigQueryDynamicDestinations.of(bigQueryDynamicDestinationsOptions))
                           .withFormatFunction(element -> removeIntermediateMetadataFields(element))
                           .withFormatRecordOnFailureFunction(element -> element)
                           .withCreateDisposition([CreateDisposition](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquery/latest/com.google.cloud.bigquery.JobInfo.CreateDisposition.html).CREATE_IF_NEEDED)
@@ -842,6 +842,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

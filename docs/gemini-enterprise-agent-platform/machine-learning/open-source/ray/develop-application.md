@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/open-source/ray/develop-application/
 title: Develop an application on the Ray cluster on Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:40:53.577420+00:00
+fetched_at: 2026-10-22T08:35:35.869259+00:00
 ---
 
 # Develop an application on the Ray cluster on Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -87,8 +87,8 @@ From an interactive Python environment:
     from google.cloud import aiplatform
     import vertex_ray
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).[init](https://docs.cloud.google.com/python/docs/reference/aiplatform/latest/google.cloud.aiplatform.html)()
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).[init](https://docs.cloud.google.com/python/docs/reference/aiplatform/latest/google.cloud.aiplatform.html)()
     # The CLUSTER_RESOURCE_NAME is the one returned from vertex_ray.create_ray_cluster.
     CLUSTER_RESOURCE_NAME='projects/{}/locations/{}/persistentResources/{}'.format(PROJECT_ID, LOCATION, CLUSTER_NAME)
     

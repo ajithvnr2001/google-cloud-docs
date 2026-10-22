@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/instance-primary-secondary-failover/
 title: Fail over a primary or secondary instance manually \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:49.626259+00:00
+fetched_at: 2026-10-22T09:27:17.084788+00:00
 ---
 
 # Fail over a primary or secondary instance manually  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

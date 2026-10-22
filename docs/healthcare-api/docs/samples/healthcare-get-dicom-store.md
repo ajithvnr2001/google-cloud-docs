@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/samples/healthcare-get-dicom-store/
 title: Get DICOM store \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:52:40.527621+00:00
+fetched_at: 2026-10-22T08:33:08.713971+00:00
 ---
 
 # Get DICOM store  |  Cloud Healthcare API  |  Google Cloud Documentation

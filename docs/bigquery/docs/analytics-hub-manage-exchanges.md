@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/analytics-hub-manage-exchanges/
 title: Manage data exchanges \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:45:37.876315+00:00
+fetched_at: 2026-10-22T09:08:53.457924+00:00
 ---
 
 # Manage data exchanges  |  BigQuery  |  Google Cloud Documentation

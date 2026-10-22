@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/partners/google-workspace-backup-with-afi-ai/
 title: Google Workspace Backup with Afi.ai \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:08:52.920699+00:00
+fetched_at: 2026-10-22T09:19:47.946274+00:00
 ---
 
 # Google Workspace Backup with Afi.ai  |  Cloud Architecture Center  |  Google Cloud Documentation

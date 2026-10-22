@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/samples/functions-helloworld-pubsub/
 title: Cloud Functions (1st Gen): Pub/Sub Hello World \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:52:03.913106+00:00
+fetched_at: 2026-10-22T08:51:21.117033+00:00
 ---
 
 # Cloud Functions (1st Gen): Pub/Sub Hello World  |  Cloud Run functions  |  Google Cloud Documentation

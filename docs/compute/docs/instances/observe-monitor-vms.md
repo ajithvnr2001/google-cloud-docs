@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/observe-monitor-vms/
 title: Observe and monitor VMs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:19:40.780249+00:00
+fetched_at: 2026-10-22T09:43:40.784630+00:00
 ---
 
 # Observe and monitor VMs  |  Compute Engine  |  Google Cloud Documentation
@@ -120,7 +120,7 @@ To view the metrics for multiple VMs, do the following:
 The information in _Figure 2_ displays an example of the Observability tab when multiple VMs in a project have the Ops Agent installed. Notice there are more metrics available about these VMs.
 
 ![Multiple VM
- instances with the Ops Agent installed.](https://docs.cloud.google.com/static/compute/images/monitoring/main-obs-tab.png)_Figure 2_ : Multiple **VM instances** with the Ops Agent installed.**Note:** For a managed instance group (MIG) that distributes instances across zones or that uses multiple machine types, you can use a preconfigured dashboard to view how your MIG's instances are distributed across zones and machine types. For more information, see [Monitor instance distribution in MIGs](https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution).
+ instances with the Ops Agent installed.](https://docs.cloud.google.com/static/compute/images/monitoring/main-obs-tab.png)_Figure 2_ : Multiple **VM instances** with the Ops Agent installed.**Note:** To see a visual representation of how a managed instance group (MIG) distributes instances across zones and machine types, you can view the instance distribution dashboard in a MIG's **Monitoring** tab. To view aggregated data across multiple MIGs, use the dashboard in Cloud Monitoring. For instructions, see [Monitor instance distribution in MIGs](https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution).
 
 #### View detailed metrics for a VM
 
@@ -275,6 +275,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

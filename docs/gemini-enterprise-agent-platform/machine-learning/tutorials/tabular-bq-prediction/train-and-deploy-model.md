@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tutorials/tabular-bq-prediction/train-and-deploy-model/
 title: Train and deploy your model \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:39.234867+00:00
+fetched_at: 2026-10-22T10:25:48.228459+00:00
 ---
 
 # Train and deploy your model  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

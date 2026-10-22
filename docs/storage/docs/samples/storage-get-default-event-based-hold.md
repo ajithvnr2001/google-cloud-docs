@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-get-default-event-based-hold/
 title: Get the state of a default event-based hold \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:30.338879+00:00
+fetched_at: 2026-10-22T10:30:57.011360+00:00
 ---
 
 # Get the state of a default event-based hold  |  Cloud Storage  |  Google Cloud Documentation

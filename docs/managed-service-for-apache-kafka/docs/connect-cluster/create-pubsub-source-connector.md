@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-pubsub-source-connector/
 title: Create a Pub/Sub Source connector \u00a0|\u00a0 Managed Service for Apache Kafka \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:16:52.442561+00:00
+fetched_at: 2026-10-22T10:44:54.586480+00:00
 ---
 
 # Create a Pub/Sub Source connector  |  Managed Service for Apache Kafka  |  Google Cloud Documentation
@@ -21,18 +21,11 @@ Send feedback
 
 #  Create a Pub/Sub Source connector Stay organized with collections  Save and categorize content based on your preferences. 
 
-Pub/Sub Source connectors stream messages from Pub/Sub to Kafka, which lets you integrate Pub/Sub with your Kafka-based applications and data pipelines.
+A Pub/Sub Source connector streams messages from Pub/Sub to Managed Service for Apache Kafka, which lets you integrate Pub/Sub with your Kafka-based applications and data pipelines. Typical use cases include real-time data ingestion for stream processing and building event-driven architectures.
 
-Use cases for Pub/Sub Source connectors include the following:
+## Overview
 
-  * Real-time data ingestion. Publish data from cloud services or other applications to Pub/Sub and then replicate the data to Kafka for stream processing.
-
-  * Event-driven architectures. Trigger Kafka-based processing from messages published to Pub/Sub.
-
-
-
-
-The connector reads messages from a Pub/Sub subscription, converts each message into a Kafka record, and writes the records to a Kafka topic. By default, the connector creates Kafka records as follows:
+This connector reads messages from a Pub/Sub subscription, converts each message into a Kafka record, and writes the records to a Kafka topic. By default, the connector creates Kafka records as follows:
 
   * The Kafka record key is `null`.
   * The Kafka record value is the Pub/Sub message data as bytes.
@@ -559,6 +552,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

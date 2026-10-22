@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/quotas/
 title: Quotas & limits \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:52:24.767634+00:00
+fetched_at: 2026-10-22T10:30:34.841306+00:00
 ---
 
 # Quotas & limits  |  Cloud Storage  |  Google Cloud Documentation
@@ -111,6 +111,24 @@ There is a limit of at most 10 [HMAC keys](https://docs.cloud.google.com/storage
 
 There is a limit of at most 100 [inventory report configurations](https://docs.cloud.google.com/storage/docs/insights/inventory-reports#inventory-reports-overview) per source bucket.
 
+## Storage Intelligence
+
+Storage Intelligence enforces rate quotas on [Intelligence Findings](https://docs.cloud.google.com/storage/docs/json_api/v1/intelligenceFindings) requests.
+
+The following table lists the metric, API methods, and default limit for the quota:
+
+Metric | API methods | Default limit  
+---|---|---  
+`storage.googleapis.com/intelligence_findings_requests` | 
+
+  * `projects.locations.intelligenceFindings.get` (`GetIntelligenceFinding`)
+  * `projects.locations.intelligenceFindings.list` (`ListIntelligenceFindings`)
+  * `projects.locations.intelligenceFindings.summarize` (`SummarizeIntelligenceFindings`)
+  * `projects.locations.intelligenceFindings.revisions.get` (`GetIntelligenceFindingRevision`)
+  * `projects.locations.intelligenceFindings.revisions.list` (`ListIntelligenceFindingRevisions`)
+
+| 600 requests per minute per project  
+  
 ## Storage batch operations jobs
 
 This section describes the limits and quotas for storage batch operations jobs.
@@ -122,7 +140,9 @@ The following table describes the limit for concurrent in-progress [`jobs`](http
 Limit type | Limit | Applies to  
 ---|---|---  
 Concurrent jobs on a single bucket | 100 | Per project per location  
+Concurrent dry-run jobs on a single bucket | 100 | Per project per location  
 Concurrent jobs on multiple buckets | 5 | Globally per project  
+Concurrent dry-run jobs on multiple buckets | 5 | Globally per project  
 Concurrent bucket operations | 50 buckets | Per job on multiple buckets per location  
   
 ### Rate quotas
@@ -133,15 +153,21 @@ The following table lists the metric, API methods, and default limits for each q
 
 Metric | API methods | Default limits  
 ---|---|---  
-`storagebatchoperations.googleapis.com/create_requests` | `storagebatchoperations.jobs.create` | 1200 requests/min/project  
-`storagebatchoperations.googleapis.com/read_requests` | 
+`storagebatchoperations.googleapis.com/api-requests` | 
 
+  * `storagebatchoperations.jobs.create`
   * `storagebatchoperations.jobs.get`
   * `storagebatchoperations.jobs.list`
+  * `storagebatchoperations.jobs.cancel`
+  * `storagebatchoperations.jobs.delete`
+  * `storagebatchoperations.jobs.bucketOperations.get`
+  * `storagebatchoperations.jobs.bucketOperations.list`
+  * `storagebatchoperations.operations.get`
+  * `storagebatchoperations.operations.list`
+  * `storagebatchoperations.operations.cancel`
+  * `storagebatchoperations.operations.delete`
 
-| 1200 requests/min/project  
-`storagebatchoperations.googleapis.com/cancel_requests` | `storagebatchoperations.jobs.cancel` | 1200 requests/min/project  
-`storagebatchoperations.googleapis.com/delete_requests` | `storagebatchoperations.jobs.delete` | 1200 requests/min/project  
+| 1200 requests per minute per project  
   
 ### Queue limits
 
@@ -165,8 +191,9 @@ The following table describes rate limits per tool:
 
 Quota | Value  
 ---|---  
-Requests for `McpListBuckets`, `McpListObjects`, `McpReadText`, `McpGetObjectMetadata`, and `McpReadObject` | 600/min/project/region  
-Requests for `McpCreateBucket` and `McpWriteText` | 300/min/project/region  
+Requests for `McpListBuckets`, `McpListObjects`, `McpReadText`, `McpGetObjectMetadata`, `McpReadObject`, `McpGetBucketMetadata`, `McpGetBucketIamPolicy`, and `McpTestBucketIamPermissions` | 600 per minute per project per region  
+Requests for `McpCreateBucket`, `McpWriteText`, and `McpDeleteObject` | 300 per minute per project per region  
+Requests for `McpDeleteBucket` and `McpSetBucketIamPolicy` | 100 per minute per project per region  
   
 ## Bandwidth
 
@@ -186,6 +213,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/intents-rich-messages/
 title: Rich response messages \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:26.733614+00:00
+fetched_at: 2026-10-22T08:25:49.529714+00:00
 ---
 
 # Rich response messages  |  Dialogflow ES  |  Google Cloud Documentation

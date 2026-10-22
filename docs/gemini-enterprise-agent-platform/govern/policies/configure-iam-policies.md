@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/policies/configure-iam-policies/
 title: Configure IAM agent policies \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:26.628732+00:00
+fetched_at: 2026-10-22T10:25:39.230894+00:00
 ---
 
 # Configure IAM agent policies  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

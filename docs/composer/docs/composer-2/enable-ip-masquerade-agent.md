@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/composer/docs/composer-2/enable-ip-masquerade-agent/
 title: Enable the IP Masquerade agent in Managed Airflow environments \u00a0|\u00a0 Managed Service for Apache Airflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:26:55.315504+00:00
+fetched_at: 2026-10-22T09:43:43.646291+00:00
 ---
 
 # Enable the IP Masquerade agent in Managed Airflow environments  |  Managed Service for Apache Airflow  |  Google Cloud Documentation
@@ -86,6 +86,7 @@ When you create an environment, the `--enable-ip-masq-agent` argument enables th
     
     gcloud composer environments create ENVIRONMENT_NAME \
         --location LOCATION \
+        --service-account "SERVICE_ACCOUNT" \
         --image-version composer-2.17.15-airflow-2.11.1 \
         --enable-ip-masq-agent
     
@@ -94,6 +95,7 @@ Replace:
 
   * `ENVIRONMENT_NAME` with the name of the environment.
   * `LOCATION` with the region where the environment is located.
+  * `SERVICE_ACCOUNT` with the service account for your environment.
 
 
 
@@ -102,6 +104,7 @@ Example:
     
     gcloud composer environments create example-environment \
         --location us-central1 \
+        --service-account "example-account@example-project.iam.gserviceaccount.com" \
         --image-version composer-2.17.15-airflow-2.11.1 \
         --enable-ip-masq-agent
     
@@ -118,6 +121,7 @@ Construct an [`environments.create`](https://docs.cloud.google.com/composer/docs
           "imageVersion": "composer-2.17.15-airflow-2.11.1"
         },
         "nodeConfig": {
+          "serviceAccount": "SERVICE_ACCOUNT"
           "enableIpMasqAgent": true
         }
       }
@@ -129,6 +133,7 @@ Replace:
   * `PROJECT_ID` with the [Project ID](https://docs.cloud.google.com/resource-manager/docs/creating-managing-projects).
   * `LOCATION` with the region where the environment is located.
   * `ENVIRONMENT_NAME` with the environment name.
+  * `SERVICE_ACCOUNT` with the service account for your environment.
 
 
 
@@ -144,6 +149,7 @@ Example:
             "imageVersion": "composer-2.17.15-airflow-2.11.1"
           },
           "nodeConfig": {
+            "serviceAccount": "example-account@example-project.iam.gserviceaccount.com"
             "enableIpMasqAgent": true
           }
         }
@@ -165,6 +171,7 @@ When you create an environment, the `enable_ip_masq_agent` field in the `node_co
           image_version = "composer-2.17.15-airflow-2.11.1"
         }
         node_config {
+          service_account = "SERVICE_ACCOUNT"
           enable_ip_masq_agent = true
         }
       }
@@ -174,6 +181,7 @@ Replace:
 
   * `ENVIRONMENT_NAME` with the name of the environment.
   * `LOCATION` with the region where the environment is located.
+  * `SERVICE_ACCOUNT` with the service account for your environment.
 
 
 
@@ -190,6 +198,7 @@ Example:
           image_version = "composer-2.17.15-airflow-2.11.1"
         }
         node_config {
+          service_account = "example-account@example-project.iam.gserviceaccount.com"
           enable_ip_masq_agent = true
         }
       }
@@ -214,6 +223,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

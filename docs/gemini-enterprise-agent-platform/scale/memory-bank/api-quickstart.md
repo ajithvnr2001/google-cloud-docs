@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/memory-bank/api-quickstart/
 title: Agent Platform Memory Bank API quickstart \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:53.306864+00:00
+fetched_at: 2026-10-22T10:28:41.800287+00:00
 ---
 
 # Agent Platform Memory Bank API quickstart  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

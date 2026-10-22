@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataform/docs/use-dataform-cli/
 title: Use the open-source Dataform CLI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:19.096698+00:00
+fetched_at: 2026-10-22T08:26:06.796717+00:00
 ---
 
 # Use the open-source Dataform CLI  |  Google Cloud Documentation

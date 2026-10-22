@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext/
 title: Run SFT for Gemma 4 31B on multi-host TPU v6e \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:02:55.979513+00:00
+fetched_at: 2026-10-22T09:10:20.337100+00:00
 ---
 
 # Run SFT for Gemma 4 31B on multi-host TPU v6e  |  AI Hypercomputer  |  Google Cloud Documentation
@@ -120,7 +120,7 @@ Set up your environment variables:
     export PROJECT="YOUR_PROJECT_ID"
     export REGION="YOUR_REGION"
     export ZONE="YOUR_ZONE"
-    export CLUSTER_NAME="gke-tpu-v6e"
+    export CLUSTER_NAME="YOUR_CLUSTER_NAME"
     export GCS_BUCKET="YOUR_BUCKET_NAME"
     export CLOUD_IMAGE_NAME="us-docker.pkg.dev/cloud-tpu-images/maxtext-images/tpu_post_training:0.2.4"
     export TPU_TYPE="v6e-32"

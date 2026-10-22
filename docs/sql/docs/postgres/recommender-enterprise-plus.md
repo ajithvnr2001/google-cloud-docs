@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/recommender-enterprise-plus/
 title: Improve performance with Cloud SQL Enterprise Plus edition \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:50.779624+00:00
+fetched_at: 2026-10-22T10:44:43.093372+00:00
 ---
 
 # Improve performance with Cloud SQL Enterprise Plus edition  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -24,16 +24,7 @@ Send feedback
 
 [MySQL](https://docs.cloud.google.com/sql/docs/mysql/recommender-enterprise-plus "View this page for the MySQL database engine") | PostgreSQL | [SQL Server](https://docs.cloud.google.com/sql/docs/sqlserver/recommender-enterprise-plus "View this page for the SQL Server database engine")
 
-This page describes the following types of Cloud SQL Enterprise Plus edition recommenders:
-
-  * Upgrade to Cloud SQL Enterprise Plus edition for near-zero maintenance downtime
-  * Upgrade to Cloud SQL Enterprise Plus edition and enable data cache to improve read performance
-  * Upgrade to Cloud SQL Enterprise Plus edition with enabling data cache
-  * Enable data cache to improve read performance
-
-
-
-The following sections describe how these recommenders work and how to use them.
+Cloud SQL Enterprise Plus edition [recommenders](https://docs.cloud.google.com/recommender/docs/overview) let you identify production Cloud SQL instances that can resolve workload bottlenecks or maintenance delays by analyzing daily instance metrics. Based on these insights, you can upgrade instances for near-zero maintenance downtime, faster read throughput with data cache, or both capabilities combined. You can also enable data cache on existing Cloud SQL Enterprise Plus edition instances to accelerate read-heavy workloads. 
 
 ## Pricing
 
@@ -610,6 +601,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

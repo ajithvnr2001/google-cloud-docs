@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-bucket-get-default-kms-key/
 title: Get a bucket's default KMS key \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:17:07.583735+00:00
+fetched_at: 2026-10-22T10:30:47.333936+00:00
 ---
 
 # Get a bucket's default KMS key  |  Cloud Storage  |  Google Cloud Documentation

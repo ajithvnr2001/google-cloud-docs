@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/migration/oracle-sql/
 title: Oracle SQL translation guide \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:46:30.320762+00:00
+fetched_at: 2026-10-22T08:58:17.450069+00:00
 ---
 
 # Oracle SQL translation guide  |  BigQuery  |  Google Cloud Documentation

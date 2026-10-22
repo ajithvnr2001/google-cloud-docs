@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-data-delete-field-async/
 title: Delete a Firestore field (async) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:58:43.603828+00:00
+fetched_at: 2026-10-22T10:27:50.061398+00:00
 ---
 
 # Delete a Firestore field (async)  |  Google Cloud Documentation

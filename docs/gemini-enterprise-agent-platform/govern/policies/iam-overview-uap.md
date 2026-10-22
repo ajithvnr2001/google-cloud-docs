@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/policies/iam-overview-uap/
 title: IAM Unified Access Policies overview \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:53.658138+00:00
+fetched_at: 2026-10-22T10:03:02.011017+00:00
 ---
 
 # IAM Unified Access Policies overview  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -20,8 +20,6 @@ fetched_at: 2026-10-21T15:42:53.658138+00:00
 Send feedback 
 
 #  IAM Unified Access Policies overview Stay organized with collections  Save and categorize content based on your preferences. 
-
-**Note:** This feature does not support VPC Service Controls.
 
 You can create Identity and Access Management (IAM) Unified Access Policies (UAPs) to help securely govern communication between _agent principals_ and _destination resources_ , such as destination agents, MCP servers, and endpoints. These policies are bound to the project that contains your Agent Gateway instances.
 

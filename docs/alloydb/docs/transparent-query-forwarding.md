@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/transparent-query-forwarding/
 title: Optimize resources and isolate read queries with transparent query forwarding \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:38.014605+00:00
+fetched_at: 2026-10-22T09:27:42.372451+00:00
 ---
 
 # Optimize resources and isolate read queries with transparent query forwarding  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

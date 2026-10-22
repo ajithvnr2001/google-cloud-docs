@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/pgaudit/about/
 title: About pgAudit \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:01.201887+00:00
+fetched_at: 2026-10-22T09:36:55.745449+00:00
 ---
 
 # About pgAudit  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

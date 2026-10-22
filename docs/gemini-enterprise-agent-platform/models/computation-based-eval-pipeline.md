@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computation-based-eval-pipeline/
 title: Run a computation-based evaluation pipeline \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:30.072100+00:00
+fetched_at: 2026-10-22T08:37:19.499790+00:00
 ---
 
 # Run a computation-based evaluation pipeline  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -270,7 +270,7 @@ To authenticate to Agent Platform, set up Application Default Credentials. For m
     
     import os
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
     from vertexai.evaluation import EvalResult, EvalTask
     
     # TODO (Developer) Set environment variables
@@ -282,7 +282,7 @@ To authenticate to Agent Platform, set up Application Default Credentials. For m
     def evaluate_model() -> EvalResult:
         """Evaluate the performance of a generative AI model."""
     
-        [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=PROJECT_ID, location=LOCATION_ID)
+        [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=PROJECT_ID, location=LOCATION_ID)
     
         # Dataset URI containing input prompts and ground truth labels
         dataset_uri = "gs://cloud-samples-data/ai-platform/generative_ai/llm_classification_bp_input_prompts_with_ground_truth.jsonl"
@@ -304,7 +304,7 @@ To authenticate to Agent Platform, set up Application Default Credentials. For m
         )
     
         # Evaluate using a modern Gemini model
-        eval_result = eval_task.[evaluate](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.evals.Evals.html#vertexai__genai_evals_Evals_evaluate)(
+        eval_result = eval_task.[evaluate](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.evals.Evals.html#vertexai__genai_evals_Evals_evaluate)(
             model=MODEL_NAME,
             prompt_template=prompt_template,
         )

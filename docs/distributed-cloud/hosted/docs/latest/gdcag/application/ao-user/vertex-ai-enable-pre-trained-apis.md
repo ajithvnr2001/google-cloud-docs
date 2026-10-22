@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-enable-pre-trained-apis/
 title: Enable Vertex AI APIs \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:58:16.094240+00:00
+fetched_at: 2026-10-22T10:13:29.039199+00:00
 ---
 
 # Enable Vertex AI APIs  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -41,7 +41,7 @@ Vertex AI on Distributed Cloud includes various APIs that you must enable from t
 
 Before you begin, check that you've done the following prerequisite steps:
 
-  1. You must have the AI Platform Admin (`ai-platform-admin`) role to set up access to the Vertex AI APIs. You can contact your Organization IAM Admin or Project IAM Admin to request the role if you don't already have it. Alternatively, you can ask your administrator to enable Vertex AI APIs on your behalf. For information about this role, see [Prepare IAM permissions](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-ao-permissions).
+  1. You must have the AI Platform Admin (`ai-platform-admin`) role to set up access to the Vertex AI APIs. You can contact your IAM Org Admin or IAM Project Admin to request the role if you don't already have it. Alternatively, you can ask your administrator to enable Vertex AI APIs on your behalf. For information about this role, see [Prepare IAM permissions](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-ao-permissions).
   2. Set up the GDC domain name system (DNS). If you haven't set up the DNS, work with your Infrastructure Operator (IO) to complete this prerequisite.
   3. [Set up a project to use Vertex AI](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-set-up-project).
   4. If you bring your own model because you want to use [Online Prediction](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-online-predictions) or run artificial intelligence (AI) and machine learning (ML) notebooks in a GPU environment, make sure to [allocate GPU machines](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/create-user-cluster#gpu) for the correct cluster types.
@@ -98,6 +98,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

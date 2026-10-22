@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-data-query-async/
 title: Query a Firestore collection (async) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:58:36.639659+00:00
+fetched_at: 2026-10-22T10:27:49.931188+00:00
 ---
 
 # Query a Firestore collection (async)  |  Google Cloud Documentation

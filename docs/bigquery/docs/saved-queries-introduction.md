@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/saved-queries-introduction/
 title: Introduction to saved queries \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:15:24.839732+00:00
+fetched_at: 2026-10-22T10:44:50.240201+00:00
 ---
 
 # Introduction to saved queries  |  BigQuery  |  Google Cloud Documentation
@@ -21,17 +21,19 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Introduction to saved queries
 
-Use saved queries in BigQuery to securely store, manage, and collaborate on your SQL scripts. As you work in the query editor, your changes are automatically saved to prevent accidental work loss.
+Saved queries let you create, manage, and share SQL scripts in BigQuery. Changes to a saved query are automatically saved so that you don't lose your work when you close the query editor. Saved query capabilities are available only in the Google Cloud console.
 
-Because saved queries are [BigQuery Studio](https://docs.cloud.google.com/bigquery/docs/query-overview#bigquery-studio) code assets powered by [Dataform](https://docs.cloud.google.com/dataform/docs/overview), they offer advanced collaboration and version control features. You can:
+## About saved queries
 
-  * **Collaborate securely:** [share saved queries](https://docs.cloud.google.com/bigquery/docs/work-with-saved-queries#share-saved-query) with specific users and groups using Identity and Access Management (IAM).
-  * **Track changes:** review a detailed version history of your query edits.
-  * **Manage versions:** branch from or revert to previous versions of a query to safely test modifications.
+Saved queries improve collaboration and query management with the following options:
+
+  * [Share saved queries](https://docs.cloud.google.com/bigquery/docs/work-with-saved-queries#share-saved-query) with specific users and groups by using Identity and Access Management (IAM).
+  * Review the query version history.
+  * Revert to or branch from previous versions of the query.
 
 
 
-Saved query capabilities are available only in the Google Cloud console.
+Saved queries are [BigQuery Studio](https://docs.cloud.google.com/bigquery/docs/query-overview#bigquery-studio) code assets powered by [Dataform](https://docs.cloud.google.com/dataform/docs/overview). [Notebooks](https://docs.cloud.google.com/bigquery/docs/programmatic-analysis) are also code assets. All code assets are stored in a default region. Updating the default region changes the region for all code assets created after that point.
 
 ## Saved query security
 
@@ -142,6 +144,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

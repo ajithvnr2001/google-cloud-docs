@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/cancel-export/
 title: Cancel an export operation \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:41.561480+00:00
+fetched_at: 2026-10-22T09:10:46.240560+00:00
 ---
 
 # Cancel an export operation  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deep-learning-containers/docs/choosing-container/
 title: Choose a container image \u00a0|\u00a0 Deep Learning Containers \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:52.465989+00:00
+fetched_at: 2026-10-22T08:26:26.043506+00:00
 ---
 
 # Choose a container image  |  Deep Learning Containers  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/cancel-import/
 title: Cancel an import operation \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:17.302360+00:00
+fetched_at: 2026-10-22T09:09:19.543780+00:00
 ---
 
 # Cancel an import operation  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/configure-vertex-ai/
 title: Integrate with Agent Platform \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:25.546032+00:00
+fetched_at: 2026-10-22T09:37:46.496516+00:00
 ---
 
 # Integrate with Agent Platform  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

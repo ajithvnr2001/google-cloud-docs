@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/administration/audit-logging/
 title: Manage audit logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:17:04.356877+00:00
+fetched_at: 2026-10-22T09:07:44.780935+00:00
 ---
 
 # Manage audit logs  |  Google Security Operations  |  Google Cloud Documentation

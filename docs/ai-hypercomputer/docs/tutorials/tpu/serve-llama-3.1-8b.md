@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/serve-llama-3.1-8b
 title: Serve Llama-3.1-8B with vLLM on TPUs \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:18.569872+00:00
+fetched_at: 2026-10-22T09:07:29.385001+00:00
 ---
 
 # Serve Llama-3.1-8B with vLLM on TPUs  |  AI Hypercomputer  |  Google Cloud Documentation

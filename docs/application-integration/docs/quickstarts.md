@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/quickstarts/
 title: Quickstarts \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:27:10.727768+00:00
+fetched_at: 2026-10-22T09:19:03.758241+00:00
 ---
 
 # Quickstarts  |  Application Integration  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-agent-kit/overview/
 title: Data Agent Kit overview \u00a0|\u00a0 Google Cloud Data Agent Kit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:25.725455+00:00
+fetched_at: 2026-10-22T08:26:16.675102+00:00
 ---
 
 # Data Agent Kit overview  |  Google Cloud Data Agent Kit  |  Google Cloud Documentation

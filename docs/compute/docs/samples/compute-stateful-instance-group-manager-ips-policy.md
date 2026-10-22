@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-stateful-instance-group-manager-ips-policy/
 title: Configure stateful IP addresses on MIG creation \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:20:26.053982+00:00
+fetched_at: 2026-10-22T09:17:12.382138+00:00
 ---
 
 # Configure stateful IP addresses on MIG creation  |  Compute Engine  |  Google Cloud Documentation

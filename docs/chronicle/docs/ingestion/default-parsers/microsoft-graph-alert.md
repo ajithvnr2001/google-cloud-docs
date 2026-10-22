@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/microsoft-graph-alert/
 title: Collect Microsoft Graph API alert logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:33.865230+00:00
+fetched_at: 2026-10-22T08:56:20.300573+00:00
 ---
 
 # Collect Microsoft Graph API alert logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/stream-logs-from-google-cloud-to-splunk/
 title: Stream logs from Google Cloud to Splunk \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:25:24.092033+00:00
+fetched_at: 2026-10-22T09:36:17.985935+00:00
 ---
 
 # Stream logs from Google Cloud to Splunk  |  Cloud Architecture Center  |  Google Cloud Documentation

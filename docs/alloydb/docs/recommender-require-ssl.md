@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/recommender-require-ssl/
 title: Improve instance security by enforcing SSL or TLS encryption \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:26.943935+00:00
+fetched_at: 2026-10-22T09:27:53.152122+00:00
 ---
 
 # Improve instance security by enforcing SSL or TLS encryption  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

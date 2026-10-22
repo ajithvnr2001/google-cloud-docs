@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-transfer-manager-upload-directory/
 title: Upload all files in a directory \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:54:41.829477+00:00
+fetched_at: 2026-10-22T10:29:38.991051+00:00
 ---
 
 # Upload all files in a directory  |  Cloud Storage  |  Google Cloud Documentation

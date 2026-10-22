@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/install-psql/
 title: Install the psql command-line tool \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:42.384335+00:00
+fetched_at: 2026-10-22T09:27:16.432601+00:00
 ---
 
 # Install the psql command-line tool  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

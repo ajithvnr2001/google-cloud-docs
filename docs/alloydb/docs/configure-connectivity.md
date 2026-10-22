@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/configure-connectivity/
 title: Enable private services access \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:38.652591+00:00
+fetched_at: 2026-10-22T09:08:46.920363+00:00
 ---
 
 # Enable private services access  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

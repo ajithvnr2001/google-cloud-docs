@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/insights/dataset-tables-and-schemas/
 title: Storage Insights datasets tables and schemas \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:52.690108+00:00
+fetched_at: 2026-10-22T10:29:29.418121+00:00
 ---
 
 # Storage Insights datasets tables and schemas  |  Google Cloud Documentation
@@ -62,9 +62,9 @@ Filter this table:  Metadata field | Mode | Type | Description | Storage batch o
 `retentionMode` | `NULLABLE` | `STRING` | The retention mode of the bucket's retention policy. The possible values are `Locked` or `Unlocked`. |   
 `objectRetentionEnabled` | `NULLABLE` | `BOOLEAN` | Whether [Object Retention Lock](https://docs.cloud.google.com/storage/docs/object-lock) is enabled on a bucket. The possible values are `True` or `False`. If this field is `True`, objects in the bucket can have object-level retention configurations. |   
 `defaultEventBasedHold` | `NULLABLE` | `BOOLEAN` | Whether a bucket has a default event-based property enabled. The possible values are `True` or `False`. |   
-`softDeletePolicy` | `NULLABLE` | `RECORD` | The bucket's [soft delete policy](https://docs.cloud.google.com/storage/docs/soft-delete), which defines the period of time during which objects in the bucket are retained in a soft-deleted state after being deleted. Objects in a soft-deleted state cannot be permanently deleted, and are restorable until their `hardDeleteTime`. |   
-`softDeletePolicy.effectiveTime` | `NULLABLE` | `DATETIME` | The datetime at which the soft delete policy becomes effective, in [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format.`softDeletePolicy.effectiveTime` is updated whenever `softDeletePolicy.retentionDurationSeconds` is increased. |   
-`softDeletePolicy.retentionDurationSeconds` | `NULLABLE` | `LONG` | The period of time during which a soft-deleted object is retained and cannot be permanently deleted, in seconds. The value must be greater than or equal to `604800` (7 days) and less than `7776000` (90 days). The value can also be set to `0`, which disables the soft delete policy. |   
+`softDeletePolicy` | `NULLABLE` | `RECORD` |  The bucket's [soft delete policy](https://docs.cloud.google.com/storage/docs/soft-delete), which defines the period of time during which objects in the bucket are retained in a soft-deleted state after being deleted. Objects in a soft-deleted state cannot be permanently deleted, and are restorable until their `hardDeleteTime`.  |   
+`softDeletePolicy.effectiveTime` | `NULLABLE` | `DATETIME` |  The datetime at which the soft delete policy becomes effective, in [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format. `softDeletePolicy.effectiveTime` is updated whenever `softDeletePolicy.retentionDurationSeconds` is increased. |   
+`softDeletePolicy.retentionDurationSeconds` | `NULLABLE` | `LONG` |  The period of time during which a soft-deleted object is retained and cannot be permanently deleted, in seconds. The value must be greater than or equal to 7 days and less than 90 days. The value can also be set to `0`, which disables the soft delete policy.  |   
 `enforcedEncryptionAllowedTypes` | `REPEATED` | `STRING` | The [encryption types](https://docs.cloud.google.com/storage/docs/encryption) allowed on the bucket. The possible values are as follows: 
 
   * `GMEK` (Google-owned and Google-managed encryption keys)
@@ -400,6 +400,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

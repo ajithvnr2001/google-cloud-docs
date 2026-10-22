@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/looker-core-lineage/
 title: Track data lineage with Knowledge Catalog \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:07:59.696669+00:00
+fetched_at: 2026-10-22T10:44:44.326621+00:00
 ---
 
 # Track data lineage with Knowledge Catalog  |  Looker  |  Google Cloud Documentation
@@ -27,19 +27,35 @@ This product or feature is subject to the "Pre-GA Offerings Terms" in the Genera
 
 This page explains how to track data lineage for your Looker (Google Cloud core) instance using Knowledge Catalog.
 
-**Data lineage** is the process of tracking how data flows through your systems. By integrating Looker (Google Cloud core) with Knowledge Catalog, you can visualize the end-to-end journey of your data from its source in BigQuery through the Looker semantic layer (LookML views and Explores) to downstream consumption in dashboards and Looks.
+**Data lineage** is the process of tracking how data flows through your systems. By integrating Looker (Google Cloud core) with Knowledge Catalog, you can visualize the end-to-end journey of your data from its source in BigQuery through the Looker semantic layer (LookML views and Explores) to downstream consumption in dashboards, Looks, and AI or data agents.
 
-This visibility helps data engineers and administrators perform **impact analysis**. For example, before dropping a column in a BigQuery table, you can check the lineage graph to see exactly which Looker dashboards would be broken by the change.
+This visibility provides bidirectional lineage tracking for data governance, impact analysis, and audit workflows:
+
+  * **Downstream impact analysis:** Predict which dashboards, Explores, and downstream consumers are affected before you make schema or model changes. For example, before dropping a column in a BigQuery table, you can check the lineage graph to see which Looker dashboards might break.
+  * **Upstream data audit:** Trace the origin, transformations, and chain of custody of the metrics that are displayed in executive dashboards and Looks.
+
+
 
 ## Before you begin
 
 To use data lineage with Looker (Google Cloud core), you must meet the following prerequisites:
 
   1. **Looker (Google Cloud core):** Data lineage is supported for all [edition types](https://docs.cloud.google.com/looker/docs/looker-core-overview#editions) of Looker (Google Cloud core) instances. Looker (original) instances don't integrate with Knowledge Catalog.
-  2. **Required Permissions:** To view lineage graphs, you need the following IAM roles: 
-     * **Looker Schema Viewer** (`roles/looker.schemaViewer`) on the project that's hosting the Looker (Google Cloud core) instance
-     * **Dataplex Viewer** (`roles/dataplex.viewer`) or equivalent permissions to view Knowledge Catalog assets
+  2. **Required Permissions:** To view lineage graphs, you need the following IAM roles:
+
+     * **Looker Schema Viewer** (`roles/looker.schemaViewer`) on the project that's hosting the Looker (Google Cloud core) instance. This role is required to view Looker (Google Cloud core)-specific metadata that populates the side panel when viewing a lineage graph.
+
+**Note:** You can add the Looker Schema Viewer role only by using Google Cloud CLI. 
+           
+           gcloud projects add-iam-policy-binding YOUR_PROJECT_ID
+           --member=PRINCIPAL_TYPE:PRINCIPAL_ID
+           --role=roles/looker.schemaViewer
+
+For more information, see the [`add-iam-policy-binding`](https://docs.cloud.google.com/sdk/gcloud/reference/projects/add-iam-policy-binding) documentation.
+     * **Dataplex Catalog Viewer** (`roles/dataplex.catalogViewer`) or equivalent permissions to view Knowledge Catalog assets
+
      * **Data Lineage Viewer** (`roles/datalineage.viewer`) to read lineage data
+
 
 **Caution:** SQL table references in LookML must match the exact casing of the corresponding BigQuery tables. For example, if a BigQuery table name is lowercase, the LookML reference must also be lowercase. Case discrepancies prevent downstream lineage from populating in the lineage graph.
 
@@ -97,7 +113,7 @@ Once the integration is enabled and the initial sync is complete (which may take
 
 
 
-The lineage graph displays the asset as a central node, with upstream sources to the left and downstream consumers to the right.
+The lineage graph displays the asset as a central node, with upstream sources to the left and downstream consumers to the right. This bidirectional layout lets you evaluate downstream impacts to the right, or trace upstream provenance and source tables to the left.
 
 ### Interpret the lineage graph
 
@@ -165,6 +181,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

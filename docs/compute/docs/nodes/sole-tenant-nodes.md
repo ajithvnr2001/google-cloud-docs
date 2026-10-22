@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/nodes/sole-tenant-nodes/
 title: Sole-tenancy overview \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:36:19.177719+00:00
+fetched_at: 2026-10-22T09:08:04.160639+00:00
 ---
 
 # Sole-tenancy overview  |  Compute Engine  |  Google Cloud Documentation
@@ -94,10 +94,10 @@ Node type | Processor | vCPU | GB | vCPU:GB | Sockets | Cores:Socket | Total cor
 `a3-highgpu-node-208-1872-lssd` 1 | Sapphire Rapids | 208 | 1872 | 1:9 | 2 | 56 | 112 | 8  
 `a3-megagpu-node-208-1872-lssd` 1 | Sapphire Rapids | 208 | 1872 | 1:9 | 2 | 56 | 112 | 1  
 `c2-node-60-240` | Cascade Lake | 60 | 240 | 1:4 | 2 | 18 | 36 | 15  
-`c3-node-176-352` | Sapphire Rapids | 176 | 352 | 1:2 | 2 | 48 | 96 | 44  
-`c3-node-176-704` | Sapphire Rapids | 176 | 704 | 1:4 | 2 | 48 | 96 | 44  
-`c3-node-176-704-lssd` | Sapphire Rapids | 176 | 704 | 1:4 | 2 | 48 | 96 | 40  
-`c3-node-176-1408` | Sapphire Rapids | 176 | 1408 | 1:8 | 2 | 48 | 96 | 44  
+`c3-node-176-352` | Sapphire Rapids | 176 | 352 | 1:2 | 2 | 56 | 112 | 44  
+`c3-node-176-704` | Sapphire Rapids | 176 | 704 | 1:4 | 2 | 56 | 112 | 44  
+`c3-node-176-704-lssd` | Sapphire Rapids | 176 | 704 | 1:4 | 2 | 56 | 112 | 40  
+`c3-node-176-1408` | Sapphire Rapids | 176 | 1408 | 1:8 | 2 | 56 | 112 | 44  
 `c3d-node-360-708` | AMD EPYC Genoa | 360 | 708 | 1:2 | 2 | 96 | 192 | 34  
 `c3d-node-360-1440` | AMD EPYC Genoa | 360 | 1440 | 1:4 | 2 | 96 | 192 | 40  
 `c3d-node-360-2880` | AMD EPYC Genoa | 360 | 2880 | 1:8 | 2 | 96 | 192 | 40  
@@ -116,7 +116,7 @@ Node type | Processor | vCPU | GB | vCPU:GB | Sockets | Cores:Socket | Total cor
 `g2-node-96-384` | Cascade Lake | 96 | 384 | 1:4 | 2 | 28 | 56 | 8  
 `g4-node-384-1440` | AMD EPYC Turin | 384 | 1440 | 1:3.75 | 2 | 96 | 192 | 64  
 `g2-node-96-432` | Cascade Lake | 96 | 432 | 1:4.5 | 2 | 28 | 56 | 8  
-`h3-node-88-352` | Sapphire Rapids | 88 | 352 | 1:4 | 2 | 48 | 96 | 1  
+`h3-node-88-352` | Sapphire Rapids | 88 | 352 | 1:4 | 2 | 56 | 112 | 1  
 `h4d-node-192-720` | AMD EPYC Turin | 192 | 720 | 1:4 | 2 | 128 | 256 | 1  
 `h4d-node-192-1488` | AMD EPYC Turin | 192 | 1488 | 1:8 | 2 | 128 | 256 | 1  
 `h4d-node-192-3024` | AMD EPYC Turin | 192 | 3024 | 1:16 | 2 | 128 | 256 | 1  
@@ -391,6 +391,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

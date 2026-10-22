@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/vector-search-2/query-search/reranking/
 title: Reranking search results with VertexRanker \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:46:44.339151+00:00
+fetched_at: 2026-10-22T10:23:37.621496+00:00
 ---
 
 # Reranking search results with VertexRanker  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

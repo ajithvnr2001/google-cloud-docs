@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/query-data/queries/
 title: Query and filter data \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:58:56.589364+00:00
+fetched_at: 2026-10-22T08:51:00.056680+00:00
 ---
 
 # Query and filter data  |  Firestore in Native mode  |  Google Cloud Documentation
@@ -238,7 +238,7 @@ Android
     )
     cities.document("BJ").set(data5)
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L722-L772)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L722-L772)
 
 ##### Java  
 Android
@@ -291,7 +291,7 @@ Android
     data5.put("regions", Arrays.asList("jingjinji", "hebei"));
     cities.document("BJ").set(data5);
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L931-L976)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L931-L976)
 
 ### Dart
     
@@ -454,7 +454,7 @@ Android
         City("Tokyo", None, "Japan", True, 9000000, ["kanto", "honshu"]).to_dict()
     )
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L152-L171)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L152-L171)
 
 ##### Python  
 (Async)
@@ -507,7 +507,7 @@ Android
         City("Tokyo", None, "Japan", True, 9000000, ["kanto", "honshu"]).to_dict()
     )
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L148-L167)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L148-L167)
 
 ##### C++
     
@@ -643,7 +643,7 @@ Android
     	}
     }
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L29-L68)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/query.go#L29-L68)
 
 ##### PHP
     
@@ -799,7 +799,7 @@ Android
     });
     Console.WriteLine("Added example cities data to the cities collection.");
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/QueryData/Program.cs#L54-L105)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/QueryData/Program.cs#L54-L105)
 
 ##### Ruby
     
@@ -861,7 +861,7 @@ Android
       }
     )
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L23-L78)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_data.rb#L23-L78)
 
 ## Simple queries
 
@@ -927,7 +927,7 @@ Android
     // Create a query against the collection.
     val query = citiesRef.whereEqualTo("state", "CA")
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L844-L848)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L844-L848)
 
 ##### Java  
 Android
@@ -939,7 +939,7 @@ Android
     // Create a query against the collection.
     Query query = citiesRef.whereEqualTo("state", "CA");
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1038-L1042)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1038-L1042)
 
 ### Dart
     
@@ -977,7 +977,7 @@ Android
     # Create a query against the collection
     query_ref = cities_ref.where(filter=FieldFilter("state", "==", "CA"))
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L457-L461)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L457-L461)
 
 ##### Python  
 (Async)
@@ -989,7 +989,7 @@ Android
     # Create a query against the collection
     query_ref = cities_ref.where(filter=FieldFilter("state", "==", "CA"))
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L451-L455)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L451-L455)
 
 ##### C++
     
@@ -1017,7 +1017,7 @@ Android
     
     query := client.Collection("cities").Where("state", "==", "CA")
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L82-L82)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/query.go#L82-L82)
 
 ##### PHP
     
@@ -1055,7 +1055,7 @@ Android
         Console.WriteLine("Document {0} returned by query State=CA", documentSnapshot.Id);
     }
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/QueryData/Program.cs#L138-L144)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/QueryData/Program.cs#L138-L144)
 
 ##### Ruby
     
@@ -1068,7 +1068,7 @@ Android
       puts "Document #{city.document_id} returned by query state=CA."
     end
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L89-L95)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_data.rb#L89-L95)
 
 The following query returns all the capital cities:
 
@@ -1118,7 +1118,7 @@ Android
     
     val capitalCities = db.collection("cities").whereEqualTo("capital", true)
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L852-L852)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L852-L852)
 
 ##### Java  
 Android
@@ -1126,7 +1126,7 @@ Android
     
     Query capitalCities = db.collection("cities").whereEqualTo("capital", true);
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1046-L1046)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1046-L1046)
 
 ### Dart
     
@@ -1159,7 +1159,7 @@ Android
     
     query = cities_ref.where(filter=FieldFilter("capital", "==", True))
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L470-L472)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L470-L472)
 
 ##### Python  
 (Async)
@@ -1169,7 +1169,7 @@ Android
     
     query = cities_ref.where(filter=FieldFilter("capital", "==", True))
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L464-L466)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L464-L466)
 
 ##### C++
     
@@ -1195,7 +1195,7 @@ Android
     
     query := client.Collection("cities").Where("capital", "==", true)
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L75-L75)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/query.go#L75-L75)
 
 ##### PHP
     
@@ -1233,7 +1233,7 @@ Android
         Console.WriteLine("Document {0} returned by query Capital=true", documentSnapshot.Id);
     }
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/QueryData/Program.cs#L152-L158)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/QueryData/Program.cs#L152-L158)
 
 ##### Ruby
     
@@ -1246,7 +1246,7 @@ Android
       puts "Document #{city.document_id} returned by query capital=true."
     end
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L105-L111)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_data.rb#L105-L111)
 
 ### Execute a query
 
@@ -1337,7 +1337,7 @@ Android
             Log.w(TAG, "Error getting documents: ", exception)
         }
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L577-L587)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L577-L587)
 
 ##### Java  
 Android
@@ -1359,7 +1359,7 @@ Android
                 }
             });
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L742-L756)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L742-L756)
 
 ### Dart
     
@@ -1402,7 +1402,7 @@ Android
     for doc in docs:
         print(f"{doc.id} => {doc.to_dict()}")
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L241-L249)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L241-L249)
 
 ##### Python  
 (Async)
@@ -1418,7 +1418,7 @@ Android
     async for doc in docs:
         print(f"{doc.id} => {doc.to_dict()}")
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L236-L244)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L236-L244)
 
 ##### C++
     
@@ -1484,7 +1484,7 @@ Android
     }
     
     
-    [retrieve_data_query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/retrieve_data_query.go#L18-L42)
+    [retrieve_data_query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/retrieve_data_query.go#L18-L42)
 
 ##### PHP
 
@@ -1540,7 +1540,7 @@ To authenticate to Firestore, set up Application Default Credentials. For more i
         Console.WriteLine("");
     }
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/GetData/Program.cs#L153-L164)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/GetData/Program.cs#L153-L164)
 
 ##### Ruby
     
@@ -1553,7 +1553,7 @@ To authenticate to Firestore, set up Application Default Credentials. For more i
       puts "#{city.document_id} data: #{city.data}."
     end
     
-    [get_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/get_data.rb#L96-L102)
+    [get_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/get_data.rb#L96-L102)
 
 See [Get Data](https://docs.cloud.google.com/firestore/native/docs/query-data/get-data) for more information on retrieving query results. You can also [add a listener](https://docs.cloud.google.com/firestore/native/docs/query-data/listen) to a query to get the current results and listen for future updates.
 
@@ -1626,7 +1626,7 @@ Android
     val populationQuery = citiesRef.whereLessThan("population", 100000)
     val nameQuery = citiesRef.whereGreaterThanOrEqualTo("name", "San Francisco")
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L856-L858)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L856-L858)
 
 ##### Java  
 Android
@@ -1636,7 +1636,7 @@ Android
     Query populationQuery = citiesRef.whereLessThan("population", 100000);
     Query nameQuery = citiesRef.whereGreaterThanOrEqualTo("name", "San Francisco");
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1050-L1052)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1050-L1052)
 
 ### Dart
     
@@ -1666,7 +1666,7 @@ Android
     cities_ref.where(filter=FieldFilter("population", "<", 1000000))
     cities_ref.where(filter=FieldFilter("name", ">=", "San Francisco"))
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L481-L485)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L481-L485)
 
 ##### Python  
 (Async)
@@ -1678,7 +1678,7 @@ Android
     cities_ref.where(filter=FieldFilter("population", "<", 1000000))
     cities_ref.where(filter=FieldFilter("name", ">=", "San Francisco"))
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L475-L479)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L475-L479)
 
 ##### C++
     
@@ -1706,7 +1706,7 @@ Android
     popQuery := cities.Where("population", "<", 1000000)
     cityQuery := cities.Where("name", ">=", "San Francisco")
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L90-L92)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/query.go#L90-L92)
 
 ##### PHP
     
@@ -1732,7 +1732,7 @@ Android
     Query populationQuery = citiesRef.WhereGreaterThan("Population", 1000000);
     Query nameQuery = citiesRef.WhereGreaterThanOrEqualTo("Name", "San Francisco");
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/QueryData/Program.cs#L166-L169)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/QueryData/Program.cs#L166-L169)
 
 ##### Ruby
     
@@ -1741,7 +1741,7 @@ Android
     population_query = cities_ref.where "population", ">", 1_000_000
     name_query       = cities_ref.where "name", ">=", "San Francisco"
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L123-L125)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_data.rb#L123-L125)
 
 ### Not equal (`!=`)
 
@@ -1787,7 +1787,7 @@ Android
     
     val notCapitalQuery = citiesRef.whereNotEqualTo("capital", false)
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L862-L862)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L862-L862)
 
 ##### Java  
 Android
@@ -1795,7 +1795,7 @@ Android
     
     Query notCapitalQuery = citiesRef.whereNotEqualTo("capital", false);
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1056-L1056)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1056-L1056)
 
 ### Dart
     
@@ -1860,7 +1860,7 @@ Android
     cities_ref = firestore.col collection_path
     query = cities_ref.where "capital", "!=", false
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L239-L240)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_data.rb#L239-L240)
 
 This query returns every `city` document where the `capital` field exists with a value other than `false` or `null`. This includes `city` documents where the `capital` field value equals `true` or any non-boolean value besides `null`.
 
@@ -1927,7 +1927,7 @@ Android
     
     citiesRef.whereArrayContains("regions", "west_coast")
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L868-L870)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L868-L870)
 
 ##### Java  
 Android
@@ -1937,7 +1937,7 @@ Android
     
     citiesRef.whereArrayContains("regions", "west_coast");
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1062-L1064)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1062-L1064)
 
 ### Dart
     
@@ -1965,7 +1965,7 @@ Android
         filter=FieldFilter("regions", "array_contains", "west_coast")
     )
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L256-L260)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L256-L260)
 
 ##### Python  
 (Async)
@@ -1977,7 +1977,7 @@ Android
         filter=FieldFilter("regions", "array_contains", "west_coast")
     )
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L251-L255)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L251-L255)
 
 ##### C++
     
@@ -2001,7 +2001,7 @@ Android
     
     query := cities.Where("regions", "array-contains", "west_coast").Documents(ctx)
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L284-L284)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/query.go#L284-L284)
 
 ##### PHP
     
@@ -2022,7 +2022,7 @@ Android
     CollectionReference citiesRef = db.Collection("cities");
     Query query = citiesRef.WhereArrayContains("Regions", "west_coast");
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/QueryData/Program.cs#L192-L193)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/QueryData/Program.cs#L192-L193)
 
 ##### Ruby
     
@@ -2030,7 +2030,7 @@ Android
     cities_ref = firestore.col collection_path
     cities = cities_ref.where "regions", "array-contains", "west_coast"
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L281-L282)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_data.rb#L281-L282)
 
 This query returns every `city` document where the `regions` field is an array that contains `west_coast`. If the array has multiple instances of the value you query on, the document is included in the results only once.
 
@@ -2088,7 +2088,7 @@ Android
     
     citiesRef.whereIn("country", listOf("USA", "Japan"))
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L884-L886)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L884-L886)
 
 ##### Java  
 Android
@@ -2098,7 +2098,7 @@ Android
     
     citiesRef.whereIn("country", Arrays.asList("USA", "Japan"));
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1078-L1080)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1078-L1080)
 
 ### Dart
     
@@ -2125,7 +2125,7 @@ Android
     query = cities_ref.where(filter=FieldFilter("country", "in", ["USA", "Japan"]))
     return query
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L908-L911)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L908-L911)
 
 ##### Python  
 (Async)
@@ -2136,7 +2136,7 @@ Android
     query = cities_ref.where(filter=FieldFilter("country", "in", ["USA", "Japan"]))
     return query
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L761-L764)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L761-L764)
 
 ##### C++
     
@@ -2163,7 +2163,7 @@ Android
     cities := client.Collection("cities")
     query := cities.Where("country", "in", []string{"USA", "Japan"}).Documents(ctx)
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L263-L264)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/query.go#L263-L264)
 
 ##### PHP
     
@@ -2186,7 +2186,7 @@ Android
     CollectionReference citiesRef = db.Collection("cities");
     Query query = citiesRef.WhereIn("Country", new[] { "USA", "Japan" });
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/QueryData/Program.cs#L220-L221)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/QueryData/Program.cs#L220-L221)
 
 ##### Ruby
     
@@ -2194,7 +2194,7 @@ Android
     cities_ref = firestore.col collection_path
     usr_or_japan = cities_ref.where "country", "in", ["USA", "Japan"]
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L211-L212)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_data.rb#L211-L212)
 
 This query returns every `city` document where the `country` field is set to `USA` or `Japan`. From the example data, this includes the `SF`, `LA`, `DC`, and `TOK` documents.
 
@@ -2326,7 +2326,7 @@ Android
     cities_ref = firestore.col collection_path
     usr_or_japan = cities_ref.where "country", "not_in", ["USA", "Japan"]
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L253-L254)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_data.rb#L253-L254)
 
 This query returns every `city` document where the `country` field exists and is not set to `USA`, `Japan`, or `null`. From the example data, this includes the `London` and `Hong Kong` documents.
 
@@ -2387,7 +2387,7 @@ Android
     
     citiesRef.whereArrayContainsAny("regions", listOf("west_coast", "east_coast"))
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L876-L878)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L876-L878)
 
 ##### Java  
 Android
@@ -2397,7 +2397,7 @@ Android
     
     citiesRef.whereArrayContainsAny("regions", Arrays.asList("west_coast", "east_coast"));
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1070-L1072)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1070-L1072)
 
 ### Dart
     
@@ -2430,7 +2430,7 @@ Android
     )
     return query
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L895-L902)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L895-L902)
 
 ##### Python  
 (Async)
@@ -2445,7 +2445,7 @@ Android
     )
     return query
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L748-L755)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L748-L755)
 
 ##### C++
     
@@ -2473,7 +2473,7 @@ Android
     cities := client.Collection("cities")
     query := cities.Where("regions", "array-contains-any", []string{"west_coast", "east_coast"}).Documents(ctx)
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L293-L294)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/query.go#L293-L294)
 
 ##### PHP
     
@@ -2498,7 +2498,7 @@ Android
     CollectionReference citiesRef = db.Collection("cities");
     Query query = citiesRef.WhereArrayContainsAny("Regions", new[] { "west_coast", "east_coast" });
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/QueryData/Program.cs#L206-L207)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/QueryData/Program.cs#L206-L207)
 
 ##### Ruby
     
@@ -2506,7 +2506,7 @@ Android
     cities_ref = firestore.col collection_path
     costal_cities = cities_ref.where "regions", "array-contains-any", ["west_coast", "east_coast"]
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L267-L268)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_data.rb#L267-L268)
 
 This query returns every city document where the `regions` field is an array that contains `west_coast` or `east_coast`. From the example data, this includes the `SF`, `LA`, and `DC` documents.
 
@@ -2559,7 +2559,7 @@ Android
     
     citiesRef.whereIn("regions", listOf(arrayOf("west_coast"), arrayOf("east_coast")))
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L894-L894)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L894-L894)
 
 ##### Java  
 Android
@@ -2567,7 +2567,7 @@ Android
     
     citiesRef.whereIn("regions", Arrays.asList(new String[]{"west_coast"}, new String[]{"east_coast"}));
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1088-L1088)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1088-L1088)
 
 ### Dart
     
@@ -2601,7 +2601,7 @@ Android
     )
     return query
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L917-L922)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L917-L922)
 
 ##### Python  
 (Async)
@@ -2614,7 +2614,7 @@ Android
     )
     return query
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L770-L775)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L770-L775)
 
 ##### C++
     
@@ -2640,7 +2640,7 @@ Android
     cities := client.Collection("cities")
     query := cities.Where("regions", "in", [][]string{{"west_coast"}, {"east_coast"}}).Documents(ctx)
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L273-L274)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/query.go#L273-L274)
 
 ##### PHP
     
@@ -2661,7 +2661,7 @@ Android
     Query query = citiesRef.WhereIn("Regions",
         new[] { new[] { "west_coast" }, new[] { "east_coast" } });
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/QueryData/Program.cs#L234-L236)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/QueryData/Program.cs#L234-L236)
 
 ##### Ruby
     
@@ -2669,7 +2669,7 @@ Android
     cities_ref = firestore.col collection_path
     exactly_one_cost = cities_ref.where "regions", "in", [["west_coast"], ["east_coast"]]
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L225-L226)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_data.rb#L225-L226)
 
 This query returns every city document where the `regions` field is an array that contains exactly one element of either `west_coast` or `east_coast`. From the example data, only the `DC` document qualifies with its `regions` field of `["east_coast"]`. The `SF` document, however, does not match because its `regions` field is `["west_coast", "norcal"]`.
 
@@ -2741,7 +2741,7 @@ Android
     citiesRef.whereEqualTo("state", "CO").whereEqualTo("name", "Denver")
     citiesRef.whereEqualTo("state", "CA").whereLessThan("population", 1000000)
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L902-L903)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L902-L903)
 
 ##### Java  
 Android
@@ -2750,7 +2750,7 @@ Android
     citiesRef.whereEqualTo("state", "CO").whereEqualTo("name", "Denver");
     citiesRef.whereEqualTo("state", "CA").whereLessThan("population", 1000000);
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1096-L1097)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1096-L1097)
 
 ### Dart
     
@@ -2784,7 +2784,7 @@ Android
         filter=FieldFilter("state", "==", "CA")
     ).where(filter=FieldFilter("population", ">", 1000000))
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L494-L501)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L494-L501)
 
 ##### Python  
 (Async)
@@ -2799,7 +2799,7 @@ Android
         filter=FieldFilter("state", "==", "CA")
     ).where(filter=FieldFilter("population", ">", 1000000))
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L486-L493)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L486-L493)
 
 ##### C++
     
@@ -2826,7 +2826,7 @@ Android
     caliQuery := cities.Where("state", "==", "CA").Where("population", "<=", 1000000)
     query := cities.Where("country", "==", "USA").Where("population", ">", 5000000)
     
-    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query.go#L115-L115)
+    [query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/query.go#L115-L115)
 
 ##### PHP
     
@@ -2852,14 +2852,14 @@ Android
         .WhereEqualTo("State", "CA")
         .WhereEqualTo("Name", "San Francisco");
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/QueryData/Program.cs#L275-L278)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/QueryData/Program.cs#L275-L278)
 
 ##### Ruby
     
     
     chained_query = cities_ref.where("state", "=", "CA").where("name", "=", "San Francisco")
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L145-L145)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_data.rb#L145-L145)
 
 ## `OR` queries
 
@@ -2951,7 +2951,7 @@ Snippet not available.
     )
     docs = query.stream()
     
-    [query_filter_or.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/query_filter_or.py#L18-L30)
+    [query_filter_or.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/query_filter_or.py#L18-L30)
 
 ##### Python  
 (Async)
@@ -3036,7 +3036,7 @@ Snippet not available.
     }
     
     
-    [query_filter_or.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/query_filter_or.go#L18-L73)
+    [query_filter_or.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/query_filter_or.go#L18-L73)
 
 ##### PHP
 
@@ -3129,7 +3129,7 @@ Android
         )
     ))
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L1149-L1155)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L1149-L1155)
 
 ##### Java  
 Android
@@ -3143,7 +3143,7 @@ Android
         )
     ));
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1377-L1383)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1377-L1383)
 
 ### Dart
     
@@ -3486,7 +3486,7 @@ Android
     )
     citiesRef.document("BJ").collection("landmarks").add(baoData)
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L778-L838)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L778-L838)
 
 ##### Java  
 Android
@@ -3544,7 +3544,7 @@ Android
     baoData.put("type", "museum");
     citiesRef.document("BJ").collection("landmarks").add(baoData);
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L982-L1032)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L982-L1032)
 
 ### Dart
     
@@ -3737,7 +3737,7 @@ Android
         {"name": "Beijing Ancient Observatory", "type": "museum"}
     )
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L857-L879)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L857-L879)
 
 ##### Python  
 (Async)
@@ -3767,7 +3767,7 @@ Android
         {"name": "Beijing Ancient Observatory", "type": "museum"}
     )
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L710-L732)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L710-L732)
 
 ##### C++
     
@@ -3901,7 +3901,7 @@ Android
     }
     
     
-    [collection_group_setup.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/collection_group_setup.go#L18-L62)
+    [collection_group_setup.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/collection_group_setup.go#L18-L62)
 
 ##### PHP
     
@@ -4467,7 +4467,7 @@ Android
     }
     
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/QueryData/Program.cs)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/QueryData/Program.cs)
 
 ##### Ruby
     
@@ -4544,7 +4544,7 @@ Android
       }
     )
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L295-L365)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_data.rb#L295-L365)
 
 We can use the simple and compound query described earlier to query a single city's `landmarks` subcollection, but you might also want to retrieve results from every city's `landmarks` subcollection at once.
 
@@ -4609,7 +4609,7 @@ Android
             // ...
         }
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L1026-L1033)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L1026-L1033)
 
 ##### Java  
 Android
@@ -4623,7 +4623,7 @@ Android
                 }
             });
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1226-L1236)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L1226-L1236)
 
 ### Dart
     
@@ -4660,7 +4660,7 @@ Android
     for doc in docs:
         print(f"{doc.id} => {doc.to_dict()}")
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L883-L888)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L883-L888)
 
 ##### Python  
 (Async)
@@ -4673,7 +4673,7 @@ Android
     async for doc in docs:
         print(f"{doc.id} => {doc.to_dict()}")
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L736-L741)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L736-L741)
 
 ##### C++
     
@@ -4740,7 +4740,7 @@ Android
     }
     
     
-    [collection_group_query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/6d3321b0e6be6f8f6a370c08bf5593f7f0558f6e/firestore/collection_group_query.go#L18-L52)
+    [collection_group_query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/collection_group_query.go#L18-L52)
 
 ##### PHP
     
@@ -4774,7 +4774,7 @@ Android
         Console.WriteLine($"{document.Reference.Path}: {document.GetValue<string>("Name")}");
     }
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/QueryData/Program.cs#L249-L254)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/QueryData/Program.cs#L249-L254)
 
 ##### Ruby
     
@@ -4784,7 +4784,7 @@ Android
       puts "#{museum[:type]} name is #{museum[:name]}."
     end
     
-    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/query_data.rb#L369-L372)
+    [query_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/query_data.rb#L369-L372)
 
 Before using a collection group query, you must create an index that supports your collection group query. [You can create an index through an error message, the console, or the Firebase CLI](https://docs.cloud.google.com/firestore/native/docs/query-data/indexing).
 
@@ -4952,6 +4952,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-19 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

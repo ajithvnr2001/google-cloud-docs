@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/custom-training-methods/
 title: Choose a Gemini Enterprise Agent Platform serverless training method \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:43:46.598230+00:00
+fetched_at: 2026-10-22T10:26:08.383136+00:00
 ---
 
 # Choose a Gemini Enterprise Agent Platform serverless training method  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/metrics-mhs/
 title: Managed Harbor Service (MHS) \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:40:00.692662+00:00
+fetched_at: 2026-10-22T08:21:46.137640+00:00
 ---
 
 # Managed Harbor Service (MHS)  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

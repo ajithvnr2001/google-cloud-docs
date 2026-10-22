@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-agent-kit/build-pipelines/
 title: Build data engineering pipelines \u00a0|\u00a0 Google Cloud Data Agent Kit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:26.158014+00:00
+fetched_at: 2026-10-22T08:26:14.075283+00:00
 ---
 
 # Build data engineering pipelines  |  Google Cloud Data Agent Kit  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/use-soft-deleted-objects/
 title: Use soft-deleted objects \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:14.624421+00:00
+fetched_at: 2026-10-22T09:50:13.658048+00:00
 ---
 
 # Use soft-deleted objects  |  Cloud Storage  |  Google Cloud Documentation
@@ -21,19 +21,19 @@ Send feedback
 
 #  Use soft-deleted objects Stay organized with collections  Save and categorize content based on your preferences. 
 
-[Overview](https://docs.cloud.google.com/storage/docs/soft-delete) [Setup](https://docs.cloud.google.com/storage/docs/use-soft-delete)
+Soft delete helps you protect your Cloud Storage data from accidental or malicious deletion. You can list the soft-deleted objects in a bucket, and restore objects individually or in bulk.
 
-This page describes how to list, access, and restore soft-deleted objects.
+For background information, see [Soft delete overview](https://docs.cloud.google.com/storage/docs/soft-delete).
 
 ## Before you begin
 
-To get the permissions that you need to list, access, and restore soft-deleted objects, ask your administrator to grant you the [Storage Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/storage#storage.admin) (`roles/storage.admin`) IAM role on the bucket, managed folder, or project. 
+To get the permissions that you need to list and restore soft-deleted objects, ask your administrator to grant you the [Storage Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/storage#storage.admin) (`roles/storage.admin`) IAM role on the bucket, managed folder, or project. 
 
-This predefined role contains the permissions required to list, access, and restore soft-deleted objects. To see the exact permissions that are required, expand the **Required permissions** section: 
+This predefined role contains the permissions required to list and restore soft-deleted objects. To see the exact permissions that are required, expand the **Required permissions** section: 
 
 #### Required permissions
 
-The following permissions are required to list, access, and restore soft-deleted objects:
+The following permissions are required to list and restore soft-deleted objects:
 
   * `storage.buckets.get` (this permission is only required for using the Google Cloud console to perform the instructions on this page) 
   * `storage.buckets.list` (this permission is only required for using the Google Cloud console to perform the instructions on this page) 
@@ -341,7 +341,7 @@ The following example shows a long-running operation that's returned from a bulk
 
 ## What's next
 
-  * Learn more about [soft delete](https://docs.cloud.google.com/storage/docs/soft-delete).
+  * Learn how to [configure soft delete on a bucket](https://docs.cloud.google.com/storage/docs/use-soft-delete).
 
 
 
@@ -349,6 +349,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

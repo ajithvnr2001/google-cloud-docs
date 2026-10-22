@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-bucket-tf-with-versioning/
 title: Create a Bucket to store Terraform state \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:17:06.116523+00:00
+fetched_at: 2026-10-22T10:31:00.653927+00:00
 ---
 
 # Create a Bucket to store Terraform state  |  Cloud Storage  |  Google Cloud Documentation

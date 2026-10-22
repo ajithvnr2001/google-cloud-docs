@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/summarize-content/
 title: Summarize content \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:35.892248+00:00
+fetched_at: 2026-10-22T09:25:16.490346+00:00
 ---
 
 # Summarize content  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

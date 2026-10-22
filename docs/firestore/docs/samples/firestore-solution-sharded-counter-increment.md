@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-solution-sharded-counter-increment/
 title: Incrementing a Firestore document field while using shards \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:59:06.755813+00:00
+fetched_at: 2026-10-22T10:27:42.800605+00:00
 ---
 
 # Incrementing a Firestore document field while using shards  |  Google Cloud Documentation

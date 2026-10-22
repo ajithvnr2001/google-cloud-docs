@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/dialogflow-messenger/fulfillment/
 title: Dialogflow CX Messenger fulfillment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:41:21.724904+00:00
+fetched_at: 2026-10-22T10:40:43.601026+00:00
 ---
 
 # Dialogflow CX Messenger fulfillment  |  Google Cloud Documentation
@@ -557,13 +557,13 @@ Properties | Input Policy | Default Value | Description
 `df-messenger-citations-message-font-color` | Optional | #041e49 | Text color of the note above citations.  
 `df-messenger-citations-message-font-size` | Optional | 12px | Text size of the note above citations.  
 `df-messenger-citations-flex-direction` | Optional | row | [Flex direction property](https://www.w3schools.com/cssref/css3_pr_flex-direction.php) of the citations, recommended to use `row` (horizontal with line breaks) or `column` (vertical).  
-`df-messenger-citations-border-color` | Optional | #1a73e8 | Border color of a citation.  
-`df-messeenger-citations-border-color-hover` | Optional | #1a73e8 | Border color of a citation when hovered.  
+`df-messenger-citations-border-color` | Optional | #3279f9 | Border color of a citation.  
+`df-messeenger-citations-border-color-hover` | Optional | #3279f9 | Border color of a citation when hovered.  
 `df-messenger-citations-border-radius` | Optional | 4px | Border radius of a citation.  
 `df-messenger-citations-padding` | Optional | 8px | Padding of a citation.  
 `df-messenger-citations-background` | Optional | white | [Background](https://developer.mozilla.org/en-US/docs/Web/CSS/background) of a citation.  
 `df-messenger-citations-background-hover` | Optional | `rgba(68, 71, 70, 0.08)` | [Background](https://developer.mozilla.org/en-US/docs/Web/CSS/background) of a citation when hovered.  
-`df-messenger-citations-font-color` | Optional | #1a73e8 | Text color of a citation.  
+`df-messenger-citations-font-color` | Optional | #3279f9 | Text color of a citation.  
 `df-messenger-citations-font-family` | Optional | "Google Sans", "Helvetica Neue", sans-serif | Font family of a citation.  
 `df-messenger-citations-font-size` | Optional | 11px | Text size of a citation.  
 `df-messenger-citations-icon-font-size` | Optional | 14px | Text size of the icon of a citation.  
@@ -967,6 +967,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

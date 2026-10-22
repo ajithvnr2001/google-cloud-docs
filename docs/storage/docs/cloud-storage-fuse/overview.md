@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/cloud-storage-fuse/overview/
 title: Cloud Storage FUSE \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:49:09.845080+00:00
+fetched_at: 2026-10-22T10:30:34.917434+00:00
 ---
 
 # Cloud Storage FUSE  |  Google Cloud Documentation
@@ -29,7 +29,7 @@ Cloud Storage FUSE is an open source product supported by Google. Cloud Storage 
 
 To use Cloud Storage FUSE, you install the Cloud Storage FUSE package on a machine with a compatible operating system such as Linux or Windows Subsystem for Linux, ensure proper Google Cloud authentication and permissions, and then execute the `gcsfuse` command to mount a specific Cloud Storage bucket to a local directory.
 
-Cloud Storage FUSE is integrated with other Google Cloud services. For example, the Cloud Storage FUSE CSI driver lets you use the Google Kubernetes Engine (GKE) API to [consume buckets as volumes](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/cloud-storage-fuse-csi-driver), so you can read from and write to Cloud Storage from within your Kubernetes pods. For more information on other integrations, see [Integrations](https://docs.cloud.google.com/storage/docs/cloud-storage-fuse/overview#integrations).
+Cloud Storage FUSE is integrated with other Google Cloud services. For example, the Cloud Storage FUSE CSI driver lets you use the Kubernetes Engine API to [consume buckets as volumes](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/cloud-storage-fuse-csi-driver), so you can read from and write to Cloud Storage from within your Kubernetes pods. For more information on other integrations, see [Integrations](https://docs.cloud.google.com/storage/docs/cloud-storage-fuse/overview#integrations).
 
 ## How Cloud Storage FUSE works
 
@@ -247,6 +247,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

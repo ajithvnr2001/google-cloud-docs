@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/managedkafka/
 title: Google Cloud Managed Service for Apache Kafka roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:42:13.109939+00:00
+fetched_at: 2026-10-22T08:31:18.017509+00:00
 ---
 
 # Google Cloud Managed Service for Apache Kafka roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

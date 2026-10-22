@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-qwen3-30b-a3b-rl-maxtext/
 title: Run multi-host RL training for Qwen3-30b-a3b on TPU v6e \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:15:18.895241+00:00
+fetched_at: 2026-10-22T09:10:20.078204+00:00
 ---
 
 # Run multi-host RL training for Qwen3-30b-a3b on TPU v6e  |  AI Hypercomputer  |  Google Cloud Documentation

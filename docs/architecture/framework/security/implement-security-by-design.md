@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/security/implement-security-by-design/
 title: Implement security by design \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:22.942269+00:00
+fetched_at: 2026-10-22T09:07:35.250959+00:00
 ---
 
 # Implement security by design  |  Cloud Architecture Center  |  Google Cloud Documentation

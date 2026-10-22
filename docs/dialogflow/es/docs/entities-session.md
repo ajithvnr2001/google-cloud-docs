@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/entities-session/
 title: Session entities \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:38.188092+00:00
+fetched_at: 2026-10-22T08:26:41.810776+00:00
 ---
 
 # Session entities  |  Dialogflow ES  |  Google Cloud Documentation

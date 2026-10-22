@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/renew-commitments-automatically/
 title: Renew commitments automatically \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:45:42.502374+00:00
+fetched_at: 2026-10-22T10:12:44.052961+00:00
 ---
 
 # Renew commitments automatically  |  Compute Engine  |  Google Cloud Documentation
@@ -104,6 +104,7 @@ Your commitment fee is the sum of the discounted prices of all your committed re
 
   * You can enable auto-renewal only on your resource-based commitments.
   * You can enable auto-renewal only on your active commitments.
+  * You can't enable auto-renewal on software license commitments.
   * You can't enable auto-renewal on commitments that you purchased through [future reservations for capacity blocks](https://docs.cloud.google.com/compute/docs/instances/choose-reservation-type#reserve-capacity-aihc).
 
 
@@ -238,9 +239,9 @@ To perform this task, you must have the following [permissions](https://docs.clo
 
 [Go to Committed use discounts](https://console.cloud.google.com/compute/commitments)
 
-  2. In the **Commitment list** , under **Hardware commitments** , click the **Name** of the commitment.
+  2. In the **Commitment list** , select the **Hardware commitments** or **Block storage commitments** tab, and then click the **Name** of the commitment.
 
-  3. On the **Hardware commitment details** page, click the **Auto renew** toggle.
+  3. On the **Hardware commitment details** or **Block storage commitment details** page that opens, click the **Auto renew** toggle.
 
 
 
@@ -314,16 +315,16 @@ To perform this task, you must have the following [permissions](https://docs.clo
 
 [Go to Committed use discounts](https://console.cloud.google.com/compute/commitments)
 
-  2. In the **Commitment list** , under **Hardware commitments** , click the **Name** of the commitment.
+  2. In the **Commitment list** , select the **Hardware commitments** or **Block storage commitments** tab, and then click the **Name** of the commitment.
 
-  3. On the **Hardware commitment details** page, click the **Auto renew** toggle.
+  3. On the **Hardware commitment details** or **Block storage commitment details** page that opens, click the **Auto renew** toggle.
 
 
 
 
 ###  gcloud 
 
-To disable auto-renewal on an existing commitment, run the [`gcloud commitments update` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/commitments/update):
+To disable auto-renewal on an existing commitment, run the [`gcloud compute commitments update` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/commitments/update):
     
     
     gcloud compute commitments update COMMITMENT_NAME --no-auto-renew

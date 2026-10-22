@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-workbench/
 title: Manage notebooks \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-16T12:01:24.615936+00:00
+fetched_at: 2026-10-22T10:30:15.782648+00:00
 ---
 
 # Manage notebooks  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -32,7 +32,7 @@ For information about backing up and restoring data, see [Create a backup and re
 
 Before using Vertex AI Workbench to manage notebooks, you must have a project ready to run Vertex AI services. For more information, see [Set up a project for Vertex AI](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-set-up-project).
 
-To get the permissions you need to manage notebook resources within a project namespace, ask your Project IAM Admin to grant you one of the following roles:
+To get the permissions you need to manage notebook resources within a project namespace, ask your IAM Project Admin to grant you one of the following roles:
 
   * **Workbench Notebooks Admin** (`workbench-notebooks-admin`): Get read and write access to all notebook resources in a project. You need this role to create JupyterLab notebooks.
   * **Workbench Notebooks Viewer** (`workbench-notebooks-viewer`): Get read-only access to all notebook resources in a project. You need this role to open JupyterLab notebooks.
@@ -132,6 +132,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

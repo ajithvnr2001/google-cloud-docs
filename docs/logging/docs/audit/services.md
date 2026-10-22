@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/audit/services/
 title: Google Cloud services with audit logs \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:05.609858+00:00
+fetched_at: 2026-10-22T10:44:03.310111+00:00
 ---
 
 # Google Cloud services with audit logs  |  Cloud Logging  |  Google Cloud Documentation
@@ -21,11 +21,11 @@ Send feedback
 
 #  Google Cloud services with audit logs Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page provides information about the Google Cloud services that write audit logs. It also provides links to other related audit logging documentation.
+Most Google Cloud services write Cloud Audit Logs to record administrative activities and data access across your Google Cloud resources. You can use the table in this document to find the audit logging reference documentation and API service name for each supported Google Cloud service.
 
 Google Cloud MCP servers write Data Access audit logs that are service-specific and use the format `SERVICE_NAME.googleapis.com/mcp`. You can enable these Data Access logs by turning on audit logging for `mcp.googleapis.com` in the [IAM `AuditConfig` object](https://docs.cloud.google.com/logging/docs/audit/configure-data-access#auditconfig_objects). For more information about audit logging for Google Cloud MCP servers, see [Google Cloud MCP servers audit logging](https://docs.cloud.google.com/mcp/audit-logging).
 
-For an overview of what audit logs are and what each type of audit log means, see [Cloud Audit Logs overview](https://docs.cloud.google.com/logging/docs/audit).
+For an overview of audit logs and the different audit log types, see [Cloud Audit Logs overview](https://docs.cloud.google.com/logging/docs/audit).
 
 ## Google Cloud services producing audit logs
 

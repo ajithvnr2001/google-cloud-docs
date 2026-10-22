@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/securing-app-engine/
 title: Securing App Engine apps with IAP \u00a0|\u00a0 Chrome Enterprise Premium \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:11:56.469930+00:00
+fetched_at: 2026-10-22T08:28:01.003728+00:00
 ---
 
 # Securing App Engine apps with IAP  |  Chrome Enterprise Premium  |  Google Cloud Documentation

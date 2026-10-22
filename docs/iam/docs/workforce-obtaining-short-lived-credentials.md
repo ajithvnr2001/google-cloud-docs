@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/workforce-obtaining-short-lived-credentials/
 title: Obtain short-lived tokens for Workforce Identity Federation \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:54:13.699077+00:00
+fetched_at: 2026-10-22T08:59:55.740331+00:00
 ---
 
 # Obtain short-lived tokens for Workforce Identity Federation  |  Identity and Access Management (IAM)  |  Google Cloud Documentation
@@ -22,14 +22,14 @@ Send feedback
 
 #  Obtain short-lived tokens for Workforce Identity Federation Stay organized with collections  Save and categorize content based on your preferences. 
 
-This guide shows you how to use a workforce identity pool and workforce identity pool provider to obtain short-lived tokens from Security Token Service or the [Cloud OAuth API](https://docs.cloud.google.com/iam/docs/cloud-oauth-api-overview). You can use the tokens to access Google Cloud resources that [support Workforce Identity Federation](https://docs.cloud.google.com/iam/docs/federated-identity-supported-services) and for which you have permissions.
+You can use a workforce identity pool and workforce identity pool provider to obtain short-lived tokens from Security Token Service or the [Cloud OAuth API](https://docs.cloud.google.com/iam/docs/cloud-oauth-api-overview). These tokens let you access Google Cloud resources that [support Workforce Identity Federation](https://docs.cloud.google.com/iam/docs/federated-identity-supported-services) and for which you have permissions.
 
-You can use the methods described in this guide on headless machines.
+You can use the methods described in this document on headless machines.
 
 To obtain short-lived tokens, follow this high-level process:
 
-  1. Obtain a credential from the trusted identity provider (IdP).
-  2. Exchange the credential for a token from Security Token Service or the Cloud OAuth API.
+  1. Obtain a credential from the trusted identity provider (IdP), or redirect users to the authorization endpoint (`https://auth.cloud.google/authorize`) to sign in with the IdP and obtain an authorization code.
+  2. Exchange the credential or authorization code for a token from Security Token Service or the Cloud OAuth API.
 
 
 
@@ -42,7 +42,7 @@ To obtain short-lived tokens, follow this high-level process:
 
 Note your workforce identity pool ID and workforce identity pool provider ID.
 
-  2. Ensure that every principal for which tokens are exchanged using the Security Token Service has the Identity and Access Management (IAM) permission `serviceusage.services.use`. The least-privileged role that contains this permission is Service Usage Consumer (`roles/serviceusage.serviceUsageConsumer`).
+  2. Ensure that every principal for which tokens are exchanged using Security Token Service has the Identity and Access Management (IAM) permission `serviceusage.services.use`. The least-privileged role that contains this permission is Service Usage Consumer (`roles/serviceusage.serviceUsageConsumer`).
 
   3. Enable the IAM, Security Token Service, and the Cloud OAuth API APIs, if any are not already enabled. 
 
@@ -64,9 +64,9 @@ If you're using an external identity provider (IdP), you must first [ sign in to
 
 ## Exchange external credentials for a Google Cloud access token
 
-This section shows you how to use [Security Token Service](https://docs.cloud.google.com/iam/docs/reference/sts/rest) or the [Cloud OAuth API](https://docs.cloud.google.com/iam/docs/cloud-oauth-api-overview) to exchange your external credentials for an access token that grants access to Google Cloud. You can do this by using the gcloud CLI, REST API, and Cloud Client Libraries as described later in this guide.
+This section shows you how to use [Security Token Service](https://docs.cloud.google.com/iam/docs/reference/sts/rest) or the [Cloud OAuth API](https://docs.cloud.google.com/iam/docs/cloud-oauth-api-overview) to exchange your external credentials for an access token that grants access to Google Cloud. You can do this by using the gcloud CLI, the REST API, and the Cloud Client Libraries as described later in this document.
 
-For instructions on how to exchange authorization codes and refresh tokens using the Cloud OAuth API, see [Exchange tokens with the Cloud OAuth API](https://docs.cloud.google.com/iam/docs/cloud-oauth-exchange-tokens).
+For instructions about how to obtain an authorization code from the authorization endpoint (`https://auth.cloud.google/authorize`) and exchange authorization codes and refresh tokens using the Cloud OAuth API, see [Exchange tokens with the Cloud OAuth API](https://docs.cloud.google.com/iam/docs/cloud-oauth-exchange-tokens).
 
 If you need long-lived access, you can configure a long-running process to continuously refresh credentials on that machine. Alternatively, you can run a local server in the background with an endpoint that returns the credentials.
 
@@ -866,7 +866,9 @@ For details, see the [user guide for the `google-auth` package](https://github.c
 
 ### Use the REST API
 
-You can call the Google Cloud Security Token Service API to exchange your external credentials for Google Cloud access tokens by running the following command:
+To obtain an authorization code from the authorization endpoint (`https://auth.cloud.google/authorize`) and exchange authorization codes or refresh tokens using the Cloud OAuth API (`cloudoauth.googleapis.com`), see [Exchange tokens with the Cloud OAuth API](https://docs.cloud.google.com/iam/docs/cloud-oauth-exchange-tokens).
+
+You can also call the Google Cloud Security Token Service API to exchange your external credentials for Google Cloud access tokens by running the following command:
     
     
     curl https://sts.googleapis.com/v1/token \
@@ -955,6 +957,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

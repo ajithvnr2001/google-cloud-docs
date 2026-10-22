@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/audiocodes/
 title: AudioCodes \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:28.248715+00:00
+fetched_at: 2026-10-22T08:33:49.450030+00:00
 ---
 
 # AudioCodes  |  Dialogflow CX  |  Google Cloud Documentation

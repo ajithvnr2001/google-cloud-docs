@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/deprecations/migrate-oauth-client/
 title: Migrate from the IAP OAuth Admin API \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:11:55.204799+00:00
+fetched_at: 2026-10-22T08:27:26.015416+00:00
 ---
 
 # Migrate from the IAP OAuth Admin API  |  Identity-Aware Proxy  |  Google Cloud Documentation

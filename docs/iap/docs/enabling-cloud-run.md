@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/enabling-cloud-run/
 title: Enable IAP for Cloud Run \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:11:52.545351+00:00
+fetched_at: 2026-10-22T08:27:55.515403+00:00
 ---
 
 # Enable IAP for Cloud Run  |  Identity-Aware Proxy  |  Google Cloud Documentation

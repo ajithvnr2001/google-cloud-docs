@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/vector-search-2/cmek/
 title: Customer Managed Encryption Keys (CMEK) in Agent Retrieval \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:46:44.504332+00:00
+fetched_at: 2026-10-22T10:28:51.007340+00:00
 ---
 
 # Customer Managed Encryption Keys (CMEK) in Agent Retrieval  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

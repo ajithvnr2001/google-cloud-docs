@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/pgaudit/configure-log-behavior/
 title: Configure logging behavior \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:23.461512+00:00
+fetched_at: 2026-10-22T09:36:55.526979+00:00
 ---
 
 # Configure logging behavior  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

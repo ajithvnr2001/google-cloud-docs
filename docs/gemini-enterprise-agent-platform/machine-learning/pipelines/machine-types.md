@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/machine-types/
 title: Specify the machine configuration for a pipeline step \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:00.461318+00:00
+fetched_at: 2026-10-22T10:22:48.687136+00:00
 ---
 
 # Specify the machine configuration for a pipeline step  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/reliability-recommender/
 title: Reliability recommender \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:17.007148+00:00
+fetched_at: 2026-10-22T08:25:16.158612+00:00
 ---
 
 # Reliability recommender  |  Firestore in Datastore mode  |  Google Cloud Documentation

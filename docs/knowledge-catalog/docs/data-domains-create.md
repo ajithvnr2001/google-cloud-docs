@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/data-domains-create/
 title: Create data domains \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:02:51.756175+00:00
+fetched_at: 2026-10-22T09:49:20.919944+00:00
 ---
 
 # Create data domains  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -27,7 +27,7 @@ Send feedback
 
 This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
-This document describes how to create data domains and subdomains using the Google Cloud console and the REST API, and how to grant Identity and Access Management the roles and permissions to users who interact with the domains and their resources.
+Data domains and subdomains in Knowledge Catalog (formerly Dataplex Universal Catalog) let you organize data assets and products into a logical hierarchy that reflects your business structure. After you create a domain, you can grant Identity and Access Management roles and permissions to control how users interact with the domain and its resources.
 
 ## Before you begin
 
@@ -63,7 +63,7 @@ You might also be able to get the required permissions through [custom roles](ht
 
 ## Create a data domain
 
-Create a data domain to serve as a logical grouping for data assets and products within a project and location.
+Create a data domain using the Google Cloud console or the REST API to serve as a logical grouping for data assets and products within a project and location.
 
 ###  Console 
 
@@ -157,7 +157,7 @@ You should receive a successful status code (2xx) and an empty response.
 
 ## Create a data subdomain
 
-Create a subdomain to extend the data domain hierarchy.
+Create a subdomain using the Google Cloud console or the REST API to extend the data domain hierarchy.
 
 ###  Console 
 
@@ -274,9 +274,9 @@ When you grant the roles to domain owners or users, consider the following:
 
 ## Grant access to a data domain
 
-###  Console 
+To grant IAM roles and permissions to users who interact with a data domain and its resources, follow these steps:
 
-To grant access to a data domain, follow these steps:
+###  Console 
 
   1. In the Google Cloud console, go to the **Data domains** page.
 
@@ -516,6 +516,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

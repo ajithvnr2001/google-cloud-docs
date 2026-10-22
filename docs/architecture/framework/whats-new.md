@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/whats-new/
 title: What's new in the Well-Architected Framework \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:28:20.297107+00:00
+fetched_at: 2026-10-22T09:38:51.486151+00:00
 ---
 
 # What's new in the Well-Architected Framework  |  Cloud Architecture Center  |  Google Cloud Documentation

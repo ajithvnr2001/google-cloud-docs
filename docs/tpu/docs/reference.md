@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tpu/docs/reference/
 title: All APIs and reference documents \u00a0|\u00a0 Cloud TPU \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:38:49.012074+00:00
+fetched_at: 2026-10-22T10:03:39.005091+00:00
 ---
 
 # All APIs and reference documents  |  Cloud TPU  |  Google Cloud Documentation
@@ -27,13 +27,14 @@ Send feedback
 
 
 
-## Frameworks (TensorFlow, PyTorch, JAX)
+## Frameworks (JAX, PyTorch, TensorFlow)
 
+  * ### [JAX AI stack Describes the JAX AI stack on Cloud TPU.  ](https://docs.cloud.google.com/tpu/docs/jax-ai-stack)
+  * ### [JAX Docs Links to the JAX developer documentation.  ](https://docs.jax.dev/en/latest/)
+  * ### [PyTorch on TPU TorchTPU is a native PyTorch backend for Cloud TPUs, built with the PyTorch team and integrated with the ecosystem of projects like vLLM-TorchTPU, SGLang-TorchTPU, and TorchTitan-TorchTPU.  ](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)
+  * ### [TorchTPU Docs Links to the TorchTPU developer documentation.  ](https://torchtpu.readthedocs.io/en/latest/)
   * ### [TensorFlow Reference Links to the TensorFlow API documentation.  ](https://www.tensorflow.org/versions)
   * ### [Available TensorFlow Ops Lists the TensorFlow operations available on Cloud TPU.  ](https://docs.cloud.google.com/tpu/docs/tensorflow-ops)
-  * ### [Supported TPUs and TPU software versions Lists the supported Cloud TPU configurations and supported framework (TensorFlow, PyTorch, JAX) software versions.  ](https://docs.cloud.google.com/tpu/docs/supported-tpu-versions)
-  * ### [JAX AI stack Describes the JAX AI stack.  ](https://docs.cloud.google.com/tpu/docs/jax-ai-stack)
-  * ### [PyTorch on TPU TorchTPU is a native PyTorch backend for Cloud TPUs, built with the PyTorch team and integrated with the ecosystem of projects like vLLM-TorchTPU, SGLang-TorchTPU, and TorchTitan-TorchTPU.  ](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)
 
 
 

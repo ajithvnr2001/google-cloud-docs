@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-cloud-sql-postgres-source-connector/
 title: Create a Cloud SQL for PostgreSQL Source connector \u00a0|\u00a0 Managed Service for Apache Kafka \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:16:54.423991+00:00
+fetched_at: 2026-10-22T10:44:54.470610+00:00
 ---
 
 # Create a Cloud SQL for PostgreSQL Source connector  |  Managed Service for Apache Kafka  |  Google Cloud Documentation
@@ -21,11 +21,9 @@ Send feedback
 
 #  Create a Cloud SQL for PostgreSQL Source connector Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document describes how to create a Cloud SQL for PostgreSQL Source connector for Kafka Connect.
+A Cloud SQL for PostgreSQL Source connector lets you capture row-level changes from a [Cloud SQL for PostgreSQL](https://docs.cloud.google.com/sql/docs/postgres/introduction) database and write them to topics in a Managed Service for Apache Kafka cluster.
 
-A Cloud SQL for PostgreSQL Source connector is an instance of a [Debezium PostgreSQL connector](https://debezium.io/documentation/reference/stable/connectors/postgresql.html). It reads row-level changes from a [Cloud SQL for PostgreSQL](https://docs.cloud.google.com/sql/docs/postgres/introduction) database and writes them to topics in a Managed Service for Apache Kafka cluster.
-
-Use cases for this connector include:
+Typical use cases for this connector include:
 
   * Monitor row-level database changes in real time.
   * Integrate database change events into an event-driven architecture.
@@ -429,6 +427,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

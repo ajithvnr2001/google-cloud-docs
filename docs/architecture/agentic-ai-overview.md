@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/agentic-ai-overview/
 title: Agentic AI architecture guides \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:27:28.590452+00:00
+fetched_at: 2026-10-22T09:36:04.341470+00:00
 ---
 
 # Agentic AI architecture guides  |  Cloud Architecture Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/quotas/
 title: Quotas and limits \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T11:26:14.013318+00:00
+fetched_at: 2026-10-22T08:59:27.249722+00:00
 ---
 
 # Quotas and limits  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -151,6 +151,23 @@ Read requests for data assets per project per user per region per minute | 250
 Write requests for data assets per project per region per minute | 30  
 Write requests for data assets per project per user per region per minute | 15  
   
+## Quotas and limits for Knowledge Studio enrichment tasks
+
+**Preview**
+
+This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+
+The Dataplex API enforces rate and resource quotas on Knowledge Studio enrichment tasks (`AgentTask` resources) and task runs (`AgentRun` resources).
+
+The following quotas apply to Knowledge Studio enrichment tasks:
+
+Quota | Default value  
+---|---  
+Read requests for enrichment task resources (such as `Get` and `List` for tasks and runs) per project per region per minute | 1200  
+Write requests for enrichment task resources (such as `Create`, `Update`, and `Delete`) per project per region per minute | 60  
+Run requests for enrichment task resources per project per region per minute | 20  
+Maximum number of enrichment tasks (`AgentTask` resources) per project per region | 100  
+  
 ## Quotas for resources
 
 Resource quota is enforced at per-project level for the following resource types: lake, zone, asset, on-demand task, recurring task. You can check your current usage of Knowledge Catalog quota on the **Quotas** page in the Google Cloud console.
@@ -228,6 +245,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

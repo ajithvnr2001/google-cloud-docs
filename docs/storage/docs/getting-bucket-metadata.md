@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/getting-bucket-metadata/
 title: Get bucket metadata \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:39:40.376085+00:00
+fetched_at: 2026-10-22T09:49:44.042232+00:00
 ---
 
 # Get bucket metadata  |  Cloud Storage  |  Google Cloud Documentation
@@ -21,11 +21,9 @@ Send feedback
 
 #  Get bucket metadata Stay organized with collections  Save and categorize content based on your preferences. 
 
-[Concepts](https://docs.cloud.google.com/storage/docs/bucket-metadata)
+You can view the metadata of your Cloud Storage [buckets](https://docs.cloud.google.com/storage/docs/buckets) to determine properties such as the default storage class, lifecycle rules, and data protection settings. This document describes how to retrieve bucket metadata, excluding IAM policies and access control lists.
 
-This page shows you how get information on the [metadata](https://docs.cloud.google.com/storage/docs/bucket-metadata) of your Cloud Storage [buckets](https://docs.cloud.google.com/storage/docs/buckets), excluding IAM policies and ACLs.
-
-To learn how to get the IAM policy of your bucket, see [View the IAM policy for a bucket](https://docs.cloud.google.com/storage/docs/access-control/using-iam-permissions#bucket-view).
+For background information about bucket metadata, see [Bucket metadata](https://docs.cloud.google.com/storage/docs/bucket-metadata). For steps to get the IAM policy for a bucket, see [View the IAM policy for a bucket](https://docs.cloud.google.com/storage/docs/access-control/using-iam-permissions#bucket-view).
 
 ## Required roles
 
@@ -541,6 +539,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

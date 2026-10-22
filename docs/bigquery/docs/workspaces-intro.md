@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/workspaces-intro/
 title: Introduction to workspaces \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:49:16.945144+00:00
+fetched_at: 2026-10-22T08:56:47.219961+00:00
 ---
 
 # Introduction to workspaces  |  BigQuery  |  Google Cloud Documentation

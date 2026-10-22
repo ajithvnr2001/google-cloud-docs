@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/export-to-spanner/
 title: Export data to Spanner (reverse ETL) \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:46:27.729505+00:00
+fetched_at: 2026-10-22T10:44:50.033216+00:00
 ---
 
 # Export data to Spanner (reverse ETL)  |  BigQuery  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Export data to Spanner (reverse ETL)
 
-This document describes how you can set up a reverse extract, transform, and load (reverse ETL) workflow from BigQuery to Spanner. You can do this by using the [`EXPORT DATA` statement](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/export-statements) to export data from BigQuery data sources, including [Iceberg tables](https://docs.cloud.google.com/bigquery/docs/iceberg-tables), to a [Spanner](https://docs.cloud.google.com/spanner/docs/overview) table.
+A reverse extract, transform, and load (reverse ETL) workflow from BigQuery to Spanner lets you combine analytic capabilities in BigQuery with low latency and high throughput in Spanner. You can serve data to application users without exhausting quotas and limits on BigQuery.
 
-This reverse ETL workflow combines analytic capabilities in BigQuery with low latency and high throughput in Spanner. This workflow lets you serve data to application users without exhausting quotas and limits on BigQuery.
+To set up this workflow, you use the [`EXPORT DATA` statement](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/export-statements) to export data from BigQuery data sources, including [Iceberg tables](https://docs.cloud.google.com/bigquery/docs/iceberg-tables), to a [Spanner](https://docs.cloud.google.com/spanner/docs/overview) table.
 
 ## Before you begin
 
@@ -618,6 +618,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

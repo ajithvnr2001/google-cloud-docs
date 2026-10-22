@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/hyperdisks/
 title: Google Cloud Hyperdisk overview \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:29.793348+00:00
+fetched_at: 2026-10-22T10:12:51.193704+00:00
 ---
 
 # Google Cloud Hyperdisk overview  |  Compute Engine  |  Google Cloud Documentation
@@ -357,7 +357,7 @@ The following scenarios are supported:
     * Hyperdisk Balanced
     * Hyperdisk Extreme
     * Hyperdisk Balanced High Availability
-  * Concurrent read-only access to a single volume from multiple instances. This is more cost effective than having multiple disks with the same data. Recommended for accelerator-optimized machine learning workloads. Supported for Hyperdisk ML volumes.
+  * Concurrent read-only access to a single volume from multiple instances. This scenario is more cost effective than having multiple disks with the same data. Recommended for accelerator-optimized machine learning workloads. Supported for Hyperdisk ML volumes.
 
 
 
@@ -437,12 +437,7 @@ For more pricing information, see [Disk pricing](https://docs.cloud.google.com/c
 
 ### Hyperdisk and committed use discounts
 
-Hyperdisk volumes are not eligible for:
-
-  * Resource-based committed use discounts (CUDs)
-  * Sustained use discounts (SUDs)
-
-
+Only [Hyperdisk Exapools](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-exapools) are eligible for resource-based committed use discounts (CUDs). Hyperdisk volumes that you purchase individually outside of an Exapool, as well as Hyperdisk Storage Pools, aren't eligible for resource-based CUDs or sustained use discounts (SUDs). To receive CUDs for Exapools, you must purchase a [block storage commitment](https://docs.cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts#block_storage_commitments).
 
 ### Hyperdisk and preemptible VM instances
 
@@ -463,7 +458,7 @@ Hyperdisk can be used with Spot VMs (or preemptible VMs). However, there are no 
 
 
 
-## What's next?
+## What's next
 
   * Learn how to [create a Hyperdisk volume](https://docs.cloud.google.com/compute/docs/disks/add-hyperdisk).
   * Learn how to [clone a Hyperdisk volume](https://docs.cloud.google.com/compute/docs/disks/clone-duplicate-disks).
@@ -478,6 +473,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/platform/pa-user/iam/secure-service-account-keys/
 title: Secure service account keys \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:56:39.978508+00:00
+fetched_at: 2026-10-22T10:14:21.969241+00:00
 ---
 
 # Secure service account keys  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation
@@ -23,9 +23,11 @@ Send feedback
 
 #  Secure service account keys Stay organized with collections  Save and categorize content based on your preferences. 
 
-Unlike normal users, service accounts don't have passwords. Instead, service accounts use ECDSA key pairs for authentication. Because the private key of the RSA key pair lets you authenticate as the service account, having access to the private key is similar to knowing a user's password. The private key is known as a service account key. Service account keys are a security risk if not managed carefully.
+Service account key management in Google Distributed Cloud (GDC) air-gapped appliance helps you prevent unauthorized workload authentication and privilege escalation. Unlike user accounts, service accounts authenticate with ECDSA key pairs instead of passwords, making each private service account key equivalent to a persistent credential. Applying storage, rotation, and expiry best practices lets you reduce exposure across your projects and organizations.
 
-Main threats related to service account keys are as follows:
+## Threats to service account keys
+
+Unprotected service account keys expose your environment to the following threats:
 
   * **Credential leakage** : Service account keys might inadvertently end up in places where they are not supposed to be stored. A bad actor can use a leaked service account key to authenticate and gain access to your environment.
 
@@ -37,8 +39,6 @@ Main threats related to service account keys are as follows:
 
 
 
-
-This page presents best practices for managing, using, and securing service account keys.
 
 ## Protect against credential leakage
 
@@ -137,6 +137,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

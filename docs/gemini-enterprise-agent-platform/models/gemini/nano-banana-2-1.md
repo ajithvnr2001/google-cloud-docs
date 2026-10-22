@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/nano-banana-2-1/
 title: Gemini Nano Banana 2.1 \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:43:39.559861+00:00
+fetched_at: 2026-10-22T10:23:58.492200+00:00
 ---
 
 # Gemini Nano Banana 2.1  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

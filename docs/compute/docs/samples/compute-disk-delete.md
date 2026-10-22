@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-disk-delete/
 title: Delete a disk \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:19:49.365203+00:00
+fetched_at: 2026-10-22T09:17:14.656325+00:00
 ---
 
 # Delete a disk  |  Compute Engine  |  Google Cloud Documentation
@@ -71,7 +71,7 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     	// diskName := "your_disk_name"
     
     	ctx := context.Background()
-    	disksClient, err := compute.[NewDisksRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_DisksClient_NewDisksRESTClient)(ctx)
+    	disksClient, err := compute.NewDisksRESTClient(ctx)
     	if err != nil {
     		return fmt.Errorf("NewDisksRESTClient: %w", err)
     	}
@@ -105,9 +105,9 @@ Before trying this sample, follow the Java setup instructions in the [Compute En
 To authenticate to Compute Engine, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
     
     
-    import com.google.cloud.compute.v1.[DeleteDiskRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DeleteDiskRequest.html);
-    import com.google.cloud.compute.v1.[DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html);
-    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html);
+    import com.google.cloud.compute.v1.DeleteDiskRequest;
+    import com.google.cloud.compute.v1.DisksClient;
+    import com.google.cloud.compute.v1.Operation;
     import java.io.IOException;
     import java.util.concurrent.ExecutionException;
     import java.util.concurrent.TimeUnit;
@@ -139,24 +139,24 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
         // once, and can be reused for multiple requests. After completing all of your requests, call
         // the `disksClient.close()` method on the client to safely
         // clean up any remaining background resources.
-        try ([DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html) disksClient = [DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html).create()) {
+        try (DisksClient disksClient = DisksClient.create()) {
     
           // Create the request object.
-          [DeleteDiskRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DeleteDiskRequest.html) deleteDiskRequest = [DeleteDiskRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DeleteDiskRequest.html).newBuilder()
+          DeleteDiskRequest deleteDiskRequest = DeleteDiskRequest.newBuilder()
               .setProject(projectId)
               .setZone(zone)
               .setDisk(diskName)
               .build();
     
           // Wait for the delete disk operation to complete.
-          [Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html) response = disksClient.deleteAsync(deleteDiskRequest)
+          Operation response = disksClient.deleteAsync(deleteDiskRequest)
               .get(3, TimeUnit.MINUTES);
     
-          if (response.[hasError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_hasError__)()) {
+          if (response.hasError()) {
             System.out.println("Disk deletion failed!" + response);
             return;
           }
-          System.out.println("Operation Status: " + response.[getStatus](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_getStatus__)());
+          System.out.println("Operation Status: " + response.getStatus());
         }
       }
     }
@@ -175,10 +175,10 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     // const zone = 'europe-central2-b';
     // const diskName = 'YOUR_DISK_NAME';
     
-    const compute = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)');
+    const compute = require('@google-cloud/compute');
     
     async function deleteDisk() {
-      const disksClient = new compute.[DisksClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+      const disksClient = new compute.DisksClient();
     
       const [response] = await disksClient.delete({
         project: projectId,
@@ -186,7 +186,7 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
         disk: diskName,
       });
       let operation = response.latestResponse;
-      const operationsClient = new compute.[ZoneOperationsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+      const operationsClient = new compute.ZoneOperationsClient();
     
       // Wait for the create disk operation to complete.
       while (operation.status !== 'DONE') {
@@ -215,7 +215,7 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     from typing import Any
     
     from google.api_core.extended_operation import ExtendedOperation
-    from google.cloud import [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest)
+    from google.cloud import compute_v1
     
     
     def wait_for_extended_operation(
@@ -275,8 +275,8 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
             zone: name of the zone in which is the disk you want to delete.
             disk_name: name of the disk you want to delete.
         """
-        disk_client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[DisksClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.disks.DisksClient.html)()
-        operation = disk_client.[delete](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.disks.DisksClient.html#google_cloud_compute_v1_services_disks_DisksClient_delete)(project=project_id, zone=zone, disk=disk_name)
+        disk_client = compute_v1.DisksClient()
+        operation = disk_client.delete(project=project_id, zone=zone, disk=disk_name)
         wait_for_extended_operation(operation, "disk deletion")
     
     

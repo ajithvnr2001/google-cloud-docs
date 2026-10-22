@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/configure-bigquery/
 title: Configure a BigQuery dataset \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:20:54.481895+00:00
+fetched_at: 2026-10-22T09:44:00.089580+00:00
 ---
 
 # Configure a BigQuery dataset  |  Application Design Center  |  Google Cloud Documentation

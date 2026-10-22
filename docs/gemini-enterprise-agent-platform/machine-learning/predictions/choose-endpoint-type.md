@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/choose-endpoint-type/
 title: Choose an endpoint type \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:48.502502+00:00
+fetched_at: 2026-10-22T10:23:04.531612+00:00
 ---
 
 # Choose an endpoint type  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

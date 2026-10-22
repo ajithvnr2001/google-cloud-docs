@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/google-ads-transfer/
 title: Load Google Ads data into BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T13:11:18.430573+00:00
+fetched_at: 2026-10-22T10:45:06.744872+00:00
 ---
 
 # Load Google Ads data into BigQuery  |  Google Cloud Documentation
@@ -335,7 +335,7 @@ When you [manually trigger a transfer](https://docs.cloud.google.com/bigquery/do
 
 ## Custom reports
 
-The BigQuery Data Transfer Service for Google Ads connector also supports the use of custom reports using Google Ads Query Language (GAQL) queries in the Google Ads transfer configuration. These custom reports ingest data from all resources available in the Google Ads API version supported by the BigQuery Data Transfer Service. For more information about using and validating a GAQL query, see [Google Ads Query Builder](https://developers.google.com/google-ads/api/fields/v25/overview_query_builder).
+The BigQuery Data Transfer Service for Google Ads connector also supports the use of custom reports using Google Ads Query Language (GAQL) queries in the Google Ads transfer configuration. These custom reports ingest data from all resources available in the Google Ads API version supported by the BigQuery Data Transfer Service. For more information about using and validating a GAQL query, see [Google Ads Query Builder (v25)](https://developers.google.com/google-ads/api/fields/v25/overview_query_builder). For general query building across newer Google Ads API versions, refer to the [latest Google Ads Query Builder](https://developers.google.com/google-ads/api/fields/latest/overview_query_builder).
 
 You can specify custom reports when you [Create a Google Ads transfer](https://docs.cloud.google.com/bigquery/docs/google-ads-transfer#setup-data-transfer).
 
@@ -344,7 +344,7 @@ You can specify custom reports when you [Create a Google Ads transfer](https://d
 Custom reports with the Google Ads connector are subject to the following limitations:
 
   * The Google Ads connector doesn't support `WHERE`, `ORDER BY`, `LIMIT`, and `PARAMETERS` clauses. Your GAQL query should be in the format similar to the following: `SELECT FIELD_NAME, FIELD_NAME,... FROM RESOURCE_NAME`.
-  * The Google Ads connector automatically appends `WHERE segments.date = run_date` when there is a core date segment (for example, `segments.date`, `segments.week`, `segments.month`, `segments.quarter`, `segments.year`) in the query. This can cause the [Google Ads Query Validator](https://developers.google.com/google-ads/api/fields/v25/query_validator) to return an error, for example, `The filtering conditions in the WHERE clause must combine to form a valid, finite date range composed of the core date segments ...`. You can safely ignore these errors.
+  * The Google Ads connector automatically appends `WHERE segments.date = run_date` when there is a core date segment (for example, `segments.date`, `segments.week`, `segments.month`, `segments.quarter`, `segments.year`) in the query. This can cause the [Google Ads Query Validator (v25)](https://developers.google.com/google-ads/api/fields/v25/query_validator) to return an error, for example, `The filtering conditions in the WHERE clause must combine to form a valid, finite date range composed of the core date segments ...`. You can safely ignore these errors.
   * GAQL queries without a [`segments.date` field](https://developers.google.com/google-ads/api/fields/v25/segments#segments.date) acts as [match tables](https://docs.cloud.google.com/bigquery/docs/google-ads-transformation#google_ads_match_tables), which are only updated once per day and are not supported in backfill runs. If you want to backfill data, you must include a `segments.date` field in the GAQL query.
   * The Google Ads connector supports up to 100 custom reports in a single transfer.
   * When you use segmented fields (for example, `segments.ad_network_type` or `segments.device`) in a custom query, the Google Ads API excludes campaigns that have zero impressions.
@@ -623,6 +623,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

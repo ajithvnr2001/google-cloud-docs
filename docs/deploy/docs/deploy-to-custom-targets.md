@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/deploy-to-custom-targets/
 title: Deploy to custom target types \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:47.995787+00:00
+fetched_at: 2026-10-22T08:26:27.002614+00:00
 ---
 
 # Deploy to custom target types  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/iam-roles-permissions/
 title: IAM roles and permissions \u00a0|\u00a0 Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:46.728000+00:00
+fetched_at: 2026-10-22T08:26:00.929204+00:00
 ---
 
 # IAM roles and permissions  |  Cloud Deploy  |  Google Cloud Documentation

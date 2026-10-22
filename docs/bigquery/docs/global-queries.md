@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/global-queries/
 title: Global queries \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:00:02.632025+00:00
+fetched_at: 2026-10-22T10:13:32.184785+00:00
 ---
 
 # Global queries  |  BigQuery  |  Google Cloud Documentation
@@ -202,7 +202,7 @@ To find all remote child jobs associated with a parent global query, you can que
 Replace the following:
 
   * `PROJECT_ID`: your Google Cloud project ID.
-  * `LOG_DATASET`: the BigQuery linked dataset for Log Analytics or the log sink destination dataset.
+  * `LOG_DATASET`: the BigQuery linked dataset for Observability Analytics or the log sink destination dataset.
   * `PARENT_JOB_ID`: the job ID of the parent global query job.
 
 
@@ -325,6 +325,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-19 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

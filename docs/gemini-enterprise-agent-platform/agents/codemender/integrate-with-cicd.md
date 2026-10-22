@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/agents/codemender/integrate-with-cicd/
 title: Integrate with CI/CD \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:57.663856+00:00
+fetched_at: 2026-10-22T10:25:51.203380+00:00
 ---
 
 # Integrate with CI/CD  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -742,7 +742,7 @@ The following `cm find` flags control pull request scans. For all flags, run `cm
 
 Flag | Default | Description  
 ---|---|---  
-`--diff[=REF]` | Off |  Scans the changes compared with `REF`, such as `origin/main`. Without `REF`, scans uncommitted changes to tracked files (compared against `HEAD`). Can't be used with `--deep`.   
+`--diff[=REF]` | Off |  Scans the changes compared with `REF`, such as `origin/main`. Without `REF`, scans uncommitted changes to tracked files (compared against `HEAD`). Can't be used with `--deep` or `--quick`.   
 `--staged` | Off | With `--diff`, scans only staged changes.  
 `--diff-depth DEPTH` | `1` | Traversal depth for impact analysis (1 to 3, default: 1-hop).  
 `--diff-workers COUNT` | `4` | The number of files to scan at the same time, from 1 to 16.  

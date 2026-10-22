@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataproc-metastore/docs/iam-roles/
 title: Dataproc Metastore IAM roles \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:40.252822+00:00
+fetched_at: 2026-10-22T08:32:30.830063+00:00
 ---
 
 # Dataproc Metastore IAM roles  |  Google Cloud Documentation

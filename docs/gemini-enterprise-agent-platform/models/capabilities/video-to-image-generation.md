@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/video-to-image-generation/
 title: Generate images from video with Gemini \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:34.982446+00:00
+fetched_at: 2026-10-22T10:24:54.117817+00:00
 ---
 
 # Generate images from video with Gemini  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

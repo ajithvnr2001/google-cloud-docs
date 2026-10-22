@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/parallel-file-systems-for-hpc/
 title: Parallel file systems for HPC workloads \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:05.993482+00:00
+fetched_at: 2026-10-22T09:38:31.108100+00:00
 ---
 
 # Parallel file systems for HPC workloads  |  Cloud Architecture Center  |  Google Cloud Documentation

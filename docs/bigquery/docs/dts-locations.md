@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/dts-locations/
 title: Data location and transfers \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:37:07.959297+00:00
+fetched_at: 2026-10-22T08:57:40.157233+00:00
 ---
 
 # Data location and transfers  |  BigQuery  |  Google Cloud Documentation

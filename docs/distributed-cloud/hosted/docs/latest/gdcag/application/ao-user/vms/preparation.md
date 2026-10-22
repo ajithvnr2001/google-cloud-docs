@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/preparation/
 title: IAM permissions preparation \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T13:42:33.662066+00:00
+fetched_at: 2026-10-22T10:30:14.068028+00:00
 ---
 
 # IAM permissions preparation  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -22,7 +22,7 @@ Send feedback
 
 #  IAM permissions preparation Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document outlines the Identity and Access Management (IAM) roles and permissions necessary for requesting resource access from your Project IAM administrator. You must have the necessary IAM roles and permissions to perform tasks on virtual machines (VMs) in Google Distributed Cloud (GDC) air-gapped.
+This document outlines the Identity and Access Management (IAM) roles and permissions necessary for requesting resource access from your IAM Project Admin. You must have the necessary IAM roles and permissions to perform tasks on virtual machines (VMs) in Google Distributed Cloud (GDC) air-gapped.
 
 This document is for developers in platform administrator or application operator groups that create and manage VMs in a GDC environment. For more information, see [Audiences for GDC air-gapped documentation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/audiences).
 
@@ -47,7 +47,7 @@ To run commands against the Management API server, ensure you have the following
 
 ### Request IAM roles
 
-Contact your Project IAM Admin to request the following roles on your project:
+Contact your IAM Project Admin to request the following roles on your project:
 
   * **Virtual Machine Project Admin** (project-vm-admin): create, modify, list, and delete VMs in the project namespace.
 
@@ -73,10 +73,10 @@ Follow the steps to [sign in](https://docs.cloud.google.com/distributed-cloud/ho
   3. In the navigation menu, click **Virtual Machines** > **Instances**.
   4. To check whether you have access to create VMs in the project, click **Create Instance**. 
      * If you can proceed with VM creation, you have permissions to create VMs.
-     * If the **Create Instance** button is unavailable or you encounter an error message indicating a lack of permissions, contact your Project IAM Admin and request the Virtual Machine Project Admin (`project-vm-admin`) role in the namespace of the project where the VM resides.
+     * If the **Create Instance** button is unavailable or you encounter an error message indicating a lack of permissions, contact your IAM Project Admin and request the Virtual Machine Project Admin (`project-vm-admin`) role in the namespace of the project where the VM resides.
   5. To determine whether you can view and create images, click **Virtual Machines** > **Import** > **Create Image**. 
      * If you can proceed with image import, you have permissions to create `VirtualMachineImageImport` resources.
-     * If the **Import** or **Create Image** options are unavailable or you encounter a permissions error, contact your Project IAM Admin and request the Virtual Machine Image Project Admin (`project-vm-image-admin`) role in the namespace of the project where the VM resides.
+     * If the **Import** or **Create Image** options are unavailable or you encounter a permissions error, contact your IAM Project Admin and request the Virtual Machine Image Project Admin (`project-vm-image-admin`) role in the namespace of the project where the VM resides.
 
 
 
@@ -98,7 +98,7 @@ Variable | Replacement
 `MANAGEMENT_API_SERVER` | The system kubeconfig file from `gdcloud auth login`.  
 `PROJECT` | The project name where you create VM images  
      * If the output is `yes`, you have permissions to create a VM in the project `PROJECT`.
-     * If the output is `no`, you don't have permissions. Contact your Project IAM Admin and request the Virtual Machine Project Admin (`project-vm-admin`) role in the namespace of the project where the VM resides.
+     * If the output is `no`, you don't have permissions. Contact your IAM Project Admin and request the Virtual Machine Project Admin (`project-vm-admin`) role in the namespace of the project where the VM resides.
   3. Verify whether you have access to project-level VM images. Run the `kubectl` commands to verify if you can create and use `VirtualMachineImage` resources at the project level:
          
          kubectl --kubeconfig MANAGEMENT_API_SERVER auth can-i get virtualmachineimages.virtualmachine.gdc.goog -n PROJECT \
@@ -112,7 +112,7 @@ Variable | Replacement
 `MANAGEMENT_API_SERVER` | The Management API server `kubeconfig` path  
 `PROJECT` | The project name where you create VM images  
      * If the output is `yes`, you have permissions to access custom VM images in the project PROJECT.
-     * If the output is `no`, you don't have permissions. Contact your Project IAM Admin and request the Virtual Machine Image Project Admin (`project-vm-image-admin`) role in the namespace of the project where the VM resides.
+     * If the output is `no`, you don't have permissions. Contact your IAM Project Admin and request the Virtual Machine Image Project Admin (`project-vm-image-admin`) role in the namespace of the project where the VM resides.
 
 
 
@@ -128,6 +128,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

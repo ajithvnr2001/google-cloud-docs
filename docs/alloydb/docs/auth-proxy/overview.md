@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/auth-proxy/overview/
 title: About the AlloyDB Auth Proxy \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:40.493239+00:00
+fetched_at: 2026-10-22T09:44:10.726957+00:00
 ---
 
 # About the AlloyDB Auth Proxy  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

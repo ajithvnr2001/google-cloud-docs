@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/security/confidential-computing-analytics-ai/
 title: Confidential computing for data analytics, AI, and federated learning \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:06.657081+00:00
+fetched_at: 2026-10-22T09:18:13.241797+00:00
 ---
 
 # Confidential computing for data analytics, AI, and federated learning  |  Cloud Architecture Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/latest/docs/kubectl/
 title: Configure kubectl connectivity \u00a0|\u00a0 Google Distributed Cloud connected \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:34.874364+00:00
+fetched_at: 2026-10-22T08:25:58.010254+00:00
 ---
 
 # Configure kubectl connectivity  |  Google Distributed Cloud connected  |  Google Cloud Documentation

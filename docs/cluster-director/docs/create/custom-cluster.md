@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-director/docs/create/custom-cluster/
 title: Create a custom cluster \u00a0|\u00a0 Cluster Director \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:37:10.995759+00:00
+fetched_at: 2026-10-22T09:25:06.758558+00:00
 ---
 
 # Create a custom cluster  |  Cluster Director  |  Google Cloud Documentation

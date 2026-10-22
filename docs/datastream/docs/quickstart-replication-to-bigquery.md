@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/quickstart-replication-to-bigquery/
 title: Replicate data to BigQuery in near real-time with Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:30.035116+00:00
+fetched_at: 2026-10-22T08:33:24.678294+00:00
 ---
 
 # Replicate data to BigQuery in near real-time with Datastream  |  Google Cloud Documentation

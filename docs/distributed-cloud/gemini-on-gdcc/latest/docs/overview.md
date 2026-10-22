@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/gemini-on-gdcc/latest/docs/overview/
 title: Overview of Gemini on GDC connected API \u00a0|\u00a0 Gemini on GDC API on GDC connected \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:23.907217+00:00
+fetched_at: 2026-10-22T08:26:19.196202+00:00
 ---
 
 # Overview of Gemini on GDC connected API  |  Gemini on GDC API on GDC connected  |  Google Cloud Documentation

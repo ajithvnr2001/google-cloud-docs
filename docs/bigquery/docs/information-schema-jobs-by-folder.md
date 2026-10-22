@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-jobs-by-folder/
 title: JOBS_BY_FOLDER view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:12:00.390621+00:00
+fetched_at: 2026-10-22T08:34:11.037623+00:00
 ---
 
 # JOBS_BY_FOLDER view  |  BigQuery  |  Google Cloud Documentation

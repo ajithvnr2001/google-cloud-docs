@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/docs/how-to/finops-hub/
 title: Optimize costs with FinOps hub \u00a0|\u00a0 Cloud Billing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:30:46.483447+00:00
+fetched_at: 2026-10-22T09:08:54.208959+00:00
 ---
 
 # Optimize costs with FinOps hub  |  Cloud Billing  |  Google Cloud Documentation

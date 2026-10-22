@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/
 title: Build generative AI applications using AlloyDB AI \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:28.244017+00:00
+fetched_at: 2026-10-22T09:19:33.605596+00:00
 ---
 
 # Build generative AI applications using AlloyDB AI  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/ml-metadata/configure/
 title: Configure your project's metadata store \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:38.285171+00:00
+fetched_at: 2026-10-22T10:26:25.594664+00:00
 ---
 
 # Configure your project's metadata store  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

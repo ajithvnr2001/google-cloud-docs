@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/upgrade-commitment-term/
 title: Upgrade commitments \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:09:31.362107+00:00
+fetched_at: 2026-10-22T10:12:54.631307+00:00
 ---
 
 # Upgrade commitments  |  Compute Engine  |  Google Cloud Documentation
@@ -90,7 +90,7 @@ Your commitment fee is the sum of the discounted prices of all your committed re
 ## Limitations
 
   * You can upgrade only active commitments.
-  * You can't upgrade software license commitments.
+  * You can't upgrade software license commitments or block storage commitments.
   * You can't upgrade commitments that you purchased through [future reservations for capacity blocks](https://docs.cloud.google.com/compute/docs/instances/choose-reservation-type#reserve-capacity-aihc).
 
 

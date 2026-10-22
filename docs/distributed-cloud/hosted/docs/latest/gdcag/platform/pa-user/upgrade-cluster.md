@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/upgrade-cluster/
 title: Upgrade a cluster \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:24.646638+00:00
+fetched_at: 2026-10-22T10:30:04.112824+00:00
 ---
 
 # Upgrade a cluster  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -38,13 +38,13 @@ You must have specific roles to get the permissions you need to upgrade your Kub
 
 #### Organization roles
 
-To list available upgrade versions for a Kubernetes cluster, ask your Organization IAM Admin to grant you the **User Cluster Admin** (`user-cluster-admin`) role. This role isn't bound to a namespace.
+To list available upgrade versions for a Kubernetes cluster, ask your IAM Org Admin to grant you the **User Cluster Admin** (`user-cluster-admin`) role. This role isn't bound to a namespace.
 
 If you manage a standard cluster and are unable to obtain the User Cluster Admin role from your platform administrator group, you must request they provide you with the list of available Kubernetes upgrade versions.
 
 #### Project roles
 
-To create, delete, edit, or view cluster upgrades, ask your Project IAM Admin to grant you the **Standard Cluster Admin** (`standard-cluster-admin`) role. This role is bound to your project namespace.
+To create, delete, edit, or view cluster upgrades, ask your IAM Project Admin to grant you the **Standard Cluster Admin** (`standard-cluster-admin`) role. This role is bound to your project namespace.
 
 ### Prepare your environment
 
@@ -183,6 +183,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/vpc-psc-i-multicloud-access/
 title: Allow multicloud access to protected resources from private endpoint outside a VPC Service Controls perimeter \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:00.217853+00:00
+fetched_at: 2026-10-22T10:26:02.388926+00:00
 ---
 
 # Allow multicloud access to protected resources from private endpoint outside a VPC Service Controls perimeter  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

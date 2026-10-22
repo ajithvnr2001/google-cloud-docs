@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/configure-memorystore-for-redis/
 title: Configure a Memorystore for Redis instance \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:30:06.938570+00:00
+fetched_at: 2026-10-22T10:44:48.676038+00:00
 ---
 
 # Configure a Memorystore for Redis instance  |  Application Design Center  |  Google Cloud Documentation
@@ -20,9 +20,7 @@ Send feedback
 
 #  Configure a Memorystore for Redis instance Stay organized with collections  Save and categorize content based on your preferences. 
 
-Memorystore for Redis is a fully managed Redis service for Google Cloud. Applications running on Google Cloud achieve extreme performance by leveraging the highly scalable, available, secure Redis service without the burden of managing complex Redis deployments. For more information, see [Memorystore for Redis overview](https://docs.cloud.google.com/memorystore/docs/redis/memorystore-for-redis-overview).
-
-This document describes the connection and parameters you configure when using App Design Center to create a Memorystore for Redis instance. The configuration parameters are based on the [terraform-google-memorystore](https://github.com/terraform-google-modules/terraform-google-memorystore) Terraform module.
+In App Design Center, you can configure a [Memorystore for Redis](https://docs.cloud.google.com/memorystore/docs/redis/memorystore-for-redis-overview) instance to provide fully managed, scalable in-memory Redis caching for your Google Cloud applications without managing complex Redis deployments. You can customize the instance's component connections and configuration parameters based on the [terraform-google-memorystore](https://github.com/terraform-google-modules/terraform-google-memorystore) Terraform module.
 
 ## Component connections
 
@@ -98,6 +96,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

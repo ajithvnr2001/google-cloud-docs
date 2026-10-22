@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/get-started/ai-capabilities/
 title: AI gateway capabilities \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:59.021297+00:00
+fetched_at: 2026-10-22T10:43:00.422586+00:00
 ---
 
 # AI gateway capabilities  |  Apigee  |  Google Cloud Documentation
@@ -81,6 +81,12 @@ Tutorial
 
 Set quota and rate-limits to ensure applications do not exceed token quotas and maintain platform stability. 
 
+Overview 
+
+###  [ AI and MCP tool performance insights ](https://docs.cloud.google.com/apigee/docs/apihub/api-insights-dashboard#ai-performance)
+
+Track LLM token usage by model and app to manage cost. Monitor model latency, error rates, and MCP tool performance in API insights. 
+
 ## Translate APIs into Tools
 
 Guide 
@@ -117,12 +123,6 @@ Automatically sync tools and server metadata with Agent Registry.
 
 Guide 
 
-###  [ Dialogflow integration ](https://docs.cloud.google.com/apigee/docs/api-platform/develop/integrating-apigee-contact-center-ai)
-
-Manage the interactions between Dialogflow and your backend services for Contact Center AI. 
-
-Guide 
-
 ###  [ Semantic search in API hub with MCP ](https://docs.cloud.google.com/apigee/docs/apihub/search-apis)
 
 Search API hub using natural language. Agents can also use semantic search to find your APIs in API hub. 
@@ -132,6 +132,12 @@ Guide
 ###  [ Extension processor policies ](https://docs.cloud.google.com/apigee/docs/api-platform/service-extensions/extension-processor-policies)
 
 Apply Apigee policies to traffic that is not fronted by an Apigee proxy, including an AI agent's model and MCP tool calls. 
+
+Guide 
+
+###  [ Dialogflow integration ](https://docs.cloud.google.com/apigee/docs/api-platform/develop/integrating-apigee-contact-center-ai)
+
+Manage the interactions between Dialogflow and your backend services for Contact Center AI. 
 
 ## What's next
 
@@ -144,6 +150,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

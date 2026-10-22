@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-remove-bucket-default-owner/
 title: Remove a default ACL from a bucket \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:53.623038+00:00
+fetched_at: 2026-10-22T10:31:45.987918+00:00
 ---
 
 # Remove a default ACL from a bucket  |  Cloud Storage  |  Google Cloud Documentation

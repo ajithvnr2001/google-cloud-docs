@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api/asynchronous-function-calling/
 title: Asynchronous function calling with Gemini Live API \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:21.866101+00:00
+fetched_at: 2026-10-22T10:28:46.112071+00:00
 ---
 
 # Asynchronous function calling with Gemini Live API  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

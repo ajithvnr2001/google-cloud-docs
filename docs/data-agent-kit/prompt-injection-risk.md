@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-agent-kit/prompt-injection-risk/
 title: Mitigate indirect prompt injection risks from Google Cloud MCP \u00a0|\u00a0 Google Cloud Data Agent Kit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:25.618326+00:00
+fetched_at: 2026-10-22T08:26:12.759072+00:00
 ---
 
 # Mitigate indirect prompt injection risks from Google Cloud MCP  |  Google Cloud Data Agent Kit  |  Google Cloud Documentation

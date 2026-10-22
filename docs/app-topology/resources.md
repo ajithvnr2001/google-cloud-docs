@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-topology/resources/
 title: Resources \u00a0|\u00a0 App Topology \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:25:16.915654+00:00
+fetched_at: 2026-10-22T09:38:39.111028+00:00
 ---
 
 # Resources  |  App Topology  |  Google Cloud Documentation

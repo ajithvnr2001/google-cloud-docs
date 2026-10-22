@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/media/
 title: Media: articles, videos, and podcasts \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:05:09.024673+00:00
+fetched_at: 2026-10-22T10:44:54.947264+00:00
 ---
 
 # Media: articles, videos, and podcasts  |  Pub/Sub  |  Google Cloud Documentation
@@ -65,13 +65,9 @@ Visit Pub/Sub docs to learn about the different [integrations](https://cloud.goo
 
 #### Brightcove: Serverless data processing with Google Cloud Dataflow and Pub/Sub
 
-#### Delivery Hero: Using data to deliver meals
-
 #### Home Depot: Lessons from Data Warehousing Migrations
 
 #### Vivint: Accelerating time to deploy by building Event-driven applications
-
-#### Pokémon Go: Scaling to millions of requests
 
 #### Spotify: Migrating events from Kafka to Pub/Sub
 
@@ -100,8 +96,6 @@ Visit Pub/Sub docs to learn about the different [integrations](https://cloud.goo
 #### Integrating Webhooks with Pub/Sub
 
 #### Pub/Sub foundation
-
-#### Pub/Sub Made Easy series
 
 ### Articles
 
@@ -133,21 +127,13 @@ Visit Pub/Sub docs to learn about the different [integrations](https://cloud.goo
 
 #### Cloud Next: Advanced data science on Google Cloud Platform
 
-#### Cloud Next: Flexible, Easy Data Pipelines on Google Cloud with Cloud Composer
-
 #### Cloud Next: Apache Kafka Ecosystem As-a-Service on Google Cloud with Confluent
-
-#### Cloud Next: Building A Petabyte Scale Warehouse in BigQuery
 
 #### Cloud Next: Insights from store telemetry, internet traffic, and building MVP with core products
 
 #### Cloud Next: Build Your Own Event Analytics Pipeline using BigQuery, Dataflow, and Kubernetes
 
-#### Cloud Next: Modern Data Pipeline in Action
-
 #### Cloud Next: Real-Time, Serverless Predictions With Google Cloud Healthcare API
-
-#### Cloud Next: Accelerating insights with the health analytics platform
 
 #### Cloud Next: The future of data governance, at scale, in multi-cloud
 
@@ -165,6 +151,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

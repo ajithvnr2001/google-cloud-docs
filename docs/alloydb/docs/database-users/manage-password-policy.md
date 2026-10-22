@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/database-users/manage-password-policy/
 title: Manage built-in authentication using password policies \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:37.545568+00:00
+fetched_at: 2026-10-22T09:39:13.319433+00:00
 ---
 
 # Manage built-in authentication using password policies  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

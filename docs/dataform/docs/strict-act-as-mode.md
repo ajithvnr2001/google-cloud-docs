@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataform/docs/strict-act-as-mode/
 title: Use strict act-as mode \u00a0|\u00a0 Dataform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:19.278909+00:00
+fetched_at: 2026-10-22T08:26:06.183102+00:00
 ---
 
 # Use strict act-as mode  |  Dataform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/audit-manager/docs/release-notes/
 title: Audit Manager release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:16.772268+00:00
+fetched_at: 2026-10-22T09:26:05.110083+00:00
 ---
 
 # Audit Manager release notes  |  Google Cloud Documentation

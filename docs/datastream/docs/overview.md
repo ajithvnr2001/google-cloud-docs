@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/overview/
 title: Datastream overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:30.402322+00:00
+fetched_at: 2026-10-22T08:25:51.761138+00:00
 ---
 
 # Datastream overview  |  Google Cloud Documentation

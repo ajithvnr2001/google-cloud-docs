@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/reference/siemplify-module/
 title: Siemplify module \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:42:00.086057+00:00
+fetched_at: 2026-10-22T09:24:35.802730+00:00
 ---
 
 # Siemplify module  |  Google Security Operations  |  Google Cloud Documentation
@@ -899,8 +899,8 @@ Param name | Param type | Definition | Possible values | Comments
 ---|---|---|---|---  
 environments | {[string]} | List of environment names (environment) | N/A | If no environments are provided, `None` is used (optional)  
 analysts | {[string]} | List of analysts names (case assigned user/role), | N/A | If no analyst is provided, `None` is used (optional)  
-statuses | {[int]} | List of statues to filter by | N/A | See [ApiSyncCaseStatusEnum](https://docs.cloud.google.com/chronicle/docs/soar/reference/siemplify-data-model-module#ApiSyncCaseStatusEnum).  
-If no statuses is provided, `None` is used (optional)  
+statuses | {[int]} | List of statuses to filter by | N/A | Valid `statuses` values are: `1 = Open`  
+`2 = Closed` If no statuses are provided, `None` is used, which returns both open and closed cases (optional)  
 case_names | {[string]} | List of case names | N/A | If no `case_names` are provided, `None` is used (optional)  
 tags | {[string]} | List of case tags | N/A | If no tags are provided, `None` is used (optional)  
 priorities | {[int]} | List of priorities |  | See [ApiSyncAlertPriorityEnum](https://docs.cloud.google.com/chronicle/docs/soar/reference/siemplify-data-model-module#ApiSyncAlertPriorityEnum).  
@@ -1547,6 +1547,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

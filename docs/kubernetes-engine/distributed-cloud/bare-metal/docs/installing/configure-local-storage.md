@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/configure-local-storage/
 title: Configure local storage \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:56:51.732480+00:00
+fetched_at: 2026-10-22T10:12:37.231204+00:00
 ---
 
 # Configure local storage  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -22,9 +22,9 @@ Send feedback
 
 #  Configure local storage Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page shows you how to configure local volumes for Google Distributed Cloud clusters.
+Local persistent volumes (PVs) let you configure fast, node-local storage for resilient workloads in your Google Distributed Cloud clusters.
 
-Google Distributed Cloud clusters provide two options for configuring [local PVs](https://kubernetes.io/docs/concepts/storage/volumes/#local)) in the cluster: LVP share and LVP node mounts. LVP share uses directories in a shared file system, while LVP node mounts uses dedicated disks.
+Google Distributed Cloud offers two options for configuring [local PVs](https://kubernetes.io/docs/concepts/storage/volumes/#local): LVP share and LVP node mounts. LVP share uses directories in a shared file system, while LVP node mounts use dedicated disks.
 
 **Caution:** Using a local PV binds the Pod to a specific disk and node. If that disk or node becomes unavailable, then the Pod also becomes unavailable. Workloads using local PVs need to be resilient to this kind of failure, and may require additional orchestration to release the Pod's PVCs and find a new, empty disk on another node.
 
@@ -137,6 +137,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

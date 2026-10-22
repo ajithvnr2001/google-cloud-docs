@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.13.0/docs/vm-runtime/guest-os/
 title: Verified guest operating systems for VM Runtime on GDC \u00a0|\u00a0 Google Distributed Cloud connected \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:56.656165+00:00
+fetched_at: 2026-10-22T08:26:02.921363+00:00
 ---
 
 # Verified guest operating systems for VM Runtime on GDC  |  Google Distributed Cloud connected  |  Google Cloud Documentation

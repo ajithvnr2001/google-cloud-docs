@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/conversational-analytics/
 title: Conversational analytics \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:04.355316+00:00
+fetched_at: 2026-10-22T09:37:43.866001+00:00
 ---
 
 # Conversational analytics  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

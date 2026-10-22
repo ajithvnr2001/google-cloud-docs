@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/restore-in-place/
 title: Perform an in-place restore operation \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:16.284577+00:00
+fetched_at: 2026-10-22T08:25:03.952369+00:00
 ---
 
 # Perform an in-place restore operation  |  Firestore in Datastore mode  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/list-ip-filter/
 title: List bucket IP filtering rules \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:52:57.414161+00:00
+fetched_at: 2026-10-22T09:49:16.896189+00:00
 ---
 
 # List bucket IP filtering rules  |  Cloud Storage  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  List bucket IP filtering rules Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to list the [bucket IP filtering](https://docs.cloud.google.com/storage/docs/ip-filtering-overview) rules. With the list bucket IP filtering rules operation, you can check if IP filtering is enabled or disabled on a bucket. If you need to view information about the specific network sources that are allowed, use the [Get bucket IP filtering rules](https://docs.cloud.google.com/storage/docs/get-ip-filter) operation.
+You can check whether [IP filtering](https://docs.cloud.google.com/storage/docs/ip-filtering-overview) is enabled or disabled on your Cloud Storage buckets by listing the bucket IP filtering rules. If you need to view information about the specific network sources that are allowed, use the [Get bucket IP filtering rules](https://docs.cloud.google.com/storage/docs/get-ip-filter) operation.
 
 ## Required roles
 
@@ -141,6 +141,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-print-file-acl-for-user/
 title: Get an object ACL that's filtered by user \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:52.949797+00:00
+fetched_at: 2026-10-22T10:31:42.879213+00:00
 ---
 
 # Get an object ACL that's filtered by user  |  Cloud Storage  |  Google Cloud Documentation

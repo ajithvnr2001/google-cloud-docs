@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/regions/
 title: About Cloud Deploy regions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:44.949281+00:00
+fetched_at: 2026-10-22T08:24:47.763443+00:00
 ---
 
 # About Cloud Deploy regions  |  Google Cloud Documentation

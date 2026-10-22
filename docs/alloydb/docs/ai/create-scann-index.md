@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/create-scann-index/
 title: Create a ScaNN index \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:25.289654+00:00
+fetched_at: 2026-10-22T09:39:13.193116+00:00
 ---
 
 # Create a ScaNN index  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

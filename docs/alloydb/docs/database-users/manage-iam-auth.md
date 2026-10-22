@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/database-users/manage-iam-auth/
 title: Manage IAM authentication \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:07.223222+00:00
+fetched_at: 2026-10-22T09:44:24.436658+00:00
 ---
 
 # Manage IAM authentication  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

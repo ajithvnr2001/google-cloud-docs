@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/tuning/translation/
 title: About supervised fine-tuning for Translation LLM models \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:02.582552+00:00
+fetched_at: 2026-10-22T08:36:13.090431+00:00
 ---
 
 # About supervised fine-tuning for Translation LLM models  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

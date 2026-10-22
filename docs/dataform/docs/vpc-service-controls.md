@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataform/docs/vpc-service-controls/
 title: Configure VPC Service Controls \u00a0|\u00a0 Dataform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:18.830361+00:00
+fetched_at: 2026-10-22T08:26:04.717411+00:00
 ---
 
 # Configure VPC Service Controls  |  Dataform  |  Google Cloud Documentation

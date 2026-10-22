@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/instance-settings/
 title: About instance settings \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:28:35.025954+00:00
+fetched_at: 2026-10-22T10:32:09.892312+00:00
 ---
 
 # About instance settings  |  Cloud SQL for MySQL  |  Google Cloud Documentation
@@ -98,14 +98,14 @@ Memory | Y |  For Cloud SQL Enterprise Plus edition: 6.75 GB to 8 GB per vCPU.
 The 6.75 GB to 1 vCPU ratio is for the `[db-perf-optimized-N-128](https://docs.cloud.google.com/sql/docs/mysql/machine-series-overview)` machine type only. All other machine types have the 8 GB to 1 vCPU ratio.   
 For Cloud SQL Enterprise edition: 0.9 GB to 6.5 GB per vCPU (must be a multiple of 256 MB and at least 3.75 GB).   
 Storage type | N |  **SSD** (default value)  
-**HDD**(Cloud SQL Enterprise edition only)  
+**HDD** (Cloud SQL Enterprise edition only)  
 **Google Cloud Hyperdisk Balanced**  
 Storage capacity | Y   
 (Increase only) |  Standard and high memory machine types: up to 64 TB.  
 Shared-core machine types (`db-f1-micro` and `db-g1-small`): up to 3054 GB.   
   
 Note that creating or increasing storage capacity to 64 TB might increase latency of common operations, such as backups, dependent on your workload.   
-[ Google Cloud Hyperdisk settings](https://docs.cloud.google.com/sql/docs/mysql/storage-options-overview#hyperdisk) | Y |  This setting is only applicable for Cloud SQL Enterprise Plus edition instances using the C4, C4A or N4 machine series.  
+[ Google Cloud Hyperdisk settings](https://docs.cloud.google.com/sql/docs/mysql/storage-options-overview#hyperdisk) | Y |  This setting is only applicable for Cloud SQL Enterprise Plus edition instances using the C4 or C4A machine series, and for Cloud SQL Enterprise edition instances using the N4 machine series.  
   
 **Provisioned IOPS** : 4,000 (default value)  
 **Provisioned throughput** : 170 (default value)  
@@ -189,14 +189,14 @@ Storage type by Cloud SQL editions and machine series:
   * **Cloud SQL Enterprise Plus edition C4A machine series** : Google Cloud Hyperdisk Balanced
   * **Cloud SQL Enterprise Plus edition N2 machine series** : SSD
   * **Cloud SQL Enterprise edition N4 machine series** : Google Cloud Hyperdisk Balanced
-  * **Cloud SQL Enterprise edition general purpose shared or dedicated core** : SSD or HDD
+  * **Cloud SQL Enterprise edition general purpose shared or dedicated core machine series** : SSD or HDD
 
 
 
-For N2 machine series, choosing **SSD** , the default value, provides your instance with SSD storage. SSDs provide lower latency and higher data throughput. If you don't need high-performance access to your data, for example for long-term storage or rarely accessed data, you can reduce your costs by choosing **HDD**.  
+For the N2 machine series, choosing **SSD** , the default and only value, provides your instance with SSD storage. For the general purpose shared or dedicated core machine series, **SSD** is the default value and provides lower latency and higher data throughput. If you don't need high-performance access to your data, for example for long-term storage or rarely accessed data, then you can reduce your costs by choosing a different machine series that uses **HDD**.  
 
 
-For the C4, C4A and N4 machine series, choosing **Google Cloud Hyperdisk Balanced** , the default and only value, provides a scalable, high-performance storage service. To learn more about Google Cloud Hyperdisk Balanced and its limitations, see [Storage options overview](https://docs.cloud.google.com/sql/docs/mysql/storage-options-overview).
+For the C4, C4A, and N4 machine series, choosing **Google Cloud Hyperdisk Balanced** , the default and only value, provides a scalable, high-performance storage service. To learn more about Google Cloud Hyperdisk Balanced and its limitations, see [Storage options overview](https://docs.cloud.google.com/sql/docs/mysql/storage-options-overview).
 
 Set password policy
     
@@ -508,6 +508,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

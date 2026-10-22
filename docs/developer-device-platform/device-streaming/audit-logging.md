@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/developer-device-platform/device-streaming/audit-logging/
 title: Device Streaming API audit logging \u00a0|\u00a0 Developer Device Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:04.305832+00:00
+fetched_at: 2026-10-22T08:26:23.883008+00:00
 ---
 
 # Device Streaming API audit logging  |  Developer Device Platform  |  Google Cloud Documentation

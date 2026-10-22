@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/model-registry/import-model/
 title: Import models to Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:38.787251+00:00
+fetched_at: 2026-10-22T10:27:41.410155+00:00
 ---
 
 # Import models to Gemini Enterprise Agent Platform  |  Google Cloud Documentation

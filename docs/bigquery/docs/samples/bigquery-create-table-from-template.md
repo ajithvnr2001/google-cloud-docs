@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-create-table-from-template/
 title: Create a table using a template \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:40:10.889416+00:00
+fetched_at: 2026-10-22T09:17:48.106025+00:00
 ---
 
 # Create a table using a template  |  BigQuery  |  Google Cloud Documentation

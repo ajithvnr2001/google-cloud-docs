@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/org-policy-constraints/
 title: Organization policy constraints for Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:12.115562+00:00
+fetched_at: 2026-10-22T10:25:19.576784+00:00
 ---
 
 # Organization policy constraints for Cloud Storage  |  Google Cloud Documentation
@@ -157,7 +157,7 @@ Tags provides a way to conditionally allow or deny organization policies based o
   * See [Creating and managing organization policies](https://docs.cloud.google.com/resource-manager/docs/organization-policy/creating-managing-policies) for instructions on working with constraints and organization policies in the Google Cloud console.
   * See [Using constraints](https://docs.cloud.google.com/resource-manager/docs/organization-policy/using-constraints) for instructions on working with constraints and organization policies in the gcloud CLI.
   * Learn about [custom constraints for Cloud Storage](https://docs.cloud.google.com/storage/docs/custom-constraints).
-  * See the Resource Manager API [reference documentation](https://docs.cloud.google.com/resource-manager/reference/rest) for relevant API methods, such as [`projects.setOrgPolicy`](https://docs.cloud.google.com/resource-manager/reference/rest/v1/projects/setOrgPolicy).
+  * See the Cloud Resource Manager API [reference documentation](https://docs.cloud.google.com/resource-manager/reference/rest) for relevant API methods, such as [`projects.setOrgPolicy`](https://docs.cloud.google.com/resource-manager/reference/rest/v1/projects/setOrgPolicy).
 
 
 
@@ -165,6 +165,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

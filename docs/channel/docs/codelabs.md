@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/channel/docs/codelabs/
 title: Codelabs \u00a0|\u00a0 Channel Services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:12:51.857832+00:00
+fetched_at: 2026-10-22T09:18:43.378868+00:00
 ---
 
 # Codelabs  |  Channel Services  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/use-cmek/
 title: Secure data with encryption keys \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:40.974885+00:00
+fetched_at: 2026-10-22T09:44:21.825543+00:00
 ---
 
 # Secure data with encryption keys  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

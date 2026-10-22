@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/choose-index-strategy/
 title: Choose a vector index in AlloyDB AI \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:38.582869+00:00
+fetched_at: 2026-10-22T09:31:05.609990+00:00
 ---
 
 # Choose a vector index in AlloyDB AI  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

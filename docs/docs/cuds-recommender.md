@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/cuds-recommender/
 title: Get recommendations for committed use discounts (CUDs) \u00a0|\u00a0 Get started \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:05:54.958904+00:00
+fetched_at: 2026-10-22T10:12:54.358736+00:00
 ---
 
 # Get recommendations for committed use discounts (CUDs)  |  Get started  |  Google Cloud Documentation
@@ -68,6 +68,7 @@ You can view commitment recommendations on the **FinOps hub** or the **Recommend
   * Spend-based CUD recommendations are available only on the Google Cloud console. However, you can view resource-based CUD recommendations by using the Google Cloud console, [Cloud Billing data export to BigQuery](https://docs.cloud.google.com/billing/docs/how-to/export-data-bigquery), and the [Recommender API](https://docs.cloud.google.com/recommender/docs/overview).
   * CUD recommendations are not available for the A3 Ultra, A4, A4X, and A4X Max machine series.
   * CUD recommendations are not available for Cloud TPUs.
+  * CUD recommendations are not available for block storage commitments.
 
 
 
@@ -77,7 +78,7 @@ This section describes the resources and services for which you can receive CUD 
 
 ### Resource-based CUD recommendations
 
-Resource-based CUDs are available only for Compute Engine. These CUDs are available for both hardware resources (such as vCPUs, memory, GPUs, and Local SSD disks) as well as software resources (such as OS licenses). Resource-based CUD recommendations are available for the following hardware and software resources:
+Resource-based CUDs are available only for Compute Engine. These CUDs are available for hardware resources (such as vCPUs, memory, GPUs, and Local SSD disks), software resources (such as OS licenses), and block storage resources (Hyperdisk Exapools). However, resource-based CUD recommendations are available only for the following hardware and software resources:
 
 #### Hardware resources
 
@@ -518,6 +519,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

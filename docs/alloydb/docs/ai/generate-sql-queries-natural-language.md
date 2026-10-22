@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/generate-sql-queries-natural-language/
 title: Generate SQL queries using natural language questions \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:56.603384+00:00
+fetched_at: 2026-10-22T09:27:15.063385+00:00
 ---
 
 # Generate SQL queries using natural language questions  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

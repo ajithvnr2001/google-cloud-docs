@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/manager-api-pagination-tailing/
 title: Pagination and tailing \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:09:42.668434+00:00
+fetched_at: 2026-10-22T10:13:59.358670+00:00
 ---
 
 # Pagination and tailing  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation
@@ -198,7 +198,7 @@ Response objects updated on or after the timestamp specified are returned, sorte
 
 ### Tail the Agent Activity API endpoint
 
-Unlike the Chat and Call records, the Agent Activity Logs don't get updated and as such don't have an `updated_at` timestamp. You can use the `started_at` timestamp to specify the activity records that you want to retrieve when calling the Agent Activity API endpoint.
+Agent Activity Logs don't have an `updated_at` timestamp, so this endpoint is filtered by activity time rather than by update time. You can use the `started_at` timestamp to specify the activity records that you want to retrieve when calling the Agent Activity API endpoint. This endpoint also supports keyset pagination through a `cursor` query parameter, which walks records in `id` order and avoids the depth-related slowdown of offset pagination. Start the walk at `cursor=0`, pass the `X-Next-Cursor` response header value as the `cursor` parameter on each subsequent request, and stop when a response carries no `X-Next-Cursor` header. A `cursor` request cannot be combined with `page`, `sort_column`, or `sort_direction`.
 
 To tail the Agent Activity API endpoint every 60 minutes, follow these steps:
 
@@ -263,6 +263,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

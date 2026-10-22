@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/concepts/
 title: Concepts \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:55:15.161117+00:00
+fetched_at: 2026-10-22T08:36:23.979011+00:00
 ---
 
 # Concepts  |  Customer Experience Insights  |  Google Cloud Documentation

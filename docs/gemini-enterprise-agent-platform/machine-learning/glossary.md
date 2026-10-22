@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/glossary/
 title: Gemini Enterprise Agent Platform glossary \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:54.138316+00:00
+fetched_at: 2026-10-22T10:27:38.098538+00:00
 ---
 
 # Gemini Enterprise Agent Platform glossary  |  Google Cloud Documentation

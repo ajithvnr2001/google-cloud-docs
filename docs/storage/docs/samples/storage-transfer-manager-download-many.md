@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-transfer-manager-download-many/
 title: Download many objects \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:54:47.700452+00:00
+fetched_at: 2026-10-22T10:32:29.974658+00:00
 ---
 
 # Download many objects  |  Cloud Storage  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/resources/
 title: Resources \u00a0|\u00a0 Cloud Code for IntelliJ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:40:42.200123+00:00
+fetched_at: 2026-10-22T09:02:33.647705+00:00
 ---
 
 # Resources  |  Cloud Code for IntelliJ  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/access-control/
 title: Access control with IAM \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:27.868606+00:00
+fetched_at: 2026-10-22T08:31:09.494786+00:00
 ---
 
 # Access control with IAM  |  Artifact Analysis  |  Google Cloud Documentation

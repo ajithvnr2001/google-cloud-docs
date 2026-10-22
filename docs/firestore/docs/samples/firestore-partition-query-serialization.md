@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-partition-query-serialization/
 title: Serialize a Firestore query for execution elsewhere \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:58:32.495125+00:00
+fetched_at: 2026-10-22T10:28:22.992150+00:00
 ---
 
 # Serialize a Firestore query for execution elsewhere  |  Google Cloud Documentation

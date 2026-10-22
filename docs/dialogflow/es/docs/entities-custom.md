@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/entities-custom/
 title: Custom entities \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:38.982442+00:00
+fetched_at: 2026-10-22T08:33:17.982230+00:00
 ---
 
 # Custom entities  |  Dialogflow ES  |  Google Cloud Documentation

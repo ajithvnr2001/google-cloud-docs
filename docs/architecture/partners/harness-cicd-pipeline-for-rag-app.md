@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/partners/harness-cicd-pipeline-for-rag-app/
 title: Harness CI/CD pipeline for RAG applications \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:35.564288+00:00
+fetched_at: 2026-10-22T09:19:48.550961+00:00
 ---
 
 # Harness CI/CD pipeline for RAG applications  |  Cloud Architecture Center  |  Google Cloud Documentation

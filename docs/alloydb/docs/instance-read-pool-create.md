@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/instance-read-pool-create/
 title: Create a read pool instance in a cluster \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:47.347235+00:00
+fetched_at: 2026-10-22T09:27:18.752281+00:00
 ---
 
 # Create a read pool instance in a cluster  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/creating-clusters/admin-cluster-creation/
 title: Create admin clusters \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:57:39.295963+00:00
+fetched_at: 2026-10-22T10:12:39.895935+00:00
 ---
 
 # Create admin clusters  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -22,17 +22,13 @@ Send feedback
 
 #  Create admin clusters Stay organized with collections  Save and categorize content based on your preferences. 
 
-In Google Distributed Cloud, you set up admin clusters to manage other clusters securely. You can create, update, upgrade, or delete user clusters from admin clusters. The user clusters run workloads separately from administration, so sensitive information is protected.
+Admin clusters let you create, update, upgrade, and delete user clusters. Separating cluster administration from user workloads helps protect sensitive data, such as SSH keys and service account credentials, with the trade-off of requiring dedicated resources for management.
 
-Admin clusters managing multi-cluster workloads can provide highly available (HA) reliability. In an HA cluster, if one control plane node fails, other nodes will continue to work.
+In a high-availability (HA) configuration, admin clusters provide redundant control plane nodes so management operations continue if a single node fails. You create an admin cluster by using the `bmctl` command. After cluster creation, you deploy [user clusters](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/creating-clusters/user-cluster-creation) to run workloads.
 
-An admin cluster in a multi-cluster environment provides the best fundamental security. Because access to administration data is separated from workloads, those who access user workloads have no access to sensitive administrative data, like SSH keys and service account data. As a result, there is some trade-off between security and the resources required, since a separate admin cluster means you need dedicated resources for management and workloads.
+## Prerequisites
 
-You create an admin cluster using the `bmctl` command. After you create an admin cluster, you create [user clusters](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/creating-clusters/user-cluster-creation) to run workloads.
-
-Prerequisites:
-
-  * Latest `bmctl` is downloaded (`gs://anthos-baremetal-release/bmctl/1.36.100-gke.144/linux-amd64/bmctl`) from Cloud Storage.
+  * Latest `bmctl` is downloaded (`gs://anthos-baremetal-release/bmctl/1.36.200-gke.118/linux-amd64/bmctl`) from Cloud Storage.
   * Workstation running `bmctl` has network connectivity to all nodes in the target user clusters.
   * Workstation running `bmctl` has network connectivity to the cluster API server (control plane VIP).
   * SSH key used to create the Admin cluster is available to either `root` or a [non-root user with passwordless `sudo` privileges](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/how-to/update-clusters#set_a_login_user) on all nodes in the target admin cluster.
@@ -214,6 +210,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

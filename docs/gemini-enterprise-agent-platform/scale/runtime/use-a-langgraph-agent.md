@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/use-a-langgraph-agent/
 title: Use a LangGraph agent \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:59.251140+00:00
+fetched_at: 2026-10-22T10:26:36.740547+00:00
 ---
 
 # Use a LangGraph agent  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

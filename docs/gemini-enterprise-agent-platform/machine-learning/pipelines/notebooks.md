@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/notebooks/
 title: Agent Platform Pipelines tutorial notebooks \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:46:34.384024+00:00
+fetched_at: 2026-10-22T10:29:20.293155+00:00
 ---
 
 # Agent Platform Pipelines tutorial notebooks  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

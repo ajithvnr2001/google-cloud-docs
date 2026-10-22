@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/tpc-differences/
 title: 404 \u00a0|\u00a0 Page Not Found \u00a0|\u00a0 Google Cloud Documentation
 method: crawl4ai+scrapegraph (scrapling: scrapling status 404)
-fetched_at: 2026-10-21T12:55:58.135074+00:00
+fetched_at: 2026-10-22T08:51:58.895611+00:00
 ---
 
 # 404  |  Page Not Found  |  Google Cloud Documentation
@@ -22,7 +22,8 @@ fetched_at: 2026-10-21T12:55:58.135074+00:00
   * [日本語](https://docs.cloud.google.com/filestore/docs/tpc-differences/?hl=ja)
   * [한국어](https://docs.cloud.google.com/filestore/docs/tpc-differences/?hl=ko)
 
-Sign in
+
+[ Sign in ](https://docs.cloud.google.com/_d/signin?continue=https%3A%2F%2Fdocs.cloud.google.com%2Ffilestore%2Fdocs%2Ftpc-differences%2F&prompt=select_account)
 [Start free](https://console.cloud.google.com/freetrial)
 ### 404
 Sorry, we couldn't find that page. 

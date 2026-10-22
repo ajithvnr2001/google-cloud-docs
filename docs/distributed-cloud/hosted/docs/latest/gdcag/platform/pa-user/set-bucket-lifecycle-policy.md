@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/set-bucket-lifecycle-policy/
 title: Set object lifecycle policy for storage buckets \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:58:48.180720+00:00
+fetched_at: 2026-10-22T10:14:20.268716+00:00
 ---
 
 # Set object lifecycle policy for storage buckets  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -22,7 +22,7 @@ Send feedback
 
 #  Set object lifecycle policy for storage buckets Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page shows you how to set object lifecycle policy for Google Distributed Cloud (GDC) air-gapped storage buckets.
+Object lifecycle policies in Google Distributed Cloud (GDC) air-gapped let you automate data retention and expiration across your storage buckets. You can define age, prefix, and tag rules to delete unversioned objects or transition and expire versions without manual cleanup.
 
 ## Before you begin
 
@@ -199,6 +199,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

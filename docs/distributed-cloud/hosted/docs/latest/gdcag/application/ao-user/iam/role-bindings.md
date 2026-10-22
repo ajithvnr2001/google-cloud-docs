@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/iam/role-bindings/
 title: Grant access to project resources \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:57:54.151946+00:00
+fetched_at: 2026-10-22T10:24:59.111016+00:00
 ---
 
 # Grant access to project resources  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -32,9 +32,9 @@ Before creating or removing role bindings, you must request the necessary permis
 
 ### Request IAM roles
 
-To create, update, and delete role bindings within a project, contact your Organization IAM Admin or Project IAM Admin to request the **Project IAM Admin** (`project-iam-admin`) role.
+To create, update, and delete role bindings within a project, contact your IAM Org Admin or IAM Project Admin to request the **IAM Project Admin** (`project-iam-admin`) role.
 
-The Organization IAM Admin can grant this role for any project within the organization. The Project IAM Admin can grant this role within the scope of their specific project.
+The IAM Org Admin can grant this role for any project within the organization. The IAM Project Admin can grant this role within the scope of their specific project.
 
 ## Set up role bindings
 
@@ -117,6 +117,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

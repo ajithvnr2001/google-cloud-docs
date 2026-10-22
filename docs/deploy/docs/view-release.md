@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/view-release/
 title: Viewing release details \u00a0|\u00a0 Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:42.986029+00:00
+fetched_at: 2026-10-22T08:25:15.480333+00:00
 ---
 
 # Viewing release details  |  Cloud Deploy  |  Google Cloud Documentation

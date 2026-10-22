@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/dataset-access-control/
 title: Changes to dataset-level access controls \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:06:07.946608+00:00
+fetched_at: 2026-10-22T10:13:36.322087+00:00
 ---
 
 # Changes to dataset-level access controls  |  BigQuery  |  Google Cloud Documentation
@@ -79,7 +79,7 @@ If you opt into enforcement of the permission changes, any custom roles that gra
 
 Any custom roles that only include the `bigquery.datasets.get`, `bigquery.datasets.update`, or `bigquery.datasets.create` permission must be updated to include the `bigquery.datasets.getIamPolicy` or `bigquery.datasets.setIamPolicy` permission, if you want to maintain the existing functionality of the custom roles. If your custom roles need to view or update only a dataset's metadata, use the new `dataset_view` and `update_mode` parameters.
 
-Standard BigQuery predefined user roles aren't affected by this change. Specifically, `roles/bigquery.admin`, `roles/bigquery.dataOwner`, `roles/bigquery.dataEditor`, `roles/bigquery.dataViewer`, `roles/bigquery.metadataViewer`, `roles/bigquery.user`, `roles/bigquery.studioAdmin`, and `roles/bigquery.securityAdmin` already grant the corresponding `bigquery.datasets.getIamPolicy` or `bigquery.datasets.setIamPolicy` permissions. However, other predefined roles that need only dataset metadata access don't include the `bigquery.datasets.getIamPolicy` or `bigquery.datasets.setIamPolicy` permission. These roles include [authorized routine roles](https://docs.cloud.google.com/bigquery/docs/authorized-routines), metadata roles for other services, and some [service agent roles](https://docs.cloud.google.com/iam/docs/service-agent-roles).
+Standard BigQuery predefined user roles aren't affected by this change. Specifically, `roles/bigquery.admin`, `roles/bigquery.dataOwner`, `roles/bigquery.dataEditor`, `roles/bigquery.dataViewer`, `roles/bigquery.metadataViewer`, `roles/bigquery.user`, `roles/bigquery.studioAdmin`, and `roles/bigquery.securityAdmin` already grant the corresponding `bigquery.datasets.getIamPolicy` or `bigquery.datasets.setIamPolicy` permissions. However, other predefined roles that need only dataset metadata access don't include the `bigquery.datasets.getIamPolicy` or `bigquery.datasets.setIamPolicy` permission. These roles include [authorized routine roles](https://docs.cloud.google.com/bigquery/docs/authorized-routines), metadata roles for other services, and some [service agent roles](https://docs.cloud.google.com/iam/docs/service-agents).
 
 ## Changes to bq command-line tool commands
 
@@ -294,6 +294,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

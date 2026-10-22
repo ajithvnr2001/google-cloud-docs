@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/dts-authentication-authorization/
 title: Authorize accounts for data transfer \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:37:09.238451+00:00
+fetched_at: 2026-10-22T08:57:14.308929+00:00
 ---
 
 # Authorize accounts for data transfer  |  BigQuery  |  Google Cloud Documentation

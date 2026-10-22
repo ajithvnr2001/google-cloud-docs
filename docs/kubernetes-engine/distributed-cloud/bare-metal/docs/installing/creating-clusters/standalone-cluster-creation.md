@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/creating-clusters/standalone-cluster-creation/
 title: Create standalone clusters \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:57:28.293544+00:00
+fetched_at: 2026-10-22T10:12:39.309422+00:00
 ---
 
 # Create standalone clusters  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -22,20 +22,15 @@ Send feedback
 
 #  Create standalone clusters Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page shows you how to create a standalone cluster, which is a self-managing cluster that runs workloads. Standalone clusters don't manage other clusters, eliminating the need for running a separate admin cluster in resource- constrained scenarios. Furthermore, standalone clusters offer two installation profiles to choose from:
+A standalone cluster lets you run workloads on a self-managing cluster without deploying a separate admin cluster in resource-constrained environments. You can choose between two installation profiles: the default profile, which has standard resource requirements, and the edge profile, which significantly reduces system resource requirements for edge devices.
 
-  * **Default** : The default profile has limited resource requirements.
-  * **Edge** : The edge profile has significantly reduced system resource requirements and is recommended for edge devices with high resource constraints.
-
-
-
-Before creating a standalone cluster, consider the tradeoff between reducing resources and overall security. Since standalone clusters manage themselves, running workloads on the same cluster increases the risk of exposing sensitive administrative data, like SSH keys.
+Before creating a standalone cluster, consider the trade-off between reducing resource overhead and overall security. Because standalone clusters manage themselves, running user workloads on the same cluster increases the risk of exposing sensitive administrative data, like SSH keys.
 
 ## Prerequisites
 
 Before you create a standalone cluster, ensure the following:
 
-  * Latest `bmctl` is downloaded (`gs://anthos-baremetal-release/bmctl/1.36.100-gke.144/linux-amd64/bmctl`) from Cloud Storage.
+  * Latest `bmctl` is downloaded (`gs://anthos-baremetal-release/bmctl/1.36.200-gke.118/linux-amd64/bmctl`) from Cloud Storage.
   * Workstation running `bmctl` has network connectivity to all nodes in the target standalone cluster.
   * Workstation running `bmctl` has network connectivity to the control plane VIP of the target standalone cluster.
   * SSH key used to create the standalone cluster is available to root, or there is SUDO user access on all nodes in the target standalone cluster.
@@ -89,7 +84,9 @@ Replace JSON_KEY_FILE with the path to your service account JSON key file.
 
 
 
-### Create a standalone cluster config file
+### Create a standalone cluster
+
+config file
 
 After you've logged into the gcloud CLI and have your project set up, you can create the cluster config file with the `bmctl` command. In this example, all service accounts are automatically created by the `bmctl create config` command:
     
@@ -225,6 +222,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

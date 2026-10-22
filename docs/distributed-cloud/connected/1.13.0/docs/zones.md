@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.13.0/docs/zones/
 title: Manage zones \u00a0|\u00a0 Google Distributed Cloud connected \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:44.629752+00:00
+fetched_at: 2026-10-22T08:25:56.930047+00:00
 ---
 
 # Manage zones  |  Google Distributed Cloud connected  |  Google Cloud Documentation

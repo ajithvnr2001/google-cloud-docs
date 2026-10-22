@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/llm-d/
 title: llm-d \u00a0|\u00a0 Google Cloud Observability \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:18.755749+00:00
+fetched_at: 2026-10-22T10:39:28.151067+00:00
 ---
 
 # llm-d  |  Google Cloud Observability  |  Google Cloud Documentation
@@ -20,18 +20,18 @@ Send feedback
 
 #  llm-d Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document describes how your Google Kubernetes Engine deployment can use Google Cloud Managed Service for Prometheus to collect metrics from [llm-d](https://llm-d.ai/). llm-d consists of many components, including GKE Inference Gateway and vLLM.
+This document describes how your Google Kubernetes Engine deployment can use Google Cloud Managed Service for Prometheus to collect metrics from [llm-d](https://llm-d.ai/). llm-d consists of the llm-d Router (Endpoint Picker, deployed in Standalone Mode or Gateway Mode with GKE Gateway) and model servers such as vLLM.
 
-For information about collecting metrics from GKE Inference Gateway and vLLM, see the following documents:
+For information about collecting metrics from the llm-d Router and vLLM, see the following:
 
-  * [ GKE Inference Gateway](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/inference-optimized-gateway)
-  * [ vLLM](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/vllm). Use the configuration for the PodMonitoring resource described in this document.
+  * **llm-d Router (EPP)** : When deploying the router with the llm-d Helm chart, include the [ `monitoring-gke.values.yaml`](https://github.com/llm-d/llm-d/blob/main/guides/recipes/router/features/monitoring-gke.values.yaml) recipe (`router.monitoring.provider.name=gmp` and `router.monitoring.prometheus.enabled=true`) to automatically create the `PodMonitoring` resource and metrics-reader `Secret` in your workload namespace. For standalone GKE Inference Gateway deployments or llm-d versions earlier than v0.8.0, see [ GKE Inference Gateway](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/inference-optimized-gateway).
+  * [ **vLLM**](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/vllm): Enable [ automatic application monitoring](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/configure-automatic-application-monitoring) or use the `PodMonitoring` configuration described in this document to map the `llm-d.ai/role` pod label for Prefill/Decode (P/D) disaggregation.
 
 
 
-The instructions in these documents apply only if you are using [ managed collection](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/setup-managed) with Managed Service for Prometheus. If you are using self-deployed collection, then see the [llm-d documentation](https://github.com/llm-d/llm-d/tree/main/docs/monitoring).
+The instructions in these documents apply only if you are using [ managed collection](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/setup-managed) with Managed Service for Prometheus. If you are using self-deployed collection, then see the [llm-d documentation](https://llm-d.ai/docs/operations/observability/setup).
 
-After you configure GKE Inference Gateway and vLLM, you can access a predefined dashboard in Cloud Monitoring to view the metrics.
+After you configure the llm-d Router and vLLM, you can access a predefined dashboard in Cloud Monitoring to view the metrics.
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ To collect metrics from llm-d by using Managed Service for Prometheus and manage
 
 
 
-You must also change the configuration of the PodMonitoring resource for vLLM. Use the following configuration:
+To group vLLM metrics by the `llm-d.ai/role` pod label (for example, `prefill` and `decode` in Prefill/Decode disaggregation), apply the following `PodMonitoring` resource in your workload namespace:
     
     
     apiVersion: monitoring.googleapis.com/v1
@@ -52,10 +52,10 @@ You must also change the configuration of the PodMonitoring resource for vLLM. U
     spec:
       selector:
         matchLabels:
-          llm-d.ai/model: ms-pd-llm-d-modelservice
+          llm-d.ai/InferenceServing: "true"
       endpoints:
-      - port: 8200
-        interval: 10s
+      - port: 8000
+        interval: 15s
         path: /metrics
       targetLabels:
         fromPod:
@@ -71,7 +71,14 @@ You must also change the configuration of the PodMonitoring resource for vLLM. U
 
 ## View dashboards
 
-The Cloud Monitoring integration includes the **llm-d Prometheus Overview** dashboard. Dashboards are automatically installed when you configure the integration. You can also view static previews of dashboards without installing the integration.
+The Cloud Monitoring integration includes the following unified dashboards for both Standalone Mode and Gateway Mode (the Application Load Balancer section is populated when the llm-d proxy uses GKE Inference Gateway):
+
+  * **llm-d Overview** : For llm-d version v0.8.0 and later (queries `llm_d_epp_*` EPP metrics alongside Application Load Balancer, GPU networking, and vLLM metrics).
+  * **llm-d Overview ( < v0.8.0)**: For llm-d versions earlier than v0.8.0 (queries `inference_objective_*` metrics).
+
+
+
+Dashboards are automatically installed when you configure the integration. You can also view static previews of dashboards without installing the integration.
 
 To view an installed dashboard, do the following:
 
@@ -83,7 +90,7 @@ If you use the search bar to find this page, then select the result whose subhea
 
   2. Select the **Dashboard List** tab.
   3. Choose the **Integrations** category.
-  4. Click the name of the dashboard, for example, **llm-d Prometheus Overview**.
+  4. Click the name of the dashboard you want to view.
 
 
 

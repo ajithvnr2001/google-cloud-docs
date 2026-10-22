@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tpu/docs/tpu-inference/
 title: Run inference on Cloud TPU \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:27.855895+00:00
+fetched_at: 2026-10-22T10:25:11.578121+00:00
 ---
 
 # Run inference on Cloud TPU  |  Google Cloud Documentation
@@ -94,7 +94,7 @@ For information about installation, server launch, and supported configurations,
 After setting up inference, you can use profilers to analyze performance and TPU utilization. For more information about profiling, see the following resources:
 
   * [Profiling on Cloud TPU](https://docs.cloud.google.com/tpu/docs/profile-tpu-vm)
-  * [PyTorch profiling (PyTorch/XLA, deprecated)](https://docs.cloud.google.com/tpu/docs/pytorch-xla-performance-profiling-tpu-vm)
+  * [PyTorch profiling](https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/)
   * [JAX profiling](https://jax.readthedocs.io/en/latest/profiling.html#profiling-jax-programs)
 
 
@@ -103,6 +103,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

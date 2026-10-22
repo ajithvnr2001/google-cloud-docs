@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataform/docs/quickstart-connect-git-repo/
 title: Quickstart: Connect a Git repository and run a workflow \u00a0|\u00a0 Dataform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:21.515230+00:00
+fetched_at: 2026-10-22T08:26:21.808382+00:00
 ---
 
 # Quickstart: Connect a Git repository and run a workflow  |  Dataform  |  Google Cloud Documentation

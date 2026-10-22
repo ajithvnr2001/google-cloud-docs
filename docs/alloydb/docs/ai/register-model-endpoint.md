@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/register-model-endpoint/
 title: Register and call remote AI models using model endpoint management \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:58.701985+00:00
+fetched_at: 2026-10-22T09:39:03.911730+00:00
 ---
 
 # Register and call remote AI models using model endpoint management  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-batch-delete-job/
 title: Storage Batch Delete Job \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:06:34.987558+00:00
+fetched_at: 2026-10-22T10:31:45.493982+00:00
 ---
 
 # Storage Batch Delete Job  |  Google Cloud Documentation

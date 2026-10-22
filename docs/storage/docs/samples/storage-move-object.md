@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-move-object/
 title: Rename objects atomically \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:46.060897+00:00
+fetched_at: 2026-10-22T10:31:23.023964+00:00
 ---
 
 # Rename objects atomically  |  Cloud Storage  |  Google Cloud Documentation
@@ -277,14 +277,14 @@ To authenticate to Cloud Storage, set up Application Default Credentials. For mo
       # The new object name which you want to craete
       # destination_file_name = "your-new-file-name"
     
-      require "google/cloud/st[orage&q](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html)u[ot;](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html)
+      require "google/cloud/storage"
     
-      storage = Google::Cloud::Storage.new
-      bucket  = storage.bucket b[ucket_nam](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage-Bucket.html)e, skip_lookup: true
+      storage = Google::Cloud::[Storage](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html)
+      bucket  = storage.bucket bucket_name, skip_lookup: true
     
-      bucket.move_file source_file_name, dest[inat](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage-Bucket.html)ion_file_name
-      fetch_file = bucket.file destination_file_name
-      puts &quot;New File #{fetch_file.name} created\n"
+      bucket.[move_file](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage-Bucket.html) source_file_name, destination_file_name
+      fetch_file = bucket.[file](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage-Bucket.html) destination_file_name
+      puts "New File #{fetch_file.name} created\n"
     end
 
 ## What's next

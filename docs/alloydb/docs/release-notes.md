@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/release-notes/
 title: AlloyDB for PostgreSQL release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:46.131329+00:00
+fetched_at: 2026-10-22T09:27:41.321222+00:00
 ---
 
 # AlloyDB for PostgreSQL release notes  |  Google Cloud Documentation

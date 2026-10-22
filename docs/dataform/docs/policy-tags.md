@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataform/docs/policy-tags/
 title: Control column access \u00a0|\u00a0 Dataform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:21.390181+00:00
+fetched_at: 2026-10-22T08:26:19.114869+00:00
 ---
 
 # Control column access  |  Dataform  |  Google Cloud Documentation

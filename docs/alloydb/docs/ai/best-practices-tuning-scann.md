@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/best-practices-tuning-scann/
 title: Best practices for tuning ScaNN indexes in AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:48.191589+00:00
+fetched_at: 2026-10-22T09:44:15.279975+00:00
 ---
 
 # Best practices for tuning ScaNN indexes in AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/knowledge-catalog-integration/
 title: Manage your AlloyDB resources using Knowledge Catalog \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:39.343765+00:00
+fetched_at: 2026-10-22T09:29:36.337434+00:00
 ---
 
 # Manage your AlloyDB resources using Knowledge Catalog  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

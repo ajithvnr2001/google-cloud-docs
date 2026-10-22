@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/samples/genappbuilder-list-documents/
 title: List documents in a data store \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:54:54.366675+00:00
+fetched_at: 2026-10-22T08:32:41.498617+00:00
 ---
 
 # List documents in a data store  |  Agent Search  |  Google Cloud Documentation

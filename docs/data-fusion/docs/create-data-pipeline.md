@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/create-data-pipeline/
 title: Create a data pipeline by using Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:51.520337+00:00
+fetched_at: 2026-10-22T08:35:20.377614+00:00
 ---
 
 # Create a data pipeline by using Cloud Data Fusion  |  Google Cloud Documentation

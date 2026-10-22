@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.8.0/docs/getting-support/
 title: Support for Distributed Cloud connected \u00a0|\u00a0 Google Distributed Cloud connected, version 1.8.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:08.175339+00:00
+fetched_at: 2026-10-22T08:24:56.388490+00:00
 ---
 
 # Support for Distributed Cloud connected  |  Google Distributed Cloud connected, version 1.8.0  |  Google Cloud Documentation

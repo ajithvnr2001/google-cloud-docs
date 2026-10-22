@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/linux/current/docs/protect-data-using-backups/
 title: Protect your data using backups \u00a0|\u00a0 AlloyDB Omni using RPM: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:25:15.668986+00:00
+fetched_at: 2026-10-22T09:51:36.772499+00:00
 ---
 
 # Protect your data using backups  |  AlloyDB Omni using RPM: Current (18.4.0)  |  Google Cloud Documentation

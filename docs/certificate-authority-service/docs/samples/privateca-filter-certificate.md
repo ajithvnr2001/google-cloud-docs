@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/samples/privateca-filter-certificate/
 title: Filter certificates \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:38:00.130183+00:00
+fetched_at: 2026-10-22T08:55:05.113284+00:00
 ---
 
 # Filter certificates  |  Certificate Authority Service  |  Google Cloud Documentation

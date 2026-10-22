@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/notebooks/workbench/instances/migrate/
 title: Migrate data to a new Agent Platform Workbench instance \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:59.223478+00:00
+fetched_at: 2026-10-22T10:25:42.979125+00:00
 ---
 
 # Migrate data to a new Agent Platform Workbench instance  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/servicenow/
 title: Overview \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:51:42.842283+00:00
+fetched_at: 2026-10-22T09:54:16.118015+00:00
 ---
 
 # Overview  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -52,14 +52,82 @@ The ServiceNow connector supports ServiceNow API version v2 and later.
 
 ## Supported actions
 
-When the ServiceNow connector is enabled, end users can use natural language commands in Gemini Enterprise to perform the following actions.
+When the ServiceNow data store is enabled, end users can use natural language commands in Gemini Enterprise to perform the actions listed in this section.
+
+Actions fall into three categories, based on how they are enabled in the console:
+
+  * **Mutative actions** create or modify records in ServiceNow. You can enable each one individually when creating the data store or afterward.
+  * **Read-only actions enabled by default** read ServiceNow data for the end user. They are turned on automatically; you can disable them.
+  * **Read-only actions available on request** read ServiceNow data but are turned off by default. You can enable them individually.
+
+**Note:** Many mutative actions depend on read-only actions to look up the right record (for example, "Update incident" uses "List incidents" and "Search user"). When you enable a mutative action in the console, Gemini Enterprise prompts you to also enable the actions it depends on. For information about how to enable or disable actions after you create the data store, see [Manage actions](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/manage-actions).
+
+### Mutative actions
 
 Action  | Description   
 ---|---  
 Create incident  | Create a new incident record in ServiceNow to report and track a service interruption.   
 Update incident  | Update an existing incident in ServiceNow using its unique system ID.   
-**Note:** Additional read-only actions are also available.
+Create change request  | Create a change request in ServiceNow to formally manage and track system changes.   
+Create task  | Create a generic task in ServiceNow for tracking any work that needs to be done.   
+Update task  | Update an existing ServiceNow task identified by its system ID.   
+Create service catalog request  | Create a service catalog request in ServiceNow to order items or services.   
+Update service catalog request  | Update an existing service catalog request in ServiceNow.   
+Create request item  | Create a request item in ServiceNow to track an individual item or service within a service catalog request.   
+Update request item  | Update an existing request item in ServiceNow.   
+Submit catalog item  | Submit a service catalog item order in ServiceNow on behalf of the requesting user.   
+Approve record  | Approve or reject a pending ServiceNow approval record (`sysapproval_approver`). Commonly used to act on change requests, requested items, or catalog orders awaiting approval.   
+Add ticket comment  | Append a journal entry (additional comment or work note) to any ServiceNow task-derived record (incident, change request, requested item, request, and so on) without modifying other fields.   
+Create record  | Create a new record in a specified ServiceNow table.   
+Update record  | Update an existing record in a specified ServiceNow table.   
+Upload attachment  | Upload a file as an attachment to an existing ServiceNow record using the Attachment API.   
+  
+### Read-only actions enabled by default
 
+Action  | Description   
+---|---  
+List incidents| List or query incidents.  
+List change requests| List or query change requests.  
+List tasks| List or query tasks.  
+List request items| List or query request items.  
+List service catalog requests| List or query service catalog requests.  
+Search service catalog request| Search or query service catalog requests.  
+Search request item| List or query requested items.  
+Search catalog| List or query service catalogs.  
+Search catalog item| List or query catalog items.  
+List catalog categories| List or query catalog categories.  
+Search knowledge base| List or query knowledge articles.  
+List knowledge bases| List or query knowledge bases.  
+List problems| List or query problems.  
+List services| List or query services.  
+List outages| List or query outages.  
+Search configuration items| List or query configuration items (CIs).  
+List hardware assets| List or query hardware assets.  
+List software licenses| List or query software licenses.  
+Search user| List or query users.  
+Search departments| Search or query departments.  
+Search locations| Search or query locations.  
+Search project| Search or query projects.  
+  
+### Read-only actions available on request
+
+Action  | Description   
+---|---  
+List assets| List or query assets.  
+List stockrooms| List or query stockrooms.  
+List service contracts| List or query service contracts.  
+List SLA definitions| List or query SLA definitions.  
+List consumers| List or query consumers.  
+List accounts| List or query accounts.  
+List contacts| List or query contacts.  
+List cases| List or query cases.  
+List entitlements| List or query entitlements.  
+List knowledge categories| List or query knowledge categories.  
+Search story| List or query stories (`rm_story`).  
+Search attachment| Search or query attachments.  
+Search portfolio| Search or query portfolios.  
+Search time card| Search or query time cards.  
+  
 ## Limitations
 
 This section outlines known issues and limitations that may affect your use of the ServiceNow data store.
@@ -84,6 +152,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

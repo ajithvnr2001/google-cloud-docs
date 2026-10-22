@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/concepts/supported-policy-api-settings/
 title: Settings available in the API \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:58:11.598917+00:00
+fetched_at: 2026-10-22T10:21:25.715681+00:00
 ---
 
 # Settings available in the API  |  Cloud Identity  |  Google Cloud Documentation
@@ -585,6 +585,12 @@ custom_reporting_form_description  | string
 **Restrict which mail clients users can use (OAuth mail clients only)** | imap_access_restriction.allowed_oauth_mail_client_list  | OAuthMailClientList  
 **End User Access > Google Workspace Sync** | `gmail.workspace_sync_for_outlook` | No  | **Enable Google Workspace Sync for Microsoft Outlook for my users** | enable_google_workspace_sync_for_microsoft_outlook  | boolean   
 **End User Access > Automatic forwarding** | `gmail.auto_forwarding` | No  | **Allow users to automatically forward incoming email to another address** | enable_auto_forwarding  | boolean   
+**Allowed forwarding destination** | allowed_forwarding_destination  | enum: 
+
+  * `ANY_ADDRESS`
+  * `INTERNAL_ADDRESSES`
+
+  
 **User Settings > Name format** | `gmail.name_format` | No  | **Allow users to customize this setting** | allow_custom_display_names  | boolean   
 **First Last or Last, First** | default_display_name_format  | enum: 
 
@@ -1646,6 +1652,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-19 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

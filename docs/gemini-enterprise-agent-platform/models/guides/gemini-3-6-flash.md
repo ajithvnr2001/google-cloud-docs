@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-3-6-flash/
 title: Developer's guide to Gemini 3.6 Flash \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:46:19.802734+00:00
+fetched_at: 2026-10-22T10:23:30.352232+00:00
 ---
 
 # Developer's guide to Gemini 3.6 Flash  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

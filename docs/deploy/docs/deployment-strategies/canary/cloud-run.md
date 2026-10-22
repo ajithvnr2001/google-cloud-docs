@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary/cloud-run/
 title: Canary Deployments to Cloud Run \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:46.975773+00:00
+fetched_at: 2026-10-22T08:25:01.014822+00:00
 ---
 
 # Canary Deployments to Cloud Run  |  Google Cloud Documentation

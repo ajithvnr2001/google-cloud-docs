@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/database-users/built-in-authentication/
 title: AlloyDB for PostgreSQL built-in database authentication \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:35.947252+00:00
+fetched_at: 2026-10-22T09:39:12.299895+00:00
 ---
 
 # AlloyDB for PostgreSQL built-in database authentication  |  Google Cloud Documentation

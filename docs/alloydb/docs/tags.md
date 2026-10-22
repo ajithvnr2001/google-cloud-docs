@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/tags/
 title: Organize resources using tags \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:04.095166+00:00
+fetched_at: 2026-10-22T10:41:58.457274+00:00
 ---
 
 # Organize resources using tags  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Organize resources using tags Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes Google Cloud tags and how to use them with AlloyDB for PostgreSQL. To add tags to AlloyDB clusters and backups using `Google Cloud CLI`, see [Attach and manage tags](https://docs.cloud.google.com/alloydb/docs/manage-tags).
+To organize your AlloyDB for PostgreSQL clusters and backups, enforce conditional access control policies, and categorize Cloud Billing cost exports, you can attach Google Cloud tags to your AlloyDB resources. To add tags to AlloyDB clusters and backups by using the Google Cloud CLI, see [Attach and manage tags](https://docs.cloud.google.com/alloydb/docs/manage-tags).
 
 ## Overview of tags
 
@@ -37,7 +37,7 @@ You can add a reference to tags in [Identity and Access Management (IAM) policy 
 
 After you attach a tag to an AlloyDB resource, you can use the tag with IAM Conditions to conditionally grant access to AlloyDB resources. For more information about setting conditions based on tags, see [Resource tags](https://docs.cloud.google.com/iam/docs/conditions-attribute-reference#resource-tags). IAM Conditions let you impose fine-grained access control on AlloyDB resources.
 
-To use IAM Conditions, you reference the tags in IAM policy bindings. For more information about how to control access to your Google Cloud resources using use tags with IAM, see [Tags and conditional access](https://docs.cloud.google.com/iam/docs/tags-access-control).
+To use IAM Conditions, you reference the tags in IAM policy bindings. For more information about how to control access to your Google Cloud resources by using tags with IAM, see [Tags and conditional access](https://docs.cloud.google.com/iam/docs/tags-access-control).
 
 ## Export Cloud Billing data to BigQuery with resource-level tags
 
@@ -82,6 +82,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

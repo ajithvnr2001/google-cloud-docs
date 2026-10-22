@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/food-ai/quickstart-client-libraries/
 title: Quickstart: Using client libraries \u00a0|\u00a0 Food Ordering AI Agent \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:26:00.470642+00:00
+fetched_at: 2026-10-22T08:35:59.261272+00:00
 ---
 
 # Quickstart: Using client libraries  |  Food Ordering AI Agent  |  Google Cloud Documentation

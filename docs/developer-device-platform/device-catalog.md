@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/developer-device-platform/device-catalog/
 title: Developer Device Platform Device Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:05.386825+00:00
+fetched_at: 2026-10-22T08:26:46.971559+00:00
 ---
 
 # Developer Device Platform Device Catalog  |  Google Cloud Documentation
@@ -39,9 +39,9 @@ These steps assume that you have already created a Google Cloud project, complet
 
 The following interactive table lists all available device configurations in Developer Device Platform. Use the search box or table headers to filter and sort devices by ID, make, name, model, hardware type, OS version, and supported products. To use it, make your selections from the menus and click the Catalog link.
 
-### View Catalog (269 devices available)
+### View Catalog (270 devices available)
 
-All MakesAppleFUJITSUGenericGoogleINFINIX MOBILITY LIMITEDLenovoMotorolaNothingOPPOOnePlusSHARPSamsungSonyTECNOTECNO MOBILE LIMITEDXiaomirealmeAll Hardware TypesPHYSICALVIRTUALAll Form FactorsPHONETABLETWEARABLEAll OS VersionsAndroid 26Android 27Android 28Android 29Android 30Android 31Android 32Android 33Android 34Android 35Android 36Android 37iOS 18.3iOS 18.4iOS 26.3
+All MakesAppleFUJITSUGenericGoogleINFINIX MOBILITY LIMITEDLenovoMotorolaNothingOPPOOnePlusSHARPSamsungSonyTECNOTECNO MOBILE LIMITEDXiaomirealmeAll Hardware TypesPHYSICALVIRTUALAll Form FactorsPHONETABLETWEARABLEAll OS VersionsAndroid 26Android 27Android 28Android 29Android 30Android 31Android 32Android 33Android 34Android 35Android 36Android 37iOS 18.3iOS 18.4iOS 26.3iOS 26.5
 
 ID | Make | Name | Model | Form Factor | Hardware Type | OS Version | Products  
 ---|---|---|---|---|---|---|---  
@@ -182,6 +182,7 @@ ID | Make | Name | Model | Form Factor | Hardware Type | OS Version | Products
 `husky-35` | Google | Pixel 8 Pro | husky | PHONE | PHYSICAL | Android 35 | Automation, Streaming  
 `infinix-x6525-33` | INFINIX MOBILITY LIMITED | Infinix SMART 8 | Infinix-X6525 | PHONE | PHYSICAL | Android 33 | Automation, Streaming  
 `iphone16pro-18-3` | Apple | iPhone 16 Pro | iphone16pro | PHONE | PHYSICAL | iOS 18.3 | Automation  
+`iphone17pro-26-5` | Apple | iPhone 17 Pro | iphone17pro | PHONE | PHYSICAL | iOS 26.5 | Automation  
 `iphonese3-18-4` | Apple | iPhone SE 3 | iphonese3 | PHONE | PHYSICAL | iOS 18.4 | Automation  
 `iphonese3-26-3` | Apple | iPhone SE 3 | iphonese3 | PHONE | PHYSICAL | iOS 26.3 | Automation  
 `java-30` | Motorola | Motorola G20 | java | PHONE | PHYSICAL | Android 30 | Automation, Streaming  
@@ -437,6 +438,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

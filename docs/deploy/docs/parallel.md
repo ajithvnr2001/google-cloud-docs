@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/parallel/
 title: Deploy to multiple targets at the same time \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:45.535296+00:00
+fetched_at: 2026-10-22T08:24:47.398680+00:00
 ---
 
 # Deploy to multiple targets at the same time  |  Google Cloud Documentation

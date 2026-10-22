@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/columnar-engine/manage-content-recommendations/
 title: Manage column store content using auto-columnarization \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:51.491401+00:00
+fetched_at: 2026-10-22T09:44:22.310469+00:00
 ---
 
 # Manage column store content using auto-columnarization  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/manage-looker-core-metadata/
 title: Manage Looker (Google Cloud core) resources with Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:02:27.665403+00:00
+fetched_at: 2026-10-22T10:44:43.864167+00:00
 ---
 
 # Manage Looker (Google Cloud core) resources with Knowledge Catalog  |  Google Cloud Documentation
@@ -23,43 +23,52 @@ Send feedback
 
 #  Manage Looker (Google Cloud core) resources with Knowledge Catalog Stay organized with collections  Save and categorize content based on your preferences. 
 
-**Preview**
+You can manage metadata from your Looker (Google Cloud core) instances by using Knowledge Catalog. Managing metadata helps you govern your data and make informed decisions.
 
-This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+Knowledge Catalog is a data cataloging platform that stores, manages, and provides access to your metadata. It indexes production LookML, LookML project, and dashboard metadata from Looker (Google Cloud core).
 
-**Note:** Use [the issue report and feedback form](https://docs.google.com/forms/d/e/1FAIpQLSctRNhQVzQG1y0NlxIGK2RHlVJZtNL0GbWwDpRyKXD3pqOFMw/viewform) to provide feedback or report issues with this preview feature.
+This integration provides a single view of your data assets and their relationships, including data lineage. When you use Knowledge Catalog, you can perform impact analysis, data discovery, and change management, which can help you integrate data into operational workflows and find new uses for your data.
 
-Knowledge Catalog lets you index, store, and manage production LookML, LookML project, and dashboard metadata from your Looker (Google Cloud core) instances. This integration provides a single view of your data assets and their relationships, including data lineage, so that you can perform data discovery, impact analysis, and change management.
+Knowledge Catalog captures multiple entity levels from Looker, which include the following:
+
+  * Looker instance: including instance ID, URL, and related dashboards
+  * Agent: including creator, description, and data source
+  * Dashboard: including name, layout, filters, and related dashboard elements
+  * Dashboard element: including type, query, model, and Explores
+  * Explore: including label, default queries, foreign key, join conditions ([`sql_on`](https://docs.cloud.google.com/looker/docs/reference/param-explore-join-sql-on), [`relationship`](https://docs.cloud.google.com/looker/docs/reference/param-explore-join-relationship), and [`type`](https://docs.cloud.google.com/looker/docs/reference/param-explore-join-type)), filters ([`always_filter`](https://docs.cloud.google.com/looker/docs/reference/param-explore-always-filter), [`conditionally_filter`](https://docs.cloud.google.com/looker/docs/reference/param-explore-conditionally-filter), [`access_filter`](https://docs.cloud.google.com/looker/docs/reference/param-explore-access-filter), [`sql_always_where`](https://docs.cloud.google.com/looker/docs/reference/param-explore-sql-always-where), and [`sql_always_having`](https://docs.cloud.google.com/looker/docs/reference/param-explore-sql-always-having)), schema with dimension and measure definitions, and synonyms
+  * Look: including creator project, Explore, model, and fields
+  * LookML dashboard: including description, dashboard name, layout, filters, and related LookML dashboard elements
+  * LookML dashboard element: including description, queries, merged queries
+  * LookML project: including description and related models
+  * Model: including path, project URL, connection, and related views, Explores, and LookML dashboards
+  * View: including derived table, cluster keys, primary key, and schema with dimension and measure definitions
+
+
+
+The Knowledge Catalog and Looker (Google Cloud core) integration also represents defined relationships, including:
+
+  * `reference` entry links representing relationships between Looker objects
+  * `schema-join` entry links representing primary key and foreign key associations
+
+
 
 ## How the integration works
 
-The Looker and Knowledge Catalog integration uses a first-party connector for metadata ingestion. Looker (Google Cloud core) publishes LookML metadata to regional Cloud Storage repositories for Knowledge Catalog to consume through a batch sync process.
+The Looker and Knowledge Catalog integration uses a first-party connector for metadata ingestion. Looker (Google Cloud core) publishes LookML metadata to regional Cloud Storage repositories for Knowledge Catalog to consume through a live sync process.
 
-Data transmission from Looker (Google Cloud core) to Knowledge Catalog is automatic by default and requires no configuration changes. Looker (Google Cloud core) uses internal services to perform the synchronization. The internal batch sync process runs approximately every four hours, and data from Looker refreshes approximately hourly into Knowledge Catalog.
+Data transmission from Looker (Google Cloud core) to Knowledge Catalog is automatic by default and requires no configuration changes. Looker (Google Cloud core) uses internal services to perform live synchronization.
 
 When you update your LookML models and push them to production, the system automatically synchronizes key metadata with Knowledge Catalog. This metadata includes view and Explore details, field definitions, and model information. Similarly, dashboard metadata, including titles, ownership, and usage statistics, appears in the catalog.
 
-Knowledge Catalog captures the following entity levels from Looker:
-
-  * Looker instance
-  * Dashboard
-  * Dashboard element
-  * Look
-  * LookML project
-  * Model
-  * Explore
-  * View (contains dimensions and measures)
-
-
-
 ## When to use Knowledge Catalog with Looker
 
-Use Knowledge Catalog to discover, understand, and govern your Looker metadata so that you can make informed decisions, integrate data into operational workflows, and find new uses for your data. The catalog aids with the following activities:
+Use Knowledge Catalog to discover and understand your Looker metadata. The catalog aids with the following activities:
 
-  * **Impact Analysis:** Use [data lineage](https://docs.cloud.google.com/looker/docs/looker-core-lineage) to visualize how data flows from BigQuery to Looker dashboards.
-  * **Discovery:** Search for dashboards, Explores, and views across your organization.
-  * **Change management:** Understand dependencies before making changes.
-  * **Data movement pipelines:** Track data provenance.
+  * **AI and data agent accuracy:** Use indexed LookML models, Explores, and views as semantic definitions. Grounding query generation against Looker entries in Knowledge Catalog ensures that AI agents adhere to official business logic (certified measures, dimensions, and valid join paths).
+  * **End-to-end lineage (impact analysis and provenance):** Use [data lineage](https://docs.cloud.google.com/looker/docs/looker-core-lineage) to visualize how data flows between data sources (such as BigQuery) and Looker assets in both directions: 
+    * **Downstream impact analysis:** Predict which dashboards and Explores are affected before making schema or model changes.
+    * **Upstream data audit:** Audit the origin, transformations, and chain of custody of the metrics that are displayed in executive dashboards and Looks.
+  * **Discovery and asset consolidation:** Search for certified dashboards, Explores, and views across your organization to prevent duplicate reporting and redundant data modeling.
 
 
 
@@ -69,8 +78,8 @@ With Knowledge Catalog, you can also curate metadata by [attaching aspects](http
 
 To get the permissions that you need to use the Knowledge Catalog and Looker (Google Cloud core) integration, ask your administrator to grant you the following IAM roles on project where your Looker (Google Cloud core) instance resides:
 
-  * To view Knowledge Catalog resources: [Dataplex Viewer](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.viewer) (`roles/dataplex.viewer`)
-  * To access the Looker (Google Cloud core) metadata on Knowledge Catalog: Looker Schema Viewer (`roles/looker.schemaViewer`)
+  * To view Knowledge Catalog resources: [Dataplex Catalog Viewer](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`)
+  * To access the Looker (Google Cloud core) metadata on Knowledge Catalog: **Looker Schema Viewer** (`roles/looker.schemaViewer`)
 
     * The Looker Schema Viewer predefined role contains the `looker.schemas.view` permission, which is required to access Looker (Google Cloud core) metadata on Knowledge Catalog.
 **Note:** You can add the Looker Schema Viewer role only by using Google Cloud CLI. 
@@ -137,33 +146,44 @@ Use the Knowledge Catalog **Search** page in the Google Cloud console to search 
 
 [ Go to Search](https://console.cloud.google.com/dataplex/dp-search)
 
-In the **Filters** panel, you can filter for Looker (Google Cloud core) assets by using the **Project** , **System** and **Type aliases** sections. In the **System** section, you can filter for **Looker**. In **Type aliases** , you can filter the search results to a specific type of Looker asset by selecting one or more of the following:
+In the **Filters** panel, you can filter for Looker (Google Cloud core) assets by using the **Project** , **Systems** , and **Type aliases** sections. In the **Systems** section, you can filter for **Looker**. In **Type aliases** , you can filter the search results to a specific type of asset.
 
+If you have set the **Systems** filter to **Looker** , then you can filter for a specific type of Looker asset by selecting one or more of the following in the **Type aliases** section:
+
+  * Agent
   * Dashboard
   * Dashboard element
   * Explore
+  * Instance
+  * Look
   * LookML project
   * Model
-  * Instance
   * View
   * Other
 
+**Note:** Filtering by **Dashboard** returns both user-defined and LookML dashboards. Filtering by **Dashboard element** returns elements from both user-defined and LookML dashboards.
 
+You can also enter search queries directly in the search field using keyword or natural language syntax. For example, to view all Looker assets, enter `system=Looker`. To view all Looker dashboards, enter `system=Looker AND type=dashboard`.
 
-You can also use the search field to perform search queries. You can perform a keyword or natural language search. For example, to view all Looker assets through keyword search, enter `system=Looker`. To view all Looker dashboards, enter the query `system=Looker AND type=DASHBOARD`. The following assets are available for search with the `type` keyword:
+**Tip:** The `type` qualifier and type aliases aren't specific to a system. For example, filtering only by `type=view` (or selecting only **View** in **Type aliases**) returns both Looker views and BigQuery views. To filter specifically for Looker views, filter on both system and type: select **Looker** in **Systems** and **View** in **Type aliases** , or enter `system=Looker AND type=view` in the search field.
 
-  * dashboard
-  * dashboard_element
-  * explore
-  * instance
-  * look
-  * lookml_project
-  * model
-  * view
+You can use the following values with the `type` qualifier:
 
+  * `agent`
+  * `dashboard`
+  * `dashboard_element`
+  * `explore`
+  * `instance`
+  * `look`
+  * `lookml_project`
+  * `model`
+  * `view`
 
+**Note:** Searching using `dashboard` returns both user-defined and LookML dashboards. Searching using `dashboard_element` returns elements from both user-defined and LookML dashboards.
 
-To learn more about searching for resources, see the [Search for resources in Knowledge Catalog](https://docs.cloud.google.com/dataplex/docs/search-assets) documentation page. To learn more about the expressions that you can use in the search field, see the [Search syntax for Knowledge Catalog](https://docs.cloud.google.com/dataplex/docs/search-syntax) documentation page.
+You can also search for Looker-related BigQuery entries using the [`lookupEntryLinks` method](https://docs.cloud.google.com/dataplex/docs/reference/rest/v1/projects.locations/lookupEntryLinks). The `reference` entry link represents the link from BigQuery table entries to their Looker view entries.
+
+To learn more about searching for resources, see [Search for resources in Knowledge Catalog](https://docs.cloud.google.com/dataplex/docs/search-assets). To learn more about the expressions that you can use in the search field, see [Search syntax for Knowledge Catalog](https://docs.cloud.google.com/dataplex/docs/search-syntax).
 
 ## Disable the integration of Knowledge Catalog and your Looker (Google Cloud core) instance
 
@@ -195,26 +215,11 @@ When the integration is disabled after having been enabled, the Looker metadata 
 
 The integration between Looker (Google Cloud core) and Knowledge Catalog supports VPC Service Controls.
 
-If your Looker (Google Cloud core) instance or Knowledge Catalog resources are within a VPC Service Controls service perimeter, you must ensure that the services required for metadata export are accessible.
-
-  * Ensure that **Dataplex API** (`dataplex.googleapis.com`) is configured as a restricted service within your perimeter.
-  * The integration uses internal Cloud Storage buckets to transfer metadata. Ensure that your service perimeter allows access to the necessary Cloud Storage resources. Contact your Google Cloud account team or support if you encounter `PERMISSION_DENIED` errors that are related to metadata export.
-
-
+If your Looker (Google Cloud core) instance or Knowledge Catalog resources are within a VPC Service Controls service perimeter, you must ensure that **Dataplex API** (`dataplex.googleapis.com`) is configured as a restricted service within your perimeter.
 
 ## Pricing
 
 There is no charge for storing Looker (Google Cloud core) technical metadata in Knowledge Catalog. Standard Knowledge Catalog pricing applies for API calls and additional business metadata enrichment. For more information, see the [Knowledge Catalog pricing page](https://cloud.google.com/dataplex/pricing).
-
-## Limitations
-
-This section lists limitations with using Looker (Google Cloud core) and Knowledge Catalog:
-
-  * The metadata from Looker is not instantly available in the catalog. The batch sync process runs on a set interval, and data refresh occurs approximately hourly.
-  * There is no public API exposed for this integration.
-  * For data lineage limitations, see the [Track data lineage with Knowledge Catalog](https://docs.cloud.google.com/looker/docs/looker-core-lineage#limitations) page.
-
-
 
 ## What's next
 
@@ -229,6 +234,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

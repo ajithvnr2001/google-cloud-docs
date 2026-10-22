@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/tuning/image/
 title: Image tuning \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:04.331348+00:00
+fetched_at: 2026-10-22T10:27:39.002416+00:00
 ---
 
 # Image tuning  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

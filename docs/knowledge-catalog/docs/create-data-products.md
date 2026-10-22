@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/create-data-products/
 title: Create data products \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:43:30.353314+00:00
+fetched_at: 2026-10-22T09:49:29.057573+00:00
 ---
 
 # Create data products  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -23,9 +23,9 @@ Send feedback
 
 #  Create data products Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document is intended for data product owners who want to create and configure data products in Knowledge Catalog (formerly Dataplex Universal Catalog). When you define these resources, ensure their IDs adhere to [Knowledge Catalog resource naming guidelines](https://docs.cloud.google.com/knowledge-catalog/docs/guidelines-resources).
+Data products in Knowledge Catalog (formerly Dataplex Universal Catalog) let you package related data assets into a single, discoverable unit. You can then configure access groups, attach refresh contracts and metadata aspects, and add documentation so consumers can evaluate and request access to those assets.
 
-For more information about the architecture and key concepts of data products, see [About data products](https://docs.cloud.google.com/knowledge-catalog/docs/data-products-overview).
+This document is intended for data product owners. For more information about the architecture and key concepts of data products, see [About data products](https://docs.cloud.google.com/knowledge-catalog/docs/data-products-overview).
 
 ## Before you begin
 
@@ -189,6 +189,8 @@ In this final phase, you add rich text documentation, such as user onboarding gu
 To create and configure a data product, complete the steps in the following sections:
 
 ### Create a data product
+
+Define the core details for your data product, such as its ID, location, and contacts. When you define data products and their assets, ensure their IDs adhere to [Knowledge Catalog resource naming guidelines](https://docs.cloud.google.com/knowledge-catalog/docs/guidelines-resources).
 
 **Note:** The REST API methods for creating and configuring data products and assets are long-running operations. When you call these methods, the API returns an [Operation](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations.operations) object that you can use to check the status of the task.
 
@@ -1952,6 +1954,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-19 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

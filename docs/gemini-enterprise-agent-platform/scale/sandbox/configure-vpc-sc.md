@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/configure-vpc-sc/
 title: Configure VPC Service Controls and Private Service Connect with sandboxes \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:46:05.161743+00:00
+fetched_at: 2026-10-22T08:37:04.931734+00:00
 ---
 
 # Configure VPC Service Controls and Private Service Connect with sandboxes  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/merge-and-split-commitments/
 title: Merge and split commitments \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:45:43.543953+00:00
+fetched_at: 2026-10-22T10:12:44.244749+00:00
 ---
 
 # Merge and split commitments  |  Compute Engine  |  Google Cloud Documentation
@@ -123,8 +123,8 @@ Your commitment fee is the sum of the discounted prices of all your committed re
 
 ### Limitations
 
-  * You can't merge license commitments.
-  * You can't merge commitments that you purchased through [future reservations for capacity blocks for GPU VMs](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity) or [future reservations for capacity blocks for TPU VMs](https://docs.cloud.google.com/tpu/docs/long-term-reservation).
+  * You can't merge software license commitments or block storage commitments.
+  * You can't merge commitments that you purchased through [future reservations for capacity blocks for GPU VMs](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity) or [future reservations for capacity blocks for Cloud TPU VMs](https://docs.cloud.google.com/tpu/docs/long-term-reservation).
   * The merged commitment automatically includes any reservations already attached to source commitments. You can't attach any additional reservations (new or existing) to the merged commitment.
   * You can't merge commitments that have expired or are canceled.
   * By default, when you create merged commitments, the auto-renewal setting is disabled on the new commitments, even if all source commitments were set to renew automatically. If you want your merged commitments to renew automatically, then you must manually enable the auto-renewal setting on those commitments. You can do so either [at the time of their creation](https://docs.cloud.google.com/compute/docs/instances/renew-commitments-automatically#create_a_commitment_that_renews_automatically) or [after their creation](https://docs.cloud.google.com/compute/docs/instances/renew-commitments-automatically#enable_auto-renew_on_an_existing_commitment).
@@ -458,7 +458,7 @@ However, if you merge or split either of these commitments again, then the disco
 
 ### Limitations
 
-  * You can't split license commitments.
+  * You can't split software license commitments or block storage commitments.
   * You can't split commitments that you purchased through [future reservations for capacity blocks](https://docs.cloud.google.com/compute/docs/instances/choose-reservation-type#reserve-capacity-aihc).
   * You can't split [commitments that have attached reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-with-commitments). Consequently, you can't split commitments that have GPUs, Local SSD disks, or both, because commitments with these resources always have attached reservations.
   * You can't attach any reservations (new or existing) to the split commitments.

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.13.0/docs/shared-responsibility/
 title: Google Distributed Cloud connected shared responsibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:46.162489+00:00
+fetched_at: 2026-10-22T08:25:07.186227+00:00
 ---
 
 # Google Distributed Cloud connected shared responsibility  |  Google Cloud Documentation

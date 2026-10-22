@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/entities-fuzzy/
 title: Fuzzy matching \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:39.197655+00:00
+fetched_at: 2026-10-22T08:26:15.128481+00:00
 ---
 
 # Fuzzy matching  |  Dialogflow ES  |  Google Cloud Documentation

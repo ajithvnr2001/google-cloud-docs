@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/function-calling/
 title: Function calling reference \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:25:01.074513+00:00
+fetched_at: 2026-10-22T08:35:10.492857+00:00
 ---
 
 # Function calling reference  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -684,7 +684,7 @@ Save the request body in a file named `request.json`, and execute the following 
 You can call the Function Calling API by using the OpenAI library. For more information, see [ Call Agent Platform models by using the OpenAI library](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate/openai/overview). 
     
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
     import openai
     
     from google.auth import default, transport
@@ -693,11 +693,11 @@ You can call the Function Calling API by using the OpenAI library. For more info
     # PROJECT_ID = "your-project-id"
     location = "us-central1"
     
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=PROJECT_ID, location=location)
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=PROJECT_ID, location=location)
     
     # Programmatically get an access token
     credentials, _ = default(scopes=["https://www.googleapis.com/auth/cloud-platform"])
-    auth_request = transport.[requests](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.SandboxEnvironmentTemplateResourceRequirementsDict.html#vertexai__genai_types_SandboxEnvironmentTemplateResourceRequirementsDict_requests).Request()
+    auth_request = transport.[requests](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.SandboxEnvironmentTemplateResourceRequirementsDict.html#vertexai__genai_types_SandboxEnvironmentTemplateResourceRequirementsDict_requests).Request()
     credentials.refresh(auth_request)
     
     # # OpenAI Client
@@ -741,8 +741,8 @@ You can call the Function Calling API by using the OpenAI library. For more info
         tools=tools,
     )
     
-    print("Function:", response.choices[0].message.tool_calls[0].[id](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.StructuredMemorySchemaConfigDict.html#vertexai__genai_types_StructuredMemorySchemaConfigDict_id))
-    print("Arguments:", response.choices[0].message.tool_calls[0].function.[arguments](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.SchemaPromptInstancePromptExecutionDict.html#vertexai__genai_types_SchemaPromptInstancePromptExecutionDict_arguments))
+    print("Function:", response.choices[0].message.tool_calls[0].[id](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.StructuredMemorySchemaConfigDict.html#vertexai__genai_types_StructuredMemorySchemaConfigDict_id))
+    print("Arguments:", response.choices[0].message.tool_calls[0].function.[arguments](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.SchemaPromptInstancePromptExecutionDict.html#vertexai__genai_types_SchemaPromptInstancePromptExecutionDict_arguments))
     # Example response:
     # Function: get_current_weather
     # Arguments: {"location":"Boston"}
@@ -1318,7 +1318,7 @@ Save the request body in a file named `request.json`, and execute the following 
 You can call the Function Calling API by using the OpenAI library. For more information, see [ Call Agent Platform models by using the OpenAI library](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate/openai/overview). 
     
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
     import openai
     
     from google.auth import default, transport
@@ -1327,11 +1327,11 @@ You can call the Function Calling API by using the OpenAI library. For more info
     # PROJECT_ID = "your-project-id"
     location = "us-central1"
     
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=PROJECT_ID, location=location)
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=PROJECT_ID, location=location)
     
     # Programmatically get an access token
     credentials, _ = default(scopes=["https://www.googleapis.com/auth/cloud-platform"])
-    auth_request = transport.[requests](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.SandboxEnvironmentTemplateResourceRequirementsDict.html#vertexai__genai_types_SandboxEnvironmentTemplateResourceRequirementsDict_requests).Request()
+    auth_request = transport.[requests](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.SandboxEnvironmentTemplateResourceRequirementsDict.html#vertexai__genai_types_SandboxEnvironmentTemplateResourceRequirementsDict_requests).Request()
     credentials.refresh(auth_request)
     
     # OpenAI Client
@@ -1376,8 +1376,8 @@ You can call the Function Calling API by using the OpenAI library. For more info
         tool_choice="auto",
     )
     
-    print("Function:", response.choices[0].message.tool_calls[0].[id](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.StructuredMemorySchemaConfigDict.html#vertexai__genai_types_StructuredMemorySchemaConfigDict_id))
-    print("Arguments:", response.choices[0].message.tool_calls[0].function.[arguments](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.SchemaPromptInstancePromptExecutionDict.html#vertexai__genai_types_SchemaPromptInstancePromptExecutionDict_arguments))
+    print("Function:", response.choices[0].message.tool_calls[0].[id](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.StructuredMemorySchemaConfigDict.html#vertexai__genai_types_StructuredMemorySchemaConfigDict_id))
+    print("Arguments:", response.choices[0].message.tool_calls[0].function.[arguments](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.SchemaPromptInstancePromptExecutionDict.html#vertexai__genai_types_SchemaPromptInstancePromptExecutionDict_arguments))
     # Example response:
     # Function: get_current_weather
     # Arguments: {"location":"Boston"}

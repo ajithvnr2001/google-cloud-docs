@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/vertex-ai-search/
 title: About Agent Search \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:00.913560+00:00
+fetched_at: 2026-10-22T10:24:40.417497+00:00
 ---
 
 # About Agent Search  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

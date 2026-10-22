@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/analytics-hub-custom-constraints/
 title: Manage Sharing data exchanges and listings using custom constraints \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:48:52.596780+00:00
+fetched_at: 2026-10-22T09:08:51.525402+00:00
 ---
 
 # Manage Sharing data exchanges and listings using custom constraints  |  BigQuery  |  Google Cloud Documentation

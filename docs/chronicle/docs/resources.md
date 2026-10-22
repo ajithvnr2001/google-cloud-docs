@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/resources/
 title: Resources \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:11:15.637354+00:00
+fetched_at: 2026-10-22T08:56:07.471708+00:00
 ---
 
 # Resources  |  Google Security Operations  |  Google Cloud Documentation

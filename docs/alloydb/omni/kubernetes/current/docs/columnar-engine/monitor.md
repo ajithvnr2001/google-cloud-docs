@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/columnar-engine/monitor/
 title: Monitor the columnar engine \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:39:11.528412+00:00
+fetched_at: 2026-10-22T10:13:00.806757+00:00
 ---
 
 # Monitor the columnar engine  |  AlloyDB Omni using the container orchestrator: Current (18.4.0)  |  Google Cloud Documentation
@@ -128,7 +128,7 @@ With joins, columnar scan operators can also use the `Late Materialization` mode
 
 ## View columnar engine vectorized join usage
 
-You can verify the new vectorized join operator by using `EXPLAIN` statement to observe the new `Vectorized Hash Join` operator that appears in a query's generated query plan.
+You can verify the new vectorized join operator by using the `EXPLAIN` statement to observe the new `Vectorized Hash Join` operator that appears in a query's generated query plan.
     
     
     EXPLAIN (ANALYZE,COSTS OFF,BUFFERS,TIMING OFF,SUMMARY OFF)
@@ -205,6 +205,25 @@ You can view information about the columns in the column store by querying the `
     SELECT database_name, schema_name, relation_name, column_name, size_in_bytes, last_accessed_time FROM g_columnar_columns;
     
 
+### View the column store in the web UI
+
+You can also view the column store inventory in the AlloyDB Omni web user interface:
+
+  1. [Connect to the web UI](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/connect-web-ui) and select your cluster.
+  2. In the navigation menu, click **Columnar Engine**.
+  3. In the **Columnar Store data** table, review the columns populated in the column store: 
+     * **Database name** : The database that contains the relation.
+     * **Schema name** : The schema of the relation.
+     * **Relation name** : The name of the table or materialized view.
+     * **Column name** : The name of the columnarized column.
+     * **Column type** : The SQL data type of the column.
+     * **Status** : The readiness status of the column in the column store (for example, `Usable`).
+     * **Size** : The memory footprint of the column in the column store.
+     * **Accesses** : The number of times the column has been accessed by columnar scans.
+     * **Last accessed** : The timestamp of the most recent columnar scan access.
+
+
+
 ## View columnar engine execution statistics for recent queries
 
 You can view columnar engine execution statistics for recent queries using the `g_columnar_stat_statements` view. This view adds columnar engine statistics to the `pg_stat_statements` view provided by the `pg_stat_statements` extension. To use this view, you must first enable the `pg_stat_statements` extension.
@@ -269,6 +288,24 @@ You can view columnar engine execution statistics for recent queries using the `
 
 
 
+### View columnar query statistics in the web UI
+
+After enabling the `pg_stat_statements` extension, you can also inspect columnar query execution statistics in the AlloyDB Omni web user interface:
+
+  1. [Connect to the web UI](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/connect-web-ui) and select your cluster.
+  2. In the navigation menu, click **Columnar Engine**.
+  3. In the **Columnar Queries** table, review the execution statistics for analytical queries that used the column store: 
+     * **Query ID** : The identifier of the sanitized query.
+     * **Query** : The sanitized SQL statement text, with constant values replaced by placeholders.
+     * **Times called** : The number of times the query was executed.
+     * **Avg. row fetched** : The average number of rows returned per execution.
+     * **Mean latency** : The average execution latency of the query.
+     * **Max latency** : The maximum execution latency recorded for the query.
+     * **Columnar unit read** : The number of columnar units read from the column store.
+     * **Page read** : The number of pages read during execution.
+
+
+
 ## View column store memory usage
 
 To see the amount of unused RAM available to the columnar engine, you can query the `google_columnar_engine_memory_available` function. The output integer shows the available memory in megabytes (MB).
@@ -276,6 +313,21 @@ To see the amount of unused RAM available to the columnar engine, you can query 
     
     SELECT google_columnar_engine_memory_available();
     
+
+### View column store memory size and settings in the web UI
+
+You can also check the column store memory consumption and configuration settings in the AlloyDB Omni web user interface:
+
+  1. [Connect to the web UI](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/connect-web-ui) and select your cluster.
+  2. In the navigation menu, click **Columnar Engine**.
+  3. Review the **Columnar Store settings** section, which displays the following status and memory indicators: 
+     * **Columnar Engine** : Indicates whether the columnar engine is active (for example, `Enabled`).
+     * **Memory size** : Displays the amount of column store memory in use out of the total allocated columnar memory (for example, `2.0 MB used of 1024.0 MB`).
+     * **Auto Columnarization** : Indicates whether automatic columnarization is enabled (for example, `Enabled`).
+     * **Run frequency** : Displays the schedule interval for automatic columnarization runs (for example, `Every 5 minutes`).
+     * **Columnar scan** : Indicates whether columnar scan execution is enabled (for example, `Enabled`).
+
+
 
 ## View columnar engine storage cache
 
@@ -291,6 +343,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

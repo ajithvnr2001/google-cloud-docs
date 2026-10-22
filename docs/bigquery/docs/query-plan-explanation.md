@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/query-plan-explanation/
 title: Query plan and timeline \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:46:37.182639+00:00
+fetched_at: 2026-10-22T09:00:00.397808+00:00
 ---
 
 # Query plan and timeline  |  BigQuery  |  Google Cloud Documentation

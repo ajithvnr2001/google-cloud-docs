@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/advanced/migrate-to-gcp/
 title: SOAR migration overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:37:13.122685+00:00
+fetched_at: 2026-10-22T08:59:54.917437+00:00
 ---
 
 # SOAR migration overview  |  Google Security Operations  |  Google Cloud Documentation

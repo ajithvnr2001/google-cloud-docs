@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/use-agent-platform-mcp/
 title: Use the Agent Platform remote MCP server \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:11.219790+00:00
+fetched_at: 2026-10-22T10:31:10.850165+00:00
 ---
 
 # Use the Agent Platform remote MCP server  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Use the Agent Platform remote MCP server Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document shows you how to use the Gemini Enterprise Agent Platform remote Model Context Protocol (MCP) server to connect with AI applications including Gemini CLI, ChatGPT, Claude, and custom applications you are developing. The Agent Platform remote MCP server lets you manage Agent Platform resources from your AI application. The Gemini Enterprise Agent Platform remote MCP server is enabled when you enable the Gemini Enterprise Agent Platform API. 
+This document shows you how to use the Gemini Enterprise Agent Platform remote Model Context Protocol (MCP) server to connect with AI applications including Antigravity, ChatGPT, Claude, and custom applications you are developing. The Agent Platform remote MCP server lets you manage Agent Platform resources from your AI application. The Gemini Enterprise Agent Platform remote MCP server is enabled when you enable the Gemini Enterprise Agent Platform API. 
 
 [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP) standardizes how large language models (LLMs) and AI applications or agents connect to external data sources. MCP servers let you use their tools, resources, and prompts to take actions and get updated data from their backend service.
 

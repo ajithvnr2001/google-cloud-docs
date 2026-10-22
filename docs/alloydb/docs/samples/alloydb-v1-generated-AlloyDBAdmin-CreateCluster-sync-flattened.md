@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-v1-generated-AlloyDBAdmin-CreateCluster-sync-flattened/
 title: Create a cluster \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:08.645575+00:00
+fetched_at: 2026-10-22T09:28:34.391237+00:00
 ---
 
 # Create a cluster  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

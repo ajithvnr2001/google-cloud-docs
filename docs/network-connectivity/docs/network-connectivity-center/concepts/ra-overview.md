@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/ra-overview/
 title: Router appliance overview \u00a0|\u00a0 Network Connectivity Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:14:51.437501+00:00
+fetched_at: 2026-10-22T10:41:46.525368+00:00
 ---
 
 # Router appliance overview  |  Network Connectivity Center  |  Google Cloud Documentation
@@ -41,6 +41,15 @@ After the router appliance instance is installed, you configure interfaces on th
 
 Cloud Router uses interfaces configured with RFC 1918 internal IP addresses to establish BGP peering with router appliance instances.
 
+### Supported connectivity mechanisms for external sites
+
+Router appliance instances can establish data plane connectivity to external sites, such as customer premises equipment or branch offices, using any mechanism available to VM instances. These include other kinds of hybrid connections supported by Google Cloud:
+
+  * **IPsec VPN tunnels:** The router appliance instance can connect through a Cloud VPN gateway deployed in the same VPC network.
+  * **Cloud Interconnect:** You can use Cloud Interconnect, such as Dedicated Interconnect or Partner Interconnect VLAN attachments to connect on-premises networks to the VPC network hosting the router appliance instances.
+
+
+
 There are no separate APIs or Google Cloud resources or permissions for Router appliance. To work with Router appliance, you use Compute Engine and Cloud Router resources and permissions.
 
 ## Use case: Data transfer between on-premises sites
@@ -49,7 +58,7 @@ The following topology shows a VPC network and two on-premises sites. Each on-pr
 
 [ ![Router appliance topology](https://docs.cloud.google.com/static/network-connectivity/docs/network-connectivity-center/images/router-appliance-topology.svg)](https://docs.cloud.google.com/static/network-connectivity/docs/network-connectivity-center/images/router-appliance-topology.svg) Router appliance topology (click to enlarge)
 
-  1. On-premises `Customer network A` and `Customer network B` are each connected through _customer premises equipment (CPE)_ to a router appliance instance. CPEs typically use a connectivity mechanism, such as an SD-WAN overlay tunnel or an IPsec VPN tunnel, to establish connectivity with the router appliance instance.
+  1. On-premises `Customer network A` and `Customer network B` are each connected through _customer premises equipment (CPE)_ to a router appliance instance. CPEs typically use a connectivity mechanism, such as an SD-WAN overlay tunnel, an IPsec VPN tunnel (including Cloud VPN gateways), or Cloud Interconnect, to establish connectivity with the router appliance instance.
 
 Each router appliance instance is located in the Google Cloud region closest to its associated customer network. Both router appliance instances are in a single VPC network. However, the router appliance instances are in different regions. For this reason, the VPC network has its [dynamic routing mode](https://docs.cloud.google.com/vpc/docs/create-modify-vpc-networks#switch-dynamic-routing) set to `global`.
 
@@ -122,6 +131,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

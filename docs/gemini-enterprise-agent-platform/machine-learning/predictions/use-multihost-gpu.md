@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/use-multihost-gpu/
 title: Serve a DeepSeek-V3 model using multi-host GPU deployment \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:45.058685+00:00
+fetched_at: 2026-10-22T10:25:47.647764+00:00
 ---
 
 # Serve a DeepSeek-V3 model using multi-host GPU deployment  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

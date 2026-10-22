@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/oracle/database/docs/iam-overview/
 title: IAM overview \u00a0|\u00a0 Oracle Database at Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:41:41.011964+00:00
+fetched_at: 2026-10-22T08:31:47.836551+00:00
 ---
 
 # IAM overview  |  Oracle Database at Google Cloud  |  Google Cloud Documentation

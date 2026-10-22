@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/samples/functions-concepts-filesystem/
 title: File system \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:52:02.293302+00:00
+fetched_at: 2026-10-22T08:51:23.342467+00:00
 ---
 
 # File system  |  Cloud Run functions  |  Google Cloud Documentation

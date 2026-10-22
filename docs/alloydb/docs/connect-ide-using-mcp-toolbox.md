@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/connect-ide-using-mcp-toolbox/
 title: Use AlloyDB for PostgreSQL with MCP, Gemini CLI, and other agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:47.166723+00:00
+fetched_at: 2026-10-22T09:10:45.321578+00:00
 ---
 
 # Use AlloyDB for PostgreSQL with MCP, Gemini CLI, and other agents  |  Google Cloud Documentation

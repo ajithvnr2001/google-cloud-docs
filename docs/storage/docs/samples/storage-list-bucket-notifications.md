@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-list-bucket-notifications/
 title: List Pub/Sub notifications \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:53.789356+00:00
+fetched_at: 2026-10-22T10:31:14.671972+00:00
 ---
 
 # List Pub/Sub notifications  |  Cloud Storage  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/runtime/sdk-migration/
 title: Agent Runtime SDK migration guide \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:46:02.534326+00:00
+fetched_at: 2026-10-22T08:37:30.940626+00:00
 ---
 
 # Agent Runtime SDK migration guide  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

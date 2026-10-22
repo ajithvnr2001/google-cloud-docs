@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/schedule-pipeline-run/
 title: Schedule a pipeline run with scheduler API \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:43:53.967299+00:00
+fetched_at: 2026-10-22T10:23:02.501686+00:00
 ---
 
 # Schedule a pipeline run with scheduler API  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

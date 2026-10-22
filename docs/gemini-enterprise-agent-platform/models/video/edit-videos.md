@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/video/edit-videos/
 title: Edit videos \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:12.455441+00:00
+fetched_at: 2026-10-22T08:34:24.645292+00:00
 ---
 
 # Edit videos  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -121,8 +121,8 @@ Before using any of the request data, make the following replacements:
 
   * `PROJECT_ID`: A string representing your Google Cloud project ID. 
   * `MODEL_ID`: A string representing the model ID to use. The following are accepted values: 
-    * `"gemini-omni-flash-preview"`
     * `"gemini-omni-1.1-flash-preview"`
+    * `"gemini-omni-flash-preview"`
   * `TEXT_PROMPT`: The text prompt used to guide video generation. 
   * `CLOUD_STORAGE_VIDEO_URI`: A string representing the Cloud Storage bucket that contains the input video. For example: `"gs://video-bucket/input/"`. 
   * `VIDEO_MIME`: A string representing a video MIME type. The following are accepted values: 
@@ -175,7 +175,7 @@ Request JSON body:
         {
           "type": "video",
           "delivery": "uri",
-          "output": "OUTPUT_RESOLUTION",
+          "resolution": "OUTPUT_RESOLUTION",
           "gcs_uri": "CLOUD_STORAGE_OUTPUT_URI"
         }
       ],
@@ -219,7 +219,7 @@ The response contains an interaction which includes the model thoughts and an ou
     
     {
       "id":"INTERACTION_ID",
-      "model":"gemini-omni-flash-preview",
+      "model":"gemini-omni-1.1-flash-preview",
       "status":"completed",
       "usage":{
         "total_tokens":479,
@@ -251,7 +251,7 @@ The response contains an interaction which includes the model thoughts and an ou
               "type":"text",
               "text":"MODEL THOUGHTS"
             }
-          ],
+          ]
         },
         { **"type":"model_output",
           "content":[
@@ -266,7 +266,7 @@ The response contains an interaction which includes the model thoughts and an ou
       "object":"interaction",
       "role":"model",
       "created":"2026-05-29T02:17:56Z",
-      "updated":"2026-05-29T02:17:56Z",
+      "updated":"2026-05-29T02:17:56Z"
     }
     
 
@@ -276,8 +276,8 @@ Before using any of the request data, make the following replacements:
 
   * `PROJECT_ID`: A string representing your Google Cloud project ID. 
   * `MODEL_ID`: A string representing the model ID to use. The following are accepted values: 
-    * `"gemini-omni-flash-preview"`
     * `"gemini-omni-1.1-flash-preview"`
+    * `"gemini-omni-flash-preview"`
   * `TEXT_PROMPT`: The text prompt used to guide video generation. 
   * `CLOUD_STORAGE_VIDEO_URI`: A string representing the Cloud Storage bucket that contains the input video. For example: `"gs://video-bucket/input/"`. 
   * `VIDEO_MIME`: A string representing a video MIME type. The following are accepted values: 
@@ -341,7 +341,12 @@ Request JSON body:
           "resolution": "OUTPUT_RESOLUTION",
           "gcs_uri": "CLOUD_STORAGE_OUTPUT_URI"
         }
-      ]
+      ],
+      "generation_config": {
+        "video_config": {
+          "task": "edit"
+        }
+      }
     }
     
 
@@ -377,7 +382,7 @@ The response contains an interaction which includes the model thoughts and an ou
     
     {
       "id":"INTERACTION_ID",
-      "model":"gemini-omni-flash-preview",
+      "model":"gemini-omni-1.1-flash-preview",
       "status":"completed",
       "usage":{
         "total_tokens":479,
@@ -409,7 +414,7 @@ The response contains an interaction which includes the model thoughts and an ou
               "type":"text",
               "text":"MODEL THOUGHTS"
             }
-          ],
+          ]
         },
         { **"type":"model_output",
           "content":[
@@ -424,7 +429,7 @@ The response contains an interaction which includes the model thoughts and an ou
       "object":"interaction",
       "role":"model",
       "created":"2026-05-29T02:17:56Z",
-      "updated":"2026-05-29T02:17:56Z",
+      "updated":"2026-05-29T02:17:56Z"
     }
     
 
@@ -470,7 +475,7 @@ The response is in a format similar to the following:
     
     {
       "id":"INTERACTION_ID",
-      "model":"gemini-omni-flash-preview",
+      "model":"gemini-omni-1.1-flash-preview",
       "status":"completed",
       "usage":{
         "total_tokens":479,
@@ -510,13 +515,13 @@ The response is in a format similar to the following:
           ]
         },
         {
-          "type":"thought"
+          "type":"thought",
           "summary":[
             {
               "type":"text",
               "text":"MODEL THOUGHTS"
             }
-          ],
+          ]
         },
         { **"type":"model_output",
           "content":[
@@ -528,10 +533,10 @@ The response is in a format similar to the following:
           ]
         }
       ],
-      "object":"interaction"
+      "object":"interaction",
       "role":"model",
       "created":"2026-05-29T02:17:56Z",
-      "updated":"2026-05-29T02:17:56Z",
+      "updated":"2026-05-29T02:17:56Z"
     }
     
 
@@ -541,8 +546,8 @@ Before using any of the request data, make the following replacements:
 
   * `PROJECT_ID`: A string representing your Google Cloud project ID. 
   * `MODEL_ID`: A string representing the model ID to use. The following are accepted values: 
-    * `"gemini-omni-flash-preview"`
     * `"gemini-omni-1.1-flash-preview"`
+    * `"gemini-omni-flash-preview"`
   * `TEXT_PROMPT`: The text prompt used to guide video generation. 
   * `CLOUD_STORAGE_VIDEO_URI`: A string representing the Cloud Storage bucket that contains the input video. For example: `"gs://video-bucket/input/"`. 
   * `VIDEO_MIME`: A string representing a video MIME type. The following are accepted values: 
@@ -606,7 +611,12 @@ Request JSON body:
           "resolution": "OUTPUT_RESOLUTION",
           "gcs_uri": "CLOUD_STORAGE_OUTPUT_URI"
         }
-      ]
+      ],
+      "generation_config": {
+        "video_config": {
+          "task": "edit"
+        }
+      }
     }
     
 
@@ -641,7 +651,7 @@ The response contains an interaction which includes the model thoughts and an ou
     
     
     event: interaction.created
-    data: {"interaction":{"id":"INTERACTION_ID","status":"in_progress","object":"interaction","model":"gemini-omni-flash-preview"},"event_type":"interaction.created"}
+    data: {"interaction":{"id":"INTERACTION_ID","status":"in_progress","object":"interaction","model":"gemini-omni-1.1-flash-preview"},"event_type":"interaction.created"}
     
     event: interaction.status_update
     data: {"interaction_id":"INTERACTION_ID","status":"in_progress","event_type":"interaction.status_update"}
@@ -671,7 +681,7 @@ The response contains an interaction which includes the model thoughts and an ou
     data: {"index":1,"event_type":"step.stop"}
     
     event: interaction.completed
-    data: {"interaction":{"id":"INTERACTION_ID","status":"completed","usage":{"total_tokens":17812,"total_input_tokens":21,"input_tokens_by_modality":[{"modality":"text","tokens":21}],"total_output_tokens":17376,"output_tokens_by_modality":[{"modality":"video","tokens":17376}],"total_thought_tokens":415},"created":"2026-08-12T21:26:20Z","updated":"2026-08-12T21:26:20Z","event_id":"EVENT_ID","object":"interaction","model":"gemini-omni-flash-preview"},"event_id":"EVENT_ID","event_type":"interaction.completed"}
+    data: {"interaction":{"id":"INTERACTION_ID","status":"completed","usage":{"total_tokens":17812,"total_input_tokens":21,"input_tokens_by_modality":[{"modality":"text","tokens":21}],"total_output_tokens":17376,"output_tokens_by_modality":[{"modality":"video","tokens":17376}],"total_thought_tokens":415},"created":"2026-08-12T21:26:20Z","updated":"2026-08-12T21:26:20Z","event_id":"EVENT_ID","object":"interaction","model":"gemini-omni-1.1-flash-preview"},"event_id":"EVENT_ID","event_type":"interaction.completed"}
     
     event: done
     data: [DONE]
@@ -718,7 +728,7 @@ The response is a stream of Server-Sent Events (SSE) in a format similar to the 
     
     
     event: interaction.created
-    data: {"interaction":{"id":"INTERACTION_ID","status":"in_progress","object":"interaction","model":"gemini-omni-flash-preview"},"event_type":"interaction.created"}
+    data: {"interaction":{"id":"INTERACTION_ID","status":"in_progress","object":"interaction","model":"gemini-omni-1.1-flash-preview"},"event_type":"interaction.created"}
     
     event: interaction.status_update
     data: {"interaction_id":"INTERACTION_ID","status":"in_progress","event_type":"interaction.status_update"}
@@ -748,7 +758,7 @@ The response is a stream of Server-Sent Events (SSE) in a format similar to the 
     data: {"index":1,"event_type":"step.stop"}
     
     event: interaction.completed
-    data: {"interaction":{"id":"INTERACTION_ID","status":"completed","usage":{"total_tokens":17664,"total_input_tokens":21,"input_tokens_by_modality":[{"modality":"text","tokens":21}],"total_output_tokens":17376,"output_tokens_by_modality":[{"modality":"video","tokens":17376}],"total_thought_tokens":267},"created":"2026-08-12T21:33:08Z","updated":"2026-08-12T21:33:08Z","event_id":"EVENT_ID","object":"interaction","model":"gemini-omni-flash-preview"},"event_id":"EVENT_ID","event_type":"interaction.completed"}
+    data: {"interaction":{"id":"INTERACTION_ID","status":"completed","usage":{"total_tokens":17664,"total_input_tokens":21,"input_tokens_by_modality":[{"modality":"text","tokens":21}],"total_output_tokens":17376,"output_tokens_by_modality":[{"modality":"video","tokens":17376}],"total_thought_tokens":267},"created":"2026-08-12T21:33:08Z","updated":"2026-08-12T21:33:08Z","event_id":"EVENT_ID","object":"interaction","model":"gemini-omni-1.1-flash-preview"},"event_id":"EVENT_ID","event_type":"interaction.completed"}
     
     event: done
     data: [DONE]
@@ -799,9 +809,9 @@ Request JSON body:
     
     {
       "model": "MODEL_ID",
+      "background": true,
       "input": [
         {
-          "background": true,
           "type": "text",
           "text": "TEXT_PROMPT"
         },
@@ -906,7 +916,7 @@ The response is in a format similar to the following:
     
     {
       "id":"INTERACTION_ID",
-      "model":"gemini-omni-flash-preview",
+      "model":"gemini-omni-1.1-flash-preview",
       "status":"completed",
       "usage":{
         "total_tokens":479,
@@ -946,13 +956,13 @@ The response is in a format similar to the following:
           ]
         },
         {
-          "type":"thought"
+          "type":"thought",
           "summary":[
             {
               "type":"text",
               "text":"MODEL THOUGHTS"
             }
-          ],
+          ]
         },
         { **"type":"model_output",
           "content":[
@@ -964,10 +974,10 @@ The response is in a format similar to the following:
           ]
         }
       ],
-      "object":"interaction"
+      "object":"interaction",
       "role":"model",
       "created":"2026-05-29T02:17:56Z",
-      "updated":"2026-05-29T02:17:56Z",
+      "updated":"2026-05-29T02:17:56Z"
     }
     
 
@@ -994,6 +1004,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

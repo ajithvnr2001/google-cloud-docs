@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api/get-started-websocket/
 title: Get started with Gemini Live API using WebSockets \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:26.533575+00:00
+fetched_at: 2026-10-22T10:23:47.882504+00:00
 ---
 
 # Get started with Gemini Live API using WebSockets  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

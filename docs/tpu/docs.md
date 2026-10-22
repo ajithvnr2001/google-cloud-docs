@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tpu/docs/
 title: Cloud TPU documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:26:28.691179+00:00
+fetched_at: 2026-10-22T09:56:50.505708+00:00
 ---
 
 # Cloud TPU documentation  |  Google Cloud Documentation
@@ -20,7 +20,7 @@ fetched_at: 2026-10-21T03:26:28.691179+00:00
 
 [Read product documentation](https://docs.cloud.google.com/tpu/docs/intro-to-tpu)
 
-Tensor Processing Units (TPUs) are Google's custom-developed ASICs used to accelerate machine learning workloads. You can use Cloud TPU to access TPUs from Compute Engine, [ Google Kubernetes Engine](https://docs.cloud.google.com/tpu/docs/kubernetes-engine-setup) and [Vertex AI](https://docs.cloud.google.com/vertex-ai/docs/training/training-with-tpu-vm). 
+Tensor Processing Units (TPUs) are Google's custom-developed ASICs used to accelerate machine learning workloads. You can use Cloud TPU to access TPUs from [Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine), [ Google Kubernetes Engine](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus), and [Vertex AI](https://docs.cloud.google.com/vertex-ai/docs/training/training-with-tpu-vm). 
 
 [Go to the Cloud TPU product page for more.](https://cloud.google.com/tpu/)
 
@@ -52,13 +52,15 @@ format_list_numbered
 
   * [ TPU architecture ](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm)
 
-  * [ TPU software versions ](https://docs.cloud.google.com/tpu/docs/runtimes)
-
-  * [ Get started ](https://docs.cloud.google.com/tpu/docs/setup-gcp-account)
+  * [ Get started ](https://docs.cloud.google.com/tpu/docs/setup-gcp-account-compute)
 
   * [ TPU7x (Ironwood) ](https://docs.cloud.google.com/tpu/docs/tpu7x)
 
-  * [ Train a model using TPU7x ](https://docs.cloud.google.com/tpu/docs/tpu7x-training)
+  * [ JAX on Cloud TPU ](https://docs.cloud.google.com/tpu/docs/jax-ai-stack)
+
+  * [ PyTorch on Cloud TPU ](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)
+
+  * [ Run inference on Cloud TPU ](https://docs.cloud.google.com/tpu/docs/tpu-inference)
 
 
 
@@ -97,6 +99,6 @@ info
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

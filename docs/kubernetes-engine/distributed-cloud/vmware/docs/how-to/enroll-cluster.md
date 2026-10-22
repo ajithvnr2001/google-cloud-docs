@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/enroll-cluster/
 title: Configure a cluster to be managed by the GKE On-Prem API \u00a0|\u00a0 Google Distributed Cloud software only for VMware \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:57:36.465813+00:00
+fetched_at: 2026-10-22T10:12:38.356752+00:00
 ---
 
 # Configure a cluster to be managed by the GKE On-Prem API  |  Google Distributed Cloud software only for VMware  |  Google Cloud Documentation
@@ -21,13 +21,9 @@ Send feedback
 
 #  Configure a cluster to be managed by the GKE On-Prem API Stay organized with collections  Save and categorize content based on your preferences. 
 
-The GKE On-Prem API is a Google Cloud-hosted API that lets you manage the lifecycle of your on-premises clusters by using standard tools: the Google Cloud console, the Google Cloud CLI, or Terraform. When you create a cluster using one of these tools, the API stores metadata about your cluster's state in the Google Cloud region that you specified when creating the cluster. This metadata lets you manage the lifecycle of the cluster using the standard tools. If you want to use these tools to view cluster details or manage the lifecycle of clusters that were created using `gkectl`, you must _enroll_ the clusters in the GKE On-Prem API.
+The GKE On-Prem API lets you manage on-premises cluster lifecycles by using the Google Cloud console, the Google Cloud CLI, or Terraform. When you create a cluster with these tools, the API stores cluster metadata in your chosen Google Cloud region. If you create clusters with `gkectl`, you must enroll them in the GKE On-Prem API to view details and manage their lifecycles through these interfaces.
 
-### Terminology
-
-Enrolling a cluster lets you manage the cluster lifecycle by using the console, the gcloud CLI, or Terraform.
-
-Enrolling a cluster is a separate process to registering a cluster to a _fleet_. A fleet is a a logical grouping of Kubernetes clusters that you can manage together. All Google Distributed Cloud clusters are registered to a fleet at cluster creation time. When you create a cluster using gkectl, the cluster is registered to the Google Cloud project that you specify in the `gkeConnect.projectID` field in the cluster configuration file. This project is referred to as the [fleet host project](https://docs.cloud.google.com/anthos/fleet-management/docs/fleet-concepts#fleet-host-project). To learn more about fleets, including uses cases, best practices, and examples, see the [Fleet management](https://docs.cloud.google.com/anthos/fleet-management/docs) documentation.
+Enrolling a cluster is separate from registering it to a [fleet](https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs). All Google Distributed Cloud clusters automatically register to a [fleet host project](https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs/fleet-concepts#fleet-host-project) at creation. In the Google Cloud console, registered clusters managed by the GKE On-Prem API show as **VMware** in the **Type** column, whereas unenrolled clusters appear as **External**.
 
 ### View registered clusters
 
@@ -294,6 +290,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

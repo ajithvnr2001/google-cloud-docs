@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/bigquery/docs/merchant-center-performance-schema/
-title: Google Merchant Center Performance Table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
+title: Google Merchant Center performance table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:54:55.113555+00:00
+fetched_at: 2026-10-22T10:44:46.055484+00:00
 ---
 
-# Google Merchant Center Performance Table  |  BigQuery  |  Google Cloud Documentation
+# Google Merchant Center performance table  |  BigQuery  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/bigquery/docs/merchant-center-performance-schema/
 
@@ -19,11 +19,11 @@ fetched_at: 2026-10-21T11:54:55.113555+00:00
 
 Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
 
-# Google Merchant Center Performance Table
+# Google Merchant Center performance table
 
 ## Overview
 
-The Performance Table contains columns that you can use to understand the distribution of the following metrics:
+The performance table contains columns that you can use to understand the distribution of the following metrics:
 
   * **Clicks:** The total number of clicks on your products on Google. Only visits to your product detail pages are counted.
 
@@ -32,7 +32,7 @@ The Performance Table contains columns that you can use to understand the distri
 
 
 
-Note that Performance data might get updated up to 3 days in the past to account for corrections. The variations are usually small.
+Note that performance data might get updated up to 3 days in the past to account for corrections. The variations are usually small.
 
 When you select `Performance` as one of the reports that are relevant to your transfer, the following table is created:
 
@@ -76,6 +76,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-19 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/troubleshooting/troubleshooting-migs/
 title: Troubleshooting managed instance groups \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T18:11:05.103007+00:00
+fetched_at: 2026-10-22T09:43:41.759992+00:00
 ---
 
 # Troubleshooting managed instance groups  |  Compute Engine  |  Google Cloud Documentation
@@ -176,7 +176,7 @@ If you configured an autohealing policy but you did not configure—or misconfig
 
 If your [regional MIG](https://docs.cloud.google.com/compute/docs/instance-groups/regional-migs) or [MIG with instance flexibility](https://docs.cloud.google.com/compute/docs/instance-groups/about-instance-flexibility) is operational but you suspect that instances are not distributed across zones as expected, or that the group is relying on fallback machine types, then you can monitor the actual distribution of your successfully provisioned instances.
 
-To monitor your MIG's runtime instance distribution, use the **GCE MIG Instance Distribution Monitoring** dashboard in Cloud Monitoring. Note that this dashboard is an observability tool for the instance distribution; it doesn't identify the underlying causes of creation failures or capacity constraints. For more information about the dashboard, see [Monitor instance distribution in MIGs](https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution).
+You can view the runtime instance distribution for a specific MIG or aggregated data across multiple MIGs. Note that monitoring instance distribution provides observability into provisioned instances; it doesn't identify the underlying causes of creation failures or capacity constraints. For instructions on how to view the instance distribution, see [Monitor instance distribution in MIGs](https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution).
 
 ## If stockout logs are missing or appear unexpectedly for a MIG with instance flexibility
 
@@ -195,6 +195,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

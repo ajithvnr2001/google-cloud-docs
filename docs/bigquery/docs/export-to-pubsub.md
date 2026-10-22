@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/export-to-pubsub/
 title: Export data to Pub/Sub (reverse ETL) \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:06:33.138481+00:00
+fetched_at: 2026-10-22T10:44:50.865663+00:00
 ---
 
 # Export data to Pub/Sub (reverse ETL)  |  BigQuery  |  Google Cloud Documentation
@@ -21,11 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Export data to Pub/Sub (reverse ETL)
 
-Exporting data to Pub/Sub requires using BigQuery [continuous queries](https://docs.cloud.google.com/bigquery/docs/continuous-queries-introduction).
+Reverse extract-transform-load (RETL) from BigQuery to [Pub/Sub](https://docs.cloud.google.com/pubsub/docs/overview) lets you serve data to downstream applications and services in an event-driven manner. This workflow combines analytics capabilities in BigQuery with the asynchronous and scalable global messaging service in Pub/Sub.
 
-This document describes how you can set up reverse extract-transform-load (RETL) from BigQuery to [Pub/Sub](https://docs.cloud.google.com/pubsub/docs/overview). You can do this by using the [`EXPORT DATA` statement](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/export-statements) in a [continuous query](https://docs.cloud.google.com/bigquery/docs/continuous-queries-introduction) to export data from BigQuery to a [Pub/Sub topic](https://docs.cloud.google.com/pubsub/docs/create-topic).
-
-You can use a RETL workflow to Pub/Sub to combine BigQuery's analytics capabilities with Pub/Sub's asynchronous and scalable global messaging service. This workflow lets you serve data to downstream applications and services in an event-driven manner.
+To export data to Pub/Sub, you use the [`EXPORT DATA` statement](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/export-statements) in a [continuous query](https://docs.cloud.google.com/bigquery/docs/continuous-queries-introduction) to export data from BigQuery to a [Pub/Sub topic](https://docs.cloud.google.com/pubsub/docs/create-topic).
 
 ## Prerequisites
 
@@ -220,6 +218,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

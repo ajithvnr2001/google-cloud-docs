@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/anthos-targets/
 title: Deploy to GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:01.004028+00:00
+fetched_at: 2026-10-22T08:25:49.985496+00:00
 ---
 
 # Deploy to GKE attached clusters  |  Google Cloud Documentation

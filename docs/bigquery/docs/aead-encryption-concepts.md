@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/aead-encryption-concepts/
 title: AEAD encryption concepts \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:24:03.721732+00:00
+fetched_at: 2026-10-22T10:14:14.128075+00:00
 ---
 
 # AEAD encryption concepts  |  BigQuery  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback
 
 #  AEAD encryption concepts Stay organized with collections  Save and categorize content based on your preferences. 
 
-GoogleSQL for BigQuery supports Authenticated Encryption with Associated Data (AEAD) encryption.
+Authenticated Encryption with Associated Data (AEAD) encryption in GoogleSQL for BigQuery lets you protect sensitive column-level data and control decryption directly within queries. By binding ciphertext to additional authenticated data, AEAD encryption verifies data integrity and prevents unauthorized tampering or ciphertext substitution.
 
-This topic explains the concepts behind AEAD encryption in GoogleSQL. For a description of the different AEAD encryption functions that GoogleSQL supports, see [AEAD encryption functions](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/aead_encryption_functions).
+For a complete list of supported SQL functions, see [AEAD encryption functions](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/aead_encryption_functions).
 
 ### Purpose of AEAD encryption
 
@@ -160,6 +160,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

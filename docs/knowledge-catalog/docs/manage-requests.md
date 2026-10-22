@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/manage-requests/
 title: Manage change requests with governance workflows \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:03:05.564874+00:00
+fetched_at: 2026-10-22T08:59:27.343814+00:00
 ---
 
 # Manage change requests with governance workflows  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -27,7 +27,7 @@ Send feedback
 
 This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
-This document describes how requesters, approvers, and workflow administrators manage governance requests in Knowledge Catalog.
+Governance workflows in Knowledge Catalog let you track, evaluate, and audit change requests, such as data product access requests, across their lifecycle. As a requester, approver, or workflow administrator, you can modify pending requests, approve or reject access to automate provisioning, and monitor approval logs for compliance.
 
 ## Before you begin
 
@@ -171,7 +171,7 @@ Before using any of the request data, make the following replacements:
 HTTP method and URL: 
     
     
-    GET https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests/CHANGE_REQUEST_ID
+    GET https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/CHANGE_REQUEST_ID
 
 To send your request, expand one of these options:
 
@@ -184,7 +184,7 @@ Execute the following command:
     
     curl -X GET \  
          -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
-         "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests/CHANGE_REQUEST_ID"
+         "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/CHANGE_REQUEST_ID"
 
 #### PowerShell (Windows)
 
@@ -199,27 +199,27 @@ Execute the following command:
     Invoke-WebRequest `  
         -Method GET `  
         -Headers $headers `  
-        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests/CHANGE_REQUEST_ID" | Select-Object -Expand Content
+        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/CHANGE_REQUEST_ID" | Select-Object -Expand Content
 
 You should receive a JSON response similar to the following:
     
     
     {
-      "name": "projects/PROJECT_ID/locations/LOCATION/changeRequests/CHANGE_REQUEST_ID",
+      "name": "projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/CHANGE_REQUEST_ID",
       "uid": "123e4567-e89b-12d3-a456-426614174000",
       "createTime": "2026-07-20T10:00:00Z",
       "updateTime": "2026-07-20T10:00:00Z",
       "justification": "Proposing a new glossary term definition for business accuracy.",
       "author": "user@example.com",
       "state": "NEW",
-      "resource": "projects/PROJECT_ID/locations/LOCATION/glossaries/sample-glossary",
+      "resource": "projects/PROJECT_ID/locations/TARGET_LOCATION/glossaries/sample-glossary",
       "createGlossaryTerm": {
-        "parent": "projects/PROJECT_ID/locations/LOCATION/glossaries/sample-glossary",
+        "parent": "projects/PROJECT_ID/locations/TARGET_LOCATION/glossaries/sample-glossary",
         "termId": "sample-term-id",
         "term": {
           "displayName": "Sample term name",
           "description": "Sample term description",
-          "parent": "projects/PROJECT_ID/locations/LOCATION/glossaries/sample-glossary"
+          "parent": "projects/PROJECT_ID/locations/TARGET_LOCATION/glossaries/sample-glossary"
         }
       }
     }
@@ -245,7 +245,7 @@ Before using any of the request data, make the following replacements:
 HTTP method and URL: 
     
     
-    PATCH https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests/CHANGE_REQUEST_ID?updateMask=justification
+    PATCH https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/CHANGE_REQUEST_ID?updateMask=justification
 
 Request JSON body: 
     
@@ -268,7 +268,7 @@ Save the request body in a file named `request.json`, and execute the following 
          -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
          -H "Content-Type: application/json; charset=utf-8" \  
          -d @request.json \  
-         "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests/CHANGE_REQUEST_ID?updateMask=justification"
+         "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/CHANGE_REQUEST_ID?updateMask=justification"
 
 #### PowerShell (Windows)
 
@@ -285,7 +285,7 @@ Save the request body in a file named `request.json`, and execute the following 
         -Headers $headers `  
         -ContentType: "application/json; charset=utf-8" `  
         -InFile request.json `  
-        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests/CHANGE_REQUEST_ID?updateMask=justification" | Select-Object -Expand Content
+        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/CHANGE_REQUEST_ID?updateMask=justification" | Select-Object -Expand Content
 
 You should receive a successful status code (2xx) and an empty response.
 
@@ -323,7 +323,7 @@ Before using any of the request data, make the following replacements:
 HTTP method and URL: 
     
     
-    DELETE https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests/CHANGE_REQUEST_ID
+    DELETE https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/CHANGE_REQUEST_ID
 
 To send your request, expand one of these options:
 
@@ -336,7 +336,7 @@ Execute the following command:
     
     curl -X DELETE \  
          -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
-         "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests/CHANGE_REQUEST_ID"
+         "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/CHANGE_REQUEST_ID"
 
 #### PowerShell (Windows)
 
@@ -351,7 +351,7 @@ Execute the following command:
     Invoke-WebRequest `  
         -Method DELETE `  
         -Headers $headers `  
-        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests/CHANGE_REQUEST_ID" | Select-Object -Expand Content
+        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/CHANGE_REQUEST_ID" | Select-Object -Expand Content
 
 You should receive a successful status code (2xx) and an empty response.
 
@@ -388,7 +388,7 @@ Before using any of the request data, make the following replacements:
 HTTP method and URL: 
     
     
-    GET https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests
+    GET https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests
 
 To send your request, expand one of these options:
 
@@ -401,7 +401,7 @@ Execute the following command:
     
     curl -X GET \  
          -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
-         "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests"
+         "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests"
 
 #### PowerShell (Windows)
 
@@ -416,7 +416,7 @@ Execute the following command:
     Invoke-WebRequest `  
         -Method GET `  
         -Headers $headers `  
-        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests" | Select-Object -Expand Content
+        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests" | Select-Object -Expand Content
 
 You should receive a JSON response similar to the following:
     
@@ -424,21 +424,21 @@ You should receive a JSON response similar to the following:
     {
       "changeRequests": [
         {
-          "name": "projects/PROJECT_ID/locations/LOCATION/changeRequests/sample-change-request-1",
+          "name": "projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/sample-change-request-1",
           "uid": "123e4567-e89b-12d3-a456-426614174000",
           "createTime": "2026-07-20T10:00:00Z",
           "updateTime": "2026-07-20T10:00:00Z",
           "justification": "Proposing a new glossary term definition for business accuracy.",
           "author": "user@example.com",
           "state": "NEW",
-          "resource": "projects/PROJECT_ID/locations/LOCATION/glossaries/sample-glossary",
+          "resource": "projects/PROJECT_ID/locations/TARGET_LOCATION/glossaries/sample-glossary",
           "createGlossaryTerm": {
-            "parent": "projects/PROJECT_ID/locations/LOCATION/glossaries/sample-glossary",
+            "parent": "projects/PROJECT_ID/locations/TARGET_LOCATION/glossaries/sample-glossary",
             "termId": "sample-term-id",
             "term": {
               "displayName": "Sample term name",
               "description": "Sample term description",
-              "parent": "projects/PROJECT_ID/locations/LOCATION/glossaries/sample-glossary"
+              "parent": "projects/PROJECT_ID/locations/TARGET_LOCATION/glossaries/sample-glossary"
             }
           }
         }
@@ -480,7 +480,7 @@ Before using any of the request data, make the following replacements:
 HTTP method and URL: 
     
     
-    POST https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests/CHANGE_REQUEST_ID:approve
+    POST https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/CHANGE_REQUEST_ID:approve
 
 To send your request, expand one of these options:
 
@@ -495,7 +495,7 @@ Execute the following command:
          -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
          -H "Content-Type: application/json; charset=utf-8" \  
          -d "" \  
-         "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests/CHANGE_REQUEST_ID:approve"
+         "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/CHANGE_REQUEST_ID:approve"
 
 #### PowerShell (Windows)
 
@@ -510,7 +510,7 @@ Execute the following command:
     Invoke-WebRequest `  
         -Method POST `  
         -Headers $headers `  
-        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests/CHANGE_REQUEST_ID:approve" | Select-Object -Expand Content
+        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/CHANGE_REQUEST_ID:approve" | Select-Object -Expand Content
 
 You should receive a successful status code (2xx) and an empty response.
 
@@ -555,7 +555,7 @@ Before using any of the request data, make the following replacements:
 HTTP method and URL: 
     
     
-    POST https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests/CHANGE_REQUEST_ID:reject
+    POST https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/CHANGE_REQUEST_ID:reject
 
 Request JSON body: 
     
@@ -578,7 +578,7 @@ Save the request body in a file named `request.json`, and execute the following 
          -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
          -H "Content-Type: application/json; charset=utf-8" \  
          -d @request.json \  
-         "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests/CHANGE_REQUEST_ID:reject"
+         "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/CHANGE_REQUEST_ID:reject"
 
 #### PowerShell (Windows)
 
@@ -595,7 +595,7 @@ Save the request body in a file named `request.json`, and execute the following 
         -Headers $headers `  
         -ContentType: "application/json; charset=utf-8" `  
         -InFile request.json `  
-        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests/CHANGE_REQUEST_ID:reject" | Select-Object -Expand Content
+        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/CHANGE_REQUEST_ID:reject" | Select-Object -Expand Content
 
 You should receive a successful status code (2xx) and an empty response.
 
@@ -623,7 +623,7 @@ Before using any of the request data, make the following replacements:
 HTTP method and URL: 
     
     
-    GET https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests
+    GET https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests
 
 To send your request, expand one of these options:
 
@@ -636,7 +636,7 @@ Execute the following command:
     
     curl -X GET \  
          -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
-         "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests"
+         "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests"
 
 #### PowerShell (Windows)
 
@@ -651,7 +651,7 @@ Execute the following command:
     Invoke-WebRequest `  
         -Method GET `  
         -Headers $headers `  
-        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests" | Select-Object -Expand Content
+        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests" | Select-Object -Expand Content
 
 You should receive a JSON response similar to the following:
     
@@ -659,21 +659,21 @@ You should receive a JSON response similar to the following:
     {
       "changeRequests": [
         {
-          "name": "projects/PROJECT_ID/locations/LOCATION/changeRequests/sample-change-request-1",
+          "name": "projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/sample-change-request-1",
           "uid": "123e4567-e89b-12d3-a456-426614174000",
           "createTime": "2026-07-20T10:00:00Z",
           "updateTime": "2026-07-20T10:00:00Z",
           "justification": "Proposing a new glossary term definition for business accuracy.",
           "author": "user@example.com",
           "state": "NEW",
-          "resource": "projects/PROJECT_ID/locations/LOCATION/glossaries/sample-glossary",
+          "resource": "projects/PROJECT_ID/locations/TARGET_LOCATION/glossaries/sample-glossary",
           "createGlossaryTerm": {
-            "parent": "projects/PROJECT_ID/locations/LOCATION/glossaries/sample-glossary",
+            "parent": "projects/PROJECT_ID/locations/TARGET_LOCATION/glossaries/sample-glossary",
             "termId": "sample-term-id",
             "term": {
               "displayName": "Sample term name",
               "description": "Sample term description",
-              "parent": "projects/PROJECT_ID/locations/LOCATION/glossaries/sample-glossary"
+              "parent": "projects/PROJECT_ID/locations/TARGET_LOCATION/glossaries/sample-glossary"
             }
           }
         }
@@ -710,7 +710,7 @@ Before using any of the request data, make the following replacements:
 HTTP method and URL: 
     
     
-    GET https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests
+    GET https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests
 
 To send your request, expand one of these options:
 
@@ -723,7 +723,7 @@ Execute the following command:
     
     curl -X GET \  
          -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
-         "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests"
+         "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests"
 
 #### PowerShell (Windows)
 
@@ -738,7 +738,7 @@ Execute the following command:
     Invoke-WebRequest `  
         -Method GET `  
         -Headers $headers `  
-        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/changeRequests" | Select-Object -Expand Content
+        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests" | Select-Object -Expand Content
 
 You should receive a JSON response similar to the following:
     
@@ -746,21 +746,21 @@ You should receive a JSON response similar to the following:
     {
       "changeRequests": [
         {
-          "name": "projects/PROJECT_ID/locations/LOCATION/changeRequests/sample-change-request-1",
+          "name": "projects/PROJECT_ID/locations/TARGET_LOCATION/changeRequests/sample-change-request-1",
           "uid": "123e4567-e89b-12d3-a456-426614174000",
           "createTime": "2026-07-20T10:00:00Z",
           "updateTime": "2026-07-20T10:00:00Z",
           "justification": "Proposing a new glossary term definition for business accuracy.",
           "author": "user@example.com",
           "state": "NEW",
-          "resource": "projects/PROJECT_ID/locations/LOCATION/glossaries/sample-glossary",
+          "resource": "projects/PROJECT_ID/locations/TARGET_LOCATION/glossaries/sample-glossary",
           "createGlossaryTerm": {
-            "parent": "projects/PROJECT_ID/locations/LOCATION/glossaries/sample-glossary",
+            "parent": "projects/PROJECT_ID/locations/TARGET_LOCATION/glossaries/sample-glossary",
             "termId": "sample-term-id",
             "term": {
               "displayName": "Sample term name",
               "description": "Sample term description",
-              "parent": "projects/PROJECT_ID/locations/LOCATION/glossaries/sample-glossary"
+              "parent": "projects/PROJECT_ID/locations/TARGET_LOCATION/glossaries/sample-glossary"
             }
           }
         }
@@ -778,6 +778,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

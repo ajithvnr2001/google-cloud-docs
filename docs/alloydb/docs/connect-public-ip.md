@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/connect-public-ip/
 title: Connect using public IP \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:34.382929+00:00
+fetched_at: 2026-10-22T09:11:39.063564+00:00
 ---
 
 # Connect using public IP  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/queues/queues-overview/
 title: Spanner queues overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:26:22.695581+00:00
+fetched_at: 2026-10-22T10:03:09.822004+00:00
 ---
 
 # Spanner queues overview  |  Google Cloud Documentation
@@ -119,7 +119,6 @@ Spanner queues have the following limitations:
   * **Manual splitting:** the `AddSplits` API is not supported for queues. Workload distribution relies entirely on load-based splitting. Interleaving the queue in a table is recommended so that users can add split points to the table.
   * **Geo-partitioning compliance:** geo-partitioned queues are not data residency compliant after executing a `DROP PARTITION` operation.
   * **Queue count limits:** instances are limited to 100 queues for instances with 1 or more nodes. The limit scales down proportionally for granular instances (for example, instances with 200 processing units are limited to 20 queues).
-  * **Dropping and recreating a queue:** dropping and recreating a queue of the same name isn't fully supported. The `RECEIVE` TVF for the queue may take time to "reset" before messages can be received at the same name again. 
   * **PostgreSQL column naming:** Spanner exposes both the `deliver_time` and `DeliverTime` columns for the delivery time of a message. We recommend using the `deliver_time` column to align with standard PostgreSQL naming conventions, and because the `DeliverTime` column will be hidden from the information schema in a future release.
   * **Named schema:** queues cannot be created in named schemas.
 
@@ -138,6 +137,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

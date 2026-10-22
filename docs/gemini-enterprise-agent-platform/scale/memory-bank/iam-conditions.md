@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/memory-bank/iam-conditions/
 title: Control access to Memory Bank with IAM Conditions \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:10.955854+00:00
+fetched_at: 2026-10-22T10:24:52.947160+00:00
 ---
 
 # Control access to Memory Bank with IAM Conditions  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

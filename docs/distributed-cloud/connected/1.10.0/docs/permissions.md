@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.10.0/docs/permissions/
 title: Roles and permissions \u00a0|\u00a0 Google Distributed Cloud connected, version 1.10.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:32.294857+00:00
+fetched_at: 2026-10-22T08:31:46.616562+00:00
 ---
 
 # Roles and permissions  |  Google Distributed Cloud connected, version 1.10.0  |  Google Cloud Documentation

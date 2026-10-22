@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/creating-clusters/hybrid-cluster-creation/
 title: Create hybrid clusters \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:57:26.563483+00:00
+fetched_at: 2026-10-22T10:12:35.358662+00:00
 ---
 
 # Create hybrid clusters  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -22,19 +22,13 @@ Send feedback
 
 #  Create hybrid clusters Stay organized with collections  Save and categorize content based on your preferences. 
 
-In Google Distributed Cloud, hybrid clusters perform the dual role of an admin cluster and a user cluster. They run workloads, and at the same time, manage other clusters, and themselves.
+Google Distributed Cloud hybrid clusters let you run user workloads while managing other clusters and the hybrid cluster itself. Combining admin and user roles eliminates the overhead of a dedicated admin cluster in resource-constrained environments. Unlike standalone clusters, which only manage themselves, hybrid clusters can also create and manage other clusters.
 
-Hybrid clusters eliminate the need to run a separate admin cluster in resource-constrained scenarios, and can provide highly available (HA) reliability. In an HA hybrid cluster, if one node fails, then others will take its place.
-
-Hybrid clusters are different from standalone clusters in that they can also manage other clusters. Standalone clusters can't create or manage other clusters.
-
-When you create hybrid clusters, there is some tradeoff between flexibility and security, however. Since hybrid clusters manage themselves, running workloads on the same cluster increases the risk of security exposure to sensitive administrative data, like SSH keys.
-
-You create a hybrid cluster with a high availability (HA) control plane using the `bmctl` command. The `bmctl` command can be run on a separate workstation or on one of the hybrid cluster nodes.
+Hosting workloads alongside control components trades security isolation for flexibility, increasing exposure risks for sensitive assets like SSH keys. You deploy hybrid clusters with a high-availability (HA) control plane by using the `bmctl` tool from a separate workstation or directly on a target node.
 
 ## Prerequisites
 
-  * Latest `bmctl` is downloaded (`gs://anthos-baremetal-release/bmctl/1.36.100-gke.144/linux-amd64/bmctl`) from Cloud Storage.
+  * Latest `bmctl` is downloaded (`gs://anthos-baremetal-release/bmctl/1.36.200-gke.118/linux-amd64/bmctl`) from Cloud Storage.
   * Workstation running `bmctl` has network connectivity to all nodes in the target hybrid cluster.
   * Workstation running `bmctl` has network connectivity to the control plane VIP of the target hybrid cluster.
   * SSH key used to create the hybrid cluster is available to root, or there is SUDO user access on all nodes in the target hybrid cluster.
@@ -198,6 +192,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

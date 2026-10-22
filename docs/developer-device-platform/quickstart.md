@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/developer-device-platform/quickstart/
 title: Quickstart: Prepare for Developer Device Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:04.079896+00:00
+fetched_at: 2026-10-22T08:33:25.824139+00:00
 ---
 
 # Quickstart: Prepare for Developer Device Platform  |  Google Cloud Documentation

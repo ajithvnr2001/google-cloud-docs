@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/organization-external-traffic/
 title: Create organization-external network policies \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:59:45.056250+00:00
+fetched_at: 2026-10-22T10:30:05.442823+00:00
 ---
 
 # Create organization-external network policies  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -145,7 +145,7 @@ You've now permitted connections to another organization. After creating the fir
 
 ###  API 
 
-To enable outbound traffic to services outside of the organization, customize your `ProjectNetworkPolicy` resource. However, because data exfiltration prevention is enabled by default, your customized `ProjectNetworkPolicy` egress policy shows a validation error in the status field, and the dataplane ignores it. This behavior happens by design.
+To enable outbound traffic to services outside of the organization, customize your `ProjectNetworkPolicy` resource. However, because data exfiltration prevention is enabled by default, your customized `ProjectNetworkPolicy` egress policy isn't enforced. Zonal API servers reject egress policies with the message `Data Exfiltration Protection is enabled for Project PROJECT; cannot configure egress policies`, so a global egress policy doesn't become ready. This behavior happens by design.
 
 You can transfer workloads from a given project when you allow data exfiltration for that project. The outbound traffic that you allow is a source network address translation (NAT) using a well-known IP address allocated for the project.
 
@@ -162,6 +162,7 @@ Use the following example:
            namespace: PROJECT
            name: allow-outbound-traffic-to-external
          spec:
+           policyType: Egress
            subject:
              subjectType: UserWorkload
            egress:
@@ -171,15 +172,17 @@ Use the following example:
          EOF
          
 
-The policy allows outbound traffic to all hosts in the CIDR block, which reside outside the organization. Your first attempt must cause an intended and necessary status error.
+The policy allows outbound traffic to all hosts in the CIDR block, which reside outside the organization. While data exfiltration prevention is enabled, the policy isn't enforced.
 
-  2. Confirm that you see a validation error in your status.
+  2. Confirm that the policy isn't ready yet. While data exfiltration prevention is enabled, the `Ready` condition of the global policy has `status: "Unknown"` and the reason `Reconciling`, because the zonal API servers reject the policy.
 
 **Important:** Only the outbound traffic to destinations outside your project's organization that you explicitly allow in your `ProjectNetworkPolicy` egress policy configuration is granted. Any other outbound traffic is denied. Therefore, only apply a customized `ProjectNetworkPolicy` egress policy when requirements mandate such a policy.
-  3. Ask the Organization IAM Admin to disable data exfiltration prevention. This action enables your configuration, while preventing all other outbound traffic.
+  3. Apply an [egress intra-project policy](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/intra-project-traffic#egress-intra-project) and any cross-project egress policies that your workloads need. After data exfiltration prevention is disabled, the policy from the first step blocks all other outbound traffic from every workload in the project, including traffic to workloads in the same project and in other projects.
+
+  4. Ask the IAM Org Admin to disable data exfiltration prevention. This action enables your configuration, while preventing all other outbound traffic.
 
 **Important:** Disabling data exfiltration prevention without defining one or more valid `ProjectNetworkPolicy` resources permits all outbound traffic to destinations outside your project's organization. Never disable this setting without configuring your customized `ProjectNetworkPolicy` egress policy.
-  4. Check the `ProjectNetworkPolicy` that you created and verify that the error in the validation status field is gone, and the status `Ready` is `True`, indicating that your policy is in effect:
+  5. Check the `ProjectNetworkPolicy` that you created and verify that the `Ready` condition has `status: "True"`, indicating that your policy is in effect:
          
          kubectl --kubeconfig GLOBAL_API_SERVER \
              get projectnetworkpolicy allow-outbound-traffic-to-external \
@@ -299,6 +302,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/service-extensions/docs/plugins-overview/
 title: Plugins overview \u00a0|\u00a0 Service Extensions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:49:16.633573+00:00
+fetched_at: 2026-10-22T10:45:05.225593+00:00
 ---
 
 # Plugins overview  |  Service Extensions  |  Google Cloud Documentation
@@ -27,7 +27,7 @@ This feature is in [Preview](https://cloud.google.com/products#product-launch-st
 
 Plugins are built using WebAssembly (Wasm) format and use Proxy-Wasm APIs.
 
-  * [Wasm](https://webassembly.org/) is an open and standardized binary instruction format that enables a host to load and run Wasm modules with customer-provided code. Wasm has a number of benefits for executing customer code, including sandboxing for security, support for multiple languages, portability, broad and growing support within the industry, and improved performance relative to other VM-based options such as JavaScript.
+  * [Wasm](https://webassembly.org/) is an open and standardized binary instruction format that enables a host to load and run Wasm modules with customer-provided code. Wasm has a number of benefits for executing customer code, including sandboxing for security, support for multiple languages, portability, broad and growing support within the industry, and improved performance relative to other options based on virtual machines (VMs), such as JavaScript.
 
   * [Proxy-Wasm](https://github.com/proxy-wasm) is an open source project started by Google. It defines APIs that let you customize the behavior of network proxies by implementing callbacks to be executed during HTTP request and response processing.
 
@@ -109,7 +109,11 @@ Plugins are strictly constrained in how many resources they can use:
 
   * A plugin can use up to 1 msec of normalized vCPU for each invocation. A CPU millisecond is platform dependent, but the normalized platform is approximately equal to a processor with a 4 GHz clock speed. An invocation is an independently billed phase of execution, which can be request headers, request body, response headers, or response body.
 
-  * A plugin can use up to 16 MiB of memory for each VM instance. An instance must be able to serve up to 1000 concurrent requests, which means that a plugin can hold up to 16 KiB of memory for each stream. Keep in mind that the total memory use includes global state and stack allocations.
+  * A plugin can use up to 16 MiB of memory for each VM instance (4 MiB for Media CDN plugins).
+
+    * An instance must be able to serve up to 1,000 concurrent requests, which means that a plugin can hold up to 16 KiB of memory for each stream (4 KiB for Media CDN plugins). Total memory use includes global state and stack allocations. Plugins that exceed this limit are terminated.
+
+    * We recommend that you use C++ and Rust, because they produce plugins with the smallest memory footprint. The Go SDK is not recommended for Media CDN because the Go runtime and garbage collector require a minimum baseline memory footprint of 2–3 MiB.
 
 
 
@@ -164,6 +168,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

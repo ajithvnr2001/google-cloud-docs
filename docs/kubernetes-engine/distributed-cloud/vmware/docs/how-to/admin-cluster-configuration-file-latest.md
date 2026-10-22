@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/admin-cluster-configuration-file-latest/
 title: Admin cluster configuration file 1.30 and higher \u00a0|\u00a0 Google Distributed Cloud software only for VMware \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:57:01.632238+00:00
+fetched_at: 2026-10-22T10:13:44.115218+00:00
 ---
 
 # Admin cluster configuration file 1.30 and higher  |  Google Distributed Cloud software only for VMware  |  Google Cloud Documentation
@@ -39,7 +39,7 @@ Replace the following:
 
   * `OUTPUT_FILENAME`: a path of your choice for the generated template. If you omit this flag, `gkectl` names the file `admin-cluster.yaml` and puts it in the current directory.
 
-  * `VERSION`: the Google Distributed Cloud version number. For example: `gkectl create-config admin --gke-on-prem-version=1.36.100-gke.144`. This version must be equal to or less than your `gkectl` version. If you omit this flag, the generated config template is populated with values based on the latest 1.36 patch.
+  * `VERSION`: the Google Distributed Cloud version number. For example: `gkectl create-config admin --gke-on-prem-version=1.36.200-gke.118`. This version must be equal to or less than your `gkectl` version. If you omit this flag, the generated config template is populated with values based on the latest 1.36 patch.
 
 
 
@@ -2137,6 +2137,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

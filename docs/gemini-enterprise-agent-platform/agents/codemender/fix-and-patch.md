@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/agents/codemender/fix-and-patch/
 title: Fix code vulnerabilities and manage diffs \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:07.215601+00:00
+fetched_at: 2026-10-22T10:23:11.759788+00:00
 ---
 
 # Fix code vulnerabilities and manage diffs  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

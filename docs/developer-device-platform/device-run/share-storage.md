@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/developer-device-platform/device-run/share-storage/
 title: Share your Cloud Storage Buckets with Developer Device Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:04.636111+00:00
+fetched_at: 2026-10-22T08:26:28.700076+00:00
 ---
 
 # Share your Cloud Storage Buckets with Developer Device Platform  |  Google Cloud Documentation

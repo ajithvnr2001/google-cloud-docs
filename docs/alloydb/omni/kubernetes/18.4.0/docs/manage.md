@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/18.4.0/docs/manage/
 title: Manage and monitor AlloyDB Omni \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 18.4.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:18:28.009766+00:00
+fetched_at: 2026-10-22T10:20:58.949035+00:00
 ---
 
 # Manage and monitor AlloyDB Omni  |  AlloyDB Omni using the container orchestrator: 18.4.0  |  Google Cloud Documentation
@@ -193,12 +193,16 @@ The following response shows that the services are being forwarded.
          curl http://localhost:MONITORING_METRICS_PORT/metrics
          
 
+You can also visualize these Prometheus metrics in the **System Insights** page of the AlloyDB Omni web user interface. When the monitoring service endpoint (port `9187`) is scraped by your Prometheus instance, the web UI queries Prometheus to display real-time CPU, memory, storage, and disk I/O charts. For more information, see View system metrics using System Insights.
+
 
 
 
 ### View metrics using the Prometheus API
 
 The `alloydbomni.internal.dbadmin.goog/task-type` label key and the `metricsalloydbomni` port is available as a default for all monitoring services in AlloyDB Omni. You can use them together with a single [`serviceMonitor`](https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#monitoring.coreos.com/v1.ServiceMonitor) custom resource to select all the services for all namespaces in your database cluster.
+
+When you configure Prometheus to scrape the `metricsalloydbomni` port using the Prometheus API, you can connect your Prometheus endpoint to the AlloyDB Omni web user interface to monitor host and instance resource utilization in **System Insights** (`/system-insights`). In **System Insights** , you can filter metrics across scraped instances using the **Filter by: Instances** menu and adjust the observation window (**1 hour** , **6 hours** , **1 day** , or **7 days**) to inspect CPU usage, memory usage, memory available, memory limit, storage usage, and disk I/O read and write throughput. For more information, see View system metrics using System Insights.
 
 For more information about using the Prometheus API, see the [Prometheus Operator documentation](https://prometheus-operator.dev/docs/api-reference/api/).
 
@@ -276,6 +280,27 @@ If the command returns `True`, the `alloydb-omni-dashboard` is successfully depl
 
 
 
+### View system metrics using System Insights
+
+You can monitor real-time and historical infrastructure metrics for your AlloyDB Omni instances using **System Insights** in the AlloyDB Omni web user interface. **System Insights** queries the Prometheus metrics exported by the AlloyDB Omni monitoring agent to display resource utilization charts.
+
+**Note:** **System Insights** isn't supported when deploying AlloyDB Omni using containers because a containerized monitoring agent isn't available for container deployments.
+
+To view system metrics in the web UI, complete the following steps:
+
+  1. [Connect to the web UI](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.4.0/docs/connect-web-ui) and select your cluster.
+  2. In the navigation menu, click **System Insights**.
+  3. Optional: In a multi-node cluster, use the **Filter by: Instances** list to select a specific instance endpoint (for example, `localhost:9187`).
+  4. Select a time window (**1 hour** , **6 hours** , **1 day** , or **7 days**) to adjust the observation period across all charts.
+  5. Review the system telemetry charts: 
+     * **CPU Usage** : Displays the percentage of CPU utilization over time.
+     * **Memory Usage** : Displays the percentage of allocated memory in use over time.
+     * **Memory Available** : Displays the percentage of free memory available over time.
+     * **Memory Limit** : Displays the configured memory quota (in GB) for the instance.
+     * **Storage and disk I/O** : Displays six additional charts tracking storage usage, storage limit, number of disk reads, bytes read, number of disk writes, and bytes written.
+
+
+
 ## Uninstall AlloyDB Omni
 
 ###  Kubernetes 
@@ -346,6 +371,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

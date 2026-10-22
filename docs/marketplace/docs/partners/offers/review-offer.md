@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/marketplace/docs/partners/offers/review-offer/
 title: Review and publish your offer \u00a0|\u00a0 Google Cloud Marketplace Partners \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:12:12.459651+00:00
+fetched_at: 2026-10-22T10:44:50.089777+00:00
 ---
 
 # Review and publish your offer  |  Google Cloud Marketplace Partners  |  Google Cloud Documentation
@@ -68,7 +68,7 @@ For some offers, Cloud Marketplace requires that Google review and approve the o
 
 If Cloud Marketplace requires that Google review and approve your offer, you see a **Continue** button. To submit your offer for review, click the **Continue** button. After you've clicked the button, the offer's status changes to `Pending Google Approval` until Google reviews the offer. After Google has reviewed and approved your offer, the offer's status changes to `Created`.
 
-If Cloud Marketplace doesn't require that Google review and approve your offer, you see a **Publish** button. To publish your offer, click the **Publish** button. The offer publishes immediately after you click the button.
+If Cloud Marketplace doesn't require that Google review and approve your offer, you see a **Publish** button. To publish your offer, click the **Publish** button. The offer publishes immediately after you click the button, and the **Share offer** dialog appears, where you can [send the offer to your customer](https://docs.cloud.google.com/marketplace/docs/partners/offers/send-offer).
 
 ### View the offer's revenue share
 
@@ -78,7 +78,7 @@ After you publish the offer, the applicable revenue share appears in the **Deal 
 
 ## What's next
 
-  * You can now copy the generated URL and [send the offer to your customer](https://docs.cloud.google.com/marketplace/docs/partners/offers/send-offer).
+  * You can now [send the offer to your customer](https://docs.cloud.google.com/marketplace/docs/partners/offers/send-offer), either by email from Producer Portal or by sharing the offer URL.
   * View [sample revenue share calculations for Cloud Marketplace](https://docs.cloud.google.com/marketplace/docs/partners/revenue-share-scenarios).
 
 
@@ -87,6 +87,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

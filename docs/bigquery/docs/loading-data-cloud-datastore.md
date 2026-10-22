@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/loading-data-cloud-datastore/
 title: Load data from Datastore exports \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:01:34.171004+00:00
+fetched_at: 2026-10-22T10:23:21.399792+00:00
 ---
 
 # Load data from Datastore exports  |  BigQuery  |  Google Cloud Documentation
@@ -21,15 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Load data from Datastore exports
 
-BigQuery supports loading data from [Datastore](https://docs.cloud.google.com/datastore) exports created using the Datastore managed import and export service. You can use the managed import and export service to export Datastore entities into a Cloud Storage bucket. You can then load the export into BigQuery as a table.
+BigQuery lets you load [Datastore](https://docs.cloud.google.com/datastore) entities from a Cloud Storage bucket into a BigQuery table for analysis. After you export entities by using the Datastore managed import and export service, you can load all entity data or select specific properties to import.
 
-To learn how to create a Datastore export file, see [Exporting and importing entities](https://docs.cloud.google.com/datastore/docs/export-import-entities) in the Datastore documentation. For information on scheduling exports, see [Scheduling an export](https://docs.cloud.google.com/datastore/docs/schedule-export).
-
-**Note:** If you intend to load a Datastore export into BigQuery, you must specify an entity filter in your [export command](https://docs.cloud.google.com/datastore/docs/export-import-entities#exporting_entities). Data exported without specifying an entity filter cannot be loaded into BigQuery.
-
-You can control which properties BigQuery should load by setting the [`projectionFields` property](https://docs.cloud.google.com/bigquery/docs/reference/rest/v2/Job#JobConfigurationLoad.FIELDS.projection_fields) in the API or by using the `--projection_fields` flag in the bq command-line tool.
-
-If you prefer to skip the loading process, you can query the export directly by setting it up as an external data source. For more information, see [External data sources](https://docs.cloud.google.com/bigquery/external-data-sources).
+To load a Datastore export into BigQuery, you must specify an entity filter in your [export command](https://docs.cloud.google.com/datastore/docs/export-import-entities#exporting_entities). For more information about creating and scheduling exports, see [Exporting and importing entities](https://docs.cloud.google.com/datastore/docs/export-import-entities) and [Scheduling an export](https://docs.cloud.google.com/datastore/docs/schedule-export). To query export files directly without loading them into BigQuery, see [External data sources](https://docs.cloud.google.com/bigquery/external-data-sources).
 
 ## Limitations
 
@@ -262,7 +256,7 @@ Set the following properties to load data from the [API](https://docs.cloud.goog
 
 ## Datastore options
 
-To change how BigQuery parses Datastore export data, specify the following option:
+You can control which properties BigQuery loads and how it parses Datastore export data by setting the [`projectionFields` property](https://docs.cloud.google.com/bigquery/docs/reference/rest/v2/Job#JobConfigurationLoad.FIELDS.projection_fields) in the API or by using the `--projection_fields` flag in the bq command-line tool:
 
 Console option | bq tool flag | BigQuery API property | Description  
 ---|---|---|---  
@@ -309,6 +303,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-19 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

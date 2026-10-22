@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/import-metadata/
 title: Import metadata using a custom pipeline \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:03:33.285425+00:00
+fetched_at: 2026-10-22T08:59:28.405558+00:00
 ---
 
 # Import metadata using a custom pipeline  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -357,7 +357,7 @@ Before using any of the request data, make the following replacements:
 HTTP method and URL: 
     
     
-    POST https://dataplex.googleapis.com/v1/projects/PROJECT_NUMBER/locations/LOCATION_ID/metadataJobs?metadataJobId=METADATA_JOB_ID
+    POST https://dataplex.googleapis.com/v1/projects/TARGET_PROJECT_NUMBER/locations/LOCATION_ID/metadataJobs?metadataJobId=METADATA_JOB_ID
 
 Request JSON body: 
     
@@ -397,7 +397,7 @@ Save the request body in a file named `request.json`, and execute the following 
          -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
          -H "Content-Type: application/json; charset=utf-8" \  
          -d @request.json \  
-         "https://dataplex.googleapis.com/v1/projects/PROJECT_NUMBER/locations/LOCATION_ID/metadataJobs?metadataJobId=METADATA_JOB_ID"
+         "https://dataplex.googleapis.com/v1/projects/TARGET_PROJECT_NUMBER/locations/LOCATION_ID/metadataJobs?metadataJobId=METADATA_JOB_ID"
 
 #### PowerShell (Windows)
 
@@ -414,7 +414,7 @@ Save the request body in a file named `request.json`, and execute the following 
         -Headers $headers `  
         -ContentType: "application/json; charset=utf-8" `  
         -InFile request.json `  
-        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_NUMBER/locations/LOCATION_ID/metadataJobs?metadataJobId=METADATA_JOB_ID" | Select-Object -Expand Content
+        -Uri "https://dataplex.googleapis.com/v1/projects/TARGET_PROJECT_NUMBER/locations/LOCATION_ID/metadataJobs?metadataJobId=METADATA_JOB_ID" | Select-Object -Expand Content
 
 The response identifies a long-running operation.
 
@@ -667,7 +667,7 @@ Before using any of the request data, make the following replacements:
 HTTP method and URL: 
     
     
-    GET https://dataplex.googleapis.com/v1/projects/PROJECT_NUMBER/locations/LOCATION_ID/metadataJobs/METADATA_JOB_ID
+    GET https://dataplex.googleapis.com/v1/projects/TARGET_PROJECT_NUMBER/locations/LOCATION_ID/metadataJobs/METADATA_JOB_ID
 
 To send your request, expand one of these options:
 
@@ -680,7 +680,7 @@ Execute the following command:
     
     curl -X GET \  
          -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
-         "https://dataplex.googleapis.com/v1/projects/PROJECT_NUMBER/locations/LOCATION_ID/metadataJobs/METADATA_JOB_ID"
+         "https://dataplex.googleapis.com/v1/projects/TARGET_PROJECT_NUMBER/locations/LOCATION_ID/metadataJobs/METADATA_JOB_ID"
 
 #### PowerShell (Windows)
 
@@ -695,7 +695,7 @@ Execute the following command:
     Invoke-WebRequest `  
         -Method GET `  
         -Headers $headers `  
-        -Uri "https://dataplex.googleapis.com/v1/projects/PROJECT_NUMBER/locations/LOCATION_ID/metadataJobs/METADATA_JOB_ID" | Select-Object -Expand Content
+        -Uri "https://dataplex.googleapis.com/v1/projects/TARGET_PROJECT_NUMBER/locations/LOCATION_ID/metadataJobs/METADATA_JOB_ID" | Select-Object -Expand Content
 
 You should receive a JSON response similar to the following:
     
@@ -1342,6 +1342,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

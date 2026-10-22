@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/version-history/
 title: Versioning \u00a0|\u00a0 Google Distributed Cloud software only for VMware \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:13:56.309432+00:00
+fetched_at: 2026-10-22T10:24:18.601976+00:00
 ---
 
 # Versioning  |  Google Distributed Cloud software only for VMware  |  Google Cloud Documentation
@@ -33,6 +33,12 @@ For information about the initial release of version 1.36, see [August 25, 2026]
 
 **Release date** | **Available patches** | **Kubernetes version** | **Node kernel versions**  
 ---|---|---|---  
+October 21, 2026 | [1.36.200-gke.118](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/release-notes#October_21_2026) | [v1.36.4-gke.100](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.36.md) | 
+
+  * 6.8.0-1050.54 (ubuntu 24.04)
+  * 6.6.143 (cos m117)
+
+  
 October 7, 2026 | [1.36.100-gke.144](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/release-notes#October_07_2026) | [v1.36.4-gke.100](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.36.md) | 
 
   * 6.8.0-1048.52 (ubuntu 24.04)
@@ -1288,7 +1294,7 @@ Entity | Description
 Admin workstation OVA | Open virtual appliance (OVA) for the admin workstation. Contains the OS image for the admin workstation along with the cluster bundle and the `gkectl` command-line tool. The version number is part of the filename—for example:
     
     
-    gke-on-prem-admin-appliance-vsphere-1.36.100-gke.144.ova
+    gke-on-prem-admin-appliance-vsphere-1.36.200-gke.118.ova
 
 For more information, see the [Open Virtualization Format Specification PDF](https://www.dmtf.org/sites/default/files/standards/documents/DSP0243_2.1.1.pdf).   
 `gkectl` | The command-line interface to Google Distributed Cloud. Create and manage clusters, create configuration files, and run preflight checks. Included in the admin workstation OVA. To check the version, run `gkectl version`.  
@@ -1355,6 +1361,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

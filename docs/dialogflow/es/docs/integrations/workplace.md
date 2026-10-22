@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/integrations/workplace/
 title: Workplace from Facebook \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:28.498129+00:00
+fetched_at: 2026-10-22T08:33:17.131547+00:00
 ---
 
 # Workplace from Facebook  |  Dialogflow ES  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-images-create/
 title: Create a disk image \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:19:50.694513+00:00
+fetched_at: 2026-10-22T09:17:38.428338+00:00
 ---
 
 # Create a disk image  |  Compute Engine  |  Google Cloud Documentation
@@ -65,12 +65,12 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     	// forceCreate = false
     
     	ctx := context.Background()
-    	disksClient, err := compute.[NewDisksRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_DisksClient_NewDisksRESTClient)(ctx)
+    	disksClient, err := compute.NewDisksRESTClient(ctx)
     	if err != nil {
     		return fmt.Errorf("NewDisksRESTClient: %w", err)
     	}
     	defer disksClient.Close()
-    	imagesClient, err := compute.[NewImagesRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_ImagesClient_NewImagesRESTClient)(ctx)
+    	imagesClient, err := compute.NewImagesRESTClient(ctx)
     	if err != nil {
     		return fmt.Errorf("NewImagesRESTClient: %w", err)
     	}
@@ -118,14 +118,14 @@ Before trying this sample, follow the Java setup instructions in the [Compute En
 To authenticate to Compute Engine, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
     
     
-    import com.google.cloud.compute.v1.[Disk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Disk.html);
-    import com.google.cloud.compute.v1.[DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html);
-    import com.google.cloud.compute.v1.[Image](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Image.html);
-    import com.google.cloud.compute.v1.[ImagesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ImagesClient.html);
-    import com.google.cloud.compute.v1.[InsertImageRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertImageRequest.html);
-    import com.google.cloud.compute.v1.[Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html);
-    import com.google.cloud.compute.v1.[InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html);
-    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html);
+    import com.google.cloud.compute.v1.Disk;
+    import com.google.cloud.compute.v1.DisksClient;
+    import com.google.cloud.compute.v1.Image;
+    import com.google.cloud.compute.v1.ImagesClient;
+    import com.google.cloud.compute.v1.InsertImageRequest;
+    import com.google.cloud.compute.v1.Instance;
+    import com.google.cloud.compute.v1.InstancesClient;
+    import com.google.cloud.compute.v1.Operation;
     import java.io.IOException;
     import java.util.Arrays;
     import java.util.HashMap;
@@ -165,16 +165,16 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
         // once, and can be reused for multiple requests. After completing all of your requests, call
         // the `client.close()` method on the client to safely
         // clean up any remaining background resources.
-        try ([ImagesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ImagesClient.html) imagesClient = [ImagesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ImagesClient.html).create();
-            [InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html) instancesClient = [InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html).create();
-            [DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html) disksClient = [DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html).create()) {
+        try (ImagesClient imagesClient = ImagesClient.create();
+            InstancesClient instancesClient = InstancesClient.create();
+            DisksClient disksClient = DisksClient.create()) {
     
-          [Disk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Disk.html) disk = disksClient.get(project, zone, sourceDiskName);
+          Disk disk = disksClient.get(project, zone, sourceDiskName);
     
           // Getting instances where source disk is attached.
-          for (String fullInstanceName : disk.[getUsersList](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Disk.html#com_google_cloud_compute_v1_Disk_getUsersList__)()) {
+          for (String fullInstanceName : disk.getUsersList()) {
             Map<String, String> instanceInfo = parseInstanceName(fullInstanceName);
-            [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html) instance = instancesClient.get(instanceInfo.get("instanceProjectId"),
+            Instance instance = instancesClient.get(instanceInfo.get("instanceProjectId"),
                 instanceInfo.get("instanceZone"), instanceInfo.get("instanceName"));
     
             // Сheck whether the instances are stopped.
@@ -200,21 +200,21 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
           }
     
           // Create Image.
-          I[Image](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Image.html)image = I[Image](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Image.html)newBuilder()
+          Image image = Image.newBuilder()
               .setName(imageName)
               .setSourceDisk(String.format("/zones/%s/disks/%s", zone, sourceDiskName))
               .addStorageLocations(storageLocation.isEmpty() ? "" : storageLocation)
               .build();
     
-          I[InsertImageRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertImageRequest.html)insertImageRequest = I[InsertImageRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertImageRequest.html)newBuilder()
+          InsertImageRequest insertImageRequest = InsertImageRequest.newBuilder()
               .setProject(project)
-              .s[setForceCreate](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertImageRequest.Builder.html#com_google_cloud_compute_v1_InsertImageRequest_Builder_setForceCreate_boolean_)forceCreate)
+              .setForceCreate(forceCreate)
               .setImageResource(image)
               .build();
     
-          O[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html)response = imagesClient.insertAsync(insertImageRequest).get(5, TimeUnit.MINUTES);
+          Operation response = imagesClient.insertAsync(insertImageRequest).get(5, TimeUnit.MINUTES);
     
-          if (rresponse.[hasError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_hasError__)() {
+          if (response.hasError()) {
             System.out.println("Image creation failed ! ! " + response);
             return;
           }
@@ -259,7 +259,7 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     import warnings
     
     from google.api_core.extended_operation import ExtendedOperation
-    from google.cloud import [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest)
+    from google.cloud import compute_v1
     
     
     def wait_for_extended_operation(
@@ -311,8 +311,8 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     
     
     STOPPED_MACHINE_STATUS = (
-        [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[Instance](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.Instance.html).Status.TERMINATED.name,
-        [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[Instance](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.Instance.html).Status.STOPPED.name,
+        compute_v1.Instance.Status.TERMINATED.name,
+        compute_v1.Instance.Status.STOPPED.name,
     )
     
     
@@ -341,16 +341,16 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
         Returns:
             An Image object.
         """
-        image_client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[ImagesClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.images.ImagesClient.html)()
-        disk_client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[DisksClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.disks.DisksClient.html)()
-        instance_client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[InstancesClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html)()
+        image_client = compute_v1.ImagesClient()
+        disk_client = compute_v1.DisksClient()
+        instance_client = compute_v1.InstancesClient()
     
         # Get source disk
-        disk = disk_client.[get](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.disks.DisksClient.html#google_cloud_compute_v1_services_disks_DisksClient_get)(project=project_id, zone=zone, disk=source_disk_name)
+        disk = disk_client.get(project=project_id, zone=zone, disk=source_disk_name)
     
         for disk_user in disk.users:
             instance_name = disk_user.split("/")[-1]
-            instance = instance_client.[get](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html#google_cloud_compute_v1_services_instances_InstancesClient_get)(
+            instance = instance_client.get(
                 project=project_id, zone=zone, instance=instance_name
             )
             if instance.status in STOPPED_MACHINE_STATUS:
@@ -372,17 +372,17 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
                 )
     
         # Create image
-        image = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[Image](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.Image.html)()
+        image = compute_v1.Image()
         image.source_disk = disk.self_link
         image.name = image_name
         if storage_location:
             image.storage_locations = [storage_location]
     
-        operation = image_client.[insert](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.images.ImagesClient.html#google_cloud_compute_v1_services_images_ImagesClient_insert)(project=project_id, image_resource=image)
+        operation = image_client.insert(project=project_id, image_resource=image)
     
         wait_for_extended_operation(operation, "image creation from disk")
     
-        return image_client.[get](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.images.ImagesClient.html#google_cloud_compute_v1_services_images_ImagesClient_get)(project=project_id, image=image_name)
+        return image_client.get(project=project_id, image=image_name)
     
     
 

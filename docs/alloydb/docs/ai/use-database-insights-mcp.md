@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/use-database-insights-mcp/
 title: Monitor AlloyDB using the Database Insights MCP server \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:28.013981+00:00
+fetched_at: 2026-10-22T09:24:58.598010+00:00
 ---
 
 # Monitor AlloyDB using the Database Insights MCP server  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

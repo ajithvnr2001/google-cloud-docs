@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/apigee-mcp/troubleshoot-mcp-deployments/
 title: Troubleshoot MCP deployments in Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:35:55.039001+00:00
+fetched_at: 2026-10-22T10:45:06.461945+00:00
 ---
 
 # Troubleshoot MCP deployments in Apigee  |  Google Cloud Documentation
@@ -40,6 +40,31 @@ While these downstream provisioning steps are taking place, the UI shows the pro
 ## Troubleshooting
 
 The following sections describe errors and known issues you might encounter while using MCP in Apigee.
+
+### Backend does not receive a tool argument in the expected location
+
+**Issue:** A backend reads a tool argument from one request location — the query string, a header, or a cookie — but the OpenAPI specification declares the parameter `in` a different location, so the argument arrives somewhere else on the backend request. The call fails or behaves as though the argument were absent.
+
+**Symptoms:** The `tools/call` request succeeds at the MCP layer and the MCP client supplies the argument, but the backend responds as though the value were missing — for example a `400` for a required value, or a default being applied in place of the value sent.
+
+**Cause:** The parameter is declared `in: header` or `in: cookie` in the OpenAPI specification, so Apigee sends its value as a request header or in the `Cookie` header rather than in the query string. A backend that reads the value only from the query string does not see it. See [Tool argument placement on the backend request](https://docs.cloud.google.com/apigee/docs/api-platform/apigee-mcp/apigee-mcp-overview#tool-argument-placement).
+
+**Resolution:** Decide where the value belongs and make the specification and the backend agree:
+
+  * To keep the value in the query string, declare the parameter `in: query`.
+  * To send it as a header or a cookie, leave the declaration as it is and read the value from that location in your backend.
+
+
+
+### Backend stops receiving a cookie that the MCP client's request carried
+
+**Issue:** A cookie that arrives on the HTTP request the MCP client makes — a session cookie from a browser-based client, for example — stops reaching the backend on some tool calls.
+
+**Symptoms:** The backend behaves as though the caller were not authenticated or not in session, and the behavior is inconsistent: the same operation works on some calls and not others.
+
+**Cause:** The operation declares one or more `in: cookie` parameters, and the affected calls supplied at least one of them. The `Cookie` header is rewritten as a whole rather than appended to, so on those calls it carries the declared cookie parameters only and every other cookie is dropped. Calls that supplied none of the cookie parameters pass the header through untouched, which is why only some calls fail. See [Cookies on the request to your backend](https://docs.cloud.google.com/apigee/docs/api-platform/apigee-mcp/apigee-mcp-overview#cookie-header-replacement).
+
+**Resolution:** Declare every cookie the backend needs as an `in: cookie` parameter on each operation that needs it, so its value is always supplied by the tool call rather than inherited from the client's request. There is no setting that preserves an undeclared cookie.
 
 ### Error response status codes for tool calls and metadata
 
@@ -258,6 +283,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

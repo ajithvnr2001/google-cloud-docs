@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/columnar-engine/add-frequent-expressions/
 title: Optimize queries with virtual columns for expressions \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:39.992881+00:00
+fetched_at: 2026-10-22T09:37:11.199313+00:00
 ---
 
 # Optimize queries with virtual columns for expressions  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

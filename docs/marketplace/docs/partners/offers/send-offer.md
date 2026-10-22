@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/marketplace/docs/partners/offers/send-offer/
 title: Send a private offer to a customer \u00a0|\u00a0 Google Cloud Marketplace Partners \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:12:10.161472+00:00
+fetched_at: 2026-10-22T10:44:48.990690+00:00
 ---
 
 # Send a private offer to a customer  |  Google Cloud Marketplace Partners  |  Google Cloud Documentation
@@ -45,26 +45,54 @@ Before you send your offer to a customer, you must have completed the following 
 
 **Note:** If your offer's status is `Pending Google Approval`, Cloud Marketplace sends the offer to the customer automatically after Google approves it.
 
-After you've [generated the URL](https://docs.cloud.google.com/marketplace/docs/partners/offers/review-offer#publish-offer) for your offer, you must send the offer to the customer to view and purchase. A customer can purchase an offer only once.
+After you [publish your offer](https://docs.cloud.google.com/marketplace/docs/partners/offers/review-offer#publish-offer), you must send the offer to the customer to view and purchase. A customer can purchase an offer only once.
 
 **Note:** If you're offering a SaaS product, you must also [approve the accepted offer](https://docs.cloud.google.com/marketplace/docs/partners/offers/approve-offer) after the customer completes their purchase.
 
-When you email your offer to your customer, consider guiding them through the process:
+Regardless of how you send the offer, verify that the customer has the correct IAM permissions for the Cloud Billing account that you included in the offer. To view and purchase the offer, the customer must have:
 
-  * Verify that the customer has the correct IAM permissions for the Cloud Billing account that you included in the offer. To view and purchase the offer, the customer must have:
+  * The [Billing Administrator](https://docs.cloud.google.com/billing/docs/how-to/billing-access#overview-of-cloud-billing-roles-in-cloud-iam) (`roles/billing.admin`) role _OR_
 
-    * The [Billing Administrator](https://docs.cloud.google.com/billing/docs/how-to/billing-access#overview-of-cloud-billing-roles-in-cloud-iam) (`roles/billing.admin`) role _OR_
+  * The Billing User (`roles/billing.user`) _AND_ Consumer Procurement Order Administrator (`roles/consumerprocurement.orderAdmin`) roles.
 
-    * The Billing User (`roles/billing.user`) _AND_ Consumer Procurement Order Administrator (`roles/consumerprocurement.orderAdmin`) roles.
+
+
 
 If your customer or your contact with your customer needs access, you should recommend that they reach out to an Organization Administrator or Billing Administrator.
 
-  * In your email, include the documentation [Accept a private offer](https://docs.cloud.google.com/marketplace/docs/offers/accepting-private-offer), which explains the process for Cloud Marketplace customers.
+You can send the offer in either of the following ways.
+
+### Send the offer from Producer Portal
+
+After you publish the offer, the **Share offer** dialog appears. To open the dialog later, go to the **Private offers** page in Producer Portal, and then, for your offer, click **Send offer**.
+
+To send the offer by email from Producer Portal:
+
+  1. In the **Share offer** dialog, click **Send email**.
+
+  2. In the **Add customer email** field, enter the email addresses of the recipients. You can send the email to a maximum of ten recipients.
+
+  3. Optional: To send a copy of the email to the sales contact that you specified for the offer, select **Send a copy to partner contact**. To send a copy to yourself, select **Send a copy to me**.
+
+  4. Click **Send**.
 
 
 
 
-### Example letter to a customer
+Cloud Marketplace sends each recipient an email that contains a link to the offer. Recipients must have the permissions described earlier to view and purchase the offer.
+
+### Send the offer URL yourself
+
+To send the offer URL in your own email:
+
+  1. In the **Share offer** dialog, click **Copy URL** , and then copy the offer URL.
+
+  2. In your email, include the offer URL and the documentation [Accept a private offer](https://docs.cloud.google.com/marketplace/docs/offers/accepting-private-offer), which explains the process for Cloud Marketplace customers.
+
+
+
+
+#### Example letter to a customer
 
 The following example follows best practices for sending a private offer to a Cloud Marketplace customer:
 
@@ -99,6 +127,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

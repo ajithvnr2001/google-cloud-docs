@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/vpc-sc/configure-vpc-service-controls/
 title: Configure VPC Service Controls \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:48.794928+00:00
+fetched_at: 2026-10-22T09:36:54.847915+00:00
 ---
 
 # Configure VPC Service Controls  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

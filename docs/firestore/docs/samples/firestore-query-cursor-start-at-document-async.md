@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-query-cursor-start-at-document-async/
 title: Query a Firestore collection with a cursor start at document filter (async) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:58:34.904075+00:00
+fetched_at: 2026-10-22T10:27:59.765719+00:00
 ---
 
 # Query a Firestore collection with a cursor start at document filter (async)  |  Google Cloud Documentation

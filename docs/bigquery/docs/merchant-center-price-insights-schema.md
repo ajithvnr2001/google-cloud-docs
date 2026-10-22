@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/bigquery/docs/merchant-center-price-insights-schema/
-title: Google Merchant Center Price Insights table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
+title: Google Merchant Center price insights table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:37:14.640337+00:00
+fetched_at: 2026-10-22T10:44:46.586044+00:00
 ---
 
-# Google Merchant Center Price Insights table  |  BigQuery  |  Google Cloud Documentation
+# Google Merchant Center price insights table  |  BigQuery  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/bigquery/docs/merchant-center-price-insights-schema/
 
@@ -19,11 +19,11 @@ fetched_at: 2026-10-21T12:37:14.640337+00:00
 
 Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
 
-# Google Merchant Center Price Insights table
+# Google Merchant Center price insights table
 
 ## Overview
 
-The Price Insights report shows suggested sale prices for your products and predicts the performance that you can expect if you update your products' prices. You can use the Price Insights report to price your products more effectively. The report is similar to the [Price Insights Report from Google Merchant Center](https://support.google.com/merchants/answer/11916926).
+The price insights report shows suggested sale prices for your products and predicts the performance that you can expect if you update your products' prices. You can use the price insights report to price your products more effectively. The report is similar to the [price insights report from Google Merchant Center](https://support.google.com/merchants/answer/11916926).
 
 The data is written to a table named `PriceInsights_MERCHANT_ID` if you are using an individual Merchant ID, or `PriceInsights_AGGREGATOR_ID` if you're using an MCA account.
 
@@ -61,6 +61,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

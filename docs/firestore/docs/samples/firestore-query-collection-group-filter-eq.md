@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-query-collection-group-filter-eq/
 title: Query a Firestore collection group with an eq filter \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:58:33.732367+00:00
+fetched_at: 2026-10-22T10:27:43.928258+00:00
 ---
 
 # Query a Firestore collection group with an eq filter  |  Google Cloud Documentation

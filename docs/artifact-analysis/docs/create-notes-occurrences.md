@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/create-notes-occurrences/
 title: Create custom notes and occurrences \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:44:04.649408+00:00
+fetched_at: 2026-10-22T09:19:08.367533+00:00
 ---
 
 # Create custom notes and occurrences  |  Artifact Analysis  |  Google Cloud Documentation
@@ -272,7 +272,7 @@ To authenticate to Artifact Analysis, set up Application Default Credentials. Fo
     require "google/cloud/container_analysis"
     
     # Initialize the client
-    client = Google::Cloud::[ContainerAnalysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[container_analysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[grafeas_client](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis-V1-ContainerAnalysis-Client.html)
+    client = Google::Cloud::[ContainerAnalysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis.html).[container_analysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[grafeas_client](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis-V1-ContainerAnalysis-Client.html)
     
     parent = client.[project_path](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis-V1-ContainerAnalysis-Paths.html) project: project_id
     note = {
@@ -524,7 +524,7 @@ To authenticate to Artifact Analysis, set up Application Default Credentials. Fo
     require "base64"
     
     # Initialize the client
-    client = Google::Cloud::[ContainerAnalysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[container_analysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[grafeas_client](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis-V1-ContainerAnalysis-Client.html)
+    client = Google::Cloud::[ContainerAnalysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis.html).[container_analysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[grafeas_client](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis-V1-ContainerAnalysis-Client.html)
     note_path = client.note_path project: note_project, note: note_id
     project_path = client.[project_path](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis-V1-ContainerAnalysis-Paths.html) project: occurrence_project
     
@@ -742,7 +742,7 @@ To authenticate to Artifact Analysis, set up Application Default Credentials. Fo
       require "google/cloud/container_analysis"
     
       # Initialize the client
-      client = Google::Cloud::[ContainerAnalysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[container_analysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[grafeas_client](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis-V1-ContainerAnalysis-Client.html)
+      client = Google::Cloud::[ContainerAnalysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis.html).[container_analysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[grafeas_client](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis-V1-ContainerAnalysis-Client.html)
     
       name = client.note_path project: project_id, note: note_id
       count = 0
@@ -763,7 +763,7 @@ To authenticate to Artifact Analysis, set up Application Default Credentials. Fo
       require "google/cloud/container_analysis"
     
       # Initialize the client
-      client = Google::Cloud::[ContainerAnalysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[container_analysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[grafeas_client](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis-V1-ContainerAnalysis-Client.html)
+      client = Google::Cloud::[ContainerAnalysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis.html).[container_analysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[grafeas_client](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis-V1-ContainerAnalysis-Client.html)
     
       parent = client.project_path project: project_id
       filter = "kind = \"DISCOVERY\" AND resourceUrl = \"#{resource_url}\""
@@ -780,7 +780,7 @@ To authenticate to Artifact Analysis, set up Application Default Credentials. Fo
     
       require "google/cloud/pubsub"
     
-      pubsub = Google::Cloud::[PubSub](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-pubsub/latest/Google-Cloud-PubSub.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-pubsub/latest/Google-Cloud-PubSub.html) project_id: project_id
+      pubsub = Google::Cloud::[PubSub](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-pubsub-v1/latest/Google-Cloud-PubSub.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-pubsub/latest/Google-Cloud-PubSub.html) project_id: project_id
       subscription_admin = pubsub.[subscription_admin](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-pubsub/latest/Google-Cloud-PubSub-Project.html)
       subscription = subscription_admin.create_subscription \
         name: pubsub.subscription_path(subscription_id),
@@ -820,7 +820,7 @@ To authenticate to Artifact Analysis, set up Application Default Credentials. Fo
       deadline = Time.now + timeout_seconds
     
       # Initialize the client
-      client = Google::Cloud::[ContainerAnalysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[container_analysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[grafeas_client](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis-V1-ContainerAnalysis-Client.html)
+      client = Google::Cloud::[ContainerAnalysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis.html).[container_analysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[grafeas_client](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis-V1-ContainerAnalysis-Client.html)
       parent = client.project_path project: project_id
     
       # Find the discovery occurrence using a filter string
@@ -874,7 +874,7 @@ To authenticate to Artifact Analysis, set up Application Default Credentials. Fo
       require "google/cloud/container_analysis"
     
       # Initialize the client
-      client = Google::Cloud::[ContainerAnalysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[container_analysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[grafeas_client](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis-V1-ContainerAnalysis-Client.html)
+      client = Google::Cloud::[ContainerAnalysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis.html).[container_analysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[grafeas_client](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis-V1-ContainerAnalysis-Client.html)
     
       parent = client.project_path project: project_id
       filter = "resourceUrl = \"#{resource_url}\" AND kind = \"VULNERABILITY\""
@@ -892,7 +892,7 @@ To authenticate to Artifact Analysis, set up Application Default Credentials. Fo
       require "google/cloud/container_analysis"
     
       # Initialize the client
-      client = Google::Cloud::[ContainerAnalysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[container_analysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[grafeas_client](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis-V1-ContainerAnalysis-Client.html)
+      client = Google::Cloud::[ContainerAnalysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis.html).[container_analysis](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis/latest/Google-Cloud-ContainerAnalysis.html).[grafeas_client](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-container_analysis-v1/latest/Google-Cloud-ContainerAnalysis-V1-ContainerAnalysis-Client.html)
     
       parent = client.project_path project: project_id
       filter = "resourceUrl = \"#{resource_url}\" AND kind = \"VULNERABILITY\""
@@ -947,6 +947,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

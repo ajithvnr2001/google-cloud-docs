@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/latest/docs/notifications/
 title: Order communications and alerts \u00a0|\u00a0 Google Distributed Cloud connected \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:33.351258+00:00
+fetched_at: 2026-10-22T08:24:55.762774+00:00
 ---
 
 # Order communications and alerts  |  Google Distributed Cloud connected  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-reads-row-partial/
 title: Read a partial row \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:43:42.732000+00:00
+fetched_at: 2026-10-22T08:57:55.457924+00:00
 ---
 
 # Read a partial row  |  Bigtable  |  Google Cloud Documentation

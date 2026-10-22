@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/featurestore/latest/control-access/
 title: Control access to resources \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:15.146405+00:00
+fetched_at: 2026-10-22T10:23:14.372089+00:00
 ---
 
 # Control access to resources  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

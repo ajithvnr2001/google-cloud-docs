@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/obs-iam-permissions/
 title: Prepare IAM permissions \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T13:32:53.283596+00:00
+fetched_at: 2026-10-22T10:24:48.233822+00:00
 ---
 
 # Prepare IAM permissions  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -33,7 +33,7 @@ IAM on Distributed Cloud offers the following access levels for permissions:
 
 **Important:** The project namespace for logging and monitoring resources of Platform Administrators in the global API server is the `platform-obs` namespace. When granting the roles described on this page, create the role bindings in the `platform-obs` namespace using the kubeconfig file for the `org-management` cluster.
 
-If you can't access or use a monitoring or logging service, contact your administrator to grant you the necessary roles. Request the appropriate permissions from your Project IAM Admin for a given project. If you require permissions at the organization level, ask your Organization IAM Admin instead.
+If you can't access or use a monitoring or logging service, contact your administrator to grant you the necessary roles. Request the appropriate permissions from your IAM Project Admin for a given project. If you require permissions at the organization level, ask your IAM Org Admin instead.
 
 
 
@@ -42,7 +42,7 @@ This page describes all the roles and their respective permissions for using mon
 
 ## Predefined roles at the organization level
 
-Request the appropriate permissions from your Organization IAM Admin to set up logging and monitoring in an organization and manage the lifecycle of a project that uses observability services.
+Request the appropriate permissions from your IAM Org Admin to set up logging and monitoring in an organization and manage the lifecycle of a project that uses observability services.
 
 To grant team members organization-wide resource access, assign roles by creating role bindings on the global API server using its kubeconfig file. To grant permissions or receive role access to resources at the organization level, see [Grant and revoke access](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/set-up-role-bindings).
 
@@ -83,7 +83,7 @@ LoggingTarget PA Viewer | `loggingtarget-pa-viewer` | View `LoggingTarget` custo
   
 ## Predefined roles at the project level
 
-Request the appropriate permissions from your Project IAM Admin to use logging and monitoring services in a project. All roles must bind to the project namespace where you are using the service.
+Request the appropriate permissions from your IAM Project Admin to use logging and monitoring services in a project. All roles must bind to the project namespace where you are using the service.
 
 To grant team members project-wide resource access, assign roles by creating role bindings on the global API server using its kubeconfig file. To grant permissions or receive role access to resources at the project level, see [Grant and revoke access](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/set-up-role-bindings).
 
@@ -133,6 +133,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

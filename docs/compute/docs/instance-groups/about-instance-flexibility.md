@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/about-instance-flexibility/
 title: About instance flexibility in MIGs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:19:32.021901+00:00
+fetched_at: 2026-10-22T09:43:47.743883+00:00
 ---
 
 # About instance flexibility in MIGs  |  Compute Engine  |  Google Cloud Documentation
@@ -211,11 +211,7 @@ For more information about how a target distribution shape works, see [Regional 
 
 ### Observability and monitoring
 
-Because a MIG with instance flexibility dynamically selects machine types and zones based on real-time availability, you can observe this runtime behavior using a Cloud Monitoring dashboard.
-
-Google Cloud provides a preconfigured dashboard, **GCE MIG Instance Distribution Monitoring** , which visualizes the instance distribution by machine type and zone in real-time. This observability helps you confirm high availability, track fallback machine type allocations, and diagnose capacity distribution in your MIG.
-
-To learn how to access the monitoring dashboard, see [Monitor instance distribution in MIGs](https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution).
+A MIG with instance flexibility dynamically selects machine types and zones based on real-time availability. You can monitor how instances are distributed across machine types and zones in real time. Tracking this data helps you verify high availability, see how fallback machine types are allocated, and diagnose capacity distribution. For instructions on viewing this data for a specific MIG or aggregated across multiple MIGs, see [Monitor instance distribution in MIGs](https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution).
 
 ## Instance flexibility and reservations
 
@@ -367,6 +363,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

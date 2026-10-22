@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment/
 title: Choose your AlloyDB Omni deployment option \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:28:28.924136+00:00
+fetched_at: 2026-10-22T09:54:38.138397+00:00
 ---
 
 # Choose your AlloyDB Omni deployment option  |  Google Cloud Documentation
@@ -88,6 +88,17 @@ Common use cases include the following:
 
 To start using the RPM orchestrator deployment option, see [Install the AlloyDB Omni RPM orchestrator](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/install-orchestrator).
 
+## AlloyDB Omni web user interface
+
+You can pair the optional web UI with any of the AlloyDB Omni deployment options.
+
+The web UI is packaged in two formats to match your deployment choice:
+
+  * Docker container image (`ALLOYDB_OMNI_UI_IMAGE_TAG`): for containerized environments, including containers and the container orchestrator.
+  * Linux RPM package (`alloydbomni_ui`): for non-containerized VM or bare-metal environments, including RPM and the RPM orchestrator.
+
+
+
 ## What's next
 
 [Manage AlloyDB Omni subscriptions in the Google Cloud console](https://console.cloud.google.com/alloydb/omni/subscriptions).
@@ -96,6 +107,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

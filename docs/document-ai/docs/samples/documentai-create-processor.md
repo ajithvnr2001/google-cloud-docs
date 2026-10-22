@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/document-ai/docs/samples/documentai-create-processor/
 title: Create a processor \u00a0|\u00a0 Document AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:39:46.125258+00:00
+fetched_at: 2026-10-22T08:24:42.037222+00:00
 ---
 
 # Create a processor  |  Document AI  |  Google Cloud Documentation

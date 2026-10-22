@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tpu/docs/v6e/
 title: TPU v6e \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:52.441266+00:00
+fetched_at: 2026-10-22T09:51:02.211390+00:00
 ---
 
 # TPU v6e  |  Google Cloud Documentation
@@ -66,7 +66,7 @@ Topology | TPU chips | Hosts | VMs | Machine type | Scope
 8x8 | 64 | 8 | 16 | `ct6e-standard-4t` | Multi-host  
 8x16 | 128 | 16 | 32 | `ct6e-standard-4t` | Multi-host  
 16x16 | 256 | 32 | 64 | `ct6e-standard-4t` | Multi-host  
-**Note:** The 8-chip (2x4) configuration attached to 2 VMs is only supported when using the GKE API.
+**Note:** The 8-chip (`2x4`) multi-host configuration attached to two `ct6e-standard-4t` VMs is supported when you provision TPUs with GKE or Compute Engine, and isn't supported when you use the Cloud TPU API.
 
 Slices with 8 chips (`v6e-8`) attached to a single VM are optimized for inference, allowing all 8 chips to be used in a single serving workload. You can perform multi-host inference using Pathways on Cloud. For more information, see [Perform multihost inference using Pathways](https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/pathways-on-cloud/multihost-inference).
 
@@ -104,6 +104,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

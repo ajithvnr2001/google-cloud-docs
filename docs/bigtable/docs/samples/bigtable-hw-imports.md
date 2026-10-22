@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-hw-imports/
 title: Import modules \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:43:44.147596+00:00
+fetched_at: 2026-10-22T08:56:44.541462+00:00
 ---
 
 # Import modules  |  Bigtable  |  Google Cloud Documentation

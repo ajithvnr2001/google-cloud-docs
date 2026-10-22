@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-bq-connector/
 title: Create a BigQuery Sink connector \u00a0|\u00a0 Managed Service for Apache Kafka \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:15:46.653459+00:00
+fetched_at: 2026-10-22T10:44:54.379574+00:00
 ---
 
 # Create a BigQuery Sink connector  |  Managed Service for Apache Kafka  |  Google Cloud Documentation
@@ -21,16 +21,7 @@ Send feedback
 
 #  Create a BigQuery Sink connector Stay organized with collections  Save and categorize content based on your preferences. 
 
-BigQuery Sink connectors stream data from Kafka to BigQuery tables, enabling real-time data ingestion and analysis within BigQuery.
-
-Use cases for BigQuery Sink connectors include the following:
-
-  * Data warehousing. Load streaming data into BigQuery for analytics and reporting.
-
-  * Populate BigQuery tables that power real-time dashboards.
-
-
-
+A BigQuery Sink connector lets you stream data from Managed Service for Apache Kafka to BigQuery tables in real time. You can use this connector to ingest streaming data into BigQuery for data warehousing, analytical reporting, and powering real-time dashboards.
 
 ## Before you begin
 
@@ -594,6 +585,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-basic-vm-parent-tag/
 title: Create a Compute Engine instance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:19:26.038157+00:00
+fetched_at: 2026-10-22T09:17:20.247418+00:00
 ---
 
 # Create a Compute Engine instance  |  Google Cloud Documentation

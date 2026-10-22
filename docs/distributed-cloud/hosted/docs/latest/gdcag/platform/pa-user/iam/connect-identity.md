@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/connect-identity/
 title: Connect to an identity provider \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:58:50.232734+00:00
+fetched_at: 2026-10-22T10:29:51.937795+00:00
 ---
 
 # Connect to an identity provider  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -45,9 +45,9 @@ They can do so by opening a ticket in the ticketing system and providing the req
 
 ### Request IAM roles
 
-To create, read, update, and delete identity provider configurations, contact your Organization IAM Admin to request the **IdP Federation Admin** (`idp-federation-admin`) role.
+To create, read, update, and delete identity provider configurations, contact your IAM Org Admin to request the **IdP Federation Admin** (`idp-federation-admin`) role.
 
-Ensure that the initial admin you specify when connecting the identity provider has the **Organization IAM Admin** (`organization-iam-admin`) role.
+Ensure that the initial admin you specify when connecting the identity provider has the **IAM Org Admin** (`organization-iam-admin`) role.
 
 ### Prepare your environment
 
@@ -85,7 +85,7 @@ To connect to an existing OIDC provider, complete the following steps:
 **Note:** Distributed Cloud doesn't insert a separator between the prefix and the group name. Insert a separator such as `-` or `:` at the end of the prefix to increase readability. Otherwise, `prefix` and `kiran@example.com` are identified as `prefixkiran@example.com`.
      7. Optional: In the **Encryption** section, select **Enable encryption tokens**.
 
-To enable encryption tokens, ask your Organization IAM Admin to grant you the IdP Federation Admin (`idp-federation-admin`) role.
+To enable encryption tokens, ask your IAM Org Admin to grant you the IdP Federation Admin (`idp-federation-admin`) role.
 
         1. In the **Key ID** field, enter your key ID. The key ID identifies the public key of a JSON web encryption (JWE) token. Your OIDC provider sets up and provisions a key ID.
         2. In the **Decryption key** field, enter the decryption key in PEM format. The decryption key is an asymmetric key used to decrypt tokens. Your OIDC provider sets up and provisions a decryption key.
@@ -180,7 +180,7 @@ To connect to an existing SAML provider, complete the following steps:
 
      7. Optional: In the **SAML Assertions** section, select **Enable encryption SAML assertions**.
 
-To enable encrypted SAML assertions, ask your Organization IAM Admin to grant you the IdP Federation Admin (`idp-federation-admin`) role.
+To enable encrypted SAML assertions, ask your IAM Org Admin to grant you the IdP Federation Admin (`idp-federation-admin`) role.
 
         1. In the **Encryption assertion certificate** field, enter your encryption certificate in PEM format. You obtain your encryption certificate from your SAML provider.
         2. In the **Encryption assertion key** field, enter your private key. You receive your decryption key after generating the SAML provider.
@@ -278,6 +278,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

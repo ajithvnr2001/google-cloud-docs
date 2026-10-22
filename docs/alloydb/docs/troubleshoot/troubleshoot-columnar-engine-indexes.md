@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/troubleshoot/troubleshoot-columnar-engine-indexes/
 title: Troubleshoot vector indexes in the columnar engine \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:26.616244+00:00
+fetched_at: 2026-10-22T09:36:25.342981+00:00
 ---
 
 # Troubleshoot vector indexes in the columnar engine  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

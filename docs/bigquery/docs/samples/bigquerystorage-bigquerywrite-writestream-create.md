@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerystorage-bigquerywrite-writestream-create/
 title: Create a write stream \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:37:58.401195+00:00
+fetched_at: 2026-10-22T08:53:49.859693+00:00
 ---
 
 # Create a write stream  |  BigQuery  |  Google Cloud Documentation

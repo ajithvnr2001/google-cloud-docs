@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/samples/privateca-update-certificate-template/
 title: Update a Certificate template \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:37:50.517370+00:00
+fetched_at: 2026-10-22T08:55:00.668029+00:00
 ---
 
 # Update a Certificate template  |  Certificate Authority Service  |  Google Cloud Documentation
@@ -34,7 +34,7 @@ To authenticate to CA Service, set up Application Default Credentials. For more 
     import com.google.cloud.security.privateca.v1.[CertificateTemplate](https://docs.cloud.google.com/java/docs/reference/google-cloud-security-private-ca/latest/com.google.cloud.security.privateca.v1.CertificateTemplate.html);
     import com.google.cloud.security.privateca.v1.[CertificateTemplateName](https://docs.cloud.google.com/java/docs/reference/google-cloud-security-private-ca/latest/com.google.cloud.security.privateca.v1.CertificateTemplateName.html);
     import com.google.cloud.security.privateca.v1.[UpdateCertificateTemplateRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-security-private-ca/latest/com.google.cloud.security.privateca.v1.UpdateCertificateTemplateRequest.html);
-    import com.google.longrunning.[Operation](https://docs.cloud.google.com/java/docs/reference/proto-google-common-protos/latest/com.google.longrunning.Operation.html);
+    import com.google.longrunning.[Operation](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.longrunning.Operation.html);
     import com.google.protobuf.[FieldMask](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.FieldMask.html);
     import java.io.IOException;
     import java.util.concurrent.ExecutionException;
@@ -100,11 +100,11 @@ To authenticate to CA Service, set up Application Default Credentials. For more 
           ApiFuture<Operation> futureCall =
               certificateAuthorityServiceClient.[updateCertificateTemplateCallable](https://docs.cloud.google.com/java/docs/reference/google-cloud-security-private-ca/latest/com.google.cloud.security.privateca.v1.CertificateAuthorityServiceClient.html#com_google_cloud_security_privateca_v1_CertificateAuthorityServiceClient_updateCertificateTemplateCallable__)().futureCall(request);
     
-          [Operation](https://docs.cloud.google.com/java/docs/reference/proto-google-common-protos/latest/com.google.longrunning.Operation.html) response = futureCall.get(60, TimeUnit.SECONDS);
+          [Operation](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.longrunning.Operation.html) response = futureCall.get(60, TimeUnit.SECONDS);
     
           // Check for errors.
-          if (response.[hasError](https://docs.cloud.google.com/java/docs/reference/proto-google-common-protos/latest/com.google.longrunning.Operation.html#com_google_longrunning_Operation_hasError__)()) {
-            System.out.println("Error in updating certificate template ! " + response.[getError](https://docs.cloud.google.com/java/docs/reference/proto-google-common-protos/latest/com.google.longrunning.Operation.html#com_google_longrunning_Operation_getError__)());
+          if (response.[hasError](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.longrunning.Operation.html#com_google_longrunning_Operation_hasError__)()) {
+            System.out.println("Error in updating certificate template ! " + response.[getError](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.longrunning.Operation.html#com_google_longrunning_Operation_getError__)());
             return;
           }
     
@@ -116,7 +116,7 @@ To authenticate to CA Service, set up Application Default Credentials. For more 
     
           if (!updatedCertificateIdentityConstraints.[getAllowSubjectPassthrough](https://docs.cloud.google.com/java/docs/reference/google-cloud-security-private-ca/latest/com.google.cloud.security.privateca.v1.CertificateIdentityConstraints.html#com_google_cloud_security_privateca_v1_CertificateIdentityConstraints_getAllowSubjectPassthrough__)()
               && updatedCertificateIdentityConstraints.getAllowSubjectAltNamesPassthrough()) {
-            System.out.println("Successfully updated the certificate template ! " + response.[getName](https://docs.cloud.google.com/java/docs/reference/proto-google-common-protos/latest/com.google.longrunning.Operation.html#com_google_longrunning_Operation_getName__)());
+            System.out.println("Successfully updated the certificate template ! " + response.[getName](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.longrunning.Operation.html#com_google_longrunning_Operation_getName__)());
             return;
           }
     

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/concepts/
 title: Concepts \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-16T11:05:03.740167+00:00
+fetched_at: 2026-10-22T09:19:09.482643+00:00
 ---
 
 # Concepts  |  Artifact Analysis  |  Google Cloud Documentation

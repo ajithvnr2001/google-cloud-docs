@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/locations/
 title: AlloyDB locations \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:35.126994+00:00
+fetched_at: 2026-10-22T09:27:15.651662+00:00
 ---
 
 # AlloyDB locations  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

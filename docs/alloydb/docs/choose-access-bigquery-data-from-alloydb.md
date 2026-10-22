@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/choose-access-bigquery-data-from-alloydb/
 title: Choose how to access BigQuery data from AlloyDB \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:06.465535+00:00
+fetched_at: 2026-10-22T09:10:47.741632+00:00
 ---
 
 # Choose how to access BigQuery data from AlloyDB  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

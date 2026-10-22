@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/cloudsecurityscanner/
 title: Web Security Scanner roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:42:58.905852+00:00
+fetched_at: 2026-10-22T08:28:04.343704+00:00
 ---
 
 # Web Security Scanner roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

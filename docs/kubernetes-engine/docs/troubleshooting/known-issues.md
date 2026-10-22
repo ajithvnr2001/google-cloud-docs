@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/troubleshooting/known-issues/
 title: GKE known issues \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:03:39.613720+00:00
+fetched_at: 2026-10-22T10:41:14.711497+00:00
 ---
 
 # GKE known issues  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -43,6 +43,15 @@ Or, search for your issue:
 
 Category | Identified version(s) | Fixed version(s) | Issue and workaround  
 ---|---|---|---  
+Upgrades and updates | 
+
+  * 1.36.3-gke.1767000 and later
+
+|  | 
+
+###  Agent Sandbox workloads fail after cluster upgrade 
+
+The Agent Sandbox (`agentsandbox`) addon promoted its custom resource definitions and API from `v1alpha1` to `v1beta1` starting in GKE version 1.36.3-gke.1767000. If you upgrade a cluster running Agent Sandbox from a version earlier than 1.36.3-gke.1767000 without migrating your custom resources, existing `v1alpha1` workloads fail to operate properly.  **Workaround:** Before upgrading your cluster control plane to 1.36.3-gke.1767000 or later, migrate your Agent Sandbox manifests and workloads from `v1alpha1` to `v1beta1` by following the [Agent Sandbox v1alpha1 to v1beta1 migration guide](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/how-install-agent-sandbox#migrate-v1alpha1-to-v1beta1).   
 Operation | 
 
   * 1.35
@@ -777,6 +786,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

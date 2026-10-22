@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-remove-bucket-iam-member/
 title: Delete an IAM member \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:26.779608+00:00
+fetched_at: 2026-10-22T10:31:51.251248+00:00
 ---
 
 # Delete an IAM member  |  Cloud Storage  |  Google Cloud Documentation

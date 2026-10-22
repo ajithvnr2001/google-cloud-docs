@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/evaluation/
 title: Evaluation \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T22:59:00.168495+00:00
+fetched_at: 2026-10-22T10:44:44.564181+00:00
 ---
 
 # Evaluation  |  CX Agent Studio  |  Google Cloud Documentation
@@ -27,14 +27,15 @@ To get started, click the **Evaluate** button at the top of the agent builder.
 
 ## Evaluation concepts
 
-**Test case** : Each test case is a specific, self-contained test scenario or prompt designed to assess the agent's performance. You can create two different types of test case:
+**Test case** : Each test case is a specific, self-contained test scenario or prompt designed to assess the agent's performance. You can create three different types of test case:
 
   * **Scenario** : An AI-powered feature to bootstrap your testing and ensure comprehensive test coverage. You describe a user's goal, and the system automatically simulates the user and generates conversations to test the agent's ability to handle the scenario in a robust way. Scenarios are a useful way to experiment and help define golden conversations.
+  * **Simulation** : Ideal for testing multi-step journeys. Instead of a single open-ended user goal, you break the conversation down into an ordered list of _goals_ (also called _milestones_). The simulated user works through the goals one at a time and only moves on to the next goal after the success criteria for the current goal are met. Simulations give you the flexibility of a simulated user while keeping the conversation on a predictable path.
   * **Golden** : Ideal for regression testing. You provide a specific, "ideal" conversation path, and the evaluation checks if the agent's behavior matches this ideal path, including tool calls.
 
+**Note:** Simulation test cases offer an alternative to scenarios for simulated-user testing. By breaking a single user goal into an ordered list of goals with per-step success criteria, simulations provide more predictable and repeatable coverage for multi-step journeys and clearer step-by-step diagnostics when a run fails.
 
-
-**Run** : An evaluation _run_ represents a complete, single execution of a set of golden and scenario test cases against the performance of the agent you're testing. Each run can include one or more test cases.
+**Run** : An evaluation _run_ represents a complete, single execution of a set of golden, scenario, and simulation test cases against the performance of the agent you're testing. Each run can include one or more test cases.
 
 **Result** : A test case _result_ refers to a single execution of a specific test case in a single run. If a test case is run multiple times during a single evaluation run (for example, to check for consistency, flakiness, and so on), each individual execution is an individual result. Results are displayed as rectangular icons in columns in each test case row, showing a red X if the run failed and a green check-mark if it passed.
 
@@ -42,13 +43,15 @@ To get started, click the **Evaluate** button at the top of the agent builder.
 
 ## Create test cases
 
-To create and access test cases for your agent, click the **Evaluate** button at the top of the agent builder. You can create and manage either golden or scenario based test cases.
+To create and access test cases for your agent, click the **Evaluate** button at the top of the agent builder. You can create and manage golden, scenario, or simulation based test cases. The **Type** column in the test case list shows the type of each test case.
 
 ## Scenario
 
 Scenario-based test case uses AI to automatically generate a variety of conversations based on a high-level user goal you define. With these test cases, rather than providing specific golden conversations, you select generated scenarios or describe specific scenarios that must be tested. This is a powerful tool to help you explore edge cases and testing your agent's robustness without having to manually write every possible conversational path.
 
 Once these scenarios are working well, you can save them as golden conversations.
+
+**Note:** For multi-step journeys where you want more control over the conversation path, consider using simulation test cases as an alternative to scenarios. A simulation replaces the single user goal with an ordered list of goals and per-step success criteria, making simulated-user runs more repeatable and easier to troubleshoot.
 
 To create a scenario:
 
@@ -106,6 +109,133 @@ To create an expectation:
   * Click a particular scenario to open its details.
   * In the **Expectations** section, click **View all**.
   * Follow the interface instructions to create expectations for the scenario.
+
+
+
+## Simulation
+
+A simulation test case breaks a conversation into an ordered list of steps, called _goals_ (also known as _milestones_). Each goal describes one stage of the user's journey and the criteria that must be met before the simulated user moves on to the next stage.
+
+A simulation sits between a scenario and a golden test case:
+
+  * A scenario gives the simulated user a single, open-ended user goal and lets it improvise the whole conversation. This is useful for exploring, but the conversation can take a different route on every run.
+  * A golden test case pins down every user turn. This is precise for regression testing, but it's rigid for long journeys and can't adapt to valid variations in the agent's wording.
+  * A simulation keeps a live simulated user, but constrains it to your goals, in order. This makes multi-step journeys, such as authentication followed by a lookup followed by an update, repeatable without hard-coding every turn.
+
+
+
+Use a simulation when:
+
+  * The journey has several distinct stages that must happen in a fixed order.
+  * You need to confirm that the agent reaches an intermediate state, such as successfully verifying a caller, before it does anything else.
+  * A golden conversation would be too rigid, but a single-goal scenario doesn't reliably exercise the whole path.
+
+
+
+### Create a simulation
+
+  1. Navigate to the **Evaluation** tab.
+  2. Click **\+ Add test case**.
+  3. Select **Simulation**. The simulation editor opens with one empty goal.
+  4. Enter a **Test case name** and add any **Tags**.
+  5. Fill in the **User goal** and **Success criteria** for the first goal, and set **Max turns to achieve**.
+  6. Click **Add goal** and repeat for each stage of the journey, in order. For details of each step type, see Goals.
+  7. Optionally, in the **Variable Override** section, click **Add overrides** to set session variables before the conversation starts. Once the test case has at least one override, the labeled button is replaced by an add (**+**) icon button next to the existing override chips.
+  8. Optionally, click **Add expectations** to attach conversation-level expectations that are checked against the whole transcript.
+  9. Click **Create**.
+
+
+
+The editor has a **UI** tab and a **YAML** tab, which edit the same test case. For details of the YAML format, see Edit a simulation as YAML.
+
+### Goals
+
+Click **Add goal** to add a step to the simulation. Each step is one of the following types, which you select from the type menu on the step:
+
+  * **User goal** : The simulated user generates its own utterances until the success criteria are met. These steps are labeled **Goal** in the editor. Configure: 
+    * **User goal** : What the simulated user is trying to accomplish in this step, such as `Ask for a refund on the most recent order`.
+    * **Success criteria** : The condition that determines whether the step is complete, such as `Agent asks for the reason for the refund`.
+    * **Max turns to achieve** : The maximum number of turns allowed for this step before the simulation stops. The default is 3.
+    * **User information** : Optional persona and context hints that are visible only to the simulated user, not to the agent. Use this to supply details that the user would know, such as an order number or a reason for calling. To add this field, open the step's more options menu and click **Add user information**.
+  * **Static utterance** : The simulated user sends exactly the text that you provide, with no generation. Use this when the precise wording matters, for example when you're testing how the agent handles an alphanumeric account number.
+  * **Event** : Sends a named event to the agent instead of an utterance. Use this to reproduce non-conversational inputs, such as a telephony event.
+
+
+
+Static utterance and event steps are labeled **Turn** in the editor. Like user goals, they can have success criteria, but they don't have their own **Max turns to achieve** or **User information** fields.
+
+Write success criteria as observable agent behavior. Criteria that describe what the agent should _say_ or _do_ are assessed reliably; criteria that describe internal state that never surfaces in the conversation are not.
+
+### How a simulation runs
+
+  1. The simulated user starts on the first step.
+  2. On each turn, the simulated user generates an utterance that works towards the _current_ step only.
+  3. After the agent responds, the current step is assessed against its success criteria. If the criteria are met, the step is marked as completed and the simulated user moves on to the next step. A step that has been completed is never re-opened.
+  4. If a step isn't completed within its **Max turns to achieve** limit, the simulation stops. The steps after it are never attempted.
+  5. When the conversation ends, the transcript is assessed to produce a written justification for each step that was attempted.
+
+
+
+In addition to the per-step limits, the whole conversation is capped at the same overall limit as any other simulated conversation, which is 100 turns. In practice the per-step **Max turns to achieve** limits stop a simulation first.
+
+A simulation only passes if every step is completed, in addition to the other pass or fail criteria that apply to simulated conversations. Because steps are strictly sequential, one failing step blocks the rest of the test case. Order your steps so that a failure points clearly at the stage that broke.
+
+### Simulation results
+
+Open a simulation result to see a goals section whose heading shows how many steps completed out of the total, for example `Goals (2/3)`. The section expands automatically when not every step completed. Inside it is one collapsible panel per step:
+
+  * A green check mark means that the success criteria for the step were met.
+  * A red X means that the step wasn't completed, either because the criteria were never met or because an earlier step blocked it.
+
+
+
+Each panel contains a **Justification** that explains in plain language why the step was or wasn't considered complete. When the run finishes, steps that weren't completed are expanded for you with their justification showing, and completed steps are collapsed. A step that was never attempted is justified with a message naming the text of the goal that blocked it.
+
+The **Conversation** panel below the goals contains the full simulated transcript, so you can replay exactly what the simulated user said and how the agent responded.
+
+If the run ended in an error, a card at the top of the result shows the error message. If the run completed but a **Static utterance** step wasn't completed, that card instead repeats the justification of the first such step. Because static utterance and event steps are both labeled **Turn** in the editor, check the goals section to see which step the card refers to. Uncompleted **User goal** and **Event** steps are only reported in the goals section.
+
+### Edit a simulation as YAML
+
+In the simulation editor, click the **YAML** tab to edit the test case as YAML. The goal list is expressed as `steps`, and each step maps to the fields described in Goals:
+    
+    
+    evals:
+      - name: "billing_refund_request"
+        tags:
+          - "billing"
+        session_parameters:
+          product_id: "prod_123"
+        steps:
+          - goal: "Greet the agent and ask for a refund for product_id."
+            success_criteria: "Agent asks for the reason for the refund."
+            max_turns: 3
+          - goal: "Provide the reason and insist on the refund."
+            success_criteria: "Agent agrees to process the refund or escalates."
+          - static_utterance: "I want to check my balance."
+    
+
+YAML key | Console field  
+---|---  
+`name` | Test case name  
+`tags` | Tags  
+`session_parameters` | Variable Override  
+`goal` | User goal  
+`success_criteria` | Success criteria  
+`max_turns` | Max turns to achieve  
+`response_guide` | User information  
+`static_utterance` | Static utterance step  
+`event` | Event step  
+`expectations` | Expectations  
+  
+The editor validates the YAML as you type, and applies the following rules:
+
+  * The document must contain an `evals` list, and the editor only reads the first entry in that list.
+  * Each entry must have a `name` and at least one step.
+  * Every step must have at least one of `goal`, `static_utterance`, or `event`.
+  * Every key in `session_parameters` must be a variable that's declared in the agent application.
+  * Every string in `expectations` must be the prompt text of an expectation that already exists in the agent application. Matching ignores case and surrounding whitespace. To create an expectation, use **Add expectations** on the **UI** tab, then reference its prompt here.
+  * Unrecognized keys in an entry of the `evals` list are rejected.
 
 
 
@@ -219,6 +349,8 @@ If you click a particular run evaluation, you can see the detailed results for a
 
 For golden test cases, you may see the term "stable replay" which is clarifying that the test ran in a consistent environment (i.e. without shifting context / input).
 
+For simulation test cases, the result shows the outcome of each goal instead of a turn-by-turn comparison against expected responses. For details, see Simulation results.
+
 ### Use AI to improve test cases (PREVIEW)
 
 **Preview**
@@ -274,13 +406,25 @@ Each test case result includes a set of metrics that measure the agent's perform
 
 In all cases, you can customize the values required to for the run pass in the **Settings** menu in the **Evaluate** tab.
 
+**Note:** Simulation test cases are executed by the same simulated-user pipeline as scenarios, so every metric that's calculated for a scenario is also calculated for a simulation. The applicability of each metric is called out below.
+
 ### Tool correctness
 
-Calculated for _golden and scenario_ test cases. This metric reflects the percentage of expected parameters that were matched given an expected tool call and its expected parameter values. Missed tool calls are scored as 0, tool calls with no input parameters are scored as 1 if present. If an unexpected tool call is made during a _golden evaluation_ , the result will be considered a failure, but this has no impact on the tool correctness value.
+Calculated for _golden_ , _scenario_ , and _simulation_ test cases. This metric reflects the percentage of expected parameters that were matched given an expected tool call and its expected parameter values. Missed tool calls are scored as 0, tool calls with no input parameters are scored as 1 if present. If an unexpected tool call is made during a _golden evaluation_ , the result will be considered a failure, but this has no impact on the tool correctness value.
 
 ### User goal satisfaction
 
-Calculated for _scenarios_. User goal satisfaction is a binary metric designed for user-simulation evaluations. It measures whether the simulated user believes their goals were achieved (0=no, 1=yes). Inputs are the `user_goal` as defined by the simulated user configuration and a conversation transcript. If the `user_goal` provided doesn't specify an explicit or implied goal, the output score is -1.
+Calculated for _scenario_ and _simulation_ test cases. User goal satisfaction is a binary metric designed for user-simulation evaluations. It measures whether the simulated user believes their goals were achieved (0=no, 1=yes). Inputs are the `user_goal` as defined by the simulated user configuration and a conversation transcript. If the `user_goal` provided doesn't specify an explicit or implied goal, the output score is -1.
+
+A simulation has no separate field for an overall user goal, so this metric is judged against the **Test case name**. Give simulations a name that describes what the user is trying to achieve overall.
+
+This isn't the only conversation-level signal for a simulation. A simulation can also carry expectations, which are checked against the whole transcript and reported in the **Expectations** section of the result. These are the same expectations that scenarios use; see Scenario expectations. Per-step outcomes are reported by Goal completion.
+
+### Goal completion
+
+Reported for _simulations_ only. Instead of a single score for the conversation, each step in the simulation is reported individually as completed or not completed, along with a justification that explains the outcome. The console summarizes this in the heading of the goals section as the number of completed steps out of the total, for example `Goals (2/3)`. The count includes every step in the simulation, including static utterance and event steps.
+
+Because steps are attempted in order, the first step that isn't completed is the cause of the failure, and the steps after it are never attempted.
 
 ### Hallucinations
 
@@ -290,11 +434,11 @@ You can enable and disable hallucinations in the evaluation settings.
 
 ### Semantic match
 
-Calculated for _golden_ test cases. This metric measures the extent to which an observed agent utterance matches with an expected agent utterance. **Semantic match is computed at the turn level**. Returned values range from 0 (completely inconsistent or contradictory) to 4 (fully consistent).
+Calculated for _golden_ test cases only; it isn't calculated for scenario or simulation test cases. This metric measures the extent to which an observed agent utterance matches with an expected agent utterance. **Semantic match is computed at the turn level**. Returned values range from 0 (completely inconsistent or contradictory) to 4 (fully consistent).
 
 ### Scenario expectations
 
-Calculated for _scenarios_. This metric is a measure of whether or not the behavior of the agent as expected by the simulated users was satisfactory or not (0=no, 1=yes). Two types of simulated user expectations are supported:
+Calculated for _scenario_ and _simulation_ test cases. This metric is a measure of whether or not the behavior of the agent as expected by the simulated users was satisfactory or not (0=no, 1=yes). Two types of simulated user expectations are supported:
 
   * Tool call expectations: Calculated similarly to [tool call correctness](https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/evaluation#tool_correctness) with the following exceptions: 
     * Results are either 0 (no) or 1 (yes).
@@ -306,13 +450,15 @@ Calculated for _scenarios_. This metric is a measure of whether or not the behav
 
 ### Task completion
 
-Calculated for _scenarios_. Task completion is a measure of conversation quality. It jointly measures whether or not the user's goals were achieved AND that the agent behavior was correct. It is defined as:
+Calculated for _scenario_ and _simulation_ test cases. Task completion is a measure of conversation quality. It jointly measures whether or not the user's goals were achieved AND that the agent behavior was correct. It is defined as:
 
 `User_Goal_Satisfied AND no_hallucinations_detected AND Expectations Satisfied`
 
+For simulations, a fourth term is added: every step in the simulation must also be completed. Task completion is what the console reports as the overall pass or fail status of the test case result.
+
 ## Personas
 
-Personas are simulated user personas that you can customize and use for agent testing with _scenario_ test cases. This feature is useful for ensuring that the agent appropriately interacts with the types of human users they are likely to encounter at runtime.
+Personas are simulated user personas that you can customize and use for agent testing with _scenario_ and _simulation_ test cases. This feature is useful for ensuring that the agent appropriately interacts with the types of human users they are likely to encounter at runtime.
 
 If you do not select a persona, a random persona will be selected for each scenario result.
 
@@ -329,7 +475,7 @@ This feature is available for use with both text and audio inputs.
 
 To run an evaluation using a persona:
 
-  1. Navigate back to the main **Evaluate** page and select one or more scenario test cases. Click **Run selected**.
+  1. Navigate back to the main **Evaluate** page and select one or more scenario or simulation test cases. Click **Run selected**.
   2. In the window that pops up, select the persona you just created from the **Personas** drop-down menu and click **Run**.
 
 
@@ -368,6 +514,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

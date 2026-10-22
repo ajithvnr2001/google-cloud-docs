@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/audit-backup-restore/
 title: Secure and restore audit logs \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:58:38.939064+00:00
+fetched_at: 2026-10-22T10:30:10.586767+00:00
 ---
 
 # Secure and restore audit logs  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -34,7 +34,7 @@ You must identify the source GDC bucket that contains the original audit logs yo
 
 **Note:** You must explicitly list the `audit-logs-loki-pa bucket` to identify the bucket that contains the original audit logs that need to be secured. 
 
-To get the permissions you need to view platform audit logs buckets, ask your Organization IAM Admin to grant you the Audit Logs Platform Bucket Viewer (`audit-logs-platform-bucket-viewer`) role in the Management API server in the `audit-logs-loki-pa-buckets` namespace.
+To get the permissions you need to view platform audit logs buckets, ask your IAM Org Admin to grant you the Audit Logs Platform Bucket Viewer (`audit-logs-platform-bucket-viewer`) role in the Management API server in the `audit-logs-loki-pa-buckets` namespace.
 
 You must share with the IO the name and endpoint of the bucket that contains the logs you want to secure. To learn how to view bucket configurations, see [List and view storage bucket configurations](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/list-view-storage-buckets).
 
@@ -48,6 +48,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

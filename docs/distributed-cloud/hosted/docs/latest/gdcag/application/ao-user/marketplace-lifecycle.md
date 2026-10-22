@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/marketplace-lifecycle/
 title: Life cycle of a marketplace deployment \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:24:28.603721+00:00
+fetched_at: 2026-10-22T10:30:19.797478+00:00
 ---
 
 # Life cycle of a marketplace deployment  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -32,14 +32,14 @@ Before you can install, upgrade, or uninstall Marketplace software packages, you
 
 ### Request IAM roles
 
-Contact your Organization IAM Admin or Project IAM Admin to request the following roles based on the tasks you need to perform within your project:
+Contact your IAM Org Admin or IAM Project Admin to request the following roles based on the tasks you need to perform within your project:
 
   * **Marketplace Editor** (`marketplace-editor`): install, upgrade, and uninstall Marketplace software packages.
   * **Project Viewer** (`project-viewer`): view an existing project and its resources.
 
 
 
-The Organization IAM Admin can grant these roles for any project within the organization. The Project IAM Admin can grant these roles within the scope of their specific project.
+The IAM Org Admin can grant these roles for any project within the organization. The IAM Project Admin can grant these roles within the scope of their specific project.
 
 ### Prepare your environment
 
@@ -217,6 +217,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

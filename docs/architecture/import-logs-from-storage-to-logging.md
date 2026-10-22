@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/import-logs-from-storage-to-logging/
 title: Import logs from Cloud Storage to Cloud Logging \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:01.135235+00:00
+fetched_at: 2026-10-22T09:38:04.029362+00:00
 ---
 
 # Import logs from Cloud Storage to Cloud Logging  |  Cloud Architecture Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/maas/zaiorg/glm-52/
 title: GLM 5.2 \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:43:06.755080+00:00
+fetched_at: 2026-10-22T10:24:01.929087+00:00
 ---
 
 # GLM 5.2  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/quickstart-change-streaming-to-gcs/
 title: Stream changes to data in near real-time with Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:30.260806+00:00
+fetched_at: 2026-10-22T08:26:06.251882+00:00
 ---
 
 # Stream changes to data in near real-time with Datastream  |  Google Cloud Documentation

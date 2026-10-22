@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/featurestore/latest/embeddings-search/
 title: Search using embeddings \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:01.367470+00:00
+fetched_at: 2026-10-22T10:25:47.179197+00:00
 ---
 
 # Search using embeddings  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

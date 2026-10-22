@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-define-bucket-website-configuration/
 title: Set the website configuration on a bucket \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:17:02.035061+00:00
+fetched_at: 2026-10-22T10:30:43.004113+00:00
 ---
 
 # Set the website configuration on a bucket  |  Cloud Storage  |  Google Cloud Documentation

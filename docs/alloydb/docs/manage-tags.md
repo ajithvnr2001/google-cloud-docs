@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/manage-tags/
 title: Attach and manage tags on AlloyDB resources \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:08.714682+00:00
+fetched_at: 2026-10-22T09:35:04.867200+00:00
 ---
 
 # Attach and manage tags on AlloyDB resources  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

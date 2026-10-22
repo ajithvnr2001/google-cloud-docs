@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/bigquery/docs/merchant-center-product-targeting-schema/
-title: Google Merchant Center Product Targeting table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
+title: Google Merchant Center product targeting table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:35:46.270088+00:00
+fetched_at: 2026-10-22T10:44:48.365290+00:00
 ---
 
-# Google Merchant Center Product Targeting table  |  BigQuery  |  Google Cloud Documentation
+# Google Merchant Center product targeting table  |  BigQuery  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/bigquery/docs/merchant-center-product-targeting-schema/
 
@@ -19,7 +19,7 @@ fetched_at: 2026-10-21T12:35:46.270088+00:00
 
 Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
 
-# Google Merchant Center Product Targeting table
+# Google Merchant Center product targeting table
 
 ## Overview
 
@@ -42,19 +42,19 @@ If you choose the **Product Targeting** report option when you [set up a Google 
 
 ## Schema
 
-The Product Targeting table has the following schema:
+The product targeting table has the following schema:
 
 Name | Type | Description | Example data  
 ---|---|---|---  
 `product_id` | `STRING` | The Content API REST ID for the product is in the format: `channel:content_language:feed_label:offer_id`. This field is a primary key. | online:en:AU:666840730  
 `**advertiser_id**` | `INTEGER` | Advertiser ID of the campaign. This field is a primary key. | 4321  
 `targeting_status` | `STRING` | Whether the product is targeted by Ads campaigns.  
-**Note:** Products targeted by Ads campaigns might not be eligible to serve. To check if your products are eligible, use the `destinations.status` field of the [ Products report](https://docs.cloud.google.com/bigquery/docs/merchant-center-products-schema).  | TARGETED, NOT_TARGETED  
+**Note:** Products targeted by Ads campaigns might not be eligible to serve. To check if your products are eligible, use the `destinations.status` field of the [ products report](https://docs.cloud.google.com/bigquery/docs/merchant-center-products-schema).  | TARGETED, NOT_TARGETED  
   
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

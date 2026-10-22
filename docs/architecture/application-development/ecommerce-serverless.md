@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/application-development/ecommerce-serverless/
 title: Delete the Ecommerce platform with serverless computing \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:10.598149+00:00
+fetched_at: 2026-10-22T09:38:12.155704+00:00
 ---
 
 # Delete the Ecommerce platform with serverless computing  |  Cloud Architecture Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/use-logging-mcp/
 title: Use the Cloud Logging remote MCP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:17:33.722811+00:00
+fetched_at: 2026-10-22T10:43:27.854064+00:00
 ---
 
 # Use the Cloud Logging remote MCP server  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Use the Cloud Logging remote MCP server Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document shows you how to use the Cloud Logging remote Model Context Protocol (MCP) server to connect with AI applications including Gemini CLI, ChatGPT, Claude, and custom applications you are developing. The Cloud Logging remote MCP server lets agents and API applications interact with your log entries. The Cloud Logging remote MCP server is enabled when you enable the Cloud Logging API. 
+This document shows you how to use the Cloud Logging remote Model Context Protocol (MCP) server to connect with AI applications including Antigravity, ChatGPT, Claude, and custom applications you are developing. The Cloud Logging remote MCP server lets agents and API applications interact with your log entries. The Cloud Logging remote MCP server is enabled when you enable the Cloud Logging API. 
 
 [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP) standardizes how large language models (LLMs) and AI applications or agents connect to external data sources. MCP servers let you use their tools, resources, and prompts to take actions and get updated data from their backend service.
 

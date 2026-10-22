@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/latest/docs/machines/
 title: Manage machines \u00a0|\u00a0 Google Distributed Cloud connected \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:34.342018+00:00
+fetched_at: 2026-10-22T08:24:55.075503+00:00
 ---
 
 # Manage machines  |  Google Distributed Cloud connected  |  Google Cloud Documentation

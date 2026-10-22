@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/storage-optimized-machines/
 title: Storage-optimized machine family for Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:01.042224+00:00
+fetched_at: 2026-10-22T10:41:40.925888+00:00
 ---
 
 # Storage-optimized machine family for Compute Engine  |  Google Cloud Documentation
@@ -261,7 +261,7 @@ For details on pricing, see the [VM pricing page](https://docs.cloud.google.com/
 
 The following restrictions apply:
 
-  * Z4D instances are available in [select zones and regions](https://docs.cloud.google.com/compute/docs/regions-zones#available).
+  * Z4D instances are available in [select zones and regions](https://docs.cloud.google.com/compute/docs/regions-zones#available). For regional availability of bare metal instances, see [Bare metal instances](https://docs.cloud.google.com/compute/docs/instances/bare-metal-instances#regions_zones).
   * You can't use [GPUs](https://docs.cloud.google.com/compute/docs/gpus) with Z4D instances.
   * Z4D doesn't support sole tenancy.
   * You can't suspend a Z4D instance.
@@ -280,6 +280,8 @@ The Z4D machine series supports the following predefined `lssd` machine subtypes
   * `highlssd`: offers high performance and storage intensive streaming and data analysis for large-sized data sets. This machine type has a vCPU to Titanium SSD capacity ratio of 1:438 and offers a larger Titanium SSD disk partition size than `standardlssd`.
 
 
+
+To create a bare metal instance with Z4D, use the `z4d-highmem-384-standardlssd-metal` machine type.
 
 ### Z4D standardlssd
 
@@ -423,11 +425,7 @@ The following network interface drivers are required:
 
 Z4D instances support up to 200 Gbps network bandwidth for standard networking. Z4D instances with two physical NICs support up to 400 Gbps network bandwidth for standard networking. Z4D instances don't use the per VM Tier_1 networking performance feature.
 
-Z4D VM instances require [gVNIC network interfaces](https://docs.cloud.google.com/compute/docs/networking/using-gvnic). 
-
-Z4D supports up to 200 Gbps network bandwidth for standard networking. Z4D instances with two NICs support up to 400 Gbps network bandwidth for standard networking. Z4D instances don't use the per VM Tier_1 networking performance feature.
-
-Before migrating to Z4D or creating Z4D VM instances, make sure that the [operating system image](https://docs.cloud.google.com/compute/docs/images/os-details#networking) that you use supports the IDPF network driver for bare metal instances or the gVNIC driver for VM instances. If your Z4D VM is using an operating system with an older version of gVNIC driver, this is still supported but the VM might experience suboptimal performance such as less network bandwidth or higher latency.
+Before migrating to Z4D or creating Z4D VMs or bare metal instances, make sure that the [operating system image](https://docs.cloud.google.com/compute/docs/images/os-details#networking) that you use supports the IDPF network driver for bare metal instances or the gVNIC driver for VM instances. If your Z4D VM is using an operating system with an older version of gVNIC driver, this is still supported but the VM might experience suboptimal performance such as less network bandwidth or higher latency.
 
 Google recommends using the latest gVNIC driver version to benefit from additional features and bug fixes.
 
@@ -677,6 +675,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

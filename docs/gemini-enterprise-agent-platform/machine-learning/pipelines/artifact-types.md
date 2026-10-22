@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/artifact-types/
 title: ML metadata artifact types \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:45.474320+00:00
+fetched_at: 2026-10-22T10:23:36.735931+00:00
 ---
 
 # ML metadata artifact types  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

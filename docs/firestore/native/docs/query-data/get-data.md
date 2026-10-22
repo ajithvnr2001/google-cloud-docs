@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/query-data/get-data/
 title: Getting data \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:58:44.633754+00:00
+fetched_at: 2026-10-22T08:51:01.071425+00:00
 ---
 
 # Getting data  |  Firestore in Native mode  |  Google Cloud Documentation
@@ -132,7 +132,7 @@ Android
     
     val db = Firebase.firestore
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L109-L109)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L109-L109)
 
 ##### Java  
 Android
@@ -143,7 +143,7 @@ Android
     
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L131-L131)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L131-L131)
 
 ### Dart
     
@@ -196,7 +196,7 @@ Android
     # project inferred from the environment.
     db = firestore.[Client](https://docs.cloud.google.com/python/docs/reference/firestore/latest/google.cloud.firestore_v1.client.Client.html)(project="my-project-id")
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L26-L33)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L26-L33)
 
 ##### Python  
 (Async)
@@ -209,7 +209,7 @@ Android
     # project inferred from the environment.
     db = firestore.[AsyncClient](https://docs.cloud.google.com/python/docs/reference/firestore/latest/google.cloud.firestore_v1.async_client.AsyncClient.html)(project="my-project-id")
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L22-L27)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L22-L27)
 
 ##### Node.js
     
@@ -249,7 +249,7 @@ Android
     }
     
     
-    [main.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/firestore_quickstart/main.go#L40-L48)
+    [main.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/firestore_quickstart/main.go#L40-L48)
 
 ##### PHP
 
@@ -302,7 +302,7 @@ To authenticate to Firestore, set up Application Default Credentials. For more i
     
     puts "Created Cloud Firestore client with given project ID."
     
-    [quickstart.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/quickstart.rb#L19-L26)
+    [quickstart.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/quickstart.rb#L19-L26)
 
 ## Example data
 
@@ -517,7 +517,7 @@ Android
     )
     cities.document("BJ").set(data5)
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L722-L772)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L722-L772)
 
 ##### Java  
 Android
@@ -570,7 +570,7 @@ Android
     data5.put("regions", Arrays.asList("jingjinji", "hebei"));
     cities.document("BJ").set(data5);
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L931-L976)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L931-L976)
 
 ### Dart
     
@@ -733,7 +733,7 @@ Android
         City("Tokyo", None, "Japan", True, 9000000, ["kanto", "honshu"]).to_dict()
     )
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L152-L171)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L152-L171)
 
 ##### Python  
 (Async)
@@ -760,7 +760,7 @@ Android
         City("Tokyo", None, "Japan", True, 9000000, ["kanto", "honshu"]).to_dict()
     )
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L148-L167)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L148-L167)
 
 ##### C++
     
@@ -877,7 +877,7 @@ Android
     }
     
     
-    [retrieve_data_get_dataset.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/retrieve_data_get_dataset.go#L18-L44)
+    [retrieve_data_get_dataset.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/retrieve_data_get_dataset.go#L18-L44)
 
 ##### PHP
 
@@ -1015,7 +1015,7 @@ To authenticate to Firestore, set up Application Default Credentials. For more i
     });
     Console.WriteLine("Added example cities data to the cities collection.");
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/GetData/Program.cs#L44-L80)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/GetData/Program.cs#L44-L80)
 
 ##### Ruby
     
@@ -1067,7 +1067,7 @@ To authenticate to Firestore, set up Application Default Credentials. For more i
       }
     )
     
-    [get_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/get_data.rb#L23-L68)
+    [get_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/get_data.rb#L23-L68)
 
 ## Get a document
 
@@ -1166,7 +1166,7 @@ Android
             Log.d(TAG, "get failed with ", exception)
         }
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L479-L490)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L479-L490)
 
 ##### Java  
 Android
@@ -1189,7 +1189,7 @@ Android
         }
     });
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L625-L640)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L625-L640)
 
 ### Dart
     
@@ -1233,7 +1233,7 @@ Android
     else:
         print("No such document!")
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L217-L223)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L217-L223)
 
 ##### Python  
 (Async)
@@ -1247,7 +1247,7 @@ Android
     else:
         print("No such document!")
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L212-L218)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L212-L218)
 
 ##### C++
     
@@ -1302,7 +1302,7 @@ Android
     }
     
     
-    [retrieve_data_get_as_map.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/retrieve_data_get_as_map.go#L18-L35)
+    [retrieve_data_get_as_map.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/retrieve_data_get_as_map.go#L18-L35)
 
 ##### PHP
 
@@ -1358,7 +1358,7 @@ To authenticate to Firestore, set up Application Default Credentials. For more i
         Console.WriteLine("Document {0} does not exist!", snapshot.Id);
     }
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/GetData/Program.cs#L88-L102)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/GetData/Program.cs#L88-L102)
 
 ##### Ruby
     
@@ -1371,7 +1371,7 @@ To authenticate to Firestore, set up Application Default Credentials. For more i
       puts "Document #{snapshot.document_id} does not exist!"
     end
     
-    [get_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/get_data.rb#L80-L86)
+    [get_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/get_data.rb#L80-L86)
 
 **Note:** If there is no document at the location referenced by `docRef`, the resulting `document` will be empty and calling `exists` on it will return `false`.
 
@@ -1494,7 +1494,7 @@ Android
         }
     }
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L496-L510)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L496-L510)
 
 ##### Java  
 Android
@@ -1519,7 +1519,7 @@ Android
         }
     });
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L646-L663)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L646-L663)
 
 ### Dart
     
@@ -1755,7 +1755,7 @@ Android
         val city = documentSnapshot.toObject<City>()
     }
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L516-L519)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L516-L519)
 
 ##### Java  
 Android
@@ -1771,7 +1771,7 @@ Important: Each custom class must have a public constructor that takes no argume
         }
     });
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L669-L675)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L669-L675)
 
 ### Dart
 
@@ -1872,7 +1872,7 @@ Each custom class must have a public constructor that takes no arguments. In add
     city = City.from_dict(doc.to_dict())
     print(city)
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L230-L234)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L230-L234)
 
 ##### Python  
 (Async)
@@ -1884,7 +1884,7 @@ Each custom class must have a public constructor that takes no arguments. In add
     city = City.from_dict(doc.to_dict())
     print(city)
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L225-L229)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L225-L229)
 
 ##### C++
     
@@ -1917,7 +1917,7 @@ Node.js uses JavaScript objects.
     }
     
     
-    [retrieve_data_get_as_custom_type.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/retrieve_data_get_as_custom_type.go#L18-L36)
+    [retrieve_data_get_as_custom_type.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/retrieve_data_get_as_custom_type.go#L18-L36)
 
 ##### PHP
 
@@ -1981,7 +1981,7 @@ To authenticate to Firestore, set up Application Default Credentials. For more i
         Console.WriteLine("Document {0} does not exist!", snapshot.Id);
     }
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/GetData/Program.cs#L130-L145)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/GetData/Program.cs#L130-L145)
 
 ##### Ruby
 
@@ -2076,7 +2076,7 @@ Android
             Log.w(TAG, "Error getting documents: ", exception)
         }
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L577-L587)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L577-L587)
 
 ##### Java  
 Android
@@ -2098,7 +2098,7 @@ Android
                 }
             });
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L742-L756)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L742-L756)
 
 ### Dart
     
@@ -2141,7 +2141,7 @@ Android
     for doc in docs:
         print(f"{doc.id} => {doc.to_dict()}")
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L241-L249)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L241-L249)
 
 ##### Python  
 (Async)
@@ -2157,7 +2157,7 @@ Android
     async for doc in docs:
         print(f"{doc.id} => {doc.to_dict()}")
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L236-L244)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L236-L244)
 
 ##### C++
     
@@ -2223,7 +2223,7 @@ Android
     }
     
     
-    [retrieve_data_query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/retrieve_data_query.go#L18-L42)
+    [retrieve_data_query.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/retrieve_data_query.go#L18-L42)
 
 ##### PHP
 
@@ -2279,7 +2279,7 @@ To authenticate to Firestore, set up Application Default Credentials. For more i
         Console.WriteLine("");
     }
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/GetData/Program.cs#L153-L164)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/GetData/Program.cs#L153-L164)
 
 ##### Ruby
     
@@ -2292,7 +2292,7 @@ To authenticate to Firestore, set up Application Default Credentials. For more i
       puts "#{city.document_id} data: #{city.data}."
     end
     
-    [get_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/get_data.rb#L96-L102)
+    [get_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/get_data.rb#L96-L102)
 
 By default, Firestore retrieves all documents that satisfy the query in ascending order by document ID, but you can [order and limit the data returned](https://docs.cloud.google.com/firestore/native/docs/query-data/order-limit-data).
 
@@ -2376,7 +2376,7 @@ Android
             Log.d(TAG, "Error getting documents: ", exception)
         }
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L593-L602)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L593-L602)
 
 ##### Java  
 Android
@@ -2397,7 +2397,7 @@ Android
                 }
             });
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L762-L775)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L762-L775)
 
 ### Dart
     
@@ -2435,7 +2435,7 @@ Android
     for doc in docs:
         print(f"{doc.id} => {doc.to_dict()}")
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L270-L273)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L270-L273)
 
 ##### Python  
 (Async)
@@ -2446,7 +2446,7 @@ Android
     async for doc in docs:
         print(f"{doc.id} => {doc.to_dict()}")
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L265-L268)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L265-L268)
 
 ##### C++
     
@@ -2506,7 +2506,7 @@ Android
     }
     
     
-    [retrieve_data_get_all_documents.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/retrieve_data_get_all_documents.go#L18-L43)
+    [retrieve_data_get_all_documents.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/retrieve_data_get_all_documents.go#L18-L43)
 
 ##### PHP
 
@@ -2564,7 +2564,7 @@ To authenticate to Firestore, set up Application Default Credentials. For more i
         Console.WriteLine("");
     }
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/GetData/Program.cs#L172-L183)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/GetData/Program.cs#L172-L183)
 
 ##### Ruby
     
@@ -2574,7 +2574,7 @@ To authenticate to Firestore, set up Application Default Credentials. For more i
       puts "#{city.document_id} data: #{city.data}."
     end
     
-    [get_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/get_data.rb#L112-L115)
+    [get_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/get_data.rb#L112-L115)
 
 ### Get all documents in a subcollection
 
@@ -2647,7 +2647,7 @@ Android
             Log.d(TAG, "Error getting documents: ", exception)
         }
     
-    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L608-L619)
+    [DocSnippets.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/DocSnippets.kt#L608-L619)
 
 ##### Java  
 Android
@@ -2670,7 +2670,7 @@ Android
                 }
             });
     
-    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L781-L796)
+    [DocSnippets.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/DocSnippets.java#L781-L796)
 
 ### Dart
     
@@ -2795,7 +2795,7 @@ Not available in the Flutter client library.
         for doc in collection.stream():
             print(f"{doc.id} => {doc.to_dict()}")
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-client/snippets.py#L955-L959)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-client/snippets.py#L955-L959)
 
 ##### Python  
 (Async)
@@ -2806,7 +2806,7 @@ Not available in the Flutter client library.
         async for doc in collection.stream():
             print(f"{doc.id} => {doc.to_dict()}")
     
-    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/08e010a5852a3328fe8c1904020e1d8adb48fe85/firestore/cloud-async-client/snippets.py#L790-L793)
+    [snippets.py](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/83a4a2befda9030e8c4e5b1d24bbc97c04329923/firestore/cloud-async-client/snippets.py#L790-L793)
 
 ##### C++
 
@@ -2850,7 +2850,7 @@ Not available in the C++ client library.
     }
     
     
-    [retrieve_data_get_sub_collections.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/edbc7e6338c19c4a6e788ce685473e8cf2f397e4/firestore/retrieve_data_get_sub_collections.go#L18-L41)
+    [retrieve_data_get_sub_collections.go](https://github.com/GoogleCloudPlatform/golang-samples/blob/5a88b95e85a07cb132bd437f5940aea3afe8ab54/firestore/retrieve_data_get_sub_collections.go#L18-L41)
 
 ##### PHP
 
@@ -2882,7 +2882,7 @@ To authenticate to Firestore, set up Application Default Credentials. For more i
         Console.WriteLine("Found subcollection with ID: {0}", subcollectionRef.Id);
     }
     
-    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/55b6f7afd6367b7564f419b3e0d62a3e467522e3/firestore/api/GetData/Program.cs#L206-L213)
+    [Program.cs](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/blob/6f1cae15ae479cedcc5c6f3760f94c581c985822/firestore/api/GetData/Program.cs#L206-L213)
 
 ##### Ruby
     
@@ -2892,7 +2892,7 @@ To authenticate to Firestore, set up Application Default Credentials. For more i
       puts col.collection_id
     end
     
-    [get_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/96af99eb31443fe6587644b8cd7074947b001a5a/google-cloud-firestore/samples/get_data.rb#L140-L143)
+    [get_data.rb](https://github.com/googleapis/google-cloud-ruby/blob/ce9995ee43bde7f4792efc07782fe2a2ba6184d9/google-cloud-firestore/samples/get_data.rb#L140-L143)
 
 Learn more about different [types of queries](https://docs.cloud.google.com/firestore/native/docs/query-data/queries).
 
@@ -2902,6 +2902,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-19 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/audit/configure-gsuite-audit-logs/
 title: View and manage audit logs for Google Workspace \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:37.488178+00:00
+fetched_at: 2026-10-22T10:44:03.653417+00:00
 ---
 
 # View and manage audit logs for Google Workspace  |  Cloud Logging  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback
 
 #  View and manage audit logs for Google Workspace Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document describes how to configure, view, and route audit logs for Google Workspace to Google Cloud. By routing audit logs to Google Cloud, you can diagnose and resolve common issues related to data security and compliance.
+You can configure, view, and route audit logs for Google Workspace to Google Cloud to monitor administrative and user activity across your organization. Routing these audit logs to Google Cloud helps you diagnose and resolve issues related to data security and compliance.
 
-For a conceptual discussion of Google Workspace audit logs, see [Audit logs for Google Workspace](https://docs.cloud.google.com/logging/docs/audit/gsuite-audit-logging).
+For an overview of Google Workspace audit logs, see [Audit logs for Google Workspace](https://docs.cloud.google.com/logging/docs/audit/gsuite-audit-logging).
 
 ## Overview
 

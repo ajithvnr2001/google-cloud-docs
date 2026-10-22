@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/cluster/
 title: Maintain Kubernetes clusters \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:59:08.637129+00:00
+fetched_at: 2026-10-22T10:24:41.328605+00:00
 ---
 
 # Maintain Kubernetes clusters  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -49,7 +49,7 @@ You must have specific roles to get the permissions you need to maintain your Ku
 
 #### Shared cluster roles
 
-To view and maintain your shared Kubernetes cluster and its resources, ask your Organization IAM Admin to grant you the following roles based on the task to perform:
+To view and maintain your shared Kubernetes cluster and its resources, ask your IAM Org Admin to grant you the following roles based on the task to perform:
 
   * **Project Creator** (`project-creator`): create or view project resources. This role is required to attach a shared cluster to a project.
 
@@ -64,7 +64,7 @@ These roles aren't bound to a project namespace.
 
 #### Standard cluster roles
 
-To view your standard Kubernetes cluster and its resources, ask your Project IAM Admin to grant you the **Standard Cluster Viewer** (`standard-cluster-viewer`) role. This role provides access to the management plane APIs for the standard cluster hosted in the management API server.
+To view your standard Kubernetes cluster and its resources, ask your IAM Project Admin to grant you the **Standard Cluster Viewer** (`standard-cluster-viewer`) role. This role provides access to the management plane APIs for the standard cluster hosted in the management API server.
 
 This role is bound to your project namespace.
 
@@ -381,6 +381,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

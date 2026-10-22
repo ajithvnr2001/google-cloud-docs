@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/generate-manage-auto-embeddings-for-tables/
 title: Generate and manage auto vector embeddings for large tables \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:02.488007+00:00
+fetched_at: 2026-10-22T09:30:25.309565+00:00
 ---
 
 # Generate and manage auto vector embeddings for large tables  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

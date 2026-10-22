@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/table-functions/
 title: Table functions \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:12:03.405506+00:00
+fetched_at: 2026-10-22T09:10:04.527531+00:00
 ---
 
 # Table functions  |  BigQuery  |  Google Cloud Documentation

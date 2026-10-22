@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/migration/snowflake-transfer-schema/
 title: Schema detection and mapping for Snowflake \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:46:20.962224+00:00
+fetched_at: 2026-10-22T08:58:14.593301+00:00
 ---
 
 # Schema detection and mapping for Snowflake  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/user-grant-access/
 title: Grant access to other users \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:05.208651+00:00
+fetched_at: 2026-10-22T09:37:44.194227+00:00
 ---
 
 # Grant access to other users  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

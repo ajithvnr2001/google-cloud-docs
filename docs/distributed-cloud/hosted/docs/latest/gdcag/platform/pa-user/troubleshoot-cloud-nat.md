@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/troubleshoot-cloud-nat/
 title: Troubleshoot Cloud NAT \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:59:17.456452+00:00
+fetched_at: 2026-10-22T10:23:18.903067+00:00
 ---
 
 # Troubleshoot Cloud NAT  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -28,7 +28,7 @@ This guide helps you diagnose why your workloads (Pods or VMs) cannot access ext
 
 To troubleshoot a Cloud NAT configuration, you must have the following:
 
-  * The necessary identity and access roles. Ask your Project IAM Admin to grant you one or both of the following roles: 
+  * The necessary identity and access roles. Ask your IAM Project Admin to grant you one or both of the following roles: 
     * **Cloud NAT Viewer (`cloud-nat-viewer`)**: This role offers read-only access to Cloud NAT resources. This role gets you started on diagnosing the problem.
     * **Cloud NAT Developer (`cloud-nat-developer`)**: This role provides the necessary permissions for application operators to Create, Read, Update, and Delete (CRUD) Cloud NAT objects within their assigned projects. This role lets you perform many of the fixes described on this page.
     * Additional roles may be needed for some specific diagnostic measures and fixes.
@@ -226,6 +226,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

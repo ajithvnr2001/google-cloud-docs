@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/ip-allowlists/
 title: IP allowlists \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:33.093103+00:00
+fetched_at: 2026-10-22T08:26:05.271168+00:00
 ---
 
 # IP allowlists  |  Datastream  |  Google Cloud Documentation

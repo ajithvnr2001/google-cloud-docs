@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/deleting-buckets/
 title: Delete buckets \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:52:41.229636+00:00
+fetched_at: 2026-10-22T10:29:12.425959+00:00
 ---
 
 # Delete buckets  |  Cloud Storage  |  Google Cloud Documentation
@@ -21,11 +21,11 @@ Send feedback
 
 #  Delete buckets Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page shows you how to delete Cloud Storage [buckets](https://docs.cloud.google.com/storage/docs/buckets).
+You can delete a Cloud Storage bucket when you no longer need the bucket or the objects within it.
 
-If you delete a bucket that has [soft delete](https://docs.cloud.google.com/storage/docs/soft-delete) enabled, you can restore the bucket or individual objects from the bucket during the retention duration specified in the soft delete policy. Managed folders cannot be recovered, even if the bucket has soft delete enabled.
+If you delete a bucket that has [soft delete](https://docs.cloud.google.com/storage/docs/soft-delete) enabled, you can restore the bucket or individual objects from the bucket during the soft delete retention duration. You can't recover managed folders.
 
-**Warning:** Once a bucket is deleted, anyone can reuse the bucket's name for a new bucket and potentially receive data or requests intended for the original deleted bucket. To learn how to mitigate this risk, see [Bucket name considerations](https://docs.cloud.google.com/storage/docs/buckets#considerations). Note that a soft-deleted bucket cannot be restored if its name becomes reused.
+**Warning:** After a bucket is deleted, anyone can reuse the bucket's name for a new bucket and potentially receive data or requests that are intended for the original bucket. Also, a soft-deleted bucket can't be restored if its name is reused. To learn how to mitigate these risks, see [Bucket name considerations](https://docs.cloud.google.com/storage/docs/buckets#considerations).
 
 ## Before you begin
 
@@ -361,6 +361,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

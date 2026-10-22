@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/identity/
 title: Overview of identity and access management \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:11.826365+00:00
+fetched_at: 2026-10-22T09:38:04.162997+00:00
 ---
 
 # Overview of identity and access management  |  Cloud Architecture Center  |  Google Cloud Documentation

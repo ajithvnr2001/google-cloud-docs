@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/gcpc-label-propagation/
 title: Resource labeling by Gemini Enterprise Agent Platform Pipelines \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:43.888970+00:00
+fetched_at: 2026-10-22T10:23:45.914137+00:00
 ---
 
 # Resource labeling by Gemini Enterprise Agent Platform Pipelines  |  Google Cloud Documentation

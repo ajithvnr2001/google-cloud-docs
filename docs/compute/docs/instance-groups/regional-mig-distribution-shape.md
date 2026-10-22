@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/regional-mig-distribution-shape/
 title: Regional MIG target distribution shape \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:22:48.647833+00:00
+fetched_at: 2026-10-22T09:43:42.241396+00:00
 ---
 
 # Regional MIG target distribution shape  |  Compute Engine  |  Google Cloud Documentation
@@ -381,11 +381,9 @@ In the unlikely event of a zonal failure in the zone that hosts your regional MI
 
 ## Monitor target distribution shapes and zonal balance
 
-To observe how your target distribution shape (`EVEN`, `BALANCED`, `ANY`, or `ANY_SINGLE_ZONE`) affects the real-time allocation of instances across zones over time, you can use the **GCE MIG Instance Distribution Monitoring** dashboard in Cloud Monitoring.
+To observe how your target distribution shape (`EVEN`, `BALANCED`, `ANY`, or `ANY_SINGLE_ZONE`) affects the real-time allocation of instances across zones over time, you can view the instance distribution for a specific MIG or aggregated data across multiple MIGs.
 
-This preconfigured dashboard helps you to verify that your instance distribution is working as intended. You can use these insights to monitor and investigate issues during capacity shifts or outages, and identify potential adjustments to optimize your infrastructure or troubleshoot problems.
-
-To learn how to access the monitoring dashboard, see [Monitor instance distribution in MIGs](https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution).
+This visibility helps you verify that your instance distribution is working as intended, monitor capacity shifts or outages, and identify potential adjustments to optimize your infrastructure. For instructions, see [Monitor instance distribution in MIGs](https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution).
 
 ## What's next
 
@@ -400,6 +398,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

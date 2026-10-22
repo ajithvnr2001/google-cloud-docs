@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/training-clusters/run-prebuilt-workloads/
 title: Run prebuilt workloads \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:41.648824+00:00
+fetched_at: 2026-10-22T10:29:25.445010+00:00
 ---
 
 # Run prebuilt workloads  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

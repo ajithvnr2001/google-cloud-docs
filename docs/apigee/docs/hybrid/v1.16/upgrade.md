@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/upgrade/
 title: Upgrading Apigee hybrid to version 1.16 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T10:41:59.939117+00:00
+fetched_at: 2026-10-22T09:47:45.733859+00:00
 ---
 
 # Upgrading Apigee hybrid to version 1.16  |  Google Cloud Documentation

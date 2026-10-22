@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-ftp/configure-vpc-service-controls/
 title: Configure VPC Service Controls for Cloud FTP \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:23:37.081233+00:00
+fetched_at: 2026-10-22T10:14:42.659033+00:00
 ---
 
 # Configure VPC Service Controls for Cloud FTP  |  Google Cloud Documentation
@@ -20,10 +20,6 @@ fetched_at: 2026-10-21T14:23:37.081233+00:00
 Send feedback 
 
 #  Configure VPC Service Controls for Cloud FTP Stay organized with collections  Save and categorize content based on your preferences. 
-
-**Preview**
-
-This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
 Cloud FTP requires access to Cloud Storage buckets in order to upload and download data in the buckets. If your organization uses VPC Service Controls to help protect Cloud Storage, then extra setup is required to use Cloud FTP to transfer data. This document describes how to create a VPC Service Controls service perimeter with ingress rules that allow Cloud FTP to transfer Cloud Storage data that is stored within the perimeter.
 
@@ -93,6 +89,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

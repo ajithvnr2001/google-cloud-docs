@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/gemini-robotics-er/
 title: Gemini Robotics ER 2 \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:46:19.357146+00:00
+fetched_at: 2026-10-22T10:24:00.951728+00:00
 ---
 
 # Gemini Robotics ER 2  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/sources-mongodb/
 title: Stream data from MongoDB databases \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:29.225345+00:00
+fetched_at: 2026-10-22T08:26:05.160482+00:00
 ---
 
 # Stream data from MongoDB databases  |  Datastream  |  Google Cloud Documentation
@@ -82,6 +82,7 @@ Known limitations for using MongoDB as a source include:
   * Strict mode doesn't support the `Infinity`, `-Infinity`, and `NaN` numeric values. Documents are discarded if they contain these values in strict mode. If your database contains these values, use canonical mode (default). For more information, see [MongoDB data types](https://docs.cloud.google.com/datastream/docs/bq-map-data-types#mongodb-data-types).
   * Datastream doesn't support Request Unit (RU)-based Azure Cosmos DB.
   * Datastream doesn't support Amazon DocumentDB Elastic Clusters.
+  * Datastream doesn't replicate change events from MongoDB [time series collections](https://www.mongodb.com/docs/manual/core/timeseries-collections/), because MongoDB doesn't support change streams on them. Datastream only backfills time series collections and doesn't replicate inserts, updates, or deletes made after the backfill.
 
 
 
@@ -96,6 +97,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

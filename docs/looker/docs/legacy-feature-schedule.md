@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/legacy-feature-schedule/
 title: Admin settings - Legacy features \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:03:26.139143+00:00
+fetched_at: 2026-10-22T10:11:42.337349+00:00
 ---
 
 # Admin settings - Legacy features  |  Looker  |  Google Cloud Documentation
@@ -72,9 +72,6 @@ Leave the legacy feature enabled while you implement any necessary transition gu
 ---  
 **Description** | **Introduced** | **Disabled** | **Disallowed** | **Removed** | **Status** | **Resources**  
 When this legacy feature is enabled, all LookML projects will use the legacy LookML runtime by default rather than the new LookML runtime. To enable new LookML runtime for a LookML project while this legacy feature is on, add a [`new_lookml_runtime: yes`](https://docs.cloud.google.com/looker/docs/reference/param-manifest-new-lookml-runtime) LookML statement to the LookML project's manifest file. | 22.6 | 22.14 | 24.2 | TBD | **Active** |   
-**Use Legacy Connections Page**  
-**Description** | **Introduced** | **Disabled** | **Disallowed** | **Removed** | **Status** | **Resources**  
-When this legacy feature is enabled, it enables the [legacy **Connections**](https://docs.cloud.google.com/looker/docs/connecting-to-your-db-legacy) page in Looker. Enable this feature if you don't want to use the [new **Connections**](https://docs.cloud.google.com/looker/docs/connecting-to-your-db) workflow for creating database connections in Looker. | 25.4 | 25.8 | 25.10 | 26.20 | **Active** | [Connecting Looker to your database](https://docs.cloud.google.com/looker/docs/connecting-to-your-db)  
 **Use Legacy Explore and Merge Query Experience**  
 **Description** | **Introduced** | **Disabled** | **Disallowed** | **Removed** | **Status** | **Resources**  
 When enabled, Explores and Merge Queries open in the legacy experience for all users. Disable this to open them in the new Looker Explore and Merge Query experience by default. Individual users can still switch back to the legacy experience. | 26.20 | 27.2 | 27.6 | 27.6 | **Active** |   
@@ -152,11 +149,12 @@ Always hide Row Totals series from stacked charts | 23.0 | 23.0 | 23.20 | **Remo
 Disallow Numeric Query IDs | 24.2 | 24.10 | 24.10 | **Removed in Looker 24.10** |   
 Allow Legacy Maps | 23.10 | 24.8 | 24.18 | **Removed in Looker 24.18** |   
 Use Legacy Project Creation Page | 24.20 | 26.4 | 26.18 | **Removed in Looker 26.18** | [Creating a new LookML project](https://docs.cloud.google.com/looker/docs/create-projects)  
+Use Legacy Connections Page | 25.4 | 25.8 | 26.20 | **Removed in Looker 26.20** | [Connecting Looker to your database](https://docs.cloud.google.com/looker/docs/connecting-to-your-db)  
   
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

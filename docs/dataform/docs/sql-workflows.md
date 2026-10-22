@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataform/docs/sql-workflows/
 title: Overview of workflows \u00a0|\u00a0 Dataform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:19.203739+00:00
+fetched_at: 2026-10-22T08:25:41.615059+00:00
 ---
 
 # Overview of workflows  |  Dataform  |  Google Cloud Documentation

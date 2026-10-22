@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/github/build-repos-from-github/
 title: Building repositories from GitHub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:00:27.546338+00:00
+fetched_at: 2026-10-22T09:08:31.360223+00:00
 ---
 
 # Building repositories from GitHub  |  Google Cloud Documentation
@@ -161,7 +161,7 @@ To create a GitHub trigger with the API, use the following JSON template:
     {
         "filename": "cloudbuild.yaml",
         "name": "curl-trigger",
-        "description": "curl trigger&quot;,
+        "description": "curl trigger",
         "repository_event_config": {
           "repository": "REPO_NAME",
           "repository_type": "GITHUB",
@@ -183,7 +183,7 @@ Where:
 Enter the following `curl` command in your terminal:
     
     
-      curl -X POST -H "Authorization: Bearer "$(gcloud auth print-access-token) -H "Content-Type: application/json; charset=utf-8" -H &quot;x-goog-user-project: PROJECT_NUMBER" https://cloudbuild.googleapis.com/v1/projects/PROJECT_ID/triggers -d @trigger.json
+      curl -X POST -H "Authorization: Bearer "$(gcloud auth print-access-token) -H "Content-Type: application/json; charset=utf-8" -H "x-goog-user-project: PROJECT_NUMBER" https://cloudbuild.googleapis.com/v1/projects/PROJECT_ID/triggers -d @trigger.json
     
 
 Where:
@@ -265,6 +265,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

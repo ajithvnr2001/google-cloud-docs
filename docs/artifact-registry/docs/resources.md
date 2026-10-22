@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/resources/
 title: Resources \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:31:02.953477+00:00
+fetched_at: 2026-10-22T09:14:42.301429+00:00
 ---
 
 # Resources  |  Artifact Registry  |  Google Cloud Documentation

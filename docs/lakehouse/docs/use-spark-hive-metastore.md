@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/lakehouse/docs/use-spark-hive-metastore/
 title: Set up Spark and Hive with the Lakehouse runtime catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:25:59.030981+00:00
+fetched_at: 2026-10-22T09:50:05.271864+00:00
 ---
 
 # Set up Spark and Hive with the Lakehouse runtime catalog  |  Google Cloud Documentation
@@ -177,7 +177,35 @@ To route Hive catalog requests directly to a specific region for data residency 
 
 To use the Lakehouse runtime catalog, you must configure your Spark session with specific properties. You can set these properties when you create a Managed Service for Apache Spark cluster or specify them each time you create a session.
 
-These properties include details such as the client factory, Google Cloud project ID, default catalog, and warehouse directory. After the session is established, you can perform fundamental operations like listing existing databases, creating new databases, defining tables, and inserting data.
+### Spark configuration properties
+
+Configure your Spark session or job submission with the following properties to connect to the Apache Hive catalog endpoint:
+
+Property | Value | Description  
+---|---|---  
+`spark.hive.metastore.client.factory.class` | `com.google.cloud.bigquery.metastore.client.BigLakeMetastoreClientFactory` | Configures Spark to use the Lakehouse runtime catalog Hive client factory.  
+`spark.hive.metastore.blms.project.id` | `PROJECT_ID` | Specifies the Google Cloud project ID that contains the Hive catalog.  
+`spark.hive.metastore.blms.catalog.default` | `LAKEHOUSE_CATALOG_ID` | Specifies the default Hive catalog ID in the Lakehouse runtime catalog.  
+`spark.hive.metastore.warehouse.dir` | `gs://GCS_WAREHOUSE_PATH` | Specifies the Cloud Storage URI for the Hive warehouse directory.  
+`spark.sql.catalogImplementation` | `hive` | Enables Hive catalog support in the Spark session.  
+`spark.sql.addPartitionInBatch.size` | `900` | Optional: sets the maximum batch size for partition ingestion operations. For more information, see [Partition batch size](https://docs.cloud.google.com/lakehouse/docs/spark-hive-limitations#partition-size).  
+`spark.sql.extensions` | `io.delta.sql.DeltaSparkSessionExtension` | Optional: enables Delta Lake SQL extensions when using [Delta tables](https://docs.cloud.google.com/lakehouse/docs/use-spark-delta-tables) with a Hive catalog.  
+`spark.sql.catalog.spark_catalog` | `org.apache.spark.sql.delta.catalog.DeltaCatalog` | Optional: configures the Delta catalog implementation when using [Delta tables](https://docs.cloud.google.com/lakehouse/docs/use-spark-delta-tables) with a Hive catalog.  
+  
+Replace the following:
+
+  * `PROJECT_ID`: your Google Cloud project ID.
+
+  * `LAKEHOUSE_CATALOG_ID`: the Hive catalog name.
+
+  * `GCS_WAREHOUSE_PATH`: the Cloud Storage path that stores your Hive warehouse.
+
+
+
+
+### Run Spark and Hive queries
+
+After the session is established, you can perform operations such as listing existing databases, creating databases, defining tables, and inserting data:
 
 ### spark-sql
 
@@ -489,6 +517,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-15 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/major-version-upgrade-inplace-overview/
 title: Database in-place major version upgrade overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:01.720810+00:00
+fetched_at: 2026-10-22T10:41:58.097910+00:00
 ---
 
 # Database in-place major version upgrade overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Database in-place major version upgrade overview Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document describes AlloyDB for PostgreSQL database in-place major version upgrades, which let you upgrade a database to a higher version without migrating data or replacing the existing instance.
+To adopt new PostgreSQL features, performance improvements, and security enhancements without migrating data or changing application connection strings, you can perform an in-place major version upgrade on your AlloyDB for PostgreSQL cluster.
 
 The PostgreSQL community periodically releases [new major versions](https://www.postgresql.org/support/versioning/) that contain new features, performance improvements, and security enhancements. After PostgreSQL releases a new major version, AlloyDB [adds support for the compatible version](https://docs.cloud.google.com/alloydb/docs/db-version-policies#support-table). To keep your database up to date, you can upgrade your AlloyDB cluster by upgrading to a higher major version. You can upgrade your cluster by using this in-place upgrade feature or by [migrating your data](https://docs.cloud.google.com/alloydb/docs/cluster-upgrade) to a new AlloyDB cluster.
 
@@ -63,7 +63,7 @@ After the primary instance is upgraded, read pool instances become unavailable. 
 
 If the major version upgrade fails at any step before the primary instance is upgraded, AlloyDB automatically rolls back all changes.
 
-After the primary instance is upgraded, the cluster version is upgraded to the target version and no rollbacks are triggered for any failure after this point. For example, AlloyDB doesn't roll back the cluster if one or more read pool instance upgrades fail. In these situations, contact [Google Cloud CLI Support](https://cloud.google.com/support).
+After the primary instance is upgraded, the cluster version is upgraded to the target version and no rollbacks are triggered for any failure after this point. For example, AlloyDB doesn't roll back the cluster if one or more read pool instance upgrades fail. In these situations, contact [Google Cloud Support](https://cloud.google.com/support).
 
 The following table gives an approximate estimation of the time taken for the upgrade to complete for clusters of different database sizes:
 
@@ -142,6 +142,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

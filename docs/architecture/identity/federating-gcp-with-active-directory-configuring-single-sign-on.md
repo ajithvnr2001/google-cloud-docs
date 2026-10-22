@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/identity/federating-gcp-with-active-directory-configuring-single-sign-on/
 title: Active Directory single sign-on \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:28:58.944374+00:00
+fetched_at: 2026-10-22T09:01:21.223524+00:00
 ---
 
 # Active Directory single sign-on  |  Cloud Architecture Center  |  Google Cloud Documentation

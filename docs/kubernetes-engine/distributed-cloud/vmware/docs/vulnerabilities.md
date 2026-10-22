@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities/
 title: Vulnerability fixes \u00a0|\u00a0 Google Distributed Cloud software only for VMware \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:57:15.257759+00:00
+fetched_at: 2026-10-22T10:14:04.863799+00:00
 ---
 
 # Vulnerability fixes  |  Google Distributed Cloud software only for VMware  |  Google Cloud Documentation
@@ -50,6 +50,17 @@ The following table lists all vulnerabilities that have been fixed, starting in 
 
 Minor | Patch and severity | Vulnerabilities fixed  
 ---|---|---  
+  
+### 1.36
+
+| [1.36.200-gke.118](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/release-notes#October_21_2026):  
+Critical Severity | N/A  
+[1.36.200-gke.118](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/release-notes#October_21_2026):  
+High Severity | N/A  
+[1.36.200-gke.118](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/release-notes#October_21_2026):  
+Container-Optimized OS |  [CVE-2026-64378](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-64378), [CVE-2026-70463](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-70463), [CVE-2026-53791](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-53791), [CVE-2026-53789](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-53789), [CVE-2026-70455](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-70455), [CVE-2026-53802](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-53802), [CVE-2026-53803](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-53803), [CVE-2026-70461](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-70461), [CVE-2026-60000](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-60000), [CVE-2026-53784](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-53784), [CVE-2026-53795](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-53795), [CVE-2026-70457](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-70457), [CVE-2026-60002](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-60002), [CVE-2026-59999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-59999)  
+[1.36.200-gke.118](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/release-notes#October_21_2026):  
+Ubuntu | N/A  
   
 ### 1.36
 
@@ -624,6 +635,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

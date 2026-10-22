@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/export-to-bigtable/
 title: Export data to Bigtable (reverse ETL) \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:10:04.908177+00:00
+fetched_at: 2026-10-22T10:44:49.735559+00:00
 ---
 
 # Export data to Bigtable (reverse ETL)  |  BigQuery  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Export data to Bigtable (reverse ETL)
 
-This document describes how you can set up reverse ETL (RETL) from BigQuery to Bigtable. You can do this by using the [`EXPORT DATA` statement](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/export-statements) to export data from a BigQuery table to a [Bigtable](https://docs.cloud.google.com/bigtable/docs/overview) table.
+Reverse extract-transform-load (RETL) from BigQuery to Bigtable lets you combine analytics in BigQuery with the low latency and high throughput of Bigtable. You can serve data to application users without exhausting quotas and limits on BigQuery.
 
-You can use a RETL workflow to Bigtable to combine BigQuery's analytics capabilities with Bigtable's low latency and high throughput. This workflow lets you serve data to application users without exhausting quotas and limits on BigQuery.
+To set up this workflow, you use the [`EXPORT DATA` statement](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/export-statements) to export data from a BigQuery table to a [Bigtable](https://docs.cloud.google.com/bigtable/docs/overview) table.
 
 ## Characteristics of Bigtable tables
 
@@ -321,6 +321,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

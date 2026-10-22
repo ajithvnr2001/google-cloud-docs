@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/committed-use-discounts/share-resource-cuds-across-projects/
 title: Share resource-based CUDs across projects \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:21.592904+00:00
+fetched_at: 2026-10-22T09:24:34.952455+00:00
 ---
 
 # Share resource-based CUDs across projects  |  Compute Engine  |  Google Cloud Documentation

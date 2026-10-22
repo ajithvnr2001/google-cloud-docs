@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/monitoring/docs/use-monitoring-mcp/
 title: Use the Cloud Monitoring remote MCP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:16:40.191468+00:00
+fetched_at: 2026-10-22T10:43:27.156049+00:00
 ---
 
 # Use the Cloud Monitoring remote MCP server  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Use the Cloud Monitoring remote MCP server Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document shows you how to use the Cloud Monitoring remote Model Context Protocol (MCP) server to connect with AI applications including Gemini CLI, ChatGPT, Claude, and custom applications you are developing. The Cloud Monitoring remote MCP server lets agents and API applications [retrieve information about time series, alerting policies, dashboards, and other assets](https://docs.cloud.google.com/monitoring/api/ref_v3_mcp/mcp). The Cloud Monitoring remote MCP server is enabled when you enable the Cloud Monitoring API. 
+This document shows you how to use the Cloud Monitoring remote Model Context Protocol (MCP) server to connect with AI applications including Antigravity, ChatGPT, Claude, and custom applications you are developing. The Cloud Monitoring remote MCP server lets agents and API applications [retrieve information about time series, alerting policies, dashboards, and other assets](https://docs.cloud.google.com/monitoring/api/ref_v3_mcp/mcp). The Cloud Monitoring remote MCP server is enabled when you enable the Cloud Monitoring API. 
 
 For information about the Cloud Monitoring local MCP server, see the [gcloud MCP Server repository](https://github.com/googleapis/gcloud-mcp), which hosts Google Cloud Observability MCP servers including Cloud Monitoring.
 

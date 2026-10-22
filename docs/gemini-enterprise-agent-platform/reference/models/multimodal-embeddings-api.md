@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/multimodal-embeddings-api/
 title: Multimodal embeddings API \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:57.814980+00:00
+fetched_at: 2026-10-22T10:31:16.534647+00:00
 ---
 
 # Multimodal embeddings API  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

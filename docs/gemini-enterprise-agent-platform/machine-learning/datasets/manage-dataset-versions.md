@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/datasets/manage-dataset-versions/
 title: Manage image dataset versions (API-only) \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:57.231890+00:00
+fetched_at: 2026-10-22T10:22:34.920259+00:00
 ---
 
 # Manage image dataset versions (API-only)  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

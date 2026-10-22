@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/configure-canvas/
 title: Configure Canvas \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T20:58:24.963947+00:00
+fetched_at: 2026-10-22T10:24:10.002162+00:00
 ---
 
 # Configure Canvas  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -74,7 +74,10 @@ For more information about managing Gemini Enterprise IAM roles, see [Access con
 
 ## Limitations
 
-Canvas isn't supported on the mobile app. It is only available on the web app.
+  * Canvas isn't supported on the mobile app. It's only available on the web app.
+  * When you [share a conversation](https://docs.cloud.google.com/gemini/enterprise/docs/share-conversations), recipients can't open or edit documents or slide presentations created in Canvas. To share Canvas content with others, [export](https://docs.cloud.google.com/gemini/enterprise/docs/assistant-canvas#export_documents_and_slides_from_canvas) the document or slide presentation to Google Docs, Google Slides, or another supported format, and then share the exported file.
+
+
 
 ## Quota consumption
 
@@ -93,6 +96,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/guides/templates/provided/pubsub-to-mongodb/
 title: Pub/Sub to MongoDB template \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:38:53.946191+00:00
+fetched_at: 2026-10-22T08:24:59.457810+00:00
 ---
 
 # Pub/Sub to MongoDB template  |  Cloud Dataflow  |  Google Cloud Documentation

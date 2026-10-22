@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/dnsfilter/
 title: Collect DNSFilter logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:45:24.830756+00:00
+fetched_at: 2026-10-22T09:10:50.065401+00:00
 ---
 
 # Collect DNSFilter logs  |  Google Security Operations  |  Google Cloud Documentation

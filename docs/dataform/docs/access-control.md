@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataform/docs/access-control/
 title: Control access with IAM \u00a0|\u00a0 Dataform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:48.014261+00:00
+fetched_at: 2026-10-22T08:31:02.269306+00:00
 ---
 
 # Control access with IAM  |  Dataform  |  Google Cloud Documentation

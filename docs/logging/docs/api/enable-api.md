@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/api/enable-api/
 title: Enable the Logging API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:38.895577+00:00
+fetched_at: 2026-10-22T10:44:11.120479+00:00
 ---
 
 # Enable the Logging API  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Enable the Logging API Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to enable and authorize use of the Logging API v2.
+Enabling and authorizing the Cloud Logging API v2 lets you programmatically read, write, and manage log entries and Cloud Logging configurations. Before you can call the Logging API or use the Logging client libraries, you must enable the API for your project and grant users the required permissions.
 
 ## Enable the API
 

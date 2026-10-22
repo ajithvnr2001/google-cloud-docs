@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/soft-delete/
 title: Soft delete overview \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:36.468724+00:00
+fetched_at: 2026-10-22T10:30:23.588130+00:00
 ---
 
 # Soft delete overview  |  Cloud Storage  |  Google Cloud Documentation
@@ -37,7 +37,7 @@ When soft delete is enabled on a bucket, deleting the bucket or the objects with
 
 Soft delete policies work in the following ways:
 
-  * The soft delete policy includes a retention duration that defines how long soft-deleted resources are retained before being permanently deleted. The default retention duration is 7 days and you can customize the retention duration to anywhere between 7 to 90 days. To disable soft delete, you set the retention duration to 0.
+  * The soft delete policy includes a retention duration that defines how long soft-deleted resources are retained before being permanently deleted. The default retention duration is 7 days and you can customize the retention duration between 7 days and 90 days. To disable soft delete, you set the retention duration to 0.
 
   * A default soft delete policy is automatically set on all newly created buckets, except for buckets that use products or capabilities that are incompatible with soft delete (such as zonal buckets that use [Rapid Bucket](https://docs.cloud.google.com/storage/docs/rapid/rapid-bucket)).
 
@@ -192,7 +192,7 @@ When soft delete is enabled, it behaves with other products and features in the 
 
   * [Managed folders](https://docs.cloud.google.com/storage/docs/managed-folders): Soft delete cannot restore the IAM policies on [managed folders](https://docs.cloud.google.com/storage/docs/managed-folders). If you soft delete an object and delete a managed folder that grants IAM policies for the object, you might have to recreate those IAM policies before you have the necessary permissions to restore the soft-deleted object.
 
-  * [Tags](https://docs.cloud.google.com/resource-manager/docs/tags/tags-overview): If you create a bucket without including a soft delete setting yourself, the Cloud Storage default is to create the bucket with a seven day soft delete retention duration. You can change this default by [using a tag](https://docs.cloud.google.com/storage/docs/use-tags-for-soft-delete). The tag can change the default retention duration for new buckets to be any value between 7 and 90 days, or it can change the default to disable soft delete on new buckets. You can also use tags to disable soft delete by default. 
+  * [Tags](https://docs.cloud.google.com/resource-manager/docs/tags/tags-overview): If you create a bucket without including a soft delete setting yourself, the Cloud Storage default is to create the bucket with a seven day soft delete retention duration. You can change this default by [using a tag](https://docs.cloud.google.com/storage/docs/use-tags-for-soft-delete). The tag can change the default retention duration for new buckets to be any value between 7 days and 90 days, or it can change the default to disable soft delete on new buckets. You can also use tags to disable soft delete by default. 
 
   * [Recommender](https://docs.cloud.google.com/storage/docs/soft-delete-recommender): You can enable the Recommender API to receive suggestions and insights on enabling or disabling soft delete based on Cloud Billing costs and usage. To learn more, see [soft delete recommender](https://docs.cloud.google.com/storage/docs/soft-delete-recommender). 
 
@@ -211,6 +211,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

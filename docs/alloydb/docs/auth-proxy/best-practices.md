@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/auth-proxy/best-practices/
 title: Best practices for using the AlloyDB Auth Proxy \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:21.165371+00:00
+fetched_at: 2026-10-22T09:27:00.597502+00:00
 ---
 
 # Best practices for using the AlloyDB Auth Proxy  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

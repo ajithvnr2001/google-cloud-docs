@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/digi-modems/
 title: Collect Digi Modems logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:30.571205+00:00
+fetched_at: 2026-10-22T09:08:19.772806+00:00
 ---
 
 # Collect Digi Modems logs  |  Google Security Operations  |  Google Cloud Documentation

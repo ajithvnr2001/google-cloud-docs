@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/monitor-performance/
 title: Monitor AlloyDB Omni database performance \u00a0|\u00a0 AlloyDB Omni using the RPM orchestrator: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:23:05.611819+00:00
+fetched_at: 2026-10-22T10:37:22.663068+00:00
 ---
 
 # Monitor AlloyDB Omni database performance  |  AlloyDB Omni using the RPM orchestrator: Current (18.4.0)  |  Google Cloud Documentation
@@ -27,6 +27,7 @@ Select a documentation version: 18.4.0keyboard_arrow_down
 
   * [ Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/monitor-performance)
   * [ 18.4.0 ](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18.4.0/docs/monitor-performance)
+  * [ 18.1.0 ](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18.1.0/docs/monitor-performance)
 
 **Note:** Your use of AlloyDB Omni is subject to the agreement between you and Google that governs Google Cloud offerings. If you do not have a Google Cloud account, or have not otherwise entered into an agreement with Google that governs Google Cloud offerings, please do not proceed or download this software until you have done so. To create a Google Cloud account, see [ the Google Cloud homepage](https://docs.cloud.google.com/docs/get-started). 
 
@@ -239,10 +240,31 @@ After running this, check the `postgres.log` file to see if temporary files were
 
 The goal is to minimize the creation of temporary files, not completely prevent them from happening. This is because setting both `work_mem` and `temp_buffers` is a balance between available memory on the host and the number of connections that require the memory. Setting these parameters correctly requires understanding about each individual workload.
 
+## View query performance using Query Insights
+
+You can identify slow queries and high disk I/O statements using **Query Insights** in the AlloyDB Omni web user interface. **Query Insights** requires the `pg_stat_statements` extension to be enabled on your database. For setup instructions, see [Install the web UI](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/install-web-ui#optional-steps).
+
+To view query performance metrics in the web UI, complete the following steps:
+
+  1. [Connect to the web UI](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/connect-web-ui) and select your cluster.
+  2. In the navigation menu, click **Query Insights**.
+  3. Optional: Use the **Database** list to filter statements by a specific database or select **All databases**.
+  4. Review the **Queries** table to analyze SQL execution statistics. Each row displays the following metrics along with the full SQL statement below the row: 
+     * **Database name** : The logical database where the statement ran.
+     * **Calls** : The total number of times the statement was executed.
+     * **Rows** : The total number of rows retrieved or affected by the statement.
+     * **Execution time: mean** : The average execution time per call.
+     * **Execution time: total** : The cumulative execution time across all calls.
+     * **Shared block hit** : The total number of shared buffer cache hits.
+     * **Shared block read** : The total number of shared blocks read from disk.
+     * **Query type** : Categorizes the query performance impact, such as `Slow query` or `High disk IO`.
+
+
+
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

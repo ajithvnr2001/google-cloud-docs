@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/smart-actions/
 title: Pre-session SmartActions \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:38:48.024698+00:00
+fetched_at: 2026-10-22T09:11:32.758553+00:00
 ---
 
 # Pre-session SmartActions  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

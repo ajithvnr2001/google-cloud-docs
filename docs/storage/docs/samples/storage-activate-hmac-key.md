@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-activate-hmac-key/
 title: Activate an HMAC key \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:06:36.277351+00:00
+fetched_at: 2026-10-22T10:30:47.734181+00:00
 ---
 
 # Activate an HMAC key  |  Cloud Storage  |  Google Cloud Documentation

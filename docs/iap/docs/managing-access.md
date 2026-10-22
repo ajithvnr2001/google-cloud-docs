@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/managing-access/
 title: Manage access to IAP-secured resources \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:11:53.366119+00:00
+fetched_at: 2026-10-22T08:27:23.626630+00:00
 ---
 
 # Manage access to IAP-secured resources  |  Identity-Aware Proxy  |  Google Cloud Documentation

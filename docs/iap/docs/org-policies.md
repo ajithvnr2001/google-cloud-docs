@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/org-policies/
 title: Using organization policies to control IAP enablement \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:11:48.410370+00:00
+fetched_at: 2026-10-22T08:27:23.549378+00:00
 ---
 
 # Using organization policies to control IAP enablement  |  Identity-Aware Proxy  |  Google Cloud Documentation

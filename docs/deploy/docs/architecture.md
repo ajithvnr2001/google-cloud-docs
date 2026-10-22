@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/architecture/
 title: Cloud Deploy service architecture \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:00.956821+00:00
+fetched_at: 2026-10-22T08:26:07.956666+00:00
 ---
 
 # Cloud Deploy service architecture  |  Google Cloud Documentation

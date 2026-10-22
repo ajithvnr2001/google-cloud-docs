@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/agentic-ai-system-with-grounding-using-maps/
 title: Build trusted AI agents with Google Maps Platform \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:09.936248+00:00
+fetched_at: 2026-10-22T10:10:28.737170+00:00
 ---
 
 # Build trusted AI agents with Google Maps Platform  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -19,7 +19,7 @@ Send feedback
 
 #  Build trusted AI agents with Google Maps Platform Stay organized with collections  Save and categorize content based on your preferences. 
 
-Last reviewed 2026-05-01 UTC
+Last reviewed 2026-10-21 UTC
 
 This document provides a high-level architecture to build a trusted and effective agentic AI system that's grounded in real-world contextual data from Google Maps Platform and Google Calendar. The system builds travel plans for places that users indicate in their prompt. The plan considers the user's schedule, the geographic location of the places, operating hours, and route distances.
 
@@ -44,7 +44,7 @@ The architecture in the preceding diagram contains the following components:
 
 All of the agents in this architecture are built by using Agent Development Kit (ADK). The agents run in Agent Runtime on Gemini Enterprise Agent Platform and they use a Gemini model.
 
-  * **Tools and data:** The agents use the following tools to get the data that they need:
+  * **Tools and data** : The agents use the following tools to get the data that they need:
 
     * [**Grounding with Google Maps**](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/grounding-with-google-maps): Provides real-world geographic context from Google Maps Platform to the Places and Routes agents.
     * [**Places Insights**](https://developers.google.com/maps/documentation/placesinsights/overview): Provides deep, site-specific analytics and information from Google Maps Platform to help the agents create appropriate artifacts based on the meeting type.
@@ -87,22 +87,48 @@ The following are examples of use cases for this architecture:
   * **Logistics and supply chain coordination** : A logistics manager needs to redirect a shipment due to a weather event.
 
     * A Logistics agent monitors real-time traffic and weather by using Google Maps Platform.
-    * The Logistics agent finds an alternative route and warehouse
+    * The Logistics agent finds an alternative route and warehouse.
     * A CRM agent notifies the customer about the revised shipment schedule.
 
 
 
 ## Design considerations
 
-To implement this architecture for production, consider the following recommendations:
+This section describes design factors, best practices, and recommendations to consider when you use this reference architecture to develop a topology that meets your specific requirements for security, reliability, operational efficiency, cost, and performance.
 
-  * **Security** : Adopt a zero-trust model by giving each agent the least-privilege access that's necessary to perform its task. Strictly define the tools and data that each agent can access. For example, configure the Schedule agent to only read or write to specific calendars.
-  * **Reliability** : Include [human-in-the-loop (HITL)](https://cloud.google.com/discover/human-in-the-loop) validation for critical tasks like booking non-refundable tickets. Create clear audit trails for agent decisions by building an observability pipeline with Logging and Pub/Sub.
-  * **Performance** : The modular, [multi-agent coordinator pattern](https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system#coordinator-pattern) in this architecture helps to improve performance by enabling specialized agents to work in parallel. For example, the Places agent can search for locations while the Schedule agent simultaneously checks for calendar conflicts.
-  * **Cost** : Manage costs by tightly scoping each agent's tasks to prevent open-ended or unnecessary queries. Reduce API calls by using caching for frequently requested data, such as common routes or popular places.
-  * **Governance** : Establish strong governance with clear roles for each agent and with guidelines for handling data. Use an iterative development process that includes continuous monitoring. This process helps to refine the agents' behavior and it helps to ensure that the behavior is aligned with business requirements.
+The guidance in this section isn't exhaustive. For more information about design factors and best practices, and for recommendations about building and deploying a multi-agent AI system, see [Multi-agent AI system in Google Cloud](https://docs.cloud.google.com/architecture/multiagent-ai-system#design_considerations).
+
+### Security, privacy, and compliance
+
+To help address the unique security risks of AI agents, Google recommends an [approach](https://research.google/pubs/an-introduction-to-googles-approach-for-secure-ai-agents/) that combines deterministic security controls with dynamic, reasoning-based defenses:
+
+  * **Human oversight** : Incorporate a human-in-the-loop flow in business-critical systems so human supervisors can review outputs and approve, override, or pause agent actions.
+  * **[Agent Identity](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/agent-identity-overview)** : Assign each agent a workload-bound identity to enforce least-privilege access control and centrally manage credentials for external tools.
+  * **[Agent Gateway](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/gateways/agent-gateway-overview)** : Enforce ingress and egress traffic governance, default-deny access policies, and inline prompt and tool inspection with [Model Armor](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/configure-model-armor).
+  * **[Agent Registry](https://docs.cloud.google.com/agent-registry/overview)** : Verify that agents only connect to approved subagents and MCP tools.
 
 
+
+### Reliability
+
+To help ensure that your agent configurations meet your reliability requirements, consider the following recommendations:
+
+  * **Validation for critical actions** : Include [human-in-the-loop (HITL)](https://cloud.google.com/discover/human-in-the-loop) validation for critical tasks like booking non-refundable tickets.
+  * **Audit trails** : Create clear audit trails for agent decisions by building an observability pipeline with Logging and Pub/Sub.
+
+
+
+### Operational efficiency
+
+Establish strong governance with clear roles for each agent and with guidelines for handling data. Use an iterative development process that includes continuous monitoring. This process helps to refine the agents' behavior and it helps to ensure that the behavior is aligned with business requirements.
+
+### Cost optimization
+
+Manage costs by tightly scoping each agent's tasks to prevent open-ended or unnecessary queries. Reduce API calls by using caching for frequently requested data, such as common routes or popular places.
+
+### Performance optimization
+
+The modular, [multi-agent coordinator pattern](https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system#coordinator-pattern) in this architecture helps to improve performance by enabling specialized agents to work in parallel. For example, the Places agent can search for locations while the Schedule agent simultaneously checks for calendar conflicts.
 
 When you design the architecture for your agentic AI workload, consider the best practices and recommendations in [Google Cloud Well-Architected Framework: AI and ML perspective](https://docs.cloud.google.com/architecture/framework/perspectives/ai-ml).
 
@@ -141,6 +167,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-05-01 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-05-01 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

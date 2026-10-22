@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/partners/c3-ai-architecture/
 title: C3 AI architecture on Google Cloud \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:35.894579+00:00
+fetched_at: 2026-10-22T09:19:48.742253+00:00
 ---
 
 # C3 AI architecture on Google Cloud  |  Cloud Architecture Center  |  Google Cloud Documentation

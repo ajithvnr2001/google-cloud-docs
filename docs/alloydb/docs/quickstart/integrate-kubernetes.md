@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/quickstart/integrate-kubernetes/
 title: Connect from Google Kubernetes Engine (GKE) to AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T22:59:23.777697+00:00
+fetched_at: 2026-10-22T09:44:23.913820+00:00
 ---
 
 # Connect from Google Kubernetes Engine (GKE) to AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -1125,7 +1125,7 @@ Sample output:
             env:
             - name: DB_HOST
               # The port value here (5432) should match the --port flag below.
-              value: "localhost:5342"
+              value: "localhost:5432"
             - name: DB_USER
               valueFrom:
                 secretKeyRef:

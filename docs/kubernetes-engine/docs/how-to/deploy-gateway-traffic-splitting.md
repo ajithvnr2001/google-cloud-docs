@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/deploy-gateway-traffic-splitting/
 title: Deploy a multi-cluster Gateway for weighted traffic splitting \u00a0|\u00a0 GKE networking \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:16:25.642525+00:00
+fetched_at: 2026-10-22T10:40:55.326862+00:00
 ---
 
 # Deploy a multi-cluster Gateway for weighted traffic splitting  |  GKE networking  |  Google Cloud Documentation

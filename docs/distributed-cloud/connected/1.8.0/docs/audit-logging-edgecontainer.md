@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.8.0/docs/audit-logging-edgecontainer/
 title: Google Distributed Cloud audit logging \u00a0|\u00a0 Google Distributed Cloud connected, version 1.8.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:09.309403+00:00
+fetched_at: 2026-10-22T08:26:02.308255+00:00
 ---
 
 # Google Distributed Cloud audit logging  |  Google Distributed Cloud connected, version 1.8.0  |  Google Cloud Documentation

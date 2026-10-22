@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/connect-auth-proxy/
 title: Connect using the Cloud SQL Auth Proxy \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:59.839287+00:00
+fetched_at: 2026-10-22T10:41:37.619133+00:00
 ---
 
 # Connect using the Cloud SQL Auth Proxy  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -1214,9 +1214,9 @@ For production workloads, the Cloud SQL Auth Proxy doesn't currently provide bui
 
 **Note:** If you run the Cloud SQL Auth Proxy as a service, keep in mind that it uses a secure connection to communicate with Cloud SQL instances, but connections from your application to the Cloud SQL Auth Proxy are not encrypted. For this reason, ensure that only trusted users are able to access the address and port that the Cloud SQL Auth Proxy is listening on.
 
-### Enforce the use of the Cloud SQL Auth Proxy
+### Enforce the use of Cloud SQL connectors
 
-Enable the use of the Cloud SQL Auth Proxy in Cloud SQL using [ConnectorEnforcement](https://docs.cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/instances#connectorenforcement).
+You can enforce the use of the Cloud SQL Auth Proxy or Cloud SQL Language Connectors in Cloud SQL instance connections using [ConnectorEnforcement](https://docs.cloud.google.com/sql/docs/postgres/admin-api/rest/v1/instances#ConnectorEnforcement).
 
 If you're using a [Private Service Connect-enabled instance](https://docs.cloud.google.com/sql/docs/postgres/about-private-service-connect), then there's a limitation. If the instance has connector enforcement enabled, then you can't create read replicas for the instance. Similarly, if the instance has read replicas, then you can't enable connector enforcement for the instance.
 
@@ -1233,7 +1233,7 @@ To disable the enforcement, use the following line of code: `--connector-enforce
 
 ### REST v1
 
-The following command enforces the use of Cloud SQL connectors
+The following command enforces the use of Cloud SQL connectors.
 
 Before using any of the request data, make the following replacements: 
 
@@ -1511,6 +1511,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

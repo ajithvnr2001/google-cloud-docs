@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/elastic-search/
 title: Access Elasticsearch data from AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:46.473587+00:00
+fetched_at: 2026-10-22T09:11:41.330158+00:00
 ---
 
 # Access Elasticsearch data from AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/cuds/
 title: Committed use discounts \u00a0|\u00a0 Get started \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:07:02.414995+00:00
+fetched_at: 2026-10-22T10:12:54.910437+00:00
 ---
 
 # Committed use discounts  |  Get started  |  Google Cloud Documentation
@@ -156,7 +156,7 @@ For current rates, see [Cloud SQL pricing](https://cloud.google.com/sql/pricing)
 
 #### Google Cloud Managed Service for Apache Kafka
 
-[Managed Service for Apache Kafka committed use discounts (CUDs)](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/cuds) are discounts that apply to the Kafka compute (vCPU and RAM) costs for running Managed Service for Apache Kafka clusters across projects. You can apply the CUDs to any Managed Service for Apache Kafka project that is associated with the Cloud Billing account used to purchase the commitment. You can apply CUDs to any available region. You cannot apply the Managed Service for Apache Kafka CUDs to the cost of storage, networking or Private Service Connect.
+[Managed Service for Apache Kafka committed use discounts (CUDs)](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/cuds) are discounts that apply to the Kafka compute (vCPU and RAM) costs for running Managed Service for Apache Kafka clusters across projects. You can apply the CUDs to any Managed Service for Apache Kafka project that is associated with the Cloud Billing account used to purchase the commitment. You can apply CUDs to any available region. You can't apply the Managed Service for Apache Kafka CUDs to the cost of storage, networking or Private Service Connect.
 
 For current rates and other details, see [Managed Service for Apache Kafka pricing](https://cloud.google.com/managed-service-for-apache-kafka/pricing).
 
@@ -197,22 +197,19 @@ For current rates, see the following pages:
 
 ## Resource-based commitments
 
-Resource-based CUDs are available only for Compute Engine. [Compute Engine resource-based CUDs](https://docs.cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts) provide discounts in exchange for committing to using a minimum amount of Compute Engine resources in a specific region. These CUDs are ideal when you have predictable resource needs. You can purchase Compute Engine resource-based commitments for the following hardware and software resources for a duration of up to six years:
+Resource-based CUDs are available only for Compute Engine. [Compute Engine resource-based CUDs](https://docs.cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts) provide discounts in exchange for committing to using a minimum amount of Compute Engine resources in a specific region. These CUDs are ideal when you have predictable resource needs. You can purchase Compute Engine resource-based commitments for the following hardware, software, and block storage resources for a duration of up to six years:
 
   * vCPUs
   * Memory
-
-
-
-### gpu_name
-
+  * GPUs
   * Local SSD disks
   * Sole-tenant nodes
   * Operating system (OS) licenses
+  * Hyperdisk Exapools
 
 
 
-Commitments for hardware resources are separate from the ones for OS licenses. You can purchase both categories of commitments for the same virtual machine (VM) instance, but you cannot purchase a single commitment that covers both hardware resources and licenses.
+Commitments for hardware resources, commitments for OS licenses, and commitments for block storage remain distinct from one another. You can't purchase a single commitment that covers resources from multiple categories.
 
 For current rates, see [VM instance pricing](https://docs.cloud.google.com/compute/vm-instance-pricing#general-purpose_machine_type_family).
 
@@ -222,7 +219,7 @@ The following table demonstrates the differences between spend-based and resourc
 
 Spend-based CUDs | Resource-based CUDs  
 ---|---  
-**Spend-based** commitments for Compute Engine are purchased and measured in terms of the dollars per hour of equivalent discount spend. | **Resource-based** commitments for Compute Engine are purchased and measured in terms of the underlying vCPU, memory, GPU, and Local SSD disk resources.  
+**Spend-based** commitments for Compute Engine are purchased and measured in terms of the dollars per hour of equivalent discount spend. | **Resource-based** commitments for Compute Engine are purchased and measured in terms of the numbers of the underlying resource types.  
 **Spend-based** commitments are purchased from your Cloud Billing account; they apply to eligible usage in any projects paid for by that Cloud Billing account.  |  **Resource-based** commitments are purchased in the context of an individual project, rather than that of a Cloud Billing account. The commitments are tied to the project where they were purchased. However, the CUDs can apply to the specific project or be shared across all projects linked to the Cloud Billing account, depending on your [CUD sharing configuration](https://docs.cloud.google.com/compute/docs/committed-use-discounts/share-resource-cuds-across-projects#cud-scope-configuration). You can enable or disable [ CUD sharing](https://docs.cloud.google.com/compute/docs/committed-use-discounts/share-resource-cuds-across-projects) for your Cloud Billing account at any time.  You can change the Cloud Billing account that pays for the project where you purchased the resource-based commitments. [ Learn about how moving a project affects CUD sharing and attribution settings](https://docs.cloud.google.com/compute/docs/committed-use-discounts/share-resource-cuds-across-projects#moving-project-billing-account).   
   
 ## CUDs summary
@@ -324,7 +321,7 @@ On this page, you can view which of your commitments are expiring in the next 30
 
 For information about viewing _spend-based_ CUDs, see [Viewing spend-based commitments](https://docs.cloud.google.com/billing/docs/how-to/cuds-list-overview).
 
-For information about viewing _resource-based_ CUDs, see [Viewing resource-based commitments](https://docs.cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts#console_3).
+For information about viewing _resource-based_ CUDs, see [Viewing resource-based commitments](https://docs.cloud.google.com/compute/docs/committed-use-discounts/view-resource-based-commitments).
 
 ## Pricing for commitments
 
@@ -358,6 +355,7 @@ To purchase _resource-based_ commitments for Compute Engine, see one of the foll
   * [Purchase hardware commitments without attached reservations](https://docs.cloud.google.com/compute/docs/committed-use-discounts/purchase-commitments)
   * [Purchase hardware commitments with attached reservations](https://docs.cloud.google.com/compute/docs/committed-use-discounts/purchase-commitments-with-reservations)
   * [Purchase software commitments for OS licenses](https://docs.cloud.google.com/compute/docs/committed-use-discounts/purchase-license-commitments)
+  * [Purchase block storage commitments for Exapools](https://docs.cloud.google.com/compute/docs/committed-use-discounts/purchase-block-storage-commitments)
 
 
 
@@ -378,6 +376,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

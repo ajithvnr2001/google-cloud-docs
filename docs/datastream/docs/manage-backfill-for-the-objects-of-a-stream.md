@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/manage-backfill-for-the-objects-of-a-stream/
 title: Manage backfill for the objects of a stream \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:31.521772+00:00
+fetched_at: 2026-10-22T08:26:05.582289+00:00
 ---
 
 # Manage backfill for the objects of a stream  |  Datastream  |  Google Cloud Documentation

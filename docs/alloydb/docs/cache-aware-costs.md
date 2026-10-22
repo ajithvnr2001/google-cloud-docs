@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/cache-aware-costs/
 title: Enable cache-aware costs for index scan query plans \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:06.841750+00:00
+fetched_at: 2026-10-22T09:10:47.073054+00:00
 ---
 
 # Enable cache-aware costs for index scan query plans  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

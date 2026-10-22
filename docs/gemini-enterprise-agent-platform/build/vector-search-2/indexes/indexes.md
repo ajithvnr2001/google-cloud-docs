@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/vector-search-2/indexes/indexes/
 title: Collection Indexes \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:44.980821+00:00
+fetched_at: 2026-10-22T10:23:03.844507+00:00
 ---
 
 # Collection Indexes  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

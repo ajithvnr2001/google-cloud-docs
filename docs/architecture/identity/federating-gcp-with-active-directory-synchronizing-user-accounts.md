@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/identity/federating-gcp-with-active-directory-synchronizing-user-accounts/
 title: Active Directory user account provisioning \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:18.047316+00:00
+fetched_at: 2026-10-22T09:08:27.569661+00:00
 ---
 
 # Active Directory user account provisioning  |  Cloud Architecture Center  |  Google Cloud Documentation

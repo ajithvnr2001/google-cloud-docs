@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/api/platform-logs/
 title: Google Cloud platform logs \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:06.329053+00:00
+fetched_at: 2026-10-22T10:44:11.838774+00:00
 ---
 
 # Google Cloud platform logs  |  Cloud Logging  |  Google Cloud Documentation
@@ -21,13 +21,11 @@ Send feedback
 
 #  Google Cloud platform logs Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document provides basic information about the Google Cloud platform logs that are available in Cloud Logging, as well as next steps for viewing and managing platform logs.
+Google Cloud platform logs in Cloud Logging let you debug and troubleshoot issues, monitor resources, and understand the Google Cloud services that you use. Logging receives, indexes, and stores these service-specific log entries so that you can view, query, and manage them.
 
 ## Overview
 
-Logging receives, indexes, and stores log entries from [Google Cloud services](https://cloud.google.com/terms/services). Google Cloud platform logs are service-specific logs that can help you debug and troubleshoot issues, as well as better understand the Google Cloud services you're using.
-
-The Google Cloud platform logs visible to you in Cloud Logging vary, depending on which Google Cloud resources you're using in your Google Cloud project or organization.
+The Google Cloud platform logs visible to you in Logging depend on which [Google Cloud services](https://cloud.google.com/terms/services) and resources you use in your Google Cloud project or organization.
 
 When using this document, note the following:
 

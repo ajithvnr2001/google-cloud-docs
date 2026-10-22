@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/trigger-host-maintenance-event/
 title: Manually start a host maintenance event \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:49:35.033236+00:00
+fetched_at: 2026-10-22T08:22:23.095754+00:00
 ---
 
 # Manually start a host maintenance event  |  Compute Engine  |  Google Cloud Documentation

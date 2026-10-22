@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/deploy-manually/
 title: Deploy manually \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:47.769336+00:00
+fetched_at: 2026-10-22T08:25:01.099502+00:00
 ---
 
 # Deploy manually  |  Google Cloud Documentation

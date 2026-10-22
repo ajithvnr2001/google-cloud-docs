@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/vector-assist-overview/
 title: Vector assist overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:53.388798+00:00
+fetched_at: 2026-10-22T09:30:35.363635+00:00
 ---
 
 # Vector assist overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

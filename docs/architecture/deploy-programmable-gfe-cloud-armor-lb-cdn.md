@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/deploy-programmable-gfe-cloud-armor-lb-cdn/
 title: Use Google Cloud Armor, load balancing, and Cloud CDN to deploy programmable global front ends \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:18.375083+00:00
+fetched_at: 2026-10-22T09:36:00.208336+00:00
 ---
 
 # Use Google Cloud Armor, load balancing, and Cloud CDN to deploy programmable global front ends  |  Cloud Architecture Center  |  Google Cloud Documentation

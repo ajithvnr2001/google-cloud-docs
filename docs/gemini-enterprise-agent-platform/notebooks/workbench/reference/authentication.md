@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/notebooks/workbench/reference/authentication/
 title: Authenticate to Agent Platform Workbench \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:59:18.060638+00:00
+fetched_at: 2026-10-22T10:12:14.108800+00:00
 ---
 
 # Authenticate to Agent Platform Workbench  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -49,7 +49,7 @@ For more information, see [Authenticate for the gcloud CLI](https://docs.cloud.g
 
 ### REST
 
-You can authenticate to [the Notebooks API](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference) by using your [gcloud CLI credentials](https://docs.cloud.google.com/sdk/docs/authenticate) or by using [ Application Default Credentials](https://docs.cloud.google.com/docs/authentication/application-default-credentials). For more information about authentication for REST requests, see [Authenticate for using REST](https://docs.cloud.google.com/docs/authentication/rest). 
+You can authenticate to [the Notebooks API](https://docs.cloud.google.com/gemini-enterprise-agent-platform/notebooks/workbench/reference/rest) by using your [gcloud CLI credentials](https://docs.cloud.google.com/sdk/docs/authenticate) or by using [ Application Default Credentials](https://docs.cloud.google.com/docs/authentication/application-default-credentials). For more information about authentication for REST requests, see [Authenticate for using REST](https://docs.cloud.google.com/docs/authentication/rest). 
 
 ## Set up authentication for Agent Platform Workbench
 
@@ -211,7 +211,7 @@ The preferred method to set up authentication from outside of Google Cloud is to
 
 After you authenticate to Agent Platform Workbench, you must be authorized to access Google Cloud resources. Agent Platform Workbench uses Identity and Access Management (IAM) for authorization. 
 
-For more information about the roles for Agent Platform Workbench, see [Access control](https://docs.cloud.google.com/gemini-enterprise-agent-platform/notebooks/workbench/reference/gemini-enterprise-agent-platform/notebooks/workbench/instances/iam). For more information about IAM and authorization, see [IAM overview](https://docs.cloud.google.com/iam/docs/overview). 
+For more information about the roles for Agent Platform Workbench, see [Access control](https://docs.cloud.google.com/gemini-enterprise-agent-platform/notebooks/workbench/instances/iam). For more information about IAM and authorization, see [IAM overview](https://docs.cloud.google.com/iam/docs/overview). 
 
 ## What's next
 
@@ -228,6 +228,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-19 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

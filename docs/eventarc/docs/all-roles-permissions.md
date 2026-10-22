@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/docs/all-roles-permissions/
 title: All roles and permissions \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:52:35.254202+00:00
+fetched_at: 2026-10-22T08:37:19.932588+00:00
 ---
 
 # All roles and permissions  |  Eventarc Standard  |  Google Cloud Documentation

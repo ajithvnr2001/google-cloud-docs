@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/api-reference/
 title: APIs and references \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:28.700939+00:00
+fetched_at: 2026-10-22T09:37:59.167947+00:00
 ---
 
 # APIs and references  |  Google Cloud Armor  |  Google Cloud Documentation

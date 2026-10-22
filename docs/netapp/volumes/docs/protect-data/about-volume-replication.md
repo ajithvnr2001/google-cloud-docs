@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/netapp/volumes/docs/protect-data/about-volume-replication/
 title: About volume replication \u00a0|\u00a0 NetApp Volumes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:26:18.079577+00:00
+fetched_at: 2026-10-22T09:24:32.504908+00:00
 ---
 
 # About volume replication  |  NetApp Volumes  |  Google Cloud Documentation
@@ -48,36 +48,55 @@ After all the changes are transferred, the destination volume's contents transit
 
 ## Settings modifications
 
-As long as a replication is in a _mirrored_ state, any settings changes applied to either the source or destination volume are automatically applied to both volumes. However, the following settings aren't synchronized between the source and destination volumes:
+When the replication is in a **Mirrored** state, NetApp Volumes applies most setting changes that you make on the source or destination volume to both volumes.
 
-  * **Labels and volume description** : these settings must be configured independently on the source and destination pools.
+The following sections describe the settings that NetApp Volumes synchronizes across both volumes and the settings that you configure separately for each volume.
 
-  * **Active Directory policy** : this policy is set on both the source and destination pools and can't be changed.
+### Replicated settings
 
-  * **CMEK policy** : this policy is set on both the source and destination pools and can't be changed.
+While the replication is in a **Mirrored** state, NetApp Volumes synchronizes the following settings across the source and destination volumes:
 
-  * **Backup policy** : this setting needs to be configured independently on both the source and destination volumes.
+  * **Capacity** : Updates the capacity on both volumes. Both the source and destination storage pools must have enough available space for the new volume size.
 
-A backup schedule on a destination volume becomes active only once replication is stopped and it's inactive while the replication is in a _mirrored_ state.
+  * **Export policy** : Applies export rule changes to both volumes so that the source and destination volumes use the same policy. If the policies differ, the next volume update applies one policy to both volumes, which might disrupt client access. For more information, see [Possible disruption of client access when updating settings of an NFS volume](https://docs.cloud.google.com/netapp/volumes/docs/troubleshoot/known-limitations#disruption-cvs-transition). Unlike standard volume replication, cross-project replication doesn't copy export rules between the source and destination volumes.
 
-  * **Backup vault** : this setting must be configured independently on the source and destination volumes.
+  * **Protocol settings** : Applies changes to already enabled protocols on both volumes. For Server Message Block (SMB) volumes, these settings include SMB encryption, share visibility, and access-based enumeration. You can't change the protocol type after you create the volume.
 
-  * **Auto-tiering** : this setting needs to be configured independently on the source and destination volumes.
+  * **Snapshot schedules** : Synchronizes changes to hourly, daily, weekly, and monthly snapshot schedules across both volumes.
 
-  * **Make snapshot directory visible** : this setting can be configured only on the source volume. It can't be changed on destination volumes.
+  * **UNIX permissions** : Copies the UNIX permissions of the source root directory to the destination volume. These permissions become the initial permissions for the destination root directory.
 
-  * **Unix permissions** : this API parameter defines the initial UNIX permissions of the root inode, which is replicated to the destination volume during the replication process.
-
-  * **Block volume deletion** : this setting must be configured independently on the source and destination volumes.
-
-  * **Manual and auto QoS** : this setting can be configured manually or automatically, depending on the source and destination pool types. For volumes in an auto QoS pool, throughput is set by their size and service level. However, the throughput for volumes in a manual QoS pool can be configured on the source and destination volumes independently.
+  * **Quota rules** : Applies quota rule changes to the source volume immediately. The destination volume stores the changes and applies them when you stop the replication. If stopping the replication returns a quota error, compare the quota rules on both volumes and add any missing rules to the destination volume. For more information, see [Destination volume quota settings might fail in an active replication](https://docs.cloud.google.com/netapp/volumes/docs/troubleshoot/known-limitations#destination_volume_quota_settings_might_fail_in_an_active_replication).
 
 
 
 
-If the service level of the source volume is changed by moving it to a different pool, the destination volume isn't changed.
+### Settings for each volume
 
-If the replication stops, the source and destination volumes become independent. Any data or settings changes made to either the source or destination volume aren't applied to the other volume. After resuming a stopped replication, the source volume settings overwrite the destination volume settings, with the exceptions listed in this section.
+Configure the following settings separately on the source and destination volumes:
+
+  * **Labels and volume description** : Specify labels and a description for each volume.
+
+  * **Backup policy** : Configure a backup policy for each volume. On a destination volume, a backup schedule is inactive while the replication is in a **Mirrored** state and becomes active only after you stop the replication.
+
+  * **Backup vault** : Assign a backup vault for each volume.
+
+  * **Auto-tiering** : Enable or disable auto-tiering for each volume.
+
+  * **Make snapshot directory visible** : Configure this setting only on the source volume. You can't change this setting on a destination volume.
+
+  * **Block volume deletion** : Enable or disable this setting for each volume.
+
+  * **Throughput** : Configure the throughput separately on the source and destination volumes in a manual quality of service (QoS) pool. In an automatic QoS pool, the volume size and service level determine the throughput.
+
+
+
+
+You configure Active Directory and customer-managed encryption key (CMEK) policies at the storage pool level. The source and destination pools must use Active Directory policies that connect to the same Active Directory domain. The replication retains the policy assigned to each pool.
+
+For the Standard, Premium, and Extreme service levels, if you move the source volume to a pool with a different service level, only the source volume changes. The destination volume remains in its current pool.
+
+If you stop the replication, the source and destination volumes become independent. Any changes that you make to the data or settings on one volume don't apply to the other volume. When you resume a stopped replication, the source volume settings overwrite the destination volume settings, except for the settings that you configure separately.
 
 ## Considerations for volume replication
 
@@ -275,6 +294,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-15 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

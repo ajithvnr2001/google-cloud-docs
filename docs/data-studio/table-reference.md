@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/table-reference/
 title: Table reference \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:54.824241+00:00
+fetched_at: 2026-10-22T08:37:26.931301+00:00
 ---
 
 # Table reference  |  Data Studio  |  Google Cloud Documentation

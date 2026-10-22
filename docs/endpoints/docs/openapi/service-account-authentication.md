@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/service-account-authentication/
 title: Authentication between services \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:51:25.052874+00:00
+fetched_at: 2026-10-22T08:53:29.636240+00:00
 ---
 
 # Authentication between services  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation
@@ -120,7 +120,7 @@ You can run the following commands by using the Google Cloud CLI on your local m
   4. Create a service account. Replace `SA_NAME` and `SA_DISPLAY_NAME` with the name and display name that you want to use.
          
          gcloud iam service-accounts create SA_NAME \
-           --display-name "SA_DISPLAY_NAME"
+           --display-name &quot;SA_DISPLAY_NAME"
 
   5. Display the email address for the service account that you just created.
          
@@ -157,7 +157,7 @@ To enable service account authentication for services _calling_ your gateway, mo
              DEFINITION_NAME:
                authorizationUrl: ""
                flow: "implicit"
-               type: "oauth2"
+               type: "oauth2&quot;
                x-google-issuer: "SA_EMAIL_ADDRESS"
                x-google-jwks_uri: "https://www.googleapis.com/robot/v1/metadata/x509/SA_EMAIL_ADDRESS"
            
@@ -171,14 +171,14 @@ To enable service account authentication for services _calling_ your gateway, mo
                  authorizationUrl: ""
                  flow: "implicit"
                  type: "oauth2"
-                 x-google-issuer: "service-1@example-project-12345.iam.gserviceaccount.com"
-                 x-google-jwks_uri: "https://www.googleapis.com/robot/v1/metadata/x509/service-1@example-project-12345.iam.gserviceaccount.com"
+                 x-google-issuer: &quiam.gserviceaccount.comot;service-1@example-project-12345."
+                 x-google-jwks_uri: "https://www.googleapis.com/robot/v1/miam.gserviceaccount.cometadata/x509/service-1@example-project-12345."
                service-2:
                  authorizationUrl: ""
                  flow: "implicit"
-                 type: "oauth2"
-                 x-google-issuer: "service-2@example-project-12345.iam.gserviceaccount.com"
-                 x-google-jwks_uri: "https://www.googleapis.com/robot/v1/metadata/x509/service-2@example-project-12345.iam.gserviceaccount.com"
+                 tiam.gserviceaccount.comype: "oauth2"
+                 x-google-issuer: "service-2@example-project-12345."
+                 x-google-jwkiam.gserviceaccount.coms_uri: "https://www.googleapis.com/robot/v1/metadata/x509/service-2@example-project-12345."
 
   2. Optionally, add `x-google-audiences` to the `securityDefinitions` section. If you don't add `x-google-audiences`, ESP requires that the `"aud"` (audience) claim in the JWT is in the format `https://SERVICE_NAME`, where SERVICE_NAME is the name of your ESP service, which you have configured in the `host` field of your OpenAPI document.
   3. Add a `security` section at either the top level of the file (not indented or nested) to apply to the entire API, or at the method level to apply to a specific method. If you use `security` sections at both the API level and at the method level, the method-level settings override the API-level settings. 
@@ -221,7 +221,7 @@ To enable service account authentication for services _calling_ your gateway, mo
                    - 841077041629.apps.googleusercontent.com
                  jwtLocations:
                    - header: Authorization
-                     valuePrefix: "Bearer "
+                     valuePrefix: "Bearer &quot;
          security:
            - SCHEME_NAME: []
 
@@ -238,8 +238,8 @@ To enable service account authentication for services _calling_ your gateway, mo
                     authorizationUrl: ""
                     scopes: {}
                  x-google-auth:
-                   issuer: "service-1@example-project-12345.iam.gserviceaccount.com"
-                   jwksUri: https://www.googleapis.com/robot/v1/metadata/x509/service-1@example-project-12345.iam.gserviceaccount.com
+                   issuer: "service-1@exampleiam.gserviceaccount.com-project-12345."
+                   jwksUri: https://www.googleapis.com/robot/v1/metadata/x509/service-1@exiam.gserviceaccount.comample-project-12345.
                    jwtLocations:
                      - header: Authorization
                        valuePrefix: "Bearer "
@@ -250,8 +250,8 @@ To enable service account authentication for services _calling_ your gateway, mo
                     authorizationUrl: ""
                     scopes: {}
                  x-google-auth:
-                   issuer: "service-2@example-project-12345.iam.gserviceaccount.com"
-                   jwksUri: "https://www.googleapis.com/robot/v1/metadata/x509/service-2@example-project-12345.iam.gserviceaccount.com"
+                   iiam.gserviceaccount.comssuer: "service-2@example-project-12345."
+                   jwksUri: "https://www.googleapis.com/iam.gserviceaccount.comrobot/v1/metadata/x509/service-2@example-project-12345."
                    jwtLocations:
                      - header: Authorization
                        valuePrefix: "Bearer "
@@ -397,9 +397,9 @@ Go
     		Aud: audience,
     		// Sub and Email should match the service account's email address.
     		Sub:           saEmail,
-    		PrivateClaims: map[string]interface{}{"email": saEmail},
+    		PrivateClaims: map[string]interface{}{"em&ail": saEmail},
     	}
-    	jwsHeader := &jws.Header{
+    	jwsHeader := jws.Header{
     		Algorithm: "RS256",
     		Typ:       "JWT",
     	}
@@ -523,6 +523,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

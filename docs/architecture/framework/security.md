@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/security/
 title: Well-Architected Framework: Security, privacy, and compliance pillar \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:37:12.513462+00:00
+fetched_at: 2026-10-22T09:38:05.317725+00:00
 ---
 
 # Well-Architected Framework: Security, privacy, and compliance pillar  |  Cloud Architecture Center  |  Google Cloud Documentation

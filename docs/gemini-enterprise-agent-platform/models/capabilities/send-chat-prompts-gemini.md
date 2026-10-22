@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/send-chat-prompts-gemini/
 title: Text generation \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:43:07.949347+00:00
+fetched_at: 2026-10-22T10:14:14.330691+00:00
 ---
 
 # Text generation  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

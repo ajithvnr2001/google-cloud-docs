@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/runtime/create-a-langchain-agent/
 title: Create a LangChain agent \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:46:03.315455+00:00
+fetched_at: 2026-10-22T08:37:31.591238+00:00
 ---
 
 # Create a LangChain agent  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -327,10 +327,10 @@ Tools for [`LangchainAgent`](https://docs.cloud.google.com/python/docs/reference
 First, import the `generate_models` package and create the tool
     
     
-    from vertexai.generative_models import [grounding](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.generative_models.grounding.html), Tool
+    from vertexai.generative_models import [grounding](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.generative_models.grounding.html), Tool
     
     grounded_search_tool = Tool.from_google_search_retrieval(
-        [grounding](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.generative_models.grounding.html).[GoogleSearchRetrieval](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.generative_models.grounding.GoogleSearchRetrieval.html)()
+        [grounding](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.generative_models.grounding.html).[GoogleSearchRetrieval](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.generative_models.grounding.GoogleSearchRetrieval.html)()
     )
     
 

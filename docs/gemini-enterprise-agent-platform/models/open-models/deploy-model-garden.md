@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-models/deploy-model-garden/
 title: Deploy open models from Model Garden \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:15.741544+00:00
+fetched_at: 2026-10-22T08:35:37.940184+00:00
 ---
 
 # Deploy open models from Model Garden  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -70,10 +70,10 @@ To deploy a model in the Google Cloud console, do the following:
 The following sample shows you how to deploy a model by using the Agent Platform SDK for Python.
     
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
     from vertexai import model_garden
     
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project="PROJECT_ID", location="asia-south2")
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project="PROJECT_ID", location="asia-south2")
     
     model = model_garden.OpenModel("meta/llama3-3@llama-3.3-70b-instruct-fp8")
     endpoint = model.deploy(

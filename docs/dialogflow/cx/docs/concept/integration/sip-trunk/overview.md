@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/sip-trunk/overview/
 title: Telephony integration overview \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:42:32.479578+00:00
+fetched_at: 2026-10-22T10:42:47.135275+00:00
 ---
 
 # Telephony integration overview  |  Dialogflow CX  |  Google Cloud Documentation
@@ -23,9 +23,9 @@ Send feedback
 
 #  Telephony integration overview Stay organized with collections  Save and categorize content based on your preferences. 
 
-You can send audio data to Conversational AI with a telephony-based integration. To do this, you must establish telephony connectivity to Google's SIP endpoints, which are hosted by the Google Telephony Platform (GTP).
+Send audio data to Conversational AI with a telephony-based integration by establishing telephony connectivity to Google's SIP endpoints, which are hosted by the Google Telephony Platform (GTP).
 
-This documentation section outlines the process of integrating your Session Border Control (SBC) system with the Google Telephony Platform (GTP) to make voice data available in Conversational Agents.
+This document describes how to integrate your Session Border Control (SBC) system with the Google Telephony Platform (GTP) to make voice data available in Conversational Agents.
 
 ![Flowchart outlining telephony integration](https://docs.cloud.google.com/static/dialogflow/cx/docs/images/integration.png)
 
@@ -33,45 +33,47 @@ This documentation section outlines the process of integrating your Session Bord
 
 The telephony integration process has two main components:
 
-  * Conversational AI Google Cloud project setup.
-  * SBC configuration and validation.
+  * Set up your Conversational AI Google Cloud project.
+  * Configure and validate your SBC.
 
 
 
 ### Conversational AI Google Cloud project setup
 
   * Define a Conversational AI Google Cloud project.
-  * Allowlist the Google Cloud project for Conversational AI SBC integration.
+  * Complete the allowlist process for the Google Cloud project for Conversational AI SBC integration.
   * Configure Dialogflow, Conversational AI conversation profile, and phone number.
-  * (Optional) Request quota increase for Dialogflow CX Phone Gateway call length.
-  * (Optional) Enable audit logging for the Dialogflow API.
+  * Optional: Request a quota increase for the Dialogflow CX Phone Gateway call length.
+  * Optional: Enable audit logging for the Dialogflow API.
 
 
 
 ### SBC configuration and validation
 
   * Review supported SBC vendors and firmware versions.
-  * Supported SBC signaling and media protocols
-  * SBC's TLS configuration.
-  * SIP trunk creation on GTP.
+  * Configure supported SBC signaling and media protocols.
+  * Configure the SBC TLS settings.
+  * Create a SIP trunk on GTP.
   * Review telephony connectivity network requirements.
-  * Configure SBC for SIP connection to GTP.
-  * Perform SIP connectivity test with SIP OPTIONS ping.
-  * SIP header configuration for Conversational AI conversations.
+  * Configure the SBC for a SIP connection to GTP.
+  * Perform a SIP connectivity test with a SIP OPTIONS ping.
+  * Configure SIP headers for Conversational AI conversations.
   * Perform test calls.
-  * Review Dialogflow conversation history.
-  * (Optional) Review Google Cloud Logs Explorer.
+  * Review the Dialogflow conversation history.
+  * Optional: Review the Google Cloud Logs Explorer.
 
 
 
 ## What's next
 
-Learn how to [set up a Google Cloud project](https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/sip-trunk/cloud-setup) for the integration.
+  * Learn how to [set up a Google Cloud project](https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/sip-trunk/cloud-setup) for the telephony integration.
+
+
 
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

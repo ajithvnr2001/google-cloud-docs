@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-sqlalchemy-connect-connector-public-ip/
 title: Connect with a public IP using SQLAlchemy \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:52.930389+00:00
+fetched_at: 2026-10-22T09:38:26.932694+00:00
 ---
 
 # Connect with a public IP using SQLAlchemy  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

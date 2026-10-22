@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/knowledge-catalog-integration/
 title: Manage your Datastream resources using Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:32.028153+00:00
+fetched_at: 2026-10-22T08:26:41.543566+00:00
 ---
 
 # Manage your Datastream resources using Knowledge Catalog  |  Google Cloud Documentation

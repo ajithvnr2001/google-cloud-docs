@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/flow-logs/
 title: Manage flow logs \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T13:00:21.709648+00:00
+fetched_at: 2026-10-22T10:23:20.567869+00:00
 ---
 
 # Manage flow logs  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -34,7 +34,7 @@ Flow log is a GDC feature based on the open source Hubble project: <https://gith
 
 ## Before you begin
 
-  * You must obtain authorization to manage or view flow logs from the GDC console. To manage flow logs, ask your Organization IAM Admin to grant you the Flow Log Admin (`flowlog-admin`) role. To only view existing flow logs, ask your Organization IAM Admin to grant you the Flow Log Viewer (`flowlog-viewer`) role.
+  * You must obtain authorization to manage or view flow logs from the GDC console. To manage flow logs, ask your IAM Org Admin to grant you the Flow Log Admin (`flowlog-admin`) role. To only view existing flow logs, ask your IAM Org Admin to grant you the Flow Log Viewer (`flowlog-viewer`) role.
 
 For information about setting role bindings from the GDC console, see [Grant access to resources](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/set-up-role-bindings).
 
@@ -221,6 +221,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/self-service-maintenance/
 title: Perform self-service maintenance \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:41.319984+00:00
+fetched_at: 2026-10-22T09:27:58.061910+00:00
 ---
 
 # Perform self-service maintenance  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

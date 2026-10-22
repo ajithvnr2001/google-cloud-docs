@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/terraform/
 title: Provision IAP resources with Terraform \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:11:55.569803+00:00
+fetched_at: 2026-10-22T08:27:20.850225+00:00
 ---
 
 # Provision IAP resources with Terraform  |  Identity-Aware Proxy  |  Google Cloud Documentation

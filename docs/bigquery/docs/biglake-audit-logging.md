@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/biglake-audit-logging/
 title: BigLake audit logging \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:09:31.781703+00:00
+fetched_at: 2026-10-22T10:44:43.417255+00:00
 ---
 
 # BigLake audit logging  |  BigQuery  |  Google Cloud Documentation
@@ -60,14 +60,13 @@ API methods in the following list that are marked with (LRO) are long-running op
 `google.cloud.biglake.hive.v1.HiveMetastoreService.ListHiveDatabases`  
 `google.cloud.biglake.hive.v1.HiveMetastoreService.ListHiveTables`  
 `google.cloud.biglake.hive.v1.HiveMetastoreService.ListPartitions`  
-`google.cloud.biglake.hive.v1alpha.HiveMetastoreService.ListHiveDatabases`  
-`google.cloud.biglake.hive.v1alpha.HiveMetastoreService.ListPartitions`  
+`google.cloud.biglake.hive.v1alpha.HiveMetastoreService.GetHiveCatalog`  
+`google.cloud.biglake.hive.v1alpha.HiveMetastoreService.GetHiveTable`  
+`google.cloud.biglake.hive.v1alpha.HiveMetastoreService.ListHiveTables`  
 `google.cloud.biglake.hive.v1beta.HiveMetastoreService.GetHiveDatabase`  
 `google.cloud.biglake.hive.v1beta.HiveMetastoreService.GetHiveTable`  
 `google.cloud.biglake.hive.v1beta.HiveMetastoreService.ListHiveCatalogs`  
 `google.cloud.biglake.hive.v1beta.HiveMetastoreService.ListHiveDatabases`  
-`google.cloud.biglake.v1.IcebergCatalogService.GetIcebergCatalogConfig`  
-`google.cloud.biglake.v1alpha.DeltaSharingService.GetDeltaSharingCatalog`  
 `google.cloud.bigquery.biglake.v1.MetastoreService.GetCatalog`  
 `google.cloud.bigquery.biglake.v1.MetastoreService.GetDatabase`  
 `google.cloud.bigquery.biglake.v1.MetastoreService.GetTable`  
@@ -104,10 +103,9 @@ API methods in the following list that are marked with (LRO) are long-running op
 `google.cloud.biglake.hive.v1alpha.HiveMetastoreService.DeleteHiveDatabase`  
 `google.cloud.biglake.hive.v1alpha.HiveMetastoreService.DeleteHiveTable`  
 `google.cloud.biglake.hive.v1alpha.HiveMetastoreService.FailoverHiveCatalog`  
-`google.cloud.biglake.hive.v1alpha.HiveMetastoreService.GetHiveCatalog`  
 `google.cloud.biglake.hive.v1alpha.HiveMetastoreService.GetHiveDatabase`  
-`google.cloud.biglake.hive.v1alpha.HiveMetastoreService.GetHiveTable`  
-`google.cloud.biglake.hive.v1alpha.HiveMetastoreService.ListHiveTables`  
+`google.cloud.biglake.hive.v1alpha.HiveMetastoreService.ListHiveDatabases`  
+`google.cloud.biglake.hive.v1alpha.HiveMetastoreService.ListPartitions`  
 `google.cloud.biglake.hive.v1alpha.HiveMetastoreService.UpdateHiveCatalog`  
 `google.cloud.biglake.hive.v1alpha.HiveMetastoreService.UpdateHiveDatabase`  
 `google.cloud.biglake.hive.v1alpha.HiveMetastoreService.UpdateHiveTable`  
@@ -140,10 +138,12 @@ API methods in the following list that are marked with (LRO) are long-running op
 `google.cloud.biglake.v1.IcebergCatalogService.DeleteIcebergCatalog`  
 `google.cloud.biglake.v1.IcebergCatalogService.DeleteIcebergNamespace`  
 `google.cloud.biglake.v1.IcebergCatalogService.DeleteIcebergTable`  
+`google.cloud.biglake.v1.IcebergCatalogService.GetIcebergCatalogConfig`  
 `google.cloud.biglake.v1.IcebergCatalogService.UpdateIcebergCatalog`  
 `google.cloud.biglake.v1.IcebergCatalogService.UpdateIcebergNamespace`  
 `google.cloud.biglake.v1.IcebergCatalogService.UpdateIcebergTable`  
 `google.cloud.biglake.v1alpha.DataProductSharingService.PublishDataProduct`  
+`google.cloud.biglake.v1alpha.DataProductSharingService.UnpublishDataProduct`  
 `google.cloud.biglake.v1alpha.DeltaSharingService.CreateDeltaSharingCatalog`  
 `google.cloud.biglake.v1alpha.DeltaSharingService.DeleteDeltaSharingCatalog`  
 `google.cloud.biglake.v1alpha.DeltaSharingService.UpdateDeltaSharingCatalog`  
@@ -156,6 +156,7 @@ API methods in the following list that are marked with (LRO) are long-running op
 `google.cloud.biglake.v1alpha.IcebergCatalogService.UpdateIcebergCatalog`  
 `google.cloud.biglake.v1alpha.IcebergCatalogService.UpdateIcebergNamespace`  
 `google.cloud.biglake.v1alpha.IcebergCatalogService.UpdateIcebergTable`  
+`google.cloud.biglake.v1beta.IcebergCatalogService.CreateIcebergCatalog`  
 `google.cloud.biglake.v1beta.IcebergCatalogService.CreateIcebergNamespace`  
 `google.cloud.biglake.v1beta.IcebergCatalogService.CreateIcebergTable`  
 `google.cloud.biglake.v1beta.IcebergCatalogService.DeleteIcebergCatalog`  
@@ -655,7 +656,7 @@ The following audit logs are associated with methods belonging to `google.cloud.
   * **Audit log type** : [Admin activity](https://docs.cloud.google.com/logging/docs/audit#admin-activity)  
 
   * **Permissions** : 
-    * `biglake.catalogs.get - ADMIN_WRITE`
+    * `biglake.catalogs.get - ADMIN_READ`
   * **Method is a long-running or streaming operation** : No.  
 
   * **Filter for this method** : ` protoPayload.methodName="google.cloud.biglake.hive.v1alpha.HiveMetastoreService.GetHiveCatalog" `  
@@ -685,7 +686,7 @@ The following audit logs are associated with methods belonging to `google.cloud.
   * **Audit log type** : [Admin activity](https://docs.cloud.google.com/logging/docs/audit#admin-activity)  
 
   * **Permissions** : 
-    * `biglake.tables.get - ADMIN_WRITE`
+    * `biglake.tables.get - ADMIN_READ`
   * **Method is a long-running or streaming operation** : No.  
 
   * **Filter for this method** : ` protoPayload.methodName="google.cloud.biglake.hive.v1alpha.HiveMetastoreService.GetHiveTable" `  
@@ -700,7 +701,7 @@ The following audit logs are associated with methods belonging to `google.cloud.
   * **Audit log type** : [Admin activity](https://docs.cloud.google.com/logging/docs/audit#admin-activity)  
 
   * **Permissions** : 
-    * `biglake.namespaces.list - ADMIN_READ`
+    * `biglake.namespaces.list - ADMIN_WRITE`
   * **Method is a long-running or streaming operation** : No.  
 
   * **Filter for this method** : ` protoPayload.methodName="google.cloud.biglake.hive.v1alpha.HiveMetastoreService.ListHiveDatabases" `  
@@ -715,7 +716,7 @@ The following audit logs are associated with methods belonging to `google.cloud.
   * **Audit log type** : [Admin activity](https://docs.cloud.google.com/logging/docs/audit#admin-activity)  
 
   * **Permissions** : 
-    * `biglake.tables.list - ADMIN_WRITE`
+    * `biglake.tables.list - ADMIN_READ`
   * **Method is a long-running or streaming operation** : No.  
 
   * **Filter for this method** : ` protoPayload.methodName="google.cloud.biglake.hive.v1alpha.HiveMetastoreService.ListHiveTables" `  
@@ -730,7 +731,7 @@ The following audit logs are associated with methods belonging to `google.cloud.
   * **Audit log type** : [Admin activity](https://docs.cloud.google.com/logging/docs/audit#admin-activity)  
 
   * **Permissions** : 
-    * `biglake.tables.listPartitions - ADMIN_READ`
+    * `biglake.tables.listPartitions - ADMIN_WRITE`
   * **Method is a long-running or streaming operation** : [**Streaming RPC**](https://docs.cloud.google.com/logging/docs/audit/understanding-audit-logs#streaming)   
 
   * **Filter for this method** : ` protoPayload.methodName="google.cloud.biglake.hive.v1alpha.HiveMetastoreService.ListPartitions" `  
@@ -1001,7 +1002,7 @@ The following audit logs are associated with methods belonging to `google.cloud.
 
   * **Method** : `google.cloud.biglake.hive.v1beta.HiveMetastoreService.ListHiveDatabases`  
 
-  * **Audit log type** : [Admin activity](https://docs.cloud.google.com/logging/docs/audit#admin-activity)  
+  * **Audit log type** : [Data access](https://docs.cloud.google.com/logging/docs/audit#data-access)  
 
   * **Permissions** : 
     * `biglake.namespaces.list - ADMIN_READ`
@@ -1016,7 +1017,7 @@ The following audit logs are associated with methods belonging to `google.cloud.
 
   * **Method** : `google.cloud.biglake.hive.v1beta.HiveMetastoreService.ListHiveTables`  
 
-  * **Audit log type** : [Admin activity](https://docs.cloud.google.com/logging/docs/audit#admin-activity)  
+  * **Audit log type** : [Data access](https://docs.cloud.google.com/logging/docs/audit#data-access)  
 
   * **Permissions** : 
     * `biglake.tables.list - ADMIN_WRITE`
@@ -1305,7 +1306,7 @@ The following audit logs are associated with methods belonging to `google.cloud.
   * **Audit log type** : [Admin activity](https://docs.cloud.google.com/logging/docs/audit#admin-activity)  
 
   * **Permissions** : 
-    * `biglake.catalogs.get - ADMIN_READ`
+    * `biglake.catalogs.get - ADMIN_WRITE`
   * **Method is a long-running or streaming operation** : No.  
 
   * **Filter for this method** : ` protoPayload.methodName="google.cloud.biglake.v1.IcebergCatalogService.GetIcebergCatalogConfig" `  
@@ -1377,6 +1378,21 @@ The following audit logs are associated with methods belonging to `google.cloud.
 
 
 
+#### `UnpublishDataProduct`
+
+  * **Method** : `google.cloud.biglake.v1alpha.DataProductSharingService.UnpublishDataProduct`  
+
+  * **Audit log type** : [Admin activity](https://docs.cloud.google.com/logging/docs/audit#admin-activity)  
+
+  * **Permissions** : 
+    * `biglake.catalogs.update - ADMIN_WRITE`
+  * **Method is a long-running or streaming operation** : No.  
+
+  * **Filter for this method** : ` protoPayload.methodName="google.cloud.biglake.v1alpha.DataProductSharingService.UnpublishDataProduct" `  
+
+
+
+
 ### `google.cloud.biglake.v1alpha.DeltaSharingService`
 
 The following audit logs are associated with methods belonging to `google.cloud.biglake.v1alpha.DeltaSharingService`.
@@ -1407,21 +1423,6 @@ The following audit logs are associated with methods belonging to `google.cloud.
   * **Method is a long-running or streaming operation** : No.  
 
   * **Filter for this method** : ` protoPayload.methodName="google.cloud.biglake.v1alpha.DeltaSharingService.DeleteDeltaSharingCatalog" `  
-
-
-
-
-#### `GetDeltaSharingCatalog`
-
-  * **Method** : `google.cloud.biglake.v1alpha.DeltaSharingService.GetDeltaSharingCatalog`  
-
-  * **Audit log type** : [Data access](https://docs.cloud.google.com/logging/docs/audit#data-access)  
-
-  * **Permissions** : 
-    * `biglake.catalogs.get - ADMIN_READ`
-  * **Method is a long-running or streaming operation** : No.  
-
-  * **Filter for this method** : ` protoPayload.methodName="google.cloud.biglake.v1alpha.DeltaSharingService.GetDeltaSharingCatalog" `  
 
 
 
@@ -1583,6 +1584,21 @@ The following audit logs are associated with methods belonging to `google.cloud.
 ### `google.cloud.biglake.v1beta.IcebergCatalogService`
 
 The following audit logs are associated with methods belonging to `google.cloud.biglake.v1beta.IcebergCatalogService`.
+
+#### `CreateIcebergCatalog`
+
+  * **Method** : `google.cloud.biglake.v1beta.IcebergCatalogService.CreateIcebergCatalog`  
+
+  * **Audit log type** : [Admin activity](https://docs.cloud.google.com/logging/docs/audit#admin-activity)  
+
+  * **Permissions** : 
+    * `biglake.catalogs.create - ADMIN_WRITE`
+  * **Method is a long-running or streaming operation** : No.  
+
+  * **Filter for this method** : ` protoPayload.methodName="google.cloud.biglake.v1beta.IcebergCatalogService.CreateIcebergCatalog" `  
+
+
+
 
 #### `CreateIcebergNamespace`
 

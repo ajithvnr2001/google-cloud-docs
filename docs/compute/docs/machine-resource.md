@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/machine-resource/
 title: Machine families resource and comparison guide \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:25:06.580856+00:00
+fetched_at: 2026-10-22T10:44:49.373752+00:00
 ---
 
 # Machine families resource and comparison guide  |  Compute Engine  |  Google Cloud Documentation
@@ -273,16 +273,13 @@ The [**storage-optimized machine family**](https://docs.cloud.google.com/compute
 
 Z3 runs on the Intel Xeon Scalable processor (code name Sapphire Rapids) with DDR5 memory and [Titanium](https://cloud.google.com/titanium) offload processors. Z3 brings together compute, networking, and storage innovations into one platform. Z3 instances are aligned with the underlying NUMA architecture to offer optimal, reliable, and consistent performance.
 
-  * Z3 `standardlssd` machine types can have up to 176 vCPUs, 1,406 GB of memory, and 35 TiB of Titanium SSD.
-  * Z3 `highlssd` machine types can have up to 88 vCPUs, 704 GB of memory, and 35 TiB of Titanium SSD.
-  * Z3 bare metal machine types have 192 vCPUs, 1,536 GB of memory, and 70 TiB of local Titanium SSD.
-
-
++Z3 `standardlssd` machine types can have up to 176 vCPUs, 1,406 GB of memory, and 35 TiB of Titanium SSD. \+ Z3 `highlssd` machine types can have up to 88 vCPUs, 704 GB of memory, and 35 TiB of Titanium SSD. \+ Z3 bare metal machine types have 192 vCPUs, 1,536 GB of memory, and 70 TiB of local Titanium SSD.
 
 Z4D runs on AMD EPYC Turin processors with DDR5 memory and Titanium offload processors. Z4D machine types are optimized for the underlying NUMA architecture to deliver optimal, reliable, and consistent performance. Z4D also offers larger Titanium SSD disk sizes than Z3.
 
   * Z4D `standardlssd` machine types can have up to 384 vCPUs, 3,024 GB of memory, and 84,000 GiB of Titanium SSD.
   * Z4D `highlssd` machine types can have up to 192 vCPUs, 1,512 GB of memory, and 84,000 GiB of Titanium SSD.
+  * Z4D bare metal machine types have 384 vCPUs, 3,072 GB of memory, and 84 TiB of local Titanium SSD.
 
 
 
@@ -464,6 +461,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-15 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

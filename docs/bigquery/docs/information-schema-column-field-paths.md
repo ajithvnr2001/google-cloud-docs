@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-column-field-paths/
 title: COLUMN_FIELD_PATHS view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:01:28.410544+00:00
+fetched_at: 2026-10-22T10:13:49.232738+00:00
 ---
 
 # COLUMN_FIELD_PATHS view  |  BigQuery  |  Google Cloud Documentation
@@ -65,6 +65,12 @@ Column name | Data type | Value
 If a `STRING`, `ARRAY<STRING>`, or `STRING` field in a `STRUCT` is passed in, the collation specification is returned if it exists; otherwise, `NULL` is returned.   
 `rounding_mode` | `STRING` |  The mode of rounding that's used when applying precision and scale to parameterized `NUMERIC` or `BIGNUMERIC` values; otherwise, the value is `NULL`.   
 `data_policies.name` | `STRING` |  The list of data policies that are attached to the column to control access and masking. This field is in ([Preview](https://cloud.google.com/products#product-launch-stages)).   
+`data_governance_tags` | `ARRAY<STRUCT>` |  The list of [data governance tags](https://docs.cloud.google.com/bigquery/docs/tags#data-governance-tags) that are attached to the column or nested field to control access and masking. Each `STRUCT` contains the following `STRING` fields: 
+
+  * `key`: the namespaced tag key, in the format `PROJECT_ID/TAG_KEY` or `ORGANIZATION_ID/TAG_KEY`.
+  * `value`: the short name of the tag value.
+
+  
 `policy_tags` | `ARRAY<STRING>` |  The list of policy tags that are attached to the column.   
   
 For stability, we recommend that you explicitly list columns in your information schema queries instead of using a wildcard (`SELECT *`). Explicitly listing columns prevents queries from breaking if the underlying schema changes.
@@ -144,6 +150,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-19 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

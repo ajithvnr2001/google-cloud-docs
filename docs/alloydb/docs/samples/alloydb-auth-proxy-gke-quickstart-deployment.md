@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-auth-proxy-gke-quickstart-deployment/
 title: Connect from Google Kubernetes Engine with a sidecar proxy \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:47.207886+00:00
+fetched_at: 2026-10-22T10:24:03.038935+00:00
 ---
 
 # Connect from Google Kubernetes Engine with a sidecar proxy  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -20,6 +20,14 @@ fetched_at: 2026-10-20T20:45:47.207886+00:00
 #  Connect from Google Kubernetes Engine with a sidecar proxy Stay organized with collections  Save and categorize content based on your preferences. 
 
 This manifest defines a Kubernetes Deployment that runs the Auth Proxy as a sidecar container alongside your application. Use this pattern to provide secure, authorized, and encrypted connections from your application in Google Kubernetes Engine to your database instance.
+
+## Explore further
+
+For detailed documentation that includes this code sample, see the following: 
+
+  * [Connect from Google Kubernetes Engine (GKE) to AlloyDB for PostgreSQL](https://docs.cloud.google.com/alloydb/docs/quickstart/integrate-kubernetes)
+
+
 
 ## Code sample
 
@@ -47,7 +55,7 @@ This manifest defines a Kubernetes Deployment that runs the Auth Proxy as a side
             env:
             - name: DB_HOST
               # The port value here (5432) should match the --port flag below.
-              value: "localhost:5342"
+              value: "localhost:5432"
             - name: DB_USER
               valueFrom:
                 secretKeyRef:

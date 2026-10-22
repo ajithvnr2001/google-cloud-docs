@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-batch-create-job/
 title: Storage Batch Create Job \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:06:35.115491+00:00
+fetched_at: 2026-10-22T10:31:05.803791+00:00
 ---
 
 # Storage Batch Create Job  |  Google Cloud Documentation

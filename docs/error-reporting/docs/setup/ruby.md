@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/error-reporting/docs/setup/ruby/
 title: Instrument Ruby apps for Error Reporting \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:41.953455+00:00
+fetched_at: 2026-10-22T08:37:24.285042+00:00
 ---
 
 # Instrument Ruby apps for Error Reporting  |  Google Cloud Documentation

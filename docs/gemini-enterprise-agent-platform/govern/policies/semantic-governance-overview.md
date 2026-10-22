@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/policies/semantic-governance-overview/
 title: Semantic governance policies overview \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:53.507917+00:00
+fetched_at: 2026-10-22T10:28:30.606793+00:00
 ---
 
 # Semantic governance policies overview  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

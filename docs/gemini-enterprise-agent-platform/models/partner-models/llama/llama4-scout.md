@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/llama/llama4-scout/
 title: Llama 4 Scout 17B-16E \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:09.101718+00:00
+fetched_at: 2026-10-22T10:27:36.540667+00:00
 ---
 
 # Llama 4 Scout 17B-16E  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/columnar-engine/maintain-content-freshness/
 title: Maintain freshness of in-memory column store data \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:36.104490+00:00
+fetched_at: 2026-10-22T09:44:10.046235+00:00
 ---
 
 # Maintain freshness of in-memory column store data  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

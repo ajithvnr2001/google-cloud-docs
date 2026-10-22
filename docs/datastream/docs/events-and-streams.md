@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/events-and-streams/
 title: Events and streams \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:33.347145+00:00
+fetched_at: 2026-10-22T08:26:16.471776+00:00
 ---
 
 # Events and streams  |  Datastream  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/partners/palo-alto-networks-ngfw/
 title: Secure virtual private cloud networks with the Palo Alto VM-Series NGFW \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:46:08.048966+00:00
+fetched_at: 2026-10-22T09:19:47.519809+00:00
 ---
 
 # Secure virtual private cloud networks with the Palo Alto VM-Series NGFW  |  Cloud Architecture Center  |  Google Cloud Documentation

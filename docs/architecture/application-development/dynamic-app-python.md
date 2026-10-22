@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/application-development/dynamic-app-python/
 title: Delete the Dynamic web application with Python and JavaScript \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:22:23.027644+00:00
+fetched_at: 2026-10-22T09:38:12.557834+00:00
 ---
 
 # Delete the Dynamic web application with Python and JavaScript  |  Cloud Architecture Center  |  Google Cloud Documentation

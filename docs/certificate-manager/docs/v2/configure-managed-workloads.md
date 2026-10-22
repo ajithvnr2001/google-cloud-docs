@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/v2/configure-managed-workloads/
 title: Configure lifecycle management for managed workloads \u00a0|\u00a0 Certificate Manager (2nd gen) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:38:44.607642+00:00
+fetched_at: 2026-10-22T09:12:32.995585+00:00
 ---
 
 # Configure lifecycle management for managed workloads  |  Certificate Manager (2nd gen)  |  Google Cloud Documentation

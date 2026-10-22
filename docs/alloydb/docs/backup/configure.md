@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/backup/configure/
 title: Configure backup plans \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:41.738819+00:00
+fetched_at: 2026-10-22T09:38:30.245930+00:00
 ---
 
 # Configure backup plans  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

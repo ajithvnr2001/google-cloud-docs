@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tpu/docs/v6e-training/
 title: Train a model using TPU v6e \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:27.208449+00:00
+fetched_at: 2026-10-22T09:57:26.978058+00:00
 ---
 
 # Train a model using TPU v6e  |  Google Cloud Documentation
@@ -686,12 +686,12 @@ Throughput (examples/sec)  | 115.9  | 438.4  | 492.3
   
 ### Train a model using PyTorch on Cloud TPU
 
-You can use [TorchTPU](https://github.com/google-pytorch/torch_tpu) directly to train your model or reuse the [TorchTitan](https://github.com/google-pytorch/torchtitan) reference library. To get started with v6e workloads, see the [TorchTitan Trillium recipes](https://github.com/google-pytorch/torchtitan/tree/main/torchtitan/experiments/tpu/recipes/trillium). For more information about the PyTorch ecosystem on Cloud TPU, see [PyTorch on Cloud TPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu).
+You can use [TorchTPU](https://torchtpu.readthedocs.io/en/latest/) directly to train your model or reuse the [TorchTitan](https://github.com/google-pytorch/torchtitan) reference library. To get started with v6e workloads, see [Get started with TorchTPU on a TPU VM](https://torchtpu.readthedocs.io/en/latest/get_started_on_a_vm/) and the [TorchTitan Trillium recipes](https://github.com/google-pytorch/torchtitan/tree/main/torchtitan/experiments/tpu/recipes/trillium). For more information about the PyTorch ecosystem on Cloud TPU, see [PyTorch on Cloud TPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu).
 
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

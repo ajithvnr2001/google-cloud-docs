@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/configure-compute/
 title: Configure compute resources for Gemini Enterprise Agent Platform serverless training \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:43:48.739864+00:00
+fetched_at: 2026-10-22T10:14:16.483099+00:00
 ---
 
 # Configure compute resources for Gemini Enterprise Agent Platform serverless training  |  Google Cloud Documentation

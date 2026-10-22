@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/start/get-started-with-gemini-3/
 title: Get started with Gemini 3 \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:43:31.734194+00:00
+fetched_at: 2026-10-22T10:28:57.498645+00:00
 ---
 
 # Get started with Gemini 3  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

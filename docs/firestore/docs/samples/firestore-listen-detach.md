@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-listen-detach/
 title: Unsubscribe from a Firestore watch listener \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:58:57.864767+00:00
+fetched_at: 2026-10-22T10:28:23.043785+00:00
 ---
 
 # Unsubscribe from a Firestore watch listener  |  Google Cloud Documentation

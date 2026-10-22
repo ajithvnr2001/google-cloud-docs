@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/url-context/
 title: URL context \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:15.370623+00:00
+fetched_at: 2026-10-22T10:28:49.985945+00:00
 ---
 
 # URL context  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

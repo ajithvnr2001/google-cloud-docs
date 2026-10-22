@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/monitor-a-stream/
 title: Monitor a stream \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:30.443574+00:00
+fetched_at: 2026-10-22T08:26:33.750738+00:00
 ---
 
 # Monitor a stream  |  Datastream  |  Google Cloud Documentation

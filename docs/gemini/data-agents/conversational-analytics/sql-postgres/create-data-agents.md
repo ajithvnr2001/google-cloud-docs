@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/conversational-analytics/sql-postgres/create-data-agents/
 title: Create data agents \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:36:51.037186+00:00
+fetched_at: 2026-10-22T08:49:59.456542+00:00
 ---
 
 # Create data agents  |  Data Agents  |  Google Cloud Documentation

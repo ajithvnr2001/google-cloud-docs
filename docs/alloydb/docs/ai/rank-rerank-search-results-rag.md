@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/rank-rerank-search-results-rag/
 title: Rank search results \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:01.850673+00:00
+fetched_at: 2026-10-22T09:37:46.200429+00:00
 ---
 
 # Rank search results  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

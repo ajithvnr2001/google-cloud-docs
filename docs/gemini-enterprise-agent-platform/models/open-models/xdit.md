@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-models/xdit/
 title: Serve Diffusion Transformer models using xDiT container on Cloud GPUs \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:21.489103+00:00
+fetched_at: 2026-10-22T08:35:37.664775+00:00
 ---
 
 # Serve Diffusion Transformer models using xDiT container on Cloud GPUs  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -94,10 +94,10 @@ For flexibility and customization, use the Colab Enterprise notebook examples to
 
     
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
     from vertexai import model_garden
     
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=<YOUR_PROJECT_ID>, location=<REGION>)
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=<YOUR_PROJECT_ID>, location=<REGION>)
     
     model = model_garden.OpenModel("black-forest-labs/FLUX.1-schnell")
     endpoint = model.deploy()
@@ -196,15 +196,15 @@ xDiT offers a range of server arguments that can be configured to optimize perfo
 
 ### Serving Customizations
 
-Model Garden provides default xDiT parallelization configurations for supported models. You can inspect these default settings using the [Agent Platform SDK](https://cloud.google.com/gemini-enterprise-agent-platform/models/model-garden/use-models?_gl=1*1vbblld*_ga*MTg0NzQyNjM2NS4xNzUyNjAyNDg5*_ga_WH2QY8WWF5*czE3NTI2OTg4MTckbzIkZzEkdDE3NTI2OTg4MTgkajU5JGwwJGgw#deploy_a_model) for Python.
+Model Garden provides default xDiT parallelization configurations for supported models. You can inspect these default settings using the [Agent Platform SDK](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-garden/use-models#deploy_a_model) for Python.
 
 To view the default deployment configuration for a model, such as "black-forest-labs/FLUX.1-schnell", you can run the following code snippet:
     
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
     from vertexai import model_garden
     
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=<YOUR_PROJECT_ID>, location=<REGION>)
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=<YOUR_PROJECT_ID>, location=<REGION>)
     
     model = model_garden.OpenModel("black-forest-labs/FLUX.1-schnell")
     deploy_options = model.list_deploy_options()
@@ -247,11 +247,11 @@ The `list_deploy_options()` method returns the container specifications, includi
 To customize the parallelism strategy, you can override these environment variables when deploying the model. The following example demonstrates how to modify the RING_DEGREE and ULYSSES_DEGREE for a 2-GPU setup, changing the parallelism approach:
     
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
     from vertexai import model_garden
     
     # Replace with your project ID and region
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project="<YOUR_PROJECT_ID>", location="<REGION>")
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project="<YOUR_PROJECT_ID>", location="<REGION>")
     
     model = model_garden.OpenModel("black-forest-labs/FLUX.1-schnell")
     
@@ -279,7 +279,7 @@ To customize the parallelism strategy, you can override these environment variab
 
 Remember to consult the "Understanding xDiT specific arguments" section for details on each environment variable. Ensure that the product of parallelism degrees (e.g., PIPEFUSION_PARALLEL_DEGREE,ULYSSES_DEGREE, RING_DEGREE, and USE_CFG_PARALLEL) equals the total number of GPUs (N_GPUS).
 
-For more examples of serving recipes and configurations for different models, refer to the [xDiT official documentation](https://github.com/xdit-project/xDiT/tree/main?tab=readme-ov-file). For additional information on the Model Garden SDK, see the [documentation](https://cloud.google.com/gemini-enterprise-agent-platform/models/model-garden/use-models?_gl=1*1vbblld*_ga*MTg0NzQyNjM2NS4xNzUyNjAyNDg5*_ga_WH2QY8WWF5*czE3NTI2OTg4MTckbzIkZzEkdDE3NTI2OTg4MTgkajU5JGwwJGgw#deploy_a_model).
+For more examples of serving recipes and configurations for different models, refer to the [xDiT official documentation](https://github.com/xdit-project/xDiT/tree/main?tab=readme-ov-file). For additional information on the Model Garden SDK, see the [documentation](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-garden/use-models#deploy_a_model).
 
 Send feedback 
 

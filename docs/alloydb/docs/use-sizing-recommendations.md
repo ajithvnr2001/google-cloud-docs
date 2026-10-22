@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/use-sizing-recommendations/
 title: Sizing and deployment recommendations \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:22.129741+00:00
+fetched_at: 2026-10-22T10:41:58.282949+00:00
 ---
 
 # Sizing and deployment recommendations  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Sizing and deployment recommendations Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document provides workload and deployment recommendations for sizing AlloyDB for PostgreSQL instances for both online transaction processing (OLTP) and online analytical processing (OLAP) workloads.
+To optimize throughput, latency, and high availability for your AlloyDB for PostgreSQL workloads, you can size and deploy your primary and read pool instances for online transaction processing (OLTP), online analytical processing (OLAP), and hybrid transactional and analytical processing (HTAP) workloads.
 
 ## Overview
 
@@ -35,7 +35,7 @@ To help you achieve better database performance, AlloyDB for PostgreSQL provides
 
 
 
-Tuning your AlloyDB for PostgreSQL instance for performanceincludes managing the following::
+Tuning your AlloyDB for PostgreSQL instance for performance includes managing the following:
 
   * Sizing your primary and read pool instances correctly
   * Updating flags that impact performance
@@ -118,9 +118,7 @@ If you choose to deploy a primary with read pool instance, consider the followin
   * Add more than one node per read pool instance for high availability.
   * Enable columnar engine selectively in specific read pool instances for read query performance. This doesn't require enabling columnar engine on the primary instance.
 
-
-
-Consider using built-in features such as index advisor to help you add indexes that can improve query performance.
+Consider using built-in features such as index advisor to help you add indexes that can improve query performance. 
 
 ## OLAP workloads
 
@@ -167,6 +165,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

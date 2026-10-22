@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/query-insights/
 title: Analyze query performance statistics \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:17.515467+00:00
+fetched_at: 2026-10-22T08:25:15.876470+00:00
 ---
 
 # Analyze query performance statistics  |  Firestore in Datastore mode  |  Google Cloud Documentation

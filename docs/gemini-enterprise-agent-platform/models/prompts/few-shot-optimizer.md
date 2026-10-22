@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/prompts/few-shot-optimizer/
 title: Few-shot prompt optimizer \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:22.721657+00:00
+fetched_at: 2026-10-22T08:37:13.946035+00:00
 ---
 
 # Few-shot prompt optimizer  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -40,12 +40,12 @@ The rubrics can be consistent across all rows or tailored to each example.
     
     
     import pandas as pd
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
-    from vertexai import [types](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.html)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+    from vertexai import [types](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.html)
     
     PROJECT_NAME = "YOUR_PROJECT_NAME"
     LOCATION = "YOUR_LOCATION" # e.g. "us-central1"
-    client = [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).Client(project=PROJECT_NAME, location=LOCATION)
+    client = [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).Client(project=PROJECT_NAME, location=LOCATION)
     
     system_instructions = "You are an AI assistant skilled in analyzing articles. Your task is to extract key arguments, evaluate evidence quality, identify potential biases, and summarize core findings into a concise, actionable, and objective report. Make sure the response is less than 50 words"
     df = pd.DataFrame(
@@ -65,14 +65,14 @@ The rubrics can be consistent across all rows or tailored to each example.
         ]
     )
     
-    config = [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).[types](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.html).[OptimizeConfig](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.OptimizeConfig.html)(
-        optimization_target=[vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).[types](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.html).[OptimizeTarget](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.OptimizeTarget.html).[OPTIMIZATION_TARGET_FEW_SHOT_RUBRICS](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.OptimizeTarget.html#vertexai__genai_types_OptimizeTarget_OPTIMIZATION_TARGET_FEW_SHOT_RUBRICS),
+    config = [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).[types](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.html).[OptimizeConfig](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.OptimizeConfig.html)(
+        optimization_target=[vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).[types](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.html).[OptimizeTarget](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.OptimizeTarget.html).[OPTIMIZATION_TARGET_FEW_SHOT_RUBRICS](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.OptimizeTarget.html#vertexai__genai_types_OptimizeTarget_OPTIMIZATION_TARGET_FEW_SHOT_RUBRICS),
         examples_dataframe=df,
     )
     
-    response = client.[prompts](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.prompts.html).optimize(prompt=system_instructions, config=config)
+    response = client.[prompts](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.prompts.html).optimize(prompt=system_instructions, config=config)
     
-    print(response.[parsed_response](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.OptimizeResponseDict.html#vertexai__genai_types_OptimizeResponseDict_parsed_response).suggested_prompt)
+    print(response.[parsed_response](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.OptimizeResponseDict.html#vertexai__genai_types_OptimizeResponseDict_parsed_response).suggested_prompt)
     
 
 ## Optimize using target responses
@@ -89,12 +89,12 @@ Your DataFrame must include these three columns:
     
     
     import pandas as pd
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
-    from vertexai import [types](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.html)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+    from vertexai import [types](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.html)
     
     PROJECT_NAME = "PROJECT"
     LOCATION = "YOUR_LOCATION" # e.g. "us-central1"
-    client = [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).Client(project=YOUR_PROJECT_NAME, location=LOCATION)
+    client = [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).Client(project=YOUR_PROJECT_NAME, location=LOCATION)
     
     system_instructions = "You are an AI assistant skilled in analyzing articles. Your task is to extract key arguments, evaluate evidence quality, identify potential biases, and summarize core findings into a concise, actionable, and objective report. Make sure the response is less than 50 words"
     df = pd.DataFrame(
@@ -104,16 +104,16 @@ Your DataFrame must include these three columns:
             "target_response": ["target1", "target2"],
         }
     )
-    config = [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).[types](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.html).[OptimizeConfig](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.OptimizeConfig.html)(
-        optimization_target=[vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).[types](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.html).[OptimizeTarget](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.OptimizeTarget.html).[OPTIMIZATION_TARGET_FEW_SHOT_TARGET_RESPONSE](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.OptimizeTarget.html#vertexai__genai_types_OptimizeTarget_OPTIMIZATION_TARGET_FEW_SHOT_TARGET_RESPONSE),
+    config = [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).[types](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.html).[OptimizeConfig](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.OptimizeConfig.html)(
+        optimization_target=[vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).[types](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.html).[OptimizeTarget](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.OptimizeTarget.html).[OPTIMIZATION_TARGET_FEW_SHOT_TARGET_RESPONSE](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.OptimizeTarget.html#vertexai__genai_types_OptimizeTarget_OPTIMIZATION_TARGET_FEW_SHOT_TARGET_RESPONSE),
         examples_dataframe=df,
     )
-    response = client.[prompts](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.prompts.html).optimize(
+    response = client.[prompts](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.prompts.html).optimize(
         prompt=system_instructions,
         config=config,
     )
     
-    print(response.[parsed_response](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.OptimizeResponseDict.html#vertexai__genai_types_OptimizeResponseDict_parsed_response).suggested_prompt)
+    print(response.[parsed_response](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.OptimizeResponseDict.html#vertexai__genai_types_OptimizeResponseDict_parsed_response).suggested_prompt)
     
 
 Send feedback 

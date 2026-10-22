@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/inference-optimized-gateway/
 title: GKE Inference Gateway \u00a0|\u00a0 Google Cloud Observability \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:17:16.995465+00:00
+fetched_at: 2026-10-22T10:39:28.851772+00:00
 ---
 
 # GKE Inference Gateway  |  Google Cloud Observability  |  Google Cloud Documentation
@@ -40,7 +40,9 @@ To collect metrics from the GKE Inference Gateway exporter by using Managed Serv
   * Your cluster must be running Google Kubernetes Engine version 1.28.15-gke.2475000 or later.
   * You must be running Managed Service for Prometheus with managed collection enabled. For more information, see [ Get started with managed collection](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/setup-managed).
 
-The GKE Inference Gateway exporter exposes Prometheus-format metrics automatically; you don't have to install it separately. 
+**Note:** This exporter and the **GKE Inference Gateway Prometheus Overview** dashboard target legacy Gateway API Inference Extension (v1.5.0 and earlier) and llm-d (earlier than v0.8.0) deployments that emit `inference _objective_ *` metrics. For [llm-d](https://llm-d.ai/) version v0.8.0 and later (both Standalone Mode and Gateway Mode with GKE Inference Gateway), use the [llm-d exporter and unified **llm-d Overview** dashboard](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/llm-d) instead.
+
+The GKE Inference Gateway exporter exposes Prometheus-format metrics automatically; you don't have to install it separately.
 
 To verify that the GKE Inference Gateway exporter is emitting metrics on the expected endpoints, do the following:
 

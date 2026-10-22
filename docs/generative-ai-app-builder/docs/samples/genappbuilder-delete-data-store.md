@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/samples/genappbuilder-delete-data-store/
 title: Delete a data store \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:54:54.593610+00:00
+fetched_at: 2026-10-22T08:32:44.296107+00:00
 ---
 
 # Delete a data store  |  Agent Search  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/composer/docs/apis/
 title: APIs & reference \u00a0|\u00a0 Managed Service for Apache Airflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:27:38.213125+00:00
+fetched_at: 2026-10-22T09:18:43.750706+00:00
 ---
 
 # APIs & reference  |  Managed Service for Apache Airflow  |  Google Cloud Documentation

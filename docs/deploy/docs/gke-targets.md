@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/gke-targets/
 title: Deploy to a Google Kubernetes Engine cluster \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:46.806792+00:00
+fetched_at: 2026-10-22T08:24:48.448130+00:00
 ---
 
 # Deploy to a Google Kubernetes Engine cluster  |  Google Cloud Documentation

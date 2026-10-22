@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/cloudsecuritycompliance/
 title: Cloud Security Compliance roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:42:56.960639+00:00
+fetched_at: 2026-10-22T08:27:26.999300+00:00
 ---
 
 # Cloud Security Compliance roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

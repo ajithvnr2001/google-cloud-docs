@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-agent-kit/transform-data/
 title: Transform data \u00a0|\u00a0 Google Cloud Data Agent Kit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:25.476308+00:00
+fetched_at: 2026-10-22T08:26:16.872532+00:00
 ---
 
 # Transform data  |  Google Cloud Data Agent Kit  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/image-data/classification/prepare-data/
 title: Prepare image training data for classification \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:46:36.169977+00:00
+fetched_at: 2026-10-22T10:23:11.329204+00:00
 ---
 
 # Prepare image training data for classification  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

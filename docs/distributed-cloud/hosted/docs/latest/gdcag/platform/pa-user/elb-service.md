@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/elb-service/
 title: Configure external load balancers \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T13:32:52.591511+00:00
+fetched_at: 2026-10-22T10:22:02.672028+00:00
 ---
 
 # Configure external load balancers  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -42,9 +42,9 @@ To configure ELB services, you must:
   * Have a customized `ProjectNetworkPolicy` (PNP) ingress policy to allow traffic to this ELB service. For more information, see Configure PNP to allow traffic to ELB.
   * Have the necessary identity and access roles:
 
-    * Project NetworkPolicy Admin: has access to manage project network policies in the project namespace. Ask your Organization IAM Admin to grant you the Project NetworkPolicy Admin (`project-networkpolicy-admin`) role.
-    * Load Balancer Admin: Ask your Organization IAM Admin to grant you the Load Balancer Admin (`load-balancer-admin`) role.
-    * Global Load Balancer Admin: For global ELBs, ask your Organization IAM Admin to grant you the Global Load Balancer Admin (`global-load-balancer-admin`) role. For more information, see [Predefined role descriptions](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/role-descriptions).
+    * Project NetworkPolicy Admin: has access to manage project network policies in the project namespace. Ask your IAM Org Admin to grant you the Project NetworkPolicy Admin (`project-networkpolicy-admin`) role.
+    * Load Balancer Admin: Ask your IAM Org Admin to grant you the Load Balancer Admin (`load-balancer-admin`) role.
+    * Global Load Balancer Admin: For global ELBs, ask your IAM Org Admin to grant you the Global Load Balancer Admin (`global-load-balancer-admin`) role. For more information, see [Predefined role descriptions](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/role-descriptions).
 
 
 
@@ -761,8 +761,8 @@ To configure ELB services, you must:
   * Have a customized `ProjectNetworkPolicy` (PNP) ingress policy to allow traffic to this ELB service. For more information, see Configure PNP to allow traffic to ELB for standard clusters.
   * Have the necessary identity and access roles:
 
-    * Project NetworkPolicy Admin: has access to manage project network policies in the project namespace Ask your Organization IAM Admin to grant you the Project NetworkPolicy Admin (`project-networkpolicy-admin`) role.
-    * Load Balancer Admin: Ask your Organization IAM Admin to grant you the Load Balancer Admin (`load-balancer-admin`) role.
+    * Project NetworkPolicy Admin: has access to manage project network policies in the project namespace Ask your IAM Org Admin to grant you the Project NetworkPolicy Admin (`project-networkpolicy-admin`) role.
+    * Load Balancer Admin: Ask your IAM Org Admin to grant you the Load Balancer Admin (`load-balancer-admin`) role.
 
 
 
@@ -783,16 +783,16 @@ The following example project network policy YAML file allows traffic from a wor
       subject:
         subjectType: UserWorkload
         userWorkloadSelector:
-        labelSelector:
-          clusters:
-            matchLabels:
-              kubernetes.io/metadata.name: my-sc-1
-          namespaces:
-            matchLabels:
-              kubernetes.io/metadata.name: my-app-ns
-          workloads:
-            matchLabels:
-              app: my-internal-app
+          labelSelector:
+            clusters:
+              matchLabels:
+                kubernetes.io/metadata.name: my-sc-1
+            namespaces:
+              matchLabels:
+                kubernetes.io/metadata.name: my-app-ns
+            workloads:
+              matchLabels:
+                app: my-internal-app
       ingress:
       - from:
         - projectSelector:
@@ -800,9 +800,10 @@ The following example project network policy YAML file allows traffic from a wor
               matchNames:
               - "$PROJECT_2"
             workloadSelector:
-              workloads:
-                matchLabels:
-                  app: my-client
+              labelSelector:
+                workloads:
+                  matchLabels:
+                    app: my-client
         ports:
         - protocol: TCP
           port: 8080
@@ -909,6 +910,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

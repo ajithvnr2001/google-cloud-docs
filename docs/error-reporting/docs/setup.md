@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/error-reporting/docs/setup/
 title: Collect error data by using Error Reporting \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:09.787964+00:00
+fetched_at: 2026-10-22T08:53:08.507164+00:00
 ---
 
 # Collect error data by using Error Reporting  |  Google Cloud Documentation

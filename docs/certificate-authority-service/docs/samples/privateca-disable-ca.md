@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/samples/privateca-disable-ca/
 title: Disable a Certificate Authority \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:38:43.134622+00:00
+fetched_at: 2026-10-22T08:57:34.827506+00:00
 ---
 
 # Disable a Certificate Authority  |  Certificate Authority Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/quotas/
 title: Quotas and limits \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:26:18.908423+00:00
+fetched_at: 2026-10-22T09:49:25.646770+00:00
 ---
 
 # Quotas and limits  |  BigQuery  |  Google Cloud Documentation
@@ -129,7 +129,7 @@ Maximum number of concurrent interactive queries against Bigtable external data 
 Maximum number of concurrent queries that contain remote functions | 10 queries | You can run up to ten concurrent queries with [ remote functions](https://docs.cloud.google.com/bigquery/docs/remote-functions) per project.   
 Maximum number of concurrent multi-statement queries | 1,000 multi-statement queries | Your project can run up to 1,000 concurrent [multi-statement queries](https://docs.cloud.google.com/bigquery/docs/multi-statement-queries). For other quotas and limits related to multi-statement queries, see [ Multi-statement queries](https://docs.cloud.google.com/bigquery/quotas#multi_statement_query_limits).   
 Maximum number of concurrent legacy SQL queries that contain UDFs | 6 queries |  Your project can run up to six concurrent legacy SQL queries with user-defined functions (UDFs). This limit includes both [interactive](https://docs.cloud.google.com/bigquery/docs/running-queries#queries) and [batch](https://docs.cloud.google.com/bigquery/docs/running-queries#batch) queries. Interactive queries that contain UDFs also count toward the concurrent limit for interactive queries. This limit does not apply to GoogleSQL queries.   
-Daily query size limit | Unlimited | By default, there is no daily query size limit. However, you can set limits on the amount of data users can query by creating [custom quotas](https://docs.cloud.google.com/bigquery/cost-controls#controlling_query_costs_using_bigquery_%20custom_quotas) to control [query usage per day](https://docs.cloud.google.com/bigquery/quotas#query_usage_per_day) or [query usage per day per user](https://docs.cloud.google.com/bigquery/quotas#query_usage_per_day_per_user).   
+Daily query size limit | Unlimited | By default, there is no daily query size limit. However, you can set limits on the amount of data users can query by creating [custom quotas](https://docs.cloud.google.com/bigquery/docs/custom-quotas) to control [query usage per day](https://docs.cloud.google.com/bigquery/quotas#query_usage_per_day) or [query usage per day per user](https://docs.cloud.google.com/bigquery/quotas#query_usage_per_day_per_user).   
 Daily destination table update limit |  See [Maximum number of table operations per day](https://docs.cloud.google.com/bigquery/quotas#load_job_per_table.long).  |  Updates to destination tables in a query job count toward the limit on the maximum number of table operations per day for the destination tables. Destination table updates include append and overwrite operations that are performed by queries that you run by using the Google Cloud console, using the bq command-line tool, or calling the [`jobs.query`](https://docs.cloud.google.com/bigquery/docs/reference/v2/jobs/query) and query-type [`jobs.insert`](https://docs.cloud.google.com/bigquery/docs/reference/v2/jobs/insert) API methods.   
 Query/multi-statement query execution-time limit | 6 hours |  A query or multi-statement query can execute for up to 6 hours, and then it fails. However, BigQuery might internally retry a query job due to transient issues, such as server restarts. BigQuery can try a query up to three times, and each attempt can run for up to 6 hours. As a result, it's possible for a query to have a total runtime of more than 6 hours (up to 18 hours). To check whether a job was retried, you can look for these signals:
 
@@ -1134,6 +1134,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-15 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

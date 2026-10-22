@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts/
 title: Resource-based committed use discounts \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:45:42.983813+00:00
+fetched_at: 2026-10-22T10:12:55.397553+00:00
 ---
 
 # Resource-based committed use discounts  |  Compute Engine  |  Google Cloud Documentation
@@ -27,14 +27,17 @@ This document provides an overview of resource-based commitments, including how 
 
 To learn about spend-based CUDs for Compute Engine, see [Compute flexible CUDs](https://docs.cloud.google.com/compute/docs/instances/committed-use-discounts-overview#spend_based).
 
-Resource-based commitments are ideal for predictable and steady state usage. Compute Engine lets you purchase the following categories of [resource-based commitments](https://docs.cloud.google.com/docs/cuds#resource_based_commitments):
+Resource-based commitments are ideal for predictable and steady state usage. Depending on the resource type, Compute Engine offers the following categories of resource-based commitments:
 
-  * **Hardware commitments** : You can purchase hardware commitments for a specific [machine series](https://docs.cloud.google.com/compute/docs/machine-resource#vm_terminology) and commit to resources available for that machine series, such as vCPUs, memory, GPUs, Local SSD disks, and sole-tenant nodes. For more information, see [Purchase resource-based commitments without attached reservations](https://docs.cloud.google.com/compute/docs/committed-use-discounts/purchase-commitments) and [Purchase resource-based commitments with attached reservations](https://docs.cloud.google.com/compute/docs/committed-use-discounts/purchase-commitments-with-reservations).
-  * **Software license commitments** : You can purchase license commitments for applicable premium operating system (OS) licenses. For more information, see [Purchase resource-based commitments for OS licenses](https://docs.cloud.google.com/compute/docs/committed-use-discounts/purchase-license-commitments).
+  * **Hardware commitments** : You can purchase hardware commitments for a specific [machine configuration](https://docs.cloud.google.com/compute/docs/machine-resource#vm_terminology). These commitments cover physical compute infrastructure resources, such as vCPUs, system memory, GPUs, and Local SSD disks. These resources are directly attached to or compose the Compute Engine instance itself.
+  * **Software license commitments** : You can purchase license commitments for applicable premium operating system (OS) licenses. These commitments cover OS licenses that run on top of your compute instances.
+  * **Block storage commitments** : You can purchase commitments only for [Hyperdisk Exapools](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-exapools) configurations. These commitments cover durable, network-attached block storage capacity in Hyperdisk pools, excluding Local SSD disks. These resources are independent of the compute instances themselves.
 
 
 
-Commitments for hardware resources are separate from commitments for licenses. You can purchase both categories of commitments for a VM instance, but you can't purchase a single commitment that covers both hardware resources and licenses.
+Commitments for hardware resources, commitments for OS licenses, and commitments for block storage are distinct from one another. Each category represents a fundamentally different resource type. Each category also has a distinct resource enforcement mechanism. You can purchase commitments from all three categories and use them to cover the usage of compute instances. However, you can't purchase a single commitment that covers resources from multiple categories. You must purchase and manage commitments for each category separately.
+
+For example, suppose you purchase a 1-year commitment for 100 C4D vCPUs (hardware commitment) and a 1-year commitment for 100,000 GiB of Hyperdisk Throughput Exapools capacity (block storage commitment). Your block storage commitment can't be used to offset vCPU charges and your hardware commitment can't be used to offset block storage charges. Each commitment applies exclusively to eligible usage within its own category.
 
 ## Before you begin
 
@@ -262,6 +265,30 @@ The following restrictions apply to resource-based CUDs.
 
   * CUD recommendations aren't available for the A3 Ultra, A4, A4X, and A4X Max machine series.
   * CUD recommendations aren't available for Cloud TPUs.
+
+
+
+### Limitations specific to software license commitments
+
+  * You can't merge software license commitments.
+  * You can't split software license commitments.
+  * You can't upgrade software license commitments from a 1-year plan to a 3-year plan.
+  * You can't extend the term of software license commitments.
+  * You can't enable the auto-renewal setting for software license commitments. If you want a commitment for these resources for longer periods, then purchase a new commitment.
+  * Attached reservations are not supported for software license commitments.
+
+
+
+### Limitations specific to block storage commitments
+
+  * You must contact your account team to purchase block storage commitments. Compute Engine doesn't support self-service purchase of these commitments through the Google Cloud console, the gcloud CLI, or REST.
+  * Block storage commitments are available only for purchasing Exapool capacity. You can't purchase commitments for Persistent Disk, Hyperdisk, or Hyperdisk Storage Pools.
+  * You can't merge block storage commitments.
+  * You can't split block storage commitments.
+  * You can't upgrade block storage commitments from a 1-year to a 3-year plan.
+  * You can't extend the term of block storage commitments.
+  * Attached reservations are not supported for block storage commitments.
+  * CUD recommendations and [CUD analysis reports](https://docs.cloud.google.com/billing/docs/how-to/analyze-cuds) are not supported for block storage commitments.
 
 
 
@@ -885,20 +912,63 @@ You can't cancel a license commitment after you purchase it. When your license c
 
 **Important:** Always verify that committed use discount contracts or commitments for your licenses are in the correct project ID and regions to avoid being double charged. You must purchase your license commitment in the same project and region as the machine using the license. For example, if you purchase your license commitment in Project A, but the running VMs that require the OS images are in Project B, then you are charged for the license commitment in Project A and the on-demand image price for the VMs running in Project B.
 
-To purchase commitments for licenses, see [Purchase resource-based commitments for OS licenses](https://docs.cloud.google.com/compute/docs/committed-use-discounts/purchase-license-commitments).
+To purchase commitments for OS licenses, see [Purchase software commitments for OS licenses](https://docs.cloud.google.com/compute/docs/committed-use-discounts/purchase-license-commitments).
+
+## Block storage commitments
+
+Block storage commitments provide CUDs for block storage in [Hyperdisk Exapools](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-exapools). Exapools let you purchase storage and performance in 1 GiB increments called _[capacity units](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-exapools#how_capacity_units_work)_. You can consume the purchased capacity units by creating an Exapool or by modifying an existing Exapool to consume the purchased capacity units.
+
+To receive block storage CUDs, you must first purchase a block storage commitment for a specific amount of Exapool capacity units (measured in GiB) for a 1-year or 3-year plan. After your commitment becomes active, Google Cloud applies CUDs to the prices of the matching capacity units in your Exapools. You pay these discounted prices for the entire duration of your commitment's term, regardless of whether or not you create an Exapool with those capacity units.
+
+A block storage commitment covers only the capacity units in an Exapool and doesn't automatically create an Exapool for you. The commitment also doesn't apply to individual disks that aren't created in an Exapool. To use the resources covered by your commitment, create or modify an Exapool with matching capacity units, and then create disks in the Exapool as needed.
+
+### How block storage commitments work
+
+Block storage commitments apply to usage within the specific region for which you purchased the commitment. These commitments aren't tied to specific disks or specific Exapools. When you purchase a block storage commitment, Compute Engine aggregates your committed Exapool capacity units for the specified region. When you create or modify Exapools with capacity units that match the pool type and region specified by your commitment, Compute Engine counts the capacity units in those pools as eligible usage and automatically applies CUDs to their prices.
+
+Compute Engine calculates eligible usage per microsecond and charges you discounted rates on an hourly basis. Compute Engine bills any capacity units in your Exapools that exceed your committed amount as overage usage at on-demand rates. Your commitment continues to cover eligible usage until the expiration date.
+
+Depending on your [CUD sharing scope](https://docs.cloud.google.com/compute/docs/committed-use-discounts/share-resource-cuds-across-projects), Compute Engine combines your committed Exapool capacity units from all commitments either at the project level or at the Cloud Billing account level. If you have CUD sharing enabled, then your commitments are pooled at the Cloud Billing account level and can cover eligible usage across all projects in that account. If you disable CUD sharing, then Compute Engine covers only the usage that comes from the commitment's project.
+
+### Eligible Hyperdisk Exapool types
+
+Each block storage commitment applies to a specific Exapool type and one or more Exapool capacity unit types. Compute Engine offers block storage commitments for the following Exapool types:
+
+  * Hyperdisk Balanced Exapools
+  * Hyperdisk Throughput Exapools
+
+
+
+For details, see [Exapool types](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-exapools#exapool-types).
+
+A single block storage commitment can apply to only one Exapool type. To receive CUDs for both Hyperdisk Balanced Exapools and Hyperdisk Throughput Exapools, you must purchase separate commitments for each pool type.
+
+When you purchase a block storage commitment, you must also specify the Exapool [capacity unit types](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-exapools#how_capacity_units_work) that you want to commit to purchasing. These unit types are the same capacity unit types that you select when you provision an Exapool to match your workload's read and write requirements. Each unit provides 1 GiB of storage and a fixed amount of performance (IOPS and throughput) per GiB:
+
+  * `CAPACITY_OPTIMIZED` (capacity-optimized units): provides a balanced rate of IOPS and throughput per GiB for both read and write operations.
+  * `READ_OPTIMIZED` (read-optimized units): provides the highest rate of read operations and read throughput per GiB for read-intensive workloads.
+  * `WRITE_OPTIMIZED` (write-optimized units): provides the highest rate of write operations and write throughput per GiB for write-intensive workloads.
+
+
+
+You can commit to purchasing a combination (or _blend_) of these capacity unit types within a single commitment for a given Exapool type. As explained in [How capacity units work](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-exapools#how_capacity_units_work), the blend of capacity units that you choose determines your billing allocation and the maximum provisioned performance of the Exapool, rather than the performance of individual disks inside the pool.
+
+### Applicable CUD rates
+
+To learn more about discount rates for block storage commitments, contact your Google Cloud account team.
+
+To purchase block storage commitments, see [Purchase block storage commitments for Exapools](https://docs.cloud.google.com/compute/docs/committed-use-discounts/purchase-block-storage-commitments).
 
 ## Quotas for commitments and committed resources
 
-You can only purchase resource-based commitments for resources in a specific region if you have quota available in that region for both of the following:
+To purchase resource-based commitments in a specific region, you must have quota available in that region for your commitments and for any applicable committed resources:
 
-  * Commitments
-  * Committed resources (with the exception of memory)
+  * **Commitments** : every resource-based commitment that you purchase requires regional quota for commitments, regardless of the commitment category.
+  * **Committed resources** : depending on the commitment category and the type of resource that you commit to purchasing, you might also need regional quota for those specific committed resources. For example, to purchase commitments for any vCPUs, GPUs, Local SSD disks, or OS licenses, you must have quota available for those specific committed SKUs in the target region. You don't need separate quota for committed memory SKUs or block storage commitments.
 
 
 
-Specifically, if you want to purchase commitments for any vCPUs, GPUs, or Local SSD disks, then you need to have quota available both for commitments and for those specific committed SKUs in the region where you want to purchase the commitment. There is no quota on memory, so you don't need to have separate quota for committed memory to purchase a commitment for memory.
-
-For example, to purchase 5 commitments that cover 32 vCPUs of general-purpose N1 machine type, 16 GB memory, 4 NVIDIA P4 GPUs, and 2 Local SSD disks in the `us-central1` region, you must have quota for each of the following:
+For example, to purchase 5 hardware commitments that cover 32 vCPUs of general-purpose N1 machine type, 16 GB memory, 4 NVIDIA P4 GPUs, and 2 Local SSD disks in the `us-central1` region, you must have quota for each of the following:
 
   * Five commitments in `us-central1`
   * 32 committed N1 vCPUs in `us-central1`
@@ -909,7 +979,7 @@ For example, to purchase 5 commitments that cover 32 vCPUs of general-purpose N1
 
 ### Quota limits
 
-By default, Compute Engine offers a specific amount of commitment quota for each type of committed resource. These quota limits determine the number of commitments that you can purchase and the amount of resources that you can commit to. To learn how to view the current quota limits and quota usage values for your commitments and committed resources, see [View quotas in the Google Cloud console](https://docs.cloud.google.com/docs/quotas/view-manage#viewing_your_quota_console).
+By default, Compute Engine offers a specific amount of commitment quota for each type of committed resource. These quota limits determine the number of commitments that you can purchase and the amount of resources that you can commit to purchasing. To learn how to view the current quota limits and quota usage values for your commitments and committed resources, see [View quotas in the Google Cloud console](https://docs.cloud.google.com/docs/quotas/view-manage#viewing_your_quota_console).
 
 If you consistently pay for a very high amount of committed vCPUs for your projects across different regions, then you might be eligible for unlimited quota on your committed vCPUs for all machine types (except for memory-optimized machine types) in all regions.
 
@@ -988,67 +1058,7 @@ To learn how to purchase your selected commitment recommendation, see [Apply rec
 
 ## View your commitments
 
-View the list of all your commitments in the Google Cloud console, the gcloud CLI, or REST.
-
-###  Console 
-
-In the Google Cloud console, view a list of commitments in the **Committed use discounts** page.
-
-[Go to Committed use discounts](https://console.cloud.google.com/compute/commitments)
-
-###  gcloud 
-
-Make a request using the `commitments list` command:
-    
-    
-    gcloud compute commitments list
-    
-
-The tool returns a list of commitments:
-    
-    
-     NAME              REGION    END_TIMESTAMP                  STATUS
-     my-commitment     us-east1  2018-03-17T00:00:00.000-07:00  NOT_YET_ACTIVE
-     
-
-###  REST 
-
-You can get a list of commitments across all regions by making an [`aggregatedList` request](https://docs.cloud.google.com/compute/docs/reference/latest/regionCommitments/aggregatedList) to the following URL:
-    
-    
-    https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/aggregated/commitments
-    
-
-Which returns a list of commitments:
-    
-    
-    {
-      "commitments": [
-        {
-          "kind": "compute#commitment",
-          "id": "3294122326373778983",
-          "creationTimestamp": "2017-02-09T15:18:32.411-08:00",
-          "name": "example-commitment",
-          "region": "https://www.googleapis.com/compute/v1/projects/example-project/regions/us-central1",
-          "selfLink": "https://www.googleapis.com/compute/v1/projects/example-project/regions/us-central1/commitments/example-commitment",
-          "status": "NOT_YET_ACTIVE",
-          "statusMessage": "The commitment is not yet active (its startTimestamp is in the future). It will not apply to current resource usage.",
-          "plan": "TWELVE_MONTH",
-          "startTimestamp": "2017-02-10T00:00:00.000-08:00",
-          "endTimestamp": "2018-02-10T00:00:00.000-08:00",
-          "resources": [
-            {
-              "type": "VCPU",
-              "amount": "5"
-            },
-            {
-              "type": "MEMORY",
-              "amount": "32500"
-            }
-          ]
-        }
-      ]
-    }
+To learn how to view the list and details of your commitments, see [View resource-based commitments](https://docs.cloud.google.com/compute/docs/committed-use-discounts/view-resource-based-commitments).
 
 ## Modify a commitment
 

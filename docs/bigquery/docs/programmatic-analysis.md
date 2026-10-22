@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/programmatic-analysis/
 title: Notebooks and programmatic analysis tools \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:19.925467+00:00
+fetched_at: 2026-10-22T08:58:37.229036+00:00
 ---
 
 # Notebooks and programmatic analysis tools  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-v1-generated-AlloyDBAdmin-DeleteCluster-sync-flattened/
 title: Delete a cluster \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:10.438105+00:00
+fetched_at: 2026-10-22T09:26:06.866395+00:00
 ---
 
 # Delete a cluster  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

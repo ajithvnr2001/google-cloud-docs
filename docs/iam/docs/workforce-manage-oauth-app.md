@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/workforce-manage-oauth-app/
 title: Manage OAuth application \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:53:39.794687+00:00
+fetched_at: 2026-10-22T08:59:55.969156+00:00
 ---
 
 # Manage OAuth application  |  Identity and Access Management (IAM)  |  Google Cloud Documentation
@@ -22,7 +22,7 @@ Send feedback
 
 #  Manage OAuth application Stay organized with collections  Save and categorize content based on your preferences. 
 
-This guide shows you how to manage OAuth-based application integrations with Google Cloud.
+You can create, view, update, and delete OAuth clients and client credentials to integrate your OAuth-based applications with Google Cloud. Registering an OAuth client lets federated workforce users sign in to your applications and access Google Cloud resources.
 
 **Important:** OAuth application integration works only with Identity-Aware Proxy.
 
@@ -36,7 +36,7 @@ At a high level, to integrate an OAuth-based application, you do the following:
 
 
 
-After you have completed these steps, the OAuth-based application can access Google Cloud products and data. You can use the registered OAuth client credentials to exchange authorization codes or refresh tokens with the [Cloud OAuth API](https://docs.cloud.google.com/iam/docs/cloud-oauth-api-overview).
+After you complete these steps, the OAuth-based application can access Google Cloud products and data. You can redirect users to the authorization endpoint (`https://auth.cloud.google/authorize`) to obtain an authorization code, and then use the registered OAuth client credentials to exchange authorization codes or refresh tokens with the [Cloud OAuth API](https://docs.cloud.google.com/iam/docs/cloud-oauth-api-overview).
 
 ## Before you begin
 
@@ -156,7 +156,7 @@ To describe an OAuth client, run the following command:
 
 Replace the following:
 
-  * `APP_OAUTH_CLIENT_ID`: the ID of the OAuth client that you want to to describe
+  * `APP_OAUTH_CLIENT_ID`: the ID of the OAuth client that you want to describe
   * `PROJECT_ID`: the ID of the project where you registered your OAuth application
 
 
@@ -174,7 +174,7 @@ Replace the following:
 Replace the following:
 
   * `PROJECT_ID`: the ID of the project where you registered your OAuth application
-  * `APP_OAUTH_CLIENT_ID`: the ID of the OAuth client that you want to to describe
+  * `APP_OAUTH_CLIENT_ID`: the ID of the OAuth client that you want to describe
 
 
 
@@ -500,6 +500,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

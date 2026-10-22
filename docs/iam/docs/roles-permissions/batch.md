@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/batch/
 title: Batch roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:06.508439+00:00
+fetched_at: 2026-10-22T08:26:51.169046+00:00
 ---
 
 # Batch roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

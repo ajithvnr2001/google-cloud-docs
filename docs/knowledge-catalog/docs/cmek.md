@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/cmek/
 title: Enable customer-managed encryption keys \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:02:19.978806+00:00
+fetched_at: 2026-10-22T08:42:28.388103+00:00
 ---
 
 # Enable customer-managed encryption keys  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -313,9 +313,11 @@ Google Cloud provides organization policy [constraints](https://docs.cloud.googl
 
 For more information about configuring organization policies, see [CMEK organization policies](https://docs.cloud.google.com/kms/docs/cmek-org-policy).
 
-### Knowledge Catalog DataScans CMEK Permissions
+### Knowledge Catalog DataScans CMEK permissions
 
-When creating Data Profile or Data Quality scans against CMEK-encrypted BigQuery resources, grant the `roles/cloudkms.cryptoKeyEncrypterDecrypter` role to both the Knowledge Catalog Service Agent (`service-<var>PROJECT_NUMBER</var>@gcp-sa-dataplex.iam.gserviceaccount.com`) and the BigQuery Service Agent (`bq-<var>PROJECT_NUMBER</var>@bigquery-encryption.iam.gserviceaccount.com`) on the Cloud Key Management Service key protecting the BigQuery dataset:
+To create data profile or data quality scans on CMEK-encrypted BigQuery resources, grant the Cloud KMS CryptoKey Encrypter/Decrypter (`roles/cloudkms.cryptoKeyEncrypterDecrypter`) role on the Cloud KMS key that protects the BigQuery dataset to both the Knowledge Catalog and BigQuery service agents.
+
+Grant the `roles/cloudkms.cryptoKeyEncrypterDecrypter` role to the Knowledge Catalog service agent:
     
     
     gcloud kms keys add-iam-policy-binding KEY_NAME \
@@ -324,6 +326,25 @@ When creating Data Profile or Data Quality scans against CMEK-encrypted BigQuery
         --member="serviceAccount:service-PROJECT_NUMBER@gcp-sa-dataplex.iam.gserviceaccount.com" \
         --role="roles/cloudkms.cryptoKeyEncrypterDecrypter"
     
+
+Grant the `roles/cloudkms.cryptoKeyEncrypterDecrypter` role to the BigQuery service agent:
+    
+    
+    gcloud kms keys add-iam-policy-binding KEY_NAME \
+        --location=LOCATION \
+        --keyring=KEYRING_NAME \
+        --member="serviceAccount:bq-PROJECT_NUMBER@bigquery-encryption.iam.gserviceaccount.com" \
+        --role="roles/cloudkms.cryptoKeyEncrypterDecrypter"
+    
+
+Replace the following:
+
+  * KEY_NAME: the name of the Cloud KMS key that protects the BigQuery dataset.
+  * LOCATION: the location of the key ring.
+  * KEYRING_NAME: the name of the key ring.
+  * PROJECT_NUMBER: your Google Cloud project number.
+
+
 
 ## What's next
 
@@ -335,6 +356,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

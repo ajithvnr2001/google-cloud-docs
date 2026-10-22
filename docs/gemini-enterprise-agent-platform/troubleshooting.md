@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/
 title: Troubleshoot Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:07.104220+00:00
+fetched_at: 2026-10-22T10:22:50.388497+00:00
 ---
 
 # Troubleshoot Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -55,6 +55,7 @@ Status code or message | Resolution
 `ImportError: cannot import name 'reasoning_engines'`, `ImportError: cannot import name 'agent_engines'` | [Outdated version of the Agent Platform SDK for Python](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/runtime-setup#outdated-vertex-sdk-errors)  
 `401` `Context-Aware Access requirements are not met`, `401` `Request had invalid authentication credentials` | [401 authorization errors](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/runtime-setup#401-errors)  
 `ValueError: Cannot get the Candidate text` | [Content generation errors](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-creation#content-generation-errors)  
+`400`, `INVALID_ARGUMENT`, `REASONING_ENGINE_CONTAINER_FAILED_TO_START` | [Container failed to start](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-deployment#container-failed-to-start)  
 `failed to start and cannot serve traffic`, on your first custom container (BYOC) deployment in a region | [BYOC first-time creation error](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-creation#byoc-first-creation-error)  
 `failed to start and cannot serve traffic` or `Request is prohibited by organization's policy`, inside a VPC Service Controls perimeter | [VPC-SC violation errors](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-deployment#vpc-sc-violation-errors)  
 `429`, `RESOURCE_EXHAUSTED` | [Resource exhausted or rate limit errors](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-deployment#error-429)  

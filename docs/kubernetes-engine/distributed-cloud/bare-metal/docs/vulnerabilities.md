@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/vulnerabilities/
 title: Vulnerability fixes \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:57:09.979558+00:00
+fetched_at: 2026-10-22T10:13:41.404635+00:00
 ---
 
 # Vulnerability fixes  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -51,6 +51,17 @@ The following table lists all vulnerabilities that have been fixed, starting in 
 
 Minor | Patch and severity | Vulnerabilities fixed  
 ---|---|---  
+  
+### 1.36
+
+| [1.36.200-gke.118](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/release-notes#October_21_2026):  
+Critical Severity | N/A  
+[1.36.200-gke.118](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/release-notes#October_21_2026):  
+High Severity |  [CVE-2026-97687](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97687), [CVE-2026-97689](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97689), [CVE-2026-76957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-76957)  
+[1.36.200-gke.118](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/release-notes#October_21_2026):  
+Medium Severity |  [CVE-2026-97688](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97688), [CVE-2026-56405](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56405), [CVE-2026-56412](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56412), [CVE-2026-50219](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-50219), [CVE-2026-56403](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56403), [CVE-2026-56404](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56404), [CVE-2026-34743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34743)  
+[1.36.200-gke.118](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/release-notes#October_21_2026):  
+Low Severity | N/A  
   
 ### 1.36
 
@@ -652,6 +663,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

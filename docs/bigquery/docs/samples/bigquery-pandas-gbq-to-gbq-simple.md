@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-pandas-gbq-to-gbq-simple/
 title: Load a DataFrame to BigQuery with pandas-gbq \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:38:04.562634+00:00
+fetched_at: 2026-10-22T09:17:11.585072+00:00
 ---
 
 # Load a DataFrame to BigQuery with pandas-gbq  |  Google Cloud Documentation

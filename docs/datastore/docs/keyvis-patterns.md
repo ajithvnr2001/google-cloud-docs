@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/keyvis-patterns/
 title: Heatmap patterns for entity keys \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:18.520629+00:00
+fetched_at: 2026-10-22T08:25:26.989829+00:00
 ---
 
 # Heatmap patterns for entity keys  |  Firestore in Datastore mode  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/custom-roles/
 title: Create a custom role \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:59:18.030595+00:00
+fetched_at: 2026-10-22T10:24:52.182720+00:00
 ---
 
 # Create a custom role  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -45,13 +45,13 @@ Before creating or managing custom roles, you must request the necessary permiss
 
 ### Request IAM organization roles
 
-To create, update, and delete custom roles across an organization or within a project, contact your Organization IAM Admin to request the **Custom Role Org Admin** (`custom-role-org-admin`) role.
+To create, update, and delete custom roles across an organization or within a project, contact your IAM Org Admin to request the **Custom Role Org Admin** (`custom-role-org-admin`) role.
 
 Learn more about assigning role permissions for [organizations](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/set-up-role-bindings).
 
 ### Request IAM project roles
 
-To create, update, and delete custom roles within a specific project, contact your Project IAM Admin to request the **Custom Role Project Admin** (`custom-role-project-admin`) role.
+To create, update, and delete custom roles within a specific project, contact your IAM Project Admin to request the **Custom Role Project Admin** (`custom-role-project-admin`) role.
 
 Learn more about assigning role permissions for [projects](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/iam/role-bindings).
 
@@ -484,6 +484,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

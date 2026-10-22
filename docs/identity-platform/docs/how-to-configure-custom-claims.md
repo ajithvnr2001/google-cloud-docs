@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/how-to-configure-custom-claims/
 title: Configure custom claims on users \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:54:17.120961+00:00
+fetched_at: 2026-10-22T08:28:06.146393+00:00
 ---
 
 # Configure custom claims on users  |  Identity Platform  |  Google Cloud Documentation
@@ -53,7 +53,7 @@ To preserve security, set custom claims using the Admin SDK on your server:
          // The new custom claims will propagate to the user's ID token the
          // next time a new one is issued.
          
-         [FirebaseAuthSnippets.java](https://github.com/firebase/firebase-admin-java/blob/2225373d97869e72b164a4081968027c130c782b/src/test/java/com/google/firebase/snippets/FirebaseAuthSnippets.java#L157-L162)
+         [FirebaseAuthSnippets.java](https://github.com/firebase/firebase-admin-java/blob/2d89465e59689e6256b0965cf50197cf3ddaf823/src/test/java/com/google/firebase/snippets/FirebaseAuthSnippets.java#L157-L162)
 
 ###  Python 
          
@@ -94,7 +94,7 @@ To preserve security, set custom claims using the Admin SDK on your server:
          // The new custom claims will propagate to the user's ID token the
          // next time a new one is issued.
          
-         [FirebaseAuthSnippets.cs](https://github.com/firebase/firebase-admin-dotnet/blob/19ae6920ee9560cfbc6b8cbce9ecff0e6521b0a0/FirebaseAdmin/FirebaseAdmin.Snippets/FirebaseAuthSnippets.cs#L527-L534)
+         [FirebaseAuthSnippets.cs](https://github.com/firebase/firebase-admin-dotnet/blob/c08a6533b109f960bfec5eaa93a55126dd62fe9e/FirebaseAdmin/FirebaseAdmin.Snippets/FirebaseAuthSnippets.cs#L527-L534)
 
   3. Validate the custom claim the next time it's sent to your server:
 
@@ -119,7 +119,7 @@ To preserve security, set custom claims using the Admin SDK on your server:
            // Allow access to requested admin resource.
          }
          
-         [FirebaseAuthSnippets.java](https://github.com/firebase/firebase-admin-java/blob/2225373d97869e72b164a4081968027c130c782b/src/test/java/com/google/firebase/snippets/FirebaseAuthSnippets.java#L167-L171)
+         [FirebaseAuthSnippets.java](https://github.com/firebase/firebase-admin-java/blob/2d89465e59689e6256b0965cf50197cf3ddaf823/src/test/java/com/google/firebase/snippets/FirebaseAuthSnippets.java#L167-L171)
 
 ###  Python 
          
@@ -162,7 +162,7 @@ To preserve security, set custom claims using the Admin SDK on your server:
          }
          
          
-         [FirebaseAuthSnippets.cs](https://github.com/firebase/firebase-admin-dotnet/blob/19ae6920ee9560cfbc6b8cbce9ecff0e6521b0a0/FirebaseAdmin/FirebaseAdmin.Snippets/FirebaseAuthSnippets.cs#L539-L549)
+         [FirebaseAuthSnippets.cs](https://github.com/firebase/firebase-admin-dotnet/blob/c08a6533b109f960bfec5eaa93a55126dd62fe9e/FirebaseAdmin/FirebaseAdmin.Snippets/FirebaseAuthSnippets.cs#L539-L549)
 
   4. To determine what custom claims are present for a user:
 
@@ -184,7 +184,7 @@ To preserve security, set custom claims using the Admin SDK on your server:
          UserRecord user = FirebaseAuth.getInstance().getUser(uid);
          System.out.println(user.getCustomClaims().get("admin"));
          
-         [FirebaseAuthSnippets.java](https://github.com/firebase/firebase-admin-java/blob/2225373d97869e72b164a4081968027c130c782b/src/test/java/com/google/firebase/snippets/FirebaseAuthSnippets.java#L175-L177)
+         [FirebaseAuthSnippets.java](https://github.com/firebase/firebase-admin-java/blob/2d89465e59689e6256b0965cf50197cf3ddaf823/src/test/java/com/google/firebase/snippets/FirebaseAuthSnippets.java#L175-L177)
 
 ###  Python 
          
@@ -217,7 +217,7 @@ To preserve security, set custom claims using the Admin SDK on your server:
          UserRecord user = await FirebaseAuth.DefaultInstance.GetUserAsync(uid);
          Console.WriteLine(user.CustomClaims["admin"]);
          
-         [FirebaseAuthSnippets.cs](https://github.com/firebase/firebase-admin-dotnet/blob/19ae6920ee9560cfbc6b8cbce9ecff0e6521b0a0/FirebaseAdmin/FirebaseAdmin.Snippets/FirebaseAuthSnippets.cs#L553-L555)
+         [FirebaseAuthSnippets.cs](https://github.com/firebase/firebase-admin-dotnet/blob/c08a6533b109f960bfec5eaa93a55126dd62fe9e/FirebaseAdmin/FirebaseAdmin.Snippets/FirebaseAuthSnippets.cs#L553-L555)
 
 
 
@@ -241,6 +241,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

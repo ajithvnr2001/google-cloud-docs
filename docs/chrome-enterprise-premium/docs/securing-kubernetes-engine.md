@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/securing-kubernetes-engine/
 title: Securing GKE apps and resources with IAP \u00a0|\u00a0 Chrome Enterprise Premium \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:11:49.952050+00:00
+fetched_at: 2026-10-22T08:31:16.167279+00:00
 ---
 
 # Securing GKE apps and resources with IAP  |  Chrome Enterprise Premium  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/backup/view/
 title: View backup details \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:54.738821+00:00
+fetched_at: 2026-10-22T09:24:54.051144+00:00
 ---
 
 # View backup details  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

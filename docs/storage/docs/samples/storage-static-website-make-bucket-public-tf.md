@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-static-website-make-bucket-public-tf/
 title: Make static website Bucket public \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:54:47.877051+00:00
+fetched_at: 2026-10-22T10:30:59.403433+00:00
 ---
 
 # Make static website Bucket public  |  Cloud Storage  |  Google Cloud Documentation

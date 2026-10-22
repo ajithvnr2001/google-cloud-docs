@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tabular-data/overview/
 title: Tabular data overview \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:31.892341+00:00
+fetched_at: 2026-10-22T10:26:29.461072+00:00
 ---
 
 # Tabular data overview  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

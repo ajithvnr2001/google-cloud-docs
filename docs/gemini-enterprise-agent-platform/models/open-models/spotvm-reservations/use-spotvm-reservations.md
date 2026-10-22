@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-models/spotvm-reservations/use-spotvm-reservations/
 title: Using Spot VMs or reservations to deploy a Gemini Enterprise Agent Platform Llama-3.1 endpoint on Cloud GPUs \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:36.640688+00:00
+fetched_at: 2026-10-22T10:28:31.080040+00:00
 ---
 
 # Using Spot VMs or reservations to deploy a Gemini Enterprise Agent Platform Llama-3.1 endpoint on Cloud GPUs  |  Google Cloud Documentation

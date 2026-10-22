@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced/
 title: About Hyperdisk Balanced \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:34.343372+00:00
+fetched_at: 2026-10-22T10:41:37.052689+00:00
 ---
 
 # About Hyperdisk Balanced  |  Compute Engine  |  Google Cloud Documentation
@@ -342,6 +342,9 @@ M4 1
 `m4-*-112`1 | 240,000 | 5,000  
 `m4-*-224`1 | 320,000 | 10,000  
 M4N 1,2  
+`m4n-*-2`1 | 50,000 | 800  
+`m4n-*-4`1 | 50,000 | 800  
+`m4n-*-8`1 | 100,000 | 900  
 `m4n-*-16`1 | 120,000 | 1,800  
 `m4n-*-28`1 | 125,000 | 3,125  
 `m4n-*-32`1 | 144,000 | 3,600  
@@ -396,14 +399,14 @@ TPU v6e
 TPU7x 1  
 `tpu7x-standard-4t`1 | 320,000 | 6,000  
 X4   
-`x4-480-*-metal` | 160,000 | 4,800  
-`x4-960-*-metal` | 160,000 | 4,800  
-`x4-1440-24t-metal` | 160,000 | 4,800  
-`x4-1920-32t-metal` | 160,000 | 4,800  
+`x4-*-480-metal` | 160,000 | 4,800  
+`x4-*-960-metal` | 160,000 | 4,800  
+`x4-24t-1440-metal` | 160,000 | 4,800  
+`x4-32t-1920-metal` | 160,000 | 4,800  
 X5   
-`x5-688-*-metal` | 640,000 | 20,000  
-`x5-1376-*-metal` | 640,000 | 20,000  
-`x5-2064-*-metal` | 640,000 | 20,000  
+`x5-*-688-metal` | 640,000 | 20,000  
+`x5-*-1376-metal` | 640,000 | 20,000  
+`x5-*-2064-metal` | 640,000 | 20,000  
 Z3   
 `z3-*-8` | 50,000 | 800  
 `z3-*-14` | 100,000 | 1,600  
@@ -423,6 +426,7 @@ Z4D 1
 `z4d-*-96`1 | 160,000 | 6,250  
 `z4d-*-192`1 | 320,000 | 12,500  
 `z4d-*-384`1,2 | 640,000 | 25,000  
+`z4d-*-384-metal`1,2 | 640,000 | 25,000  
 Z4M 1  
 `z4m-*-16`1 | 75,000 | 1,600  
 `z4m-*-32`1 | 100,000 | 2,100  
@@ -487,6 +491,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

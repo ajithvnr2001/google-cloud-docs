@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workstations/docs/known-issues/
 title: Known issues \u00a0|\u00a0 Cloud Workstations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:07:09.633007+00:00
+fetched_at: 2026-10-22T10:13:03.299324+00:00
 ---
 
 # Known issues  |  Cloud Workstations  |  Google Cloud Documentation
@@ -27,9 +27,9 @@ This page describes known issues that you might encounter while using Cloud Work
 
 If Compute Engine is experiencing resource shortages (stockouts) of the machine type specified in your workstation configuration, you might be unable to start your workstation. To address this issue, try one of the following strategies:
 
-  1. Change the machine type in your workstation configuration to a machine type that has available capacity in your region.
-  2. [Reserve capacity](https://docs.cloud.google.com/workstations/docs/reserve-capacity) for your selected machine type. Cloud Workstations automatically consumes reservations, or you can configure the service to consume a specific reservation.
-  3. Specify additional machine types in your configuration with the [boost mode](https://docs.cloud.google.com/workstations/docs/boost-workstation) feature. This allows your developers to choose a machine type with capacity in your region when starting the workstation.
+  1. **Recommended** : Specify additional machine types in your configuration with the [boost mode](https://docs.cloud.google.com/workstations/docs/boost-workstation) feature and configure [automatic failover](https://docs.cloud.google.com/workstations/docs/boost-workstation#automatic-failover).
+  2. Change the machine type in your workstation configuration to a machine type that has available capacity in your region.
+  3. [Reserve capacity](https://docs.cloud.google.com/workstations/docs/reserve-capacity) for your selected machine type. Cloud Workstations automatically consumes reservations, or you can configure the service to consume a specific reservation.
 
 
 
@@ -86,16 +86,10 @@ To update the preinstalled APT repository keys in your container, run the key re
 
 You can also run this script directly in your custom `Dockerfile` before running `apt-get update` or `apt-get install`. For more information, see [Update preconfigured Secure APT keys](https://docs.cloud.google.com/workstations/docs/customize-container-images#update_preconfigured_secure_apt_keys).
 
-## Machine types or GPUs supported in only a single zone
-
-Some Compute Engine machine types and GPU accelerators listed in [available regions and zones](https://docs.cloud.google.com/compute/docs/regions-zones) are supported in only a single zone within a region.
-
-When you create a workstation configuration, Cloud Workstations requires you to specify two replica zones in the region. If you choose a machine type or GPU that is supported in only one zone, you can select two replica zones, but workstation VMs are provisioned only in the single zone that supports the hardware. As a result, workstations lack multi-zone failover and cannot fall back to the second replica zone if the supported zone experiences capacity constraints or an outage.
-
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

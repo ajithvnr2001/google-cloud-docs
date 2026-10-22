@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/enforce-connectors/
 title: Control connector enforcement \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:06.901024+00:00
+fetched_at: 2026-10-22T09:09:22.063511+00:00
 ---
 
 # Control connector enforcement  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-change-default-storage-class/
 title: Change the default storage class of a bucket \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:17:06.247809+00:00
+fetched_at: 2026-10-22T10:31:44.747271+00:00
 ---
 
 # Change the default storage class of a bucket  |  Cloud Storage  |  Google Cloud Documentation

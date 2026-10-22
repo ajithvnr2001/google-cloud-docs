@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/committed-use-discounts-overview/
 title: Committed use discounts (CUDs) for Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T23:39:00.377371+00:00
+fetched_at: 2026-10-22T10:12:45.982055+00:00
 ---
 
 # Committed use discounts (CUDs) for Compute Engine  |  Google Cloud Documentation
@@ -29,7 +29,7 @@ For Compute Engine, you receive deeply discounted prices for your VM instances i
 
 Depending on your resource usage requirements, you can receive CUDs for Compute Engine resources in one of the following ways:
 
-  * **Resource-based committed use discounts (or resource-based CUDs)** are CUDs that you receive when you purchase a resource-based commitment and commit to use a minimum amount of Compute Engine resources in a specific region and with a specific machine configuration. These CUDs are ideal for predictable and steady state _resource usage_.
+  * **Resource-based committed use discounts (or resource-based CUDs)** are CUDs that you receive when you purchase a resource-based commitment and commit to use a minimum amount of Compute Engine resources (such as vCPUs, memory, or block storage capacity) in a specific region. These CUDs are ideal for predictable and steady-state _resource usage_.
 
   * **Compute flexible committed use discounts (or compute flexible CUDs)** are spend-based CUDs that you receive when you purchase a compute flexible commitment and commit to a minimum amount of hourly spend on eligible services and resources. These CUDs are ideal for scenarios where you have more predictable _Google Cloud spend needs_ across one or more of the following services:
 
@@ -58,14 +58,15 @@ However, depending on the Cloud Billing account's [CUD sharing](https://docs.clo
 
 ### Eligible resources
 
-Resource-based commitments are available for the following resources:
+You can purchase resource-based commitments for the following resources:
 
   * vCPUs
   * Memory
   * GPUs
   * Local SSD disks
   * Sole-tenant nodes
-  * Operating system (OS) licenses.
+  * Operating system (OS) licenses
+  * Block storage capacity (specifically Exapool capacity).
 
 
 
@@ -80,10 +81,12 @@ You can purchase the following categories of resource-based commitments:
     * **Up to 79%** for SUSE Linux Enterprise Server (SLES) images
     * **Up to 63%** for SLES for SAP images
     * **Up to 20%** for Red Hat Enterprise Linux (RHEL) images
+  * **Block storage commitments:** You can purchase commitments for block storage capacity. Google Cloud provides these commitments specifically for Exapool capacity. You can't purchase commitments for Hyperdisk Storage Pools, individual Hyperdisk volumes, or Persistent Disk volumes.
 
 
 
-Resource-based commitments for hardware resources are separate from the ones for licenses. You can purchase both categories of commitments for the same VM instance, but you can't purchase a single resource-based commitment that covers both hardware resources and licenses.
+
+Resource-based commitments for hardware, software licenses, and block storage remain distinct from one another. You can't purchase a single commitment that covers resources from multiple categories.
 
 When you purchase a resource-based commitment, the commitment becomes active on the following day at 12 AM US and Canadian Pacific Time (UTC-8, or UTC-7 during daylight saving time). You are billed monthly for your committed resources until the end of your commitment term, regardless of whether or not you use those resources. You can't cancel a commitment after its purchase.
 
@@ -96,6 +99,7 @@ For purchase information, see one of the following depending on your use case:
   * [Purchase hardware commitments without attached reservations](https://docs.cloud.google.com/compute/docs/committed-use-discounts/purchase-commitments)
   * [Purchase hardware commitments with attached reservations](https://docs.cloud.google.com/compute/docs/committed-use-discounts/purchase-commitments-with-reservations)
   * [Purchase software commitments for OS licenses](https://docs.cloud.google.com/compute/docs/committed-use-discounts/purchase-license-commitments)
+  * [Purchase block storage commitments for Exapools](https://docs.cloud.google.com/compute/docs/committed-use-discounts/purchase-block-storage-commitments)
 
 
 
@@ -177,7 +181,7 @@ Every hour, until your total spend on eligible SKUs equals the commitment fee, t
 
 #### Commitment utilization criteria
 
-Your Cloud Billing account might have multiple spend-based commitments that can cover usage of the same resource or service type. A single compute flexible commitment can also cover the usage of several types of resources and services. For a given Cloud Billing account, Google Cloud applies spend-based commitments to any eligible hourly usage in the following order of precedence. If you have multiple spend-based commitments and multiple types of usage, then these rules determine which commitment Google Cloud utilizes first and which usage Google Cloud covers first.
+Your Cloud Billing account might have multiple spend-based commitments that can cover usage of the same resource or service type. A single compute flexible commitment can cover the usage of several types of resources and services. For a given Cloud Billing account, Google Cloud applies spend-based commitments to any eligible hourly usage in the following order of precedence. If you have multiple spend-based commitments and multiple types of usage, then these rules determine which commitment Google Cloud utilizes first and which usage Google Cloud covers first.
 
   1. **Service-specific commitments first** : If both a compute flexible commitment and a service-specific spend-based commitment can cover the same usage, then the service-specific commitment takes precedence. By first utilizing the commitment with a narrower scope, Google Cloud keeps the more generic and broader-scoped commitment available for other types of usage.
 
@@ -247,7 +251,7 @@ Suppose that you purchase a compute flexible commitment for this Cloud Billing a
   * You get discounted prices for your hourly usage on vCPUs, memory, or Local SSD disks from any N2, N2D, and C2 instances across `us-central1` and `us-east1` regions, until you fully use your commitment.
   * Essentially, your commitment fee can cover eligible N2, N2D, and C2 resources that are worth an on-demand price of up to US$185.19 per hour (US$100 / (1 - 0.46)).
   * If you use hourly resources with an on-demand price of US$50, then the discounted cost of these resources is US$27 (US$50 * (1 - 0.46)). This usage is covered by your commitment fee. You still pay the US$100 fee, and the unused portion of your commitment (US$73) is not rolled over.
-  * If you use hourly resources with an on-demand price of US$200, then the first US$185.19 of usage is covered by your commitment. The discounted cost is US$100, which is offset by your commitment fee. The remaining US$14.81 of usage is considered overage and is billed at on-demand rates. Your total hourly cost is US$100 (commitment amount) + US$14.81 (overage) = US$114.81.
+  * If you use hourly resources with an on-demand price of US$200, then the first US$185.19 of usage is covered by your commitment. The discounted cost is US$100, which is offset by your commitment fee. The remaining US$14.81 of usage is overage usage, and Compute Engine bills it at on-demand rates. Your total hourly cost is US$100 (commitment amount) + US$14.81 (overage) = US$114.81.
 
 
 
@@ -366,6 +370,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

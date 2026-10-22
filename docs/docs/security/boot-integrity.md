@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/boot-integrity/
 title: How Google enforces boot integrity on production machines \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:08:01.216618+00:00
+fetched_at: 2026-10-22T08:24:16.743689+00:00
 ---
 
 # How Google enforces boot integrity on production machines  |  Security  |  Google Cloud Documentation

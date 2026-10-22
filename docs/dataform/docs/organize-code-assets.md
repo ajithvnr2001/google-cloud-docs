@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataform/docs/organize-code-assets/
 title: Organize code assets with folders and repositories \u00a0|\u00a0 Dataform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:21.742033+00:00
+fetched_at: 2026-10-22T08:25:39.729158+00:00
 ---
 
 # Organize code assets with folders and repositories  |  Dataform  |  Google Cloud Documentation

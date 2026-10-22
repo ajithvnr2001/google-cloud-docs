@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/model-endpoint-console/
 title: Use model endpoint management in AlloyDB Studio \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:07.474393+00:00
+fetched_at: 2026-10-22T09:31:34.596754+00:00
 ---
 
 # Use model endpoint management in AlloyDB Studio  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

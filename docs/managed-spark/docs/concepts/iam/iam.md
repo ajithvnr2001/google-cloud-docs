@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-spark/docs/concepts/iam/iam/
 title: Managed Service for Apache Spark on clusters permissions and roles \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:41:50.227193+00:00
+fetched_at: 2026-10-22T08:29:44.471501+00:00
 ---
 
 # Managed Service for Apache Spark on clusters permissions and roles  |  Google Cloud Documentation

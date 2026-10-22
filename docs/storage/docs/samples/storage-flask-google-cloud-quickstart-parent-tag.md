@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-flask-google-cloud-quickstart-parent-tag/
 title: Create a Flask application on Compute Engine \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:31.103791+00:00
+fetched_at: 2026-10-22T10:31:55.642971+00:00
 ---
 
 # Create a Flask application on Compute Engine  |  Cloud Storage  |  Google Cloud Documentation

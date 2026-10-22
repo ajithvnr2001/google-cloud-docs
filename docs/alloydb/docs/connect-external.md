@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/connect-external/
 title: Connect to a cluster from outside its VPC \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:50.205712+00:00
+fetched_at: 2026-10-22T09:11:37.762388+00:00
 ---
 
 # Connect to a cluster from outside its VPC  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

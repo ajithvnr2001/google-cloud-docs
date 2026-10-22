@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/use-natural-language-generate-sql-queries/
 title: Use AlloyDB AI natural language to generate SQL \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:41.251220+00:00
+fetched_at: 2026-10-22T09:24:59.723629+00:00
 ---
 
 # Use AlloyDB AI natural language to generate SQL  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

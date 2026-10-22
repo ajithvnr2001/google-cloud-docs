@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/query-plan-management/
 title: Manage query plans \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:37.606765+00:00
+fetched_at: 2026-10-22T09:27:15.190048+00:00
 ---
 
 # Manage query plans  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

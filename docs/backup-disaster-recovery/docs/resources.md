@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/backup-disaster-recovery/docs/resources/
 title: Resources \u00a0|\u00a0 Backup and DR \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:36:16.972118+00:00
+fetched_at: 2026-10-22T09:19:49.545672+00:00
 ---
 
 # Resources  |  Backup and DR  |  Google Cloud Documentation

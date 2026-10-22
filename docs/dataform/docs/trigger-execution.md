@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataform/docs/trigger-execution/
 title: Manually trigger runs \u00a0|\u00a0 Dataform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:19.536195+00:00
+fetched_at: 2026-10-22T08:25:40.413921+00:00
 ---
 
 # Manually trigger runs  |  Dataform  |  Google Cloud Documentation

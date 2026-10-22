@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/hybrid-multicloud-secure-networking-patterns/whats-next/
 title: Hybrid and multicloud secure networking architecture patterns: What's next \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:28:02.744373+00:00
+fetched_at: 2026-10-22T09:09:23.329609+00:00
 ---
 
 # Hybrid and multicloud secure networking architecture patterns: What's next  |  Cloud Architecture Center  |  Google Cloud Documentation

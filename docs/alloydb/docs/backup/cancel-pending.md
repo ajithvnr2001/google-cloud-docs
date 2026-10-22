@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/backup/cancel-pending/
 title: Cancel an in-progress backup operation \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:40.108602+00:00
+fetched_at: 2026-10-22T09:30:35.516313+00:00
 ---
 
 # Cancel an in-progress backup operation  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

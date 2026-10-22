@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/adaptive-filtering/
 title: Understand adaptive filtering in AlloyDB AI \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:16.217135+00:00
+fetched_at: 2026-10-22T09:30:06.605001+00:00
 ---
 
 # Understand adaptive filtering in AlloyDB AI  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/entities-export/
 title: Export and import entities \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:38.705799+00:00
+fetched_at: 2026-10-22T08:33:36.401506+00:00
 ---
 
 # Export and import entities  |  Dialogflow ES  |  Google Cloud Documentation

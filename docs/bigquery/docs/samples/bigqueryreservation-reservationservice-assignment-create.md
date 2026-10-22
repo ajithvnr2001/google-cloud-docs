@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigqueryreservation-reservationservice-assignment-create/
 title: Create a reservation assignment \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:36:22.766878+00:00
+fetched_at: 2026-10-22T08:54:34.028791+00:00
 ---
 
 # Create a reservation assignment  |  BigQuery  |  Google Cloud Documentation

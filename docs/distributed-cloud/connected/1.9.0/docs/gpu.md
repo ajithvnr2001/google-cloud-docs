@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.9.0/docs/gpu/
 title: Manage GPU workloads \u00a0|\u00a0 Google Distributed Cloud connected, version 1.9.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:41.053146+00:00
+fetched_at: 2026-10-22T08:24:54.156205+00:00
 ---
 
 # Manage GPU workloads  |  Google Distributed Cloud connected, version 1.9.0  |  Google Cloud Documentation

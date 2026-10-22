@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/connect-language-connectors/
 title: Connect using the AlloyDB Language Connectors \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:54.578698+00:00
+fetched_at: 2026-10-22T09:08:49.173141+00:00
 ---
 
 # Connect using the AlloyDB Language Connectors  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

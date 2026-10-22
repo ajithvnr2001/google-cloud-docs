@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/access-control/
 title: Access control with IAM \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:51.913964+00:00
+fetched_at: 2026-10-22T08:35:09.534995+00:00
 ---
 
 # Access control with IAM  |  Cloud Data Fusion  |  Google Cloud Documentation

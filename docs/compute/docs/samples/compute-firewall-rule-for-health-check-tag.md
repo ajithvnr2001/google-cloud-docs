@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-firewall-rule-for-health-check-tag/
 title: Create a firewall to allow health checks for autohealing in MIGs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:19:40.497562+00:00
+fetched_at: 2026-10-22T09:17:15.080534+00:00
 ---
 
 # Create a firewall to allow health checks for autohealing in MIGs  |  Compute Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/sources-dataverse/
 title: Stream data from Microsoft Dataverse \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:29.888520+00:00
+fetched_at: 2026-10-22T08:33:14.705616+00:00
 ---
 
 # Stream data from Microsoft Dataverse  |  Datastream  |  Google Cloud Documentation

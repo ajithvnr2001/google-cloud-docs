@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/build-pipeline/
 title: Build a pipeline \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:44.390869+00:00
+fetched_at: 2026-10-22T10:26:42.280378+00:00
 ---
 
 # Build a pipeline  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

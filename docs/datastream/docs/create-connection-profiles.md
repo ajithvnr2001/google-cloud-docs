@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/create-connection-profiles/
 title: Create connection profiles \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:34.355151+00:00
+fetched_at: 2026-10-22T08:25:14.329099+00:00
 ---
 
 # Create connection profiles  |  Datastream  |  Google Cloud Documentation

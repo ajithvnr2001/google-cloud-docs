@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/infrastructure/design/
 title: Google infrastructure security design overview \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:08:17.735354+00:00
+fetched_at: 2026-10-22T08:42:33.838519+00:00
 ---
 
 # Google infrastructure security design overview  |  Security  |  Google Cloud Documentation

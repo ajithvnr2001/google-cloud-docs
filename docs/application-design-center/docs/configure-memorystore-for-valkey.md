@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/configure-memorystore-for-valkey/
 title: Configure a Memorystore for Valkey instance \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:35:23.953047+00:00
+fetched_at: 2026-10-22T10:44:48.616179+00:00
 ---
 
 # Configure a Memorystore for Valkey instance  |  Application Design Center  |  Google Cloud Documentation
@@ -20,9 +20,7 @@ Send feedback
 
 #  Configure a Memorystore for Valkey instance Stay organized with collections  Save and categorize content based on your preferences. 
 
-Memorystore for Valkey is a fully managed Valkey service for Google Cloud which supports both Cluster Mode Enabled and Cluster Mode Disabled instances. Applications running on Google Cloud can achieve extreme performance by leveraging the highly scalable, available, and secure Valkey service without the burden of managing complex Valkey deployments. For more information, see [Memorystore for Valkey overview](https://docs.cloud.google.com/memorystore/docs/valkey/product-overview).
-
-This document describes the connections and parameters you can configure when using App Design Center to create a Memorystore for Valkey instance. The configuration parameters are based on the [terraform-google-memorystore](https://github.com/terraform-google-modules/terraform-google-memorystore/tree/main/modules/valkey) Terraform module.
+In App Design Center, you can configure a [Memorystore for Valkey](https://docs.cloud.google.com/memorystore/docs/valkey/product-overview) instance to provide fully managed, scalable Valkey caching for your Google Cloud applications, with support for both Cluster Mode Enabled and Cluster Mode Disabled instances. You can customize the instance's component connections and configuration parameters based on the [terraform-google-memorystore](https://github.com/terraform-google-modules/terraform-google-memorystore/tree/main/modules/valkey) Terraform module.
 
 ## Component connections
 
@@ -133,6 +131,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

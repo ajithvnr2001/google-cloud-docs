@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/admin-panel-general-preview-features/
 title: Admin settings - Preview Features \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:33:13.819550+00:00
+fetched_at: 2026-10-22T10:37:23.180290+00:00
 ---
 
 # Admin settings - Preview Features  |  Looker  |  Google Cloud Documentation
@@ -48,6 +48,12 @@ To enable or disable a feature, click the switch next to the feature name.
 
 Looker supports the following preview features.
 
+### Data Apps
+
+This feature is disabled by default.
+
+[Looker Data Apps](https://docs.cloud.google.com/looker/docs/data-apps) are freeform canvas dashboards that are built by local AI coding agents, such as Gemini CLI, Claude Code, or Cursor, from natural-language prompts. Data Apps give you complete visual layout control (including absolute positioning, overlapping elements, and custom web components) while remaining bound to Looker's governed LookML semantic layer and user permissions.
+
 ### End User Conversational Analytics (CA) Query Review
 
 This feature is disabled by default.
@@ -92,12 +98,6 @@ This preview feature is enabled by default.
 When this preview feature is enabled, the total number of schemas that can be returned to [SQL Runner](https://docs.cloud.google.com/looker/docs/sql-runner-basics) increases to 12,000.
 
 **Warning:** Enabling this preview feature will increase the table name display response time if your instance has access to a large number of schemas and tables.
-
-### Internal Dashboard Theming
-
-This preview feature is enabled by default.
-
-When this setting is enabled, users can apply [themes](https://docs.cloud.google.com/looker/docs/themes-for-internal-dashboards) to their Looker dashboards and Looks. These themes, which are distinct from the themes that are used for [embedded dashboards, Explores, and Looks](https://docs.cloud.google.com/looker/docs/getting-started-embed-themes), can be managed by users who have the `manage_internal_themes` permission.
 
 ### KPI Visualization
 
@@ -221,6 +221,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

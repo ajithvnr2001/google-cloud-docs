@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/opensearch/
 title: Access OpenSearch data from AlloyDB \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:41.401816+00:00
+fetched_at: 2026-10-22T09:27:18.639929+00:00
 ---
 
 # Access OpenSearch data from AlloyDB  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

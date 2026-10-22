@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/predefined-iam-roles-permissions/
 title: Predefined Application Integration IAM roles \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:28.709306+00:00
+fetched_at: 2026-10-22T08:31:46.104579+00:00
 ---
 
 # Predefined Application Integration IAM roles  |  Google Cloud Documentation

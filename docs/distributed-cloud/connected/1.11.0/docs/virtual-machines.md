@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.11.0/docs/virtual-machines/
 title: Manage virtual machines on Distributed Cloud connected racks \u00a0|\u00a0 Google Distributed Cloud connected \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:51.503037+00:00
+fetched_at: 2026-10-22T08:23:18.148368+00:00
 ---
 
 # Manage virtual machines on Distributed Cloud connected racks  |  Google Distributed Cloud connected  |  Google Cloud Documentation

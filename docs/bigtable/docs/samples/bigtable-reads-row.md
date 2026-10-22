@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-reads-row/
 title: Read a row \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:43:44.093156+00:00
+fetched_at: 2026-10-22T09:01:11.146618+00:00
 ---
 
 # Read a row  |  Bigtable  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/retrieval-and-ranking/
 title: Reranking for RAG Engine on Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:08.182286+00:00
+fetched_at: 2026-10-22T08:37:32.263949+00:00
 ---
 
 # Reranking for RAG Engine on Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -57,14 +57,14 @@ Format: `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`.
     
     
     from vertexai import rag
-    from vertexai.generative_models import [GenerativeModel](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.preview.generative_models.GenerativeModel.html), [Tool](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.preview.generative_models.Tool.html)
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+    from vertexai.generative_models import [GenerativeModel](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.preview.generative_models.GenerativeModel.html), [Tool](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.preview.generative_models.Tool.html)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
     
     PROJECT_ID = "PROJECT_ID"
     CORPUS_NAME = "projects/{PROJECT_ID}/locations/LOCATION/ragCorpora/RAG_CORPUS_RESOURCE"
     
     # Initialize Agent Platform API once per session
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=PROJECT_ID, location="LOCATION")
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=PROJECT_ID, location="LOCATION")
     
     config = rag.RagRetrievalConfig(
         top_k=10,
@@ -75,7 +75,7 @@ Format: `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`.
         )
     )
     
-    rag_retrieval_tool = [Tool](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.preview.generative_models.Tool.html).from_retrieval(
+    rag_retrieval_tool = [Tool](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.preview.generative_models.Tool.html).from_retrieval(
         retrieval=rag.Retrieval(
             source=rag.VertexRagStore(
                 rag_resources=[
@@ -91,7 +91,7 @@ Format: `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`.
     rag_model = GenerativeModel(
         model_name="MODEL_NAME", tools=[rag_retrieval_tool]
     )
-    response = rag_model.[generate_content](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.preview.generative_models.GenerativeModel.html#vertexai_preview_generative_models_GenerativeModel_generate_content)("INPUT_PROMPT")
+    response = rag_model.[generate_content](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.preview.generative_models.GenerativeModel.html#vertexai_preview_generative_models_GenerativeModel_generate_content)("INPUT_PROMPT")
     print(response.text)
     # Example response:
     #   The sky appears blue due to a phenomenon called Rayleigh scattering.
@@ -175,14 +175,14 @@ Replace the following variables used in the code sample:
     
     
     from vertexai import rag
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
     
     PROJECT_ID = "PROJECT_ID"
     CORPUS_NAME = "projects/[PROJECT_ID]/locations/LOCATION/ragCorpora/RAG_CORPUS_RESOURCE"
     MODEL_NAME= "MODEL_NAME"
     
     # Initialize Agent Platform API once per session
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=PROJECT_ID, location="LOCATION")
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=PROJECT_ID, location="LOCATION")
     
     rag_retrieval_config = rag.RagRetrievalConfig(
         top_k=10,

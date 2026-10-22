@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/networking/
 title: Networking resources \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:27:51.486649+00:00
+fetched_at: 2026-10-22T09:38:03.707597+00:00
 ---
 
 # Networking resources  |  Cloud Architecture Center  |  Google Cloud Documentation

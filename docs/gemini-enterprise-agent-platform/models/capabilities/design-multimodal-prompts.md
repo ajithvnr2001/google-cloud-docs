@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/design-multimodal-prompts/
 title: Design multimodal prompts \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:37.297773+00:00
+fetched_at: 2026-10-22T10:26:04.260395+00:00
 ---
 
 # Design multimodal prompts  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

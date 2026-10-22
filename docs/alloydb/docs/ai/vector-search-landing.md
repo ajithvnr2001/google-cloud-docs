@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/vector-search-landing/
 title: Vector indexing overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:42.614479+00:00
+fetched_at: 2026-10-22T09:27:11.267618+00:00
 ---
 
 # Vector indexing overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

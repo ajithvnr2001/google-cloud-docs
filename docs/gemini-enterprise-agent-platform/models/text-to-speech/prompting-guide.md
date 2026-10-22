@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/text-to-speech/prompting-guide/
 title: Gemini TTS prompting guide \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:43:04.446817+00:00
+fetched_at: 2026-10-22T10:24:53.898900+00:00
 ---
 
 # Gemini TTS prompting guide  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

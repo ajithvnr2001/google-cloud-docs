@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-authorized-dataset/
 title: Authorize a BigQuery Dataset \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:43:55.194065+00:00
+fetched_at: 2026-10-22T09:17:39.289078+00:00
 ---
 
 # Authorize a BigQuery Dataset  |  Google Cloud Documentation
@@ -106,11 +106,11 @@ To authenticate to BigQuery, set up Application Default Credentials. For more in
     #
     def authorized_dataset source_project_id:, source_database_id:, user_project_id:, user_database_id:, target_types:
       # Initialize client and get source dataset's references
-      source_bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-data_policies-v1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html) project_id: source_project_id
+      source_bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-data_policies-v1beta1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html) project_id: source_project_id
       source_dataset  = source_bigquery.dataset source_database_id
     
       # Initialize client and get user dataset's references
-      user_bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-data_policies-v1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html) project_id: user_project_id
+      user_bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-data_policies-v1beta1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html) project_id: user_project_id
       user_dataset  = user_bigquery.dataset user_database_id
     
       # Add the user dataset's DatasetAccessEntry object to the existing source dataset rules

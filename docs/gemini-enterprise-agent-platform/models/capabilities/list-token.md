@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/list-token/
 title: List and count tokens \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:40:55.480274+00:00
+fetched_at: 2026-10-22T10:27:39.313187+00:00
 ---
 
 # List and count tokens  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

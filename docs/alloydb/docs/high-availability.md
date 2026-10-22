@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/high-availability/
 title: AlloyDB high availability overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:59.966499+00:00
+fetched_at: 2026-10-22T09:07:54.016526+00:00
 ---
 
 # AlloyDB high availability overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/tpu/
 title: Cloud TPU roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:41:53.583198+00:00
+fetched_at: 2026-10-22T08:29:48.394489+00:00
 ---
 
 # Cloud TPU roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

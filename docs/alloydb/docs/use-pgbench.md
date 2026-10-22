@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/use-pgbench/
 title: Analyze the performance of an AlloyDB instance with pgbench \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:57.381012+00:00
+fetched_at: 2026-10-22T09:27:42.219875+00:00
 ---
 
 # Analyze the performance of an AlloyDB instance with pgbench  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

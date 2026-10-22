@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/billing/view-invoices/
 title: View invoices \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:59:01.549647+00:00
+fetched_at: 2026-10-22T10:24:50.926857+00:00
 ---
 
 # View invoices  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -24,7 +24,7 @@ Send feedback
 
 The Spend Reports dashboard is a cost management tool to help you understand the costs that reconcile to your invoice. The dashboard displays a detailed view of your costs for an invoice in a date range that includes the SKU description. You can also export the report in the dashboard to a comma separated values (CSV) file.
 
-To get the permissions that you need to view the Invoice Reports dashboard, ask your Organization IAM Admin to grant you the corresponding project viewer role for the `platform-obs` project.
+To get the permissions that you need to view the Invoice Reports dashboard, ask your IAM Org Admin to grant you the corresponding project viewer role for the `platform-obs` project.
 
 To access the Spend Reports dashboard and get an invoice using the `kubectl` CLI, work through the following steps:
 
@@ -38,7 +38,7 @@ To access the Spend Reports dashboard and get an invoice using the `kubectl` CLI
 
 ### CLI
 
-**Note:** To get the permissions that you need to get an invoice, ask your Organization IAM Admin to grant you the Billing Viewer (`billing-viewer`) role for the `billing-system` namespace.
+**Note:** To get the permissions that you need to get an invoice, ask your IAM Org Admin to grant you the Billing Viewer (`billing-viewer`) role for the `billing-system` namespace.
 
 To list spend reports, use the following command:
     
@@ -186,6 +186,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

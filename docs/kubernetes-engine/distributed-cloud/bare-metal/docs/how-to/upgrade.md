@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/how-to/upgrade/
 title: Upgrade clusters \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:57:17.108561+00:00
+fetched_at: 2026-10-22T10:13:38.978950+00:00
 ---
 
 # Upgrade clusters  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -104,7 +104,7 @@ The process for performing a skip upgrade isn't different from performing a sequ
          spec:
            type: user
            profile: default
-           anthosBareMetalVersion:   1.36.100-gke.144
+           anthosBareMetalVersion:   1.36.200-gke.118
            ...
          
 
@@ -242,7 +242,7 @@ The cluster upgrade operation upgrades the following nodes:
 
 
 
-For example, suppose that your cluster is at version 1.35.0 and has two worker node pools: `wpool01` and `wpool02`. Also, suppose that you want to upgrade the control plane and `wpool01` to 1.36.100-gke.144, but you want `wpool02` to remain at version 1.35.0.
+For example, suppose that your cluster is at version 1.35.0 and has two worker node pools: `wpool01` and `wpool02`. Also, suppose that you want to upgrade the control plane and `wpool01` to 1.36.200-gke.118, but you want `wpool02` to remain at version 1.35.0.
 
 The following cluster configuration file excerpt shows how you can modify the cluster configuration to support this partial upgrade:
     
@@ -256,7 +256,7 @@ The following cluster configuration file excerpt shows how you can modify the cl
       namespace: cluster-user001
     spec:
       type: user
-      profile: default**  anthosBareMetalVersion: 1.36.100-gke.144**
+      profile: default**  anthosBareMetalVersion: 1.36.200-gke.118**
     ---
     apiVersion: baremetal.cluster.gke.io/v1
     kind: NodePool
@@ -264,7 +264,7 @@ The following cluster configuration file excerpt shows how you can modify the cl
       name: wpool01
       namespace: cluster-user001
     spec:
-      clusterName: user001**  anthosBareMetalVersion: 1.36.100-gke.144**
+      clusterName: user001**  anthosBareMetalVersion: 1.36.200-gke.118**
       nodes:
       - address:  10.200.0.1
       - address:  10.200.0.2
@@ -304,7 +304,7 @@ The cluster upgrade operation upgrades only the previously excluded worker node 
 
 
 
-For example, suppose that you upgraded your cluster to version 1.36.100-gke.144, but node pool `wpool02` is still at the old, pre-upgrade cluster version 1.35.0. Workloads are running properly on the upgraded node pool, `wpool01`, so now you want to bring `wpool02` up to the current cluster version, too. To upgrade `wpool02`, you can remove the `anthosBareMetalVersion` field or set its value to the empty string.
+For example, suppose that you upgraded your cluster to version 1.36.200-gke.118, but node pool `wpool02` is still at the old, pre-upgrade cluster version 1.35.0. Workloads are running properly on the upgraded node pool, `wpool01`, so now you want to bring `wpool02` up to the current cluster version, too. To upgrade `wpool02`, you can remove the `anthosBareMetalVersion` field or set its value to the empty string.
 
 The following cluster configuration file excerpt shows how you can modify the cluster configuration to support this partial upgrade:
     
@@ -318,7 +318,7 @@ The following cluster configuration file excerpt shows how you can modify the cl
       namespace: cluster-user001
     spec:
       type: user
-      profile: default**  anthosBareMetalVersion: 1.36.100-gke.144**
+      profile: default**  anthosBareMetalVersion: 1.36.200-gke.118**
     ---
     apiVersion: baremetal.cluster.gke.io/v1
     kind: NodePool
@@ -326,7 +326,7 @@ The following cluster configuration file excerpt shows how you can modify the cl
       name: wpool01
       namespace: cluster-user001
     spec:
-      clusterName: user001**  anthosBareMetalVersion: 1.36.100-gke.144**
+      clusterName: user001**  anthosBareMetalVersion: 1.36.200-gke.118**
       nodes:
       - address:  10.200.0.1
       - address:  10.200.0.2
@@ -609,7 +609,7 @@ In this example, the value of the field `concurrentNodes` is `5`, which means th
          spec:
            type: user
            profile: default
-           anthosBareMetalVersion: 1.36.100-gke.144
+           anthosBareMetalVersion: 1.36.200-gke.118
            ...**  nodePoolUpgradeStrategy:
              concurrentNodePools: 0**
            ...
@@ -643,7 +643,7 @@ Field | Default value | Meaning
 
 This section contains instructions for upgrading clusters.
 
-**Note:** You should upgrade an admin cluster before upgrading any associated user clusters. However, before upgrading the admin cluster to `1.36.100-gke.144`, make sure its associated user clusters are at version `1.35.0` or higher. `bmctl` emits an error if it finds any user cluster is with a version lower than `1.35.0`.
+**Note:** You should upgrade an admin cluster before upgrading any associated user clusters. However, before upgrading the admin cluster to `1.36.200-gke.118`, make sure its associated user clusters are at version `1.35.0` or higher. `bmctl` emits an error if it finds any user cluster is with a version lower than `1.35.0`.
 
 ###  `bmctl`
 
@@ -670,7 +670,7 @@ The upgrade target version must match the version of the downloaded `bmctl` file
            namespace: cluster-cluster1
          spec:
            type: admin
-           # Anthos cluster version.**  anthosBareMetalVersion: 1.36.100-gke.144**
+           # Anthos cluster version.**  anthosBareMetalVersion: 1.36.200-gke.118**
          
 
   4. Use the `bmctl upgrade cluster` command to complete the upgrade:
@@ -909,6 +909,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

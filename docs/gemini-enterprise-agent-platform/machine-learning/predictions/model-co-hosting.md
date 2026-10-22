@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/model-co-hosting/
 title: Share resources across deployments \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:44.308962+00:00
+fetched_at: 2026-10-22T10:24:04.273104+00:00
 ---
 
 # Share resources across deployments  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

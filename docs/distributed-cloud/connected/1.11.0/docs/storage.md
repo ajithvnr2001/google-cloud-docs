@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.11.0/docs/storage/
 title: Configure Distributed Cloud connected storage \u00a0|\u00a0 Google Distributed Cloud connected \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:52.394164+00:00
+fetched_at: 2026-10-22T08:24:52.966118+00:00
 ---
 
 # Configure Distributed Cloud connected storage  |  Google Distributed Cloud connected  |  Google Cloud Documentation

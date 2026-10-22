@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/authenticate-toolsets/
 title: Authenticate to tools and resources \u00a0|\u00a0 Agent Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:39:59.272166+00:00
+fetched_at: 2026-10-22T09:38:23.284995+00:00
 ---
 
 # Authenticate to tools and resources  |  Agent Registry  |  Google Cloud Documentation

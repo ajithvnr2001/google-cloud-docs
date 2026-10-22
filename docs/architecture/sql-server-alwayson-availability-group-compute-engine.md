@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/sql-server-alwayson-availability-group-compute-engine/
 title: Microsoft SQL Server Always On availability group in Google Cloud \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:00.417360+00:00
+fetched_at: 2026-10-22T10:44:53.337181+00:00
 ---
 
 # Microsoft SQL Server Always On availability group in Google Cloud  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -117,7 +117,7 @@ When you design the HA and DR strategy for your SQL Server deployment, consider 
     * If some downtime is acceptable, restore the databases from backups or use log shipping with manual failover.
   * **Budget** : Consider the trade-offs between cost and reliability. 
     * High cost but reliable: Use an Always On availability group with asynchronous replication to additional nodes in a DR region. Plan for redundant infrastructure and licenses.
-    * Medium cost: Implement asynchronous disk replication to another region or use Backup and DR Service.
+    * Medium cost: Implement asynchronous disk replication to another region or use Backup and DR.
     * Low cost but high recovery time: Back up the databases to a [multi-region Cloud Storage bucket](https://docs.cloud.google.com/storage/docs/locations#location-mr).
   * **Types of failures** : What types of failures do you need to handle? 
     * To handle hardware-level, instance-level, and zonal failures, you can use availability groups.
@@ -140,7 +140,7 @@ Use the following decision-flow questionnaire to choose an optimal reliability s
      * Less than five minutes: Use a SQL Server Always On availability group with an asynchronous disk replica.
      * One hour or more: Proceed to the next question.
   4. What's your RPO? 
-     * Less than two hours: Use a SQL Server Always On availability group with Backup and DR Service.
+     * Less than two hours: Use a SQL Server Always On availability group with Backup and DR.
      * Eight hours or more: Use offsite backups or log shipping.
 
 
@@ -150,7 +150,7 @@ Use the following decision-flow questionnaire to choose an optimal reliability s
 If your reliability strategy includes database backups, choose a backup method that meets your requirements. Google Cloud offers the following flexible and enterprise-ready options for backing up SQL Server databases:
 
   * [Direct backup to a Cloud Storage bucket](https://docs.cloud.google.com/compute/docs/instances/sql-server/backup-sql-server-db-to-gcs-bucket): Write database backups directly to Cloud Storage by using the `BACKUP TO URL` command and the S3 connector in SQL Server (version 2022 or later). For production environments, you can use a hash-based message authentication code (HMAC) access key. This backup option provides cost-effective protection for databases and logs without the need for intermediate local storage.
-  * [Compute Engine instant snapshots](https://docs.cloud.google.com/compute/docs/instances/sql-server/backup-sql-server-with-instant-snapshots): Capture simultaneous snapshots across multiple disks (for example, across [Hyperdisk Balanced](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced) disks) in less than one second by using Transact-SQL (T-SQL) freeze-thaw operations combined with Compute Engine consistency groups. This option enables high-performance VM-level backups for multi-disk databases, and it has a near-zero write-freeze requirement.
+  * [Compute Engine instant snapshots](https://docs.cloud.google.com/compute/docs/instances/sql-server/backup-sql-server-with-instant-snapshots): Capture simultaneous snapshots across multiple disks (for example, across [Google Cloud Hyperdisk Balanced](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced) disks) in less than one second by using Transact-SQL (T-SQL) freeze-thaw operations combined with Compute Engine consistency groups. This option enables high-performance VM-level backups for multi-disk databases, and it has a near-zero write-freeze requirement.
   * [Backup and DR](https://docs.cloud.google.com/backup-disaster-recovery/docs/concepts/backup-dr): Orchestrate application-consistent snapshots by using [Microsoft VSS](https://learn.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service) providers and consistency groups. This backup option is suitable when you need granular, multi-database point-in-time recovery (PITR) and the ability to use logs to [roll databases forward](https://learn.microsoft.com/en-us/sql/relational-databases/logs/the-transaction-log-sql-server#rolling-a-restored-database-file-filegroup-or-page-forward-to-the-point-of-failure).
   * [Google Cloud NetApp Volumes](https://docs.cloud.google.com/netapp/volumes/docs/discover/overview): Create instant snapshots and asynchronous backups to remote vaults by using the [ONTAP](https://docs.cloud.google.com/netapp/volumes/docs/ontap/overview) storage engine. We recommend NetApp Volumes for latency-sensitive enterprise applications that need rapid ransomware mitigation and space-efficient clones.
 
@@ -204,7 +204,7 @@ Consider the following recommendations:
 
   * **Disable simultaneous multi-threading (SMT)** : By disabling SMT, you can reduce the core count that's reported for licensing purposes by 50%. By overprovisioning your CPUs by 20% and then disabling SMT, you can achieve substantial savings in licensing costs without sacrificing performance. For more information, see [Set the number of threads per core](https://docs.cloud.google.com/compute/docs/instances/set-threads-per-core).
   * **Use SQL Server Standard Edition** : Depending on your HA and DR requirements, you can reduce licensing cost by using SQL Server Standard edition instead of Enterprise edition. For more information, see [Editions and Supported Features of SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2022?view=sql-server-ver16).
-  * **Optimize storage** : Hyperdisk provides different disk options that you can choose from based on the needs of your SQL Server deployment. Hyperdisk Balanced provides a balance between cost and performance. You can scale throughput and input/output operations per second (IOPS) and independently, so that your infrastructure spend precisely matches the needs of the workload. For more information, see the Choose an appropriate storage disk type section.
+  * **Optimize storage** : Google Cloud Hyperdisk provides different disk options that you can choose from based on the needs of your SQL Server deployment. Hyperdisk Balanced provides a balance between cost and performance. You can scale throughput and input/output operations per second (IOPS) and independently, so that your infrastructure spend precisely matches the needs of the workload. For more information, see the Choose an appropriate storage disk type section.
 
 
 
@@ -245,7 +245,7 @@ Disk type | Performance characteristics | Workload suitability
 ---|---|---  
 SSD Persistent Disk (`pd-ssd`) | Medium to high performance depending on the VM machine type and disk size | Workloads that require performance to scale with the size of the disk and the vCPUs of the VM. For more information, see [Persistent Disk performance overview](https://docs.cloud.google.com/compute/docs/disks/performance).   
 [Hyperdisk Balanced](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced) | High performance with configurable IOPS and throughput | Production SQL Server data and log files. Hyperdisk Balanced lets you configure IOPS and throughput independently of disk size and based on the needs of the workload.  
-[Hyperdisk Extreme](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-extreme) | Very high performance with configurable IOPS | High-end, mission-critical OLTP workloads that need maximum IOPS and the lowest latency, such as large-scale financial or ecommerce systems.  
+[Google Cloud Hyperdisk Extreme](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-extreme) | Very high performance with configurable IOPS | High-end, mission-critical OLTP workloads that need maximum IOPS and the lowest latency, such as large-scale financial or ecommerce systems.  
 [Local SSD](https://docs.cloud.google.com/compute/docs/disks/local-ssd) | Highest IOPS and throughput compared with the other disk types | Temporary data that doesn't need the durability of persistent disks. For data such as the [`tempdb`](https://learn.microsoft.com/en-us/sql/relational-databases/databases/tempdb-database) system database and the Windows page file, local SSDs provide the lowest latency because they are physically attached to the VMs.  
   
 #### Match the infrastructure to performance requirements

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerystorage-jsonstreamwriter-default/
 title: Append records using default client \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:01:01.823520+00:00
+fetched_at: 2026-10-22T08:54:38.767273+00:00
 ---
 
 # Append records using default client  |  BigQuery  |  Google Cloud Documentation
@@ -58,7 +58,7 @@ To authenticate to BigQuery, set up Application Default Credentials. For more in
     import com.google.cloud.bigquery.storage.v1.[Exceptions](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerystorage/latest/com.google.cloud.bigquery.storage.v1.Exceptions.html).StorageException;
     import com.google.cloud.bigquery.storage.v1.[Exceptions](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerystorage/latest/com.google.cloud.bigquery.storage.v1.Exceptions.html).StreamWriterClosedException;
     import com.google.cloud.bigquery.storage.v1.[JsonStreamWriter](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerystorage/latest/com.google.cloud.bigquery.storage.v1.JsonStreamWriter.html);
-    import com.google.cloud.bigquery.storage.v1.[TableName](https://docs.cloud.google.com/java/docs/reference/google-cloud-biglake/latest/com.google.cloud.bigquery.biglake.v1.TableName.html);
+    import com.google.cloud.bigquery.storage.v1.[TableName](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerystorage/latest/com.google.cloud.bigquery.storage.v1.TableName.html);
     import com.google.common.util.concurrent.MoreExecutors;
     import com.google.protobuf.[ByteString](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html);
     import com.google.protobuf.[Descriptors](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Descriptors.html).[DescriptorValidationException](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Descriptors.DescriptorValidationException.html);
@@ -106,7 +106,7 @@ To authenticate to BigQuery, set up Application Default Credentials. For more in
     
       public static void writeToDefaultStream(String projectId, String datasetName, String tableName)
           throws [DescriptorValidationException](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Descriptors.DescriptorValidationException.html), InterruptedException, IOException {
-        [TableName](https://docs.cloud.google.com/java/docs/reference/google-cloud-biglake/latest/com.google.cloud.bigquery.biglake.v1.TableName.html) parentTable = [TableName](https://docs.cloud.google.com/java/docs/reference/google-cloud-biglake/latest/com.google.cloud.bigquery.biglake.v1.TableName.html).of(projectId, datasetName, tableName);
+        [TableName](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerystorage/latest/com.google.cloud.bigquery.storage.v1.TableName.html) parentTable = [TableName](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerystorage/latest/com.google.cloud.bigquery.storage.v1.TableName.html).of(projectId, datasetName, tableName);
     
         DataWriter writer = new DataWriter();
         // One time initialization for the worker.
@@ -131,15 +131,15 @@ To authenticate to BigQuery, set up Application Default Credentials. For more in
         System.out.println("Appended records successfully.");
       }
     
-      private static void verifyExpectedRowCount([TableName](https://docs.cloud.google.com/java/docs/reference/google-cloud-biglake/latest/com.google.cloud.bigquery.biglake.v1.TableName.html) parentTable, long expectedRowCount)
+      private static void verifyExpectedRowCount([TableName](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerystorage/latest/com.google.cloud.bigquery.storage.v1.TableName.html) parentTable, long expectedRowCount)
           throws InterruptedException {
         String queryRowCount =
             "SELECT COUNT(*) FROM `"
-                + parentTable.[getProject](https://docs.cloud.google.com/java/docs/reference/google-cloud-biglake/latest/com.google.cloud.bigquery.biglake.v1.TableName.html#com_google_cloud_bigquery_biglake_v1_TableName_getProject__)()
+                + parentTable.[getProject](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerystorage/latest/com.google.cloud.bigquery.storage.v1.TableName.html#com_google_cloud_bigquery_storage_v1_TableName_getProject__)()
                 + "."
                 + parentTable.[getDataset](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerystorage/latest/com.google.cloud.bigquery.storage.v1.TableName.html#com_google_cloud_bigquery_storage_v1_TableName_getDataset__)()
                 + "."
-                + parentTable.[getTable](https://docs.cloud.google.com/java/docs/reference/google-cloud-biglake/latest/com.google.cloud.bigquery.biglake.v1.TableName.html#com_google_cloud_bigquery_biglake_v1_TableName_getTable__)()
+                + parentTable.[getTable](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerystorage/latest/com.google.cloud.bigquery.storage.v1.TableName.html#com_google_cloud_bigquery_storage_v1_TableName_getTable__)()
                 + "`";
         [QueryJobConfiguration](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquery/latest/com.google.cloud.bigquery.QueryJobConfiguration.html) queryConfig = [QueryJobConfiguration](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquery/latest/com.google.cloud.bigquery.QueryJobConfiguration.html).newBuilder(queryRowCount).build();
         [BigQuery](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquery/latest/com.google.cloud.bigquery.BigQuery.html) bigquery = [BigQueryOptions](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquery/latest/com.google.cloud.bigquery.BigQueryOptions.html).getDefaultInstance().getService();
@@ -217,13 +217,13 @@ To authenticate to BigQuery, set up Application Default Credentials. For more in
               .build();
         }
     
-        public void initialize([TableName](https://docs.cloud.google.com/java/docs/reference/google-cloud-biglake/latest/com.google.cloud.bigquery.biglake.v1.TableName.html) parentTable)
+        public void initialize([TableName](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerystorage/latest/com.google.cloud.bigquery.storage.v1.TableName.html) parentTable)
             throws [DescriptorValidationException](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Descriptors.DescriptorValidationException.html), IOException, InterruptedException {
           // Initialize client without settings, internally within stream writer a new client will be
           // created with full settings.
           client = [BigQueryWriteClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerystorage/latest/com.google.cloud.bigquery.storage.v1.BigQueryWriteClient.html).create();
     
-          streamWriter = createStreamWriter(parentTable.[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-biglake/latest/com.google.cloud.bigquery.biglake.v1.TableName.html#com_google_cloud_bigquery_biglake_v1_TableName_toString__)());
+          streamWriter = createStreamWriter(parentTable.[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerystorage/latest/com.google.cloud.bigquery.storage.v1.TableName.html#com_google_cloud_bigquery_storage_v1_TableName_toString__)());
         }
     
         public void append(AppendContext appendContext)

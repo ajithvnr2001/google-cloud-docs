@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-data-get-dataset-async/
 title: Get Firestore Documents created from custom classes (async) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:58:39.640023+00:00
+fetched_at: 2026-10-22T10:28:23.181334+00:00
 ---
 
 # Get Firestore Documents created from custom classes (async)  |  Google Cloud Documentation

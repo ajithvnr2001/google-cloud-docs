@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/vector-search/using-metadata/
 title: Vector Search embeddings with metadata \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:54.405640+00:00
+fetched_at: 2026-10-22T10:24:51.005466+00:00
 ---
 
 # Vector Search embeddings with metadata  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

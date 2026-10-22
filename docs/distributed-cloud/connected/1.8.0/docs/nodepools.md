@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.8.0/docs/nodepools/
 title: Create and manage node pools \u00a0|\u00a0 Google Distributed Cloud connected, version 1.8.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:06.869376+00:00
+fetched_at: 2026-10-22T08:25:47.367810+00:00
 ---
 
 # Create and manage node pools  |  Google Distributed Cloud connected, version 1.8.0  |  Google Cloud Documentation

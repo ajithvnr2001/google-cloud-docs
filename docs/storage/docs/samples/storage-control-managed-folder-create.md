@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-control-managed-folder-create/
 title: Storage Control Create a Managed Folder \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:17:05.136678+00:00
+fetched_at: 2026-10-22T10:32:03.153700+00:00
 ---
 
 # Storage Control Create a Managed Folder  |  Google Cloud Documentation

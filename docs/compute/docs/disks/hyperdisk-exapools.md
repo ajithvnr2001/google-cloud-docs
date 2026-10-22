@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/hyperdisk-exapools/
 title: Hyperdisk Exapools overview \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:56.764652+00:00
+fetched_at: 2026-10-22T10:12:47.005751+00:00
 ---
 
 # Hyperdisk Exapools overview  |  Compute Engine  |  Google Cloud Documentation
@@ -95,7 +95,7 @@ Exapools use advanced performance provisioning, which offers the following benef
 
 For a detailed explanation of advanced performance provisioning, see [Advanced performance provisioning](https://docs.cloud.google.com/compute/docs/disks/pools#adv-perf).
 
-## Purchasing capacity and performance
+## Purchase capacity and performance
 
 An Exapool's provisioned performance, or how much IOPS and throughput you can allocate to disks within the pool, depends on the following factors:
 
@@ -240,7 +240,9 @@ For more information, see [Reservations for pools](https://docs.cloud.google.com
 
 You're billed for Exapools based on the number and type of capacity and performance units you purchased for the pool. You aren't billed for the provisioned IOPS, throughput, or capacity for the disks created in the pool.
 
-Hyperdisk Exapools are eligible for resource-based committed use discounts (CUDs) with a minimum 1-year or up to 3-year commitment. When you purchase a 1- or 3-year Exapool, you automatically qualify for resource-based CUDs in 1- or 3-year commitments. For more information, see [Disk pricing](https://docs.cloud.google.com/compute/disks-image-pricing#disk-and-image-pricing).
+Compute Engine offers resource-based committed use discounts (CUDs) for your Hyperdisk Exapools. You can receive these discounts by purchasing 1-year or 3-year block storage commitments. To learn more about how block storage commitments work, see [Block storage commitments](https://docs.cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts#block_storage_commitments) in the resource-based CUDs documentation. For instructions on how to purchase a block storage commitment, see [Purchase block storage commitments](https://docs.cloud.google.com/compute/docs/committed-use-discounts/purchase-block-storage-commitments).
+
+To compare on-demand prices with 1-year and 3-year CUD prices, see [Disk pricing](https://docs.cloud.google.com/compute/disks-image-pricing?e=48754805#section-2).
 
 ## Limitations
 
@@ -264,7 +266,7 @@ The following limitations apply to Exapools.
 
   * [Contact your account team](https://docs.cloud.google.com/tam) to create an Exapool
   * [View the properties of a Hyperdisk pool](https://docs.cloud.google.com/compute/docs/disks/manage-storage-pools)
-  * [Add disks in a pool to a VMs](https://docs.cloud.google.com/compute/docs/disks/use-storage-pool-capacity)
+  * [Add disks in a pool to VMs](https://docs.cloud.google.com/compute/docs/disks/use-storage-pool-capacity)
 
 
 
@@ -272,6 +274,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

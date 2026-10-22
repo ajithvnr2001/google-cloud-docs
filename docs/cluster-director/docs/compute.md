@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-director/docs/compute/
 title: Supported machine series for Cluster Director \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:37:11.094970+00:00
+fetched_at: 2026-10-22T09:25:06.865715+00:00
 ---
 
 # Supported machine series for Cluster Director  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/free-trial-cluster/
 title: AlloyDB free trial clusters overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:56.825861+00:00
+fetched_at: 2026-10-22T10:42:27.379955+00:00
 ---
 
 # AlloyDB free trial clusters overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,9 +21,7 @@ Send feedback
 
 #  AlloyDB free trial clusters overview Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page provides information about the AlloyDB for PostgreSQL free trial cluster.
-
-An AlloyDB free trial cluster lets you test majority of AlloyDB features for up to 30 days without any financial commitment through a 8 vCPU basic primary instance that automatically scales storage up to 1TB.
+To test the majority of AlloyDB for PostgreSQL features for up to 30 days without any financial commitment, you can create an AlloyDB free trial cluster, which provisions an 8 vCPU basic primary instance that automatically scales storage up to 1 TB.
 
 After you create a free trial cluster, you can start trying out AlloyDB capabilities, including but not limited to the following:
 
@@ -44,7 +42,7 @@ Billing  |  Before you create an AlloyDB trial cluster, understand the following
   * **Existing user** : Ensure [Cloud Billing is enabled](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#console) for your project.
   * **New user** : Sign in to the Google Cloud console with your Google Account and [set up a Cloud Billing account](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#console) with your credit card or other payment method.
 
-We don't charge you for free trial clusters and instance resources, but you are charged for data transfer costs for connections outside the region, through the public internet, and for taking and storing your final backup. For more information, see [Trial inclusions and conditions](https://docs.cloud.google.com/alloydb/docs/free-trial-cluster#trial-inclusion").   
+We don't charge you for free trial clusters and instance resources, but you are charged for data transfer costs for connections outside the region, through the public internet, and for taking and storing your final backup. For more information, see [Trial inclusions and conditions](https://docs.cloud.google.com/alloydb/docs/free-trial-cluster#trial-inclusion-conditions).   
 Duration  |  You can explore AlloyDB features with free trial clusters until one of the following occurs: 
 
   * 30 days have elapsed since you first created your free trial cluster. 
@@ -60,7 +58,7 @@ The following inclusions and conditions apply to a free trial cluster:
 
   * One free trial cluster allowed per project lifecycle.
   * 30-day free trial cluster.
-  * No [SLA](https://cloud.google.com/alloydb/sla) guarantees.
+  * No [SLA](https://cloud.google.com/alloydb/sla) coverage.
   * All AlloyDB [quotas and limits](https://docs.cloud.google.com/alloydb/quotas) apply.
   * One free trial cluster provides up to 1 TB of storage capacity and 8 vCPU of single zone primary instance for testing purposes. You can't edit a free trial cluster to increase its storage or compute capacity limits. To increase the storage and compute capacity of a free trial cluster, [upgrade to a paid instance](https://docs.cloud.google.com/alloydb/docs/create-free-trial-cluster#upgrade-free-trial).
   * Maximum of one read pool with 8 vCPU compute capacity.
@@ -124,6 +122,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

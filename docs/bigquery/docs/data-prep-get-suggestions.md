@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/data-prep-get-suggestions/
 title: Prepare data with Gemini \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:08:06.240276+00:00
+fetched_at: 2026-10-22T10:44:45.907753+00:00
 ---
 
 # Prepare data with Gemini  |  BigQuery  |  Google Cloud Documentation
@@ -188,6 +188,7 @@ If existing suggestions don't meet your needs, add a step. Choose columns or a s
 
 Gemini generates a SQL expression and a new description based on your prompt.
 
+**Note:** The SQL expression uses the new natural language expressions experience when generating transformations.
   4. In the **Target column** list, select or enter a column name.
 
   5. Optional: To update the SQL expression, revise the prompt and click send **Send** , or manually enter a SQL expression.
@@ -269,9 +270,14 @@ To add a filter that removes rows, follow these steps:
   1. In the data or schema view, choose the **Filter** option. You can also choose columns to help Gemini understand your data filter.
   2. In the **Description** field, enter a prompt, such as `Column ID should not be NULL`.
   3. Click **Generate**. Gemini generates a SQL expression and a new description based on your prompt.
+
+**Note:** The SQL expression uses the new natural language expressions experience when generating transformations.
   4. Optional: To update the SQL expression, revise the prompt and click send **Send** , or enter a SQL expression manually.
+
   5. Optional: Click **Preview** and review the step.
+
   6. Click **Apply**.
+
 
 
 
@@ -454,6 +460,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

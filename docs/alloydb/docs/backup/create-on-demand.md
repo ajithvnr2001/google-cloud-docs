@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/backup/create-on-demand/
 title: Create an on-demand backup \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:48.349560+00:00
+fetched_at: 2026-10-22T09:27:13.353850+00:00
 ---
 
 # Create an on-demand backup  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

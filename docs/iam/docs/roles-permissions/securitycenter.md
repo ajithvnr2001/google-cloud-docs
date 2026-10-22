@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/securitycenter/
 title: Security Command Center roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:41:58.645859+00:00
+fetched_at: 2026-10-22T08:30:00.515184+00:00
 ---
 
 # Security Command Center roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

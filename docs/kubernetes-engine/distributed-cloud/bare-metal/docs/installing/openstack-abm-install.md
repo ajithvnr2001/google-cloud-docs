@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/openstack-abm-install/
 title: Deploy a cluster on OpenStack \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:57:50.385181+00:00
+fetched_at: 2026-10-22T10:21:33.769817+00:00
 ---
 
 # Deploy a cluster on OpenStack  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -203,7 +203,7 @@ These credentials are used with subsequent `gcloud` commands.
   1. Download the `bmctl` command line utility.
          
          mkdir baremetal && cd baremetal
-         gcloud storage cp gs://anthos-baremetal-release/bmctl/1.36.100-gke.144/linux-amd64/bmctl .
+         gcloud storage cp gs://anthos-baremetal-release/bmctl/1.36.200-gke.118/linux-amd64/bmctl .
          chmod a+x bmctl
          sudo mv bmctl /usr/local/sbin/
          
@@ -237,7 +237,7 @@ These credentials are used with subsequent `gcloud` commands.
              baremetal.cluster.gke.io/external-cloud-provider: "true"
          spec:
            type: hybrid
-           anthosBareMetalVersion: 1.36.100-gke.144
+           anthosBareMetalVersion: 1.36.200-gke.118
            gkeConnect:
              projectID: PROJECT_ID
            controlPlane:
@@ -373,6 +373,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

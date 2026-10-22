@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deep-learning-containers/docs/shared-responsibility/
 title: Deep Learning Containers shared responsibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:51.424171+00:00
+fetched_at: 2026-10-22T08:26:27.129865+00:00
 ---
 
 # Deep Learning Containers shared responsibility  |  Google Cloud Documentation

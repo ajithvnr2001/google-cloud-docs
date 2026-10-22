@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18.4.0/docs/overview/
 title: AlloyDB Omni using the RPM orchestrator overview \u00a0|\u00a0 AlloyDB Omni using the RPM orchestrator: 18.4.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:23:17.707599+00:00
+fetched_at: 2026-10-22T10:40:31.874074+00:00
 ---
 
 # AlloyDB Omni using the RPM orchestrator overview  |  AlloyDB Omni using the RPM orchestrator: 18.4.0  |  Google Cloud Documentation
@@ -104,6 +104,7 @@ The RPM orchestrator deployment option includes a set of software components, ea
 Orchestrator | AlloyDB Omni orchestration provides command-line and Ansible interfaces to help you deploy and manage one or more AlloyDB Omni clusters in a distributed environment.  
 alloydbomni | The AlloyDB Omni core includes PostgreSQL and autopilot features for enhanced performance and capabilities to support modern workloads, for example, online analytical processing (OLAP) and generative AI.  
 alloydbomni_monitor | The AlloyDB Omni monitor lets you pull metrics from AlloyDB Omni.  
+`alloydbomni_ui` (optional) | The [AlloyDB Omni web user interface](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18.4.0/docs/install-web-ui) is a self-managed web console that provides observability dashboards for cluster instances, system telemetry charts, database sizes, active database flags, columnar engine statistics, and query insights.  
 etcd | etcd provides a distributed configuration system that the cluster manager uses to store PostgreSQL configuration and state information.  
 Cluster manager | The central control plane orchestrates cluster-wide operations. This includes bootstrapping the cluster, managing HA, handling failover, coordinating upgrades, and exposing interfaces for automation tools, for example, Ansible and the `alloydbctl` command-line utility.   
 Node manager | An agent that runs on each node in the AlloyDB Omni cluster. It interacts with the cluster manager to execute tasks on the node, for example, installing and configuring AlloyDB Omni, managing the database service lifecycle (start and stop), monitoring node health, and collecting logs and metrics.  
@@ -359,6 +360,7 @@ The orchestrators take a set of specifications as input in YAML format.
   * To get started with this deployment option, [request access using the sign-up form](https://forms.gle/zxuHekMtV67Bw9Av9).
   * Choose [an AlloyDB Omni download and installation option](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18.4.0/docs/available-download-install-options).
   * Install the [AlloyDB Omni orchestrator](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18.4.0/docs/install-orchestrator).
+  * [Install the web UI](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18.4.0/docs/install-web-ui).
 
 
 
@@ -366,6 +368,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/storage-advisor/
 title: Design an optimal storage strategy for your cloud workload \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:00.247868+00:00
+fetched_at: 2026-10-22T10:44:54.734612+00:00
 ---
 
 # Design an optimal storage strategy for your cloud workload  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -173,7 +173,7 @@ The following table lists the key capabilities of the storage services in Google
 | Persistent Disk | Hyperdisk | Local SSD | Filestore | Managed Lustre | NetApp Volumes | Cloud Storage  
 ---|---|---|---|---|---|---|---  
 **Capacity limit**  
-fullscreen | 64 TiB per disk and 257 TiB per VM. Latest specifications: [ Persistent Disk documentation](https://docs.cloud.google.com/compute/docs/disks/persistent-disks#capacity_257tb) | 64 TiB per disk, 512 TiB per VM, and 5 PiB per storage pool. [Exapools](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-exapools) are higher capacity Hyperdisk pools. Latest specifications: [ Hyperdisk documentation](https://docs.cloud.google.com/compute/docs/disks/hyperdisks#size-limits) |  375 GiB per disk and 12,000 GiB per VM. [Titanium SSD](https://docs.cloud.google.com/compute/docs/disks/local-ssd#titanium-ssd-perf-nvme) disks support up to 6 TiB per disk and 84,000 GiB per VM.  Latest specifications: [ Local SSD documentation](https://docs.cloud.google.com/compute/docs/disks/local-ssd#performance) | 100 TiB per instance, depending on the [service tier. ](https://docs.cloud.google.com/filestore/docs/service-tiers#tier-comparison) | 80.1 PiB per instance, depending on the [performance tier.](https://docs.cloud.google.com/managed-lustre/docs/performance-tiers) | 20 PiB per storage pool and 20 PiB per volume. Latest specifications: [ NetApp Volumes documentation](https://docs.cloud.google.com/netapp/volumes/docs/discover/service-levels) |  5 TiB per object, with no limit per bucket (except [Rapid Bucket](https://docs.cloud.google.com/storage/docs/rapid/rapid-bucket)). Latest specifications: [ Cloud Storage documentation](https://docs.cloud.google.com/storage/quotas)  
+fullscreen | 64 TiB per disk and 257 TiB per VM. Latest specifications: [ Persistent Disk documentation](https://docs.cloud.google.com/compute/docs/disks/persistent-disks#capacity_257tb) | 64 TiB per disk, 512 TiB per VM, and 5 PiB per storage pool. [Google Cloud Hyperdisk Exapools](https://docs.cloud.google.com/compute/docs/disks/hyperdisk-exapools) are higher capacity Hyperdisk pools. Latest specifications: [ Hyperdisk documentation](https://docs.cloud.google.com/compute/docs/disks/hyperdisks#size-limits) |  375 GiB per disk and 12,000 GiB per VM. [Titanium SSD](https://docs.cloud.google.com/compute/docs/disks/local-ssd#titanium-ssd-perf-nvme) disks support up to 6 TiB per disk and 84,000 GiB per VM.  Latest specifications: [ Local SSD documentation](https://docs.cloud.google.com/compute/docs/disks/local-ssd#performance) | 100 TiB per instance, depending on the [service tier. ](https://docs.cloud.google.com/filestore/docs/service-tiers#tier-comparison) | 80.1 PiB per instance, depending on the [performance tier.](https://docs.cloud.google.com/managed-lustre/docs/performance-tiers) | 20 PiB per storage pool and 20 PiB per volume. Latest specifications: [ NetApp Volumes documentation](https://docs.cloud.google.com/netapp/volumes/docs/discover/service-levels) |  5 TiB per object, with no limit per bucket (except [Rapid Bucket](https://docs.cloud.google.com/storage/docs/rapid/rapid-bucket)). Latest specifications: [ Cloud Storage documentation](https://docs.cloud.google.com/storage/quotas)  
 **Scaling**  
 aspect_ratio | 
 
@@ -432,7 +432,7 @@ For more information, see [About Persistent Disk](https://docs.cloud.google.com/
     * Depending on your redundancy requirements, choose between zonal and regional disks. Requirement  | Recommendation   
 ---|---  
 Redundancy within a single zone in a region | Use Hyperdisk or zonal Persistent Disk.  
-Redundancy across multiple zones within a region | Use Hyperdisk Balanced High Availability or regional Persistent Disk.  
+Redundancy across multiple zones within a region | Use Google Cloud Hyperdisk Balanced High Availability or regional Persistent Disk.  
   * For _large-scale and globally available_ storage, use Cloud Storage.
 
 Depending on the data-access frequency and the storage duration, choose a suitable Cloud Storage class. 

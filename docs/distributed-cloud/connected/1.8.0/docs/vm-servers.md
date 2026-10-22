@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.8.0/docs/vm-servers/
 title: Manage virtual machines on Distributed Cloud connected servers \u00a0|\u00a0 Google Distributed Cloud connected, version 1.8.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:43.523821+00:00
+fetched_at: 2026-10-22T08:24:54.306326+00:00
 ---
 
 # Manage virtual machines on Distributed Cloud connected servers  |  Google Distributed Cloud connected, version 1.8.0  |  Google Cloud Documentation

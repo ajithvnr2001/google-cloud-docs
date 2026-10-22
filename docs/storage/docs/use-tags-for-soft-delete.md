@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/use-tags-for-soft-delete/
 title: Use tags to set a default soft delete retention duration for new buckets \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:34.207614+00:00
+fetched_at: 2026-10-22T10:29:22.639347+00:00
 ---
 
 # Use tags to set a default soft delete retention duration for new buckets  |  Cloud Storage  |  Google Cloud Documentation
@@ -98,7 +98,7 @@ To create the default soft delete retention duration tag and tag values, complet
 
   6. Click add **Add value**.
 
-  7. In the **Tag value** field, enter the length of time you want to set as the default soft delete retention duration. Format the retention duration as a number value between 7 to 90 days, such as `30d`, or, to disable soft delete on your resource by default, enter `0d`.
+  7. In the **Tag value** field, enter the length of time you want to set as the default soft delete retention duration. Format the retention duration as a number value between 7 days and 90 days, such as `30d`. Or, to disable soft delete on your resource by default, enter `0d`.
 
   8. In the **Tag value description** field, enter a description of your tag value.
 
@@ -128,7 +128,7 @@ Replace the following:
           --description="Sets the default soft delete retention duration for new Storage buckets to $duration."
          
 
-     * `RETENTION_DURATION`: the length of time you want to set as the new default soft delete retention duration. Format the retention duration as a number value between 7 to 90 days, such as `30d`, or, to disable soft delete on your resource by default, enter `0d`.
+     * `RETENTION_DURATION`: the length of time you want to set as the new default soft delete retention duration. Format the retention duration as a number value between 7 days and 90 days, such as `30d`. Or, to disable soft delete on your resource by default, enter `0d`.
 
      * `ORGANIZATION_ID`: the numeric ID of the organization you want to set the default soft delete retention duration for. For example, `12345678901`.
 
@@ -184,7 +184,7 @@ Replace the following:
 
   * `ORGANIZATION_ID`: the numeric ID of the organization under which the tag was created. For example, `12345678901`.
 
-  * `RETENTION_DURATION`: the length of time you want to set the new default soft delete retention duration to. Format the retention duration as a number value between 7 to 90 days, such as `30d`, or, to disable soft delete on your resource by default, enter `0d`.
+  * `RETENTION_DURATION`: the length of time you want to set the new default soft delete retention duration to. Format the retention duration as a number value between 7 days and 90 days, such as `30d`. Or, to disable soft delete on your resource by default, enter `0d`.
 
   * `RESOURCE_ID`: the full name of the folder, project, or organization you want to create the tag binding for. For example, to attach a tag to `projects/7890123456`, enter `//cloudresourcemanager.googleapis.com/projects/7890123456`.
 
@@ -250,6 +250,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

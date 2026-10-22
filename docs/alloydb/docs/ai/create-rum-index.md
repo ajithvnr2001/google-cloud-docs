@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/create-rum-index/
 title: Create and manage RUM index \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:25.472978+00:00
+fetched_at: 2026-10-22T09:30:37.989378+00:00
 ---
 
 # Create and manage RUM index  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/developer-device-platform/device-streaming/governance-security/
 title: Device Streaming API Organizational Controls for Google Device Cloud \u00a0|\u00a0 Developer Device Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:04.259366+00:00
+fetched_at: 2026-10-22T08:33:15.331906+00:00
 ---
 
 # Device Streaming API Organizational Controls for Google Device Cloud  |  Developer Device Platform  |  Google Cloud Documentation

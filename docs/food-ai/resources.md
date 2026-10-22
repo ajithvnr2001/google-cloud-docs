@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/food-ai/resources/
 title: Resources \u00a0|\u00a0 Food Ordering AI Agent \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:55:30.178757+00:00
+fetched_at: 2026-10-22T08:35:59.012991+00:00
 ---
 
 # Resources  |  Food Ordering AI Agent  |  Google Cloud Documentation

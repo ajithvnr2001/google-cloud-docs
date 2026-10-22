@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/containers/deploy-gpu-container-workloads/
 title: Manage GPU container workloads \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:57:47.495086+00:00
+fetched_at: 2026-10-22T10:30:00.855503+00:00
 ---
 
 # Manage GPU container workloads  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -47,7 +47,7 @@ To verify GPU-supported node pools and deploy GPU workloads in a shared cluster,
 
 #### Standard cluster roles
 
-To verify GPU-supported node pools and deploy GPU workloads to a standard cluster, ask your Project IAM Admin to grant you the following roles:
+To verify GPU-supported node pools and deploy GPU workloads to a standard cluster, ask your IAM Project Admin to grant you the following roles:
 
   * **Standard Cluster Admin** (`standard-cluster-admin`): create, delete, edit, or view the resources of a standard cluster hosted on the management API server. This role lets you check GPUs in the shared cluster, and is bound to your project namespace.
   * **Cluster Developer** (`cluster-developer`): create, delete, edit, or view a standard cluster. This role lets you deploy GPU workloads to a standard cluster by providing access to the data plane APIs hosted within the standard cluster. This role is bound to your project namespace.
@@ -182,6 +182,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/identity/keycloak-single-sign-on/
 title: Keycloak single sign-on \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:28:58.497379+00:00
+fetched_at: 2026-10-22T09:00:18.425712+00:00
 ---
 
 # Keycloak single sign-on  |  Cloud Architecture Center  |  Google Cloud Documentation

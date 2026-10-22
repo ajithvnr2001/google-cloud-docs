@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/access-control/
 title: Access control with Identity and Access Management \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:41:41.472344+00:00
+fetched_at: 2026-10-22T08:31:47.207330+00:00
 ---
 
 # Access control with Identity and Access Management  |  Pub/Sub  |  Google Cloud Documentation

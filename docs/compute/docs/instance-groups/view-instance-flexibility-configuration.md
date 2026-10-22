@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/view-instance-flexibility-configuration/
 title: View instance flexibility \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:22:49.067357+00:00
+fetched_at: 2026-10-22T09:43:40.412609+00:00
 ---
 
 # View instance flexibility  |  Compute Engine  |  Google Cloud Documentation
@@ -266,9 +266,7 @@ Replace the following:
 
 While checking your static instance flexibility policy and listing individual VM machine types provides a snapshot of your current configuration, observing how your MIG allocates capacity over time requires real-time monitoring.
 
-You can use the **GCE MIG Instance Distribution Monitoring** dashboard in Cloud Monitoring to observe runtime instance distributions across zones and machine types in real-time. This visibility helps you verify that your VMs are distributed across your intended ranks and locations when demand or capacity shifts.
-
-For instructions on how to access the monitoring dashboard, see [Monitor instance distribution in MIGs](https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution).
+To verify that your VMs are distributed across your intended ranks and locations when demand or capacity shifts, you can view the runtime instance distribution for a specific MIG or aggregated data across multiple MIGs. For instructions on how to view the instance distribution, see [Monitor instance distribution in MIGs](https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution).
 
 ## What's next
 
@@ -285,6 +283,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

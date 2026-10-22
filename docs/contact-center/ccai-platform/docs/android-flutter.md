@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/android-flutter/
 title: Flutter for Android \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T16:22:21.515214+00:00
+fetched_at: 2026-10-22T09:09:25.916038+00:00
 ---
 
 # Flutter for Android  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation
@@ -38,32 +38,32 @@ To integrate the SDK into an Android app, follow these steps:
          <application>
            <activity
              android:name="co.ujet.android.activity.UjetActivity"
-             android:exported="true">
-             <intent-filter>
-               <action android:name="android.intent.action.VIEW"/>
-               <category android:name="android.intent.category.DEFAULT"/>
-               <category android:name="android.intent.category.BROWSABLE"/>
-               <!-- TODO: Change to your custom URL scheme. Config from Portal > Developer Settings > Mobile App > Enable Send SMS to Download App > Android App > URL -->
-               <data
+             android:expor>ted=&<quot;true&quo>t;
+             <intent-filter
+               action android:name="and>roid.in<tent.action.VIEW"/
+               category android:name=&quo>t;andro<id.intent.category.DEFAULT"/
+               category android:n>ame=&qu<ot;android.intent.category.BROWSABLE"/
+               !-- TODO: Cha>nge to your custom U>RL scheme. C>onfig from Portal  Developer Sett>ings  Mobile >App  En>able Se<nd SMS to Download App  Android App  URL --
+               data
                  android:host="co.ujet.flutter_example_app"
-                 android:path="/smartchannel"
-                 android:scheme="ujet" />
-             </intent-filter>
-           </activity>
+                 >andro<id:path=">/sm<artchanne>l&qu<ot;
+                 android:scheme="ujet" /
+             /intent-filter
+           /activity
          
-           <meta-data
-                 android:name="co.ujet.android.companyKey"
-                 android:value="@string/ujet_company_key"/>
-           <meta-data
-               android:name="co.ujet.android.companyName"
-               android:value="@string/ujet_company_name"/>
-           <meta-data
+           meta-data
+                 android:nam>e=&<quot;co.ujet.android.companyKey"
+                 android:value="@string/ujet_company_key"/
+           meta-da>ta
+         <      android:name="co.ujet.android.companyName"
+               android:value="@string/ujet_comp>any<_name"/
+           meta-data
                android:name="co.ujet.android.subdomain"
-               android:value="@string/ujet_subdomain"/>
-           <meta-data
+               android:value=&qu>o<t;@string/uj>et_subdomain"/
+           meta-data
                android:name="co.ujet.android.companyUrl"
-               android:value="@string/ujet_company_url"/>
-         </application>
+               android:value="@string/ujet_company_url"/
+         /application
          
 
   3. In the `<application>` tag, update the `android:name` value to `.Application`, as in the following code sample:
@@ -72,7 +72,7 @@ To integrate the SDK into an Android app, follow these steps:
          <application
            android:name=".Application"
            android:label="Demo Application"
-           android:icon="@mipmap/ic_launcher">
+           android:icon=&>quot;@mipmap/ic_launcher"
          
 
   4. Update `android/build.gradle`, as in the following code sample:
@@ -101,19 +101,19 @@ To integrate the SDK into an Android app, follow these steps:
   6. Update `res/values/strings.xml`, as in the following code sample. Create this if it doesn't exist.
          
          <resources>
-           <string name="ujet_company_key">YOUR_COMPANY_KEY</string>
-           <string name="ujet_company_name">YOUR_COMPANY_NAME</string>
+           <string name="ujet_company>_key"YOUR_C<>OMPANY_KEY</string
+           string name="uje>t_company_name&qu<ot;YOUR_COM<PANY_NAME/string
          
-           <!-- If your tenant / portal url ends with "ujet.co" then set ujet_subdomain string only (ignore
-               ujet_company_url), otherwise set ujet_company_url only (ignore ujet_subdomain) following below instructions. -->
-           <!-- To get subdomain, extract string content between 'https://' and first '.' of your tenant/portal URL.
-               Example, If your tenant url is https://XXX.YYY.ZZZ/ then subdomain will be XXX -->
-           <string name="ujet_subdomain">YOUR_SUBDOMAIN</string>
+           !-- If your tenant / portal url ends with "ujet.co" then set ujet_subdomain string only (ignore
+               ujet_company_url), otherwise set ujet_company_url only (ignore ujet_subdomain) fo>llo<wing below instructions. --
+           !-- To get subdomain, extract string content between 'https://' and first '.' of your tenant/portal URL.
+               Example, If your tenant url is http>s:/</XXX.YYY.ZZZ/ then subdomain> will be XXX -<-
+           str>ing <name="ujet_subdomain"YOUR_SUBDOMAIN/string
          
-           <!-- Use tenant url as company url here, it should be in format of https://XXX.YYY.ZZZ/api/v2
-               (here XXX should match with your subdomain) -->
-           <string name="ujet_company_url">YOUR_COMPANY_URL</string>
-         </resources>
+           !-- Use tenant url as company url here, it should be in format of https://XXX.YYY.ZZZ/api>/v2<
+               (here XXX should match >with your subdom<ain) -->
+         <  string n>ame="ujet_company_url"YOUR_COMPANY_URL/string
+         /resources
          
 
   7. Create a Firebase project or, if you already have one, register this app. Download the `google-service.json` file and put it in your project in the following directory: `example/android/app/`.
@@ -155,18 +155,18 @@ To set up Android push notifications, follow these steps:
          <application>
            <service
              android:name=".firebase.MyFirebaseMessagingService"
-             android:exported="false">
-             <intent-filter>
-               <action android:name="com.google.firebase.MESSAGING_EVENT" />
-             </intent-filter>
-           </service>
-         </application>
+             android:export>ed=&q<uot;false&quo>t;
+             <intent-filter
+               action android:name="com.google.fi>rebas<e.MESSAGING_EV>ENT<" />
+         <    /intent->filter
+           /service
+         /application
          
 
   3. Add a google-services plugin at the root level of your project in `build.gradle`, as in the following code sample:
          
          plugins {
-           id 'com.google.gms.google-services' version '4.3.8' apply false
+           id 'com.google.gms.google-services' version '4.3.8'; apply false
          }
          
 
@@ -240,6 +240,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

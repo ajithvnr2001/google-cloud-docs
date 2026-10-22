@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/recommender-optimize-underprovisioned-cluster/
 title: Optimize underprovisioned clusters \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:03.883111+00:00
+fetched_at: 2026-10-22T09:37:33.106110+00:00
 ---
 
 # Optimize underprovisioned clusters  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

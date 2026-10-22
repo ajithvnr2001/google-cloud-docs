@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/deploy-regulatory-compliance/
 title: Regulatory support in Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:47.570458+00:00
+fetched_at: 2026-10-22T08:25:15.726471+00:00
 ---
 
 # Regulatory support in Cloud Deploy  |  Google Cloud Documentation

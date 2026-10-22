@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/json_api/v1/buckets/
 title: Buckets \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:51:42.117085+00:00
+fetched_at: 2026-10-22T10:37:53.670191+00:00
 ---
 
 # Buckets  |  Cloud Storage  |  Google Cloud Documentation
@@ -296,9 +296,9 @@ Format: `projects/PROJECT_ID/global/networks/NETWORK_NAME` |  writable
 `retentionPolicy.isLocked` | `boolean` | Whether or not the retentionPolicy is locked. If true, the retentionPolicy cannot be removed and the retention period cannot be reduced. |   
 `retentionPolicy.retentionPeriod` | `unsigned integer`1 | The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, replaced, or made noncurrent. The value must be greater than 0 seconds and less than 3,155,760,000 seconds. |  writable   
 `rpo` | `string` | The recovery point objective for cross-region replication of the bucket. Applicable only for dual- and multi-region buckets. `"DEFAULT"` uses default replication. `"ASYNC_TURBO"` enables turbo replication, valid for dual-region buckets only. If `rpo` is not specified when the bucket is created, it defaults to `"DEFAULT"`. For more information, see [redundancy across regions](https://docs.cloud.google.com/storage/docs/availability-durability#cross-region-redundancy). |  writable   
-`softDeletePolicy` | `object` | The bucket's [soft delete policy](https://docs.cloud.google.com/storage/docs/soft-delete), which defines the period of time during which objects in the bucket are retained in a soft-deleted state after being deleted. Objects in a soft-deleted state cannot be permanently deleted, and are restorable until their `hardDeleteTime`. | writable  
-`softDeletePolicy.effectiveTime` | `datetime` | The datetime at which the soft delete policy becomes effective, in [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format.`softDeletePolicy.effectiveTime` is updated whenever `softDeletePolicy.retentionDurationSeconds` is increased. |   
-`softDeletePolicy.retentionDurationSeconds` | `long` | The period of time during which a soft-deleted object is retained and cannot be permanently deleted, in seconds. The value must be greater than or equal to `604800` (7 days) and less than `7776000` (90 days). The value can also be set to `0`, which disables the soft delete policy. | writable  
+`softDeletePolicy` | `object` |  The bucket's [soft delete policy](https://docs.cloud.google.com/storage/docs/soft-delete), which defines the period of time during which objects in the bucket are retained in a soft-deleted state after being deleted. Objects in a soft-deleted state cannot be permanently deleted, and are restorable until their `hardDeleteTime`.  | writable  
+`softDeletePolicy.effectiveTime` | `datetime` |  The datetime at which the soft delete policy becomes effective, in [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format. `softDeletePolicy.effectiveTime` is updated whenever `softDeletePolicy.retentionDurationSeconds` is increased. |   
+`softDeletePolicy.retentionDurationSeconds` | `long` |  The period of time during which a soft-deleted object is retained and cannot be permanently deleted, in seconds. The value must be greater than or equal to 7 days and less than 90 days. The value can also be set to `0`, which disables the soft delete policy.  | writable  
 `storageClass` | `string` | The bucket's default storage class, used whenever no `storageClass` is specified for a newly-created object. If `storageClass` is not specified when the bucket is created, it defaults to `"STANDARD"`. For available storage classes, see [Storage classes](https://docs.cloud.google.com/storage/docs/storage-classes). |  writable   
 `timeCreated` | `datetime`1 | The creation time of the bucket in [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format. |   
 `updated` | `datetime`1 | The time at which the bucket's metadata or IAM policy was last updated, in [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format. |   
@@ -352,6 +352,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/vpc-peering/
 title: Set up VPC Network Peering \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:47.602217+00:00
+fetched_at: 2026-10-22T10:26:11.990599+00:00
 ---
 
 # Set up VPC Network Peering  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/import-csv-file/
 title: Import a CSV file \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:01.940208+00:00
+fetched_at: 2026-10-22T09:07:59.583019+00:00
 ---
 
 # Import a CSV file  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

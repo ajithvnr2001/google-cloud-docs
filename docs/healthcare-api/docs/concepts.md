@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/concepts/
 title: Concepts \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:55:00.904283+00:00
+fetched_at: 2026-10-22T08:28:10.081515+00:00
 ---
 
 # Concepts  |  Cloud Healthcare API  |  Google Cloud Documentation

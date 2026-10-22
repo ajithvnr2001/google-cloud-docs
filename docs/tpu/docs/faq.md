@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tpu/docs/faq/
 title: Frequently Asked Questions - Cloud TPU \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:12.187401+00:00
+fetched_at: 2026-10-22T10:25:14.579447+00:00
 ---
 
 # Frequently Asked Questions - Cloud TPU  |  Google Cloud Documentation
@@ -87,7 +87,7 @@ For more information, see [Attach durable block storage to a TPU VM](https://doc
 
 ### What storage options are supported or recommended for training with TPU VM?
 
-For more information, see [Cloud TPU storage options](https://docs.cloud.google.com/tpu/docs/storage-options-compute).
+For more information, see [Cloud TPU storage options](https://docs.cloud.google.com/tpu/docs/storage-options).
 
 ## JAX FAQs
 
@@ -120,17 +120,17 @@ You can verify that PyTorch is using the TPU with TorchTPU in the following ways
          assert torch.accelerator.current_accelerator().type == "tpu"
          
 
-  2. Profile your workload with `torch.profiler` and verify that TPU operations appear in the trace.
+  2. Profile your workload with `torch.profiler` and verify that TPU operations appear in the trace. For more information, see [Performance profiling with XProf](https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/).
 
 
 
 
-For more information, see [PyTorch on Cloud TPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu) and the [TorchTPU documentation](https://github.com/google-pytorch/torch_tpu).
+For more information, see [PyTorch on Cloud TPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu), the [TorchTPU documentation](https://torchtpu.readthedocs.io/en/latest/), and the [TorchTPU FAQ](https://torchtpu.readthedocs.io/en/latest/faq/).
 
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

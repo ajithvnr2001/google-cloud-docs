@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/genai-podcasts-from-commentary/
 title: Generative AI use case: Generate podcasts from audio files \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:23.397849+00:00
+fetched_at: 2026-10-22T09:35:57.659033+00:00
 ---
 
 # Generative AI use case: Generate podcasts from audio files  |  Cloud Architecture Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/events-platform/
 title: Platform events \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:37.855200+00:00
+fetched_at: 2026-10-22T08:26:13.613665+00:00
 ---
 
 # Platform events  |  Dialogflow ES  |  Google Cloud Documentation

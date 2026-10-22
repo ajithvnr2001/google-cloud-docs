@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cpp/docs/quickstart-open-telemetry/
 title: Quickstart: Trace a C++ Application \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:26.852328+00:00
+fetched_at: 2026-10-22T08:28:01.824606+00:00
 ---
 
 # Quickstart: Trace a C++ Application  |  Google Cloud Documentation

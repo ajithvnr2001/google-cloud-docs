@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/measure-address-table-index-bloat/
 title: Measure and address table and index bloat \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:40.606713+00:00
+fetched_at: 2026-10-22T09:29:08.365093+00:00
 ---
 
 # Measure and address table and index bloat  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

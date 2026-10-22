@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/iam-permissions/
 title: Knowledge Catalog IAM permissions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:03:32.453405+00:00
+fetched_at: 2026-10-22T08:59:27.203730+00:00
 ---
 
 # Knowledge Catalog IAM permissions  |  Google Cloud Documentation
@@ -33,7 +33,7 @@ IAM offers predefined roles for common use cases. If these predefined roles don'
 
 For more information about predefined Knowledge Catalog roles and the permissions they contain, see [Knowledge Catalog IAM roles](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles).
 
-For a detailed description of IAM and its features, see the [IAM documentation](https://docs.cloud.google.com/iam/docs).
+For a detailed description of IAM and its features, see the [ IAM documentation](https://docs.cloud.google.com/iam/docs).
 
 ## IAM policy Set and Get permissions
 
@@ -196,18 +196,33 @@ The following [limitations](https://docs.cloud.google.com/knowledge-catalog/docs
 
 ### Context sets
 
-Context sets contain database-specific information, such as SQL query templates, [faceted search queries](https://en.wikipedia.org/wiki/Faceted_search), and value search queries. The context engineering agent uses context sets to build, evaluate, and optimize text-to-SQL translations. QueryData is a conversational query tool that uses context sets to translate natural language into database queries when you build [data agents](https://docs.cloud.google.com/gemini/data-agents).
+Context sets are bounded containers of target data assets and metadata used to ground AI models in your proprietary business logic. While they can contain database-specific information, such as SQL query templates or value search queries for text-to-SQL tools like QueryData, Knowledge Studio also uses context sets to house terminology glossaries, structured table overviews, and enterprise data mappings.
 
-For more information, see the context sets overview for [AlloyDB for PostgreSQL](https://docs.cloud.google.com/gemini/data-agents/querydata/alloydb/context-sets-overview), [Cloud SQL for MySQL](https://docs.cloud.google.com/gemini/data-agents/querydata/sql-mysql/context-sets-overview), [Cloud SQL for PostgreSQL](https://docs.cloud.google.com/gemini/data-agents/querydata/sql-postgres/context-sets-overview), or [Spanner](https://docs.cloud.google.com/gemini/data-agents/querydata/spanner/context-sets-overview).
+For more information on how context sets are used across Google Cloud, see the context sets overview for [Knowledge Studio](https://docs.cloud.google.com/knowledge-catalog/docs/context-sets), [AlloyDB for PostgreSQL](https://docs.cloud.google.com/gemini/data-agents/querydata/alloydb/context-sets-overview), [Cloud SQL for MySQL](https://docs.cloud.google.com/gemini/data-agents/querydata/sql-mysql/context-sets-overview), [Cloud SQL for PostgreSQL](https://docs.cloud.google.com/gemini/data-agents/querydata/sql-postgres/context-sets-overview), or [Spanner](https://docs.cloud.google.com/gemini/data-agents/querydata/spanner/context-sets-overview).
 
 To create and manage context sets for AI grounding, you must be granted the following IAM roles:
 
   * **Dataplex Catalog Viewer** (`roles/dataplex.catalogViewer`): Read-only access to view, list, and download context sets, and to view locations.
-  * **Dataplex Catalog Editor** (`roles/dataplex.catalogEditor`): Access to create, update, delete, upload, and download context sets.
-  * **Dataplex Catalog Admin** (`roles/dataplex.catalogAdmin`): Full administrative access to context sets.
+  * **Dataplex Catalog Editor** (`roles/dataplex.catalogEditor`): Access to update, delete, upload, and download context sets.
+  * **Dataplex Catalog Admin** (`roles/dataplex.catalogAdmin`) or **Dataplex Entry Group Owner** (`roles/dataplex.entryGroupOwner`): Full administrative access to context sets, including the `dataplex.entryGroups.setIamPolicy` permission required to create context sets.
 
 
 
+The following table lists the IAM permissions required for operating on context sets:
+
+Operation | IAM permission  
+---|---  
+Create context sets | `dataplex.entryGroups.createContextSet`  
+Delete context sets | `dataplex.entryGroups.deleteContextSet`  
+Read context sets | `dataplex.entryGroups.getContextSet`  
+Update context sets | `dataplex.entryGroups.updateContextSet`  
+Request context changes | `dataplex.entryGroups.requestContextChanges`  
+Create context entries | `dataplex.entries.createContext`  
+Delete context entries | `dataplex.entries.deleteContext`  
+Read context entries | `dataplex.entries.getContext`  
+List context entries | `dataplex.entries.listContext`  
+Update context entries | `dataplex.entries.updateContext`  
+  
 For more information, see [Knowledge Catalog IAM roles](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles).
 
 ### Metadata job permissions
@@ -320,10 +335,46 @@ API method | IAM permission
 [`RunDataScan`](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations.dataScans/run) | dataplex.datascans.run  
 [`UpdateDataScan`](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations.dataScans/patch) | dataplex.datascans.update  
   
+## Knowledge Studio enrichment tasks
+
+**Preview**
+
+This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+
+The following permissions are required for creating and managing Knowledge Studio enrichment tasks:
+
+Operation | IAM permission  
+---|---  
+Create enrichment tasks | `dataplex.agentTasks.create`  
+Delete enrichment tasks | `dataplex.agentTasks.delete`  
+Read enrichment task details | `dataplex.agentTasks.get`  
+Read and fetch underlying data results | `dataplex.agentTasks.getData`  
+List enrichment tasks | `dataplex.agentTasks.list`  
+Update enrichment tasks | `dataplex.agentTasks.update`  
+Run enrichment tasks | `dataplex.agentTasks.run`  
+Request changes to entry groups (proposals) | `dataplex.entryGroups.requestChanges`  
+Approve metadata change requests | `dataplex.changeRequests.use`  
+Cancel enrichment task runs | `dataplex.agentTasks.cancel`  
+  
+### Third-party auth providers permissions
+
+When configuring external connectors, the following Agent Identity permissions are required to manage Auth Providers:
+
+Operation | IAM permission  
+---|---  
+Create Auth Providers | `agentidentity.authProviders.create`  
+View Auth Provider details | `agentidentity.authProviders.get`  
+Delete Auth Providers | `agentidentity.authProviders.delete`  
+Update Auth Providers | `agentidentity.authProviders.update`  
+  
+### BigQuery profiling permissions
+
+To allow the enrichment agent to perform BigQuery data profiling and read table query history, you must grant the **BigQuery Data Viewer** (`roles/bigquery.dataViewer`) and **BigQuery Resource Viewer** (`roles/bigquery.resourceViewer`) roles to the target project's **Knowledge Catalog Service Agent** (`service-<var>PROJECT_NUMBER</var>@gcp-sa-dataplex.iam.gserviceaccount.com`).
+
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

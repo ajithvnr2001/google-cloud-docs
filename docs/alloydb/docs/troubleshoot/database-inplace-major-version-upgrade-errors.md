@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/troubleshoot/database-inplace-major-version-upgrade-errors/
 title: Database in-place major version upgrade errors \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:05.298350+00:00
+fetched_at: 2026-10-22T09:36:25.507202+00:00
 ---
 
 # Database in-place major version upgrade errors  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

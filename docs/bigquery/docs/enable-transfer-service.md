@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/enable-transfer-service/
 title: Enable the BigQuery Data Transfer Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:37:08.105444+00:00
+fetched_at: 2026-10-22T08:57:11.280819+00:00
 ---
 
 # Enable the BigQuery Data Transfer Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu/
 title: PyTorch on Cloud TPU \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:30:00.480534+00:00
+fetched_at: 2026-10-22T10:41:31.560742+00:00
 ---
 
 # PyTorch on Cloud TPU  |  Google Cloud Documentation
@@ -67,7 +67,7 @@ To run a tensor operation on a Cloud TPU, run the following Python code:
 
 The following video gives you a brief overview of TorchTPU:
 
-For more in-depth information, see [How TorchTPU works](https://torchtpu.readthedocs.io/en/latest/how_torchtpu_works/).
+For more information, see [TorchTPU is now open source: Run native PyTorch on TPUs](https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus), and see [How TorchTPU works](https://torchtpu.readthedocs.io/en/latest/how_torchtpu_works/).
 
 ### Motivation
 
@@ -172,7 +172,7 @@ To pre-train, fine-tune, and adapt large models, TorchTPU provides reference tra
 
 [TorchTitan on TPU](https://github.com/google-pytorch/torchtitan) extends [TorchTitan](https://github.com/pytorch/torchtitan), the PyTorch modular reference platform for generative AI training, with TPU sharding passes, custom kernels, and training recipes.
 
-For more information, read the blog post [Integrating TorchTPU into TorchTitan and Optimizing Models for TPU](https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/).
+For more information, see [Integrating TorchTPU into TorchTitan and Optimizing Models for TPU](https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/).
 
 #### Motivation
 
@@ -207,7 +207,7 @@ To scale multi-node pipelines and automate model onboarding, the TorchTPU ecosys
 
 ### Ray: Distributed training, serving, and RL
 
-[Ray](https://github.com/ray-project/ray) scales Python and AI workloads across clusters using Ray Train, Ray Serve, Ray Data, Ray Core, and RL frameworks such as [VeRL](https://github.com/verl-project/verl/tree/main/examples/tpu/grpo) (Preview). For more information, read the blog post [Announcing Ray support for PyTorch on Google TPUs](https://www.anyscale.com/blog/announcing-ray-support-native-pytorch-google-tpu).
+[Ray](https://github.com/ray-project/ray) scales Python and AI workloads across clusters using Ray Train, Ray Serve, Ray Data, Ray Core, and RL frameworks such as [VeRL](https://github.com/verl-project/verl/tree/main/examples/tpu/grpo) (Preview). For more information, see [Announcing Ray support for PyTorch on Google TPUs](https://www.anyscale.com/blog/announcing-ray-support-native-pytorch-google-tpu).
 
 #### Motivation
 
@@ -267,6 +267,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

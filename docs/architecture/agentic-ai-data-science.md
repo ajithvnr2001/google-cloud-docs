@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/agentic-ai-data-science/
 title: Agentic AI use case: Automate data science workflows \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:21.340585+00:00
+fetched_at: 2026-10-22T09:17:43.898214+00:00
 ---
 
 # Agentic AI use case: Automate data science workflows  |  Cloud Architecture Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/try/gce-vms/
 title: Create a hybrid cluster on Compute Engine VMs \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:56:47.604228+00:00
+fetched_at: 2026-10-22T10:22:00.387064+00:00
 ---
 
 # Create a hybrid cluster on Compute Engine VMs  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -95,7 +95,7 @@ Complete these steps to create the following VMs:
          export PROJECT_ID=PROJECT_ID
          export ZONE=ZONE
          export CLUSTER_NAME=CLUSTER_NAME
-         export BMCTL_VERSION=1.36.100-gke.144
+         export BMCTL_VERSION=1.36.200-gke.118
          
 
 For the `ZONE`, you can use `us-central1-a` or any of the other [Compute Engine zones](https://docs.cloud.google.com/compute/docs/regions-zones#available) .
@@ -574,6 +574,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

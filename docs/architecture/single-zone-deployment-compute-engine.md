@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/single-zone-deployment-compute-engine/
 title: Single-zone deployment on Compute Engine \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:05.560422+00:00
+fetched_at: 2026-10-22T10:44:53.728687+00:00
 ---
 
 # Single-zone deployment on Compute Engine  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -109,7 +109,7 @@ The decision of whether to use VMs, containers, or serverless services involves 
 
 The architecture shown in this document uses [zonal Persistent Disk volumes](https://docs.cloud.google.com/compute/docs/disks/persistent-disks#zonal-pds) for all the tiers. For more durable persistent storage, you can use [regional Persistent Disk volumes](https://docs.cloud.google.com/compute/docs/disks/persistent-disks#repds), which provide synchronous replication of data across two zones within a region.
 
-[Google Cloud Hyperdisk](https://docs.cloud.google.com/compute/docs/disks/hyperdisks) provides better performance, flexibility, and efficiency than Persistent Disk. With Hyperdisk Balanced, you can provision IOPS and throughput separately and dynamically, which lets you tune the volume to a wide variety of workloads.
+[Google Cloud Hyperdisk](https://docs.cloud.google.com/compute/docs/disks/hyperdisks) provides better performance, flexibility, and efficiency than Persistent Disk. With Google Cloud Hyperdisk Balanced, you can provision IOPS and throughput separately and dynamically, which lets you tune the volume to a wide variety of workloads.
 
 For low-cost storage that's replicated across multiple locations, you can use Cloud Storage regional, dual-region, or multi-region buckets.
 
@@ -222,12 +222,12 @@ A best practice in application design is to avoid the need for stateful local di
 
 #### Data durability
 
-You can use [Backup and DR](https://docs.cloud.google.com/backup-disaster-recovery/docs/concepts/backup-dr) to create, store, and manage backups of the Compute Engine VMs. Backup and DR stores backup data in its original, application-readable format. When required, you can restore your workloads to production by directly using data from long-term backup storage and avoid the need to prepare or move data.
+You can use [Backup and DR Service](https://docs.cloud.google.com/backup-disaster-recovery/docs/concepts/backup-dr) to create, store, and manage backups of the Compute Engine VMs. Backup and DR stores backup data in its original, application-readable format. When required, you can restore your workloads to production by directly using data from long-term backup storage and avoid the need to prepare or move data.
 
 Compute Engine provides the following options to help you to ensure the durability of data that's stored in Persistent Disk volumes:
 
   * You can use [snapshots](https://docs.cloud.google.com/compute/docs/disks/snapshots) to capture the point-in-time state of Persistent Disk volumes. The snapshots are stored redundantly in multiple regions, with automatic checksums to ensure the integrity of your data. Snapshots are incremental by default, so they use less storage space and you save money. Snapshots are stored in a [Cloud Storage location](https://docs.cloud.google.com/compute/docs/disks/snapshot-settings#storage_location_options) that you can configure. For more recommendations about using and managing snapshots, see [Best practices for Compute Engine disk snapshots](https://docs.cloud.google.com/compute/docs/disks/snapshot-best-practices).
-  * To ensure that data in Persistent Disk remains available if a zone outage occurs, you can use [Regional Persistent Disk](https://docs.cloud.google.com/compute/docs/disks/about-regional-persistent-disk) or [Hyperdisk Balanced High Availability](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced-ha). Data in these disk types is replicated synchronously between two zones in the same region. For more information, see [About synchronous disk replication](https://docs.cloud.google.com/compute/docs/disks/about-regional-persistent-disk#zonal_replication).
+  * To ensure that data in Persistent Disk remains available if a zone outage occurs, you can use [Regional Persistent Disk](https://docs.cloud.google.com/compute/docs/disks/about-regional-persistent-disk) or [Google Cloud Hyperdisk Balanced High Availability](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced-ha). Data in these disk types is replicated synchronously between two zones in the same region. For more information, see [About synchronous disk replication](https://docs.cloud.google.com/compute/docs/disks/about-regional-persistent-disk#zonal_replication).
 
 
 

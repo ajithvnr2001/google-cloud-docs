@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/linux/18.3.0/docs/overview/
 title: AlloyDB Omni using RPM overview \u00a0|\u00a0 AlloyDB Omni using RPM: 18.3.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:42:05.746668+00:00
+fetched_at: 2026-10-22T09:49:26.584797+00:00
 ---
 
 # AlloyDB Omni using RPM overview  |  AlloyDB Omni using RPM: 18.3.0  |  Google Cloud Documentation
@@ -74,6 +74,7 @@ The RPM deployment option architecture consists of the following primary RPM pac
 
   * `alloydbomni`: this package is the core database engine. It contains the enhanced PostgreSQL server binaries, the AlloyDB for PostgreSQL columnar engine, and the autopilot management extensions. It runs as a system service (managed by `systemd`), handling client connections, query processing, and data storage.
   * `alloydbomni_monitor`: this package is a lightweight monitoring agent that runs alongside the core engine. It collects telemetry and performance metrics from the AlloyDB for PostgreSQL instance and exposes them over the Prometheus protocol for observability tools.
+  * `alloydbomni_ui` (optional): this package provides the [AlloyDB Omni web user interface](https://docs.cloud.google.com/alloydb/omni/linux/18.3.0/docs/install-web-ui), a self-managed web console that gives you observability into your database clusters, including CPU and memory telemetry charts (using metrics from `alloydbomni_monitor` and Prometheus), database sizes, active database flags, columnar engine statistics, and query insights.
 
 
 
@@ -92,6 +93,7 @@ The RPM deployment option integrates directly with the Linux ecosystem:
   * See [available download and installation options](https://docs.cloud.google.com/alloydb/omni/linux/18.3.0/docs/available-download-install-options).
   * Learn about [resource considerations that affect performance](https://docs.cloud.google.com/alloydb/omni/linux/18.3.0/docs/resource-considerations).
   * [Plan your RPM installation](https://docs.cloud.google.com/alloydb/omni/linux/18.3.0/docs/plan-installation-linux).
+  * [Install the web UI](https://docs.cloud.google.com/alloydb/omni/linux/18.3.0/docs/install-web-ui).
 
 
 
@@ -99,6 +101,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

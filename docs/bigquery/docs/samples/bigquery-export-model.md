@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-export-model/
 title: Export a model \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:43:40.266762+00:00
+fetched_at: 2026-10-22T09:17:02.285090+00:00
 ---
 
 # Export a model  |  BigQuery  |  Google Cloud Documentation
@@ -184,7 +184,7 @@ To authenticate to BigQuery, set up Application Default Credentials. For more in
     # @param model_id   [String] The ID of the model to export.
     # @param destination_uri [String] The Google Cloud Storage bucket to export the model to.
     def export_model dataset_id, model_id, destination_uri
-      bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-data_policies-v1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html)
+      bigquery = Google::Cloud::[Bigquery](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-data_policies-v1beta1/latest/Google-Cloud-Bigquery.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery/latest/Google-Cloud-Bigquery.html)
       dataset = bigquery.dataset dataset_id
       model = dataset.model model_id
     

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/billing/monitor-real-time-costs/
 title: Monitor real-time costs \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:59:17.662116+00:00
+fetched_at: 2026-10-22T10:24:51.319850+00:00
 ---
 
 # Monitor real-time costs  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -24,7 +24,7 @@ Send feedback
 
 The Customer Real Time Cost dashboard helps you monitor real-time cost and resource usage for your infrastructure as it occurs. This dashboard displays active resource consumption and accumulated costs through line graph panels for costs and usage.
 
-To get the permissions that you need to view the Customer Real Time Cost dashboard, ask your Organization IAM Admin to grant you the corresponding project viewer role for the `platform-obs` project.
+To get the permissions that you need to view the Customer Real Time Cost dashboard, ask your IAM Org Admin to grant you the corresponding project viewer role for the `platform-obs` project.
 
 ## Access the Customer Real Time Cost dashboard
 
@@ -81,6 +81,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

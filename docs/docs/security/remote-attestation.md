@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/remote-attestation/
 title: Remote attestation of disaggregated machines \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:06:57.393180+00:00
+fetched_at: 2026-10-22T08:24:40.952900+00:00
 ---
 
 # Remote attestation of disaggregated machines  |  Security  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/connect-iam/
 title: Connect using an IAM account \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:39.428255+00:00
+fetched_at: 2026-10-22T09:11:41.005587+00:00
 ---
 
 # Connect using an IAM account  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

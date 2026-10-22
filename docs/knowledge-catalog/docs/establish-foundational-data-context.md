@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/establish-foundational-data-context/
 title: Establish foundational data context with Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:02:22.085627+00:00
+fetched_at: 2026-10-22T09:49:18.465006+00:00
 ---
 
 # Establish foundational data context with Knowledge Catalog  |  Google Cloud Documentation
@@ -23,9 +23,9 @@ Send feedback
 
 #  Establish foundational data context with Knowledge Catalog Stay organized with collections  Save and categorize content based on your preferences. 
 
-When working with data, you've probably asked questions like "What does this column name mean?", "Who owns this broken dataset?", or "Is this table approved for use?" Metadata tags try to answer these questions, but they quickly become outdated or inconsistent. Knowledge Catalog (formerly Dataplex Universal Catalog) solves this by letting you attach structured metadata and clear business definitions directly to data assets. Providing clear data context [grounds AI agents](https://docs.cloud.google.com/knowledge-catalog/docs/introduction) and builds a foundation of trust for every user who interacts with the data.
+Knowledge Catalog (formerly Dataplex Universal Catalog) lets you attach structured metadata and clear business definitions directly to your data assets. Providing this context makes your data discoverable, builds trust for users, and [grounds AI agents](https://docs.cloud.google.com/knowledge-catalog/docs/introduction).
 
-This tutorial shows you how to establish data context in Knowledge Catalog. Designed for users such as data stewards and business analysts, this tutorial walks you through UI-based steps to build standard business terms and context before you automate these workflows. The tutorial clarifies relationships between key [Knowledge Catalog concepts](https://docs.cloud.google.com/knowledge-catalog/docs/metadata-overview). By the end, you'll know how to make your data discoverable and trustworthy.
+In this tutorial for data stewards and business analysts, you complete UI-based steps to build standard business terms and metadata context before you automate these workflows. You also explore how key [Knowledge Catalog concepts](https://docs.cloud.google.com/knowledge-catalog/docs/metadata-overview) work together.
 
 ## Objectives
 
@@ -120,7 +120,7 @@ Example output:
 
 ## Establish common terms with a business glossary
 
-Good data context relies on clear definitions. For example, a developer shouldn't have to guess whether a column named `gmv` means Gross Merchandise Value or whether it includes taxes and returns. A [_business glossary_](https://docs.cloud.google.com/knowledge-catalog/docs/manage-glossaries) creates a single source of truth for these definitions across your organization. When teammates or AI agents analyze your data, they inherit this precise business context. Shared definitions align metrics across teams such as Finance, Sales, and Operations, and help AI agents avoid hallucinations.
+Good data context relies on clear definitions that answer questions like "What does this column name mean?" For example, a developer shouldn't have to guess whether a column named `gmv` means Gross Merchandise Value or whether it includes taxes and returns. A [_business glossary_](https://docs.cloud.google.com/knowledge-catalog/docs/manage-glossaries) creates a single source of truth for these definitions across your organization. When teammates or AI agents analyze your data, they inherit this precise business context. Shared definitions align metrics across teams such as Finance, Sales, and Operations, and help AI agents avoid hallucinations.
 
 Follow these steps to create a glossary and define your first term:
 
@@ -157,7 +157,7 @@ You have now created a glossary term that you can link to data entries across yo
 
 ## Define technical metadata with an aspect type
 
-When you use unstructured metadata tags, you often end up with inconsistent catalog entries. For example, one table might be tagged `owner:bob` and another `steward:alice@example.com`. To keep your metadata organized at scale, you need a consistent schema.
+When working with data, you often need to answer questions like "Who owns this broken dataset?" or "Is this table approved for use?" Unstructured metadata tags try to answer these questions, but they quickly become outdated or inconsistent. For example, one table might be tagged `owner:bob` and another `steward:alice@example.com`. To keep your metadata organized at scale, you need a consistent schema.
 
 That's where [_aspect types_](https://docs.cloud.google.com/knowledge-catalog/docs/enrich-entries-metadata) come in. An aspect type is a metadata blueprint that lets you set clear rules and required fields. Requiring standard fields like valid email addresses for data stewards lets downstream scripts validate and protect your metadata automatically.
 
@@ -332,6 +332,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

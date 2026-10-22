@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/current/docs/overview/
 title: AlloyDB Omni using containers overview \u00a0|\u00a0 AlloyDB Omni using containers: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:32:52.345985+00:00
+fetched_at: 2026-10-22T09:49:24.209437+00:00
 ---
 
 # AlloyDB Omni using containers overview  |  AlloyDB Omni using containers: Current (18.4.0)  |  Google Cloud Documentation
@@ -72,7 +72,7 @@ You can also create [Transparent Data Encryption (TDE)-enabled clusters](https:/
 
 ## Key features and performance
 
-**Note:** To unlock additional features, including support for PostgreSQL version 18 and the AlloyDB Omni standalone user interface, sign up using the [AlloyDB Omni incentives form](https://docs.google.com/forms/d/e/1FAIpQLSep1HzCiseWXq_0oTPs9wOTVWQuH2yAK225SbggvvuqWzMPjQ/viewform).
+**Note:** To unlock additional features, including support for PostgreSQL version 18, sign up using the [AlloyDB Omni incentives form](https://docs.google.com/forms/d/e/1FAIpQLSep1HzCiseWXq_0oTPs9wOTVWQuH2yAK225SbggvvuqWzMPjQ/viewform).
 
 AlloyDB Omni provides a PostgreSQL-compatible database server. It includes support for AlloyDB AI, enabling the creation of enterprise-grade generative AI applications using operational data, with integrations into the Google Cloud AI ecosystem.
 
@@ -93,7 +93,8 @@ The container deployment option comprises PostgreSQL components with AlloyDB for
   * Database engine: translates client queries into executable plans, finds necessary data, performs filtering, ordering, and aggregation, and returns results. It aims to respond to queries using minimal resources, emphasizing good data models and query design.
   * Data storage: data is stored in fixed-size pages in the underlying file system. AlloyDB Omni first checks the buffer pool when accessing data; if not found, it reads from the file system. Maximizing buffer pool size is crucial for performance. AlloyDB Omni uses dynamic memory management, allowing the buffer pool to grow and shrink dynamically within configured bounds, eliminating the need to manually tune its size.
   * Resource management: query processing requires CPU, memory, I/O, network, and synchronization primitives. Monitoring CPU utilization (aiming for ~70% steady state) and IOPS is important to avoid bottlenecks. Minimizing reads and writes to storage by maximizing data in the buffer pool helps avoid IOPS limits.
-  * AI/ML worker: in a VM environment, the AI/ML background worker provides all capabilities needed for calling Vertex AI models directly from the database, running as the `omni ml worker` process.
+  * AI/ML worker: in a VM environment, the AI/ML background worker provides all capabilities needed for calling Vertex AI models directly from the database, running as the `omni ml worker` process. 
+  * The web UI (optional): a self-managed web console that provides observability dashboards for your database instances, including database sizes, active database flags, columnar engine statistics, and query insights. For more information, see [Install the web UI](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/install-web-ui). 
 
 
 
@@ -112,6 +113,7 @@ To upgrade to the fully managed scaling, security, and availability features of 
   * Choose an [AlloyDB for PostgreSQL download or installation option](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/available-download-install-options).
   * Choose an [AlloyDB Omni availability reference architecture](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/database-availability-reference-architecture-overview).
   * [Plan your AlloyDB Omni installation](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/plan-installation). 
+  * [Install the web UI](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/install-web-ui). 
 
 
 
@@ -119,6 +121,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

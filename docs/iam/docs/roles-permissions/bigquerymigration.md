@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/bigquerymigration/
 title: BigQuery Migration API roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:04.684742+00:00
+fetched_at: 2026-10-22T08:27:51.865773+00:00
 ---
 
 # BigQuery Migration API roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

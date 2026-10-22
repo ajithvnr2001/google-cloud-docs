@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/columnar-engine/configure/
 title: Configure the columnar engine \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:42.174186+00:00
+fetched_at: 2026-10-22T09:36:55.667364+00:00
 ---
 
 # Configure the columnar engine  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

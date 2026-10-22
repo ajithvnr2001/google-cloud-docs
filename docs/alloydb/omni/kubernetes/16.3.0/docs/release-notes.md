@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/16.3.0/docs/release-notes/
 title: AlloyDB Omni (Kubernetes) version 16.3.0 release notes \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 16.3.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:09:25.019689+00:00
+fetched_at: 2026-10-22T09:36:24.993944+00:00
 ---
 
 # AlloyDB Omni (Kubernetes) version 16.3.0 release notes  |  AlloyDB Omni for Kubernetes: 16.3.0  |  Google Cloud Documentation
@@ -29,6 +29,22 @@ This page contains release notes for features and updates to AlloyDB Omni.
 You can see the latest product updates for all of Google Cloud on the [ Google Cloud](https://docs.cloud.google.com/release-notes) page, browse and filter all release notes in the [Google Cloud console](https://console.cloud.google.com/release-notes), or programmatically access release notes in [BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_cloud_release_notes&t=release_notes&page=table). 
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/alloydbomni-release-notes.xml) directly. 
+
+## October 21, 2026
+
+Feature
+
+The AlloyDB Omni web user interface is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) for AlloyDB Omni version 18.1.0 and later. The web UI provides a centralized graphical dashboard to monitor, analyze, and manage your AlloyDB Omni deployments, including the following capabilities:
+
+  * Connect to the web UI: set up multiple connection profiles to connect to multiple clusters. For more information, see [Install the AlloyDB Omni web user interface](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/install-web-ui) and [Connect to the AlloyDB Omni web user interface](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/connect-web-ui).
+  * Monitor cluster high availability: view cluster topology, instance roles, node health, and replication status. For more information, see [Monitor cluster high availability](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/monitor-cluster-high-availability).
+  * Monitor system resources with system insights: track real-time and historical CPU, memory, storage, and disk I/O metrics. For more information, see [View system metrics using system insights](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/manage#system-insights).
+  * Analyze query performance with query insights: identify slow queries and high disk I/O statements, and inspect SQL execution statistics. For more information, see [View query performance using query insights](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/monitor-performance#query-insights).
+  * Monitor the columnar engine: view the column store inventory, analyze columnar query execution statistics, and track column store memory usage. For more information, see [Monitor the columnar engine](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/columnar-engine/monitor).
+  * Audit database parameters: search, filter, and audit active database parameters and identify customized flags that differ from default engine values. For more information, see [Audit database parameters using the AlloyDB Omni web user interface](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/configure-database-flags#audit-parameters-ui).
+  * Monitor AI and ML capabilities: view registered machine learning models and external model endpoints available to the database engine; check connectivity status with remote AI endpoints, such as Vertex AI, and local model inference runtimes; and view the status of vector search indexing, vector dimensionality, and index build health.
+
+
 
 ## October 13, 2026
 
@@ -823,6 +839,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

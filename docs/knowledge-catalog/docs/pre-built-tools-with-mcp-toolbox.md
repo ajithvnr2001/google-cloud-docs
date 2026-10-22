@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/knowledge-catalog/docs/pre-built-tools-with-mcp-toolbox/
-title: Use Knowledge Catalog with MCP, Gemini, and other agents \u00a0|\u00a0 Google Cloud Documentation
+title: Use Knowledge Catalog with MCP, the Antigravity CLI, and other agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:15:50.646179+00:00
+fetched_at: 2026-10-22T10:32:17.942190+00:00
 ---
 
-# Use Knowledge Catalog with MCP, Gemini, and other agents  |  Google Cloud Documentation
+# Use Knowledge Catalog with MCP, the Antigravity CLI, and other agents  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/knowledge-catalog/docs/pre-built-tools-with-mcp-toolbox/
 
@@ -21,20 +21,22 @@ As of April 10, 2026, Dataplex Universal Catalog is now called Knowledge Catalog
 
 Send feedback 
 
-#  Use Knowledge Catalog with MCP, Gemini, and other agents Stay organized with collections  Save and categorize content based on your preferences. 
+#  Use Knowledge Catalog with MCP, the Antigravity CLI, and other agents Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page explains how to connect your Knowledge Catalog (formerly Dataplex Universal Catalog) instance to developer tools such as the Gemini CLI. Connecting Knowledge Catalog to these tools enables AI-driven data discovery and asset management directly within your tool.
+**Note:** Gemini Code Assist and the Gemini CLI are now Antigravity Code Assist and the Antigravity CLI. Some links in this document point to destinations that still use the former product names.
+
+This page explains how to connect your Knowledge Catalog (formerly Dataplex Universal Catalog) instance to developer tools such as the Antigravity CLI. Connecting Knowledge Catalog to these tools enables AI-driven data discovery and asset management directly within your tool.
 
 To connect data lineage to developer tools using a local MCP Toolbox server, see [Use data lineage with local MCP Toolbox server](https://docs.cloud.google.com/knowledge-catalog/docs/use-lineage-mcp-toolbox).
 
-For an integrated command-line experience, we recommend using the dedicated Knowledge Catalog extension for Gemini CLI. The extension bundles the underlying skills directly into the extension, which simplifies setup and configuration.
+For an integrated command-line experience, we recommend using the dedicated Knowledge Catalog plugin for the Antigravity CLI. The plugin bundles the underlying skills directly into the plugin, which simplifies setup and configuration.
 
 Alternatively, you can connect other IDEs and developer tools that support MCP by using a local [MCP Toolbox for Databases](https://github.com/googleapis/mcp-toolbox). You can then use AI agents in your existing IDE to discover data assets in Knowledge Catalog. For more information about MCP, see [Introduction to Model Context Protocol](https://modelcontextprotocol.io/introduction).
 
 This guide demonstrates the connection process for the following tools:
 
-  * Gemini CLI (through extension)
-  * Gemini Code Assist
+  * Antigravity CLI (through plugin)
+  * Antigravity Code Assist
   * Claude Code
   * Claude desktop
   * Codex
@@ -45,27 +47,27 @@ This guide demonstrates the connection process for the following tools:
 
 
 
-## About Gemini CLI and extensions
+## About the Antigravity CLI and plugins
 
-Gemini CLI is an open-source conversational AI agent from Google that accelerates development workflows and assists with coding, debugging, data exploration, and content creation. It offers an agent-driven experience to interact with Data Cloud services, such as Knowledge Catalog, and other popular open-source databases.
+The Antigravity CLI is an open-source conversational AI agent from Google that accelerates development workflows and assists with coding, debugging, data exploration, and content creation. It offers an agent-driven experience to interact with Data Cloud services, such as Knowledge Catalog, and other popular open-source databases.
 
-For more information about Gemini CLI, see the [Gemini CLI documentation](https://github.com/google-gemini/gemini-cli/blob/main/README.md).
+For more information about the Antigravity CLI, see the [Antigravity CLI documentation](https://antigravity.google/docs/cli/overview).
 
-### How do Gemini CLI extensions work?
+### How do Antigravity CLI plugins work?
 
-Extensions expand the capabilities of Gemini CLI, letting it connect to and control specific Google Cloud services and other tools. They provide Gemini with context and API understanding, enabling conversational interaction. You can load Gemini CLI extensions from GitHub URLs, local directories, or registries. These extensions offer new skills, slash commands, and prompts. These are separate from IDE extensions, such as Gemini Code Assist, which integrate using the MCP Toolbox.
+Plugins expand the capabilities of the Antigravity CLI, letting it connect to and control specific Google Cloud services and other tools. They provide the Antigravity CLI with context and API understanding, enabling conversational interaction. You can load Antigravity CLI plugins from GitHub URLs, local directories, or registries. These plugins offer new skills, slash commands, and prompts. These are separate from IDE plugins, such as Antigravity Code Assist, which integrate using the MCP Toolbox.
 
 ### What MCP tools does Knowledge Catalog provide?
 
-The Knowledge Catalog extension for Gemini CLI integrates AI into your data governance and discovery tasks. You can interact with Knowledge Catalog using natural language prompts in your terminal.
+The Knowledge Catalog plugin for the Antigravity CLI integrates AI into your data governance and discovery tasks. You can interact with Knowledge Catalog using natural language prompts in your terminal.
 
 For all available skills, see the [Knowledge Catalog skills on GitHub](https://github.com/gemini-cli-extensions/knowledge-catalog/tree/main/skills).
 
-For more information about the Knowledge Catalog extension, see the [Gemini CLI Extension - Knowledge Catalog](https://github.com/gemini-cli-extensions/knowledge-catalog).
+For more information about the Knowledge Catalog plugin, see the [Antigravity CLI Plugin - Knowledge Catalog](https://github.com/gemini-cli-extensions/knowledge-catalog).
 
 ## Required roles
 
-To get the permissions that you need to connect to Knowledge Catalog using MCP Toolbox or the Gemini CLI extension, ask your administrator to grant you the following IAM roles on your project: 
+To get the permissions that you need to connect to Knowledge Catalog using MCP Toolbox or the Antigravity CLI plugin, ask your administrator to grant you the following IAM roles on your project: 
 
   * To enable APIs: [Service Usage Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/serviceusage#serviceusage.serviceUsageAdmin) (`roles/serviceusage.serviceUsageAdmin`) 
   * To use Knowledge Catalog skills: [Dataplex Catalog Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) 
@@ -74,11 +76,11 @@ To get the permissions that you need to connect to Knowledge Catalog using MCP T
 
 For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
 
-These predefined roles contain the permissions required to connect to Knowledge Catalog using MCP Toolbox or the Gemini CLI extension. To see the exact permissions that are required, expand the **Required permissions** section: 
+These predefined roles contain the permissions required to connect to Knowledge Catalog using MCP Toolbox or the Antigravity CLI plugin. To see the exact permissions that are required, expand the **Required permissions** section: 
 
 #### Required permissions
 
-The following permissions are required to connect to Knowledge Catalog using MCP Toolbox or the Gemini CLI extension:
+The following permissions are required to connect to Knowledge Catalog using MCP Toolbox or the Antigravity CLI plugin:
 
   * To enable APIs: `serviceusage.services.enable`
   * To use Knowledge Catalog skills: 
@@ -127,7 +129,7 @@ If an authentication error is returned, and you are using an external identity p
 
 ## Install MCP Toolbox
 
-You don't need to install MCP Toolbox if you only plan to use Gemini Code Assist or the Gemini CLI extension, as they bundle the required server capabilities. For other IDEs and tools, follow the steps in this section to install MCP Toolbox.
+You don't need to install MCP Toolbox if you only plan to use Antigravity Code Assist or the Antigravity CLI plugin, as they bundle the required server capabilities. For other IDEs and tools, follow the steps in this section to install MCP Toolbox.
 
   1. Download the latest version of MCP Toolbox as a binary. Select the [MCP Toolbox binary release](https://github.com/googleapis/mcp-toolbox/releases) that corresponds to your (OS) and CPU architecture. You must use MCP Toolbox `v0.31.0` or later.
 
@@ -176,16 +178,16 @@ This section explains how to connect Knowledge Catalog to your tools.
 
 To connect MCP-compatible tools and IDEs, you must first install MCP Toolbox. The toolbox acts as an open-source [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) server that sits between your IDE and Knowledge Catalog, providing a secure and efficient control plane for your AI tools. After installation, see the section for your specific tool for configuration instructions.
 
-**Note:** You don't need to install MCP Toolbox if you only plan to use Gemini Code Assist or the Gemini CLI extension.
+**Note:** You don't need to install MCP Toolbox if you only plan to use Antigravity Code Assist or the Antigravity CLI plugin.
 
-### Gemini CLI extension
+### Antigravity CLI plugin
 
-This method uses the `knowledge-catalog` extension for the standalone Gemini CLI tool, and doesn't use MCP Toolbox.
+This method uses the `knowledge-catalog` plugin for the standalone Antigravity CLI tool, and doesn't use MCP Toolbox.
 
-  1. Install the [Gemini CLI](https://github.com/google-gemini/gemini-cli?tab=readme-ov-file#quickstart).
-  2. Install the Knowledge Catalog extension for Gemini CLI from the GitHub repository:
+  1. Install the [Antigravity CLI](https://antigravity.google/docs/cli/overview).
+  2. Install the Knowledge Catalog plugin for the Antigravity CLI from the GitHub repository:
          
-         gemini extensions install https://github.com/gemini-cli-extensions/knowledge-catalog
+         agy plugin install https://github.com/gemini-cli-extensions/knowledge-catalog
          
 
   3. Set the environment variable to connect to your Knowledge Catalog project:
@@ -195,25 +197,25 @@ This method uses the `knowledge-catalog` extension for the standalone Gemini CLI
 
 Replace `PROJECT_ID` with the Google Cloud project ID.
 
-  4. Start the Gemini CLI in interactive mode:
+  4. Start the Antigravity CLI in interactive mode:
          
-         gemini
+         agy
          
 
-The CLI automatically loads the Knowledge Catalog extension and its skills, which you can use to interact with your database.
+The CLI automatically loads the Knowledge Catalog plugin and its skills, which you can use to interact with your database.
 
-In the Gemini CLI, use the [`/extensions`](https://github.com/google-gemini/gemini-cli/blob/bbcc90613390e4d3d3aed911fbc1535af80d643b/docs/cli/commands.md) command to verify that the extension is installed.
-
-
+  5. In the Antigravity CLI, use the `/mcp` command to verify that the plugin is installed.
 
 
-### Gemini Code Assist
 
-Gemini Code Assist bundles the required MCP server capabilities, so you don't need to install MCP Toolbox separately.
 
-  1. In VS Code, install the [Gemini Code Assist](https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist) extension.
-  2. Enable **Agent Mode** in Gemini Code Assist chat.
-  3. In your working directory, create a folder named `.gemini`. Within that folder, create a `settings.json` file.
+### Antigravity Code Assist
+
+Antigravity Code Assist bundles the required MCP server capabilities, so you don't need to install MCP Toolbox separately.
+
+  1. In VS Code, install the [Antigravity Code Assist](https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist) extension.
+  2. Enable **Agent Mode** in Antigravity Code Assist chat.
+  3. In your working directory, create a folder named `.antigravity`. Within that folder, create a `settings.json` file.
   4. Add the following configuration:
          
          {
@@ -396,7 +398,7 @@ Replace `PROJECT_ID` with the Google Cloud project ID.
 
 ### Windsurf
 
-  1. Open [Windsurf](https://docs.codeium.com/windsurf) and navigate to Cascade assistant.
+  1. Open [Windsurf](https://docs.codeium.com/windsurf) and navigate to Cascade **Settings**.
   2. To open the configuration file, click the MCP icon, then click **Configure**.
   3. Add the following configuration:
          
@@ -457,6 +459,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

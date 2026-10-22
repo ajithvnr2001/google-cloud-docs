@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/resources/
 title: Resources \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:30:10.515526+00:00
+fetched_at: 2026-10-22T09:44:35.020315+00:00
 ---
 
 # Resources  |  App Engine flexible environment  |  Google Cloud Documentation

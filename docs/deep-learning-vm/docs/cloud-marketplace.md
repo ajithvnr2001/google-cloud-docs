@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deep-learning-vm/docs/cloud-marketplace/
 title: Create a Deep Learning VM instance from Cloud Marketplace \u00a0|\u00a0 Deep Learning VM Images \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:51.029170+00:00
+fetched_at: 2026-10-22T08:33:18.229947+00:00
 ---
 
 # Create a Deep Learning VM instance from Cloud Marketplace  |  Deep Learning VM Images  |  Google Cloud Documentation

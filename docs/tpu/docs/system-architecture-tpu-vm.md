@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm/
 title: TPU architecture \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:15.939814+00:00
+fetched_at: 2026-10-22T10:29:19.498336+00:00
 ---
 
 # TPU architecture  |  Google Cloud Documentation
@@ -83,7 +83,7 @@ If you are new to Cloud TPU, check out the [TPU documentation home page](https:/
 
 A TPU chip contains one or more TensorCores. The number of TensorCores depends on the version of the TPU chip. Each TensorCore consists of one or more matrix-multiply units (MXUs), a vector unit, and a scalar unit. For more information about TensorCores, see [A Domain-Specific Supercomputer for Training Deep Neural Networks](https://dl.acm.org/doi/pdf/10.1145/3360307).
 
-An MXU is composed of either 256 x 256 (TPU v6e and TPU7x) or 128 x 128 (TPU versions prior to v6e) multiply-accumulators in a [systolic array](https://en.wikipedia.org/wiki/Systolic_array). MXUs provide the bulk of the compute power in a TensorCore. Each MXU is capable of performing 16K multiply-accumulate operations per cycle. All multiplies take [bfloat16](https://en.wikipedia.org/wiki/Bfloat16_floating-point_format) inputs, but all accumulations are performed in FP32 number format.
+An MXU is composed of either 256 x 256 (TPU v6e and TPU7x) or 128 x 128 (TPU versions prior to v6e) multiply-accumulators in a [systolic array](https://en.wikipedia.org/wiki/Systolic_array). MXUs provide the bulk of the compute power in a TensorCore. Each 128 x 128 MXU (TPU v5p and earlier) performs 16K multiply-accumulate operations per cycle. Each 256 x 256 MXU (TPU v6e and TPU7x) performs 128K [bfloat16](https://en.wikipedia.org/wiki/Bfloat16_floating-point_format) multiply-accumulate operations per cycle. All multiplies take bfloat16 inputs, but all accumulations are performed in FP32 number format.
 
 The vector unit is used for general computation such as activations and softmax. The scalar unit is used for control flow, calculating memory addresses, and other maintenance operations.
 
@@ -180,6 +180,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

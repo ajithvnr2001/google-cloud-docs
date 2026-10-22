@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-v1-generated-AlloyDBAdmin-Create-SetEndpoint-sync/
 title: Set a custom API endpoint \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:44:46.694763+00:00
+fetched_at: 2026-10-22T09:38:25.605051+00:00
 ---
 
 # Set a custom API endpoint  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

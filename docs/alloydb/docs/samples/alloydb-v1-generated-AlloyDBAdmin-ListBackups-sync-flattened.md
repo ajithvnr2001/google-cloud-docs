@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-v1-generated-AlloyDBAdmin-ListBackups-sync-flattened/
 title: List all backups in a location \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:21.376110+00:00
+fetched_at: 2026-10-22T09:28:17.156279+00:00
 ---
 
 # List all backups in a location  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

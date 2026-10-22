@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/reliability/load-balanced-vms/
 title: Delete the Load balanced managed VMs \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T18:17:42.269485+00:00
+fetched_at: 2026-10-22T09:17:45.708535+00:00
 ---
 
 # Delete the Load balanced managed VMs  |  Cloud Architecture Center  |  Google Cloud Documentation

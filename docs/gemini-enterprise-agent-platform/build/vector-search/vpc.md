@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/vector-search/vpc/
 title: Set up a VPC Network Peering connection \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:03.789677+00:00
+fetched_at: 2026-10-22T10:29:34.947179+00:00
 ---
 
 # Set up a VPC Network Peering connection  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

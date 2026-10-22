@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/export-dmp-file/
 title: Export a DMP file \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:40.321121+00:00
+fetched_at: 2026-10-22T09:08:44.620719+00:00
 ---
 
 # Export a DMP file  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

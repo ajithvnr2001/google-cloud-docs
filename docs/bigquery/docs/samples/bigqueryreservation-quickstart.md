@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigqueryreservation-quickstart/
 title: Report capacity commitments and reservations \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:37:58.250865+00:00
+fetched_at: 2026-10-22T08:54:31.237895+00:00
 ---
 
 # Report capacity commitments and reservations  |  BigQuery  |  Google Cloud Documentation

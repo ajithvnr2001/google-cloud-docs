@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/manage-private-connectivity-configurations/
 title: Manage private connectivity configurations \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:31.858043+00:00
+fetched_at: 2026-10-22T08:33:18.046323+00:00
 ---
 
 # Manage private connectivity configurations  |  Datastream  |  Google Cloud Documentation

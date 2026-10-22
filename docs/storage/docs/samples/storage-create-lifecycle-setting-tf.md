@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-create-lifecycle-setting-tf/
 title: Set the lifecycle configuration for a Bucket \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:17:02.281066+00:00
+fetched_at: 2026-10-22T10:31:39.667823+00:00
 ---
 
 # Set the lifecycle configuration for a Bucket  |  Cloud Storage  |  Google Cloud Documentation

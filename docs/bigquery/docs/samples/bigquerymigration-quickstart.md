@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerymigration-quickstart/
 title: Demonstrate batch query translation \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:36:24.181655+00:00
+fetched_at: 2026-10-22T08:53:56.911138+00:00
 ---
 
 # Demonstrate batch query translation  |  BigQuery  |  Google Cloud Documentation

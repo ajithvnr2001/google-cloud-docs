@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/latest/docs/clusters/
 title: Create and manage clusters \u00a0|\u00a0 Google Distributed Cloud connected \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:36.586372+00:00
+fetched_at: 2026-10-22T08:25:19.554279+00:00
 ---
 
 # Create and manage clusters  |  Google Distributed Cloud connected  |  Google Cloud Documentation

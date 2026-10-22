@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/neural-architecture-search/nas-client/
 title: Neural Architecture Search client library \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:43:47.308037+00:00
+fetched_at: 2026-10-22T10:25:09.090902+00:00
 ---
 
 # Neural Architecture Search client library  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

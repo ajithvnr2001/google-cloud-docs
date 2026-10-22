@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/setup/
 title: Set up Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:44.553635+00:00
+fetched_at: 2026-10-22T08:25:57.547232+00:00
 ---
 
 # Set up Cloud Deploy  |  Google Cloud Documentation

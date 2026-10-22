@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-get-service-account/
 title: Get a service account \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:52.567889+00:00
+fetched_at: 2026-10-22T10:31:52.865051+00:00
 ---
 
 # Get a service account  |  Cloud Storage  |  Google Cloud Documentation

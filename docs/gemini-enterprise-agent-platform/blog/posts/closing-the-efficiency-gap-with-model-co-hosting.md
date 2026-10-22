@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/blog/posts/closing-the-efficiency-gap-with-model-co-hosting/
 title: Closing the efficiency gap in LLM serving with model co-hosting with Vertex AI \u00a0|\u00a0 Cloud AI Engineering Blog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:23.993275+00:00
+fetched_at: 2026-10-22T10:23:54.501190+00:00
 ---
 
 # Closing the efficiency gap in LLM serving with model co-hosting with Vertex AI  |  Cloud AI Engineering Blog  |  Google Cloud Documentation

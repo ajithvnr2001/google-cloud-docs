@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-download-encrypted-file/
 title: Download a CSEK-encrypted object \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:17:00.027505+00:00
+fetched_at: 2026-10-22T10:30:27.010093+00:00
 ---
 
 # Download a CSEK-encrypted object  |  Cloud Storage  |  Google Cloud Documentation

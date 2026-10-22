@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-models/use-hugging-face-models/
 title: Use Hugging Face Models \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:53.667538+00:00
+fetched_at: 2026-10-22T10:23:08.274859+00:00
 ---
 
 # Use Hugging Face Models  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

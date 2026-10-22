@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18.1.0/docs/resources/
 title: Resources \u00a0|\u00a0 AlloyDB Omni using the RPM orchestrator: 18.1.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:56:35.826646+00:00
+fetched_at: 2026-10-22T10:14:10.891567+00:00
 ---
 
 # Resources  |  AlloyDB Omni using the RPM orchestrator: 18.1.0  |  Google Cloud Documentation

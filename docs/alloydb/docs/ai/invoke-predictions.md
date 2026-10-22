@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/invoke-predictions/
 title: Invoke predictions \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:42.326582+00:00
+fetched_at: 2026-10-22T09:44:09.984104+00:00
 ---
 
 # Invoke predictions  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

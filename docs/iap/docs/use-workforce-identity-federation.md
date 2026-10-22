@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/use-workforce-identity-federation/
 title: Configure IAP with Workforce Identity Federation \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:11:53.880682+00:00
+fetched_at: 2026-10-22T08:27:20.277374+00:00
 ---
 
 # Configure IAP with Workforce Identity Federation  |  Identity-Aware Proxy  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/instance-settings/
 title: About instance settings \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:31.526647+00:00
+fetched_at: 2026-10-22T10:32:12.309161+00:00
 ---
 
 # About instance settings  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -115,7 +115,7 @@ Storage capacity | Y
 Instances with a shared vCPU can have up to 3054 GB.   
   
 Note that creating or increasing storage capacity to 64 TB might increase latency of common operations, such as backups, dependent on your workload.   
-[ Google Cloud Hyperdisk settings](https://docs.cloud.google.com/sql/docs/postgres/storage-options-overview#hyperdisk) | Y |  This setting is only applicable for Cloud SQL Enterprise Plus edition instances using the C4, C4A or N4 machine series.  
+[ Google Cloud Hyperdisk settings](https://docs.cloud.google.com/sql/docs/postgres/storage-options-overview#hyperdisk) | Y |  This setting is only applicable for Cloud SQL Enterprise Plus edition instances using the C4 or C4A machine series, and for Cloud SQL Enterprise edition instances using the N4 machine series.  
   
 **Provisioned IOPS** : 4,000 (default value)  
 **Provisioned throughput** : 170 (default value)  
@@ -218,15 +218,15 @@ Storage type by machine series:
   * **C4 machine series** : Google Cloud Hyperdisk Balanced
   * **C4A machine series** : Google Cloud Hyperdisk Balanced
   * **N2 machine series** : SSD
-  * **N4 machine series** : SSD or HDD
-  * **General purpose shared or dedicated core machine series** : Google Cloud Hyperdisk Balanced
+  * **N4 machine series** : Google Cloud Hyperdisk Balanced
+  * **General purpose shared or dedicated core machine series** : SSD or HDD
 
 
 
-For the N2 machine series, choosing **SSD** , the default value, provides your instance with SSD storage. SSDs provide lower latency and higher data throughput. If you don't need high-performance access to your data, for example for long-term storage or rarely accessed data, you can reduce your costs by choosing **HDD**.  
+For the N2 machine series, choosing **SSD** , the default and only value, provides your instance with SSD storage. For the general purpose shared or dedicated core machine series, **SSD** is the default value and provides lower latency and higher data throughput. If you don't need high-performance access to your data, for example for long-term storage or rarely accessed data, you can reduce your costs by choosing **HDD**.  
 
 
-For the C4, C4A and N4 machine series, choosing **Google Cloud Hyperdisk Balanced** , the default and only value, provides a scalable, high-performance storage service. To learn more about Google Cloud Hyperdisk Balanced and its limitations, see [Storage options overview](https://docs.cloud.google.com/sql/docs/postgres/storage-options-overview).
+For the C4, C4A, and N4 machine series, choosing **Google Cloud Hyperdisk Balanced** , the default and only value, provides a scalable, high-performance storage service. To learn more about Google Cloud Hyperdisk Balanced and its limitations, see [Storage options overview](https://docs.cloud.google.com/sql/docs/postgres/storage-options-overview).
 
 SSL mode
     
@@ -523,6 +523,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

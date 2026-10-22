@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/enable-policy-compliant-lakehouse-access/
 title: Enable policy-compliant lakehouse access with Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:02:39.058885+00:00
+fetched_at: 2026-10-22T09:49:17.266379+00:00
 ---
 
 # Enable policy-compliant lakehouse access with Knowledge Catalog  |  Google Cloud Documentation
@@ -23,19 +23,15 @@ Send feedback
 
 #  Enable policy-compliant lakehouse access with Knowledge Catalog Stay organized with collections  Save and categorize content based on your preferences. 
 
-When you store your data across different storage systems, managing fragmented security can become a major challenge. You want to make sure sensitive information, such as financial records, stays protected, even if you store it in open formats like Apache Iceberg on [Google Cloud storage](https://cloud.google.com/storage).
-
-Crucially, your security measures must work seamlessly across various query engines, like BigQuery SQL and Apache Spark. In this architecture, Knowledge Catalog solves this by functioning as a universal context engine. It holds the metadata needed to ensure that your security context is applied consistently, no matter which engine queries the data.
-
-In this tutorial, you build a secure data lakehouse to solve these challenges. Using scripts, you define security policies and see Knowledge Catalog (formerly Dataplex Universal Catalog) and [borderless Lakehouse](https://docs.cloud.google.com/lakehouse/docs/introduction) work together to enforce the policies across different query engines.
+Knowledge Catalog (formerly Dataplex Universal Catalog) lets you enforce consistent security policies across query engines, such as BigQuery SQL and Apache Spark, for Apache Iceberg tables on [Google Cloud storage](https://cloud.google.com/storage). In this tutorial, you use scripts with Knowledge Catalog and [borderless Lakehouse](https://docs.cloud.google.com/lakehouse/docs/introduction) to build a governed data lakehouse that helps you protect sensitive information, such as financial records.
 
 ## Architecture overview
 
-To set up fine-grained access control on an open table format like Apache Iceberg, you must create a strict, unified security architecture.
+When you store data across different storage systems, managing fragmented security can become a challenge. To set up fine-grained access control on an open table format like Apache Iceberg, you must create a strict, unified security architecture.
 
-With this design, Knowledge Catalog acts as the central control plane. Knowledge Catalog dynamically enforces your security context across all supported engines.
+With this design, Knowledge Catalog acts as the central control plane and functions as a universal context engine. It holds the metadata needed to dynamically enforce your security context across all supported engines, no matter which engine queries the data.
 
-![Architecture of a policy-complaint lakehouse that uses secure architectural layers and centralized policy enforcement.](https://docs.cloud.google.com/static/knowledge-catalog/images/policy_compliant_lakehouse_architecture.png)Architecture of a policy-compliant lakehouse
+![Architecture of a policy-compliant lakehouse that uses secure architectural layers and centralized policy enforcement.](https://docs.cloud.google.com/static/knowledge-catalog/images/policy_compliant_lakehouse_architecture.png)Architecture of a policy-compliant lakehouse
 
 This tutorial relies on two main concepts to create this unified architecture:
 
@@ -171,7 +167,7 @@ Create service accounts for two personas: **Analyst** and **Manager**. The follo
     echo "Granting roles to service accounts..."
     for USER in "${USER_ANALYST}" "${USER_MANAGER}"; do
         EMAIL="${USER}@${PROJECT_ID}.iam.gserviceaccount.com"
-        
+    
         # Allow Cloud Shell to impersonate them for testing
         gcloud iam service-accounts add-iam-policy-binding ${EMAIL} \
             --member="user:${CURRENT_USER}" \
@@ -221,11 +217,11 @@ Run the following commands to create inventory and transaction tables:
     # Inventory table
     bq query --use_legacy_sql=false \
     "CREATE OR REPLACE TABLE \`${PROJECT_ID}.${DATASET_ID}.inventory\` (
-        product_id INT64, 
-        product_name STRING, 
+        product_id INT64,
+        product_name STRING,
         stock_count INT64
-    ) 
-    WITH CONNECTION \`${REGION}.${CONN_NAME}\` 
+    )
+    WITH CONNECTION \`${REGION}.${CONN_NAME}\`
     OPTIONS (
         file_format = 'PARQUET',
         table_format = 'ICEBERG',
@@ -235,12 +231,12 @@ Run the following commands to create inventory and transaction tables:
     # Transactions table
     bq query --use_legacy_sql=false \
     "CREATE OR REPLACE TABLE \`${PROJECT_ID}.${DATASET_ID}.transactions\` (
-        id INT64, 
-        item STRING, 
-        amount FLOAT64, 
+        id INT64,
+        item STRING,
+        amount FLOAT64,
         transaction_date DATE
-    ) 
-    WITH CONNECTION \`${REGION}.${CONN_NAME}\` 
+    )
+    WITH CONNECTION \`${REGION}.${CONN_NAME}\`
     OPTIONS (
         file_format = 'PARQUET',
         table_format = 'ICEBERG',
@@ -263,9 +259,9 @@ Insert sample data into the tables:
     # Insert into Transactions table
     bq query --use_legacy_sql=false \
     "INSERT INTO \`${PROJECT_ID}.${DATASET_ID}.transactions\` (id, item, amount, transaction_date)
-    VALUES 
-        (1, 'Widget A', 100.0, DATE '2024-01-01'), 
-        (2, 'Widget B', 150.0, DATE '2024-01-02'), 
+    VALUES
+        (1, 'Widget A', 100.0, DATE '2024-01-01'),
+        (2, 'Widget B', 150.0, DATE '2024-01-02'),
         (3, 'Widget C', 50.0, DATE '2024-01-03');"
     
 
@@ -280,9 +276,9 @@ Aggregate your raw transactions into a daily sales summary. This transformation 
     
     echo "Creating transactions summary table..."
     bq query --use_legacy_sql=false \
-    "CREATE TABLE \`${PROJECT_ID}.${DATASET_ID}.transactions_summary\` AS 
-     SELECT transaction_date, SUM(amount) as total_sales, COUNT(id) as transaction_count 
-     FROM \`${PROJECT_ID}.${DATASET_ID}.transactions\` 
+    "CREATE TABLE \`${PROJECT_ID}.${DATASET_ID}.transactions_summary\` AS
+     SELECT transaction_date, SUM(amount) as total_sales, COUNT(id) as transaction_count
+     FROM \`${PROJECT_ID}.${DATASET_ID}.transactions\`
      GROUP BY transaction_date;"
     
 
@@ -359,7 +355,7 @@ Inside `2_create_masking.py`, the script looks up the ID for the policy tag you 
     
     # Bind the Masked Reader role to the Analyst
     iam_policy.bindings.add(
-        role="roles/bigquerydatapolicy.maskedReader", 
+        role="roles/bigquerydatapolicy.maskedReader",
         members=[f"serviceAccount:{analyst_email}"]
     )
     
@@ -590,7 +586,7 @@ To prevent ongoing charges, remove the resources you created for this tutorial.
 
 ### Remove policy and metadata assets
 
-Before you can delete the BigQuery dataset or Cloud Storage bucket, you must delete the data governance policies and metadata assets. 
+Before you can delete the BigQuery dataset or Cloud Storage bucket, you must delete the data governance policies and metadata assets.
 
 Run the Python cleanup script:
     
@@ -623,13 +619,13 @@ Copy and run the following cleanup script in your Cloud Shell:
     
     for USER in "${USER_ANALYST}" "${USER_MANAGER}"; do
         EMAIL="${USER}@${PROJECT_ID}.iam.gserviceaccount.com"
-        
+    
         # Remove impersonation binding
         gcloud iam service-accounts remove-iam-policy-binding ${EMAIL} \
             --member="user:${CURRENT_USER}" \
             --role="roles/iam.serviceAccountTokenCreator" \
             --quiet > /dev/null 2>&1
-            
+    
         # Delete the Service Account
         gcloud iam service-accounts delete ${EMAIL} --quiet
     done
@@ -681,6 +677,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/concepts/multitenancy/
 title: Multitenancy \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:20.101960+00:00
+fetched_at: 2026-10-22T08:25:24.557670+00:00
 ---
 
 # Multitenancy  |  Firestore in Datastore mode  |  Google Cloud Documentation

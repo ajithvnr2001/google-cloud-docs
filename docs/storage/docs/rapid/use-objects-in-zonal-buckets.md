@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/rapid/use-objects-in-zonal-buckets/
 title: Read and append to objects in zonal buckets \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:52:40.015168+00:00
+fetched_at: 2026-10-22T09:43:47.375245+00:00
 ---
 
 # Read and append to objects in zonal buckets  |  Cloud Storage  |  Google Cloud Documentation
@@ -1021,6 +1021,162 @@ The following sample performs ranged reads on multiple objects:
         await asyncio.gather(*download_tasks)
     
     
+
+### Rust
+
+The following sample performs a ranged read on a single object:
+    
+    
+    use google_cloud_storage::client::Storage;
+    use google_cloud_storage::model_ext::ReadRange;
+    
+    pub async fn sample(
+        client: &Storage,
+        bucket: &str,
+        object: &str,
+        start: u64,
+        end: u64,
+        destination_file_name: &str,
+    ) -> anyhow::Result<()> {
+        let count = end - start + 1;
+        let (metadata, mut reader) = client
+            .open_object(format!("projects/_/buckets/{bucket}"), object)
+            .send_and_read(ReadRange::segment(start, count))
+            .await?;
+    
+        let mut content = Vec::new();
+        while let Some(data) = reader.next().await.transpose()? {
+            content.extend_from_slice(&data);
+        }
+    
+        tokio::fs::write(destination_file_name, content).await?;
+    
+        println!(
+            "Downloaded bytes from {start} to {end} of object {object} in bucket {bucket} to {destination_file_name}."
+        );
+        println!("Metadata: {:?}", metadata.object());
+        Ok(())
+    }
+
+The following sample performs a full read on a single object:
+    
+    
+    use google_cloud_storage::client::Storage;
+    use google_cloud_storage::model_ext::ReadRange;
+    
+    pub async fn sample(
+        client: &Storage,
+        bucket: &str,
+        object: &str,
+        destination_file_name: &str,
+    ) -> anyhow::Result<()> {
+        let (metadata, mut reader) = client
+            .open_object(format!("projects/_/buckets/{bucket}"), object)
+            .send_and_read(ReadRange::all())
+            .await?;
+    
+        let mut content = Vec::new();
+        while let Some(data) = reader.next().await.transpose()? {
+            content.extend_from_slice(&data);
+        }
+    
+        tokio::fs::write(destination_file_name, content).await?;
+    
+        println!("Downloaded object {object} in bucket {bucket} to {destination_file_name}.");
+        println!("Metadata: {:?}", metadata.object());
+        Ok(())
+    }
+
+The following sample performs ranged reads on a single object:
+    
+    
+    use google_cloud_storage::client::Storage;
+    use google_cloud_storage::model_ext::ReadRange;
+    
+    pub async fn sample(client: &Storage, bucket: &str, object: &str) -> anyhow::Result<()> {
+        let bucket_name = format!("projects/_/buckets/{bucket}");
+    
+        // 1. Open the connection and read the first range.
+        let (descriptor, mut reader) = client
+            .open_object(bucket_name, object)
+            .send_and_read(ReadRange::head(5))
+            .await?;
+    
+        let mut content = Vec::new();
+        while let Some(data) = reader.next().await.transpose()? {
+            content.extend_from_slice(&data);
+        }
+        println!(
+            "Read first range from {object} in {bucket}. Content: {:?}",
+            String::from_utf8_lossy(&content)
+        );
+    
+        // 2. Read another range.
+        let mut reader = descriptor.read_range(ReadRange::segment(5, 5)).await;
+    
+        let mut content = Vec::new();
+        while let Some(data) = reader.next().await.transpose()? {
+            content.extend_from_slice(&data);
+        }
+        println!(
+            "Read second range from {object} in {bucket}. Content: {:?}",
+            String::from_utf8_lossy(&content)
+        );
+    
+        println!("Metadata: {:?}", descriptor.object());
+        Ok(())
+    }
+
+The following sample performs ranged reads on multiple objects:
+    
+    
+    use google_cloud_storage::client::Storage;
+    use google_cloud_storage::model_ext::ReadRange;
+    use google_cloud_storage::object_descriptor::ObjectDescriptor;
+    use std::collections::HashMap;
+    use tokio::task::JoinSet;
+    
+    pub async fn sample(client: &Storage, bucket: &str, object_names: &[&str]) -> anyhow::Result<()> {
+        let bucket_name = format!("projects/_/buckets/{bucket}");
+    
+        async fn read_footer(
+            client: &Storage,
+            bucket_name: &str,
+            object_name: &str,
+        ) -> anyhow::Result<(ObjectDescriptor, Vec<u8>, String)> {
+            // Reading the last 8 bytes is common in Parquet and other column-oriented formats
+            // with a footer.
+            let (descriptor, mut reader) = client
+                .open_object(bucket_name, object_name)
+                .send_and_read(ReadRange::tail(8))
+                .await?;
+    
+            let mut footer = Vec::new();
+            while let Some(data) = reader.next().await.transpose()? {
+                footer.extend_from_slice(&data);
+            }
+            Ok((descriptor, footer, object_name.to_string()))
+        }
+    
+        let mut set = JoinSet::new();
+        for o in object_names {
+            let client = client.clone();
+            let bucket_name = bucket_name.clone();
+            let object_name = o.to_string();
+            set.spawn(async move { read_footer(&client, &bucket_name, &object_name).await });
+        }
+    
+        let mut descriptors = HashMap::new();
+        while let Some(result) = set.join_next().await {
+            let (descriptor, footer, object_name) = result??;
+            println!("The footer for object {object_name} is {footer:?}");
+            descriptors.insert(object_name, (descriptor, footer));
+        }
+    
+        // Use the descriptors in the map to read more ranges.
+    
+        Ok(())
+    }
 
 ## Pause and resume an object
 
@@ -2351,6 +2507,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

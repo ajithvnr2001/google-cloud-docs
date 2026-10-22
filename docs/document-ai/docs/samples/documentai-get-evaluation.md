@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/document-ai/docs/samples/documentai-get-evaluation/
 title: Get evaluation details for a processor version \u00a0|\u00a0 Document AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:07:52.007624+00:00
+fetched_at: 2026-10-22T08:24:41.768440+00:00
 ---
 
 # Get evaluation details for a processor version  |  Document AI  |  Google Cloud Documentation

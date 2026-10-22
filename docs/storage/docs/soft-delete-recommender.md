@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/storage/docs/soft-delete-recommender/
-title: Soft Delete recommender \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
+title: Soft delete recommender \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:35.144942+00:00
+fetched_at: 2026-10-22T10:03:27.515277+00:00
 ---
 
-# Soft Delete recommender  |  Cloud Storage  |  Google Cloud Documentation
+# Soft delete recommender  |  Cloud Storage  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/storage/docs/soft-delete-recommender/
 
@@ -19,13 +19,9 @@ fetched_at: 2026-10-21T01:01:35.144942+00:00
 
 Send feedback 
 
-#  Soft Delete recommender Stay organized with collections  Save and categorize content based on your preferences. 
+#  Soft delete recommender Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page provides information about the soft delete recommender and describes how to enable and use recommendations.
-
-## Overview
-
-The soft delete recommender provides insights on when it's best to enable or disable soft delete on buckets in your project based on your data usage and assessed impact to Cloud Billing and security.
+The soft delete recommender helps you balance data protection and storage costs by identifying when to enable or disable soft delete on the buckets in your project. The recommender provides these suggestions based on your data usage and the assessed impact to billing and security.
 
 ## Criteria for receiving soft delete recommendations
 
@@ -68,13 +64,13 @@ Before using Active Assist recommendations, complete the following requirements.
 
 ### Required roles
 
-To get the permissions that you need to view recommendations in the Active Assist, ask your administrator to grant you the [Storage Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/storage#storage.admin) (`roles/storage.admin`) IAM role on the project. 
+To get the permissions that you need to view recommendations in Active Assist, ask your administrator to grant you the [Storage Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/storage#storage.admin) (`roles/storage.admin`) IAM role on the project. 
 
-This predefined role contains the permissions required to view recommendations in the Active Assist. To see the exact permissions that are required, expand the **Required permissions** section: 
+This predefined role contains the permissions required to view recommendations in Active Assist. To see the exact permissions that are required, expand the **Required permissions** section: 
 
 #### Required permissions
 
-The following permissions are required to view recommendations in the Active Assist:
+The following permissions are required to view recommendations in Active Assist:
 
   * `recommender.storageBucketSoftDeleteInsights.get`
   * `recommender.storageBucketSoftDeleteInsights.list`
@@ -87,15 +83,15 @@ The following permissions are required to view recommendations in the Active Ass
 
 ## View soft delete recommendations
 
-You can view soft delete recommendations using the [Active Assist](https://docs.cloud.google.com/recommender/docs/recommendation-hub/find-recommnedation-hub). Cloud Storage provides recommendations to enable soft delete for buckets that don't yet have soft delete enabled, as well as recommendations to disable soft delete for buckets that have soft delete enabled.
+You can view soft delete recommendations by using [Active Assist](https://docs.cloud.google.com/recommender/docs/recommendation-hub/find-recommnedation-hub). Cloud Storage provides recommendations to enable soft delete for buckets that don't yet have soft delete enabled, as well as recommendations to disable soft delete for buckets that have soft delete enabled.
 
-  1. In the Google Cloud console, go to the **Active Assist**.
+  1. In the Google Cloud console, go to the **Recommendation Hub** page.
 
-[Go to Recommendations](https://console.cloud.google.com/home/recommendations)
+[Go to Recommendation Hub](https://console.cloud.google.com/home/recommendations)
 
   2. In the **All recommendations** menu, click **All recommendations**.
 
-  3. In the **All recommendations** page, the Active Assist displays the following soft delete recommendations:
+  3. On the **All recommendations** page, Active Assist displays the following soft delete recommendations:
 
      * **Disable Soft delete**
 
@@ -108,11 +104,11 @@ Use the instructions in the following sections to disable or enable soft delete 
 
 ### View recommendation to disable soft delete
 
-To view the recommendation for disabling soft delete in the Active Assist, use the following instructions.
+To view the recommendation for disabling soft delete in Active Assist, use the following instructions.
 
-  1. In the Active Assist, in the **All recommendations** page, click **Disable Soft delete**.
+  1. In Active Assist, on the **All recommendations** page, click **Disable Soft delete**.
 
-  2. In the **Insight** page, the recommendation displays the following information:
+  2. On the **Insight** page, the recommendation displays the following information:
 
      * **Bucket name** : the name of the bucket Recommender recommends disabling soft delete for.
 
@@ -135,15 +131,15 @@ Cloud Storage disables soft delete policy on the bucket. To learn more about how
 
 ### View recommendation to enable soft delete
 
-To view the Recommender recommendation for enabling soft delete in the Active Assist, use the following instructions:
+To view the Recommender recommendation for enabling soft delete in Active Assist, use the following instructions:
 
-  1. In the Active Assist, in the **All recommendations** page, Click **Enable Soft delete**.
+  1. In Active Assist, on the **All recommendations** page, click **Enable Soft delete**.
 
-  2. In the **Insight** page, the recommendation displays the following information:
+  2. On the **Insight** page, the recommendation displays the following information:
 
      * **Bucket name** : the name of the bucket in your project Recommender recommends enabling soft delete for.
 
-     * **Current retention days** : the current soft delete retention duration on your bucket. For buckets with soft delete already disabled, the Active Assist displays **0 days**.
+     * **Current retention days** : the current soft delete retention duration on your bucket. For buckets with soft delete already disabled, Active Assist displays **0 days**.
 
      * **Recommended retention days** : the recommended number of days to set your soft delete policy to. For enabling soft delete, Recommender recommends setting your bucket's soft delete policy to the minimum retention duration of **7 days**.
 
@@ -181,6 +177,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

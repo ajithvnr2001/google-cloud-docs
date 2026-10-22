@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/custom-oauth-configuration/
 title: Use custom OAuth clients with IAP \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:11:54.475998+00:00
+fetched_at: 2026-10-22T08:27:56.184009+00:00
 ---
 
 # Use custom OAuth clients with IAP  |  Identity-Aware Proxy  |  Google Cloud Documentation

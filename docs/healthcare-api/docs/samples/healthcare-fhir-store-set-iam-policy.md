@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/samples/healthcare-fhir-store-set-iam-policy/
 title: Set FHIR store IAM policy \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:53:28.561050+00:00
+fetched_at: 2026-10-22T08:33:08.453436+00:00
 ---
 
 # Set FHIR store IAM policy  |  Cloud Healthcare API  |  Google Cloud Documentation

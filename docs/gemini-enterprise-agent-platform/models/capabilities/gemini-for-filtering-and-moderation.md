@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/gemini-for-filtering-and-moderation/
 title: Gemini for safety filtering and content moderation \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:26.205359+00:00
+fetched_at: 2026-10-22T10:26:45.865609+00:00
 ---
 
 # Gemini for safety filtering and content moderation  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

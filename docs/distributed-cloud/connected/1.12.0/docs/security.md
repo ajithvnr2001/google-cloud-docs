@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.12.0/docs/security/
 title: Security best practices \u00a0|\u00a0 Google Distributed Cloud connected \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:58.339279+00:00
+fetched_at: 2026-10-22T08:26:22.639808+00:00
 ---
 
 # Security best practices  |  Google Distributed Cloud connected  |  Google Cloud Documentation

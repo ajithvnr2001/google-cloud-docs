@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/data-products-overview/
 title: About data products \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:02:38.561105+00:00
+fetched_at: 2026-10-22T09:49:26.975995+00:00
 ---
 
 # About data products  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -23,14 +23,16 @@ Send feedback
 
 #  About data products Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document describes the architecture and key concepts of data products in Knowledge Catalog (formerly Dataplex Universal Catalog).
+Data products in Knowledge Catalog (formerly Dataplex Universal Catalog) let you package related catalog assets into a single, curated unit to solve specific business problems. You can then add context and contracts to help data consumers discover, evaluate, and request self-service access to trusted data.
 
-A data product is a logical, curated collection of data assets, formally packaged to ensure it's discoverable, trusted, and accessible. The key capabilities of a data product include the following:
+## Key capabilities
 
-  * Organize catalog assets into a logical unit that solves a specific business problem and enables faster time to insights.
-  * Distribute with context that includes a description, documentation, and aspects.
-  * Establish trust with contracts that enable data producers to provide assurance to data consumers.
-  * Provide self-service workflow for data consumers to evaluate data products and get access to data.
+Data products provide the following key capabilities:
+
+  * Organize catalog assets into a logical unit that solves a specific business problem and speeds up time to insights.
+  * Distribute data assets with context that includes a description, documentation, and aspects.
+  * Establish trust with contracts that let data producers provide assurance to data consumers.
+  * Provide a self-service workflow for data consumers to evaluate data products and get access to data.
 
 
 
@@ -207,6 +209,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/looker-core-instance-create/
 title: Create a public secure connections Looker (Google Cloud core) instance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:09:39.013920+00:00
+fetched_at: 2026-10-22T10:44:44.766611+00:00
 ---
 
 # Create a public secure connections Looker (Google Cloud core) instance  |  Google Cloud Documentation
@@ -108,7 +108,6 @@ Editions cannot be changed after instance creation. If you want to change an edi
 
   14. In the **Knowledge Catalog integration** section, you can optionally select the **Opt out of Knowledge Catalog integration** checkbox if you don't want Looker (Google Cloud core) to [integrate with Knowledge Catalog](https://docs.cloud.google.com/looker/docs/looker-core-dataplex). Looker (Google Cloud core) and Knowledge Catalog are integrated by default.
 
-**Note:** The integration between Looker (Google Cloud core) and Knowledge Catalog is in preview. Pre-GA products and features are available "as is" and might have limited support.
   15. Click **Create**.
 
 
@@ -166,7 +165,7 @@ The following flags enable other settings:
 
      * `--accelerated-security-patch-enabled` and `--no-accelerated-security-patch-enabled`: Include one of these flags if your instance is on the `regular` channel and you want to receive or disable security patches bi-weekly. This feature is in [preview](https://cloud.google.com/products#product-launch-stages).
      * `--fips-enabled`: [Enable FIPS 140-3 level 1 compliance](https://docs.cloud.google.com/looker/docs/looker-core-fips-mode).
-     * Replace the `--catalog-integration-enabled` flag with the `--no-catalog-integration-enabled` flag to disable the [ Looker (Google Cloud core) and Knowledge Catalog integration](https://docs.cloud.google.com/looker/docs/looker-core-dataplex). This feature is in [preview](https://cloud.google.com/products#product-launch-stages).
+     * Replace the `--catalog-integration-enabled` flag with the `--no-catalog-integration-enabled` flag to disable the [ Looker (Google Cloud core) and Knowledge Catalog integration](https://docs.cloud.google.com/looker/docs/looker-core-dataplex).
 
 **Tip:** You must have [quota](https://docs.cloud.google.com/docs/quotas/view-manage) for the proper edition type to create an instance. If you don't have quota, [contact Sales](https://cloud.google.com/contact/form?direct=true&e=13802955) to allocate quota to your project. For more troubleshooting help, see the [Troubleshooting Looker (Google Cloud core) instance creation failures](https://docs.cloud.google.com/looker/docs/best-practices/flows/looker-core-instance-creation-troubleshooting) documentation page.
 
@@ -373,6 +372,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/permissions/
 title: Design permissioning setup \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:59:59.103011+00:00
+fetched_at: 2026-10-22T10:30:02.958918+00:00
 ---
 
 # Design permissioning setup  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -77,7 +77,7 @@ For Kubernetes service accounts, authorization is based on a secret token. To mi
 
 Consider the principle of least privilege (PoLP) when granting [role bindings](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/set-up-role-bindings) to users. In accordance with PoLP, consider assigning only privileges required to complete a task.
 
-For example, you grant the Project IAM Admin role within a single project to a user, so that this user delegates authority to grant roles within that project. This user then grants granular roles to other developers in the project based on the specific services they use. The Project IAM Admin role must be restricted to a trusted lead because this role could be used to escalate privilege, granting oneself or others additional roles in the project.
+For example, you grant the IAM Project Admin role within a single project to a user, so that this user delegates authority to grant roles within that project. This user then grants granular roles to other developers in the project based on the specific services they use. The IAM Project Admin role must be restricted to a trusted lead because this role could be used to escalate privilege, granting oneself or others additional roles in the project.
 
 ## Audit regularly for excessive privileges
 
@@ -89,6 +89,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

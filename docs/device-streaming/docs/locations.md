@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/device-streaming/docs/locations/
 title: Device Streaming API locations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:02.337708+00:00
+fetched_at: 2026-10-22T08:26:46.730108+00:00
 ---
 
 # Device Streaming API locations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/gemini-on-gdcc/latest/docs/permissions/
 title: Roles and permissions \u00a0|\u00a0 Gemini on GDC API on GDC connected \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:23.459965+00:00
+fetched_at: 2026-10-22T08:26:18.683654+00:00
 ---
 
 # Roles and permissions  |  Gemini on GDC API on GDC connected  |  Google Cloud Documentation

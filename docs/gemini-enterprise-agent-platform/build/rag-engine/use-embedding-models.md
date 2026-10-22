@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/use-embedding-models/
 title: Use embedding models with RAG Engine \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:08.352767+00:00
+fetched_at: 2026-10-22T10:23:42.893831+00:00
 ---
 
 # Use embedding models with RAG Engine  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -118,12 +118,12 @@ These code samples demonstrate how to create a RAG corpus with a publisher Gecko
 ###  Agent Platform SDK for Python 
     
     
-      import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+      import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
       from vertexai import rag
     
       # Set Project
       PROJECT_ID = "YOUR_PROJECT_ID"
-      [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=${PROJECT_ID}, location="us-central1")
+      [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=${PROJECT_ID}, location="us-central1")
     
       # Configure a Google first-party embedding model
       embedding_model_config = rag.RagEmbeddingModelConfig(
@@ -179,12 +179,12 @@ These code samples demonstrate how to create a RAG corpus with your deployed, fi
 ###  Agent Platform SDK for Python 
     
     
-      import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+      import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
       from vertexai import rag
     
       # Set Project
       PROJECT_ID = "YOUR_PROJECT_ID"
-      [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=${PROJECT_ID}, location="us-central1")
+      [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=${PROJECT_ID}, location="us-central1")
     
       # Your Vertex Endpoint resource with the deployed fine-tuned Gecko model
       ENDPOINT_ID = "YOUR_MODEL_ENDPOINT_ID"

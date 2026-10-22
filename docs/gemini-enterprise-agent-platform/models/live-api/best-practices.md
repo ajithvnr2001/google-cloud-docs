@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/live-api/best-practices/
 title: Best practices with Gemini Live API \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:38.466101+00:00
+fetched_at: 2026-10-22T10:23:28.928448+00:00
 ---
 
 # Best practices with Gemini Live API  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

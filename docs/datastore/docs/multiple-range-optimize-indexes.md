@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/multiple-range-optimize-indexes/
 title: Optimize queries with range and inequality filters on multiple properties \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:17.963466+00:00
+fetched_at: 2026-10-22T08:24:58.574544+00:00
 ---
 
 # Optimize queries with range and inequality filters on multiple properties  |  Firestore in Datastore mode  |  Google Cloud Documentation

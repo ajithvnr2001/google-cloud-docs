@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/preflight/
 title: Preflight checks \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:57:37.631541+00:00
+fetched_at: 2026-10-22T10:12:37.527819+00:00
 ---
 
 # Preflight checks  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -22,18 +22,9 @@ Send feedback
 
 #  Preflight checks Stay organized with collections  Save and categorize content based on your preferences. 
 
-Preflight checks are a preventive measure to help identify problems before you start a major cluster operation, such as creating or upgrading clusters. When these checks run automatically ahead of an operation, no changes are made to your clusters unless the preflight checks all pass. You can also run preflight checks on demand.
+Preflight checks let you identify issues before you perform major cluster operations, such as creating or upgrading clusters. When checks run automatically ahead of an operation, Google Distributed Cloud blocks cluster modifications until all validations pass. You can also run checks on demand or bypass them during cluster management workflows.
 
-This document describes each check, in what circumstances it runs automatically, how and when to run it manually, and how to interpret results.
-
-In Google Distributed Cloud you can run preflight checks for different situations:
-
-  * Google Distributed Cloud runs preflight checks when you create or upgrade clusters and node pool resources with `bmctl`. If the checks fail, no changes are made. You can also bypass these checks, or run them explicitly.
-
-  * Google Distributed Cloud also runs internal preflight checks when an admin or hybrid cluster creates or updates Kubernetes resources on user clusters. The checks are run before changes are applied to affected user clusters. If the checks fail, no changes are made.
-
-
-
+Google Distributed Cloud executes these validations when you create or upgrade clusters and node pools with `bmctl`. It also runs internal checks when an admin or hybrid cluster updates resources on user clusters. If any check fails, no changes are applied to your clusters.
 
 ## `PreflightCheck` custom resources
 
@@ -443,7 +434,7 @@ Here's part of a cluster configuration file that shows the `bypassPreflightCheck
     spec:
       type: user**  bypassPreflightCheck: true**
       # Anthos cluster version.
-      anthosBareMetalVersion: 1.36.100-gke.144
+      anthosBareMetalVersion: 1.36.200-gke.118
     ...
     
 
@@ -482,6 +473,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/bigquery-ready-partners/
 title: Google Cloud Ready - BigQuery Partners \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:46:28.986896+00:00
+fetched_at: 2026-10-22T08:56:28.743622+00:00
 ---
 
 # Google Cloud Ready - BigQuery Partners  |  Google Cloud Documentation

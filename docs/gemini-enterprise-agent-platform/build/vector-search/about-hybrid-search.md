@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/vector-search/about-hybrid-search/
 title: About hybrid search \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:05.249879+00:00
+fetched_at: 2026-10-22T10:29:18.215517+00:00
 ---
 
 # About hybrid search  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

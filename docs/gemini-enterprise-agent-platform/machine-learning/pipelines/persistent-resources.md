@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/persistent-resources/
 title: Configure a pipeline run on a persistent resource \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:43:54.397009+00:00
+fetched_at: 2026-10-22T10:25:42.484480+00:00
 ---
 
 # Configure a pipeline run on a persistent resource  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

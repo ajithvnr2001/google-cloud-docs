@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles/
 title: Knowledge Catalog IAM roles \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:41:49.939606+00:00
+fetched_at: 2026-10-22T08:29:44.090566+00:00
 ---
 
 # Knowledge Catalog IAM roles  |  Google Cloud Documentation
@@ -37,10 +37,10 @@ For a detailed description of IAM and its features, see the [Identity and Access
 
   * To view connector configurations and run history: 
     * BigQuery User (`roles/bigquery.user`)
-    * Dataplex Viewer (`roles/dataplex.viewer`)
+    * **Dataplex Viewer** (`roles/dataplex.viewer`)
   * To create, edit, delete, or manually run connector configurations: 
     * BigQuery Admin (`roles/bigquery.admin`)
-    * Dataplex Administrator (`roles/dataplex.admin`) or Dataplex Editor (`roles/dataplex.editor`)
+    * Dataplex Administrator (`roles/dataplex.admin`) or **Dataplex Editor** (`roles/dataplex.editor`)
 
 
 
@@ -1659,6 +1659,21 @@ To view metadata about an asset stored in Knowledge Catalog, you must have a vie
 
 **Note:** If an asset is located in an organization that you're not a member of, data lineage might not be able to retrieve the metadata for that asset.
 
+## Agent Identity roles
+
+**Preview**
+
+This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+
+The following roles provide access to manage third-party auth providers for Knowledge Studio enrichment workflows:
+
+Role | Description  
+---|---  
+**Agent Identity Admin**  
+(`roles/agentidentity.admin`) | Full access to manage Agent Identity auth providers and credentials.  
+**Agent Identity Viewer**  
+(`roles/agentidentity.viewer`) | Read-only access to view Agent Identity auth providers.  
+  
 ## Metadata roles
 
 Metadata roles grant permissions to view and update metadata, such as table schemas.
@@ -1696,6 +1711,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/shell-sandbox-quickstart/
 title: Shell sandbox quickstart \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:40:49.910080+00:00
+fetched_at: 2026-10-22T08:37:03.341195+00:00
 ---
 
 # Shell sandbox quickstart  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -108,12 +108,12 @@ To authenticate with Application Default Credentials:
 To use a shell sandbox, first create an Agent Platform instance. You don't need to deploy an agent to use a shell sandbox. Without deployment, creating an Agent Platform instance should take a few seconds.
     
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
     
-    client = [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).Client(project='PROJECT_ID', location='LOCATION')
+    client = [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).Client(project='PROJECT_ID', location='LOCATION')
     
-    agent_engine = client.[agent_engines](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.agent_engines.html).create()
-    agent_engine_name = [agent_engine](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.AgentRunConfigDict.html#vertexai__genai_types_AgentRunConfigDict_agent_engine).api_resource.name
+    agent_engine = client.[agent_engines](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.agent_engines.html).create()
+    agent_engine_name = [agent_engine](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.AgentRunConfigDict.html#vertexai__genai_types_AgentRunConfigDict_agent_engine).api_resource.name
     
 
 Replace the following:

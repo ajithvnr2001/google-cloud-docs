@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/test-high-availability/
 title: Test a primary instance for high availability \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:51.196161+00:00
+fetched_at: 2026-10-22T09:37:33.390253+00:00
 ---
 
 # Test a primary instance for high availability  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/ces/
 title: Gemini Enterprise for Customer Experience roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:05.953450+00:00
+fetched_at: 2026-10-22T08:27:47.311680+00:00
 ---
 
 # Gemini Enterprise for Customer Experience roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

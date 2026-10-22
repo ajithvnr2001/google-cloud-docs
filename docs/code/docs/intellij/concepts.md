@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/concepts/
 title: Concepts \u00a0|\u00a0 Cloud Code for IntelliJ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:40:42.553098+00:00
+fetched_at: 2026-10-22T10:02:35.152293+00:00
 ---
 
 # Concepts  |  Cloud Code for IntelliJ  |  Google Cloud Documentation

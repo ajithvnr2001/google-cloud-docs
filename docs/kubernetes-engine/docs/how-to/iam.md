@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/iam/
 title: Create IAM allow policies \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:41:51.983904+00:00
+fetched_at: 2026-10-22T08:29:45.606988+00:00
 ---
 
 # Create IAM allow policies  |  GKE security  |  Google Cloud Documentation

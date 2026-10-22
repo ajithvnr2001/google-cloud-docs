@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/sharing-oauth-clients/
 title: How to share OAuth clients \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:11:47.515135+00:00
+fetched_at: 2026-10-22T08:27:21.610246+00:00
 ---
 
 # How to share OAuth clients  |  Identity-Aware Proxy  |  Google Cloud Documentation

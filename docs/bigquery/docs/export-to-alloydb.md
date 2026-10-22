@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/export-to-alloydb/
 title: Export data to AlloyDB (reverse ETL) \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:06:52.701268+00:00
+fetched_at: 2026-10-22T10:44:50.714230+00:00
 ---
 
 # Export data to AlloyDB (reverse ETL)  |  BigQuery  |  Google Cloud Documentation
@@ -27,9 +27,7 @@ This feature is subject to the "Pre-GA Offerings Terms" in the General Service T
 
 **Note:** To provide feedback or request support for this feature, send email to [bq-alloydb-export-feedback@google.com](mailto:bq-alloydb-export-feedback@google.com).
 
-This document describes how you can set up a reverse extract, transform, and load (reverse ETL) workflow from BigQuery to AlloyDB for PostgreSQL. You can do this by using the [`EXPORT DATA` statement](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/export-statements).
-
-You can also export data to AlloyDB by syncing your BigQuery table to AlloyDB.
+A reverse extract, transform, and load (reverse ETL) workflow from BigQuery to AlloyDB for PostgreSQL lets you move data from BigQuery into an AlloyDB database. You can use the [`EXPORT DATA` statement](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/export-statements) to process or filter the data with a query before you export it, or you can sync your BigQuery table to AlloyDB to copy or mirror the full table.
 
 ## Before you begin
 
@@ -185,6 +183,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

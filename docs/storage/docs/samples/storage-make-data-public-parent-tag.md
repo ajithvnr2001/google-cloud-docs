@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-make-data-public-parent-tag/
 title: Create a public Cloud Storage bucket \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:29.602556+00:00
+fetched_at: 2026-10-22T10:31:56.387801+00:00
 ---
 
 # Create a public Cloud Storage bucket  |  Google Cloud Documentation

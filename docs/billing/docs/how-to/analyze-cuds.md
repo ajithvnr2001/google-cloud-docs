@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/docs/how-to/analyze-cuds/
 title: Analyze the effectiveness of your CUDs \u00a0|\u00a0 Cloud Billing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:38:01.855589+00:00
+fetched_at: 2026-10-22T10:12:46.387629+00:00
 ---
 
 # Analyze the effectiveness of your CUDs  |  Cloud Billing  |  Google Cloud Documentation
@@ -29,7 +29,7 @@ This document explains how to use the **CUD analysis** report on the Google Clou
 
 You can purchase a commitment to receive committed-use discounts (CUDs). When you purchase a commitment, you commit to a minimum amount of usage or spend on a service or product for a specified term. In return, you receive discounts on your usage. Google Cloud offers two types of CUDs:
 
-  * **Resource-based CUDs** : You get a credit back to offset the on-demand price in exchange for your commitment to purchase a minimum level of Compute Engine resources belonging to a particular machine series and region. You can purchase resource-based commitments only for Compute Engine. Eligible resources include vCPUs, memory, GPUs, and local SSDs. For more information, see the [Resource-based CUDs documentation](https://docs.cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts)
+  * **Resource-based CUDs** : You get a credit back to offset the on-demand price in exchange for your commitment to purchase a minimum level of Compute Engine resources in a particular region. You can purchase resource-based commitments only for Compute Engine. Eligible resources include hardware resources (vCPUs, memory, GPUs, Local SSD disks, and sole-tenant nodes), software OS licenses, and block storage resources (Hyperdisk Exapools). However, CUD analysis reports are not supported for block storage commitments. For more information, see the [Resource-based CUDs documentation](https://docs.cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts).
   * **Spend-based CUDs** : You get a discount in exchange for your commitment to spend a minimum amount for eligible services for a specified time duration. Spend-based CUDs are available for a number of Google Cloud services. For more information, see [Spend-based CUDs](https://docs.cloud.google.com/docs/cuds#service-specific_spend-based_commitments).
 
 **Note:** The CUD analysis experience is available for resourced-based CUDs and legacy CUDs. CUDs purchased prior to the migration may still display using the legacy credit-based model until their term expires. As a result, you won't see discount rates directly, instead you will see the legacy process that gives back credits to offset the price you paid. For the affected and unaffected CUDs, see [Products covered by spend-based commitments](https://docs.cloud.google.com/docs/cuds-multiprice#affected-cuds).
@@ -326,6 +326,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/samples/healthcare-dicom-keeplist-deidentify-dataset/
 title: De-identify DICOM data using keeplist \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:53:22.324925+00:00
+fetched_at: 2026-10-22T08:33:11.177110+00:00
 ---
 
 # De-identify DICOM data using keeplist  |  Cloud Healthcare API  |  Google Cloud Documentation

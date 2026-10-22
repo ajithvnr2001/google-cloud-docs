@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/evaluation-overview/
 title: Gen AI evaluation service overview \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:23.969972+00:00
+fetched_at: 2026-10-22T08:37:04.855052+00:00
 ---
 
 # Gen AI evaluation service overview  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

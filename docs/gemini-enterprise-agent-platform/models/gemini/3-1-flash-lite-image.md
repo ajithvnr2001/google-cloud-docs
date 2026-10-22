@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite-image/
 title: Gemini 3.1 Flash-Lite Image (Nano Banana 2 Lite) \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:46:17.689639+00:00
+fetched_at: 2026-10-22T10:25:15.160358+00:00
 ---
 
 # Gemini 3.1 Flash-Lite Image (Nano Banana 2 Lite)  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

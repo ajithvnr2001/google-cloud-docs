@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/securing-on-premises/
 title: Securing non-Google Cloud applications using the On-Prem Connector \u00a0|\u00a0 Chrome Enterprise Premium \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:07:44.418998+00:00
+fetched_at: 2026-10-22T08:57:49.672503+00:00
 ---
 
 # Securing non-Google Cloud applications using the On-Prem Connector  |  Chrome Enterprise Premium  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/use-secret-manager/
 title: Use Secret Manager to handle secrets in AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:37.390973+00:00
+fetched_at: 2026-10-22T09:39:03.978061+00:00
 ---
 
 # Use Secret Manager to handle secrets in AlloyDB for PostgreSQL  |  Google Cloud Documentation

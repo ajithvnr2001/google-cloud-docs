@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/docs/samples/firestore-data-get-sub-collections/
 title: Get Firestore documents in nested collections \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:58:48.265104+00:00
+fetched_at: 2026-10-22T10:28:01.740209+00:00
 ---
 
 # Get Firestore documents in nested collections  |  Google Cloud Documentation

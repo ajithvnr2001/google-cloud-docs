@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/config-yaml-translation/
 title: Transform SQL translations with YAML \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:12:04.405393+00:00
+fetched_at: 2026-10-22T08:59:26.519349+00:00
 ---
 
 # Transform SQL translations with YAML  |  BigQuery  |  Google Cloud Documentation

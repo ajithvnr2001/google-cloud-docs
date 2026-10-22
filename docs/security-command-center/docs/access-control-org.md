@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/access-control-org/
 title: Control access with organization-level activations \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:45.561097+00:00
+fetched_at: 2026-10-22T08:27:20.206368+00:00
 ---
 
 # Control access with organization-level activations  |  Security Command Center  |  Google Cloud Documentation

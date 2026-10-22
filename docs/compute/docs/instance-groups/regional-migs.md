@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/regional-migs/
 title: About regional MIGs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:23:14.977242+00:00
+fetched_at: 2026-10-22T09:43:41.095249+00:00
 ---
 
 # About regional MIGs  |  Compute Engine  |  Google Cloud Documentation
@@ -246,13 +246,11 @@ Creating a single-zone regional MIG is not recommended because it offers the min
 
 ## Monitor instance distribution across zones
 
-To observe how your regional MIG allocates and balances instances across zones over time, you can use the **GCE MIG Instance Distribution Monitoring** dashboard in Cloud Monitoring. This preconfigured dashboard helps you to verify that your instance distribution is working as intended. You can use these insights to identify potential adjustments to optimize your infrastructure.
-
-To learn how to access the monitoring dashboard, see [Monitor instance distribution in MIGs](https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution).
+To observe how your regional MIG allocates and balances instances across zones over time, you can view the instance distribution for a specific MIG or aggregated data across multiple MIGs. You can use these insights to identify potential adjustments to optimize your infrastructure. For instructions on how to view the instance distribution, see [Monitor instance distribution in MIGs](https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution).
 
 ## What's next
 
-  * [Create a regional MIG](https://docs.cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups)
+  * [Create a regional MIG](https://docs.cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups).
   * [Monitor instance distribution in MIGs](https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution).
   * Learn how to build [scalable and resilient web applications](https://docs.cloud.google.com/solutions/scalable-and-resilient-apps).
   * Learn about [disaster recovery on Google Cloud Platform](https://docs.cloud.google.com/solutions/disaster-recovery-cookbook).
@@ -263,6 +261,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

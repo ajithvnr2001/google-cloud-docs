@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups/
 title: Create a MIG with VMs in multiple zones in a region \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:22:21.845197+00:00
+fetched_at: 2026-10-22T09:43:43.516417+00:00
 ---
 
 # Create a MIG with VMs in multiple zones in a region  |  Compute Engine  |  Google Cloud Documentation
@@ -283,6 +283,7 @@ For more information, see the following documents:
   * Preserve disks, metadata, and IP addresses across disruptive events like VM recreation, autohealing, and updates by [adding stateful configuration](https://docs.cloud.google.com/compute/docs/instance-groups/configuring-stateful-migs).
   * Learn about [working with managed instances](https://docs.cloud.google.com/compute/docs/instance-groups/working-with-managed-instances), for example, to delete, abandon, and recreate VMs in a MIG.
   * [View info](https://docs.cloud.google.com/compute/docs/instance-groups/getting-info-about-migs) about MIGs and their VMs.
+  * [Monitor instance distribution in MIGs](https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution) to observe how instances are distributed across zones.
   * [Simulate a zone outage for a regional MIG](https://docs.cloud.google.com/compute/docs/instance-groups/regional-mig-simulate-zonal-outage)
   * Learn how to [add an external HTTP(S) load balancer frontend to your instance group](https://docs.cloud.google.com/load-balancing/docs/https/setup-global-ext-https-compute). For information about other types of load balancers, see the [Load balancing overview](https://docs.cloud.google.com/load-balancing/docs/load-balancing-overview).
 
@@ -292,6 +293,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

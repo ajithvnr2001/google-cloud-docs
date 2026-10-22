@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.9.0/docs/order/
 title: Order hardware \u00a0|\u00a0 Google Distributed Cloud connected, version 1.9.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:39.693859+00:00
+fetched_at: 2026-10-22T08:25:40.065132+00:00
 ---
 
 # Order hardware  |  Google Distributed Cloud connected, version 1.9.0  |  Google Cloud Documentation

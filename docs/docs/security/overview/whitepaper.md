@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/overview/whitepaper/
 title: Google security overview \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:06:27.434998+00:00
+fetched_at: 2026-10-22T08:24:06.111062+00:00
 ---
 
 # Google security overview  |  Security  |  Google Cloud Documentation

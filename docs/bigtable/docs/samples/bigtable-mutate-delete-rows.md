@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-mutate-delete-rows/
 title: Delete rows with mutate \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:10:54.729576+00:00
+fetched_at: 2026-10-22T08:58:02.880873+00:00
 ---
 
 # Delete rows with mutate  |  Bigtable  |  Google Cloud Documentation

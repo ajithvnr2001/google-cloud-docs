@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-hw-create-table-hbase/
 title: Create a table (HBase) \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:10:54.769761+00:00
+fetched_at: 2026-10-22T08:57:33.967009+00:00
 ---
 
 # Create a table (HBase)  |  Bigtable  |  Google Cloud Documentation

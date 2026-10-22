@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/metadata/
 title: Object metadata \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:52:57.884917+00:00
+fetched_at: 2026-10-22T10:20:46.315647+00:00
 ---
 
 # Object metadata  |  Cloud Storage  |  Google Cloud Documentation
@@ -21,19 +21,17 @@ Send feedback
 
 #  Object metadata Stay organized with collections  Save and categorize content based on your preferences. 
 
-[Manage](https://docs.cloud.google.com/storage/docs/viewing-editing-metadata)
+The metadata for a Cloud Storage object identifies the object's properties and lets you control how the object behaves. An object's metadata includes non-editable fields such as the object's generation number, as well as configurable settings like caching behavior, retention configuration, and custom metadata.
 
-This page discusses the commonly-used metadata fields that are stored along with objects in Cloud Storage.
+## Overview of object metadata
 
-## Introduction
-
-Objects stored in Cloud Storage have _metadata_ associated with them. Metadata identifies properties of the object, as well as specifies how the object should be handled when it's accessed. Metadata exists as _key:value pairs_. For example, the [storage class](https://docs.cloud.google.com/storage/docs/storage-classes) of an object is represented by the metadata entry `storageClass:STANDARD`. `storageClass` is the _key_ for the metadata, and all objects have such a key associated with them. `STANDARD` specifies the _value_ this specific object has, and the value varies from object to object.
+Metadata is stored as _key-value pairs_. For example, the [storage class](https://docs.cloud.google.com/storage/docs/storage-classes) of an object is represented by the metadata entry `storageClass:STANDARD`. `storageClass` is the _key_ for the metadata, and all objects have such a key associated with them. `STANDARD` specifies the _value_ this specific object has, and the value differs from object to object.
 
 The mutability of metadata varies: some metadata you can edit at any time, some metadata you can only set at the time the object is created, and some metadata you can only view. For example, you can edit the value of the `Cache-Control` metadata at any time, but you can only assign the `storageClass` metadata when the object is created or rewritten, and you cannot directly edit the value for the `generation` metadata, though the `generation` value changes when the object is replaced.
 
 ## Editable metadata
 
-There are two categories of metadata that [users can change](https://docs.cloud.google.com/storage/docs/viewing-editing-metadata) for objects:
+You can edit the following categories of object metadata:
 
   * **Fixed-key metadata** : Metadata whose keys are set, but for which you can specify a value.
 
@@ -43,6 +41,8 @@ There are two categories of metadata that [users can change](https://docs.cloud.
 
 
 When editing metadata, you should generally avoid non-ascii characters, because they are not permitted in HTTP headers, which the XML API uses.
+
+For steps to edit object metadata, see [View and edit object metadata](https://docs.cloud.google.com/storage/docs/viewing-editing-metadata).
 
 ### Fixed-key metadata
 
@@ -303,6 +303,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

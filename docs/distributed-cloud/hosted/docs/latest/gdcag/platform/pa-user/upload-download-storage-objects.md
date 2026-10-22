@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/upload-download-storage-objects/
 title: Upload and download storage objects \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:59:17.219979+00:00
+fetched_at: 2026-10-22T10:14:06.065947+00:00
 ---
 
 # Upload and download storage objects  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -22,7 +22,7 @@ Send feedback
 
 #  Upload and download storage objects Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page shows you how to upload and download objects to and from Google Distributed Cloud (GDC) air-gapped storage buckets.
+Object storage in Google Distributed Cloud (GDC) air-gapped lets you transfer and retrieve files, directories, and versioned data across project-scoped buckets. You can run single-file or multipart operations through the GDC console or the gdcloud CLI and protect objects with custom `AEADKey` encryption.
 
 ## Before you begin
 
@@ -175,6 +175,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

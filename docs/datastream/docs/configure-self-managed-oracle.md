@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/configure-self-managed-oracle/
 title: Configure a self-managed Oracle database for CDC \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:36.889169+00:00
+fetched_at: 2026-10-22T08:26:18.802630+00:00
 ---
 
 # Configure a self-managed Oracle database for CDC  |  Datastream  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/text-to-speech/docs/gemini-tts-voice-replication/
 title: Gemini-TTS voice replication \u00a0|\u00a0 Cloud Text-to-Speech \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:00.741363+00:00
+fetched_at: 2026-10-22T09:12:32.873064+00:00
 ---
 
 # Gemini-TTS voice replication  |  Cloud Text-to-Speech  |  Google Cloud Documentation

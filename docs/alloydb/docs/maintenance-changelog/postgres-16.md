@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/maintenance-changelog/postgres-16/
 title: AlloyDB for PostgreSQL 16 maintenance changelog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:48.671620+00:00
+fetched_at: 2026-10-22T09:56:19.694560+00:00
 ---
 
 # AlloyDB for PostgreSQL 16 maintenance changelog  |  Google Cloud Documentation
@@ -23,7 +23,93 @@ Send feedback
 
 This changelog details maintenance changes and security updates for AlloyDB for PostgreSQL 16. You can use this changelog to track maintenance versions, product enhancements, and Common Vulnerabilities and Exposures (CVE) security patches. To receive these updates when they are released, add the following URL to your feed reader: `https://cloud.google.com/feeds/alloydb-alloydb-postgresql-16-maintenance-changelog.xml`.
 
-## POSTGRES_16.20260722.04_06 (latest)
+## POSTGRES_16.20260902.01_15 (latest)
+
+**Date released** | **Release type**  
+---|---  
+2026-10-20 | Automatic Maintenance  
+  
+### Security patches
+
+  * [CVE-2025-68768](https://nvd.nist.gov/vuln/detail/CVE-2025-68768)
+  * [CVE-2026-10536](https://nvd.nist.gov/vuln/detail/CVE-2026-10536)
+  * [CVE-2026-11564](https://nvd.nist.gov/vuln/detail/CVE-2026-11564)
+  * [CVE-2026-23346](https://nvd.nist.gov/vuln/detail/CVE-2026-23346)
+  * [CVE-2026-29518](https://nvd.nist.gov/vuln/detail/CVE-2026-29518)
+  * [CVE-2026-31419](https://nvd.nist.gov/vuln/detail/CVE-2026-31419)
+  * [CVE-2026-31613](https://nvd.nist.gov/vuln/detail/CVE-2026-31613)
+  * [CVE-2026-40226](https://nvd.nist.gov/vuln/detail/CVE-2026-40226)
+  * [CVE-2026-41035](https://nvd.nist.gov/vuln/detail/CVE-2026-41035)
+  * [CVE-2026-41991](https://nvd.nist.gov/vuln/detail/CVE-2026-41991)
+  * [CVE-2026-41992](https://nvd.nist.gov/vuln/detail/CVE-2026-41992)
+  * [CVE-2026-42766](https://nvd.nist.gov/vuln/detail/CVE-2026-42766)
+  * [CVE-2026-43617](https://nvd.nist.gov/vuln/detail/CVE-2026-43617)
+  * [CVE-2026-43618](https://nvd.nist.gov/vuln/detail/CVE-2026-43618)
+  * [CVE-2026-43619](https://nvd.nist.gov/vuln/detail/CVE-2026-43619)
+  * [CVE-2026-43620](https://nvd.nist.gov/vuln/detail/CVE-2026-43620)
+  * [CVE-2026-45232](https://nvd.nist.gov/vuln/detail/CVE-2026-45232)
+  * [CVE-2026-45446](https://nvd.nist.gov/vuln/detail/CVE-2026-45446)
+  * [CVE-2026-46193](https://nvd.nist.gov/vuln/detail/CVE-2026-46193)
+  * [CVE-2026-52946](https://nvd.nist.gov/vuln/detail/CVE-2026-52946)
+  * [CVE-2026-52967](https://nvd.nist.gov/vuln/detail/CVE-2026-52967)
+  * [CVE-2026-52972](https://nvd.nist.gov/vuln/detail/CVE-2026-52972)
+  * [CVE-2026-52975](https://nvd.nist.gov/vuln/detail/CVE-2026-52975)
+  * [CVE-2026-52981](https://nvd.nist.gov/vuln/detail/CVE-2026-52981)
+  * [CVE-2026-53061](https://nvd.nist.gov/vuln/detail/CVE-2026-53061)
+  * [CVE-2026-53096](https://nvd.nist.gov/vuln/detail/CVE-2026-53096)
+  * [CVE-2026-53111](https://nvd.nist.gov/vuln/detail/CVE-2026-53111)
+  * [CVE-2026-53207](https://nvd.nist.gov/vuln/detail/CVE-2026-53207)
+  * [CVE-2026-53239](https://nvd.nist.gov/vuln/detail/CVE-2026-53239)
+  * [CVE-2026-53287](https://nvd.nist.gov/vuln/detail/CVE-2026-53287)
+  * [CVE-2026-53295](https://nvd.nist.gov/vuln/detail/CVE-2026-53295)
+  * [CVE-2026-53314](https://nvd.nist.gov/vuln/detail/CVE-2026-53314)
+  * [CVE-2026-53337](https://nvd.nist.gov/vuln/detail/CVE-2026-53337)
+  * [CVE-2026-53345](https://nvd.nist.gov/vuln/detail/CVE-2026-53345)
+  * [CVE-2026-53349](https://nvd.nist.gov/vuln/detail/CVE-2026-53349)
+  * [CVE-2026-53352](https://nvd.nist.gov/vuln/detail/CVE-2026-53352)
+  * [CVE-2026-53354](https://nvd.nist.gov/vuln/detail/CVE-2026-53354)
+  * [CVE-2026-53361](https://nvd.nist.gov/vuln/detail/CVE-2026-53361)
+  * [CVE-2026-53369](https://nvd.nist.gov/vuln/detail/CVE-2026-53369)
+  * [CVE-2026-56123](https://nvd.nist.gov/vuln/detail/CVE-2026-56123)
+  * [CVE-2026-63865](https://nvd.nist.gov/vuln/detail/CVE-2026-63865)
+  * [CVE-2026-63886](https://nvd.nist.gov/vuln/detail/CVE-2026-63886)
+  * [CVE-2026-63887](https://nvd.nist.gov/vuln/detail/CVE-2026-63887)
+  * [CVE-2026-63888](https://nvd.nist.gov/vuln/detail/CVE-2026-63888)
+  * [CVE-2026-63913](https://nvd.nist.gov/vuln/detail/CVE-2026-63913)
+  * [CVE-2026-63919](https://nvd.nist.gov/vuln/detail/CVE-2026-63919)
+  * [CVE-2026-63920](https://nvd.nist.gov/vuln/detail/CVE-2026-63920)
+  * [CVE-2026-63922](https://nvd.nist.gov/vuln/detail/CVE-2026-63922)
+  * [CVE-2026-63968](https://nvd.nist.gov/vuln/detail/CVE-2026-63968)
+  * [CVE-2026-63969](https://nvd.nist.gov/vuln/detail/CVE-2026-63969)
+  * [CVE-2026-63985](https://nvd.nist.gov/vuln/detail/CVE-2026-63985)
+  * [CVE-2026-63992](https://nvd.nist.gov/vuln/detail/CVE-2026-63992)
+  * [CVE-2026-63994](https://nvd.nist.gov/vuln/detail/CVE-2026-63994)
+  * [CVE-2026-64002](https://nvd.nist.gov/vuln/detail/CVE-2026-64002)
+  * [CVE-2026-64003](https://nvd.nist.gov/vuln/detail/CVE-2026-64003)
+  * [CVE-2026-64006](https://nvd.nist.gov/vuln/detail/CVE-2026-64006)
+  * [CVE-2026-64007](https://nvd.nist.gov/vuln/detail/CVE-2026-64007)
+  * [CVE-2026-64025](https://nvd.nist.gov/vuln/detail/CVE-2026-64025)
+  * [CVE-2026-64046](https://nvd.nist.gov/vuln/detail/CVE-2026-64046)
+  * [CVE-2026-64047](https://nvd.nist.gov/vuln/detail/CVE-2026-64047)
+  * [CVE-2026-64073](https://nvd.nist.gov/vuln/detail/CVE-2026-64073)
+  * [CVE-2026-64109](https://nvd.nist.gov/vuln/detail/CVE-2026-64109)
+  * [CVE-2026-64113](https://nvd.nist.gov/vuln/detail/CVE-2026-64113)
+  * [CVE-2026-64114](https://nvd.nist.gov/vuln/detail/CVE-2026-64114)
+  * [CVE-2026-64115](https://nvd.nist.gov/vuln/detail/CVE-2026-64115)
+  * [CVE-2026-64116](https://nvd.nist.gov/vuln/detail/CVE-2026-64116)
+  * [CVE-2026-64121](https://nvd.nist.gov/vuln/detail/CVE-2026-64121)
+  * [CVE-2026-64182](https://nvd.nist.gov/vuln/detail/CVE-2026-64182)
+  * [CVE-2026-64183](https://nvd.nist.gov/vuln/detail/CVE-2026-64183)
+  * [CVE-2026-64185](https://nvd.nist.gov/vuln/detail/CVE-2026-64185)
+  * [CVE-2026-64217](https://nvd.nist.gov/vuln/detail/CVE-2026-64217)
+  * [CVE-2026-64220](https://nvd.nist.gov/vuln/detail/CVE-2026-64220)
+  * [CVE-2026-74259](https://nvd.nist.gov/vuln/detail/CVE-2026-74259)
+  * [CVE-2026-8458](https://nvd.nist.gov/vuln/detail/CVE-2026-8458)
+  * [CVE-2026-8924](https://nvd.nist.gov/vuln/detail/CVE-2026-8924)
+
+
+
+## POSTGRES_16.20260722.04_06
 
 **Date released** | **Release type**  
 ---|---  
@@ -422,6 +508,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

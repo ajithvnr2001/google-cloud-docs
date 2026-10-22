@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/voice-agent-design/
 title: Voice agent design best practices \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:25.222937+00:00
+fetched_at: 2026-10-22T08:33:19.393128+00:00
 ---
 
 # Voice agent design best practices  |  Dialogflow ES  |  Google Cloud Documentation

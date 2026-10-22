@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/eval-python-sdk/metrics-templates/
 title: Metric prompt templates for model-based evaluation \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:39.512519+00:00
+fetched_at: 2026-10-22T10:22:47.619439+00:00
 ---
 
 # Metric prompt templates for model-based evaluation  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

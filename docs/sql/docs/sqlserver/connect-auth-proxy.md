@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/connect-auth-proxy/
 title: Connect using the Cloud SQL Auth Proxy \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:28:25.284058+00:00
+fetched_at: 2026-10-22T10:41:36.410856+00:00
 ---
 
 # Connect using the Cloud SQL Auth Proxy  |  Cloud SQL for SQL Server  |  Google Cloud Documentation
@@ -779,9 +779,9 @@ For production workloads, the Cloud SQL Auth Proxy doesn't currently provide bui
 **Note:** If a SQL Server instance has **Require SSL/TLS** checked, even with Cloud SQL Auth Proxy or Cloud SQL Connectors, the client application needs to have TLS/SSL configured the same way as if Cloud SQL Auth Proxy or Cloud SQL Connectors aren't involved, otherwise a connection attempt might fail. For successful connections, Cloud SQL Auth Proxy or Cloud SQL Connectors add another layer of encryption besides SQL Server's native encryption. In other words, the connection between the Proxy Client/Cloud SQL Connectors and the Proxy Server would be double-encrypted.   
 **Double encryption** can negatively impact SQL Server performance. We suggest that customers consider carefully before requiring SSL and using Cloud SQL Auth Proxy or Cloud SQL Connectors at the same time. 
 
-### Enforce the use of the Cloud SQL Auth Proxy
+### Enforce the use of Cloud SQL connectors
 
-Enable the use of the Cloud SQL Auth Proxy in Cloud SQL using [ConnectorEnforcement](https://docs.cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/instances#connectorenforcement).
+You can enforce the use of the Cloud SQL Auth Proxy or Cloud SQL Language Connectors in Cloud SQL instance connections using [ConnectorEnforcement](https://docs.cloud.google.com/sql/docs/sqlserver/admin-api/rest/v1/instances#ConnectorEnforcement).
 
 If you're using a [Private Service Connect-enabled instance](https://docs.cloud.google.com/sql/docs/sqlserver/about-private-service-connect), then there's a limitation. If the instance has connector enforcement enabled, then you can't create read replicas for the instance. Similarly, if the instance has read replicas, then you can't enable connector enforcement for the instance.
 
@@ -798,7 +798,7 @@ To disable the enforcement, use the following line of code: `--connector-enforce
 
 ### REST v1
 
-The following command enforces the use of Cloud SQL connectors
+The following command enforces the use of Cloud SQL connectors.
 
 Before using any of the request data, make the following replacements: 
 
@@ -1051,6 +1051,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

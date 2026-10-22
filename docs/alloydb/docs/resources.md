@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/resources/
 title: Resources \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:39.393141+00:00
+fetched_at: 2026-10-22T10:41:57.580821+00:00
 ---
 
 # Resources  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,13 +21,16 @@ Send feedback
 
 #  Resources Stay organized with collections  Save and categorize content based on your preferences. 
 
-  * ### [Pricing Understand how your AlloyDB usage will be charged.  ](https://cloud.google.com/alloydb/pricing)
-  * ### [Committed use discounts Understand how your AlloyDB usage is charged.  ](https://docs.cloud.google.com/alloydb/cud)
+To plan deployments, estimate costs, and track service updates for AlloyDB for PostgreSQL, you can use pricing, regional availability, quotas and limits, partner integrations, release notes, and Service Level Agreement (SLA) resources.
+
+  * ### [Pricing Understand how your AlloyDB usage is charged.  ](https://cloud.google.com/alloydb/pricing)
+  * ### [Committed use discounts Reduce costs for predictable workloads with AlloyDB committed use discounts.  ](https://docs.cloud.google.com/alloydb/cud)
   * ### [Locations See the locations where AlloyDB is available.  ](https://docs.cloud.google.com/alloydb/docs/locations)
   * ### [Quotas and limits Understand the AlloyDB quotas and limits applied to your projects and instances.  ](https://docs.cloud.google.com/alloydb/quotas)
-  * ### [Google Cloud Ready - AlloyDB A list of partner solutions that have met the requirements and are validated to ensure the best integration possible.  ](https://docs.cloud.google.com/alloydb/docs/cloud-ready/partners)
-  * ### [Release notes This page documents production updates and known issues for AlloyDB.  ](https://docs.cloud.google.com/alloydb/docs/release-notes)
-  * ### [Service Level Agreement Read the current Service Level Agreement (SLA) for AlloyDB.  ](https://docs.cloud.google.com/alloydb/sla)
+  * ### [Google Cloud Ready - AlloyDB Guidance for solution partners, including the requirements and validation steps for AlloyDB integrations.  ](https://docs.cloud.google.com/alloydb/docs/cloud-ready/overview)
+  * ### [Google Cloud Ready - AlloyDB partners Explore validated partner solutions that integrate with AlloyDB.  ](https://docs.cloud.google.com/alloydb/docs/cloud-ready/partners)
+  * ### [Release notes Review production updates, feature launches, and known issues for AlloyDB.  ](https://docs.cloud.google.com/alloydb/docs/release-notes)
+  * ### [Service Level Agreement Read the Service Level Agreement (SLA) for AlloyDB.  ](https://cloud.google.com/alloydb/sla)
 
 
 

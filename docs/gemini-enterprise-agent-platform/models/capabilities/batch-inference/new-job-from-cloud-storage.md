@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/batch-inference/new-job-from-cloud-storage/
 title: Batch inference from Cloud Storage \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:43:43.718227+00:00
+fetched_at: 2026-10-22T10:14:07.336036+00:00
 ---
 
 # Batch inference from Cloud Storage  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

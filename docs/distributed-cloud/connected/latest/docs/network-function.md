@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/latest/docs/network-function/
 title: Network Function operator \u00a0|\u00a0 Google Distributed Cloud connected \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:34.232531+00:00
+fetched_at: 2026-10-22T08:24:56.860606+00:00
 ---
 
 # Network Function operator  |  Google Distributed Cloud connected  |  Google Cloud Documentation

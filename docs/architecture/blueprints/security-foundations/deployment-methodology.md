@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/blueprints/security-foundations/deployment-methodology/
 title: Deployment methodology \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:27:36.760810+00:00
+fetched_at: 2026-10-22T09:38:08.739955+00:00
 ---
 
 # Deployment methodology  |  Cloud Architecture Center  |  Google Cloud Documentation

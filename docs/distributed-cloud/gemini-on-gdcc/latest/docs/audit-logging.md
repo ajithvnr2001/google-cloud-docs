@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/gemini-on-gdcc/latest/docs/audit-logging/
 title: Gemini on Google Distributed Cloud connected API audit logging \u00a0|\u00a0 Gemini on GDC API on GDC connected \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:24.513607+00:00
+fetched_at: 2026-10-22T08:26:17.917885+00:00
 ---
 
 # Gemini on Google Distributed Cloud connected API audit logging  |  Gemini on GDC API on GDC connected  |  Google Cloud Documentation

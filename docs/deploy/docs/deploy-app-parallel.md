@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/deploy-app-parallel/
 title: Quickstart: Deploy an app to multiple targets at the same time \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:48.452902+00:00
+fetched_at: 2026-10-22T08:24:51.522751+00:00
 ---
 
 # Quickstart: Deploy an app to multiple targets at the same time  |  Google Cloud Documentation

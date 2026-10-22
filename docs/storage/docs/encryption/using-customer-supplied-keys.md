@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/encryption/using-customer-supplied-keys/
 title: Use customer-supplied encryption keys \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:52:38.181647+00:00
+fetched_at: 2026-10-22T09:50:41.251421+00:00
 ---
 
 # Use customer-supplied encryption keys  |  Cloud Storage  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback
 
 #  Use customer-supplied encryption keys Stay organized with collections  Save and categorize content based on your preferences. 
 
-[Overview](https://docs.cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+Customer-supplied encryption keys (CSEK) let you encrypt Cloud Storage objects by using cryptographic keys that you generate and control. This encryption option is best for scenarios where you have an existing key management system outside of Google Cloud and you want to use those keys to encrypt your data.
 
-This page describes how to use your own encryption key, referred to as a _customer-supplied encryption key_ , with Cloud Storage. For other encryption options in Cloud Storage, see [Data Encryption Options](https://docs.cloud.google.com/storage/docs/encryption).
+For background information about customer-supplied encryption keys, see [Customer-supplied encryption keys](https://docs.cloud.google.com/storage/docs/encryption/customer-supplied-keys). For information about other encryption options in Cloud Storage, see [Data encryption options](https://docs.cloud.google.com/storage/docs/encryption).
 
 ## Generate your own encryption key
 
@@ -1614,6 +1614,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

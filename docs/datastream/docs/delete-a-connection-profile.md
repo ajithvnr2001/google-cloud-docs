@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/delete-a-connection-profile/
 title: Delete a connection profile \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:33.576704+00:00
+fetched_at: 2026-10-22T08:26:13.119528+00:00
 ---
 
 # Delete a connection profile  |  Datastream  |  Google Cloud Documentation

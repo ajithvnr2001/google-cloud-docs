@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/vpcsc-data-products/
 title: Use VPC Service Controls with data products \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:15:50.024163+00:00
+fetched_at: 2026-10-22T09:49:24.161193+00:00
 ---
 
 # Use VPC Service Controls with data products  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -23,11 +23,11 @@ Send feedback
 
 #  Use VPC Service Controls with data products Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to configure VPC Service Controls to secure your data products.
+[VPC Service Controls](https://docs.cloud.google.com/vpc-service-controls/docs/overview) lets you define service perimeters that help prevent data exfiltration from your [data products](https://docs.cloud.google.com/knowledge-catalog/docs/data-products-overview). You can configure ingress and egress rules to keep communication between data products, data assets, and users within authorized boundaries.
 
-Use [VPC Service Controls](https://docs.cloud.google.com/vpc-service-controls/docs/overview) to prevent data exfiltration and ensure that communication between data products, data assets, and users stays within authorized perimeters.
+## How VPC Service Controls works with data products
 
-A [data product](https://docs.cloud.google.com/knowledge-catalog/docs/data-products-overview) is a logical grouping of resources (data assets) that can span multiple projects. When your projects belong to different VPC Service Controls perimeters, you must configure ingress and egress rules to allow the Dataplex API to manage resources and metadata.
+A data product is a logical grouping of resources, called data assets, that can span multiple projects. When your projects belong to different VPC Service Controls perimeters, you must configure ingress and egress rules so that the Dataplex API can manage resources and metadata across perimeters.
 
 ## Before you begin
 
@@ -157,6 +157,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

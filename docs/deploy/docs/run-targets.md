@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/run-targets/
 title: Deploy a Cloud Run service, job, or worker pool \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:44.507889+00:00
+fetched_at: 2026-10-22T08:25:55.066824+00:00
 ---
 
 # Deploy a Cloud Run service, job, or worker pool  |  Google Cloud Documentation

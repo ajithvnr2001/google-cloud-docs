@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/fable-5/
 title: Anthropic's Claude Fable 5 on Google Cloud \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:43:37.932929+00:00
+fetched_at: 2026-10-22T10:23:39.238476+00:00
 ---
 
 # Anthropic's Claude Fable 5 on Google Cloud  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

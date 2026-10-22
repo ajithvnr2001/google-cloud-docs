@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/transfer-troubleshooting/
 title: Troubleshoot transfer configurations \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:46:28.084218+00:00
+fetched_at: 2026-10-22T09:49:19.164076+00:00
 ---
 
 # Troubleshoot transfer configurations  |  BigQuery  |  Google Cloud Documentation
@@ -1010,11 +1010,21 @@ For YouTube Content Manager reports, the user setting up the transfer must have 
 
 Error: `Quota exceeded: Your project exceeded quota for imports per project.`
     **Resolution:** Verify you have not scheduled too many transfers in your project. For information on calculating the number of load jobs initiated by a transfer, see [Quotas and limits](https://docs.cloud.google.com/bigquery/quotas).
+Error: `RESOURCE_EXHAUSTED: Rate limit exceeded.` (or similar rate limit errors when transferring data from third-party applications such as ServiceNow, Facebook Ads, Confluence, or PayPal)
+    
+
+**Resolution:** When using the BigQuery Data Transfer Service to ingest data from third-party applications, rate limit errors can originate from the external source application throttling data extraction rather than BigQuery ingestion limits. To resolve this error, do the following:
+
+  * **Verify the source of the error:** Inspect the transfer run logs. If the error message references the external connector or third-party data source, the rate limit was enforced by the external platform.
+  * **Check API rate limits in the third-party platform:** Sign in to your external platform to review API usage and rate limits (for example, upgrading a Facebook Ads app to Advanced Access or reviewing inbound REST API rate limits in ServiceNow), and ensure no parallel workflows are sharing the same credentials.
+  * **Reduce transfer frequency or stagger schedules:** Modify your transfer configuration schedule to run less frequently and avoid running parallel transfers against the same external account simultaneously.
+
+
 
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

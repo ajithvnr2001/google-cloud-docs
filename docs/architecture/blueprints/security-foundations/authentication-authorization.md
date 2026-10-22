@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/blueprints/security-foundations/authentication-authorization/
 title: Authentication and authorization \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:27:38.244573+00:00
+fetched_at: 2026-10-22T09:38:09.052487+00:00
 ---
 
 # Authentication and authorization  |  Cloud Architecture Center  |  Google Cloud Documentation

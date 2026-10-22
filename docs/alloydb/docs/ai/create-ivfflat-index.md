@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/create-ivfflat-index/
 title: Create an IVFFLAT index \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:47.899019+00:00
+fetched_at: 2026-10-22T09:39:12.133880+00:00
 ---
 
 # Create an IVFFLAT index  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

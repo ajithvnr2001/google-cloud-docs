@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/ttl/
 title: Manage data retention with TTL policies \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:15.630726+00:00
+fetched_at: 2026-10-22T08:25:04.198620+00:00
 ---
 
 # Manage data retention with TTL policies  |  Firestore in Datastore mode  |  Google Cloud Documentation

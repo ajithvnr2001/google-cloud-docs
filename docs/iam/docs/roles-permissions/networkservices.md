@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/networkservices/
 title: Network Services roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:42:05.590406+00:00
+fetched_at: 2026-10-22T08:32:02.583175+00:00
 ---
 
 # Network Services roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

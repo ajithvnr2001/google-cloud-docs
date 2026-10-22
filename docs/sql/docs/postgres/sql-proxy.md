@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/sql-proxy/
 title: About the Cloud SQL Auth Proxy \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:24.685665+00:00
+fetched_at: 2026-10-22T10:41:37.124227+00:00
 ---
 
 # About the Cloud SQL Auth Proxy  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -80,6 +80,13 @@ The Cloud SQL Auth Proxy doesn't provide [connection pooling](https://docs.cloud
 The following diagram shows how the Cloud SQL Auth Proxy connects to Cloud SQL:
 
 ![Diagram of the Cloud SQL Auth Proxy connecting from client software to SQL instance](https://docs.cloud.google.com/static/sql/images/proxyconnection.svg)
+
+As shown in the diagram, the connection uses the following ports:
+
+  * **From the client application to the local Cloud SQL Auth Proxy client:** Your application connects to the Cloud SQL Auth Proxy on the client machine using a Unix domain socket or a local TCP port. By default, standard database TCP ports are `3306` for MySQL, `5432` for PostgreSQL, and `1433` for SQL Server.
+  * **From the Cloud SQL Auth Proxy client to the Cloud SQL instance:** The Cloud SQL Auth Proxy establishes a secure tunnel to the proxy server process on the Cloud SQL instance using destination TCP port `3307`.
+
+
 
 ## Requirements for using the Cloud SQL Auth Proxy
 
@@ -296,15 +303,15 @@ If you're connecting to an instance that has a write endpoint, then you can conn
 
 The Cloud SQL Auth Proxy Docker image is based on a specific version of the Cloud SQL Auth Proxy. When a new version of the Cloud SQL Auth Proxy becomes available, pull the new version of the Cloud SQL Auth Proxy Docker image to keep your environment up to date. You can see the current version of the Cloud SQL Auth Proxy by checking the [ Cloud SQL Auth Proxy GitHub releases page](https://github.com/GoogleCloudPlatform/cloudsql-proxy/releases).
 
-### How to enforce use of the Cloud SQL Auth Proxy
+### How to enforce use of the Cloud SQL Auth Proxy or Cloud SQL Language Connectors
 
-You can enforce the use of the Cloud SQL Auth Proxy in Cloud SQL instance connections using [ConnectorEnforcement](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/instances#ConnectorEnforcement). With connector enforcement, direct database connection are rejected.
+You can enforce the use of the Cloud SQL Auth Proxy or Cloud SQL Language Connectors in Cloud SQL instance connections using [ConnectorEnforcement](https://docs.cloud.google.com/sql/docs/postgres/admin-api/rest/v1/instances#ConnectorEnforcement). With connector enforcement, direct database connections are rejected.
 
 To use connector enforcement, you use the `ConnectorEnforcement` field in the `instances` API.
 
 If you're using a [Private Service Connect-enabled instance](https://docs.cloud.google.com/sql/docs/postgres/about-private-service-connect), then there's a limitation. If the instance has connector enforcement enabled, then you can't create read replicas for the instance. Similarly, if the instance has read replicas, then you can't enable connector enforcement for the instance.
 
-For more information about how to enforce using only the Cloud SQL Auth Proxy or Cloud SQL Language Connectors to connect to an instance, see [Enforce the use of the Cloud SQL Auth Proxy](https://docs.cloud.google.com/sql/docs/postgres/connect-auth-proxy#enforce).
+For more information about how to enforce using the Cloud SQL Auth Proxy or Cloud SQL Language Connectors to connect to an instance, see [Enforce the use of Cloud SQL connectors](https://docs.cloud.google.com/sql/docs/postgres/connect-auth-proxy#enforce).
 
 ## About the Cloud SQL Proxy Operator
 
@@ -326,6 +333,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

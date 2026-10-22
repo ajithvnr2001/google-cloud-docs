@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerydatatransfer-update-config/
 title: Update a transfer configuration \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:37:32.683452+00:00
+fetched_at: 2026-10-22T08:35:07.021847+00:00
 ---
 
 # Update a transfer configuration  |  BigQuery  |  Google Cloud Documentation

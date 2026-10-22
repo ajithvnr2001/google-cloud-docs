@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/parameters/
 title: Pass parameters to your deployment \u00a0|\u00a0 Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:45.739200+00:00
+fetched_at: 2026-10-22T08:25:16.615723+00:00
 ---
 
 # Pass parameters to your deployment  |  Cloud Deploy  |  Google Cloud Documentation

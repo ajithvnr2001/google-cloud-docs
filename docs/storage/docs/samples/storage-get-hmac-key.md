@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-get-hmac-key/
 title: Get an HMAC key \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:30.952905+00:00
+fetched_at: 2026-10-22T10:29:20.668094+00:00
 ---
 
 # Get an HMAC key  |  Cloud Storage  |  Google Cloud Documentation

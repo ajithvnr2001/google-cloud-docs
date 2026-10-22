@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-agent-kit/billing-questions/
 title: Billing questions \u00a0|\u00a0 Google Cloud Data Agent Kit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:26.456161+00:00
+fetched_at: 2026-10-22T08:26:11.988327+00:00
 ---
 
 # Billing questions  |  Google Cloud Data Agent Kit  |  Google Cloud Documentation

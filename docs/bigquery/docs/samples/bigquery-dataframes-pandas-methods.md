@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-dataframes-pandas-methods/
 title: Run queries using the BigQuery DataFrames bigframes.pandas APIs \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:41:02.177446+00:00
+fetched_at: 2026-10-22T09:17:49.160096+00:00
 ---
 
 # Run queries using the BigQuery DataFrames bigframes.pandas APIs  |  Google Cloud Documentation

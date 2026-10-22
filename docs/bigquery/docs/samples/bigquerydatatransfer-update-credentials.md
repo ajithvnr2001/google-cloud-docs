@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerydatatransfer-update-credentials/
 title: Update transfer configuration credentials \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T19:51:08.956780+00:00
+fetched_at: 2026-10-22T08:35:00.119605+00:00
 ---
 
 # Update transfer configuration credentials  |  BigQuery  |  Google Cloud Documentation

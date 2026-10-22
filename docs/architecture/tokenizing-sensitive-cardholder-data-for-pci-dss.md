@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/tokenizing-sensitive-cardholder-data-for-pci-dss/
 title: Tokenizing sensitive cardholder data for PCI DSS \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:15.764152+00:00
+fetched_at: 2026-10-22T09:38:00.750062+00:00
 ---
 
 # Tokenizing sensitive cardholder data for PCI DSS  |  Cloud Architecture Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-director/docs/choose-consumption-option/
 title: Choose a consumption option \u00a0|\u00a0 Cluster Director \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:37:11.350616+00:00
+fetched_at: 2026-10-22T09:25:06.918911+00:00
 ---
 
 # Choose a consumption option  |  Cluster Director  |  Google Cloud Documentation

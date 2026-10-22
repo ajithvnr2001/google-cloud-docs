@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/start/use-terraform-vertex-ai/
 title: Terraform support for Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:35.493086+00:00
+fetched_at: 2026-10-22T10:23:39.003371+00:00
 ---
 
 # Terraform support for Gemini Enterprise Agent Platform  |  Google Cloud Documentation

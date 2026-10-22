@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/create-alloydb-stream-automated/
 title: Create an AlloyDB stream using the automated flow \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:34.560368+00:00
+fetched_at: 2026-10-22T08:25:15.009821+00:00
 ---
 
 # Create an AlloyDB stream using the automated flow  |  Datastream  |  Google Cloud Documentation

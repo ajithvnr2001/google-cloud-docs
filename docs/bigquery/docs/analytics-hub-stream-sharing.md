@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/analytics-hub-stream-sharing/
 title: Stream sharing with Pub/Sub \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:49:17.606875+00:00
+fetched_at: 2026-10-22T08:56:48.561283+00:00
 ---
 
 # Stream sharing with Pub/Sub  |  BigQuery  |  Google Cloud Documentation

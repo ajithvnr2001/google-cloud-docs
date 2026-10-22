@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/blueprints/enterprise-application-blueprint/
 title: Deploy an enterprise developer platform on Google Cloud \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:23:22.303725+00:00
+fetched_at: 2026-10-22T09:38:11.302620+00:00
 ---
 
 # Deploy an enterprise developer platform on Google Cloud  |  Cloud Architecture Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/network-connectivity-options/
 title: Network connectivity methods \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:31.018051+00:00
+fetched_at: 2026-10-22T08:28:21.641812+00:00
 ---
 
 # Network connectivity methods  |  Datastream  |  Google Cloud Documentation

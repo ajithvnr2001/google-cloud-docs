@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/use-rag-in-live-api/
 title: Use RAG Engine on Gemini Enterprise Agent Platform in Gemini Live API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:07.135532+00:00
+fetched_at: 2026-10-22T10:26:20.782156+00:00
 ---
 
 # Use RAG Engine on Gemini Enterprise Agent Platform in Gemini Live API  |  Google Cloud Documentation

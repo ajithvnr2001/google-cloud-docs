@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/create-a-stream-automated/
 title: Create a Cloud SQL stream using the automated flow \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:35.140753+00:00
+fetched_at: 2026-10-22T08:25:11.374107+00:00
 ---
 
 # Create a Cloud SQL stream using the automated flow  |  Datastream  |  Google Cloud Documentation

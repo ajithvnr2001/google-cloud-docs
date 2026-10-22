@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/audit/configure-data-access/
 title: Enable Data Access audit logs \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:05.705851+00:00
+fetched_at: 2026-10-22T10:44:03.532590+00:00
 ---
 
 # Enable Data Access audit logs  |  Cloud Logging  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Enable Data Access audit logs Stay organized with collections  Save and categorize content based on your preferences. 
 
-This guide explains how to enable or disable some or all [Data Access audit logs](https://docs.cloud.google.com/logging/docs/audit#data-access) in your Google Cloud projects, billing accounts, folders, and organizations by using the Google Cloud console or the API.
+[Data Access audit logs](https://docs.cloud.google.com/logging/docs/audit#data-access) let you record API calls that read resource configurations or metadata, as well as user-driven API calls that create, modify, or read user-provided resource data. Because these logs are disabled by default for most services, you can explicitly enable, configure, or disable them for your Google Cloud projects, billing accounts, folders, and organizations by using the Google Cloud console or the API.
 
 ## Before you begin
 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deploy/error-code-429/
 title: Error code 429 \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:25.577601+00:00
+fetched_at: 2026-10-22T10:29:34.731146+00:00
 ---
 
 # Error code 429  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

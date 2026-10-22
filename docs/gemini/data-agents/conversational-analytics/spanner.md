@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/conversational-analytics/spanner/
 title: Conversational analytics for Spanner overview \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:36:50.489694+00:00
+fetched_at: 2026-10-22T08:51:34.385580+00:00
 ---
 
 # Conversational analytics for Spanner overview  |  Data Agents  |  Google Cloud Documentation

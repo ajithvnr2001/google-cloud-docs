@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/operational-excellence/continuously-improve-and-innovate/
 title: Continuously improve and innovate \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:03.505455+00:00
+fetched_at: 2026-10-22T09:07:58.049666+00:00
 ---
 
 # Continuously improve and innovate  |  Cloud Architecture Center  |  Google Cloud Documentation

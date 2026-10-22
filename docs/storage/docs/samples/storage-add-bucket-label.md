@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-add-bucket-label/
 title: Add a label to a bucket \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:06:35.987091+00:00
+fetched_at: 2026-10-22T10:31:48.832188+00:00
 ---
 
 # Add a label to a bucket  |  Cloud Storage  |  Google Cloud Documentation

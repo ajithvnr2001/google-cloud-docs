@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/use-data-ingestion/
 title: Use data ingestion with RAG Engine \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:01.895454+00:00
+fetched_at: 2026-10-22T10:25:28.661656+00:00
 ---
 
 # Use data ingestion with RAG Engine  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -366,18 +366,18 @@ Use your Drive ID to list the children of the root directory:
     
     
         from vertexai.preview import rag
-        from vertexai.preview.rag.utils import [resources](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.SandboxEnvironmentTemplateCustomContainerEnvironmentDict.html#vertexai__genai_types_SandboxEnvironmentTemplateCustomContainerEnvironmentDict_resources)
-        import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+        from vertexai.preview.rag.utils import [resources](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.SandboxEnvironmentTemplateCustomContainerEnvironmentDict.html#vertexai__genai_types_SandboxEnvironmentTemplateCustomContainerEnvironmentDict_resources)
+        import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
     
-        [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(
+        [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(
             project="PROJECT_ID",
             location="REGION",
         )
     
         # SharePoint Example.
-        source = [resources](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.SandboxEnvironmentTemplateCustomContainerEnvironmentDict.html#vertexai__genai_types_SandboxEnvironmentTemplateCustomContainerEnvironmentDict_resources).SharePointSources(
+        source = [resources](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.SandboxEnvironmentTemplateCustomContainerEnvironmentDict.html#vertexai__genai_types_SandboxEnvironmentTemplateCustomContainerEnvironmentDict_resources).SharePointSources(
             share_point_sources=[
-                [resources](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.SandboxEnvironmentTemplateCustomContainerEnvironmentDict.html#vertexai__genai_types_SandboxEnvironmentTemplateCustomContainerEnvironmentDict_resources).SharePointSource(
+                [resources](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.SandboxEnvironmentTemplateCustomContainerEnvironmentDict.html#vertexai__genai_types_SandboxEnvironmentTemplateCustomContainerEnvironmentDict_resources).SharePointSource(
                     client_id="CLIENT_ID",
                     client_secret="API_KEY_SECRET_VERSION",
                     tenant_id="SHAREPOINT_TENANT_ID",

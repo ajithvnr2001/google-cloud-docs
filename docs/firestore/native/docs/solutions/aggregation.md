@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/solutions/aggregation/
 title: Write-time aggregations \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:58:41.357465+00:00
+fetched_at: 2026-10-22T10:28:08.674708+00:00
 ---
 
 # Write-time aggregations  |  Firestore in Native mode  |  Google Cloud Documentation
@@ -93,7 +93,7 @@ Android
         .collection("ratings")
         .get()
     
-    [SolutionAggregation.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/SolutionAggregation.kt#L31-L34)
+    [SolutionAggregation.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/SolutionAggregation.kt#L31-L34)
 
 ###  Java  
 Android
@@ -104,7 +104,7 @@ Android
             .collection("ratings")
             .get();
     
-    [SolutionAggregation.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/SolutionAggregation.java#L44-L47)
+    [SolutionAggregation.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/SolutionAggregation.java#L44-L47)
 
 Rather than fetching all ratings and then computing aggregate information, we can store this information on the restaurant document itself:
 
@@ -185,7 +185,7 @@ Android
     
     val arinell = Restaurant("Arinell Pizza", 4.65, 683)
     
-    [SolutionAggregation.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/SolutionAggregation.kt#L25-L25)
+    [SolutionAggregation.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/SolutionAggregation.kt#L25-L25)
 
 ###  Java  
 Android
@@ -206,7 +206,7 @@ Android
     
     Restaurant arinell = new Restaurant("Arinell Pizza", 4.65, 683);
     
-    [SolutionAggregation.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/SolutionAggregation.java#L38-L38)
+    [SolutionAggregation.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/SolutionAggregation.java#L38-L38)
 
 In order to keep these aggregations consistent, they must be updated each time a new rating is added to the subcollection. One way to achieve consistency is to perform the add and the update in a single transaction:
 
@@ -371,7 +371,7 @@ Android
         }
     }
     
-    [SolutionAggregation.kt](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/kotlin/SolutionAggregation.kt#L39-L69)
+    [SolutionAggregation.kt](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/kotlin/SolutionAggregation.kt#L39-L69)
 
 ###  Java  
 Android
@@ -411,7 +411,7 @@ Android
         });
     }
     
-    [SolutionAggregation.java](https://github.com/firebase/snippets-android/blob/12ec906c9ccba5acf8d47009fd4f00370b186b9b/firestore/app/src/main/java/com/google/example/firestore/SolutionAggregation.java#L52-L84)
+    [SolutionAggregation.java](https://github.com/firebase/snippets-android/blob/4d625814cc35f931646387cd6211a213382b9740/firestore/app/src/main/java/com/google/example/firestore/SolutionAggregation.java#L52-L84)
 
 Using a transaction keeps your aggregate data consistent with the underlying collection. To read more about transactions in Firestore, see [Transactions and Batched Writes](https://docs.cloud.google.com/firestore/native/docs/manage-data/transactions).
 
@@ -479,6 +479,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-19 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

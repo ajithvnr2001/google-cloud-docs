@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/use-data-products/
 title: Use data products \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:14:09.467877+00:00
+fetched_at: 2026-10-22T09:49:27.307684+00:00
 ---
 
 # Use data products  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -23,9 +23,9 @@ Send feedback
 
 #  Use data products Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document is intended for Knowledge Catalog (formerly Dataplex Universal Catalog) data product consumers who want to discover and use data products for their use cases.
+Data products in Knowledge Catalog (formerly Dataplex Universal Catalog) let you find curated asset collections and request access through built-in approval workflows. Once approved, you can query the underlying data, such as BigQuery tables, using your user credentials, a service account, or a remote Model Context Protocol (MCP) server.
 
-For more information about the architecture and key concepts of data products, see [About data products](https://docs.cloud.google.com/knowledge-catalog/docs/data-products-overview).
+This document is intended for data product consumers. For more information about the architecture and key concepts of data products, see [About data products](https://docs.cloud.google.com/knowledge-catalog/docs/data-products-overview).
 
 ## Before you begin
 
@@ -336,6 +336,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

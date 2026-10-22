@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/import-export-best-practices/
 title: Best practices for importing and exporting data \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:59.810243+00:00
+fetched_at: 2026-10-22T09:36:55.244854+00:00
 ---
 
 # Best practices for importing and exporting data  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

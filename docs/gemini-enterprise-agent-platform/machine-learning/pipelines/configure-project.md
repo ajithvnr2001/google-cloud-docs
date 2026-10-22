@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/configure-project/
 title: Configure your Google Cloud project for Gemini Enterprise Agent Platform Pipelines \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:43.390920+00:00
+fetched_at: 2026-10-22T10:22:49.212660+00:00
 ---
 
 # Configure your Google Cloud project for Gemini Enterprise Agent Platform Pipelines  |  Google Cloud Documentation

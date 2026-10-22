@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/document-ai/docs/samples/documentai-deploy-processor-version/
 title: Deploy a processor version \u00a0|\u00a0 Document AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:39:46.089595+00:00
+fetched_at: 2026-10-22T08:24:12.440025+00:00
 ---
 
 # Deploy a processor version  |  Document AI  |  Google Cloud Documentation

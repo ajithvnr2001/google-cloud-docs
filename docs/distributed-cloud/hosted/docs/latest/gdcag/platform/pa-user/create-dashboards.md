@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/create-dashboards/
 title: Create visualization dashboards \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:02:17.155027+00:00
+fetched_at: 2026-10-22T10:21:58.465311+00:00
 ---
 
 # Create visualization dashboards  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -41,7 +41,7 @@ To manage `Dashboard` and `ConfigMap` custom resources, you must have the necess
 
 ### Request IAM organization roles
 
-Contact your Organization IAM Admin to request the following roles to work with dashboards across an organization:
+Contact your IAM Org Admin to request the following roles to work with dashboards across an organization:
 
   * **Dashboard PA Creator** (`dashboard-pa-creator`): create custom dashboards.
   * **Dashboard PA Editor** (`dashboard-pa-editor`): edit or delete custom dashboards.
@@ -51,7 +51,7 @@ Contact your Organization IAM Admin to request the following roles to work with 
 
 ### Request IAM project roles
 
-Contact your Project IAM Admin to request the following roles to work with dashboards and configurations in a project:
+Contact your IAM Project Admin to request the following roles to work with dashboards and configurations in a project:
 
   * **Dashboard Editor** (`dashboard-editor`): create, edit, and delete custom dashboards within the project namespace.
   * **Dashboard Viewer** (`dashboard-viewer`): view custom dashboards within the project namespace.
@@ -253,6 +253,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

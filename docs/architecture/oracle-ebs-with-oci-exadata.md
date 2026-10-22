@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/oracle-ebs-with-oci-exadata/
 title: Oracle E-Business Suite on Compute Engine with Oracle Exadata \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:13.105013+00:00
+fetched_at: 2026-10-22T10:44:52.688768+00:00
 ---
 
 # Oracle E-Business Suite on Compute Engine with Oracle Exadata  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -41,7 +41,7 @@ Component | Purpose
 ---|---  
 [Regional external Application Load Balancer](https://docs.cloud.google.com/load-balancing/docs/https) |  The load balancer receives and distributes user requests to the Oracle E-Business Suite applications.  
 [Google Cloud Armor security policy](https://docs.cloud.google.com/armor/docs/security-policy-overview) |  The Cloud Armor security policy helps to protect your application stack against threats like distributed denial-of-service (DDoS) attacks and cross-site scripting (XSS).  
-[Oracle E-Business Suite](https://www.oracle.com/applications/ebusiness) (BYOL) |  The Oracle E-Business Suite application-layer components (Oracle HTTP Server, Oracle WebLogic Server, and a concurrent processing server) run on [Compute Engine VMs](https://docs.cloud.google.com/compute/docs/overview) that are distributed across two zones in the primary region. Each VM hosts an independent instance of the application layer. The boot disk for each VM is a [Hyperdisk Balanced](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced) volume. You bring your own licenses (BYOL) for Oracle E-Business Suite, and you manage the VMs and the applications.  
+[Oracle E-Business Suite](https://www.oracle.com/applications/ebusiness) (BYOL) |  The Oracle E-Business Suite application-layer components (Oracle HTTP Server, Oracle WebLogic Server, and a concurrent processing server) run on [Compute Engine VMs](https://docs.cloud.google.com/compute/docs/overview) that are distributed across two zones in the primary region. Each VM hosts an independent instance of the application layer. The boot disk for each VM is a [Google Cloud Hyperdisk Balanced](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced) volume. You bring your own licenses (BYOL) for Oracle E-Business Suite, and you manage the VMs and the applications.  
 Application binaries and data |  A [Filestore](https://docs.cloud.google.com/filestore/docs/overview) regional instance contains the application binaries and data. The Filestore instance is mounted on all of the Compute Engine VMs that host the application-layer components in both zones.  
 Application backups |  Backups of the application are created, stored, and managed by using [Backup and DR Service](https://docs.cloud.google.com/backup-disaster-recovery/docs/concepts/backup-dr).  
 [Virtual Private Cloud (VPC) network](https://docs.cloud.google.com/vpc/docs/vpc) |  All of the Google Cloud resources in the architecture use a single VPC network. Depending on your requirements, you can choose to build an architecture that uses multiple networks. For more information, see [Deciding whether to create multiple VPC networks](https://docs.cloud.google.com/architecture/best-practices-vpc-design#decide-whether-to-create-multiple-vpcs).  
@@ -62,7 +62,7 @@ Private [Cloud DNS](https://docs.cloud.google.com/dns/docs/overview) zone |  Whe
 [OCI Object Storage](https://www.oracle.com/cloud/storage/object-storage/) and [OCI Service Gateway](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/servicegateway.htm) |  By default, backups of the Oracle Exadata databases are stored in OCI Object Storage. Database backups are routed to OCI Object Storage through a Service Gateway.  
 Public [Cloud NAT](https://docs.cloud.google.com/nat/docs/overview) gateway |  The architecture includes a public Cloud NAT gateway to enable secure outbound connections from the Compute Engine VMs, which have only internal IP addresses.  
 [Cloud Interconnect](https://docs.cloud.google.com/network-connectivity/docs/interconnect/concepts/overview) or [Cloud VPN](https://docs.cloud.google.com/network-connectivity/docs/vpn/concepts/overview) |  To connect your on-premises network to the VPC network in Google Cloud, you can use Cloud Interconnect or Cloud VPN. For information about the relative advantages of each approach, see [Choosing a Network Connectivity product](https://docs.cloud.google.com/network-connectivity/docs/how-to/choose-product).  
-[Cloud Monitoring](https://docs.cloud.google.com/monitoring/docs/monitoring-overview) |  You can use Cloud Monitoring to observe the behavior, health, and performance of your application and Google Cloud resources, including the Oracle Exadata resources. You can also monitor the resources in Oracle Exadata resources by using the OCI Monitoring service.  
+[Cloud Monitoring](https://docs.cloud.google.com/monitoring/docs/monitoring-overview) |  You can use Monitoring to observe the behavior, health, and performance of your application and Google Cloud resources, including the Oracle Exadata resources. You can also monitor the resources in Oracle Exadata resources by using the OCI Monitoring service.  
   
 ## Products used
 
@@ -133,7 +133,7 @@ Before you use the migrated databases in a production environment, verify connec
 
 #### Storage options
 
-For the Compute Engine VMs in the architecture, you can use [Hyperdisk](https://docs.cloud.google.com/compute/docs/disks/hyperdisks) or [Persistent Disk](https://docs.cloud.google.com/compute/docs/disks/persistent-disks) boot volumes. Hyperdisk volumes provide better performance, flexibility, and efficiency than Persistent Disk. With [Hyperdisk Balanced](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced), you can provision IOPS and throughput separately and dynamically, which lets you tune the volume to a wide variety of workloads.
+For the Compute Engine VMs in the architecture, you can use [Google Cloud Hyperdisk](https://docs.cloud.google.com/compute/docs/disks/hyperdisks) or [Persistent Disk](https://docs.cloud.google.com/compute/docs/disks/persistent-disks) boot volumes. Hyperdisk volumes provide better performance, flexibility, and efficiency than Persistent Disk. With [Google Cloud Hyperdisk Balanced](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced), you can provision IOPS and throughput separately and dynamically, which lets you tune the volume to a wide variety of workloads.
 
 To store application binaries, use [Filestore](https://docs.cloud.google.com/filestore/docs/overview). Files that you store in a [Filestore Regional](https://docs.cloud.google.com/filestore/docs/service-tiers#regional) instance are replicated synchronously across three zones within the [region](https://docs.cloud.google.com/docs/geography-and-regions#regions_and_zones). This replication helps to ensure [high availability](https://cloud.google.com/filestore/sla) and robustness against zone outages. For robustness against region outages, you can replicate a Filestore instance to a different region. For more information, see [Instance replication](https://docs.cloud.google.com/filestore/docs/instance-replication#instance-replication).
 
@@ -205,7 +205,7 @@ Sometimes an application VM might be running and available, but there might be i
 
 In a regional architecture, if one of the zones has an outage, the load balancer forwards requests to instances of the applications that run in the other zone. Filestore continues to be available because the architecture uses the Filestore Regional service tier.
 
-To ensure high availability of data in Hyperdisk volumes during a single-zone outage, you can use [Hyperdisk Balanced High Availability](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced-ha). When data is written to a Hyperdisk Balanced High Availability volume, the data is replicated synchronously between two zones in the same region.
+To ensure high availability of data in Google Cloud Hyperdisk volumes during a single-zone outage, you can use [Google Cloud Hyperdisk Balanced High Availability](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced-ha). When data is written to a Hyperdisk Balanced High Availability volume, the data is replicated synchronously between two zones in the same region.
 
 #### Robustness against region outages
 

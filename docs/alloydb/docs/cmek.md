@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/cmek/
 title: About CMEK \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:53.829581+00:00
+fetched_at: 2026-10-22T09:08:48.923347+00:00
 ---
 
 # About CMEK  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

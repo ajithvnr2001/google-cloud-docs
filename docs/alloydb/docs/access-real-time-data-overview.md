@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/access-real-time-data-overview/
 title: AlloyDB access to real-time data in BigQuery overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:16.114339+00:00
+fetched_at: 2026-10-22T09:11:14.047620+00:00
 ---
 
 # AlloyDB access to real-time data in BigQuery overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

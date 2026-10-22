@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/integrating-ci/
 title: Integrating Cloud Deploy with your CI system \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:46.379970+00:00
+fetched_at: 2026-10-22T08:25:10.616518+00:00
 ---
 
 # Integrating Cloud Deploy with your CI system  |  Google Cloud Documentation

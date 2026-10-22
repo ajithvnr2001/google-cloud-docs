@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/use-rag-managed-vertex-ai-vector-search/
 title: Use Vector Search 2.0 with RAG \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:26.452983+00:00
+fetched_at: 2026-10-22T08:37:32.380145+00:00
 ---
 
 # Use Vector Search 2.0 with RAG  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -57,14 +57,14 @@ This code samples demonstrates how to create a RAG corpus using `RagManagedVerte
     
     
     from vertexai.preview import rag
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
     
     PROJECT_ID = YOUR_PROJECT_ID
     LOCATION = YOUR_RAG_ENGINE_LOCATION
     DISPLAY_NAME = YOUR_RAG_CORPUS_DISPLAY_NAME
     
     # Initialize Agent Platform API once per session
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=PROJECT_ID, location=LOCATION)
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=PROJECT_ID, location=LOCATION)
     
     vector_db = rag.RagManagedVertexVectorSearch()
     rag_corpus = rag.create_corpus(
@@ -108,7 +108,7 @@ To upload your local file into your RAG corpus, see [Upload a RAG file](https://
     
     
     from vertexai.preview import rag
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
     
     PROJECT_ID = YOUR_PROJECT_ID
     LOCATION = YOUR_RAG_ENGINE_LOCATION
@@ -116,7 +116,7 @@ To upload your local file into your RAG corpus, see [Upload a RAG file](https://
     PATHS = ["gs://my_bucket/my_files_dir"]
     
     # Initialize Agent Platform API once per session
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=PROJECT_ID, location=LOCATION)
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=PROJECT_ID, location=LOCATION)
     
     corpus_name = f"projects/{PROJECT_ID}/locations/{LOCATION}/ragCorpora/{CORPUS_ID}"
     # This is a non blocking call.
@@ -126,7 +126,7 @@ To upload your local file into your RAG corpus, see [Upload a RAG file](https://
     )
     
     # Wait for the import to complete.
-    await response.[result](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.CheckQueryJobResultDict.html#vertexai__genai_types_CheckQueryJobResultDict_result)()
+    await response.[result](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.CheckQueryJobResultDict.html#vertexai__genai_types_CheckQueryJobResultDict_result)()
     
 
 ###  REST 

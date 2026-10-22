@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/psc-interfaces/
 title: Configure Private Service Connect interfaces \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:30.188179+00:00
+fetched_at: 2026-10-22T08:25:56.978959+00:00
 ---
 
 # Configure Private Service Connect interfaces  |  Datastream  |  Google Cloud Documentation

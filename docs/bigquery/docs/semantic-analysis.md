@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/semantic-analysis/
 title: Perform semantic analysis with managed AI functions \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:12:01.481360+00:00
+fetched_at: 2026-10-22T09:00:35.871163+00:00
 ---
 
 # Perform semantic analysis with managed AI functions  |  BigQuery  |  Google Cloud Documentation

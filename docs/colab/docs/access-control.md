@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/colab/docs/access-control/
 title: Access control with IAM \u00a0|\u00a0 Colab Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:27.767657+00:00
+fetched_at: 2026-10-22T08:27:15.529010+00:00
 ---
 
 # Access control with IAM  |  Colab Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/choose-machine-type/
 title: Choose an AlloyDB machine type \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:17.093252+00:00
+fetched_at: 2026-10-22T10:41:56.647069+00:00
 ---
 
 # Choose an AlloyDB machine type  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,9 +21,7 @@ Send feedback
 
 #  Choose an AlloyDB machine type Stay organized with collections  Save and categorize content based on your preferences. 
 
-Choosing the right machine shape for your AlloyDB for PostgreSQL cluster is critical for getting the best performance and cost efficiency for your database workload. This document helps you choose the right machine type by describing the AlloyDB machine series, their intended use cases, and how Google determines where to launch the machine series.
-
-Having a diverse set of machine types lets you customize your AlloyDB instance for your use case, whether you have a massive dataset that benefits from a huge cache, or you have a high-concurrency transactional workload that benefits from the highest number of cores. This flexibility ensures that AlloyDB can support everything from massive, very large database workloads to standard, mission-critical applications.
+To optimize performance and cost efficiency for your AlloyDB for PostgreSQL workload, you can select a machine series and shape tailored to your compute, memory, and caching requirements. Comparing the supported AlloyDB machine series, their target workload profiles, and regional availability helps you configure instances for workloads ranging from large datasets that require high-capacity caches to high-concurrency transactional applications.
 
 ## Machine series overview
 
@@ -463,8 +461,8 @@ N2 | C4A | C4 | Z3
   
 ## What's next
 
-  * [Create a cluster and its primary instance](https://docs.cloud.google.com/alloydb/docs/cluster-create#procedure).
-  * Learn about [AlloyDB locations](https://docs.cloud.google.com/alloydb/docs/locations).
+  * [Create a cluster and its primary instance](https://docs.cloud.google.com/alloydb/docs/cluster-create#procedure). 
+  * Learn about [AlloyDB locations](https://docs.cloud.google.com/alloydb/docs/locations). 
 
 
 
@@ -472,6 +470,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

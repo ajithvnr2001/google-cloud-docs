@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/quickstart/connect-cloud-shell/
 title: Quickstart: Connect to AlloyDB from Cloud Shell using the Auth Proxy \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:43:39.026457+00:00
+fetched_at: 2026-10-22T09:44:23.601675+00:00
 ---
 
 # Quickstart: Connect to AlloyDB from Cloud Shell using the Auth Proxy  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/instance-primary-create/
 title: Create a primary instance \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:26.871929+00:00
+fetched_at: 2026-10-22T09:29:07.327995+00:00
 ---
 
 # Create a primary instance  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

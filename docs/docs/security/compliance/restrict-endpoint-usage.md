@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/compliance/restrict-endpoint-usage/
 title: Restrict endpoint usage \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:58:17.171937+00:00
+fetched_at: 2026-10-22T08:23:48.771695+00:00
 ---
 
 # Restrict endpoint usage  |  Security  |  Google Cloud Documentation

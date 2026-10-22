@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-columns/
 title: COLUMNS view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:36:10.597090+00:00
+fetched_at: 2026-10-22T10:13:39.918175+00:00
 ---
 
 # COLUMNS view  |  BigQuery  |  Google Cloud Documentation
@@ -80,6 +80,12 @@ If a `STRING` or `ARRAY<STRING>` is passed in, the collation specification is re
 `column_default` | `STRING` |  The [default value](https://docs.cloud.google.com/bigquery/docs/default-values) of the column if it exists; otherwise, the value is `NULL`.   
 `rounding_mode` | `STRING` |  The mode of rounding that's used for values written to the field if its type is a parameterized `NUMERIC` or `BIGNUMERIC`; otherwise, the value is `NULL`.   
 `data_policies.name` | `STRING` |  The list of data policies that are attached to the column to control access and masking. This field is in ([Preview](https://cloud.google.com/products#product-launch-stages)).   
+`data_governance_tags` | `ARRAY<STRUCT>` |  The list of [data governance tags](https://docs.cloud.google.com/bigquery/docs/tags#data-governance-tags) that are attached to the column to control access and masking. Each `STRUCT` contains the following `STRING` fields: 
+
+  * `key`: the namespaced tag key, in the format `PROJECT_ID/TAG_KEY` or `ORGANIZATION_ID/TAG_KEY`.
+  * `value`: the short name of the tag value.
+
+For `STRUCT` (or `RECORD`) columns, data governance tags that are attached to nested fields are available in the [`INFORMATION_SCHEMA.COLUMN_FIELD_PATHS`](https://docs.cloud.google.com/bigquery/docs/information-schema-column-field-paths) view.   
 `policy_tags` | `ARRAY<STRING>` |  The list of policy tags that are attached to the column.   
 `is_identity` | `STRING` |  `YES` or `NO` depending on whether the column is an identity column.   
 `identity_generation` | `STRING` |  One of `ALWAYS` or `BY DEFAULT`, depending on the generation mode of the identity column. If the column isn't an identity column, then the value is `NULL`.   
@@ -149,6 +155,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

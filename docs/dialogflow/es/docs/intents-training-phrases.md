@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/intents-training-phrases/
 title: Training phrases \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:26.524369+00:00
+fetched_at: 2026-10-22T08:26:08.505451+00:00
 ---
 
 # Training phrases  |  Dialogflow ES  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/committed-use-discounts/extend-commitment-term/
 title: Extend commitment terms \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:09:32.157854+00:00
+fetched_at: 2026-10-22T10:12:43.340284+00:00
 ---
 
 # Extend commitment terms  |  Compute Engine  |  Google Cloud Documentation
@@ -165,7 +165,7 @@ For more information about upgrading commitments, see [Upgrade commitments](http
 
 The following limitations apply to term extensions of resource-based commitments:
 
-  * You can extend the terms of only hardware resource commitments.
+  * You can extend the terms of only hardware resource commitments. You can't extend the terms of software license commitments or block storage commitments.
   * You can't extend the terms of inactive or expired commitments.
   * You can't extend the terms of commitments that you purchased through [future reservations for capacity blocks](https://docs.cloud.google.com/compute/docs/instances/choose-reservation-type#reserve-capacity-aihc).
   * For 1-year commitments, you can't specify a custom end date that results in a total commitment term of 3 years or longer. Instead, consider changing your commitment's plan from a 1-year to 3-year by [upgrading your commitment](https://docs.cloud.google.com/compute/docs/instances/upgrade-commitment-term).

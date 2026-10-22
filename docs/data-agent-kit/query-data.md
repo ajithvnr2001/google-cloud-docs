@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-agent-kit/query-data/
 title: Query your data \u00a0|\u00a0 Google Cloud Data Agent Kit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:25.875106+00:00
+fetched_at: 2026-10-22T08:28:33.879341+00:00
 ---
 
 # Query your data  |  Google Cloud Data Agent Kit  |  Google Cloud Documentation

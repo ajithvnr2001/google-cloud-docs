@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/asset-inventory/docs/tpc-differences/
 title: 404 \u00a0|\u00a0 Page Not Found \u00a0|\u00a0 Google Cloud Documentation
 method: crawl4ai+scrapegraph (scrapling: scrapling status 404)
-fetched_at: 2026-10-15T19:08:11.237239+00:00
+fetched_at: 2026-10-22T09:37:40.699818+00:00
 ---
 
 # 404  |  Page Not Found  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/create-a-private-connectivity-configuration/
 title: Create a private connectivity configuration \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:34.602493+00:00
+fetched_at: 2026-10-22T08:25:30.909812+00:00
 ---
 
 # Create a private connectivity configuration  |  Datastream  |  Google Cloud Documentation

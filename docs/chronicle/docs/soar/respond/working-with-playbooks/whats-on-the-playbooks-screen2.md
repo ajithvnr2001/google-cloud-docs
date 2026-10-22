@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/whats-on-the-playbooks-screen2/
 title: Playbook automation overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:36:50.739697+00:00
+fetched_at: 2026-10-22T09:02:03.615605+00:00
 ---
 
 # Playbook automation overview  |  Google Security Operations  |  Google Cloud Documentation

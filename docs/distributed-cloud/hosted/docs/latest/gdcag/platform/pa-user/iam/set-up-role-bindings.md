@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/set-up-role-bindings/
 title: Grant and revoke access \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:58:57.775602+00:00
+fetched_at: 2026-10-22T10:29:51.423953+00:00
 ---
 
 # Grant and revoke access  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -34,9 +34,9 @@ Before managing role bindings or revoking access, you must request the necessary
 
 ### Request IAM roles
 
-Contact your Organization IAM Admin to request the roles based on the tasks you need to perform:
+Contact your IAM Org Admin to request the roles based on the tasks you need to perform:
 
-  * **Organization IAM Admin** (`organization-iam-admin`): create, update, and delete role bindings at the organization and project levels.
+  * **IAM Org Admin** (`organization-iam-admin`): create, update, and delete role bindings at the organization and project levels.
   * **Org Session Admin** (`org-session-admin`): revoke a user's active sessions and access within a specific zone.
 
 
@@ -267,6 +267,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

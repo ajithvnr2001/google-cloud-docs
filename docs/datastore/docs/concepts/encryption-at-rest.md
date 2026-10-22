@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/concepts/encryption-at-rest/
 title: Server-Side Encryption \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:21.994677+00:00
+fetched_at: 2026-10-22T08:25:10.983931+00:00
 ---
 
 # Server-Side Encryption  |  Firestore in Datastore mode  |  Google Cloud Documentation

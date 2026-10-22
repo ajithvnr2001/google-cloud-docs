@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/git-repositories/
 title: Manage code with BigQuery Studio Git repositories \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:49:17.185779+00:00
+fetched_at: 2026-10-22T08:56:45.762918+00:00
 ---
 
 # Manage code with BigQuery Studio Git repositories  |  Google Cloud Documentation

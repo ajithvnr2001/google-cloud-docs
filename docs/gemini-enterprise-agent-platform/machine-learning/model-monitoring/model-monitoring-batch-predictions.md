@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/model-monitoring/model-monitoring-batch-predictions/
 title: Gemini Enterprise Agent Platform Model Monitoring for batch inferences \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:46:35.921469+00:00
+fetched_at: 2026-10-22T10:24:55.326320+00:00
 ---
 
 # Gemini Enterprise Agent Platform Model Monitoring for batch inferences  |  Google Cloud Documentation

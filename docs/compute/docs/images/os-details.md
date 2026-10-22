@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/os-details/
 title: Operating system details \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:58:18.600992+00:00
+fetched_at: 2026-10-22T10:44:52.501488+00:00
 ---
 
 # Operating system details  |  Compute Engine  |  Google Cloud Documentation
@@ -1463,9 +1463,9 @@ OS version | Image project | Image family | [Machine series](https://docs.cloud.
 [RHEL 9.8 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | `rhel-sap-cloud` | x86: `rhel-9-8-sap-ha` | All except A4X, A4, G4, T2A, N4A, C4A, X5 | GA | May 2030  
 [RHEL 9.6 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | `rhel-sap-cloud` | x86: `rhel-9-6-sap-ha` | All except A4X, A4, G4, T2A, N4A, C4A | GA | May 2029  
 [RHEL 9.4 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | `rhel-sap-cloud` | x86: `rhel-9-4-sap-ha` | All except A4X Max, A4X, A4, G4, T2A, N4A, C4A | GA | April 2028  
-[RHEL 9.2 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | `rhel-sap-cloud` | x86: `rhel-9-2-sap-ha` | All except A4X Max, A4X, A4, G4, T2A, X5, X4, N4A, C4A, C4D-metal, C4-metal, C3-metal, and Z3-metal | GA | May 2027  
+[RHEL 9.2 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | `rhel-sap-cloud` | x86: `rhel-9-2-sap-ha` | All except A4X Max, A4X, A4, G4, T2A, X5, X4, N4A, C4A, C4D-metal, C4-metal, C3-metal, Z4D-metal and Z3-metal | GA | May 2027  
 [RHEL 8.10 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | `rhel-sap-cloud` | x86: `rhel-8-10-sap-ha` | All except A4X Max, A4X, A4, G4, T2A, N4A, C4A, C4N, X5 | GA | May 2029  
-[RHEL 8.8 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | `rhel-sap-cloud` | x86: `rhel-8-8-sap-ha` | All except A4X Max, A4X, A4, G4, T2A, X5, X4, N4A, C4A, C4N, C4D-metal, C4-metal, C3-metal, and Z3-metal | GA | May 2027  
+[RHEL 8.8 for SAP](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) | `rhel-sap-cloud` | x86: `rhel-8-8-sap-ha` | All except A4X Max, A4X, A4, G4, T2A, X5, X4, N4A, C4A, C4N, C4D-metal, C4-metal, C3-metal, Z4D-metal and Z3-metal | GA | May 2027  
 [RHEL 10.2 EUS](https://access.redhat.com/articles/rhel-eus) | `rhel-cloud` | 
 
   * x86: `rhel-10-2-eus`
@@ -2604,7 +2604,7 @@ SLES 15 SP5 for SAP  | `suse-sap-cloud` | x86: `sles-15-sp5-sap` | All except A4
 SLES 15 SP4 for SAP  | `suse-sap-cloud` | x86: `sles-15-sp4-sap` | All except A4X Max, A4X, A4, G4, T2A, N4A, C4A, X5 | GA | Dec 2026  
 SLES 15 SP5  | `suse-byos-cloud` | N/A | All except A4X Max, A4X, A4, C4N, G4, X5 | BYOS w/ LTSS1 | Dec 2027  
 SLES 15 SP4  | `suse-byos-cloud` | N/A | All except A4X Max, A4X, A4, G4, T2A, N4A, C4A, C4N, X5 | BYOS w/ LTSS1 | Dec 2026  
-SLES 12 SP5 for SAP  | `suse-sap-cloud` | x86: `sles-12-sp5-sap` | All except T2A, N4A, C4A, C4N, C4D-metal, C4-metal, C3-metal, H4D, A4, A4X, A4X Max, G4, G2, X4, X5, Z3-metal | BYOS w/ LTSS1 | Oct 2027  
+SLES 12 SP5 for SAP  | `suse-sap-cloud` | x86: `sles-12-sp5-sap` | All except T2A, N4A, C4A, C4N, C4D-metal, C4-metal, C3-metal, H4D, A4, A4X, A4X Max, G4, G2, X4, X5, Z4D-metal, Z3-metal | BYOS w/ LTSS1 | Oct 2027  
   
 1**BYOS with LTSS** : Support for this operating system is only offered through the [Long Term Service Pack Support (LTSS)](https://www.suse.com/products/long-term-service-pack-support/) that is available when using BYOS licenses from SUSE.
 
@@ -2778,11 +2778,11 @@ The following section summarizes feature support for versions of this OS that ar
 
 OS version | Image project | Image family | [Machine series](https://docs.cloud.google.com/compute/docs/machine-resource#recommendations_for_machine_types) | [Lifecycle stage](https://docs.cloud.google.com/compute/docs/images/os-image-lifecycle#lifecycle-stages) | EOS and image deprecation date  
 ---|---|---|---|---|---  
-SLES 15 SP3  | `suse-byos-cloud` | N/A | All except A4X Max, A4X, A4, G4, T2A, N4A, C4A, C4D-metal, C4-metal, C3-metal, X4, X5, Z3-metal | EOL | Dec 2025  
-SLES 15 SP2  | `suse-byos-cloud` | N/A | All except A4X Max, A4X, A4, G4, T2A, N4A, C4A, C4D-metal, C4-metal, C3-metal, X4, X5, Z3-metal | EOL | Dec 2024  
-SLES 12 SP5  | `suse-cloud` | x86: `sles-12` | All except A4X Max, A4X, A4, G2, T2A, N4A, C4A, C4N, C4D-metal, C4-metal, C3-metal, X5, X4, Z3-metal | EOL | Oct 2024  
-SLES 15 SP3 for SAP  | `suse-byos-cloud` | N/A | All except A4X Max, A4X, A4, G4, T2A, N4A, C4A, C4D-metal, C4-metal, C3-metal, X4, X5, Z3-metal | EOL | Dec 2025  
-SLES 15 SP2 for SAP  | `suse-byos-cloud` | N/A | All except A4X Max, A4X, A4, T2A, N4A, C4A-metal, C4D-metal, C4-metal, C3-metal, X5, X4, Z3-metal | EOL | Dec 2024  
+SLES 15 SP3  | `suse-byos-cloud` | N/A | All except A4X Max, A4X, A4, G4, T2A, N4A, C4A, C4D-metal, C4-metal, C3-metal, X4, X5, Z4D-metal, Z3-metal | EOL | Dec 2025  
+SLES 15 SP2  | `suse-byos-cloud` | N/A | All except A4X Max, A4X, A4, G4, T2A, N4A, C4A, C4D-metal, C4-metal, C3-metal, X4, X5, Z4D-metal, Z3-metal | EOL | Dec 2024  
+SLES 12 SP5  | `suse-cloud` | x86: `sles-12` | All except A4X Max, A4X, A4, G2, T2A, N4A, C4A, C4N, C4D-metal, C4-metal, C3-metal, X5, X4, Z4D-metal, Z3-metal | EOL | Oct 2024  
+SLES 15 SP3 for SAP  | `suse-byos-cloud` | N/A | All except A4X Max, A4X, A4, G4, T2A, N4A, C4A, C4D-metal, C4-metal, C3-metal, X4, X5, Z4D-metal, Z3-metal | EOL | Dec 2025  
+SLES 15 SP2 for SAP  | `suse-byos-cloud` | N/A | All except A4X Max, A4X, A4, T2A, N4A, C4A-metal, C4D-metal, C4-metal, C3-metal, X5, X4, Z4D-metal, Z3-metal | EOL | Dec 2024  
 SLES 15 SP1  | N/A | N/A | N/A | EOS | Jan 2024  
 SLES 12 SP4  | N/A | N/A | N/A | EOS | June 2023  
 SLES 15 SP1 for SAP  | N/A | N/A | N/A | EOS | Jan 2024  
@@ -4015,13 +4015,13 @@ The following section summarizes feature support for versions of this OS that ar
 OS version | Image project | Image family | [Machine series](https://docs.cloud.google.com/compute/docs/machine-resource#recommendations_for_machine_types) | [Lifecycle stage](https://docs.cloud.google.com/compute/docs/images/os-image-lifecycle#lifecycle-stages) 1 | EOS and image deprecation date  
 ---|---|---|---|---|---  
 Windows Server 2025  | `windows-cloud` | `windows-2025`  
-`windows-2025-core` | All except T2A, N4A, C4A, C4D-metal, C4-metal, C3-metal, Z3, A4X Max, A4X, A4, A3, X4 | GA | Oct 10, 2034  
+`windows-2025-core` | All except T2A, N4A, C4A, C4D-metal, C4-metal, C3-metal, Z4D-metal, Z3, A4X Max, A4X, A4, A3, X4 | GA | Oct 10, 2034  
 Windows Server 2022  | `windows-cloud` | `windows-2022`  
-`windows-2022-core` | All except T2A, N4A, C4A, C4-metal, C4D-metal, C3-metal, Z3, A4X Max, A4X, A4, A3, X4 | GA | Oct 14, 2031  
+`windows-2022-core` | All except T2A, N4A, C4A, C4-metal, C4D-metal, C3-metal, Z4D-metal, Z3, A4X Max, A4X, A4, A3, X4 | GA | Oct 14, 2031  
 Windows Server 2019  | `windows-cloud` | `windows-2019`  
-`windows-2019-core` | All except T2A, N4A, C4A, C4-metal, C4D-metal, C3-metal, Z3, A4X Max, A4X, A4, G4, A3, X4 | GA | Jan 9, 2029  
+`windows-2019-core` | All except T2A, N4A, C4A, C4-metal, C4D-metal, C3-metal, Z4D-metal, Z3, A4X Max, A4X, A4, G4, A3, X4 | GA | Jan 9, 2029  
 Windows Server 2016  | `windows-cloud` | `windows-2016`  
-`windows-2016-core` | All except T2A, N4A, C4A, C4-metal, C4D-metal, C3-metal, Z3, A4X Max, A4X, A4, A3, G4, G2, X4 | GA | Jan 12, 2027  
+`windows-2016-core` | All except T2A, N4A, C4A, C4-metal, C4D-metal, C3-metal, Z4D-metal, Z3, A4X Max, A4X, A4, A3, G4, G2, X4 | GA | Jan 12, 2027  
   
 1**Lifecycle stage** : Google Cloud Support typically coincides with Extended Support End Date. For information about the end of support (EOS) date for each of the operating systems in the previous table, see the [Microsoft Lifecycle Policy](https://support.microsoft.com/en-us/hub/4095338/microsoft-lifecycle-policy).
 
@@ -4219,6 +4219,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-19 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-19 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

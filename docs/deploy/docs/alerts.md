@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/alerts/
 title: Create Cloud Deploy alerts \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:01.177714+00:00
+fetched_at: 2026-10-22T08:26:02.595387+00:00
 ---
 
 # Create Cloud Deploy alerts  |  Google Cloud Documentation

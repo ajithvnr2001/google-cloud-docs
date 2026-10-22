@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/datasets/create-annotation-set/
 title: Create an annotation set for AutoML image training \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:46:42.860454+00:00
+fetched_at: 2026-10-22T10:23:03.443577+00:00
 ---
 
 # Create an annotation set for AutoML image training  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

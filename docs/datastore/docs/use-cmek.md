@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/use-cmek/
 title: Use customer-managed encryption keys (CMEK) \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:15.128719+00:00
+fetched_at: 2026-10-22T08:24:58.046432+00:00
 ---
 
 # Use customer-managed encryption keys (CMEK)  |  Firestore in Datastore mode  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/concepts/
 title: Concepts \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T09:40:57.444420+00:00
+fetched_at: 2026-10-22T09:19:04.116997+00:00
 ---
 
 # Concepts  |  Application Integration  |  Google Cloud Documentation

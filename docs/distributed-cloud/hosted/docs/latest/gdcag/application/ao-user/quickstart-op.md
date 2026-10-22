@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/quickstart-op/
 title: Get an online prediction \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:58:16.218078+00:00
+fetched_at: 2026-10-22T10:30:20.651959+00:00
 ---
 
 # Get an online prediction  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -35,7 +35,7 @@ Before you can start using the Online Prediction API, you must have a project an
 Follow these steps before getting an online prediction:
 
   1. [Set up a project for Vertex AI](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-set-up-project).
-  2. To get the permissions that you need to access Online Prediction, ask your Project IAM Admin to grant you the Vertex AI Prediction User (`vertex-ai-prediction-user`) role.
+  2. To get the permissions that you need to access Online Prediction, ask your IAM Project Admin to grant you the Vertex AI Prediction User (`vertex-ai-prediction-user`) role.
 
 For information about this role, see [Prepare IAM permissions](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-ao-permissions).
 
@@ -161,7 +161,7 @@ You must add and [format your input for online prediction](https://docs.cloud.go
          import grpc
          from absl import app
          from absl import flags
-         import [google](https://docs.cloud.google.com/python/docs/reference/pubsub/latest)
+         import [google](https://docs.cloud.google.com/python/docs/reference/googleapis-common-protos/latest)
          
          from google.auth.transport import [requests](https://docs.cloud.google.com/python/docs/reference/google-resumable-media/latest/google.resumable_media.requests.html)
          from google.protobuf import json_format
@@ -178,7 +178,7 @@ You must add and [format your input for online prediction](https://docs.cloud.go
          def get_sts_token(endpoint_hostname):
            creds = None
            try:
-             creds, _ = [google](https://docs.cloud.google.com/python/docs/reference/pubsub/latest).auth.default()
+             creds, _ = [google](https://docs.cloud.google.com/python/docs/reference/googleapis-common-protos/latest).auth.default()
              creds = creds.with_gdch_audience("https://"+endpoint_hostname+":443")
              req = [requests](https://docs.cloud.google.com/python/docs/reference/google-resumable-media/latest/google.resumable_media.requests.html).[Request](https://docs.cloud.google.com/python/docs/reference/policytroubleshooter-iam/latest/google.cloud.policytroubleshooter_iam_v3.types.ConditionContext.Request.html)()
              creds.refresh(req)
@@ -257,6 +257,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

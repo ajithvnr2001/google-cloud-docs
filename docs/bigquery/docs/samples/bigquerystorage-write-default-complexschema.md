@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerystorage-write-default-complexschema/
 title: Append data for a complex schema \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:38:00.058799+00:00
+fetched_at: 2026-10-22T08:35:14.254808+00:00
 ---
 
 # Append data for a complex schema  |  BigQuery  |  Google Cloud Documentation

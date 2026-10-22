@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/audit-manager/docs/configure-vpcsc/
 title: Configure VPC Service Controls for Audit Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:15.468171+00:00
+fetched_at: 2026-10-22T09:37:40.371779+00:00
 ---
 
 # Configure VPC Service Controls for Audit Manager  |  Google Cloud Documentation

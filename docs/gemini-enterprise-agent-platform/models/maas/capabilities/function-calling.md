@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/maas/capabilities/function-calling/
 title: Function calling for open models \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:26.747138+00:00
+fetched_at: 2026-10-22T10:25:17.757183+00:00
 ---
 
 # Function calling for open models  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

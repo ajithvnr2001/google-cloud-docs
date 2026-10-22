@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/ip-allowlists-and-regions/
 title: IP allowlists and regions \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:32.166321+00:00
+fetched_at: 2026-10-22T08:33:26.674622+00:00
 ---
 
 # IP allowlists and regions  |  Datastream  |  Google Cloud Documentation

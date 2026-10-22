@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataform/docs/preview-queries/
 title: Preview SQL queries \u00a0|\u00a0 Dataform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:20.947459+00:00
+fetched_at: 2026-10-22T08:26:22.688749+00:00
 ---
 
 # Preview SQL queries  |  Dataform  |  Google Cloud Documentation

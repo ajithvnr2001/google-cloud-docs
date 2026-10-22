@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/audit-manager/docs/enroll-resource/
 title: Enroll a resource for auditing \u00a0|\u00a0 Audit Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:15.384798+00:00
+fetched_at: 2026-10-22T09:37:40.236730+00:00
 ---
 
 # Enroll a resource for auditing  |  Audit Manager  |  Google Cloud Documentation

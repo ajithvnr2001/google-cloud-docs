@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.8.0/docs/troubleshooting/
 title: Troubleshoot Distributed Cloud connected \u00a0|\u00a0 Google Distributed Cloud connected, version 1.8.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:43.306067+00:00
+fetched_at: 2026-10-22T08:24:52.669949+00:00
 ---
 
 # Troubleshoot Distributed Cloud connected  |  Google Distributed Cloud connected, version 1.8.0  |  Google Cloud Documentation

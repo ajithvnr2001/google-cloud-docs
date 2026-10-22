@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/workload/aci-images/
 title: Overview of Advanced Compute Images \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:24:03.379601+00:00
+fetched_at: 2026-10-22T10:44:43.004852+00:00
 ---
 
 # Overview of Advanced Compute Images  |  Compute Engine  |  Google Cloud Documentation
@@ -91,7 +91,7 @@ Advanced Compute Images contain multiple layers of configurations to support run
 
 ## Supported hardware and image families
 
-ACI supports two primary hardware platforms:
+ACI supports three primary hardware platforms:
 
   * **CPU (HPC)** : support CPU workloads and have the following characteristics:
 
@@ -108,41 +108,21 @@ ACI supports two primary hardware platforms:
     * Include RDMA drivers and utilities to support MRDMA for GPU-to-GPU communication
     * Are suitable for AI, ML, or HPC workloads
     * Are the default images installed when you deploy Slurm cluster blueprints for A4X, A4, and A3 Ultra machine types in Cluster Toolkit
+  * **TPU (AI/ML/HPC)** : support TPU workloads and have the following characteristics:
+
+    * Designed for use with TPU v7x instances
+    * Optimized for Google's Cloud TPU accelerators
+    * Support Ubuntu LTS 24.04
+    * Include the required packages to run Docker, Cloud Storage FUSE, Lustre client, gcloud CLI, and the [Ops Agent](https://docs.cloud.google.com/monitoring/agent/ops-agent)
+
+
+
+### Advanced Compute Images for GPU instances
+
+The following table lists the Advanced Compute Images images designed for workloads that use GPU accelerators.
 
 Hardware | OS | Orchestrator | Features | Architecture | Supported machine series | Image family  
 ---|---|---|---|---|---|---  
-CPU | Rocky Linux 9 | none | 
-
-  * RDMA
-  * OpenMPI,IntelMPI
-  * CUDA 13.2
-  * NVIDIA 595
-
-| Intel or AMD x86_64 | C2D, H3, H4D | `aci-cpu-rocky-linux-9-amd64`  
-CPU | Rocky Linux 8 | none | 
-
-  * RDMA
-  * OpenMPI,IntelMPI
-  * CUDA 13.2
-  * NVIDIA 595
-
-| Intel or AMD x86_64 | C2D, H3, H4D | `aci-cpu-rocky-linux-8-amd64`  
-CPU | Rocky Linux 8 | Slurm 26.05 | 
-
-  * RDMA
-  * MPI
-  * CUDA 13.2
-  * NVIDIA 595
-
-| Intel or AMD x86_64 | C2D, H3, H4D | `aci-cpu-rocky-linux-8-slurm-2605-amd64`  
-CPU | Rocky Linux 9 | Slurm 26.05 | 
-
-  * RDMA
-  * MPI
-  * CUDA 13.2
-  * NVIDIA 595
-
-| Intel or AMD x86_64 | C2D, H3, H4D | `aci-cpu-rocky-linux-9-slurm-2605-amd64`  
 GPU | Ubuntu LTS 24.04 | Slurm 25.11 | 
 
   * CUDA 13.0
@@ -186,6 +166,59 @@ GPU | Ubuntu LTS 22.04 | none |
 
 | AMD x86_64 | A3 Ultra, A4 | `aci-gpu-u2204-cuda-130-nvidia-580-amd64`  
   
+### Advanced Compute Images for CPU instances
+
+The following table lists the Advanced Compute Images images designed for CPU-based workloads.
+
+Hardware | OS | Orchestrator | Features | Architecture | Supported machine series | Image family  
+---|---|---|---|---|---|---  
+CPU | Rocky Linux 9 | none | 
+
+  * RDMA
+  * OpenMPI,IntelMPI
+  * CUDA 13.2
+  * NVIDIA 595
+
+| Intel and AMD x86_64 | C2D, H3, H4D | `aci-cpu-rocky-linux-9-amd64`  
+CPU | Rocky Linux 8 | none | 
+
+  * RDMA
+  * OpenMPI,IntelMPI
+  * CUDA 13.2
+  * NVIDIA 595
+
+| Intel and AMD x86_64 | C2D, H3, H4D | `aci-cpu-rocky-linux-8-amd64`  
+CPU | Rocky Linux 9 | Slurm 26.05 | 
+
+  * RDMA
+  * MPI
+  * CUDA 13.2
+  * NVIDIA 595
+
+| Intel or AMD x86_64 | C2D, H3, H4D | `aci-cpu-rocky-linux-9-slurm-2605-amd64`  
+CPU | Rocky Linux 8 | Slurm 26.05 | 
+
+  * RDMA
+  * MPI
+  * CUDA 13.2
+  * NVIDIA 595
+
+| Intel or AMD x86_64 | C2D, H3, H4D | `aci-cpu-rocky-linux-8-slurm-2605-amd64`  
+  
+### Advanced Compute Images for TPU instances
+
+The following table lists the Advanced Compute Images images designed for workloads that use TPU accelerators.
+
+Hardware | OS | Orchestrator | Features | Architecture | Supported machine series | Image family  
+---|---|---|---|---|---|---  
+TPU | Ubuntu LTS 24.04 | Slurm 26.05 | 
+
+  * NVIDIA Pyxis
+  * Cloud Storage FUSE
+  * Lustre client, gcloud CLI, Ops Agent support
+
+| AMD x86_64 | TPU v7x | `ubuntu-accel-2404-amd64-tpu-tpu7x`  
+  
 ### Pre-installed packages (or RPMs)
 
 Advanced Compute Images come with a variety of tools, libraries, drivers, and packages pre-installed. To see a list of what is installed for any image, refer to the manifest file for that image.
@@ -203,7 +236,7 @@ All families of Advanced Compute Images follow a standardized lifecycle to ensur
   * **Unsupported** : 
     * No longer receives critical security updates or bug fixes.
     * No new features.
-    * Not supported through Cloud Customer Care.
+    * Not supported through Customer Care.
     * Can't be used to create compute instances.
 
 
@@ -213,7 +246,7 @@ The lifecycle of an Advanced Compute Images family consists of four phases:
 Lifecycle phase | Support status | Description and impact  
 ---|---|---  
 **Active** | Supported | Recommended for new deployments. For 12 months after the release date, the image family is fully supported. Receives critical security updates and bug fixes.  
-**Deprecated (EOS date)** | Unsupported | We recommend that you migrate to a supported image family. For approximately six months after the Active phase ends, the image family is deprecated. No new features or patches are released. Google Cloud console and Google Cloud CLI warnings appear when you create instances that use this image family.   
+**Deprecated (EOS date)** | Unsupported | We recommend that you migrate to a supported image family. For approximately six months after the Active phase ends, the image family is deprecated. No new features or patches are released. Google Cloud console and gcloud CLI warnings appear when you create instances that use this image family.  
 **Obsolete** | Unsupported | After the deprecated phase ends, the image family becomes obsolete. You can no longer create compute instances by using this image family. Existing compute instances continue to run, but risk incompatibility with the Slurm controller.   
 **Deletion** | Unsupported | Three months after an image family becomes obsolete, the underlying Advanced Compute Images image resource is permanently deleted. Existing compute instances continue to run, but risk incompatibility with the Slurm controller and vulnerabilities.  
   
@@ -238,6 +271,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

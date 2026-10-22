@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/linux/current/docs/configure-database-flags/
 title: Configure AlloyDB Omni database parameters \u00a0|\u00a0 AlloyDB Omni using RPM: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:37:41.064255+00:00
+fetched_at: 2026-10-22T10:43:41.108163+00:00
 ---
 
 # Configure AlloyDB Omni database parameters  |  AlloyDB Omni using RPM: Current (18.4.0)  |  Google Cloud Documentation
@@ -58,10 +58,32 @@ For example, to [enforce password expiration](https://docs.cloud.google.com/allo
 
 
 
+## Audit database parameters using the web UI
+
+You can audit active database flags and identify customized parameters that differ from default engine values using the **Database flags** page in the AlloyDB Omni web user interface.
+
+To audit database parameters in the web UI, complete the following steps:
+
+  1. [Connect to the web UI](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/connect-web-ui) and select your cluster.
+  2. In the navigation menu, click **Database flags**.
+  3. Use the following controls to search and filter parameters: 
+     * **Search for flags** : Enter a keyword (for example, `max`) to filter parameters by name.
+     * **Show modified flags** : Select this checkbox to display only parameters whose active values differ from their default engine values. Customized values are also highlighted in yellow in the **Current value** column.
+     * **Collapse all** or **Expand all** : Collapse or expand the parameter category groups (such as **Google AlloyDB Options** , **Client Connection Defaults / Locale and Formatting** , **Client Connection Defaults / Other Defaults** , and **Client Connection Defaults / Shared Library Preloading**).
+  4. Review the parameter table columns within each category group: 
+     * **Setting** : The name of the database parameter.
+     * **Type** : The data type of the parameter (for example, `INTEGER`).
+     * **Current value** : The active value of the parameter on the instance (highlighted in yellow if modified from the default).
+     * **Default value** : The default engine value for the parameter.
+     * **Restart required** : Indicates whether modifying the parameter requires a database restart (`true` or `false`).
+     * **Source** : The configuration source of the current value (for example, `default`).
+
+
+
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/identity/federating-gcp-with-azure-active-directory/
 title: Federate Google Cloud with Microsoft Entra ID (formerly Azure AD) \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:03.867492+00:00
+fetched_at: 2026-10-22T09:02:52.371860+00:00
 ---
 
 # Federate Google Cloud with Microsoft Entra ID (formerly Azure AD)  |  Cloud Architecture Center  |  Google Cloud Documentation

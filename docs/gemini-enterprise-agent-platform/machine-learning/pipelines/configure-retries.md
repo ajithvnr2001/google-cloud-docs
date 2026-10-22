@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/configure-retries/
 title: Configure retries for a pipeline task \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:43:15.546148+00:00
+fetched_at: 2026-10-22T10:23:29.656393+00:00
 ---
 
 # Configure retries for a pipeline task  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

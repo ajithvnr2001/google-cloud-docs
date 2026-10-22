@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/how-to/upgrade-lifecycle/
 title: Lifecycle and stages of cluster upgrades \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:56:56.136171+00:00
+fetched_at: 2026-10-22T10:14:16.738964+00:00
 ---
 
 # Lifecycle and stages of cluster upgrades  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -92,7 +92,7 @@ For information about version skew rules for node pools, see Node pool versionin
 
 When you download and install a new version of `bmctl`, you can upgrade your admin, hybrid, standalone, and user clusters created or upgraded with an earlier version of `bmctl`. Clusters can't be downgraded to a lower version.
 
-You can only upgrade a cluster to a version that matches the version of `bmctl` you are using. That is, if you're using version 1.36.100-gke.144 of `bmctl`, you can upgrade a cluster to version 1.36.100-gke.144 only.
+You can only upgrade a cluster to a version that matches the version of `bmctl` you are using. That is, if you're using version 1.36.200-gke.118 of `bmctl`, you can upgrade a cluster to version 1.36.200-gke.118 only.
 
 #### Patch version upgrades
 
@@ -106,7 +106,7 @@ When you upgrade a cluster to a new minor version, you pick up new features and 
 
 ###  1.33 and higher 
 
-You can upgrade clusters from one minor version to the next, regardless of the patch version. That is, you can upgrade from `1.**N**._X_` to `1.**N+1**._Y_`, where `1.**N**._X_` is the version of your cluster and `**N+1**` is the next available minor version. The patch versions, `_X_` and `_Y_`, don't affect the upgrade logic in this case. For example, you can upgrade from `1.35.600-gke.141` to `1.36.100-gke.144`.
+You can upgrade clusters from one minor version to the next, regardless of the patch version. That is, you can upgrade from `1.**N**._X_` to `1.**N+1**._Y_`, where `1.**N**._X_` is the version of your cluster and `**N+1**` is the next available minor version. The patch versions, `_X_` and `_Y_`, don't affect the upgrade logic in this case. For example, you can upgrade from `1.35.600-gke.141` to `1.36.200-gke.118`.
 
 Starting with version 1.33, Google Distributed Cloud supports [_skip upgrades_](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/how-to/upgrade#skip-upgrades) (upgrading two minor versions in a single operation). This means that you can upgrade a cluster from version `1.**N**._X_`, where `N` is `31` or higher, directly to version `1.**N+2**._Z_` with a single operation.
 
@@ -114,7 +114,7 @@ Skip upgrades are available for [Preview](https://cloud.google.com/products/#pro
 
 ###  1.32 and lower 
 
-You can upgrade clusters from one minor version to the next, regardless of the patch version. That is, you can upgrade from `1.**N**._X_` to `1.**N+1**._Y_`, where `1.**N**._X_` is the version of your cluster and `**N+1**` is the next available minor version. The patch versions, `_X_` and `_Y_`, don't affect the upgrade logic in this case. For example, you can upgrade from `1.35.600-gke.141` to `1.36.100-gke.144`.
+You can upgrade clusters from one minor version to the next, regardless of the patch version. That is, you can upgrade from `1.**N**._X_` to `1.**N+1**._Y_`, where `1.**N**._X_` is the version of your cluster and `**N+1**` is the next available minor version. The patch versions, `_X_` and `_Y_`, don't affect the upgrade logic in this case. For example, you can upgrade from `1.35.600-gke.141` to `1.36.200-gke.118`.
 
 Prior to release 1.33, you can't skip minor versions when upgrading clusters. If you attempt to upgrade to a minor version that is two or more minor versions higher than the current cluster version, `bmctl` emits an error. For example, you can't upgrade a version `1.30.0` cluster to version `1.32.0` in a single step.
 
@@ -1905,6 +1905,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

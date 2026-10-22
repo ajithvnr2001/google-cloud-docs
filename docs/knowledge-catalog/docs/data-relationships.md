@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/data-relationships/
 title: View data relationships in Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:37:01.013301+00:00
+fetched_at: 2026-10-22T09:49:29.130747+00:00
 ---
 
 # View data relationships in Knowledge Catalog  |  Google Cloud Documentation
@@ -27,7 +27,7 @@ Send feedback
 
 This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
-Knowledge Catalog (formerly Dataplex Universal Catalog) discovers potential links between data assets, helping you to discover the related data and understand the nature of the relationship.
+Data relationships in Knowledge Catalog (formerly Dataplex Universal Catalog) let you find related BigQuery tables and views and inspect how they connect. You can then explore linked datasets or provide structural context to AI agents for more accurate query generation.
 
 ## Before you begin
 
@@ -43,7 +43,7 @@ If you don't have the permission to view an asset in its source system, the Know
 
 Data relationships illustrate how data assets connect. For example, if you locate a table with customer data, its relationships can reveal related tables listing orders or support tickets. Additionally, relationships act as a structural guide, providing essential context to Large Language Models. As a result, AI generates more precise responses, formulating accurate queries to retrieve specific information.
 
-Knowledge Catalog automatically discovers and stores common relationships between the data assets. The relationship data originates from various sources, such as the following:
+Knowledge Catalog automatically discovers and stores potential links and common relationships between data assets, helping you understand the nature of each connection. The relationship data originates from various sources, such as the following:
 
   * Historical query logs Knowledge Catalog that continuously analyze query history to detect potential `JOIN` patterns between tables.
   * [Data insights](https://docs.cloud.google.com/knowledge-catalog/docs/data-insights) suggest data relationships on demand by analyzing schema attributes and data overlaps using large language models.
@@ -118,6 +118,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

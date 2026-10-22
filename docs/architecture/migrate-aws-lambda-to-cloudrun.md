@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/migrate-aws-lambda-to-cloudrun/
 title: Migrate from AWS to Google Cloud: Migrate from AWS Lambda to Cloud Run \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:21:59.146142+00:00
+fetched_at: 2026-10-22T09:38:36.890782+00:00
 ---
 
 # Migrate from AWS to Google Cloud: Migrate from AWS Lambda to Cloud Run  |  Cloud Architecture Center  |  Google Cloud Documentation

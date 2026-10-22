@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/get-batch-model-garden/
 title: Get batch predictions from a self-deployed Model Garden model \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:43:53.574576+00:00
+fetched_at: 2026-10-22T10:21:11.500983+00:00
 ---
 
 # Get batch predictions from a self-deployed Model Garden model  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

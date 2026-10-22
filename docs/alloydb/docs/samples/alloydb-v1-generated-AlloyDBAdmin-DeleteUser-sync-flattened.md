@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-v1-generated-AlloyDBAdmin-DeleteUser-sync-flattened/
 title: Delete a user \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:24.190014+00:00
+fetched_at: 2026-10-22T09:26:05.749946+00:00
 ---
 
 # Delete a user  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

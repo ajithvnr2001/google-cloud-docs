@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/featurestore/latest/create-onlinestore/
 title: Create an online store instance \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:10.727041+00:00
+fetched_at: 2026-10-22T10:29:32.354755+00:00
 ---
 
 # Create an online store instance  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

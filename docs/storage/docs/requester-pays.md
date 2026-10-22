@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/requester-pays/
 title: Requester Pays \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:30.698447+00:00
+fetched_at: 2026-10-22T09:50:34.584876+00:00
 ---
 
 # Requester Pays  |  Cloud Storage  |  Google Cloud Documentation
@@ -21,11 +21,11 @@ Send feedback
 
 #  Requester Pays Stay organized with collections  Save and categorize content based on your preferences. 
 
-[Setup](https://docs.cloud.google.com/storage/docs/using-requester-pays)
+The Requester Pays feature lets you share data from your Cloud Storage buckets, while requiring users who access the data to pay for the associated costs. Requester Pays is useful when you want to make large amounts of data available to users without being charged for their access to that data.
 
-This page provides an overview of the Requester Pays feature for Cloud Storage.
+For steps to enable or disable Requester Pays on a bucket, see [Use Requester Pays](https://docs.cloud.google.com/storage/docs/using-requester-pays).
 
-## Introduction
+## Overview of Requester Pays
 
 Whenever a user accesses a Cloud Storage resource such as a bucket or object, there are [charges](https://docs.cloud.google.com/storage/pricing) associated with making and executing the request. Such charges include:
 
@@ -36,7 +36,7 @@ Whenever a user accesses a Cloud Storage resource such as a bucket or object, th
 
 
 
-Normally, the project owner of the resource is billed for these charges; however, if the requester provides a _billing project_ with their request, the requester's project is billed instead. With Requester Pays enabled on your bucket, you can _require_ requesters to include a billing project in their requests, thus billing the requester's project. Enabling Requester Pays is useful, for example, if you have a lot of data you want to make available to users, but you don't want to be charged for their access to that data.
+Normally, the project owner of the resource is billed for these charges; however, if the requester provides a _billing project_ with their request, the requester's project is billed instead. With Requester Pays enabled on your bucket, you can _require_ requesters to include a billing project in their requests, thus billing the requester's project.
 
 **Note:** You currently incur no charges when you use the [Cloud Storage Transfer Service](https://docs.cloud.google.com/storage-transfer) and have a billing project in your request. This is a promotional price.
 
@@ -93,7 +93,7 @@ For operations that require multiple requests to complete, the use of billing pr
 
 Charges associated with including a billing project in your request do not appear separately in your billing. For example, say you make several downloads from a Requester Pays bucket, and you use the project `my-project` as the project to bill for the request. If `my-project` also contains a bucket from which you perform downloads, your bill only shows the total charges for your combined downloads. It does not distinguish between the downloads from your own bucket and those from the Requester Pays bucket.
 
-If you wish to distinguish between charges from your own Cloud Storage resources and charges from including billing projects in your requests, you should [create a project](https://docs.cloud.google.com/resource-manager/docs/creating-managing-projects#creating_a_project) that contains no Cloud Storage resources: this project is thus dedicated to making requests to resources in other projects, such as Requester Pays buckets.
+If you want to distinguish between charges from your own Cloud Storage resources and charges from including billing projects in your requests, you should [create a project](https://docs.cloud.google.com/resource-manager/docs/creating-managing-projects#creating_a_project) that contains no Cloud Storage resources: this project is thus dedicated to making requests to resources in other projects, such as Requester Pays buckets.
 
 ## What's next
 
@@ -106,6 +106,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

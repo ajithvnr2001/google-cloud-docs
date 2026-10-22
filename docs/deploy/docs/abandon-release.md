@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/abandon-release/
 title: Abandon a release \u00a0|\u00a0 Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:01.346941+00:00
+fetched_at: 2026-10-22T08:25:50.515635+00:00
 ---
 
 # Abandon a release  |  Cloud Deploy  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/servicenow/set-up-data-store/
 title: Set up a ServiceNow data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-16T12:30:34.563081+00:00
+fetched_at: 2026-10-22T09:53:58.033677+00:00
 ---
 
 # Set up a ServiceNow data store  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -104,8 +104,14 @@ For more information about credentials, see [ServiceNow configuration](https://d
            2. Enter **Base URL** of your ServiceNow site.
         2. Click **Continue**.
 
-        3. Optional: In the **Advanced options** section, to expose or hide ServiceNow system tables, select the **Include system tables** checkbox.
+        3. Optional: In the **Advanced options** section, configure any of the following:
 
+           * To expose or hide ServiceNow system tables, select the **Include system tables** checkbox.
+           * In the **Portal suffix** field, enter the default URL suffix for portals (for example, `sp`).
+           * In the **Knowledge portal suffix** field, enter the suffix for the knowledge portal. You can enter a single suffix (for example, `kb`) or a map of knowledge base `sys_id` to suffix (for example, `key1:value1|fallback:kb`).
+           * In the **Catalog portal suffix** field, enter the suffix for the catalog portal. You can enter a single suffix (for example, `csm`) or a map of catalog `sys_id` to suffix (for example, `key1:value1|fallback:csm`).
+           * In the **Incident portal suffix** field, enter the suffix for the incident portal (for example, `ip`).
+           * In the **Public host URL** field, enter the public URL of your instance to use when building URLs (for example, `https://some-public-url.com`). If you don't provide this value, Gemini Enterprise uses the **Instance URL**.
         4. Click **Continue**.
 
      6. If you selected **Data ingestion** , in the **Advanced options** section do the following:
@@ -151,8 +157,14 @@ For more information about credentials, see [ServiceNow configuration](https://d
 
        4. Click **Continue**.
 
-       5. Optional: In the **Advanced options** section, to expose or hide ServiceNow system tables, select the **Include system tables** checkbox.
+       5. Optional: In the **Advanced options** section, configure any of the following:
 
+          * To expose or hide ServiceNow system tables, select the **Include system tables** checkbox.
+          * In the **Portal suffix** field, enter the default URL suffix for portals (for example, `sp`).
+          * In the **Knowledge portal suffix** field, enter the suffix for the knowledge portal. You can enter a single suffix (for example, `kb`) or a map of knowledge base `sys_id` to suffix (for example, `key1:value1|fallback:kb`).
+          * In the **Catalog portal suffix** field, enter the suffix for the catalog portal. You can enter a single suffix (for example, `csm`) or a map of catalog `sys_id` to suffix (for example, `key1:value1|fallback:csm`).
+          * In the **Incident portal suffix** field, enter the suffix for the incident portal (for example, `ip`).
+          * In the **Public host URL** field, enter the public URL of your instance to use when building URLs (for example, `https://some-public-url.com`). If you don't provide this value, Gemini Enterprise uses the **Instance URL**.
        6. Click **Continue**.
 
        7. In the **Destinations** section:
@@ -232,6 +244,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

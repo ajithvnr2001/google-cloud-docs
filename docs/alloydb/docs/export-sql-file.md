@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/export-sql-file/
 title: Export a SQL file \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:22.699640+00:00
+fetched_at: 2026-10-22T09:08:45.296677+00:00
 ---
 
 # Export a SQL file  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

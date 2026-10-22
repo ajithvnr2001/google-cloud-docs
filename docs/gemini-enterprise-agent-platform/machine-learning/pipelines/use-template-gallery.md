@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/use-template-gallery/
 title: Use a prebuilt template from the Template Gallery \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:41:45.410454+00:00
+fetched_at: 2026-10-22T10:22:58.512628+00:00
 ---
 
 # Use a prebuilt template from the Template Gallery  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

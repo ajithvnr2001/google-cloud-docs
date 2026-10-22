@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-dataframes-load-data-from-bigquery/
 title: Create a BigQuery DataFrame from a table \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:40:11.404261+00:00
+fetched_at: 2026-10-22T09:16:58.482720+00:00
 ---
 
 # Create a BigQuery DataFrame from a table  |  Google Cloud Documentation

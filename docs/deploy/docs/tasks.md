@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/tasks/
 title: Configure tasks \u00a0|\u00a0 Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:43.277478+00:00
+fetched_at: 2026-10-22T08:25:01.807261+00:00
 ---
 
 # Configure tasks  |  Cloud Deploy  |  Google Cloud Documentation

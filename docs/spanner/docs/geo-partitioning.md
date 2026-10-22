@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/geo-partitioning/
 title: Geo-partitioning overview \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:23.118960+00:00
+fetched_at: 2026-10-22T09:49:16.967514+00:00
 ---
 
 # Geo-partitioning overview  |  Spanner  |  Google Cloud Documentation
@@ -88,7 +88,7 @@ Consider the following before creating your instance partitions, placements, and
 
     * For better latency, we recommend that you select a multi-region default instance partition location that has read-write and read-only regions that cover all jurisdictions required by your application. Then, create additional instance partitions (which can be regional) with leader regions that match the regions in the multi-region default instance partition.
 
-  * **Number of instance partitions** : Too many instance partitions can lead to overhead, while too few might not offer enough benefits. You can create a maximum of ten instance partitions per instance.
+  * **Number of instance partitions** : Too many instance partitions can lead to overhead, while too few might not offer enough benefits. You can create a maximum of 20 instance partitions per instance. For more information about geo-partitioning limits, see [Geo-partitioning limits](https://docs.cloud.google.com/spanner/quotas#geo-partitioning_limits).
 
 
 
@@ -165,6 +165,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

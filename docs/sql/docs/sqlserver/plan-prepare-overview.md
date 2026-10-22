@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/plan-prepare-overview/
 title: Plan and prepare overview \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:02.543309+00:00
+fetched_at: 2026-10-22T10:32:12.490265+00:00
 ---
 
 # Plan and prepare overview  |  Cloud SQL for SQL Server  |  Google Cloud Documentation
@@ -56,7 +56,8 @@ The following table lists the machine series and storage options available for e
 
 Cloud SQL edition | Machine series | Storage option  
 ---|---|---  
-[Cloud SQL Enterprise Plus edition](https://docs.cloud.google.com/sql/docs/sqlserver/machine-series-overview#enterprise-plus) | [N2](https://docs.cloud.google.com/sql/docs/sqlserver/machine-series-overview#n2) | [SSD](https://docs.cloud.google.com/sql/docs/sqlserver/storage-options-overview#ssd)  
+[Cloud SQL Enterprise Plus edition](https://docs.cloud.google.com/sql/docs/sqlserver/machine-series-overview#enterprise-plus) | [C4](https://docs.cloud.google.com/sql/docs/sqlserver/machine-series-overview#c4) | [Hyperdisk Balanced](https://docs.cloud.google.com/sql/docs/sqlserver/storage-options-overview#hyperdisk)  
+[N2](https://docs.cloud.google.com/sql/docs/sqlserver/machine-series-overview#n2) | [SSD](https://docs.cloud.google.com/sql/docs/sqlserver/storage-options-overview#ssd)  
 [Memory-optimized-N2](https://docs.cloud.google.com/sql/docs/sqlserver/machine-series-overview#memory-optimized-N2) | [SSD](https://docs.cloud.google.com/sql/docs/sqlserver/storage-options-overview#ssd)  
 [Cloud SQL Enterprise edition](https://docs.cloud.google.com/sql/docs/sqlserver/machine-series-overview#enterprise) | [N4 machine series](https://docs.cloud.google.com/sql/docs/sqlserver/machine-series-overview#n4)  
 [Dedicated core](https://docs.cloud.google.com/sql/docs/sqlserver/machine-series-overview#enterprise) | [Hyperdisk Balanced](https://docs.cloud.google.com/sql/docs/sqlserver/storage-options-overview#hyperdisk)  
@@ -88,6 +89,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

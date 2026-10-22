@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/configure-spanner/
 title: Configure a Spanner instance \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:31.154451+00:00
+fetched_at: 2026-10-22T09:43:57.021776+00:00
 ---
 
 # Configure a Spanner instance  |  Application Design Center  |  Google Cloud Documentation

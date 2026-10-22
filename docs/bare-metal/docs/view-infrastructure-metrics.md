@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/view-infrastructure-metrics/
 title: View Bare Metal Solution metrics \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:42.750604+00:00
+fetched_at: 2026-10-22T09:37:01.667114+00:00
 ---
 
 # View Bare Metal Solution metrics  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/developer-device-platform/agent-skill/
 title: Developer Device Platform Agent Skill \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:05.552464+00:00
+fetched_at: 2026-10-22T08:32:32.476792+00:00
 ---
 
 # Developer Device Platform Agent Skill  |  Google Cloud Documentation

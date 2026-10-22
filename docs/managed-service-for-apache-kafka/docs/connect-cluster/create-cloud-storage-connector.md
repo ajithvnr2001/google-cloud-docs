@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-cloud-storage-connector/
 title: Create a Cloud Storage Sink connector \u00a0|\u00a0 Managed Service for Apache Kafka \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:56:54.399118+00:00
+fetched_at: 2026-10-22T10:44:55.273054+00:00
 ---
 
 # Create a Cloud Storage Sink connector  |  Managed Service for Apache Kafka  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback
 
 #  Create a Cloud Storage Sink connector Stay organized with collections  Save and categorize content based on your preferences. 
 
-Cloud Storage Sink connectors stream data from Kafka to Cloud Storage buckets, which lets you store and process large volumes of data in a cost-effective and scalable manner.
+A Cloud Storage Sink connector streams data from Managed Service for Apache Kafka to a Cloud Storage, which lets you store and process large volumes of data in a cost-effective and scalable manner.
 
-Use cases for Cloud Storage Sink connectors include the following:
+Typical use cases for this connector include:
 
   * Data lake ingestion. Store Kafka data in a data lake for long-term archival and batch processing.
 
@@ -522,6 +522,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

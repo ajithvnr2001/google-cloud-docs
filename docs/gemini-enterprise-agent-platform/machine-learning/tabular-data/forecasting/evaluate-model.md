@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tabular-data/forecasting/evaluate-model/
 title: Evaluate AutoML forecast models \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:35.034125+00:00
+fetched_at: 2026-10-22T10:25:12.785577+00:00
 ---
 
 # Evaluate AutoML forecast models  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

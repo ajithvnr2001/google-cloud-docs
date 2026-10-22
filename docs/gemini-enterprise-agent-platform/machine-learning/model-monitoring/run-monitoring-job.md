@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/model-monitoring/run-monitoring-job/
 title: Run monitoring jobs \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:45:01.025505+00:00
+fetched_at: 2026-10-22T08:35:36.491016+00:00
 ---
 
 # Run monitoring jobs  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -60,7 +60,7 @@ Run a one-time monitoring job. Set the target and baseline datasets as well as t
       "body_mass_g": 0.002,
     }
     
-    FEATURE_DRIFT_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[DataDriftSpec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.DataDriftSpec.html)(
+    FEATURE_DRIFT_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[DataDriftSpec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.DataDriftSpec.html)(
       categorical_metric_type="l_infinity",
       numeric_metric_type="jensen_shannon_divergence",
       default_categorical_alert_threshold=0.001,
@@ -68,14 +68,14 @@ Run a one-time monitoring job. Set the target and baseline datasets as well as t
       feature_alert_thresholds=FEATURE_THRESHOLDS,
     )
     
-    PREDICTION_OUTPUT_DRIFT_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[DataDriftSpec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.DataDriftSpec.html)(
+    PREDICTION_OUTPUT_DRIFT_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[DataDriftSpec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.DataDriftSpec.html)(
       categorical_metric_type="l_infinity",
       numeric_metric_type="jensen_shannon_divergence",
       default_categorical_alert_threshold=0.001,
       default_numeric_alert_threshold=0.001,
     )
     
-    FEATURE_ATTRIBUTION_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[FeatureAttributionSpec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.FeatureAttributionSpec.html)(
+    FEATURE_ATTRIBUTION_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[FeatureAttributionSpec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.FeatureAttributionSpec.html)(
       default_alert_threshold=0.0003,
       feature_alert_thresholds={"cnt_ad_reward":0.0001},
     )
@@ -97,12 +97,12 @@ Run a one-time monitoring job. Set the target and baseline datasets as well as t
       )
     )
     
-    TRAINING_DATASET=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[MonitoringInput](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.MonitoringInput.html)(
+    TRAINING_DATASET=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[MonitoringInput](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.MonitoringInput.html)(
       gcs_uri=TRAINING_URI,
       data_format="csv"
     )
     
-    TARGET_DATASET=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[MonitoringInput](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.MonitoringInput.html)(
+    TARGET_DATASET=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[MonitoringInput](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.MonitoringInput.html)(
       table_uri=BIGQUERY_URI
     )
     
@@ -110,7 +110,7 @@ Run a one-time monitoring job. Set the target and baseline datasets as well as t
       display_name=JOB_DISPLAY_NAME,
       baseline_dataset=TRAINING_DATASET,
       target_dataset=TARGET_DATASET,
-      tabular_objective_spec=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[TabularObjective](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.TabularObjective.html)(
+      tabular_objective_spec=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[TabularObjective](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.TabularObjective.html)(
           # Optional: set to monitor input feature drift.
           feature_drift_spec=FEATURE_DRIFT_SPEC,
     

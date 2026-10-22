@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/what-is-alloydb-ai/
 title: What is AlloyDB AI \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:24.553714+00:00
+fetched_at: 2026-10-22T09:31:34.540528+00:00
 ---
 
 # What is AlloyDB AI  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

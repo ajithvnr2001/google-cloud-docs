@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/embeddings/
 title: Embeddings APIs overview \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:44:25.294636+00:00
+fetched_at: 2026-10-22T10:26:39.617427+00:00
 ---
 
 # Embeddings APIs overview  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

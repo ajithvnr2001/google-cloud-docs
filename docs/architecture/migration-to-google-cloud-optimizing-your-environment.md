@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/migration-to-google-cloud-optimizing-your-environment/
 title: Migrate to Google Cloud: Optimize your environment \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:11.930060+00:00
+fetched_at: 2026-10-22T09:38:34.329025+00:00
 ---
 
 # Migrate to Google Cloud: Optimize your environment  |  Cloud Architecture Center  |  Google Cloud Documentation

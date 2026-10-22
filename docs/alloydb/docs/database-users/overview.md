@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/database-users/overview/
 title: About database user management in AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:16.017708+00:00
+fetched_at: 2026-10-22T09:44:24.028136+00:00
 ---
 
 # About database user management in AlloyDB for PostgreSQL  |  Google Cloud Documentation

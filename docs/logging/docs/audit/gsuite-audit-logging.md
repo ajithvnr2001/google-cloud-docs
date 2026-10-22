@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/audit/gsuite-audit-logging/
 title: Audit logs for Google Workspace \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:17:36.928144+00:00
+fetched_at: 2026-10-22T10:44:04.252499+00:00
 ---
 
 # Audit logs for Google Workspace  |  Cloud Logging  |  Google Cloud Documentation
@@ -21,13 +21,11 @@ Send feedback
 
 #  Audit logs for Google Workspace Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document provides a conceptual overview of the audit logs that Google Workspace provides as a part of Cloud Audit Logs.
+Google Workspace audit logs in Cloud Audit Logs let you track administrative and user actions across your organization to help you answer "Who did what, where, and when?". You can share your Google Workspace audit logs with Google Cloud to store, analyze, monitor, and alert on your Google Workspace data.
 
-For information about managing your Google Workspace audit logs, see [View and manage audit logs for Google Workspace](https://docs.cloud.google.com/logging/docs/audit/configure-gsuite-audit-logs).
+For instructions on viewing and managing your Google Workspace audit logs, see [View and manage audit logs for Google Workspace](https://docs.cloud.google.com/logging/docs/audit/configure-gsuite-audit-logs).
 
 ## Overview
-
-Google Cloud services write audit logs to help you answer the questions, "Who did what, where, and when?". You can share your Google Workspace audit logs with Google Cloud to store, analyze, monitor, and alert on your Google Workspace data.
 
 Audit logs for Google Workspace are available for Cloud Identity, Cloud Identity Premium, and all Google Workspace customers.
 

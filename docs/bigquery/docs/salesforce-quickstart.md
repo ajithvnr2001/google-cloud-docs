@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/salesforce-quickstart/
 title: Work with Salesforce Data 360 data in BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:46:26.890720+00:00
+fetched_at: 2026-10-22T08:59:25.930008+00:00
 ---
 
 # Work with Salesforce Data 360 data in BigQuery  |  Google Cloud Documentation

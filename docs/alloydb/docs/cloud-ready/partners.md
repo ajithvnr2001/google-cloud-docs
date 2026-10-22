@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/cloud-ready/partners/
 title: Google Cloud Ready - AlloyDB Partners \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:07.940572+00:00
+fetched_at: 2026-10-22T09:27:14.781581+00:00
 ---
 
 # Google Cloud Ready - AlloyDB Partners  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

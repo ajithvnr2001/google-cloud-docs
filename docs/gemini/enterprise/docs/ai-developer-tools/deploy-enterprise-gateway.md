@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/ai-developer-tools/deploy-enterprise-gateway/
 title: Deploy Google Antigravity Enterprise Gateway \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:17.229948+00:00
+fetched_at: 2026-10-22T10:44:15.541702+00:00
 ---
 
 # Deploy Google Antigravity Enterprise Gateway  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -41,7 +41,7 @@ Antigravity automatically attaches client attribution headers to identify develo
 
   * **`User-Agent`** : Antigravity automatically emits an identification header:
         
-        User-Agent: antigravity/<var>VERSION</var> (aidev_client; auth_method=gateway)
+        User-Agent: antigravity/VERSION (aidev_client; auth_method=gateway)
         
 
   * **`X-Goog-Api-Client`** : Identifies the Antigravity client runtime and SDK telemetry so Google credits the activity to your licensed enterprise deployment.
@@ -103,17 +103,17 @@ Antigravity clients don't send Google Cloud project information in gateway mode.
 
 ### Mandatory request paths
 
-Your gateway must route the following inference paths. Paths are relative to your gateway URL. For example, a streaming request to `https://gateway.cymbal.com` uses `https://gateway.cymbal.com/v1beta/models/<var>MODEL_ID</var>:streamGenerateContent?alt=sse`.
+Your gateway must route the following inference paths. Paths are relative to your gateway URL. For example, a streaming request to `https://gateway.cymbal.com` uses `https://gateway.cymbal.com/v1beta/models/MODEL_ID:streamGenerateContent?alt=sse`.
 
-  * **Streaming inference** : `POST /v1beta/models/<var>MODEL_ID</var>:streamGenerateContent?alt=sse`
-  * **Unary inference** : `POST /v1beta/models/<var>MODEL_ID</var>:generateContent`
+  * **Streaming inference** : `POST /v1beta/models/MODEL_ID:streamGenerateContent?alt=sse`
+  * **Unary inference** : `POST /v1beta/models/MODEL_ID:generateContent`
 
 
 
 Your gateway must also accept the equivalent full Gemini Enterprise Agent Platform paths:
 
-  * **Streaming inference** : `POST /v1beta1/projects/<var>PROJECT_ID</var>/locations/<var>REGION</var>/publishers/google/models/<var>MODEL_ID</var>:streamGenerateContent?alt=sse`
-  * **Unary inference** : `POST /v1beta1/projects/<var>PROJECT_ID</var>/locations/<var>REGION</var>/publishers/google/models/<var>MODEL_ID</var>:generateContent`
+  * **Streaming inference** : `POST /v1beta1/projects/PROJECT_ID/locations/REGION/publishers/google/models/MODEL_ID:streamGenerateContent?alt=sse`
+  * **Unary inference** : `POST /v1beta1/projects/PROJECT_ID/locations/REGION/publishers/google/models/MODEL_ID:generateContent`
 
 
 
@@ -133,7 +133,7 @@ Antigravity Enterprise Gateway supports two wire protocols for inference request
 Antigravity authenticates to your gateway with an API key that your gateway issues. Antigravity sends the key from `gateway.apiKey` (or the `AGY_LLM_GATEWAY_API_KEY` environment variable) as a bearer token in the `Authorization` header:
     
     
-    Authorization: Bearer <var>GATEWAY_API_KEY</var>
+    Authorization: Bearer GATEWAY_API_KEY
     
 
 Antigravity doesn't obtain Google Cloud credentials, OAuth tokens, or client certificates on behalf of developers. Your gateway must authenticate every request and reject requests that don't present a valid key.
@@ -159,19 +159,19 @@ Your gateway calls the Gemini Enterprise Agent Platform API by using a Google Cl
          gcloud services enable \
            aiplatform.googleapis.com \
            secretmanager.googleapis.com \
-           --project=<var>PROJECT_ID</var>
+           --project=PROJECT_ID
          
 
 Replace `PROJECT_ID` with your Google Cloud project ID.
 
   2. Create a service account for the gateway and grant it the `roles/aiplatform.user` role:
          
-         gcloud iam service-accounts create <var>SERVICE_ACCOUNT_NAME</var> \
-           --project=<var>PROJECT_ID</var> \
+         gcloud iam service-accounts create SERVICE_ACCOUNT_NAME \
+           --project=PROJECT_ID \
            --display-name="Antigravity Enterprise Gateway"
          
-         gcloud projects add-iam-policy-binding <var>PROJECT_ID</var> \
-           --member="serviceAccount:<var>SERVICE_ACCOUNT_NAME</var>@<var>PROJECT_ID</var>.iam.gserviceaccount.com" \
+         gcloud projects add-iam-policy-binding PROJECT_ID \
+           --member="serviceAccount:SERVICE_ACCOUNT_NAME@PROJECT_ID.iam.gserviceaccount.com" \
            --role="roles/aiplatform.user"
          
 
@@ -179,13 +179,13 @@ Replace `SERVICE_ACCOUNT_NAME` with a name for the service account, such as `agy
 
   3. Generate a gateway API key, store it in Secret Manager, and let the service account read it:
          
-         openssl rand -base64 32 | tr -d '\n' | gcloud secrets create <var>SECRET_NAME</var> \
-           --project=<var>PROJECT_ID</var> \
+         openssl rand -base64 32 | tr -d '\n' | gcloud secrets create SECRET_NAME \
+           --project=PROJECT_ID \
            --data-file=-
          
-         gcloud secrets add-iam-policy-binding <var>SECRET_NAME</var> \
-           --project=<var>PROJECT_ID</var> \
-           --member="serviceAccount:<var>SERVICE_ACCOUNT_NAME</var>@<var>PROJECT_ID</var>.iam.gserviceaccount.com" \
+         gcloud secrets add-iam-policy-binding SECRET_NAME \
+           --project=PROJECT_ID \
+           --member="serviceAccount:SERVICE_ACCOUNT_NAME@PROJECT_ID.iam.gserviceaccount.com" \
            --role="roles/secretmanager.secretAccessor"
          
 
@@ -280,7 +280,7 @@ The following example `admin_settings.json` file configures Antigravity to route
       "gateway": {
         "enabled": true,
         "url": "https://gateway.cymbal.com",
-        "apiKey": "<var>GATEWAY_API_KEY</var>",
+        "apiKey": "GATEWAY_API_KEY",
         "wireProtocol": "genai",
         "customHeaders": {
           "X-Cost-Center": "Platform-Engineering",
@@ -303,7 +303,7 @@ This example configuration defines the following settings:
 
   * `gateway.enabled`: Enables gateway routing mode. When set to `true`, Antigravity sends all inference requests to your gateway instead of sending them directly to Google, and doesn't prompt developers to sign in with a Google Account.
   * `gateway.url`: The HTTPS endpoint of your enterprise gateway (`https://gateway.cymbal.com`).
-  * `gateway.apiKey`: The API key (`<var>GATEWAY_API_KEY</var>`) that your gateway requires to authorize requests. Your gateway issues this key, not Google. Antigravity sends it as a bearer token in the `Authorization` header.
+  * `gateway.apiKey`: The API key (`GATEWAY_API_KEY`) that your gateway requires to authorize requests. Your gateway issues this key, not Google. Antigravity sends it as a bearer token in the `Authorization` header.
   * `gateway.wireProtocol`: The API wire protocol. Supported values are:
 
     * `genai` (default): Uses the Gemini API protocol (`POST /v1beta/models/...`).
@@ -341,8 +341,8 @@ Test your enterprise gateway endpoint directly using `curl` before testing on de
 The following example `curl` command sends a streaming request directly to your gateway endpoint:
     
     
-    curl -N -X POST "https://gateway.cymbal.com/v1beta/models/<var>MODEL_ID</var>:streamGenerateContent?alt=sse" \
-      -H "Authorization: Bearer <var>GATEWAY_API_KEY</var>" \
+    curl -N -X POST "https://gateway.cymbal.com/v1beta/models/MODEL_ID:streamGenerateContent?alt=sse" \
+      -H "Authorization: Bearer GATEWAY_API_KEY" \
       -H "Content-Type: application/json" \
       -H "User-Agent: antigravity/1.2.15 (aidev_client; auth_method=gateway)" \
       -d '{"contents": [{"role": "user", "parts": [{"text": "Reply with PONG"}]}]}'
@@ -351,8 +351,8 @@ The following example `curl` command sends a streaming request directly to your 
 In this command:
 
   * `-N`: Turns off response buffering in `curl` so Server-Sent Events (SSE) stream immediately.
-  * `<var>MODEL_ID</var>`: An approved model from your `models.list` (such as `gemini-3.8-flash` or `gemini-3.7-flash`). We recommend testing with a Flash model for initial verification. For a list of available models, see [Supported models](https://antigravity.google/docs/models).
-  * `Authorization`: Sends the gateway API key (`<var>GATEWAY_API_KEY</var>`) to authenticate the request with the gateway.
+  * `MODEL_ID`: An approved model from your `models.list` (such as `gemini-3.8-flash` or `gemini-3.7-flash`). We recommend testing with a Flash model for initial verification. For a list of available models, see [Supported models](https://antigravity.google/docs/models).
+  * `Authorization`: Sends the gateway API key (`GATEWAY_API_KEY`) to authenticate the request with the gateway.
   * `User-Agent`: Sends the client attribution string that Google uses to attribute usage to your Gemini Enterprise agreement.
   * `streamGenerateContent?alt=sse`: Calls the streaming API endpoint for the specified model.
 
@@ -389,7 +389,7 @@ In the Google Cloud console, verify that attribution headers are received:
          protoPayload.serviceName="aiplatform.googleapis.com"
          
 
-  3. Inspect the log entry metadata. Verify that `protoPayload.requestMetadata.callerSuppliedUserAgent` contains `antigravity/<var>VERSION</var> (aidev_client; auth_method=gateway)`.
+  3. Inspect the log entry metadata. Verify that `protoPayload.requestMetadata.callerSuppliedUserAgent` contains `antigravity/VERSION (aidev_client; auth_method=gateway)`.
 
 
 

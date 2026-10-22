@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/odbc-for-bigquery/
 title: Use the ODBC driver for BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:11:59.919498+00:00
+fetched_at: 2026-10-22T08:54:17.508348+00:00
 ---
 
 # Use the ODBC driver for BigQuery  |  Google Cloud Documentation

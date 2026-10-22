@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/deploy-container-workloads/
 title: Deploy a containerized web server app \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:26:23.620219+00:00
+fetched_at: 2026-10-22T10:20:58.408398+00:00
 ---
 
 # Deploy a containerized web server app  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -24,13 +24,9 @@ Send feedback
 
 [ Shared ](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/cluster-configs#shared-cluster)
 
-This tutorial describes how to upload a container application in an air-gapped Google Distributed Cloud (GDC) air-gapped environment, and run that application on a shared Kubernetes cluster. A containerized workload runs on a shared Kubernetes cluster within a project namespace. Shared clusters are logically separate from projects and from each other to provide different failure domains and isolation guarantees. However, you must ensure your shared cluster is attached to a project to allow for containerized workloads to be managed within a project.
+A shared cluster in Google Distributed Cloud (GDC) air-gapped lets you run containerized applications in isolated failure domains across your organization. After attaching one to a project, you can manage those workloads within a dedicated namespace. In this tutorial, you configure a managed Harbor registry, push a sample NGINX image from Docker Hub, and deploy the web server.
 
-This workflow is for application developers within the application operator group who are responsible for creating application workloads for their organization. For more information, see [Audiences for GDC air-gapped documentation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/audiences).
-
-One of the largest obstacles for deploying a container app is getting the binary for the app to your air-gapped data center. Work with your infrastructure team and administrators to transport the application to your workstation or implement this tutorial directly on your continuous integration and continuous delivery (CI/CD) server.
-
-This tutorial uses a sample web server app available from the Google Cloud Artifact Registry.
+This workflow is for developers within the application operator group who create workloads for their organization. For more information, see [Audiences for GDC air-gapped documentation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/audiences).
 
 ## Objectives
 
@@ -55,19 +51,21 @@ To track storage and compute consumption, use the [Billing Usage dashboards](htt
 
 To complete the tasks in this document, you must request the necessary permissions and prepare your environment.
 
+Work with your infrastructure team and administrators to transport your application binary to your air-gapped workstation, or run this tutorial directly on your continuous integration and continuous delivery (CI/CD) server.
+
 ### Request IAM roles
 
 You must have specific roles to get the permissions you need to complete this tutorial workflow. You must request roles scoped to your project and organization.
 
 #### Organization roles
 
-To create, delete, edit, or view a shared Kubernetes cluster, ask your Organization IAM Admin to grant you the **User Cluster Admin** (`user-cluster-admin`) role. This role isn't bound to a namespace.
+To create, delete, edit, or view a shared Kubernetes cluster, ask your IAM Org Admin to grant you the **User Cluster Admin** (`user-cluster-admin`) role. This role isn't bound to a namespace.
 
 If you don't have the permissions to create a shared cluster, ask your platform administrator to create one for you.
 
 #### Project roles
 
-Ask your Project IAM Admin to grant you the following roles in your project namespace based on the task to perform:
+Ask your IAM Project Admin to grant you the following roles in your project namespace based on the task to perform:
 
   * **Namespace Admin** (`namepspace-admin`): create, delete, edit, and view project resources. This role is required to deploy container workloads in your project.
 
@@ -531,6 +529,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-15 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

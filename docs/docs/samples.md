@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/samples/
 title: Google Cloud samples \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:07:29.851073+00:00
+fetched_at: 2026-10-22T08:42:33.605444+00:00
 ---
 
 # Google Cloud samples  |  Google Cloud Documentation

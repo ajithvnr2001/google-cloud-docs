@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/store-query-data/
 title: Quickstart: Store and query data in Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:16.388899+00:00
+fetched_at: 2026-10-22T08:25:14.516488+00:00
 ---
 
 # Quickstart: Store and query data in Firestore in Datastore mode  |  Google Cloud Documentation

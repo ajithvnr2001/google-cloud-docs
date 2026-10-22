@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/document-ai/docs/samples/documentai-delete-processor-version/
 title: Delete a processor version \u00a0|\u00a0 Document AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:39:46.928712+00:00
+fetched_at: 2026-10-22T08:24:12.646167+00:00
 ---
 
 # Delete a processor version  |  Document AI  |  Google Cloud Documentation

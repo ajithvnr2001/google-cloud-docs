@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-hikaricp-connect-connector/
 title: Connect using HikariCP and the Java connector \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:27.197047+00:00
+fetched_at: 2026-10-22T09:38:27.990650+00:00
 ---
 
 # Connect using HikariCP and the Java connector  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/use-aci-images/
 title: Create an instance with Advanced Compute Images \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:47:14.162757+00:00
+fetched_at: 2026-10-22T08:22:25.555300+00:00
 ---
 
 # Create an instance with Advanced Compute Images  |  Compute Engine  |  Google Cloud Documentation

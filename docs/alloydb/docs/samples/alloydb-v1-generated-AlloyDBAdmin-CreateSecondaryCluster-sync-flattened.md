@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-v1-generated-AlloyDBAdmin-CreateSecondaryCluster-sync-flattened/
 title: Create a secondary cluster \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:04.592996+00:00
+fetched_at: 2026-10-22T09:34:53.513257+00:00
 ---
 
 # Create a secondary cluster  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

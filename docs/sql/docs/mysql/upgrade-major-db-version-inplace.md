@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/upgrade-major-db-version-inplace/
 title: Upgrade the database major version in-place \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:06.610228+00:00
+fetched_at: 2026-10-22T10:44:48.521941+00:00
 ---
 
 # Upgrade the database major version in-place  |  Cloud SQL for MySQL  |  Google Cloud Documentation
@@ -192,7 +192,7 @@ Upgrading requires the instance to become unavailable for a period of time. Plan
 
 Before you upgrade, complete the following steps:
 
-  1. If you're upgrading from MySQL 8.0 to MySQL 8.4, then update the authentication plugin of your existing user accounts to use the `caching_sha2_password` authentication plugin instead of the deprecated `mysql_native_password` plugin. **Important:** BigQuery federated queries don't support the `caching_sha2_password` authentication plugin. If you want to use BigQuery to query your MySQL 8.4 database, don't update the authentication plugin from `caching_sha2_password` to `mysql_native_password`. For more details, see [Troubleshooting](https://docs.cloud.google.com/bigquery/docs/cloud-sql-federated-queries#troubleshooting). To change your existing database user accounts to use the `caching_sha2_password` authentication plugin, use the following command: 
+  1. If you're upgrading from MySQL 8.0 to MySQL 8.4, then all new users that you create after the upgrade use the `caching_sha2_password` authentication plugin instead of the deprecated `mysql_native_password` plugin. You can also update existing user accounts to use the `caching_sha2_password` authentication plugin. **Important:** BigQuery federated queries don't support the `caching_sha2_password` authentication plugin. If you want to use BigQuery to query your MySQL 8.4 database, don't update the authentication plugin from `caching_sha2_password` to `mysql_native_password`. For more details, see [Troubleshooting](https://docs.cloud.google.com/bigquery/docs/cloud-sql-federated-queries#troubleshooting). To change your existing database user accounts to use the `caching_sha2_password` authentication plugin, use the following command: 
          
          ALTER USER 'username'@'%'
          IDENTIFIED WITH caching_sha2_password BY 'user_password';
@@ -1183,6 +1183,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-hw-get-by-key-hbase/
 title: Read by keys (HBase) \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:10:49.495088+00:00
+fetched_at: 2026-10-22T08:57:33.248105+00:00
 ---
 
 # Read by keys (HBase)  |  Bigtable  |  Google Cloud Documentation

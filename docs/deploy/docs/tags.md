@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/tags/
 title: Create and manage tags \u00a0|\u00a0 Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:43.445884+00:00
+fetched_at: 2026-10-22T08:25:16.477264+00:00
 ---
 
 # Create and manage tags  |  Cloud Deploy  |  Google Cloud Documentation

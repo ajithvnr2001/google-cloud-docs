@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/how-to/upgrade-on-prem-api/
 title: Upgrade an admin or user cluster using GKE On-Prem API clients \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:56:52.416230+00:00
+fetched_at: 2026-10-22T10:22:27.075556+00:00
 ---
 
 # Upgrade an admin or user cluster using GKE On-Prem API clients  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -153,7 +153,7 @@ When the upgrade is complete, you see something similar to the following in the 
     
     Updated Anthos on bare metal Admin Cluster [https://gkeonprem.googleapis.com/v1/projects/example-project-1234/locations/us-central1/bareMetalAdminClusters/abm-admin-cluster].
     NAME               LOCATION     VERSION     MEMBERSHIP         STATE
-    abm-admin-cluster  us-central1  1.36.100-gke.144      abm-admin-cluster  RUNNING
+    abm-admin-cluster  us-central1  1.36.200-gke.118      abm-admin-cluster  RUNNING
     
 
 For additional information on the fields and flags, see [gcloud container bare-metal admin-clusters reference](https://docs.cloud.google.com/sdk/gcloud/reference/container/bare-metal/admin-clusters).
@@ -199,7 +199,7 @@ To view the status of the upgrade, click **Show Details** on the **Cluster Detai
 The output of the command is similar to the following:
     
     NAME              LOCATION     VERSION  ADMIN_CLUSTER      STATE
-    abm-user-cluster  us-central1  1.36.100-gke.144   abm-admin-cluster  RUNNING
+    abm-user-cluster  us-central1  1.36.200-gke.118   abm-admin-cluster  RUNNING
     
 
 If you get a `PERMISSION_DENIED` error, double check the project ID that you entered. If the project ID is correct, run `gcloud auth login` to sign in to the Google Cloud CLI with the account that has access to the project.
@@ -317,6 +317,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/speech/speech-to-text/
 title: Convert speech to text \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:42:07.494612+00:00
+fetched_at: 2026-10-22T10:25:29.991267+00:00
 ---
 
 # Convert speech to text  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

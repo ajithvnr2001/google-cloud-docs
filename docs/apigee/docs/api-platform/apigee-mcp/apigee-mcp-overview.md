@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/apigee-mcp/apigee-mcp-overview/
 title: Model Context Protocol (MCP) in Apigee overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:30:57.694665+00:00
+fetched_at: 2026-10-22T10:45:07.844832+00:00
 ---
 
 # Model Context Protocol (MCP) in Apigee overview  |  Google Cloud Documentation
@@ -90,6 +90,73 @@ You can discover available MCP endpoints for Apigee services using a directory s
 
 Additionally, MCP integrates with Apigee API hub. When an MCP Discovery Proxy is deployed, API hub automatically ingests its OpenAPI specification, assigns it the **MCP** API style, and maps API operations to individual MCP tools. This allows developers to easily filter for MCP-enabled APIs in API hub and use **Semantic Search** with natural language queries to find relevant tools for their agentic applications.
 
+### Tool argument placement on the backend request
+
+When an MCP client calls a tool, Apigee builds a request to your backend from the arguments the client supplied. The `in` value that each parameter declares in your OpenAPI specification determines where that argument is placed on the outgoing request.
+
+OpenAPI `in` value | Where the argument is sent on the backend request  
+---|---  
+`header` | As a request header. The parameter name is used as the header name exactly as written in the specification.  
+`cookie` | In the `Cookie` request header, as a `name=value` pair. If an operation declares several cookie parameters, they are sent in one `Cookie` header, separated by `; ` (a semicolon and a space).  
+`query` | In the query string.  
+`path` | Substituted into the request URL path.  
+  
+Every parameter appears in the tool's `inputSchema` regardless of its `in` value, so an MCP client supplies all of them the same way. The `in` value changes only where the value is placed on the request to your backend.
+
+For example, the following operation declares one parameter in each of three locations:
+    
+    
+    paths:
+      /orders:
+        get:
+          operationId: listOrders
+          parameters:
+            - name: X-Session-Id
+              in: header
+              schema:
+                type: string
+            - name: tenantId
+              in: cookie
+              schema:
+                type: string
+            - name: limit
+              in: query
+              schema:
+                type: integer
+
+A `tools/call` request that supplies all three arguments produces a backend request of the following shape:
+    
+    
+    GET /orders?limit=25
+    X-Session-Id: sess-abc-123
+    Cookie: tenantId=tenant-xyz-789
+
+Note the following behavior:
+
+  * An argument bound to a header or a cookie is not also appended to the query string, and is not included in the request body.
+  * An argument the client does not supply is skipped. No empty header, cookie or query parameter is sent in its place.
+  * A bound header replaces any header of the same name already on the backend request. Other headers on the backend request are passed through unchanged.
+  * Values are percent-encoded (RFC 3986) when placed on the backend request, so a value containing a space or a reserved character reaches your backend in its encoded form. Decode it there if you need the original.
+  * Where an operation and its path both declare a parameter with the same name and the same `in` value, the operation-level declaration applies, as the OpenAPI specification requires.
+  * Give parameters on the same operation distinct names, even when they declare different `in` values. OpenAPI identifies a parameter by the pair of its name and its location, but an MCP tool takes a single value per argument name. If a specification declares two same-named parameters with different `in` values, the client supplies one value and that value is sent to **both** declared locations on the backend request: a `sessionId` declared both `in: cookie` and `in: query` arrives in the `Cookie` header and in the query string. Check for this if your backend has logic that depends on where a value came from.
+  * Argument names are case-sensitive, so `UserID` and `userid` are two different arguments. For `header` parameters, take the further step of making the names differ by more than case: HTTP header names are case-insensitive, so two header parameters whose names differ only in case resolve to the same header on the backend request and only one of the two values survives.
+
+
+
+#### Cookies on the request to your backend
+
+Cookies are the one case where binding can remove something from the request rather than only adding to it. Unlike other HTTP headers, which carry independent name/value pairs that can each be set on their own, all cookies share a single `Cookie` header. Apigee does not merge the cookies you bind with the cookies that arrived on the MCP client's request: when a call supplies any cookie argument, the `Cookie` header is replaced as a whole with the bound cookies alone.
+
+So whether a cookie that arrived with the MCP client's own HTTP request reaches your backend depends on the individual tool call:
+
+  * If the operation declares no `cookie` parameters, the `Cookie` header is forwarded to the backend unchanged.
+  * If the operation declares `cookie` parameters but the call supplies none of them, the `Cookie` header is again forwarded to the backend unchanged.
+  * As soon as the call supplies at least one cookie argument, the `Cookie` header is replaced by the bound cookies alone. Any cookie that arrived on the client's request and is not declared as a `cookie` parameter is dropped.
+
+
+
+Because the third case is driven by the arguments a particular call supplies, an operation with optional cookie parameters can pass cookies through on one call and drop them on the next. There is no setting that preserves an undeclared cookie. If your backend depends on a cookie, declare it as a `cookie` parameter on every operation that needs it, so its value is always supplied by the tool call rather than inherited from the client's request.
+
 ### Security
 
 MCP in Apigee includes multiple layers of security to protect your services. You can control access using authentication, authorization, network boundaries, and content scanning.
@@ -163,6 +230,7 @@ If you see a provisioning error, or the provisioning status never changes to **D
 
 The following limitations apply to MCP in Apigee hybrid:
 
+  * **Tool arguments declared`in: header` or `in: cookie` are sent in the query string.** The per-location routing described in Tool argument placement on the backend request is not yet available in Apigee hybrid. Until it is, a parameter declaring either of those locations reaches your backend as a query parameter, which is the behavior that preceded that feature. The `in: query` and `in: path` rows of that table apply to Apigee hybrid as written.
   * **MCP tool count is bounded by size, not by a fixed number.** Unlike Apigee (which enforces a fixed maximum number of MCP tools per organization), Apigee hybrid bounds tool capacity through four size limits: OpenAPI specification file size, MCP proxy bundle size, `tools/list` response size per hostname, and the number of hostnames per environment group. For most OpenAPI specifications, you can typically expect to fit 10,000 MCP tools per organization at the default response size limit. Actual capacity varies with the specific shape of your specification (dominated by the number of parameters and request-body properties, plus the description length); response schemas do not count against the budget. To estimate capacity for your specific OpenAPI specifications and to see the four hard limits and their failure modes, see [Estimate MCP tool capacity](https://docs.cloud.google.com/apigee/docs/api-platform/apigee-mcp/enable-mcp#tool-capacity).
   * **Enabling or disabling MCP triggers a staged canary release of Message Processor pods.** The Apigee operator updates your Message Processor pod spec when you enable or disable MCP, and the Message Processor `ApigeeDeployment` controller runs the change through a staged canary release rather than as a vanilla Kubernetes rolling restart. The release fires only on the enable and disable transitions, not on ongoing MCP deployment activity or steady-state MCP traffic. Schedule the initial enable and any subsequent disable operations during an approved maintenance window.
   * **MCP pod resource sizing is customer-managed.** The MCP pods run with the resource requests and limits set by the built-in defaults in the Apigee hybrid Helm charts. If your workload requires more capacity, adjust CPU and memory in `overrides.yaml`. See the [`overrides.yaml` field reference](https://docs.cloud.google.com/apigee/docs/api-platform/apigee-mcp/enable-mcp#reference) for the available fields.
@@ -185,6 +253,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

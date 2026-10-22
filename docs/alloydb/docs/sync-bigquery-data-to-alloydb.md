@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/sync-bigquery-data-to-alloydb/
 title: Sync BigQuery data to AlloyDB \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:07.590979+00:00
+fetched_at: 2026-10-22T09:37:39.156500+00:00
 ---
 
 # Sync BigQuery data to AlloyDB  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

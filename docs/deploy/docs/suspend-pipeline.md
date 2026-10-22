@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/suspend-pipeline/
 title: Suspend a delivery pipeline \u00a0|\u00a0 Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:43.668242+00:00
+fetched_at: 2026-10-22T08:26:00.750228+00:00
 ---
 
 # Suspend a delivery pipeline  |  Cloud Deploy  |  Google Cloud Documentation

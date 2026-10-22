@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-delete-protection-set/
 title: Change the deletion protection setting for an existing VM \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:43:53.848009+00:00
+fetched_at: 2026-10-22T09:17:43.261077+00:00
 ---
 
 # Change the deletion protection setting for an existing VM  |  Compute Engine  |  Google Cloud Documentation

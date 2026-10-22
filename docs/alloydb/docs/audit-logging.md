@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/audit-logging/
 title: AlloyDB for PostgreSQL audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:05.908979+00:00
+fetched_at: 2026-10-22T09:09:20.091333+00:00
 ---
 
 # AlloyDB for PostgreSQL audit logging  |  Google Cloud Documentation

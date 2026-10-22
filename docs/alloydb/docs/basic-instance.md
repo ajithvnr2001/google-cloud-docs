@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/basic-instance/
 title: Reduce costs using basic instances \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:25.998655+00:00
+fetched_at: 2026-10-22T09:09:21.622323+00:00
 ---
 
 # Reduce costs using basic instances  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

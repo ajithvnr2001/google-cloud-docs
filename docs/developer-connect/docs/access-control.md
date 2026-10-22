@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/developer-connect/docs/access-control/
 title: IAM roles and permissions \u00a0|\u00a0 Developer Connect \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:56.199450+00:00
+fetched_at: 2026-10-22T08:32:30.560246+00:00
 ---
 
 # IAM roles and permissions  |  Developer Connect  |  Google Cloud Documentation

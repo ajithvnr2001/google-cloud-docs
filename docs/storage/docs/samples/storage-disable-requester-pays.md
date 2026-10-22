@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-disable-requester-pays/
 title: Disable the requester pays status for a bucket \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:17:01.211227+00:00
+fetched_at: 2026-10-22T10:30:50.584111+00:00
 ---
 
 # Disable the requester pays status for a bucket  |  Cloud Storage  |  Google Cloud Documentation

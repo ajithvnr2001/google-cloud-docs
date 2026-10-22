@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/get-started-tpc/
 title: 404 \u00a0|\u00a0 Page Not Found \u00a0|\u00a0 Google Cloud Documentation
 method: crawl4ai+scrapegraph (scrapling: scrapling status 404)
-fetched_at: 2026-10-21T14:06:54.595793+00:00
+fetched_at: 2026-10-22T09:07:34.946938+00:00
 ---
 
 # 404  |  Page Not Found  |  Google Cloud Documentation
@@ -22,8 +22,7 @@ fetched_at: 2026-10-21T14:06:54.595793+00:00
   * [日本語](https://docs.cloud.google.com/docs/get-started-tpc/?hl=ja)
   * [한국어](https://docs.cloud.google.com/docs/get-started-tpc/?hl=ko)
 
-
-[ Sign in ](https://docs.cloud.google.com/_d/signin?continue=https%3A%2F%2Fdocs.cloud.google.com%2Fdocs%2Fget-started-tpc%2F&prompt=select_account)
+Sign in
 [Start free](https://console.cloud.google.com/freetrial)
 ### 404
 Sorry, we couldn't find that page. 

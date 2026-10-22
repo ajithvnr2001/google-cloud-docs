@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cpp/docs/background-threads/
 title: Background threads in the C++ Client Libraries \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:40:27.157196+00:00
+fetched_at: 2026-10-22T08:29:30.699541+00:00
 ---
 
 # Background threads in the C++ Client Libraries  |  Google Cloud Documentation

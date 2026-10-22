@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/blueprints/security-foundations/organization-structure/
 title: Organization structure \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:27:26.440232+00:00
+fetched_at: 2026-10-22T09:38:55.542851+00:00
 ---
 
 # Organization structure  |  Cloud Architecture Center  |  Google Cloud Documentation
