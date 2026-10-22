@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/connectors/get-started-connectors/
 title: Get started with connectors \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:54:18.598551+00:00
+fetched_at: 2026-10-21T12:35:37.455672+00:00
 ---
 
 # Get started with connectors  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/support/
 title: Support \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:41:36.592281+00:00
+fetched_at: 2026-10-21T14:30:36.985180+00:00
 ---
 
 # Support  |  Cloud Healthcare API  |  Google Cloud Documentation

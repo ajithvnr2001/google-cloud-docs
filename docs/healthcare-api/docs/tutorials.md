@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/tutorials/
 title: Tutorials \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:35:08.625687+00:00
+fetched_at: 2026-10-21T12:54:27.569511+00:00
 ---
 
 # Tutorials  |  Cloud Healthcare API  |  Google Cloud Documentation

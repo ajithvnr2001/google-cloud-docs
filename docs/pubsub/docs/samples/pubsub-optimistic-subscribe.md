@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-optimistic-subscribe/
 title: Optimistically subscribe without creating a subscription first \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:53:01.042091+00:00
+fetched_at: 2026-10-21T14:59:00.409419+00:00
 ---
 
 # Optimistically subscribe without creating a subscription first  |  Pub/Sub  |  Google Cloud Documentation

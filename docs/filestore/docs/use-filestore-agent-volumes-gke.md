@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/use-filestore-agent-volumes-gke/
 title: Set up GKE environment for Filestore agent volumes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:15:18.734598+00:00
+fetched_at: 2026-10-21T14:58:22.891048+00:00
 ---
 
 # Set up GKE environment for Filestore agent volumes  |  Google Cloud Documentation
@@ -55,7 +55,7 @@ Create a GKE cluster connected to your Private Service Connect.
         --network=projects/PROJECT_ID/global/networks/VPC_NETWORK \
         --subnetwork=SUBNET_NAME \
         --num-nodes=3 \
-        --workload-pool=PROJECT_ID.svc.id.goog\
+        --workload-pool=PROJECT_ID.svc.id.goog \
         --scopes=cloud-platform \
         --enable-agent-sandbox \
         --addons=GcpFilestoreCsiDriver=DISABLED \
@@ -74,38 +74,34 @@ Replace the following:
 
 ## Set up Workload Identity Federation for GKE and IAM
 
-Configure a Google Service Account (GSA) with permissions to provision Filestore volumes and bind it to the Kubernetes Service Account (KSA) used by the CSI driver.
+Give the Kubernetes ServiceAccount used by the CSI driver and the Compute Engine default service account permissions to provision Filestore volumes:
 
-  1. Create the Google Service Account:
+  1. Get your project number:
          
-         gcloud iam service-accounts create filestore-csi-gsa \
-             --display-name="Filestore CSI Driver GSA" \
-             --project=PROJECT_ID
+         gcloud projects describe PROJECT_ID \
+             --format="value(projectNumber)"
          
 
-  2. Grant the Cloud Filestore Editor (`roles/file.editor`) role to the service account:
+Replace `PROJECT_ID` with your project ID.
+
+  2. Grant the Cloud Filestore Editor role (`roles/file.editor`) on the project to the Kubernetes ServiceAccount (`gcp-filestore-csi-controller-sa`) in the `gcp-filestore-csi-driver` namespace:
          
          gcloud projects add-iam-policy-binding PROJECT_ID \
-             --member="serviceAccount:filestore-csi-gsa@PROJECT_ID.iam.gserviceaccount.com" \
-             --role="roles/file.editor"
+             --member="principal://iam.googleapis.com/projects/PROJECT_NUMBER/locations/global/workloadIdentityPools/PROJECT_ID.svc.id.goog/subject/ns/gcp-filestore-csi-driver/sa/gcp-filestore-csi-controller-sa" \
+             --role="roles/file.editor" \
+             --condition=None
          
 
-  3. Grant the Cloud Filestore Editor (`roles/file.editor`) role to the Compute Engine default service account:
+Replace the following:
+
+     * `PROJECT_ID`: your Google Cloud project ID.
+     * `PROJECT_NUMBER`: your Google Cloud project number.
+  3. Grant the Cloud Filestore Editor role (`roles/file.editor`) on the project to the Compute Engine default service account:
          
-         PROJECT_NUMBER=$(gcloud projects describe PROJECT_ID \
-             --format="value(projectNumber)")
          gcloud projects add-iam-policy-binding PROJECT_ID \
              --member="serviceAccount:PROJECT_NUMBER-compute@developer.gserviceaccount.com" \
-             --role="roles/file.editor"
-         
-
-  4. Bind the KSA in the `gcp-filestore-csi-driver` namespace to the GSA:
-         
-         gcloud iam service-accounts add-iam-policy-binding \
-             filestore-csi-gsa@PROJECT_ID.iam.gserviceaccount.com \
-             --role="roles/iam.workloadIdentityUser" \
-             --member="serviceAccount:PROJECT_ID.svc.id.goog[gcp-filestore-csi-driver/gcp-filestore-csi-controller-sa]" \
-             --project=PROJECT_ID
+             --role="roles/file.editor" \
+             --condition=None
          
 
 
@@ -127,15 +123,7 @@ Configure a Google Service Account (GSA) with permissions to provision Filestore
          kubectl apply -k deploy/kubernetes/overlays/volumepool
          
 
-  3. Annotate the controller service account with the GSA:
-         
-         kubectl annotate serviceaccount gcp-filestore-csi-controller-sa \
-             --namespace=gcp-filestore-csi-driver \
-             --overwrite \
-             iam.gke.io/gcp-service-account=filestore-csi-gsa@PROJECT_ID.iam.gserviceaccount.com
-         
-
-  4. Verify that the CSI driver pods are running:
+  3. Verify that the CSI driver pods are running:
          
          kubectl get pods -n gcp-filestore-csi-driver
          
@@ -216,6 +204,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

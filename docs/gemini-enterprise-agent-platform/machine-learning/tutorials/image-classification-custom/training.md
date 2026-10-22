@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tutorials/image-classification-custom/training/
 title: Hello custom training: Train a custom image classification model \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:25:54.835330+00:00
+fetched_at: 2026-10-21T12:52:35.210875+00:00
 ---
 
 # Hello custom training: Train a custom image classification model  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

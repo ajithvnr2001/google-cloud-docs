@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/administration/rbac/
 title: Configure legacy RBAC \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:40.969960+00:00
+fetched_at: 2026-10-21T14:11:17.426018+00:00
 ---
 
 # Configure legacy RBAC  |  Google Security Operations  |  Google Cloud Documentation

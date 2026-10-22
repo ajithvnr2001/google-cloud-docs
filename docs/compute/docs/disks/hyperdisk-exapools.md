@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/hyperdisk-exapools/
 title: Hyperdisk Exapools overview \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:29.917474+00:00
+fetched_at: 2026-10-21T14:18:56.764652+00:00
 ---
 
 # Hyperdisk Exapools overview  |  Compute Engine  |  Google Cloud Documentation

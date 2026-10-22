@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/colab/docs/service-controls/
 title: Use VPC Service Controls with Colab Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:30:22.138761+00:00
+fetched_at: 2026-10-21T14:19:26.198904+00:00
 ---
 
 # Use VPC Service Controls with Colab Enterprise  |  Google Cloud Documentation

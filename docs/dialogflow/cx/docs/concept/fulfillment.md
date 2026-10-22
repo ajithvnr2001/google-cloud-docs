@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/fulfillment/
 title: Fulfillments \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:39.064849+00:00
+fetched_at: 2026-10-21T12:56:01.929171+00:00
 ---
 
 # Fulfillments  |  Dialogflow CX  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/differential-privacy/
 title: Use differential privacy \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:12:53.434199+00:00
+fetched_at: 2026-10-21T14:07:57.292968+00:00
 ---
 
 # Use differential privacy  |  BigQuery  |  Google Cloud Documentation

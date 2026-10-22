@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/search-intro/
 title: Introduction to search in BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:17.669710+00:00
+fetched_at: 2026-10-21T12:36:10.438754+00:00
 ---
 
 # Introduction to search in BigQuery  |  Google Cloud Documentation

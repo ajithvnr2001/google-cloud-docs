@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/quickstart-scanning-go-manually/
 title: Quickstart: Scan Go packages manually \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:44:38.225885+00:00
+fetched_at: 2026-10-21T12:40:28.178776+00:00
 ---
 
 # Quickstart: Scan Go packages manually  |  Artifact Analysis  |  Google Cloud Documentation

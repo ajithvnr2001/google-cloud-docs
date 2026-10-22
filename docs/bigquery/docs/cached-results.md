@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/cached-results/
 title: Use cached query results \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:21.978579+00:00
+fetched_at: 2026-10-21T12:41:02.728447+00:00
 ---
 
 # Use cached query results  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/search/python/functions/
 title: Functions \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:56.086513+00:00
+fetched_at: 2026-10-21T14:53:39.887574+00:00
 ---
 
 # Functions  |  App Engine standard environment  |  Google Cloud Documentation

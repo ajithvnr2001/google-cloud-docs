@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/access-approval/docs/access-transparency/
 title: Introduction to Access Transparency \u00a0|\u00a0 Access Approval \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:25:30.405007+00:00
+fetched_at: 2026-10-21T12:29:39.706607+00:00
 ---
 
 # Introduction to Access Transparency  |  Access Approval  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/create-reusable-enrichment-block/
 title: Create an enrichment playbook block \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:05:53.751546+00:00
+fetched_at: 2026-10-21T12:38:56.578169+00:00
 ---
 
 # Create an enrichment playbook block  |  Google Security Operations  |  Google Cloud Documentation

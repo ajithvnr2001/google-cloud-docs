@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/spaces/spaces-roles-permissions/
 title: Apigee Spaces roles and permissions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:54:41.494388+00:00
+fetched_at: 2026-10-21T14:28:22.077703+00:00
 ---
 
 # Apigee Spaces roles and permissions  |  Google Cloud Documentation

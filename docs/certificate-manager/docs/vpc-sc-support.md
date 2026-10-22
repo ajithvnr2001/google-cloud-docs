@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/vpc-sc-support/
 title: Configure VPC Service Controls for Certificate Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:00:06.435711+00:00
+fetched_at: 2026-10-21T14:25:17.977576+00:00
 ---
 
 # Configure VPC Service Controls for Certificate Manager  |  Google Cloud Documentation

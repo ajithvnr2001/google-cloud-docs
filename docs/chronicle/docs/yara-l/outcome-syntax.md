@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/yara-l/outcome-syntax/
 title: Outcome section syntax \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:23:44.744702+00:00
+fetched_at: 2026-10-21T14:10:29.481243+00:00
 ---
 
 # Outcome section syntax  |  Google Security Operations  |  Google Cloud Documentation

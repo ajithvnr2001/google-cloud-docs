@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/support-maintenance-policy/
 title: Support policy for operating systems \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:43.569832+00:00
+fetched_at: 2026-10-21T14:21:37.976668+00:00
 ---
 
 # Support policy for operating systems  |  Compute Engine  |  Google Cloud Documentation

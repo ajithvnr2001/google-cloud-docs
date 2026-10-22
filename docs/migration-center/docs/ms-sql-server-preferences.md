@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/ms-sql-server-preferences/
 title: Migration preferences for Microsoft SQL Server \u00a0|\u00a0 Migration Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:24.227052+00:00
+fetched_at: 2026-10-21T15:12:40.951270+00:00
 ---
 
 # Migration preferences for Microsoft SQL Server  |  Migration Center  |  Google Cloud Documentation

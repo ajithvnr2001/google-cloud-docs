@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/mcafee-tiedxl/
 title: McAfee TIE DXL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:13:43.533324+00:00
+fetched_at: 2026-10-21T12:29:43.928921+00:00
 ---
 
 # McAfee TIE DXL  |  Google Security Operations  |  Google Cloud Documentation

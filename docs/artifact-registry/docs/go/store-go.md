@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/go/store-go/
 title: Quickstart: Store Go modules in Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:16.644468+00:00
+fetched_at: 2026-10-21T12:39:45.041758+00:00
 ---
 
 # Quickstart: Store Go modules in Artifact Registry  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/cluster-node-machines/
 title: Cluster node machine types \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:58.951747+00:00
+fetched_at: 2026-10-21T12:58:35.396810+00:00
 ---
 
 # Cluster node machine types  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

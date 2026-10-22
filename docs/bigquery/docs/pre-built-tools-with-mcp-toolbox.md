@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/pre-built-tools-with-mcp-toolbox/
 title: Connect LLMs to BigQuery with MCP \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:52:55.257453+00:00
+fetched_at: 2026-10-21T12:36:13.375294+00:00
 ---
 
 # Connect LLMs to BigQuery with MCP  |  Google Cloud Documentation

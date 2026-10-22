@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/deploying-builds/deploy-cloud-run/
 title: Deploying to Cloud Run using Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:04.149576+00:00
+fetched_at: 2026-10-21T14:11:45.913297+00:00
 ---
 
 # Deploying to Cloud Run using Cloud Build  |  Google Cloud Documentation

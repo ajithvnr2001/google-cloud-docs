@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigqueryreservation-reservationservice-reservation-create/
 title: Create a BigQuery reservation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:45.904777+00:00
+fetched_at: 2026-10-21T12:37:57.337876+00:00
 ---
 
 # Create a BigQuery reservation  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/configuring-datastore-indexes-with-index-yaml/
 title: Configure Datastore indexes with index.yaml \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:51:00.368554+00:00
+fetched_at: 2026-10-21T14:21:30.510171+00:00
 ---
 
 # Configure Datastore indexes with index.yaml  |  App Engine standard environment  |  Google Cloud Documentation

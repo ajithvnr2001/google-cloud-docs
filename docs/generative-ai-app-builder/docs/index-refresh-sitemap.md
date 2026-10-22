@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/index-refresh-sitemap/
 title: Index and refresh web pages using sitemaps \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:26:52.263202+00:00
+fetched_at: 2026-10-21T12:55:30.553256+00:00
 ---
 
 # Index and refresh web pages using sitemaps  |  Agent Search  |  Google Cloud Documentation

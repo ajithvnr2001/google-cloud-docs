@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/15.7.1/docs/plan-installation/
 title: Plan your AlloyDB Omni installation on a VM \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 15.7.1 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:41:09.850040+00:00
+fetched_at: 2026-10-21T15:27:09.437358+00:00
 ---
 
 # Plan your AlloyDB Omni installation on a VM  |  AlloyDB Omni for Kubernetes: 15.7.1  |  Google Cloud Documentation

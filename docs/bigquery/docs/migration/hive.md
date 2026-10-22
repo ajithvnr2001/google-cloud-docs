@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/migration/hive/
 title: Migrate schema and data from Apache Hive \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:05:15.800940+00:00
+fetched_at: 2026-10-21T12:39:28.663883+00:00
 ---
 
 # Migrate schema and data from Apache Hive  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/configure-automatic-application-monitoring/
 title: Configure automatic application monitoring for workloads \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:26:24.809418+00:00
+fetched_at: 2026-10-21T12:26:49.765926+00:00
 ---
 
 # Configure automatic application monitoring for workloads  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -41,6 +41,7 @@ Automatic application monitoring supports the following workloads:
   * AI model servers: 
     * [JetStream](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/jetstream)
     * [NVIDIA Triton](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/nvidia-triton)
+    * [SGLang](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/sglang)
     * [TensorFlow Serving](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/tf-serving)
     * [Text Generation Inference](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/tgi)
     * [TorchServe](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/exporters/torchserve)
@@ -446,6 +447,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

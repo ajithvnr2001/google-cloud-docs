@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/gke/route-trigger-apigee-registry/
 title: Route Apigee Registry events to GKE \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:30:41.992456+00:00
+fetched_at: 2026-10-21T12:45:51.077288+00:00
 ---
 
 # Route Apigee Registry events to GKE  |  Eventarc Standard  |  Google Cloud Documentation

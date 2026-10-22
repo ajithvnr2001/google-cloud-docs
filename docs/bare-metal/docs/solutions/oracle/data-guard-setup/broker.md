@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/solutions/oracle/data-guard-setup/broker/
 title: Configure and enable Data Guard broker \u00a0|\u00a0 Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:53:41.219006+00:00
+fetched_at: 2026-10-21T14:25:08.938730+00:00
 ---
 
 # Configure and enable Data Guard broker  |  Bare Metal Solution  |  Google Cloud Documentation

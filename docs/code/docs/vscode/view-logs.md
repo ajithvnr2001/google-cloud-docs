@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/vscode/view-logs/
 title: View Kubernetes logs in Cloud Code for VS Code \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:41:13.436703+00:00
+fetched_at: 2026-10-21T12:39:52.773864+00:00
 ---
 
 # View Kubernetes logs in Cloud Code for VS Code  |  Google Cloud Documentation

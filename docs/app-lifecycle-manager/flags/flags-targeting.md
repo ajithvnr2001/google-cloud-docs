@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/flags/flags-targeting/
 title: Target flags with CEL \u00a0|\u00a0 App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:18.639153+00:00
+fetched_at: 2026-10-21T12:35:26.607047+00:00
 ---
 
 # Target flags with CEL  |  App Lifecycle Manager  |  Google Cloud Documentation

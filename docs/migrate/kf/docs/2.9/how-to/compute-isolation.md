@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.9/how-to/compute-isolation/
 title: Enable compute isolation \u00a0|\u00a0 Kf 2.8 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:34:57.962924+00:00
+fetched_at: 2026-10-21T15:17:31.529144+00:00
 ---
 
 # Enable compute isolation  |  Kf 2.8  |  Google Cloud Documentation

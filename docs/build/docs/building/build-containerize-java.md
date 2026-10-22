@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/building/build-containerize-java/
 title: Build, test, and containerize Java applications \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:03.597502+00:00
+fetched_at: 2026-10-21T14:11:28.456454+00:00
 ---
 
 # Build, test, and containerize Java applications  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deployment-manager/docs/
 title: Google Cloud Deployment Manager documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:15:29.660589+00:00
+fetched_at: 2026-10-21T12:42:45.506612+00:00
 ---
 
 # Google Cloud Deployment Manager documentation  |  Google Cloud Documentation

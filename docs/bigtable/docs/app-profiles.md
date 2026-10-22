@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/app-profiles/
 title: App profiles overview \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:11.990377+00:00
+fetched_at: 2026-10-21T12:36:38.047968+00:00
 ---
 
 # App profiles overview  |  Bigtable  |  Google Cloud Documentation

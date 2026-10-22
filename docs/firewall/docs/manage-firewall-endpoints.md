@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/manage-firewall-endpoints/
 title: Manage firewall endpoints and endpoint associations \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:40:28.721120+00:00
+fetched_at: 2026-10-21T12:46:26.528985+00:00
 ---
 
 # Manage firewall endpoints and endpoint associations  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

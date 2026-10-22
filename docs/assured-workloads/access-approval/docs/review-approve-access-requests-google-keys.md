@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/access-approval/docs/review-approve-access-requests-google-keys/
 title: Review and approve access requests using the Google-managed signing key \u00a0|\u00a0 Access Approval \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:29:50.628594+00:00
+fetched_at: 2026-10-21T14:09:41.181444+00:00
 ---
 
 # Review and approve access requests using the Google-managed signing key  |  Access Approval  |  Google Cloud Documentation

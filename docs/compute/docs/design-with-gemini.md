@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/design-with-gemini/
 title: Design compute infrastructure with Compute Advisor \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:42.191963+00:00
+fetched_at: 2026-10-21T14:24:54.366630+00:00
 ---
 
 # Design compute infrastructure with Compute Advisor  |  Compute Engine  |  Google Cloud Documentation

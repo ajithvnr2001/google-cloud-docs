@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-open-source-software/docs/access-metadata-using-cloud-storage/
 title: Access metadata using Cloud Storage \u00a0|\u00a0 Assured Open Source Software \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:44:05.871799+00:00
+fetched_at: 2026-10-21T14:09:40.564100+00:00
 ---
 
 # Access metadata using Cloud Storage  |  Assured Open Source Software  |  Google Cloud Documentation

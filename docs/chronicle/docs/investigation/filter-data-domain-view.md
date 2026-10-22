@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/filter-data-domain-view/
 title: Filter data in Domain view \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:22:03.197759+00:00
+fetched_at: 2026-10-21T14:11:06.047577+00:00
 ---
 
 # Filter data in Domain view  |  Google Security Operations  |  Google Cloud Documentation

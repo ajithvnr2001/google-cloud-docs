@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/update-on-repair/
 title: Apply configuration updates during repairs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:21.019902+00:00
+fetched_at: 2026-10-21T14:22:45.778028+00:00
 ---
 
 # Apply configuration updates during repairs  |  Compute Engine  |  Google Cloud Documentation

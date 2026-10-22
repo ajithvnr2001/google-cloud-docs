@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/playbooks-use-cases/
 title: Explore playbook use cases \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:15:16.984098+00:00
+fetched_at: 2026-10-21T12:38:52.423288+00:00
 ---
 
 # Explore playbook use cases  |  Google Security Operations  |  Google Cloud Documentation

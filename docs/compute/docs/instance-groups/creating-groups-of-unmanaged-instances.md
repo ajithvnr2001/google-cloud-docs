@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/creating-groups-of-unmanaged-instances/
 title: Group unmanaged VMs together \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:55:57.995602+00:00
+fetched_at: 2026-10-21T14:23:37.675324+00:00
 ---
 
 # Group unmanaged VMs together  |  Compute Engine  |  Google Cloud Documentation

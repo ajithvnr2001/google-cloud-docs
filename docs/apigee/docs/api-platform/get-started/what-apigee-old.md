@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/get-started/what-apigee-old/
 title: What is Apigee? \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:24:24.433073+00:00
+fetched_at: 2026-10-21T14:54:51.746708+00:00
 ---
 
 # What is Apigee?  |  Google Cloud Documentation

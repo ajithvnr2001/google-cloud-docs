@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-director/docs/monitor/view-topology/
 title: View cluster topology \u00a0|\u00a0 Cluster Director \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:31:13.594608+00:00
+fetched_at: 2026-10-21T14:41:59.735538+00:00
 ---
 
 # View cluster topology  |  Cluster Director  |  Google Cloud Documentation

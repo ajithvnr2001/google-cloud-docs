@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/resources/gdcloud-reference/gdcloud-version/
 title: gdcloud version \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:48:35.623508+00:00
+fetched_at: 2026-10-21T12:57:04.767788+00:00
 ---
 
 # gdcloud version  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

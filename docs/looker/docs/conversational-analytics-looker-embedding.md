@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-embedding/
 title: Embedding Conversational Analytics \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:33:40.706172+00:00
+fetched_at: 2026-10-21T14:56:40.005063+00:00
 ---
 
 # Embedding Conversational Analytics  |  Looker  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Embedding Conversational Analytics Stay organized with collections  Save and categorize content based on your preferences. 
 
-You can embed the Conversational Analytics interface in a website or an application by using an HTML iframe tag just as you can with other Looker content types. The Conversational Analytics interface includes the dashboard data agent conversation pane and the **Conversations** page, where you can chat with data agents that are connected to multiple Looker Explores or chat with a standalone Explore.
+You can embed the Conversational Analytics interface in a website or an application by using an HTML iframe tag just as you can with other Looker content types. The Conversational Analytics interface includes the dashboard data agent conversation pane and the **Conversations** page, where you can chat with data agents that are connected to multiple Looker Explores or have a direct chat with an Explore.
 
 Conversational Analytics supports both [private embedding](https://docs.cloud.google.com/looker/docs/private-embedding), where users are authenticated using their Looker login, and [signed embedding](https://docs.cloud.google.com/looker/docs/signed-embedding), where users are authenticated through your own application.
 
@@ -37,7 +37,7 @@ To embed Conversational Analytics, the following requirements must be fulfilled:
 
   * Your instance must be Looker-hosted.
   * Users will need the same permissions that are required to use non-embedded [Conversational Analytics](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-setup#required-permissions).
-  * To embed a Looker dashboard that uses a Conversational Analytics dashboard data agent, an admin must enable [dashboard data agents](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-dashboards) [[Preview](https://cloud.google.com/products#product-launch-stages)]. On the **Gemini in Looker** admin page, under the **Enable Trusted Tester Features** setting, turn on the **Enable Dashboard Agents** setting. The **Enable Trusted Tester Features** setting must also be enabled.
+  * To embed a Looker dashboard that uses a Conversational Analytics dashboard data agent, an admin must enable [dashboard data agents](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-dashboards). On the **Gemini in Looker** admin page, under **Conversational Analytics** , turn on the **Dashboard agents** setting.
 
 
 
@@ -51,12 +51,12 @@ Note the following limitations when embedding Conversational Analytics content:
 
 The process to create an embed URL for Conversational Analytics is the same as for embedding other content types, such as dashboards or Looks, where you add `/embed/` after the instance name and before the content folder and content ID.
 
-To embed a conversation with an Explore data agent or with a standalone Explore, find the non-embedded URL of the conversation or agent, and add `/embed/` before the `conversations` or `agents` folder. For example:
+To embed a conversation with an Explore data agent or a direct chat with an Explore, find the non-embedded URL of the conversation or agent, and add `/embed/` before the `conversations` or `agents` folder. For example:
 
   * For the **Conversations** page, the embed URL will look like `https://my_looker_instance.looker.com/embed/conversations`.
   * For the **Agents** page, the embed URL will look like `https://my_looker_instance.looker.com/embed/agents`.
   * For a specific conversation, the embed URL will look like `https://my_looker_instance.looker.com/embed/conversations/c9f370ac830b4669aeb494396422004c`. In this example, `c9f370ac830b4669aeb494396422004c` is the conversation ID.
-  * For a dashboard that uses a Conversational Analytics dashboard data agent [[Preview](https://cloud.google.com/products#product-launch-stages)], the embed URL will look like `https://my_looker_instance.looker.com/embed/dashboards/1`.
+  * For a dashboard that uses a Conversational Analytics dashboard data agent, the embed URL will look like `https://my_looker_instance.looker.com/embed/dashboards/1`.
 
 
 
@@ -87,6 +87,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

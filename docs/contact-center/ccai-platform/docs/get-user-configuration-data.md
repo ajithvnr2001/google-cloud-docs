@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/get-user-configuration-data/
 title: Get user configuration data \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:50:06.508020+00:00
+fetched_at: 2026-10-21T14:08:09.574687+00:00
 ---
 
 # Get user configuration data  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

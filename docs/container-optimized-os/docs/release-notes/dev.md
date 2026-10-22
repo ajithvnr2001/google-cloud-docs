@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/container-optimized-os/docs/release-notes/dev/
 title: Container-Optimized OS Release Notes: DEV \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:40:03.474067+00:00
+fetched_at: 2026-10-21T14:45:16.232086+00:00
 ---
 
 # Container-Optimized OS Release Notes: DEV  |  Google Cloud Documentation

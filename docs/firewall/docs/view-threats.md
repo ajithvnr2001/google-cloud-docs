@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/view-threats/
 title: View threats \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:40:31.847777+00:00
+fetched_at: 2026-10-21T12:55:13.833283+00:00
 ---
 
 # View threats  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

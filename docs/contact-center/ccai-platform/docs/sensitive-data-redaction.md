@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/sensitive-data-redaction/
 title: Sensitive data redaction \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:04:23.367126+00:00
+fetched_at: 2026-10-21T14:07:46.044593+00:00
 ---
 
 # Sensitive data redaction  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

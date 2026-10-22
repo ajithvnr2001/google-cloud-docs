@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/repositories/configure-connector-authentication/
 title: Authenticate connector repositories to upstream sources \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:55:50.519041+00:00
+fetched_at: 2026-10-21T14:25:32.036851+00:00
 ---
 
 # Authenticate connector repositories to upstream sources  |  Artifact Registry  |  Google Cloud Documentation

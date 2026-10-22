@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations/
 title: Supported configurations \u00a0|\u00a0 Confidential VM \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:25.334511+00:00
+fetched_at: 2026-10-21T12:29:22.264106+00:00
 ---
 
 # Supported configurations  |  Confidential VM  |  Google Cloud Documentation
@@ -565,21 +565,35 @@ To view details about a specific image, run the following command using details 
 
 ### Supported images for a Confidential VM instance with GPU
 
-For Confidential VM instances with attached NVIDIA GPUs, we recommend using the following operating system image families based on the machine type:
+For Confidential VM instances with attached NVIDIA GPUs, we recommend using the following operating system image projects and image families based on the machine type:
 
   * **A3 High machine type** :
 
-    * `ubuntu-2204-lts`
+    * **Container-Optimized OS** (`confidential-vm-images` project): `cos-tdx-113-lts`
 
-    * `cos-tdx-113-lts`
+    * **Ubuntu** (`ubuntu-os-cloud` project): `ubuntu-2204-lts`
 
 While other images might be tagged as `TDX_CAPABLE`, we don't provide official support for them when used with GPUs.
 
   * **G4 machine type** :
 
-    * `ubuntu-2404-lts-amd64`
+    * **Container-Optimized OS** (`cos-cloud` project): `cos-125-lts`
 
-    * `cos-125-lts`
+    * **Ubuntu** (`ubuntu-os-cloud` project):
+
+      * `ubuntu-2204-lts`
+
+      * `ubuntu-minimal-2204-lts`
+
+      * `ubuntu-2404-lts-amd64`
+
+      * `ubuntu-minimal-2404-lts-amd64`
+
+    * **Ubuntu Pro** (`ubuntu-os-pro-cloud` project):
+
+      * `ubuntu-pro-2204-lts`
+
+      * `ubuntu-pro-2404-lts-amd64`
 
 
 
@@ -608,6 +622,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

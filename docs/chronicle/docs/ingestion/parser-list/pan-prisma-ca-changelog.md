@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/pan-prisma-ca-changelog/
 title: Change log for PAN_PRISMA_CA \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:39:29.849132+00:00
+fetched_at: 2026-10-21T14:51:50.556867+00:00
 ---
 
 # Change log for PAN_PRISMA_CA  |  Google Security Operations  |  Google Cloud Documentation

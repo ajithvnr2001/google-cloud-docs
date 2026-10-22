@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/enterprise-knowledge-graph/docs/evaluate/
 title: Evaluate result and quality \u00a0|\u00a0 Enterprise Knowledge Graph \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:23:56.306704+00:00
+fetched_at: 2026-10-21T12:51:23.849492+00:00
 ---
 
 # Evaluate result and quality  |  Enterprise Knowledge Graph  |  Google Cloud Documentation

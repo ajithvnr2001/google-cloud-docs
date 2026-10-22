@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deployment-manager/docs/deprecations/
 title: Deployment Manager deprecation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:15:30.534379+00:00
+fetched_at: 2026-10-21T12:42:47.139921+00:00
 ---
 
 # Deployment Manager deprecation  |  Google Cloud Documentation

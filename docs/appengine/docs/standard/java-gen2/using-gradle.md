@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/java-gen2/using-gradle/
 title: Use Gradle and the App Engine plugin \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:36.723855+00:00
+fetched_at: 2026-10-21T14:26:29.476002+00:00
 ---
 
 # Use Gradle and the App Engine plugin  |  App Engine standard environment  |  Google Cloud Documentation

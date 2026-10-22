@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/private-pools/create-manage-private-pools/
 title: Create and manage private pools \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:01.310522+00:00
+fetched_at: 2026-10-21T14:11:03.682810+00:00
 ---
 
 # Create and manage private pools  |  Cloud Build  |  Google Cloud Documentation

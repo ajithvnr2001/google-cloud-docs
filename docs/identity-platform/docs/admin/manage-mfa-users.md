@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/admin/manage-mfa-users/
 title: Managing multi-factor users programmatically \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:20.177919+00:00
+fetched_at: 2026-10-21T12:54:24.353648+00:00
 ---
 
 # Managing multi-factor users programmatically  |  Identity Platform  |  Google Cloud Documentation

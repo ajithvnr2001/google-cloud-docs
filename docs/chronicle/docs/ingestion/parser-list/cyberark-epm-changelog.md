@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cyberark-epm-changelog/
 title: Change log for CYBERARK_EPM \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:40:35.010339+00:00
+fetched_at: 2026-10-21T14:45:33.205078+00:00
 ---
 
 # Change log for CYBERARK_EPM  |  Google Security Operations  |  Google Cloud Documentation

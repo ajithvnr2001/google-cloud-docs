@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/cassandra-scaling/
 title: Scaling Cassandra \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:41:04.837242+00:00
+fetched_at: 2026-10-21T14:28:59.359709+00:00
 ---
 
 # Scaling Cassandra  |  Apigee  |  Google Cloud Documentation

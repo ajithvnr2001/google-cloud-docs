@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/asynchronous-functions/
 title: Customizing the authentication flow using asynchronous functions \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:19.872245+00:00
+fetched_at: 2026-10-21T12:53:55.071472+00:00
 ---
 
 # Customizing the authentication flow using asynchronous functions  |  Identity Platform  |  Google Cloud Documentation

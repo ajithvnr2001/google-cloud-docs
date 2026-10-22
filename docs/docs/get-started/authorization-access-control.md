@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/get-started/authorization-access-control/
 title: Authorization and access control \u00a0|\u00a0 Get started \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:26.931499+00:00
+fetched_at: 2026-10-21T14:06:01.471808+00:00
 ---
 
 # Authorization and access control  |  Get started  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/using-cache-keys/
 title: Customize cache keys \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:19:39.123427+00:00
+fetched_at: 2026-10-21T14:24:29.046253+00:00
 ---
 
 # Customize cache keys  |  Cloud CDN  |  Google Cloud Documentation

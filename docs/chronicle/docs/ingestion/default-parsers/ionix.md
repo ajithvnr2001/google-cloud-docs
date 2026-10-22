@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/ionix/
 title: Collect IONIX Attack Surface Management logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:15:10.570789+00:00
+fetched_at: 2026-10-22T05:39:04.004269+00:00
 ---
 
 # Collect IONIX Attack Surface Management logs  |  Google Security Operations  |  Google Cloud Documentation
@@ -78,13 +78,10 @@ After creating the feed, you must generate a secret key for authentication:
   2. In the **Endpoint Information** section, copy the **Feed endpoint URL**.
   3. The URL format is:
          
-         https://malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate
+         https://{region}-chronicle.googleapis.com/v1/{parent}/logs:import
          
 
-or
-         
-         https://<REGION>-malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate
-         
+Where `{region}` is the region of your Google SecOps instance (for example, `us`, `europe`, or `asia-southeast1`), and `{parent}` is the resource path in the format `projects/<PROJECT_ID>/locations/<LOCATION>/instances/<INSTANCE_ID>/logTypes/<LOG_TYPE>`.
 
   4. Save this URL for the next steps.
 
@@ -133,7 +130,7 @@ IONIX natively supports pushing security event data to external endpoints via HT
 
     * **Example:**
           
-          https://malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate?key=AIzaSyD...&secret=abcd1234...
+          https://{region}-chronicle.googleapis.com/v1/{parent}/logs:import?key=AIzaSyD...&secret=abcd1234...
           
 
 
@@ -149,7 +146,7 @@ IONIX natively supports pushing security event data to external endpoints via HT
      * **HEC Token** : Enter the secret key generated from the Google SecOps webhook feed.
      * **Splunk Server** : Enter the full Google SecOps webhook endpoint URL with the API key appended as a query parameter. Use the following format:
            
-           https://malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate?key=<API_KEY>
+           https://{region}-chronicle.googleapis.com/v1/{parent}/logs:import?key=<API_KEY>
            
 
 **Note:** IONIX's Splunk integration sends data via HTTP POST to the configured server URL. By providing the Google SecOps webhook endpoint URL in the **Splunk Server** field, IONIX will push JSON event data directly to Google SecOps.
@@ -261,7 +258,7 @@ If your vendor does not support custom headers, append credentials to the URL.
 
     * **Example:**
     
-    https://malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate?key=AIzaSyD...&secret=abcd1234...
+    https://{region}-chronicle.googleapis.com/v1/{parent}/logs:import?key=AIzaSyD...&secret=abcd1234...
     
 
   * **Request format:**
@@ -334,6 +331,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

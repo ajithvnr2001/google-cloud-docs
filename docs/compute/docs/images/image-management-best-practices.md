@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/image-management-best-practices/
 title: Image management best practices \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:42:45.836269+00:00
+fetched_at: 2026-10-21T14:22:35.889237+00:00
 ---
 
 # Image management best practices  |  Compute Engine  |  Google Cloud Documentation

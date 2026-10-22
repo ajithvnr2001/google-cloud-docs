@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/prebuilt-component/name-collection/
 title: Name collection prebuilt component \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:43.928063+00:00
+fetched_at: 2026-10-21T12:43:51.483321+00:00
 ---
 
 # Name collection prebuilt component  |  Dialogflow CX  |  Google Cloud Documentation

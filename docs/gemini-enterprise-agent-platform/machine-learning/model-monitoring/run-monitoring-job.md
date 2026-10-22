@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/model-monitoring/run-monitoring-job/
 title: Run monitoring jobs \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:16:31.623464+00:00
+fetched_at: 2026-10-21T15:45:01.025505+00:00
 ---
 
 # Run monitoring jobs  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -60,7 +60,7 @@ Run a one-time monitoring job. Set the target and baseline datasets as well as t
       "body_mass_g": 0.002,
     }
     
-    FEATURE_DRIFT_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[DataDriftSpec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.DataDriftSpec.html)(
+    FEATURE_DRIFT_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[DataDriftSpec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.DataDriftSpec.html)(
       categorical_metric_type="l_infinity",
       numeric_metric_type="jensen_shannon_divergence",
       default_categorical_alert_threshold=0.001,
@@ -68,14 +68,14 @@ Run a one-time monitoring job. Set the target and baseline datasets as well as t
       feature_alert_thresholds=FEATURE_THRESHOLDS,
     )
     
-    PREDICTION_OUTPUT_DRIFT_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[DataDriftSpec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.DataDriftSpec.html)(
+    PREDICTION_OUTPUT_DRIFT_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[DataDriftSpec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.DataDriftSpec.html)(
       categorical_metric_type="l_infinity",
       numeric_metric_type="jensen_shannon_divergence",
       default_categorical_alert_threshold=0.001,
       default_numeric_alert_threshold=0.001,
     )
     
-    FEATURE_ATTRIBUTION_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[FeatureAttributionSpec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.FeatureAttributionSpec.html)(
+    FEATURE_ATTRIBUTION_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[FeatureAttributionSpec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.FeatureAttributionSpec.html)(
       default_alert_threshold=0.0003,
       feature_alert_thresholds={"cnt_ad_reward":0.0001},
     )
@@ -97,12 +97,12 @@ Run a one-time monitoring job. Set the target and baseline datasets as well as t
       )
     )
     
-    TRAINING_DATASET=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[MonitoringInput](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.MonitoringInput.html)(
+    TRAINING_DATASET=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[MonitoringInput](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.MonitoringInput.html)(
       gcs_uri=TRAINING_URI,
       data_format="csv"
     )
     
-    TARGET_DATASET=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[MonitoringInput](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.MonitoringInput.html)(
+    TARGET_DATASET=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[MonitoringInput](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.MonitoringInput.html)(
       table_uri=BIGQUERY_URI
     )
     
@@ -110,7 +110,7 @@ Run a one-time monitoring job. Set the target and baseline datasets as well as t
       display_name=JOB_DISPLAY_NAME,
       baseline_dataset=TRAINING_DATASET,
       target_dataset=TARGET_DATASET,
-      tabular_objective_spec=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[TabularObjective](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.TabularObjective.html)(
+      tabular_objective_spec=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[TabularObjective](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.TabularObjective.html)(
           # Optional: set to monitor input feature drift.
           feature_drift_spec=FEATURE_DRIFT_SPEC,
     
@@ -305,6 +305,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

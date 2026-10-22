@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/terraform/understanding-apis-and-terraform/
 title: Understanding Google Cloud APIs and Terraform \u00a0|\u00a0 Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:32:24.715043+00:00
+fetched_at: 2026-10-21T14:06:23.884710+00:00
 ---
 
 # Understanding Google Cloud APIs and Terraform  |  Infrastructure Manager  |  Google Cloud Documentation

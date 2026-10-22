@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/api/
 title: APIs and reference \u00a0|\u00a0 Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:23:42.101670+00:00
+fetched_at: 2026-10-22T05:41:00.905628+00:00
 ---
 
 # APIs and reference  |  Cloud Deploy  |  Google Cloud Documentation

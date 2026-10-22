@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/migration/redshift-vpc/
 title: Migrating Amazon Redshift data with a VPC network \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:08:00.112748+00:00
+fetched_at: 2026-10-21T12:39:26.824193+00:00
 ---
 
 # Migrating Amazon Redshift data with a VPC network  |  BigQuery  |  Google Cloud Documentation

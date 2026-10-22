@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/knowledge-catalog/
 title: Knowledge Catalog integration \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:36:57.627962+00:00
+fetched_at: 2026-10-21T14:23:37.823440+00:00
 ---
 
 # Knowledge Catalog integration  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

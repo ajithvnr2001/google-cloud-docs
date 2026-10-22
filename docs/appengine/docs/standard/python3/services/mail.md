@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/python3/services/mail/
 title: Mail API for Python \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:57:16.910055+00:00
+fetched_at: 2026-10-21T14:26:08.957667+00:00
 ---
 
 # Mail API for Python  |  App Engine standard environment  |  Google Cloud Documentation

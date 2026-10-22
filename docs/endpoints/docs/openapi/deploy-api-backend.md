@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/deploy-api-backend/
 title: Deploying the API backend \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:19:51.563823+00:00
+fetched_at: 2026-10-21T12:51:05.942464+00:00
 ---
 
 # Deploying the API backend  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation

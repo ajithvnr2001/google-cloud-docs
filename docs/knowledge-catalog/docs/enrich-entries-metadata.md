@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/enrich-entries-metadata/
 title: Manage aspects and enrich metadata \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:37:33.083687+00:00
+fetched_at: 2026-10-21T12:29:37.440101+00:00
 ---
 
 # Manage aspects and enrich metadata  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -23,24 +23,13 @@ Send feedback
 
 #  Manage aspects and enrich metadata Stay organized with collections  Save and categorize content based on your preferences. 
 
-Metadata is crucial for organizing and understanding your data assets and relationships between them. For example, regulated industries need to protect personally identifiable information (PII) such as names, addresses, and government issued ID numbers. This data can occur in numerous instances across distributed data systems. Knowledge Catalog (formerly Dataplex Universal Catalog) helps you quickly discover and catalog your distributed data assets. You can then classify data as being PII.
+Aspects and aspect types in Knowledge Catalog (formerly Dataplex Universal Catalog) let you add structured metadata to entries and entry links to describe your data assets and their relationships. This context improves data discoverability and helps you classify sensitive information, such as personally identifiable information (PII), to apply data quality or access policies.
 
-By enriching data entries and entry links with meaningful context, you can make your data more discoverable and useful. Knowledge Catalog enables context through aspect types and aspects:
-
-  * Aspect type: A JSON template defining related data. For example, for compliance information, you might have PII classification and GDPR compliance.
-  * Aspect: An instance of an aspect type. For example, {"pii_classification": "confidential", "gdpr_compliant": true}. You can apply an aspect to an entire table, an individual table column, or an entry link.
-
-
-
-Once you've classified data, you can apply data quality or access policies to the data.
-
-For more information, see [About metadata in Knowledge Catalog](https://docs.cloud.google.com/knowledge-catalog/docs/metadata-overview).
-
-**Tip:** If this is your first time working with Knowledge Catalog metadata, consider following the quickstarts: [Add metadata to a BigQuery table](/knowledge-catalog/docs/add-metadata-quickstart) or [Create and use a business glossary](/knowledge-catalog/docs/quickstart-business-glossary).
+For more information about metadata concepts, see [About metadata in Knowledge Catalog](https://docs.cloud.google.com/knowledge-catalog/docs/metadata-overview). If this is your first time working with Knowledge Catalog metadata, see the [Add metadata to a BigQuery table](https://docs.cloud.google.com/knowledge-catalog/docs/add-metadata-quickstart) or [Create and use a business glossary](https://docs.cloud.google.com/knowledge-catalog/docs/quickstart-business-glossary) quickstarts.
 
 ## What are aspect types?
 
-Aspect types are reusable resources that provide templates for aspects. When you create a custom aspect type, you must specify an ID that complies with [Knowledge Catalog resource naming guidelines](https://docs.cloud.google.com/knowledge-catalog/docs/guidelines-resources#id).
+Aspect types are reusable resources that provide JSON templates defining related metadata fields for aspects. For example, for compliance information, you might define an aspect type with fields for PII classification and GDPR compliance. When you create a custom aspect type, you must specify an ID that complies with [Knowledge Catalog resource naming guidelines](https://docs.cloud.google.com/knowledge-catalog/docs/guidelines-resources#id).
 
 ### Categories of aspect types
 
@@ -50,7 +39,7 @@ Aspect types are categorized into custom and system aspect types:
 
 Aspect types that you create in Knowledge Catalog are called custom aspect types.
 
-**Note:** Custom aspect types apply to entries but not to entry links.**Note:** **Gemini Context Retrieval Boundary:** Gemini in BigQuery grounds SQL generation and data reasoning on standard schema definitions, table constraints, and table/column description fields. User-defined custom aspect types in Knowledge Catalog are stored in the catalog plane for governance, search, and API retrieval, but are not dynamically injected into Gemini's contextual prompt retrieval pipeline. **Recommended best practice:** To ensure business logic, semantic context, or developer notes are visible to Gemini in BigQuery, document them directly in the [table](/bigquery/docs/managing-tables#updating_a_tables_description) and [column description](/bigquery/docs/managing-table-schemas#change-column-description) fields, within the [standard `overview` aspect](#other-reusable-aspect-types), or by using [business glossary terms](/knowledge-catalog/docs/manage-glossaries). For more information, see [Use Knowledge Catalog with BigQuery](/bigquery/docs/use-knowledge-catalog).
+**Note:** Custom aspect types apply to entries but not to entry links.
 
 Custom aspect types can be global or regional:
 
@@ -106,11 +95,21 @@ You can read aspects under these aspect types, but can't create or edit aspects 
 
   
   
+### Custom aspect types and Gemini in BigQuery
+
+**Gemini Context Retrieval Boundary:** Gemini in BigQuery grounds SQL generation and data reasoning on standard schema definitions, table constraints, and table or column description fields. User-defined custom aspect types in Knowledge Catalog are stored in the catalog plane for governance, search, and API retrieval, but are not dynamically injected into Gemini's contextual prompt retrieval pipeline.
+
+#### Recommended best practice
+
+To ensure business logic, semantic context, or developer notes are visible to Gemini in BigQuery, document them directly in the [table](https://docs.cloud.google.com/bigquery/docs/managing-tables#updating_a_tables_description) and [column description](https://docs.cloud.google.com/bigquery/docs/managing-table-schemas#change-column-description) fields, within the standard `overview` aspect, or by using [business glossary terms](https://docs.cloud.google.com/knowledge-catalog/docs/manage-glossaries).
+
+For more information, see [Use Knowledge Catalog with BigQuery](https://docs.cloud.google.com/bigquery/docs/use-knowledge-catalog).
+
 ## What are aspects?
 
 Aspects let you capture metadata within entries or entry links to provide meaningful context. You can use aspects to store the following types of metadata:
 
-  * **Business metadata** : Information that provides business context, such as data classification.
+  * **Business metadata** : Information that provides business context, such as data classification. For example, regulated industries need to protect PII—such as names, addresses, and government-issued ID numbers—across distributed data systems. After you catalog your distributed data assets, you can classify data as PII and then apply data quality or access policies to the data.
 
   * **Technical metadata** : Technical details of entries or entry links, including the following:
 
@@ -125,7 +124,7 @@ Aspects are component parts of the parent entry resource rather than separate st
 
 ### Aspect placement and target levels
 
-Every aspect is an instance of an aspect type template, which defines the fields you must populate. Where you can apply an aspect and how many times it can appear depends on the target resource type:
+Every aspect is an instance of an aspect type template, which defines the fields you must populate—for example, `{"pii_classification": "confidential", "gdpr_compliant": true}`. You can apply an aspect to an entire table, an individual table column, or an entry link. Where you can apply an aspect and how many times it can appear depends on the target resource type:
 
 Target resource | Supported levels | Cardinality limits  
 ---|---|---  
@@ -3759,6 +3758,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/dynamics365bc/configure/
 title: Dynamics 365 Business Central \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:19.726206+00:00
+fetched_at: 2026-10-21T12:52:18.834767+00:00
 ---
 
 # Dynamics 365 Business Central  |  Integration Connectors  |  Google Cloud Documentation

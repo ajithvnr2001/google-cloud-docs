@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/reference/mcp/postgres/mcp/tools_list/import_data/
 title: MCP Tools Reference: cloud-sql \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:14:44.203651+00:00
+fetched_at: 2026-10-21T14:56:34.051533+00:00
 ---
 
 # MCP Tools Reference: cloud-sql  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation

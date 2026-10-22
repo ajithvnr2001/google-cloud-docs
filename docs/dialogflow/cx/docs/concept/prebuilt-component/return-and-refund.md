@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/prebuilt-component/return-and-refund/
 title: Return and refund prebuilt component \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:45.072460+00:00
+fetched_at: 2026-10-21T12:44:20.336105+00:00
 ---
 
 # Return and refund prebuilt component  |  Dialogflow CX  |  Google Cloud Documentation

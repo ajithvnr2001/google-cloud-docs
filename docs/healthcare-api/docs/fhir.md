@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/fhir/
 title: FHIR conformance statement \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:58:24.185011+00:00
+fetched_at: 2026-10-21T14:30:41.606031+00:00
 ---
 
 # FHIR conformance statement  |  Cloud Healthcare API  |  Google Cloud Documentation

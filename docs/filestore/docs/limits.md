@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/limits/
 title: Quotas and limits \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:27:08.400470+00:00
+fetched_at: 2026-10-21T14:59:24.424278+00:00
 ---
 
 # Quotas and limits  |  Filestore  |  Google Cloud Documentation

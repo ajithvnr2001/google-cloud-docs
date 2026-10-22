@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/marketo/configure/
 title: Marketo \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:23.904863+00:00
+fetched_at: 2026-10-21T12:53:10.840538+00:00
 ---
 
 # Marketo  |  Integration Connectors  |  Google Cloud Documentation

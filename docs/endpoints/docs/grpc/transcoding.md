@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/grpc/transcoding/
 title: Transcoding HTTP/JSON to gRPC \u00a0|\u00a0 Cloud Endpoints with gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:42:49.108790+00:00
+fetched_at: 2026-10-21T12:46:10.385191+00:00
 ---
 
 # Transcoding HTTP/JSON to gRPC  |  Cloud Endpoints with gRPC  |  Google Cloud Documentation

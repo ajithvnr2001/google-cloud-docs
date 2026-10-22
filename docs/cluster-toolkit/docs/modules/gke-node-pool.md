@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/gke-node-pool/
 title: Create a Google Kubernetes node pool \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:53:53.931066+00:00
+fetched_at: 2026-10-21T14:42:17.807222+00:00
 ---
 
 # Create a Google Kubernetes node pool  |  Cluster Toolkit  |  Google Cloud Documentation

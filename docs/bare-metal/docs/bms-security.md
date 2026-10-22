@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-security/
 title: Provide security for enterprise workloads in a Bare Metal Solution environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:53:36.968146+00:00
+fetched_at: 2026-10-21T14:26:14.394179+00:00
 ---
 
 # Provide security for enterprise workloads in a Bare Metal Solution environment  |  Google Cloud Documentation

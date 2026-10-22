@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/gitlab/
 title: GitLab on Google Cloud documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:52:59.888737+00:00
+fetched_at: 2026-10-21T14:39:48.613527+00:00
 ---
 
 # GitLab on Google Cloud documentation  |  Google Cloud Documentation

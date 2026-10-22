@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/no-source-control/
 title: Antipattern: Manage resources without using source control management \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:19.377598+00:00
+fetched_at: 2026-10-21T12:30:21.539931+00:00
 ---
 
 # Antipattern: Manage resources without using source control management  |  Apigee  |  Google Cloud Documentation

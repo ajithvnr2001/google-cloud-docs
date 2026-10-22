@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-ftp/get-user-information/
 title: Get SFTP user information \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:31:30.098579+00:00
+fetched_at: 2026-10-21T14:22:32.568818+00:00
 ---
 
 # Get SFTP user information  |  Google Cloud Documentation

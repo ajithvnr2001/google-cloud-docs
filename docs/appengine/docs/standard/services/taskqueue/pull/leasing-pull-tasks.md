@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/taskqueue/pull/leasing-pull-tasks/
 title: Leasing Pull Tasks \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:57.682411+00:00
+fetched_at: 2026-10-21T14:24:57.204090+00:00
 ---
 
 # Leasing Pull Tasks  |  App Engine standard environment  |  Google Cloud Documentation

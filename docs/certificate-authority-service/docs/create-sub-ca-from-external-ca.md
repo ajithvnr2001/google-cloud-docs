@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/create-sub-ca-from-external-ca/
 title: Create a subordinate CA from an external CA \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:27:19.815787+00:00
+fetched_at: 2026-10-21T14:24:15.369128+00:00
 ---
 
 # Create a subordinate CA from an external CA  |  Certificate Authority Service  |  Google Cloud Documentation

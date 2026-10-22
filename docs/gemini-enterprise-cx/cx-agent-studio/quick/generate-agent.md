@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/quick/generate-agent/
 title: Create an agent with Gemini \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:22:20.536187+00:00
+fetched_at: 2026-10-21T12:55:25.054403+00:00
 ---
 
 # Create an agent with Gemini  |  CX Agent Studio  |  Google Cloud Documentation

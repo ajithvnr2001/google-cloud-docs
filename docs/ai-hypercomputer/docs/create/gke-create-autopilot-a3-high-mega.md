@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/create/gke-create-autopilot-a3-high-mega/
 title: Create a GKE Autopilot cluster that uses A3 Mega or A3 High \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:34:54.191890+00:00
+fetched_at: 2026-10-21T14:26:22.768858+00:00
 ---
 
 # Create a GKE Autopilot cluster that uses A3 Mega or A3 High  |  AI Hypercomputer  |  Google Cloud Documentation

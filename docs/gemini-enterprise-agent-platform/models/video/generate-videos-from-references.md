@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/video/generate-videos-from-references/
 title: Generate videos from references \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:36.069206+00:00
+fetched_at: 2026-10-21T15:45:13.899137+00:00
 ---
 
 # Generate videos from references  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -1089,7 +1089,7 @@ Do the following:
 
   5. In the **Model** menu, select a model from the available options.
 
-**Note:** `veo-3.1-generate-preview` only returns 8 second videos when you use subject images.
+**Note:** `veo-3.1-generate-001` only returns 8 second videos when you use subject images.
   6. In the **Subject Images** section, click **Add**.
 
 A file selection dialog is displayed. Choose one to three images on your computer to upload.
@@ -1191,9 +1191,7 @@ Before using any of the request data, make the following replacements:
 
      * `PROJECT_ID`: Your Google Cloud project ID. 
      * `MODEL_ID`: A string representing the model ID to use. The following models are supported: 
-       * `veo-3.1-generate-preview preview`
        * `veo-3.1-generate-001`
-       * `veo-3.1-fast-generate-preview preview`
        * `veo-3.1-fast-generate-001`
      * `TEXT_PROMPT`: The text prompt used to guide video generation. 
      * `BASE64_ENCODED_IMAGE`: A base64-bytes encoded subject image. You can repeat this field and `mimeType` to specify up to three subject images. 
@@ -1217,7 +1215,7 @@ The default value is `"16:9"`.
 
        * `"720p"`
        * `"1080p"`
-       * `"4k"` (Veo 3.1 Preview models only)
+       * `"4k"` (`veo-3.1-generate-001` only)
 
 Default value is `"720p"`. 
 
@@ -1424,6 +1422,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/concepts/
 title: Concepts \u00a0|\u00a0 Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:54:15.707177+00:00
+fetched_at: 2026-10-21T14:21:11.372063+00:00
 ---
 
 # Concepts  |  Cloud Code for Cloud Shell  |  Google Cloud Documentation

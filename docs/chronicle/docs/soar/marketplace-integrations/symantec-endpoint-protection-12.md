@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/symantec-endpoint-protection-12/
 title: Symantec Endpoint Protection 12 \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:22:58.746167+00:00
+fetched_at: 2026-10-21T12:39:48.045010+00:00
 ---
 
 # Symantec Endpoint Protection 12  |  Google Security Operations  |  Google Cloud Documentation

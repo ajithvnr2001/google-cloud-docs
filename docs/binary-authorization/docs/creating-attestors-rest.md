@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/creating-attestors-rest/
 title: Create attestors using the REST API \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:59:53.911377+00:00
+fetched_at: 2026-10-21T14:11:17.756288+00:00
 ---
 
 # Create attestors using the REST API  |  Binary Authorization  |  Google Cloud Documentation

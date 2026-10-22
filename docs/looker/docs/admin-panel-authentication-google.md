@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/admin-panel-authentication-google/
 title: Admin settings - Google authentication \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:18:28.650560+00:00
+fetched_at: 2026-10-21T15:17:02.410697+00:00
 ---
 
 # Admin settings - Google authentication  |  Looker  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/python3/building-app/writing-web-service/
 title: Write a basic web service for App Engine \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:34.593120+00:00
+fetched_at: 2026-10-21T12:35:20.029664+00:00
 ---
 
 # Write a basic web service for App Engine  |  App Engine standard environment  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/snapshots/
 title: About archive and standard disk snapshots \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:26.636354+00:00
+fetched_at: 2026-10-22T05:49:25.168263+00:00
 ---
 
 # About archive and standard disk snapshots  |  Compute Engine  |  Google Cloud Documentation
@@ -305,11 +305,16 @@ If you restore a snapshot to a disk in a region that isn't included in the snaps
 
   * You can't change the storage location of an existing standard snapshot. See Selecting the storage location for a snapshot.
 
-  * You can snapshot a specific disk at most 6 times every 60 minutes. For more information, see [Snapshot frequency limits](https://docs.cloud.google.com/compute/docs/disks/snapshot-best-practices#freq_limits).
+  * You can snapshot a specific disk at most six times every 60 minutes. If the disk is a zonal disk, then this limit is shared with creating regional clones of the disk if any of the following is true:
+
+    * The disk was created from an image
+    * The disk was created by cloning a disk that was created from an image
+
+For more information, see [Rate limits for cloning disks](https://docs.cloud.google.com/compute/docs/disks/clone-duplicate-disks#rate-limits) and [Snapshot frequency limits](https://docs.cloud.google.com/compute/docs/disks/snapshot-best-practices#freq_limits).
 
   * You can't edit the data stored in a snapshot.
 
-  * Deleting an image, instant snapshot, image, or archive snapshot is irreversible.
+  * Deleting a disk, instant snapshot, image, or archive snapshot is irreversible.
 
 Deleting a standard snapshot might be irreversible if the recycle bin ([Preview](https://docs.cloud.google.com/products#product-launch-stages)) is disabled for the standard snapshot. 
 
@@ -319,7 +324,7 @@ Deleting a standard snapshot might be irreversible if the recycle bin ([Preview]
 
   * You can't convert a globally scoped snapshot to a regionally scoped snapshot. You must create a new snapshot with the appropriate scope.
 
-  * You can't create regionally scoped snapshots with source disks that are protected by a customer-supplied encryption key (CSEK).
+  * You can't create regionally scoped snapshots of source disks that are protected by a customer-supplied encryption key (CSEK) ([Deprecated](https://docs.cloud.google.com/compute/docs/deprecations)).
 
   * Regionally scoped snapshot names are unique only within a region. You can have regionally scoped snapshots with the same name in different regions.
 
@@ -341,6 +346,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

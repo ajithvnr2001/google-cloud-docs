@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cisco-fwsm-changelog/
 title: Change log for CISCO_FWSM \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:46:32.110719+00:00
+fetched_at: 2026-10-21T14:44:56.357395+00:00
 ---
 
 # Change log for CISCO_FWSM  |  Google Security Operations  |  Google Cloud Documentation

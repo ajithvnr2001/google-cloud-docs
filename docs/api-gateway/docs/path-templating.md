@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/path-templating/
 title: Understand path templating \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:14:09.249869+00:00
+fetched_at: 2026-10-21T14:09:46.656526+00:00
 ---
 
 # Understand path templating  |  API Gateway  |  Google Cloud Documentation

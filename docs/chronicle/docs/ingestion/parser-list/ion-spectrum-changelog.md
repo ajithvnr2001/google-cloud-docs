@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/ion-spectrum-changelog/
 title: Change log for ION_SPECTRUM \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:20:24.928628+00:00
+fetched_at: 2026-10-21T14:43:41.358750+00:00
 ---
 
 # Change log for ION_SPECTRUM  |  Google Security Operations  |  Google Cloud Documentation

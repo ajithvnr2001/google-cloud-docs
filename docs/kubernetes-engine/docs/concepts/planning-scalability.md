@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/planning-scalability/
 title: Best practices for GKE scalability \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:01:54.932721+00:00
+fetched_at: 2026-10-21T15:00:50.384384+00:00
 ---
 
 # Best practices for GKE scalability  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

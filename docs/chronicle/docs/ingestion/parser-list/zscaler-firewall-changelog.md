@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/zscaler-firewall-changelog/
 title: Change log for ZSCALER_FIREWALL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:29:35.365864+00:00
+fetched_at: 2026-10-21T14:47:03.279321+00:00
 ---
 
 # Change log for ZSCALER_FIREWALL  |  Google Security Operations  |  Google Cloud Documentation

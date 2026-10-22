@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/recaptcha-metrics/
 title: Monitor reCAPTCHA metrics \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:23.443648+00:00
+fetched_at: 2026-10-21T12:53:40.097097+00:00
 ---
 
 # Monitor reCAPTCHA metrics  |  Identity Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/reference/versions/v1.25.7-gke.1000/metrics/
 title: Metrics available in 1.25.7-gke.1000 \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:39:31.366235+00:00
+fetched_at: 2026-10-21T14:59:41.524629+00:00
 ---
 
 # Metrics available in 1.25.7-gke.1000  |  GKE on Azure  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/tipcommon/tc-adapters/
 title: TIPCommon.adapters \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:45:28.848880+00:00
+fetched_at: 2026-10-21T14:19:50.865476+00:00
 ---
 
 # TIPCommon.adapters  |  Google Security Operations  |  Google Cloud Documentation

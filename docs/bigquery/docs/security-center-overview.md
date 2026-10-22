@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/security-center-overview/
 title: Security center overview \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:32:44.181801+00:00
+fetched_at: 2026-10-21T14:35:34.893946+00:00
 ---
 
 # Security center overview  |  BigQuery  |  Google Cloud Documentation
@@ -39,15 +39,9 @@ To enable APIs, you need the `serviceusage.services.enable` permission. If you c
 
 To get the permissions that you need to manage and monitor security settings from the BigQuery **Security center** page, ask your administrator to grant you the following IAM roles: 
 
-  * Browse and search resources on the **Resources** tab, and view data masking routines: [BigQuery Metadata Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.metadataViewer) (`roles/bigquery.metadataViewer`) on the project 
-  * Manage row-level access policies, data policies (column-level security), and table and dataset security: [BigQuery Security Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.securityAdmin) (`roles/bigquery.securityAdmin`) on the project 
-  * Attach policy tags to columns: 
-    * [BigQuery Data Owner ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.dataOwner) (`roles/bigquery.dataOwner`) on the table
-    * [BigQuery Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.admin) (`roles/bigquery.admin`) on the project
-  * Create and manage data policies without dataset ownership: [BigQuery Data Policy Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquerydatapolicy#bigquerydatapolicy.admin) (`roles/bigquerydatapolicy.admin`) on the project 
-  * Run query jobs and view security insights (including `INFORMATION_SCHEMA` views): [BigQuery Job User ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.jobUser) (`roles/bigquery.jobUser`) on the project 
-  * Manage data governance tags: [Tag Administrator ](https://docs.cloud.google.com/iam/docs/roles-permissions/resourcemanager#resourcemanager.tagAdmin) (`roles/resourcemanager.tagAdmin`) on the organization 
-  * Create and manage policy tag taxonomies: [Policy Tag Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/datacatalog#datacatalog.categoryAdmin) (`roles/datacatalog.categoryAdmin`) on the taxonomy or organization 
+  * [BigQuery Security Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.securityAdmin) (`roles/bigquery.securityAdmin`) on the project
+  * Manage data governance tags: [Tag Administrator ](https://docs.cloud.google.com/iam/docs/roles-permissions/resourcemanager#resourcemanager.tagAdmin) (`roles/resourcemanager.tagAdmin`) on the organization or project 
+  * Create and manage policy tag taxonomies: [Policy Tag Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/datacatalog#datacatalog.categoryAdmin) (`roles/datacatalog.categoryAdmin`) on the taxonomy, project, or organization 
   * Use Gemini Cloud Assist in the Security center: [Gemini for Google Cloud User ](https://docs.cloud.google.com/iam/docs/roles-permissions/cloudaicompanion#cloudaicompanion.user) (`roles/cloudaicompanion.user`) on the project 
 
 
@@ -193,6 +187,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/microsoft-laps-changelog/
 title: Change log for MICROSOFT_LAPS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:17:06.874283+00:00
+fetched_at: 2026-10-21T14:43:37.987019+00:00
 ---
 
 # Change log for MICROSOFT_LAPS  |  Google Security Operations  |  Google Cloud Documentation

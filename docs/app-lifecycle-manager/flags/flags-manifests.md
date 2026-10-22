@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/flags/flags-manifests/
 title: Use feature flag manifests \u00a0|\u00a0 App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:32:17.760057+00:00
+fetched_at: 2026-10-21T12:30:28.451167+00:00
 ---
 
 # Use feature flag manifests  |  App Lifecycle Manager  |  Google Cloud Documentation

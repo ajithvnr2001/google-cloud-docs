@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/umbrella-firewall/
 title: Collect Cisco Umbrella Cloud Firewall logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:14:32.558082+00:00
+fetched_at: 2026-10-21T12:39:10.967313+00:00
 ---
 
 # Collect Cisco Umbrella Cloud Firewall logs  |  Google Security Operations  |  Google Cloud Documentation

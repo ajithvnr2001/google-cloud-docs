@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/vms/manage-vms/operations-and-lifecycle/view-and-maintain-metadata/
 title: View and maintain VM metadata \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:22:08.009724+00:00
+fetched_at: 2026-10-21T12:56:34.417020+00:00
 ---
 
 # View and maintain VM metadata  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

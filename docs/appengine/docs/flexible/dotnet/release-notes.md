@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/dotnet/release-notes/
 title: App Engine flexible environment for .NET release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:40:23.987376+00:00
+fetched_at: 2026-10-21T14:43:08.990479+00:00
 ---
 
 # App Engine flexible environment for .NET release notes  |  Google Cloud Documentation

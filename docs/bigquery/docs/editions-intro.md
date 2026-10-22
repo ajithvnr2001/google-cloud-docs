@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/editions-intro/
 title: Understand BigQuery editions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:36:49.932281+00:00
+fetched_at: 2026-10-21T14:09:15.132964+00:00
 ---
 
 # Understand BigQuery editions  |  Google Cloud Documentation

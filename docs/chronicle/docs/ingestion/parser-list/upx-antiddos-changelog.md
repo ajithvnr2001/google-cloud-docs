@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/upx-antiddos-changelog/
 title: Change log for UPX_ANTIDDOS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:10:23.246435+00:00
+fetched_at: 2026-10-21T14:43:24.774072+00:00
 ---
 
 # Change log for UPX_ANTIDDOS  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-table-storage/
 title: TABLE_STORAGE view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T10:06:30.052648+00:00
+fetched_at: 2026-10-21T12:36:26.727718+00:00
 ---
 
 # TABLE_STORAGE view  |  BigQuery  |  Google Cloud Documentation

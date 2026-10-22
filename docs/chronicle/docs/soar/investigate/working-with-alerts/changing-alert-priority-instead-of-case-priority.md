@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/investigate/working-with-alerts/changing-alert-priority-instead-of-case-priority/
 title: Change alert priority \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:02:40.219471+00:00
+fetched_at: 2026-10-21T14:21:23.424381+00:00
 ---
 
 # Change alert priority  |  Google Security Operations  |  Google Cloud Documentation

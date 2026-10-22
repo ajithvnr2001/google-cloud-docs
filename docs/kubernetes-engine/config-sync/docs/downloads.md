@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/downloads/
 title: Config Sync downloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:11:40.363348+00:00
+fetched_at: 2026-10-21T15:00:13.232667+00:00
 ---
 
 # Config Sync downloads  |  Google Cloud Documentation

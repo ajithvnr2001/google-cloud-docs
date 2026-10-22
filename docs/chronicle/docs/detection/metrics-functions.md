@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/metrics-functions/
 title: Use metrics functions for Risk Analytics rules \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:22:05.441964+00:00
+fetched_at: 2026-10-21T12:38:06.097988+00:00
 ---
 
 # Use metrics functions for Risk Analytics rules  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/flags/flags-overview/
 title: App Lifecycle Manager feature flags overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:29:59.540521+00:00
+fetched_at: 2026-10-21T12:30:47.600301+00:00
 ---
 
 # App Lifecycle Manager feature flags overview  |  Google Cloud Documentation

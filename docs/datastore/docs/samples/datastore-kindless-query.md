@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/samples/datastore-kindless-query/
 title: Kindless query \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:55:26.086435+00:00
+fetched_at: 2026-10-22T05:42:11.110690+00:00
 ---
 
 # Kindless query  |  Firestore in Datastore mode  |  Google Cloud Documentation

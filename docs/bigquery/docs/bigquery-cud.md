@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/bigquery-cud/
 title: Committed use discounts \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:46:48.852089+00:00
+fetched_at: 2026-10-21T12:39:53.598661+00:00
 ---
 
 # Committed use discounts  |  BigQuery  |  Google Cloud Documentation

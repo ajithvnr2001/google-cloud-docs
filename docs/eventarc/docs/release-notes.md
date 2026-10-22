@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/docs/release-notes/
 title: Eventarc Release Notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:12:41.368448+00:00
+fetched_at: 2026-10-21T14:35:33.133725+00:00
 ---
 
 # Eventarc Release Notes  |  Google Cloud Documentation

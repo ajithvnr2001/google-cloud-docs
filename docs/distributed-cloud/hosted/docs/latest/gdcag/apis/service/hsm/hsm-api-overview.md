@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/service/hsm/hsm-api-overview/
 title: Hardware security modules API overview \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:13:25.965284+00:00
+fetched_at: 2026-10-21T12:57:02.645367+00:00
 ---
 
 # Hardware security modules API overview  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

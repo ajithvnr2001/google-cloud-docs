@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/regions-zones/tpu-regions-zones/
 title: TPU locations \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:41.194984+00:00
+fetched_at: 2026-10-21T14:22:23.918355+00:00
 ---
 
 # TPU locations  |  Compute Engine  |  Google Cloud Documentation

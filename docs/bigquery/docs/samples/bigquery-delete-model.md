@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-delete-model/
 title: Delete a model \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:51.471448+00:00
+fetched_at: 2026-10-21T14:21:33.001686+00:00
 ---
 
 # Delete a model  |  BigQuery  |  Google Cloud Documentation

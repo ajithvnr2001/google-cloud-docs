@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/how-to/audit-logging/
 title: GKE Multi-Cloud audit logging \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:55.929628+00:00
+fetched_at: 2026-10-21T15:09:30.235799+00:00
 ---
 
 # GKE Multi-Cloud audit logging  |  GKE on Azure  |  Google Cloud Documentation

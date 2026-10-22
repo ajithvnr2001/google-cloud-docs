@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-query-total-rows/
 title: Run a query and get total rows \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:45:32.568338+00:00
+fetched_at: 2026-10-22T05:49:24.122440+00:00
 ---
 
 # Run a query and get total rows  |  BigQuery  |  Google Cloud Documentation

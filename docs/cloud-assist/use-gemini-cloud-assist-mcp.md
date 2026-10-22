@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/use-gemini-cloud-assist-mcp/
 title: Use the Gemini Cloud Assist remote MCP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:40:55.565054+00:00
+fetched_at: 2026-10-21T14:22:31.086514+00:00
 ---
 
 # Use the Gemini Cloud Assist remote MCP server  |  Google Cloud Documentation

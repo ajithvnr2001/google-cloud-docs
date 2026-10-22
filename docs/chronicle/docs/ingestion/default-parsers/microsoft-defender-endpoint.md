@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/microsoft-defender-endpoint/
 title: Collect Microsoft Defender for Endpoint logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:57.907798+00:00
+fetched_at: 2026-10-21T12:39:19.221583+00:00
 ---
 
 # Collect Microsoft Defender for Endpoint logs  |  Google Security Operations  |  Google Cloud Documentation

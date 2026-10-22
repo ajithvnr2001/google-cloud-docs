@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat/
 title: Method: projects.locations.chat \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:35:35.408194+00:00
+fetched_at: 2026-10-21T12:51:30.612099+00:00
 ---
 
 # Method: projects.locations.chat  |  Data Agents  |  Google Cloud Documentation
@@ -84,7 +84,8 @@ JSON representation
       "thinkingMode": enum ([ThinkingMode](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat#ThinkingMode)),
       "model": enum ([Model](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat#Model)),
     
-      // Union field context_provider can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "inlineContext": {
         object ([Context](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations.dataAgents#Context))
       },
@@ -97,13 +98,14 @@ JSON representation
       "clientManagedResourceContext": {
         object ([ClientManagedResourceContext](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat#ClientManagedResourceContext))
       }
-      // End of list of possible types for union field context_provider.
+      // End of mutually exclusive fields.
     
-      // Union field datasource_settings can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "lookerSettings": {
         object ([LookerSettings](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat#LookerSettings))
       }
-      // End of list of possible types for union field datasource_settings.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
@@ -112,13 +114,15 @@ Fields
 `credentials` |  `object (`[Credentials](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat#Credentials)`)` Optional. The credentials to use when calling the data source(s) specified in the context.This field can be used to provide credentials for various data sources. For example, when connecting to Looker, it currently supports both OAuth token and API key-based credentials, as described in [Authentication with an SDK](https://cloud.google.com/looker/docs/api-auth#authentication_with_an_sdk).  
 `thinkingMode` |  `enum (`[ThinkingMode](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat#ThinkingMode)`)` Optional. The thinking mode to use for the agent loop. Defaults to THINKING_MODE_UNSPECIFIED if not specified.  
 `model` |  `enum (`[Model](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat#Model)`)` Optional. The model to use for the agent loop when processing the request. This setting only has an effect when context.options.model is not set.  
-Union field `context_provider`. Context Provider for the chat request. It can either be - inline_context, which is a context provided inline in the request. data_agent, which is a reference to a data agent resource. conversation_reference, which is a reference to a persisted conversation and context using conversation_id and agent_id. `context_provider` can be only one of the following:  
+Context Provider for the chat request. It can either be - inline_context, which is a context provided inline in the request. data_agent, which is a reference to a data agent resource. conversation_reference, which is a reference to a persisted conversation and context using conversation_id and agent_id. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `inlineContext` |  `object (`[Context](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations.dataAgents#Context)`)` Optional. Inline context for the chat request. Use this to chat statelessly (without managed conversation persistence and without an Agent) by passing all context inline.  
 `conversationReference` |  `object (`[ConversationReference](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat#ConversationReference)`)` Optional. Reference to a persisted conversation and agent context. Use this to chat with an Agent using managed conversation persistence.  
 `dataAgentContext` |  `object (`[DataAgentContext](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat#DataAgentContext)`)` Optional. Context for the chat request. Use this to chat with an Agent statelessly, without managed conversation persistence.  
 `clientManagedResourceContext` |  `object (`[ClientManagedResourceContext](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat#ClientManagedResourceContext)`)` Optional. Context with client managed resources. Some clients may not use GDA managed resources including conversations and agents, instead they create and manage their own conversations and agents resources.  
-Union field `datasource_settings`. Optional settings to customize request behavior, specific to the target datasource. `datasource_settings` can be only one of the following:  
+End of mutually exclusive fields.  
+Optional settings to customize request behavior, specific to the target datasource. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `lookerSettings` |  `object (`[LookerSettings](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat#LookerSettings)`)` Optional. Looker specific settings.  
+End of mutually exclusive fields.  
   
 ### Response body
 
@@ -126,9 +130,10 @@ If successful, the response body contains a stream of `[Message](https://docs.cl
 
 ### Authorization scopes
 
-Requires the following OAuth scope:
+Requires one of the following OAuth scopes:
 
   * `https://www.googleapis.com/auth/cloud-platform`
+  * `https://www.googleapis.com/auth/geminidataanalytics`
 
 
 
@@ -230,17 +235,19 @@ JSON representation
     
     {
     
-      // Union field kind can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "oauth": {
         object ([OAuthCredentials](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat#OAuthCredentials))
       }
-      // End of list of possible types for union field kind.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
 ---  
-Union field `kind`. The kind of credentials. `kind` can be only one of the following:  
+The kind of credentials. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `oauth` |  `object (`[OAuthCredentials](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat#OAuthCredentials)`)` OAuth credentials.  
+End of mutually exclusive fields.  
   
 ## OAuthCredentials
 
@@ -252,21 +259,23 @@ JSON representation
     
     {
     
-      // Union field kind can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "secret": {
         object ([SecretBased](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat#SecretBased))
       },
       "token": {
         object ([TokenBased](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat#TokenBased))
       }
-      // End of list of possible types for union field kind.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
 ---  
-Union field `kind`. The kind of OAuth credentials. `kind` can be only one of the following:  
+The kind of OAuth credentials. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `secret` |  `object (`[SecretBased](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat#SecretBased)`)` Secret-based OAuth credentials.  
 `token` |  `object (`[TokenBased](https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations/chat#TokenBased)`)` Token-based OAuth credentials.  
+End of mutually exclusive fields.  
   
 ## SecretBased
 
@@ -308,7 +317,7 @@ Mode of thinking for the agent.
 
 Enums  
 ---  
-`THINKING_MODE_UNSPECIFIED` | Unspecified thinking mode, agent will use THINKING mode by default except for BigQuery user defaulting to FAST mode by default.  
+`THINKING_MODE_UNSPECIFIED` | The default value. For BigQuery and Looker data sources, the agent uses FAST. For all other data sources, the agent uses THINKING.  
 `FAST` | Fast mode, answers quickly.  
 `THINKING` | Thinking mode, solves complex problems.  
   
@@ -325,6 +334,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-13 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

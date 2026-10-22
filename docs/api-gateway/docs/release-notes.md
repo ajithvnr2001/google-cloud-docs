@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/release-notes/
 title: API Gateway release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:03:09.680645+00:00
+fetched_at: 2026-10-21T14:54:08.255510+00:00
 ---
 
 # API Gateway release notes  |  Google Cloud Documentation

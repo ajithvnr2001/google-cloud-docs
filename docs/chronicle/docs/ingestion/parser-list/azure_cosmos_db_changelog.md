@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/azure_cosmos_db_changelog/
 title: Change log for AZURE_COSMOS_DB \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:08:05.153947+00:00
+fetched_at: 2026-10-21T14:51:55.107738+00:00
 ---
 
 # Change log for AZURE_COSMOS_DB  |  Google Security Operations  |  Google Cloud Documentation

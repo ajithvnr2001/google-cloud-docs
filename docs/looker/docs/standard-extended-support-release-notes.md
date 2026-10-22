@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/standard-extended-support-release-notes/
 title: Standard extended support release notes \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:35:12.549285+00:00
+fetched_at: 2026-10-21T15:08:43.175705+00:00
 ---
 
 # Standard extended support release notes  |  Looker  |  Google Cloud Documentation

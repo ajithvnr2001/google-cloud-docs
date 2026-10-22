@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/quotas/audit-logging/
 title: Cloud Quotas audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:40:31.867751+00:00
+fetched_at: 2026-10-21T14:08:17.651124+00:00
 ---
 
 # Cloud Quotas audit logging  |  Google Cloud Documentation

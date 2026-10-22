@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/java/using-maven/
 title: Using Apache Maven and the App Engine Plugin \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:08.794108+00:00
+fetched_at: 2026-10-21T14:26:45.532568+00:00
 ---
 
 # Using Apache Maven and the App Engine Plugin  |  App Engine flexible environment  |  Google Cloud Documentation

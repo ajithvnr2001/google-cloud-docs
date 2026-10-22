@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/configure-memorystore-for-valkey/
 title: Configure a Memorystore for Valkey instance \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:50:44.714794+00:00
+fetched_at: 2026-10-21T12:35:23.953047+00:00
 ---
 
 # Configure a Memorystore for Valkey instance  |  Application Design Center  |  Google Cloud Documentation

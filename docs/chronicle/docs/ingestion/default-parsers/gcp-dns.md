@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/gcp-dns/
 title: Collect Google Cloud DNS logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:31.370303+00:00
+fetched_at: 2026-10-21T12:36:36.779093+00:00
 ---
 
 # Collect Google Cloud DNS logs  |  Google Security Operations  |  Google Cloud Documentation

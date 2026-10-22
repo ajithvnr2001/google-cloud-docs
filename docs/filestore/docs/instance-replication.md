@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/instance-replication/
 title: About instance replication \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:15:16.776546+00:00
+fetched_at: 2026-10-21T12:52:08.481146+00:00
 ---
 
 # About instance replication  |  Filestore  |  Google Cloud Documentation

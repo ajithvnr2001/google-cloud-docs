@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/db-update-attributes/
 title: Update database cluster attributes \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T09:27:17.702558+00:00
+fetched_at: 2026-10-21T12:58:18.075723+00:00
 ---
 
 # Update database cluster attributes  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

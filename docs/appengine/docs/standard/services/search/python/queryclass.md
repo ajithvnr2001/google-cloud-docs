@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/search/python/queryclass/
 title: The Query Class \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:47:07.952061+00:00
+fetched_at: 2026-10-21T14:53:39.410373+00:00
 ---
 
 # The Query Class  |  App Engine standard environment  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aws-redshift/
 title: Collect AWS Redshift logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:25:15.029325+00:00
+fetched_at: 2026-10-21T14:24:22.324341+00:00
 ---
 
 # Collect AWS Redshift logs  |  Google Security Operations  |  Google Cloud Documentation

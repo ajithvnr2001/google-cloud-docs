@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/estimate/overview/
 title: Cost estimation overview \u00a0|\u00a0 Migration Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:18.561797+00:00
+fetched_at: 2026-10-21T15:12:53.099407+00:00
 ---
 
 # Cost estimation overview  |  Migration Center  |  Google Cloud Documentation

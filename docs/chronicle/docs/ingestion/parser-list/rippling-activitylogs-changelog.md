@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/rippling-activitylogs-changelog/
 title: Change log for RIPPLING_ACTIVITYLOGS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:59:01.580033+00:00
+fetched_at: 2026-10-21T14:43:28.140817+00:00
 ---
 
 # Change log for RIPPLING_ACTIVITYLOGS  |  Google Security Operations  |  Google Cloud Documentation

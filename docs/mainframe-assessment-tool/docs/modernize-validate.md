@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/mainframe-assessment-tool/docs/modernize-validate/
 title: Modernize and validate \u00a0|\u00a0 Mainframe Assessment Tool \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:38:08.852921+00:00
+fetched_at: 2026-10-21T12:29:26.846865+00:00
 ---
 
 # Modernize and validate  |  Mainframe Assessment Tool  |  Google Cloud Documentation
@@ -50,10 +50,14 @@ To prepare your environment for code modernization, complete the following steps
 
 ### Requirements
 
-  * **Export the agent configuration:** in the Mainframe Assessment Tool, [export the agent configuration (`AGENTS.md`) file](https://docs.cloud.google.com/mainframe-assessment-tool/docs/business-rules-extraction#export-rules). This file provides Antigravity with context about your assessment.
-  * **Access Antigravity:** Use [Antigravity](https://antigravity.google/) or the Antigravity CLI.
-  * **Set up a workspace:** create a local directory for your modernization project to store exported configuration files and generated code.
-  * **Enable the Mainframe Assessment Tool MCP server:** [configure Mainframe Assessment Tool MCP server](https://docs.cloud.google.com/mainframe-assessment-tool/docs/mcp-server) to enable communication between Antigravity and assessment data.
+Before modernizing application code with [Antigravity](https://antigravity.google/), verify that you have the following:
+
+  * **A local workspace:** create a dedicated directory on your computer to store your exported configuration files, agent skills, and generated code.
+  * **An active MCP server** : ensure that the Mainframe Assessment Tool MCP server is [enabled and accessible](https://docs.cloud.google.com/mainframe-assessment-tool/docs/mcp-server#enable-mcp-server) from your local environment.
+  * **MCP connection and agent skill:** on the **Assessments** page in Mainframe Assessment Tool, click **Use with Antigravity** in the toolbar to configure Antigravity: 
+    * **Configure MCP:** view the connection details to [connect Antigravity to the MCP server](https://docs.cloud.google.com/mainframe-assessment-tool/docs/mcp-server#connect-mcp-server).
+    * **Download Skill:** download `skill.zip`, which contains the `mat-backend-query` agent skill for querying call trees, database access patterns, and dataset I/O metrics. For extraction instructions, see [Install and use the Mainframe Assessment Tool agent skill](https://docs.cloud.google.com/mainframe-assessment-tool/docs/mcp-server#install-agent-skill).
+  * **Exported agent configuration (`AGENTS.md`):** [export the `AGENTS.md` file](https://docs.cloud.google.com/mainframe-assessment-tool/docs/business-rules-extraction#export-rules) from your completed business rules extraction job. This file provides Antigravity with context about your assessment.
 
 
 
@@ -90,7 +94,7 @@ Replace the following:
 
 After you configure Antigravity to modernize code, it automatically uses the `assessmentID` and `jobID` from your `AGENTS.md` file to contextually understand your application.
 
-Antigravity uses the [Mainframe Assessment Tool MCP server tools](https://docs.cloud.google.com/mainframe-assessment-tool/docs/mcp-server#mcp_server_tools) and combines multiple data sources from your assessment and design phases to perform analysis and generate the following:
+Antigravity uses the [Mainframe Assessment Tool MCP server tools](https://docs.cloud.google.com/mainframe-assessment-tool/docs/mcp-server#mcp-server-tools) and combines multiple data sources from your assessment and design phases to perform analysis and generate the following:
 
   * Validated business rules: core business logic extracted from legacy code and verified by stakeholders.
   * Target data model: optimized data structures designed for your target Google Cloud environment, such as Cloud Spanner or Cloud SQL.
@@ -148,6 +152,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

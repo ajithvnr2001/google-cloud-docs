@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/carbon-footprint/docs/export/
 title: Export your carbon footprint \u00a0|\u00a0 Carbon Footprint \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:38:58.435057+00:00
+fetched_at: 2026-10-21T14:25:13.988671+00:00
 ---
 
 # Export your carbon footprint  |  Carbon Footprint  |  Google Cloud Documentation

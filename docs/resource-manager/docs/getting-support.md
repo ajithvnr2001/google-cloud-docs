@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/resource-manager/docs/getting-support/
 title: Getting support \u00a0|\u00a0 Resource Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:55:21.736573+00:00
+fetched_at: 2026-10-21T14:57:59.923667+00:00
 ---
 
 # Getting support  |  Resource Manager  |  Google Cloud Documentation

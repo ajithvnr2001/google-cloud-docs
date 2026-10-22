@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/trendmicro-vision-one-audit/
 title: Collect Trend Micro Vision One Audit logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:27:51.991534+00:00
+fetched_at: 2026-10-21T12:38:18.553512+00:00
 ---
 
 # Collect Trend Micro Vision One Audit logs  |  Google Security Operations  |  Google Cloud Documentation

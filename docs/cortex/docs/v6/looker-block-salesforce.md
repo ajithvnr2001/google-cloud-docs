@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/looker-block-salesforce/
 title: Looker Block for Salesforce Sales Cloud \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:12:24.403165+00:00
+fetched_at: 2026-10-21T14:09:48.058168+00:00
 ---
 
 # Looker Block for Salesforce Sales Cloud  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

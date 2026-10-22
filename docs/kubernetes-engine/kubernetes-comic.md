@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/kubernetes-comic/
 title: Deploy code faster: with CI/CD and Kubernetes \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:27:48.514378+00:00
+fetched_at: 2026-10-21T14:42:14.701483+00:00
 ---
 
 # Deploy code faster: with CI/CD and Kubernetes  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

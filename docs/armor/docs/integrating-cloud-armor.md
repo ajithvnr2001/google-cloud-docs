@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/integrating-cloud-armor/
 title: Integrate with other Google products \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:16.638203+00:00
+fetched_at: 2026-10-21T14:58:25.407351+00:00
 ---
 
 # Integrate with other Google products  |  Google Cloud Armor  |  Google Cloud Documentation
@@ -178,6 +178,12 @@ For more information about serverless NEGs, see [Serverless network endpoint gro
 
 You can configure internal service security policies for your service mesh to enforce global server-side rate limiting per client, helping you fairly share your service's available capacity and mitigating the risk of malicious or misbehaving clients overloading your services. You attach a security policy to a Cloud Service Mesh endpoint policy to enforce rate limiting on inbound traffic on the server-side. However, you can't configure a Cloud Armor security policy if you are using TCP traffic routing. For more information about using Cloud Armor with Cloud Service Mesh, see [Configure rate limiting with Cloud Armor](https://docs.cloud.google.com/service-mesh/docs/service-routing/rate-limiting-overview).
 
+## Cloud Armor and service rate limiting
+
+Service rate limiting manages trusted but potentially misbehaving clients on an internal Application Load Balancer and a Secure Web Proxy to maximize service availability for your most important traffic.
+
+For more information, see [Service rate limiting overview](https://docs.cloud.google.com/load-balancing/docs/srl-policy/service-rate-limiting-overview).
+
 ## Cloud Armor and Global Front End
 
 **Preview**
@@ -200,6 +206,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

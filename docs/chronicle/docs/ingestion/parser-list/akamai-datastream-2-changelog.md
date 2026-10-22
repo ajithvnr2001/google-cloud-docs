@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/akamai-datastream-2-changelog/
 title: Change log for AKAMAI_DATASTREAM_2 \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:55:28.420652+00:00
+fetched_at: 2026-10-21T14:46:19.202142+00:00
 ---
 
 # Change log for AKAMAI_DATASTREAM_2  |  Google Security Operations  |  Google Cloud Documentation

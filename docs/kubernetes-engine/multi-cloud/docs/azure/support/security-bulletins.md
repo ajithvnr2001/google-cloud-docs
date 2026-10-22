@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/support/security-bulletins/
 title: GKE on Azure security bulletins \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:55:50.315944+00:00
+fetched_at: 2026-10-21T14:59:38.294991+00:00
 ---
 
 # GKE on Azure security bulletins  |  Google Cloud Documentation

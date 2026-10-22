@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/create/gke-create-n1/
 title: Create an AI-optimized GKE cluster that uses N1 \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:34:54.469135+00:00
+fetched_at: 2026-10-21T14:27:00.579376+00:00
 ---
 
 # Create an AI-optimized GKE cluster that uses N1  |  AI Hypercomputer  |  Google Cloud Documentation

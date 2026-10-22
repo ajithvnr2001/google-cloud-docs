@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/gcp-tasks/configure-firestore-documentget-task/
 title: Firestore - Document Get task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:58:35.519489+00:00
+fetched_at: 2026-10-21T14:26:37.530554+00:00
 ---
 
 # Firestore - Document Get task  |  Application Integration  |  Google Cloud Documentation

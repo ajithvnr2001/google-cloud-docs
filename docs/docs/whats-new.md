@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/whats-new/
 title: What's New \u00a0|\u00a0 What's new for Google Cloud documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:52:52.516965+00:00
+fetched_at: 2026-10-21T14:08:20.132308+00:00
 ---
 
 # What's New  |  What's new for Google Cloud documentation  |  Google Cloud Documentation

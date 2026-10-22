@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/skip-crm-account-record-creation/
 title: Skip CRM account and record creation \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:04:51.945290+00:00
+fetched_at: 2026-10-21T14:06:56.171722+00:00
 ---
 
 # Skip CRM account and record creation  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

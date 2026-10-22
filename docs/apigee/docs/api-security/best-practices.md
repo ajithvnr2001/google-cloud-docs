@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-security/best-practices/
 title: Advanced API Security best practices \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:22:00.742905+00:00
+fetched_at: 2026-10-21T14:53:13.779512+00:00
 ---
 
 # Advanced API Security best practices  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/va-custom-events/
 title: Virtual agent custom events \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:53:13.796737+00:00
+fetched_at: 2026-10-21T14:22:02.528826+00:00
 ---
 
 # Virtual agent custom events  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

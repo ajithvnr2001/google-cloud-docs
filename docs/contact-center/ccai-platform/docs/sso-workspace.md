@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/sso-workspace/
 title: Configure SSO using Google Workspace \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:03.149447+00:00
+fetched_at: 2026-10-21T14:22:16.414580+00:00
 ---
 
 # Configure SSO using Google Workspace  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

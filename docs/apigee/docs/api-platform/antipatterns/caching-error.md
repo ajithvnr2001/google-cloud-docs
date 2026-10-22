@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/caching-error/
 title: Antipattern: Cache error responses \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:37:29.032789+00:00
+fetched_at: 2026-10-21T12:29:52.960831+00:00
 ---
 
 # Antipattern: Cache error responses  |  Apigee  |  Google Cloud Documentation

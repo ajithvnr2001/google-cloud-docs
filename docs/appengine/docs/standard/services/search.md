@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/search/
 title: Search API for legacy bundled services \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:41:16.441443+00:00
+fetched_at: 2026-10-21T14:22:27.672563+00:00
 ---
 
 # Search API for legacy bundled services  |  App Engine standard environment  |  Google Cloud Documentation

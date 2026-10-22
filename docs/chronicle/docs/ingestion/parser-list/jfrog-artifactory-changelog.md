@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/jfrog-artifactory-changelog/
 title: Change log for JFROG_ARTIFACTORY \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:18:13.756909+00:00
+fetched_at: 2026-10-21T14:43:40.113086+00:00
 ---
 
 # Change log for JFROG_ARTIFACTORY  |  Google Security Operations  |  Google Cloud Documentation

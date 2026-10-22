@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/asset-inventory/docs/search-query-syntax/
 title: Search query syntax \u00a0|\u00a0 Cloud Asset Inventory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:30:02.792342+00:00
+fetched_at: 2026-10-21T14:41:36.626004+00:00
 ---
 
 # Search query syntax  |  Cloud Asset Inventory  |  Google Cloud Documentation

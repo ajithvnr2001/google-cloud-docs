@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automate-builds-pubsub-events/
 title: Automate builds in response to Pub/Sub events \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:07.178632+00:00
+fetched_at: 2026-10-21T12:38:22.518863+00:00
 ---
 
 # Automate builds in response to Pub/Sub events  |  Cloud Build  |  Google Cloud Documentation

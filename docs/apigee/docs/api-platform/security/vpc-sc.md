@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/security/vpc-sc/
 title: Using VPC Service Controls with Apigee and Apigee hybrid \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:43:10.356683+00:00
+fetched_at: 2026-10-21T12:30:20.295762+00:00
 ---
 
 # Using VPC Service Controls with Apigee and Apigee hybrid  |  Google Cloud Documentation

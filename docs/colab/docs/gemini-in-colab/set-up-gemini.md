@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/colab/docs/gemini-in-colab/set-up-gemini/
 title: Set up Gemini in Colab Enterprise for a project \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:52:30.852590+00:00
+fetched_at: 2026-10-21T14:20:55.491180+00:00
 ---
 
 # Set up Gemini in Colab Enterprise for a project  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/carbon-footprint/docs/iam/
 title: Cloud Billing IAM permissions and roles \u00a0|\u00a0 Carbon Footprint \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:39:03.261237+00:00
+fetched_at: 2026-10-21T14:25:17.546737+00:00
 ---
 
 # Cloud Billing IAM permissions and roles  |  Carbon Footprint  |  Google Cloud Documentation

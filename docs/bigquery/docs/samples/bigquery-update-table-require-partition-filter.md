@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-update-table-require-partition-filter/
 title: Update the require partition filter \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:11.141876+00:00
+fetched_at: 2026-10-22T05:46:11.215609+00:00
 ---
 
 # Update the require partition filter  |  BigQuery  |  Google Cloud Documentation

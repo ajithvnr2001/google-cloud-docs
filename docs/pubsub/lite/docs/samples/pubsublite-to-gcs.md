@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/lite/docs/samples/pubsublite-to-gcs/
 title: Stream Pub/Sub Lite to Cloud Storage using Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:45:45.916724+00:00
+fetched_at: 2026-10-21T15:15:07.114946+00:00
 ---
 
 # Stream Pub/Sub Lite to Cloud Storage using Dataflow  |  Google Cloud Documentation

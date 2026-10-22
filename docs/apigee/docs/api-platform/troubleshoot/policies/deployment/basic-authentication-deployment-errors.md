@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/basic-authentication-deployment-errors/
 title: BasicAuthentication policy deployment error troubleshooting \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:27.662941+00:00
+fetched_at: 2026-10-21T14:19:00.400317+00:00
 ---
 
 # BasicAuthentication policy deployment error troubleshooting  |  Apigee  |  Google Cloud Documentation

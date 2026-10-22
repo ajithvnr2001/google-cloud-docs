@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/reference-patterns/
 title: Reference patterns \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:20:34.975121+00:00
+fetched_at: 2026-10-21T12:35:50.122099+00:00
 ---
 
 # Reference patterns  |  BigQuery  |  Google Cloud Documentation

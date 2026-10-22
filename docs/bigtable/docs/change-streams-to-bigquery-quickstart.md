@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/change-streams-to-bigquery-quickstart/
 title: Quickstart: Stream changes to BigQuery using a Dataflow template \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:15.454231+00:00
+fetched_at: 2026-10-21T12:36:20.501155+00:00
 ---
 
 # Quickstart: Stream changes to BigQuery using a Dataflow template  |  Bigtable  |  Google Cloud Documentation

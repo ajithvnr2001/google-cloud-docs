@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/pulse_secure_vpn_changelog/
 title: Change log for PULSE_SECURE_VPN \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:01:01.141005+00:00
+fetched_at: 2026-10-21T14:51:47.603039+00:00
 ---
 
 # Change log for PULSE_SECURE_VPN  |  Google Security Operations  |  Google Cloud Documentation

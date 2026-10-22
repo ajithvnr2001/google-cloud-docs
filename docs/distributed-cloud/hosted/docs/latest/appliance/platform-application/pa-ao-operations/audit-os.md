@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/platform-application/pa-ao-operations/audit-os/
 title: Node and operating system (OS) \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:52.433221+00:00
+fetched_at: 2026-10-21T12:57:06.391851+00:00
 ---
 
 # Node and operating system (OS)  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

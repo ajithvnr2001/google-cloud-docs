@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/gke-cluster/
 title: Create a GKE cluster \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:41.420469+00:00
+fetched_at: 2026-10-21T14:42:18.455441+00:00
 ---
 
 # Create a GKE cluster  |  Cluster Toolkit  |  Google Cloud Documentation

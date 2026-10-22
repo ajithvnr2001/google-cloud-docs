@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/vm-manager/
 title: About VM Manager \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:18:40.458438+00:00
+fetched_at: 2026-10-21T14:22:33.131573+00:00
 ---
 
 # About VM Manager  |  Compute Engine  |  Google Cloud Documentation

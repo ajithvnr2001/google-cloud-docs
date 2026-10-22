@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/premium/sles-faq/
 title: SUSE Linux Enterprise Server FAQ \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:44.480092+00:00
+fetched_at: 2026-10-21T14:21:41.579727+00:00
 ---
 
 # SUSE Linux Enterprise Server FAQ  |  Compute Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/samples/privateca-create-ca-byo-key/
 title: Create a root CA using a self-managed key \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:34:49.422663+00:00
+fetched_at: 2026-10-22T05:46:21.675192+00:00
 ---
 
 # Create a root CA using a self-managed key  |  Certificate Authority Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cisco-ironport-changelog/
 title: Change log for CISCO_IRONPORT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:26:16.226399+00:00
+fetched_at: 2026-10-21T14:44:56.096793+00:00
 ---
 
 # Change log for CISCO_IRONPORT  |  Google Security Operations  |  Google Cloud Documentation

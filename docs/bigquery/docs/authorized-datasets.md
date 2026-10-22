@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/authorized-datasets/
 title: Authorized datasets \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:10:05.616325+00:00
+fetched_at: 2026-10-21T12:30:44.209633+00:00
 ---
 
 # Authorized datasets  |  BigQuery  |  Google Cloud Documentation

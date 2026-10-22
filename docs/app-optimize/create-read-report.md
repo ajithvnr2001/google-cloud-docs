@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-optimize/create-read-report/
 title: Quickstart: Create and read a report \u00a0|\u00a0 App Optimize \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:05:47.492216+00:00
+fetched_at: 2026-10-21T12:31:00.046231+00:00
 ---
 
 # Quickstart: Create and read a report  |  App Optimize  |  Google Cloud Documentation

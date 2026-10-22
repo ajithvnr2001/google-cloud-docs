@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/self-service-maintenance/
 title: Self-service maintenance \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:56.267571+00:00
+fetched_at: 2026-10-21T15:13:50.560773+00:00
 ---
 
 # Self-service maintenance  |  Memorystore for Redis  |  Google Cloud Documentation

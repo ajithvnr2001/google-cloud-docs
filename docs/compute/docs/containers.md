@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/containers/
 title: Containers on Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:36:38.012480+00:00
+fetched_at: 2026-10-22T05:45:43.204148+00:00
 ---
 
 # Containers on Compute Engine  |  Google Cloud Documentation

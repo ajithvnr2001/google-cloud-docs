@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/l7-lb-architecture/
 title: Layer 7 load balancing reference architecture \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:50:00.241940+00:00
+fetched_at: 2026-10-21T12:58:12.808999+00:00
 ---
 
 # Layer 7 load balancing reference architecture  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

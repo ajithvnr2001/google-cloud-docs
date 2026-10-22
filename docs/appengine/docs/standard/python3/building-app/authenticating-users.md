@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/python3/building-app/authenticating-users/
 title: Authenticate users with Firebase \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:35.704975+00:00
+fetched_at: 2026-10-21T12:35:47.726573+00:00
 ---
 
 # Authenticate users with Firebase  |  App Engine standard environment  |  Google Cloud Documentation

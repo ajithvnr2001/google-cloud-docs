@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/marketing-tiktok/
 title: Integration with TikTok \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:19:33.681317+00:00
+fetched_at: 2026-10-21T14:10:20.554855+00:00
 ---
 
 # Integration with TikTok  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

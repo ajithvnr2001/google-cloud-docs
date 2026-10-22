@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/Shared.Types/TaskState/
 title: TaskState \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:43:07.147882+00:00
+fetched_at: 2026-10-21T12:51:41.392053+00:00
 ---
 
 # TaskState  |  Data Agents  |  Google Cloud Documentation

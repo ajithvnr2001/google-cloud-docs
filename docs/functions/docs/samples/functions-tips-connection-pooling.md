@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/samples/functions-tips-connection-pooling/
 title: Use HTTP connection pooling \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:03:39.580799+00:00
+fetched_at: 2026-10-21T12:51:34.979983+00:00
 ---
 
 # Use HTTP connection pooling  |  Cloud Run functions  |  Google Cloud Documentation

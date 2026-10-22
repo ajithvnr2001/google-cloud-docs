@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/vm-manager/docs/audit-logging/
 title: VM Manager audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:53:14.600250+00:00
+fetched_at: 2026-10-21T14:08:46.463612+00:00
 ---
 
 # VM Manager audit logging  |  Google Cloud Documentation

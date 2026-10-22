@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/ssl-labs/
 title: SSL Labs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:51:46.017737+00:00
+fetched_at: 2026-10-21T12:37:28.096233+00:00
 ---
 
 # SSL Labs  |  Google Security Operations  |  Google Cloud Documentation

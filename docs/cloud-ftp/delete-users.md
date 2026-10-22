@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-ftp/delete-users/
 title: Delete users from an SFTP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:17:50.745995+00:00
+fetched_at: 2026-10-21T14:22:36.638126+00:00
 ---
 
 # Delete users from an SFTP server  |  Google Cloud Documentation

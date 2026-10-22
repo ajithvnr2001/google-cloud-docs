@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/db-create-cluster/
 title: Create a database cluster \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:11:02.840113+00:00
+fetched_at: 2026-10-21T12:53:21.941562+00:00
 ---
 
 # Create a database cluster  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/config-controller/docs/scalability/
 title: Config Controller scalability guidelines \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:36:42.947330+00:00
+fetched_at: 2026-10-21T15:00:42.449428+00:00
 ---
 
 # Config Controller scalability guidelines  |  Google Cloud Documentation

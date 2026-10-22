@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/source-system-integration/overview/
 title: Source system integration \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:36:57.159624+00:00
+fetched_at: 2026-10-21T14:23:20.623100+00:00
 ---
 
 # Source system integration  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

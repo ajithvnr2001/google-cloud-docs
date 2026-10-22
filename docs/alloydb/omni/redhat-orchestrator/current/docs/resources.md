@@ -1,21 +1,21 @@
 ---
 url: https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/resources/
-title: Resources \u00a0|\u00a0 AlloyDB Omni using the RPM orchestrator: Current (18.3.0) \u00a0|\u00a0 Google Cloud Documentation
+title: Resources \u00a0|\u00a0 AlloyDB Omni using the RPM orchestrator: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:52:05.323709+00:00
+fetched_at: 2026-10-21T14:37:55.665657+00:00
 ---
 
-# Resources  |  AlloyDB Omni using the RPM orchestrator: Current (18.3.0)  |  Google Cloud Documentation
+# Resources  |  AlloyDB Omni using the RPM orchestrator: Current (18.4.0)  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/resources/
 
-This page documents AlloyDB Omni version **18.3.0** using the **RPM orchestrator** deployment option. [Choose a different deployment option](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment). 
+This page documents AlloyDB Omni version **18.4.0** using the **RPM orchestrator** deployment option. [Choose a different deployment option](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment). 
 
   * [ Home ](https://docs.cloud.google.com/)
   * [ Documentation ](https://docs.cloud.google.com/docs)
   * [ Databases ](https://docs.cloud.google.com/docs/databases)
   * [ AlloyDB Omni ](https://docs.cloud.google.com/alloydb/omni/docs)
-  * [ RPM orchestrator: Current (18.3.0) ](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/overview)
+  * [ RPM orchestrator: Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/overview)
   * [ Resources ](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/resources)
 
 

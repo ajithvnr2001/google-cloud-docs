@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/setup-devices/
 title: Set up the Devices API \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:19.384913+00:00
+fetched_at: 2026-10-21T12:54:09.338219+00:00
 ---
 
 # Set up the Devices API  |  Cloud Identity  |  Google Cloud Documentation

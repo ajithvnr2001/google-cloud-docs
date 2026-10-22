@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/silverfort-changelog/
 title: Change log for SILVERFORT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:30:13.541841+00:00
+fetched_at: 2026-10-21T14:42:39.468430+00:00
 ---
 
 # Change log for SILVERFORT  |  Google Security Operations  |  Google Cloud Documentation

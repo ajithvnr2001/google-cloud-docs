@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/juniper-mist-changelog/
 title: Change log for JUNIPER_MIST \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:09:18.506884+00:00
+fetched_at: 2026-10-21T14:43:38.987542+00:00
 ---
 
 # Change log for JUNIPER_MIST  |  Google Security Operations  |  Google Cloud Documentation

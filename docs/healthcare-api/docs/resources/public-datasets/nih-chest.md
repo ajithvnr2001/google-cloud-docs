@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/resources/public-datasets/nih-chest/
 title: NIH Chest X-ray dataset \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:14:07.332571+00:00
+fetched_at: 2026-10-21T14:29:28.072980+00:00
 ---
 
 # NIH Chest X-ray dataset  |  Cloud Healthcare API  |  Google Cloud Documentation

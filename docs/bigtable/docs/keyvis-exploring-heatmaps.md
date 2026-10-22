@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/keyvis-exploring-heatmaps/
 title: Explore heatmaps \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:22.937520+00:00
+fetched_at: 2026-10-21T12:37:28.698012+00:00
 ---
 
 # Explore heatmaps  |  Bigtable  |  Google Cloud Documentation

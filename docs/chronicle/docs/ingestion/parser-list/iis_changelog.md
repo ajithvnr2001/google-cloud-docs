@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/iis_changelog/
 title: Change log for IIS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:06:53.801522+00:00
+fetched_at: 2026-10-21T14:52:01.058093+00:00
 ---
 
 # Change log for IIS  |  Google Security Operations  |  Google Cloud Documentation

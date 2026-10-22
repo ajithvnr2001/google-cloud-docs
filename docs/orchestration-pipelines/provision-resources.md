@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/orchestration-pipelines/provision-resources/
 title: Provision resources \u00a0|\u00a0 Orchestration Pipelines \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:51:02.282925+00:00
+fetched_at: 2026-10-21T14:59:12.976720+00:00
 ---
 
 # Provision resources  |  Orchestration Pipelines  |  Google Cloud Documentation

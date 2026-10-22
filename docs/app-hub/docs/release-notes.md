@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/release-notes/
 title: App Hub release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:20:58.526937+00:00
+fetched_at: 2026-10-21T14:54:04.544263+00:00
 ---
 
 # App Hub release notes  |  Google Cloud Documentation

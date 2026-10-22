@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/nat/docs/gke-example/
 title: Use Public NAT with GKE \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:52.530569+00:00
+fetched_at: 2026-10-21T15:15:43.977742+00:00
 ---
 
 # Use Public NAT with GKE  |  Google Cloud Documentation

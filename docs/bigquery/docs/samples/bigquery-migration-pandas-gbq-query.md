@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-migration-pandas-gbq-query/
 title: Migration Guide: pandas-gbq \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T13:49:44.362374+00:00
+fetched_at: 2026-10-22T05:50:28.030404+00:00
 ---
 
 # Migration Guide: pandas-gbq  |  BigQuery  |  Google Cloud Documentation

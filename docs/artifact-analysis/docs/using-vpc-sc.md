@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/using-vpc-sc/
 title: Using Artifact Analysis with VPC Service Controls \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:22:10.711021+00:00
+fetched_at: 2026-10-21T12:30:42.627101+00:00
 ---
 
 # Using Artifact Analysis with VPC Service Controls  |  Google Cloud Documentation

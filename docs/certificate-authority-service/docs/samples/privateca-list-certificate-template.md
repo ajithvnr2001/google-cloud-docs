@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/samples/privateca-list-certificate-template/
 title: List Certificate templates \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:58:54.144133+00:00
+fetched_at: 2026-10-21T12:38:02.883277+00:00
 ---
 
 # List Certificate templates  |  Certificate Authority Service  |  Google Cloud Documentation

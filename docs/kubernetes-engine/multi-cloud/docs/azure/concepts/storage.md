@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/concepts/storage/
 title: Storage overview \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:55.660409+00:00
+fetched_at: 2026-10-21T15:09:57.611239+00:00
 ---
 
 # Storage overview  |  GKE on Azure  |  Google Cloud Documentation

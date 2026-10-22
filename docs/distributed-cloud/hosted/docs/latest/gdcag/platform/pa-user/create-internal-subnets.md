@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/create-internal-subnets/
 title: Provision IP addresses for workloads \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:33:02.992026+00:00
+fetched_at: 2026-10-21T12:58:41.709793+00:00
 ---
 
 # Provision IP addresses for workloads  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

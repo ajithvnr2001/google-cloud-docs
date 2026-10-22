@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/anthos/clusters/docs/on-prem/1.16/release-notes/
 title: Distributed Cloud version 1.16 release notes \u00a0|\u00a0 Google Distributed Cloud Virtual for VMware \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:10:30.123494+00:00
+fetched_at: 2026-10-21T14:53:46.355961+00:00
 ---
 
 # Distributed Cloud version 1.16 release notes  |  Google Distributed Cloud Virtual for VMware  |  Google Cloud Documentation

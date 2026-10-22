@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aws-rds/
 title: Collect AWS RDS logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:08:04.106367+00:00
+fetched_at: 2026-10-21T14:24:06.881318+00:00
 ---
 
 # Collect AWS RDS logs  |  Google Security Operations  |  Google Cloud Documentation

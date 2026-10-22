@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/pam-view-update-delete-entitlements/
 title: View, update, and delete entitlements in Privileged Access Manager \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:10:11.135941+00:00
+fetched_at: 2026-10-21T12:54:00.224314+00:00
 ---
 
 # View, update, and delete entitlements in Privileged Access Manager  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

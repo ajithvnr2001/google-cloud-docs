@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/vertex-ai-translation/
 title: Learn about translation features \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:22:15.179430+00:00
+fetched_at: 2026-10-21T12:56:43.787388+00:00
 ---
 
 # Learn about translation features  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

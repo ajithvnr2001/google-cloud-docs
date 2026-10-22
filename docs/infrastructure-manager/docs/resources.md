@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/resources/
 title: Resources \u00a0|\u00a0 Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:29:31.634669+00:00
+fetched_at: 2026-10-21T12:53:45.174326+00:00
 ---
 
 # Resources  |  Infrastructure Manager  |  Google Cloud Documentation

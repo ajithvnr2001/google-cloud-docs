@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/troubleshoot/known-issues/
 title: Known issues for GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:57.310356+00:00
+fetched_at: 2026-10-21T14:59:32.056032+00:00
 ---
 
 # Known issues for GKE on Azure  |  Google Cloud Documentation

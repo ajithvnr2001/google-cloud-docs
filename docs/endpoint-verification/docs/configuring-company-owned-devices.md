@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoint-verification/docs/configuring-company-owned-devices/
 title: Add company-owned devices \u00a0|\u00a0 Endpoint Verification \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:18:28.288967+00:00
+fetched_at: 2026-10-21T12:51:19.919700+00:00
 ---
 
 # Add company-owned devices  |  Endpoint Verification  |  Google Cloud Documentation

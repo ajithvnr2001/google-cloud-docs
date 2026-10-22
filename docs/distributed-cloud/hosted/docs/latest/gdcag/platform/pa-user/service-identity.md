@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/service-identity/
 title: Authenticate with service identities \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:39.267197+00:00
+fetched_at: 2026-10-21T12:59:10.961695+00:00
 ---
 
 # Authenticate with service identities  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

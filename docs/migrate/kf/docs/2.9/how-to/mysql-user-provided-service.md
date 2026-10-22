@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.9/how-to/mysql-user-provided-service/
 title: Set up MySQL as a user-provided service \u00a0|\u00a0 Kf 2.9 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:34:56.365508+00:00
+fetched_at: 2026-10-21T15:17:21.713352+00:00
 ---
 
 # Set up MySQL as a user-provided service  |  Kf 2.9  |  Google Cloud Documentation

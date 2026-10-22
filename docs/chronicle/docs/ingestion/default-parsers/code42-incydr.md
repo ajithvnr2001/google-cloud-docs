@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/code42-incydr/
 title: Collect Code42 Incydr core datasets \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:06:14.342187+00:00
+fetched_at: 2026-10-21T12:37:54.555271+00:00
 ---
 
 # Collect Code42 Incydr core datasets  |  Google Security Operations  |  Google Cloud Documentation

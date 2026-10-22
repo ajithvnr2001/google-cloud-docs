@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/sailpoint-iam-changelog/
 title: Change log for SAILPOINT_IAM \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:00:42.547313+00:00
+fetched_at: 2026-10-21T14:43:27.038288+00:00
 ---
 
 # Change log for SAILPOINT_IAM  |  Google Security Operations  |  Google Cloud Documentation

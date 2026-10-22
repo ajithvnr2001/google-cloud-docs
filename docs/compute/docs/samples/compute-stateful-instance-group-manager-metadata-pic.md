@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-stateful-instance-group-manager-metadata-pic/
 title: Set stateful metadata on VM instance creation in a MIG \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:26.278841+00:00
+fetched_at: 2026-10-22T05:49:38.779556+00:00
 ---
 
 # Set stateful metadata on VM instance creation in a MIG  |  Compute Engine  |  Google Cloud Documentation

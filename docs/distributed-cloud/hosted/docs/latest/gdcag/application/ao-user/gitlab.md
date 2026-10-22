@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/gitlab/
 title: Deploy GitLab Enterprise Edition on Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:06:18.035252+00:00
+fetched_at: 2026-10-21T12:58:16.547776+00:00
 ---
 
 # Deploy GitLab Enterprise Edition on Google Distributed Cloud air-gapped  |  Google Cloud Documentation

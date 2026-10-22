@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/troubleshooting/troubleshoot-discovery-client/
 title: Troubleshoot issues with discovery client \u00a0|\u00a0 Migration Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:26.756507+00:00
+fetched_at: 2026-10-21T15:15:56.933019+00:00
 ---
 
 # Troubleshoot issues with discovery client  |  Migration Center  |  Google Cloud Documentation

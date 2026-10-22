@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/asset-inventory/docs/deprecations/
 title: Deprecations and shut down features \u00a0|\u00a0 Cloud Asset Inventory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:02:02.303410+00:00
+fetched_at: 2026-10-21T14:53:15.112897+00:00
 ---
 
 # Deprecations and shut down features  |  Cloud Asset Inventory  |  Google Cloud Documentation

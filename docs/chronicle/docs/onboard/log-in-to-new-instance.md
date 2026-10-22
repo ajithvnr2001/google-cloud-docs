@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/onboard/log-in-to-new-instance/
 title: Access a Google SecOps instance \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:36.879955+00:00
+fetched_at: 2026-10-21T14:25:36.760696+00:00
 ---
 
 # Access a Google SecOps instance  |  Google Security Operations  |  Google Cloud Documentation

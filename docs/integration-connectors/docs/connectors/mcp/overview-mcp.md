@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/mcp/overview-mcp/
 title: MCP connector \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:23.975809+00:00
+fetched_at: 2026-10-21T12:52:38.648876+00:00
 ---
 
 # MCP connector  |  Integration Connectors  |  Google Cloud Documentation

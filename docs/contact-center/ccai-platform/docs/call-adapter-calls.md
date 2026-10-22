@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/call-adapter-calls/
 title: Receive and make calls \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:33.611577+00:00
+fetched_at: 2026-10-21T14:10:34.013541+00:00
 ---
 
 # Receive and make calls  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

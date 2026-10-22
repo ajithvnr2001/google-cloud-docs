@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/column-key-encrypt/
 title: Column-level encryption with Cloud KMS \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:32:06.206693+00:00
+fetched_at: 2026-10-21T12:39:51.420956+00:00
 ---
 
 # Column-level encryption with Cloud KMS  |  BigQuery  |  Google Cloud Documentation

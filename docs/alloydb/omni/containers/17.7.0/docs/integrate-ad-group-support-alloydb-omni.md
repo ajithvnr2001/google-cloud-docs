@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/17.7.0/docs/integrate-ad-group-support-alloydb-omni/
 title: Integrate Active Directory group support with AlloyDB Omni \u00a0|\u00a0 AlloyDB Omni using containers: 17.7.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:47:03.953101+00:00
+fetched_at: 2026-10-21T15:20:13.503327+00:00
 ---
 
 # Integrate Active Directory group support with AlloyDB Omni  |  AlloyDB Omni using containers: 17.7.0  |  Google Cloud Documentation

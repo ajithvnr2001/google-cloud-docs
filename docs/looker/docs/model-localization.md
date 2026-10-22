@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/model-localization/
 title: Localizing your LookML model \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:41:43.251915+00:00
+fetched_at: 2026-10-21T15:03:07.210942+00:00
 ---
 
 # Localizing your LookML model  |  Looker  |  Google Cloud Documentation

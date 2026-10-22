@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/multi-tenancy-authentication/
 title: Authenticating with multi-tenancy \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:22.283861+00:00
+fetched_at: 2026-10-21T12:54:14.982180+00:00
 ---
 
 # Authenticating with multi-tenancy  |  Identity Platform  |  Google Cloud Documentation

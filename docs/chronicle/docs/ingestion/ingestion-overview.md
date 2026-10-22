@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/ingestion-overview/
 title: Check data ingestion health \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:39:41.430310+00:00
+fetched_at: 2026-10-21T12:38:14.883314+00:00
 ---
 
 # Check data ingestion health  |  Google Security Operations  |  Google Cloud Documentation

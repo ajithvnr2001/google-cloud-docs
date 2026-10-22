@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/troubleshooting/
 title: Troubleshoot Config Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:19.853254+00:00
+fetched_at: 2026-10-21T14:36:19.510065+00:00
 ---
 
 # Troubleshoot Config Connector  |  Google Cloud Documentation
@@ -146,7 +146,7 @@ Use the following table to help troubleshoot your issue based on the type of sym
 **Configuration** | 
 
   * Cannot make changes to immutable fields
-  * No matches for kind "Foo"
+  * No matches for kind "RESOURCE_KIND"
   * Labels are not propagated to the Google Cloud resource
   * Error due to special characters in resource name
   * Unable to remove fields from resource spec
@@ -278,14 +278,14 @@ A common misconception is that Config Connector has initiated and deleted some o
 
 To determine why a resource was deleted, you need to look into the first delete request that was sent to the corresponding resource. The best way to look into this is by examining the Kubernetes cluster audit logs.
 
-As an example, if you are using GKE, you can [use Cloud Logging to query](https://docs.cloud.google.com/logging/docs/view/building-queries) for GKE cluster audit logs. For example, if you want to look for the initial delete requests for a `BigQueryDataset` resource named `foo` in namespace `bar`, you would run a query like the following:
+As an example, if you are using GKE, you can [use Cloud Logging to query](https://docs.cloud.google.com/logging/docs/view/building-queries) for GKE cluster audit logs. For example, if you want to look for the initial delete requests for a BigQueryDataset resource named `my-dataset` in the `my-namespace` namespace, run a query like the following:
     
     
     resource.type="k8s_cluster"
     resource.labels.project_id="my-project-id"
     resource.labels.cluster_name="my-cluster-name"
     protoPayload.methodName="com.google.cloud.cnrm.bigquery.v1beta1.bigquerydatasets.delete"
-    protoPayload.resourceName="bigquery.cnrm.cloud.google.com/v1beta1/namespaces/bar/bigquerydatasets/foo"
+    protoPayload.resourceName="bigquery.cnrm.cloud.google.com/v1beta1/namespaces/my-namespace/bigquerydatasets/my-dataset"
     
 
 Using this query, you would look for the first delete request and then check `authenticationInfo.principalEmail` of that delete log message to determine the cause of the deletion.
@@ -670,15 +670,15 @@ You can resolve the issue by updating the values of those immutable fields in th
 
 
 
-### No matches for kind "Foo"
+### No matches for kind "RESOURCE_KIND"
 
 #### Symptom
 
-You see the error `No matches for kind "Foo"`.
+You see the error `No matches for kind "RESOURCE_KIND"`.
 
 #### Cause
 
-Your Kubernetes cluster does not have the CRD for the `Foo` resource kind installed.
+Your Kubernetes cluster doesn't have the CRD for the RESOURCE_KIND resource kind installed.
 
 #### Resolution
 
@@ -760,8 +760,8 @@ The following example shows the `targetServiceAccounts` field that we want to re
         
         spec:
           targetServiceAccounts:
-            - external: "foo-bar@foo-project.iam.gserviceaccount.com"
-            - external: "bar@foo-project.iam.gserviceaccount.com"
+            - external: "example-sa-1@example-project.iam.gserviceaccount.com"
+            - external: "example-sa-2@example-project.iam.gserviceaccount.com"
         
 
 To remove this field, set the value to empty:
@@ -782,7 +782,7 @@ The following example shows the `identityNamespace` field that we want to remove
         
         spec:
           workloadIdentityConfig:
-            identityNamespace: "foo-project.svc.id.goog"
+            identityNamespace: "example-project.svc.id.goog"
         
 
 To remove this field, set the value to empty:
@@ -923,6 +923,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/windows-threats-category/
 title: Windows Threats \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:35:07.418686+00:00
+fetched_at: 2026-10-21T14:26:33.436586+00:00
 ---
 
 # Windows Threats  |  Google Security Operations  |  Google Cloud Documentation

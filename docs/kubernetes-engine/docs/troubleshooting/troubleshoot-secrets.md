@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/troubleshooting/troubleshoot-secrets/
 title: Troubleshoot application-layer secrets encryption \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:15.496335+00:00
+fetched_at: 2026-10-21T15:03:23.380307+00:00
 ---
 
 # Troubleshoot application-layer secrets encryption  |  GKE security  |  Google Cloud Documentation

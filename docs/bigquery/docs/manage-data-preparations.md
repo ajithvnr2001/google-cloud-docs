@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/manage-data-preparations/
 title: Manage data preparations \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:36:25.760248+00:00
+fetched_at: 2026-10-21T12:36:42.948156+00:00
 ---
 
 # Manage data preparations  |  BigQuery  |  Google Cloud Documentation

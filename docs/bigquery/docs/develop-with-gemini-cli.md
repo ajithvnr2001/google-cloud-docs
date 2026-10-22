@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/develop-with-gemini-cli/
 title: Analyze data with the Gemini CLI \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:05.515699+00:00
+fetched_at: 2026-10-21T14:07:28.772957+00:00
 ---
 
 # Analyze data with the Gemini CLI  |  BigQuery  |  Google Cloud Documentation

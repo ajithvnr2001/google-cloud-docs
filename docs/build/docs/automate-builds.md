@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automate-builds/
 title: Quickstart: Automate builds by using Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:00.902196+00:00
+fetched_at: 2026-10-21T12:39:26.288010+00:00
 ---
 
 # Quickstart: Automate builds by using Cloud Build  |  Google Cloud Documentation

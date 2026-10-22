@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/18.1.0/docs/kubernetes-dr-backup-singleserver-local/
 title: Clone a database cluster in a single server using a local backup \u00a0|\u00a0 AlloyDB Omni using containers: 18.1.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:18:01.176979+00:00
+fetched_at: 2026-10-21T15:27:57.425987+00:00
 ---
 
 # Clone a database cluster in a single server using a local backup  |  AlloyDB Omni using containers: 18.1.0  |  Google Cloud Documentation
@@ -25,16 +25,21 @@ Send feedback
 
 Select a documentation version: 18.1.0keyboard_arrow_down
 
+  * [ Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/kubernetes-dr-backup-singleserver-local)
+  * [ 18.4.0 ](https://docs.cloud.google.com/alloydb/omni/containers/18.4.0/docs/kubernetes-dr-backup-singleserver-local)
   * [ 18.3.0 ](https://docs.cloud.google.com/alloydb/omni/containers/18.3.0/docs/kubernetes-dr-backup-singleserver-local)
   * [ 18.1.0 ](https://docs.cloud.google.com/alloydb/omni/containers/18.1.0/docs/kubernetes-dr-backup-singleserver-local)
+  * [ 17.10.0 ](https://docs.cloud.google.com/alloydb/omni/containers/17.10.0/docs/kubernetes-dr-backup-singleserver-local)
   * [ 17.9.0 ](https://docs.cloud.google.com/alloydb/omni/containers/17.9.0/docs/kubernetes-dr-backup-singleserver-local)
   * [ 17.7.0 ](https://docs.cloud.google.com/alloydb/omni/containers/17.7.0/docs/kubernetes-dr-backup-singleserver-local)
   * [ 17.5.0 ](https://docs.cloud.google.com/alloydb/omni/containers/17.5.0/docs/kubernetes-dr-backup-singleserver-local)
+  * [ 16.14.0 ](https://docs.cloud.google.com/alloydb/omni/containers/16.14.0/docs/kubernetes-dr-backup-singleserver-local)
   * [ 16.13.0 ](https://docs.cloud.google.com/alloydb/omni/containers/16.13.0/docs/kubernetes-dr-backup-singleserver-local)
   * [ 16.11.0 ](https://docs.cloud.google.com/alloydb/omni/containers/16.11.0/docs/kubernetes-dr-backup-singleserver-local)
   * [ 16.9.0 ](https://docs.cloud.google.com/alloydb/omni/containers/16.9.0/docs/kubernetes-dr-backup-singleserver-local)
   * [ 16.8.0 ](https://docs.cloud.google.com/alloydb/omni/containers/16.8.0/docs/kubernetes-dr-backup-singleserver-local)
   * [ 16.3.0 ](https://docs.cloud.google.com/alloydb/omni/containers/16.3.0/docs/kubernetes-dr-backup-singleserver-local)
+  * [ 15.18.0 ](https://docs.cloud.google.com/alloydb/omni/containers/15.18.0/docs/kubernetes-dr-backup-singleserver-local)
   * [ 15.17.0 ](https://docs.cloud.google.com/alloydb/omni/containers/15.17.0/docs/kubernetes-dr-backup-singleserver-local)
   * [ 15.15.0 ](https://docs.cloud.google.com/alloydb/omni/containers/15.15.0/docs/kubernetes-dr-backup-singleserver-local)
   * [ 15.13.0 ](https://docs.cloud.google.com/alloydb/omni/containers/15.13.0/docs/kubernetes-dr-backup-singleserver-local)

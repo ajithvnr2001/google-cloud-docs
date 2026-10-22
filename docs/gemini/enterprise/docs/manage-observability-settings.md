@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/manage-observability-settings/
 title: Manage observability settings \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:08:01.751366+00:00
+fetched_at: 2026-10-21T12:35:41.566382+00:00
 ---
 
 # Manage observability settings  |  Gemini Enterprise  |  Google Cloud Documentation

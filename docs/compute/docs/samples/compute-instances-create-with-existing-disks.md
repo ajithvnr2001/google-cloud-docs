@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-instances-create-with-existing-disks/
 title: Create a VM from existing disk \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:13.061134+00:00
+fetched_at: 2026-10-22T05:49:31.179441+00:00
 ---
 
 # Create a VM from existing disk  |  Compute Engine  |  Google Cloud Documentation
@@ -62,13 +62,13 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     	// diskNames := []string{"boot_disk", "disk1", "disk2"}
     
     	ctx := context.Background()
-    	instancesClient, err := compute.NewInstancesRESTClient(ctx)
+    	instancesClient, err := compute.[NewInstancesRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_InstancesClient_NewInstancesRESTClient)(ctx)
     	if err != nil {
     		return fmt.Errorf("NewInstancesRESTClient: %w", err)
     	}
     	defer instancesClient.Close()
     
-    	disksClient, err := compute.NewDisksRESTClient(ctx)
+    	disksClient, err := compute.[NewDisksRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_DisksClient_NewDisksRESTClient)(ctx)
     	if err != nil {
     		return fmt.Errorf("NewDisksRESTClient: %w", err)
     	}
@@ -141,14 +141,14 @@ Before trying this sample, follow the Java setup instructions in the [Compute En
 To authenticate to Compute Engine, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
     
     
-    import com.google.cloud.compute.v1.AttachedDisk;
-    import com.google.cloud.compute.v1.Disk;
-    import com.google.cloud.compute.v1.DisksClient;
-    import com.google.cloud.compute.v1.InsertInstanceRequest;
-    import com.google.cloud.compute.v1.Instance;
-    import com.google.cloud.compute.v1.InstancesClient;
-    import com.google.cloud.compute.v1.NetworkInterface;
-    import com.google.cloud.compute.v1.Operation;
+    import com.google.cloud.compute.v1.[AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html);
+    import com.google.cloud.compute.v1.[Disk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Disk.html);
+    import com.google.cloud.compute.v1.[DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html);
+    import com.google.cloud.compute.v1.[InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html);
+    import com.google.cloud.compute.v1.[Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html);
+    import com.google.cloud.compute.v1.[InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html);
+    import com.google.cloud.compute.v1.[NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html);
+    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html);
     import java.io.IOException;
     import java.util.ArrayList;
     import java.util.List;
@@ -188,60 +188,60 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
         // once, and can be reused for multiple requests. After completing all of your requests, call
         // the `instancesClient.close()` method on the client to safely
         // clean up any remaining background resources.
-        try (InstancesClient instancesClient = InstancesClient.create();
-            DisksClient disksClient = DisksClient.create()) {
+        try ([InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html) instancesClient = [InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html).create();
+            [DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html) disksClient = [DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html).create()) {
     
           if (diskNames.size() == 0) {
-            throw new Error("At least one disk should be provided");
+            throw new [Error](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Error.html)("At least one disk should be provided");
           }
     
           // Create the list of attached disks to be used in instance creation.
           List<AttachedDisk> attachedDisks = new ArrayList<>();
           for (int i = 0; i < diskNames.size(); i++) {
             String diskName = diskNames.get(i);
-            Disk disk = disksClient.get(projectId, zone, diskName);
-            AttachedDisk attDisk = null;
+            [Disk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Disk.html) disk = disksClient.get(projectId, zone, diskName);
+            [AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html) attDisk = null;
     
             if (i == 0) {
               // Make the first disk in the list as the boot disk.
-              attDisk = AttachedDisk.newBuilder()
-                  .setSource(disk.getSelfLink())
+              attDisk = [AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html).newBuilder()
+                  .setSource(disk.[getSelfLink](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Disk.html#com_google_cloud_compute_v1_Disk_getSelfLink__)())
                   .setBoot(true)
                   .build();
             } else {
-              attDisk = AttachedDisk.newBuilder()
-                  .setSource(disk.getSelfLink())
+              attDisk = [AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html).newBuilder()
+                  .setSource(disk.[getSelfLink](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Disk.html#com_google_cloud_compute_v1_Disk_getSelfLink__)())
                   .build();
             }
             attachedDisks.add(attDisk);
           }
     
           // Create the instance.
-          Instance instance = Instance.newBuilder()
+          [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html) instance = [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html).newBuilder()
               .setName(instanceName)
               // Add the attached disks to the instance.
               .addAllDisks(attachedDisks)
               .setMachineType(String.format("zones/%s/machineTypes/n1-standard-1", zone))
               .addNetworkInterfaces(
-                  NetworkInterface.newBuilder().setName("global/networks/default").build())
+                  [NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html).newBuilder().setName("global/networks/default").build())
               .build();
     
           // Create the insert instance request.
-          InsertInstanceRequest insertInstanceRequest = InsertInstanceRequest.newBuilder()
+          [InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html) insertInstanceRequest = [InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html).newBuilder()
               .setProject(projectId)
               .setZone(zone)
               .setInstanceResource(instance)
               .build();
     
           // Wait for the create operation to complete.
-          Operation response = instancesClient.insertAsync(insertInstanceRequest)
+          [Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html) response = instancesClient.insertAsync(insertInstanceRequest)
               .get(3, TimeUnit.MINUTES);
     
-          if (response.hasError()) {
+          if (response.[hasError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_hasError__)()) {
             System.out.println("Instance creation failed!" + response);
             return;
           }
-          System.out.println("Operation Status: " + response.getStatus());
+          System.out.println("Operation Status: " + response.[getStatus](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_getStatus__)());
     
         }
       }
@@ -262,11 +262,11 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     // const instanceName = 'YOUR_INSTANCE_NAME';
     // const diskNames = ['boot_disk', 'disk1', 'disk2'];
     
-    const compute = require('@google-cloud/compute');
+    const compute = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)');
     
     async function createWithExistingDisks() {
-      const instancesClient = new compute.InstancesClient();
-      const disksClient = new compute.DisksClient();
+      const instancesClient = new compute.[InstancesClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+      const disksClient = new compute.[DisksClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
     
       if (diskNames.length < 1) {
         throw new Error('At least one disk should be provided');
@@ -307,7 +307,7 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
         },
       });
       let operation = response.latestResponse;
-      const operationsClient = new compute.ZoneOperationsClient();
+      const operationsClient = new compute.[ZoneOperationsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
     
       // Wait for the create operation to complete.
       while (operation.status !== 'DONE') {

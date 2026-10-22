@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/troubleshooting/file-import-errors/
 title: Troubleshoot file import errors \u00a0|\u00a0 Migration Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:26.814532+00:00
+fetched_at: 2026-10-21T15:15:22.463644+00:00
 ---
 
 # Troubleshoot file import errors  |  Migration Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/mainframe-connector/docs/architecture/
 title: Mainframe Connector architecture \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:35:00.533004+00:00
+fetched_at: 2026-10-21T15:11:00.101217+00:00
 ---
 
 # Mainframe Connector architecture  |  Google Cloud Documentation

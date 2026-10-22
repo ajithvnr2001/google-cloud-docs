@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/virtual-agents-with-crms/
 title: Virtual agents with CRMs \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:20.897615+00:00
+fetched_at: 2026-10-21T14:22:33.420605+00:00
 ---
 
 # Virtual agents with CRMs  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

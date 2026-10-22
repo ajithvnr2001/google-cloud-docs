@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/optional-step-segregate-access/
 title: Using different projects to segregate access \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:12:21.091224+00:00
+fetched_at: 2026-10-21T14:10:06.631111+00:00
 ---
 
 # Using different projects to segregate access  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/prebuilt-component/account-statement/
 title: Account statement prebuilt component \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:40.399676+00:00
+fetched_at: 2026-10-21T12:45:19.296191+00:00
 ---
 
 # Account statement prebuilt component  |  Dialogflow CX  |  Google Cloud Documentation

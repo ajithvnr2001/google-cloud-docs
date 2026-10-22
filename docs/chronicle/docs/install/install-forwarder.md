@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/install/install-forwarder/
 title: Install and configure the forwarder \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:21.563809+00:00
+fetched_at: 2026-10-21T14:11:19.892174+00:00
 ---
 
 # Install and configure the forwarder  |  Google Security Operations  |  Google Cloud Documentation

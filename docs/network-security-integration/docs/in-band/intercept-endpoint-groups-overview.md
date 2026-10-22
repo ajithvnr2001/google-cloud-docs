@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-security-integration/docs/in-band/intercept-endpoint-groups-overview/
 title: Intercept endpoint groups and associations overview \u00a0|\u00a0 Network Security Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:23.330265+00:00
+fetched_at: 2026-10-21T15:15:38.334998+00:00
 ---
 
 # Intercept endpoint groups and associations overview  |  Network Security Integration  |  Google Cloud Documentation

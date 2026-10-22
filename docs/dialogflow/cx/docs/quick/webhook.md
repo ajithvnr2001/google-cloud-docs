@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/quick/webhook/
 title: Create a webhook \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:32.775477+00:00
+fetched_at: 2026-10-21T14:09:11.120418+00:00
 ---
 
 # Create a webhook  |  Dialogflow CX  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/use-enriched-data-in-search/
 title: Use context-enriched data in search \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:20:02.361451+00:00
+fetched_at: 2026-10-21T14:25:21.905944+00:00
 ---
 
 # Use context-enriched data in search  |  Google Security Operations  |  Google Cloud Documentation

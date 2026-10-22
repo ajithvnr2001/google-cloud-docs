@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/analytics-hub-manage-listings/
 title: Manage listings \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:12:01.022441+00:00
+fetched_at: 2026-10-22T05:48:52.123650+00:00
 ---
 
 # Manage listings  |  BigQuery  |  Google Cloud Documentation
@@ -144,7 +144,7 @@ For more information about data egress controls, including restrictions, see [Da
 
   6. Enter the following optional details:
 
-     * **Category** : select up to two categories that best represent your listing. Subscribers can [filter listings](https://docs.cloud.google.com/bigquery/docs/analytics-hub-view-subscribe-listings#discover-listings) using your selected categories.
+     * **Category** : select up to five categories that best represent your listing. Subscribers can [filter listings](https://docs.cloud.google.com/bigquery/docs/analytics-hub-view-subscribe-listings#discover-listings) using your selected categories.
      * **Data affinity** : specify the regions that you use for publishing data. This location setting helps subscribers minimize or avoid Pub/Sub network egress costs by reading data from the same region. For more information about egress costs, see [Data transfer costs](https://cloud.google.com/pubsub/pricing#egress_costs).
      * **Icon** : upload an icon for your listing. PNG and JPEG file formats are supported. Icons must be smaller than 512 KiB with maximum dimensions of 512 x 512 pixels.
      * **Description** : enter a brief description of your listing. Subscribers can [search for listings](https://docs.cloud.google.com/bigquery/docs/analytics-hub-view-subscribe-listings#discover-listings) by description text.
@@ -184,7 +184,7 @@ Subscribers can filter listings by data provider.
 Use the [`projects.locations.dataExchanges.listings.create` method](https://docs.cloud.google.com/bigquery/docs/reference/analytics-hub/rest/v1/projects.locations.dataExchanges.listings/create):
     
     
-    POST https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/location/LOCATION/dataExchanges/DATAEXCHANGE_ID/listings?listingId=LISTING_ID
+    POST https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/dataExchanges/DATAEXCHANGE_ID/listings?listingId=LISTING_ID
     
 
 Replace the following:
@@ -240,7 +240,7 @@ For information about data egress controls and restrictions, see [Data egress op
 
   10. Enter the following optional details:
 
-     * **Category** : select up to two categories that best represent your listing. Subscribers can [filter listings](https://docs.cloud.google.com/bigquery/docs/analytics-hub-view-subscribe-listings#discover-listings) using your selected categories.
+     * **Category** : select up to five categories that best represent your listing. Subscribers can [filter listings](https://docs.cloud.google.com/bigquery/docs/analytics-hub-view-subscribe-listings#discover-listings) using your selected categories.
 
      * **Data affinity** : specify the regions that you use for publishing data. This location setting helps subscribers minimize or avoid Pub/Sub network egress costs by reading data from the same region. For more information about egress costs, see [Data transfer costs](https://cloud.google.com/pubsub/pricing#egress_costs).
 
@@ -388,7 +388,7 @@ For example, to grant the `roles/analyticshub.subscriber` role to `group:subscri
 
   3. Update the policy by calling the [`projects.locations.dataExchanges.listings.setIamPolicy` method](https://docs.cloud.google.com/bigquery/docs/reference/analytics-hub/rest/v1/projects.locations.dataExchanges.listings/setIamPolicy). In the request body, pass the updated IAM policy from the previous step.
          
-         POST https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/location/LOCATION/dataExchanges/DATAEXCHANGE_ID/listings/LISTING_ID:setIamPolicy
+         POST https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/dataExchanges/DATAEXCHANGE_ID/listings/LISTING_ID:setIamPolicy
          
 
 In the request body, pass the listing details. If the request succeeds, the response body returns the listing details with the updated policy.
@@ -439,7 +439,7 @@ To view all the current subscriptions to your listing, select one of the followi
 
   4. To view all subscribers of your listing, click **Manage subscriptions** :
 
-![The highlighted Manage subscriptions option for an Analytics Hub listing.](https://docs.cloud.google.com/static/bigquery/images/analytics-hub-manage-subscription.png)
+![The highlighted Manage subscriptions option for a BigQuery sharing listing.](https://docs.cloud.google.com/static/bigquery/images/analytics-hub-manage-subscription.png)
 
   5. Optional: You can filter results by subscriber details.
 
@@ -494,10 +494,10 @@ For a listing with multiple regions, you can view the subscriptions across diffe
 
 ###  API 
 
-Use the [projects.locations.dataExchanges.listings.listSubscriptions method](https://docs.cloud.google.com/bigquery/docs/reference/analytics-hub/rest/v1/projects.locations.dataExchanges.listings/listSubscriptions).
+Use the [`projects.locations.dataExchanges.listings.listSubscriptions` method](https://docs.cloud.google.com/bigquery/docs/reference/analytics-hub/rest/v1/projects.locations.dataExchanges.listings/listSubscriptions).
     
     
-    GET https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/location/LOCATION/dataExchanges/DATAEXCHANGE_ID/listings/LISTING_ID:listSubscriptions
+    GET https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/dataExchanges/DATAEXCHANGE_ID/listings/LISTING_ID:listSubscriptions
     
 
 Replace the following:
@@ -550,14 +550,14 @@ To remove a subscription created after July 25, 2023, follow these steps:
 Call the [`projects.locations.subscriptions.revoke` method](https://docs.cloud.google.com/bigquery/docs/reference/analytics-hub/rest/v1/projects.locations.subscriptions/revoke):
     
     
-    POST https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/location/LOCATION/subscriptions/SUBSCRIPTION_ID:revoke
+    POST https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/subscriptions/SUBSCRIPTION_ID:revoke
     
 
 Replace the following:
 
   * `PROJECT_ID`: the project ID of the subscription that you want to remove.
   * `LOCATION`: the location of the subscription that you want to remove.
-  * `SUBSCRIPTION`: the ID of the [subscription](https://docs.cloud.google.com/bigquery/docs/analytics-hub-manage-subscriptions#list_subscriptions) that you want to remove.
+  * `SUBSCRIPTION_ID`: the ID of the [subscription](https://docs.cloud.google.com/bigquery/docs/analytics-hub-manage-subscriptions#list_subscriptions) that you want to remove.
 
 
 
@@ -602,7 +602,7 @@ To update a listing, follow these steps:
 Call the [`projects.locations.dataExchanges.listings.patch` method](https://docs.cloud.google.com/bigquery/docs/reference/analytics-hub/rest/v1/projects.locations.dataExchanges.listings/patch):
     
     
-    PATCH https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/location/LOCATION/dataExchanges/DATAEXCHANGE_ID/listings/LISTING_ID?updateMask=UPDATEMASK
+    PATCH https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/dataExchanges/DATAEXCHANGE_ID/listings/LISTING_ID?updateMask=UPDATEMASK
     
 
 Replace the following:
@@ -692,7 +692,7 @@ To delete a listing, follow these steps:
 Call the [`projects.locations.dataExchanges.listings.delete` method](https://docs.cloud.google.com/bigquery/docs/reference/analytics-hub/rest/v1/projects.locations.dataExchanges.listings/delete):
     
     
-    DELETE https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/location/LOCATION/dataExchanges/DATAEXCHANGE_ID/listings/LISTING_ID
+    DELETE https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/dataExchanges/DATAEXCHANGE_ID/listings/LISTING_ID
     
 
 Replace the following:
@@ -721,6 +721,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

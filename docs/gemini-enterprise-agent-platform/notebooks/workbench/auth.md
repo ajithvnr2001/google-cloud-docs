@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/notebooks/workbench/auth/
 title: Introduction to Agent Platform Workbench \u00a0|\u00a0 Gemini Enterprise Agent Platform Workbench \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:56:27.286710+00:00
+fetched_at: 2026-10-21T12:54:46.750724+00:00
 ---
 
 # Introduction to Agent Platform Workbench  |  Gemini Enterprise Agent Platform Workbench  |  Google Cloud Documentation

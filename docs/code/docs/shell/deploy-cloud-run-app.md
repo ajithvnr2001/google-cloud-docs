@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/deploy-cloud-run-app/
 title: Deploy a Cloud Run service by using Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:48.775184+00:00
+fetched_at: 2026-10-21T14:20:18.722261+00:00
 ---
 
 # Deploy a Cloud Run service by using Cloud Code for Cloud Shell  |  Google Cloud Documentation

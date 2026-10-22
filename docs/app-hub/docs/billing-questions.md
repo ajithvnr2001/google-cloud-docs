@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/billing-questions/
 title: Billing questions \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:13:57.511567+00:00
+fetched_at: 2026-10-21T14:25:35.089771+00:00
 ---
 
 # Billing questions  |  App Hub  |  Google Cloud Documentation

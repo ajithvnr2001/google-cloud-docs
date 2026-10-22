@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/how-to/managing-resources-with-resource-ids/
 title: Managing resources with the resourceID field \u00a0|\u00a0 Config Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:17.485294+00:00
+fetched_at: 2026-10-21T14:24:35.480737+00:00
 ---
 
 # Managing resources with the resourceID field  |  Config Connector  |  Google Cloud Documentation

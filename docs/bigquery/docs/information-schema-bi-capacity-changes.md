@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-bi-capacity-changes/
 title: INFORMATION_SCHEMA.BI_CAPACITY_CHANGES view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T10:43:55.024673+00:00
+fetched_at: 2026-10-21T12:35:57.916643+00:00
 ---
 
 # INFORMATION_SCHEMA.BI_CAPACITY_CHANGES view  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/samples/datastore-array-value-equality/
 title: Filter array value with equality \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:26.572636+00:00
+fetched_at: 2026-10-22T05:43:00.138863+00:00
 ---
 
 # Filter array value with equality  |  Firestore in Datastore mode  |  Google Cloud Documentation

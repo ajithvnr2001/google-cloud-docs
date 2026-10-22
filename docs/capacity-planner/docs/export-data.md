@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/capacity-planner/docs/export-data/
 title: Export data to your local workstation \u00a0|\u00a0 Capacity Planner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:38:52.791555+00:00
+fetched_at: 2026-10-21T14:25:06.776186+00:00
 ---
 
 # Export data to your local workstation  |  Capacity Planner  |  Google Cloud Documentation

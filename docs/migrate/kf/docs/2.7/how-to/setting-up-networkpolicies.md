@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.7/how-to/setting-up-networkpolicies/
 title: Set up network policies \u00a0|\u00a0 Kf 2.7 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:45:57.158129+00:00
+fetched_at: 2026-10-21T15:17:17.223787+00:00
 ---
 
 # Set up network policies  |  Kf 2.7  |  Google Cloud Documentation

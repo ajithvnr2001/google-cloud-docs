@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/how-to/install-config-management/
 title: Install Config Sync and Policy Controller \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:54.528855+00:00
+fetched_at: 2026-10-21T15:09:55.745696+00:00
 ---
 
 # Install Config Sync and Policy Controller  |  GKE on Azure  |  Google Cloud Documentation

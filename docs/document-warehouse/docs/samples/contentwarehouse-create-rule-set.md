@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/document-warehouse/docs/samples/contentwarehouse-create-rule-set/
 title: Create a rule set \u00a0|\u00a0 Document AI Warehouse \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:45:27.072711+00:00
+fetched_at: 2026-10-22T08:21:42.269998+00:00
 ---
 
 # Create a rule set  |  Document AI Warehouse  |  Google Cloud Documentation

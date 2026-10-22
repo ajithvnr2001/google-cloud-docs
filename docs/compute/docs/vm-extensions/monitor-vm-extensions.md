@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/vm-extensions/monitor-vm-extensions/
 title: Monitor VM extensions \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:10:12.316876+00:00
+fetched_at: 2026-10-21T14:09:22.996791+00:00
 ---
 
 # Monitor VM extensions  |  Compute Engine  |  Google Cloud Documentation

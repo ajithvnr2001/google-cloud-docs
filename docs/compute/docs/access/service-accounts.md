@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/access/service-accounts/
 title: Service accounts \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:48.474597+00:00
+fetched_at: 2026-10-21T14:22:44.992578+00:00
 ---
 
 # Service accounts  |  Compute Engine  |  Google Cloud Documentation

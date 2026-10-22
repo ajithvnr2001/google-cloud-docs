@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deployment-manager/runtime-configurator/
 title: Runtime Configurator Fundamentals \u00a0|\u00a0 Cloud Deployment Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:46:59.983331+00:00
+fetched_at: 2026-10-21T12:43:08.083580+00:00
 ---
 
 # Runtime Configurator Fundamentals  |  Cloud Deployment Manager  |  Google Cloud Documentation

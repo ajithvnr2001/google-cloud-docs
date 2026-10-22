@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/containers/prevent-konlet-vms/
 title: Prevent creation of VMs that use the container metadata \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:15:54.392658+00:00
+fetched_at: 2026-10-21T12:39:32.425535+00:00
 ---
 
 # Prevent creation of VMs that use the container metadata  |  Compute Engine  |  Google Cloud Documentation

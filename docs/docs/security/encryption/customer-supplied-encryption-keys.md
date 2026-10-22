@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/encryption/customer-supplied-encryption-keys/
 title: Customer-supplied encryption keys \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:22:37.972868+00:00
+fetched_at: 2026-10-21T14:08:25.972567+00:00
 ---
 
 # Customer-supplied encryption keys  |  Security  |  Google Cloud Documentation

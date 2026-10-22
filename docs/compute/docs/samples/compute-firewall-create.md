@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-firewall-create/
 title: Create a firewall rule \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:17.241551+00:00
+fetched_at: 2026-10-21T14:19:50.036626+00:00
 ---
 
 # Create a firewall rule  |  Compute Engine  |  Google Cloud Documentation

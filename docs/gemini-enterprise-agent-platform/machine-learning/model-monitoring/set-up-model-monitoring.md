@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/model-monitoring/set-up-model-monitoring/
 title: Set up model monitoring \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T23:41:18.689694+00:00
+fetched_at: 2026-10-21T15:42:44.802038+00:00
 ---
 
 # Set up model monitoring  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -209,53 +209,53 @@ This configuration is used as the defaults when running a job.
     from google.cloud.aiplatform_v1beta1.types import ExplanationSpec, ExplanationParameters, ExplanationMetadata
     
     # Define Monitoring Schema. For AutoML models, this is optional if the schema information is available.
-    MONITORING_SCHEMA=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[ModelMonitoringSchema](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.ModelMonitoringSchema.html)(
+    MONITORING_SCHEMA=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[ModelMonitoringSchema](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.ModelMonitoringSchema.html)(
       feature_fields=[
-          ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[FieldSchema](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.FieldSchema.html)(
+          ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[FieldSchema](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.FieldSchema.html)(
               name="sepal_length_cm",
               data_type="float"
           ),
-          ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[FieldSchema](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.FieldSchema.html)(
+          ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[FieldSchema](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.FieldSchema.html)(
               name="sepal_width_cm",
               data_type="float"
           ),
-          ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[FieldSchema](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.FieldSchema.html)(
+          ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[FieldSchema](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.FieldSchema.html)(
               name="petal_length_cm",
               data_type="float"
           ),
-          ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[FieldSchema](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.FieldSchema.html)(
+          ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[FieldSchema](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.FieldSchema.html)(
               name="petal_width_cm",
               data_type="float"
           )
       ],
       prediction_fields = [
-          ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[FieldSchema](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.FieldSchema.html)(
+          ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[FieldSchema](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.FieldSchema.html)(
               name="predicted_species",
               data_type="categorical"
           )
       ]
     )
     
-    TRAINING_DATASET = ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[MonitoringInput](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.MonitoringInput.html)(
+    TRAINING_DATASET = ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[MonitoringInput](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.MonitoringInput.html)(
       gcs_uri=GCS_INPUT_URI,
       data_format=DATA_FORMAT,
     )
     
-    DEFAULT_FEATURE_DRIFT_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[DataDriftSpec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.DataDriftSpec.html)(
+    DEFAULT_FEATURE_DRIFT_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[DataDriftSpec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.DataDriftSpec.html)(
       categorical_metric_type="l_infinity",
       numeric_metric_type="jensen_shannon_divergence",
       default_categorical_alert_threshold=0.1,
       default_numeric_alert_threshold=0.1,
     )
     
-    DEFAULT_PREDICTION_OUTPUT_DRIFT_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[DataDriftSpec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.DataDriftSpec.html)(
+    DEFAULT_PREDICTION_OUTPUT_DRIFT_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[DataDriftSpec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.DataDriftSpec.html)(
       categorical_metric_type="l_infinity",
       numeric_metric_type="jensen_shannon_divergence",
       default_categorical_alert_threshold=0.1,
       default_numeric_alert_threshold=0.1,
     )
     
-    DEFAULT_FEATURE_ATTRIBUTION_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[FeatureAttributionSpec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.FeatureAttributionSpec.html)(
+    DEFAULT_FEATURE_ATTRIBUTION_SPEC=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[FeatureAttributionSpec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.FeatureAttributionSpec.html)(
       default_alert_threshold=0.0003,
       feature_alert_thresholds={"sepal_length_cm":0.0001},
     )
@@ -277,11 +277,11 @@ This configuration is used as the defaults when running a job.
       )
     )
     
-    DEFAULT_OUTPUT_SPEC = ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).output.[OutputSpec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.OutputSpec.html)(
+    DEFAULT_OUTPUT_SPEC = ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).output.[OutputSpec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.OutputSpec.html)(
       gcs_base_dir=GCS_OUTPUT_BASE_DIR
     )
     
-    DEFAULT_NOTIFICATION_SPEC = ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[NotificationSpec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.NotificationSpec.html)(
+    DEFAULT_NOTIFICATION_SPEC = ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[NotificationSpec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.NotificationSpec.html)(
       user_emails=['email@example.com']
     )
     
@@ -292,7 +292,7 @@ This configuration is used as the defaults when running a job.
       model_monitoring_schema=MONITORING_SCHEMA,
       # The following fields are optional for creating the model monitor.
       training_dataset=TRAINING_DATASET,
-      tabular_objective_spec=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.html).[TabularObjective](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai.resources.preview.ml_monitoring.spec.TabularObjective.html)(
+      tabular_objective_spec=ml_monitoring.[spec](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.html).[TabularObjective](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.resources.preview.ml_monitoring.spec.TabularObjective.html)(
           feature_drift_spec=DEFAULT_FEATURE_DRIFT_SPEC,
           prediction_output_drift_spec=DEFAULT_PREDICTION_OUTPUT_DRIFT_SPEC,
           feature_attribution_spec=DEFAULT_FEATURE_ATTRIBUTION_SPEC,
@@ -306,6 +306,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

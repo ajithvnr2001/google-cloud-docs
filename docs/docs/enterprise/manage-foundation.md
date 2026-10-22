@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/enterprise/manage-foundation/
 title: Extend your initial setup and build your architecture \u00a0|\u00a0 Get started \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:26.730869+00:00
+fetched_at: 2026-10-21T14:06:08.158210+00:00
 ---
 
 # Extend your initial setup and build your architecture  |  Get started  |  Google Cloud Documentation

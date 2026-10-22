@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/docs/concepts/
 title: Concepts \u00a0|\u00a0 Cloud Natural Language API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:00:23.696201+00:00
+fetched_at: 2026-10-21T15:17:36.185425+00:00
 ---
 
 # Concepts  |  Cloud Natural Language API  |  Google Cloud Documentation

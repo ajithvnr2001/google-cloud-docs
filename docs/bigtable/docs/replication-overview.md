@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/replication-overview/
 title: Replication overview \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:13.873844+00:00
+fetched_at: 2026-10-21T14:10:06.599377+00:00
 ---
 
 # Replication overview  |  Bigtable  |  Google Cloud Documentation

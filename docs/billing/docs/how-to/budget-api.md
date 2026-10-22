@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/docs/how-to/budget-api/
 title: Using the Cloud Billing Budget API for alerts-only budgets \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:13:32.651654+00:00
+fetched_at: 2026-10-21T12:38:25.534276+00:00
 ---
 
 # Using the Cloud Billing Budget API for alerts-only budgets  |  Google Cloud Documentation

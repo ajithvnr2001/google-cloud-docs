@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/about-importing-exporting/
 title: About importing and exporting data \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:53.894573+00:00
+fetched_at: 2026-10-21T15:11:12.298055+00:00
 ---
 
 # About importing and exporting data  |  Memorystore for Redis  |  Google Cloud Documentation

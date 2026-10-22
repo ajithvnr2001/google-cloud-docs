@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/output-name-mapping/
 title: Map SQL object names for batch translation \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:11:29.788543+00:00
+fetched_at: 2026-10-21T14:19:14.703527+00:00
 ---
 
 # Map SQL object names for batch translation  |  BigQuery  |  Google Cloud Documentation

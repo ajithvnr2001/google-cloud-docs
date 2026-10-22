@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/query-iceberg-data/
 title: Query Apache Iceberg external tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T13:51:46.364688+00:00
+fetched_at: 2026-10-21T12:35:28.042627+00:00
 ---
 
 # Query Apache Iceberg external tables  |  BigQuery  |  Google Cloud Documentation

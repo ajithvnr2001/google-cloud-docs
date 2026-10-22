@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/hpc/bulk-create-hpc-vms/
 title: Bulk create HPC-optimized instances with H4D \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:08.764601+00:00
+fetched_at: 2026-10-21T14:21:40.645138+00:00
 ---
 
 # Bulk create HPC-optimized instances with H4D  |  Compute Engine  |  Google Cloud Documentation

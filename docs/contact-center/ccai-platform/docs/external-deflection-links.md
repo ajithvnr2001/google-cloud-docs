@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/external-deflection-links/
 title: External Deflection Links \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:14.994571+00:00
+fetched_at: 2026-10-21T14:06:15.147239+00:00
 ---
 
 # External Deflection Links  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

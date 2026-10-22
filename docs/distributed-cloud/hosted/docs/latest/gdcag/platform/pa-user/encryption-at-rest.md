@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/encryption-at-rest/
 title: Encryption at rest \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:42.523210+00:00
+fetched_at: 2026-10-21T13:32:51.065158+00:00
 ---
 
 # Encryption at rest  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/looker-block-overview/
 title: Looker Blocks and Dashboards overview \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:19:05.628662+00:00
+fetched_at: 2026-10-21T14:10:00.710423+00:00
 ---
 
 # Looker Blocks and Dashboards overview  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

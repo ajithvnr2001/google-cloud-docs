@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/generative-ai/choose-models-infra-for-ai/
 title: Gen AI \u00a0|\u00a0 Generative AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:10:34.832526+00:00
+fetched_at: 2026-10-21T14:06:14.352110+00:00
 ---
 
 # Gen AI  |  Generative AI  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/prebuilt-component/offers-and-deals/
 title: Offers and deals prebuilt component \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:44.732392+00:00
+fetched_at: 2026-10-21T12:44:42.139857+00:00
 ---
 
 # Offers and deals prebuilt component  |  Dialogflow CX  |  Google Cloud Documentation

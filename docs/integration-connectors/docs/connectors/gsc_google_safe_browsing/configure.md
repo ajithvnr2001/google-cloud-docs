@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/gsc_google_safe_browsing/configure/
 title: Google Safe Browsing \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:15.463841+00:00
+fetched_at: 2026-10-21T12:53:05.642792+00:00
 ---
 
 # Google Safe Browsing  |  Integration Connectors  |  Google Cloud Documentation

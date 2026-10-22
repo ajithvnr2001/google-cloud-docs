@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/onboard/configure-authentication/
 title: Configure third-party identity \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:38.691319+00:00
+fetched_at: 2026-10-21T14:25:20.272081+00:00
 ---
 
 # Configure third-party identity  |  Google Security Operations  |  Google Cloud Documentation

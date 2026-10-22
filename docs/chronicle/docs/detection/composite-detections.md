@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/composite-detections/
 title: Composite detections overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:22:17.676642+00:00
+fetched_at: 2026-10-21T12:38:28.957932+00:00
 ---
 
 # Composite detections overview  |  Google Security Operations  |  Google Cloud Documentation

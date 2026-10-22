@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/set-customized-schedule/
 title: Configure customized schedules for rules \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:50:17.157526+00:00
+fetched_at: 2026-10-21T12:38:29.262515+00:00
 ---
 
 # Configure customized schedules for rules  |  Google Security Operations  |  Google Cloud Documentation

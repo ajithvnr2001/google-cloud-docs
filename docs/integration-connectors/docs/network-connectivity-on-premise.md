@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/network-connectivity-on-premise/
 title: Private connectivity for on-premise or other cloud providers \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:33.674599+00:00
+fetched_at: 2026-10-21T12:53:45.102311+00:00
 ---
 
 # Private connectivity for on-premise or other cloud providers  |  Integration Connectors  |  Google Cloud Documentation

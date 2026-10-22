@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/eventsubscription/
 title: Event subscriptions \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:34.210507+00:00
+fetched_at: 2026-10-21T12:53:38.091762+00:00
 ---
 
 # Event subscriptions  |  Integration Connectors  |  Google Cloud Documentation

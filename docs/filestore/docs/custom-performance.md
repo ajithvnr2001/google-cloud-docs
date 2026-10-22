@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/custom-performance/
 title: Custom performance \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:05:12.849849+00:00
+fetched_at: 2026-10-21T14:59:29.280896+00:00
 ---
 
 # Custom performance  |  Filestore  |  Google Cloud Documentation
@@ -176,7 +176,7 @@ For more information, see the [read and write IOPS](https://docs.cloud.google.co
 
 Custom performance examples for the regional tier Provisioned IOPS per TiB | Capacity (GiB) | Read IOPS | Write IOPS | Read throughput (MiBps) | Write throughput (MiBps)  
 ---|---|---|---|---|---  
-4,000 | 100 | 2,000* | 600 | 47 | 16  
+4,000 | 100 | 2,000 | 600 | 47 | 16  
 600 | 2,344 | 703 | 55 | 19  
 1,024 | 4,000 | 1,200 | 94 | 32  
 10,239 | 39,996 | 11,999 | 940 | 320  
@@ -185,8 +185,6 @@ Custom performance examples for the regional tier Provisioned IOPS per TiB | Cap
 1,024 | 17,000 | 5,100 | 400 | 136  
 10,239 | 169,983 | 50,995 | 3,995 | 1,360  
   
-* If small capacity instances are available in the region where your instance is located, Regional instance capacity ranges from 100 GiB to 10,239 GiB. Otherwise, the range is 1 TiB to 9.75 TiB. For more information, see [Small capacity instances](https://docs.cloud.google.com/filestore/docs/service-tiers#small-instances).
-
 For details about performance limits when custom performance is not activated, see [performance limits](https://docs.cloud.google.com/filestore/docs/performance).
 
 ## Monitoring
@@ -208,6 +206,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

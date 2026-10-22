@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/datastore/callbacks/
 title: Datastore callbacks \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:46.906603+00:00
+fetched_at: 2026-10-21T14:28:27.733097+00:00
 ---
 
 # Datastore callbacks  |  App Engine standard environment  |  Google Cloud Documentation

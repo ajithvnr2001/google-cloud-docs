@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/colab/docs/explain-errors/
 title: Explain and fix errors with Gemini assistance \u00a0|\u00a0 Colab Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:30:20.512990+00:00
+fetched_at: 2026-10-21T14:19:25.468423+00:00
 ---
 
 # Explain and fix errors with Gemini assistance  |  Colab Enterprise  |  Google Cloud Documentation

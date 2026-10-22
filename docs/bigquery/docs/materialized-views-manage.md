@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/materialized-views-manage/
 title: Manage materialized views \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:49:33.697294+00:00
+fetched_at: 2026-10-21T12:35:43.925757+00:00
 ---
 
 # Manage materialized views  |  BigQuery  |  Google Cloud Documentation

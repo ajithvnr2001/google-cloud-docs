@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/cloud-bigtable-for-aerospike-users/
 title: Bigtable for Aerospike users \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:21.412118+00:00
+fetched_at: 2026-10-21T12:36:18.122723+00:00
 ---
 
 # Bigtable for Aerospike users  |  Google Cloud Documentation

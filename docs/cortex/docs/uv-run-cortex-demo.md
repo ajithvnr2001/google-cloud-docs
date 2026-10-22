@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/uv-run-cortex-demo/
 title: CLI Cortex Framework demo deploy \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:36:57.993963+00:00
+fetched_at: 2026-10-21T14:23:29.976644+00:00
 ---
 
 # CLI Cortex Framework demo deploy  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

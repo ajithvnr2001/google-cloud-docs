@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/advisory-notifications/docs/release-notes/
 title: Advisory Notifications release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:42:27.659198+00:00
+fetched_at: 2026-10-21T14:55:18.381396+00:00
 ---
 
 # Advisory Notifications release notes  |  Google Cloud Documentation

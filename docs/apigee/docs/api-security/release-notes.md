@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-security/release-notes/
 title: Apigee Advanced API Security release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:39:10.719001+00:00
+fetched_at: 2026-10-21T14:54:05.119039+00:00
 ---
 
 # Apigee Advanced API Security release notes  |  Google Cloud Documentation

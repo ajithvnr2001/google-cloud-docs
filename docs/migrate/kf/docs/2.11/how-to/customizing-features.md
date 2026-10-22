@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.11/how-to/customizing-features/
 title: Customizing Kf Features \u00a0|\u00a0 Kf 2.11 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:31.783785+00:00
+fetched_at: 2026-10-21T15:13:50.388593+00:00
 ---
 
 # Customizing Kf Features  |  Kf 2.11  |  Google Cloud Documentation

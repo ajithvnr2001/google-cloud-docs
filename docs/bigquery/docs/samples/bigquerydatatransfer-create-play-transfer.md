@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerydatatransfer-create-play-transfer/
 title: Load data from Google Play \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:14.577841+00:00
+fetched_at: 2026-10-22T05:45:22.339575+00:00
 ---
 
 # Load data from Google Play  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.6/reference/
 title: APIs and reference \u00a0|\u00a0 Kf 2.6 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:27:12.544580+00:00
+fetched_at: 2026-10-21T15:29:18.437052+00:00
 ---
 
 # APIs and reference  |  Kf 2.6  |  Google Cloud Documentation

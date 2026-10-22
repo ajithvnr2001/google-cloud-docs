@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/policy-controller/docs/reference/
 title: Reference \u00a0|\u00a0 Policy Controller \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:10:49.292467+00:00
+fetched_at: 2026-10-21T14:59:33.454441+00:00
 ---
 
 # Reference  |  Policy Controller  |  Google Cloud Documentation

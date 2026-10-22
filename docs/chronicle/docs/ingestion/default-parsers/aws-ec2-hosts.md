@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aws-ec2-hosts/
 title: Collect AWS EC2 Hosts logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:26.230618+00:00
+fetched_at: 2026-10-21T14:23:51.592902+00:00
 ---
 
 # Collect AWS EC2 Hosts logs  |  Google Security Operations  |  Google Cloud Documentation

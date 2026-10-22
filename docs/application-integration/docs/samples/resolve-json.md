@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/samples/resolve-json/
 title: Resolve a JSON reference \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:31:59.138900+00:00
+fetched_at: 2026-10-21T14:26:02.196662+00:00
 ---
 
 # Resolve a JSON reference  |  Application Integration  |  Google Cloud Documentation

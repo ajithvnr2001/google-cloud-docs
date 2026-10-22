@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/contact-list/
 title: Contact lists \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:12.369112+00:00
+fetched_at: 2026-10-21T14:23:11.630510+00:00
 ---
 
 # Contact lists  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/write-task-logs/
 title: Write task logs \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:29:21.506611+00:00
+fetched_at: 2026-10-21T14:24:14.045847+00:00
 ---
 
 # Write task logs  |  Batch  |  Google Cloud Documentation

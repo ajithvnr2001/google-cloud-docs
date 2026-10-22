@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-disaster-recovery-backup-plans-create/
 title: gdcloud disaster-recovery backup-plans create \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:33:55.349883+00:00
+fetched_at: 2026-10-21T12:59:25.127718+00:00
 ---
 
 # gdcloud disaster-recovery backup-plans create  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

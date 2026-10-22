@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/hybrid/apigee-metrics-pods-in-crashloopbackoff/
 title: Apigee Metrics pods in CrashLoopBackOff status \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:31:20.616230+00:00
+fetched_at: 2026-10-21T14:26:46.570136+00:00
 ---
 
 # Apigee Metrics pods in CrashLoopBackOff status  |  Google Cloud Documentation

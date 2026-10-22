@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/monitor/
 title: Monitoring dashboard \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:22:26.082407+00:00
+fetched_at: 2026-10-21T12:55:10.949429+00:00
 ---
 
 # Monitoring dashboard  |  CX Agent Studio  |  Google Cloud Documentation

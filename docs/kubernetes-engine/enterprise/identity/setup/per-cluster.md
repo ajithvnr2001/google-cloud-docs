@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/enterprise/identity/setup/per-cluster/
 title: Set up fleet member clusters for OIDC authentication \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:36:50.728712+00:00
+fetched_at: 2026-10-21T15:08:48.168620+00:00
 ---
 
 # Set up fleet member clusters for OIDC authentication  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

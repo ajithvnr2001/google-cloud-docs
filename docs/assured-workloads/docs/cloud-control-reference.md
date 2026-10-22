@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/cloud-control-reference/
 title: Assured Workloads cloud controls \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:53.524117+00:00
+fetched_at: 2026-10-21T14:43:04.063027+00:00
 ---
 
 # Assured Workloads cloud controls  |  Google Cloud Documentation

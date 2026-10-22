@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6-compatibility/
 title: Cortex Framework v6 compatibility \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:36:59.046957+00:00
+fetched_at: 2026-10-21T14:23:27.196642+00:00
 ---
 
 # Cortex Framework v6 compatibility  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

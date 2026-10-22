@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.10/resources/
 title: Resources \u00a0|\u00a0 Kf 2.10 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:29:17.400631+00:00
+fetched_at: 2026-10-21T15:16:44.272925+00:00
 ---
 
 # Resources  |  Kf 2.10  |  Google Cloud Documentation

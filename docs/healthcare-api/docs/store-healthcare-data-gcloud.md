@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/store-healthcare-data-gcloud/
 title: Quickstart: Store healthcare data with the Google Cloud CLI \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:10:10.889415+00:00
+fetched_at: 2026-10-21T14:30:39.355153+00:00
 ---
 
 # Quickstart: Store healthcare data with the Google Cloud CLI  |  Cloud Healthcare API  |  Google Cloud Documentation
@@ -76,7 +76,7 @@ To enable APIs, you need the `serviceusage.services.enable` permission. If you c
 
   8. Grant roles to your user account. Run the following command once for each of the following IAM roles: `roles/healthcare.datasetAdmin, roles/healthcare.fhirStoreAdmin, roles/healthcare.dicomStoreAdmin, roles/healthcare.hl7V2StoreAdmin`
          
-         gcloud projects add-iam-policy-binding PROJECT_ID --member="user:USER_IDENTIFIER&quot; --role=ROLE
+         gcloud projects add-iam-policy-binding PROJECT_ID --member="user:USER_IDENTIFIER" --role=ROLE
 
 Replace the following:
 
@@ -123,7 +123,7 @@ To enable APIs, you need the `serviceusage.services.enable` permission. If you c
 
   15. Grant roles to your user account. Run the following command once for each of the following IAM roles: `roles/healthcare.datasetAdmin, roles/healthcare.fhirStoreAdmin, roles/healthcare.dicomStoreAdmin, roles/healthcare.hl7V2StoreAdmin`
          
-         gcloud projects add-iam-policy-binding PROJECT_ID --member="user:USER_IDENTIFIER&quot; --role=ROLE
+         gcloud projects add-iam-policy-binding PROJECT_ID --member="user:USER_IDENTIFIER" --role=ROLE
 
 Replace the following:
 

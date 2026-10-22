@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-images-create/
 title: Create a disk image \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:16.569759+00:00
+fetched_at: 2026-10-21T14:19:50.694513+00:00
 ---
 
 # Create a disk image  |  Compute Engine  |  Google Cloud Documentation

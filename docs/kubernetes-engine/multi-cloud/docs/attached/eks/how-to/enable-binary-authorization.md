@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/eks/how-to/enable-binary-authorization/
 title: Enable Binary Authorization \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:44:21.365024+00:00
+fetched_at: 2026-10-21T15:01:53.243847+00:00
 ---
 
 # Enable Binary Authorization  |  GKE attached clusters  |  Google Cloud Documentation

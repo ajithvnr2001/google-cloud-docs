@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/gcp_cloudidentity_deviceusers_changelog/
 title: Change log for GCP_CLOUDIDENTITY_DEVICEUSERS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:26:01.250902+00:00
+fetched_at: 2026-10-21T14:51:57.612412+00:00
 ---
 
 # Change log for GCP_CLOUDIDENTITY_DEVICEUSERS  |  Google Security Operations  |  Google Cloud Documentation

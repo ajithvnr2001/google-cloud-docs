@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/sanity/
 title: Overview \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T13:50:15.335765+00:00
+fetched_at: 2026-10-21T12:45:50.061098+00:00
 ---
 
 # Overview  |  Gemini Enterprise  |  Google Cloud Documentation

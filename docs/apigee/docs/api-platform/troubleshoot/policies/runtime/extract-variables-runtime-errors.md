@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/runtime/extract-variables-runtime-errors/
 title: Extract Variables runtime error troubleshooting \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:30.281899+00:00
+fetched_at: 2026-10-21T12:35:55.973608+00:00
 ---
 
 # Extract Variables runtime error troubleshooting  |  Apigee  |  Google Cloud Documentation

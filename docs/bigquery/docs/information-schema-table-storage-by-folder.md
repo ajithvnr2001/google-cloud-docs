@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-table-storage-by-folder/
 title: TABLE_STORAGE_BY_FOLDER view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:10:52.704288+00:00
+fetched_at: 2026-10-21T12:36:14.218748+00:00
 ---
 
 # TABLE_STORAGE_BY_FOLDER view  |  BigQuery  |  Google Cloud Documentation

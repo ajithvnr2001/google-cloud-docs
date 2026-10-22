@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/create-managed-workload-identities-load-balancing/
 title: Create managed workload identities for load balancers \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:10:02.674736+00:00
+fetched_at: 2026-10-21T12:53:54.414257+00:00
 ---
 
 # Create managed workload identities for load balancers  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

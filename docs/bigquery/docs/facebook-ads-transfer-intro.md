@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/facebook-ads-transfer-intro/
 title: Introduction to Facebook Ads data transfers \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:32:40.901310+00:00
+fetched_at: 2026-10-21T14:07:41.140300+00:00
 ---
 
 # Introduction to Facebook Ads data transfers  |  BigQuery  |  Google Cloud Documentation

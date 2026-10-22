@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/mcp-server/
 title: Use the CX Agent Studio MCP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:49:46.276598+00:00
+fetched_at: 2026-10-21T12:54:38.082129+00:00
 ---
 
 # Use the CX Agent Studio MCP server  |  Google Cloud Documentation

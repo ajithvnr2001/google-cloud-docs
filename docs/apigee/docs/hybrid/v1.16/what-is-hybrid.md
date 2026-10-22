@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/what-is-hybrid/
 title: What is Apigee hybrid? \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:18:21.893553+00:00
+fetched_at: 2026-10-21T14:11:06.475769+00:00
 ---
 
 # What is Apigee hybrid?  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/authentication/
 title: Authenticate to the Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:41:37.184744+00:00
+fetched_at: 2026-10-21T14:30:46.075549+00:00
 ---
 
 # Authenticate to the Cloud Healthcare API  |  Google Cloud Documentation

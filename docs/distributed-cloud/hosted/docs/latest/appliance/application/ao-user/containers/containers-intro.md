@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/containers/containers-intro/
 title: Container workloads in GDC \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:22:02.392368+00:00
+fetched_at: 2026-10-21T12:56:28.010693+00:00
 ---
 
 # Container workloads in GDC  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

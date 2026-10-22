@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/cmek/
 title: Encrypt data with customer-managed encryption keys (CMEK) \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:15:23.901187+00:00
+fetched_at: 2026-10-21T12:52:14.759888+00:00
 ---
 
 # Encrypt data with customer-managed encryption keys (CMEK)  |  Filestore  |  Google Cloud Documentation

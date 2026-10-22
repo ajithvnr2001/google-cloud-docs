@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/prevent-agents-from-selecting-queue-for-outbound-call/
 title: Prevent agents from selecting a queue for an outbound call \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:05.939794+00:00
+fetched_at: 2026-10-21T14:09:02.274831+00:00
 ---
 
 # Prevent agents from selecting a queue for an outbound call  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

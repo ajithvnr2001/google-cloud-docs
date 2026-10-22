@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/fault-injection-testing/experiment-setup/fail-compute/
 title: Set up an experiment for Fail Compute \u00a0|\u00a0 Fault Injection Testing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:02:11.531105+00:00
+fetched_at: 2026-10-21T12:52:48.145103+00:00
 ---
 
 # Set up an experiment for Fail Compute  |  Fault Injection Testing  |  Google Cloud Documentation

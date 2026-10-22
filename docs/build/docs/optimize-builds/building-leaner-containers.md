@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/optimize-builds/building-leaner-containers/
 title: Building leaner containers \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:11.358274+00:00
+fetched_at: 2026-10-21T14:11:16.863101+00:00
 ---
 
 # Building leaner containers  |  Google Cloud Documentation

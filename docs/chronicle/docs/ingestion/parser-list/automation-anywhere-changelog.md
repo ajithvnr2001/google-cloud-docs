@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/automation-anywhere-changelog/
 title: Change log for AUTOMATION_ANYWHERE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:43:46.402077+00:00
+fetched_at: 2026-10-21T14:46:15.529679+00:00
 ---
 
 # Change log for AUTOMATION_ANYWHERE  |  Google Security Operations  |  Google Cloud Documentation

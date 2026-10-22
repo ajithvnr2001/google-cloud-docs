@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/anomali-ioc/
 title: Collect Anomali ThreatStream IOC logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:43:31.675914+00:00
+fetched_at: 2026-10-21T14:09:47.757200+00:00
 ---
 
 # Collect Anomali ThreatStream IOC logs  |  Google Security Operations  |  Google Cloud Documentation

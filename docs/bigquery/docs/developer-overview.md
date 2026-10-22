@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/developer-overview/
 title: Introduction to developer tools \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:47:35.780236+00:00
+fetched_at: 2026-10-21T14:07:11.565591+00:00
 ---
 
 # Introduction to developer tools  |  BigQuery  |  Google Cloud Documentation

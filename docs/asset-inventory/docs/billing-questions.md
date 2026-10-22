@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/asset-inventory/docs/billing-questions/
 title: Billing questions \u00a0|\u00a0 Cloud Asset Inventory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:26:24.713472+00:00
+fetched_at: 2026-10-21T14:41:37.441467+00:00
 ---
 
 # Billing questions  |  Cloud Asset Inventory  |  Google Cloud Documentation

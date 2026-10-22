@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/ndb/db_to_ndb/
 title: DB to NDB Client Library Migration \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:35:26.834780+00:00
+fetched_at: 2026-10-21T14:19:59.641306+00:00
 ---
 
 # DB to NDB Client Library Migration  |  App Engine standard environment  |  Google Cloud Documentation

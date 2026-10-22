@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/user-secops/working-with-collaborator-groups/
 title: Work with collaborator user groups \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:39:17.683624+00:00
+fetched_at: 2026-10-21T14:21:23.668826+00:00
 ---
 
 # Work with collaborator user groups  |  Google Security Operations  |  Google Cloud Documentation

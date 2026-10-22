@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/java-permission-reference/
 title: Java permission reference \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:30:57.377938+00:00
+fetched_at: 2026-10-21T12:29:59.267936+00:00
 ---
 
 # Java permission reference  |  Apigee  |  Google Cloud Documentation

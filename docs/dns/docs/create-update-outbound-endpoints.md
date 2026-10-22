@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/docs/create-update-outbound-endpoints/
 title: Create and update Outbound Endpoints \u00a0|\u00a0 Cloud DNS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:22:38.158796+00:00
+fetched_at: 2026-10-21T14:07:09.301225+00:00
 ---
 
 # Create and update Outbound Endpoints  |  Cloud DNS  |  Google Cloud Documentation

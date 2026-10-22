@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/docs/routing-policies-overview/
 title: DNS routing policies and health checks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:57.711929+00:00
+fetched_at: 2026-10-21T14:06:18.659709+00:00
 ---
 
 # DNS routing policies and health checks  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/service-tiers/
 title: About service tiers \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:10:34.647091+00:00
+fetched_at: 2026-10-21T14:59:25.370260+00:00
 ---
 
 # About service tiers  |  Filestore  |  Google Cloud Documentation
@@ -52,7 +52,7 @@ Replication
 **Zonal** | 10 TiB to 100 TiB | Up or down in 2.5 TiB units | [Configurable](https://docs.cloud.google.com/filestore/docs/custom-performance) | [Zonal](https://docs.cloud.google.com/docs/geography-and-regions#zonal_resources) | NFSv3, NFSv4.1 | Backups  
 Snapshots  
 Replication  
-**Regional** | 100 GiB to 9.75 TiB* | Up or down in 1 GiB or 256 GiB units* | [Configurable](https://docs.cloud.google.com/filestore/docs/custom-performance) | [Regional](https://docs.cloud.google.com/docs/geography-and-regions#regions_and_zones) | NFSv3, NFSv4.1 | Backups  
+**Regional** | 100 GiB to 10,239 GiB | Up or down in 1 GiB units | [Configurable](https://docs.cloud.google.com/filestore/docs/custom-performance) | [Regional](https://docs.cloud.google.com/docs/geography-and-regions#regions_and_zones) | NFSv3, NFSv4.1 | Backups  
 Snapshots  
 Replication  
 **Regional** | 10 TiB to 100 TiB | Up or down in 2.5 TiB units | [Configurable](https://docs.cloud.google.com/filestore/docs/custom-performance) | [Regional](https://docs.cloud.google.com/docs/geography-and-regions#regions_and_zones) | NFSv3, NFSv4.1 | Backups  
@@ -61,42 +61,28 @@ Replication
 **Multishares for GKE (Enterprise)** | 1 TiB to 10 TiB | Up or down in 256 GiB units | Scales with capacity | [Regional](https://docs.cloud.google.com/docs/geography-and-regions#regions_and_zones) | NFSv3, NFSv4.1 | Backups  
 Snapshots  
 Replication  
-**Basic HDD (on GKE)** ** | 100 GiB to 63.9 TiB | Up only in 1 GiB units | Standard fixed | [Zonal](https://docs.cloud.google.com/docs/geography-and-regions#zonal_resources) | NFSv3 | Backups  
+**Basic HDD (on GKE)** * | 100 GiB to 63.9 TiB | Up only in 1 GiB units | Standard fixed | [Zonal](https://docs.cloud.google.com/docs/geography-and-regions#zonal_resources) | NFSv3 | Backups  
 **Basic HDD** | 1 TiB to 63.9 TiB | Up only in 1 GiB units | Standard fixed | [Zonal](https://docs.cloud.google.com/docs/geography-and-regions#zonal_resources) | NFSv3 | Backups  
 **Basic SSD** | 2.5 TiB to 63.9 TiB | Up only in 1 GiB units | Premium fixed | [Zonal](https://docs.cloud.google.com/docs/geography-and-regions#zonal_resources) | NFSv3 | Backups  
   
-* If small capacity instances are available in the region where your instance is located, Regional instance capacity ranges from 100 GiB to 10,239 GiB. Otherwise, the range is 1 TiB to 9.75 TiB. For more information, see [Small capacity instances](https://docs.cloud.google.com/filestore/docs/service-tiers#small-instances).
-
-** Basic HDD on GKE refers to basic HDD instances with a minimum capacity of 100 GiB provisioned with the [Filestore CSI driver](https://docs.cloud.google.com/filestore/docs/csi-driver). Basic HDD on GKE instances with capacity lower than 1 TiB consume 1 TiB of quota.
+* Basic HDD on GKE refers to basic HDD instances with a minimum capacity of 100 GiB provisioned with the [Filestore CSI driver](https://docs.cloud.google.com/filestore/docs/csi-driver). Basic HDD on GKE instances with capacity lower than 1 TiB consume 1 TiB of quota.
 
 ## Small capacity instances
 
 Filestore Regional instances with capacity lower than 1024 GiB are a good option when you need a smaller instance for your application and expand it in time. For example, you can use small instances for development purposes, testing, and for applications with low traffic or basic storage needs.
 
-The following table provides a comparison between the capacity ranges for Regional instances based on the region where the instance was created.
+The following table lists the capacity ranges and increments for Regional instances:
 
-| Supported regions | Unsupported regions  
----|---|---  
+Capacity range | Specifications  
+---|---  
 Lower capacity range | 
 
   * 100 GiB to 10,239 GiB (approximately 0.097 TiB to 9.99 TiB)
   * Capacity increment: 1 GiB
   * IOPS increment: 100
 
-| 
-
-  * 1 TiB to 9.75 TiB
-  * Capacity increment: 256 GiB
-  * IOPS increment: 100
-
   
 Higher capacity range | 
-
-  * 10 TiB to 100 TiB
-  * Capacity increment: 2.5 TiB
-  * IOPS increment: 1,000
-
-| 
 
   * 10 TiB to 100 TiB
   * Capacity increment: 2.5 TiB
@@ -115,10 +101,6 @@ If you want to create a Regional instance that has capacity lower than 1024 GiB,
 
 
 For more information about custom performance settings, see [Configure performance](https://docs.cloud.google.com/filestore/docs/creating-instances#configure-performance).
-
-### Availability of small instances
-
-The small capacity Filestore instances feature is available in the `us-central1` and `us-east4` regions for the Regional service tier. If you choose a different region for your instance, the instance capacity starts at 1 TiB.
 
 ## Pricing
 
@@ -149,6 +131,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/salesforce_changelog/
 title: Change log for SALESFORCE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:30:28.863555+00:00
+fetched_at: 2026-10-21T14:43:27.202895+00:00
 ---
 
 # Change log for SALESFORCE  |  Google Security Operations  |  Google Cloud Documentation

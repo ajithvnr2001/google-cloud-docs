@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/speech-model-migration/
 title: Speech model migration in Q1 2024 \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:45:41.125030+00:00
+fetched_at: 2026-10-21T12:45:22.138417+00:00
 ---
 
 # Speech model migration in Q1 2024  |  Dialogflow ES  |  Google Cloud Documentation

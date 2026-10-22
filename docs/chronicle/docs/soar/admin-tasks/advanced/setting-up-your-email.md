@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/advanced/setting-up-your-email/
 title: Configure email settings \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:47.841418+00:00
+fetched_at: 2026-10-21T14:24:07.502051+00:00
 ---
 
 # Configure email settings  |  Google Security Operations  |  Google Cloud Documentation

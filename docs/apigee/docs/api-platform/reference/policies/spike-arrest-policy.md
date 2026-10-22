@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/spike-arrest-policy/
 title: SpikeArrest policy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:58:27.495793+00:00
+fetched_at: 2026-10-21T12:30:16.918562+00:00
 ---
 
 # SpikeArrest policy  |  Apigee  |  Google Cloud Documentation

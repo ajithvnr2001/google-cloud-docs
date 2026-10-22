@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/byoa-extension/
 title: User guide: Build your own GenAI assist extension \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:44:14.951033+00:00
+fetched_at: 2026-10-21T12:54:45.752995+00:00
 ---
 
 # User guide: Build your own GenAI assist extension  |  Agent Assist  |  Google Cloud Documentation

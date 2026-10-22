@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/pam-request-temporary-elevated-access/
 title: Request temporary elevated access with Privileged Access Manager \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:10:12.255114+00:00
+fetched_at: 2026-10-21T12:54:00.409002+00:00
 ---
 
 # Request temporary elevated access with Privileged Access Manager  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

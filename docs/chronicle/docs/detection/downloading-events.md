@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/downloading-events/
 title: Download events \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:23:39.983850+00:00
+fetched_at: 2026-10-21T12:38:25.939735+00:00
 ---
 
 # Download events  |  Google Security Operations  |  Google Cloud Documentation

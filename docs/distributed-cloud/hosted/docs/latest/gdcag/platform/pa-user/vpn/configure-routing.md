@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/vpn/configure-routing/
 title: Create a VPN BGP session \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:54.513626+00:00
+fetched_at: 2026-10-21T12:59:46.147517+00:00
 ---
 
 # Create a VPN BGP session  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-template-get/
 title: Get information about an instance template \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:22.687992+00:00
+fetched_at: 2026-10-22T05:49:42.822632+00:00
 ---
 
 # Get information about an instance template  |  Compute Engine  |  Google Cloud Documentation

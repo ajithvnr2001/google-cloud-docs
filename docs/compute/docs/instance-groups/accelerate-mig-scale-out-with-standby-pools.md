@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/accelerate-mig-scale-out-with-standby-pools/
 title: Accelerate scale out with suspended and stopped VMs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:18:26.380997+00:00
+fetched_at: 2026-10-21T14:19:28.843450+00:00
 ---
 
 # Accelerate scale out with suspended and stopped VMs  |  Compute Engine  |  Google Cloud Documentation

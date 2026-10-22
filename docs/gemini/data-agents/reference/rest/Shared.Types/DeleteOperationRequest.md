@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/Shared.Types/DeleteOperationRequest/
 title: DeleteOperationRequest \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:43:04.474576+00:00
+fetched_at: 2026-10-21T12:56:04.653877+00:00
 ---
 
 # DeleteOperationRequest  |  Data Agents  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/migrate-to-hyperdisk/
 title: Change the disk type \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:39:49.990186+00:00
+fetched_at: 2026-10-22T05:47:02.370680+00:00
 ---
 
 # Change the disk type  |  Compute Engine  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Change the disk type Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document discusses how to perform certain tasks on a disk. To perform any of the following tasks, you must create a new disk. You can't make the following changes to a disk.
+To change the type, location, or project of a disk, you must create a new disk. This document describes how to make the following changes to a disk, since you can't modify these attributes on an existing disk:
 
   * Change a disk's type, for example, change a Hyperdisk Throughput volume to a Hyperdisk Balanced volume.
   * Change the disk's encryption type, for example, modify a disk's encryption from using Google-generated keys to customer-managed encryption keys (CMEK).
@@ -267,16 +267,22 @@ You can set the access mode for the following disk types:
 
 
 
-## Change a zonal disk to a regional Hyperdisk Balanced High Availability disk
+## Change a zonal disk to a regional Hyperdisk
 
-How you change a zonal Hyperdisk to a Hyperdisk Balanced High Availability disk depends on the zonal disk's type:
+To change an existing zonal disk to a regional Hyperdisk, you must create a new Hyperdisk Balanced High Availability volume from the source disk. This is because Hyperdisk Balanced High Availability is the only supported regional Hyperdisk.
 
-  * If the zonal disk is a boot disk or a Hyperdisk ML or Hyperdisk Throughput disk, create a Hyperdisk Balanced High Availability volume from the snapshot of the zonal disk, as described in this section.
+How you create a [Hyperdisk Balanced High Availability volume](https://docs.cloud.google.com/compute/docs/disks/about-regional-persistent-disk) from a zonal disk depends on the zonal disk's type:
 
-  * If the zonal disk is a Hyperdisk Balanced or Hyperdisk Extreme disk and is not a boot disk, create a Hyperdisk Balanced High Availability volume by [cloning the source disk](https://docs.cloud.google.com/compute/docs/disks/clone-duplicate-disks#create-regional-clone).
+  * For Hyperdisk Balanced volumes, including boot and data disks, and Hyperdisk Extreme volumes, create a Hyperdisk Balanced High Availability volume by [cloning the source disk](https://docs.cloud.google.com/compute/docs/disks/clone-duplicate-disks#create-regional-clone).
+
+  * For Hyperdisk ML, Hyperdisk Throughput, and Persistent Disk volumes, follow the instructions in this section.
+
+To create a Hyperdisk Balanced High Availability volume from the preceding disk types, you must create a Hyperdisk Balanced High Availability volume from the snapshot of the zonal disk.
 
 
 
+
+You can use the Google Cloud console, the gcloud CLI, the Terraform provider for Google Cloud, or REST.
 
 ###  Console 
 
@@ -439,6 +445,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

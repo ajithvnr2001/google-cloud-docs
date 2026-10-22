@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/plan-for-dr/
 title: Plan for disaster recovery \u00a0|\u00a0 Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:27:28.341787+00:00
+fetched_at: 2026-10-21T14:25:17.729009+00:00
 ---
 
 # Plan for disaster recovery  |  Bare Metal Solution  |  Google Cloud Documentation

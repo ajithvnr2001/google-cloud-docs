@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-intelligence-center/docs/performance-dashboard/support/troubleshooting/
 title: Troubleshoot Performance Dashboard \u00a0|\u00a0 Network Intelligence Center - Performance Dashboard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:28:53.410465+00:00
+fetched_at: 2026-10-21T15:14:43.194652+00:00
 ---
 
 # Troubleshoot Performance Dashboard  |  Network Intelligence Center - Performance Dashboard  |  Google Cloud Documentation

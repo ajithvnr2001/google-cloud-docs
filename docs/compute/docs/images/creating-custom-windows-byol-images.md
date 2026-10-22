@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/creating-custom-windows-byol-images/
 title: Create custom Windows BYOL images \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:04.266973+00:00
+fetched_at: 2026-10-21T14:22:35.040119+00:00
 ---
 
 # Create custom Windows BYOL images  |  Compute Engine  |  Google Cloud Documentation

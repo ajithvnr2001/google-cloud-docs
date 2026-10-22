@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/barracuda-email-changelog/
 title: Change log for BARRACUDA_EMAIL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:37:02.376788+00:00
+fetched_at: 2026-10-21T14:51:54.713157+00:00
 ---
 
 # Change log for BARRACUDA_EMAIL  |  Google Security Operations  |  Google Cloud Documentation

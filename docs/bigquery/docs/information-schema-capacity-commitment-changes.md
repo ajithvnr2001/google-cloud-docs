@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-capacity-commitment-changes/
 title: CAPACITY_COMMITMENT_CHANGES view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:04:06.274206+00:00
+fetched_at: 2026-10-21T12:35:48.529280+00:00
 ---
 
 # CAPACITY_COMMITMENT_CHANGES view  |  BigQuery  |  Google Cloud Documentation

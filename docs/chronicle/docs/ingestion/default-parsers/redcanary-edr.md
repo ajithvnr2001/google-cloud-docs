@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/redcanary-edr/
 title: Collect Red Canary EDR logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T13:37:26.453432+00:00
+fetched_at: 2026-10-21T12:36:29.447847+00:00
 ---
 
 # Collect Red Canary EDR logs  |  Google Security Operations  |  Google Cloud Documentation

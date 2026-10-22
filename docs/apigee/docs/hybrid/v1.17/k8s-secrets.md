@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/k8s-secrets/
 title: Storing data in a Kubernetes secret \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:40:47.099919+00:00
+fetched_at: 2026-10-21T14:27:02.358248+00:00
 ---
 
 # Storing data in a Kubernetes secret  |  Apigee  |  Google Cloud Documentation

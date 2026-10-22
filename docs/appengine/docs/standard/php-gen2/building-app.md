@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/php-gen2/building-app/
 title: Building an app with PHP \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:03:56.367738+00:00
+fetched_at: 2026-10-21T14:22:53.949503+00:00
 ---
 
 # Building an app with PHP  |  App Engine standard environment  |  Google Cloud Documentation

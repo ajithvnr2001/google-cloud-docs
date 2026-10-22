@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/viewing-cloud-run-logs/
 title: View logs from a service in Cloud Code for IntelliJ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:06:08.693595+00:00
+fetched_at: 2026-10-21T14:21:15.588047+00:00
 ---
 
 # View logs from a service in Cloud Code for IntelliJ  |  Google Cloud Documentation

@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cluster-autoscaler-visibility/
-title: View cluster autoscaler events \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
+title: View cluster autoscaler events and metrics \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:01:58.405222+00:00
+fetched_at: 2026-10-21T12:29:26.372557+00:00
 ---
 
-# View cluster autoscaler events  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
+# View cluster autoscaler events and metrics  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cluster-autoscaler-visibility/
 
@@ -19,13 +19,18 @@ fetched_at: 2026-10-14T02:01:58.405222+00:00
 
 Send feedback 
 
-#  View cluster autoscaler events Stay organized with collections  Save and categorize content based on your preferences. 
+#  View cluster autoscaler events and metrics Stay organized with collections  Save and categorize content based on your preferences. 
 
 [ Standard ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode)
 
-This page provides information about visibility events emitted by [cluster autoscaler](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler) in Google Kubernetes Engine (GKE). By analyzing these events, you can gain insights into how cluster autoscaler manages your cluster's scaling and understand the reasons behind its decisions.
+This page provides information about visibility events and metrics emitted by [cluster autoscaler](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler) in Google Kubernetes Engine (GKE). By analyzing these logs and metrics, you can gain insights into how cluster autoscaler manages your cluster's scaling, track node provisioning trends, and understand the reasons behind its decisions.
 
-The GKE cluster autoscaler emits visibility events, which are available as log entries in Cloud Logging. The events described in this guide are separate from the Kubernetes events produced by the cluster autoscaler.
+You can use the following information to observe the cluster autoscaler:
+
+  * **Visibility event logs** : event logs in Cloud Logging that provide detailed information about specific scaling actions, such as `scaleUp`, `scaleDown`, and `noScaleUp` decisions. The events described in this guide are separate from the Kubernetes events produced by the cluster autoscaler.
+  * **Cloud Monitoring metrics** : aggregate time-series metrics that provide high-level trends on node provisioning attempts, failures, and pending Pods across ComputeClasses.
+
+
 
 ## Requirements
 
@@ -81,6 +86,118 @@ To view the visibility event notifications on the Google Kubernetes Engine page,
 
 
 
+
+## Monitor pending Pod status with Cloud Monitoring
+
+Available on GKE version 1.37 and later, in addition to visibility events, the GKE cluster autoscaler exports the `kubernetes.io/autoscaler/cluster_pending_pods_per_ccc` real-time metric to Cloud Monitoring. This metric provides a count of Pods in the `Pending` state, as seen and processed by the cluster autoscaler, and is available for the `k8s_entity` monitored resource type.
+
+This metric is particularly useful for understanding the demand for different ComputeClasses.
+
+### Key labels
+
+The metric includes the following key labels:
+
+  * `resource.labels.entity_type`: The entity type, which is always `ComputeClass` for this metric.
+  * `resource.labels.entity_name`: The name of the ComputeClass the Pods are requesting. Empty ("") for Pods without a specific ComputeClass.
+  * `metric.labels.reason`: The current stage of the Pod in the cluster autoscaler's view (`unprocessed`, `provisioning_in_progress`, `unable_to_provision`, `no_action_taken`).
+  * `metric.labels.type`: The type of Pod (`system_pod` or `user_pod`).
+
+
+
+### Example use cases
+
+The following examples show how to query this metric with PromQL:
+
+  * **Track scale-up demand per ComputeClass:**
+        
+        sum by (entity_name) (
+          kubernetes_io:autoscaler_cluster_pending_pods_per_ccc{
+            monitored_resource="k8s_entity",
+            entity_type="ComputeClass",
+            type="user_pod"
+          }
+        )
+        
+
+This query shows the total pending user Pods for each ComputeClass, indicating where the current scaling demand lies.
+
+  * **Monitor blocked scale-ups:**
+        
+        sum by (entity_name, type) (
+          kubernetes_io:autoscaler_cluster_pending_pods_per_ccc{
+            monitored_resource="k8s_entity",
+            entity_type="ComputeClass",
+            reason="unable_to_provision"
+          }
+        )
+        
+
+This query helps quickly identify if any ComputeClasses are experiencing issues where the cluster autoscaler can't provision nodes. 
+
+
+
+
+By analyzing this metric, you can gain insights into the cluster autoscaler's backlog and its ability to provision nodes for different workload types defined by your ComputeClasses. For troubleshooting specific ComputeClass scheduling issues, see [Troubleshoot ComputeClass issues](https://docs.cloud.google.com/kubernetes-engine/docs/troubleshooting/custom-computeclass#analyze-ca-metric).
+
+## Monitor node provisioning
+
+Available on GKE version 1.37 and later, the following Cloud Monitoring metrics provide visibility into cluster autoscaler's node provisioning activities, broken down by ComputeClasses. These metrics use the `k8s_entity` monitored resource type. In this resource type, the value of the `resource.labels.entity_type` label is `ComputeClass`, and the value of the `resource.labels.entity_name` label is the name of the ComputeClass that defines the node group being provisioned. An empty string ("") for the `resource.labels.entity_name` label indicates that the node group being provisioned is not associated with any specific ComputeClass.
+
+### Use metrics and logs together
+
+To monitor and diagnose potential issues with the cluster autoscaler, you can use a combination of metrics and logs to do tasks like the following:
+
+  * **Identify trends and set alerts with metrics** : use Cloud Monitoring metrics to monitor aggregate provisioning health, visualize trends over time, and configure alerting policies (such as alerts on spikes in provisioning failures or quota exhaustion).
+  * **Investigate root causes with logs** : failed scale-up attempts also generate visibility log entries (such as `noScaleUp` or `eventResult` events) in Cloud Logging. When metrics indicate a spike in failures during a time window, inspect the corresponding logs to view the specific Pods, target node pools, and detailed error messages.
+
+
+
+### Monitor node provisioning attempts
+
+The `kubernetes.io/autoscaler/cluster_node_provisioning_attempts_count_per_ccc` metric tracks how often the autoscaler tries to add nodes to a node group defined by a specific ComputeClass. An empty string (`""`) for the `resource.labels.entity_name` label indicates that the provisioning activity is not associated with any specific ComputeClass.
+
+**Important:** Because of the asynchronous nature of provisioning, don't subtract failures from attempts to determine successes in real time. Instead, compare trends over a window (for example, 10m).
+
+The following PromQL example tracks scale-up activity per ComputeClass:
+    
+    
+    sum by (entity_name) (
+      increase(
+        kubernetes_io:autoscaler_cluster_node_provisioning_attempts_count_per_ccc{
+          monitored_resource="k8s_entity",
+          entity_type="ComputeClass"
+        }[5m]
+      )
+    )
+    
+
+### Monitor node provisioning failures
+
+The `kubernetes.io/autoscaler/cluster_node_provisioning_failed_attempts_count_per_ccc` metric provides a count of failed scale-up attempts. Use this metric to identify infrastructure bottlenecks or misconfigurations.
+
+Important labels for this metric include the following:
+
+  * `resource.labels.entity_name`: the name of the ComputeClass defining the node group for which provisioning failed. The value is empty ("") if the node group is not defined by a specific ComputeClass.
+  * `metric.labels.reason`: the string code representing the failure reason.
+
+
+
+The following PromQL example identifies top failure reasons per ComputeClass:
+    
+    
+    sum by (reason, entity_name) (
+      increase(
+        kubernetes_io:autoscaler_cluster_node_provisioning_failed_attempts_count_per_ccc{
+          monitored_resource="k8s_entity",
+          entity_type="ComputeClass"
+        }[1h]
+      )
+    )
+    
+
+#### Failure reasons (`metric.labels.reason`)
+
+The `metric.labels.reason` label on the `kubernetes.io/autoscaler/cluster_node_provisioning_failed_attempts_count_per_ccc` metric provides a string code indicating the cause of the node provisioning failure. For a detailed explanation of each reason, and potential corrective actions, see the [Interpret failure reasons](https://docs.cloud.google.com/kubernetes-engine/docs/troubleshooting/custom-computeclass#interpreting-failure-reasons) troubleshooting guide.
 
 ## Types of events
 
@@ -611,6 +728,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

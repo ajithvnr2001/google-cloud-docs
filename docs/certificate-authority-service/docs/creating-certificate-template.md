@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/creating-certificate-template/
 title: Create a certificate template \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:05:59.309435+00:00
+fetched_at: 2026-10-21T14:24:29.156716+00:00
 ---
 
 # Create a certificate template  |  Certificate Authority Service  |  Google Cloud Documentation

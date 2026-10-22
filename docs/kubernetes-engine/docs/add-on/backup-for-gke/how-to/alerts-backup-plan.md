@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke/how-to/alerts-backup-plan/
 title: Set up alerts for paused backup plans \u00a0|\u00a0 Backup for GKE \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:13:42.638284+00:00
+fetched_at: 2026-10-21T15:01:11.305424+00:00
 ---
 
 # Set up alerts for paused backup plans  |  Backup for GKE  |  Google Cloud Documentation

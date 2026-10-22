@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/livestream/docs/samples/livestream-list-inputs/
 title: List input endpoints \u00a0|\u00a0 Live Stream API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:34:20.595360+00:00
+fetched_at: 2026-10-21T15:10:33.569306+00:00
 ---
 
 # List input endpoints  |  Live Stream API  |  Google Cloud Documentation

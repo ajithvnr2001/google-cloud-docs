@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/troubleshooting-apigee-hybrid/
 title: Troubleshooting Apigee hybrid stuck in creating or releasing state \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:25.961818+00:00
+fetched_at: 2026-10-21T14:27:43.462328+00:00
 ---
 
 # Troubleshooting Apigee hybrid stuck in creating or releasing state  |  Google Cloud Documentation

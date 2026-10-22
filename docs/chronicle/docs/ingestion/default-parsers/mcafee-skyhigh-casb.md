@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/mcafee-skyhigh-casb/
 title: Collect Skyhigh Security CASB (formerly McAfee Skyhigh CASB) logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:14:30.101026+00:00
+fetched_at: 2026-10-21T12:38:04.422193+00:00
 ---
 
 # Collect Skyhigh Security CASB (formerly McAfee Skyhigh CASB) logs  |  Google Security Operations  |  Google Cloud Documentation

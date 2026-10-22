@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/memcached/regions/
 title: Regions and zones \u00a0|\u00a0 Memorystore for Memcached \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:01:02.077808+00:00
+fetched_at: 2026-10-21T15:11:19.387428+00:00
 ---
 
 # Regions and zones  |  Memorystore for Memcached  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/slurm/static-nodes-best-practices/
 title: Best practices for static compute nodes \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:23:58.368071+00:00
+fetched_at: 2026-10-21T14:46:08.108272+00:00
 ---
 
 # Best practices for static compute nodes  |  Cluster Toolkit  |  Google Cloud Documentation

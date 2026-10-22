@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deployment-manager/docs/best-practices/
 title: Best practices for using Deployment Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:46:38.872305+00:00
+fetched_at: 2026-10-21T12:42:44.567152+00:00
 ---
 
 # Best practices for using Deployment Manager  |  Google Cloud Documentation

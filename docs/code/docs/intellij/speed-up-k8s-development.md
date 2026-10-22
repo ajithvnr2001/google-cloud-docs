@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/speed-up-k8s-development/
 title: Speed up development in Cloud Code for IntelliJ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:21:35.771203+00:00
+fetched_at: 2026-10-21T12:40:18.189816+00:00
 ---
 
 # Speed up development in Cloud Code for IntelliJ  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/18.1.0/docs/quickstart/
 title: Install AlloyDB Omni \u00a0|\u00a0 AlloyDB Omni using containers: 18.1.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:23:43.293626+00:00
+fetched_at: 2026-10-21T15:32:51.293903+00:00
 ---
 
 # Install AlloyDB Omni  |  AlloyDB Omni using containers: 18.1.0  |  Google Cloud Documentation

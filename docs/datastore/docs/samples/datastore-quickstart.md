@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/samples/datastore-quickstart/
 title: Quickstart \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:26:29.109682+00:00
+fetched_at: 2026-10-22T05:41:21.505311+00:00
 ---
 
 # Quickstart  |  Firestore in Datastore mode  |  Google Cloud Documentation
@@ -252,7 +252,7 @@ To authenticate to Datastore mode, set up Application Default Credentials. For m
     require "google/cloud/datastore"
     
     # Instantiate a client
-    datastore = Google::Cloud::[Datastore](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-datastore-admin/latest/Google-Cloud-Datastore.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-datastore/latest/Google-Cloud-Datastore.html)
+    datastore = Google::Cloud::[Datastore](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-datastore/latest/Google-Cloud-Datastore.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-datastore/latest/Google-Cloud-Datastore.html)
     
     # The kind for the new entity
     kind = "Task"

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-query-params-arrays/
 title: Array parameters \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:44.523942+00:00
+fetched_at: 2026-10-22T05:49:36.142516+00:00
 ---
 
 # Array parameters  |  BigQuery  |  Google Cloud Documentation

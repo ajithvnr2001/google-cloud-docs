@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/dns/update-dns-records/
 title: Update DNS records \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:46.397554+00:00
+fetched_at: 2026-10-21T12:58:48.648297+00:00
 ---
 
 # Update DNS records  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

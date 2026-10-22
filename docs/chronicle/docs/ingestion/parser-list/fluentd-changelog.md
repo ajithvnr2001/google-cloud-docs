@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/fluentd-changelog/
 title: Change log for FLUENTD \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:03:59.961296+00:00
+fetched_at: 2026-10-21T14:42:46.423309+00:00
 ---
 
 # Change log for FLUENTD  |  Google Security Operations  |  Google Cloud Documentation

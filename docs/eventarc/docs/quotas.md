@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/docs/quotas/
 title: Quotas and limits \u00a0|\u00a0 Eventarc \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:12:42.438196+00:00
+fetched_at: 2026-10-21T12:52:30.429956+00:00
 ---
 
 # Quotas and limits  |  Eventarc  |  Google Cloud Documentation

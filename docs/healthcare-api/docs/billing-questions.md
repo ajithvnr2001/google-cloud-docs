@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/billing-questions/
 title: Billing questions \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:16:20.558964+00:00
+fetched_at: 2026-10-21T14:30:43.487751+00:00
 ---
 
 # Billing questions  |  Cloud Healthcare API  |  Google Cloud Documentation

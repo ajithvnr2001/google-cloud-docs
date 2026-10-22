@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/discover-aws-assets/
 title: Discover assets on AWS \u00a0|\u00a0 Migration Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:20.909661+00:00
+fetched_at: 2026-10-21T15:16:53.447083+00:00
 ---
 
 # Discover assets on AWS  |  Migration Center  |  Google Cloud Documentation

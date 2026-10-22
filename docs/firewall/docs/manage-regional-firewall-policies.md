@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/manage-regional-firewall-policies/
 title: Manage regional network firewall policies \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:40:25.700486+00:00
+fetched_at: 2026-10-21T12:46:07.863373+00:00
 ---
 
 # Manage regional network firewall policies  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

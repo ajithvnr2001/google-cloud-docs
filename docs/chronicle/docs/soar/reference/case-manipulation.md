@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/reference/case-manipulation/
 title: Case manipulation \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:36:05.353439+00:00
+fetched_at: 2026-10-21T14:10:27.152900+00:00
 ---
 
 # Case manipulation  |  Google Security Operations  |  Google Cloud Documentation

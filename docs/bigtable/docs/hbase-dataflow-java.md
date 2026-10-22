@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/hbase-dataflow-java/
 title: Bigtable HBase Beam connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:19.547737+00:00
+fetched_at: 2026-10-21T12:36:51.523696+00:00
 ---
 
 # Bigtable HBase Beam connector  |  Google Cloud Documentation

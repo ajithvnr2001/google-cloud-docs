@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/anomali-ioc-changelog/
 title: Change log for ANOMALI_IOC \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:47:19.415854+00:00
+fetched_at: 2026-10-21T14:46:19.172925+00:00
 ---
 
 # Change log for ANOMALI_IOC  |  Google Security Operations  |  Google Cloud Documentation

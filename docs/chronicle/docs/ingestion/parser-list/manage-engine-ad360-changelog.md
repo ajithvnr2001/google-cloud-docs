@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/manage-engine-ad360-changelog/
 title: Change log for MANAGE_ENGINE_AD360 \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:14:43.356118+00:00
+fetched_at: 2026-10-21T14:43:15.379988+00:00
 ---
 
 # Change log for MANAGE_ENGINE_AD360  |  Google Security Operations  |  Google Cloud Documentation

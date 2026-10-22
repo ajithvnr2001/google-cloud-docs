@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/groups/
 title: Groups API overview \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:23.976037+00:00
+fetched_at: 2026-10-21T12:54:07.495335+00:00
 ---
 
 # Groups API overview  |  Cloud Identity  |  Google Cloud Documentation

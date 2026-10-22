@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/tutorials/samples/
 title: Other samples and learning material \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:59.465666+00:00
+fetched_at: 2026-10-21T14:08:57.066506+00:00
 ---
 
 # Other samples and learning material  |  Dialogflow CX  |  Google Cloud Documentation

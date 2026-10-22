@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigqueryconnection-update-connection/
 title: Update connection metadata \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:10.172758+00:00
+fetched_at: 2026-10-22T05:46:10.608681+00:00
 ---
 
 # Update connection metadata  |  BigQuery  |  Google Cloud Documentation

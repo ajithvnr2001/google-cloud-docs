@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/data-agent-system-instructions/
 title: Guide agent behavior with authored context \u00a0|\u00a0 Conversational Analytics API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:24:43.658748+00:00
+fetched_at: 2026-10-21T12:46:24.101180+00:00
 ---
 
 # Guide agent behavior with authored context  |  Conversational Analytics API  |  Google Cloud Documentation

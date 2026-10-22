@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/cuds-spend-based/
 title: Spend-based committed use discounts \u00a0|\u00a0 Get started \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:38.622955+00:00
+fetched_at: 2026-10-21T14:06:06.523116+00:00
 ---
 
 # Spend-based committed use discounts  |  Get started  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/monetization/manage-prepaid-balances/
 title: Managing prepaid account balances \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:00:51.788271+00:00
+fetched_at: 2026-10-21T14:54:44.824006+00:00
 ---
 
 # Managing prepaid account balances  |  Apigee  |  Google Cloud Documentation

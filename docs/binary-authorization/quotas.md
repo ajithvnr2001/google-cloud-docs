@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/quotas/
 title: Quotas and limits \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:50:47.883169+00:00
+fetched_at: 2026-10-21T12:29:38.597359+00:00
 ---
 
 # Quotas and limits  |  Binary Authorization  |  Google Cloud Documentation

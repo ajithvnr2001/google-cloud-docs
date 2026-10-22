@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-registry/docs/access-control/
 title: Access control with IAM \u00a0|\u00a0 Cloud API Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:17:49.311220+00:00
+fetched_at: 2026-10-21T14:30:28.144873+00:00
 ---
 
 # Access control with IAM  |  Cloud API Registry  |  Google Cloud Documentation

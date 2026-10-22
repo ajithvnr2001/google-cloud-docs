@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/access-crash-looping-database-pod/
 title: Troubleshoot a crashlooping database pod in AlloyDB Omni using the container orchestrator \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 18.1.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:27:48.988068+00:00
+fetched_at: 2026-10-21T15:32:06.594346+00:00
 ---
 
 # Troubleshoot a crashlooping database pod in AlloyDB Omni using the container orchestrator  |  AlloyDB Omni using the container orchestrator: 18.1.0  |  Google Cloud Documentation
@@ -25,15 +25,19 @@ Send feedback
 
 Select a documentation version: 18.1.0keyboard_arrow_down
 
-  * [ Current (18.3.0) ](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/access-crash-looping-database-pod)
+  * [ Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/access-crash-looping-database-pod)
+  * [ 18.4.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.4.0/docs/access-crash-looping-database-pod)
   * [ 18.3.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/access-crash-looping-database-pod)
   * [ 18.1.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/access-crash-looping-database-pod)
+  * [ 17.10.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.10.0/docs/access-crash-looping-database-pod)
   * [ 17.9.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.9.0/docs/access-crash-looping-database-pod)
   * [ 17.7.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.7.0/docs/access-crash-looping-database-pod)
   * [ 17.5.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.5.0/docs/access-crash-looping-database-pod)
+  * [ 16.14.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.14.0/docs/access-crash-looping-database-pod)
   * [ 16.13.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.13.0/docs/access-crash-looping-database-pod)
   * [ 16.11.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.11.0/docs/access-crash-looping-database-pod)
   * [ 16.9.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.9.0/docs/access-crash-looping-database-pod)
+  * [ 15.18.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/15.18.0/docs/access-crash-looping-database-pod)
   * [ 15.17.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/15.17.0/docs/access-crash-looping-database-pod)
   * [ 15.15.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/15.15.0/docs/access-crash-looping-database-pod)
   * [ 15.13.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/15.13.0/docs/access-crash-looping-database-pod)

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/authentication/end-user-installed/
 title: Authenticate installed apps with user accounts \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:12:29.789413+00:00
+fetched_at: 2026-10-21T14:27:31.752252+00:00
 ---
 
 # Authenticate installed apps with user accounts  |  BigQuery  |  Google Cloud Documentation

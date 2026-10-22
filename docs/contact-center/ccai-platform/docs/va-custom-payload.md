@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/va-custom-payload/
 title: Virtual agent custom payloads \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:43:55.763693+00:00
+fetched_at: 2026-10-21T14:22:50.924680+00:00
 ---
 
 # Virtual agent custom payloads  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

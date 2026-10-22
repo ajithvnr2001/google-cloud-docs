@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/manage-costs/
 title: Manage BigQuery costs for Conversational Analytics API agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:37.467090+00:00
+fetched_at: 2026-10-21T12:51:21.554791+00:00
 ---
 
 # Manage BigQuery costs for Conversational Analytics API agents  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/enable-custom-fallback-ivr-nav-queues/
 title: Enable custom fallback IVR navigation for top-level queues \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:08.231874+00:00
+fetched_at: 2026-10-21T14:21:47.996755+00:00
 ---
 
 # Enable custom fallback IVR navigation for top-level queues  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

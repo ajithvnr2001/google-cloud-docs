@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/manage-functions-workspace/
 title: Manage functions in Shell workspace \u00a0|\u00a0 Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:16:49.455306+00:00
+fetched_at: 2026-10-21T14:21:31.123872+00:00
 ---
 
 # Manage functions in Shell workspace  |  Cloud Code for Cloud Shell  |  Google Cloud Documentation

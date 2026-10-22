@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/samples/dataplex-quickstart/
 title: Quickstart: manage metadata \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:19:08.889208+00:00
+fetched_at: 2026-10-21T15:03:12.118227+00:00
 ---
 
 # Quickstart: manage metadata  |  Knowledge Catalog  |  Google Cloud Documentation

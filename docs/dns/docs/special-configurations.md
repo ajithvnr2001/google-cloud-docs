@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/docs/special-configurations/
 title: Special configurations \u00a0|\u00a0 Cloud DNS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:58.529367+00:00
+fetched_at: 2026-10-21T14:06:41.650962+00:00
 ---
 
 # Special configurations  |  Cloud DNS  |  Google Cloud Documentation

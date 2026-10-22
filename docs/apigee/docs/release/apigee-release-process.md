@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/release/apigee-release-process/
 title: Apigee release process \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:39:12.973669+00:00
+fetched_at: 2026-10-21T14:26:35.142200+00:00
 ---
 
 # Apigee release process  |  Google Cloud Documentation

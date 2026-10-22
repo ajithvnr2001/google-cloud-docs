@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-iam/
 title: Configure IAM for Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:53:37.265927+00:00
+fetched_at: 2026-10-21T14:26:10.152441+00:00
 ---
 
 # Configure IAM for Bare Metal Solution  |  Google Cloud Documentation

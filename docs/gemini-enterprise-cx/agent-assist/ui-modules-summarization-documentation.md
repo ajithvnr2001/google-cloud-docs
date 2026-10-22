@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/ui-modules-summarization-documentation/
 title: Summarization \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:44:22.520074+00:00
+fetched_at: 2026-10-21T12:55:11.252523+00:00
 ---
 
 # Summarization  |  Agent Assist  |  Google Cloud Documentation

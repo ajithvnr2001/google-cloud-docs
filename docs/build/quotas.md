@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/quotas/
 title: Quotas and limits \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:57:09.463725+00:00
+fetched_at: 2026-10-21T12:38:43.196912+00:00
 ---
 
 # Quotas and limits  |  Cloud Build  |  Google Cloud Documentation

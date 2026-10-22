@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/event-processing/auto-extraction/
 title: Auto-extraction overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:29:02.730943+00:00
+fetched_at: 2026-10-21T14:25:34.712445+00:00
 ---
 
 # Auto-extraction overview  |  Google Security Operations  |  Google Cloud Documentation

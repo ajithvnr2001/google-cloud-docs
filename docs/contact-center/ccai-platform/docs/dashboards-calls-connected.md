@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/dashboards-calls-connected/
 title: Real-time Connected - Calls dashboard \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:14:12.717986+00:00
+fetched_at: 2026-10-21T14:22:15.774555+00:00
 ---
 
 # Real-time Connected - Calls dashboard  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/integration/getting-started-apigee-target-endpoint/
 title: Getting started with Application Integration and Apigee proxy Integration targets \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:41:21.632974+00:00
+fetched_at: 2026-10-21T14:54:49.705432+00:00
 ---
 
 # Getting started with Application Integration and Apigee proxy Integration targets  |  Google Cloud Documentation

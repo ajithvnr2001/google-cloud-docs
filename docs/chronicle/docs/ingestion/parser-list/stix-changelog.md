@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/stix-changelog/
 title: Change log for STIX \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:06:45.258267+00:00
+fetched_at: 2026-10-21T14:43:12.397199+00:00
 ---
 
 # Change log for STIX  |  Google Security Operations  |  Google Cloud Documentation

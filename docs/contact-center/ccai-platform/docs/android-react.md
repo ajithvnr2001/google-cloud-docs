@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/android-react/
 title: React Native for Android \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:45:47.292528+00:00
+fetched_at: 2026-10-21T14:21:31.946637+00:00
 ---
 
 # React Native for Android  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

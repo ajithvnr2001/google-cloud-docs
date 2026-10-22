@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/monitor-gemini-code-assist/
 title: Monitor Gemini Code Assist usage \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:02:48.826186+00:00
+fetched_at: 2026-10-21T12:51:47.347771+00:00
 ---
 
 # Monitor Gemini Code Assist usage  |  Gemini for Google Cloud  |  Google Cloud Documentation

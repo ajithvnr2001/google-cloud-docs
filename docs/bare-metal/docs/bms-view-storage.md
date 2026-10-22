@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-view-storage/
 title: View storage volumes \u00a0|\u00a0 Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:33:55.919627+00:00
+fetched_at: 2026-10-21T14:26:45.287322+00:00
 ---
 
 # View storage volumes  |  Bare Metal Solution  |  Google Cloud Documentation

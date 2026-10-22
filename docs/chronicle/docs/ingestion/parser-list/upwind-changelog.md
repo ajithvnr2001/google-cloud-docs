@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/upwind-changelog/
 title: Change log for UPWIND \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:36:51.578045+00:00
+fetched_at: 2026-10-21T14:43:25.356115+00:00
 ---
 
 # Change log for UPWIND  |  Google Security Operations  |  Google Cloud Documentation

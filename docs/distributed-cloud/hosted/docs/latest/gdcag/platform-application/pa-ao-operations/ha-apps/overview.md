@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/ha-apps/overview/
 title: High availability for your apps \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:58:32.262432+00:00
+fetched_at: 2026-10-21T12:59:42.506698+00:00
 ---
 
 # High availability for your apps  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

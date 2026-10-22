@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-preemptible-create/
 title: Create a preemptible VM \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:00:05.574789+00:00
+fetched_at: 2026-10-22T05:47:46.922306+00:00
 ---
 
 # Create a preemptible VM  |  Compute Engine  |  Google Cloud Documentation
@@ -59,13 +59,13 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     	// preemptible := true
     
     	ctx := context.Background()
-    	instancesClient, err := compute.NewInstancesRESTClient(ctx)
+    	instancesClient, err := compute.[NewInstancesRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_InstancesClient_NewInstancesRESTClient)(ctx)
     	if err != nil {
     		return fmt.Errorf("NewInstancesRESTClient: %w", err)
     	}
     	defer instancesClient.Close()
     
-    	imagesClient, err := compute.NewImagesRESTClient(ctx)
+    	imagesClient, err := compute.[NewImagesRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_ImagesClient_NewImagesRESTClient)(ctx)
     	if err != nil {
     		return fmt.Errorf("NewImagesRESTClient: %w", err)
     	}
@@ -135,14 +135,14 @@ Before trying this sample, follow the Java setup instructions in the [Compute En
 To authenticate to Compute Engine, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
     
     
-    import com.google.cloud.compute.v1.AttachedDisk;
-    import com.google.cloud.compute.v1.AttachedDiskInitializeParams;
-    import com.google.cloud.compute.v1.InsertInstanceRequest;
-    import com.google.cloud.compute.v1.Instance;
-    import com.google.cloud.compute.v1.InstancesClient;
-    import com.google.cloud.compute.v1.NetworkInterface;
-    import com.google.cloud.compute.v1.Operation;
-    import com.google.cloud.compute.v1.Scheduling;
+    import com.google.cloud.compute.v1.[AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html);
+    import com.google.cloud.compute.v1.[AttachedDiskInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDiskInitializeParams.html);
+    import com.google.cloud.compute.v1.[InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html);
+    import com.google.cloud.compute.v1.[Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html);
+    import com.google.cloud.compute.v1.[InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html);
+    import com.google.cloud.compute.v1.[NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html);
+    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html);
+    import com.google.cloud.compute.v1.[Scheduling](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Scheduling.html);
     import java.io.IOException;
     import java.util.concurrent.ExecutionException;
     import java.util.concurrent.TimeUnit;
@@ -173,61 +173,58 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
         long diskSizeGb = 10L;
         String networkName = "default";
     
-        try (InstancesClient instancesClient = InstancesClient.create()) {
+        try (Inst[InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html)tancesClient = Inst[InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html)ate()) {
     
-          AttachedDisk disk =
-              AttachedDisk.newBuilder()
+          Atta[AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html)k =
+              Atta[AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html)Builder()
                   .setBoot(true)
                   .setAutoDelete(true)
-                  .setType(AttachedDisk.Type.PERSISTENT.toString())
-                  .setInitializeParams(
-                      // Describe the size and source image of the boot disk to attach to the instance.
-                      AttachedDiskInitializeParams.newBuilder()
+                  .setType(Atta[AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html)e.PERSISTENT.toString())
+                  .setI[setInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.Builder.html#com_google_cloud_compute_v1_AttachedDisk_Builder_setInitializeParams_com_google_cloud_compute_v1_AttachedDiskInitializeParams_)                // Describe the size and source image of the boot disk to attach to the instance.
+                      Atta[AttachedDiskInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDiskInitializeParams.html)Builder()
                           .setSourceImage(sourceImage)
                           .setDiskSizeGb(diskSizeGb)
                           .build())
                   .build();
     
           // Use the default VPC network.
-          NetworkInterface networkInterface = NetworkInterface.newBuilder()
+          Netw[NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html)workInterface = Netw[NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html)Builder()
               .setName(networkName)
               .build();
     
           // Collect information into the Instance object.
-          Instance instanceResource =
-              Instance.newBuilder()
+          Inst[Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html)tanceResource =
+              Inst[Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html)Builder()
                   .setName(instanceName)
                   .setMachineType(machineType)
                   .addDisks(disk)
                   .addNetworkInterfaces(networkInterface)
                   // Set the preemptible setting.
-                  .setScheduling(Scheduling.newBuilder()
-                      .setPreemptible(true)
+                  .setScheduling(Sche[Scheduling](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Scheduling.html)Builder()
+                      .setP[setPreemptible](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Scheduling.Builder.html#com_google_cloud_compute_v1_Scheduling_Builder_setPreemptible_boolean_)e)
                       .build())
                   .build();
     
           System.out.printf("Creating instance: %s at %s %n", instanceName, zone);
     
           // Prepare the request to insert an instance.
-          InsertInstanceRequest insertInstanceRequest = InsertInstanceRequest.newBuilder()
+          Inse[InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html)ertInstanceRequest = Inse[InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html)Builder()
               .setProject(projectId)
               .setZone(zone)
               .setInstanceResource(instanceResource)
               .build();
     
           // Wait for the create operation to complete.
-          Operation response = instancesClient.insertAsync(insertInstanceRequest)
+          Oper[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html)ponse = instancesClient.insertAsync(insertInstanceRequest)
               .get(3, TimeUnit.MINUTES);
           ;
     
-          if (response.hasError()) {
-            System.out.println("Instance creation failed ! ! " + response);
+          if (respresponse.[hasError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_hasError__)()        System.out.println("Instance creation failed ! ! " + response);
             return;
           }
     
           System.out.printf("Instance created : %s\n", instanceName);
-          System.out.println("Operation Status: " + response.getStatus());
-        }
+          System.out.println("Operation Status: " + respresponse.[getStatus](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_getStatus__)()   }
       }
     }
 
@@ -245,10 +242,10 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     // const zone = 'europe-central2-b';
     // const instanceName = 'YOUR_INSTANCE_NAME';
     
-    const compute = require('@google-cloud/compute');
+    const compute = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)');
     
     async function createPreemptible() {
-      const instancesClient = new compute.InstancesClient();
+      const instancesClient = new compute.[InstancesClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
     
       const [response] = await instancesClient.insert({
         instanceResource: {
@@ -279,7 +276,7 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
         zone,
       });
       let operation = response.latestResponse;
-      const operationsClient = new compute.ZoneOperationsClient();
+      const operationsClient = new compute.[ZoneOperationsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
     
       // Wait for the create operation to complete.
       while (operation.status !== 'DONE') {

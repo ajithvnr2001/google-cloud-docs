@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/image-build-settings/
 title: Explore your build options with buildpacks, Jib, or Docker \u00a0|\u00a0 Cloud Code for IntelliJ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:21:35.121464+00:00
+fetched_at: 2026-10-21T12:39:54.706495+00:00
 ---
 
 # Explore your build options with buildpacks, Jib, or Docker  |  Cloud Code for IntelliJ  |  Google Cloud Documentation

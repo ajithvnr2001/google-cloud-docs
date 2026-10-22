@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerydatatransfer-datatransferservice-datasource-get/
 title: Get a data source \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:12.686232+00:00
+fetched_at: 2026-10-22T05:45:19.435709+00:00
 ---
 
 # Get a data source  |  BigQuery  |  Google Cloud Documentation

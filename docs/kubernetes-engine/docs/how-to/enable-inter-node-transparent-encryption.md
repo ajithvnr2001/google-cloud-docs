@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/enable-inter-node-transparent-encryption/
 title: Encrypt your data in-transit in GKE with user-managed encryption keys \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:11.653366+00:00
+fetched_at: 2026-10-21T15:00:28.454408+00:00
 ---
 
 # Encrypt your data in-transit in GKE with user-managed encryption keys  |  GKE security  |  Google Cloud Documentation

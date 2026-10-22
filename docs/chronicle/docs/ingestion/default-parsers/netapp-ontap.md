@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/netapp-ontap/
 title: Collect NetApp ONTAP logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T18:50:59.462088+00:00
+fetched_at: 2026-10-21T12:28:22.869517+00:00
 ---
 
 # Collect NetApp ONTAP logs  |  Google Security Operations  |  Google Cloud Documentation

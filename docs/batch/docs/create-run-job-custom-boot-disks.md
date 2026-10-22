@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/create-run-job-custom-boot-disks/
 title: Create and run a job that uses custom boot disks \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:04:41.774062+00:00
+fetched_at: 2026-10-21T12:30:59.956908+00:00
 ---
 
 # Create and run a job that uses custom boot disks  |  Batch  |  Google Cloud Documentation

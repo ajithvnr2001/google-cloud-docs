@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.triggers
 title: REST Resource: projects.triggers \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:59:24.318110+00:00
+fetched_at: 2026-10-21T14:35:14.218019+00:00
 ---
 
 # REST Resource: projects.triggers  |  Cloud Build  |  Google Cloud Documentation
@@ -87,7 +87,8 @@ JSON representation
         object ([DeveloperConnectEventConfig](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.DeveloperConnectEventConfig))
       },
     
-      // Union field build_template can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "autodetect": boolean,
       "build": {
         object ([Build](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build))
@@ -96,7 +97,7 @@ JSON representation
       "gitFileSource": {
         object ([GitFileSource](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.GitFileSource))
       }
-      // End of list of possible types for union field build_template.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
@@ -130,7 +131,7 @@ Fields
 `includeBuildLogs` |  `enum (`[IncludeBuildLogs](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.IncludeBuildLogs)`)` If set to INCLUDE_BUILD_LOGS_WITH_STATUS, log url will be shown on GitHub page when build status is final. Setting this field to INCLUDE_BUILD_LOGS_WITH_STATUS for non GitHub triggers results in INVALID_ARGUMENT error.  
 `repositoryEventConfig` |  `object (`[RepositoryEventConfig](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.RepositoryEventConfig)`)` The configuration of a trigger that creates a build whenever an event from Repo API is received.  
 `developerConnectEventConfig` |  `object (`[DeveloperConnectEventConfig](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.DeveloperConnectEventConfig)`)` Optional. The configuration of a trigger that creates a build whenever an event from the DeveloperConnect API is received.  
-Union field `build_template`. Template describing the Build request to make when the trigger is matched. At least one of the template fields must be provided. `build_template` can be only one of the following:  
+Template describing the Build request to make when the trigger is matched. At least one of the template fields must be provided. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `autodetect` |  `boolean` Autodetect build configuration. The following precedence is used (case insensitive):
 
   1. cloudbuild.yaml
@@ -142,6 +143,7 @@ Currently only available for GitHub App Triggers.
 `build` |  `object (`[Build](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build)`)` Contents of the build template.  
 `filename` |  `string` Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).  
 `gitFileSource` |  `object (`[GitFileSource](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.GitFileSource)`)` The file source describing the local or remote Build template.  
+End of mutually exclusive fields.  
   
 ## Methods  
   
@@ -179,6 +181,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-07-10 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-07-10 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

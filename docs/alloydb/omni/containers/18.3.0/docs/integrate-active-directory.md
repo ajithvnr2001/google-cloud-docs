@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/18.3.0/docs/integrate-active-directory/
 title: Integrate Active Directory user support with AlloyDB Omni \u00a0|\u00a0 AlloyDB Omni using containers: 18.3.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:03.458094+00:00
+fetched_at: 2026-10-21T15:19:07.946039+00:00
 ---
 
 # Integrate Active Directory user support with AlloyDB Omni  |  AlloyDB Omni using containers: 18.3.0  |  Google Cloud Documentation

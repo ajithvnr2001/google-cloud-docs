@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/premium/rhel-faq/
 title: Red Hat Enterprise Linux FAQ \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:43.968716+00:00
+fetched_at: 2026-10-21T14:19:54.336883+00:00
 ---
 
 # Red Hat Enterprise Linux FAQ  |  Compute Engine  |  Google Cloud Documentation

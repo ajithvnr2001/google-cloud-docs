@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cisco-stealthwatch-changelog/
 title: Change log for CISCO_STEALTHWATCH \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:36:15.635508+00:00
+fetched_at: 2026-10-21T14:44:55.854963+00:00
 ---
 
 # Change log for CISCO_STEALTHWATCH  |  Google Security Operations  |  Google Cloud Documentation

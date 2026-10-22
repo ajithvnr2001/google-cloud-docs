@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.7/how-to/setting-up-https-ingress/
 title: Set up HTTPS ingress \u00a0|\u00a0 Kf 2.7 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:45:55.892126+00:00
+fetched_at: 2026-10-21T15:17:17.161259+00:00
 ---
 
 # Set up HTTPS ingress  |  Kf 2.7  |  Google Cloud Documentation

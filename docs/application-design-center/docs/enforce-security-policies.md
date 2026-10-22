@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/enforce-security-policies/
 title: Enforce security policies \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:57:51.183351+00:00
+fetched_at: 2026-10-21T12:30:10.326320+00:00
 ---
 
 # Enforce security policies  |  Application Design Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/marketplace-offerings/
 title: Run the Dataproc Container for Spark service \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:22:11.070306+00:00
+fetched_at: 2026-10-21T12:55:47.719357+00:00
 ---
 
 # Run the Dataproc Container for Spark service  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

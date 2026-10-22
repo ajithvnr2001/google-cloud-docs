@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/java-gen2/gradle-reference/
 title: App Engine Gradle Plugin Tasks and Properties \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:37.259361+00:00
+fetched_at: 2026-10-21T14:27:40.661432+00:00
 ---
 
 # App Engine Gradle Plugin Tasks and Properties  |  App Engine standard environment  |  Google Cloud Documentation

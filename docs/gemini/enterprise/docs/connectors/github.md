@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/github/
 title: Overview \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:21:35.948662+00:00
+fetched_at: 2026-10-21T12:29:45.119544+00:00
 ---
 
 # Overview  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -38,15 +38,20 @@ Action | Description
 Add comment to pending review | Add a review comment to your latest pending pull request review.  
 Add issue comment | Add a comment to a specific issue or pull request.  
 Create branch | Create a new branch in a repository.  
+Create gist | Create a new GitHub Gist.  
 Create or update file | Create or update a single file in a repository.  
+Dismiss notification | Mark a GitHub notification as read or done.  
 Fork repository | Fork a repository to your account or a specified organization.  
+Manage notification subscription | Ignore, watch, or delete a notification thread subscription.  
+Manage repository notification subscription | Ignore, watch, or delete a repository's notification subscription.  
+Mark all notifications read | Mark all notifications as read, optionally scoped to a repository.  
 Merge pull request | Merge a pull request.  
 Push files | Push multiple files to a repository in a single commit.  
 Reply to pull request comment | Add a reply to an existing pull request comment.  
 Star repository | Star a repository on behalf of the authenticated user.  
 Trigger Actions workflow | Trigger a GitHub Actions workflow (run, cancel, or rerun jobs).  
-Triage issue | Update labels, assignees, or state on an issue.  
 Unstar repository | Unstar a repository on behalf of the authenticated user.  
+Update gist | Update an existing GitHub Gist.  
 Update pull request | Update an existing pull request.  
 Write discussion comment | Add, reply to, update, delete, or mark/unmark as answer a discussion comment.  
 Write GitHub project | Create or update GitHub Projects (project, items, fields, status updates).  
@@ -63,7 +68,7 @@ Repository: Actions  | Read and write  | Trigger, list, cancel, and rerun workfl
 Repository: Administration  | Read-only  | List repository collaborators   
 Repository: Contents  | Read and write  | Read files, commits, branches, tags, and releases; create branches, write files, push commits, and fork repositories   
 Repository: Discussions  | Read and write  | Read GitHub Discussions and discussion categories; add, update, or delete discussion comments   
-Repository: Issues  | Read and write  | Read issues, labels, comments, and search issues; create or update issues, post comments, triage issues, and manage labels   
+Repository: Issues  | Read and write  | Read issues, labels, comments, and search issues; create or update issues, post comments, and manage labels   
 Repository: Metadata  | Read-only (Mandatory)  | Search for repositories and users   
 Repository: Pull requests  | Read and write  | Read pull requests, diffs, and PR comments; merge, update, and add review comments and replies   
 Repository: Code scanning alerts  | Read-only  | Read code scanning alerts   
@@ -102,6 +107,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

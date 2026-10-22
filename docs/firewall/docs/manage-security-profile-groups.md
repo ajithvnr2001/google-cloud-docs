@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/manage-security-profile-groups/
 title: Manage security profile groups \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:40:28.210276+00:00
+fetched_at: 2026-10-21T12:46:28.758125+00:00
 ---
 
 # Manage security profile groups  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/auditd-changelog/
 title: Change log for AUDITD \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:18:37.721622+00:00
+fetched_at: 2026-10-21T14:46:16.197754+00:00
 ---
 
 # Change log for AUDITD  |  Google Security Operations  |  Google Cloud Documentation
@@ -22,6 +22,16 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 Date | Changes  
 ---|---  
+2026-09-30 |  Enhancement:  
+\- Added New Grok pattern to support new format of syslog logs.  
+\- Modified the grok patterns to support new format of syslog logs.   
+2026-09-22 |  Enhancement:  
+\- Added support for new format of syslog.  
+\- `event.idm.read_only_udm.metadata.description`: Newly mapped `eventType`, `process_pid`, `msg2` raw log fields with `event.idm.read_only_udm.metadata.description` UDM field.   
+2026-09-18 |  \- Handled edge case scenarios for the `Task` raw log field.   
+2026-09-01 |  Enhancement:  
+\- Added a Grok pattern to support new format of syslog logs.  
+\- `event.idm.read_only_udm.principal.process.pid`: Removed mapping of `process_pid` from `event.idm.read_only_udm.principal.process.pid` UDM field since it is a duplicate Mapping and Added a conditional check to map `process_pid` to `event.idm.read_only_udm.principal.process.pid` UDM field when `tar_pid` is null.   
 2026-07-30 |  Enhancement:  
 \- Modified grok pattern to support new format of syslog logs.   
 2026-07-03 |  Enhancement:  
@@ -420,6 +430,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-11 UTC.
+Last updated 2026-10-13 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-11 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

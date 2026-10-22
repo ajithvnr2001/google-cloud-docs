@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/looker-7-changelog/
 title: Looker 7 changelog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:35:12.243003+00:00
+fetched_at: 2026-10-21T15:09:52.581386+00:00
 ---
 
 # Looker 7 changelog  |  Google Cloud Documentation

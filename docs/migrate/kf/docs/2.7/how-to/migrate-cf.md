@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.7/how-to/migrate-cf/
 title: Assess and migrate Cloud Foundry \u00a0|\u00a0 Kf 2.7 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:45:52.537774+00:00
+fetched_at: 2026-10-21T15:17:18.313699+00:00
 ---
 
 # Assess and migrate Cloud Foundry  |  Kf 2.7  |  Google Cloud Documentation

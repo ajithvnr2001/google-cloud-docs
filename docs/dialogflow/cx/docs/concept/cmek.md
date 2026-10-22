@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/cmek/
 title: Customer-managed encryption keys (CMEK) \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:54.135596+00:00
+fetched_at: 2026-10-21T12:56:01.490209+00:00
 ---
 
 # Customer-managed encryption keys (CMEK)  |  Dialogflow CX  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/linux-auditd-logging/
 title: Enable linux auditd logs on GKE nodes \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:14.279712+00:00
+fetched_at: 2026-10-21T15:01:55.136646+00:00
 ---
 
 # Enable linux auditd logs on GKE nodes  |  GKE security  |  Google Cloud Documentation

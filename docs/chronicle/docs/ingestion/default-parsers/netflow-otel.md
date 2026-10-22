@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/netflow-otel/
 title: Collect OpenTelemetry Netflow Receiver logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:31:51.970580+00:00
+fetched_at: 2026-10-21T14:18:51.814917+00:00
 ---
 
 # Collect OpenTelemetry Netflow Receiver logs  |  Google Security Operations  |  Google Cloud Documentation

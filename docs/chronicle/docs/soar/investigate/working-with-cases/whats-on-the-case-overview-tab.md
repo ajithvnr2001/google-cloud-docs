@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/investigate/working-with-cases/whats-on-the-case-overview-tab/
 title: Explore the case overview tab \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:45:00.405525+00:00
+fetched_at: 2026-10-21T14:21:02.783189+00:00
 ---
 
 # Explore the case overview tab  |  Google Security Operations  |  Google Cloud Documentation

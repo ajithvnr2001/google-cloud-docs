@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/github-changelog/
 title: Change log for GITHUB \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:18:34.943040+00:00
+fetched_at: 2026-10-21T14:51:57.557331+00:00
 ---
 
 # Change log for GITHUB  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/manage-security-gateway/
 title: Manage a secure gateway \u00a0|\u00a0 Chrome Enterprise Premium \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:01:27.818741+00:00
+fetched_at: 2026-10-21T14:23:11.458062+00:00
 ---
 
 # Manage a secure gateway  |  Chrome Enterprise Premium  |  Google Cloud Documentation

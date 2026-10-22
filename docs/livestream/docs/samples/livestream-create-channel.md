@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/livestream/docs/samples/livestream-create-channel/
 title: Create a channel \u00a0|\u00a0 Live Stream API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:34:12.441219+00:00
+fetched_at: 2026-10-21T15:09:37.760919+00:00
 ---
 
 # Create a channel  |  Live Stream API  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/prebuilt-component/credit-card-number-collection/
 title: Credit card number collection prebuilt component \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:42.224376+00:00
+fetched_at: 2026-10-21T12:43:49.120113+00:00
 ---
 
 # Credit card number collection prebuilt component  |  Dialogflow CX  |  Google Cloud Documentation

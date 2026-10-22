@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/using-tcp-forwarding/
 title: Use IAP for TCP forwarding \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:10.057174+00:00
+fetched_at: 2026-10-21T12:53:57.283521+00:00
 ---
 
 # Use IAP for TCP forwarding  |  Identity-Aware Proxy  |  Google Cloud Documentation

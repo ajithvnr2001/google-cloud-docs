@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/generate-table-insights/
 title: Generate table insights \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:05.250717+00:00
+fetched_at: 2026-10-21T14:06:32.301339+00:00
 ---
 
 # Generate table insights  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/manage-endpoints/
 title: Manage and discover endpoints \u00a0|\u00a0 Agent Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:37:01.759902+00:00
+fetched_at: 2026-10-21T14:29:00.296600+00:00
 ---
 
 # Manage and discover endpoints  |  Agent Registry  |  Google Cloud Documentation

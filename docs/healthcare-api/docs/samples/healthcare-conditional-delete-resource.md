@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/samples/healthcare-conditional-delete-resource/
 title: Conditional delete resource \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:53:21.218665+00:00
+fetched_at: 2026-10-21T14:29:27.848899+00:00
 ---
 
 # Conditional delete resource  |  Cloud Healthcare API  |  Google Cloud Documentation

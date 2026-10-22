@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/keyboard-shortcuts/
 title: Keyboard shortcuts for Gemini Code Assist features \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:02:45.450296+00:00
+fetched_at: 2026-10-21T12:51:29.023536+00:00
 ---
 
 # Keyboard shortcuts for Gemini Code Assist features  |  Gemini for Google Cloud  |  Google Cloud Documentation

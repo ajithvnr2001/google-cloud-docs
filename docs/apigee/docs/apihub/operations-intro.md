@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/apihub/operations-intro/
 title: API operations and MCP tools overview \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:08:40.679177+00:00
+fetched_at: 2026-10-21T14:55:12.622439+00:00
 ---
 
 # API operations and MCP tools overview  |  Apigee  |  Google Cloud Documentation

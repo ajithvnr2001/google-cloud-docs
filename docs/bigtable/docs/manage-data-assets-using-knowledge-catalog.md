@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/manage-data-assets-using-knowledge-catalog/
 title: Manage data assets using Knowledge Catalog \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:11.870703+00:00
+fetched_at: 2026-10-21T12:36:38.205495+00:00
 ---
 
 # Manage data assets using Knowledge Catalog  |  Bigtable  |  Google Cloud Documentation

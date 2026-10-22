@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs/register/gke/
 title: Register a cluster on Google Cloud to your fleet \u00a0|\u00a0 Fleet management \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:37:13.964512+00:00
+fetched_at: 2026-10-21T15:03:41.176299+00:00
 ---
 
 # Register a cluster on Google Cloud to your fleet  |  Fleet management  |  Google Cloud Documentation

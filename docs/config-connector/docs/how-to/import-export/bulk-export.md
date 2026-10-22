@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/how-to/import-export/bulk-export/
 title: Bulk importing and exporting existing Google Cloud resources \u00a0|\u00a0 Config Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:02:21.142707+00:00
+fetched_at: 2026-10-21T14:24:53.228264+00:00
 ---
 
 # Bulk importing and exporting existing Google Cloud resources  |  Config Connector  |  Google Cloud Documentation

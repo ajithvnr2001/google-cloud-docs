@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/arbor-sightline-changelog/
 title: Change log for ARBOR_SIGHTLINE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:46:59.040546+00:00
+fetched_at: 2026-10-21T14:46:18.307050+00:00
 ---
 
 # Change log for ARBOR_SIGHTLINE  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/ingress-cert-mismatch/
 title: Ingress cert mismatch \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:39:29.363516+00:00
+fetched_at: 2026-10-21T14:28:26.437867+00:00
 ---
 
 # Ingress cert mismatch  |  Apigee  |  Google Cloud Documentation

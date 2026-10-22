@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/buildpacks/set-environment-variables/
 title: Set environment variables to configure builds \u00a0|\u00a0 Buildpacks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:27:05.399276+00:00
+fetched_at: 2026-10-21T14:06:06.971111+00:00
 ---
 
 # Set environment variables to configure builds  |  Buildpacks  |  Google Cloud Documentation

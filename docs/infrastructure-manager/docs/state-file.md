@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/state-file/
 title: Manage the Terraform state file \u00a0|\u00a0 Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:04:28.926531+00:00
+fetched_at: 2026-10-21T12:54:01.024798+00:00
 ---
 
 # Manage the Terraform state file  |  Infrastructure Manager  |  Google Cloud Documentation

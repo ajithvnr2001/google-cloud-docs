@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/docs/getting-support/
 title: Getting support \u00a0|\u00a0 Cloud Natural Language API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:00:40.990789+00:00
+fetched_at: 2026-10-21T15:17:52.595305+00:00
 ---
 
 # Getting support  |  Cloud Natural Language API  |  Google Cloud Documentation

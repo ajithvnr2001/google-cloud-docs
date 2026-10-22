@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/marketplace/docs/partners/access-control/
 title: Configure access control for Producer Portal users \u00a0|\u00a0 Google Cloud Marketplace Partners \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:48:05.850920+00:00
+fetched_at: 2026-10-21T14:30:04.178155+00:00
 ---
 
 # Configure access control for Producer Portal users  |  Google Cloud Marketplace Partners  |  Google Cloud Documentation

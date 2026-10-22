@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/export-bq/
 title: Conversation history export to BigQuery \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:52.236752+00:00
+fetched_at: 2026-10-21T12:56:08.759690+00:00
 ---
 
 # Conversation history export to BigQuery  |  Dialogflow CX  |  Google Cloud Documentation

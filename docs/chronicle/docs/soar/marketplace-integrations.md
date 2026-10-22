@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/
 title: Google Security Operations response integrations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:26:47.255247+00:00
+fetched_at: 2026-10-21T14:24:02.851498+00:00
 ---
 
 # Google Security Operations response integrations  |  Google Cloud Documentation

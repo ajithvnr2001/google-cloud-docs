@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/google-groups-rbac/
 title: Configure Google Groups for RBAC \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:17:24.842002+00:00
+fetched_at: 2026-10-21T15:00:20.599099+00:00
 ---
 
 # Configure Google Groups for RBAC  |  GKE security  |  Google Cloud Documentation

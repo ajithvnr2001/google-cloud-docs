@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/aks/reference/supported-regions/
 title: Supported regions for AKS attached clusters \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:22.978370+00:00
+fetched_at: 2026-10-21T15:01:50.730633+00:00
 ---
 
 # Supported regions for AKS attached clusters  |  GKE attached clusters  |  Google Cloud Documentation

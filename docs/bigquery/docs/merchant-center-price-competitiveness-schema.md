@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/merchant-center-price-competitiveness-schema/
 title: Google Merchant Center Price Competitiveness table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:48:24.044260+00:00
+fetched_at: 2026-10-21T12:36:23.230652+00:00
 ---
 
 # Google Merchant Center Price Competitiveness table  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/ftinfo/
 title: FT.INFO \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:54.568317+00:00
+fetched_at: 2026-10-21T15:15:06.381737+00:00
 ---
 
 # FT.INFO  |  Memorystore for Redis  |  Google Cloud Documentation

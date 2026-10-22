@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/load-balancing/docs/l7-internal/monitoring/
 title: Internal Application Load Balancer logging and monitoring \u00a0|\u00a0 Cloud Load Balancing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:45:27.865443+00:00
+fetched_at: 2026-10-21T14:58:24.190670+00:00
 ---
 
 # Internal Application Load Balancer logging and monitoring  |  Cloud Load Balancing  |  Google Cloud Documentation
@@ -429,6 +429,7 @@ In the form `"projects/PROJECT_ID/logs/requests"`.
   * `serviceExtensionInfo`
   * `mtls`
   * `authzPolicyInfo`
+  * `RateLimitPolicyInfo`
   * `backendNetworkName`
   * `orcaLoadReport`
 
@@ -444,7 +445,8 @@ string | Required | The `serviceDirectoryService` field holds the name of the Se
 string | Required | The `cloudFitExperiment` field holds the name of the Cloud FIT experiment.  
 string | Required | The `cloudFitFault` field holds the name of the fault injected by a Cloud FIT fault experiment in this request path.  
 ServiceExtensionInfo | Required | The `serviceExtensionInfo` field stores information about the gRPC streams from the load balancer to Service Extensions. For more information, see [ what is logged for callout extensions](https://docs.cloud.google.com/service-extensions/docs/view-callout-log-messages#what-is-logged-for-callouts).  
-AuthzPolicyInfo | Required | The `authzPolicyInfo` field stores information about the authorization policy result. This information is only available for internal Application Load Balancers that have enabled [ authorization policies](https://docs.cloud.google.com/load-balancing/docs/auth-policy/auth-policy-overview). For more information, see [ Authorization policy request logs](https://docs.cloud.google.com/load-balancing/docs/l7-internal/monitoring#authz_info).  
+AuthzPolicyInfo | Required | The `authzPolicyInfo` field stores information about the authorization policy result. This information is only available for internal Application Load Balancers that have enabled [ authorization policies](https://docs.cloud.google.com/load-balancing/docs/auth-policy/auth-policy-overview). For more information, see [ what is logged for authorization policy](https://docs.cloud.google.com/load-balancing/docs/l7-internal/monitoring#authz_info).  
+RateLimitPolicyInfo | Required | The `RateLimitPolicyInfo` field stores information about the service rate limiting policy result. This information is only available for internal Application Load Balancers that have enabled [ service rate limiting policies](https://docs.cloud.google.com/load-balancing/docs/srl-policy/service-rate-limiting-overview). For more information, see [ what is logged for service rate limiting policy](https://docs.cloud.google.com/load-balancing/docs/l7-internal/monitoring#srl_info).  
 TlsInfo | Optional | The `tls` field holds the TlsInfo field that specifies the TLS metadata for the connection between the client and the load balancer. This field is only available if the client is using TLS/SSL encryption. Use the `--logging-optional-fields` parameter to specify which elements must be logged:
 
   * `tls.protocol`
@@ -711,6 +713,22 @@ Field | Type | Description
   
 `authz_info.overall_result` | enum | The result can be `ALLOWED` or `DENIED`.  
   
+#### RateLimitPolicyInfo field format
+
+The `RateLimitPolicyInfo` object in the Load Balancer Log Entry JSON payload contains information about service rate limiting policies.
+
+Field | Field format | Field type: Required or Optional | Description  
+---|---|---|---  
+**RateLimitPolicyInfo.policies[]** | array | Optional | A list of rate limit policies that match the request.   
+**RateLimitPolicyInfo.policies[].name** | string | Optional | The rate limit policy resource name.   
+**RateLimitPolicyInfo.policies[].buckets[]** | array | Optional | Information about the rate limit bucket.   
+**RateLimitPolicyInfo.policies[].buckets[].bucket** | string | Optional | The applied bucket name.   
+**RateLimitPolicyInfo.policies[].buckets[].key** | string | Optional | The key used for the rate limit.   
+**RateLimitPolicyInfo.policies[].buckets[].result** | enum | Optional | The rate limit result for the bucket. Possible values are: `RESULT_UNSPECIFIED`, `SUCCESS`, or `THROTTLED`.   
+**RateLimitPolicyInfo.policies[].result** | enum | Optional | The rate limit result for the policy. Possible values are: `RESULT_UNSPECIFIED`, `SUCCESS`, or `THROTTLED`.   
+**RateLimitPolicyInfo.policies[].details** | string | Optional | Additional details about the rate limit policy.   
+**RateLimitPolicyInfo.overall_result** | enum | Optional | The overall rate limit result. Possible values are: `RESULT_UNSPECIFIED`, `SUCCESS`, or `THROTTLED`.   
+  
 #### View logs for mTLS client certificate validation
 
 To view the [logged errors for closed connections](https://docs.cloud.google.com/load-balancing/docs/mtls#logs-error) during mutual TLS client certificate validation, complete the following steps.
@@ -883,6 +901,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

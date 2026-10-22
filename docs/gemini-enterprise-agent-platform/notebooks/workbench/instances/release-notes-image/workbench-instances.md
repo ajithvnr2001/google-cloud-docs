@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/notebooks/workbench/instances/release-notes-image/workbench-instances/
 title: Image release notes: workbench-instances \u00a0|\u00a0 Gemini Enterprise Agent Platform Workbench \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:27:37.274074+00:00
+fetched_at: 2026-10-21T14:35:29.306974+00:00
 ---
 
 # Image release notes: workbench-instances  |  Gemini Enterprise Agent Platform Workbench  |  Google Cloud Documentation

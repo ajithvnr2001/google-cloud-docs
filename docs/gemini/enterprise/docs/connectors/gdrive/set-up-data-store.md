@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/gdrive/set-up-data-store/
 title: Set up a Google Drive data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:21:16.037882+00:00
+fetched_at: 2026-10-21T12:29:36.449741+00:00
 ---
 
 # Set up a Google Drive data store  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -58,16 +58,75 @@ To create the Google Drive data store, perform the following steps:
 
   5. In the **Source** section, search for **Google Drive** , and click **Select**.
 
-**Note:** Administrator filters (folder and shared drive scoping) are no longer supported for new Google Drive data stores. Data stores that were created before this change continue to work with their existing filters. To manage filters on those legacy data stores, see [Add filters to a Google Drive data store](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/gdrive/add-filters-to-gdrive-data-store).
-  6. In the **Actions** section, choose the actions from the list to enable them for the Google Drive connector.
+  6. Optional: In the **Data** section, configure filters that scope which Google Drive content the data store searches. To configure filters using the Google Cloud console or REST API, select one of the following options:
+
+### Console
+
+     1. In the **Shared Drive IDs** field, the **Folder IDs** field, or both, enter the IDs that you want to filter on.
+     2. For each field, choose **Include** to search only the specified IDs, or **Exclude** to omit them from search. Configure either **Include** mode or **Exclude** mode for each field, but not both.
+     3. To locate a folder ID or shared drive ID, open the folder or shared drive in Google Drive and copy the ID from the URL. The URL follows this format: `https://drive.google.com/drive/folders/ID`. For example, `https://drive.google.com/drive/folders/123456789012345678901`.
+
+### REST API
+
+To create a data store with filters, call the [`setUpDataConnector`](https://docs.cloud.google.com/gemini/enterprise/docs/reference/rest/v1alpha/projects.locations/setUpDataConnector) method.
+
+Inclusion lists are set under `admin_filter` and exclusion lists are set under `admin_exclusion_filter`. For each filter type, populate the list under `admin_filter` or under `admin_exclusion_filter`, but not both.
+    
+    curl -X POST \
+       -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+       -H "Content-Type: application/json" \
+       -H "X-Goog-User-Project: PROJECT_ID" \
+       "https://ENDPOINT_LOCATION-discoveryengine.googleapis.com/v1alpha/projects/PROJECT_ID/locations/LOCATION:setUpDataConnector" \
+       -d '{
+           "collectionId": "COLLECTION_ID",
+           "collectionDisplayName": "COLLECTION_DISPLAY_NAME",
+           "dataConnector": {
+             "dataSource": "google_drive",
+             "params": {
+               "FILTER_TYPE": {
+                 "FILTER_KEY": [
+                   "FILTER_VALUE_1",
+                   "FILTER_VALUE_2"
+                 ]
+               }
+             },
+             "entities": [
+               {
+                 "entityName": "google_drive"
+               }
+             ],
+             "connectorModes": [
+               "FEDERATED"
+             ]
+           }
+       }'
+       
+
+Replace the following:
+
+     * `PROJECT_ID`: the ID of your project. 
+     * `ENDPOINT_LOCATION`: the multi-region for your API request. Specify one of the following values: 
+       * `us` for the US multi-region
+       * `eu` for the EU multi-region
+       * `global` for the Global location
+For more information, see [Specify a multi-region for your data store](https://docs.cloud.google.com/gemini/enterprise/docs/locations#specify_a_multi-region_for_your_data_store). 
+     * `LOCATION`: the multi-region of your data store: `global` or `us`. 
+     * `COLLECTION_ID`: the unique ID of the data store. 
+     * `COLLECTION_DISPLAY_NAME`: the display name of the data store. 
+     * `FILTER_TYPE`: the type of filter, either `admin_filter` for inclusion or `admin_exclusion_filter` for exclusion. Populate the list under `admin_filter` or under `admin_exclusion_filter`, but not both. 
+     * `FILTER_KEY`: the Drive entity to filter on, either `SharedDriveIds` or `FolderIds`. 
+     * `FILTER_VALUE_1`, `FILTER_VALUE_2`: the shared drive IDs or folder IDs to filter on. 
+
+**Note:** Filters scope search results only. Data stores created with the previous scoping options continue to work with their existing configuration. For more details on filter types, and to add or change filters after the data store is created, see [Add filters to a Google Drive data store](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/gdrive/add-filters-to-gdrive-data-store).
+  7. In the **Actions** section, choose the actions from the list to enable them for the Google Drive connector.
 
 **Note:** If you skip adding actions in this step, you can add them later. For more information, see [Add actions](https://docs.cloud.google.com/gemini/enterprise/docs/manage-actions#add-actions).
 
 To manage the list of actions, see [Manage actions](https://docs.cloud.google.com/gemini/enterprise/docs/manage-actions).
 
-  7. Click **Continue**.
+  8. Click **Continue**.
 
-  8. In the **Configuration** section: 
+  9. In the **Configuration** section: 
 
      1. From the **Multi-region** list, select the location for your data connector.
      2. In the **Data connector name** field, enter a name for your connector.
@@ -77,11 +136,11 @@ To manage the list of actions, see [Manage actions](https://docs.cloud.google.co
           * In the **Key management type** list, select the appropriate type.
           * In the **Cloud KMS key** list, select the key.
 For more information, see [Customer-managed encryption keys](https://docs.cloud.google.com/gemini/enterprise/docs/cmek). 
-  9. Optional: In the **Tag** field, enter a stable identifier for the data store. This identifier is used across different versions of the connector and becomes immutable after the data store is created, so choose a value that you don't need to change later.
+  10. Optional: In the **Tag** field, enter a stable identifier for the data store. This identifier is used across different versions of the connector and becomes immutable after the data store is created, so choose a value that you don't need to change later.
 
-  10. Optional: In the **Sensitive Data Protection policy** section, attach an existing [Sensitive Data Protection](https://docs.cloud.google.com/sensitive-data-protection/docs/sensitive-data-protection-overview) policy to inspect and de-identify data that Gemini Enterprise retrieves through this data store. If your organization doesn't require a Sensitive Data Protection policy, you can skip this step.
+  11. Optional: In the **Sensitive Data Protection policy** section, attach an existing [Sensitive Data Protection](https://docs.cloud.google.com/sensitive-data-protection/docs/sensitive-data-protection-overview) policy to inspect and de-identify data that Gemini Enterprise retrieves through this data store. If your organization doesn't require a Sensitive Data Protection policy, you can skip this step.
 
-  11. Click **Create**. Gemini Enterprise creates your data store and displays your data stores on the **Data Stores** page.
+  12. Click **Create**. Gemini Enterprise creates your data store and displays your data stores on the **Data Stores** page.
 
 
 
@@ -123,6 +182,7 @@ For common search issues that you encounter when querying your Google Drive data
 ## What's next
 
   * To provide a user interface for querying your data, [create an app](https://docs.cloud.google.com/gemini/enterprise/docs/create-app) and [connect it to the Google Drive data store](https://docs.cloud.google.com/gemini/enterprise/docs/connect-existing-data-store).
+  * To add or update folder and shared drive filters on your data store, see [Add filters to a Google Drive data store](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/gdrive/add-filters-to-gdrive-data-store).
   * To preview how your search results appear after your app is set up, see [Get search results](https://docs.cloud.google.com/gemini/enterprise/docs/preview-search-results).
   * To enable alerts for the data store, see [Configure alerts for third-party data stores](https://docs.cloud.google.com/gemini/enterprise/docs/configure-periodic-data-alerts).
   * If your app wasn't initially configured to include cross-domain documents, enable the **Include cross-domain documents** feature in the **Manage web app features** settings. For more information, see [Manage web app features](https://docs.cloud.google.com/gemini/enterprise/docs/manage-web-app-features).
@@ -133,6 +193,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

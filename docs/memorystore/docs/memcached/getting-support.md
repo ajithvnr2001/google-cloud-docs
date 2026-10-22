@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/memcached/getting-support/
 title: Get support \u00a0|\u00a0 Memorystore for Memcached \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:00:59.994502+00:00
+fetched_at: 2026-10-21T15:13:57.597313+00:00
 ---
 
 # Get support  |  Memorystore for Memcached  |  Google Cloud Documentation

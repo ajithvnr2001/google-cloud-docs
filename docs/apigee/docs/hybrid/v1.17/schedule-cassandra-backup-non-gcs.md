@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/schedule-cassandra-backup-non-gcs/
 title: Scheduling backups in a remote server \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:43:36.095955+00:00
+fetched_at: 2026-10-21T14:28:24.258142+00:00
 ---
 
 # Scheduling backups in a remote server  |  Apigee  |  Google Cloud Documentation

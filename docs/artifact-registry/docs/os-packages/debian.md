@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/os-packages/debian/
 title: Get started with Debian packages \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:40:24.003522+00:00
+fetched_at: 2026-10-21T14:27:41.201627+00:00
 ---
 
 # Get started with Debian packages  |  Artifact Registry  |  Google Cloud Documentation

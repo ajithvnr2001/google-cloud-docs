@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/github/build-repos-from-github-enterprise/
 title: Building repositories from GitHub Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:05.718223+00:00
+fetched_at: 2026-10-21T14:11:24.869585+00:00
 ---
 
 # Building repositories from GitHub Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/image-builder/overview/
 title: Image Builder overview \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:00:35.670717+00:00
+fetched_at: 2026-10-21T14:21:19.548031+00:00
 ---
 
 # Image Builder overview  |  Compute Engine  |  Google Cloud Documentation

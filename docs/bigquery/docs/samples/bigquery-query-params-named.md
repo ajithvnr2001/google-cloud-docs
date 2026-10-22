@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-query-params-named/
 title: Named parameters \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:02.585927+00:00
+fetched_at: 2026-10-22T05:49:45.326956+00:00
 ---
 
 # Named parameters  |  BigQuery  |  Google Cloud Documentation

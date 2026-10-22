@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/authorization-changes-grant-access/
 title: Grant Service Account User for run-as service accounts \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:51.056133+00:00
+fetched_at: 2026-10-21T14:10:20.890739+00:00
 ---
 
 # Grant Service Account User for run-as service accounts  |  Application Integration  |  Google Cloud Documentation

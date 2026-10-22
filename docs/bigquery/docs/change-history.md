@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/change-history/
 title: Work with change history \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:01.782984+00:00
+fetched_at: 2026-10-21T12:40:51.445281+00:00
 ---
 
 # Work with change history  |  BigQuery  |  Google Cloud Documentation

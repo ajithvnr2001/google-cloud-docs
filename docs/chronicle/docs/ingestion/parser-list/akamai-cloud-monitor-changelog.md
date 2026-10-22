@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/akamai-cloud-monitor-changelog/
 title: Change log for AKAMAI_CLOUD_MONITOR \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:17:29.763304+00:00
+fetched_at: 2026-10-21T14:46:19.818312+00:00
 ---
 
 # Change log for AKAMAI_CLOUD_MONITOR  |  Google Security Operations  |  Google Cloud Documentation

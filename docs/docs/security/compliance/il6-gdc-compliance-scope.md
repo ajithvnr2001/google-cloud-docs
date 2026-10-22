@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/compliance/il6-gdc-compliance-scope/
 title: DoD compliance scope for Distributed Cloud air-gapped \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:22:41.834324+00:00
+fetched_at: 2026-10-21T14:07:50.937628+00:00
 ---
 
 # DoD compliance scope for Distributed Cloud air-gapped  |  Security  |  Google Cloud Documentation

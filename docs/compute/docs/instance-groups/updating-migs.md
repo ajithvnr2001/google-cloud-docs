@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/updating-migs/
 title: Apply new VM configurations in a MIG \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:26:53.914328+00:00
+fetched_at: 2026-10-21T14:21:55.024974+00:00
 ---
 
 # Apply new VM configurations in a MIG  |  Compute Engine  |  Google Cloud Documentation

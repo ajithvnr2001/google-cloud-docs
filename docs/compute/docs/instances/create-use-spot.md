@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/create-use-spot/
 title: Create and use Spot VMs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:00.204257+00:00
+fetched_at: 2026-10-22T05:49:32.972217+00:00
 ---
 
 # Create and use Spot VMs  |  Compute Engine  |  Google Cloud Documentation
@@ -455,7 +455,7 @@ where `TERMINATION_ACTION` indicates which action to take when Compute Engine pr
     	// zone := "europe-central2-b"
     	// instanceName := "your_instance_name"
     	ctx := context.Background()
-    	client, err := compute.[NewInstancesRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_InstancesClient_NewInstancesRESTClient)(ctx)
+    	client, err := compute.NewInstancesRESTClient(ctx)
     	if err != nil {
     		return false, fmt.Errorf("NewInstancesRESTClient: %w", err)
     	}
@@ -472,7 +472,7 @@ where `TERMINATION_ACTION` indicates which action to take when Compute Engine pr
     		return false, fmt.Errorf("GetInstance: %w", err)
     	}
     
-    	isSpot := instance.GetScheduling().GetProvisioningModel() == computepb.[Scheduling_SPOT](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1/computepb.html#cloud_google_com_go_compute_apiv1_computepb_Scheduling_UNDEFINED_PROVISIONING_MODEL_Scheduling_FLEX_START_Scheduling_RESERVATION_BOUND_Scheduling_SPOT_Scheduling_STANDARD).String()
+    	isSpot := instance.GetScheduling().GetProvisioningModel() == computepb.Scheduling_SPOT.String()
     
     	var isSpotMessage string
     	if !isSpot {
@@ -480,16 +480,16 @@ where `TERMINATION_ACTION` indicates which action to take when Compute Engine pr
     	}
     	fmt.Fprintf(w, "Instance %s is%s spot\n", instanceName, isSpotMessage)
     
-    	return instance.GetScheduling().GetProvisioningModel() == computepb.[Scheduling_SPOT](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1/computepb.html#cloud_google_com_go_compute_apiv1_computepb_Scheduling_UNDEFINED_PROVISIONING_MODEL_Scheduling_FLEX_START_Scheduling_RESERVATION_BOUND_Scheduling_SPOT_Scheduling_STANDARD).String(), nil
+    	return instance.GetScheduling().GetProvisioningModel() == computepb.Scheduling_SPOT.String(), nil
     }
     
 
 ###  Java 
     
     
-    import com.google.cloud.compute.v1.[Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html);
-    import com.google.cloud.compute.v1.[InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html);
-    import com.google.cloud.compute.v1.[Scheduling](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Scheduling.html);
+    import com.google.cloud.compute.v1.Instance;
+    import com.google.cloud.compute.v1.InstancesClient;
+    import com.google.cloud.compute.v1.Scheduling;
     import java.io.IOException;
     import java.util.concurrent.ExecutionException;
     import java.util.concurrent.TimeoutException;
@@ -514,11 +514,11 @@ where `TERMINATION_ACTION` indicates which action to take when Compute Engine pr
               throws IOException {
         // Initialize client that will be used to send requests. This client only needs to be created
         // once, and can be reused for multiple requests.
-        try ([InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html) client = [InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html).create()) {
-          [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html) instance = client.get(projectId, zone, instanceName);
+        try (InstancesClient client = InstancesClient.create()) {
+          Instance instance = client.get(projectId, zone, instanceName);
     
-          return instance.[getScheduling](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html#com_google_cloud_compute_v1_Instance_getScheduling__)().getProvisioningModel()
-                  .equals([Scheduling](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Scheduling.html).ProvisioningModel.SPOT.name());
+          return instance.getScheduling().getProvisioningModel()
+                  .equals(Scheduling.ProvisioningModel.SPOT.name());
         }
       }
     }
@@ -526,7 +526,7 @@ where `TERMINATION_ACTION` indicates which action to take when Compute Engine pr
 ###  Python 
     
     
-    from google.cloud import [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest)
+    from google.cloud import compute_v1
     
     
     def is_spot_vm(project_id: str, zone: str, instance_name: str) -> bool:
@@ -539,13 +539,13 @@ where `TERMINATION_ACTION` indicates which action to take when Compute Engine pr
         Returns:
             The Spot VM status of the instance.
         """
-        instance_client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[InstancesClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html)()
-        instance = instance_client.[get](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html#google_cloud_compute_v1_services_instances_InstancesClient_get)(
+        instance_client = compute_v1.InstancesClient()
+        instance = instance_client.get(
             project=project_id, zone=zone, instance=instance_name
         )
         return (
             instance.scheduling.provisioning_model
-            == [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[Scheduling](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.Scheduling.html).ProvisioningModel.SPOT.name
+            == compute_v1.Scheduling.ProvisioningModel.SPOT.name
         )
     
     
@@ -851,6 +851,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

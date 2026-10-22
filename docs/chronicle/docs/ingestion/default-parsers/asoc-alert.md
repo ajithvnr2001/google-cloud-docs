@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/asoc-alert/
 title: Collect AlphaSOC alert logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:04:54.695040+00:00
+fetched_at: 2026-10-21T14:10:27.536598+00:00
 ---
 
 # Collect AlphaSOC alert logs  |  Google Security Operations  |  Google Cloud Documentation

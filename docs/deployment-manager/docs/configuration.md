@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deployment-manager/docs/configuration/
 title: Configurations Overview \u00a0|\u00a0 Cloud Deployment Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:46:54.341709+00:00
+fetched_at: 2026-10-21T12:43:08.813907+00:00
 ---
 
 # Configurations Overview  |  Cloud Deployment Manager  |  Google Cloud Documentation

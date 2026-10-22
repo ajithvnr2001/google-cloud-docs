@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/quotas-overview/
 title: About quotas \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:35:48.014375+00:00
+fetched_at: 2026-10-21T14:09:57.268141+00:00
 ---
 
 # About quotas  |  API Gateway  |  Google Cloud Documentation

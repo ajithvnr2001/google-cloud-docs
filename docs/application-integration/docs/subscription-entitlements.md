@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/subscription-entitlements/
 title: Subscription entitlements \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:35.874485+00:00
+fetched_at: 2026-10-21T12:35:22.187646+00:00
 ---
 
 # Subscription entitlements  |  Application Integration  |  Google Cloud Documentation

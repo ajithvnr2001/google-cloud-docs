@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/tableau-admin/
 title: Administering Tableau to Looker connections \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:26:16.680316+00:00
+fetched_at: 2026-10-21T15:03:52.063462+00:00
 ---
 
 # Administering Tableau to Looker connections  |  Google Cloud Documentation

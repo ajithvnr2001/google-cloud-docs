@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/valkey/resources/
 title: Resources \u00a0|\u00a0 Memorystore for Valkey \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:35:19.627501+00:00
+fetched_at: 2026-10-21T15:11:26.317432+00:00
 ---
 
 # Resources  |  Memorystore for Valkey  |  Google Cloud Documentation

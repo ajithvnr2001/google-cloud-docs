@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/forcepoint-mail-relay-changelog/
 title: Change log for FORCEPOINT_MAIL_RELAY \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:55:44.815665+00:00
+fetched_at: 2026-10-21T14:42:45.687078+00:00
 ---
 
 # Change log for FORCEPOINT_MAIL_RELAY  |  Google Security Operations  |  Google Cloud Documentation

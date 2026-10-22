@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/nodes/share-node-groups/
 title: Share sole-tenant node groups \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:25.483876+00:00
+fetched_at: 2026-10-21T12:37:02.099081+00:00
 ---
 
 # Share sole-tenant node groups  |  Compute Engine  |  Google Cloud Documentation

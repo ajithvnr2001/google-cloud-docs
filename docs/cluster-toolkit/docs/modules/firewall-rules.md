@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/firewall-rules/
 title: Create firewall rules \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:42.741112+00:00
+fetched_at: 2026-10-21T14:42:18.875058+00:00
 ---
 
 # Create firewall rules  |  Cluster Toolkit  |  Google Cloud Documentation

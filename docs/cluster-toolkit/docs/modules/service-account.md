@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/service-account/
 title: Create a service account \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:43.458758+00:00
+fetched_at: 2026-10-21T14:42:15.769962+00:00
 ---
 
 # Create a service account  |  Cluster Toolkit  |  Google Cloud Documentation

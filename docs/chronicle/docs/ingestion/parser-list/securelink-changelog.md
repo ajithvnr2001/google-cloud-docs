@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/securelink-changelog/
 title: Change log for SECURELINK \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:35:10.921594+00:00
+fetched_at: 2026-10-21T14:42:41.781414+00:00
 ---
 
 # Change log for SECURELINK  |  Google Security Operations  |  Google Cloud Documentation

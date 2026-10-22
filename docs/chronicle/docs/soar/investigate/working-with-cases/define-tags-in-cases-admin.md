@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/investigate/working-with-cases/define-tags-in-cases-admin/
 title: Manage case and alert tags \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:53.496472+00:00
+fetched_at: 2026-10-21T14:19:55.035192+00:00
 ---
 
 # Manage case and alert tags  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/advisory-notifications/docs/billing-questions/
 title: Billing questions \u00a0|\u00a0 Advisory Notifications \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:13:48.518120+00:00
+fetched_at: 2026-10-21T14:29:13.584449+00:00
 ---
 
 # Billing questions  |  Advisory Notifications  |  Google Cloud Documentation

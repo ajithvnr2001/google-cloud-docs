@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/15.5.5/docs/error-codes/ec-DBSE2414/
 title: DBSE2414. PostgreSQL: Failed to run pg_basebackup \u00a0|\u00a0 AlloyDB Omni for containers: 15.5.5 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:23:36.624886+00:00
+fetched_at: 2026-10-21T15:26:34.837280+00:00
 ---
 
 # DBSE2414. PostgreSQL: Failed to run pg_basebackup  |  AlloyDB Omni for containers: 15.5.5  |  Google Cloud Documentation

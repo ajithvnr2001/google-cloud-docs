@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/bitbucket/connect-host-bitbucket-cloud/
 title: Connect to a Bitbucket Cloud host \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:07.083959+00:00
+fetched_at: 2026-10-21T14:11:09.957152+00:00
 ---
 
 # Connect to a Bitbucket Cloud host  |  Cloud Build  |  Google Cloud Documentation

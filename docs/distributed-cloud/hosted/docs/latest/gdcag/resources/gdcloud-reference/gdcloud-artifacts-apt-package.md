@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-artifacts-apt-package/
 title: gdcloud artifacts apt package \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:13:57.802801+00:00
+fetched_at: 2026-10-21T13:33:05.486049+00:00
 ---
 
 # gdcloud artifacts apt package  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

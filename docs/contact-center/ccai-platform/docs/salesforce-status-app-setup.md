@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/salesforce-status-app-setup/
 title: Salesforce Status App Setup 1.0 \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:59:00.952891+00:00
+fetched_at: 2026-10-21T14:07:49.156465+00:00
 ---
 
 # Salesforce Status App Setup 1.0  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

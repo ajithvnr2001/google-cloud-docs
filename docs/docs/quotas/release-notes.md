@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/quotas/release-notes/
 title: Cloud Quotas release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:25.309130+00:00
+fetched_at: 2026-10-21T14:39:48.021638+00:00
 ---
 
 # Cloud Quotas release notes  |  Google Cloud Documentation

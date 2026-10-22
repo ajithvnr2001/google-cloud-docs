@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/vpn/configure-the-tunnel/
 title: Create a VPN tunnel \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:54.936294+00:00
+fetched_at: 2026-10-21T12:59:50.760977+00:00
 ---
 
 # Create a VPN tunnel  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

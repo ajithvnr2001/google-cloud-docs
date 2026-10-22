@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/monitor-and-report/soar-reports/understanding-reports/
 title: Explore legacy SOAR reports \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:54:35.531252+00:00
+fetched_at: 2026-10-21T14:19:49.670939+00:00
 ---
 
 # Explore legacy SOAR reports  |  Google Security Operations  |  Google Cloud Documentation

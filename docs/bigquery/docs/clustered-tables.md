@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/clustered-tables/
 title: Introduction to clustered tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:42.583432+00:00
+fetched_at: 2026-10-21T12:39:53.976792+00:00
 ---
 
 # Introduction to clustered tables  |  BigQuery  |  Google Cloud Documentation

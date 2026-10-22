@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/wiz/
 title: Integrate Wiz with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:46:30.165999+00:00
+fetched_at: 2026-10-21T12:38:54.562456+00:00
 ---
 
 # Integrate Wiz with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

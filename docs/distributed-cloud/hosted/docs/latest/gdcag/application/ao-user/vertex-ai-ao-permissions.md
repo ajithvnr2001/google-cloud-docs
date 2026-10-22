@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-ao-permissions/
 title: Prepare IAM permissions \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:10:25.899805+00:00
+fetched_at: 2026-10-21T12:58:32.192156+00:00
 ---
 
 # Prepare IAM permissions  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

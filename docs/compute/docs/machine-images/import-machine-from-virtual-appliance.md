@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/machine-images/import-machine-from-virtual-appliance/
 title: Import machine images from virtual appliances \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:57:47.085304+00:00
+fetched_at: 2026-10-21T12:40:22.108441+00:00
 ---
 
 # Import machine images from virtual appliances  |  Compute Engine  |  Google Cloud Documentation

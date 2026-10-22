@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-ftp/update-server/
 title: Update an SFTP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:12:11.515156+00:00
+fetched_at: 2026-10-21T14:23:20.383693+00:00
 ---
 
 # Update an SFTP server  |  Google Cloud Documentation

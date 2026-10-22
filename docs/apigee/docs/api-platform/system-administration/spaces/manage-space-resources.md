@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/spaces/manage-space-resources/
 title: Manage API resources with Apigee Spaces \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:07:44.126605+00:00
+fetched_at: 2026-10-21T14:27:44.313976+00:00
 ---
 
 # Manage API resources with Apigee Spaces  |  Google Cloud Documentation

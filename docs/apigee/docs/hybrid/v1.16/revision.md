@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/revision/
 title: Rolling updates \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:59:23.189344+00:00
+fetched_at: 2026-10-21T14:28:46.963414+00:00
 ---
 
 # Rolling updates  |  Apigee  |  Google Cloud Documentation

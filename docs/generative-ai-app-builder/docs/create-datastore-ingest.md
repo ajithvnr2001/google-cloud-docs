@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/create-datastore-ingest/
 title: About apps and data stores \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:00.248698+00:00
+fetched_at: 2026-10-21T12:55:38.527751+00:00
 ---
 
 # About apps and data stores  |  Agent Search  |  Google Cloud Documentation

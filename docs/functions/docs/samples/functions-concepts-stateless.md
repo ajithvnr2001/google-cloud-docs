@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/samples/functions-concepts-stateless/
 title: Statelessness \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:22:03.894200+00:00
+fetched_at: 2026-10-21T12:51:51.059192+00:00
 ---
 
 # Statelessness  |  Cloud Run functions  |  Google Cloud Documentation

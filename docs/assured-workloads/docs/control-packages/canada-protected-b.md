@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/control-packages/canada-protected-b/
 title: Data Boundary for Canada Protected B \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:45.986308+00:00
+fetched_at: 2026-10-21T14:27:09.884965+00:00
 ---
 
 # Data Boundary for Canada Protected B  |  Assured Workloads  |  Google Cloud Documentation

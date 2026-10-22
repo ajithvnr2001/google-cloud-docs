@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-load-table-gcs-json-cmek/
 title: Load a table in JSON format \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:01.763272+00:00
+fetched_at: 2026-10-22T05:50:36.280098+00:00
 ---
 
 # Load a table in JSON format  |  BigQuery  |  Google Cloud Documentation

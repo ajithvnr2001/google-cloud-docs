@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/marketplace/develop-mp-connector/
 title: Develop a Marketplace connector \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:34.775381+00:00
+fetched_at: 2026-10-21T12:53:17.369283+00:00
 ---
 
 # Develop a Marketplace connector  |  Integration Connectors  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/manage-redis-auth/
 title: Manage Redis AUTH \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:53.248496+00:00
+fetched_at: 2026-10-21T15:14:53.622162+00:00
 ---
 
 # Manage Redis AUTH  |  Memorystore for Redis  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/hashicorp-integration/
 title: Use Hashicorp Vault CA with CA Service \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:37:55.451513+00:00
+fetched_at: 2026-10-21T14:23:58.864679+00:00
 ---
 
 # Use Hashicorp Vault CA with CA Service  |  Certificate Authority Service  |  Google Cloud Documentation

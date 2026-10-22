@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/samples/functions-concepts-node-termination-http/
 title: Node.js: terminate HTTP connection \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:03:37.931295+00:00
+fetched_at: 2026-10-21T12:52:04.460398+00:00
 ---
 
 # Node.js: terminate HTTP connection  |  Cloud Run functions  |  Google Cloud Documentation

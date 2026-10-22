@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-connectivity/docs/verified-peering-provider/
 title: Verified Peering Provider overview \u00a0|\u00a0 Network Connectivity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:36:07.564597+00:00
+fetched_at: 2026-10-21T15:17:14.602390+00:00
 ---
 
 # Verified Peering Provider overview  |  Network Connectivity  |  Google Cloud Documentation

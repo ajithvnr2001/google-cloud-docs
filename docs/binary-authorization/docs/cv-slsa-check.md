@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/cv-slsa-check/
 title: Use the SLSA check \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:45:59.710247+00:00
+fetched_at: 2026-10-21T14:11:16.055633+00:00
 ---
 
 # Use the SLSA check  |  Binary Authorization  |  Google Cloud Documentation

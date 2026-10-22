@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cloudflare-audit-changelog/
 title: Change log for CLOUDFLARE_AUDIT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:34:57.106809+00:00
+fetched_at: 2026-10-21T14:44:40.555911+00:00
 ---
 
 # Change log for CLOUDFLARE_AUDIT  |  Google Security Operations  |  Google Cloud Documentation

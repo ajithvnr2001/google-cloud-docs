@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/kubernetes-secrets/
 title: Sensitive information storage in Kubernetes using Cloud Code for IntelliJ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:21:37.916963+00:00
+fetched_at: 2026-10-21T12:41:02.442783+00:00
 ---
 
 # Sensitive information storage in Kubernetes using Cloud Code for IntelliJ  |  Google Cloud Documentation

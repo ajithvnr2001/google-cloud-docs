@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/hpc/reserve-capacity-account-team/
 title: Reserve capacity through your account team \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:08.072025+00:00
+fetched_at: 2026-10-21T14:22:33.698815+00:00
 ---
 
 # Reserve capacity through your account team  |  Compute Engine  |  Google Cloud Documentation

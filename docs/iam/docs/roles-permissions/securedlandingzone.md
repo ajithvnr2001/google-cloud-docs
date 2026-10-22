@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/securedlandingzone/
 title: Secured Landing Zone roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:35:08.846411+00:00
+fetched_at: 2026-10-21T14:30:13.066316+00:00
 ---
 
 # Secured Landing Zone roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

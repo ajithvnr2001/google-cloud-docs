@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/atlassian-audit/
 title: Collect Atlassian Organization Audit Log logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:41:14.673155+00:00
+fetched_at: 2026-10-21T14:11:57.061019+00:00
 ---
 
 # Collect Atlassian Organization Audit Log logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/configuring-notifications/configure-bigquery/
 title: Configure BigQuery notifications \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:08.309248+00:00
+fetched_at: 2026-10-21T14:11:27.017798+00:00
 ---
 
 # Configure BigQuery notifications  |  Cloud Build  |  Google Cloud Documentation

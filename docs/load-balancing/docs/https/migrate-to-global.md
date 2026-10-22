@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/load-balancing/docs/https/migrate-to-global/
 title: Migration overview \u00a0|\u00a0 Cloud Load Balancing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:45:21.364182+00:00
+fetched_at: 2026-10-21T15:03:29.911103+00:00
 ---
 
 # Migration overview  |  Cloud Load Balancing  |  Google Cloud Documentation

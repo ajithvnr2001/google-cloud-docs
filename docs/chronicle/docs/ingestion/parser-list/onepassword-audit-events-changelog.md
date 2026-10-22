@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/onepassword-audit-events-changelog/
 title: Change log for ONEPASSWORD_AUDIT_EVENTS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:32:40.417823+00:00
+fetched_at: 2026-10-21T14:47:10.175898+00:00
 ---
 
 # Change log for ONEPASSWORD_AUDIT_EVENTS  |  Google Security Operations  |  Google Cloud Documentation

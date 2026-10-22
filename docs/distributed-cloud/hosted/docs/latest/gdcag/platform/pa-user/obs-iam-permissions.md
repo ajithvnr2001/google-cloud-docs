@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/obs-iam-permissions/
 title: Prepare IAM permissions \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:44:01.564318+00:00
+fetched_at: 2026-10-21T13:32:53.283596+00:00
 ---
 
 # Prepare IAM permissions  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

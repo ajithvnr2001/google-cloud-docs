@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/search-joins/
 title: Apply joins in search and dashboards \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:38:20.996265+00:00
+fetched_at: 2026-10-21T14:19:21.884768+00:00
 ---
 
 # Apply joins in search and dashboards  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/bluecoat_webproxy_changelog/
 title: Change log for BLUECOAT_WEBPROXY \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:42:49.701818+00:00
+fetched_at: 2026-10-21T14:51:53.072652+00:00
 ---
 
 # Change log for BLUECOAT_WEBPROXY  |  Google Security Operations  |  Google Cloud Documentation

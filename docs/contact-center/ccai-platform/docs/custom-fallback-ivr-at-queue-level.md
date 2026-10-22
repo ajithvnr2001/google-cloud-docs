@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/custom-fallback-ivr-at-queue-level/
 title: Custom fallback IVR at the queue level \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:07.149091+00:00
+fetched_at: 2026-10-21T14:22:14.852707+00:00
 ---
 
 # Custom fallback IVR at the queue level  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

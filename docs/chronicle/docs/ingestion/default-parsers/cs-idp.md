@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/cs-idp/
 title: Collect CrowdStrike Identity Protection (IDP) Services logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:34:11.855041+00:00
+fetched_at: 2026-10-21T12:38:58.437733+00:00
 ---
 
 # Collect CrowdStrike Identity Protection (IDP) Services logs  |  Google Security Operations  |  Google Cloud Documentation

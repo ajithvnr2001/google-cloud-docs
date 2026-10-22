@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-intelligence-center/docs/performance-dashboard/how-to/view-project-specific-latency/
 title: View project-specific latency dashboard \u00a0|\u00a0 Network Intelligence Center - Performance Dashboard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:28:42.268127+00:00
+fetched_at: 2026-10-21T15:14:50.638761+00:00
 ---
 
 # View project-specific latency dashboard  |  Network Intelligence Center - Performance Dashboard  |  Google Cloud Documentation

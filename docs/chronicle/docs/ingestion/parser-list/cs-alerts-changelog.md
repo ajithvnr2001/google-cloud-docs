@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cs-alerts-changelog/
 title: Change log for CS_ALERTS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:07:36.436523+00:00
+fetched_at: 2026-10-21T14:44:38.708959+00:00
 ---
 
 # Change log for CS_ALERTS  |  Google Security Operations  |  Google Cloud Documentation

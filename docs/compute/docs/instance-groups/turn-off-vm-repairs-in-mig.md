@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/turn-off-vm-repairs-in-mig/
 title: Turn off repairs in a MIG \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:16.642054+00:00
+fetched_at: 2026-10-21T14:22:25.633239+00:00
 ---
 
 # Turn off repairs in a MIG  |  Compute Engine  |  Google Cloud Documentation

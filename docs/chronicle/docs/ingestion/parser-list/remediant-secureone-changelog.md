@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/remediant-secureone-changelog/
 title: Change log for REMEDIANT_SECUREONE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:34:51.692940+00:00
+fetched_at: 2026-10-21T14:43:28.511252+00:00
 ---
 
 # Change log for REMEDIANT_SECUREONE  |  Google Security Operations  |  Google Cloud Documentation

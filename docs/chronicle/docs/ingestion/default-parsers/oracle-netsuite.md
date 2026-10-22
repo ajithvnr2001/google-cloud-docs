@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/oracle-netsuite/
 title: Collect Oracle NetSuite logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:27.571034+00:00
+fetched_at: 2026-10-21T14:11:11.963344+00:00
 ---
 
 # Collect Oracle NetSuite logs  |  Google Security Operations  |  Google Cloud Documentation

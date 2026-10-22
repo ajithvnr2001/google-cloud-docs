@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/tipcommon/tc-extraction-module/
 title: Extraction module \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:50:53.180879+00:00
+fetched_at: 2026-10-21T14:21:03.458450+00:00
 ---
 
 # Extraction module  |  Google Security Operations  |  Google Cloud Documentation

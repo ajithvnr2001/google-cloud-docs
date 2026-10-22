@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/azure-ad-signin-changelog/
 title: Change log for AZURE_AD_SIGNIN \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:23:17.799810+00:00
+fetched_at: 2026-10-21T14:45:43.422288+00:00
 ---
 
 # Change log for AZURE_AD_SIGNIN  |  Google Security Operations  |  Google Cloud Documentation

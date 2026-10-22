@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/resources/quotas/
 title: Quotas and system limits \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:36:45.943336+00:00
+fetched_at: 2026-10-21T12:55:30.706528+00:00
 ---
 
 # Quotas and system limits  |  CX Agent Studio  |  Google Cloud Documentation

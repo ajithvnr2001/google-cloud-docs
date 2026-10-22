@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/communicating-between-services/
 title: Communicating between your services \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:09.547550+00:00
+fetched_at: 2026-10-21T12:30:10.617282+00:00
 ---
 
 # Communicating between your services  |  App Engine flexible environment  |  Google Cloud Documentation

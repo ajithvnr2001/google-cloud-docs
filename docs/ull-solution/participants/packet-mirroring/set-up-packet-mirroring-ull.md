@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ull-solution/participants/packet-mirroring/set-up-packet-mirroring-ull/
 title: Set up Packet Mirroring for ULL VPC networks \u00a0|\u00a0 Ultra Low Latency Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:06.737487+00:00
+fetched_at: 2026-10-22T05:47:32.154887+00:00
 ---
 
 # Set up Packet Mirroring for ULL VPC networks  |  Ultra Low Latency Solution  |  Google Cloud Documentation
@@ -53,16 +53,14 @@ To receive mirrored traffic, create ULL Mirroring collector instances and an int
 
 To create the collector instances, the internal passthrough Network Load Balancer, and the forwarding rule, follow these steps:
 
-  1. Ask the exchange operator to grant you the `networksecurity.ullMirroringEngines.use` permission in the project that contains the `UllMirroringEngine` resource.
-
-
-  1. Create one or more collector instances in the collector project. For more information, see Create a ULL Packet Mirroring collector. 
+  1. Ask the exchange operator to grant you the `networksecurity.ullMirroringEngines.use` permission in the project that contains the `UllMirroringEngine` resource. 
+  2. Create one or more collector instances in the collector project. For more information, see Create a ULL Packet Mirroring collector. 
      * Verify that the VPC network used by the collector instances has an MTU of at least 1808 bytes.
      * Install software capable of receiving and analyzing GENEVE-encapsulated traffic.
-  2. Add the collector instances to an instance group.
-  3. Create a health check for your collector application.
-  4. Create a regional backend service for the internal passthrough Network Load Balancer with the protocol set to `UDP`.
-  5. Create the forwarding rule for the internal passthrough Network Load Balancer. For more information, see Create an internal load balancer for Packet Mirroring.
+  3. Add the collector instances to an instance group.
+  4. Create a health check for your collector application.
+  5. Create a regional backend service for the internal passthrough Network Load Balancer with the protocol set to `UDP`.
+  6. Create the forwarding rule for the internal passthrough Network Load Balancer. For more information, see Create an internal load balancer for Packet Mirroring.
 
 When you configure the forwarding rule, specify the `--is-mirroring-collector` flag, set `--ip-protocol` to `UDP`, and set `--ports` to `6081`.
 
@@ -756,6 +754,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

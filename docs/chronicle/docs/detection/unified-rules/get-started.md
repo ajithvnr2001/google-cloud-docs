@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/unified-rules/get-started/
 title: Detect threats with unified rules \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:18.528897+00:00
+fetched_at: 2026-10-21T14:26:04.158195+00:00
 ---
 
 # Detect threats with unified rules  |  Google Security Operations  |  Google Cloud Documentation

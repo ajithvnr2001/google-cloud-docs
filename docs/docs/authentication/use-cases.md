@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/authentication/use-cases/
 title: Authentication and authorization use cases \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:53:06.111706+00:00
+fetched_at: 2026-10-21T14:07:10.418069+00:00
 ---
 
 # Authentication and authorization use cases  |  Google Cloud Documentation

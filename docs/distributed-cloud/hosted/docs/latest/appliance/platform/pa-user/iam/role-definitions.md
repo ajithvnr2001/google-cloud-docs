@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/platform/pa-user/iam/role-definitions/
 title: Role definitions \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:40.975933+00:00
+fetched_at: 2026-10-21T12:56:31.665041+00:00
 ---
 
 # Role definitions  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

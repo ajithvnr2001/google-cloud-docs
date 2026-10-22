@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-reservation-changes/
 title: RESERVATION_CHANGES view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T09:50:03.925792+00:00
+fetched_at: 2026-10-21T12:35:49.327813+00:00
 ---
 
 # RESERVATION_CHANGES view  |  BigQuery  |  Google Cloud Documentation

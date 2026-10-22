@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-regional-disk-attach-read-only/
 title: Attach a regional disk to a Compute Engine VM instance in read-only mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:48:21.142286+00:00
+fetched_at: 2026-10-22T05:50:09.225313+00:00
 ---
 
 # Attach a regional disk to a Compute Engine VM instance in read-only mode  |  Google Cloud Documentation

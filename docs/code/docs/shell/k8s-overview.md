@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/k8s-overview/
 title: Cloud Code for Cloud Shell Kubernetes overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:16:46.565278+00:00
+fetched_at: 2026-10-21T14:20:53.436399+00:00
 ---
 
 # Cloud Code for Cloud Shell Kubernetes overview  |  Google Cloud Documentation

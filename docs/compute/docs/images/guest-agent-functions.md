@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/guest-agent-functions/
 title: Guest agent functionality \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:11:03.999483+00:00
+fetched_at: 2026-10-21T14:21:36.933474+00:00
 ---
 
 # Guest agent functionality  |  Compute Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/samples/datastore-query-filter-or/
 title: Create a union of two filters (OR operator) \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:23.728164+00:00
+fetched_at: 2026-10-22T05:42:08.502283+00:00
 ---
 
 # Create a union of two filters (OR operator)  |  Firestore in Datastore mode  |  Google Cloud Documentation

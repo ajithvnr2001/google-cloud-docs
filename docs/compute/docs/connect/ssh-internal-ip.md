@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/connect/ssh-internal-ip/
 title: Choose a connection option for internal-only VMs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:17.400969+00:00
+fetched_at: 2026-10-21T12:40:19.051328+00:00
 ---
 
 # Choose a connection option for internal-only VMs  |  Compute Engine  |  Google Cloud Documentation

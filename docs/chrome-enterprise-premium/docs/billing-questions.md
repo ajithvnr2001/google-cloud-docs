@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/billing-questions/
 title: Billing Questions \u00a0|\u00a0 Chrome Enterprise Premium \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:44:15.478009+00:00
+fetched_at: 2026-10-21T14:25:44.915495+00:00
 ---
 
 # Billing Questions  |  Chrome Enterprise Premium  |  Google Cloud Documentation

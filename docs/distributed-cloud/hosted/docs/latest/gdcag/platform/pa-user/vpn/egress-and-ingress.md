@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/vpn/egress-and-ingress/
 title: Control ingress and egress traffic \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:55.421168+00:00
+fetched_at: 2026-10-21T12:59:22.928469+00:00
 ---
 
 # Control ingress and egress traffic  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

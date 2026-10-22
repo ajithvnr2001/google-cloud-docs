@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/supported-languages/
 title: Supported languages, IDEs, and interfaces \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:02:47.953018+00:00
+fetched_at: 2026-10-21T12:51:37.627142+00:00
 ---
 
 # Supported languages, IDEs, and interfaces  |  Gemini for Google Cloud  |  Google Cloud Documentation

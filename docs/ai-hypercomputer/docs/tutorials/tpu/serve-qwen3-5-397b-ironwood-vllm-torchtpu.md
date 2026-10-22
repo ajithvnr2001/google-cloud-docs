@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/serve-qwen3-5-397b-ironwood-vllm-torchtpu/
 title: Serve Qwen3.5-397B on GKE with vLLM TorchTPU on TPU7x accelerators \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:26:38.158048+00:00
+fetched_at: 2026-10-22T05:40:09.929775+00:00
 ---
 
 # Serve Qwen3.5-397B on GKE with vLLM TorchTPU on TPU7x accelerators  |  AI Hypercomputer  |  Google Cloud Documentation

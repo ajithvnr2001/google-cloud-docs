@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/grpc/deploying-apis-subdomains/
 title: Serving multiple APIs from a domain \u00a0|\u00a0 Cloud Endpoints with gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:36:09.202953+00:00
+fetched_at: 2026-10-21T12:46:09.020825+00:00
 ---
 
 # Serving multiple APIs from a domain  |  Cloud Endpoints with gRPC  |  Google Cloud Documentation

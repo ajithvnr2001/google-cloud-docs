@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/integration-with-service-extensions/
 title: Use Service Extensions for edge compute \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:29:50.852663+00:00
+fetched_at: 2026-10-21T14:23:45.659586+00:00
 ---
 
 # Use Service Extensions for edge compute  |  Cloud CDN  |  Google Cloud Documentation

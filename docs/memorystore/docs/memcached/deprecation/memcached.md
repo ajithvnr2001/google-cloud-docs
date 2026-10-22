@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/memcached/deprecation/memcached/
 title: Memorystore for Memcached \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:46:05.205374+00:00
+fetched_at: 2026-10-21T15:11:45.330576+00:00
 ---
 
 # Memorystore for Memcached  |  Google Cloud Documentation

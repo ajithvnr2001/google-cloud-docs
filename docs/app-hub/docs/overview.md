@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/overview/
 title: App Hub overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:57.497474+00:00
+fetched_at: 2026-10-21T12:30:15.120276+00:00
 ---
 
 # App Hub overview  |  Google Cloud Documentation

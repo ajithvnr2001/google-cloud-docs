@@ -1,21 +1,21 @@
 ---
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/columnar-engine/maintain-content-freshness/
-title: Maintain freshness of in-memory column store data \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: Current (18.3.0) \u00a0|\u00a0 Google Cloud Documentation
+title: Maintain freshness of in-memory column store data \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:51:38.335831+00:00
+fetched_at: 2026-10-21T14:55:50.678914+00:00
 ---
 
-# Maintain freshness of in-memory column store data  |  AlloyDB Omni using the container orchestrator: Current (18.3.0)  |  Google Cloud Documentation
+# Maintain freshness of in-memory column store data  |  AlloyDB Omni using the container orchestrator: Current (18.4.0)  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/columnar-engine/maintain-content-freshness/
 
-This page documents AlloyDB Omni version **18.3.0** using the **container orchestrator** deployment option. [Choose a different deployment option](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment). 
+This page documents AlloyDB Omni version **18.4.0** using the **container orchestrator** deployment option. [Choose a different deployment option](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment). 
 
   * [ Home ](https://docs.cloud.google.com/)
   * [ Documentation ](https://docs.cloud.google.com/docs)
   * [ Databases ](https://docs.cloud.google.com/docs/databases)
   * [ AlloyDB Omni ](https://docs.cloud.google.com/alloydb/omni/docs)
-  * [ Container orchestrator: Current (18.3.0) ](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/overview)
+  * [ Container orchestrator: Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/overview)
 
 
 
@@ -23,7 +23,7 @@ Send feedback
 
 #  Maintain freshness of in-memory column store data Stay organized with collections  Save and categorize content based on your preferences. 
 
-Select a documentation version: 18.3.0keyboard_arrow_down
+Select a documentation version: 18.4.0keyboard_arrow_down
 
   * [ Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/columnar-engine/maintain-content-freshness)
   * [ 18.4.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.4.0/docs/columnar-engine/maintain-content-freshness)
@@ -154,6 +154,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

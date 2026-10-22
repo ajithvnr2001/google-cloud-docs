@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/document-ai/docs/deprecation/
 title: Document AI deprecations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:46:14.560102+00:00
+fetched_at: 2026-10-21T14:08:26.545634+00:00
 ---
 
 # Document AI deprecations  |  Google Cloud Documentation

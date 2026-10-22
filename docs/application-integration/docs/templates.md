@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/templates/
 title: Templates \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:51:12.815554+00:00
+fetched_at: 2026-10-21T12:35:39.401811+00:00
 ---
 
 # Templates  |  Application Integration  |  Google Cloud Documentation

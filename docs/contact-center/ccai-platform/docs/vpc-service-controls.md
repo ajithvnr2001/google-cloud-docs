@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/vpc-service-controls/
 title: VPC Service Controls \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:47:10.478727+00:00
+fetched_at: 2026-10-21T14:22:37.340946+00:00
 ---
 
 # VPC Service Controls  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

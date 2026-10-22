@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.7/how-to/monitoring-overview/
 title: Logging and monitoring overview \u00a0|\u00a0 Kf 2.7 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:45:56.087411+00:00
+fetched_at: 2026-10-21T15:17:10.011829+00:00
 ---
 
 # Logging and monitoring overview  |  Kf 2.7  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/storage-options/
 title: Understanding data and file storage \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:42.001551+00:00
+fetched_at: 2026-10-21T12:30:55.129800+00:00
 ---
 
 # Understanding data and file storage  |  App Engine standard environment  |  Google Cloud Documentation

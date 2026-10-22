@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/supported-versions/
 title: Supported versions \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:51.119087+00:00
+fetched_at: 2026-10-21T15:13:48.977999+00:00
 ---
 
 # Supported versions  |  Memorystore for Redis  |  Google Cloud Documentation

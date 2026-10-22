@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/slot-estimator/
 title: Estimate slot capacity requirements \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:14:12.680017+00:00
+fetched_at: 2026-10-21T12:36:18.910778+00:00
 ---
 
 # Estimate slot capacity requirements  |  BigQuery  |  Google Cloud Documentation

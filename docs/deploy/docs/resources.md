@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/resources/
 title: Resources \u00a0|\u00a0 Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:14:54.858618+00:00
+fetched_at: 2026-10-22T05:40:44.863239+00:00
 ---
 
 # Resources  |  Cloud Deploy  |  Google Cloud Documentation

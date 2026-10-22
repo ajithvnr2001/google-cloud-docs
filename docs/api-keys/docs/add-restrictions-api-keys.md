@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-keys/docs/add-restrictions-api-keys/
 title: Adding restrictions to API keys \u00a0|\u00a0 API Keys API Documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:20:39.783757+00:00
+fetched_at: 2026-10-21T14:26:33.750316+00:00
 ---
 
 # Adding restrictions to API keys  |  API Keys API Documentation  |  Google Cloud Documentation

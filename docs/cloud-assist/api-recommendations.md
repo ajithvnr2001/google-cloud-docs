@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/api-recommendations/
 title: API recommendations for using Gemini Cloud Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:14:01.456813+00:00
+fetched_at: 2026-10-21T14:08:07.786165+00:00
 ---
 
 # API recommendations for using Gemini Cloud Assist  |  Google Cloud Documentation

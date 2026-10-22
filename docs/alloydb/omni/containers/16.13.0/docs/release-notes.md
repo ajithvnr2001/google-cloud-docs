@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/16.13.0/docs/release-notes/
 title: AlloyDB Omni release notes \u00a0|\u00a0 AlloyDB Omni using containers: 16.13.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:39:46.838566+00:00
+fetched_at: 2026-10-21T14:55:31.693637+00:00
 ---
 
 # AlloyDB Omni release notes  |  AlloyDB Omni using containers: 16.13.0  |  Google Cloud Documentation
@@ -29,6 +29,141 @@ This page contains release notes for features and updates to AlloyDB Omni.
 You can see the latest product updates for all of Google Cloud on the [ Google Cloud](https://docs.cloud.google.com/release-notes) page, browse and filter all release notes in the [Google Cloud console](https://console.cloud.google.com/release-notes), or programmatically access release notes in [BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_cloud_release_notes&t=release_notes&page=table). 
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/alloydbomni-release-notes.xml) directly. 
+
+## October 13, 2026
+
+Announcement
+
+AlloyDB Omni version 18.4.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) and includes the following:
+
+  * Support for [PostgreSQL version 18.4](https://www.postgresql.org/docs/release/18.4/).
+  * Critical security patches and internal stability improvements.
+  * Support for [advanced query insights](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/monitor-query-insights) for standalone AlloyDB Omni instances using containers. You can use the `google_insights_v2` extension to access granular metrics, including query execution statistics and wait events, for near real-time performance troubleshooting.
+  * Support for Thales CipherTrust Manager as an external Key Management Service (KMS) provider for transparent data encryption (TDE), in addition to HashiCorp Vault. For more information, see [Create a TDE-enabled cluster](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/create-tde-cluster).
+
+
+
+Security
+
+Fixes for the following vulnerabilities are available for version 18.4.0:
+
+  * [CVE-2026-19385](https://nvd.nist.gov/vuln/detail/CVE-2026-19385)
+  * [CVE-2026-18408](https://nvd.nist.gov/vuln/detail/CVE-2026-18408)
+  * [CVE-2026-16239](https://nvd.nist.gov/vuln/detail/CVE-2026-16239)
+  * [CVE-2026-15742](https://nvd.nist.gov/vuln/detail/CVE-2026-15742)
+  * [CVE-2026-15741](https://nvd.nist.gov/vuln/detail/CVE-2026-15741)
+  * [CVE-2026-14680](https://nvd.nist.gov/vuln/detail/CVE-2026-14680)
+  * [CVE-2026-14679](https://nvd.nist.gov/vuln/detail/CVE-2026-14679)
+  * [CVE-2026-14677](https://nvd.nist.gov/vuln/detail/CVE-2026-14677)
+  * [CVE-2026-14671](https://nvd.nist.gov/vuln/detail/CVE-2026-14671)
+  * [CVE-2026-14670](https://nvd.nist.gov/vuln/detail/CVE-2026-14670)
+  * [CVE-2026-14669](https://nvd.nist.gov/vuln/detail/CVE-2026-14669)
+  * [CVE-2026-14668](https://nvd.nist.gov/vuln/detail/CVE-2026-14668)
+  * [CVE-2026-14664](https://nvd.nist.gov/vuln/detail/CVE-2026-14664)
+  * [CVE-2026-14662](https://nvd.nist.gov/vuln/detail/CVE-2026-14662)
+  * [CVE-2026-6471](https://nvd.nist.gov/vuln/detail/CVE-2026-6471)
+  * [CVE-2026-6464](https://nvd.nist.gov/vuln/detail/CVE-2026-6464)
+
+
+
+Announcement
+
+AlloyDB Omni version 17.10.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) and includes the following:
+
+  * Support for [PostgreSQL version 17.10](https://www.postgresql.org/docs/release/17.10/).
+  * Critical security patches and internal stability improvements.
+  * Support for [advanced query insights](https://docs.cloud.google.com/alloydb/omni/containers/17.10.0/docs/monitor-query-insights) for standalone AlloyDB Omni instances using containers. You can use the `google_insights_v2` extension to access granular metrics, including query execution statistics and wait events, for near real-time performance troubleshooting.
+
+
+
+Security
+
+Fixes for the following vulnerabilities are available for version 17.10.0:
+
+  * [CVE-2026-19385](https://nvd.nist.gov/vuln/detail/CVE-2026-19385)
+  * [CVE-2026-18408](https://nvd.nist.gov/vuln/detail/CVE-2026-18408)
+  * [CVE-2026-16239](https://nvd.nist.gov/vuln/detail/CVE-2026-16239)
+  * [CVE-2026-15742](https://nvd.nist.gov/vuln/detail/CVE-2026-15742)
+  * [CVE-2026-15741](https://nvd.nist.gov/vuln/detail/CVE-2026-15741)
+  * [CVE-2026-14680](https://nvd.nist.gov/vuln/detail/CVE-2026-14680)
+  * [CVE-2026-14679](https://nvd.nist.gov/vuln/detail/CVE-2026-14679)
+  * [CVE-2026-14677](https://nvd.nist.gov/vuln/detail/CVE-2026-14677)
+  * [CVE-2026-14671](https://nvd.nist.gov/vuln/detail/CVE-2026-14671)
+  * [CVE-2026-14670](https://nvd.nist.gov/vuln/detail/CVE-2026-14670)
+  * [CVE-2026-14669](https://nvd.nist.gov/vuln/detail/CVE-2026-14669)
+  * [CVE-2026-14668](https://nvd.nist.gov/vuln/detail/CVE-2026-14668)
+  * [CVE-2026-14664](https://nvd.nist.gov/vuln/detail/CVE-2026-14664)
+  * [CVE-2026-14662](https://nvd.nist.gov/vuln/detail/CVE-2026-14662)
+  * [CVE-2026-6471](https://nvd.nist.gov/vuln/detail/CVE-2026-6471)
+  * [CVE-2026-6464](https://nvd.nist.gov/vuln/detail/CVE-2026-6464)
+
+
+
+Announcement
+
+AlloyDB Omni version 16.14.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) and includes the following:
+
+  * Support for [PostgreSQL version 16.14](https://www.postgresql.org/docs/release/16.14/).
+  * Critical security patches and internal stability improvements.
+  * Support for [advanced query insights](https://docs.cloud.google.com/alloydb/omni/containers/16.14.0/docs/monitor-query-insights) for standalone AlloyDB Omni instances using containers. You can use the `google_insights_v2` extension to access granular metrics, including query execution statistics and wait events, for near real-time performance troubleshooting.
+
+
+
+Security
+
+Fixes for the following vulnerabilities are available for version 16.14.0:
+
+  * [CVE-2026-19385](https://nvd.nist.gov/vuln/detail/CVE-2026-19385)
+  * [CVE-2026-18408](https://nvd.nist.gov/vuln/detail/CVE-2026-18408)
+  * [CVE-2026-16239](https://nvd.nist.gov/vuln/detail/CVE-2026-16239)
+  * [CVE-2026-15742](https://nvd.nist.gov/vuln/detail/CVE-2026-15742)
+  * [CVE-2026-15741](https://nvd.nist.gov/vuln/detail/CVE-2026-15741)
+  * [CVE-2026-14680](https://nvd.nist.gov/vuln/detail/CVE-2026-14680)
+  * [CVE-2026-14679](https://nvd.nist.gov/vuln/detail/CVE-2026-14679)
+  * [CVE-2026-14677](https://nvd.nist.gov/vuln/detail/CVE-2026-14677)
+  * [CVE-2026-14671](https://nvd.nist.gov/vuln/detail/CVE-2026-14671)
+  * [CVE-2026-14670](https://nvd.nist.gov/vuln/detail/CVE-2026-14670)
+  * [CVE-2026-14669](https://nvd.nist.gov/vuln/detail/CVE-2026-14669)
+  * [CVE-2026-14668](https://nvd.nist.gov/vuln/detail/CVE-2026-14668)
+  * [CVE-2026-14664](https://nvd.nist.gov/vuln/detail/CVE-2026-14664)
+  * [CVE-2026-14662](https://nvd.nist.gov/vuln/detail/CVE-2026-14662)
+  * [CVE-2026-6471](https://nvd.nist.gov/vuln/detail/CVE-2026-6471)
+  * [CVE-2026-6464](https://nvd.nist.gov/vuln/detail/CVE-2026-6464)
+
+
+
+Announcement
+
+AlloyDB Omni version 15.18.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) and includes the following:
+
+  * Support for [PostgreSQL version 15.18](https://www.postgresql.org/docs/release/15.18/).
+  * Critical security patches and internal stability improvements.
+  * Support for [advanced query insights](https://docs.cloud.google.com/alloydb/omni/containers/15.18.0/docs/monitor-query-insights) for standalone AlloyDB Omni instances using containers. You can use the `google_insights_v2` extension to access granular metrics, including query execution statistics and wait events, for near real-time performance troubleshooting.
+
+
+
+Security
+
+Fixes for the following vulnerabilities are available for version 15.18.0:
+
+  * [CVE-2026-19385](https://nvd.nist.gov/vuln/detail/CVE-2026-19385)
+  * [CVE-2026-18408](https://nvd.nist.gov/vuln/detail/CVE-2026-18408)
+  * [CVE-2026-16239](https://nvd.nist.gov/vuln/detail/CVE-2026-16239)
+  * [CVE-2026-15742](https://nvd.nist.gov/vuln/detail/CVE-2026-15742)
+  * [CVE-2026-15741](https://nvd.nist.gov/vuln/detail/CVE-2026-15741)
+  * [CVE-2026-14680](https://nvd.nist.gov/vuln/detail/CVE-2026-14680)
+  * [CVE-2026-14679](https://nvd.nist.gov/vuln/detail/CVE-2026-14679)
+  * [CVE-2026-14677](https://nvd.nist.gov/vuln/detail/CVE-2026-14677)
+  * [CVE-2026-14671](https://nvd.nist.gov/vuln/detail/CVE-2026-14671)
+  * [CVE-2026-14670](https://nvd.nist.gov/vuln/detail/CVE-2026-14670)
+  * [CVE-2026-14669](https://nvd.nist.gov/vuln/detail/CVE-2026-14669)
+  * [CVE-2026-14668](https://nvd.nist.gov/vuln/detail/CVE-2026-14668)
+  * [CVE-2026-14664](https://nvd.nist.gov/vuln/detail/CVE-2026-14664)
+  * [CVE-2026-14662](https://nvd.nist.gov/vuln/detail/CVE-2026-14662)
+  * [CVE-2026-6471](https://nvd.nist.gov/vuln/detail/CVE-2026-6471)
+  * [CVE-2026-6464](https://nvd.nist.gov/vuln/detail/CVE-2026-6464)
+
+
 
 ## July 29, 2026
 

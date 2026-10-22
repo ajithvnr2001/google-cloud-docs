@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cis-albert-alert-changelog/
 title: Change log for CIS_ALBERT_ALERT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:00:01.729280+00:00
+fetched_at: 2026-10-21T14:44:58.410779+00:00
 ---
 
 # Change log for CIS_ALBERT_ALERT  |  Google Security Operations  |  Google Cloud Documentation

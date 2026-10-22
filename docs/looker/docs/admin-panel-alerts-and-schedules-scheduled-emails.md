@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/admin-panel-alerts-and-schedules-scheduled-emails/
 title: Admin settings - Scheduled Emails \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:43:02.397876+00:00
+fetched_at: 2026-10-21T15:17:11.978232+00:00
 ---
 
 # Admin settings - Scheduled Emails  |  Looker  |  Google Cloud Documentation

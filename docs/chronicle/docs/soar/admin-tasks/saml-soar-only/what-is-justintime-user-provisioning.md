@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/saml-soar-only/what-is-justintime-user-provisioning/
 title: Configure just-in-time provisioning \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:00:48.270406+00:00
+fetched_at: 2026-10-21T14:21:34.622730+00:00
 ---
 
 # Configure just-in-time provisioning  |  Google Security Operations  |  Google Cloud Documentation

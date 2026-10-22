@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/envoy-adapter/v2.0.x/getting-started/
 title: Getting started \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:48:30.291754+00:00
+fetched_at: 2026-10-21T14:26:50.455755+00:00
 ---
 
 # Getting started  |  Apigee  |  Google Cloud Documentation

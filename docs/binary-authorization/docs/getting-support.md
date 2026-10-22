@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/getting-support/
 title: Get support \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:30:54.321290+00:00
+fetched_at: 2026-10-21T14:23:24.460362+00:00
 ---
 
 # Get support  |  Binary Authorization  |  Google Cloud Documentation

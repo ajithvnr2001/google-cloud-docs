@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/administration/configure-datarbac-dashboards/
 title: Control access to dashboards \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:40.191774+00:00
+fetched_at: 2026-10-21T14:11:00.892971+00:00
 ---
 
 # Control access to dashboards  |  Google Security Operations  |  Google Cloud Documentation

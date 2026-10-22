@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/google-cloud-api/
 title: Google Cloud API \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:55:26.269624+00:00
+fetched_at: 2026-10-21T14:06:04.621370+00:00
 ---
 
 # Google Cloud API  |  Google Security Operations  |  Google Cloud Documentation

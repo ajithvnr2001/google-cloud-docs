@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/bmc-client-management-changelog/
 title: Change log for BMC_CLIENT_MANAGEMENT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:04:51.342772+00:00
+fetched_at: 2026-10-21T14:51:52.690469+00:00
 ---
 
 # Change log for BMC_CLIENT_MANAGEMENT  |  Google Security Operations  |  Google Cloud Documentation

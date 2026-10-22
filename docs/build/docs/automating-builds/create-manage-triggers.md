@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/create-manage-triggers/
 title: Create and manage build triggers \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:05.009106+00:00
+fetched_at: 2026-10-21T14:18:48.518254+00:00
 ---
 
 # Create and manage build triggers  |  Cloud Build  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-control-plane-authority/
 title: About GKE control plane authority \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:12.788934+00:00
+fetched_at: 2026-10-21T14:59:35.681414+00:00
 ---
 
 # About GKE control plane authority  |  GKE security  |  Google Cloud Documentation

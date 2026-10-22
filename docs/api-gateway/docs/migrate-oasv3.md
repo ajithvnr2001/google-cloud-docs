@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/migrate-oasv3/
 title: Modify a gateway to use OpenAPI 3.x \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:14:08.169440+00:00
+fetched_at: 2026-10-21T14:09:45.203457+00:00
 ---
 
 # Modify a gateway to use OpenAPI 3.x  |  API Gateway  |  Google Cloud Documentation

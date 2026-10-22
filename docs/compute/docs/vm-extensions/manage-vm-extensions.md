@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/vm-extensions/manage-vm-extensions/
 title: Manage VM extensions by using extension policies \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:08:24.873339+00:00
+fetched_at: 2026-10-21T14:08:47.718507+00:00
 ---
 
 # Manage VM extensions by using extension policies  |  Compute Engine  |  Google Cloud Documentation

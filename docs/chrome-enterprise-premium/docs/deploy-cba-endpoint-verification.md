@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/deploy-cba-endpoint-verification/
 title: Deploy Endpoint Verification to use with certificate-based access \u00a0|\u00a0 Chrome Enterprise Premium \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:25:03.233760+00:00
+fetched_at: 2026-10-21T14:23:19.262727+00:00
 ---
 
 # Deploy Endpoint Verification to use with certificate-based access  |  Chrome Enterprise Premium  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/php-gen2/release-notes/
 title: App Engine standard environment for PHP gen2 release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:27:21.599108+00:00
+fetched_at: 2026-10-21T14:43:07.506779+00:00
 ---
 
 # App Engine standard environment for PHP gen2 release notes  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kms/docs/samples/kms-create-key-for-import/
 title: Create a key for import \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:44.096329+00:00
+fetched_at: 2026-10-21T15:02:19.250315+00:00
 ---
 
 # Create a key for import  |  Cloud Key Management Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/create-external-subnets/
 title: Bring your own IP addresses with external subnets \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:50.329287+00:00
+fetched_at: 2026-10-21T12:58:45.580130+00:00
 ---
 
 # Bring your own IP addresses with external subnets  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

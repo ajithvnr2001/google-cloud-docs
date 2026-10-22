@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/import/import-existing-image/
 title: Manually import boot disks \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:14.267362+00:00
+fetched_at: 2026-10-21T14:19:25.752282+00:00
 ---
 
 # Manually import boot disks  |  Compute Engine  |  Google Cloud Documentation

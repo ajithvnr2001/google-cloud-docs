@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/create-investigation/
 title: Create a Gemini Cloud Assist investigation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:14:01.702938+00:00
+fetched_at: 2026-10-21T14:08:15.641690+00:00
 ---
 
 # Create a Gemini Cloud Assist investigation  |  Google Cloud Documentation

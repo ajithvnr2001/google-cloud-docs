@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/kaspersky-endpoint-changelog/
 title: Change log for KASPERSKY_ENDPOINT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:31:53.507930+00:00
+fetched_at: 2026-10-21T14:43:39.516633+00:00
 ---
 
 # Change log for KASPERSKY_ENDPOINT  |  Google Security Operations  |  Google Cloud Documentation

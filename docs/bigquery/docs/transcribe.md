@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/transcribe/
 title: Transcribe audio files with the ML.TRANSCRIBE function \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:45:52.858140+00:00
+fetched_at: 2026-10-21T14:09:08.202871+00:00
 ---
 
 # Transcribe audio files with the ML.TRANSCRIBE function  |  BigQuery  |  Google Cloud Documentation

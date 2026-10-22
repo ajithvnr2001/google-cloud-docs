@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-delete-materialized-view/
 title: Delete materialized view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:52.289155+00:00
+fetched_at: 2026-10-21T14:19:53.507255+00:00
 ---
 
 # Delete materialized view  |  BigQuery  |  Google Cloud Documentation

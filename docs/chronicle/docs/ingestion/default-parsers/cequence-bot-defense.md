@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/cequence-bot-defense/
 title: Collect Cequence Bot Defense logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:54:15.945439+00:00
+fetched_at: 2026-10-21T14:09:12.963878+00:00
 ---
 
 # Collect Cequence Bot Defense logs  |  Google Security Operations  |  Google Cloud Documentation

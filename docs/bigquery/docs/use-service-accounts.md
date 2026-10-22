@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/use-service-accounts/
 title: Use service accounts with BigQuery Data Transfer Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:07:28.397009+00:00
+fetched_at: 2026-10-21T15:41:29.360771+00:00
 ---
 
 # Use service accounts with BigQuery Data Transfer Service  |  Google Cloud Documentation
@@ -21,11 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Use service accounts with BigQuery Data Transfer Service
 
-Some data sources support data transfer authentication by using a [service account](https://docs.cloud.google.com/iam/docs/service-account-overview) through the Google Cloud console, API, or the `bq` command line. A service account is a Google Account associated with your Google Cloud project. A service account can run jobs, such as scheduled queries or batch processing pipelines by authenticating with the service account credentials rather than a user's credentials.
+BigQuery Data Transfer Service lets you authenticate data transfers for supported data sources by using a [service account](https://docs.cloud.google.com/iam/docs/service-account-overview) instead of individual user credentials. A service account is a Google Account associated with your Google Cloud project that can run jobs, such as scheduled queries or batch processing pipelines. You can configure service account authentication through the Google Cloud console, the API, or the `bq` command line, and you can update existing transfers when credentials change.
 
-You can update an existing data transfer with the credentials of a service account. For more information, see Update data transfer credentials.
-
-The following situations require updating credentials:
+The following error codes indicate situations where you must update credentials:
 
   * Your transfer failed to authorize the user's access to the data source:
 
@@ -96,6 +94,19 @@ The `bigquery.admin` predefined IAM role includes all of these permissions. For 
 
 
 ## Update data transfer credentials
+
+You can update an existing data transfer with the credentials of a service account. The following situations require updating credentials:
+
+  * Your transfer failed to authorize the user's access to the data source:
+
+`Error code 401 : Request is missing required authentication credential. UNAUTHENTICATED`
+
+  * You receive an **INVALID_USER** error when you attempt to run the transfer:
+
+`Error code 5 : Authentication failure: User Id not found. Error code: INVALID_USERID`
+
+
+
 
 ###  Console 
 
@@ -211,6 +222,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

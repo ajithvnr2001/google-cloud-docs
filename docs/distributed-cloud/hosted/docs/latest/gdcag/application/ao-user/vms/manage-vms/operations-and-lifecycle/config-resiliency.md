@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/manage-vms/operations-and-lifecycle/config-resiliency/
 title: VM resiliency \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:36:43.654896+00:00
+fetched_at: 2026-10-21T14:08:14.643086+00:00
 ---
 
 # VM resiliency  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/create-edit-playbook-with-gemini/
 title: Manage playbooks with Gemini \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:53:51.574797+00:00
+fetched_at: 2026-10-21T12:40:09.909866+00:00
 ---
 
 # Manage playbooks with Gemini  |  Google Security Operations  |  Google Cloud Documentation

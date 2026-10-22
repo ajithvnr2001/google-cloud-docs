@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/runtime/target-connect-host-not-reachable/
 title: API requests fail with TARGET_CONNECT_HOST_NOT_REACHABLE error \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:24.481336+00:00
+fetched_at: 2026-10-21T14:27:45.740586+00:00
 ---
 
 # API requests fail with TARGET_CONNECT_HOST_NOT_REACHABLE error  |  Apigee  |  Google Cloud Documentation

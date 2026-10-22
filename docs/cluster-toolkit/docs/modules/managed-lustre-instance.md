@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/managed-lustre-instance/
 title: Create a Managed Lustre instance \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:41.099386+00:00
+fetched_at: 2026-10-21T14:42:17.363008+00:00
 ---
 
 # Create a Managed Lustre instance  |  Cluster Toolkit  |  Google Cloud Documentation

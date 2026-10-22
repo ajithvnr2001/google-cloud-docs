@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/platform/pa-user/storage-overview/
 title: Storage overview \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:41.711666+00:00
+fetched_at: 2026-10-21T12:56:55.385107+00:00
 ---
 
 # Storage overview  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

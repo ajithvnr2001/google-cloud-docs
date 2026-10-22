@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-region-autoscaler-basic-parent-tag/
 title: Create a Compute Engine managed instance group with autoscaling enabled \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:11.470902+00:00
+fetched_at: 2026-10-22T05:47:48.213891+00:00
 ---
 
 # Create a Compute Engine managed instance group with autoscaling enabled  |  Google Cloud Documentation

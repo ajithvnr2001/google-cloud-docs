@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs/connect-agent/
 title: Connect Agent overview \u00a0|\u00a0 Fleet management \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:37:15.192046+00:00
+fetched_at: 2026-10-21T15:02:15.596067+00:00
 ---
 
 # Connect Agent overview  |  Fleet management  |  Google Cloud Documentation

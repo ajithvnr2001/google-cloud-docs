@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/docs/deprecations/
 title: Eventarc deprecations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:35:27.883367+00:00
+fetched_at: 2026-10-21T12:56:03.275347+00:00
 ---
 
 # Eventarc deprecations  |  Google Cloud Documentation

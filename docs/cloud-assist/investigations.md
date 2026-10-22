@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/investigations/
 title: Troubleshoot issues with Gemini Cloud Assist investigations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:20:37.670364+00:00
+fetched_at: 2026-10-21T14:22:47.896406+00:00
 ---
 
 # Troubleshoot issues with Gemini Cloud Assist investigations  |  Google Cloud Documentation

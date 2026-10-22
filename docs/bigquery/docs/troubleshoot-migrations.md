@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/troubleshoot-migrations/
 title: Troubleshoot migration issues \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:45:26.634862+00:00
+fetched_at: 2026-10-21T14:58:25.904339+00:00
 ---
 
 # Troubleshoot migration issues  |  BigQuery  |  Google Cloud Documentation
@@ -41,7 +41,18 @@ The `hadoop-migration-assessment` query logs extraction logging hook writes debu
 
 #### Handle the `ClassNotFoundException` error
 
-This error might be caused by misplacement of the logging hook JAR file. Ensure that you added the JAR file to the `auxlib` folder on the Hive cluster. Alternatively, you can specify the full path to the JAR file in the `hive.aux.jars.path` property—for example, `file://AUXLIB_PATH/HiveMigrationAssessmentQueryLogsHooks_deploy.jar`.
+This error occurs when the `hive-server2` process can't locate `com.google.cloud.bigquery.dwhassessment.hooks.MigrationAssessmentLoggingHook` during query compilation.
+
+Ensure that you added the logging hook JAR file to the `auxlib` folder on the Hive cluster, or that you specified the full path to the JAR file in the `hive.aux.jars.path` property—for example, `file://AUXLIB_PATH/HiveMigrationAssessmentQueryLogsHooks_deploy.jar`.
+
+If the error persists, do the following:
+
+  * **Verify the JAR location on Cloudera (CDP or CDH):** In Cloudera environments, auxiliary JAR properties (`hive.aux.jars.path`) might not reliably load into the root query compilation classloader. To resolve this issue, copy the logging hook JAR file directly into the core Hive library directory on all HiveServer2 hosts—for example, `/opt/cloudera/parcels/CDH/lib/hive/lib/`.
+
+  * **Verify the configuration scope:** If you use Cloudera Manager, ensure that you place the logging hook configuration properties (for example, `hive.exec.pre.hooks`, `hive.exec.post.hooks`, `hive.exec.failure.hooks`, and `dwhassessment.hook.base-directory`) in the active execution engine configuration snippet. For example, if your cluster uses Tez execution, add the XML properties to Hive on Tez Advanced Configuration Snippet (Safety Valve) fields for `hive-site.xml`, or on the service-wide Hive safety valve, rather than in the standalone HiveServer2 configuration snippets. After you save the changes, restart the Hive service, including the HiveServer2 and Hive Metastore roles.
+
+
+
 
 #### Subfolders don't appear in the configured folder
 
@@ -343,6 +354,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

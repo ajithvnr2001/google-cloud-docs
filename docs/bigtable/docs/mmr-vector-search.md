@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/mmr-vector-search/
 title: Perform Maximal Marginal Relevance search with LangChain on Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:18.716999+00:00
+fetched_at: 2026-10-21T14:09:16.992976+00:00
 ---
 
 # Perform Maximal Marginal Relevance search with LangChain on Bigtable  |  Google Cloud Documentation

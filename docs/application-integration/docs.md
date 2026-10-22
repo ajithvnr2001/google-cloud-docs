@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/
 title: Application Integration documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:59:28.788653+00:00
+fetched_at: 2026-10-21T14:22:31.005635+00:00
 ---
 
 # Application Integration documentation  |  Google Cloud Documentation

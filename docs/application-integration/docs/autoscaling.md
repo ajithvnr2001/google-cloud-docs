@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/autoscaling/
 title: About autoscaling in Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:33.305375+00:00
+fetched_at: 2026-10-21T14:10:19.940550+00:00
 ---
 
 # About autoscaling in Application Integration  |  Google Cloud Documentation

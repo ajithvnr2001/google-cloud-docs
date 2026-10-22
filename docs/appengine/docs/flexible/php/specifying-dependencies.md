@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/php/specifying-dependencies/
 title: Specifying dependencies \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:26:20.063190+00:00
+fetched_at: 2026-10-21T14:26:35.054913+00:00
 ---
 
 # Specifying dependencies  |  App Engine flexible environment  |  Google Cloud Documentation

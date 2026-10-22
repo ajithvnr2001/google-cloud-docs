@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/how-to/import-export/overview/
 title: Install the config-connector CLI tool \u00a0|\u00a0 Config Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:18.076929+00:00
+fetched_at: 2026-10-21T14:24:52.328709+00:00
 ---
 
 # Install the config-connector CLI tool  |  Config Connector  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/saml-soar-only/saml-configuration-for-g-suite/
 title: Configure Google Workspace for SAML \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:49:19.611917+00:00
+fetched_at: 2026-10-21T14:21:14.271569+00:00
 ---
 
 # Configure Google Workspace for SAML  |  Google Security Operations  |  Google Cloud Documentation

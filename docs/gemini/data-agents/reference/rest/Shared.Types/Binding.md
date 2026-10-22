@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/Shared.Types/Binding/
 title: Binding \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:43:04.249368+00:00
+fetched_at: 2026-10-21T12:56:03.620857+00:00
 ---
 
 # Binding  |  Data Agents  |  Google Cloud Documentation

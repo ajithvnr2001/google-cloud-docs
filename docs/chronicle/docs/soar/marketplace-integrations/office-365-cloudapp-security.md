@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/office-365-cloudapp-security/
 title: Office 365 Cloud App Security \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:20:18.224696+00:00
+fetched_at: 2026-10-21T14:19:24.551484+00:00
 ---
 
 # Office 365 Cloud App Security  |  Google Security Operations  |  Google Cloud Documentation

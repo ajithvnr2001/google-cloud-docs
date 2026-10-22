@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/api-hub-connect/
 title: Connect API Gateway with API hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:14:07.185485+00:00
+fetched_at: 2026-10-21T14:29:04.424904+00:00
 ---
 
 # Connect API Gateway with API hub  |  Google Cloud Documentation

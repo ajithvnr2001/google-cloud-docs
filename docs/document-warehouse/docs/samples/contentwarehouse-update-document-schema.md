@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/document-warehouse/docs/samples/contentwarehouse-update-document-schema/
 title: Update document schema \u00a0|\u00a0 Document AI Warehouse \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:50:59.742821+00:00
+fetched_at: 2026-10-21T14:07:30.416604+00:00
 ---
 
 # Update document schema  |  Document AI Warehouse  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/containers/create-stateful-workloads/
 title: Create stateful workloads \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:22:03.423908+00:00
+fetched_at: 2026-10-21T12:56:45.030756+00:00
 ---
 
 # Create stateful workloads  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-catalog/docs/samples/data-catalog-list-entries/
 title: List entries \u00a0|\u00a0 Data Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:57:32.265818+00:00
+fetched_at: 2026-10-22T05:41:52.676076+00:00
 ---
 
 # List entries  |  Data Catalog  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/nix-system/
 title: Collect Nix System logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:27:01.449549+00:00
+fetched_at: 2026-10-21T14:06:40.678485+00:00
 ---
 
 # Collect Nix System logs  |  Google Security Operations  |  Google Cloud Documentation

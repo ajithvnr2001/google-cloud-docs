@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/playbook/conditional-actions/
 title: Conditional actions \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:35.255487+00:00
+fetched_at: 2026-10-21T12:42:51.822151+00:00
 ---
 
 # Conditional actions  |  Dialogflow CX  |  Google Cloud Documentation

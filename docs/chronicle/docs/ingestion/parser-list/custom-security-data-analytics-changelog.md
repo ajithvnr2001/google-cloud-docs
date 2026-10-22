@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/custom-security-data-analytics-changelog/
 title: Change log for CUSTOM_SECURITY_DATA_ANALYTICS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:14:01.560254+00:00
+fetched_at: 2026-10-21T14:45:33.899654+00:00
 ---
 
 # Change log for CUSTOM_SECURITY_DATA_ANALYTICS  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/manage-vms/operations-and-lifecycle/expand-vm-disks/
 title: Expand VM disks \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:45:29.247017+00:00
+fetched_at: 2026-10-21T14:08:34.323532+00:00
 ---
 
 # Expand VM disks  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

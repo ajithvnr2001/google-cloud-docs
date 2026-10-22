@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/try-media-search/
 title: Get started with media search \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:27:59.319036+00:00
+fetched_at: 2026-10-21T12:55:43.094322+00:00
 ---
 
 # Get started with media search  |  Agent Search  |  Google Cloud Documentation

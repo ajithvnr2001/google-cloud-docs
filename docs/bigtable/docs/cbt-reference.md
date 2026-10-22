@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/cbt-reference/
 title: cbt CLI reference \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:50:03.209221+00:00
+fetched_at: 2026-10-21T14:52:30.545424+00:00
 ---
 
 # cbt CLI reference  |  Bigtable  |  Google Cloud Documentation

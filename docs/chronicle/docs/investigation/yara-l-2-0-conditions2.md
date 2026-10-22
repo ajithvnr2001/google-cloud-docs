@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/yara-l-2-0-conditions2/
 title: Use conditions in search and dashboards \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:04:51.447937+00:00
+fetched_at: 2026-10-21T14:25:24.432772+00:00
 ---
 
 # Use conditions in search and dashboards  |  Google Security Operations  |  Google Cloud Documentation

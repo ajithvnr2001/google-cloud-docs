@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-intelligence-center/docs/performance-dashboard/resources/
 title: Resources \u00a0|\u00a0 Network Intelligence Center - Performance Dashboard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:28:42.084748+00:00
+fetched_at: 2026-10-21T15:16:24.660573+00:00
 ---
 
 # Resources  |  Network Intelligence Center - Performance Dashboard  |  Google Cloud Documentation

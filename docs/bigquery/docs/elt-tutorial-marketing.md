@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/elt-tutorial-marketing/
 title: Build ELT pipeline for marketing analytics data \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:03.824247+00:00
+fetched_at: 2026-10-21T14:07:53.236995+00:00
 ---
 
 # Build ELT pipeline for marketing analytics data  |  BigQuery  |  Google Cloud Documentation

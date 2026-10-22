@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/understanding-playbook-monitoring/
 title: Monitor playbook performance \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:55:38.077188+00:00
+fetched_at: 2026-10-21T12:38:55.515466+00:00
 ---
 
 # Monitor playbook performance  |  Google Security Operations  |  Google Cloud Documentation

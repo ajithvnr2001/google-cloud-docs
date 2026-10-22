@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/reference/script-result-module/
 title: ScriptResult module \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:14:23.109033+00:00
+fetched_at: 2026-10-21T14:10:11.267472+00:00
 ---
 
 # ScriptResult module  |  Google Security Operations  |  Google Cloud Documentation

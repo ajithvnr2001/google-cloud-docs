@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-security-integration/docs/configure-security-profile-groups/
 title: Create and manage security profile groups \u00a0|\u00a0 Network Security Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:23.860960+00:00
+fetched_at: 2026-10-21T15:14:57.230827+00:00
 ---
 
 # Create and manage security profile groups  |  Network Security Integration  |  Google Cloud Documentation

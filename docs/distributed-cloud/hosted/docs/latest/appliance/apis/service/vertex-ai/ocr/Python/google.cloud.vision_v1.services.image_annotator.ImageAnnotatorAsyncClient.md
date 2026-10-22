@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/apis/service/vertex-ai/ocr/Python/google.cloud.vision_v1.services.image_annotator.ImageAnnotatorAsyncClient
 title: Class ImageAnnotatorAsyncClient (3.4.4) \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:16:10.408387+00:00
+fetched_at: 2026-10-21T15:33:28.670987+00:00
 ---
 
 # Class ImageAnnotatorAsyncClient (3.4.4)  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

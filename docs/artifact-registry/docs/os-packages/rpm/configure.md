@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/os-packages/rpm/configure/
 title: Configure VMs to install RPM packages \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:17:10.993983+00:00
+fetched_at: 2026-10-21T12:40:43.071952+00:00
 ---
 
 # Configure VMs to install RPM packages  |  Artifact Registry  |  Google Cloud Documentation

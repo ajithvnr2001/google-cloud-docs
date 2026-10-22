@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/playbook/parameter/
 title: Playbook parameters \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:36.023781+00:00
+fetched_at: 2026-10-21T12:42:33.912901+00:00
 ---
 
 # Playbook parameters  |  Dialogflow CX  |  Google Cloud Documentation

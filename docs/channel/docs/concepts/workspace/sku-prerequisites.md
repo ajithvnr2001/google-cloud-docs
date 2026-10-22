@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/channel/docs/concepts/workspace/sku-prerequisites/
 title: Resellable SKU Prerequisites \u00a0|\u00a0 Channel Services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:41:43.904397+00:00
+fetched_at: 2026-10-21T14:25:25.775222+00:00
 ---
 
 # Resellable SKU Prerequisites  |  Channel Services  |  Google Cloud Documentation

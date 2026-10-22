@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/aks/reference/api-permissions/
 title: Attached clusters API access control \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:20.684049+00:00
+fetched_at: 2026-10-21T15:02:22.682288+00:00
 ---
 
 # Attached clusters API access control  |  GKE attached clusters  |  Google Cloud Documentation

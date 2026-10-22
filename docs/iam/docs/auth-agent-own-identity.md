@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/auth-agent-own-identity/
 title: Authenticate to Google Cloud using an agent's own identity \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:00:28.173939+00:00
+fetched_at: 2026-10-21T12:52:51.625912+00:00
 ---
 
 # Authenticate to Google Cloud using an agent's own identity  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

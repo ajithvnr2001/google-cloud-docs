@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/onboard/understand-billing/
 title: Understand your billing \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:38.106654+00:00
+fetched_at: 2026-10-21T14:26:00.062790+00:00
 ---
 
 # Understand your billing  |  Google Security Operations  |  Google Cloud Documentation

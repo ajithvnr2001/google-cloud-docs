@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/monitoring-overview/
 title: Monitor Application Integration resources \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:51.551998+00:00
+fetched_at: 2026-10-21T12:29:22.185983+00:00
 ---
 
 # Monitor Application Integration resources  |  Google Cloud Documentation
@@ -91,7 +91,7 @@ Step execution latency
 `is_retry`: (BOOL) Indicates whether the step execution is a retry or a first attempt, one of [true, false].   
 `is_step_external`: (BOOL) Indicates whether the task executed is internal or external, one of ["true" - external tasks such as Rest or Connector task.; "false" - internal tasks such as Data Mapper or Inline Scripting task].   
   
-Table generated at 2026-10-08 15:22:12 UTC.
+Table generated at 2026-10-14 20:24:33 UTC.
 
 ### Labels
 
@@ -133,6 +133,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

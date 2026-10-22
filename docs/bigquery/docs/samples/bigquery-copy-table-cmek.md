@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-copy-table-cmek/
 title: Copy a table with customer-managed encryption keys (CMEK) \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:45.086355+00:00
+fetched_at: 2026-10-21T12:40:25.909361+00:00
 ---
 
 # Copy a table with customer-managed encryption keys (CMEK)  |  BigQuery  |  Google Cloud Documentation

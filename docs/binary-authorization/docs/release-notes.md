@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/release-notes/
 title: Binary Authorization release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:17:48.487386+00:00
+fetched_at: 2026-10-21T14:51:46.395175+00:00
 ---
 
 # Binary Authorization release notes  |  Google Cloud Documentation

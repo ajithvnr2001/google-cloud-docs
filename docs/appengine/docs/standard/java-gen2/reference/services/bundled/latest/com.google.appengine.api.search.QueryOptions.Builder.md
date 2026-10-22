@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/java-gen2/reference/services/bundled/latest/com.google.appengine.api.search.QueryOptions.Builder
 title: Class QueryOptions.Builder (5.0.3) \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:56:13.627001+00:00
+fetched_at: 2026-10-21T15:33:29.497492+00:00
 ---
 
 # Class QueryOptions.Builder (5.0.3)  |  App Engine standard environment  |  Google Cloud Documentation
@@ -136,8 +136,8 @@ This is illustrated from the following code fragment:
              .build("some query"));
     
      // If the Cursor is built without setPerResult(true), then
-     // by default[ a sin](https://docs.cloud.google.com/appengine/docs/standard/java-gen2/reference/services/bundled/latest/com.google.appengine.api.search.Cursor)gle Cursor is returned wit[h the](https://docs.cloud.google.com/appengine/docs/standard/java-gen2/reference/services/bundled/latest/com.google.appengine.api.search.Results)
-     // Results.
+     // by default a single [Cursor](https://docs.cloud.google.com/appengine/docs/standard/java-gen2/reference/services/bundled/latest/com.google.appengine.api.search.Cursor) is returned with the
+     // [Results](https://docs.cloud.google.com/appengine/docs/standard/java-gen2/reference/services/bundled/latest/com.google.appengine.api.search.Results).
      cursor = results.getCursor();
     
      for (ScoredDocument result : results) {

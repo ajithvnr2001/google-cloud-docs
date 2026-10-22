@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/maintenance/
 title: Maintenance API roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:33:06.900559+00:00
+fetched_at: 2026-10-21T14:29:19.778362+00:00
 ---
 
 # Maintenance API roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/provide-schema/
 title: Provide or auto-detect a schema \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:00.422783+00:00
+fetched_at: 2026-10-21T12:55:46.090775+00:00
 ---
 
 # Provide or auto-detect a schema  |  Agent Search  |  Google Cloud Documentation

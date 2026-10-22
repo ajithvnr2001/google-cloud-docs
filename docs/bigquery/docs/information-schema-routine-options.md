@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-routine-options/
 title: ROUTINE_OPTIONS view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:41:33.641172+00:00
+fetched_at: 2026-10-21T12:35:58.906570+00:00
 ---
 
 # ROUTINE_OPTIONS view  |  BigQuery  |  Google Cloud Documentation

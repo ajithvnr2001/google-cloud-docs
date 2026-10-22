@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/16.11.0/docs/kubernetes-dr-backup-k8-gcs/
 title: Manually clone a database cluster in Kubernetes using a Cloud Storage backup \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 16.11.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:41:36.526733+00:00
+fetched_at: 2026-10-21T15:27:07.048956+00:00
 ---
 
 # Manually clone a database cluster in Kubernetes using a Cloud Storage backup  |  AlloyDB Omni using the container orchestrator: 16.11.0  |  Google Cloud Documentation

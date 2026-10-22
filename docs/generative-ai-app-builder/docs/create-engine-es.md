@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/create-engine-es/
 title: Create a search app \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:38:00.211906+00:00
+fetched_at: 2026-10-21T12:54:47.763929+00:00
 ---
 
 # Create a search app  |  Agent Search  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/oracle_netsuite/set-up-data-store/
 title: Set up an Oracle NetSuite data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T13:42:54.066506+00:00
+fetched_at: 2026-10-21T12:42:22.319106+00:00
 ---
 
 # Set up an Oracle NetSuite data store  |  Gemini Enterprise  |  Google Cloud Documentation

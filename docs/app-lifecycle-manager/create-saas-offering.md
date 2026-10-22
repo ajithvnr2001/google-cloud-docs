@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/create-saas-offering/
 title: Create an App offering \u00a0|\u00a0 App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:12:44.012211+00:00
+fetched_at: 2026-10-21T12:30:29.786866+00:00
 ---
 
 # Create an App offering  |  App Lifecycle Manager  |  Google Cloud Documentation

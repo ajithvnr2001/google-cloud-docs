@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/document-warehouse/docs/samples/contentwarehouse-create-folder-link-document/
 title: Create a folder and link a document \u00a0|\u00a0 Document AI Warehouse \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:45:23.561333+00:00
+fetched_at: 2026-10-22T08:21:48.335910+00:00
 ---
 
 # Create a folder and link a document  |  Document AI Warehouse  |  Google Cloud Documentation

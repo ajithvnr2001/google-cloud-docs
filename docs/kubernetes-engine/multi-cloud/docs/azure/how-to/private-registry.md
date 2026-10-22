@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/how-to/private-registry/
 title: Use a private image registry \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:55.272407+00:00
+fetched_at: 2026-10-21T15:09:41.267179+00:00
 ---
 
 # Use a private image registry  |  GKE on Azure  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.11/how-to/nfs-platform-setup/
 title: Set up NFS platform \u00a0|\u00a0 Kf 2.11 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:30.696592+00:00
+fetched_at: 2026-10-21T15:13:33.631740+00:00
 ---
 
 # Set up NFS platform  |  Kf 2.11  |  Google Cloud Documentation

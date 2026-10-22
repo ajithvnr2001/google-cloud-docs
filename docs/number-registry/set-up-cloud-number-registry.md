@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/number-registry/set-up-cloud-number-registry/
 title: Set up Cloud Number Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:20:01.174292+00:00
+fetched_at: 2026-10-21T14:59:23.166243+00:00
 ---
 
 # Set up Cloud Number Registry  |  Google Cloud Documentation

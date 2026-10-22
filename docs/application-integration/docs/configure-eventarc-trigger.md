@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure-eventarc-trigger/
 title: Configure an Eventarc trigger \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:16:59.456697+00:00
+fetched_at: 2026-10-21T12:39:29.148894+00:00
 ---
 
 # Configure an Eventarc trigger  |  Application Integration  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/data-types/
 title: Ingestion methods and data types \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:16.311268+00:00
+fetched_at: 2026-10-21T12:39:27.352273+00:00
 ---
 
 # Ingestion methods and data types  |  Google Security Operations  |  Google Cloud Documentation

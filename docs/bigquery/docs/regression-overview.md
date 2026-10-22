@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/regression-overview/
 title: Regression overview \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:27:34.218842+00:00
+fetched_at: 2026-10-21T12:35:29.526247+00:00
 ---
 
 # Regression overview  |  BigQuery  |  Google Cloud Documentation

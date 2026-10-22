@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/connect-to-spanner/
 title: Connect to Spanner \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:46:02.030766+00:00
+fetched_at: 2026-10-21T12:37:41.618750+00:00
 ---
 
 # Connect to Spanner  |  BigQuery  |  Google Cloud Documentation

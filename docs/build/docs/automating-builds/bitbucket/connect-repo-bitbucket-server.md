@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/bitbucket/connect-repo-bitbucket-server/
 title: Connect to a Bitbucket Server repository \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:06.345774+00:00
+fetched_at: 2026-10-21T14:11:41.754352+00:00
 ---
 
 # Connect to a Bitbucket Server repository  |  Cloud Build  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/carestudio/
 title: Care Studio roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:50:46.696386+00:00
+fetched_at: 2026-10-21T14:30:01.176165+00:00
 ---
 
 # Care Studio roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

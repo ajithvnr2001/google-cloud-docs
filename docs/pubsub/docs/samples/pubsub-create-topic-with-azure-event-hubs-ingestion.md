@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-create-topic-with-azure-event-hubs-ingestion/
 title: Create topic with Azure Event Hubs ingestion \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:52:58.880618+00:00
+fetched_at: 2026-10-21T14:58:49.158884+00:00
 ---
 
 # Create topic with Azure Event Hubs ingestion  |  Pub/Sub  |  Google Cloud Documentation

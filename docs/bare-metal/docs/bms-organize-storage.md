@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-organize-storage/
 title: Organize storage volumes using labels \u00a0|\u00a0 Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:53:37.919985+00:00
+fetched_at: 2026-10-21T14:27:03.646069+00:00
 ---
 
 # Organize storage volumes using labels  |  Bare Metal Solution  |  Google Cloud Documentation

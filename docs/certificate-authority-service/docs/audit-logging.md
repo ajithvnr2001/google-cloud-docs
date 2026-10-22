@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/audit-logging/
 title: Certificate Authority Service audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:59:37.186871+00:00
+fetched_at: 2026-10-21T14:24:17.651113+00:00
 ---
 
 # Certificate Authority Service audit logging  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/zix-email-encryption/
 title: Collect Zix Email Encryption logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T16:24:30.432445+00:00
+fetched_at: 2026-10-21T12:29:03.815356+00:00
 ---
 
 # Collect Zix Email Encryption logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.6.0/docs/resources/
 title: Resources \u00a0|\u00a0 Google Distributed Cloud connected, version 1.6.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:28:44.886780+00:00
+fetched_at: 2026-10-22T05:40:23.083208+00:00
 ---
 
 # Resources  |  Google Distributed Cloud connected, version 1.6.0  |  Google Cloud Documentation

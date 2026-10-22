@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/mailmarshal-changelog/
 title: Change log for MAILMARSHAL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:55:02.908831+00:00
+fetched_at: 2026-10-21T14:43:15.408539+00:00
 ---
 
 # Change log for MAILMARSHAL  |  Google Security Operations  |  Google Cloud Documentation

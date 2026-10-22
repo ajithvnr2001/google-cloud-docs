@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/playbook/prebuilt/travel/
 title: Travel prebuilt agent \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:34.249720+00:00
+fetched_at: 2026-10-21T12:45:20.333313+00:00
 ---
 
 # Travel prebuilt agent  |  Dialogflow CX  |  Google Cloud Documentation

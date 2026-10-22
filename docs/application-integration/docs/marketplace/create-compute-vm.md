@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/marketplace/create-compute-vm/
 title: Create a Compute Engine VM \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:44.993612+00:00
+fetched_at: 2026-10-21T14:27:09.546486+00:00
 ---
 
 # Create a Compute Engine VM  |  Application Integration  |  Google Cloud Documentation

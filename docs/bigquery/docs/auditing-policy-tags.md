@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/auditing-policy-tags/
 title: Audit policy tags \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:35:27.000066+00:00
+fetched_at: 2026-10-21T12:30:45.277589+00:00
 ---
 
 # Audit policy tags  |  BigQuery  |  Google Cloud Documentation

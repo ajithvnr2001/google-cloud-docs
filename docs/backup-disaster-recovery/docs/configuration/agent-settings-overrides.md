@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/backup-disaster-recovery/docs/configuration/agent-settings-overrides/
 title: Override Backup and DR agent settings for vCenter and ESX servers in the appliance management console \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:12:56.020340+00:00
+fetched_at: 2026-10-21T14:35:56.632312+00:00
 ---
 
 # Override Backup and DR agent settings for vCenter and ESX servers in the appliance management console  |  Google Cloud Documentation

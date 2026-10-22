@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/cmek-organization-policy/
 title: Apply a CMEK organization policy \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:15:24.495962+00:00
+fetched_at: 2026-10-21T12:52:30.139908+00:00
 ---
 
 # Apply a CMEK organization policy  |  Filestore  |  Google Cloud Documentation

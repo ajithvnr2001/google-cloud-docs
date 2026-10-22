@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/aiedgeportal/
 title: AI Edge Portal roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:36:20.939873+00:00
+fetched_at: 2026-10-21T14:30:34.815813+00:00
 ---
 
 # AI Edge Portal roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/quotas/terminology/
 title: Quota and system limit terminology \u00a0|\u00a0 Cloud Quotas \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:40:30.622106+00:00
+fetched_at: 2026-10-21T14:08:02.386442+00:00
 ---
 
 # Quota and system limit terminology  |  Cloud Quotas  |  Google Cloud Documentation

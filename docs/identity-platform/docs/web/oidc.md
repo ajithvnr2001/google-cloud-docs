@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/web/oidc/
 title: Signing in users with OIDC \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:17.596748+00:00
+fetched_at: 2026-10-21T12:53:58.359123+00:00
 ---
 
 # Signing in users with OIDC  |  Identity Platform  |  Google Cloud Documentation

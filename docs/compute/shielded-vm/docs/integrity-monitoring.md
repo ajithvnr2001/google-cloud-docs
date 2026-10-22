@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/shielded-vm/docs/integrity-monitoring/
 title: Monitoring integrity on Shielded VMs \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:04:10.790574+00:00
+fetched_at: 2026-10-21T14:08:52.522821+00:00
 ---
 
 # Monitoring integrity on Shielded VMs  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/v2/overview/
 title: Certificate Manager (2nd gen) overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:39:08.243276+00:00
+fetched_at: 2026-10-21T14:25:47.513827+00:00
 ---
 
 # Certificate Manager (2nd gen) overview  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/channel/docs/concepts/workspace/products-skus/
 title: Google Workspace products, SKUs, and plans \u00a0|\u00a0 Channel Services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:52:28.421768+00:00
+fetched_at: 2026-10-21T14:25:44.313978+00:00
 ---
 
 # Google Workspace products, SKUs, and plans  |  Channel Services  |  Google Cloud Documentation

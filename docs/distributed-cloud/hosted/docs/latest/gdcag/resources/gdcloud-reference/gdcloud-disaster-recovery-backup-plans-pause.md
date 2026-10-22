@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-disaster-recovery-backup-plans-pause/
 title: gdcloud disaster-recovery backup-plans pause \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:03:33.153561+00:00
+fetched_at: 2026-10-21T12:58:59.366942+00:00
 ---
 
 # gdcloud disaster-recovery backup-plans pause  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

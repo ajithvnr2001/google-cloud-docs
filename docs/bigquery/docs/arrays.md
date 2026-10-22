@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/arrays/
 title: Work with arrays \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:07.706438+00:00
+fetched_at: 2026-10-21T12:36:05.556683+00:00
 ---
 
 # Work with arrays  |  BigQuery  |  Google Cloud Documentation

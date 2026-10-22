@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/postgresql-transfer/
 title: Import metadata from PostgreSQL \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:37:28.711507+00:00
+fetched_at: 2026-10-21T15:14:29.672007+00:00
 ---
 
 # Import metadata from PostgreSQL  |  Knowledge Catalog  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/samples/datastore-transactional-get-or-create/
 title: Get or create \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:36:03.051040+00:00
+fetched_at: 2026-10-22T05:41:21.578289+00:00
 ---
 
 # Get or create  |  Firestore in Datastore mode  |  Google Cloud Documentation

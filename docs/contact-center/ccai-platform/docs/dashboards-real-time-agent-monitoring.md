@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/dashboards-real-time-agent-monitoring/
 title: Real-time Agent Monitoring dashboard \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:36:39.398500+00:00
+fetched_at: 2026-10-21T14:21:49.571485+00:00
 ---
 
 # Real-time Agent Monitoring dashboard  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

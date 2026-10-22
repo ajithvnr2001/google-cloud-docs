@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/metadata/manage-guest-attributes/
 title: Setting and querying guest attributes \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:19:53.418863+00:00
+fetched_at: 2026-10-21T12:37:01.619569+00:00
 ---
 
 # Setting and querying guest attributes  |  Compute Engine  |  Google Cloud Documentation

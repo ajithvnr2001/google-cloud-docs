@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/samples/managedkafka-update-consumergroup/
 title: Update a Kafka consumer group \u00a0|\u00a0 Managed Service for Apache Kafka \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:58:37.868162+00:00
+fetched_at: 2026-10-21T15:11:15.690101+00:00
 ---
 
 # Update a Kafka consumer group  |  Managed Service for Apache Kafka  |  Google Cloud Documentation

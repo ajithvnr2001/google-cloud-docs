@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/mcp/
 title: Looker-managed MCP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:10:38.501092+00:00
+fetched_at: 2026-10-21T15:03:36.626703+00:00
 ---
 
 # Looker-managed MCP server  |  Google Cloud Documentation

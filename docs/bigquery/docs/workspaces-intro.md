@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/workspaces-intro/
 title: Introduction to workspaces \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:27:01.872305+00:00
+fetched_at: 2026-10-22T05:49:16.945144+00:00
 ---
 
 # Introduction to workspaces  |  BigQuery  |  Google Cloud Documentation
@@ -27,7 +27,9 @@ This product or feature is subject to the "Pre-GA Offerings Terms" in the Genera
 
 **Note:** To provide feedback or ask questions that are related to this Preview feature, contact [bigquery-repositories-feedback@google.com](mailto:%20bigquery-repositories-feedback@google.com).
 
-This document helps you understand the concept of workspaces in BigQuery. You can use workspaces within [repositories](https://docs.cloud.google.com/bigquery/docs/repository-intro) to edit the code stored in the repository. Repositories perform version control on files by using Git to record changes and manage file versions.
+Workspaces in BigQuery let you edit and manage code stored in [repositories](https://docs.cloud.google.com/bigquery/docs/repository-intro). Within a workspace, you can create and modify files while the parent repository uses Git to record changes and manage file versions.
+
+## View workspaces
 
 On the BigQuery page, your workspaces are displayed in alphabetical order under the repository they are associated with. To view repositories, do the following:
 
@@ -85,6 +87,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/create-access-levels-cs/
 title: Create and assign custom access levels using Falcon ZTA data \u00a0|\u00a0 Chrome Enterprise Premium \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:01:28.746588+00:00
+fetched_at: 2026-10-21T14:23:39.430943+00:00
 ---
 
 # Create and assign custom access levels using Falcon ZTA data  |  Chrome Enterprise Premium  |  Google Cloud Documentation

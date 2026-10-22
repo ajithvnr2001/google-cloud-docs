@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure-data-mapping-task/
 title: Data Mapping task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:59:54.158830+00:00
+fetched_at: 2026-10-21T12:39:43.021039+00:00
 ---
 
 # Data Mapping task  |  Application Integration  |  Google Cloud Documentation

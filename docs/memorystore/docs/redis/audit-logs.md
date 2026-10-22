@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/audit-logs/
 title: Memorystore for Redis audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:58.399661+00:00
+fetched_at: 2026-10-21T15:15:03.177415+00:00
 ---
 
 # Memorystore for Redis audit logging  |  Google Cloud Documentation

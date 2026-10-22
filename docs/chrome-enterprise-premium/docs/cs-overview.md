@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/cs-overview/
 title: Overview of Chrome Enterprise Premium and Falcon ZTA integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:01:28.396409+00:00
+fetched_at: 2026-10-21T14:23:38.344207+00:00
 ---
 
 # Overview of Chrome Enterprise Premium and Falcon ZTA integration  |  Google Cloud Documentation

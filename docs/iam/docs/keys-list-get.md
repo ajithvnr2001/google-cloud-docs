@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/keys-list-get/
 title: List and get service account keys \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:10:05.431617+00:00
+fetched_at: 2026-10-21T12:53:23.627976+00:00
 ---
 
 # List and get service account keys  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

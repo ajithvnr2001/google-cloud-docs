@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/dynamodb-users/
 title: Migrate from DynamoDB to Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:21.332999+00:00
+fetched_at: 2026-10-21T12:36:37.439713+00:00
 ---
 
 # Migrate from DynamoDB to Bigtable  |  Google Cloud Documentation

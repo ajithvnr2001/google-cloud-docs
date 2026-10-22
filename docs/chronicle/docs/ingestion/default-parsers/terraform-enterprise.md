@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/terraform-enterprise/
 title: Collect Terraform Enterprise logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:23:53.656754+00:00
+fetched_at: 2026-10-21T12:38:23.668283+00:00
 ---
 
 # Collect Terraform Enterprise logs  |  Google Security Operations  |  Google Cloud Documentation

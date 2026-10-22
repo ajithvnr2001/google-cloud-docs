@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-disk-resize/
 title: Resize a persistent disk \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:26.599298+00:00
+fetched_at: 2026-10-21T14:19:37.670984+00:00
 ---
 
 # Resize a persistent disk  |  Compute Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/15.5.2/docs/omni-cli/
 title: Install and manage the AlloyDB Omni CLI \u00a0|\u00a0 AlloyDB Omni for containers: 15.5.2 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:14.868294+00:00
+fetched_at: 2026-10-21T15:25:35.611785+00:00
 ---
 
 # Install and manage the AlloyDB Omni CLI  |  AlloyDB Omni for containers: 15.5.2  |  Google Cloud Documentation

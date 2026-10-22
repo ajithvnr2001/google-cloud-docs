@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/gdrive/add-filters-to-gdrive-data-store/
 title: Add filters to a Google Drive data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:21:16.670445+00:00
+fetched_at: 2026-10-21T12:29:40.233733+00:00
 ---
 
 # Add filters to a Google Drive data store  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -44,7 +44,7 @@ For each filter type, you configure the **Include** mode or **Exclude** mode, no
 
 Filters match nested content. Both keys match recursively: a file is in scope if the specified shared drive or folder appears in its ancestor chain.
 
-To find a folder ID or shared drive ID, open the folder or shared drive in Google Drive and copy the ID from the URL. The URL follows this format: `https://drive.google.com/corp/drive/folders/ID`. For example, `https://drive.google.com/corp/drive/folders/123456789012345678901`.
+To find a folder ID or shared drive ID, open the folder or shared drive in Google Drive and copy the ID from the URL. The URL follows this format: `https://drive.google.com/drive/folders/ID`. For example, `https://drive.google.com/drive/folders/123456789012345678901`.
 
 **Note:** Data stores created before this feature was released keep working with their original folder and shared drive scoping. They aren't affected by these filters. You can't migrate an existing data store to the filter modes described on this page. To use these modes, create a Google Drive data store.
 
@@ -261,6 +261,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

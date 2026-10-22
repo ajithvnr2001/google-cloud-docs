@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/billing-questions/
 title: Billing questions \u00a0|\u00a0 Confidential VM \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:26:17.262088+00:00
+fetched_at: 2026-10-21T14:21:11.009359+00:00
 ---
 
 # Billing questions  |  Confidential VM  |  Google Cloud Documentation

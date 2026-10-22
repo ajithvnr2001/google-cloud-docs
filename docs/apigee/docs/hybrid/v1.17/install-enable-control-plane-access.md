@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/install-enable-control-plane-access/
 title: Step 8: Enable Control Plane access \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:49:05.561519+00:00
+fetched_at: 2026-10-21T14:27:34.659800+00:00
 ---
 
 # Step 8: Enable Control Plane access  |  Apigee  |  Google Cloud Documentation

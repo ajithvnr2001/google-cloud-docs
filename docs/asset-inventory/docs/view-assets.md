@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/asset-inventory/docs/view-assets/
 title: View your assets \u00a0|\u00a0 Cloud Asset Inventory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:37:02.593154+00:00
+fetched_at: 2026-10-21T14:41:36.254662+00:00
 ---
 
 # View your assets  |  Cloud Asset Inventory  |  Google Cloud Documentation

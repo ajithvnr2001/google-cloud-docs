@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/access-boundaries/
 title: Design access boundaries between resources \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:34.276350+00:00
+fetched_at: 2026-10-21T12:59:55.651242+00:00
 ---
 
 # Design access boundaries between resources  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

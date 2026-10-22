@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/firebaseml/
 title: ML Kit for Firebase roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:41:24.192589+00:00
+fetched_at: 2026-10-21T14:30:38.644091+00:00
 ---
 
 # ML Kit for Firebase roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation
@@ -57,7 +57,15 @@ Role | Permissions
   
 #### Firebase AI Logic Service Agent 
 
-(`roles/firebaseml.serviceAgent`) Access to Cloud ML and AI resources used by Firebase AI Logic  **Warning:** Do not grant service agent roles to any principals except [service agents](https://docs.cloud.google.com/iam/docs/service-agents).  |  `aiplatform.endpoints.predict` `logging.logEntries.create` `logging.logEntries.route` `serviceusage.services.use` `telemetry.traces.write`  
+(`roles/firebaseml.serviceAgent`) Access to Cloud ML and AI resources used by Firebase AI Logic  **Warning:** Do not grant service agent roles to any principals except [service agents](https://docs.cloud.google.com/iam/docs/service-agents).  |  `aiplatform.endpoints.predict` `aiplatform.interactions.*`
+
+  * `aiplatform.interactions.cancel`
+  * `aiplatform.interactions.create`
+  * `aiplatform.interactions.delete`
+  * `aiplatform.interactions.get`
+  * `aiplatform.interactions.list`
+
+`logging.logEntries.create` `logging.logEntries.route` `serviceusage.services.use` `telemetry.traces.write`  
   
 ## ML Kit for Firebase permissions
 
@@ -140,6 +148,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

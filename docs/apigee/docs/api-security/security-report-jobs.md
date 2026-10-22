@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-security/security-report-jobs/
 title: Security reports overview \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:58:05.418215+00:00
+fetched_at: 2026-10-21T14:53:11.361044+00:00
 ---
 
 # Security reports overview  |  Apigee  |  Google Cloud Documentation

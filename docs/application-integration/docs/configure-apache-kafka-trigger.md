@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure-apache-kafka-trigger/
 title: Apache Kafka trigger \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:37.889655+00:00
+fetched_at: 2026-10-21T14:09:57.202820+00:00
 ---
 
 # Apache Kafka trigger  |  Application Integration  |  Google Cloud Documentation

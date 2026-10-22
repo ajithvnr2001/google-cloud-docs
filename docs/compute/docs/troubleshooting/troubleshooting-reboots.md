@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/troubleshooting/troubleshooting-reboots/
 title: Troubleshooting VM shutdowns and reboots \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:28:49.481650+00:00
+fetched_at: 2026-10-21T14:23:12.553976+00:00
 ---
 
 # Troubleshooting VM shutdowns and reboots  |  Compute Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/full-resource-names/
 title: Full resource names \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:51:49.665293+00:00
+fetched_at: 2026-10-21T12:53:25.371370+00:00
 ---
 
 # Full resource names  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

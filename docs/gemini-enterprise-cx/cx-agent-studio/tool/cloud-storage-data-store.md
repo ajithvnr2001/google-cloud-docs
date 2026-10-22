@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/tool/cloud-storage-data-store/
 title: Cloud storage data store tool \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:22:22.355390+00:00
+fetched_at: 2026-10-21T12:55:15.273447+00:00
 ---
 
 # Cloud storage data store tool  |  CX Agent Studio  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/tutorials/sending-mail/using-mailgun/
 title: Sending email with Mailgun \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:18:56.809713+00:00
+fetched_at: 2026-10-21T14:09:22.584822+00:00
 ---
 
 # Sending email with Mailgun  |  Compute Engine  |  Google Cloud Documentation

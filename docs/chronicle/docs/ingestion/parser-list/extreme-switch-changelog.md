@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/extreme-switch-changelog/
 title: Change log for EXTREME_SWITCH \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:55:00.766612+00:00
+fetched_at: 2026-10-21T14:43:45.477942+00:00
 ---
 
 # Change log for EXTREME_SWITCH  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-suspend-instance/
 title: Suspend a running VM \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:27.852220+00:00
+fetched_at: 2026-10-22T05:50:18.144515+00:00
 ---
 
 # Suspend a running VM  |  Compute Engine  |  Google Cloud Documentation

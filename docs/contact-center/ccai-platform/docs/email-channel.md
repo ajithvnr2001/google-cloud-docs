@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/email-channel/
 title: Overview and expected behavior \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:17.701112+00:00
+fetched_at: 2026-10-21T14:22:03.910058+00:00
 ---
 
 # Overview and expected behavior  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

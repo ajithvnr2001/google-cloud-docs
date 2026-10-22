@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy/
 title: ResponseCache policy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:46:09.822380+00:00
+fetched_at: 2026-10-21T12:30:14.728265+00:00
 ---
 
 # ResponseCache policy  |  Apigee  |  Google Cloud Documentation

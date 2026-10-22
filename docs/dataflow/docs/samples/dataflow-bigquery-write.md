@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/samples/dataflow-bigquery-write/
 title: Write to BigQuery \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:20:14.346446+00:00
+fetched_at: 2026-10-22T05:42:38.958532+00:00
 ---
 
 # Write to BigQuery  |  Cloud Dataflow  |  Google Cloud Documentation

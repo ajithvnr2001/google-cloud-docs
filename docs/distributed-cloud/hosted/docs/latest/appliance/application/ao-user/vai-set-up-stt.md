@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/vai-set-up-stt/
 title: Set up a speech recognition project \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:22:15.405288+00:00
+fetched_at: 2026-10-21T12:56:13.618271+00:00
 ---
 
 # Set up a speech recognition project  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

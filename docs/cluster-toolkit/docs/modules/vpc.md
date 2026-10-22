@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/vpc/
 title: Create a VPC network \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:42.080219+00:00
+fetched_at: 2026-10-21T14:46:12.633792+00:00
 ---
 
 # Create a VPC network  |  Cluster Toolkit  |  Google Cloud Documentation

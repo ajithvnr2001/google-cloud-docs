@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/change-streams-configure/
 title: Configure change streams \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:14.691629+00:00
+fetched_at: 2026-10-21T12:36:52.149813+00:00
 ---
 
 # Configure change streams  |  Bigtable  |  Google Cloud Documentation

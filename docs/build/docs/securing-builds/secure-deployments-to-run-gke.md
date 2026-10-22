@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/securing-builds/secure-deployments-to-run-gke/
 title: Securing image deployments to Cloud Run and Google Kubernetes Engine \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:09.503356+00:00
+fetched_at: 2026-10-21T14:25:13.354792+00:00
 ---
 
 # Securing image deployments to Cloud Run and Google Kubernetes Engine  |  Cloud Build  |  Google Cloud Documentation

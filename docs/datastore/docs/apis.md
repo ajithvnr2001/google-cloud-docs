@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/apis/
 title: APIs & Reference \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:54:32.727860+00:00
+fetched_at: 2026-10-22T05:41:59.323003+00:00
 ---
 
 # APIs & Reference  |  Firestore in Datastore mode  |  Google Cloud Documentation

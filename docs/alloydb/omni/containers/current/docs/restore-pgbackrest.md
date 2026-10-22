@@ -1,21 +1,21 @@
 ---
 url: https://docs.cloud.google.com/alloydb/omni/containers/current/docs/restore-pgbackrest/
-title: Restore an AlloyDB Omni cluster using pgBackRest \u00a0|\u00a0 AlloyDB Omni using containers: Current (18.3.0) \u00a0|\u00a0 Google Cloud Documentation
+title: Restore an AlloyDB Omni cluster using pgBackRest \u00a0|\u00a0 AlloyDB Omni using containers: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:24:37.736319+00:00
+fetched_at: 2026-10-21T14:41:53.160215+00:00
 ---
 
-# Restore an AlloyDB Omni cluster using pgBackRest  |  AlloyDB Omni using containers: Current (18.3.0)  |  Google Cloud Documentation
+# Restore an AlloyDB Omni cluster using pgBackRest  |  AlloyDB Omni using containers: Current (18.4.0)  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/alloydb/omni/containers/current/docs/restore-pgbackrest/
 
-This page documents AlloyDB Omni version **18.3.0** using the **containers** deployment option. [Choose a different deployment option](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment). 
+This page documents AlloyDB Omni version **18.4.0** using the **containers** deployment option. [Choose a different deployment option](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment). 
 
   * [ Home ](https://docs.cloud.google.com/)
   * [ Documentation ](https://docs.cloud.google.com/docs)
   * [ Databases ](https://docs.cloud.google.com/docs/databases)
   * [ AlloyDB Omni ](https://docs.cloud.google.com/alloydb/omni/docs)
-  * [ Containers: Current (18.3.0) ](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/overview)
+  * [ Containers: Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/overview)
 
 
 
@@ -23,18 +23,23 @@ Send feedback
 
 #  Restore an AlloyDB Omni cluster using pgBackRest Stay organized with collections  Save and categorize content based on your preferences. 
 
-Select a documentation version: 18.3.0keyboard_arrow_down
+Select a documentation version: 18.4.0keyboard_arrow_down
 
+  * [ Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/restore-pgbackrest)
+  * [ 18.4.0 ](https://docs.cloud.google.com/alloydb/omni/containers/18.4.0/docs/restore-pgbackrest)
   * [ 18.3.0 ](https://docs.cloud.google.com/alloydb/omni/containers/18.3.0/docs/restore-pgbackrest)
   * [ 18.1.0 ](https://docs.cloud.google.com/alloydb/omni/containers/18.1.0/docs/restore-pgbackrest)
+  * [ 17.10.0 ](https://docs.cloud.google.com/alloydb/omni/containers/17.10.0/docs/restore-pgbackrest)
   * [ 17.9.0 ](https://docs.cloud.google.com/alloydb/omni/containers/17.9.0/docs/restore-pgbackrest)
   * [ 17.7.0 ](https://docs.cloud.google.com/alloydb/omni/containers/17.7.0/docs/restore-pgbackrest)
   * [ 17.5.0 ](https://docs.cloud.google.com/alloydb/omni/containers/17.5.0/docs/restore-pgbackrest)
+  * [ 16.14.0 ](https://docs.cloud.google.com/alloydb/omni/containers/16.14.0/docs/restore-pgbackrest)
   * [ 16.13.0 ](https://docs.cloud.google.com/alloydb/omni/containers/16.13.0/docs/restore-pgbackrest)
   * [ 16.11.0 ](https://docs.cloud.google.com/alloydb/omni/containers/16.11.0/docs/restore-pgbackrest)
   * [ 16.9.0 ](https://docs.cloud.google.com/alloydb/omni/containers/16.9.0/docs/restore-pgbackrest)
   * [ 16.8.0 ](https://docs.cloud.google.com/alloydb/omni/containers/16.8.0/docs/restore-pgbackrest)
   * [ 16.3.0 ](https://docs.cloud.google.com/alloydb/omni/containers/16.3.0/docs/restore-pgbackrest)
+  * [ 15.18.0 ](https://docs.cloud.google.com/alloydb/omni/containers/15.18.0/docs/restore-pgbackrest)
   * [ 15.17.0 ](https://docs.cloud.google.com/alloydb/omni/containers/15.17.0/docs/restore-pgbackrest)
   * [ 15.15.0 ](https://docs.cloud.google.com/alloydb/omni/containers/15.15.0/docs/restore-pgbackrest)
   * [ 15.13.0 ](https://docs.cloud.google.com/alloydb/omni/containers/15.13.0/docs/restore-pgbackrest)
@@ -466,6 +471,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

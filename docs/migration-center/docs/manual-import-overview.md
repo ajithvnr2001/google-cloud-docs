@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/manual-import-overview/
 title: Manual data import overview \u00a0|\u00a0 Migration Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:22.855699+00:00
+fetched_at: 2026-10-21T15:13:12.823690+00:00
 ---
 
 # Manual data import overview  |  Migration Center  |  Google Cloud Documentation

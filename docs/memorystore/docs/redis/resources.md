@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/resources/
 title: Resources \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:15:30.147300+00:00
+fetched_at: 2026-10-21T15:13:02.168525+00:00
 ---
 
 # Resources  |  Memorystore for Redis  |  Google Cloud Documentation

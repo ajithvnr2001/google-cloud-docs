@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/integration-versions/
 title: Integration versions \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:36.197825+00:00
+fetched_at: 2026-10-21T12:30:54.486559+00:00
 ---
 
 # Integration versions  |  Application Integration  |  Google Cloud Documentation

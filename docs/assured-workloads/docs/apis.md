@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/apis/
 title: APIs and reference \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T15:38:23.643636+00:00
+fetched_at: 2026-10-21T14:23:58.282515+00:00
 ---
 
 # APIs and reference  |  Assured Workloads  |  Google Cloud Documentation

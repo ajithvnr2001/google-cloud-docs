@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/sandbox/latest/services/translation/
 title: Try out machine translation \u00a0|\u00a0 Google Distributed Cloud Sandbox \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:13:53.376557+00:00
+fetched_at: 2026-10-21T14:06:30.695092+00:00
 ---
 
 # Try out machine translation  |  Google Distributed Cloud Sandbox  |  Google Cloud Documentation

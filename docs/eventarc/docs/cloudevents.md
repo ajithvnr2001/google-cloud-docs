@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/docs/cloudevents/
 title: CloudEvents format - HTTP protocol binding \u00a0|\u00a0 Eventarc \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:58.178789+00:00
+fetched_at: 2026-10-21T12:52:30.308032+00:00
 ---
 
 # CloudEvents format - HTTP protocol binding  |  Eventarc  |  Google Cloud Documentation

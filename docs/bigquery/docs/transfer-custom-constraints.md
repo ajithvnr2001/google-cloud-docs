@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/transfer-custom-constraints/
 title: Use custom organization policies \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:28:21.426617+00:00
+fetched_at: 2026-10-21T15:41:28.277993+00:00
 ---
 
 # Use custom organization policies  |  BigQuery  |  Google Cloud Documentation
@@ -41,7 +41,7 @@ By default, organization policies are inherited by the descendants of the resour
 
 ### Benefits
 
-You can use a custom organization policy to allow or deny specific operations on BigQuery Data Transfer Service transfer configurations in order to meet your organization's compliance and security requirements. If a request to create or update a transfer configuration fails to satisfy custom constraints set by your organization policy, then the request fails, and an error is returned to the caller.
+Custom organization policies let you allow or deny specific operations on BigQuery Data Transfer Service transfer configurations to help meet your organization's compliance and security requirements. When a request to create or update a transfer configuration doesn't satisfy your custom constraints, the policy denies the request and returns an error to the caller.
 
 ## Limitations
 
@@ -449,6 +449,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

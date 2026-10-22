@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/enable-workload-identity-gke/
 title: Enabling Workload Identity Federation for GKE \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:02:06.573052+00:00
+fetched_at: 2026-10-21T14:41:11.526110+00:00
 ---
 
 # Enabling Workload Identity Federation for GKE  |  Apigee  |  Google Cloud Documentation
@@ -69,6 +69,8 @@ A Google Cloud IAM service account is an identity that an application can use to
 Separately, Kubernetes also has the concept of service accounts. A service account provides an identity for processes that run in a Pod. Kubernetes service accounts are Kubernetes resources, while Google service accounts are specific to Google Cloud. For information on Kubernetes service accounts, see [ Configure Service Accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/) in the Kubernetes documentation.
 
 Apigee creates and uses a Kubernetes service account for each type of component when you first install the Helm charts for those components. Enabling Workload Identity Federation for GKE allows the hybrid components to interact with the Kubernetes service accounts.
+
+**Note:** Although granting Identity and Access Management (IAM) roles directly to a Kubernetes ServiceAccount principal (`principal://`) is the recommended best practice for [Workload Identity Federation for GKE](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/workload-identity), Apigee hybrid requires IAM service account impersonation because the hybrid Helm charts (`*.gsa` properties in `overrides.yaml`) and control plane synchronization APIs require IAM service account email addresses.
 
 ### Environment variables used in these procedures
 
@@ -405,6 +407,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

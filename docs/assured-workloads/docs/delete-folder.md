@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/delete-folder/
 title: Delete an Assured Workloads folder \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:51.618107+00:00
+fetched_at: 2026-10-21T14:23:54.921289+00:00
 ---
 
 # Delete an Assured Workloads folder  |  Google Cloud Documentation

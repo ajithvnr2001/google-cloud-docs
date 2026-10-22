@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/service/artifactregistry/v1/artifactregistry-v1/
 title: KRM API artifactregistry.gdc.goog/v1 \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:13:21.829875+00:00
+fetched_at: 2026-10-21T12:57:02.861774+00:00
 ---
 
 # KRM API artifactregistry.gdc.goog/v1  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

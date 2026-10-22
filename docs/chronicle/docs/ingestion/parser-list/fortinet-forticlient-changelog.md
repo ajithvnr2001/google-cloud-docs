@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/fortinet-forticlient-changelog/
 title: Change log for FORTINET_FORTICLIENT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:58:32.543654+00:00
+fetched_at: 2026-10-21T14:42:45.113225+00:00
 ---
 
 # Change log for FORTINET_FORTICLIENT  |  Google Security Operations  |  Google Cloud Documentation

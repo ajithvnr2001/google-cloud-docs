@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-filters-composing-chain/
 title: Read using a chain filter \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:24:01.359776+00:00
+fetched_at: 2026-10-21T14:25:25.165224+00:00
 ---
 
 # Read using a chain filter  |  Bigtable  |  Google Cloud Documentation

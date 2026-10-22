@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-registry/docs/billing-questions/
 title: Billing questions \u00a0|\u00a0 Cloud API Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:24:02.907562+00:00
+fetched_at: 2026-10-21T14:53:14.259981+00:00
 ---
 
 # Billing questions  |  Cloud API Registry  |  Google Cloud Documentation

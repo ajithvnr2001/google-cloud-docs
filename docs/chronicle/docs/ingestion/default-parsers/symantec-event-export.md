@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/symantec-event-export/
 title: Collect Symantec Event Export logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:59:32.919782+00:00
+fetched_at: 2026-10-21T12:38:49.615089+00:00
 ---
 
 # Collect Symantec Event Export logs  |  Google Security Operations  |  Google Cloud Documentation

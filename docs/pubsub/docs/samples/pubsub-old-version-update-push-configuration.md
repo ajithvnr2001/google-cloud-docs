@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-update-push-configuration/
 title: v1 Update subscription push configuration (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:53:14.254785+00:00
+fetched_at: 2026-10-21T14:58:56.455926+00:00
 ---
 
 # v1 Update subscription push configuration (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

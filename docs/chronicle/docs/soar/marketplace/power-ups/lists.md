@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace/power-ups/lists/
 title: Lists \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:03.945110+00:00
+fetched_at: 2026-10-21T14:21:04.279533+00:00
 ---
 
 # Lists  |  Google Security Operations  |  Google Cloud Documentation

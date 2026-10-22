@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/base64/
 title: Vertex AI services \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:49:46.041449+00:00
+fetched_at: 2026-10-21T12:56:44.453364+00:00
 ---
 
 # Vertex AI services  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

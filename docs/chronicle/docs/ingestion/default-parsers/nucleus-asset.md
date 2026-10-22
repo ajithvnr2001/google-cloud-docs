@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/nucleus-asset/
 title: Collect Nucleus Asset Metadata logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:40:21.950337+00:00
+fetched_at: 2026-10-21T14:10:40.848094+00:00
 ---
 
 # Collect Nucleus Asset Metadata logs  |  Google Security Operations  |  Google Cloud Documentation

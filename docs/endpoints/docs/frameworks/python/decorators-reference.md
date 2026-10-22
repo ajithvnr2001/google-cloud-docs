@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/python/decorators-reference/
 title: Decorators \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:38:23.387118+00:00
+fetched_at: 2026-10-21T12:46:04.585572+00:00
 ---
 
 # Decorators  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

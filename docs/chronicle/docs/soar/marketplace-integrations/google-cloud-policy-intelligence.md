@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/google-cloud-policy-intelligence/
 title: Integrate Policy Intelligence with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:00:22.283512+00:00
+fetched_at: 2026-10-21T14:06:59.528725+00:00
 ---
 
 # Integrate Policy Intelligence with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

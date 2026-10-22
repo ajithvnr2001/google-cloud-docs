@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/how-to/configuring-your-client/
 title: Configuring your kubectl client \u00a0|\u00a0 Config Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:16.201255+00:00
+fetched_at: 2026-10-21T14:24:33.256092+00:00
 ---
 
 # Configuring your kubectl client  |  Config Connector  |  Google Cloud Documentation

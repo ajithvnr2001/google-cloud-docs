@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/firewall-policies/
 title: Hierarchical firewall policies \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:54:36.253343+00:00
+fetched_at: 2026-10-21T12:45:32.661197+00:00
 ---
 
 # Hierarchical firewall policies  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

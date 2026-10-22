@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/resources/public-datasets/
 title: Cloud Healthcare API public datasets \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:40:42.936534+00:00
+fetched_at: 2026-10-21T12:54:25.244868+00:00
 ---
 
 # Cloud Healthcare API public datasets  |  Google Cloud Documentation

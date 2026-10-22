@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/configuring-policy-rest/
 title: Configure a policy using the REST API \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:41:07.744469+00:00
+fetched_at: 2026-10-21T14:10:09.583860+00:00
 ---
 
 # Configure a policy using the REST API  |  Binary Authorization  |  Google Cloud Documentation

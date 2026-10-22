@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-dataframes-load-data-from-bigquery-job/
 title: Create a BigQuery DataFrame from a finished query job \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:42.557722+00:00
+fetched_at: 2026-10-21T12:40:49.127094+00:00
 ---
 
 # Create a BigQuery DataFrame from a finished query job  |  Google Cloud Documentation

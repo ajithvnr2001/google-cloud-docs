@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy/
 title: XMLThreatProtection policy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:07:50.449108+00:00
+fetched_at: 2026-10-21T12:30:33.288546+00:00
 ---
 
 # XMLThreatProtection policy  |  Apigee  |  Google Cloud Documentation

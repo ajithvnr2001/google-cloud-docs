@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cloudflare-warp-changelog/
 title: Change log for CLOUDFLARE_WARP \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:55:56.552268+00:00
+fetched_at: 2026-10-21T14:44:40.020688+00:00
 ---
 
 # Change log for CLOUDFLARE_WARP  |  Google Security Operations  |  Google Cloud Documentation

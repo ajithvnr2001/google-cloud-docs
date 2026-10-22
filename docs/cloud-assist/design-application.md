@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/design-application/
 title: Design an application with Gemini assistance \u00a0|\u00a0 Gemini Cloud Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:14:01.908993+00:00
+fetched_at: 2026-10-21T14:22:33.832691+00:00
 ---
 
 # Design an application with Gemini assistance  |  Gemini Cloud Assist  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/cobrowse-agent-guide/
 title: Use Screen Share \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:37.196056+00:00
+fetched_at: 2026-10-21T14:22:10.933355+00:00
 ---
 
 # Use Screen Share  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

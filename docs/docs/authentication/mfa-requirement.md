@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/authentication/mfa-requirement/
 title: 2-step verification requirement for Google Cloud \u00a0|\u00a0 Authentication \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:22:45.015269+00:00
+fetched_at: 2026-10-21T14:07:03.759435+00:00
 ---
 
 # 2-step verification requirement for Google Cloud  |  Authentication  |  Google Cloud Documentation

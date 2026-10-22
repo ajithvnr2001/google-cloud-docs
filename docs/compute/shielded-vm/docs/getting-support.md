@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/shielded-vm/docs/getting-support/
 title: Get support \u00a0|\u00a0 Shielded VM \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:37:26.593808+00:00
+fetched_at: 2026-10-21T14:08:55.114028+00:00
 ---
 
 # Get support  |  Shielded VM  |  Google Cloud Documentation

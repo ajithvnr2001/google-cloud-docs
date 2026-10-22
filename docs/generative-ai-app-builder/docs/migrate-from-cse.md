@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/migrate-from-cse/
 title: Migrate from Custom Search Site Restricted JSON API \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:05.130549+00:00
+fetched_at: 2026-10-21T12:55:37.186181+00:00
 ---
 
 # Migrate from Custom Search Site Restricted JSON API  |  Agent Search  |  Google Cloud Documentation

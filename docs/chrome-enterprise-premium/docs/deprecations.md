@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/deprecations/
 title: Chrome Enterprise Premium deprecations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:13:52.674894+00:00
+fetched_at: 2026-10-21T14:25:52.172364+00:00
 ---
 
 # Chrome Enterprise Premium deprecations  |  Google Cloud Documentation

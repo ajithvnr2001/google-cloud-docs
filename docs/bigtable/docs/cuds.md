@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/cuds/
 title: Committed use discounts \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:55.162858+00:00
+fetched_at: 2026-10-21T12:37:17.005276+00:00
 ---
 
 # Committed use discounts  |  Bigtable  |  Google Cloud Documentation

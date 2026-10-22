@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/document-ai/limits/
 title: Limits \u00a0|\u00a0 Document AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:50:56.778232+00:00
+fetched_at: 2026-10-21T14:07:41.311159+00:00
 ---
 
 # Limits  |  Document AI  |  Google Cloud Documentation

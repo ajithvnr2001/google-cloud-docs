@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/15.5.4/docs/migrate-to-latest-version/
 title: Migrate from AlloyDB Omni version 15.5.2 and earlier to the latest version \u00a0|\u00a0 AlloyDB Omni for containers: 15.5.4 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:22.438134+00:00
+fetched_at: 2026-10-21T15:20:28.649594+00:00
 ---
 
 # Migrate from AlloyDB Omni version 15.5.2 and earlier to the latest version  |  AlloyDB Omni for containers: 15.5.4  |  Google Cloud Documentation

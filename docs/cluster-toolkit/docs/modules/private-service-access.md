@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/private-service-access/
 title: Configure private service access \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:42.791063+00:00
+fetched_at: 2026-10-21T14:42:15.730061+00:00
 ---
 
 # Configure private service access  |  Cluster Toolkit  |  Google Cloud Documentation

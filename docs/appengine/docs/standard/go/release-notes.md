@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/go/release-notes/
 title: App Engine standard environment for Go 1.12+ release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:57:58.357789+00:00
+fetched_at: 2026-10-21T14:43:08.060502+00:00
 ---
 
 # App Engine standard environment for Go 1.12+ release notes  |  Google Cloud Documentation

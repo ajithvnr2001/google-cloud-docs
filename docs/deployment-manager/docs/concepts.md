@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deployment-manager/docs/concepts/
 title: Concepts \u00a0|\u00a0 Cloud Deployment Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:14:59.689716+00:00
+fetched_at: 2026-10-22T05:42:05.074426+00:00
 ---
 
 # Concepts  |  Cloud Deployment Manager  |  Google Cloud Documentation

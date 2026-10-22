@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/generic/how-to/migrate-cluster/
 title: Migrate your CNCF conformant cluster \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:34:56.883896+00:00
+fetched_at: 2026-10-21T15:02:16.064460+00:00
 ---
 
 # Migrate your CNCF conformant cluster  |  GKE attached clusters  |  Google Cloud Documentation

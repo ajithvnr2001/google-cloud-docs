@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/bulk-operations/
 title: Making bulk changes to access levels \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:39:16.835727+00:00
+fetched_at: 2026-10-21T14:26:01.585261+00:00
 ---
 
 # Making bulk changes to access levels  |  Access Context Manager  |  Google Cloud Documentation

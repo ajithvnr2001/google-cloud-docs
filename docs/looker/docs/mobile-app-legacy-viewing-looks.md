@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/mobile-app-legacy-viewing-looks/
 title: Viewing Looks in the Looker Mobile (Legacy) app \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:44:17.082386+00:00
+fetched_at: 2026-10-21T15:03:06.501980+00:00
 ---
 
 # Viewing Looks in the Looker Mobile (Legacy) app  |  Google Cloud Documentation

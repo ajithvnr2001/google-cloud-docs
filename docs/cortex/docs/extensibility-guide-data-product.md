@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/extensibility-guide-data-product/
 title: Data product module creation \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:36:57.712144+00:00
+fetched_at: 2026-10-21T14:22:23.640535+00:00
 ---
 
 # Data product module creation  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

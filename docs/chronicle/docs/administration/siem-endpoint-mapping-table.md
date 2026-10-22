@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/administration/siem-endpoint-mapping-table/
 title: SIEM API endpoint mapping \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:59.240137+00:00
+fetched_at: 2026-10-21T14:11:18.557721+00:00
 ---
 
 # SIEM API endpoint mapping  |  Google Security Operations  |  Google Cloud Documentation

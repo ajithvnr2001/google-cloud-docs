@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/samples/healthcare-delete-hl7v2-message/
 title: Delete HL7v2 message \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:25:58.076055+00:00
+fetched_at: 2026-10-21T12:52:59.426830+00:00
 ---
 
 # Delete HL7v2 message  |  Cloud Healthcare API  |  Google Cloud Documentation

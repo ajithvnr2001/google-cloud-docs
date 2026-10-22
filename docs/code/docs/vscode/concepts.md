@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/vscode/concepts/
 title: Concepts \u00a0|\u00a0 Cloud Code for VS Code \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:41:16.107778+00:00
+fetched_at: 2026-10-22T05:48:28.288514+00:00
 ---
 
 # Concepts  |  Cloud Code for VS Code  |  Google Cloud Documentation

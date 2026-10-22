@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/working-with-time-series/
 title: Work with time series data \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:09.618847+00:00
+fetched_at: 2026-10-21T12:39:38.405943+00:00
 ---
 
 # Work with time series data  |  BigQuery  |  Google Cloud Documentation

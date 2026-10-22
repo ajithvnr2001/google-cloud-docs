@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents/
 title: Create and manage Explore data agents \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:33:39.314833+00:00
+fetched_at: 2026-10-21T14:56:42.460253+00:00
 ---
 
 # Create and manage Explore data agents  |  Looker  |  Google Cloud Documentation
@@ -23,7 +23,7 @@ Send feedback
 
 Data agents let you curate the [Conversational Analytics](https://docs.cloud.google.com/looker/docs/conversational-analytics-overview) experience for your users. With agents, you can provide Conversational Analytics with context and instructions to enable it to answer questions more effectively for specific use cases. Agents empower analysts to map business terms to specific fields, specify the best fields for filtering, and define custom calculations.
 
-**Note:** This page describes Explore data agents — data agents that query Explores. For information about data agents for user-defined dashboards and LookML dashboards, see the [Query a user-defined dashboard with a dashboard agent](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-dashboards) and [Create and manage data agents for LookML dashboards](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-lookml-dashboards) [[Preview](https://cloud.google.com/products#product-launch-stages)] documentation pages, respectively.
+**Note:** This page describes Explore data agents — data agents that query Explores. For information about data agents for user-defined dashboards and LookML dashboards, see the [Query a user-defined dashboard with a dashboard agent](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-dashboards) and [Create and manage data agents for LookML dashboards](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-lookml-dashboards) documentation pages, respectively.
 
 This page guides you through the following processes:
 
@@ -44,7 +44,9 @@ For more information about the permissions and access that are required to manag
 
 Conversational Analytics Explore agents are available when a Looker admin has enabled the following features on the **Gemini in Looker** admin page:
 
-  * **Conversational Analytics**
+  * **Conversational Analytics** : 
+    * **Conversational Analytics (Conversations page)** : Turn on this setting to enable access to the **Conversations** page for data agents with Explores and direct chats with an Explore.
+  * **Additional options** : 
     * **Advanced Analytics** : To allow your agent to use [**Advanced Analytics**](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-advanced-analytics), which translates your natural language questions into Python code and executes that code to provide advanced analysis and visualizations, turn on the **Advanced Analytics** setting. This setting is optional.
   * **Enable Trusted Tester Features**
     * **Agentic Workflows** [[Preview](https://cloud.google.com/products#product-launch-stages)]: To create [agentic workflows](https://docs.cloud.google.com/looker/docs/conversational-analytics-triggered-agentic-workflows) that instruct your agent to monitor changes in your data.
@@ -109,7 +111,7 @@ Verified queries, also referred to as _golden queries_ in some Google documentat
 
 When using verified queries, keep the following limits in mind:
 
-  * Verified queries are available only for Explore data agents. They aren't available for standalone conversations or for dashboard data agents.
+  * Verified queries are available only for Explore data agents. They aren't available for direct chats with an Explore or for dashboard data agents.
   * You must use an Explore that's already defined for the agent. If you reference an Explore that's not used by the data agent, you'll see the error message `This query will not be used as it references an Explore that has not been defined in this agent. For best results, make sure that verified queries are based on Explores used in this agent.`
   * Verified queries don't support Explore queries that contain custom fields or pivots.
   * Although there's no limit to the number of verified queries that you can add, we recommend including no more than 30 to 50 question-and-query pairs per agent.
@@ -240,7 +242,7 @@ Users with the following roles must follow the steps that are described in the a
 
 Before you can publish an agent, the following requirements must be met:
 
-  * A Looker admin must enable the **Publish to Gemini Enterprise** setting on the **Gemini in Looker** page in the **Admin** panel.
+  * A Looker admin must enable the **Enable Trusted Tester Features** and **Publish to Gemini Enterprise** settings, as well as the **Conversational Analytics (Conversations page)** setting, on the **Gemini in Looker** page in the **Admin** panel.
   * A Looker admin must grant you a role that contains the [`publish_agent_externally` permission](https://docs.cloud.google.com/looker/docs/admin-panel-users-roles#publish_agent_externally). You must also be able to edit a data agent.
   * The Looker service account on the Google Cloud project that hosts the Gemini Enterprise engine must be granted the [**Discovery Engine Admin**](https://docs.cloud.google.com/iam/docs/roles-permissions/discoveryengine#discoveryengine.admin) Identity and Access Management role. Granting this role assigns a Gemini Enterprise license to the account when the first data agent is published. If no Gemini Enterprise licenses are available to assign to the Looker service account, the Gemini Enterprise engine's page in the Google Cloud console displays the error "Failed to allocate quota for agent creation." A user with the [**Discovery Engine Admin**](https://docs.cloud.google.com/iam/docs/roles-permissions/discoveryengine#discoveryengine.admin) Identity and Access Management role must then provision a new Gemini Enterprise license or reassign an existing license for the Looker service account.
 
@@ -364,11 +366,11 @@ To restore a data agent from the trash, follow these steps:
 
   * **[Query a user-defined dashboard with a dashboard agent](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-dashboards)** : Query and configure dashboard agents on user-defined dashboards.
 
-  * **[Create and manage data agents for LookML dashboards](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-lookml-dashboards)** [[Preview](https://cloud.google.com/products#product-launch-stages)]: Use LookML to configure and manage version-controlled data agents for LookML dashboards.
+  * **[Create and manage data agents for LookML dashboards](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-lookml-dashboards)** : Use LookML to configure and manage version-controlled data agents for LookML dashboards.
 
-  * **[Best practices for configuring Conversational Analytics in Looker](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-best-practices)** : Strategies and best practices to help Looker administrators and LookML developers successfully configure optimize Conversational Analytics.
+  * **[Best practices for configuring Conversational Analytics in Looker](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-best-practices)** : Strategies and best practices to help Looker administrators and LookML developers successfully configure and optimize Conversational Analytics.
 
-  * **[Enable Advanced Analytics](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-code-interpreter)** : Advanced Analytics within Conversational Analytics translates your natural language questions into Python code and executes that code. Compared to standard SQL-based queries, the Advance Analytics feature's use of Python enables more complex analysis and visualizations.
+  * **[Enable Advanced Analytics](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-code-interpreter)** : Advanced Analytics within Conversational Analytics translates your natural language questions into Python code and executes that code. Compared to standard SQL-based queries, the Advanced Analytics feature's use of Python enables more complex analysis and visualizations.
 
 
 
@@ -377,6 +379,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

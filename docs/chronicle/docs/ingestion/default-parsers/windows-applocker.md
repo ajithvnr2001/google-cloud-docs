@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/windows-applocker/
 title: Collect Windows AppLocker logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:49:40.024250+00:00
+fetched_at: 2026-10-21T12:29:04.004534+00:00
 ---
 
 # Collect Windows AppLocker logs  |  Google Security Operations  |  Google Cloud Documentation
@@ -50,15 +50,42 @@ Make sure you have the following prerequisites:
 
 
 
-## Get an ingestion authentication file from Google SecOps
+## Get Google SecOps credentials for the Bindplane agent
+
+To authenticate the Bindplane agent to Google SecOps, choose one of the following methods:
+
+  * **New deployments** : Use the Chronicle API (Option 1).
+  * **Legacy deployments** : Continue using the ingestion authentication file (Option 2) until the Ingestion API is discontinued on July 20, 2027.
+
+
+
+### Option 1: Create a service account for the Chronicle API (recommended)
+
+  1. Sign in to the [Google Cloud console](https://console.cloud.google.com/) and select the Google Cloud project that is linked to your Google SecOps instance.
+  2. Go to **IAM & Admin > Service Accounts**.
+  3. Click **Create service account**.
+  4. Provide the following configuration details: 
+     * **Service account name** : Enter a name for the account (for example, `bindplane-ingest`).
+     * **Service account description** : Enter a description (for example, `Bindplane agent log ingestion`).
+  5. Click **Create and continue**.
+  6. In the **Grant this service account access to project** section, click **Select a role** and select **Chronicle Editor**.
+  7. Click **Continue** , and then click **Done**.
+  8. Click the service account you created, and then go to the **Keys** tab.
+  9. Click **Add key > Create new key**.
+  10. Select **JSON** and click **Create**. The key file is downloaded to your computer.
+  11. Save the key file as `ingestion-auth.json` in the Bindplane collector directory (`/opt/observiq-otel-collector/ingestion-auth.json` on Linux or `C:\Program Files\observIQ OpenTelemetry Collector\ingestion-auth.json` on Windows), or update `creds_file_path` in `config.yaml` to match the path where you save it.
+  12. Go to **IAM & Admin > Settings** and copy the **Project number**. You'll need it for the exporter configuration.
+
+**Note:** The JSON key is a credential. Restrict access to the file on the Bindplane host and rotate the key according to your organization's policy.
+
+### Option 2: Download the ingestion authentication file (legacy)
 
   1. Sign in to the Google SecOps console.
   2. Go to **SIEM Settings > Collection Agents**.
-  3. Download the **Ingestion Authentication File**. Save the file securely on the system where Bindplane will be installed.
+  3. Download the **ingestion authentication file**.
+  4. Save the file securely on the system where the Bindplane agent will be installed.
 
-**Note:** This JSON file contains credentials for authenticating the Bindplane agent to Google SecOps.
-
-
+**Note:** This file authenticates the agent to the legacy Ingestion API (`malachiteingestion-pa.googleapis.com`), which Google has scheduled for end of life on July 20, 2027. Plan to move to Option 1 before that date.
 
 ## Get the Google SecOps customer ID
 
@@ -109,6 +136,8 @@ The service should show as **RUNNING**.
 
 For additional installation options and troubleshooting, see the [Bindplane agent installation guide](https://docs.cloud.google.com/chronicle/docs/ingestion/use-bindplane-agent#install_the_bindplane_agent).
 
+**Note:** The Chronicle API exporter configuration requires Bindplane collector v1.106.0 or later. The previous commands install the latest release. If you're updating an existing installation, upgrade the collector before changing the configuration.
+
 ## Method 1: NXLog forwarding to Bindplane agent
 
 ### Configure the Bindplane agent to receive syslog and send to Google SecOps
@@ -128,41 +157,44 @@ For additional installation options and troubleshooting, see the [Bindplane agen
   2. Replace the entire contents of `config.yaml` with the following configuration:
          
          receivers:
-             tcplog/applocker:
-                 listen_address: "0.0.0.0:514"
+           tcplog/applocker:
+             listen_address: "0.0.0.0:514"
          
          exporters:
-             chronicle/windows_applocker:
-                 compression: gzip
-                 creds_file_path: '/path/to/ingestion-auth.json'
-                 customer_id: '<customer_id>'
-                 endpoint: malachiteingestion-pa.googleapis.com
-                 log_type: WINDOWS_APPLOCKER
-                 raw_log_field: body
-                 ingestion_labels:
-                     env: production
+           chronicle/windows_applocker:
+             protocol: https
+             # Region of your instance, for example us, europe, asia-southeast1
+             location: <LOCATION>
+             # Project number of the Google Cloud project linked to the instance
+             project: '<PROJECT_NUMBER>'
+             compression: gzip
+             creds_file_path: '/path/to/ingestion-auth.json'
+             customer_id: '<customer_id>'
+             endpoint: chronicle.googleapis.com
+             log_type: WINDOWS_APPLOCKER
+             raw_log_field: body
+             ingestion_labels:
+               env: production
          
          service:
-             pipelines:
-                 logs/applocker_to_chronicle:
-                     receivers:
-                         - tcplog/applocker
-                     exporters:
-                         - chronicle/windows_applocker
+           pipelines:
+             logs/applocker_to_chronicle:
+               receivers:
+                 - tcplog/applocker
+               exporters:
+                 - chronicle/windows_applocker
          
 
   3. Replace the following placeholders:
 
      * `listen_address`: The IP address and port the agent listens on. `0.0.0.0:514` accepts syslog on every interface on TCP port 514. Use a port higher than 1024 on Linux if the agent does not run as root, and open the port in the host firewall.
-     * `creds_file_path`: Full path to the ingestion authentication file: 
+     * `creds_file_path`: Full path to the service account JSON key file (Option 1): 
        * **Windows** : `C:\Program Files\observIQ OpenTelemetry Collector\ingestion-auth.json`
        * **Linux** : `/opt/observiq-otel-collector/ingestion-auth.json`
      * `<customer_id>`: Customer ID from the Get Google SecOps customer ID section
-     * `endpoint`: Regional endpoint URL: 
-       * **US** : `malachiteingestion-pa.googleapis.com`
-       * **Europe** : `europe-malachiteingestion-pa.googleapis.com`
-       * **Asia** : `asia-southeast1-malachiteingestion-pa.googleapis.com`
-       * See [Regional Endpoints](https://docs.cloud.google.com/chronicle/docs/reference/ingestion-api#regional_endpoints) for the complete list
+     * `location`: Replace `<LOCATION>` with the region of your Google SecOps instance (for example, `us`, `europe`, or `asia-southeast1`). The exporter prefixes `chronicle.googleapis.com` with this value. See [Regional Endpoints](https://docs.cloud.google.com/chronicle/docs/reference/rest?rep_location=us#regional-service-endpoint) for the complete list.
+     * `project`: Replace `<PROJECT_NUMBER>` with the project number from **IAM & Admin > Settings**.
+     * `endpoint`: Keep set to `chronicle.googleapis.com`.
      * `ingestion_labels`: Optional labels in YAML format (for example, `env: production`)
   4. Save the file.
 
@@ -180,6 +212,25 @@ For additional installation options and troubleshooting, see the [Bindplane agen
 
 
 
+
+#### Legacy ingestion API exporter
+
+  * If you use the ingestion authentication file from Option 2, replace the `exporters` block with the following. Set `creds_file_path` to the path to the ingestion authentication file, and if your instance is outside the US, replace `malachiteingestion-pa.googleapis.com` with your [regional endpoint](https://docs.cloud.google.com/chronicle/docs/reference/ingestion-api#regional-endpoints) (for example, `europe-malachiteingestion-pa.googleapis.com`).
+        
+        exporters:
+          chronicle/windows_applocker:
+            compression: gzip
+            creds_file_path: '/path/to/ingestion-auth.json'
+            customer_id: '<customer_id>'
+            endpoint: malachiteingestion-pa.googleapis.com
+            log_type: WINDOWS_APPLOCKER
+            raw_log_field: body
+            ingestion_labels:
+              env: production
+        
+
+
+**Note:** This exporter will stop working when the Ingestion API is discontinued on July 20, 2027.
 
 ### Install NXLog on the Windows endpoints
 
@@ -312,55 +363,60 @@ Use this method when you don't want to deploy NXLog. The Bindplane agent install
   2. Replace the entire contents of `config.yaml` with the following configuration:
          
          receivers:
-             windowseventlog/applocker_exe_dll:
-                 channel: Microsoft-Windows-AppLocker/EXE and DLL
-                 raw: true
-                 max_reads: 100
-                 poll_interval: 5s
-                 start_at: end
+           windowseventlog/applocker_exe_dll:
+             channel: Microsoft-Windows-AppLocker/EXE and DLL
+             raw: true
+             max_reads: 100
+             poll_interval: 5s
+             start_at: end
          
-             windowseventlog/applocker_msi_script:
-                 channel: Microsoft-Windows-AppLocker/MSI and Script
-                 raw: true
-                 max_reads: 100
-                 poll_interval: 5s
-                 start_at: end
+           windowseventlog/applocker_msi_script:
+             channel: Microsoft-Windows-AppLocker/MSI and Script
+             raw: true
+             max_reads: 100
+             poll_interval: 5s
+             start_at: end
          
-             windowseventlog/applocker_packaged_deployment:
-                 channel: Microsoft-Windows-AppLocker/Packaged app-Deployment
-                 raw: true
-                 max_reads: 100
-                 poll_interval: 5s
-                 start_at: end
+           windowseventlog/applocker_packaged_deployment:
+             channel: Microsoft-Windows-AppLocker/Packaged app-Deployment
+             raw: true
+             max_reads: 100
+             poll_interval: 5s
+             start_at: end
          
-             windowseventlog/applocker_packaged_execution:
-                 channel: Microsoft-Windows-AppLocker/Packaged app-Execution
-                 raw: true
-                 max_reads: 100
-                 poll_interval: 5s
-                 start_at: end
+           windowseventlog/applocker_packaged_execution:
+             channel: Microsoft-Windows-AppLocker/Packaged app-Execution
+             raw: true
+             max_reads: 100
+             poll_interval: 5s
+             start_at: end
          
          exporters:
-             chronicle/winevtlog:
-                 compression: gzip
-                 creds_file_path: 'C:\Program Files\observIQ OpenTelemetry Collector\ingestion-auth.json'
-                 customer_id: '<customer_id>'
-                 endpoint: malachiteingestion-pa.googleapis.com
-                 log_type: WINEVTLOG
-                 raw_log_field: body
-                 ingestion_labels:
-                     env: production
+           chronicle/winevtlog:
+             protocol: https
+             # Region of your instance, for example us, europe, asia-southeast1
+             location: <LOCATION>
+             # Project number of the Google Cloud project linked to the instance
+             project: '<PROJECT_NUMBER>'
+             compression: gzip
+             creds_file_path: 'C:\Program Files\observIQ OpenTelemetry Collector\ingestion-auth.json'
+             customer_id: '<customer_id>'
+             endpoint: chronicle.googleapis.com
+             log_type: WINEVTLOG
+             raw_log_field: body
+             ingestion_labels:
+               env: production
          
          service:
-             pipelines:
-                 logs/applocker_to_chronicle:
-                     receivers:
-                         - windowseventlog/applocker_exe_dll
-                         - windowseventlog/applocker_msi_script
-                         - windowseventlog/applocker_packaged_deployment
-                         - windowseventlog/applocker_packaged_execution
-                     exporters:
-                         - chronicle/winevtlog
+           pipelines:
+             logs/applocker_to_chronicle:
+               receivers:
+                 - windowseventlog/applocker_exe_dll
+                 - windowseventlog/applocker_msi_script
+                 - windowseventlog/applocker_packaged_deployment
+                 - windowseventlog/applocker_packaged_execution
+               exporters:
+                 - chronicle/winevtlog
          
 
   3. Replace the following placeholders:
@@ -384,6 +440,25 @@ Use this method when you don't want to deploy NXLog. The Bindplane agent install
 
 
 
+
+#### Legacy ingestion API exporter
+
+  * If you use the ingestion authentication file from Option 2, replace the `exporters` block with the following. Set `creds_file_path` to the path to the ingestion authentication file, and if your instance is outside the US, replace `malachiteingestion-pa.googleapis.com` with your [regional endpoint](https://docs.cloud.google.com/chronicle/docs/reference/ingestion-api#regional-endpoints) (for example, `europe-malachiteingestion-pa.googleapis.com`).
+        
+        exporters:
+          chronicle/winevtlog:
+            compression: gzip
+            creds_file_path: 'C:\Program Files\observIQ OpenTelemetry Collector\ingestion-auth.json'
+            customer_id: '<customer_id>'
+            endpoint: malachiteingestion-pa.googleapis.com
+            log_type: WINEVTLOG
+            raw_log_field: body
+            ingestion_labels:
+              env: production
+        
+
+
+**Note:** This exporter will stop working when the Ingestion API is discontinued on July 20, 2027.
 
 ## UDM mapping table
 
@@ -429,6 +504,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

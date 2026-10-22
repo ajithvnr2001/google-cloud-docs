@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/view-inventory-intune/
 title: Monitor device inventory \u00a0|\u00a0 Chrome Enterprise Premium \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:07:20.856419+00:00
+fetched_at: 2026-10-21T14:23:11.381352+00:00
 ---
 
 # Monitor device inventory  |  Chrome Enterprise Premium  |  Google Cloud Documentation

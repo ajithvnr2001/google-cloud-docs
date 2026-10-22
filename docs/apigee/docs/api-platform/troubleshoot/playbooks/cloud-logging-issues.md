@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/cloud-logging-issues/
 title: Troubleshooting Apigee logs missing from Cloud Logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:24.118800+00:00
+fetched_at: 2026-10-21T14:27:42.392569+00:00
 ---
 
 # Troubleshooting Apigee logs missing from Cloud Logging  |  Google Cloud Documentation

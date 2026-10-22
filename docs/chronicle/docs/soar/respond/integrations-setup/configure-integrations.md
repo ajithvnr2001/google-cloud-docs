@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/integrations-setup/configure-integrations/
 title: Configure response integrations \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:08.569380+00:00
+fetched_at: 2026-10-21T14:10:10.159427+00:00
 ---
 
 # Configure response integrations  |  Google Security Operations  |  Google Cloud Documentation

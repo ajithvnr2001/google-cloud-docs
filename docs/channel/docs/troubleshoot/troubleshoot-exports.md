@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/channel/docs/troubleshoot/troubleshoot-exports/
 title: Troubleshoot issues with BigQuery exports \u00a0|\u00a0 Channel Services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:30:33.807131+00:00
+fetched_at: 2026-10-21T14:25:43.452005+00:00
 ---
 
 # Troubleshoot issues with BigQuery exports  |  Channel Services  |  Google Cloud Documentation

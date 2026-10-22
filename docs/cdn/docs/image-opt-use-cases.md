@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/image-opt-use-cases/
 title: Image optimization use cases \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:29:51.759107+00:00
+fetched_at: 2026-10-21T14:23:27.032378+00:00
 ---
 
 # Image optimization use cases  |  Cloud CDN  |  Google Cloud Documentation

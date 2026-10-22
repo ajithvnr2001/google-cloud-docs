@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/setting-up-http-https-redirect/
 title: Redirect HTTP requests to HTTPS \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:29:50.514431+00:00
+fetched_at: 2026-10-21T14:23:43.388093+00:00
 ---
 
 # Redirect HTTP requests to HTTPS  |  Cloud CDN  |  Google Cloud Documentation

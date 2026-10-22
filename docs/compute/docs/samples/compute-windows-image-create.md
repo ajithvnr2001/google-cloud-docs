@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-windows-image-create/
 title: Create a Windows Server image \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:16.342490+00:00
+fetched_at: 2026-10-22T05:50:27.537053+00:00
 ---
 
 # Create a Windows Server image  |  Compute Engine  |  Google Cloud Documentation

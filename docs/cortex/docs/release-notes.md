@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/release-notes/
 title: Google Cloud Cortex Framework release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:36:59.258344+00:00
+fetched_at: 2026-10-21T14:45:11.354751+00:00
 ---
 
 # Google Cloud Cortex Framework release notes  |  Google Cloud Documentation

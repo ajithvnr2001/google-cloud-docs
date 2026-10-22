@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/s3-transfer-intro/
 title: Introduction to Amazon S3 data transfers \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:41:37.683451+00:00
+fetched_at: 2026-10-21T12:36:34.513391+00:00
 ---
 
 # Introduction to Amazon S3 data transfers  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/column-data-masking-intro/
 title: Introduction to data masking \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:51:02.504738+00:00
+fetched_at: 2026-10-21T15:03:38.960449+00:00
 ---
 
 # Introduction to data masking  |  BigQuery  |  Google Cloud Documentation
@@ -415,6 +415,10 @@ The following sections describe the categories of restrictions and limitations t
 ### Policy tags
 
   * The project containing the policy tag taxonomy must belong to an organization.
+  * Policy tag taxonomies are scoped to an organization. If you migrate a project to a different organization, the project loses access to its original Data Catalog taxonomy. Stale policy tags might still appear on table columns in the schema editor, but they are removed from the policy tag UI in the Google Cloud console and cannot be applied to new tables. If you migrate a project to a new organization, you must do the following: 
+    * Manually re-create your policy tag taxonomies, policy tags, and associated data policies in a project within the destination organization.
+    * Explicitly grant the folder-level BigQuery Admin (`roles/bigquery.admin`) and Data Catalog Admin (`roles/datacatalog.admin` or `roles/datacatalog.categoryAdmin`) roles in the destination organization.
+    * Update the table columns in the migrated project to reference the newly created policy tags in the destination organization.
   * A policy tag hierarchy can be no more than five levels deep from the root node to the lowest-level subtag, as shown in the following screenshot:
 
 ![Policy tag depth.](https://docs.cloud.google.com/static/bigquery/images/policy-tag-depth.png)
@@ -543,6 +547,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

@@ -1,21 +1,21 @@
 ---
 url: https://docs.cloud.google.com/alloydb/omni/linux/current/docs/db-version-policies/
-title: Database version policies \u00a0|\u00a0 AlloyDB Omni using RPM: Current (18.3.0) \u00a0|\u00a0 Google Cloud Documentation
+title: Database version policies \u00a0|\u00a0 AlloyDB Omni using RPM: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T14:44:10.911933+00:00
+fetched_at: 2026-10-21T14:40:29.505418+00:00
 ---
 
-# Database version policies  |  AlloyDB Omni using RPM: Current (18.3.0)  |  Google Cloud Documentation
+# Database version policies  |  AlloyDB Omni using RPM: Current (18.4.0)  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/alloydb/omni/linux/current/docs/db-version-policies/
 
-This page documents AlloyDB Omni version **18.3.0** using the **RPM** deployment option. [Choose a different deployment option](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment). 
+This page documents AlloyDB Omni version **18.4.0** using the **RPM** deployment option. [Choose a different deployment option](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment). 
 
   * [ Home ](https://docs.cloud.google.com/)
   * [ Documentation ](https://docs.cloud.google.com/docs)
   * [ Databases ](https://docs.cloud.google.com/docs/databases)
   * [ AlloyDB Omni ](https://docs.cloud.google.com/alloydb/omni/docs)
-  * [ RPM: Current (18.3.0) ](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/overview)
+  * [ RPM: Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/overview)
   * [ Resources ](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/resources)
 
 
@@ -24,9 +24,10 @@ Send feedback
 
 #  Database version policies Stay organized with collections  Save and categorize content based on your preferences. 
 
-Select a documentation version: 18.3.0keyboard_arrow_down
+Select a documentation version: 18.4.0keyboard_arrow_down
 
-  * [ Current (18.3.0) ](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/db-version-policies)
+  * [ Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/db-version-policies)
+  * [ 18.4.0 ](https://docs.cloud.google.com/alloydb/omni/linux/18.4.0/docs/db-version-policies)
   * [ 18.3.0 ](https://docs.cloud.google.com/alloydb/omni/linux/18.3.0/docs/db-version-policies)
   * [ 18.1.1 ](https://docs.cloud.google.com/alloydb/omni/linux/18.1.1/docs/db-version-policies)
   * [ 18.1.0 ](https://docs.cloud.google.com/alloydb/omni/linux/18.1.0/docs/db-version-policies)
@@ -67,7 +68,7 @@ PostgreSQL major version | GA date
 16 | April 8, 2025  
 15 | October 11, 2023  
   
-Once a version exceeds its support period, it is considered retired. Google doesn't process support tickets for retired versions and recommends that you upgrade to a supported version to continue receiving assistance.
+After a version exceeds its support period, it is considered retired. Google doesn't process support tickets for retired versions and recommends that you upgrade to a supported version to continue receiving assistance.
 
 ## Supported PostgreSQL versions
 
@@ -75,6 +76,7 @@ AlloyDB Omni supports compatibility with the following PostgreSQL database versi
 
 PostgreSQL version | AlloyDB Omni version | Status  
 ---|---|---  
+18.4 | 18.4.0 | Supported  
 18.3 | 18.3.0 | Supported  
 18.1 | 18.1.1 | Supported  
 18.1 | 18.1.0 | Supported  
@@ -97,15 +99,15 @@ Some AlloyDB Omni releases are updates to AlloyDB Omni itself, independent of up
 
 Policy category | Description  
 ---|---  
-**Major version timing** | We aim to support new PostgreSQL major versions within eight months of the release of the first minor release, version x.1, of a new PostgreSQL major version. For AlloyDB Omni in Google Distributed Cloud, we aim to support compatibility with a new major PostgreSQL version within four months of its availability in AlloyDB Omni.  
-**Minor version timing** | We aim to release support for new PostgreSQL minor versions every quarter. Because AlloyDB Omni is software that you install and run yourself, you must download and install the binaries that include upgraded PostgreSQL minor version compatibility.  
-**Upgrade order** | You must upgrade the AlloyDB Omni operator before upgrading your database clusters (dataplanes).  
-**Security updates** | We aim to release fixes within one month of a PostgreSQL community security release.  
-**Operator compatibility** | The operator is designed to manage dataplanes up to 1 year old.  
+**Major version timing** | Google aims to support new PostgreSQL major versions within eight months of the release of the first minor release, version x.1, of a new PostgreSQL major version. For AlloyDB Omni in Google Distributed Cloud, Google aims to support compatibility with a new major PostgreSQL version within four months of its availability in AlloyDB Omni.  
+**Minor version timing** | Google aims to release support for new PostgreSQL minor versions every quarter. Because AlloyDB Omni is software that you install and run yourself, you must download and install the binaries that include upgraded PostgreSQL minor version compatibility.  
+**Upgrade order** | You must upgrade the AlloyDB Omni operator before upgrading your database clusters (data planes).  
+**Security updates** | Google aims to release fixes within one month of a PostgreSQL community security release.  
+**Operator compatibility** | The operator is designed to manage data planes up to 1 year old.  
 **Upgrade path** | 
 
-  * You may skip minor or patch versions during an upgrade, provided the version gap does not exceed the 1-year support period.
-  * Rollbacks are only supported to the version used immediately prior to the upgrade.
+  * You can skip minor or patch versions during an upgrade, provided that the version gap doesn't exceed the 1-year support period.
+  * Rollbacks are only supported to the version used immediately before the upgrade.
 
   
   
@@ -123,6 +125,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

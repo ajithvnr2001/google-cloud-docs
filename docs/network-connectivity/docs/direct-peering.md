@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-connectivity/docs/direct-peering/
 title: Direct Peering overview \u00a0|\u00a0 Network Connectivity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:36:06.856979+00:00
+fetched_at: 2026-10-21T15:17:13.766296+00:00
 ---
 
 # Direct Peering overview  |  Network Connectivity  |  Google Cloud Documentation

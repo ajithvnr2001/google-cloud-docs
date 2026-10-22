@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/configure-cloudsql-sqlserver/
 title: Configure a Cloud SQL for SQL Server database for CDC \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:50:51.023692+00:00
+fetched_at: 2026-10-22T05:41:16.357816+00:00
 ---
 
 # Configure a Cloud SQL for SQL Server database for CDC  |  Datastream  |  Google Cloud Documentation
@@ -21,7 +21,9 @@ Send feedback
 
 #  Configure a Cloud SQL for SQL Server database for CDC Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to configure change data capture (CDC) to stream data from a Cloud SQL for SQL Server database to a [supported destination](https://docs.cloud.google.com/datastream/docs/destinations), such as BigQuery or Cloud Storage.
+To stream change data capture (CDC) updates to [supported destinations](https://docs.cloud.google.com/datastream/docs/destinations), such as BigQuery or Cloud Storage, you can connect a Cloud SQL for SQL Server database to Datastream. You enable CDC on your database and tables, turn on snapshot isolation, and configure a Datastream user. If you use the transaction logs CDC method, you also configure log retention and enable point-in-time recovery.
+
+To configure your source instance:
 
   1. Connect to your Cloud SQL instance. You can do it using the [`gcloud sql connect`](https://docs.cloud.google.com/sdk/gcloud/reference/sql/connect) command in the Cloud Shell prompt.
 
@@ -248,6 +250,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

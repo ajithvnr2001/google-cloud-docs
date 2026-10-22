@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/azure-storage-audit-changelog/
 title: Change log for AZURE_STORAGE_AUDIT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:29:51.626654+00:00
+fetched_at: 2026-10-21T14:51:55.051929+00:00
 ---
 
 # Change log for AZURE_STORAGE_AUDIT  |  Google Security Operations  |  Google Cloud Documentation

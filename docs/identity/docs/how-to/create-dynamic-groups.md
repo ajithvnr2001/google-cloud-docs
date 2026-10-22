@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/create-dynamic-groups/
 title: Creating and updating a dynamic group \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:21.275132+00:00
+fetched_at: 2026-10-21T12:54:28.319202+00:00
 ---
 
 # Creating and updating a dynamic group  |  Cloud Identity  |  Google Cloud Documentation

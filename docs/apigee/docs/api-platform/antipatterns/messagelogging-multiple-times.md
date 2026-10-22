@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/messagelogging-multiple-times/
 title: Antipattern: Invoke the MessageLogging policy multiple times in an API proxy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:17.658974+00:00
+fetched_at: 2026-10-21T12:30:10.659547+00:00
 ---
 
 # Antipattern: Invoke the MessageLogging policy multiple times in an API proxy  |  Apigee  |  Google Cloud Documentation

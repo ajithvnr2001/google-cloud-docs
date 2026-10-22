@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/manage-read-replicas/
 title: Manage read replicas \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:53.394361+00:00
+fetched_at: 2026-10-21T15:14:26.734740+00:00
 ---
 
 # Manage read replicas  |  Memorystore for Redis  |  Google Cloud Documentation

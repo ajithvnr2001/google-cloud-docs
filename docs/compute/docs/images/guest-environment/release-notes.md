@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/guest-environment/release-notes/
 title: Guest environment release notes \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:15.080218+00:00
+fetched_at: 2026-10-21T14:42:28.632941+00:00
 ---
 
 # Guest environment release notes  |  Compute Engine  |  Google Cloud Documentation

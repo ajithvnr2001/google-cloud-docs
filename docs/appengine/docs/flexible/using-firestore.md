@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/using-firestore/
 title: Use Firestore \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:11.399040+00:00
+fetched_at: 2026-10-21T12:30:10.228067+00:00
 ---
 
 # Use Firestore  |  App Engine flexible environment  |  Google Cloud Documentation

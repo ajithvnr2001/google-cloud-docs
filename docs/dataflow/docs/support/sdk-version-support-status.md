@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/support/sdk-version-support-status/
 title: SDK version support status \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:05:57.169484+00:00
+fetched_at: 2026-10-22T05:41:50.221770+00:00
 ---
 
 # SDK version support status  |  Cloud Dataflow  |  Google Cloud Documentation
@@ -59,6 +59,20 @@ The following tables contain the support status for the Apache Beam 2.x SDKs, in
 
 SDK version | Status | Supported components | Details  
 ---|---|---|---  
+2.77.0 | Supported |  org.apache.beam:beam-sdks-java-core  
+org.apache.beam:beam-sdks-java-io-google-cloud-platform  
+org.apache.beam:beam-sdks-java-extensions-google-cloud-platform-core  
+org.apache.beam:beam-sdks-java-extensions-protobuf  
+org.apache.beam:beam-runners-direct-java  
+Google Cloud I/O connectors under module org.apache.beam:beam-runners-google-cloud-dataflow-java: bigquery, bigtable, datastore, healthcare, pubsub, spanner  
+org.apache.beam:beam-model-pipeline  
+org.apache.beam:beam-model-job-management  
+org.apache.beam:beam-sdks-java-io-iceberg  
+org.apache.beam:beam-sdks-java-io-jdbc  
+org.apache.beam:beam-sdks-java-io-kafka  
+org.apache.beam:beam-sdks-java-extensions-sql  
+org.apache.beam:beam-sdks-java-managed  
+|  This version will be deprecated on October 7, 2027.  
 2.76.0 | Supported |  org.apache.beam:beam-sdks-java-core  
 org.apache.beam:beam-sdks-java-io-google-cloud-platform  
 org.apache.beam:beam-sdks-java-extensions-google-cloud-platform-core  
@@ -1142,6 +1156,11 @@ As a workaround, don't set the content-encoding header, and store compressed fil
 
 SDK version | Status | Supported components | Details  
 ---|---|---|---  
+2.77.0 | Supported |  Core Python SDK library under module apache_beam: submodules coders, dataframe, metrics, ml.inference (excluding PytorchModelHandlerKeyedTensor and SklearnModelHandlerPandas), options, portability, runners.dataflow, runners.direct, transforms, typehints, sql, yaml  
+File-based sources and sinks and related modules under module apache_beam.io: textio, avroio, parquetio, tfrecordio, gcsfilesystem, localfilesystem, filesystems, fileio  
+Google Cloud I/O connectors under module apache_beam.io.gcp: bigquery, datastore, pubsub  
+The connectors under apache_beam.io.jdbc: ReadFromJdbc, WriteToJdbc.   
+|  This version will be deprecated on October 7, 2027.  
 2.76.0 | Supported |  **Warning:** For Bigtable pipelines, use [cross-language transforms](https://beam.apache.org/documentation/programming-guide/#use-x-lang-transforms) with the Bigtable connector instead of `apache_beam.io.gcp.bigtableio`. Core Python SDK library under module apache_beam: submodules coders, dataframe, metrics, ml.inference (excluding PytorchModelHandlerKeyedTensor and SklearnModelHandlerPandas), options, portability, runners.dataflow, runners.direct, transforms, typehints, sql, yaml  
 File-based sources and sinks and related modules under module apache_beam.io: textio, avroio, parquetio, tfrecordio, gcsfilesystem, localfilesystem, filesystems, fileio  
 Google Cloud I/O connectors under module apache_beam.io.gcp: bigquery, datastore, pubsub  
@@ -1491,6 +1510,13 @@ Google Cloud I/O connectors under module apache_beam.io.gcp
 
 SDK version | Status | Supported components | Details  
 ---|---|---|---  
+2.77.0 | Supported |  Packages under the following directories:  
+\- [Core Beam Go SDK package](https://pkg.go.dev/github.com/apache/beam/sdks/v2/go/pkg/beam/core)  
+\- [beam/transforms](https://pkg.go.dev/github.com/apache/beam/sdks/v2/go/pkg/beam/transforms)  
+\- [beam/io/textio](https://pkg.go.dev/github.com/apache/beam/sdks/v2/go/pkg/beam/io/textio)  
+\- [beam/io/pubsubio](https://pkg.go.dev/github.com/apache/beam/sdks/v2/go/pkg/beam/io/pubsubio)  
+\- [beam/io/xlang](https://pkg.go.dev/github.com/apache/beam/sdks/v2/go/pkg/beam/io/xlang)  
+| This version will be deprecated on October 7, 2027.  
 2.76.0 | Supported |  Packages under the following directories:  
 \- [Core Beam Go SDK package](https://pkg.go.dev/github.com/apache/beam/sdks/v2/go/pkg/beam/core)  
 \- [beam/transforms](https://pkg.go.dev/github.com/apache/beam/sdks/v2/go/pkg/beam/transforms)  
@@ -1902,6 +1928,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

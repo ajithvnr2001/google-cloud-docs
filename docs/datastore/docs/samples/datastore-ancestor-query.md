@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/samples/datastore-ancestor-query/
 title: Ancestor query \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:22.962742+00:00
+fetched_at: 2026-10-22T05:43:00.352961+00:00
 ---
 
 # Ancestor query  |  Firestore in Datastore mode  |  Google Cloud Documentation

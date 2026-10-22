@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/anomaly-detection-overview/
 title: Anomaly detection overview \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:54:58.105990+00:00
+fetched_at: 2026-10-21T12:36:52.090743+00:00
 ---
 
 # Anomaly detection overview  |  BigQuery  |  Google Cloud Documentation

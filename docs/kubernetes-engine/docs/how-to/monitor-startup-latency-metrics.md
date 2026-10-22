@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/monitor-startup-latency-metrics/
 title: Monitor startup latency metrics \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:08:43.274980+00:00
+fetched_at: 2026-10-21T15:00:25.599344+00:00
 ---
 
 # Monitor startup latency metrics  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

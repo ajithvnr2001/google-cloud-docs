@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/generative-ai/code-samples/
 title: Generative AI code samples and sample applications \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:07:07.079854+00:00
+fetched_at: 2026-10-21T14:05:55.479469+00:00
 ---
 
 # Generative AI code samples and sample applications  |  Google Cloud Documentation

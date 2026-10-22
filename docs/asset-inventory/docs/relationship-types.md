@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/asset-inventory/docs/relationship-types/
 title: Relationship types \u00a0|\u00a0 Cloud Asset Inventory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:30:01.494049+00:00
+fetched_at: 2026-10-21T14:41:37.025152+00:00
 ---
 
 # Relationship types  |  Cloud Asset Inventory  |  Google Cloud Documentation

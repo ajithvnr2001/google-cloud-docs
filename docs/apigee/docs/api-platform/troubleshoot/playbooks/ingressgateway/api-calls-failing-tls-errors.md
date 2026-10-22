@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/ingressgateway/api-calls-failing-tls-errors/
 title: API Calls failing with TLS errors \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:37:54.502876+00:00
+fetched_at: 2026-10-21T14:28:35.529090+00:00
 ---
 
 # API Calls failing with TLS errors  |  Apigee  |  Google Cloud Documentation

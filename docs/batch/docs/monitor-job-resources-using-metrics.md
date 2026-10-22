@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/monitor-job-resources-using-metrics/
 title: Monitor and optimize job resources by viewing metrics \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:29:26.696043+00:00
+fetched_at: 2026-10-21T12:30:48.419006+00:00
 ---
 
 # Monitor and optimize job resources by viewing metrics  |  Batch  |  Google Cloud Documentation

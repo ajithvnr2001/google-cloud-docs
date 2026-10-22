@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/gateway-serverless-neg/
 title: Getting started with load balancing for API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:14:03.717303+00:00
+fetched_at: 2026-10-21T14:10:10.259292+00:00
 ---
 
 # Getting started with load balancing for API Gateway  |  Google Cloud Documentation

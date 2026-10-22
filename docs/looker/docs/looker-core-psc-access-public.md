@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/looker-core-psc-access-public/
 title: Public inbound access to a Looker (Google Cloud core) instance using Private Service Connect \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:30:17.661905+00:00
+fetched_at: 2026-10-21T15:09:51.422753+00:00
 ---
 
 # Public inbound access to a Looker (Google Cloud core) instance using Private Service Connect  |  Google Cloud Documentation

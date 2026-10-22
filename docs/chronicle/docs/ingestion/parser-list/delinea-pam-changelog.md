@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/delinea-pam-changelog/
 title: Change log for DELINEA_PAM \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:22:12.579863+00:00
+fetched_at: 2026-10-21T14:45:31.166123+00:00
 ---
 
 # Change log for DELINEA_PAM  |  Google Security Operations  |  Google Cloud Documentation

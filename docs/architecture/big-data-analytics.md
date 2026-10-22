@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/big-data-analytics/
 title: Big data and analytics resources \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:40.595193+00:00
+fetched_at: 2026-10-21T14:22:27.208467+00:00
 ---
 
 # Big data and analytics resources  |  Cloud Architecture Center  |  Google Cloud Documentation

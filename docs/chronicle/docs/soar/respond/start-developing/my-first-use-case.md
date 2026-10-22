@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/start-developing/my-first-use-case/
 title: Develop your first use case \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:05.552898+00:00
+fetched_at: 2026-10-21T12:38:36.795277+00:00
 ---
 
 # Develop your first use case  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/file-scanning-framework/
 title: Collect File Scanning Framework logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:15:54.714484+00:00
+fetched_at: 2026-10-21T14:08:25.929360+00:00
 ---
 
 # Collect File Scanning Framework logs  |  Google Security Operations  |  Google Cloud Documentation

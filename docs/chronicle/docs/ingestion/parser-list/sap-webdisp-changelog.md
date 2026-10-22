@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/sap-webdisp-changelog/
 title: Change log for SAP_WEBDISP \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:13:06.216446+00:00
+fetched_at: 2026-10-21T14:42:42.200187+00:00
 ---
 
 # Change log for SAP_WEBDISP  |  Google Security Operations  |  Google Cloud Documentation

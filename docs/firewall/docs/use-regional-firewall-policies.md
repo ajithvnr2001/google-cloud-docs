@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/use-regional-firewall-policies/
 title: Create regional network firewall policies and rules \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:40:25.169613+00:00
+fetched_at: 2026-10-21T12:55:42.494226+00:00
 ---
 
 # Create regional network firewall policies and rules  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

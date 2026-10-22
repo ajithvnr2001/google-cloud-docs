@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/notebooks/workbench/instances/release-notes-image/workbench-container-slim-2606/
 title: Image release notes: workbench-container-slim-2606 \u00a0|\u00a0 Gemini Enterprise Agent Platform Workbench \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:27:37.331547+00:00
+fetched_at: 2026-10-21T14:35:30.187770+00:00
 ---
 
 # Image release notes: workbench-container-slim-2606  |  Gemini Enterprise Agent Platform Workbench  |  Google Cloud Documentation

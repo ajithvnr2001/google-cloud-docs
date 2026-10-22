@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/privileged-access-management/
 title: Privileged access in Google Cloud \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:22:35.287487+00:00
+fetched_at: 2026-10-21T14:06:57.838828+00:00
 ---
 
 # Privileged access in Google Cloud  |  Security  |  Google Cloud Documentation

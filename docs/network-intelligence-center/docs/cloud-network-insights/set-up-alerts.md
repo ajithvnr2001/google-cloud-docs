@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-intelligence-center/docs/cloud-network-insights/set-up-alerts/
 title: Set up alerts and notifications \u00a0|\u00a0 Network Intelligence Center - Cloud Network Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:29:23.133187+00:00
+fetched_at: 2026-10-21T15:14:11.002135+00:00
 ---
 
 # Set up alerts and notifications  |  Network Intelligence Center - Cloud Network Insights  |  Google Cloud Documentation

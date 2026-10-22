@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/armis-vulnerabilities/
 title: Collect Armis Vulnerabilities logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:30:30.689830+00:00
+fetched_at: 2026-10-21T14:10:15.784159+00:00
 ---
 
 # Collect Armis Vulnerabilities logs  |  Google Security Operations  |  Google Cloud Documentation

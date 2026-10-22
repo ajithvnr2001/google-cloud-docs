@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/samples/datastore-eventual-consistent-query/
 title: Eventual consistent query read policy \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:25.248157+00:00
+fetched_at: 2026-10-22T05:42:12.904135+00:00
 ---
 
 # Eventual consistent query read policy  |  Firestore in Datastore mode  |  Google Cloud Documentation

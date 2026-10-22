@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/compliance/
 title: Standards, regulations, and certifications \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:27:06.819628+00:00
+fetched_at: 2026-10-21T12:52:07.520387+00:00
 ---
 
 # Standards, regulations, and certifications  |  Filestore  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-user-prompt-policy/
 title: SanitizeUserPrompt policy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:39:15.827932+00:00
+fetched_at: 2026-10-21T12:29:49.849280+00:00
 ---
 
 # SanitizeUserPrompt policy  |  Apigee  |  Google Cloud Documentation

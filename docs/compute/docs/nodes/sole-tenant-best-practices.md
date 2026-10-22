@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/nodes/sole-tenant-best-practices/
 title: Best practices for using sole-tenant nodes to run VM workloads \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:10.730404+00:00
+fetched_at: 2026-10-21T14:56:21.449811+00:00
 ---
 
 # Best practices for using sole-tenant nodes to run VM workloads  |  Compute Engine  |  Google Cloud Documentation
@@ -142,7 +142,7 @@ To use CPU overcommit, you must use a [node type that supports CPU overcommit](h
 
 CPU overcommit can be most cost-effective if you use a dedicated node group for workloads that are suitable for CPU overcommit and enable CPU overcommit for this node group only. Leave CPU overcommit disabled for any node groups that need to run performance-sensitive workloads.
 
-  * **Use a node type with a high core:memory ratio for CPU overcommit:** While CPU overcommit lets you share cores between VMs, it doesn't let you share memory between VMs. Using a node type that has relatively more memory per CPU core helps you ensure that memory doesn't become a limiting factor.
+  * **Use a node type with a high memory:core ratio for CPU overcommit:** While CPU overcommit lets you share cores between VMs, it doesn't let you share memory between VMs. Using a node type that has relatively more memory per CPU core helps you ensure that memory doesn't become a limiting factor.
 
 
 
@@ -208,6 +208,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

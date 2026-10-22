@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/review-publishers/
 title: Review skill publisher details \u00a0|\u00a0 Agent Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:37:03.334815+00:00
+fetched_at: 2026-10-21T14:29:06.950551+00:00
 ---
 
 # Review skill publisher details  |  Agent Registry  |  Google Cloud Documentation

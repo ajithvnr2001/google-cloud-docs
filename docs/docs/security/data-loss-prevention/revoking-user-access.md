@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/data-loss-prevention/revoking-user-access/
 title: Revoke access to a Google Cloud project \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:22:38.389578+00:00
+fetched_at: 2026-10-21T14:08:14.777203+00:00
 ---
 
 # Revoke access to a Google Cloud project  |  Security  |  Google Cloud Documentation

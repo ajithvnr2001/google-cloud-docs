@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/dashboards-failed-sessions/
 title: Failed sessions dashboards \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:23:49.605527+00:00
+fetched_at: 2026-10-21T14:23:09.156288+00:00
 ---
 
 # Failed sessions dashboards  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

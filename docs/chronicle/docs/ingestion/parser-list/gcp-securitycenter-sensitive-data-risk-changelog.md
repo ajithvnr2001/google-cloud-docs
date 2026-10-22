@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/gcp-securitycenter-sensitive-data-risk-changelog/
 title: Change log for GCP_SECURITYCENTER_SENSITIVE_DATA_RISK \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:15:07.153686+00:00
+fetched_at: 2026-10-21T14:52:00.270049+00:00
 ---
 
 # Change log for GCP_SECURITYCENTER_SENSITIVE_DATA_RISK  |  Google Security Operations  |  Google Cloud Documentation

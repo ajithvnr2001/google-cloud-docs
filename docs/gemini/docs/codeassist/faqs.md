@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/faqs/
 title: FAQs \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:11:45.446243+00:00
+fetched_at: 2026-10-21T12:51:37.884364+00:00
 ---
 
 # FAQs  |  Gemini for Google Cloud  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/view-and-understand-insights/
 title: View and understand insights \u00a0|\u00a0 Migration Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:23.642387+00:00
+fetched_at: 2026-10-21T15:13:22.667067+00:00
 ---
 
 # View and understand insights  |  Migration Center  |  Google Cloud Documentation

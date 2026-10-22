@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs/
 title: Use Google-managed SSL certificates \u00a0|\u00a0 Cloud Load Balancing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:45:35.612676+00:00
+fetched_at: 2026-10-21T15:14:42.306909+00:00
 ---
 
 # Use Google-managed SSL certificates  |  Cloud Load Balancing  |  Google Cloud Documentation
@@ -412,9 +412,16 @@ You cannot modify the list of domain names on an existing Google-managed SSL cer
 
 ### Renew a Google-managed SSL certificate
 
-Google Cloud provisions managed certificates valid for 90 days. About one month before expiry, the process to renew your certificate automatically begins. For this, a Certificate Authority (CA) is chosen that's both in your domain's Certification Authority Authorization (CAA) DNS record and in the list of CAs.
+Compute Engine SSL certificates support only the [Public Certificate Authority](https://docs.cloud.google.com/certificate-manager/docs/public-ca) (`pki.goog`) and the Let's Encrypt CA (`letsencrypt.org`) for issuing publicly trusted Google-managed certificates. Google Cloud provisions Google-managed certificates with a validity period of either 45 days or 90 days, depending on the issuing Certificate Authority (CA):
 
-The CA used for renewal might be different from the CA used to issue a previous version of your Google-managed certificate. You can control the CA that Google Cloud uses for renewal by ensuring that your domain's CAA DNS record specifies a single CA from the list of CAs that Google-managed certificates use.
+  * Certificates issued by Public Certificate Authority are gradually transitioning from a 90-day validity period to a 45-day validity period. Existing 90-day certificates remain valid for 90 days until their next renewal.
+  * Certificates issued by Let's Encrypt CA have a 90-day validity period.
+
+
+
+Google Cloud automatically starts the renewal process when approximately one-third of the certificate's validity period remains. Renewal begins about 15 days before expiry for 45-day certificates and about 30 days before expiry for 90-day certificates.
+
+For renewal, Google Cloud selects a CA that's both in your domain's [Certification Authority Authorization (CAA)](https://docs.cloud.google.com/certificate-manager/docs/certificate-manager-best-practices#use_caa_records_to_protect_your_domains) DNS record and in the list of CAs. The CA used for renewal might be different from the CA used to issue a previous version of your Google-managed certificate.
 
 To help ensure that your certificates don't fail the domain validation step of the renewal process, review the [requirements for your DNS A and AAAA records](https://docs.cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs#update-dns).
 
@@ -542,6 +549,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

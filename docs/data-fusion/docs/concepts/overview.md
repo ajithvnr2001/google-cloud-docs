@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/concepts/overview/
 title: Cloud Data Fusion overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:44:58.482107+00:00
+fetched_at: 2026-10-22T05:45:00.317329+00:00
 ---
 
 # Cloud Data Fusion overview  |  Google Cloud Documentation
@@ -21,9 +21,7 @@ Send feedback
 
 #  Cloud Data Fusion overview Stay organized with collections  Save and categorize content based on your preferences. 
 
-Cloud Data Fusion is a fully managed, cloud-native, enterprise data integration service for quickly building and managing data pipelines. The Cloud Data Fusion web interface lets you build scalable data integration solutions. It lets you connect to various data sources, transform the data, and then transfer it to various destination systems, without having to manage the infrastructure.
-
-Cloud Data Fusion is powered by the open source project [CDAP](https://github.com/cdapio).
+Cloud Data Fusion lets you build and orchestrate data pipelines in a fully managed, cloud-native data integration service powered by the open source project [CDAP](https://github.com/cdapio). Using the Cloud Data Fusion web interface, you can connect to data sources, transform data, and transfer it to destination systems without managing infrastructure.
 
 ## Get started with Cloud Data Fusion
 
@@ -156,6 +154,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

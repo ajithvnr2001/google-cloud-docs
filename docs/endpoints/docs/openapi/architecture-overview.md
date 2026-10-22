@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/architecture-overview/
 title: Architectural overview of Cloud Endpoints \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:49:28.919166+00:00
+fetched_at: 2026-10-21T12:45:58.200172+00:00
 ---
 
 # Architectural overview of Cloud Endpoints  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation

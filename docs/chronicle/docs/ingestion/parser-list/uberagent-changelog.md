@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/uberagent-changelog/
 title: Change log for UBERAGENT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:54:17.069114+00:00
+fetched_at: 2026-10-21T14:43:30.374171+00:00
 ---
 
 # Change log for UBERAGENT  |  Google Security Operations  |  Google Cloud Documentation

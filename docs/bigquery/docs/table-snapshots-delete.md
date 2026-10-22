@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/table-snapshots-delete/
 title: Delete table snapshots \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:32:54.744243+00:00
+fetched_at: 2026-10-21T12:29:29.027504+00:00
 ---
 
 # Delete table snapshots  |  BigQuery  |  Google Cloud Documentation

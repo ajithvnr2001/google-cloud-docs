@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/import-dbs-backup-repo/
 title: Import backup repository for Database Services \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:50:56.546923+00:00
+fetched_at: 2026-10-21T13:00:22.045822+00:00
 ---
 
 # Import backup repository for Database Services  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

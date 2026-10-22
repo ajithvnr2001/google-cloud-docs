@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/apihub/manage-curations/
 title: Manage curations \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:15:42.695201+00:00
+fetched_at: 2026-10-21T14:55:13.408625+00:00
 ---
 
 # Manage curations  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/access-transparency/docs/understanding-workspace-logs/
 title: Viewing Access Transparency logs for Google Workspace \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:49:56.180737+00:00
+fetched_at: 2026-10-21T14:27:51.269187+00:00
 ---
 
 # Viewing Access Transparency logs for Google Workspace  |  Google Cloud Documentation

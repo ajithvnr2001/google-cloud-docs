@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/about-private-services-access/
 title: Private services access overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:54.833398+00:00
+fetched_at: 2026-10-22T05:39:32.080811+00:00
 ---
 
 # Private services access overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

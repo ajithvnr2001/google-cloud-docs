@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/migration/snowflake-tutorials/
 title: Snowflake to BigQuery migration tutorials \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:31:54.559871+00:00
+fetched_at: 2026-10-21T12:39:28.102678+00:00
 ---
 
 # Snowflake to BigQuery migration tutorials  |  Google Cloud Documentation

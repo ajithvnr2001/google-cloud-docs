@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/access-transparency/docs/exclusions/
 title: Access Transparency exclusions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:49:55.463567+00:00
+fetched_at: 2026-10-21T14:27:51.135760+00:00
 ---
 
 # Access Transparency exclusions  |  Google Cloud Documentation

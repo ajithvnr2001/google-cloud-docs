@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/code-asset-folders/
 title: Organize code assets with folders \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:34:09.796925+00:00
+fetched_at: 2026-10-21T12:40:15.376826+00:00
 ---
 
 # Organize code assets with folders  |  BigQuery  |  Google Cloud Documentation

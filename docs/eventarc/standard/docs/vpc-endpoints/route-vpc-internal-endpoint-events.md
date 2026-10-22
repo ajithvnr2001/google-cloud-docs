@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/vpc-endpoints/route-vpc-internal-endpoint-events/
 title: Route events to an internal HTTP endpoint in a VPC network \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:45.673883+00:00
+fetched_at: 2026-10-21T12:45:54.457159+00:00
 ---
 
 # Route events to an internal HTTP endpoint in a VPC network  |  Eventarc Standard  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/current/docs/overview/
 title: AlloyDB Omni using containers overview \u00a0|\u00a0 AlloyDB Omni using containers: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:27:42.734084+00:00
+fetched_at: 2026-10-21T15:32:52.345985+00:00
 ---
 
 # AlloyDB Omni using containers overview  |  AlloyDB Omni using containers: Current (18.4.0)  |  Google Cloud Documentation

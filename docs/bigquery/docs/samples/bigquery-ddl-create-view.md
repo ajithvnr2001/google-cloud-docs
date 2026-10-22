@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-ddl-create-view/
 title: Create a view with DDL \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:48.960383+00:00
+fetched_at: 2026-10-21T12:40:13.471633+00:00
 ---
 
 # Create a view with DDL  |  BigQuery  |  Google Cloud Documentation

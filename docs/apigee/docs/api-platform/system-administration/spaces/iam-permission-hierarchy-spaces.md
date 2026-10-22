@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/spaces/iam-permission-hierarchy-spaces/
 title: IAM permission hierarchy in Apigee Spaces \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:55:16.864657+00:00
+fetched_at: 2026-10-21T14:28:43.398426+00:00
 ---
 
 # IAM permission hierarchy in Apigee Spaces  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/sandbox/latest/services/virtual-machine/
 title: Deploy a VM workload \u00a0|\u00a0 Google Distributed Cloud Sandbox \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:13:52.661607+00:00
+fetched_at: 2026-10-21T14:06:37.698148+00:00
 ---
 
 # Deploy a VM workload  |  Google Distributed Cloud Sandbox  |  Google Cloud Documentation

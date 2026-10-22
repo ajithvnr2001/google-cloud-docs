@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-container-clusters-upgrade/
 title: gdcloud container clusters upgrade \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:28:45.038554+00:00
+fetched_at: 2026-10-21T12:59:09.266237+00:00
 ---
 
 # gdcloud container clusters upgrade  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

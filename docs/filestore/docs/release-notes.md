@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/release-notes/
 title: Filestore release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:50:53.301819+00:00
+fetched_at: 2026-10-21T14:35:32.782364+00:00
 ---
 
 # Filestore release notes  |  Google Cloud Documentation

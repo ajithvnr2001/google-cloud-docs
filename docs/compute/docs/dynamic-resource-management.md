@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/dynamic-resource-management/
 title: Next generation dynamic resource management \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:42:10.711684+00:00
+fetched_at: 2026-10-21T14:24:52.741201+00:00
 ---
 
 # Next generation dynamic resource management  |  Compute Engine  |  Google Cloud Documentation

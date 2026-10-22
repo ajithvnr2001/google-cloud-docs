@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/support/service-requests/introduction-service-requests/
 title: Introduction to service requests \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:32.500209+00:00
+fetched_at: 2026-10-21T14:26:34.762765+00:00
 ---
 
 # Introduction to service requests  |  Apigee  |  Google Cloud Documentation

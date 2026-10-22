@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/invoke-integration-salesforce-cdc-event/
 title: Invoke an integration for a Salesforce Change Data Capture (CDC) event \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:48.177898+00:00
+fetched_at: 2026-10-21T12:30:52.488095+00:00
 ---
 
 # Invoke an integration for a Salesforce Change Data Capture (CDC) event  |  Application Integration  |  Google Cloud Documentation

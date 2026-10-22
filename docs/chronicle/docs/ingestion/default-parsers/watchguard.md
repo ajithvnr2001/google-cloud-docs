@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/watchguard/
 title: Collect WatchGuard Firebox logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:05:47.977336+00:00
+fetched_at: 2026-10-21T12:27:10.629541+00:00
 ---
 
 # Collect WatchGuard Firebox logs  |  Google Security Operations  |  Google Cloud Documentation

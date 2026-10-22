@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/quick/build-agent/
 title: Build an agent using flows \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:32.090448+00:00
+fetched_at: 2026-10-21T14:08:57.476726+00:00
 ---
 
 # Build an agent using flows  |  Dialogflow CX  |  Google Cloud Documentation

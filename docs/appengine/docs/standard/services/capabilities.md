@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/capabilities/
 title: Capabilities API for legacy bundled services \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:46.336803+00:00
+fetched_at: 2026-10-21T14:19:37.359350+00:00
 ---
 
 # Capabilities API for legacy bundled services  |  App Engine standard environment  |  Google Cloud Documentation

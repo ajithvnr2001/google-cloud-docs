@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/overview/
 title: Cloud Code overview \u00a0|\u00a0 Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:16:46.104959+00:00
+fetched_at: 2026-10-21T14:20:54.257692+00:00
 ---
 
 # Cloud Code overview  |  Cloud Code for Cloud Shell  |  Google Cloud Documentation

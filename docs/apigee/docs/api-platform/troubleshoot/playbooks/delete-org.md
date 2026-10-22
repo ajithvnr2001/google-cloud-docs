@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/delete-org/
 title: Immediately delete an Apigee or Apigee hybrid organization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:26.094426+00:00
+fetched_at: 2026-10-21T14:27:25.012152+00:00
 ---
 
 # Immediately delete an Apigee or Apigee hybrid organization  |  Google Cloud Documentation

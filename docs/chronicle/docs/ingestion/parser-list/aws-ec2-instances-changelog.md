@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/aws-ec2-instances-changelog/
 title: Change log for AWS_EC2_INSTANCES \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:00:58.343844+00:00
+fetched_at: 2026-10-21T14:45:44.747495+00:00
 ---
 
 # Change log for AWS_EC2_INSTANCES  |  Google Security Operations  |  Google Cloud Documentation

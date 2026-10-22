@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/samples/managedkafka-list-consumergroups/
 title: List the Kafka consumer groups \u00a0|\u00a0 Managed Service for Apache Kafka \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:58:39.415272+00:00
+fetched_at: 2026-10-21T15:11:07.566507+00:00
 ---
 
 # List the Kafka consumer groups  |  Managed Service for Apache Kafka  |  Google Cloud Documentation

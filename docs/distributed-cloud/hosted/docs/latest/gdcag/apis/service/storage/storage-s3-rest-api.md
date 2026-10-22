@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/service/storage/storage-s3-rest-api/
 title: Storage S3 REST API \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:13:34.924511+00:00
+fetched_at: 2026-10-21T12:56:42.417829+00:00
 ---
 
 # Storage S3 REST API  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

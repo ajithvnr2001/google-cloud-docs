@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigqueryreservation-reservationservice-bireservation-get/
 title: Get a BI reservation \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:54.430941+00:00
+fetched_at: 2026-10-21T12:36:24.244468+00:00
 ---
 
 # Get a BI reservation  |  BigQuery  |  Google Cloud Documentation

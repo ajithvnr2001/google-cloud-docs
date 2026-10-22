@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/aware-signals-changelog/
 title: Change log for AWARE_SIGNALS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:31:25.574618+00:00
+fetched_at: 2026-10-21T14:45:45.276337+00:00
 ---
 
 # Change log for AWARE_SIGNALS  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/gsc_google_natural_language/configure/
 title: Google Cloud Natural Language \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:14.690113+00:00
+fetched_at: 2026-10-21T12:52:55.959091+00:00
 ---
 
 # Google Cloud Natural Language  |  Integration Connectors  |  Google Cloud Documentation

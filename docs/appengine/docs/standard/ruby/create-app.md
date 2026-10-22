@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/ruby/create-app/
 title: Quickstart: Create a Ruby app in the App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:36.050451+00:00
+fetched_at: 2026-10-21T14:26:08.358124+00:00
 ---
 
 # Quickstart: Create a Ruby app in the App Engine standard environment  |  Google Cloud Documentation

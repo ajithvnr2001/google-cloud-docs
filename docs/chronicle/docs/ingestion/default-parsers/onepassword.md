@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/onepassword/
 title: Collect 1Password logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:40:59.178032+00:00
+fetched_at: 2026-10-21T14:06:39.819078+00:00
 ---
 
 # Collect 1Password logs  |  Google Security Operations  |  Google Cloud Documentation

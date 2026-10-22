@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/colab/docs/explain-cells/
 title: Explain code cells with Gemini assistance \u00a0|\u00a0 Colab Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:27:36.897154+00:00
+fetched_at: 2026-10-21T14:20:36.204758+00:00
 ---
 
 # Explain code cells with Gemini assistance  |  Colab Enterprise  |  Google Cloud Documentation

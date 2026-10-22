@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-publish-otel-tracing/
 title: Publish a message with OpenTelemetry tracing enabled \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:40:03.564145+00:00
+fetched_at: 2026-10-21T14:58:43.080735+00:00
 ---
 
 # Publish a message with OpenTelemetry tracing enabled  |  Pub/Sub  |  Google Cloud Documentation

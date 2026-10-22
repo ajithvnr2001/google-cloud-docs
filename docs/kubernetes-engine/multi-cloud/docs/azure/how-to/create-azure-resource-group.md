@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/how-to/create-azure-resource-group/
 title: Create an Azure resource group \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:50.713868+00:00
+fetched_at: 2026-10-21T15:09:41.861566+00:00
 ---
 
 # Create an Azure resource group  |  GKE on Azure  |  Google Cloud Documentation

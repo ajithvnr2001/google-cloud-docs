@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/rsa-securid/
 title: Collect RSA SecurID Access logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T17:22:05.070255+00:00
+fetched_at: 2026-10-21T12:27:33.794599+00:00
 ---
 
 # Collect RSA SecurID Access logs  |  Google Security Operations  |  Google Cloud Documentation

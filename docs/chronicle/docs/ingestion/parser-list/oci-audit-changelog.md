@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/oci-audit-changelog/
 title: Change log for OCI_AUDIT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:56:50.275195+00:00
+fetched_at: 2026-10-21T14:51:38.725331+00:00
 ---
 
 # Change log for OCI_AUDIT  |  Google Security Operations  |  Google Cloud Documentation

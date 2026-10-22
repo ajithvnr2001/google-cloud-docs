@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/cv-freshness-check/
 title: Use the image freshness check \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:13.214198+00:00
+fetched_at: 2026-10-21T14:10:07.181856+00:00
 ---
 
 # Use the image freshness check  |  Binary Authorization  |  Google Cloud Documentation

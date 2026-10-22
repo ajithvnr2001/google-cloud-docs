@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/v1/getting-started/
 title: Get Started with the Cloud Billing API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:13:42.675733+00:00
+fetched_at: 2026-10-21T14:27:17.714994+00:00
 ---
 
 # Get Started with the Cloud Billing API  |  Google Cloud Documentation

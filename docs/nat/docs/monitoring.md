@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/nat/docs/monitoring/
 title: Logs and metrics \u00a0|\u00a0 Cloud NAT \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:53.528634+00:00
+fetched_at: 2026-10-21T15:17:08.536945+00:00
 ---
 
 # Logs and metrics  |  Cloud NAT  |  Google Cloud Documentation

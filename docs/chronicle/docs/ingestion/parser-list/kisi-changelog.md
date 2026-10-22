@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/kisi-changelog/
 title: Change log for KISI \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:11:31.125673+00:00
+fetched_at: 2026-10-21T14:43:18.219743+00:00
 ---
 
 # Change log for KISI  |  Google Security Operations  |  Google Cloud Documentation

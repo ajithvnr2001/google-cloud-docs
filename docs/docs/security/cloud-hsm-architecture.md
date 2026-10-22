@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/cloud-hsm-architecture/
 title: Cloud HSM architecture \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:22:38.041774+00:00
+fetched_at: 2026-10-21T14:06:46.002208+00:00
 ---
 
 # Cloud HSM architecture  |  Security  |  Google Cloud Documentation

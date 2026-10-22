@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/marketing-salesforce/
 title: Integration with Salesforce Marketing Cloud \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:12:23.113254+00:00
+fetched_at: 2026-10-21T14:10:00.300219+00:00
 ---
 
 # Integration with Salesforce Marketing Cloud  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

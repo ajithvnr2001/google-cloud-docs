@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/digitalguardian-dlp/
 title: Collect Fortra Digital Guardian DLP (formerly Digital Guardian DLP) logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T19:04:52.105850+00:00
+fetched_at: 2026-10-21T12:27:20.563761+00:00
 ---
 
 # Collect Fortra Digital Guardian DLP (formerly Digital Guardian DLP) logs  |  Google Security Operations  |  Google Cloud Documentation

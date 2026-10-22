@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/dashboards-abandons/
 title: Abandons dashboards \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:00:12.492822+00:00
+fetched_at: 2026-10-21T14:23:08.376148+00:00
 ---
 
 # Abandons dashboards  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

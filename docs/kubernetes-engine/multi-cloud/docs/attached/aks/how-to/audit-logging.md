@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/aks/how-to/audit-logging/
 title: GKE Multi-Cloud audit logging \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:22.521196+00:00
+fetched_at: 2026-10-21T15:02:47.304313+00:00
 ---
 
 # GKE Multi-Cloud audit logging  |  GKE attached clusters  |  Google Cloud Documentation

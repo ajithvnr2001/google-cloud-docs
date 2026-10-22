@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/agent-collaboration/
 title: Agent collaboration \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:53.654875+00:00
+fetched_at: 2026-10-21T12:55:57.300711+00:00
 ---
 
 # Agent collaboration  |  Dialogflow CX  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/technology-partner-program/
 title: Become a technology partner \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:14.712211+00:00
+fetched_at: 2026-10-21T14:18:59.539583+00:00
 ---
 
 # Become a technology partner  |  Google Security Operations  |  Google Cloud Documentation

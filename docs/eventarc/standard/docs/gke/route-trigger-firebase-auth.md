@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/gke/route-trigger-firebase-auth/
 title: Route Firebase Authentication events to GKE \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:22:44.005417+00:00
+fetched_at: 2026-10-21T12:45:53.932078+00:00
 ---
 
 # Route Firebase Authentication events to GKE  |  Eventarc Standard  |  Google Cloud Documentation

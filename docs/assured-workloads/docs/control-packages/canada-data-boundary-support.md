@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/control-packages/canada-data-boundary-support/
 title: Canada Data Boundary and Support \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:44.440218+00:00
+fetched_at: 2026-10-21T14:25:51.707057+00:00
 ---
 
 # Canada Data Boundary and Support  |  Assured Workloads  |  Google Cloud Documentation

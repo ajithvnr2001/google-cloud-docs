@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/configuration/create-custom-lists/
 title: Create custom lists \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:48.943138+00:00
+fetched_at: 2026-10-21T14:24:03.898376+00:00
 ---
 
 # Create custom lists  |  Google Security Operations  |  Google Cloud Documentation

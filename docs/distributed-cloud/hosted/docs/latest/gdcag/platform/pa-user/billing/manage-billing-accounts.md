@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/billing/manage-billing-accounts/
 title: Create and link billing accounts \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:58:40.212834+00:00
+fetched_at: 2026-10-21T12:58:51.028579+00:00
 ---
 
 # Create and link billing accounts  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

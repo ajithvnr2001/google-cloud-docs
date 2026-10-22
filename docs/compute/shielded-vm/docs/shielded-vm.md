@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/shielded-vm/docs/shielded-vm/
 title: Shielded VM overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:05:05.455403+00:00
+fetched_at: 2026-10-21T12:29:29.726014+00:00
 ---
 
 # Shielded VM overview  |  Google Cloud Documentation
@@ -69,7 +69,7 @@ If this occurs, the VM instance's [serial console](https://docs.cloud.google.com
 
 ### Virtual Trusted Platform Module (vTPM)
 
-A vTPM is a virtualized [trusted platform module](https://trustedcomputinggroup.org/trusted-platform-module-tpm-summary/), which is a specialized computer chip you can use to protect objects, like keys and certificates, that you use to authenticate access to your system. The Shielded VM vTPM is fully compatible with the [Trusted Computing Group (TPM) library specification 2.0](https://trustedcomputinggroup.org/tpm-library-specification/) and uses the [BoringSSL library](https://boringssl.googlesource.com/boringssl/). The BoringSSL library relies on the BoringCrypto module. For FIPS 140-2 details about to the BoringCrypto module, see [NIST Cryptographic Module Validation Program Certificate #3678](https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/3678).
+A vTPM is a virtualized [trusted platform module](https://trustedcomputinggroup.org/trusted-platform-module-tpm-summary/), which is a specialized computer chip you can use to protect objects, like keys and certificates, that you use to authenticate access to your system. The Shielded VM vTPM is fully compatible with the [Trusted Computing Group (TPM) library specification 2.0](https://trustedcomputinggroup.org/tpm-library-specification/) and uses the [BoringSSL library](https://boringssl.googlesource.com/boringssl/). The BoringSSL library relies on the BoringCrypto module. For FIPS 140-3 details about the BoringCrypto module, see [NIST Cryptographic Module Validation Program Certificate #5244](https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/5244).
 
 The Shielded VM vTPM enables Measured Boot by performing the measurements needed to create a known good boot baseline, called the _integrity policy baseline_. The integrity policy baseline is used for comparison with measurements from subsequent VM boots to determine if anything has changed.
 
@@ -304,6 +304,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

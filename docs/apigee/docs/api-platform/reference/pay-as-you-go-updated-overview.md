@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/pay-as-you-go-updated-overview/
 title: Pay-as-you-go pricing overview \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:05:21.050373+00:00
+fetched_at: 2026-10-21T12:30:43.086368+00:00
 ---
 
 # Pay-as-you-go pricing overview  |  Apigee  |  Google Cloud Documentation

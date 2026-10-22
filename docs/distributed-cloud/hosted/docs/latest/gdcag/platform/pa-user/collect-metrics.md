@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/collect-metrics/
 title: Collect metrics from your workloads \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:44:02.178717+00:00
+fetched_at: 2026-10-21T12:58:36.584070+00:00
 ---
 
 # Collect metrics from your workloads  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

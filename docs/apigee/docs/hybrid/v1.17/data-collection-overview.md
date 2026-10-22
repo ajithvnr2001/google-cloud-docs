@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/data-collection-overview/
 title: Data collection overview \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:36:29.774346+00:00
+fetched_at: 2026-10-21T14:11:01.862232+00:00
 ---
 
 # Data collection overview  |  Apigee  |  Google Cloud Documentation

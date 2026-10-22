@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/15.15.0/docs/kubernetes-sidecar-container/
 title: Use a sidecar container in Kubernetes \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 15.15.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:32:39.478291+00:00
+fetched_at: 2026-10-21T15:19:13.644883+00:00
 ---
 
 # Use a sidecar container in Kubernetes  |  AlloyDB Omni using the container orchestrator: 15.15.0  |  Google Cloud Documentation

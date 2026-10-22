@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/cmek/
 title: Customer-managed encryption keys \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:36.603966+00:00
+fetched_at: 2026-10-21T12:53:38.159664+00:00
 ---
 
 # Customer-managed encryption keys  |  Integration Connectors  |  Google Cloud Documentation

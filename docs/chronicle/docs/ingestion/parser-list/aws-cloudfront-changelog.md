@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/aws-cloudfront-changelog/
 title: Change log for AWS_CLOUDFRONT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:18:19.002368+00:00
+fetched_at: 2026-10-21T14:45:45.253857+00:00
 ---
 
 # Change log for AWS_CLOUDFRONT  |  Google Security Operations  |  Google Cloud Documentation

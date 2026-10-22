@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1beta/projects.locations/queryData/
 title: Method: projects.locations.queryData \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:43:00.700576+00:00
+fetched_at: 2026-10-21T12:51:38.982673+00:00
 ---
 
 # Method: projects.locations.queryData  |  Data Agents  |  Google Cloud Documentation

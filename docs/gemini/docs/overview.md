@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/overview/
 title: Google Cloud with Gemini overview \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:02:43.844782+00:00
+fetched_at: 2026-10-21T14:56:42.937984+00:00
 ---
 
 # Google Cloud with Gemini overview  |  Gemini for Google Cloud  |  Google Cloud Documentation
@@ -21,9 +21,7 @@ Send feedback
 
 #  Google Cloud with Gemini overview Stay organized with collections  Save and categorize content based on your preferences. 
 
-Gemini offers generative AI-powered assistance to a wide range of Google Cloud users, including developers and data scientists. To provide an integrated assistance experience, Gemini is embedded in many Google Cloud products.
-
-If you want to use Gemini models to create your own generative AI application, see [Overview of Generative AI on Vertex AI](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/overview).
+Gemini provides generative AI assistance embedded across Google Cloud products to help developers and data scientists optimize their workflows. To build custom generative AI applications using Gemini foundation models, see [Overview of Generative AI on Vertex AI](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/overview).
 
 The following table shows the types of generative AI assistance that are available in Google Cloud, along with links to product overview information:
 
@@ -126,6 +124,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

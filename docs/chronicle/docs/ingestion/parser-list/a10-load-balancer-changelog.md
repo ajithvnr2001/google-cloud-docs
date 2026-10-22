@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/a10-load-balancer-changelog/
 title: Change log for A10_LOAD_BALANCER \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:00:25.119180+00:00
+fetched_at: 2026-10-21T14:51:44.510850+00:00
 ---
 
 # Change log for A10_LOAD_BALANCER  |  Google Security Operations  |  Google Cloud Documentation

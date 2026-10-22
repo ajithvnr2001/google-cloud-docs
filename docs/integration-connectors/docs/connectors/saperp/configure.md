@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/saperp/configure/
 title: SAP ERP \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:28.357708+00:00
+fetched_at: 2026-10-21T12:52:29.652436+00:00
 ---
 
 # SAP ERP  |  Integration Connectors  |  Google Cloud Documentation

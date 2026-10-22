@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/admin/manage-users/
 title: Managing users programmatically \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:21.216500+00:00
+fetched_at: 2026-10-21T12:53:46.304350+00:00
 ---
 
 # Managing users programmatically  |  Identity Platform  |  Google Cloud Documentation
@@ -315,7 +315,7 @@ You can also retrieve a list of users based on identifiers that you provide. You
     	log.Printf("%v", id)
     }
     
-    [auth.go](https://github.com/firebase/firebase-admin-go/blob/c41aefe9ae0fa36ab19f708830b508f8d7af229b/snippets/auth.go#L190-L208)
+    [auth.go](https://github.com/firebase/firebase-admin-go/blob/0be9fa841fdf0e485f4c702bd6de941ad9454f10/snippets/auth.go#L190-L208)
 
 ### C#
     
@@ -834,7 +834,7 @@ You can also delete multiple users at once:
     	log.Printf("%v", err)
     }
     
-    [auth.go](https://github.com/firebase/firebase-admin-go/blob/c41aefe9ae0fa36ab19f708830b508f8d7af229b/snippets/auth.go#L279-L288)
+    [auth.go](https://github.com/firebase/firebase-admin-go/blob/0be9fa841fdf0e485f4c702bd6de941ad9454f10/snippets/auth.go#L279-L288)
 
 ### C#
     

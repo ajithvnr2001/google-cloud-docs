@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/xiting-xams-changelog/
 title: Change log for XITING_XAMS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:20:31.733211+00:00
+fetched_at: 2026-10-21T14:47:04.364156+00:00
 ---
 
 # Change log for XITING_XAMS  |  Google Security Operations  |  Google Cloud Documentation

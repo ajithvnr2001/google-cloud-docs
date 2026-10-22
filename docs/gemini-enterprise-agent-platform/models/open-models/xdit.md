@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-models/xdit/
 title: Serve Diffusion Transformer models using xDiT container on Cloud GPUs \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:39:47.709509+00:00
+fetched_at: 2026-10-21T15:41:21.489103+00:00
 ---
 
 # Serve Diffusion Transformer models using xDiT container on Cloud GPUs  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -94,10 +94,10 @@ For flexibility and customization, use the Colab Enterprise notebook examples to
 
     
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
     from vertexai import model_garden
     
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=<YOUR_PROJECT_ID>, location=<REGION>)
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=<YOUR_PROJECT_ID>, location=<REGION>)
     
     model = model_garden.OpenModel("black-forest-labs/FLUX.1-schnell")
     endpoint = model.deploy()
@@ -201,10 +201,10 @@ Model Garden provides default xDiT parallelization configurations for supported 
 To view the default deployment configuration for a model, such as "black-forest-labs/FLUX.1-schnell", you can run the following code snippet:
     
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
     from vertexai import model_garden
     
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=<YOUR_PROJECT_ID>, location=<REGION>)
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=<YOUR_PROJECT_ID>, location=<REGION>)
     
     model = model_garden.OpenModel("black-forest-labs/FLUX.1-schnell")
     deploy_options = model.list_deploy_options()
@@ -247,11 +247,11 @@ The `list_deploy_options()` method returns the container specifications, includi
 To customize the parallelism strategy, you can override these environment variables when deploying the model. The following example demonstrates how to modify the RING_DEGREE and ULYSSES_DEGREE for a 2-GPU setup, changing the parallelism approach:
     
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
     from vertexai import model_garden
     
     # Replace with your project ID and region
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project="<YOUR_PROJECT_ID>", location="<REGION>")
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project="<YOUR_PROJECT_ID>", location="<REGION>")
     
     model = model_garden.OpenModel("black-forest-labs/FLUX.1-schnell")
     
@@ -285,6 +285,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

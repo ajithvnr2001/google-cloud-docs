@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/go/
 title: Get started with Go modules \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:21.924883+00:00
+fetched_at: 2026-10-21T14:27:39.660683+00:00
 ---
 
 # Get started with Go modules  |  Artifact Registry  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/exponential-backoff/
 title: Exponential backoff \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:58.446676+00:00
+fetched_at: 2026-10-21T15:15:03.931460+00:00
 ---
 
 # Exponential backoff  |  Memorystore for Redis  |  Google Cloud Documentation

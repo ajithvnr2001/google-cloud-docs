@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/ruby/
 title: Ruby on Google App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:59:02.869326+00:00
+fetched_at: 2026-10-21T14:22:51.179775+00:00
 ---
 
 # Ruby on Google App Engine  |  Google Cloud Documentation

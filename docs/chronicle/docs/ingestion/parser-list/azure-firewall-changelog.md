@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/azure-firewall-changelog/
 title: Change log for AZURE_FIREWALL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:48:56.029959+00:00
+fetched_at: 2026-10-21T14:45:41.401644+00:00
 ---
 
 # Change log for AZURE_FIREWALL  |  Google Security Operations  |  Google Cloud Documentation

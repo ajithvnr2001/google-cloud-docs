@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/mandiant-custom-ioc/
 title: Collect Mandiant Threat Intelligence Custom IOC logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:43:37.033883+00:00
+fetched_at: 2026-10-21T12:37:29.154054+00:00
 ---
 
 # Collect Mandiant Threat Intelligence Custom IOC logs  |  Google Security Operations  |  Google Cloud Documentation

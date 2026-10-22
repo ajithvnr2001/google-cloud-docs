@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/aks/reference/versions/v1.25.0-gke.6/metrics/
 title: Metrics available in 1.25.0-gke.6 \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:51:01.199968+00:00
+fetched_at: 2026-10-21T15:02:00.865318+00:00
 ---
 
 # Metrics available in 1.25.0-gke.6  |  GKE attached clusters  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-region-igm-spreading/
 title: Create a regional MIG \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:18.355745+00:00
+fetched_at: 2026-10-22T05:49:28.907116+00:00
 ---
 
 # Create a regional MIG  |  Compute Engine  |  Google Cloud Documentation

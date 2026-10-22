@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/vscode/resources/
 title: Resources \u00a0|\u00a0 Cloud Code for VS Code \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:41:11.839865+00:00
+fetched_at: 2026-10-22T05:48:05.683791+00:00
 ---
 
 # Resources  |  Cloud Code for VS Code  |  Google Cloud Documentation

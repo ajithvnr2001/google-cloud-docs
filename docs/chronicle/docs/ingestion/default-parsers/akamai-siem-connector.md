@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/akamai-siem-connector/
 title: Collect Akamai SIEM Connector logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:15:55.510212+00:00
+fetched_at: 2026-10-21T14:10:28.205659+00:00
 ---
 
 # Collect Akamai SIEM Connector logs  |  Google Security Operations  |  Google Cloud Documentation

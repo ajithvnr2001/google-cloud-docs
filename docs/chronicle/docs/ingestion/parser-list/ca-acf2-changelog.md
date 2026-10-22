@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/ca-acf2-changelog/
 title: Change log for CA_ACF2 \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:56:20.153186+00:00
+fetched_at: 2026-10-21T14:51:52.159027+00:00
 ---
 
 # Change log for CA_ACF2  |  Google Security Operations  |  Google Cloud Documentation

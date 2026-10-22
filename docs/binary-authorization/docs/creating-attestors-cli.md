@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/creating-attestors-cli/
 title: Create attestors using the gcloud CLI \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:43:37.457651+00:00
+fetched_at: 2026-10-21T14:10:00.405697+00:00
 ---
 
 # Create attestors using the gcloud CLI  |  Binary Authorization  |  Google Cloud Documentation

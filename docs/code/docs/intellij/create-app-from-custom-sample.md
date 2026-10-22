@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/create-app-from-custom-sample/
 title: Create a new application from a custom sample in Cloud Code for IntelliJ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:21:36.576002+00:00
+fetched_at: 2026-10-21T12:40:16.004531+00:00
 ---
 
 # Create a new application from a custom sample in Cloud Code for IntelliJ  |  Google Cloud Documentation

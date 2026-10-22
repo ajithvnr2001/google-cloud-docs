@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/cuds-flexible-savings-plans/
 title: Flexible Savings Plans \u00a0|\u00a0 Get started \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:27.860309+00:00
+fetched_at: 2026-10-21T14:05:54.738786+00:00
 ---
 
 # Flexible Savings Plans  |  Get started  |  Google Cloud Documentation

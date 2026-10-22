@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/langchain/
 title: Build LLM-powered applications using LangChain \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:57.224145+00:00
+fetched_at: 2026-10-21T15:14:24.749072+00:00
 ---
 
 # Build LLM-powered applications using LangChain  |  Memorystore for Redis  |  Google Cloud Documentation

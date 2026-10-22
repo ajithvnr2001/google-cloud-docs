@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/headless-mobile-sdk-ios-smart-actions/
 title: Headless Mobile SDK for iOS: Smart actions, attachments, and deflection \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:07:59.432285+00:00
+fetched_at: 2026-10-21T14:06:02.464660+00:00
 ---
 
 # Headless Mobile SDK for iOS: Smart actions, attachments, and deflection  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

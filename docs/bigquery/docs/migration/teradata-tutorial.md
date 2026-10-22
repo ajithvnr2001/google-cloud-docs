@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/migration/teradata-tutorial/
 title: Migrating Teradata to BigQuery tutorial \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:10:17.534078+00:00
+fetched_at: 2026-10-21T12:38:34.093388+00:00
 ---
 
 # Migrating Teradata to BigQuery tutorial  |  Google Cloud Documentation

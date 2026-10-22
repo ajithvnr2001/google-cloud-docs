@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recaptcha/docs/apis/
 title: APIs & reference \u00a0|\u00a0 Google Cloud Fraud Defense \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T13:51:12.604968+00:00
+fetched_at: 2026-10-21T14:57:53.759742+00:00
 ---
 
 # APIs & reference  |  Google Cloud Fraud Defense  |  Google Cloud Documentation

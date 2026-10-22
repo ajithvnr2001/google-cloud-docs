@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/versa-firewall/
 title: Collect Versa Networks Secure Access Service Edge (SASE) logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:14:12.966185+00:00
+fetched_at: 2026-10-21T12:27:03.088530+00:00
 ---
 
 # Collect Versa Networks Secure Access Service Edge (SASE) logs  |  Google Security Operations  |  Google Cloud Documentation

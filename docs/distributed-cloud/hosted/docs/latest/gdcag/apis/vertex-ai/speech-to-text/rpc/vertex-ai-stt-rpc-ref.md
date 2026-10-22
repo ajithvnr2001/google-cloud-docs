@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/speech-to-text/rpc/vertex-ai-stt-rpc-ref/
 title: Speech-to-Text RPC API reference \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:09:29.278686+00:00
+fetched_at: 2026-10-21T12:53:17.114857+00:00
 ---
 
 # Speech-to-Text RPC API reference  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

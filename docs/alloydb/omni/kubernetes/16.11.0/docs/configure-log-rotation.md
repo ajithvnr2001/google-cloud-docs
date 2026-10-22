@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/16.11.0/docs/configure-log-rotation/
 title: Configure AlloyDB Omni log rotation \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 16.11.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:33:02.360641+00:00
+fetched_at: 2026-10-21T15:28:59.372124+00:00
 ---
 
 # Configure AlloyDB Omni log rotation  |  AlloyDB Omni using the container orchestrator: 16.11.0  |  Google Cloud Documentation

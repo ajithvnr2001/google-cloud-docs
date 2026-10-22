@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/configure-load-balancing-global-frontend/
 title: Configure a global Cloud Load Balancing frontend \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:12:48.957037+00:00
+fetched_at: 2026-10-21T12:30:19.058389+00:00
 ---
 
 # Configure a global Cloud Load Balancing frontend  |  Application Design Center  |  Google Cloud Documentation

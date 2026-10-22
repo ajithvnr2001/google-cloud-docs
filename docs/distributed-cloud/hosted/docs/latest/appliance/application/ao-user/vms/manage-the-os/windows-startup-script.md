@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/vms/manage-the-os/windows-startup-script/
 title: Use a startup script on Windows VMs \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:22:09.191081+00:00
+fetched_at: 2026-10-21T12:56:53.047363+00:00
 ---
 
 # Use a startup script on Windows VMs  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

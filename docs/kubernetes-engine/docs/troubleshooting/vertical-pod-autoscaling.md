@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/troubleshooting/vertical-pod-autoscaling/
 title: Troubleshoot vertical Pod autoscaling \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:17:51.657250+00:00
+fetched_at: 2026-10-21T15:03:10.753426+00:00
 ---
 
 # Troubleshoot vertical Pod autoscaling  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

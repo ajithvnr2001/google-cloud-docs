@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/sonrai/
 title: Collect Sonrai Security logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T17:20:25.098538+00:00
+fetched_at: 2026-10-21T12:35:59.142987+00:00
 ---
 
 # Collect Sonrai Security logs  |  Google Security Operations  |  Google Cloud Documentation

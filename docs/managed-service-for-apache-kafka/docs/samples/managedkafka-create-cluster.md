@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/samples/managedkafka-create-cluster/
 title: Create a Kafka cluster \u00a0|\u00a0 Managed Service for Apache Kafka \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:58:36.979176+00:00
+fetched_at: 2026-10-21T15:10:53.073089+00:00
 ---
 
 # Create a Kafka cluster  |  Managed Service for Apache Kafka  |  Google Cloud Documentation

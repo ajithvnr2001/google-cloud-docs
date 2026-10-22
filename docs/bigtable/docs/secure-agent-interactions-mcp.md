@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/secure-agent-interactions-mcp/
 title: Best practices for securing agent interactions with Model Context Protocol \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:18.915332+00:00
+fetched_at: 2026-10-21T14:09:44.339273+00:00
 ---
 
 # Best practices for securing agent interactions with Model Context Protocol  |  Bigtable  |  Google Cloud Documentation

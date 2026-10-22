@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/apihub/apis-intro/
 title: API resources overview \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:44:52.333416+00:00
+fetched_at: 2026-10-21T14:53:07.132797+00:00
 ---
 
 # API resources overview  |  Apigee  |  Google Cloud Documentation

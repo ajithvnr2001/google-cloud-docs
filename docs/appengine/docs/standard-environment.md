@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard-environment/
 title: About App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:45:35.297803+00:00
+fetched_at: 2026-10-21T14:24:51.732192+00:00
 ---
 
 # About App Engine standard environment  |  Google Cloud Documentation

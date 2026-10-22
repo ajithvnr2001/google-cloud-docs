@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/gmail/
 title: Integrate Gmail with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:32:46.177564+00:00
+fetched_at: 2026-10-21T14:09:55.405125+00:00
 ---
 
 # Integrate Gmail with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

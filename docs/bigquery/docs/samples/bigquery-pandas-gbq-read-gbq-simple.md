@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-pandas-gbq-read-gbq-simple/
 title: Run a query with pandas-gbq \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:06.227563+00:00
+fetched_at: 2026-10-21T12:38:22.850370+00:00
 ---
 
 # Run a query with pandas-gbq  |  BigQuery  |  Google Cloud Documentation

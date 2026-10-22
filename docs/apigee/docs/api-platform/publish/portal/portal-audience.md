@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/publish/portal/portal-audience/
 title: Manage the audiences for your portal (Preview) \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:42:13.275833+00:00
+fetched_at: 2026-10-21T14:28:48.265412+00:00
 ---
 
 # Manage the audiences for your portal (Preview)  |  Apigee  |  Google Cloud Documentation

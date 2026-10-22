@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/admin/configure-ntp/
 title: Configure an external NTP server \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:39.010663+00:00
+fetched_at: 2026-10-21T12:57:40.623944+00:00
 ---
 
 # Configure an external NTP server  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

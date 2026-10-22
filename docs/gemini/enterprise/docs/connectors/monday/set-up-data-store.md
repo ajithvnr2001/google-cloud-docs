@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/monday/set-up-data-store/
 title: Set up a Monday data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:15:41.097013+00:00
+fetched_at: 2026-10-21T12:42:02.338490+00:00
 ---
 
 # Set up a Monday data store  |  Gemini Enterprise  |  Google Cloud Documentation

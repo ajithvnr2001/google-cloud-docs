@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/create/gke-create-g2-g4/
 title: Create an AI-optimized GKE cluster that uses G2 or G4 \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:34:54.570416+00:00
+fetched_at: 2026-10-21T14:26:24.089167+00:00
 ---
 
 # Create an AI-optimized GKE cluster that uses G2 or G4  |  AI Hypercomputer  |  Google Cloud Documentation

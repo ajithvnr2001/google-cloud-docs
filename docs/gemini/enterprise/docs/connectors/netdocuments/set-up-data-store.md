@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/netdocuments/set-up-data-store/
 title: Set up a NetDocuments data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:02:58.354135+00:00
+fetched_at: 2026-10-21T12:40:04.613971+00:00
 ---
 
 # Set up a NetDocuments data store  |  Gemini Enterprise  |  Google Cloud Documentation

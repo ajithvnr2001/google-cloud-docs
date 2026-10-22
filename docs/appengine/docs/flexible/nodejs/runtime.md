@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/nodejs/runtime/
 title: The Node.js runtime \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:07.604596+00:00
+fetched_at: 2026-10-21T14:26:37.293355+00:00
 ---
 
 # The Node.js runtime  |  App Engine flexible environment  |  Google Cloud Documentation

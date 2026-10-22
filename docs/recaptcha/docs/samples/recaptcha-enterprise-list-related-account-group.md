@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recaptcha/docs/samples/recaptcha-enterprise-list-related-account-group/
 title: List related account groups \u00a0|\u00a0 Google Cloud Fraud Defense \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:21:15.277670+00:00
+fetched_at: 2026-10-21T14:57:55.075763+00:00
 ---
 
 # List related account groups  |  Google Cloud Fraud Defense  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-monitoring/
 title: Monitoring in a Bare Metal Solution environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:53:37.653205+00:00
+fetched_at: 2026-10-21T14:26:38.967127+00:00
 ---
 
 # Monitoring in a Bare Metal Solution environment  |  Google Cloud Documentation

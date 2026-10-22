@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/permissions/define-landing-page-on-login/
 title: Define a landing page \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:47.334928+00:00
+fetched_at: 2026-10-21T14:21:12.594438+00:00
 ---
 
 # Define a landing page  |  Google Security Operations  |  Google Cloud Documentation

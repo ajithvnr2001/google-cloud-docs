@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/prebuilt-component/exchange-order/
 title: Exchange order prebuilt component \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:42.726560+00:00
+fetched_at: 2026-10-21T12:44:44.189095+00:00
 ---
 
 # Exchange order prebuilt component  |  Dialogflow CX  |  Google Cloud Documentation

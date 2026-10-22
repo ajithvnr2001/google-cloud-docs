@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/migration-intro/
 title: Introduction to BigQuery migration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:48.079903+00:00
+fetched_at: 2026-10-21T14:19:15.296487+00:00
 ---
 
 # Introduction to BigQuery migration  |  Google Cloud Documentation

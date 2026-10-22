@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/investigate/working-with-alerts/alert-events-tab/
 title: Analyze event details \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:33.701224+00:00
+fetched_at: 2026-10-21T14:21:34.447426+00:00
 ---
 
 # Analyze event details  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/how/detect-intent-stream/
 title: Detect intent with audio input stream \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:45:48.059733+00:00
+fetched_at: 2026-10-21T12:43:50.836639+00:00
 ---
 
 # Detect intent with audio input stream  |  Dialogflow ES  |  Google Cloud Documentation

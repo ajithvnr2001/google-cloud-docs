@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.1/how-to/customizing-buildpacks/
 title: Customizing Stacks and Buildpacks \u00a0|\u00a0 Kf 2.1 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:43.857226+00:00
+fetched_at: 2026-10-21T15:12:11.230371+00:00
 ---
 
 # Customizing Stacks and Buildpacks  |  Kf 2.1  |  Google Cloud Documentation

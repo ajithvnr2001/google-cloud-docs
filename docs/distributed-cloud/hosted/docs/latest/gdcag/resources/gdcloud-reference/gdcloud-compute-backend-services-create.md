@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-compute-backend-services-create/
 title: gdcloud compute backend-services create \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:14:13.234737+00:00
+fetched_at: 2026-10-21T12:58:22.736929+00:00
 ---
 
 # gdcloud compute backend-services create  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

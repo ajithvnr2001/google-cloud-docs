@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/key-concepts/
 title: Conversational Analytics API architecture and key concepts \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:34.119664+00:00
+fetched_at: 2026-10-21T12:46:43.340511+00:00
 ---
 
 # Conversational Analytics API architecture and key concepts  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/admin/iotool-setup/
 title: Set up the IO tools to access runbooks \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:39.220872+00:00
+fetched_at: 2026-10-21T12:57:31.171406+00:00
 ---
 
 # Set up the IO tools to access runbooks  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/clustering-overview/
 title: Clustering overview \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:04:17.798756+00:00
+fetched_at: 2026-10-21T12:40:13.278768+00:00
 ---
 
 # Clustering overview  |  BigQuery  |  Google Cloud Documentation

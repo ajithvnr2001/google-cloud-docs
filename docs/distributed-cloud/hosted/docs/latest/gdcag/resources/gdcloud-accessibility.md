@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-accessibility/
 title: Enable accessibility features \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:16:31.053127+00:00
+fetched_at: 2026-10-21T13:00:04.751667+00:00
 ---
 
 # Enable accessibility features  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

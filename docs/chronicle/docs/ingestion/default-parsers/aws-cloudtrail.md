@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aws-cloudtrail/
 title: Collect AWS CloudTrail logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:26.015391+00:00
+fetched_at: 2026-10-21T14:23:31.969233+00:00
 ---
 
 # Collect AWS CloudTrail logs  |  Google Security Operations  |  Google Cloud Documentation

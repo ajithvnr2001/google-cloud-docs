@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/prebuilt-component/authentication/
 title: Authentication prebuilt component \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:41.215517+00:00
+fetched_at: 2026-10-21T12:44:59.120466+00:00
 ---
 
 # Authentication prebuilt component  |  Dialogflow CX  |  Google Cloud Documentation

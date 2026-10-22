@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/platform/pa-user/set-bucket-retention-periods/
 title: Set bucket retention periods \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:42.013532+00:00
+fetched_at: 2026-10-21T12:56:58.644552+00:00
 ---
 
 # Set bucket retention periods  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/buildpacks/build-run-image/
 title: Configure your build and run images \u00a0|\u00a0 Buildpacks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:27:05.569211+00:00
+fetched_at: 2026-10-21T14:07:23.616387+00:00
 ---
 
 # Configure your build and run images  |  Buildpacks  |  Google Cloud Documentation

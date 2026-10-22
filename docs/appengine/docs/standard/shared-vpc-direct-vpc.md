@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/shared-vpc-direct-vpc/
 title: Direct VPC egress with a Shared VPC network \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:46:05.548819+00:00
+fetched_at: 2026-10-21T12:30:13.254163+00:00
 ---
 
 # Direct VPC egress with a Shared VPC network  |  App Engine standard environment  |  Google Cloud Documentation

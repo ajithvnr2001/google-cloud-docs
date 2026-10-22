@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/direct-sms-numbers/
 title: Direct SMS numbers \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:17.294660+00:00
+fetched_at: 2026-10-21T14:23:10.904637+00:00
 ---
 
 # Direct SMS numbers  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

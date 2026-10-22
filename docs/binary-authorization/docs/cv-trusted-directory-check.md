@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/cv-trusted-directory-check/
 title: Use the trusted directory check \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:13.821616+00:00
+fetched_at: 2026-10-21T14:11:15.356105+00:00
 ---
 
 # Use the trusted directory check  |  Binary Authorization  |  Google Cloud Documentation

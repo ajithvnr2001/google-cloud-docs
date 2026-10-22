@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/snowflake/
 title: Collect Snowflake logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:22:03.430191+00:00
+fetched_at: 2026-10-21T12:37:57.567757+00:00
 ---
 
 # Collect Snowflake logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/investigate/working-with-cases/adding-custom-fields/
 title: Create custom fields for cases \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:10:35.675426+00:00
+fetched_at: 2026-10-21T14:19:30.670035+00:00
 ---
 
 # Create custom fields for cases  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-security/security-scores-api/
 title: Security scores and profiles API \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:14:22.376174+00:00
+fetched_at: 2026-10-21T14:53:11.789544+00:00
 ---
 
 # Security scores and profiles API  |  Apigee  |  Google Cloud Documentation

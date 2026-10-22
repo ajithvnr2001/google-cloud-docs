@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/servicenow-audit/
 title: Collect ServiceNow audit logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T16:52:22.338773+00:00
+fetched_at: 2026-10-21T12:26:47.892531+00:00
 ---
 
 # Collect ServiceNow audit logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -1,21 +1,21 @@
 ---
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/assign-nodes-cluster-scheduling/
-title: Assign a database cluster to a node using scheduling \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: Current (18.3.0) \u00a0|\u00a0 Google Cloud Documentation
+title: Assign a database cluster to a node using scheduling \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:32:13.967631+00:00
+fetched_at: 2026-10-21T15:32:09.964636+00:00
 ---
 
-# Assign a database cluster to a node using scheduling  |  AlloyDB Omni using the container orchestrator: Current (18.3.0)  |  Google Cloud Documentation
+# Assign a database cluster to a node using scheduling  |  AlloyDB Omni using the container orchestrator: Current (18.4.0)  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/assign-nodes-cluster-scheduling/
 
-This page documents AlloyDB Omni version **18.3.0** using the **container orchestrator** deployment option. [Choose a different deployment option](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment). 
+This page documents AlloyDB Omni version **18.4.0** using the **container orchestrator** deployment option. [Choose a different deployment option](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment). 
 
   * [ Home ](https://docs.cloud.google.com/)
   * [ Documentation ](https://docs.cloud.google.com/docs)
   * [ Databases ](https://docs.cloud.google.com/docs/databases)
   * [ AlloyDB Omni ](https://docs.cloud.google.com/alloydb/omni/docs)
-  * [ Container orchestrator: Current (18.3.0) ](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/overview)
+  * [ Container orchestrator: Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/overview)
 
 
 
@@ -23,19 +23,23 @@ Send feedback
 
 #  Assign a database cluster to a node using scheduling Stay organized with collections  Save and categorize content based on your preferences. 
 
-Select a documentation version: 18.3.0keyboard_arrow_down
+Select a documentation version: 18.4.0keyboard_arrow_down
 
-  * [ Current (18.3.0) ](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/assign-nodes-cluster-scheduling)
+  * [ Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/assign-nodes-cluster-scheduling)
+  * [ 18.4.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.4.0/docs/assign-nodes-cluster-scheduling)
   * [ 18.3.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/assign-nodes-cluster-scheduling)
   * [ 18.1.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/assign-nodes-cluster-scheduling)
+  * [ 17.10.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.10.0/docs/assign-nodes-cluster-scheduling)
   * [ 17.9.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.9.0/docs/assign-nodes-cluster-scheduling)
   * [ 17.7.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.7.0/docs/assign-nodes-cluster-scheduling)
   * [ 17.5.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.5.0/docs/assign-nodes-cluster-scheduling)
+  * [ 16.14.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.14.0/docs/assign-nodes-cluster-scheduling)
   * [ 16.13.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.13.0/docs/assign-nodes-cluster-scheduling)
   * [ 16.11.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.11.0/docs/assign-nodes-cluster-scheduling)
   * [ 16.9.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.9.0/docs/assign-nodes-cluster-scheduling)
   * [ 16.8.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.8.0/docs/assign-nodes-cluster-scheduling)
   * [ 16.3.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.3.0/docs/assign-nodes-cluster-scheduling)
+  * [ 15.18.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/15.18.0/docs/assign-nodes-cluster-scheduling)
   * [ 15.17.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/15.17.0/docs/assign-nodes-cluster-scheduling)
   * [ 15.15.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/15.15.0/docs/assign-nodes-cluster-scheduling)
   * [ 15.13.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/15.13.0/docs/assign-nodes-cluster-scheduling)

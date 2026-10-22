@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/quickstarts/create-a-slurm-cluster-with-a4/
 title: Create a self-managed Slurm cluster with an A4 VM \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:39.454919+00:00
+fetched_at: 2026-10-21T14:46:12.531181+00:00
 ---
 
 # Create a self-managed Slurm cluster with an A4 VM  |  Cluster Toolkit  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/transcription-with-chirp3/
 title: Use transcription with Speech-to-Text Chirp 3 \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:44:19.589940+00:00
+fetched_at: 2026-10-21T12:54:30.957692+00:00
 ---
 
 # Use transcription with Speech-to-Text Chirp 3  |  Agent Assist  |  Google Cloud Documentation

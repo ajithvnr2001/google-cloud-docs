@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/python3/release-notes/
 title: App Engine standard environment for Python 3 release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:23:11.227361+00:00
+fetched_at: 2026-10-21T14:42:49.857404+00:00
 ---
 
 # App Engine standard environment for Python 3 release notes  |  Google Cloud Documentation

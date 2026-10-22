@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cisco_meraki_changelog/
 title: Change log for CISCO_MERAKI \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:59:33.047066+00:00
+fetched_at: 2026-10-21T14:44:42.692632+00:00
 ---
 
 # Change log for CISCO_MERAKI  |  Google Security Operations  |  Google Cloud Documentation

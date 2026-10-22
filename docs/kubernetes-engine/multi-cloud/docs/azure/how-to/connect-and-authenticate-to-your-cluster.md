@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/how-to/connect-and-authenticate-to-your-cluster/
 title: Connect and authenticate to your cluster \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:53.097944+00:00
+fetched_at: 2026-10-21T15:10:18.589232+00:00
 ---
 
 # Connect and authenticate to your cluster  |  GKE on Azure  |  Google Cloud Documentation

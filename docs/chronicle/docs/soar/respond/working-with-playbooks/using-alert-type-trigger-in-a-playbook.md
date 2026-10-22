@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/using-alert-type-trigger-in-a-playbook/
 title: Trigger playbooks by alert type \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:53:28.176263+00:00
+fetched_at: 2026-10-21T12:39:16.295690+00:00
 ---
 
 # Trigger playbooks by alert type  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/column-data-masking/
 title: Mask column data \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:42:51.582160+00:00
+fetched_at: 2026-10-21T12:39:53.200806+00:00
 ---
 
 # Mask column data  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/expand-replica-count-to-drain-istio/
 title: Expand Istio property replica counts to avoid problems when draining Istio nodes \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:58:03.122757+00:00
+fetched_at: 2026-10-21T14:28:33.147912+00:00
 ---
 
 # Expand Istio property replica counts to avoid problems when draining Istio nodes  |  Apigee  |  Google Cloud Documentation

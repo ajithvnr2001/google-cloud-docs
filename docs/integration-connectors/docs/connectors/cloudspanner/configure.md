@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/cloudspanner/configure/
 title: Cloud Spanner \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:13.427867+00:00
+fetched_at: 2026-10-21T12:53:58.594290+00:00
 ---
 
 # Cloud Spanner  |  Integration Connectors  |  Google Cloud Documentation

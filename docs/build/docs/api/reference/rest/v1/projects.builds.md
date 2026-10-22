@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds
 title: REST Resource: projects.builds \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:59:16.937420+00:00
+fetched_at: 2026-10-21T14:35:20.954010+00:00
 ---
 
 # REST Resource: projects.builds  |  Cloud Build  |  Google Cloud Documentation
@@ -66,6 +66,8 @@ Send feedback
     * UploadedNpmPackage
       * JSON representation
     * UploadedGenericArtifact
+      * JSON representation
+    * BuildResourceUsage
       * JSON representation
     * Artifacts
       * JSON representation
@@ -301,7 +303,8 @@ JSON representation
     
     {
     
-      // Union field source can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "storageSource": {
         object ([StorageSource](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.StorageSource))
       },
@@ -320,18 +323,19 @@ JSON representation
       "developerConnectConfig": {
         object ([DeveloperConnectConfig](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.DeveloperConnectConfig))
       }
-      // End of list of possible types for union field source.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
 ---  
-Union field `source`. Location of source. `source` can be only one of the following:  
+Location of source. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `storageSource` |  `object (`[StorageSource](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.StorageSource)`)` If provided, get the source from this location in Cloud Storage.  
 `repoSource` |  `object (`[RepoSource](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/RepoSource)`)` If provided, get the source from this location in a Cloud Source Repository.  
 `gitSource` |  `object (`[GitSource](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.GitSource)`)` If provided, get the source from this Git repository.  
 `storageSourceManifest` |  `object (`[StorageSourceManifest](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.StorageSourceManifest)`)` If provided, get the source from this manifest in Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).  
 `connectedRepository` |  `object (`[ConnectedRepository](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.ConnectedRepository)`)` Optional. If provided, get the source from this 2nd-gen Google Cloud Build repository resource.  
 `developerConnectConfig` |  `object (`[DeveloperConnectConfig](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.DeveloperConnectConfig)`)` If provided, get the source from this Developer Connect config.  
+End of mutually exclusive fields.  
   
 ### StorageSource
 
@@ -630,7 +634,10 @@ JSON representation
         {
           object ([UploadedGenericArtifact](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.UploadedGenericArtifact))
         }
-      ]
+      ],
+      "resourceUsage": {
+        object ([BuildResourceUsage](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.BuildResourceUsage))
+      }
     }  
   
 Fields  
@@ -647,6 +654,7 @@ Fields
 `goModules[]` |  `object (`[UploadedGoModule](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.UploadedGoModule)`)` Optional. Go module artifacts uploaded to Artifact Registry at the end of the build.  
 `npmPackages[]` |  `object (`[UploadedNpmPackage](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.UploadedNpmPackage)`)` Npm packages uploaded to Artifact Registry at the end of the build.  
 `genericArtifacts[]` |  `object (`[UploadedGenericArtifact](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.UploadedGenericArtifact)`)` Output only. Generic artifacts uploaded to Artifact Registry at the end of the build.  
+`resourceUsage` |  `object (`[BuildResourceUsage](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.BuildResourceUsage)`)` Output only. Aggregated metrics for the build.  
   
 ### BuiltImage
 
@@ -890,6 +898,30 @@ Fields
 `fileHashes` |  `map (key: string, value: object (`[FileHashes](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.FileHashes)`))` Output only. The file hashes that make up the generic artifact.An object containing a list of `"key": value` pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.  
 `pushTiming` |  `object (`[TimeSpan](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.TimeSpan)`)` Output only. Stores timing information for pushing the specified artifact.  
 `artifactRegistryPackage` |  `string` Output only. Path to the artifact in Artifact Registry.  
+  
+### BuildResourceUsage
+
+Aggregated/summary metrics over the entire build lifecycle.
+
+JSON representation  
+---  
+      
+    
+    {
+      "totalCpuDuration": string,
+      "averageCpuUtilization": number,
+      "peakCpuUtilization": number,
+      "averageMemoryUtilization": number,
+      "peakMemoryUtilization": number
+    }  
+  
+Fields  
+---  
+`totalCpuDuration` |  `string (`[Duration](https://protobuf.dev/reference/protobuf/google.protobuf/#duration)` format)` Output only. Total CPU execution time consumed across all cores during build execution.A duration in seconds with up to nine fractional digits, ending with '`s`'. Example: `"3.5s"`.  
+`averageCpuUtilization` |  `number` Output only. The average CPU utilization ratio across all vCPUs over the duration of the build, expressed as a fraction in the range [0.0, 1.0].  
+`peakCpuUtilization` |  `number` Output only. The highest CPU utilization ratio across all vCPUs observed over the duration of the build, expressed as a fraction in the range [0.0, 1.0].  
+`averageMemoryUtilization` |  `number` Output only. The average memory utilization ratio over the duration of the build, expressed as a fraction in the range [0.0, 1.0].  
+`peakMemoryUtilization` |  `number` Output only. The highest memory utilization ratio observed over the duration of the build, expressed as a fraction in the range [0.0, 1.0].  
   
 ### Artifacts
 
@@ -1181,7 +1213,12 @@ JSON representation
       ],
       "defaultLogsBucketBehavior": enum ([DefaultLogsBucketBehavior](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.DefaultLogsBucketBehavior)),
       "enableStructuredLogging": boolean,
-      "pubsubTopic": string
+      "pubsubTopic": string,
+      "workerRelease": string,
+      "resolvedWorkerRelease": string,
+      "rankedMachineSeries": [
+        enum ([MachineSeries](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/MachineSeries))
+      ]
     }  
   
 Fields  
@@ -1204,6 +1241,9 @@ Fields
 `defaultLogsBucketBehavior` |  `enum (`[DefaultLogsBucketBehavior](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.DefaultLogsBucketBehavior)`)` Optional. Option to specify how default logs buckets are setup.  
 `enableStructuredLogging` |  `boolean` Optional. Option to specify whether structured logging is enabled.If true, JSON-formatted logs are parsed as structured logs.  
 `pubsubTopic` |  `string` Optional. Option to specify the Pub/Sub topic to receive build status updates.  
+`workerRelease` |  `string` Optional. Option to specify which release or release channel (rapid|regular|stable) to use to run this build.  
+`resolvedWorkerRelease` |  `string` Output only. Worker release resolved from the release channel.  
+`rankedMachineSeries[]` |  `enum (`[MachineSeries](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/MachineSeries)`)` Optional. Ranked list (earlier items have higher priority) of Machine Series to consider when provisioning Worker VMs. A concrete machine type will be selected based on machine availability in the given region. This field must be empty for the Build to be eligible to be paired with a pre-provisioned worker VM.  
   
 ### VerifyOption
 
@@ -1219,6 +1259,7 @@ Enums
 ---  
 `NOT_VERIFIED` | Not a verifiable build (the default).  
 `VERIFIED` | Build must be verified.  
+`BEST_EFFORT` | Build verification is best effort. If provenance generation fails, the build will still succeed.  
   
 ### MachineType
 
@@ -1264,12 +1305,16 @@ JSON representation
       
     
     {
-      "name": string
+      "name": string,
+      "workerRelease": string,
+      "resolvedWorkerRelease": string
     }  
   
 Fields  
 ---  
 `name` |  `string` The `WorkerPool` resource to execute the build on. You must have `cloudbuild.workerpools.use` on the project hosting the WorkerPool.Format projects/{project}/locations/{location}/workerPools/{workerPoolId}  
+`workerRelease` |  `string` Output only. OUTPUT_ONLY. The release or release channel used to run the Build. This is set to the same value as `PrivatePoolV1Config.WorkerConfig.worker_release` for the UI to easily access.  
+`resolvedWorkerRelease` |  `string` Output only. OUTPUT_ONLY. Worker release resolved from the release channel.  
   
 ### LoggingMode
 
@@ -1555,7 +1600,8 @@ JSON representation
     
     {
     
-      // Union field dep can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "empty": boolean,
       "gitSource": {
         object ([GitSourceDependency](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.GitSourceDependency))
@@ -1563,15 +1609,16 @@ JSON representation
       "genericArtifact": {
         object ([GenericArtifactDependency](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.GenericArtifactDependency))
       }
-      // End of list of possible types for union field dep.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
 ---  
-Union field `dep`. The type of dependency to fetch. `dep` can be only one of the following:  
+The type of dependency to fetch. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `empty` |  `boolean` If set to true disable all dependency fetching (ignoring the default source as well).  
 `gitSource` |  `object (`[GitSourceDependency](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.GitSourceDependency)`)` Represents a git repository as a build dependency.  
 `genericArtifact` |  `object (`[GenericArtifactDependency](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build.GenericArtifactDependency)`)` Represents a generic artifact as a build dependency.  
+End of mutually exclusive fields.  
   
 ### GitSourceDependency
 
@@ -1611,17 +1658,19 @@ JSON representation
     
     {
     
-      // Union field repotype can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "url": string,
       "developerConnect": string
-      // End of list of possible types for union field repotype.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
 ---  
-Union field `repotype`. The type of git source repo (url or dev connect). `repotype` can be only one of the following:  
+The type of git source repo (url or dev connect). The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `url` |  `string` Location of the Git repository.  
 `developerConnect` |  `string` The Developer Connect Git repository link formatted as `projects/*/locations/*/connections/*/gitRepositoryLink/*`  
+End of mutually exclusive fields.  
   
 ### GenericArtifactDependency
 
@@ -1639,7 +1688,7 @@ JSON representation
 Fields  
 ---  
 `resource` |  `string` Required. The location to download the artifact files from. Ex: projects/p1/locations/us/repositories/r1/packages/p1/versions/v1  
-`destPath` |  `string` Required. Where the artifact files should be placed on the worker.  
+`destPath` |  `string` Optional. Where the artifact files should be placed on the worker. Required when specified in `Build.dependencies`.  
   
 ## Methods  
   
@@ -1673,6 +1722,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-08-26 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-08-26 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

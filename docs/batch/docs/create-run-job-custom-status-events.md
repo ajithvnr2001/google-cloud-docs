@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/create-run-job-custom-status-events/
 title: Configure custom status events to describe runnables \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:29:23.228041+00:00
+fetched_at: 2026-10-21T12:30:29.545449+00:00
 ---
 
 # Configure custom status events to describe runnables  |  Batch  |  Google Cloud Documentation

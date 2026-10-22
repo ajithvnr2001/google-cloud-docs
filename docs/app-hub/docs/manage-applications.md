@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/manage-applications/
 title: Manage App Hub applications \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:28:48.284194+00:00
+fetched_at: 2026-10-21T14:25:15.948743+00:00
 ---
 
 # Manage App Hub applications  |  Google Cloud Documentation

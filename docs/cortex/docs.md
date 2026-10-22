@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/
 title: Google Cloud Cortex Framework documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:41:42.137500+00:00
+fetched_at: 2026-10-21T14:25:04.565661+00:00
 ---
 
 # Google Cloud Cortex Framework documentation  |  Google Cloud Documentation

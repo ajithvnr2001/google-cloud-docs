@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/v2/quickstart-lb-certificates/
 title: Automate certificate lifecycle for load balancers \u00a0|\u00a0 Certificate Manager (2nd gen) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:04:08.368704+00:00
+fetched_at: 2026-10-21T14:25:19.129207+00:00
 ---
 
 # Automate certificate lifecycle for load balancers  |  Certificate Manager (2nd gen)  |  Google Cloud Documentation

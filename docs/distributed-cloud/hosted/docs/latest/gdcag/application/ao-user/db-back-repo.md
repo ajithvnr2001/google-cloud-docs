@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/db-back-repo/
 title: Create a backup repository for Database Service \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:06:57.228758+00:00
+fetched_at: 2026-10-21T12:56:18.422905+00:00
 ---
 
 # Create a backup repository for Database Service  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/google-rapid-response-grr/
 title: Integrate GRR Rapid Response with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:01:06.190653+00:00
+fetched_at: 2026-10-21T14:07:03.654169+00:00
 ---
 
 # Integrate GRR Rapid Response with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

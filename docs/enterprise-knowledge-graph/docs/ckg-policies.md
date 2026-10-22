@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/enterprise-knowledge-graph/docs/ckg-policies/
 title: Additional Product Requirements \u00a0|\u00a0 Enterprise Knowledge Graph \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:23:59.138109+00:00
+fetched_at: 2026-10-21T12:51:13.356238+00:00
 ---
 
 # Additional Product Requirements  |  Enterprise Knowledge Graph  |  Google Cloud Documentation

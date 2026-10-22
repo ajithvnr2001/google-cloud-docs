@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/integrate-ad-group-support-kubernetes-operator/
 title: Integrate Active Directory group support on Kubernetes \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 18.1.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:27:41.722258+00:00
+fetched_at: 2026-10-21T15:32:05.619266+00:00
 ---
 
 # Integrate Active Directory group support on Kubernetes  |  AlloyDB Omni using the container orchestrator: 18.1.0  |  Google Cloud Documentation
@@ -25,12 +25,15 @@ Send feedback
 
 Select a documentation version: 18.1.0keyboard_arrow_down
 
-  * [ Current (18.3.0) ](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/integrate-ad-group-support-kubernetes-operator)
+  * [ Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/integrate-ad-group-support-kubernetes-operator)
+  * [ 18.4.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.4.0/docs/integrate-ad-group-support-kubernetes-operator)
   * [ 18.3.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/integrate-ad-group-support-kubernetes-operator)
   * [ 18.1.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/integrate-ad-group-support-kubernetes-operator)
+  * [ 17.10.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.10.0/docs/integrate-ad-group-support-kubernetes-operator)
   * [ 17.9.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.9.0/docs/integrate-ad-group-support-kubernetes-operator)
   * [ 17.7.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.7.0/docs/integrate-ad-group-support-kubernetes-operator)
   * [ 17.5.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.5.0/docs/integrate-ad-group-support-kubernetes-operator)
+  * [ 16.14.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.14.0/docs/integrate-ad-group-support-kubernetes-operator)
   * [ 16.13.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.13.0/docs/integrate-ad-group-support-kubernetes-operator)
   * [ 16.11.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.11.0/docs/integrate-ad-group-support-kubernetes-operator)
   * [ 16.9.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.9.0/docs/integrate-ad-group-support-kubernetes-operator)

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/symantec-vip-authhub-changelog/
 title: Change log for SYMANTEC_VIP_AUTHHUB \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:21:08.857751+00:00
+fetched_at: 2026-10-21T14:43:11.260402+00:00
 ---
 
 # Change log for SYMANTEC_VIP_AUTHHUB  |  Google Security Operations  |  Google Cloud Documentation

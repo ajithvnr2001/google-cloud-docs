@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/asset-inventory/docs/roles-permissions/
 title: Roles and permissions \u00a0|\u00a0 Cloud Asset Inventory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:39:56.568332+00:00
+fetched_at: 2026-10-21T14:41:36.833951+00:00
 ---
 
 # Roles and permissions  |  Cloud Asset Inventory  |  Google Cloud Documentation

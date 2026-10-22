@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/behavior-overview/
 title: Key concepts and features \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:50:46.123727+00:00
+fetched_at: 2026-10-22T05:41:18.974442+00:00
 ---
 
 # Key concepts and features  |  Datastream  |  Google Cloud Documentation
@@ -21,9 +21,7 @@ Send feedback
 
 #  Key concepts and features Stay organized with collections  Save and categorize content based on your preferences. 
 
-## Behavior and use cases
-
-Datastream lets you ingest source data from a relational database management system (RDBMS) and other sources into destinations such as BigQuery, Apache Iceberg tables, and Cloud Storage in near real time. This enables downstream use cases such as loading data into BigQuery for data warehousing and analytics, or running Apache Spark jobs over the data for artificial intelligence and machine learning workloads.
+Datastream lets you ingest data from relational databases and other sources into destinations such as BigQuery, Apache Iceberg tables, and Cloud Storage in near real time. You can then use the replicated data in BigQuery for data warehousing and analytics, or run Apache Spark jobs for artificial intelligence and machine learning workloads.
 
 ## Concepts
 
@@ -150,6 +148,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

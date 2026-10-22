@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/run/create-trigger-storage-console/
 title: Receive direct events from Cloud Storage (Google Cloud console) \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:33.196255+00:00
+fetched_at: 2026-10-21T12:45:42.401863+00:00
 ---
 
 # Receive direct events from Cloud Storage (Google Cloud console)  |  Eventarc Standard  |  Google Cloud Documentation

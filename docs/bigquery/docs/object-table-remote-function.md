@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/object-table-remote-function/
 title: Analyze object tables by using remote functions \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:16.680074+00:00
+fetched_at: 2026-10-21T14:20:44.018323+00:00
 ---
 
 # Analyze object tables by using remote functions  |  BigQuery  |  Google Cloud Documentation

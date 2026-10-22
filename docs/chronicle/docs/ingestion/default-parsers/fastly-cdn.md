@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/fastly-cdn/
 title: Collect Fastly CDN logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:52:22.762760+00:00
+fetched_at: 2026-10-21T14:18:56.080516+00:00
 ---
 
 # Collect Fastly CDN logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/prebuilt-component/date-of-birth-collection/
 title: Date of birth collection prebuilt component \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:42.404464+00:00
+fetched_at: 2026-10-21T12:45:00.227325+00:00
 ---
 
 # Date of birth collection prebuilt component  |  Dialogflow CX  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/a2a.projects.locations.agents.v1.message/send/
 title: Method: a2a.projects.locations.agents.v1.message.send \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:42:52.032338+00:00
+fetched_at: 2026-10-21T12:51:19.213942+00:00
 ---
 
 # Method: a2a.projects.locations.agents.v1.message.send  |  Data Agents  |  Google Cloud Documentation

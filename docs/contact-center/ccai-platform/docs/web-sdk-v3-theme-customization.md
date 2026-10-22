@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/web-sdk-v3-theme-customization/
 title: Theme customization \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:52:23.673109+00:00
+fetched_at: 2026-10-21T14:23:02.972429+00:00
 ---
 
 # Theme customization  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

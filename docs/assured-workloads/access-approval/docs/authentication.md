@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/access-approval/docs/authentication/
 title: Authenticate to Access Approval \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:05:12.070344+00:00
+fetched_at: 2026-10-21T14:09:50.867192+00:00
 ---
 
 # Authenticate to Access Approval  |  Google Cloud Documentation

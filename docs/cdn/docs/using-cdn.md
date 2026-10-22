@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/using-cdn/
 title: Setup overview \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:29:48.908996+00:00
+fetched_at: 2026-10-21T14:23:29.177680+00:00
 ---
 
 # Setup overview  |  Cloud CDN  |  Google Cloud Documentation

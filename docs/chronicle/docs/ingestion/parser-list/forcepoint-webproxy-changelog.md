@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/forcepoint-webproxy-changelog/
 title: Change log for FORCEPOINT_WEBPROXY \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:32:22.776743+00:00
+fetched_at: 2026-10-21T14:42:45.757183+00:00
 ---
 
 # Change log for FORCEPOINT_WEBPROXY  |  Google Security Operations  |  Google Cloud Documentation

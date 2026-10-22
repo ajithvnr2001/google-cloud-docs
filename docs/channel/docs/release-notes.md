@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/channel/docs/release-notes/
 title: Channel Services release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:46:32.783504+00:00
+fetched_at: 2026-10-21T14:51:45.232578+00:00
 ---
 
 # Channel Services release notes  |  Google Cloud Documentation

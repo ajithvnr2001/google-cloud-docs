@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-template-delete/
 title: Delete an instance template \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:21.789687+00:00
+fetched_at: 2026-10-22T05:49:56.284724+00:00
 ---
 
 # Delete an instance template  |  Compute Engine  |  Google Cloud Documentation

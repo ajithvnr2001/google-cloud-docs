@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/gs-private-embedding/
 title: Get started with private embedding \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:18:50.131674+00:00
+fetched_at: 2026-10-21T15:02:51.984783+00:00
 ---
 
 # Get started with private embedding  |  Looker  |  Google Cloud Documentation

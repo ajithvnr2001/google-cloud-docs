@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/how-to/preexisting-volume/
 title: Import a preexisting Azure Disk volume \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:56.300343+00:00
+fetched_at: 2026-10-21T15:09:30.322906+00:00
 ---
 
 # Import a preexisting Azure Disk volume  |  GKE on Azure  |  Google Cloud Documentation

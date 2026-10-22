@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/generative-fallback/
 title: Generative fallback \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:39.759715+00:00
+fetched_at: 2026-10-21T12:56:00.352637+00:00
 ---
 
 # Generative fallback  |  Dialogflow CX  |  Google Cloud Documentation

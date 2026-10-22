@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/configure-chrome/
 title: Configure Chrome Enterprise cloud-managed browsers \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T11:38:39.875258+00:00
+fetched_at: 2026-10-21T12:51:12.654304+00:00
 ---
 
 # Configure Chrome Enterprise cloud-managed browsers  |  Gemini Enterprise  |  Google Cloud Documentation

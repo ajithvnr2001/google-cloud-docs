@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/collect-logs/
 title: Collect logs from your Kubernetes workflows \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:44:04.485616+00:00
+fetched_at: 2026-10-21T12:58:19.396619+00:00
 ---
 
 # Collect logs from your Kubernetes workflows  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/workload/hpc-vm-images/
 title: Overview of HPC-ready VM images \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:46.647737+00:00
+fetched_at: 2026-10-21T14:19:25.957347+00:00
 ---
 
 # Overview of HPC-ready VM images  |  Compute Engine  |  Google Cloud Documentation

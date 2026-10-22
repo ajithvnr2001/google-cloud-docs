@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/table-clones-intro/
 title: Introduction to table clones \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:30:36.098992+00:00
+fetched_at: 2026-10-21T14:09:10.310253+00:00
 ---
 
 # Introduction to table clones  |  BigQuery  |  Google Cloud Documentation

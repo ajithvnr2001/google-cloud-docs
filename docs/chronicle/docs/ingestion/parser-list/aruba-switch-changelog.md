@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/aruba-switch-changelog/
 title: Change log for ARUBA_SWITCH \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:45:26.379433+00:00
+fetched_at: 2026-10-21T14:46:17.078510+00:00
 ---
 
 # Change log for ARUBA_SWITCH  |  Google Security Operations  |  Google Cloud Documentation

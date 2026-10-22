@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/request-access/
 title: Request access \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:57:37.367623+00:00
+fetched_at: 2026-10-21T14:23:17.352066+00:00
 ---
 
 # Request access  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-reads-prefix-hbase/
 title: Read rows with a prefix (HBase) \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:24:01.127421+00:00
+fetched_at: 2026-10-21T14:10:56.058948+00:00
 ---
 
 # Read rows with a prefix (HBase)  |  Bigtable  |  Google Cloud Documentation

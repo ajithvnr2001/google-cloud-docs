@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/ingest-using-cloud-functions/
 title: Ingest logs with Cloud Run functions \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:22.830415+00:00
+fetched_at: 2026-10-21T12:37:29.456355+00:00
 ---
 
 # Ingest logs with Cloud Run functions  |  Google Security Operations  |  Google Cloud Documentation

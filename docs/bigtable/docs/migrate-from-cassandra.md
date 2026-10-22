@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/migrate-from-cassandra/
 title: Migrate from Apache Cassandra to Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:20.930979+00:00
+fetched_at: 2026-10-21T14:09:27.458530+00:00
 ---
 
 # Migrate from Apache Cassandra to Bigtable  |  Google Cloud Documentation

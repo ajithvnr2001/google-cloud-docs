@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/deploy-kubernetes-app/
 title: Quickstart: Deploy a Kubernetes app with Cloud Code for IntelliJ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:21:33.600101+00:00
+fetched_at: 2026-10-21T12:40:17.025328+00:00
 ---
 
 # Quickstart: Deploy a Kubernetes app with Cloud Code for IntelliJ  |  Google Cloud Documentation

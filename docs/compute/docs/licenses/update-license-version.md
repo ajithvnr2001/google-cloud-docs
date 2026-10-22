@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/licenses/update-license-version/
 title: Update licenses after an OS upgrade \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:49:53.082061+00:00
+fetched_at: 2026-10-21T12:40:52.061053+00:00
 ---
 
 # Update licenses after an OS upgrade  |  Compute Engine  |  Google Cloud Documentation

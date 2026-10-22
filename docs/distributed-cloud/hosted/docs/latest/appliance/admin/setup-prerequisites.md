@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/admin/setup-prerequisites/
 title: Insert the YubiKeys into the device \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:38.619835+00:00
+fetched_at: 2026-10-21T12:57:42.022804+00:00
 ---
 
 # Insert the YubiKeys into the device  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

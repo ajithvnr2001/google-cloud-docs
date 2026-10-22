@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/yara-l/expressions/
 title: Expressions, operators, and other constructs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:55:58.191121+00:00
+fetched_at: 2026-10-21T14:09:28.009501+00:00
 ---
 
 # Expressions, operators, and other constructs  |  Google Security Operations  |  Google Cloud Documentation

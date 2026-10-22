@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/cs-filevantage/
 title: Collect CrowdStrike FileVantage logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:56:25.988977+00:00
+fetched_at: 2026-10-21T12:36:51.194681+00:00
 ---
 
 # Collect CrowdStrike FileVantage logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/connect-redis-instance-gce/
 title: Connect to a Redis instance from a Compute Engine VM \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:52.186488+00:00
+fetched_at: 2026-10-21T15:14:54.372196+00:00
 ---
 
 # Connect to a Redis instance from a Compute Engine VM  |  Memorystore for Redis  |  Google Cloud Documentation

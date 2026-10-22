@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/quotas/configure-dimensions/
 title: Configure Cloud Quotas dimensions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:40:30.868802+00:00
+fetched_at: 2026-10-21T14:07:18.364785+00:00
 ---
 
 # Configure Cloud Quotas dimensions  |  Google Cloud Documentation

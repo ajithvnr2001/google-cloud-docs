@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/arm-support/
 title: Cloud Code support for Arm and mixed-architecture GKE clusters \u00a0|\u00a0 Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:16:50.709942+00:00
+fetched_at: 2026-10-21T14:21:16.060431+00:00
 ---
 
 # Cloud Code support for Arm and mixed-architecture GKE clusters  |  Cloud Code for Cloud Shell  |  Google Cloud Documentation

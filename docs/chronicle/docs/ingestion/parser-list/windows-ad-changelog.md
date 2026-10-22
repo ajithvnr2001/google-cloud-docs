@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/windows-ad-changelog/
 title: Change log for WINDOWS_AD \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:04:00.308851+00:00
+fetched_at: 2026-10-21T14:47:07.254324+00:00
 ---
 
 # Change log for WINDOWS_AD  |  Google Security Operations  |  Google Cloud Documentation

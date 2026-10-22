@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/cassandra-backup-overview/
 title: Cassandra backup overview \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:51:57.570281+00:00
+fetched_at: 2026-10-21T12:36:17.159504+00:00
 ---
 
 # Cassandra backup overview  |  Apigee  |  Google Cloud Documentation

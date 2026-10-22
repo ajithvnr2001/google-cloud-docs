@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/user-secops/map-users-with-multiple-control-access-parameters/
 title: Apply multiple control access parameters \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:44.628219+00:00
+fetched_at: 2026-10-21T14:21:24.022601+00:00
 ---
 
 # Apply multiple control access parameters  |  Google Security Operations  |  Google Cloud Documentation

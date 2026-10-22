@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/how-tos/dicom-deidentify/
 title: De-identifying DICOM data using DicomConfig \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:01:53.966311+00:00
+fetched_at: 2026-10-21T12:53:13.934994+00:00
 ---
 
 # De-identifying DICOM data using DicomConfig  |  Cloud Healthcare API  |  Google Cloud Documentation

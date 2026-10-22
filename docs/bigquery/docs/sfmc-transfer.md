@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/sfmc-transfer/
 title: Load Salesforce Marketing Cloud data into BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:23:07.194855+00:00
+fetched_at: 2026-10-21T12:36:20.355361+00:00
 ---
 
 # Load Salesforce Marketing Cloud data into BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-template-create-with-subnet/
 title: Create an instance template with a subnet \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:20.955407+00:00
+fetched_at: 2026-10-22T05:50:15.633077+00:00
 ---
 
 # Create an instance template with a subnet  |  Compute Engine  |  Google Cloud Documentation

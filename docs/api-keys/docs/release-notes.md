@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-keys/docs/release-notes/
 title: API Keys release notes \u00a0|\u00a0 API Keys API Documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:54:31.153337+00:00
+fetched_at: 2026-10-21T14:54:07.997129+00:00
 ---
 
 # API Keys release notes  |  API Keys API Documentation  |  Google Cloud Documentation

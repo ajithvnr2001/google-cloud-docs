@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/rubrik-security-cloud/
 title: Collect Rubrik Security Cloud logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:07.446388+00:00
+fetched_at: 2026-10-21T12:36:28.574888+00:00
 ---
 
 # Collect Rubrik Security Cloud logs  |  Google Security Operations  |  Google Cloud Documentation

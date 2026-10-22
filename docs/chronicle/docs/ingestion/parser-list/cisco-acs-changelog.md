@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cisco-acs-changelog/
 title: Change log for CISCO_ACS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:10:44.834144+00:00
+fetched_at: 2026-10-21T14:44:56.895950+00:00
 ---
 
 # Change log for CISCO_ACS  |  Google Security Operations  |  Google Cloud Documentation

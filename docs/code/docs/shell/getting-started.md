@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/getting-started/
 title: Get started with Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:36:50.681972+00:00
+fetched_at: 2026-10-21T14:20:54.218439+00:00
 ---
 
 # Get started with Cloud Code for Cloud Shell  |  Google Cloud Documentation

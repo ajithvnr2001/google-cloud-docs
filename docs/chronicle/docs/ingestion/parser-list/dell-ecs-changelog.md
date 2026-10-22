@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/dell-ecs-changelog/
 title: Change log for DELL_ECS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:30:06.233740+00:00
+fetched_at: 2026-10-21T14:45:31.332648+00:00
 ---
 
 # Change log for DELL_ECS  |  Google Security Operations  |  Google Cloud Documentation

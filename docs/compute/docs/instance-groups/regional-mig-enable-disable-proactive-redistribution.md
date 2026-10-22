@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/regional-mig-enable-disable-proactive-redistribution/
 title: Disable and re-enable proactive VM redistribution in a regional MIG \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:17:00.253115+00:00
+fetched_at: 2026-10-21T14:23:15.188781+00:00
 ---
 
 # Disable and re-enable proactive VM redistribution in a regional MIG  |  Compute Engine  |  Google Cloud Documentation

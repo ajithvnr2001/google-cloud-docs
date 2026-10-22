@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apis/docs/system-parameters/
 title: System parameters \u00a0|\u00a0 Cloud APIs \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T15:07:26.834756+00:00
+fetched_at: 2026-10-21T14:56:43.668657+00:00
 ---
 
 # System parameters  |  Cloud APIs  |  Google Cloud Documentation
@@ -20,9 +20,7 @@ Send feedback
 
 #  System parameters Stay organized with collections  Save and categorize content based on your preferences. 
 
-Google's API platform provides a set of common functionality to all Google APIs built using the platform. In order to use and control such functionality, the platform pre-defines a special set of request parameters called _system parameters_. These parameters are available across all Google REST APIs and gRPC APIs. A system parameter can be specified either using an HTTP query parameter or an HTTP header. For Google gRPC APIs, only HTTP headers are supported.
-
-Most users won't need to use these parameters directly. However, they are often used by Google-provided [client libraries](https://docs.cloud.google.com/apis/docs/client-libraries-explained). If you need to write custom code to access Google APIs directly, the system parameters can be useful in cases such as controlling JSON pretty-printing or specifying API Keys.
+Google's API platform defines _system parameters_ to control common functionality across REST and gRPC APIs, such as API keys, response field masks, quota attribution, and JSON formatting. Depending on the protocol, you pass system parameters to a service as URL query parameters or HTTP headers. You can specify these parameters directly when writing custom code, though tools such as the Google-provided [client libraries](https://docs.cloud.google.com/apis/docs/client-libraries-explained) handle many of them automatically.
 
 ## HTTP mapping
 
@@ -94,6 +92,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

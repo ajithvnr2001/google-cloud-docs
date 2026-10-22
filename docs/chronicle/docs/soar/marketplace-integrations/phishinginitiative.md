@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/phishinginitiative/
 title: Phishing Initiative \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:28:48.198388+00:00
+fetched_at: 2026-10-21T14:25:12.657747+00:00
 ---
 
 # Phishing Initiative  |  Google Security Operations  |  Google Cloud Documentation

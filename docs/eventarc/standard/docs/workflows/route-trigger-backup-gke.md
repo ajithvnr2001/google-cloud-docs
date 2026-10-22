@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/workflows/route-trigger-backup-gke/
 title: Route backup for GKE events to Workflows \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:45.986315+00:00
+fetched_at: 2026-10-21T12:46:15.865420+00:00
 ---
 
 # Route backup for GKE events to Workflows  |  Eventarc Standard  |  Google Cloud Documentation

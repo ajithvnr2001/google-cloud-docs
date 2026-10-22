@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/discover/write-prompts/
 title: Write better prompts for Gemini in Google Cloud \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:02:44.945839+00:00
+fetched_at: 2026-10-21T12:51:56.010481+00:00
 ---
 
 # Write better prompts for Gemini in Google Cloud  |  Gemini for Google Cloud  |  Google Cloud Documentation

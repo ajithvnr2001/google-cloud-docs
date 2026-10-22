@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke/how-to/enable-gke-cluster/
 title: Enable Backup for GKE for a cluster \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:55:52.975567+00:00
+fetched_at: 2026-10-21T15:00:40.672566+00:00
 ---
 
 # Enable Backup for GKE for a cluster  |  Google Cloud Documentation

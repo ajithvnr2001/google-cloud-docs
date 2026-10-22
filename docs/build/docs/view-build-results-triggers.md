@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/view-build-results-triggers/
 title: View build results for build triggers \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:07.914442+00:00
+fetched_at: 2026-10-21T14:11:27.145399+00:00
 ---
 
 # View build results for build triggers  |  Cloud Build  |  Google Cloud Documentation

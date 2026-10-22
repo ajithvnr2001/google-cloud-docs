@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/samples/logging-rails-shared-configure/
 title: Ruby: Configure Rails Logging Client \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:57:10.888792+00:00
+fetched_at: 2026-10-21T15:09:55.271780+00:00
 ---
 
 # Ruby: Configure Rails Logging Client  |  Google Cloud Documentation

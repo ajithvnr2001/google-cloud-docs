@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/recordia-changelog/
 title: Change log for RECORDIA \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:43:48.194911+00:00
+fetched_at: 2026-10-21T14:43:28.720690+00:00
 ---
 
 # Change log for RECORDIA  |  Google Security Operations  |  Google Cloud Documentation

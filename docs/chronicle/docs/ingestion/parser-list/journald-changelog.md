@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/journald-changelog/
 title: Change log for JOURNALD \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:41:42.347501+00:00
+fetched_at: 2026-10-21T14:43:39.485234+00:00
 ---
 
 # Change log for JOURNALD  |  Google Security Operations  |  Google Cloud Documentation

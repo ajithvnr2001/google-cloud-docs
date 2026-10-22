@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/enterprise/knative-serving/docs/apis/
 title: APIs & Reference \u00a0|\u00a0 Knative serving \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:21:24.014509+00:00
+fetched_at: 2026-10-21T15:08:37.734394+00:00
 ---
 
 # APIs & Reference  |  Knative serving  |  Google Cloud Documentation

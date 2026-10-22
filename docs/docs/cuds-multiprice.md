@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/cuds-multiprice/
 title: Spend-based committed use discounts \u00a0|\u00a0 Get started \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:23:29.656848+00:00
+fetched_at: 2026-10-21T14:06:06.300343+00:00
 ---
 
 # Spend-based committed use discounts  |  Get started  |  Google Cloud Documentation

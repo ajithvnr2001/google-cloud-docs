@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/dataframes-ml-ai/
 title: Use ML and AI with BigQuery DataFrames \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:11.420206+00:00
+fetched_at: 2026-10-21T14:07:11.699161+00:00
 ---
 
 # Use ML and AI with BigQuery DataFrames  |  Google Cloud Documentation

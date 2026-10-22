@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/gsc_gmail/configure/
 title: Gmail \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:14.108692+00:00
+fetched_at: 2026-10-21T12:54:08.782813+00:00
 ---
 
 # Gmail  |  Integration Connectors  |  Google Cloud Documentation

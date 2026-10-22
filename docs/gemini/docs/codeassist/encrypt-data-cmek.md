@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/encrypt-data-cmek/
 title: Encrypt data with customer-managed encryption keys \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:02:48.240027+00:00
+fetched_at: 2026-10-21T12:51:36.835737+00:00
 ---
 
 # Encrypt data with customer-managed encryption keys  |  Gemini for Google Cloud  |  Google Cloud Documentation

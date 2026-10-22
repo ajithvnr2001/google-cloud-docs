@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/event-processing/bypass-log-validations/
 title: Bypass Log Validation for parser extensions and custom parsers \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:16.816016+00:00
+fetched_at: 2026-10-21T14:25:32.671309+00:00
 ---
 
 # Bypass Log Validation for parser extensions and custom parsers  |  Google Security Operations  |  Google Cloud Documentation

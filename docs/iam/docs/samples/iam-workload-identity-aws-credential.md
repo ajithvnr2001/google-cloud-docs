@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/samples/iam-workload-identity-aws-credential/
 title: Create a token for Workload Identity Federation with AWS \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:40:09.675561+00:00
+fetched_at: 2026-10-21T12:54:03.312184+00:00
 ---
 
 # Create a token for Workload Identity Federation with AWS  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

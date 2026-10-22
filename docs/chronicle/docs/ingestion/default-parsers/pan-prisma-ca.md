@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/pan-prisma-ca/
 title: Collect Palo Alto Prisma Cloud alert logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:32.575779+00:00
+fetched_at: 2026-10-21T14:10:43.693502+00:00
 ---
 
 # Collect Palo Alto Prisma Cloud alert logs  |  Google Security Operations  |  Google Cloud Documentation

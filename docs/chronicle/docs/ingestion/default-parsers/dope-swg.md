@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/dope-swg/
 title: Collect Dope Security SWG logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:51:56.564118+00:00
+fetched_at: 2026-10-21T14:10:23.091865+00:00
 ---
 
 # Collect Dope Security SWG logs  |  Google Security Operations  |  Google Cloud Documentation

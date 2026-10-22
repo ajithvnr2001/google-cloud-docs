@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/rate-limiting/
 title: Rate limiting connection traffic \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:35.921660+00:00
+fetched_at: 2026-10-21T12:53:29.546378+00:00
 ---
 
 # Rate limiting connection traffic  |  Integration Connectors  |  Google Cloud Documentation

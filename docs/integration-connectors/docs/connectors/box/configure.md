@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/box/configure/
 title: Box \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:18.984713+00:00
+fetched_at: 2026-10-21T12:53:05.157946+00:00
 ---
 
 # Box  |  Integration Connectors  |  Google Cloud Documentation

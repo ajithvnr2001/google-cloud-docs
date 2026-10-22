@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-intelligence-center/docs/cloud-network-insights/deploy-vms-monitoring-points/
 title: Deploy VM Monitoring Points \u00a0|\u00a0 Network Intelligence Center - Cloud Network Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:29:22.976701+00:00
+fetched_at: 2026-10-21T15:14:21.126470+00:00
 ---
 
 # Deploy VM Monitoring Points  |  Network Intelligence Center - Cloud Network Insights  |  Google Cloud Documentation

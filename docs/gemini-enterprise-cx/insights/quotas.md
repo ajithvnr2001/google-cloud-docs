@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/quotas/
 title: Quotas & limits \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T14:58:46.548931+00:00
+fetched_at: 2026-10-21T12:54:50.025707+00:00
 ---
 
 # Quotas & limits  |  Customer Experience Insights  |  Google Cloud Documentation

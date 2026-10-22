@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/audit-logging-publicca/
 title: Public Certificate Authority audit logging \u00a0|\u00a0 Certificate Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:00:06.290690+00:00
+fetched_at: 2026-10-21T12:38:00.513001+00:00
 ---
 
 # Public Certificate Authority audit logging  |  Certificate Manager  |  Google Cloud Documentation

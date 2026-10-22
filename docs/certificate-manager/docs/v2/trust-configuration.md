@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/v2/trust-configuration/
 title: Create trust configuration \u00a0|\u00a0 Certificate Manager (2nd gen) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:48:14.044933+00:00
+fetched_at: 2026-10-21T14:25:33.169187+00:00
 ---
 
 # Create trust configuration  |  Certificate Manager (2nd gen)  |  Google Cloud Documentation

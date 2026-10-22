@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/csat-mobile-web/
 title: Mobile and web Customer Satisfaction Ratings (CSAT) \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:16.788963+00:00
+fetched_at: 2026-10-21T14:22:11.295292+00:00
 ---
 
 # Mobile and web Customer Satisfaction Ratings (CSAT)  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

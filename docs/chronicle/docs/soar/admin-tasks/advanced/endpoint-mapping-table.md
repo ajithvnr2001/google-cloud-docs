@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/advanced/endpoint-mapping-table/
 title: SOAR API mapping table \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:56.769904+00:00
+fetched_at: 2026-10-21T14:23:47.072524+00:00
 ---
 
 # SOAR API mapping table  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/networking/use-dpdk/
 title: Enable faster network packet processing with DPDK \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:21.515177+00:00
+fetched_at: 2026-10-21T12:40:54.047429+00:00
 ---
 
 # Enable faster network packet processing with DPDK  |  Compute Engine  |  Google Cloud Documentation

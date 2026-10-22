@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/backups-standard/
 title: Create a standard backup \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:15:23.084040+00:00
+fetched_at: 2026-10-21T12:52:48.819677+00:00
 ---
 
 # Create a standard backup  |  Filestore  |  Google Cloud Documentation

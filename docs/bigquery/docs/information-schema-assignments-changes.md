@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-assignments-changes/
 title: ASSIGNMENT_CHANGES view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:43:59.445184+00:00
+fetched_at: 2026-10-21T14:19:43.604926+00:00
 ---
 
 # ASSIGNMENT_CHANGES view  |  BigQuery  |  Google Cloud Documentation

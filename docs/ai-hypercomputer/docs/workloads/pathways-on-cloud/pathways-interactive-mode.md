@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/pathways-on-cloud/pathways-interactive-mode/
 title: Run an interactive workload with Pathways \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:35:00.402567+00:00
+fetched_at: 2026-10-21T14:29:11.620489+00:00
 ---
 
 # Run an interactive workload with Pathways  |  AI Hypercomputer  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/vscode/use-existing-kubernetes-app/
 title: Use an existing application in Cloud Code for VS Code \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:14:05.349447+00:00
+fetched_at: 2026-10-21T12:39:23.118612+00:00
 ---
 
 # Use an existing application in Cloud Code for VS Code  |  Google Cloud Documentation

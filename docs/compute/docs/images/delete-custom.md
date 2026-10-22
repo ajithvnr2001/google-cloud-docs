@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/delete-custom/
 title: Delete a custom image \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:00:23.437193+00:00
+fetched_at: 2026-10-21T14:21:16.747784+00:00
 ---
 
 # Delete a custom image  |  Compute Engine  |  Google Cloud Documentation

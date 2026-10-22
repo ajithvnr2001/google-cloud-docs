@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/view-maintenance-logs/
 title: View maintenance logs \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:51:30.560545+00:00
+fetched_at: 2026-10-21T14:27:36.514691+00:00
 ---
 
 # View maintenance logs  |  Apigee  |  Google Cloud Documentation

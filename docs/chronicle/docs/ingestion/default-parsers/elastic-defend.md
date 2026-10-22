@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/elastic-defend/
 title: Collect Elastic Defend logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:27:41.967359+00:00
+fetched_at: 2026-10-21T14:10:22.388982+00:00
 ---
 
 # Collect Elastic Defend logs  |  Google Security Operations  |  Google Cloud Documentation

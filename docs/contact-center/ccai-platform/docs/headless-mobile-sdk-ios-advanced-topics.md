@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/headless-mobile-sdk-ios-advanced-topics/
 title: Headless mobile SDK for iOS: Advanced topics, localization, and post-session flows \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:35:30.461814+00:00
+fetched_at: 2026-10-21T14:06:37.157716+00:00
 ---
 
 # Headless mobile SDK for iOS: Advanced topics, localization, and post-session flows  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

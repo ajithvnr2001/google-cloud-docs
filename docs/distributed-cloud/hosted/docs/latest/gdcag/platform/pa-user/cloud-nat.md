@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/cloud-nat/
 title: Cloud NAT \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:52.356758+00:00
+fetched_at: 2026-10-21T12:58:27.212364+00:00
 ---
 
 # Cloud NAT  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

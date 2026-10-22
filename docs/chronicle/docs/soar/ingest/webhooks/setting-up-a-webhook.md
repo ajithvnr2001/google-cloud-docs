@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/ingest/webhooks/setting-up-a-webhook/
 title: Set up a SOAR webhook \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:20.187713+00:00
+fetched_at: 2026-10-21T14:21:37.337126+00:00
 ---
 
 # Set up a SOAR webhook  |  Google Security Operations  |  Google Cloud Documentation

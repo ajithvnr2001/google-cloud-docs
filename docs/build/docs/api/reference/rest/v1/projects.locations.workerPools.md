@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.workerPools
 title: REST Resource: projects.locations.workerPools \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:56:15.211419+00:00
+fetched_at: 2026-10-21T14:35:15.368727+00:00
 ---
 
 # REST Resource: projects.locations.workerPools  |  Cloud Build  |  Google Cloud Documentation
@@ -63,11 +63,12 @@ JSON representation
       "state": enum ([State](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.workerPools#State)),
       "etag": string,
     
-      // Union field config can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "privatePoolV1Config": {
         object ([PrivatePoolV1Config](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.workerPools#PrivatePoolV1Config))
       }
-      // End of list of possible types for union field config.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
@@ -81,8 +82,9 @@ Fields
 `deleteTime` |  `string (`[Timestamp](https://protobuf.dev/reference/protobuf/google.protobuf/#timestamp)` format)` Output only. Time at which the request to delete the `WorkerPool` was received.Uses RFC 3339, where generated output will always be Z-normalized and use 0, 3, 6 or 9 fractional digits. Offsets other than "Z" are also accepted. Examples: `"2014-10-02T15:01:23Z"`, `"2014-10-02T15:01:23.045123456Z"` or `"2014-10-02T15:01:23+05:30"`.  
 `state` |  `enum (`[State](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.workerPools#State)`)` Output only. `WorkerPool` state.  
 `etag` |  `string` Output only. Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.  
-Union field `config`. Configuration for the `WorkerPool`. `config` can be only one of the following:  
+Configuration for the `WorkerPool`. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `privatePoolV1Config` |  `object (`[PrivatePoolV1Config](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.workerPools#PrivatePoolV1Config)`)` Private Pool configuration.  
+End of mutually exclusive fields.  
   
 ## State
 
@@ -134,6 +136,10 @@ JSON representation
     {
       "machineType": string,
       "diskSizeGb": string,
+      "workerRelease": string,
+      "rankedMachineSeries": [
+        enum ([MachineSeries](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/MachineSeries))
+      ],
       "enableNestedVirtualization": boolean
     }  
   
@@ -141,6 +147,8 @@ Fields
 ---  
 `machineType` |  `string` Optional. Machine type of a worker, such as `e2-medium`. See [Worker pool config file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema). If left blank, Cloud Build will use a sensible default.  
 `diskSizeGb` |  `string ([int64](https://developers.google.com/discovery/v1/type-format) format)` Size of the disk attached to the worker, in GB. See [Worker pool config file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema). Specify a value of up to 4000. If `0` is specified, Cloud Build will use a standard disk size.  
+`workerRelease` |  `string` Optional. Option to specify which release or release channel (rapid|regular|stable) to use to run this build.  
+`rankedMachineSeries[]` |  `enum (`[MachineSeries](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/MachineSeries)`)` Optional. Ranked list (earlier items have higher priority) of Machine Series to consider when provisioning Worker VMs. A concrete machine type will be selected based on machine availability in the given region.  
 `enableNestedVirtualization` |  `boolean` Optional. Enable nested virtualization on the worker, if supported by the machine type. By default, nested virtualization is disabled.  
   
 ## NetworkConfig
@@ -221,6 +229,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-06-09 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-06-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

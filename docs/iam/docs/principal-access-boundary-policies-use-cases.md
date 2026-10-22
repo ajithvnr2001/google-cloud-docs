@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/principal-access-boundary-policies-use-cases/
 title: Example use cases for Principal Access Boundary policies \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:10:09.939359+00:00
+fetched_at: 2026-10-21T12:53:12.398094+00:00
 ---
 
 # Example use cases for Principal Access Boundary policies  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

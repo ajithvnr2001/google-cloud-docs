@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/glossary/
 title: Glossary of Terms \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:51:32.764357+00:00
+fetched_at: 2026-10-21T14:23:06.915050+00:00
 ---
 
 # Glossary of Terms  |  Google Security Operations  |  Google Cloud Documentation

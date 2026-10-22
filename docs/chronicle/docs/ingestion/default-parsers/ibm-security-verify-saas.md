@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/ibm-security-verify-saas/
 title: Collect IBM Security Verify SaaS logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:30:49.157520+00:00
+fetched_at: 2026-10-21T12:39:11.506955+00:00
 ---
 
 # Collect IBM Security Verify SaaS logs  |  Google Security Operations  |  Google Cloud Documentation

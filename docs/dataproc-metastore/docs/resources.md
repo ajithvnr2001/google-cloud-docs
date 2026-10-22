@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataproc-metastore/docs/resources/
 title: Resources \u00a0|\u00a0 Dataproc Metastore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:35:08.777759+00:00
+fetched_at: 2026-10-22T05:41:37.607545+00:00
 ---
 
 # Resources  |  Dataproc Metastore  |  Google Cloud Documentation

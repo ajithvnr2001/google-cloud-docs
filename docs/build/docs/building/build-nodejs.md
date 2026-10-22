@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/building/build-nodejs/
 title: Build and test Node.js applications \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:03.408473+00:00
+fetched_at: 2026-10-21T14:11:52.108191+00:00
 ---
 
 # Build and test Node.js applications  |  Google Cloud Documentation

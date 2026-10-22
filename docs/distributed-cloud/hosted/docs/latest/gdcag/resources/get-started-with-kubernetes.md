@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/get-started-with-kubernetes/
 title: Kubernetes concepts for GDC \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:33.615190+00:00
+fetched_at: 2026-10-21T12:59:53.618658+00:00
 ---
 
 # Kubernetes concepts for GDC  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

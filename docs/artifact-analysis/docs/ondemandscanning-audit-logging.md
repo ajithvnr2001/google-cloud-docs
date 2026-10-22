@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/ondemandscanning-audit-logging/
 title: On-Demand Scanning API Audit logging \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:44:45.359721+00:00
+fetched_at: 2026-10-21T12:39:36.272645+00:00
 ---
 
 # On-Demand Scanning API Audit logging  |  Artifact Analysis  |  Google Cloud Documentation

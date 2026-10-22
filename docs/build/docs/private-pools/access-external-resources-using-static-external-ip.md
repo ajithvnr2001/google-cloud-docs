@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/private-pools/access-external-resources-using-static-external-ip/
 title: Access external resources in a private network using a static external IP \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:10.696978+00:00
+fetched_at: 2026-10-21T14:12:02.728925+00:00
 ---
 
 # Access external resources in a private network using a static external IP  |  Cloud Build  |  Google Cloud Documentation

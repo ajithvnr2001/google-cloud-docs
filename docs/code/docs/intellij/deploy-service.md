@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/deploy-service/
 title: Deploy a service to Cloud Run in Cloud Code for IntelliJ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:21:35.951058+00:00
+fetched_at: 2026-10-21T12:39:56.639800+00:00
 ---
 
 # Deploy a service to Cloud Run in Cloud Code for IntelliJ  |  Google Cloud Documentation

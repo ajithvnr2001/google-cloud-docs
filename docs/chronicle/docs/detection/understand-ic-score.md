@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/understand-ic-score/
 title: GTI score overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:36:25.760356+00:00
+fetched_at: 2026-10-21T12:37:32.959249+00:00
 ---
 
 # GTI score overview  |  Google Security Operations  |  Google Cloud Documentation

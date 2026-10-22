@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/concepts/studio-overview/
 title: Introduction to Cloud Data Fusion: Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:58:24.227611+00:00
+fetched_at: 2026-10-22T05:44:58.395120+00:00
 ---
 
 # Introduction to Cloud Data Fusion: Studio  |  Google Cloud Documentation
@@ -21,25 +21,9 @@ Send feedback
 
 #  Introduction to Cloud Data Fusion: Studio Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page introduces Cloud Data Fusion: Studio, which is a visual, click-and-drag interface for building data pipelines from a library of prebuilt plugins and an interface where you configure, execute, and manage your pipelines. Building a pipeline in the Studio typically follows this process:
+Cloud Data Fusion: Studio lets you visually build, configure, and run data pipelines using a click-and-drag interface of prebuilt plugins. You can connect to on-premises and cloud data sources, prepare and transform your data, and test or schedule deliveries to your target destinations.
 
-  1. Connect to an on-premises or cloud data source.
-  2. Prepare and transform your data.
-  3. Connect to the destination.
-  4. Test your pipeline.
-  5. Execute your pipeline.
-  6. Schedule and trigger your pipelines.
-
-
-
-After you design and execute the pipeline, you can manage pipelines on the Cloud Data Fusion **Pipeline Studio** page:
-
-  * Reuse pipelines by parameterizing them with preferences and runtime arguments.
-  * Manage pipeline execution by customizing compute profiles, managing resources, and fine-tuning pipeline performance.
-  * Manage pipeline lifecycle by editing pipelines.
-  * Manage pipeline source control using Git integration.
-
-**Note:** The Studio also provides administrative controls to centrally manage your configurations.
+After deployment, the Studio helps you manage the pipeline lifecycle through iterative editing, Git source control, and reusable runtime parameters and preferences. You can also customize compute profiles, allocate execution resources to fine-tune performance, and centrally administer configurations.
 
 ![User journey in Cloud Data Fusion Studio](https://docs.cloud.google.com/static/data-fusion/docs/images/concepts/data-fusion-studio-user-journey.png)
 
@@ -114,6 +98,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

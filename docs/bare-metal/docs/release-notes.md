@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/release-notes/
 title: Bare Metal Solution release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:03:58.635692+00:00
+fetched_at: 2026-10-21T14:53:14.600207+00:00
 ---
 
 # Bare Metal Solution release notes  |  Google Cloud Documentation

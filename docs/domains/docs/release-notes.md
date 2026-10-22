@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/domains/docs/release-notes/
 title: Cloud Domains release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:19:59.647128+00:00
+fetched_at: 2026-10-21T14:39:40.269152+00:00
 ---
 
 # Cloud Domains release notes  |  Google Cloud Documentation

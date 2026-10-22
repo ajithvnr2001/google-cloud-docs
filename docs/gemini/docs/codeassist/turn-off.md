@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/turn-off/
 title: Turn off Gemini Code Assist \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:02:48.004756+00:00
+fetched_at: 2026-10-21T12:51:55.266783+00:00
 ---
 
 # Turn off Gemini Code Assist  |  Gemini for Google Cloud  |  Google Cloud Documentation

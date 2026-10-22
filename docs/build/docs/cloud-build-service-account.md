@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/cloud-build-service-account/
 title: Default Cloud Build service account \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:27:58.920299+00:00
+fetched_at: 2026-10-21T12:38:38.907792+00:00
 ---
 
 # Default Cloud Build service account  |  Google Cloud Documentation

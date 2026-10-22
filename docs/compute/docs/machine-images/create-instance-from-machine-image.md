@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/machine-images/create-instance-from-machine-image/
 title: Create an instance or a disk from a machine image \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:43:37.417127+00:00
+fetched_at: 2026-10-21T12:40:54.534162+00:00
 ---
 
 # Create an instance or a disk from a machine image  |  Compute Engine  |  Google Cloud Documentation

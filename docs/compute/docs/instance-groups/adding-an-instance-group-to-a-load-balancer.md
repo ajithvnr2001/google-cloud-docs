@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/adding-an-instance-group-to-a-load-balancer/
 title: Add an instance group to a load balancer \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:10:57.093115+00:00
+fetched_at: 2026-10-21T14:20:52.734125+00:00
 ---
 
 # Add an instance group to a load balancer  |  Compute Engine  |  Google Cloud Documentation

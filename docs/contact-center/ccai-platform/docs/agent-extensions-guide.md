@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/agent-extensions-guide/
 title: Agent extensions guide \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:35.601577+00:00
+fetched_at: 2026-10-21T14:22:21.946274+00:00
 ---
 
 # Agent extensions guide  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

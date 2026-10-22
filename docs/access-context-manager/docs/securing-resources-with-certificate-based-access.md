@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/securing-resources-with-certificate-based-access/
 title: Context-Aware Access with mTLS overview \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:39:17.269481+00:00
+fetched_at: 2026-10-21T14:29:15.585142+00:00
 ---
 
 # Context-Aware Access with mTLS overview  |  Access Context Manager  |  Google Cloud Documentation

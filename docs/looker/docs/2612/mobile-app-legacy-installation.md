@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/2612/mobile-app-legacy-installation/
 title: Installing the Looker Mobile (Legacy) application on your mobile device \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:37:03.126747+00:00
+fetched_at: 2026-10-21T15:10:31.407635+00:00
 ---
 
 # Installing the Looker Mobile (Legacy) application on your mobile device  |  Google Cloud Documentation

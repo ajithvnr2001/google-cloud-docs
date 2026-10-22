@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/cato-networks/
 title: Collect Cato Networks logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:57:26.778837+00:00
+fetched_at: 2026-10-21T14:18:48.891776+00:00
 ---
 
 # Collect Cato Networks logs  |  Google Security Operations  |  Google Cloud Documentation

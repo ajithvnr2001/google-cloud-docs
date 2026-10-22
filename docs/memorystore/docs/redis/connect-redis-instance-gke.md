@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/connect-redis-instance-gke/
 title: Connect to a Redis instance from a Google Kubernetes Engine cluster \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:52.352747+00:00
+fetched_at: 2026-10-21T15:14:40.070221+00:00
 ---
 
 # Connect to a Redis instance from a Google Kubernetes Engine cluster  |  Memorystore for Redis  |  Google Cloud Documentation

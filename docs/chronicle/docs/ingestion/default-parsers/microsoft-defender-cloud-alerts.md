@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/microsoft-defender-cloud-alerts/
 title: Collect Microsoft Defender for Cloud alerts \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:30:17.365173+00:00
+fetched_at: 2026-10-21T12:37:06.485269+00:00
 ---
 
 # Collect Microsoft Defender for Cloud alerts  |  Google Security Operations  |  Google Cloud Documentation

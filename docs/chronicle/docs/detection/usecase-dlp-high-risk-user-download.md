@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/usecase-dlp-high-risk-user-download/
 title: Incorporate Sensitive Data Protection data in rules \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:17:26.913236+00:00
+fetched_at: 2026-10-21T12:38:04.731451+00:00
 ---
 
 # Incorporate Sensitive Data Protection data in rules  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/fhir-access-explain-data-access/
 title: Understand data access \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:10:15.933930+00:00
+fetched_at: 2026-10-21T14:30:42.830797+00:00
 ---
 
 # Understand data access  |  Cloud Healthcare API  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/containers/delete-stateful-workloads/
 title: Delete stateful workloads \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:57:34.981461+00:00
+fetched_at: 2026-10-21T12:56:19.872620+00:00
 ---
 
 # Delete stateful workloads  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

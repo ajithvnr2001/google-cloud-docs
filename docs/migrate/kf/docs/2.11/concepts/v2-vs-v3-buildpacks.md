@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.11/concepts/v2-vs-v3-buildpacks/
 title: Compare V2 vs V3 Buildpacks \u00a0|\u00a0 Kf 2.11 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:28.814045+00:00
+fetched_at: 2026-10-21T15:12:46.498297+00:00
 ---
 
 # Compare V2 vs V3 Buildpacks  |  Kf 2.11  |  Google Cloud Documentation

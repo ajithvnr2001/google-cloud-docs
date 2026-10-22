@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/how-stateful-migs-work/
 title: How stateful MIGs work \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:10:15.949423+00:00
+fetched_at: 2026-10-21T14:21:53.478253+00:00
 ---
 
 # How stateful MIGs work  |  Compute Engine  |  Google Cloud Documentation

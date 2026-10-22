@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/schema-design/
 title: Schema design best practices \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:44:39.091779+00:00
+fetched_at: 2026-10-21T14:09:20.061930+00:00
 ---
 
 # Schema design best practices  |  Bigtable  |  Google Cloud Documentation

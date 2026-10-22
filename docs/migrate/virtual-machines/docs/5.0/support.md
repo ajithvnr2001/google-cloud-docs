@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/virtual-machines/docs/5.0/support/
 title: Support \u00a0|\u00a0 Migrate to Virtual Machines \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:37:30.452615+00:00
+fetched_at: 2026-10-21T15:17:42.016635+00:00
 ---
 
 # Support  |  Migrate to Virtual Machines  |  Google Cloud Documentation

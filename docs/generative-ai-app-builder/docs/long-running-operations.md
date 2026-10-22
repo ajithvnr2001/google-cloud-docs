@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/long-running-operations/
 title: Monitor long-running operations \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:58:02.022956+00:00
+fetched_at: 2026-10-21T12:55:41.472302+00:00
 ---
 
 # Monitor long-running operations  |  Agent Search  |  Google Cloud Documentation

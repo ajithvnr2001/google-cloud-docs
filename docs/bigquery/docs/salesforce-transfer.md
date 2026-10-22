@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/salesforce-transfer/
 title: Load Salesforce data into BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:40:10.755562+00:00
+fetched_at: 2026-10-21T12:36:07.696080+00:00
 ---
 
 # Load Salesforce data into BigQuery  |  Google Cloud Documentation

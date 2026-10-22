@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-topology/billing-questions/
 title: Billing questions \u00a0|\u00a0 App Topology \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:16:40.570358+00:00
+fetched_at: 2026-10-21T12:30:35.850353+00:00
 ---
 
 # Billing questions  |  App Topology  |  Google Cloud Documentation

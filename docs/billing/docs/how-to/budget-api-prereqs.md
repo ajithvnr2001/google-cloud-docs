@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/docs/how-to/budget-api-prereqs/
 title: Cloud Billing Budget API Prerequisites \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:13:32.155400+00:00
+fetched_at: 2026-10-21T12:37:46.515739+00:00
 ---
 
 # Cloud Billing Budget API Prerequisites  |  Google Cloud Documentation

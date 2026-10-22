@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/encryption-keys/
 title: Client-side encryption \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:43.107464+00:00
+fetched_at: 2026-10-21T13:32:51.577522+00:00
 ---
 
 # Client-side encryption  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/samples/privateca-create-subordinateca/
 title: Create a Subordinate Certificate Authority \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T13:19:49.273232+00:00
+fetched_at: 2026-10-21T12:38:58.661480+00:00
 ---
 
 # Create a Subordinate Certificate Authority  |  Certificate Authority Service  |  Google Cloud Documentation

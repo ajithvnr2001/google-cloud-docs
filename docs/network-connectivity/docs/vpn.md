@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-connectivity/docs/vpn/
 title: Cloud VPN documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:48.315265+00:00
+fetched_at: 2026-10-21T15:16:49.297572+00:00
 ---
 
 # Cloud VPN documentation  |  Google Cloud Documentation

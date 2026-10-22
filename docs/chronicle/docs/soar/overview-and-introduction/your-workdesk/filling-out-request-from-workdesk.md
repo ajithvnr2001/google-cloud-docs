@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/overview-and-introduction/your-workdesk/filling-out-request-from-workdesk/
 title: Submit requests from your workdesk \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:02:07.436066+00:00
+fetched_at: 2026-10-21T14:10:23.919218+00:00
 ---
 
 # Submit requests from your workdesk  |  Google Security Operations  |  Google Cloud Documentation

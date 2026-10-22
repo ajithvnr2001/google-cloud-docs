@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/Shared.Types/AgentCapabilities/
 title: AgentCapabilities \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:43:03.645365+00:00
+fetched_at: 2026-10-21T12:56:05.111963+00:00
 ---
 
 # AgentCapabilities  |  Data Agents  |  Google Cloud Documentation

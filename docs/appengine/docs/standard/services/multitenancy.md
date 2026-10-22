@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/multitenancy/
 title: Namespaces API for legacy bundled services \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:50.884832+00:00
+fetched_at: 2026-10-21T14:23:02.191999+00:00
 ---
 
 # Namespaces API for legacy bundled services  |  App Engine standard environment  |  Google Cloud Documentation

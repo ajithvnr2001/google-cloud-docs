@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/edgenetwork/
 title: Distributed Cloud Edge Network roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:27:03.922501+00:00
+fetched_at: 2026-10-21T14:29:55.362124+00:00
 ---
 
 # Distributed Cloud Edge Network roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-storage-objects-describe/
 title: gdcloud storage objects describe \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:12:44.897307+00:00
+fetched_at: 2026-10-21T13:00:15.644292+00:00
 ---
 
 # gdcloud storage objects describe  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

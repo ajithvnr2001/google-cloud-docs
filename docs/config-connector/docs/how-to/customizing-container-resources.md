@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/how-to/customizing-container-resources/
 title: Configure container resources and replicas \u00a0|\u00a0 Config Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:16.602695+00:00
+fetched_at: 2026-10-21T14:24:54.883994+00:00
 ---
 
 # Configure container resources and replicas  |  Config Connector  |  Google Cloud Documentation

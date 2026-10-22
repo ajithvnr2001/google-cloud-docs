@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/colab/docs/post-startup-script/
 title: Use a post-startup script in Colab Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:31:03.227424+00:00
+fetched_at: 2026-10-21T14:19:28.005713+00:00
 ---
 
 # Use a post-startup script in Colab Enterprise  |  Google Cloud Documentation

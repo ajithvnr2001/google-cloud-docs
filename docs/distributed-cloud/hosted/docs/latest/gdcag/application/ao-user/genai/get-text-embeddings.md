@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/genai/get-text-embeddings/
 title: Get text embeddings \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:36:54.837809+00:00
+fetched_at: 2026-10-21T12:58:06.825596+00:00
 ---
 
 # Get text embeddings  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

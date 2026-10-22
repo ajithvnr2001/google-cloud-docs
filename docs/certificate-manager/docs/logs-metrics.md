@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/logs-metrics/
 title: Logs and metrics \u00a0|\u00a0 Certificate Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:57:43.275639+00:00
+fetched_at: 2026-10-21T14:25:55.287699+00:00
 ---
 
 # Logs and metrics  |  Certificate Manager  |  Google Cloud Documentation

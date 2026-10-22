@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/protect-artifacts/
 title: Control access and protect artifacts \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:25.524687+00:00
+fetched_at: 2026-10-21T12:29:55.327898+00:00
 ---
 
 # Control access and protect artifacts  |  Artifact Registry  |  Google Cloud Documentation

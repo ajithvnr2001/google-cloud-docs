@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/marketplace/create-vm-deploy-tf/
 title: Create a Terraform deployment module for the VM \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:44.926534+00:00
+fetched_at: 2026-10-21T14:26:25.803357+00:00
 ---
 
 # Create a Terraform deployment module for the VM  |  Application Integration  |  Google Cloud Documentation

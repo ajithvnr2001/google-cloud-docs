@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/multi-zone/networking/
 title: Network traffic management for multiple zones \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:35.666884+00:00
+fetched_at: 2026-10-21T12:58:35.294242+00:00
 ---
 
 # Network traffic management for multiple zones  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

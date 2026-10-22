@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/gitlab-changelog/
 title: Change log for GITLAB \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:41:20.234181+00:00
+fetched_at: 2026-10-21T14:51:57.352764+00:00
 ---
 
 # Change log for GITLAB  |  Google Security Operations  |  Google Cloud Documentation
@@ -22,6 +22,22 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 Date | Changes  
 ---|---  
+2026-09-29 |  Enhancement:  
+\- `event.idm.read_only_udm.principal.resource.product_object_id`: Newly mapped `meta.user_id` raw log field to `event.idm.read_only_udm.principal.resource.product_object_id` UDM field.  
+\- `event.idm.read_only_udm.target.resource.name`: Newly mapped `meta.project` raw log field to `event.idm.read_only_udm.target.resource.name` UDM field.  
+\- `event.idm.read_only_udm.principal.user.userid`: Newly mapped `meta.user` raw log field to `event.idm.read_only_udm.principal.user.userid` UDM field.  
+\- `event.idm.read_only_udm.additional.fields`: Newly mapped `controller`, `format`, `cpu_s`, `mem_total_bytes`, `db_duration_s`, `view_duration_s`, `duration_s`, `rate_limiting_gates` raw log fields to `event.idm.read_only_udm.additional.fields` UDM field.  
+\- `event.idm.read_only_udm.security_result.detection_fields`: Newly mapped `request_urgency`, `meta.caller_id`, `meta.feature_category`, `meta.organization_id`, `meta.root_namespace` raw log fields to `event.idm.read_only_udm.security_result.detection_fields` UDM field.  
+\- `event.idm.read_only_udm.security_result.action_details`: Newly mapped `action` raw log field to `event.idm.read_only_udm.security_result.action_details` UDM field.  
+\- `event.idm.read_only_udm.principal.application`: Newly mapped `worker_id` raw log field to `event.idm.read_only_udm.principal.application` UDM field.  
+\- `event.idm.read_only_udm.network.http.method`: Newly mapped `method` raw log field to `event.idm.read_only_udm.network.http.method` UDM field.  
+\- `event.idm.read_only_udm.target.process.pid`: Newly mapped `pid` raw log field to `event.idm.read_only_udm.target.process.pid` UDM field.  
+\- `event.idm.read_only_udm.network.http.response_code`: Newly mapped `status` raw log field to `event.idm.read_only_udm.network.http.response_code` UDM field.  
+\- `event.idm.read_only_udm.intermediary.ip`: Newly mapped `remote_ip`, `meta.remote_ip` raw log fields to `event.idm.read_only_udm.intermediary.ip` UDM fields.  
+\- `event.idm.read_only_udm.network.http.user_agent`: Newly mapped `ua` raw log field to `event.idm.read_only_udm.network.http.user_agent` UDM field.  
+\- `event.idm.read_only_udm.network.http.parsed_user_agent`: Newly mapped `ua` raw log field to `event.idm.read_only_udm.network.http.parsed_user_agent` UDM field.  
+\- `event.idm.read_only_udm.target.user.userid`: Newly mapped `meta.client_id` raw log field to `event.idm.read_only_udm.target.user.userid` UDM field.  
+\- `event.idm.read_only_udm.target.resource.attribute.labels`: Newly mapped `params.key`, `params.value` raw log fields to `event.idm.read_only_udm.target.resource.attribute.labels` UDM field.   
 2026-07-21 |  Enhancement:  
 \- `event.idm.read_only_udm.principal.user.email_addresses`: Newly mapped `owners.email` raw log field with `event.idm.read_only_udm.principal.user.email_addresses` UDM field.  
 \- `event.idm.read_only_udm.principal.user.user_display_name`: Newly mapped `owners.0.name` raw log field with `event.idm.read_only_udm.principal.user.user_display_name` UDM field.  
@@ -178,6 +194,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-13 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

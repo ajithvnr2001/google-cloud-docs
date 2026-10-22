@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/create-run-job-placement-policy/
 title: Reduce latency by using compact placement policies \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:29:23.841269+00:00
+fetched_at: 2026-10-21T12:30:47.941018+00:00
 ---
 
 # Reduce latency by using compact placement policies  |  Batch  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.9/concepts/cloud-sb-overview/
 title: Kf Cloud Service Broker \u00a0|\u00a0 Kf 2.9 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:34:57.128787+00:00
+fetched_at: 2026-10-21T15:17:31.064371+00:00
 ---
 
 # Kf Cloud Service Broker  |  Kf 2.9  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-resume-publish-with-ordering-keys/
 title: v1 Resume publishing with ordering keys (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:35:14.111882+00:00
+fetched_at: 2026-10-21T14:58:49.771688+00:00
 ---
 
 # v1 Resume publishing with ordering keys (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

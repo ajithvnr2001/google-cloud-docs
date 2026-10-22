@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/autoscaler/scaling-cpu/
 title: Scaling based on CPU utilization \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:08:12.795163+00:00
+fetched_at: 2026-10-21T12:29:24.908694+00:00
 ---
 
 # Scaling based on CPU utilization  |  Compute Engine  |  Google Cloud Documentation
@@ -66,6 +66,8 @@ For more information, see [Authenticate for using REST](https://docs.cloud.googl
 You can autoscale based on the average CPU utilization of a managed instance group (MIG). Using this policy tells the autoscaler to collect the CPU utilization of the instances in the group and determine whether it needs to scale. You set the target CPU utilization the autoscaler should maintain and the autoscaler works to maintain that level.
 
 The autoscaler treats the target CPU utilization level as a fraction of the average use of all vCPUs over time in the instance group. If the average utilization of your total vCPUs exceeds the target utilization, the autoscaler adds more VM instances. If the average utilization of your total vCPUs is less than the target utilization, the autoscaler removes instances. For example, setting a 0.75 target utilization tells the autoscaler to maintain an average utilization of 75% among all vCPUs in the instance group.
+
+To calculate the average CPU utilization of an instance group, the autoscaler uses the `compute.googleapis.com/instance/cpu/utilization` metric, which reports CPU utilization as measured by the hypervisor. The autoscaler doesn't use the CPU utilization that tools such as `top`, Task Manager, or the Ops Agent report from inside the guest operating system. These values can differ from the hypervisor-level measurement.
 
 **Caution:** If your application takes a long time to initialize on new VMs, Google recommends that you don't set a target CPU utilization of 85% or higher. In such a case, if your application sees an increase in traffic, your MIG's CPUs might be at risk of getting overloaded while your application slowly initializes on the new VMs that the autoscaler adds.
 
@@ -205,6 +207,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/serve-gemma4-26b-gke-trillium-vllm/
 title: Serve Gemma 4 26B on GKE with multi-host vLLM TorchTPU on Trillium TPUs \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:23:32.183755+00:00
+fetched_at: 2026-10-22T05:40:24.335591+00:00
 ---
 
 # Serve Gemma 4 26B on GKE with multi-host vLLM TorchTPU on Trillium TPUs  |  AI Hypercomputer  |  Google Cloud Documentation

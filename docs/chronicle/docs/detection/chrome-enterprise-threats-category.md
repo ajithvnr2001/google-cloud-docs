@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/chrome-enterprise-threats-category/
 title: Chrome Enterprise threats \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:10:13.127647+00:00
+fetched_at: 2026-10-21T14:11:10.207110+00:00
 ---
 
 # Chrome Enterprise threats  |  Google Security Operations  |  Google Cloud Documentation

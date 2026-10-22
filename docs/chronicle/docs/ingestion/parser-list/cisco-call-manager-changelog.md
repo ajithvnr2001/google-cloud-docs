@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cisco-call-manager-changelog/
 title: Change log for CISCO_CALL_MANAGER \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:46:53.491809+00:00
+fetched_at: 2026-10-21T14:44:56.971642+00:00
 ---
 
 # Change log for CISCO_CALL_MANAGER  |  Google Security Operations  |  Google Cloud Documentation

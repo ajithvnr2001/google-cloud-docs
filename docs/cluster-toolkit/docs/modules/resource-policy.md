@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/resource-policy/
 title: Create a resource policy \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:40.028090+00:00
+fetched_at: 2026-10-21T14:42:15.597849+00:00
 ---
 
 # Create a resource policy  |  Cluster Toolkit  |  Google Cloud Documentation

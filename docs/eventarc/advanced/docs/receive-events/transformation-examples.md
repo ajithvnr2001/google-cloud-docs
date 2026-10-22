@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/advanced/docs/receive-events/transformation-examples/
 title: Transformation examples \u00a0|\u00a0 Eventarc Advanced \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:24:26.060367+00:00
+fetched_at: 2026-10-21T12:52:05.762520+00:00
 ---
 
 # Transformation examples  |  Eventarc Advanced  |  Google Cloud Documentation

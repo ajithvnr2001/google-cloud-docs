@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/python/access_from_python/
 title: Accessing backend APIs from Python clients \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:38:22.386422+00:00
+fetched_at: 2026-10-21T12:45:57.078441+00:00
 ---
 
 # Accessing backend APIs from Python clients  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

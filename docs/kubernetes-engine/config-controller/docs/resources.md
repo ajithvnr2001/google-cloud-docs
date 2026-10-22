@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/config-controller/docs/resources/
 title: Resources \u00a0|\u00a0 Config Controller \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:36:42.436508+00:00
+fetched_at: 2026-10-21T14:59:40.774144+00:00
 ---
 
 # Resources  |  Config Controller  |  Google Cloud Documentation

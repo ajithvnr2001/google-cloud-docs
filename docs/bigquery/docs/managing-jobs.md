@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/managing-jobs/
 title: Manage jobs \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T16:26:46.857571+00:00
+fetched_at: 2026-10-21T12:36:21.154254+00:00
 ---
 
 # Manage jobs  |  BigQuery  |  Google Cloud Documentation

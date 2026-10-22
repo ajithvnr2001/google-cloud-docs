@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/broadcom-support-portal-changelog/
 title: Change log for BROADCOM_SUPPORT_PORTAL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:04:34.822478+00:00
+fetched_at: 2026-10-21T14:51:51.982618+00:00
 ---
 
 # Change log for BROADCOM_SUPPORT_PORTAL  |  Google Security Operations  |  Google Cloud Documentation

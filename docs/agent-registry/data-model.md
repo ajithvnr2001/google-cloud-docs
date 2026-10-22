@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/data-model/
 title: Agent Registry data model \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:06:14.938447+00:00
+fetched_at: 2026-10-21T14:29:10.230554+00:00
 ---
 
 # Agent Registry data model  |  Google Cloud Documentation

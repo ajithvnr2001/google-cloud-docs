@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox-storage/
 title: Choose storage for AI agentic workloads \u00a0|\u00a0 GKE AI/ML \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:26:15.106434+00:00
+fetched_at: 2026-10-21T14:37:23.889852+00:00
 ---
 
 # Choose storage for AI agentic workloads  |  GKE AI/ML  |  Google Cloud Documentation
@@ -26,7 +26,7 @@ Send feedback
 
 This document helps you select an appropriate storage option for your AI agents based on their specific data lifecycle needs and latency requirements.
 
-For implementation details, see [Manage Agent Sandbox storage](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-storage).
+For implementation details, see [Manage Agent Sandbox on GKE storage](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-storage).
 
 ## Considerations for choosing a storage solution
 
@@ -38,7 +38,7 @@ Evaluate the following operational and architectural requirements of your platfo
 
   * **Platform scale and agents churn frequency (control plane)** : the number of concurrent agents, and the number of agents created, paused, reactivated, and deleted per minute. Platforms creating thousands of agents per minute or pausing idle agents require storage with low-latency attach and mount operations at significant scale (for example, Filestore mounts faster than Hyperdisk can attach).
   * **Dataset size and load latency (data plane)** : agents loading multi-gigabyte datasets or heavy libraries (such as Node.js or Python packages) during startup require high storage I/O performance for reading the data in seconds (for example, Hyperdisk offers high per-disk read throughput).
-  * **Agent cold-start and reactivation latency** : the expected latency, such as sub-second or multi-second. Achieving sub-second startup latency requires using [GKE Agent Sandbox Warm Pools](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox#warm-pools). Using [direct sandbox creation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/how-install-agent-sandbox#alternative_create_a_sandbox_directly) generally incurs a multi-second delay for Pod startup and dynamic disk attachment.
+  * **Agent cold-start and reactivation latency** : the expected latency, such as sub-second or multi-second. Achieving sub-second startup latency requires using [Agent Sandbox on GKE Warm Pools](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox#warm-pools). Using [direct sandbox creation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/how-install-agent-sandbox#alternative_create_a_sandbox_directly) generally incurs a multi-second delay for Pod startup and dynamic disk attachment.
   * **Storage size per agent** : depending on the service chosen, you must accommodate provisioning limits, such as a minimum size of 4 GiB for Google Cloud Hyperdisk or a minimum of 10 GiB for a single Filestore share.
   * **Data access modes and isolation** : how the platform should support workspace isolation and collaborative workspaces. This determines whether your agents will need private isolated workspaces (ReadWriteOnce), collaborative workspaces (ReadWriteMany), or exploration branching workspaces (Read-Only template with a writable scratchpad).
   * **Resilience** : if your agents specifically require regional resilience, [Filestore Multishares for GKE (Enterprise)](https://docs.cloud.google.com/filestore/docs/service-tiers-enterprise) is the appropriate choice.
@@ -66,7 +66,7 @@ Choose a storage service that supports your agents' needs if they need to access
 
 
 
-## Compare storage options for Agent Sandboxes
+## Compare storage options for Agent Sandbox on GKE
 
 Consider the following scenarios to help you compare your storage options:
 
@@ -96,7 +96,7 @@ Feature | [Hyperdisk Balanced](https://docs.cloud.google.com/compute/docs/disks/
 **Access modes** |  ReadWriteOnce (RWO)  
   
 _Note:_ Use [Hyperdisk ML](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-ml) for ReadOnlyMany (ROX) mode.  | ReadWriteMany (RWX)  
-**Sub-second Agent Sandbox startup ([Warm Pools](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox#warm-pools))** | 
+**Sub-second Agent Sandbox on GKE startup ([Warm Pools](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox#warm-pools))** | 
 
   * **Ephemeral workspace:** an empty volume can be pre-attached on creation and destroyed after the active session ends.
   * **Stateful workspace or point-in-time restore:** requires custom scripting and a DaemonSet for dynamic volume binding ([example in GitHub](https://github.com/kubernetes-sigs/agent-sandbox/tree/main/examples/latebind-storage-gke-sandbox)).
@@ -159,8 +159,8 @@ _Note:_ Use [Hyperdisk ML](https://docs.cloud.google.com/compute/docs/disks/hd-t
   
 ## What's next
 
-  * [Learn more about GKE Agent Sandbox](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox).
-  * [Learn how to manage Agent Sandbox file storage](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-storage).
+  * [Learn more about Agent Sandbox on GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox).
+  * [Learn how to manage Agent Sandbox on GKE file storage](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-storage).
 
 
 
@@ -168,6 +168,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/control-packages/il4/
 title: Data Boundary for Impact Level 4 (IL4) \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:46.919497+00:00
+fetched_at: 2026-10-21T14:26:16.920021+00:00
 ---
 
 # Data Boundary for Impact Level 4 (IL4)  |  Assured Workloads  |  Google Cloud Documentation

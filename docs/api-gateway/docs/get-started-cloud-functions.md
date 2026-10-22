@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/get-started-cloud-functions/
 title: Get started with API Gateway and Cloud Functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:14:03.426284+00:00
+fetched_at: 2026-10-21T14:10:08.214758+00:00
 ---
 
 # Get started with API Gateway and Cloud Functions  |  Google Cloud Documentation

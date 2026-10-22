@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/k8s-overview/
 title: Cloud Code for IntelliJ Kubernetes overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:21:34.194978+00:00
+fetched_at: 2026-10-21T12:40:44.347476+00:00
 ---
 
 # Cloud Code for IntelliJ Kubernetes overview  |  Google Cloud Documentation

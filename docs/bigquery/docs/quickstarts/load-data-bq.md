@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/quickstarts/load-data-bq/
 title: Use the bq tool \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:37.321142+00:00
+fetched_at: 2026-10-21T12:39:21.219299+00:00
 ---
 
 # Use the bq tool  |  BigQuery  |  Google Cloud Documentation

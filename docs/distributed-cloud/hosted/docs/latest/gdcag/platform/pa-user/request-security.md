@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/request-security/
 title: Request threat prevention \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:43.895744+00:00
+fetched_at: 2026-10-21T13:32:51.371473+00:00
 ---
 
 # Request threat prevention  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

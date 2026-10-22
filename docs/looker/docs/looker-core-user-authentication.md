@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/looker-core-user-authentication/
 title: User authentication methods for Looker (Google Cloud core) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:03:02.178955+00:00
+fetched_at: 2026-10-21T15:10:18.457042+00:00
 ---
 
 # User authentication methods for Looker (Google Cloud core)  |  Google Cloud Documentation

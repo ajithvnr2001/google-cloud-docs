@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/connect-to-sap-datasphere/
 title: Connect to SAP Datasphere \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:15:25.302281+00:00
+fetched_at: 2026-10-21T12:36:31.745582+00:00
 ---
 
 # Connect to SAP Datasphere  |  BigQuery  |  Google Cloud Documentation

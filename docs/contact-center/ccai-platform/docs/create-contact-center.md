@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/create-contact-center/
 title: Configure a sample contact center \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:14:02.454517+00:00
+fetched_at: 2026-10-21T14:23:05.275178+00:00
 ---
 
 # Configure a sample contact center  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

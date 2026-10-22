@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/a2a.projects.locations.dataAgents.v1.message/stream/
 title: Method: a2a.projects.locations.dataAgents.v1.message.stream \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:42:51.808731+00:00
+fetched_at: 2026-10-21T12:51:23.991549+00:00
 ---
 
 # Method: a2a.projects.locations.dataAgents.v1.message.stream  |  Data Agents  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-registry/release-notes/
 title: Cloud API Registry release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:24:02.513451+00:00
+fetched_at: 2026-10-21T14:54:08.026269+00:00
 ---
 
 # Cloud API Registry release notes  |  Google Cloud Documentation

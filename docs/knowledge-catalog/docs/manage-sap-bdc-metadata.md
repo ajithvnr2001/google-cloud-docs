@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/manage-sap-bdc-metadata/
 title: Manage SAP BDC metadata in Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:37:28.283554+00:00
+fetched_at: 2026-10-21T15:27:09.937503+00:00
 ---
 
 # Manage SAP BDC metadata in Knowledge Catalog  |  Google Cloud Documentation

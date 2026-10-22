@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/troubleshooting/troubleshooting-windows/
 title: Troubleshooting Windows VMs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:03:50.015846+00:00
+fetched_at: 2026-10-21T15:02:20.794700+00:00
 ---
 
 # Troubleshooting Windows VMs  |  Compute Engine  |  Google Cloud Documentation
@@ -397,7 +397,7 @@ As shown in the following image, you should see **Next hop: Internet gateway** l
 
 ## Troubleshooting Interactive Serial Console
 
-  1. Ensure that you meet the [prerequsiste to access serial console](https://docs.cloud.google.com/compute/docs/troubleshooting/troubleshooting-using-serial-console#before-you-begin).
+  1. Ensure that you meet the [prerequisite to access serial console](https://docs.cloud.google.com/compute/docs/troubleshooting/troubleshooting-using-serial-console#before-you-begin).
 
   2. Enable [Emergency Management Services](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/boot-parameters-to-enable-ems-redirection). If EMS is turned off, the serial console won't take any keyboard inputs but present only a blank screen with a blinking cursor.
 
@@ -453,6 +453,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

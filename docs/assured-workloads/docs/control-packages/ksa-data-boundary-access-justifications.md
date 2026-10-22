@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/control-packages/ksa-data-boundary-access-justifications/
 title: Kingdom of Saudi Arabia (KSA) Data Boundary with Access Justifications \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:45.758712+00:00
+fetched_at: 2026-10-21T14:25:52.755669+00:00
 ---
 
 # Kingdom of Saudi Arabia (KSA) Data Boundary with Access Justifications  |  Assured Workloads  |  Google Cloud Documentation

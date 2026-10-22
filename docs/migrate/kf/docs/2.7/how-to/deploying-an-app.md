@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.7/how-to/deploying-an-app/
 title: Deploy an application \u00a0|\u00a0 Kf 2.7 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:45:54.505710+00:00
+fetched_at: 2026-10-21T15:18:04.885256+00:00
 ---
 
 # Deploy an application  |  Kf 2.7  |  Google Cloud Documentation

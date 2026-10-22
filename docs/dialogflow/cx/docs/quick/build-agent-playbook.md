@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/quick/build-agent-playbook/
 title: Build an agent using playbooks \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:32.202753+00:00
+fetched_at: 2026-10-21T14:09:10.597457+00:00
 ---
 
 # Build an agent using playbooks  |  Dialogflow CX  |  Google Cloud Documentation

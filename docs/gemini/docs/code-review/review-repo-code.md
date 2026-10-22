@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/code-review/review-repo-code/
 title: Review GitHub code using Gemini Code Assist \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:02:48.627089+00:00
+fetched_at: 2026-10-21T12:46:35.267631+00:00
 ---
 
 # Review GitHub code using Gemini Code Assist  |  Gemini for Google Cloud  |  Google Cloud Documentation

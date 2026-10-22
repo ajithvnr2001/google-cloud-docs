@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/ibm-zsecure-alert-changelog/
 title: Change log for IBM_ZSECURE_ALERT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:40:54.939371+00:00
+fetched_at: 2026-10-21T14:52:01.351765+00:00
 ---
 
 # Change log for IBM_ZSECURE_ALERT  |  Google Security Operations  |  Google Cloud Documentation

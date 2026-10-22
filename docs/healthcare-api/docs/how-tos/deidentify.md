@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/how-tos/deidentify/
 title: De-identifying sensitive data \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:01:51.876878+00:00
+fetched_at: 2026-10-21T12:53:12.602689+00:00
 ---
 
 # De-identifying sensitive data  |  Cloud Healthcare API  |  Google Cloud Documentation

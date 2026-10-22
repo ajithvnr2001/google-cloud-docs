@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/reference/mcp/
 title: MCP Reference: geminicloudassist.googleapis.com \u00a0|\u00a0 Gemini Cloud Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:40:55.100356+00:00
+fetched_at: 2026-10-21T14:43:07.115636+00:00
 ---
 
 # MCP Reference: geminicloudassist.googleapis.com  |  Gemini Cloud Assist  |  Google Cloud Documentation

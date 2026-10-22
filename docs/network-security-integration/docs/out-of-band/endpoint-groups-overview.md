@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-security-integration/docs/out-of-band/endpoint-groups-overview/
 title: Mirroring endpoint groups overview \u00a0|\u00a0 Network Security Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:22.181795+00:00
+fetched_at: 2026-10-21T15:15:52.793198+00:00
 ---
 
 # Mirroring endpoint groups overview  |  Network Security Integration  |  Google Cloud Documentation

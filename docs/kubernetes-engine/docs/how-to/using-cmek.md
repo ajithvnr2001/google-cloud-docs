@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/using-cmek/
 title: Use customer-managed encryption keys (CMEK) \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:11.403068+00:00
+fetched_at: 2026-10-21T15:01:26.731305+00:00
 ---
 
 # Use customer-managed encryption keys (CMEK)  |  GKE security  |  Google Cloud Documentation

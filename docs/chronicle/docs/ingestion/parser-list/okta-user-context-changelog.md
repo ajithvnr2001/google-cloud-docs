@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/okta-user-context-changelog/
 title: Change log for OKTA_USER_CONTEXT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:09:50.653508+00:00
+fetched_at: 2026-10-21T14:47:10.143061+00:00
 ---
 
 # Change log for OKTA_USER_CONTEXT  |  Google Security Operations  |  Google Cloud Documentation

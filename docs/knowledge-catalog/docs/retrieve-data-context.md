@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/retrieve-data-context/
 title: Retrieve context for data assets \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:10:57.504027+00:00
+fetched_at: 2026-10-21T12:29:27.903261+00:00
 ---
 
 # Retrieve context for data assets  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -27,7 +27,7 @@ The context that surrounds your data equips your AI applications with a deep und
 
 The [`lookupContext`](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations/lookupContext) method bridges the context gap using a single API request to retrieve a pre-formatted bundle of data asset metadata optimized for interactive agentic workflows. You can use this compact, LLM-ready context to ground your agents in assessing and using data assets.
 
-You can use the `lookupContext` method for any data assets stored in Knowledge Catalog, for example, BigQuery tables, datasets, or any other [entries](https://docs.cloud.google.com/knowledge-catalog/docs/metadata-overview#entries).
+You can use the `lookupContext` method for any data assets stored in Knowledge Catalog, for example, BigQuery tables, datasets, and routines, as well as [data domains](https://docs.cloud.google.com/knowledge-catalog/docs/data-domains-use#retrieve-domain-context) and any other [entries](https://docs.cloud.google.com/knowledge-catalog/docs/metadata-overview#entries).
 
 ## How can agents get data context?
 
@@ -39,7 +39,7 @@ The response contains the following context elements:
 
 Context element | Description  
 ---|---  
-Technical metadata | Resource schemas and physical configurations, such as BigQuery partition and clustering strategies.  
+Technical metadata | Resource schemas and physical configurations, such as BigQuery partition and clustering strategies, and BigQuery routine definitions, including arguments, return types, and source code.  
 Operational metadata | Joins and other relationships, based on historical query logs and data insights. For more information, see [View data relationships](https://docs.cloud.google.com/knowledge-catalog/docs/data-relationships).  
 Business descriptions | Related business terms, overviews, catalog annotations, descriptions captured in the source system and auto-generated in Knowledge Catalog, and guidelines.  
   
@@ -203,6 +203,33 @@ The following example shows how to retrieve context for a BigQuery table:
      print(f"Retrieved Context: \n{context_yaml}")
     
 
+## Retrieve context for routines
+
+You can use the `lookupContext` method to retrieve context for [BigQuery routines](https://docs.cloud.google.com/bigquery/docs/routines-intro), such as user-defined functions, table functions, and stored procedures. Agents can use this context to understand what a routine does and how to call it, for example, when they generate SQL queries. The context for a routine includes the following information:
+
+  * The routine type, such as scalar function, table function, or procedure.
+  * The routine language.
+  * The routine arguments and return type.
+  * The routine source code (definition body).
+  * Descriptions and other metadata from Knowledge Catalog.
+
+
+
+To retrieve context for a routine, include the entry name of the routine in the `resources` list of the request. The entry name has the following format:
+    
+    
+    projects/PROJECT_ID/locations/LOCATION/entryGroups/@bigquery/entries/bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/routines/ROUTINE_ID
+    
+
+Replace the following:
+
+  * PROJECT_ID: the ID of the project that contains the routine.
+  * LOCATION: the location of the dataset that contains the routine (for example, `us`).
+  * DATASET_ID: the ID of the dataset that contains the routine.
+  * ROUTINE_ID: the ID of the routine.
+
+
+
 ## What are some best practices for context lookups?
 
 To optimize your results when using the `lookupContext` method, consider the following best practices:
@@ -226,6 +253,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/jumpcloud-directory-insights-changelog/
 title: Change log for JUMPCLOUD_DIRECTORY_INSIGHTS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:47:11.189509+00:00
+fetched_at: 2026-10-21T14:43:39.133749+00:00
 ---
 
 # Change log for JUMPCLOUD_DIRECTORY_INSIGHTS  |  Google Security Operations  |  Google Cloud Documentation

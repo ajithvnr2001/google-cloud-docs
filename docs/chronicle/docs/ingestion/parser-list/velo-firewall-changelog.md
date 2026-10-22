@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/velo-firewall-changelog/
 title: Change log for VELO_FIREWALL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:36:49.478932+00:00
+fetched_at: 2026-10-21T14:43:23.791739+00:00
 ---
 
 # Change log for VELO_FIREWALL  |  Google Security Operations  |  Google Cloud Documentation

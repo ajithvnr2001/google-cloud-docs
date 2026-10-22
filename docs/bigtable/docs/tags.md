@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/tags/
 title: Create and manage tags \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:12.896875+00:00
+fetched_at: 2026-10-21T14:24:26.560662+00:00
 ---
 
 # Create and manage tags  |  Bigtable  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/docs/split-trust-encryption-tool/
 title: Split-trust Encryption Tool \u00a0|\u00a0 Confidential Computing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:49:26.792359+00:00
+fetched_at: 2026-10-21T14:21:14.867227+00:00
 ---
 
 # Split-trust Encryption Tool  |  Confidential Computing  |  Google Cloud Documentation

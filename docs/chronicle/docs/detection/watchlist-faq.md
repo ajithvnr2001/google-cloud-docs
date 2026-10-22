@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/watchlist-faq/
 title: Watchlists FAQ \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:11:42.701127+00:00
+fetched_at: 2026-10-21T14:26:04.720314+00:00
 ---
 
 # Watchlists FAQ  |  Google Security Operations  |  Google Cloud Documentation

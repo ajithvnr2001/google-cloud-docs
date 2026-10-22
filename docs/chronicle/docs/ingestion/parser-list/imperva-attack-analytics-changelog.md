@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/imperva-attack-analytics-changelog/
 title: Change log for IMPERVA_ATTACK_ANALYTICS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:52:11.370678+00:00
+fetched_at: 2026-10-21T14:43:43.968141+00:00
 ---
 
 # Change log for IMPERVA_ATTACK_ANALYTICS  |  Google Security Operations  |  Google Cloud Documentation

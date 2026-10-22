@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/analytics/endpoint-performance-dashboard/
 title: Target performance \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:05:30.008675+00:00
+fetched_at: 2026-10-21T12:30:05.962196+00:00
 ---
 
 # Target performance  |  Apigee  |  Google Cloud Documentation

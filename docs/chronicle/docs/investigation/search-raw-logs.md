@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/search-raw-logs/
 title: Search raw logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T09:30:05.595965+00:00
+fetched_at: 2026-10-21T14:11:48.434640+00:00
 ---
 
 # Search raw logs  |  Google Security Operations  |  Google Cloud Documentation

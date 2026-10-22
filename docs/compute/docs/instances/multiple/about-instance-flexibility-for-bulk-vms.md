@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/multiple/about-instance-flexibility-for-bulk-vms/
 title: About instance flexibility for VMs created in bulk \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:07.918352+00:00
+fetched_at: 2026-10-22T05:47:25.267876+00:00
 ---
 
 # About instance flexibility for VMs created in bulk  |  Compute Engine  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  About instance flexibility for VMs created in bulk Stay organized with collections  Save and categorize content based on your preferences. 
 
-When you create virtual machines (VMs) in bulk in a region by using Compute Engine, if your application is not restricted to a single machine type, you can increase the success rate of provisioning your required number of VMs by configuring _instance flexibility_. Instance flexibility lets you specify one or more machine types that are suitable for your workload. Compute Engine then provisions VMs using any of these machine types, based on capacity and quota availability.
+When you create virtual machines (VMs) in bulk in a region by using Compute Engine, if your application is not restricted to a single machine type, you can increase the success rate of provisioning your required number of VMs by configuring _instance flexibility_. Instance flexibility lets you specify one or more machine types that are suitable for your workload. Compute Engine then provisions VMs using one or more of these machine types, based on capacity and quota availability. A single bulk insert request can create VMs of multiple different machine types.
 
 Instance flexibility helps you maximize resource availability during demand spikes, improve price-performance, and safely adopt the latest hardware. For more information, see [Optimize compute provisioning](https://docs.cloud.google.com/compute/docs/about-infrastructure-flexibility).
 
@@ -236,6 +236,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

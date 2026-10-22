@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/servicenow_cmdb_changelog/
 title: Change log for SERVICENOW_CMDB \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:58:13.314223+00:00
+fetched_at: 2026-10-21T14:42:40.870471+00:00
 ---
 
 # Change log for SERVICENOW_CMDB  |  Google Security Operations  |  Google Cloud Documentation

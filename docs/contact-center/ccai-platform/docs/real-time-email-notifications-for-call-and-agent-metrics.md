@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/real-time-email-notifications-for-call-and-agent-metrics/
 title: Real-Time email notifications for call and agent metrics \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:25:59.892589+00:00
+fetched_at: 2026-10-21T14:06:55.471877+00:00
 ---
 
 # Real-Time email notifications for call and agent metrics  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

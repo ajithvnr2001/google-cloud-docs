@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/mailchimp/configure/
 title: MailChimp \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:23.680251+00:00
+fetched_at: 2026-10-21T12:53:39.246591+00:00
 ---
 
 # MailChimp  |  Integration Connectors  |  Google Cloud Documentation

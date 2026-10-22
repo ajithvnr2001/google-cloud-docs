@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/nodes/sole-tenant-nodes/
 title: Sole-tenancy overview \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:09.735815+00:00
+fetched_at: 2026-10-21T14:36:19.177719+00:00
 ---
 
 # Sole-tenancy overview  |  Compute Engine  |  Google Cloud Documentation
@@ -207,6 +207,8 @@ This policy is most suitable for high-availability workloads with licenses that 
 
 Because this policy relies on live migration to move VMs to holdback nodes, VMs that don't support live migrate can't use this policy. If your VMs can't live migrate and you don't have software licenses that require physical server affinity within a node group (such as Windows Server BYOL), then there is no benefit to using this policy and you will incur the cost of the reserved holdback nodes.
 
+With this policy, you can't assign or [manually live migrate](https://docs.cloud.google.com/compute/docs/nodes/manually-live-migrate) a VM to a specific node using the `node-name` affinity label. You can use any custom node affinity labels for your VMs as long as you also specify the `node-group-name` affinity label and not `node-name`.
+
 To confirm the capacity for live migration, Compute Engine reserves 1 holdback node for every 20 nodes that you reserve. The following figure shows an animation of the **Migrate within node group** host maintenance policy.
 
 ![Animation of the migrate within a node group host maintenance policy.](https://docs.cloud.google.com/static/compute/images/sole-tenancy/maintenance-policies/migrate-within-node-group.gif)**Figure 4** : Animation of the **Migrate within node group** host maintenance policy.
@@ -222,6 +224,8 @@ Total nodes in group | Holdback nodes reserved for live migration
 61 to 80 | 4  
 81 to 100 | 5  
   
+This policy requires at least one empty holdback node at all times for live migrations. If you try to delete the only empty node in the group, then the operation fails with an `insufficient holdback` error. To consolidate VMs onto fewer nodes and delete excess empty nodes, stop and restart VMs on sparsely populated nodes or [manually live migrate the VMs](https://docs.cloud.google.com/compute/docs/nodes/manually-live-migrate) to the node group.
+
 **Pin an instance to multiple node groups**
 
 You can pin an instance to multiple node groups using the `node-group-name` [affinity label](https://docs.cloud.google.com/compute/docs/nodes/sole-tenant-nodes#node_affinity_and_anti-affinity) under the following conditions:
@@ -237,8 +241,6 @@ For example, if you want to pin an instance `test-node` to two node groups `node
   * The host maintenance policy of `node-group1` and `node-group2` is _migrate within node group_.
 
 **Note:** If the instance's on host maintenance policy is _Terminate_ , you can pin the instance to only a single node group.
-
-You cannot assign an instance to any specific node with the affinity label `node-name`. You can use any custom node affinity labels for your instances as long as they are assigned the `node-group-name` and not the `node-name`.
 
 ### Maintenance windows
 
@@ -294,10 +296,10 @@ Compute Engine assigns the following default affinity labels to each node:
     * Key: `compute.googleapis.com/node-name`
     * Value: Name of the individual node.
   * A label for the projects the node group is shared with: 
-    * Key: `compute.googleapis.com/projects`
+    * Key: `compute.googleapis.com/project`
     * Value: Project ID of the project containing the node group.
 
-
+**Note:** Default affinity labels are system-managed labels used for VM scheduling and node affinity configurations. They don't appear in the Google Cloud console's custom affinity labels list for a node group.
 
 ### Custom affinity labels
 
@@ -389,6 +391,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

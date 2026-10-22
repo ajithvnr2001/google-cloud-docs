@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/openai-auditlog/
 title: Collect OpenAI Audit Logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:44:26.268044+00:00
+fetched_at: 2026-10-21T14:10:45.942022+00:00
 ---
 
 # Collect OpenAI Audit Logs  |  Google Security Operations  |  Google Cloud Documentation

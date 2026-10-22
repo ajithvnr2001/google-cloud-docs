@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/samples/dataflow-v1beta3-generated-Jobs-GetJob-sync/
 title: Get the state of a job (Ruby) \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:20:10.221475+00:00
+fetched_at: 2026-10-22T05:42:37.505939+00:00
 ---
 
 # Get the state of a job (Ruby)  |  Cloud Dataflow  |  Google Cloud Documentation

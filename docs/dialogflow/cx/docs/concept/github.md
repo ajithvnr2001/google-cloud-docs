@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/github/
 title: Git export/restore \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:55.407067+00:00
+fetched_at: 2026-10-21T12:55:58.854406+00:00
 ---
 
 # Git export/restore  |  Dialogflow CX  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/samples/use-vertex-ai-embedded-genai/
 title: Use the Vertex AI task to embed GenAI \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:09:48.188858+00:00
+fetched_at: 2026-10-21T14:26:04.413697+00:00
 ---
 
 # Use the Vertex AI task to embed GenAI  |  Application Integration  |  Google Cloud Documentation

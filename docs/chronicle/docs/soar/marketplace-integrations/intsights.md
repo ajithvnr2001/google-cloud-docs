@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/intsights/
 title: IntSights \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:50:18.078382+00:00
+fetched_at: 2026-10-21T14:09:58.005679+00:00
 ---
 
 # IntSights  |  Google Security Operations  |  Google Cloud Documentation

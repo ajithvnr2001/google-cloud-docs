@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/et-pro-ioc-changelog/
 title: Change log for ET_PRO_IOC \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:22:38.294734+00:00
+fetched_at: 2026-10-21T14:43:46.052227+00:00
 ---
 
 # Change log for ET_PRO_IOC  |  Google Security Operations  |  Google Cloud Documentation

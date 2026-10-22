@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/docs/linux-overview/
 title: AlloyDB Omni using RPM \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:12:38.285679+00:00
+fetched_at: 2026-10-21T15:26:35.279666+00:00
 ---
 
 # AlloyDB Omni using RPM  |  Google Cloud Documentation

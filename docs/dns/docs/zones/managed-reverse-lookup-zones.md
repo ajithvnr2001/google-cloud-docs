@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/docs/zones/managed-reverse-lookup-zones/
 title: Create a managed reverse lookup zone \u00a0|\u00a0 Cloud DNS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:57.153056+00:00
+fetched_at: 2026-10-21T14:05:54.787967+00:00
 ---
 
 # Create a managed reverse lookup zone  |  Cloud DNS  |  Google Cloud Documentation

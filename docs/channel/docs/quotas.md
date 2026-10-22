@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/channel/docs/quotas/
 title: Quotas & limits \u00a0|\u00a0 Channel Services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:52:00.220145+00:00
+fetched_at: 2026-10-21T14:25:50.259799+00:00
 ---
 
 # Quotas & limits  |  Channel Services  |  Google Cloud Documentation

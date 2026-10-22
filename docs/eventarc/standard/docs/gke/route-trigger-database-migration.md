@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/gke/route-trigger-database-migration/
 title: Route Database Migration events to GKE \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:22:25.016601+00:00
+fetched_at: 2026-10-21T12:45:44.088929+00:00
 ---
 
 # Route Database Migration events to GKE  |  Eventarc Standard  |  Google Cloud Documentation

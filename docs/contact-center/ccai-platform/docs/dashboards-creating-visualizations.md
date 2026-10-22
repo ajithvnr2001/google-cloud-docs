@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/dashboards-creating-visualizations/
 title: Creating visualizations \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:36:39.783127+00:00
+fetched_at: 2026-10-21T14:23:16.681670+00:00
 ---
 
 # Creating visualizations  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

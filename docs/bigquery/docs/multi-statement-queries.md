@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/multi-statement-queries/
 title: Work with multi-statement queries \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:07.223848+00:00
+fetched_at: 2026-10-21T14:20:12.524028+00:00
 ---
 
 # Work with multi-statement queries  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-operation-extended-wait/
 title: Wait for extended operations \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:27.992746+00:00
+fetched_at: 2026-10-22T05:49:26.885656+00:00
 ---
 
 # Wait for extended operations  |  Compute Engine  |  Google Cloud Documentation

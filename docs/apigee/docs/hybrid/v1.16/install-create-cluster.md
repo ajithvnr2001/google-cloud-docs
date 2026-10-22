@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/install-create-cluster/
 title: Step 1: Create a cluster \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:59:13.893085+00:00
+fetched_at: 2026-10-22T05:47:56.453725+00:00
 ---
 
 # Step 1: Create a cluster  |  Apigee  |  Google Cloud Documentation
@@ -51,7 +51,7 @@ Unsupported versions:
 
 
 
-**Upgrading:** If you are upgrading to Apigee hybrid version 1.16.10, see [Upgrading Apigee hybrid](https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/upgrade) for instructions. If you are performing a new installation, continue with the configurations described below.
+**Upgrading:** If you are upgrading to Apigee hybrid version 1.16.11, see [Upgrading Apigee hybrid](https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/upgrade) for instructions. If you are performing a new installation, continue with the configurations described below.
 
 This step explains how to create the cluster in which you will run Apigee hybrid. The instructions vary depending on the platform in which you are running hybrid. Before you begin, make sure to review the following information: 
 
@@ -82,7 +82,7 @@ These steps explain how to configure and create a GKE cluster in your Google Clo
 
 Apigee recommends creating a **regional cluster** rather than a **zonal cluster**. If you are unfamiliar with the distinction between regions and zones, see [Regions and zones](https://docs.cloud.google.com/compute/docs/regions-zones). The available regions are listed in [Available regions and zones](https://docs.cloud.google.com/compute/docs/regions-zones#available). Just be aware that, for example, `us-west1` is a valid region name, while `us-west1-a` is a zone in the region.
 
-  1. Make sure you are using a version of GKE that is supported for hybrid version 1.16.10. See [Apigee hybrid supported platforms and versions](https://docs.cloud.google.com/apigee/docs/hybrid/supported-platforms).
+  1. Make sure you are using a version of GKE that is supported for hybrid version 1.16.11. See [Apigee hybrid supported platforms and versions](https://docs.cloud.google.com/apigee/docs/hybrid/supported-platforms).
   2. Ensure the clocks on all nodes and application servers are synchronized with Network Time Protocol (NTP), as explained in the [Prerequisites](https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/prerequisites). The Cassandra database relies on Network Time Protocol (NTP) synchronization to maintain data consistency. If you plan to install hybrid into multiple regions, make sure they are synchronized with NTP across all regions.
   3. (GKE private clusters only), If you are creating a private cluster on GKE, add a firewall rule to allow port 9443 for communication between GKE master nodes and GKE worker nodes and to allow the GKE masters to access Apigee mutating webhooks. Follow the procedure in [Adding firewall rules for specific use cases](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#add_firewall_rules) in the Google Kubernetes Engine documentation. For more information see [Private clusters in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept). 
 
@@ -302,7 +302,7 @@ When you have a cluster installed and running, go to the next step.
 
 These steps explain how to configure and create a GKE cluster for Apigee hybrid as part of a software-only Google Distributed Cloud on VMware deployment.
 
-  1. Make sure you are using a version of Google Distributed Cloud that is supported for hybrid version 1.16.10. See [Apigee hybrid supported platforms and versions](https://docs.cloud.google.com/apigee/docs/hybrid/supported-platforms).
+  1. Make sure you are using a version of Google Distributed Cloud that is supported for hybrid version 1.16.11. See [Apigee hybrid supported platforms and versions](https://docs.cloud.google.com/apigee/docs/hybrid/supported-platforms).
   2. Ensure the clocks on all nodes and application servers are synchronized with Network Time Protocol (NTP), as explained in the [Prerequisites](https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/prerequisites). The Cassandra database relies on Network Time Protocol (NTP) synchronization to maintain data consistency. If you plan to install hybrid into multiple regions, be sure they are synchronized with NTP across all regions.
   3. Create the cluster by following the instructions at [Create basic clusters](https://docs.cloud.google.com/anthos/clusters/docs/on-prem/latest/how-to/minimal-create-clusters). It's okay to create the cluster with just the default node pool. You will configure and create the required Apigee hybrid node pools in the next step. 
 
@@ -425,7 +425,7 @@ When you have a cluster installed and running, go to the next step.
 
 These steps explain how to configure and create a GKE cluster for Apigee hybrid as part of a software-only deployment of Google Distributed Cloud on bare metal. Google Distributed Cloud on bare metal lets you run Kubernetes clusters directly on your own machine resources.
 
-  1. Make sure you are using a version of Google Distributed Cloud that is supported for hybrid version 1.16.10. See [Apigee hybrid supported platforms and versions](https://docs.cloud.google.com/apigee/docs/hybrid/supported-platforms).
+  1. Make sure you are using a version of Google Distributed Cloud that is supported for hybrid version 1.16.11. See [Apigee hybrid supported platforms and versions](https://docs.cloud.google.com/apigee/docs/hybrid/supported-platforms).
   2. Ensure the clocks on all nodes and application servers are synchronized with Network Time Protocol (NTP), as explained in the [Prerequisites](https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/prerequisites). The Cassandra database relies on Network Time Protocol (NTP) synchronization to maintain data consistency. If you plan to install hybrid into multiple regions, be sure they are synchronized with NTP across all regions.
   3. Review the [ Installation prerequisites overview](https://docs.cloud.google.com/anthos/clusters/docs/bare-metal/latest/installing/install-prereq) and [Creating clusters: overview](https://docs.cloud.google.com/anthos/clusters/docs/bare-metal/latest/installing/creating-clusters/create-clusters-overview).
   4. Create the cluster with two node pools configured as described below: 
@@ -472,7 +472,7 @@ When you have a cluster installed and running, go to the next step.
 
 These steps explain how to configure and create a cluster for Apigee hybrid on AKS.
 
-  1. Make sure you are using a version of AKS that is supported for hybrid version 1.16.10. See [Apigee hybrid supported platforms and versions](https://docs.cloud.google.com/apigee/docs/hybrid/supported-platforms).
+  1. Make sure you are using a version of AKS that is supported for hybrid version 1.16.11. See [Apigee hybrid supported platforms and versions](https://docs.cloud.google.com/apigee/docs/hybrid/supported-platforms).
   2. Ensure the clocks on all nodes and application servers are synchronized with Network Time Protocol (NTP), as explained in the [Prerequisites](https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/prerequisites). The Cassandra database relies on Network Time Protocol (NTP) synchronization to maintain data consistency. If you plan to install hybrid into multiple regions, be sure they are synchronized with NTP across all regions.
   3. Create the cluster using either the [Azure CLI](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) or [Azure Portal](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-portal), and create two node pools as described below. 
 
@@ -516,7 +516,7 @@ When you have a cluster installed and running, go to the next step.
 
 These steps explain how to configure and create a cluster for Apigee hybrid on EKS.
 
-  1. Make sure you are using a version of EKS that is supported for hybrid version 1.16.10. See [Apigee hybrid supported platforms and versions](https://docs.cloud.google.com/apigee/docs/hybrid/supported-platforms).
+  1. Make sure you are using a version of EKS that is supported for hybrid version 1.16.11. See [Apigee hybrid supported platforms and versions](https://docs.cloud.google.com/apigee/docs/hybrid/supported-platforms).
   2. Ensure the clocks on all nodes and application servers are synchronized with Network Time Protocol (NTP), as explained in the [Prerequisites](https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/prerequisites). The Cassandra database relies on Network Time Protocol (NTP) synchronization to maintain data consistency. If you plan to install hybrid into multiple regions, be sure they are synchronized with NTP across all regions.
   3. If you are using Kubernetes version 1.24 or newer, make sure you have installed the [Kubernetes CSI driver for Amazon EBS](https://github.com/kubernetes-sigs/aws-ebs-csi-driver). 
   4. Use the following instructions to create a user cluster, and create two node pools as described below. 
@@ -563,7 +563,7 @@ When you have a cluster installed and running, go to the next step.
 
 These steps explain how to configure and create a cluster for Apigee hybrid on OpenShift.
 
-  1. Make sure you are using a version of OpenShift that is supported for hybrid version 1.16.10. See [Apigee hybrid supported platforms and versions](https://docs.cloud.google.com/apigee/docs/hybrid/supported-platforms).
+  1. Make sure you are using a version of OpenShift that is supported for hybrid version 1.16.11. See [Apigee hybrid supported platforms and versions](https://docs.cloud.google.com/apigee/docs/hybrid/supported-platforms).
   2. Ensure the clocks on all nodes and application servers are synchronized with Network Time Protocol (NTP), as explained in the [Prerequisites](https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/prerequisites). The Cassandra database relies on Network Time Protocol (NTP) synchronization to maintain data consistency. If you plan to install hybrid into multiple regions, be sure they are synchronized with NTP across all regions.
   3. Build the OpenShift cluster to deploy on the runtime plane, install Apigee on your OpenShift user cluster, and create two node pools. You can find additional information about OpenShift cluster creation and management on Google Cloud in the OpenShift documentation, for example: [Installing a cluster quickly on Google Cloud](https://docs.openshift.com/container-platform/4.14/installing/installing_gcp/installing-gcp-default.html#installing-gcp-default).For help setting up your OpenShift cluster on Google Cloud VMs, see [How to Set Up Apigee hybrid on Openshift on Google Cloud VMs](https://www.googlecloudcommunity.com/gc/Cloud-Product-Articles/How-to-Set-Up-Apigee-hybrid-on-Openshift-on-GCP-VMs/ta-p/480473).
 
@@ -611,6 +611,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/control-packages/eu-data-boundary-access-justifications/
 title: EU Data Boundary with Access Justifications \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:44.112763+00:00
+fetched_at: 2026-10-21T14:25:43.345530+00:00
 ---
 
 # EU Data Boundary with Access Justifications  |  Assured Workloads  |  Google Cloud Documentation

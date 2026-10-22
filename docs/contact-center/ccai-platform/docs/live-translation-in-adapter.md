@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/live-translation-in-adapter/
 title: Live Translation in the Chat Adapter \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:33.127777+00:00
+fetched_at: 2026-10-21T14:06:36.653269+00:00
 ---
 
 # Live Translation in the Chat Adapter  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/audit-logging/
 title: Gemini Cloud Assist audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:12:09.193827+00:00
+fetched_at: 2026-10-21T14:09:28.665625+00:00
 ---
 
 # Gemini Cloud Assist audit logging  |  Google Cloud Documentation

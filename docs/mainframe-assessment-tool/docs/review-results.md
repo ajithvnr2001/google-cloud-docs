@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/mainframe-assessment-tool/docs/review-results/
 title: Review assessment results \u00a0|\u00a0 Mainframe Assessment Tool \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:15.420477+00:00
+fetched_at: 2026-10-21T15:10:48.136657+00:00
 ---
 
 # Review assessment results  |  Mainframe Assessment Tool  |  Google Cloud Documentation

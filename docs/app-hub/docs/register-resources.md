@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/register-resources/
 title: Register existing resources to an application \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:05:58.755332+00:00
+fetched_at: 2026-10-21T12:30:49.267904+00:00
 ---
 
 # Register existing resources to an application  |  App Hub  |  Google Cloud Documentation

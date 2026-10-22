@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/code-customization/
 title: Configure Gemini Code Assist code customization \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:02:47.858473+00:00
+fetched_at: 2026-10-21T12:51:29.649048+00:00
 ---
 
 # Configure Gemini Code Assist code customization  |  Gemini for Google Cloud  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/microsoft-graph-security/
 title: Microsoft Graph Security \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:35:28.742118+00:00
+fetched_at: 2026-10-21T14:20:11.029270+00:00
 ---
 
 # Microsoft Graph Security  |  Google Security Operations  |  Google Cloud Documentation

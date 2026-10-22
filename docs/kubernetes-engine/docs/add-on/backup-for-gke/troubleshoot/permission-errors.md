@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke/troubleshoot/permission-errors/
 title: Troubleshoot permission errors in Backup for GKE \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:13:42.886807+00:00
+fetched_at: 2026-10-21T15:00:56.228502+00:00
 ---
 
 # Troubleshoot permission errors in Backup for GKE  |  Google Cloud Documentation

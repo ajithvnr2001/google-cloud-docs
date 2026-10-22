@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/web/github/
 title: Sign in users with GitHub \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:17.090096+00:00
+fetched_at: 2026-10-21T12:54:07.601802+00:00
 ---
 
 # Sign in users with GitHub  |  Identity Platform  |  Google Cloud Documentation

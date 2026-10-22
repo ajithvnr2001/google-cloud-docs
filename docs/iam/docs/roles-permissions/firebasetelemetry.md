@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/firebasetelemetry/
 title: Firebase Telemetry roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:24:04.366702+00:00
+fetched_at: 2026-10-21T14:29:27.178076+00:00
 ---
 
 # Firebase Telemetry roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

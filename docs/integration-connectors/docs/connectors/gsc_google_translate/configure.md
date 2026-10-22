@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/gsc_google_translate/configure/
 title: Cloud Translation \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:14.307832+00:00
+fetched_at: 2026-10-21T12:53:24.108149+00:00
 ---
 
 # Cloud Translation  |  Integration Connectors  |  Google Cloud Documentation

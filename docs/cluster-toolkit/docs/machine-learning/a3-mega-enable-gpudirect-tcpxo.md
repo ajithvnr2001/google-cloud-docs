@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/machine-learning/a3-mega-enable-gpudirect-tcpxo/
 title: Enable GPUDirect-TCPXO optimized NCCL communication \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:44.732856+00:00
+fetched_at: 2026-10-21T14:42:19.286785+00:00
 ---
 
 # Enable GPUDirect-TCPXO optimized NCCL communication  |  Cluster Toolkit  |  Google Cloud Documentation

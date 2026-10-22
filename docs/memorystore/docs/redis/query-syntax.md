@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/query-syntax/
 title: Query syntax \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:56.190189+00:00
+fetched_at: 2026-10-21T15:13:33.686707+00:00
 ---
 
 # Query syntax  |  Memorystore for Redis  |  Google Cloud Documentation

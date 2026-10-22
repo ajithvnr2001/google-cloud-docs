@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/service/ipam/overview/
 title: IP Address Management API overview \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:13:26.983110+00:00
+fetched_at: 2026-10-21T12:57:03.771917+00:00
 ---
 
 # IP Address Management API overview  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

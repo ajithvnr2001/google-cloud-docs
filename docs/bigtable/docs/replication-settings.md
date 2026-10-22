@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/replication-settings/
 title: Examples of replication configurations \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:13.939345+00:00
+fetched_at: 2026-10-21T14:09:19.448026+00:00
 ---
 
 # Examples of replication configurations  |  Bigtable  |  Google Cloud Documentation

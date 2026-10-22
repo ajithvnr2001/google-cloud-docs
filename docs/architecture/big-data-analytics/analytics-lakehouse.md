@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/big-data-analytics/analytics-lakehouse/
 title: Delete the Analytics lakehouse \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:09:15.406564+00:00
+fetched_at: 2026-10-21T14:53:24.712533+00:00
 ---
 
 # Delete the Analytics lakehouse  |  Cloud Architecture Center  |  Google Cloud Documentation

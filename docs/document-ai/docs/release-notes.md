@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/document-ai/docs/release-notes/
 title: Document AI release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:51:56.091551+00:00
+fetched_at: 2026-10-21T14:39:41.016625+00:00
 ---
 
 # Document AI release notes  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/concepts/plugins/
 title: Plugins overview \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:58:24.026817+00:00
+fetched_at: 2026-10-22T05:44:59.685743+00:00
 ---
 
 # Plugins overview  |  Cloud Data Fusion  |  Google Cloud Documentation
@@ -21,11 +21,7 @@ Send feedback
 
 #  Plugins overview Stay organized with collections  Save and categorize content based on your preferences. 
 
-**Tip:** Explore the [Cloud Data Fusion plugins](https://cloud.google.com/data-fusion/plugins).
-
-When you create a data pipeline in Cloud Data Fusion, you use a series of stages, known as nodes, to move and manage data as it flows from source to sink. Each node consists of a plugin, a customizable module that extends the capabilities of Cloud Data Fusion.
-
-You can find the plugins in Cloud Data Fusion web interface by going to the **Studio** page. For more plugins, click **Hub**.
+Cloud Data Fusion plugins let you move and manage data as it flows from source to sink in a data pipeline. Each stage, known as a node, consists of a customizable module that extends your workflow capabilities. In the Cloud Data Fusion web interface, you can access default plugins on the **Studio** page, browse the **Hub** for additional integrations, or explore all [Cloud Data Fusion plugins](https://cloud.google.com/data-fusion/plugins).
 
 ![Plugins in the web interface.](https://docs.cloud.google.com/static/data-fusion/docs/images/concepts/plugins-in-the-web-interface.png)
 
@@ -82,6 +78,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

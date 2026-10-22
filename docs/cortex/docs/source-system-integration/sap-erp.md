@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/source-system-integration/sap-erp/
 title: SAP ERP integration for Cortex Framework. \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:36:57.535760+00:00
+fetched_at: 2026-10-21T14:23:37.735567+00:00
 ---
 
 # SAP ERP integration for Cortex Framework.  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

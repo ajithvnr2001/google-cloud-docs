@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/buildpacks/about-procfile/
 title: About Procfiles \u00a0|\u00a0 Buildpacks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:52:32.703469+00:00
+fetched_at: 2026-10-21T14:07:23.931760+00:00
 ---
 
 # About Procfiles  |  Buildpacks  |  Google Cloud Documentation

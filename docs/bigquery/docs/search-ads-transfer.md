@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/search-ads-transfer/
 title: Load Search Ads 360 data into BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:23:02.923195+00:00
+fetched_at: 2026-10-21T12:36:20.860774+00:00
 ---
 
 # Load Search Ads 360 data into BigQuery  |  Google Cloud Documentation

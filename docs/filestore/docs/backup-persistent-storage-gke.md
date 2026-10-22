@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/backup-persistent-storage-gke/
 title: Back up and restore persistent storage for your GKE clusters \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:15:23.434372+00:00
+fetched_at: 2026-10-21T14:59:30.752624+00:00
 ---
 
 # Back up and restore persistent storage for your GKE clusters  |  Filestore  |  Google Cloud Documentation
@@ -39,12 +39,10 @@ Enterprise | Single share, multishare | 1.25 | 1.33 (single share only)
 Zonal (1 TiB - 9.75 TiB) | Single share | 1.27 | 1.33  
 Zonal (10 TiB - 100 TiB) | Single share | 1.27 | 1.33  
 Regional (1 TiB - 100 TiB) | Single share | 1.33.4-gke.1172000 | 1.33.4-gke.1172000  
-Basic HDD (100 GiB - 63.9 TiB)* | Single share | 1.33 | Not supported  
+Basic HDD (100 GiB - 63.9 TiB) | Single share | 1.33 | Not supported  
 Basic HDD | Single share | 1.21 | Not supported  
 Basic SSD | Single share | 1.21 | Not supported  
   
-* If small capacity instances are available in the region where your instance is located, Regional instance capacity ranges from 100 GiB to 10,239 GiB. Otherwise, the range is 1 TiB to 9.75 TiB. For more information, see [Small capacity instances](https://docs.cloud.google.com/filestore/docs/service-tiers#small-instances).
-
   * Use control plane [versions](https://docs.cloud.google.com/kubernetes-engine/versioning-and-upgrades) 1.17 or later. To use the [Filestore CSI driver](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/filestore-csi-driver) in a `VolumeSnapshot`, use the GKE version number applicable to your service tier.
 
 
@@ -549,6 +547,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

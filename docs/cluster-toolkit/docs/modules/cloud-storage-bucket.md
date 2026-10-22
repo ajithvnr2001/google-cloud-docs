@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/cloud-storage-bucket/
 title: Create a Cloud Storage bucket \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:47:13.674175+00:00
+fetched_at: 2026-10-21T14:42:18.699589+00:00
 ---
 
 # Create a Cloud Storage bucket  |  Cluster Toolkit  |  Google Cloud Documentation

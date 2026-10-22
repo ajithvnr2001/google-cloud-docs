@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cost-allocations/
 title: Get key spending insights for your GKE resource allocation and cluster costs \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:02:00.343325+00:00
+fetched_at: 2026-10-21T14:57:50.595902+00:00
 ---
 
 # Get key spending insights for your GKE resource allocation and cluster costs  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -82,6 +82,7 @@ Before you start, make sure that you have performed the following tasks:
   * GKE cost allocation does not work with A4 or A4X VM instances, or GPUs attached to those instances.
   * GKE cost allocation is not supported when using external node management solutions that bypass GKE node pools.
   * When using Committed Use Discounts (CUDs) with discount sharing enabled, costs for the instances covered by CUDs might not be fully broken down by GKE cost allocation and might be attributed to a namespace like `goog-k8s-unsupported-sku`.
+  * GKE cost allocation does not support [native sidecar containers](https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/), which are init containers with `restartPolicy: Always` configuration. Resources requested by sidecar containers are not attributed to the Pod's namespace and are reported in the `kube:unallocated` namespace instead.
 
 
 
@@ -284,6 +285,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

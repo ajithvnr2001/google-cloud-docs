@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/version/
 title: Versions and environments \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:56.071216+00:00
+fetched_at: 2026-10-21T12:43:18.246992+00:00
 ---
 
 # Versions and environments  |  Dialogflow CX  |  Google Cloud Documentation

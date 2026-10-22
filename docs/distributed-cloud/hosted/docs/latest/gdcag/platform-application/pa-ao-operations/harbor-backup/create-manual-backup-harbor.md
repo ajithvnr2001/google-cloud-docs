@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/harbor-backup/create-manual-backup-harbor/
 title: Create a manual backup \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:32:38.512093+00:00
+fetched_at: 2026-10-21T12:59:54.107334+00:00
 ---
 
 # Create a manual backup  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

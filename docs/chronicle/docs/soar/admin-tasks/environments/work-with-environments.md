@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/environments/work-with-environments/
 title: Environments overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:42.931625+00:00
+fetched_at: 2026-10-21T14:21:15.029470+00:00
 ---
 
 # Environments overview  |  Google Security Operations  |  Google Cloud Documentation

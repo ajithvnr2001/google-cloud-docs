@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/16.3.0/docs/upgrade-vm-alloydb-omni-version/
 title: Upgrade to AlloyDB Omni version 16.3.0 on a VM \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 16.3.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:46:43.027982+00:00
+fetched_at: 2026-10-21T15:27:00.441378+00:00
 ---
 
 # Upgrade to AlloyDB Omni version 16.3.0 on a VM  |  AlloyDB Omni for Kubernetes: 16.3.0  |  Google Cloud Documentation

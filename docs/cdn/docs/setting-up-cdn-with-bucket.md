@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/setting-up-cdn-with-bucket/
 title: Set up a backend bucket \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:26:36.310974+00:00
+fetched_at: 2026-10-21T14:24:08.856669+00:00
 ---
 
 # Set up a backend bucket  |  Cloud CDN  |  Google Cloud Documentation

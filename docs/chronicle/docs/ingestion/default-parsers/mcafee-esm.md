@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/mcafee-esm/
 title: Collect McAfee ESM logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T14:19:53.766464+00:00
+fetched_at: 2026-10-21T12:29:07.967445+00:00
 ---
 
 # Collect McAfee ESM logs  |  Google Security Operations  |  Google Cloud Documentation

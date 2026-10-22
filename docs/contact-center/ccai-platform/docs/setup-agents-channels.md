@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/setup-agents-channels/
 title: Setting up and assigning agents to channels and queues: IVR, mobile, web \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:05.238362+00:00
+fetched_at: 2026-10-21T14:07:13.598761+00:00
 ---
 
 # Setting up and assigning agents to channels and queues: IVR, mobile, web  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

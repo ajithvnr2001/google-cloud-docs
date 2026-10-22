@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/migrate-cbn-alerts/
 title: Migrate CBN alerts to YARA-L alerts \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:00.168393+00:00
+fetched_at: 2026-10-21T12:37:33.215712+00:00
 ---
 
 # Migrate CBN alerts to YARA-L alerts  |  Google Security Operations  |  Google Cloud Documentation

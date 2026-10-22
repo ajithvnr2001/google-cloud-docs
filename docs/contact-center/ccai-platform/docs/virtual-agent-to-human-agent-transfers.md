@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/virtual-agent-to-human-agent-transfers/
 title: Virtual agent to human agent transfers \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:09.607345+00:00
+fetched_at: 2026-10-21T14:23:10.693906+00:00
 ---
 
 # Virtual agent to human agent transfers  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

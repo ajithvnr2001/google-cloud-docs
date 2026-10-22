@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/shared-responsibility/
 title: Shared responsibility in Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:47.735895+00:00
+fetched_at: 2026-10-21T14:25:18.752526+00:00
 ---
 
 # Shared responsibility in Assured Workloads  |  Google Cloud Documentation

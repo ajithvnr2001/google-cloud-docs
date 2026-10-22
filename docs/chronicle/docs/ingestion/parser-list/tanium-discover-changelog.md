@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/tanium-discover-changelog/
 title: Change log for TANIUM_DISCOVER \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:11:51.770479+00:00
+fetched_at: 2026-10-21T14:43:10.725662+00:00
 ---
 
 # Change log for TANIUM_DISCOVER  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/iva-guide/
 title: Interactive Virtual Assistant (IVA) guide \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:35:59.138853+00:00
+fetched_at: 2026-10-21T14:06:33.218339+00:00
 ---
 
 # Interactive Virtual Assistant (IVA) guide  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

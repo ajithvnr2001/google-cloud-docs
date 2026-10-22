@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/marketing-meta/
 title: Integration with Meta \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:40:49.515534+00:00
+fetched_at: 2026-10-21T14:09:31.354085+00:00
 ---
 
 # Integration with Meta  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

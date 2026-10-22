@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/security-bulletins/
 title: Security bulletins \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:01.533069+00:00
+fetched_at: 2026-10-21T14:12:00.503592+00:00
 ---
 
 # Security bulletins  |  Google Security Operations  |  Google Cloud Documentation

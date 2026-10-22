@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-security-integration/docs/in-band/in-band-integration-overview/
 title: In-band integration overview \u00a0|\u00a0 Network Security Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:20.459496+00:00
+fetched_at: 2026-10-21T15:15:39.209750+00:00
 ---
 
 # In-band integration overview  |  Network Security Integration  |  Google Cloud Documentation

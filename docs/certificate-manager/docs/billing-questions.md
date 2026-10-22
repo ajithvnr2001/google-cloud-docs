@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/billing-questions/
 title: Billing questions \u00a0|\u00a0 Certificate Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:05:35.293142+00:00
+fetched_at: 2026-10-21T12:38:17.715939+00:00
 ---
 
 # Billing questions  |  Certificate Manager  |  Google Cloud Documentation

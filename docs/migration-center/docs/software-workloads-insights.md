@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/software-workloads-insights/
 title: Detected software workloads \u00a0|\u00a0 Migration Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:55:28.301062+00:00
+fetched_at: 2026-10-21T15:12:40.910238+00:00
 ---
 
 # Detected software workloads  |  Migration Center  |  Google Cloud Documentation

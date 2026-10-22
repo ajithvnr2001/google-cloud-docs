@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/buildpacks/osonly/
 title: Configure the OS only runtime \u00a0|\u00a0 Buildpacks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:19:53.476313+00:00
+fetched_at: 2026-10-21T14:07:20.328407+00:00
 ---
 
 # Configure the OS only runtime  |  Buildpacks  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/saviynt-eip-changelog/
 title: Change log for SAVIYNT_EIP \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:11:57.543042+00:00
+fetched_at: 2026-10-21T14:42:43.590454+00:00
 ---
 
 # Change log for SAVIYNT_EIP  |  Google Security Operations  |  Google Cloud Documentation

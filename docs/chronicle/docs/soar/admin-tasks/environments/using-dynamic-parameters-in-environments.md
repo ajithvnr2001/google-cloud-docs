@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/environments/using-dynamic-parameters-in-environments/
 title: Configure custom environment groups \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:43.570100+00:00
+fetched_at: 2026-10-21T14:21:32.752139+00:00
 ---
 
 # Configure custom environment groups  |  Google Security Operations  |  Google Cloud Documentation

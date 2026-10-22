@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/deprecations/
 title: Feature deprecations \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:23:10.767200+00:00
+fetched_at: 2026-10-21T14:22:36.745373+00:00
 ---
 
 # Feature deprecations  |  App Engine standard environment  |  Google Cloud Documentation

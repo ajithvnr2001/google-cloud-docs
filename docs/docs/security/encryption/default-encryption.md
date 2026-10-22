@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/encryption/default-encryption/
 title: Default encryption at rest \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:22:37.910484+00:00
+fetched_at: 2026-10-21T14:08:28.629912+00:00
 ---
 
 # Default encryption at rest  |  Security  |  Google Cloud Documentation

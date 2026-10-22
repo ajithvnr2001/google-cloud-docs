@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/symantec-mail/
 title: Collect Symantec Messaging Gateway logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T14:36:32.541468+00:00
+fetched_at: 2026-10-21T12:27:45.838184+00:00
 ---
 
 # Collect Symantec Messaging Gateway logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/nodes/manually-live-migrate/
 title: Manually live migrate VMs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:55:34.257616+00:00
+fetched_at: 2026-10-21T14:36:18.403301+00:00
 ---
 
 # Manually live migrate VMs  |  Compute Engine  |  Google Cloud Documentation
@@ -66,6 +66,8 @@ To manually live migrate VMs into or within sole-tenancy, use the gcloud CLI or 
 If the destination of the VM is a node group, Compute Engine selects the node within the group that has both enough space for the VM and the least amount of spare capacity.
 
 You cannot perform live migration between projects while using shared sole-tenant node groups.
+
+**Warning:** If a node group uses the [**Migrate within node group** (`MIGRATE_WITHIN_NODE_GROUP`) host maintenance policy](https://docs.cloud.google.com/compute/docs/nodes/sole-tenant-nodes#migrate_within_node_group_host_maintenance_policy), then you can't manually live migrate and pin active VMs to a specific node within that group. Doing so results in a scheduling compatibility constraint error. Instead, target the node group by specifying `--node-group` in the gcloud CLI or the `compute.googleapis.com/node-group-name` affinity label key in REST.
 
 #### Permissions required for this task
 
@@ -156,6 +158,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

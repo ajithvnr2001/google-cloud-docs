@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/samples/filter-json-array/
 title: Filter values in a JSON array \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:00.164700+00:00
+fetched_at: 2026-10-21T14:26:03.382914+00:00
 ---
 
 # Filter values in a JSON array  |  Application Integration  |  Google Cloud Documentation

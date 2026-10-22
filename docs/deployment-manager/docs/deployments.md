@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deployment-manager/docs/deployments/
 title: Creating a Deployment using gcloud or the API \u00a0|\u00a0 Cloud Deployment Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:46:56.586544+00:00
+fetched_at: 2026-10-21T12:43:08.213786+00:00
 ---
 
 # Creating a Deployment using gcloud or the API  |  Cloud Deployment Manager  |  Google Cloud Documentation

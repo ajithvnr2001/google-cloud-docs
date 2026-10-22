@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/proactive-agents-tasks/
 title: Automate actions based on Proactive Agent results \u00a0|\u00a0 Gemini Cloud Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:14:01.621554+00:00
+fetched_at: 2026-10-21T14:23:23.564495+00:00
 ---
 
 # Automate actions based on Proactive Agent results  |  Gemini Cloud Assist  |  Google Cloud Documentation

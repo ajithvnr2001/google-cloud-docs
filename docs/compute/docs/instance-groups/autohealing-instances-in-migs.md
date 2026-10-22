@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/autohealing-instances-in-migs/
 title: Set up an application-based health check and autohealing \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:18.295577+00:00
+fetched_at: 2026-10-21T14:21:43.396301+00:00
 ---
 
 # Set up an application-based health check and autohealing  |  Compute Engine  |  Google Cloud Documentation

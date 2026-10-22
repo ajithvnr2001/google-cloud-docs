@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/vms/manage-vms/secure-vms/secure-boot-cert-update/
 title: Update Secure Boot certificates on a VM \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:22:09.051297+00:00
+fetched_at: 2026-10-21T12:59:33.860497+00:00
 ---
 
 # Update Secure Boot certificates on a VM  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

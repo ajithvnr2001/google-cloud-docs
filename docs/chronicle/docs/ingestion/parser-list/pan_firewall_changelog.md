@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/pan_firewall_changelog/
 title: Change log for PAN_FIREWALL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:28:35.763048+00:00
+fetched_at: 2026-10-21T14:51:49.917734+00:00
 ---
 
 # Change log for PAN_FIREWALL  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/cache-invalidation-overview/
 title: Cache invalidation overview \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:03:45.054799+00:00
+fetched_at: 2026-10-21T14:24:43.669753+00:00
 ---
 
 # Cache invalidation overview  |  Cloud CDN  |  Google Cloud Documentation

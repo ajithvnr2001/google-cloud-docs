@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/create-patch-delete-policies/
 title: Creating, patching, and deleting policies \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:23.464187+00:00
+fetched_at: 2026-10-21T12:54:19.574909+00:00
 ---
 
 # Creating, patching, and deleting policies  |  Cloud Identity  |  Google Cloud Documentation

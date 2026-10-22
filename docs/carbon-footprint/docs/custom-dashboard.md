@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/carbon-footprint/docs/custom-dashboard/
 title: Create a custom dashboard or analysis for your Carbon Footprint data \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:38:59.284551+00:00
+fetched_at: 2026-10-21T14:24:57.255200+00:00
 ---
 
 # Create a custom dashboard or analysis for your Carbon Footprint data  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/getting-support/
 title: Get support \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:44:27.017396+00:00
+fetched_at: 2026-10-21T14:41:57.992943+00:00
 ---
 
 # Get support  |  Cluster Toolkit  |  Google Cloud Documentation

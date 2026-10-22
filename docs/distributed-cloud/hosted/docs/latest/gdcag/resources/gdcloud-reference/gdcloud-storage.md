@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-storage/
 title: gdcloud storage \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:43:17.865657+00:00
+fetched_at: 2026-10-21T13:00:15.503203+00:00
 ---
 
 # gdcloud storage  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

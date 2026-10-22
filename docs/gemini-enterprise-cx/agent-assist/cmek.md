@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/cmek/
 title: Customer-managed encryption keys (CMEK) \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:20:29.556698+00:00
+fetched_at: 2026-10-21T12:54:16.016684+00:00
 ---
 
 # Customer-managed encryption keys (CMEK)  |  Agent Assist  |  Google Cloud Documentation

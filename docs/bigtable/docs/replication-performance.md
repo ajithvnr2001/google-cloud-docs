@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/replication-performance/
 title: Replication and performance \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:13.558221+00:00
+fetched_at: 2026-10-21T14:09:42.886669+00:00
 ---
 
 # Replication and performance  |  Bigtable  |  Google Cloud Documentation

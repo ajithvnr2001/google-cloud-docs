@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/pam-view-grants/
 title: View grants in Privileged Access Manager \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:10:11.628640+00:00
+fetched_at: 2026-10-21T12:53:12.485912+00:00
 ---
 
 # View grants in Privileged Access Manager  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

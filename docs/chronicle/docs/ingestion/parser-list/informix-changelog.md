@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/informix-changelog/
 title: Change log for INFORMIX \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:31:43.770694+00:00
+fetched_at: 2026-10-21T14:43:42.409576+00:00
 ---
 
 # Change log for INFORMIX  |  Google Security Operations  |  Google Cloud Documentation

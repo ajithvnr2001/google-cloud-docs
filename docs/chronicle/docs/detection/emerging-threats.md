@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/emerging-threats/
 title: Emerging Threats Center overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T17:16:17.783050+00:00
+fetched_at: 2026-10-21T12:37:49.406193+00:00
 ---
 
 # Emerging Threats Center overview  |  Google Security Operations  |  Google Cloud Documentation

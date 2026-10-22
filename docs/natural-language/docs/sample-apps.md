@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/docs/sample-apps/
 title: Sample Applications \u00a0|\u00a0 Cloud Natural Language API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:59:55.124324+00:00
+fetched_at: 2026-10-21T15:17:58.583130+00:00
 ---
 
 # Sample Applications  |  Cloud Natural Language API  |  Google Cloud Documentation

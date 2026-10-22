@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/deploy-vpc-with-terraform/
 title: Quickstart: Deploy a VPC with Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:45:42.315679+00:00
+fetched_at: 2026-10-21T12:53:59.239693+00:00
 ---
 
 # Quickstart: Deploy a VPC with Infrastructure Manager  |  Google Cloud Documentation

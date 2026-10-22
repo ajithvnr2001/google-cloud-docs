@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/install/forwarder-management-api/
 title: Forwarder Management API reference \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:07:43.173602+00:00
+fetched_at: 2026-10-21T14:11:04.529129+00:00
 ---
 
 # Forwarder Management API reference  |  Google Security Operations  |  Google Cloud Documentation

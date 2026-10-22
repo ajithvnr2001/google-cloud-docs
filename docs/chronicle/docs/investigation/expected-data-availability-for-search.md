@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/expected-data-availability-for-search/
 title: Understand data availability for search \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:19.659914+00:00
+fetched_at: 2026-10-21T14:11:08.875206+00:00
 ---
 
 # Understand data availability for search  |  Google Security Operations  |  Google Cloud Documentation

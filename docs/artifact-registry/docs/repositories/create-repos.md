@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/repositories/create-repos/
 title: Create standard repositories \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:18.312085+00:00
+fetched_at: 2026-10-21T14:25:41.056560+00:00
 ---
 
 # Create standard repositories  |  Artifact Registry  |  Google Cloud Documentation

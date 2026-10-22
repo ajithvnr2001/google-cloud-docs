@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/reference/connectivity/
 title: Impact of temporary disconnection from Google Cloud \u00a0|\u00a0 GKE On-Prem API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:44:21.166714+00:00
+fetched_at: 2026-10-21T15:00:46.430659+00:00
 ---
 
 # Impact of temporary disconnection from Google Cloud  |  GKE On-Prem API  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/configure-wildfire-security-profiles/
 title: Create and manage Advanced malware sandbox security profiles \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:40:27.741287+00:00
+fetched_at: 2026-10-21T12:46:08.246763+00:00
 ---
 
 # Create and manage Advanced malware sandbox security profiles  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

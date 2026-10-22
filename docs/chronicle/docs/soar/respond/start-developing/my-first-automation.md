@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/start-developing/my-first-automation/
 title: Create your first playbook \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:12:24.218077+00:00
+fetched_at: 2026-10-21T12:38:30.751013+00:00
 ---
 
 # Create your first playbook  |  Google Security Operations  |  Google Cloud Documentation

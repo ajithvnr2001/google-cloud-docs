@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/security/autopilot-cluster-policies-standard/
 title: Enforce Autopilot security policies in Standard clusters \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:12.140781+00:00
+fetched_at: 2026-10-21T15:18:09.287036+00:00
 ---
 
 # Enforce Autopilot security policies in Standard clusters  |  GKE security  |  Google Cloud Documentation

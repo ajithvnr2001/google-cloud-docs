@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/memory-management-best-practices/
 title: Memory management best practices \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:57.507829+00:00
+fetched_at: 2026-10-21T15:16:37.836844+00:00
 ---
 
 # Memory management best practices  |  Memorystore for Redis  |  Google Cloud Documentation

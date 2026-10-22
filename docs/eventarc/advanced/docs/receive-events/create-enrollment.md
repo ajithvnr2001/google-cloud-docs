@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/advanced/docs/receive-events/create-enrollment/
 title: Create an enrollment to receive events \u00a0|\u00a0 Eventarc Advanced \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:24:25.864704+00:00
+fetched_at: 2026-10-21T12:52:12.366087+00:00
 ---
 
 # Create an enrollment to receive events  |  Eventarc Advanced  |  Google Cloud Documentation

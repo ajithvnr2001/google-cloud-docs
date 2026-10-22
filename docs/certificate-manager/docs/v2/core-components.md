@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/v2/core-components/
 title: How Certificate Manager (2nd gen) works \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:39:08.702923+00:00
+fetched_at: 2026-10-21T14:26:00.166752+00:00
 ---
 
 # How Certificate Manager (2nd gen) works  |  Google Cloud Documentation

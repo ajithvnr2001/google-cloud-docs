@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/about-workload-policies/
 title: About workload policies in MIGs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:43:07.740501+00:00
+fetched_at: 2026-10-21T14:19:29.698748+00:00
 ---
 
 # About workload policies in MIGs  |  Compute Engine  |  Google Cloud Documentation

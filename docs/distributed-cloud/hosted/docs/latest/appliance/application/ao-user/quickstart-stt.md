@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/quickstart-stt/
 title: Transcribe audio \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:22:14.617646+00:00
+fetched_at: 2026-10-21T12:55:50.496973+00:00
 ---
 
 # Transcribe audio  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

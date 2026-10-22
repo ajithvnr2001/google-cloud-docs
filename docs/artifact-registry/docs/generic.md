@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/generic/
 title: Work with other artifact formats \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:21:40.054111+00:00
+fetched_at: 2026-10-21T14:27:48.605004+00:00
 ---
 
 # Work with other artifact formats  |  Artifact Registry  |  Google Cloud Documentation

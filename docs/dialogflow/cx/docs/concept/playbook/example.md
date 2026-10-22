@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/playbook/example/
 title: Playbook examples \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:35.700068+00:00
+fetched_at: 2026-10-21T12:43:40.218658+00:00
 ---
 
 # Playbook examples  |  Dialogflow CX  |  Google Cloud Documentation

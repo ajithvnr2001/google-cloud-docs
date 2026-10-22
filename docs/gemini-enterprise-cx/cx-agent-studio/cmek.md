@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/cmek/
 title: Customer-managed encryption keys (CMEK) \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:22:26.454811+00:00
+fetched_at: 2026-10-21T12:54:40.967463+00:00
 ---
 
 # Customer-managed encryption keys (CMEK)  |  CX Agent Studio  |  Google Cloud Documentation

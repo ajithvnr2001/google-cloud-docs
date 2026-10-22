@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-indexes-by-organization/
 title: SEARCH_INDEXES_BY_ORGANIZATION view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:14:34.775379+00:00
+fetched_at: 2026-10-21T12:36:10.761607+00:00
 ---
 
 # SEARCH_INDEXES_BY_ORGANIZATION view  |  BigQuery  |  Google Cloud Documentation

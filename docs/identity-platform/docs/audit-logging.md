@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/audit-logging/
 title: Identity Platform audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:13:09.693609+00:00
+fetched_at: 2026-10-21T12:53:53.754272+00:00
 ---
 
 # Identity Platform audit logging  |  Google Cloud Documentation

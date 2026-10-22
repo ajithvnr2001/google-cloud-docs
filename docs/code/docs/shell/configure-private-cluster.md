@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/configure-private-cluster/
 title: Configure a private cluster in Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:16:46.374660+00:00
+fetched_at: 2026-10-21T14:20:53.727974+00:00
 ---
 
 # Configure a private cluster in Cloud Code for Cloud Shell  |  Google Cloud Documentation

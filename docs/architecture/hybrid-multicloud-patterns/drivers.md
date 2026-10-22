@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/hybrid-multicloud-patterns/drivers/
 title: Drivers, considerations, strategy, and approaches \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:44.079279+00:00
+fetched_at: 2026-10-21T14:28:09.224446+00:00
 ---
 
 # Drivers, considerations, strategy, and approaches  |  Cloud Architecture Center  |  Google Cloud Documentation

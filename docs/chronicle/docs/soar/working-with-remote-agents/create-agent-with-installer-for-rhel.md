@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/working-with-remote-agents/create-agent-with-installer-for-rhel/
 title: Create an agent with the installer for RHEL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:10.854835+00:00
+fetched_at: 2026-10-21T12:38:34.244694+00:00
 ---
 
 # Create an agent with the installer for RHEL  |  Google Security Operations  |  Google Cloud Documentation

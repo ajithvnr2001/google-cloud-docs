@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/get-started-cloud-run/
 title: Getting started with API Gateway and Cloud Run \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:14:03.159436+00:00
+fetched_at: 2026-10-21T14:10:21.458405+00:00
 ---
 
 # Getting started with API Gateway and Cloud Run  |  Google Cloud Documentation

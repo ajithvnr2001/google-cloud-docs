@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/colab/docs/visualization-cells/
 title: Use visualization cells \u00a0|\u00a0 Colab Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:30:20.913799+00:00
+fetched_at: 2026-10-21T14:20:12.018670+00:00
 ---
 
 # Use visualization cells  |  Colab Enterprise  |  Google Cloud Documentation

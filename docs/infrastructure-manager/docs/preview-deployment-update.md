@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/preview-deployment-update/
 title: Preview an update to a deployment \u00a0|\u00a0 Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:45:43.779286+00:00
+fetched_at: 2026-10-21T12:54:34.712793+00:00
 ---
 
 # Preview an update to a deployment  |  Infrastructure Manager  |  Google Cloud Documentation

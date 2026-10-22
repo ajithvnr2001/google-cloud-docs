@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/build-push-docker-image/
 title: Quickstart: Build and push a Docker image with Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:56:03.638750+00:00
+fetched_at: 2026-10-21T12:38:39.126756+00:00
 ---
 
 # Quickstart: Build and push a Docker image with Cloud Build  |  Google Cloud Documentation

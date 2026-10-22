@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/ca-acf2/
 title: Collect CA ACF2 logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T17:37:28.465450+00:00
+fetched_at: 2026-10-21T12:27:30.668885+00:00
 ---
 
 # Collect CA ACF2 logs  |  Google Security Operations  |  Google Cloud Documentation

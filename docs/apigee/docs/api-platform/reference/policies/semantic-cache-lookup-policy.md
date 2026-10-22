@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy/
 title: SemanticCacheLookup policy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:55:42.310894+00:00
+fetched_at: 2026-10-21T12:29:47.126673+00:00
 ---
 
 # SemanticCacheLookup policy  |  Apigee  |  Google Cloud Documentation

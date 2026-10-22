@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/integrations-setup/working-with-an-external-vault-system/
 title: Manage secrets with secret managers \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:10.179308+00:00
+fetched_at: 2026-10-21T14:10:25.777385+00:00
 ---
 
 # Manage secrets with secret managers  |  Google Security Operations  |  Google Cloud Documentation

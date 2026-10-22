@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/workload-disruption-readiness/
 title: Ensure workloads are disruption-ready \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:55:18.404658+00:00
+fetched_at: 2026-10-21T15:01:05.515151+00:00
 ---
 
 # Ensure workloads are disruption-ready  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-ftp/access-control/roles-permissions/
 title: Cloud FTP roles and permissions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:17:51.416902+00:00
+fetched_at: 2026-10-21T14:19:00.712301+00:00
 ---
 
 # Cloud FTP roles and permissions  |  Google Cloud Documentation

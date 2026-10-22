@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/reserved-hostports/
 title: Reserved hostPorts \u00a0|\u00a0 GKE networking \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:30:38.983119+00:00
+fetched_at: 2026-10-21T15:00:57.245918+00:00
 ---
 
 # Reserved hostPorts  |  GKE networking  |  Google Cloud Documentation

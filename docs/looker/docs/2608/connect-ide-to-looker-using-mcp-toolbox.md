@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/2608/connect-ide-to-looker-using-mcp-toolbox/
 title: Use the MCP Toolbox for Databases \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:27:39.548968+00:00
+fetched_at: 2026-10-21T15:08:52.864815+00:00
 ---
 
 # Use the MCP Toolbox for Databases  |  Looker  |  Google Cloud Documentation

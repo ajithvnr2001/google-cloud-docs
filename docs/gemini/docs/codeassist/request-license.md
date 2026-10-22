@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/request-license/
 title: Request a Gemini Code Assist license \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:02:46.515549+00:00
+fetched_at: 2026-10-21T12:51:27.742297+00:00
 ---
 
 # Request a Gemini Code Assist license  |  Gemini for Google Cloud  |  Google Cloud Documentation

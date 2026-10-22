@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/ontology/create-entities-mapping--modeling/
 title: Map and model entities \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:09:04.445743+00:00
+fetched_at: 2026-10-21T14:21:41.262200+00:00
 ---
 
 # Map and model entities  |  Google Security Operations  |  Google Cloud Documentation

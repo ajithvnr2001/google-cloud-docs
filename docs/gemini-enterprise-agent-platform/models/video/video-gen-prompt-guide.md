@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/video/video-gen-prompt-guide/
 title: Video generation prompt guide \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:15.107247+00:00
+fetched_at: 2026-10-21T15:45:13.332151+00:00
 ---
 
 # Video generation prompt guide  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -437,8 +437,6 @@ The following are examples of temporal elements that you can use:
 
 Audio prompts help guide the visuals of the video in relation to sound. Audio direction can powerfully shape the action, pacing, and mood of the video.
 
-Audio is supported by `veo-3.0-generate-001` in [Preview](https://cloud.google.com/products#product-launch-stages).
-
 Clearly specify if you want audio. We recommend that you use separate sentences in your prompt to describe the audio. The following are examples of common audio elements you can use:
 
   * **Sound effects** : individual, distinct sounds that occur within the scene. For example, "the sound of a phone ringing", "water splashing in the background", "soft house sounds, the creak of a closet door, and a ticking clock."
@@ -512,6 +510,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

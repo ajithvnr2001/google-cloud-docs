@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-storage/
-title: Manage Agent Sandbox storage \u00a0|\u00a0 GKE AI/ML \u00a0|\u00a0 Google Cloud Documentation
+title: Manage Agent Sandbox on GKE storage \u00a0|\u00a0 GKE AI/ML \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:26:15.719394+00:00
+fetched_at: 2026-10-21T14:37:28.841207+00:00
 ---
 
-# Manage Agent Sandbox storage  |  GKE AI/ML  |  Google Cloud Documentation
+# Manage Agent Sandbox on GKE storage  |  GKE AI/ML  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-storage/
 
@@ -20,11 +20,11 @@ fetched_at: 2026-10-14T05:26:15.719394+00:00
 
 Send feedback 
 
-#  Manage Agent Sandbox storage Stay organized with collections  Save and categorize content based on your preferences. 
+#  Manage Agent Sandbox on GKE storage Stay organized with collections  Save and categorize content based on your preferences. 
 
 [ Autopilot ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview) [ Standard ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode)
 
-This document provides reference implementations for managing storage for Agent Sandboxes tailored to your agents' data lifecycle needs.
+This document provides reference implementations for managing storage for Agent Sandbox on GKE tailored to your agents' data lifecycle needs.
 
 Depending on your agents' data lifecycle needs, choose one of the following configurations:
 
@@ -36,11 +36,11 @@ Depending on your agents' data lifecycle needs, choose one of the following conf
 
 For more information about choosing a storage solution, see [Choose storage for AI agentic workloads](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox-storage).
 
-The following document uses the `dynamic-rwo` StorageClass for [automated disk type selection](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/hyperdisk#automated_disk_type_selection) to provision disks compatible with machine types of nodes where Agent Sandbox Pods are scheduled. To help ensure that GKE provisions Hyperdisk Balanced volumes for your agents' storage, you must schedule your Agent Sandboxes on the nodes of [compatible machine families](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced#machine-series), such as N4; otherwise, GKE falls back to `pd-balanced`.
+The following document uses the `dynamic-rwo` StorageClass for [automated disk type selection](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/hyperdisk#automated_disk_type_selection) to provision disks compatible with machine types of nodes where Agent Sandbox on GKE Pods are scheduled. To help ensure that GKE provisions Hyperdisk Balanced volumes for your agents' storage, you must schedule your Agent Sandbox on GKE Pods on the nodes of [compatible machine families](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced#machine-series), such as N4; otherwise, GKE falls back to `pd-balanced`.
 
 This document implements the _Private Isolated Workspace_ data access mode by using `ReadWriteOnce` (RWO) access. In this mode, an agent starts up with a private isolated storage directory it has sole read and write access to.
 
-Unless otherwise specified, the reference implementations in this document use [direct sandbox creation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/how-install-agent-sandbox#alternative_create_a_sandbox_directly), which is applicable to agents that tolerate multi-second startup latency. To achieve sub-second startup latency for stateful or point-in-time restore workspaces, you must use [GKE Agent Sandbox Warm Pools](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox#warm-pools). Binding storage to a claimed Warm Pool Pod requires custom scripting and a privileged DaemonSet. For a reference implementation, see this [GitHub example](https://github.com/kubernetes-sigs/agent-sandbox/tree/main/examples/latebind-storage-gke-sandbox).
+Unless otherwise specified, the reference implementations in this document use [direct sandbox creation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/how-install-agent-sandbox#alternative_create_a_sandbox_directly), which is applicable to agents that tolerate multi-second startup latency. To achieve sub-second startup latency for stateful or point-in-time restore workspaces, you must use [Agent Sandbox on GKE Warm Pools](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox#warm-pools). Binding storage to a claimed Warm Pool Pod requires custom scripting and a privileged DaemonSet. For a reference implementation, see this [GitHub example](https://github.com/kubernetes-sigs/agent-sandbox/tree/main/examples/latebind-storage-gke-sandbox).
 
 ## Alternative access modes
 
@@ -53,7 +53,7 @@ To support alternative access modes, you can modify the volume and snapshot defi
 
 ## Before you begin
 
-[Enable Agent Sandbox in your cluster](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/how-install-agent-sandbox#before_you_begin).
+[Enable Agent Sandbox on GKE in your cluster](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/how-install-agent-sandbox#before_you_begin).
 
 ## Configure a stateful workspace
 
@@ -479,7 +479,7 @@ Use the ephemeral workspace pattern when an agent needs a storage volume for sto
 
 ### Configure with sub-second startup
 
-Use Agent Sandbox Warm Pools to pre-provision empty volumes in the background.
+Use Agent Sandbox on GKE Warm Pools to pre-provision empty volumes in the background.
 
 #### Define the SandboxTemplate
 
@@ -701,9 +701,9 @@ Delete the Sandbox resource to automatically terminate the Pod and destroy its e
 
 ## What's next
 
-  * [Learn more about GKE Agent Sandbox](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox).
-  * [Learn more about isolating AI code execution with Agent Sandbox](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox).
-  * Learn how to [Save and restore Agent Sandbox environments with Pod snapshots](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-pod-snapshots).
+  * [Learn more about Agent Sandbox on GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox).
+  * [Learn more about isolating AI code execution with Agent Sandbox on GKE](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox).
+  * Learn how to [Save and restore Agent Sandbox on GKE environments with Pod snapshots](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-pod-snapshots).
 
 
 
@@ -711,6 +711,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

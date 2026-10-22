@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/reference/dispatch-yaml/
 title: dispatch.yaml Configuration File \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:53:32.122580+00:00
+fetched_at: 2026-10-21T14:26:00.896240+00:00
 ---
 
 # dispatch.yaml Configuration File  |  App Engine standard environment  |  Google Cloud Documentation

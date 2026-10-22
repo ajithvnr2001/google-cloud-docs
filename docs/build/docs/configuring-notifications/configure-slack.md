@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/configuring-notifications/configure-slack/
 title: Configure Slack notifications \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:08.493977+00:00
+fetched_at: 2026-10-21T14:11:03.780943+00:00
 ---
 
 # Configure Slack notifications  |  Cloud Build  |  Google Cloud Documentation

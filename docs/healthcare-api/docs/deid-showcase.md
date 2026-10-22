@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/deid-showcase/
 title: Try FHIR and DICOM de-identification \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:10:16.454394+00:00
+fetched_at: 2026-10-21T14:30:43.355088+00:00
 ---
 
 # Try FHIR and DICOM de-identification  |  Cloud Healthcare API  |  Google Cloud Documentation

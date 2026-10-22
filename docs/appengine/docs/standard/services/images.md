@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/images/
 title: Images API for legacy bundled services \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:49.282694+00:00
+fetched_at: 2026-10-21T14:20:45.738331+00:00
 ---
 
 # Images API for legacy bundled services  |  App Engine standard environment  |  Google Cloud Documentation

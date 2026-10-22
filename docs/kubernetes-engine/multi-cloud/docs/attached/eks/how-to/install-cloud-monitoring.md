@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/eks/how-to/install-cloud-monitoring/
 title: Install Cloud Monitoring on EKS attached clusters \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:44:20.804755+00:00
+fetched_at: 2026-10-21T15:02:03.494525+00:00
 ---
 
 # Install Cloud Monitoring on EKS attached clusters  |  GKE attached clusters  |  Google Cloud Documentation

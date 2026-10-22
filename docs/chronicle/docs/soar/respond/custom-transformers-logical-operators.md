@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/custom-transformers-logical-operators/
 title: Develop custom transformers \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:08.013072+00:00
+fetched_at: 2026-10-21T14:10:29.629659+00:00
 ---
 
 # Develop custom transformers  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/cross-corpus-retrieval/
 title: RAG Engine Cross Corpus Retrieval \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T23:38:34.915243+00:00
+fetched_at: 2026-10-21T15:41:09.983058+00:00
 ---
 
 # RAG Engine Cross Corpus Retrieval  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -75,7 +75,7 @@ This code sample demonstrates how to retrieve contexts from multiple RAG corpora
     
     
     from vertexai.preview import rag
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
     
     PROJECT_ID = "PROJECT_ID"
     LOCATION = "LOCATION"
@@ -83,7 +83,7 @@ This code sample demonstrates how to retrieve contexts from multiple RAG corpora
     RAG_CORPUS_2_ID = "RAG_CORPUS_2_ID"
     
     # Initialize API once per session
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=PROJECT_ID, location=LOCATION)
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=PROJECT_ID, location=LOCATION)
     
     # Async retrieve contexts from multiple corpora
     # This can be run in an environment like a Colab notebook.
@@ -183,7 +183,7 @@ This code sample demonstrates how to directly generate an answer by searching ac
     
     
     from vertexai.preview import rag
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
     
     PROJECT_ID = "PROJECT_ID"
     LOCATION = "LOCATION"
@@ -191,7 +191,7 @@ This code sample demonstrates how to directly generate an answer by searching ac
     RAG_CORPUS_2_ID = "RAG_CORPUS_2_ID"
     
     # Initialize API once per session
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=PROJECT_ID, location=LOCATION)
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=PROJECT_ID, location=LOCATION)
     
     # Ask contexts from multiple corpora
     response = rag.ask_contexts(
@@ -253,6 +253,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

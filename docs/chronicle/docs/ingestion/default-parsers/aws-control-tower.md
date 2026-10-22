@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aws-control-tower/
 title: Collect AWS Control Tower logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:41:53.193852+00:00
+fetched_at: 2026-10-21T14:23:16.060483+00:00
 ---
 
 # Collect AWS Control Tower logs  |  Google Security Operations  |  Google Cloud Documentation

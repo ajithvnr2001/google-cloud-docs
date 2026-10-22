@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/physical-to-logical-space/
 title: How Google protects the physical-to-logical space in a data center \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:22:37.188035+00:00
+fetched_at: 2026-10-21T14:07:28.443284+00:00
 ---
 
 # How Google protects the physical-to-logical space in a data center  |  Security  |  Google Cloud Documentation

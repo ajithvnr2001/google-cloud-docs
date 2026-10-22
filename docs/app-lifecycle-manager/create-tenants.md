@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/create-tenants/
 title: Set up tenant projects and resources \u00a0|\u00a0 App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:18.851064+00:00
+fetched_at: 2026-10-21T12:30:30.975143+00:00
 ---
 
 # Set up tenant projects and resources  |  App Lifecycle Manager  |  Google Cloud Documentation

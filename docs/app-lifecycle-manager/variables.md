@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/variables/
 title: Variables and variable mapping with App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:17.859411+00:00
+fetched_at: 2026-10-21T12:30:01.026898+00:00
 ---
 
 # Variables and variable mapping with App Lifecycle Manager  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/specify-vm-os-image/
 title: Specify the VM OS image for a job \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:29:21.570674+00:00
+fetched_at: 2026-10-21T12:35:29.980526+00:00
 ---
 
 # Specify the VM OS image for a job  |  Batch  |  Google Cloud Documentation

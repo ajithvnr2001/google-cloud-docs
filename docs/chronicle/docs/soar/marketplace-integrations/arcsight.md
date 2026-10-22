@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/arcsight/
 title: Integrate ArcSight with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:15:34.796544+00:00
+fetched_at: 2026-10-21T14:20:22.158565+00:00
 ---
 
 # Integrate ArcSight with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/docs/resources/cuds-billing-ui-improvements/
 title: Billing user interface improvements \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:50:32.707486+00:00
+fetched_at: 2026-10-21T14:10:07.037173+00:00
 ---
 
 # Billing user interface improvements  |  Google Cloud Documentation

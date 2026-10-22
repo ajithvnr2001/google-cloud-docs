@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/data-source-access-control/
 title: Set up data source access control \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:04.862216+00:00
+fetched_at: 2026-10-21T12:55:06.936904+00:00
 ---
 
 # Set up data source access control  |  Agent Search  |  Google Cloud Documentation

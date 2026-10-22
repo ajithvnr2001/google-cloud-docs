@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/rate-limiting-overview/
 title: Rate limiting overview \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:12.490207+00:00
+fetched_at: 2026-10-21T14:58:26.000531+00:00
 ---
 
 # Rate limiting overview  |  Google Cloud Armor  |  Google Cloud Documentation
@@ -44,6 +44,17 @@ When you configure a rule with a rate-based ban action, you can't change it to a
 Cloud Armor applies the rate limiting threshold to each associated backend. For example, if you have two backend services and you configure a rate limiting rule with a threshold of 1,000 requests per minute, then each backend service can receive 1,000 requests per minute before Cloud Armor applies the rule action.
 
 You can preview the effects of rate limiting rules in a security policy by using preview mode and examining your request logs.
+
+## Cloud Armor rate limiting and service rate limiting
+
+Cloud Armor rate limiting and service rate limiting are distinct rate limiting strategies:
+
+  * **Cloud Armor rate limiting** : it is enforced on load balancers at the network edge. Use Cloud Armor rate limiting to prevent distributed denial-of-service (DDoS) attacks from untrusted clients.
+  * **Service rate limiting** : it is enforced on an internal Application Load Balancer and a Secure Web Proxy. Use service rate limiting to manage trusted but potentially misbehaving clients and to maximize service availability for your most important traffic.
+
+
+
+For more information, see [Service rate limiting overview](https://docs.cloud.google.com/load-balancing/docs/srl-policy/service-rate-limiting-overview).
 
 ## Identifying clients for rate limiting
 
@@ -184,6 +195,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

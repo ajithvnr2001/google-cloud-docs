@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/platform/pa-user/calculate-metrics-from-logs/
 title: Create metrics from logs \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:47.424824+00:00
+fetched_at: 2026-10-21T12:57:54.446158+00:00
 ---
 
 # Create metrics from logs  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

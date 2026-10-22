@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-deploy/
 title: Deploy your Bare Metal Solution environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:53:37.481286+00:00
+fetched_at: 2026-10-21T14:26:39.627072+00:00
 ---
 
 # Deploy your Bare Metal Solution environment  |  Google Cloud Documentation

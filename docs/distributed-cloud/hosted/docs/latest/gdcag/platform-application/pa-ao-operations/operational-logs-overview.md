@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/operational-logs-overview/
 title: Operational logs overview \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:34:26.918976+00:00
+fetched_at: 2026-10-21T12:59:07.512725+00:00
 ---
 
 # Operational logs overview  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

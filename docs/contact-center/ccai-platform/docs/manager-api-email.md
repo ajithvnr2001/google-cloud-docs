@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/manager-api-email/
 title: Email endpoints \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:58:59.677176+00:00
+fetched_at: 2026-10-21T14:09:32.945763+00:00
 ---
 
 # Email endpoints  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

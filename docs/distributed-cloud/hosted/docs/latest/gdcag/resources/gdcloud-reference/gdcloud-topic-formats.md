@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-topic-formats/
 title: gdcloud topic formats \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T11:11:26.285758+00:00
+fetched_at: 2026-10-21T13:00:18.155398+00:00
 ---
 
 # gdcloud topic formats  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

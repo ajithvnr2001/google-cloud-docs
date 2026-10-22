@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/colab/docs/use-data-science-agent/
 title: Use the Data Science Agent \u00a0|\u00a0 Colab Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:30:20.861553+00:00
+fetched_at: 2026-10-21T14:19:25.287132+00:00
 ---
 
 # Use the Data Science Agent  |  Colab Enterprise  |  Google Cloud Documentation

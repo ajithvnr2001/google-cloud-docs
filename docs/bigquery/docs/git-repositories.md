@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/git-repositories/
 title: Manage code with BigQuery Studio Git repositories \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:35:24.807484+00:00
+fetched_at: 2026-10-22T05:49:17.185779+00:00
 ---
 
 # Manage code with BigQuery Studio Git repositories  |  Google Cloud Documentation
@@ -27,11 +27,9 @@ This product or feature is subject to the "Pre-GA Offerings Terms" in the Genera
 
 **Note:** To provide feedback or ask questions that are related to this Preview feature, contact [bigquery-repositories-feedback@google.com](mailto:bigquery-repositories-feedback@google.com).
 
-You can manage SQL scripts and notebooks using BigQuery Studio Git repositories. This feature integrates version control directly into the BigQuery Studio file browser, allowing you to clone repositories, manage branches, and perform Git operations without leaving Google Cloud console.
+BigQuery Studio Git repositories let you version control SQL scripts, notebooks, and other code assets directly in the BigQuery Studio file browser. You can clone remote Git repositories, manage branches, and perform Git operations without leaving the Google Cloud console.
 
-BigQuery Studio Git repositories offer a more streamlined, folder-based experience when compared to classic [repositories](https://docs.cloud.google.com/bigquery/docs/repositories). BigQuery Studio Git repositories appear directly within the left pane under your user root folder.
-
-By using BigQuery Studio Git repositories, you can interact with your code assets just like standard files and directories while maintaining a connection to a remote Git repository.
+Compared to classic [repositories](https://docs.cloud.google.com/bigquery/docs/repositories), this integration provides a streamlined, folder-based experience under your user root folder in the left pane. You can interact with your code assets like standard files and directories while maintaining a connection to a remote Git repository.
 
 ## Limitations
 
@@ -317,6 +315,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

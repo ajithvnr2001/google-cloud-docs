@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/asset-inventory/docs/legacy-fields/
 title: Legacy fields \u00a0|\u00a0 Cloud Asset Inventory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:30:01.599377+00:00
+fetched_at: 2026-10-21T14:41:37.111513+00:00
 ---
 
 # Legacy fields  |  Cloud Asset Inventory  |  Google Cloud Documentation

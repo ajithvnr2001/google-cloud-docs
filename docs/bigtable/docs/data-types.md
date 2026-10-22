@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/data-types/
 title: Data type enforcement in Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:18.339104+00:00
+fetched_at: 2026-10-21T12:37:22.088281+00:00
 ---
 
 # Data type enforcement in Bigtable  |  Google Cloud Documentation

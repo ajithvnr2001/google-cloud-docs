@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/netskope/
 title: Netskope \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:08:25.679955+00:00
+fetched_at: 2026-10-21T15:18:31.324960+00:00
 ---
 
 # Netskope  |  Google Security Operations  |  Google Cloud Documentation

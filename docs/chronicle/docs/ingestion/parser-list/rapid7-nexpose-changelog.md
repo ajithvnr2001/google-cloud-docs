@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/rapid7-nexpose-changelog/
 title: Change log for RAPID7_NEXPOSE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:53:12.326096+00:00
+fetched_at: 2026-10-21T14:43:29.302925+00:00
 ---
 
 # Change log for RAPID7_NEXPOSE  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/copying-data/
 title: Copy data to or from instances \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:22:13.666744+00:00
+fetched_at: 2026-10-21T12:52:14.851272+00:00
 ---
 
 # Copy data to or from instances  |  Filestore  |  Google Cloud Documentation

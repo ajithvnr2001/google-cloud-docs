@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/universalledger/
 title: Universal Ledger roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:03:24.806972+00:00
+fetched_at: 2026-10-21T14:30:09.546572+00:00
 ---
 
 # Universal Ledger roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

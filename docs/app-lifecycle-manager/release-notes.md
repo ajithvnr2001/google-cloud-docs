@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/release-notes/
 title: App Lifecycle Manager release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:20:58.561172+00:00
+fetched_at: 2026-10-21T14:43:09.027481+00:00
 ---
 
 # App Lifecycle Manager release notes  |  Google Cloud Documentation

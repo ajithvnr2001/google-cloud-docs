@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/reservations-details-legacy/
 title: Legacy capacity commitment plans \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:30:45.017306+00:00
+fetched_at: 2026-10-21T12:35:30.189691+00:00
 ---
 
 # Legacy capacity commitment plans  |  BigQuery  |  Google Cloud Documentation

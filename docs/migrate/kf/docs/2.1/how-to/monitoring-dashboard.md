@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.1/how-to/monitoring-dashboard/
 title: Monitoring and Dashboards \u00a0|\u00a0 Kf 2.1 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:43.701430+00:00
+fetched_at: 2026-10-21T15:11:14.603568+00:00
 ---
 
 # Monitoring and Dashboards  |  Kf 2.1  |  Google Cloud Documentation

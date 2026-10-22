@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/bmc-ami-defender-changelog/
 title: Change log for BMC_AMI_DEFENDER \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:55:37.881393+00:00
+fetched_at: 2026-10-21T14:51:53.009913+00:00
 ---
 
 # Change log for BMC_AMI_DEFENDER  |  Google Security Operations  |  Google Cloud Documentation

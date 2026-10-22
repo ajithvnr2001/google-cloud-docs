@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/blockchain-analytics/docs/example-arbitrum/
 title: Arbitrum example queries \u00a0|\u00a0 Blockchain Analytics \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:13:18.248648+00:00
+fetched_at: 2026-10-21T14:09:15.631008+00:00
 ---
 
 # Arbitrum example queries  |  Blockchain Analytics  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/keeper-changelog/
 title: Change log for KEEPER \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:26:08.427052+00:00
+fetched_at: 2026-10-21T14:43:18.461284+00:00
 ---
 
 # Change log for KEEPER  |  Google Security Operations  |  Google Cloud Documentation

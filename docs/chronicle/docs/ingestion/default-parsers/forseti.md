@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/forseti/
 title: Collect Forseti Open Source logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:55:34.222797+00:00
+fetched_at: 2026-10-21T14:10:06.828757+00:00
 ---
 
 # Collect Forseti Open Source logs  |  Google Security Operations  |  Google Cloud Documentation

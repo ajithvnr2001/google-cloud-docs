@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/geospatial-visualize/
 title: Visualize geospatial data \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:12:21.289423+00:00
+fetched_at: 2026-10-21T14:21:30.657090+00:00
 ---
 
 # Visualize geospatial data  |  BigQuery  |  Google Cloud Documentation

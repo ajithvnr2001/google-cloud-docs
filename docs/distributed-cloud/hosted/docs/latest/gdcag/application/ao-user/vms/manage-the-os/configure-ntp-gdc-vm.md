@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/manage-the-os/configure-ntp-gdc-vm/
 title: Configure NTP on a GDC VM \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:20:31.813233+00:00
+fetched_at: 2026-10-21T14:08:20.976257+00:00
 ---
 
 # Configure NTP on a GDC VM  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

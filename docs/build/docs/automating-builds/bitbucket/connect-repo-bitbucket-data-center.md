@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/bitbucket/connect-repo-bitbucket-data-center/
 title: Connect to a Bitbucket Data Center repository \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:06.901785+00:00
+fetched_at: 2026-10-21T14:11:59.406629+00:00
 ---
 
 # Connect to a Bitbucket Data Center repository  |  Cloud Build  |  Google Cloud Documentation

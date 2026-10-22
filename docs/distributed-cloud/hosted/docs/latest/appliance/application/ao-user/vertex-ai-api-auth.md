@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/vertex-ai-api-auth/
 title: Authenticate API requests \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:22:13.418531+00:00
+fetched_at: 2026-10-21T12:55:49.536794+00:00
 ---
 
 # Authenticate API requests  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

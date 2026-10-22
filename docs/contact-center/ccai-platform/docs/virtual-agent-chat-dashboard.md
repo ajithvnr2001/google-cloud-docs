@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/virtual-agent-chat-dashboard/
 title: Virtual agent chat dashboard \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:43.699364+00:00
+fetched_at: 2026-10-21T14:22:16.001406+00:00
 ---
 
 # Virtual agent chat dashboard  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

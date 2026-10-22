@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/aws-cloudwatch-changelog/
 title: Change log for AWS_CLOUDWATCH \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:57:27.544516+00:00
+fetched_at: 2026-10-21T14:45:44.982398+00:00
 ---
 
 # Change log for AWS_CLOUDWATCH  |  Google Security Operations  |  Google Cloud Documentation

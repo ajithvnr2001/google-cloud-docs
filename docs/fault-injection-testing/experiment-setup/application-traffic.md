@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/fault-injection-testing/experiment-setup/application-traffic/
 title: Set up an experiment for Degrade Application Traffic \u00a0|\u00a0 Fault Injection Testing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:37:17.810440+00:00
+fetched_at: 2026-10-21T12:52:42.072858+00:00
 ---
 
 # Set up an experiment for Degrade Application Traffic  |  Fault Injection Testing  |  Google Cloud Documentation

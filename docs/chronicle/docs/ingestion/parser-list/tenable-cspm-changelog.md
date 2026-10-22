@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/tenable-cspm-changelog/
 title: Change log for TENABLE_CSPM \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:34:12.361281+00:00
+fetched_at: 2026-10-21T14:43:34.454732+00:00
 ---
 
 # Change log for TENABLE_CSPM  |  Google Security Operations  |  Google Cloud Documentation

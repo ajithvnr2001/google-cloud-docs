@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/event-processing/configure-custom-parsers/
 title: Configure custom parsers \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:38:51.392925+00:00
+fetched_at: 2026-10-21T14:25:19.902422+00:00
 ---
 
 # Configure custom parsers  |  Google Security Operations  |  Google Cloud Documentation

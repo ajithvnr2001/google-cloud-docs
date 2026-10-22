@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/access-control/
 title: Access control with IAM \u00a0|\u00a0 Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:45:45.891887+00:00
+fetched_at: 2026-10-21T12:54:06.742745+00:00
 ---
 
 # Access control with IAM  |  Infrastructure Manager  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/third-parties/create-trigger-thirdparty/
 title: Create a trigger for third-party events \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:56.037426+00:00
+fetched_at: 2026-10-21T14:35:32.933737+00:00
 ---
 
 # Create a trigger for third-party events  |  Eventarc Standard  |  Google Cloud Documentation

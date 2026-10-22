@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-firewall-list/
 title: List firewall rules in a project \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:24.956692+00:00
+fetched_at: 2026-10-21T14:19:14.238873+00:00
 ---
 
 # List firewall rules in a project  |  Compute Engine  |  Google Cloud Documentation

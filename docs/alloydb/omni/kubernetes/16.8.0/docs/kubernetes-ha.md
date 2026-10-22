@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/16.8.0/docs/kubernetes-ha/
 title: Manage high availability in Kubernetes \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 16.8.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:23:45.884147+00:00
+fetched_at: 2026-10-21T15:19:35.169894+00:00
 ---
 
 # Manage high availability in Kubernetes  |  AlloyDB Omni for Kubernetes: 16.8.0  |  Google Cloud Documentation

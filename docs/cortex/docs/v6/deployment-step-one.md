@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/deployment-step-one/
 title: Step 1: Establish workloads \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:12:20.182028+00:00
+fetched_at: 2026-10-21T14:10:07.586902+00:00
 ---
 
 # Step 1: Establish workloads  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

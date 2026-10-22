@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-director/docs/slurm-settings/
 title: Supported Slurm settings in Cluster Director \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:10:59.288812+00:00
+fetched_at: 2026-10-21T14:41:58.630645+00:00
 ---
 
 # Supported Slurm settings in Cluster Director  |  Google Cloud Documentation

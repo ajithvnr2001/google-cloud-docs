@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/workspace-users-changelog/
 title: Change log for WORKSPACE_USERS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:59:18.573171+00:00
+fetched_at: 2026-10-21T14:47:04.910432+00:00
 ---
 
 # Change log for WORKSPACE_USERS  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/advanced/docs/publish-events/publish-events-direct-format/
 title: Publish events directly \u00a0|\u00a0 Eventarc Advanced \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:39:37.980128+00:00
+fetched_at: 2026-10-21T12:52:21.059124+00:00
 ---
 
 # Publish events directly  |  Eventarc Advanced  |  Google Cloud Documentation

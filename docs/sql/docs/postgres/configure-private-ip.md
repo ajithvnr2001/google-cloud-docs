@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/sql/docs/postgres/configure-private-ip/
-title: Configure private IP \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
+title: Configure private services access \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T14:49:59.537227+00:00
+fetched_at: 2026-10-21T15:33:28.988475+00:00
 ---
 
-# Configure private IP  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
+# Configure private services access  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/sql/docs/postgres/configure-private-ip/
 
@@ -20,83 +20,34 @@ fetched_at: 2026-10-13T14:49:59.537227+00:00
 
 Send feedback 
 
-#  Configure private IP Stay organized with collections  Save and categorize content based on your preferences. 
+#  Configure private services access Stay organized with collections  Save and categorize content based on your preferences. 
 
-[MySQL](https://docs.cloud.google.com/sql/docs/mysql/configure-private-ip "View this page for the MySQL database engine") | PostgreSQL | [SQL Server](https://docs.cloud.google.com/sql/docs/sqlserver/configure-private-ip "View this page for the SQL Server database engine")
+[MySQL](https://docs.cloud.google.com/sql/docs/mysql/configure-private-services-access "View this page for the MySQL database engine") | PostgreSQL | [SQL Server](https://docs.cloud.google.com/sql/docs/sqlserver/configure-private-services-access "View this page for the SQL Server database engine")
 
-This page describes how to configure a Cloud SQL instance to use private IP.
-
-For information about how private IP works, as well as environment and management requirements, see [Private IP](https://docs.cloud.google.com/sql/docs/postgres/private-ip).
+This document describes how to set up private IP connections to your Cloud SQL instance by using [private services access](https://docs.cloud.google.com/sql/docs/postgres/about-private-services-access).
 
 ## Before you begin
 
-  1. Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. 
-  2. In the Google Cloud console, on the project selector page, select or create a Google Cloud project.
+Cloud SQL requires **private services access** for each VPC network that's used for private IP connections.
 
-**Roles required to select or create a project**
+### Enable required APIs
 
-     * **Select a project** : Selecting a project doesn't require a specific IAM role—you can select any project that you've been granted a role on. 
-     * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
-**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.
+Enable the Service Networking API (`servicenetworking.googleapis.com`) and the Compute Engine API (`compute.googleapis.com`) in the project that hosts your Cloud SQL instance.
 
-[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)
+If you're using a [Shared VPC network](https://docs.cloud.google.com/vpc/docs/shared-vpc), then you must also enable these APIs in the Shared VPC host project.
 
-  3. If you're using an existing project for this guide, verify that you have the permissions required to complete this guide. If you created a new project, then you already have the required permissions. 
+You can enable the APIs using the following command:
+    
+    
+    gcloud services enable servicenetworking.googleapis.com compute.googleapis.com --project=PROJECT_ID
 
-  4. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). 
+Replace `PROJECT_ID` with your project ID (or the Shared VPC host project ID).
 
-  5. Enable the Service Networking API, if it is not already enabled. 
-
-**Roles required to enable APIs**
-
-To enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
-
-[Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=servicenetworking.googleapis.com)
-
-  6. [Install](https://docs.cloud.google.com/sdk/docs/install) the [gcloud CLI](https://docs.cloud.google.com/sdk/gcloud). 
-
-  7. If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). 
-
-  8. To [initialize](https://docs.cloud.google.com/sdk/docs/initializing) the gcloud CLI, run the following command: 
-         
-         gcloud init
-
-  9. In the Google Cloud console, on the project selector page, select or create a Google Cloud project.
-
-**Roles required to select or create a project**
-
-     * **Select a project** : Selecting a project doesn't require a specific IAM role—you can select any project that you've been granted a role on. 
-     * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
-**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.
-
-[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)
-
-  10. If you're using an existing project for this guide, verify that you have the permissions required to complete this guide. If you created a new project, then you already have the required permissions. 
-
-  11. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). 
-
-  12. Enable the Service Networking API, if it is not already enabled. 
-
-**Roles required to enable APIs**
-
-To enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
-
-[Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=servicenetworking.googleapis.com)
-
-  13. [Install](https://docs.cloud.google.com/sdk/docs/install) the [gcloud CLI](https://docs.cloud.google.com/sdk/gcloud). 
-
-  14. If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). 
-
-  15. To [initialize](https://docs.cloud.google.com/sdk/docs/initializing) the gcloud CLI, run the following command: 
-         
-         gcloud init
-
-
-
+If the Service Networking API isn't enabled, then when you create the Cloud SQL instance with a private IP address, the operation fails with a `SERVICE_NETWORKING_NOT_ENABLED` error.
 
 ### Required roles and permissions
 
-To get the permissions that you need to create and manage a private services access connection, ask your administrator to grant you the [Compute Network Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/compute#compute.networkAdmin) (`roles/compute.networkAdmin`) IAM role on on the project where you plan to host your Cloud SQL instance. For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+To get the permissions that you need to create and manage a private services access connection, ask your administrator to grant you the [Compute Network Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/compute#compute.networkAdmin) (`roles/compute.networkAdmin`) IAM role on on the project that hosts your Cloud SQL instance. For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
 
 This predefined role contains the permissions required to create and manage a private services access connection. To see the exact permissions that are required, expand the **Required permissions** section: 
 
@@ -118,28 +69,232 @@ The following permissions are required to create and manage a private services a
 
 You might also be able to get these permissions with [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
 
-**Important:** If you're using a [Shared VPC network](https://docs.cloud.google.com/vpc/docs/shared-vpc), then you need to enable the same APIs, add the same user, and provide the same permissions to the user in the host project.
+If you're using a [Shared VPC network](https://docs.cloud.google.com/vpc/docs/shared-vpc), you must also grant the Compute Network Admin (`roles/compute.networkAdmin`) role to the user in the Shared VPC host project.
 
-### Private services access
+## Configure private services access for Cloud SQL
 
-When you [create a new Virtual Private Cloud (VPC) network](https://docs.cloud.google.com/vpc/docs/create-modify-vpc-networks) in your project, you need to [configure private services access](https://docs.cloud.google.com/sql/docs/postgres/configure-private-services-access#configure-access) to allocate an IP address range and create a private services access connection. This allows resources in the VPC network to connect to Cloud SQL instances. The Google Cloud console provides a wizard to help you set up this configuration.
+**Important:** When you create a private connection between your VPC network and the Cloud SQL service, it becomes available for use by any Google service that supports private services access. If you later delete the private connection, you remove private connectivity to your Cloud SQL instances and _any other service that is using that connection_. Removing the private connection does not delete or deprovision any resources.
 
-Assigning different VPC networks to Cloud SQL for PostgreSQL instances with private IP addresses provides better isolation than attaching all of them to the `default` VPC network. 
+There are two parts to the private services access configuration process:
 
-## Configure an instance to use private IP
+  * Select an existing, or allocate a new IP address range.
 
-You can configure a Cloud SQL instance to use private IP when you create the instance, or for an existing instance.
+If you create your Cloud SQL instance in the Google Cloud console, then you also have the option of letting Google allocate an IP address range for you. In this case, Google will allocate an IP range of prefix-length `/24` automatically and use the name **default-ip-range**.
 
-After you configure an instance to use private IP, you cannot disable private IP connectivity for that instance.   
+If you plan to create Cloud SQL instances in multiple regions or for different database types, then you must have a minimum `/24` range of IP addresses available for each region or database type. This includes other applications such as [Filestore](https://docs.cloud.google.com/filestore/docs) or [Memorystore](https://docs.cloud.google.com/memorystore/docs). For a new region or database type, Cloud SQL must have a free `/24` range.
+
+  * Create the private services connection from your VPC network to the underlying service producer network.
 
 
-If you choose to let Cloud SQL allocate your private IP for an instance, the addresses for all instances you later configure in that VPC network are automatically allocated in the same IP address range.
 
-For each project, there's an internal limit for the number of different network-region combinations in which Cloud SQL instances can be setup with Private Services Access. To avoid reaching this limit, we recommend reusing existing available networks. 
+For information about the network and application environment requirements and the IAM permissions needed for private services access, see [Requirements for private IP connections](https://docs.cloud.google.com/sql/docs/postgres/private-ip#reqs).
+
+### Allocate an IP address range
+
+### Console
+
+  1. In the Google Cloud console, go to the **VPC networks** page.
+
+[Go to VPC networks](https://console.cloud.google.com/networking/networks)
+
+  2. Select the VPC network that you want to use.
+  3. Select the **Private services access** tab.
+  4. Select the **Allocated IP ranges for services** tab.
+  5. Click **Allocate IP range**.
+  6. For the **Name** of the allocated range, specify `google-managed-services-VPC_NETWORK_NAME`, where `VPC_NETWORK_NAME` is the name of the VPC network you are connecting (for example, `google-managed-services-default`). The **Description** is optional.
+  7. Select the **Custom** option, then enter the IP address range to allocate, in CIDR notation.
+  8. Click **Allocate** to create the allocated range.
+
+
+
+### gcloud
+
+Do one of the following:
+
+  * To specify an address range and a prefix length (subnet mask), use the `addresses` and `prefix-length` flags. For example, to allocate the CIDR block `192.168.0.0/16`, specify `192.168.0.0` for the address and `16` for the prefix length.
+    
+    gcloud compute addresses create google-managed-services-VPC_NETWORK_NAME \
+           --global \
+           --purpose=VPC_PEERING \
+           --addresses=192.168.0.0 \
+           --prefix-length=16 \
+           --network=projects/PROJECT_ID/global/networks/VPC_NETWORK_NAME
+        
+
+  * To specify a prefix length (subnet mask) only, use the `prefix-length` flag. When you omit the address range, Google Cloud automatically selects an unused address range in your VPC network. The following example selects an unused IP address range with a `16` bit prefix length.
+    
+    gcloud compute addresses create google-managed-services-VPC_NETWORK_NAME \
+        --global \
+        --purpose=VPC_PEERING \
+        --prefix-length=16 \
+        --network=projects/PROJECT_ID/global/networks/VPC_NETWORK_NAME
+      
+
+
+
+
+Replace `VPC_NETWORK_NAME` with the name of your VPC network, such as `my-vpc-network`.
+
+The following example allocates an IP range that allows resources in the VPC network `my-vpc-network` to connect to Cloud SQL instances using private IP.
+    
+    
+      gcloud compute addresses create google-managed-services-my-vpc-network \
+        --global \
+        --purpose=VPC_PEERING \
+        --prefix-length=16 \
+        --network=projects/myprojectid/global/networks/myvpcnetwork \
+        --project=my-project
+        
+
+### Terraform
+
+To allocate an IP address range, use a [Terraform resource](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_global_address). 
+    
+    
+    resource "google_compute_global_address" "private_ip_address" {
+      name          = "private-ip-address"
+      purpose       = "VPC_PEERING"
+      address_type  = "INTERNAL"
+      prefix_length = 16
+      network       = google_compute_network.peering_network.id
+    }
+
+#### Apply the changes
+
+To apply your Terraform configuration in a Google Cloud project, complete the steps in the following sections.
+
+## Prepare Cloud Shell
+
+  1. Launch [Cloud Shell](https://shell.cloud.google.com/).
+  2. Set the default Google Cloud project where you want to apply your Terraform configurations. 
+
+You only need to run this command once per project, and you can run it in any directory.
+         
+         export GOOGLE_CLOUD_PROJECT=PROJECT_ID
+
+Environment variables are overridden if you set explicit values in the Terraform configuration file.
+
+
+
+
+## Prepare the directory
+
+Each Terraform configuration file must have its own directory (also called a _root module_).
+
+  1. In [Cloud Shell](https://shell.cloud.google.com/), create a directory and a new file within that directory. The filename must have the `.tf` extension—for example `main.tf`. In this tutorial, the file is referred to as `main.tf`. 
+         
+         mkdir DIRECTORY && cd DIRECTORY && touch main.tf
+
+  2. If you are following a tutorial, you can copy the sample code in each section or step.
+
+Copy the sample code into the newly created `main.tf`.
+
+Optionally, copy the code from GitHub. This is recommended when the Terraform snippet is part of an end-to-end solution. 
+
+  3. Review and modify the sample parameters to apply to your environment.
+  4. Save your changes.
+  5. Initialize Terraform. You only need to do this once per directory. 
+         
+         terraform init
+
+Optionally, to use the latest Google provider version, include the `-upgrade` option: 
+         
+         terraform init -upgrade
+
+
+
+
+## Apply the changes
+
+  1. Review the configuration and verify that the resources that Terraform is going to create or update match your expectations: 
+         
+         terraform plan
+
+Make corrections to the configuration as necessary.
+
+  2. Apply the Terraform configuration by running the following command and entering `yes` at the prompt: 
+         
+         terraform apply
+
+Wait until Terraform displays the "Apply complete!" message.
+
+  3. [Open your Google Cloud project](https://console.cloud.google.com/) to view the results. In the Google Cloud console, navigate to your resources in the UI to make sure that Terraform has created or updated them. 
+
+**Note:** Terraform samples typically assume that the required APIs are enabled in your Google Cloud project. 
+
+#### Delete the changes
+
+Remove resources previously applied with your Terraform configuration by running the following command and entering `yes` at the prompt:
+    
+    
+    terraform destroy
+
+### Create a private connection
+
+### Console
+
+  1. In the Google Cloud console, go to the **VPC networks** page.
+
+[Go to VPC networks](https://console.cloud.google.com/networking/networks)
+
+  2. Select the VPC network that you want to use.
+  3. Select the **Private service connection** tab.
+  4. Select the **Private connections to services** tab.
+  5. Click **Create connection** to create a private connection between your network and a service producer.
+  6. For the **Assigned allocation** , select one or more existing allocated ranges that are not being used by other service producers.
+  7. Click **Connect** to create the connection.
+
+
+
+### gcloud
+
+  1. Create a private services access connection for the VPC network in your project.
+         
+         gcloud services vpc-peerings connect \
+         --service=servicenetworking.googleapis.com \
+         --ranges=google-managed-services-VPC_NETWORK_NAME \
+         --network=VPC_NETWORK_NAME \
+         --project=PROJECT_ID
+
+The command initiates a long-running Cloud SQL instance operation, returning an operation ID.
+
+  2. Check whether the operation was successful.
+         
+         gcloud services vpc-peerings operations describe \
+         --name=OPERATION_ID
+
+
+
+
+You can specify more than one allocated range when you create a private connection. For example, if a range has been exhausted, you can assign additional allocated ranges. The service uses IP addresses from all the provided ranges in the order that you specified.
+
+### Terraform
+
+To create a private connection, use a [Terraform resource](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/service_networking_connection).
+    
+    
+    resource "google_service_networking_connection" "default" {
+      network                 = google_compute_network.peering_network.id
+      service                 = "servicenetworking.googleapis.com"
+      reserved_peering_ranges = [google_compute_global_address.private_ip_address.name]
+    }
+
+A service account in the `service-HOST_PROJECT_NUMBER@service-networking.iam.gserviceaccount.com` format is granted the `servicenetworking.serviceAgent` role while the private connection is created because the account is provisioned [just-in-time](https://docs.cloud.google.com/service-infrastructure/docs/service-networking/getting-started#enabling_the_service).
+
+If you see an error about either the `compute.globalAddresses.list` permission or the `compute.projects.get` permission for the project, run this `gcloud` command:
+    
+    
+    gcloud projects add-iam-policy-binding HOST_PROJECT_NAME \
+        --member=serviceAccount:service-HOST_PROJECT_NUMBER@service-networking.iam.gserviceaccount.com \
+        --role=roles/servicenetworking.serviceAgent
+
+**Troubleshooting:** If you experience connection timeouts or errors connecting to your instance over private IP or VPC Network Peering, then see [ Diagnose VPC network and private IP connection failures](https://docs.cloud.google.com/sql/docs/postgres/debugging-connectivity#diagnose-vpc-connectivity).
+
+## Configure an instance for private IP using private services access
+
+You can configure private services access for new instances and existing instances.
 
 ### Configure private IP for a new instance
-
-To configure a Cloud SQL instance to use private IP when creating an instance:
 
 ### Console 
 
@@ -148,40 +303,41 @@ To configure a Cloud SQL instance to use private IP when creating an instance:
 [Go to Cloud SQL Instances](https://console.cloud.google.com/sql)
 
   2. Click **Create instance**.
-  3. Expand **Show configuration options**.
+  3. In the **Customize your instance** section, expand **Show configuration options**.
   4. Expand **Connections**.
-  5. Select **Private IP**. 
+  5. Select **Private IP**.
+  6. Select **Private Service Access (PSA)**. 
 
 A drop-down list shows the available VPC networks in your project. If your project is the service project of a [Shared VPC](https://docs.cloud.google.com/vpc/docs/shared-vpc), then VPC networks from the host project are also shown. 
 
-  6. Select the VPC network you want to use.
+  7. Select the VPC network you want to use.
 
 If you see a message indicating that you need to set up a private service connection, do the following:
 
      1. Click **Set up connection**.
      2. In the **Allocate an IP range** section, select one of the following options: 
-        * Select one or more existing IP ranges or create a new one from the dropdown. The dropdown includes previously allocated ranges, if there are any, or you can select **Allocate a new IP range** and enter a new range and name.
+        * Select one or more existing IP ranges or create a new one from the drop-down. The drop-down includes previously allocated ranges, if there are any, or you can select **Allocate a new IP range** and enter a new range and name.
         * **Use an automatically allocated IP range in your network**.
 **Note:** You can specify an address range only for a primary instance, not for a read replica or clone.
      3. Click **Continue**.
      4. Click **Create connection**.
      5. Verify that you see the message: `Private service connection for network VPC_NETWORK_NAME has been successfully created`.
-  7. Optionally, you can specify an allocated IP range for your instances to use for connections. 
+  8. Optionally, you can specify an allocated IP range for your instances to use for connections. 
      1. Expand **Show allocated IP range option**.
      2. Select an IP range from the drop-down menu.
-  8. Optional. If you want to allow other Google Cloud services, such as BigQuery, to access data in Cloud SQL and make queries against this data over a private IP connection, then select **Enable private path**.
-  9. Finish configuring your instance.
-  10. Click **Create instance**.
+  9. Optional. If you want to allow other Google Cloud services, such as BigQuery, to access data in Cloud SQL and make queries against this data over a private IP connection, then select **Enable private path**.
+  10. Finish configuring your instance.
+  11. Click **Create instance**.
 
 
 
 ### gcloud
 
-Before you create an instance using a private IP address, ensure that your project is configured for [ private services access](https://docs.cloud.google.com/sql/docs/postgres/configure-private-services-access).
+Before you create an instance using a private IP address, ensure that your project is configured for [private services access](https://docs.cloud.google.com/sql/docs/postgres/about-private-services-access).
 
 **Prerequisites for Private IP using private services access on new projects:**
 
-If you are creating a private IP instance in a new or empty project, you must first enable the Service Networking API and then you establish VPC Network Peering with Google services. Otherwise, instance creation will fail with `SERVICE_NETWORKING_NOT_ENABLED` or `NETWORK_NOT_PEERED`.
+If you are creating a private IP instance in a new or empty project, then you must first enable the Service Networking API. Next, establish VPC Network Peering with Google Cloud services. Otherwise, instance creation will fail with `SERVICE_NETWORKING_NOT_ENABLED` or `NETWORK_NOT_PEERED`.
 
 Run the following [gcloud CLI](https://docs.cloud.google.com/sdk/gcloud) commands to set up private services access networking for Cloud SQL:
 
@@ -223,7 +379,6 @@ Before using any of the request data, make the following replacements:
   * `NETWORK_PROJECT_ID`: The project ID of the VPC network
 
 **Note:** If the VPC network is a Shared VPC, then `PROJECT_ID` must be the ID of the Shared VPC service project, and `NETWORK_PROJECT_ID` must be the ID of the Shared VPC host project.
-
   * `VPC_NETWORK_NAME`: The name of the VPC network 
   * `RANGE_NAME`: _Optional._ If specified, sets a range name for which an IP range is allocated. The range name must comply with [`RFC-1035`](https://datatracker.ietf.org/doc/html/rfc1035) and contain 1-63 characters.
   * `DATABASE_VERSION`: The version of the PostgreSQL database (for example, `POSTGRES_14`)
@@ -233,27 +388,25 @@ Before using any of the request data, make the following replacements:
 
 To specify the name of your VPC network, use the `--network` parameter. To disable public IP, use the `--no-assign-ip` flag. 
 
-Also, optionally, use the `--enable-google-private-path` parameter to allow other Google Cloud services such as BigQuery to access data in Cloud SQL and make queries against this data over a private IP connection. This parameter is valid only if: 
+Also, optionally, use the `--enable-google-private-path` parameter to allow other Google Cloud services such as BigQuery to access data in Cloud SQL and make queries against this data over a private IP connection. This parameter is valid only if:
 
   * You use the `--no-assign-ip` parameter.
   * You use the `--network` parameter to specify the name of the VPC network that you want to use to create a private connection.
 
-To enforce the use of the new network architecture for the instance, use the [`--enforce-new-sql-network-architecture`](https://docs.cloud.google.com/sdk/gcloud/reference/beta/sql/instances/create#--enforce-new-sql-network-architecture) flag. Make sure that you have allocated enough IP addresses. When you use new network architecture enforcement before a project is fully upgraded, you might experience instance creation failure if sufficient IP address space isn't available. For more information, see [Upgrade an instance to the new network architecture](https://docs.cloud.google.com/sql/docs/postgres/upgrade-cloud-sql-instance-new-network-architecture) and [Allocate an IP address range](https://docs.cloud.google.com/sql/docs/postgres/private-ip#allocated-ip). 
-
-**Note:** After you create an instance, you can't assign an allocated range name for that instance. After you assign a range to an instance, you can't modify the range.
+To enforce the use of the new network architecture for the instance, use the [`--enforce-new-sql-network-architecture`](https://docs.cloud.google.com/sdk/gcloud/reference/beta/sql/instances/create#--enforce-new-sql-network-architecture) flag. Make sure that you have allocated enough IP addresses. When you use new network architecture enforcement before a project is fully upgraded, you might experience instance creation failure if sufficient IP address space isn't available. For more information, see [Upgrade an instance to the new network architecture](https://docs.cloud.google.com/sql/docs/postgres/upgrade-cloud-sql-instance-new-network-architecture) and Allocate an IP address range. **Note:** After you create an instance, you can't assign an allocated range name for that instance. After you assign a range to an instance, you can't modify the range.
     
     
     gcloud beta sql instances create INSTANCE_ID \
-    --project=PROJECT_ID \
-    --network=projects/NETWORK_PROJECT_ID/global/networks/VPC_NETWORK_NAME \
-    --no-assign-ip \
-    --allocated-ip-range-name=RANGE_NAME \
-    --enable-google-private-path \
-    --database-version=DATABASE_VERSION \
-    --cpu=NUMBER_OF_CPU \
-    --memory=MEMORY_IN_GB \
-    --region=REGION_NAME \
-    --enforce-new-sql-network-architecture
+      --project=PROJECT_ID \
+      --network=projects/NETWORK_PROJECT_ID/global/networks/VPC_NETWORK_NAME \
+      --no-assign-ip \
+      --allocated-ip-range-name=RANGE_NAME \
+      --enable-google-private-path \
+      --database-version=DATABASE_VERSION \
+      --cpu=NUMBER_OF_CPU \
+      --memory=MEMORY_IN_GB \
+      --region=REGION_NAME \
+      --enforce-new-sql-network-architecture
 
 ### Terraform
 
@@ -528,7 +681,7 @@ You can use the `sqlNetworkArchitecture` field to enforce the use of the new net
 HTTP method and URL: 
     
     
-    POST https://sqladmin.googleapis.com/v1beta4/projects/PROJECT_ID/instances
+    POST https://sqladmin.googleapis.com/sql/v1beta4/projects/PROJECT_ID/instances
 
 Request JSON body: 
     
@@ -566,7 +719,7 @@ Save the request body in a file named `request.json`, and execute the following 
          -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
          -H "Content-Type: application/json; charset=utf-8" \  
          -d @request.json \  
-         "https://sqladmin.googleapis.com/v1beta4/projects/PROJECT_ID/instances"
+         "https://sqladmin.googleapis.com/sql/v1beta4/projects/PROJECT_ID/instances"
 
 #### PowerShell (Windows)
 
@@ -583,7 +736,7 @@ Save the request body in a file named `request.json`, and execute the following 
         -Headers $headers `  
         -ContentType: "application/json; charset=utf-8" `  
         -InFile request.json `  
-        -Uri "https://sqladmin.googleapis.com/v1beta4/projects/PROJECT_ID/instances" | Select-Object -Expand Content
+        -Uri "https://sqladmin.googleapis.com/sql/v1beta4/projects/PROJECT_ID/instances" | Select-Object -Expand Content
 
 You should receive a JSON response similar to the following:
 
@@ -592,14 +745,14 @@ You should receive a JSON response similar to the following:
     
     {
       "kind": "sql#operation",
-      "targetLink": "https://sqladmin.googleapis.com/v1/projects/PROJECT_ID/instances/INSTANCE_ID",
+      "targetLink": "https://sqladmin.googleapis.com/sql/v1beta4/projects/PROJECT_ID/instances/INSTANCE_ID",
       "status": "PENDING",
       "user": "user@example.com",
       "insertTime": "2020-01-21T22:43:37.981Z",
       "operationType": "CREATE",
       "name": "OPERATION_ID",
       "targetId": "INSTANCE_ID",
-      "selfLink": "https://sqladmin.googleapis.com/v1/projects/PROJECT_ID/operations/OPERATION_ID",
+      "selfLink": "https://sqladmin.googleapis.com/sql/v1beta4/projects/PROJECT_ID/operations/OPERATION_ID",
       "targetProject": "PROJECT_ID"
     }
     
@@ -630,13 +783,13 @@ If you see **Private service connection required** :
 
      1. Click **Set up connection**.
      2. In the **Allocate an IP range** section, choose one of the following options: 
-        * Select one or more existing IP ranges or create a new one from the dropdown. The drop down includes previously allocated ranges, if there are any, or you can select **Allocate a new IP range** and enter a new range and name.
+        * Select one or more existing IP ranges or create a new one from the drop-down. The drop-down includes previously allocated ranges, if there are any, or you can select **Allocate a new IP range** and enter a new range and name.
         * Use an automatically allocated IP range in your network.
 **Note:** You can specify an address range only for a primary instance, not for a read replica or clone.
      3. Click **Continue**.
      4. Click **Create connection**.
      5. Verify that you see the **Private service connection for network` VPC_NETWORK_NAME` has been successfully created** status. 
-  6. Optional. If you want to allow other Google Cloud services, such as BigQuery, to access data in Cloud SQL and make queries against this data over a private IP connection, then select the **Enable private path** check box.
+  6. Optional. If you want to allow other Google Cloud services, such as BigQuery, to access data in Cloud SQL and make queries against this data over a private IP connection, then select the **Enable private path** checkbox.
   7. Click **Save**.
 
 
@@ -682,7 +835,7 @@ You can use the `sqlNetworkArchitecture` field to enforce the use of the new net
 HTTP method and URL: 
     
     
-    PATCH https://sqladmin.googleapis.com/sql/v1/projects/PROJECT_ID/instances/INSTANCE_ID
+    PATCH https://sqladmin.googleapis.com/v1/projects/PROJECT_ID/instances/INSTANCE_ID
 
 Request JSON body: 
     
@@ -717,7 +870,7 @@ Save the request body in a file named `request.json`, and execute the following 
          -H "Authorization: Bearer $(gcloud auth print-access-token)" \  
          -H "Content-Type: application/json; charset=utf-8" \  
          -d @request.json \  
-         "https://sqladmin.googleapis.com/sql/v1/projects/PROJECT_ID/instances/INSTANCE_ID"
+         "https://sqladmin.googleapis.com/v1/projects/PROJECT_ID/instances/INSTANCE_ID"
 
 #### PowerShell (Windows)
 
@@ -734,7 +887,7 @@ Save the request body in a file named `request.json`, and execute the following 
         -Headers $headers `  
         -ContentType: "application/json; charset=utf-8" `  
         -InFile request.json `  
-        -Uri "https://sqladmin.googleapis.com/sql/v1/projects/PROJECT_ID/instances/INSTANCE_ID" | Select-Object -Expand Content
+        -Uri "https://sqladmin.googleapis.com/v1/projects/PROJECT_ID/instances/INSTANCE_ID" | Select-Object -Expand Content
 
 You should receive a JSON response similar to the following:
 
@@ -743,14 +896,14 @@ You should receive a JSON response similar to the following:
     
     {
       "kind": "sql#operation",
-      "targetLink": "https://sqladmin.googleapis.com/sql/v1beta4/projects/PROJECT_ID/instances/INSTANCE_ID",
+      "targetLink": "https://sqladmin.googleapis.com/v1/projects/PROJECT_ID/instances/INSTANCE_ID",
       "status": "PENDING",
       "user": "user@example.com",
       "insertTime": "2020-01-21T22:43:37.981Z",
       "operationType": "UPDATE",
       "name": "OPERATION_ID",
       "targetId": "INSTANCE_ID",
-      "selfLink": "https://sqladmin.googleapis.com/sql/v1beta4/projects/PROJECT_ID/operations/OPERATION_ID",
+      "selfLink": "https://sqladmin.googleapis.com/v1/projects/PROJECT_ID/operations/OPERATION_ID",
       "targetProject": "PROJECT_ID"
     }
     
@@ -851,7 +1004,84 @@ You should receive a JSON response similar to the following:
     }
     
 
-## Connect to an instance using its Private IP
+### Change the private service access configuration
+
+You can change the allocated address range of a private service connection without modifying any existing Cloud SQL instances. To change the private IP address of an existing Cloud SQL instance, follow these steps.
+
+To change the allocated address range:
+
+### Console
+
+  1. In the Google Cloud console, go to the **VPC networks** page.
+
+[Go to VPC networks](https://console.cloud.google.com/networking/networks)
+
+  2. Select the VPC network that you want to use.
+  3. Select the **Private service connection** tab.
+  4. Select the **Allocated IP ranges for services** tab.
+  5. Select the name of the range you want to delete.
+
+**Note:** Before you delete the range, make a note of its name. You need this name later in this procedure.
+  6. Click **Release**.
+
+  7. Click **Allocate IP range**.
+
+  8. Create a new range with the same name and new range   
+
+
+The name matters because the private connection has already been established using that address name.
+
+
+**Note:** After modifying or removing an allocated address range, update VPC peerings. Use the following command, and make sure to use the `--force` argument:
+    
+    
+    gcloud services vpc-peerings update \
+    --network=VPC_NETWORK_NAME \
+    --ranges=ALLOCATED_RANGES \
+    --service=servicenetworking.googleapis.com \
+    **--force**
+
+Cloud SQL does not automatically delete the old subnet with the old IP range. The range is marked as unusable and cannot be used again in the project. This allows existing instances to stay in that subnet. To permanently remove the subnet, all Cloud SQL instances using an address in the range must be deleted. The subnet is deleted four days after the last instance in the subnet is deleted. 
+
+### Change the private IP address of an existing Cloud SQL instance
+
+To change the private IP address of an existing Cloud SQL instance, move the instance from its original network to a temporary VPC network. Then, change the private service access configuration of the instance's original network and move the Cloud SQL instance back to its original network.
+
+To move to a different VPC network, follow all but the final step (moving the instance back) in the following procedure. In this case, the `TEMPORARY_VPC_NETWORK_NAME` is the new VPC network. Also, [delete the old private connection](https://docs.cloud.google.com/vpc/docs/configure-private-services-access#removing-connection). It can take a few days for the deleted private connection to disappear from the Google Cloud console.
+
+If the Cloud SQL instance is hosted in a Shared VPC network, the `VPC_NETWORK_NAME` variables used in the following instructions must be the host project's VPC network names. To specify a network with a Shared VPC network, use the full URL of the network—for example, `projects/HOST_PROJECT/global/networks/NETWORK_NAME`.
+
+**Note:** If the project that's hosting the VPC network operates in dual stack mode, then there are considerations to keep in mind for using this project. For more information, see [Plan to upgrade all Cloud SQL instances in a network project](https://docs.cloud.google.com/sql/docs/postgres/upgrade-cloud-sql-instance-new-network-architecture#upgrade-all-instances-in-network-project).
+
+### Console
+
+  1. In the Google Cloud console, go to the **VPC networks** page.
+
+[Go to VPC networks](https://console.cloud.google.com/networking/networks)
+
+  2. [Create a temporary VPC network](https://docs.cloud.google.com/vpc/docs/create-modify-vpc-networks#creating_networks).
+  3. [Create an IP allocation in the temporary VPC network](https://docs.cloud.google.com/vpc/docs/configure-private-services-access#procedure).
+  4. [Create a private connection in the temporary VPC network](https://docs.cloud.google.com/vpc/docs/configure-private-services-access#creating-connection).
+  5. Move the Cloud SQL instance to the temporary VPC network.
+         
+         gcloud beta sql instances patch INSTANCE_ID \
+           --project=PROJECT_ID \
+           --network=projects/PROJECT_ID/global/networks/TEMPORARY_VPC_NETWORK_NAME \
+           --no-assign-ip
+
+  6. Change the private service access configuration in the original network to add a new allocated range or delete existing ones.
+
+  7. Move the Cloud SQL instance back to the original VPC network.
+         
+         gcloud beta sql instances patch INSTANCE_ID \
+           --project=PROJECT_ID \
+           --network=projects/PROJECT_ID/global/networks/ORIGINAL_VPC_NETWORK_NAME \
+           --no-assign-ip
+
+
+
+
+## Connect to an instance using its private IP address
 
 You use [private services access](https://docs.cloud.google.com/sql/docs/postgres/configure-private-services-access) to connect to Cloud SQL instances from Compute Engine or Google Kubernetes Engine instances in the same VPC network (defined here as _internal_ sources) or from outside of that network (an _external_ source).
 
@@ -868,7 +1098,7 @@ If an external network (for example, an on-premises network or a VPC network), i
 To permit connections from an external network, do the following:
 
   1. Ensure your VPC network is connected to the external network using a [ Cloud VPN tunnel](https://docs.cloud.google.com/network-connectivity/docs/vpn/concepts/overview) or a VLAN attachment for [ Dedicated Interconnect](https://docs.cloud.google.com/network-connectivity/docs/interconnect/how-to/dedicated/provisioning-overview) or [ Partner Interconnect](https://docs.cloud.google.com/network-connectivity/docs/interconnect/how-to/partner/provisioning-overview). 
-  2. Ensure the Border Gateway Protocol (BGP) sessions on the Cloud Routers managing your Cloud VPN tunnels and Cloud Interconnect attachments (VLANs) have received specific prefixes (destinations) from your on-premises network. 
+  2. Ensure the Border Gateway Protocol (BGP) sessions on the Cloud Routers managing your Cloud VPN tunnels and Cloud Interconnect attachments (VLANs) have received specific prefixes (destinations) from your on-premises network.
 
 Default routes (destination 0.0.0.0/0) cannot be imported into the Cloud SQL VPC network because that network has its own local default route. Local routes for a destination are used even though the Cloud SQL peering is configured to import custom routes from your VPC network.
 
@@ -887,15 +1117,15 @@ Default routes (destination 0.0.0.0/0) cannot be imported into the Cloud SQL VPC
 
 ### Connect from Cloud Shell
 
-[Cloud Shell](https://docs.cloud.google.com/shell/docs/how-cloud-shell-works) uses a Compute Engine virtual machine that's managed by Google Cloud and is outside of your VPC network. Therefore, a connectivity path doesn't exist between Cloud Shell and the private IP address space of the your VPC network.
+[Cloud Shell](https://docs.cloud.google.com/shell/docs/how-cloud-shell-works) uses a Compute Engine virtual machine that's managed by Google Cloud and is outside of your VPC network. Therefore, a connectivity path doesn't exist between Cloud Shell and the private IP address space of your VPC network.
 
 As a result, Cloud Shell doesn't support connecting to a Cloud SQL instance that has only a private IP address.
 
-To connect to Cloud SQL instances from an external network using Private IP connectivity, see [ Connect to a Cloud SQL instance from outside its VPC](https://docs.cloud.google.com/sql/docs/postgres/connect-to-instance-from-outside-vpc).
+To connect to Cloud SQL instances from an external network using private IP connectivity, see [ Connect to a Cloud SQL instance from outside its VPC](https://docs.cloud.google.com/sql/docs/postgres/connect-to-instance-from-outside-vpc).
 
 ### Connect from non-RFC 1918 IP addresses
 
-[RFC 1918](https://tools.ietf.org/html/rfc1918) specifies IP addresses that are assigned to be used internally (that is, within an organization) and will not route on the Internet. Specifically, these are:
+[RFC 1918](https://tools.ietf.org/html/rfc1918) specifies IP addresses that are assigned to be used internally (that is, within an organization) and won't route on the Internet. Specifically, these are:
 
   * 10.0.0.0/8
   * 172.16.0.0/12
@@ -915,7 +1145,7 @@ For example, use a `gcloud` command like the following:
     gcloud sql instances patch INSTANCE_NAME \
     --authorized-networks=192.88.99.0/24,11.0.0.0/24
 
-**Note:** This command overwrites all existing authorized networks, so you must include all desired authorized networks.
+**Note:** This command overwrites all existing authorized networks, so you must include all the authorized networks to use.
 
 Cloud SQL doesn't learn non-RFC 1918 subnet routes from your VPC network by default. You need to update the network peering to Cloud SQL to export any non-RFC 1918 routes.
     
@@ -990,7 +1220,7 @@ If a replica [failover or switchover](https://docs.cloud.google.com/sql/docs/pos
 
 #### How Cloud SQL creates a write endpoint
 
-If you enable the Cloud DNS API for your Google Cloud project, and then you [create a primary Cloud SQL Enterprise Plus edition instance](https://docs.cloud.google.com/sql/docs/postgres/create-instance), [promote the replica for the instance](https://docs.cloud.google.com/sql/docs/postgres/replication/manage-replicas#promote-replica), or [upgrade the instance from Cloud SQL Enterprise edition](https://docs.cloud.google.com/sql/docs/postgres/upgrade-cloud-sql-instance-to-enterprise-plus-in-place), Cloud SQL generates a write endpoint automatically and assigns it to the instance.
+If you enable the Cloud DNS API for your Google Cloud project, and afterwards, you [create a primary Cloud SQL Enterprise Plus edition instance](https://docs.cloud.google.com/sql/docs/postgres/create-instance), [promote the replica for the instance](https://docs.cloud.google.com/sql/docs/postgres/replication/manage-replicas#promote-replica), or [upgrade the instance from Cloud SQL Enterprise edition](https://docs.cloud.google.com/sql/docs/postgres/upgrade-cloud-sql-instance-to-enterprise-plus-in-place), then Cloud SQL generates a write endpoint automatically and assigns it to the instance.
 
 For more information, see [View the write endpoint](https://docs.cloud.google.com/sql/docs/postgres/connect-to-instance-using-write-endpoint#view_the_write_endpoint).
 
@@ -1004,24 +1234,10 @@ To have Cloud SQL generate a write endpoint and assign it to the instance, see [
 
 See [ troubleshooting](https://docs.cloud.google.com/sql/docs/postgres/troubleshooting#connectivity) for known connectivity issues, and also [ debugging connection issues](https://docs.cloud.google.com/sql/docs/postgres/debugging-connectivity) for help with self-diagnostics.
 
-## What's next
-
-  * Learn more about [private IP](https://docs.cloud.google.com/sql/docs/postgres/private-ip).
-  * Learn more about [private services access](https://docs.cloud.google.com/vpc/docs/private-services-access).
-  * See how to use [VPC Service Controls](https://docs.cloud.google.com/sql/docs/postgres/admin-api/configure-service-controls) to add a service perimeter.
-  * Learn more about [configuring private services access](https://docs.cloud.google.com/vpc/docs/configure-private-services-access).
-  * Learn more about [configuring private services access for Cloud SQL](https://docs.cloud.google.com/sql/docs/postgres/configure-private-services-access#configure-access).
-  * Learn more about [Cloud VPN](https://docs.cloud.google.com/network-connectivity/docs/vpn/concepts/overview).
-  * Learn more about [VPC networks](https://docs.cloud.google.com/vpc/docs/vpc).
-  * Learn more about [VPC Network Peering](https://docs.cloud.google.com/vpc/docs/vpc-peering).
-  * Learn more about [Shared VPC](https://docs.cloud.google.com/vpc/docs/shared-vpc).
-
-
-
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/discover/certifications/
 title: Certifications and security for Gemini products in Google Cloud \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:02:44.414137+00:00
+fetched_at: 2026-10-21T12:51:46.968326+00:00
 ---
 
 # Certifications and security for Gemini products in Google Cloud  |  Gemini for Google Cloud  |  Google Cloud Documentation

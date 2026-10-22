@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/use-curated-detections/
 title: Apply curated detections \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:29:35.086639+00:00
+fetched_at: 2026-10-21T12:37:20.213813+00:00
 ---
 
 # Apply curated detections  |  Google Security Operations  |  Google Cloud Documentation

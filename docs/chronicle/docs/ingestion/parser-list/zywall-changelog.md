@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/zywall-changelog/
 title: Change log for ZYWALL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:36:26.481539+00:00
+fetched_at: 2026-10-21T14:43:20.517173+00:00
 ---
 
 # Change log for ZYWALL  |  Google Security Operations  |  Google Cloud Documentation

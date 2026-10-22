@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/virtual-agent-assist/
 title: Virtual Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:44:29.783444+00:00
+fetched_at: 2026-10-21T12:55:45.277961+00:00
 ---
 
 # Virtual Agent Assist  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/guides/installing-beam-sdk/
 title: Install or update the Apache Beam SDK \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:02:36.790236+00:00
+fetched_at: 2026-10-22T05:42:18.261877+00:00
 ---
 
 # Install or update the Apache Beam SDK  |  Cloud Dataflow  |  Google Cloud Documentation
@@ -31,7 +31,7 @@ The [Apache Beam SDK](https://beam.apache.org/get-started/beam-overview/) is an 
 
 ### Java
 
-The latest released version for the Apache Beam SDK for Java is **2.76.0**. See the [ release announcement](https://beam.apache.org/blog/beam-2.76.0/) for information about the changes included in the release. 
+The latest released version for the Apache Beam SDK for Java is **2.77.0**. See the [ release announcement](https://beam.apache.org/blog/beam-2.77.0/) for information about the changes included in the release. 
 
 To get the Apache Beam SDK for Java using Maven, use one of the released artifacts from the [Maven Central Repository](https://search.maven.org/search?q=apache-beam).
 
@@ -41,7 +41,7 @@ For more information about Apache Beam SDK for Java dependencies, see [Apache Be
 
 ### Python
 
-The latest released version for the Apache Beam SDK for Python is **2.76.0**. See the [ release announcement](https://beam.apache.org/blog/beam-2.76.0/) for information about the changes included in the release. 
+The latest released version for the Apache Beam SDK for Python is **2.77.0**. See the [ release announcement](https://beam.apache.org/blog/beam-2.77.0/) for information about the changes included in the release. 
 
 To obtain the Apache Beam SDK for Python, use one of the released packages from the [ Python Package Index](https://pypi.org/project/apache-beam/).
 
@@ -61,7 +61,7 @@ As of October 7, 2020, Dataflow no longer supports Python 2 pipelines. For more 
 
 ### Go
 
-The latest released version for the Apache Beam SDK for Go is **2.76.0**. See the [ release announcement](https://beam.apache.org/blog/beam-2.76.0/) for information about the changes included in the release. 
+The latest released version for the Apache Beam SDK for Go is **2.77.0**. See the [ release announcement](https://beam.apache.org/blog/beam-2.77.0/) for information about the changes included in the release. 
 
 To install the latest version of the Apache Beam SDK for Go, run the the following command:
     
@@ -228,6 +228,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

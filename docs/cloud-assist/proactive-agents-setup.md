@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/proactive-agents-setup/
 title: Set up Proactive Mode \u00a0|\u00a0 Gemini Cloud Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:14:01.563886+00:00
+fetched_at: 2026-10-21T14:23:22.426877+00:00
 ---
 
 # Set up Proactive Mode  |  Gemini Cloud Assist  |  Google Cloud Documentation

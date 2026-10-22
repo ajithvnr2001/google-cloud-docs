@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/mysql/
 title: MySQL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T09:01:21.592159+00:00
+fetched_at: 2026-10-21T14:21:08.113848+00:00
 ---
 
 # MySQL  |  Google Security Operations  |  Google Cloud Documentation

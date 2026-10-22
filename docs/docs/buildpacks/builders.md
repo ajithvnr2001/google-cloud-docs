@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/buildpacks/builders/
 title: Builders \u00a0|\u00a0 Buildpacks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:50:17.146885+00:00
+fetched_at: 2026-10-21T14:07:56.174396+00:00
 ---
 
 # Builders  |  Buildpacks  |  Google Cloud Documentation

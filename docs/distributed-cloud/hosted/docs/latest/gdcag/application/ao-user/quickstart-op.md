@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/quickstart-op/
 title: Get an online prediction \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:40:07.941425+00:00
+fetched_at: 2026-10-21T12:58:16.218078+00:00
 ---
 
 # Get an online prediction  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

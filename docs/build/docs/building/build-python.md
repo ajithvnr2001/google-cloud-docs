@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/building/build-python/
 title: Build and test Python applications \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:56:03.855342+00:00
+fetched_at: 2026-10-21T14:11:13.557380+00:00
 ---
 
 # Build and test Python applications  |  Google Cloud Documentation

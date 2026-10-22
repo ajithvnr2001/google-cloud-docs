@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-extract-table-compressed/
 title: Export a table to a compressed file \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:54.009434+00:00
+fetched_at: 2026-10-21T14:21:20.560492+00:00
 ---
 
 # Export a table to a compressed file  |  BigQuery  |  Google Cloud Documentation

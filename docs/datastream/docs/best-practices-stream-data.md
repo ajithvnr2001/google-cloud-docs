@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/best-practices-stream-data/
 title: Use Datastream and Dataflow to stream data into BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:13:44.325143+00:00
+fetched_at: 2026-10-22T05:41:18.237494+00:00
 ---
 
 # Use Datastream and Dataflow to stream data into BigQuery  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Use Datastream and Dataflow to stream data into BigQuery Stay organized with collections  Save and categorize content based on your preferences. 
 
-In this page, you'll find best practices for using [Datastream and Dataflow to stream data into BigQuery](https://docs.cloud.google.com/datastream/docs/implementing-datastream-dataflow-analytics).
+When you replicate data into BigQuery using the [Datastream and Dataflow streaming pipeline](https://docs.cloud.google.com/datastream/docs/implementing-datastream-dataflow-analytics), you can customize how Dataflow processes and merges changes. Partitioning replica tables on custom keys, transforming events with JavaScript user-defined functions (UDFs), and tuning merge frequency help you balance data freshness with query and storage costs.
 
 ## Partition replica datasets on user defined keys
 
@@ -90,6 +90,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

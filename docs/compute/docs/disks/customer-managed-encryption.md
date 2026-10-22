@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/customer-managed-encryption/
 title: Protect resources with Cloud KMS keys \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:05:53.267663+00:00
+fetched_at: 2026-10-22T05:48:43.709324+00:00
 ---
 
 # Protect resources with Cloud KMS keys  |  Compute Engine  |  Google Cloud Documentation
@@ -154,18 +154,19 @@ For more information, see Remove the CMEK from a disk and Remove the CMEK from a
 
     * All Persistent Disk volumes
     * Disks and snapshots that were not created with the Terraform provider for Google Cloud
-    * Hyperdisk volumes that were created from an instant snapshot
     * Offline Hyperdisk volumes
     * Offline Confidential Hyperdisk volumes
     * Online Hyperdisk volumes that are attached to first- or second-generation machine types
     * Online Hyperdisk volumes that are attached to the following third- or fourth-generation machine types:
 
-      * A3
-      * A4
-      * Z3
-      * H4D
-      * all TPU versions
-      * Bare metal A4X, C4, C4A, C4D, C3, and X4 machine types
+      * A3, A4, A4X, and A4X Max
+      * C3D
+      * C4N
+      * H3 and H4D
+      * M3, M4, and M4N
+      * Z3 and Z4D
+      * All TPU versions
+      * All bare metal machine types
   * To change or rotate the CMEK for a disk or snapshot, you must use either the gcloud CLI or REST; you can't use the Google Cloud console.
 
   * To create a snapshot using a CMEK that is different from the CMEK used to encrypt the source disk, you must use either the gcloud CLI or REST; you can't use the Google Cloud console.
@@ -1201,6 +1202,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

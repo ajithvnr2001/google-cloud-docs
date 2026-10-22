@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/healthcare/
 title: Cloud Healthcare API roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:45:23.109847+00:00
+fetched_at: 2026-10-21T14:29:23.628613+00:00
 ---
 
 # Cloud Healthcare API roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

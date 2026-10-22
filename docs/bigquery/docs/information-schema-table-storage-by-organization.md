@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-table-storage-by-organization/
 title: TABLE_STORAGE_BY_ORGANIZATION view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:17:53.429045+00:00
+fetched_at: 2026-10-21T12:36:43.248186+00:00
 ---
 
 # TABLE_STORAGE_BY_ORGANIZATION view  |  BigQuery  |  Google Cloud Documentation

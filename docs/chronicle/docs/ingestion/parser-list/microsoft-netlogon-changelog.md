@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/microsoft-netlogon-changelog/
 title: Change log for MICROSOFT_NETLOGON \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:11:06.713680+00:00
+fetched_at: 2026-10-21T14:43:38.025424+00:00
 ---
 
 # Change log for MICROSOFT_NETLOGON  |  Google Security Operations  |  Google Cloud Documentation

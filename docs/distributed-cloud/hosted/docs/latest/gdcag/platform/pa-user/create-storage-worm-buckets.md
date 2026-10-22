@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/create-storage-worm-buckets/
 title: Create storage WORM buckets \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:44:01.661821+00:00
+fetched_at: 2026-10-21T12:58:46.482263+00:00
 ---
 
 # Create storage WORM buckets  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

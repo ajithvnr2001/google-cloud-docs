@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-open-source-software/docs/download-go-packages/
 title: Download Go packages using direct repository access for the free tier \u00a0|\u00a0 Assured Open Source Software \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:56:06.569711+00:00
+fetched_at: 2026-10-21T12:29:36.314444+00:00
 ---
 
 # Download Go packages using direct repository access for the free tier  |  Assured Open Source Software  |  Google Cloud Documentation

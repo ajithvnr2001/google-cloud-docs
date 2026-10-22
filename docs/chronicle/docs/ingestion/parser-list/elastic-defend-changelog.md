@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/elastic-defend-changelog/
 title: Change log for ELASTIC_DEFEND \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:10:05.670092+00:00
+fetched_at: 2026-10-21T14:43:46.557789+00:00
 ---
 
 # Change log for ELASTIC_DEFEND  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/application-centric-google-cloud/
 title: Application-centric Google Cloud \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:05:57.464045+00:00
+fetched_at: 2026-10-21T14:25:17.696344+00:00
 ---
 
 # Application-centric Google Cloud  |  App Hub  |  Google Cloud Documentation

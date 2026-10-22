@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/change-streams-read-java/
 title: Read a change stream with Java \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:15.031237+00:00
+fetched_at: 2026-10-21T12:37:16.206816+00:00
 ---
 
 # Read a change stream with Java  |  Bigtable  |  Google Cloud Documentation

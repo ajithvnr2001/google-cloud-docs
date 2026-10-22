@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/kms/encrypt-decrypt-data/
 title: Encrypt and decrypt data \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:39:25.492071+00:00
+fetched_at: 2026-10-21T12:57:47.403976+00:00
 ---
 
 # Encrypt and decrypt data  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

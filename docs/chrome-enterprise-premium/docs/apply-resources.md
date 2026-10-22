@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/apply-resources/
 title: Quickstart: Apply Chrome Enterprise Premium to cloud resources \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:01:26.492173+00:00
+fetched_at: 2026-10-21T14:25:21.657459+00:00
 ---
 
 # Quickstart: Apply Chrome Enterprise Premium to cloud resources  |  Google Cloud Documentation

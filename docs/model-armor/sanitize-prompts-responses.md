@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/model-armor/sanitize-prompts-responses/
 title: Sanitize prompts and responses \u00a0|\u00a0 Model Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:49:14.822838+00:00
+fetched_at: 2026-10-21T15:16:11.320213+00:00
 ---
 
 # Sanitize prompts and responses  |  Model Armor  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/azion-changelog/
 title: Change log for AZION \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:08:59.109621+00:00
+fetched_at: 2026-10-21T14:45:42.260330+00:00
 ---
 
 # Change log for AZION  |  Google Security Operations  |  Google Cloud Documentation

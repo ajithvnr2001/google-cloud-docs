@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataform/docs/use-dataform-cli/
 title: Use the open-source Dataform CLI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:41.139918+00:00
+fetched_at: 2026-10-22T05:39:19.096698+00:00
 ---
 
 # Use the open-source Dataform CLI  |  Google Cloud Documentation
@@ -47,25 +47,21 @@ Before installing the Dataform CLI, install [NPM](https://www.npmjs.com/get-npm)
 
   * To initialize a new Dataform project, run the following command inside your project directory:
         
-        dataform init . PROJECT_NAME DEFAULT_LOCATION
+        dataform init . YOUR_GOOGLE_CLOUD_PROJECT_ID DEFAULT_LOCATION
         
 
 Replace the following:
 
-    * `PROJECT_NAME`: the name of your project.
-    * `DEFAULT_LOCATION` (optional): the location where you want Dataform to write BigQuery data. If unset, Dataform determines the location based on the datasets that your SQL query references. This works as follows:
-
-      * If your query references datasets from the same location, Dataform uses that location.
-      * If your query references datasets from two or more different locations, an error occurs. For details about this limitation, see [Cross-region dataset replication](https://docs.cloud.google.com/bigquery/docs/data-replication).
-      * If your query doesn't reference any datasets, the default location for Dataform is the `US` multi-region. To choose a different location, set the default location. Alternatively, use the [`@@location` system variable](https://docs.cloud.google.com/bigquery/docs/reference/system-variables) in your query. For more information, see [Specify locations](https://docs.cloud.google.com/bigquery/docs/locations#specify_locations).
+    * `YOUR_GOOGLE_CLOUD_PROJECT_ID`: your Google Cloud project ID.
+    * `DEFAULT_LOCATION`: the [BigQuery location](https://docs.cloud.google.com/bigquery/docs/locations) where you want Dataform to process and store data.
 
 
 
 ## Update Dataform core
 
-  * To update the Dataform core framework, update the `dataformCoreVersion` in `workflow_settings.yaml` file, then re-run NPM install:
+  * To update the Dataform core framework, update `dataformCoreVersion` in the `workflow_settings.yaml` file. When `dataformCoreVersion` is set in `workflow_settings.yaml`, Dataform installs `@dataform/core` automatically at runtime. If your project instead manages `@dataform/core` in a `package.json` file without `dataformCoreVersion` in `workflow_settings.yaml`, update the version in `package.json` and run:
         
-        npm i
+        dataform install
         
 
 
@@ -117,13 +113,9 @@ An empty Dataform project in Dataform core 3.0.0 or later has the following stru
 
 Replace the following:
 
-    * `PROJECT_NAME`: the name of your project.
+    * `PROJECT_NAME`: the directory name of your project.
     * `YOUR_GOOGLE_CLOUD_PROJECT_ID`: your Google Cloud project ID.
-    * `DEFAULT_LOCATION` (optional): the location where you want Dataform to write BigQuery data. If unset, Dataform determines the location based on the datasets that your SQL query references. This works as follows:
-
-      * If your query references datasets from the same location, Dataform uses that location.
-      * If your query references datasets from two or more different locations, an error occurs. For details about this limitation, see [Cross-region dataset replication](https://docs.cloud.google.com/bigquery/docs/data-replication).
-      * If your query doesn't reference any datasets, the default location for Dataform is the `US` multi-region. To choose a different location, set the default location. Alternatively, use the [`@@location` system variable](https://docs.cloud.google.com/bigquery/docs/reference/system-variables) in your query. For more information, see [Specify locations](https://docs.cloud.google.com/bigquery/docs/locations#specify_locations).
+    * `DEFAULT_LOCATION`: the [BigQuery location](https://docs.cloud.google.com/bigquery/docs/locations) where you want Dataform to process and store data.
 
 
 
@@ -131,13 +123,13 @@ Replace the following:
 
 To clone an existing Dataform project from a third-party Git repository, follow the instructions from your Git provider.
 
-  * Once the repository is cloned, run the following command inside the cloned repository directory:
+  * If the cloned project declares external dependencies in a `package.json` file (without `dataformCoreVersion` in `workflow_settings.yaml`), run the following command inside the cloned repository directory:
         
         dataform install
         
 
 
-
+**Note:** Projects that specify `dataformCoreVersion` in `workflow_settings.yaml` install `@dataform/core` automatically at runtime and don't require running `dataform install`.
 
 ## Define a table
 
@@ -238,7 +230,7 @@ Replace the following:
 
     * `SAMPLE_VAR`: your custom compilation variable.
     * `SAMPLE_VALUE`: the value of your custom compilation variable.
-  * To run the code of your Dataform project in BigQuery and rebuild all tables from scratch, run the following command:
+  * To run the code of your Dataform project in BigQuery and rebuild incremental tables (unless marked `protected`) from scratch, run the following command:
         
         dataform run --full-refresh
         
@@ -246,7 +238,7 @@ Replace the following:
 
 
 
-Without `--full-refresh`, Dataform updates incremental tables without rebuilding them from scratch.
+Without `--full-refresh`, Dataform updates incremental tables without rebuilding them from scratch (regular tables and views are always rebuilt).
 
   * To perform a dry run of your code against BigQuery, run the following command:
         
@@ -275,8 +267,8 @@ Replace `COMMAND` with the command you want to learn about.
 
 ## What's next
 
-  * To learn more about Dataform CLI, see [Dataform CLI reference](https://docs.cloud.google.com/dataform/docs/reference/dataform-cli-reference)
-  * To learn more about Dataform, see [Dataform overview](https://docs.cloud.google.com/dataform/docs/overview). 
+  * To learn more about Dataform CLI commands and flags, see the [Dataform CLI reference](https://docs.cloud.google.com/dataform/docs/reference/dataform-cli-reference) and the [Dataform CLI reference on GitHub](https://github.com/dataform-co/dataform/blob/main/cli/README.md).
+  * To learn more about Dataform, see the [Dataform overview](https://docs.cloud.google.com/dataform/docs/overview). 
 
 
 
@@ -284,6 +276,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

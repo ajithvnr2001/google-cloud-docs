@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/samples/healthcare-hl7v2-store-set-iam-policy/
 title: Set HL7v2 store IAM policy \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:49:12.995471+00:00
+fetched_at: 2026-10-21T12:52:53.517092+00:00
 ---
 
 # Set HL7v2 store IAM policy  |  Cloud Healthcare API  |  Google Cloud Documentation

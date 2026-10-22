@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/locations/
 title: Batch locations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:29:27.750689+00:00
+fetched_at: 2026-10-21T12:35:43.405334+00:00
 ---
 
 # Batch locations  |  Google Cloud Documentation

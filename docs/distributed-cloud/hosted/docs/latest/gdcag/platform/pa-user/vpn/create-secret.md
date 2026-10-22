@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/vpn/create-secret/
 title: Create the secret with a PSK \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:54.410047+00:00
+fetched_at: 2026-10-21T12:59:43.734012+00:00
 ---
 
 # Create the secret with a PSK  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

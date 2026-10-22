@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/tool/open-api/
 title: OpenAPI tools \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:22:22.985984+00:00
+fetched_at: 2026-10-21T12:55:31.528697+00:00
 ---
 
 # OpenAPI tools  |  CX Agent Studio  |  Google Cloud Documentation

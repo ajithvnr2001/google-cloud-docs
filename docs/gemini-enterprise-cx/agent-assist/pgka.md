@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/pgka/
 title: Proactive generative knowledge assist \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:44:16.207158+00:00
+fetched_at: 2026-10-21T12:54:59.588766+00:00
 ---
 
 # Proactive generative knowledge assist  |  Agent Assist  |  Google Cloud Documentation

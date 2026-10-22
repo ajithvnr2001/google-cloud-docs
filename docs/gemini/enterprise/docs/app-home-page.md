@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/app-home-page/
 title: Configure the app home page \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T10:12:34.856821+00:00
+fetched_at: 2026-10-21T12:40:48.414010+00:00
 ---
 
 # Configure the app home page  |  Gemini Enterprise  |  Google Cloud Documentation

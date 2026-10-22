@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/15.5.2/docs/overview/
 title: AlloyDB Omni version 15.5.2 and earlier overview \u00a0|\u00a0 AlloyDB Omni for containers: 15.5.2 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:37:38.652950+00:00
+fetched_at: 2026-10-21T15:20:17.412560+00:00
 ---
 
 # AlloyDB Omni version 15.5.2 and earlier overview  |  AlloyDB Omni for containers: 15.5.2  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/call-adapter-end-call/
 title: End a call \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:34.399858+00:00
+fetched_at: 2026-10-21T14:11:27.926632+00:00
 ---
 
 # End a call  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

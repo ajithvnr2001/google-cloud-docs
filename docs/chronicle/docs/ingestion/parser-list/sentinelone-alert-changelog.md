@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/sentinelone-alert-changelog/
 title: Change log for SENTINELONE_ALERT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:22:07.505831+00:00
+fetched_at: 2026-10-21T14:42:41.217231+00:00
 ---
 
 # Change log for SENTINELONE_ALERT  |  Google Security Operations  |  Google Cloud Documentation

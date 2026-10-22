@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/release-notes/
 title: Cloud Run functions (formerly known as Cloud Functions) release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:27:39.728005+00:00
+fetched_at: 2026-10-21T14:35:31.240664+00:00
 ---
 
 # Cloud Run functions (formerly known as Cloud Functions) release notes  |  Google Cloud Documentation

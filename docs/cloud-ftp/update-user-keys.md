@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-ftp/update-user-keys/
 title: Update SSH keys for an SFTP user \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:17:50.598581+00:00
+fetched_at: 2026-10-21T14:23:35.263757+00:00
 ---
 
 # Update SSH keys for an SFTP user  |  Google Cloud Documentation
@@ -435,12 +435,12 @@ To authenticate to Cloud FTP, set up Application Default Credentials. For more i
         $userCredential = (new UserCredential())
             ->setCredentialName($userUserCredentialsCredentialName)
             ->setCredentialType($userUserCredentialsCredentialType);
-        $userUserCredentials = [$userCredential,];
+        $userUserCredentials = [$userCredential];
         $storageDirectoryMapping = (new StorageDirectoryMapping())
             ->setBucket($userStorageDirectoryMappingsBucket)
             ->setDirectory($userStorageDirectoryMappingsDirectory)
             ->setPermission($userStorageDirectoryMappingsPermission);
-        $userStorageDirectoryMappings = [$storageDirectoryMapping,];
+        $userStorageDirectoryMappings = [$storageDirectoryMapping];
         $user = (new User())
             ->setCustomerServiceAccount($userCustomerServiceAccount)
             ->setUserCredentials($userUserCredentials)

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/monitoring/
 title: Monitoring your API \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:14:04.963265+00:00
+fetched_at: 2026-10-21T14:10:37.280528+00:00
 ---
 
 # Monitoring your API  |  API Gateway  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/digitalguardian-edr-changelog/
 title: Change log for DIGITALGUARDIAN_EDR \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:25:09.029370+00:00
+fetched_at: 2026-10-21T14:44:07.172041+00:00
 ---
 
 # Change log for DIGITALGUARDIAN_EDR  |  Google Security Operations  |  Google Cloud Documentation

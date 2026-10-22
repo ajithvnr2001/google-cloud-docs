@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/limacharlie-edr/
 title: Collect LimaCharlie EDR logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:55:20.026363+00:00
+fetched_at: 2026-10-21T12:37:24.932666+00:00
 ---
 
 # Collect LimaCharlie EDR logs  |  Google Security Operations  |  Google Cloud Documentation

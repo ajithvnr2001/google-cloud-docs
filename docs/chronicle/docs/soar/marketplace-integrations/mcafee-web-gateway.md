@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/mcafee-web-gateway/
 title: McAfee Web Gateway \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:10:48.502852+00:00
+fetched_at: 2026-10-21T14:22:00.907752+00:00
 ---
 
 # McAfee Web Gateway  |  Google Security Operations  |  Google Cloud Documentation

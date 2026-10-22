@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/17.9.0/docs/elastic-search/
 title: Access Elasticsearch data from AlloyDB Omni \u00a0|\u00a0 AlloyDB Omni using containers: 17.9.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:03:50.959823+00:00
+fetched_at: 2026-10-21T15:19:51.350954+00:00
 ---
 
 # Access Elasticsearch data from AlloyDB Omni  |  AlloyDB Omni using containers: 17.9.0  |  Google Cloud Documentation
@@ -25,8 +25,11 @@ Send feedback
 
 Select a documentation version: 17.9.0keyboard_arrow_down
 
+  * [ Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/elastic-search)
+  * [ 18.4.0 ](https://docs.cloud.google.com/alloydb/omni/containers/18.4.0/docs/elastic-search)
   * [ 18.3.0 ](https://docs.cloud.google.com/alloydb/omni/containers/18.3.0/docs/elastic-search)
   * [ 18.1.0 ](https://docs.cloud.google.com/alloydb/omni/containers/18.1.0/docs/elastic-search)
+  * [ 17.10.0 ](https://docs.cloud.google.com/alloydb/omni/containers/17.10.0/docs/elastic-search)
   * [ 17.9.0 ](https://docs.cloud.google.com/alloydb/omni/containers/17.9.0/docs/elastic-search)
   * [ 17.7.0 ](https://docs.cloud.google.com/alloydb/omni/containers/17.7.0/docs/elastic-search)
 

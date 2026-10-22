@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/private-egress/
 title: Set up private egress \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:33:36.072847+00:00
+fetched_at: 2026-10-21T14:09:32.614856+00:00
 ---
 
 # Set up private egress  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

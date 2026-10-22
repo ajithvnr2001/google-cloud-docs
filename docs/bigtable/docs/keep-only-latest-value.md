@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/keep-only-latest-value/
 title: Keep only the most recent value \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:41:47.581610+00:00
+fetched_at: 2026-10-21T12:36:36.420231+00:00
 ---
 
 # Keep only the most recent value  |  Bigtable  |  Google Cloud Documentation

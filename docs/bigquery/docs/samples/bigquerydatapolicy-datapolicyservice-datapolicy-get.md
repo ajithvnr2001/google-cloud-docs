@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerydatapolicy-datapolicyservice-datapolicy-get/
 title: Get a data policy \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:55.148948+00:00
+fetched_at: 2026-10-21T14:18:44.558655+00:00
 ---
 
 # Get a data policy  |  BigQuery  |  Google Cloud Documentation
@@ -31,6 +31,68 @@ For detailed documentation that includes this code sample, see the following:
 
 
 ## Code sample
+
+### Java
+
+Before trying this sample, follow the Java setup instructions in the [BigQuery quickstart using client libraries](https://docs.cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries). For more information, see the [BigQuery Java API reference documentation](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquery/latest/overview). 
+
+To authenticate to BigQuery, set up Application Default Credentials. For more information, see [Set up authentication for client libraries](https://docs.cloud.google.com/bigquery/docs/authentication#client-libs). 
+    
+    
+    import com.google.api.gax.rpc.[ApiException](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.ApiException.html);
+    import com.google.api.gax.rpc.[NotFoundException](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.NotFoundException.html);
+    import com.google.cloud.bigquery.datapolicies.v2.[DataMaskingPolicy](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataMaskingPolicy.html);
+    import com.google.cloud.bigquery.datapolicies.v2.[DataMaskingPolicy](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataMaskingPolicy.html).[PredefinedExpression](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataMaskingPolicy.PredefinedExpression.html);
+    import com.google.cloud.bigquery.datapolicies.v2.[DataPolicy](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataPolicy.html);
+    import com.google.cloud.bigquery.datapolicies.v2.[DataPolicyName](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataPolicyName.html);
+    import com.google.cloud.bigquery.datapolicies.v2.[DataPolicyServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataPolicyServiceClient.html);
+    import java.io.IOException;
+    
+    public class GetDataPolicy {
+    
+      /**
+       * Gets a specific data policy from the BigQuery Data Policy API by its name.
+       *
+       * @param projectId The Google Cloud project ID (for example, "example-project-id").
+       * @param location The geographic location of the data policy (for example, "us-central1").
+       * @param dataPolicyId The user-assigned ID of the data policy (for example,
+       *     "example_data_policy").
+       */
+      public static void getDataPolicy(String projectId, String location, String dataPolicyId) {
+        [DataPolicyName](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataPolicyName.html) dataPolicyName = [DataPolicyName](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataPolicyName.html).of(projectId, location, dataPolicyId);
+    
+        try ([DataPolicyServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataPolicyServiceClient.html) client = [DataPolicyServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataPolicyServiceClient.html).create()) {
+          [DataPolicy](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataPolicy.html) response = client.getDataPolicy(dataPolicyName);
+    
+          System.out.printf("Successfully retrieved data policy: %s%n", response.[getName](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataPolicy.html#com_google_cloud_bigquery_datapolicies_v2_DataPolicy_getName__)());
+          System.out.printf("  Data Policy ID: %s%n", response.[getDataPolicyId](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataPolicy.html#com_google_cloud_bigquery_datapolicies_v2_DataPolicy_getDataPolicyId__)());
+          System.out.printf("  Data Policy Type: %s%n", response.[getDataPolicyType](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataPolicy.html#com_google_cloud_bigquery_datapolicies_v2_DataPolicy_getDataPolicyType__)());
+          if (!response.[getPolicyTag](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataPolicy.html#com_google_cloud_bigquery_datapolicies_v2_DataPolicy_getPolicyTag__)().[isEmpty](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.LibraryMetadata.html#com_google_api_gax_rpc_LibraryMetadata_isEmpty__)()) {
+            System.out.printf("  Policy Tag: %s%n", response.[getPolicyTag](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataPolicy.html#com_google_cloud_bigquery_datapolicies_v2_DataPolicy_getPolicyTag__)());
+          }
+          if (!response.[getGranteesList](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataPolicy.html#com_google_cloud_bigquery_datapolicies_v2_DataPolicy_getGranteesList__)().[isEmpty](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.LibraryMetadata.html#com_google_api_gax_rpc_LibraryMetadata_isEmpty__)()) {
+            System.out.printf("  Grantees: %s%n", String.join(", ", response.[getGranteesList](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataPolicy.html#com_google_cloud_bigquery_datapolicies_v2_DataPolicy_getGranteesList__)()));
+          }
+          if (response.[hasDataMaskingPolicy](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataPolicy.html#com_google_cloud_bigquery_datapolicies_v2_DataPolicy_hasDataMaskingPolicy__)()) {
+            [DataMaskingPolicy](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataMaskingPolicy.html) maskingPolicy = response.[getDataMaskingPolicy](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataPolicy.html#com_google_cloud_bigquery_datapolicies_v2_DataPolicy_getDataMaskingPolicy__)();
+            if (maskingPolicy.[getPredefinedExpression](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataMaskingPolicy.html#com_google_cloud_bigquery_datapolicies_v2_DataMaskingPolicy_getPredefinedExpression__)()
+                != [PredefinedExpression](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataMaskingPolicy.PredefinedExpression.html).PREDEFINED_EXPRESSION_UNSPECIFIED) {
+              System.out.printf(
+                  "  Data Masking Predefined Expression: %s%n",
+                  maskingPolicy.[getPredefinedExpression](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataMaskingPolicy.html#com_google_cloud_bigquery_datapolicies_v2_DataMaskingPolicy_getPredefinedExpression__)());
+            } else if (!maskingPolicy.[getRoutine](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataMaskingPolicy.html#com_google_cloud_bigquery_datapolicies_v2_DataMaskingPolicy_getRoutine__)().[isEmpty](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.LibraryMetadata.html#com_google_api_gax_rpc_LibraryMetadata_isEmpty__)()) {
+              System.out.printf("  Data Masking Routine: %s%n", maskingPolicy.[getRoutine](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigquerydatapolicy/latest/com.google.cloud.bigquery.datapolicies.v2.DataMaskingPolicy.html#com_google_cloud_bigquery_datapolicies_v2_DataMaskingPolicy_getRoutine__)());
+            }
+          }
+        } catch ([NotFoundException](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.NotFoundException.html) err) {
+          System.err.printf(
+              "error: data policy '%s' not found: %s%n", dataPolicyName, err.[getMessage](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.ErrorDetails.html#com_google_api_gax_rpc_ErrorDetails__T_getMessage_java_lang_Class_T__)());
+        } catch ([ApiException](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.ApiException.html) | IOException err) {
+          System.err.printf(
+              "error: failed to get data policy '%s': %s%n", dataPolicyName, err.[getMessage](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.ErrorDetails.html#com_google_api_gax_rpc_ErrorDetails__T_getMessage_java_lang_Class_T__)());
+        }
+      }
+    
 
 ### Node.js
 

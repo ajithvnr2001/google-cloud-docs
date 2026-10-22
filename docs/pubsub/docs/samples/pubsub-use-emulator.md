@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-use-emulator/
 title: Use emulator \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:53:06.455432+00:00
+fetched_at: 2026-10-21T14:59:06.080632+00:00
 ---
 
 # Use emulator  |  Pub/Sub  |  Google Cloud Documentation

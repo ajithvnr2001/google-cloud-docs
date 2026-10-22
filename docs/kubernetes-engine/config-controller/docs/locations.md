@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/config-controller/docs/locations/
 title: Config Controller locations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:12:11.738722+00:00
+fetched_at: 2026-10-21T15:03:20.332283+00:00
 ---
 
 # Config Controller locations  |  Google Cloud Documentation

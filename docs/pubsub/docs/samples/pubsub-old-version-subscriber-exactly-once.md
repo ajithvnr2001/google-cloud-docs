@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-subscriber-exactly-once/
 title: v1 Subscribe with exactly once delivery (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:53:13.337522+00:00
+fetched_at: 2026-10-21T14:58:55.208772+00:00
 ---
 
 # v1 Subscribe with exactly once delivery (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

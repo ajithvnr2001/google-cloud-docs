@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cisco_tacacs_changelog/
 title: Change log for CISCO_TACACS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:43:59.877313+00:00
+fetched_at: 2026-10-21T14:44:42.842538+00:00
 ---
 
 # Change log for CISCO_TACACS  |  Google Security Operations  |  Google Cloud Documentation

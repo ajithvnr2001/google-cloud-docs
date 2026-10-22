@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/monitoring/
 title: Create a Cloud Monitoring dashboard \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:42:51.959984+00:00
+fetched_at: 2026-10-21T14:42:17.267419+00:00
 ---
 
 # Create a Cloud Monitoring dashboard  |  Cluster Toolkit  |  Google Cloud Documentation

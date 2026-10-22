@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/network/
 title: Networking overview \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:22:25.781445+00:00
+fetched_at: 2026-10-21T12:55:51.187351+00:00
 ---
 
 # Networking overview  |  CX Agent Studio  |  Google Cloud Documentation

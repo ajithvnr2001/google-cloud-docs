@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/default-parser-configuration/
 title: List of default parser configuration guides \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:25.162155+00:00
+fetched_at: 2026-10-21T12:36:47.177913+00:00
 ---
 
 # List of default parser configuration guides  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/concepts/overview-devices/
 title: Devices API overview \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:25.169095+00:00
+fetched_at: 2026-10-21T12:54:18.882490+00:00
 ---
 
 # Devices API overview  |  Cloud Identity  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/tpus/quickstart-create-tpu-instance/
 title: Quickstart: Create a TPU instance \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:51.240569+00:00
+fetched_at: 2026-10-21T14:20:37.799598+00:00
 ---
 
 # Quickstart: Create a TPU instance  |  Compute Engine  |  Google Cloud Documentation

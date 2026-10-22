@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/hyperdisk/
 title: Scale your storage performance with Hyperdisk \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:02:03.630420+00:00
+fetched_at: 2026-10-21T15:03:14.665507+00:00
 ---
 
 # Scale your storage performance with Hyperdisk  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

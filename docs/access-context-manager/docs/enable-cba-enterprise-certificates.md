@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/enable-cba-enterprise-certificates/
 title: Enable certificate-based access with your enterprise certificates \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:25:27.819898+00:00
+fetched_at: 2026-10-21T14:26:02.496463+00:00
 ---
 
 # Enable certificate-based access with your enterprise certificates  |  Access Context Manager  |  Google Cloud Documentation

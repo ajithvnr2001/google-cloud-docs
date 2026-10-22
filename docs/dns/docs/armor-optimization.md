@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/docs/armor-optimization/
 title: DNS Armor cost estimation and optimization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:59.462416+00:00
+fetched_at: 2026-10-21T14:06:31.896262+00:00
 ---
 
 # DNS Armor cost estimation and optimization  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/spaces/apigee-spaces-overview/
 title: Apigee Spaces overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:39:17.266222+00:00
+fetched_at: 2026-10-21T14:27:38.744402+00:00
 ---
 
 # Apigee Spaces overview  |  Google Cloud Documentation

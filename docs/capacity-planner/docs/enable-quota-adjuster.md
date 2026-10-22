@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/capacity-planner/docs/enable-quota-adjuster/
 title: Enable the quota adjuster \u00a0|\u00a0 Capacity Planner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:38:52.945313+00:00
+fetched_at: 2026-10-21T14:24:58.107466+00:00
 ---
 
 # Enable the quota adjuster  |  Capacity Planner  |  Google Cloud Documentation

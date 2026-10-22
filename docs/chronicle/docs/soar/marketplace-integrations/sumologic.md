@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/sumologic/
 title: Sumo Logic \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:55:28.889772+00:00
+fetched_at: 2026-10-21T12:36:49.135104+00:00
 ---
 
 # Sumo Logic  |  Google Security Operations  |  Google Cloud Documentation

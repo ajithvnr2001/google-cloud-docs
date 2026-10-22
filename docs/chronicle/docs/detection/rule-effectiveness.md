@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/rule-effectiveness/
 title: Monitor rule performance \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:15:53.090092+00:00
+fetched_at: 2026-10-21T12:38:28.465183+00:00
 ---
 
 # Monitor rule performance  |  Google Security Operations  |  Google Cloud Documentation

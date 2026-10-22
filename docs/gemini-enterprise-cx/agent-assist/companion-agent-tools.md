@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/companion-agent-tools/
 title: Companion agent tool support \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:44:15.078558+00:00
+fetched_at: 2026-10-21T12:54:53.009993+00:00
 ---
 
 # Companion agent tool support  |  Agent Assist  |  Google Cloud Documentation

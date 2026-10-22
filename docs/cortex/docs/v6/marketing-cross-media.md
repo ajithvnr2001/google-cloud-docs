@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/marketing-cross-media/
 title: Cross Media & Product Connected Insights \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:54:03.119693+00:00
+fetched_at: 2026-10-21T14:10:37.240233+00:00
 ---
 
 # Cross Media & Product Connected Insights  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances/
 title: Basic scenarios for creating managed instance groups (MIGs) \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:04.401224+00:00
+fetched_at: 2026-10-21T14:22:21.445147+00:00
 ---
 
 # Basic scenarios for creating managed instance groups (MIGs)  |  Compute Engine  |  Google Cloud Documentation

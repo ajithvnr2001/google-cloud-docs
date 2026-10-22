@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/restrict-confidential-vm-interaction/
 title: Restrict VM interaction to Confidential VM only \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:28.039827+00:00
+fetched_at: 2026-10-21T14:21:13.367826+00:00
 ---
 
 # Restrict VM interaction to Confidential VM only  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/passwordstate-changelog/
 title: Change log for PASSWORDSTATE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:51:50.188699+00:00
+fetched_at: 2026-10-21T14:51:49.526811+00:00
 ---
 
 # Change log for PASSWORDSTATE  |  Google Security Operations  |  Google Cloud Documentation

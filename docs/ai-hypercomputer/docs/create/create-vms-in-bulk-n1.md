@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-vms-in-bulk-n1/
 title: Create AI-optimized N1 VMs with GPUs in bulk \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:34:57.788312+00:00
+fetched_at: 2026-10-21T14:25:55.593016+00:00
 ---
 
 # Create AI-optimized N1 VMs with GPUs in bulk  |  AI Hypercomputer  |  Google Cloud Documentation

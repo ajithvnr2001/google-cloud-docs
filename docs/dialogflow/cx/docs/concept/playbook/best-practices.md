@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/playbook/best-practices/
 title: Playbook best practices \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:36.610985+00:00
+fetched_at: 2026-10-21T12:42:34.106100+00:00
 ---
 
 # Playbook best practices  |  Dialogflow CX  |  Google Cloud Documentation

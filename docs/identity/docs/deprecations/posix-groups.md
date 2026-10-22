@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/deprecations/posix-groups/
 title: POSIX groups deprecation \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:21:33.794732+00:00
+fetched_at: 2026-10-21T12:54:36.654690+00:00
 ---
 
 # POSIX groups deprecation  |  Cloud Identity  |  Google Cloud Documentation

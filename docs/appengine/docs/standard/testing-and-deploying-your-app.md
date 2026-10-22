@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/testing-and-deploying-your-app/
 title: Test and deploy your application \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:08:47.426925+00:00
+fetched_at: 2026-10-21T12:30:40.742759+00:00
 ---
 
 # Test and deploy your application  |  App Engine standard environment  |  Google Cloud Documentation

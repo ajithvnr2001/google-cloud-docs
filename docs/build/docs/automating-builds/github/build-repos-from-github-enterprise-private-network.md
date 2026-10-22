@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/github/build-repos-from-github-enterprise-private-network/
 title: Build repositories from GitHub Enterprise in a private network \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:06.153005+00:00
+fetched_at: 2026-10-21T14:11:12.441109+00:00
 ---
 
 # Build repositories from GitHub Enterprise in a private network  |  Google Cloud Documentation

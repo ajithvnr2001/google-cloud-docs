@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-bulk-user-management/
 title: Bulk user management endpoints \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:41:41.487359+00:00
+fetched_at: 2026-10-21T14:21:55.710895+00:00
 ---
 
 # Bulk user management endpoints  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/editions-overview/
 title: Editions overview \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:05.453141+00:00
+fetched_at: 2026-10-21T12:37:09.341957+00:00
 ---
 
 # Editions overview  |  Bigtable  |  Google Cloud Documentation

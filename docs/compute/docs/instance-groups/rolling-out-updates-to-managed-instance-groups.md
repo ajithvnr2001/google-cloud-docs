@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups/
 title: Automatically apply VM configuration updates in a MIG \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:25:24.032072+00:00
+fetched_at: 2026-10-21T14:22:45.260220+00:00
 ---
 
 # Automatically apply VM configuration updates in a MIG  |  Compute Engine  |  Google Cloud Documentation

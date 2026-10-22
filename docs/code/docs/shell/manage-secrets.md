@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/manage-secrets/
 title: Create and manage secrets with Cloud Code \u00a0|\u00a0 Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:16:47.037864+00:00
+fetched_at: 2026-10-21T14:20:40.562242+00:00
 ---
 
 # Create and manage secrets with Cloud Code  |  Cloud Code for Cloud Shell  |  Google Cloud Documentation

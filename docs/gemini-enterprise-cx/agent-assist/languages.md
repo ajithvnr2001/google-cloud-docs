@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/languages/
 title: Language support \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:25:07.907944+00:00
+fetched_at: 2026-10-21T12:54:44.210961+00:00
 ---
 
 # Language support  |  Agent Assist  |  Google Cloud Documentation

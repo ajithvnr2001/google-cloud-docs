@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/sample-integration/
 title: Integrate a sample integration with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:29:45.604695+00:00
+fetched_at: 2026-10-21T14:22:51.687493+00:00
 ---
 
 # Integrate a sample integration with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/campaign-progressive-amd/
 title: Answering machine detection for progressive campaigns \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:26.046464+00:00
+fetched_at: 2026-10-21T14:11:59.511403+00:00
 ---
 
 # Answering machine detection for progressive campaigns  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

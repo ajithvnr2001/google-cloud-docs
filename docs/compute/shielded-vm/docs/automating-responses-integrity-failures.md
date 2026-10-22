@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/shielded-vm/docs/automating-responses-integrity-failures/
 title: Automating responses to integrity validation failures \u00a0|\u00a0 Shielded VM \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:05:06.140748+00:00
+fetched_at: 2026-10-21T14:08:48.480227+00:00
 ---
 
 # Automating responses to integrity validation failures  |  Shielded VM  |  Google Cloud Documentation

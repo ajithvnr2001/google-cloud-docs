@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-custom-machine-type-create-without-helper/
 title: Create custom machine types without helper function \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:38:33.266116+00:00
+fetched_at: 2026-10-21T14:20:19.000305+00:00
 ---
 
 # Create custom machine types without helper function  |  Compute Engine  |  Google Cloud Documentation

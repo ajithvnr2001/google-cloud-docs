@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/analytics/investigate-anomalies/
 title: View and investigate anomalies \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T09:17:08.353002+00:00
+fetched_at: 2026-10-21T12:30:02.626890+00:00
 ---
 
 # View and investigate anomalies  |  Apigee  |  Google Cloud Documentation

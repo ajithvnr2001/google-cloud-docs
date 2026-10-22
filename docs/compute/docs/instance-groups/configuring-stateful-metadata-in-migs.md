@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/configuring-stateful-metadata-in-migs/
 title: Configuring stateful metadata in MIGs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:51:32.758013+00:00
+fetched_at: 2026-10-21T14:19:27.135793+00:00
 ---
 
 # Configuring stateful metadata in MIGs  |  Compute Engine  |  Google Cloud Documentation

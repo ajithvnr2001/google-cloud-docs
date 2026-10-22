@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/create-a-vm/supported-vm-images/
 title: GDC-supported VM images \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:13:34.523063+00:00
+fetched_at: 2026-10-21T14:08:32.403156+00:00
 ---
 
 # GDC-supported VM images  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/administration/migrate-from-legacy-auth-to-gcp-auth/
 title: Migrate to Google Cloud authentication \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:58.006696+00:00
+fetched_at: 2026-10-21T14:19:00.588156+00:00
 ---
 
 # Migrate to Google Cloud authentication  |  Google Security Operations  |  Google Cloud Documentation

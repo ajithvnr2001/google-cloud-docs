@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/gcp-threatintel-changelog/
 title: Change log for GCP_THREATINTEL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:44:46.190474+00:00
+fetched_at: 2026-10-21T14:51:57.779299+00:00
 ---
 
 # Change log for GCP_THREATINTEL  |  Google Security Operations  |  Google Cloud Documentation

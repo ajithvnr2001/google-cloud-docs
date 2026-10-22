@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/spaces/move-space-resources/
 title: Move API resources in Apigee Spaces \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:18:52.747428+00:00
+fetched_at: 2026-10-21T14:27:28.361968+00:00
 ---
 
 # Move API resources in Apigee Spaces  |  Google Cloud Documentation

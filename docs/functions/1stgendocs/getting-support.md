@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/1stgendocs/getting-support/
 title: Getting support \u00a0|\u00a0 Cloud Run functions (1st gen) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:29:43.653536+00:00
+fetched_at: 2026-10-21T12:55:24.189729+00:00
 ---
 
 # Getting support  |  Cloud Run functions (1st gen)  |  Google Cloud Documentation

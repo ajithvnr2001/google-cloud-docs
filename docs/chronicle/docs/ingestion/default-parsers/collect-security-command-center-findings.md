@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/collect-security-command-center-findings/
 title: Collect Security Command Center findings \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:27:17.880380+00:00
+fetched_at: 2026-10-21T12:37:57.257365+00:00
 ---
 
 # Collect Security Command Center findings  |  Google Security Operations  |  Google Cloud Documentation

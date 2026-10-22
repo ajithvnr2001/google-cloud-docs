@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/gke/route-trigger-vision-ai/
 title: Route Vision AI events to GKE \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:47:19.779101+00:00
+fetched_at: 2026-10-21T12:45:54.150140+00:00
 ---
 
 # Route Vision AI events to GKE  |  Eventarc Standard  |  Google Cloud Documentation

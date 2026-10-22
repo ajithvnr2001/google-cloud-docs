@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/bi-engine-intro/
 title: Introduction to BI Engine \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:23.456843+00:00
+fetched_at: 2026-10-21T12:41:03.759170+00:00
 ---
 
 # Introduction to BI Engine  |  BigQuery  |  Google Cloud Documentation

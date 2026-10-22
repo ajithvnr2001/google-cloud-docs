@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/utilize-set-targets/
 title: Utilize set targets \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:38:11.962728+00:00
+fetched_at: 2026-10-21T14:22:34.434673+00:00
 ---
 
 # Utilize set targets  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

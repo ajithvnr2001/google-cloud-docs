@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/gcp-tasks/configure-sheets-get-task/
 title: Sheets - Get task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:42.386563+00:00
+fetched_at: 2026-10-21T14:26:24.525207+00:00
 ---
 
 # Sheets - Get task  |  Application Integration  |  Google Cloud Documentation

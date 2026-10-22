@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/raster-tutorial-weather/
 title: Use raster data to analyze temperature \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:46:59.349717+00:00
+fetched_at: 2026-10-21T12:36:27.461561+00:00
 ---
 
 # Use raster data to analyze temperature  |  BigQuery  |  Google Cloud Documentation

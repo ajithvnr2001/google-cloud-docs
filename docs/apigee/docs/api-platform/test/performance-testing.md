@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/test/performance-testing/
 title: Performance and load testing \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:24:51.826590+00:00
+fetched_at: 2026-10-21T14:27:38.041815+00:00
 ---
 
 # Performance and load testing  |  Apigee  |  Google Cloud Documentation

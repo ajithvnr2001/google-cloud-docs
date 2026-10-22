@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/web-sdk-v3-customize/
 title: Customize messages and translations \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:07:59.883262+00:00
+fetched_at: 2026-10-21T14:21:25.307030+00:00
 ---
 
 # Customize messages and translations  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

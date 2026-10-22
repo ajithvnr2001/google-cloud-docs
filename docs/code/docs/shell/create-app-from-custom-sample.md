@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/create-app-from-custom-sample/
 title: Create a new application from a custom sample in Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:54:59.468691+00:00
+fetched_at: 2026-10-21T14:20:13.046666+00:00
 ---
 
 # Create a new application from a custom sample in Cloud Code for Cloud Shell  |  Google Cloud Documentation

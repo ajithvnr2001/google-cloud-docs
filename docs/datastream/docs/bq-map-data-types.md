@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/bq-map-data-types/
 title: Data type mappings in BigQuery \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:50:53.689287+00:00
+fetched_at: 2026-10-22T05:41:18.370777+00:00
 ---
 
 # Data type mappings in BigQuery  |  Datastream  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Data type mappings in BigQuery Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how Datastream maps data types from various source databases to their corresponding BigQuery data types. Learn how different data types convert when you migrate data to BigQuery, how BigQuery represents MongoDB binary JSON (BSON) documents, and how to query PostgreSQL array data as a BigQuery `ARRAY` data type.
+Datastream automatically converts data types from supported sources into compatible BigQuery data types. Understanding these mappings helps you plan destination schemas, work with MongoDB binary JSON (BSON) documents in BigQuery, and query PostgreSQL arrays as a BigQuery `ARRAY` data type.
 
 ## Map data types
 
@@ -313,6 +313,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

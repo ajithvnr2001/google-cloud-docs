@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/ide/using-the-ide/
 title: Use the IDE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:04.351442+00:00
+fetched_at: 2026-10-21T14:09:53.930531+00:00
 ---
 
 # Use the IDE  |  Google Security Operations  |  Google Cloud Documentation

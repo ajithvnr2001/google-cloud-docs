@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/apihub/quickstart-create-event-triggers/
 title: Create an Eventarc trigger \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:16:56.447330+00:00
+fetched_at: 2026-10-21T14:55:11.096202+00:00
 ---
 
 # Create an Eventarc trigger  |  Apigee  |  Google Cloud Documentation

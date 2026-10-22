@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/17.5.0/docs/integrate-active-directory-kubernetes-operator/
 title: Integrate Active Directory user support on Kubernetes \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 17.5.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:02:11.376087+00:00
+fetched_at: 2026-10-21T15:26:27.813546+00:00
 ---
 
 # Integrate Active Directory user support on Kubernetes  |  AlloyDB Omni for Kubernetes: 17.5.0  |  Google Cloud Documentation

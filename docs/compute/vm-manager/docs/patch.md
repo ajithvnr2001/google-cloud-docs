@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/vm-manager/docs/patch/
 title: About Patch \u00a0|\u00a0 VM Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:30:09.028535+00:00
+fetched_at: 2026-10-21T14:21:43.783792+00:00
 ---
 
 # About Patch  |  VM Manager  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/setting-up-cs/
 title: Set up Chrome Enterprise Premium and Falcon ZTA integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:55:41.695427+00:00
+fetched_at: 2026-10-21T14:23:02.730647+00:00
 ---
 
 # Set up Chrome Enterprise Premium and Falcon ZTA integration  |  Google Cloud Documentation

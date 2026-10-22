@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/gcp-cloudaudit/
 title: Collect Google Cloud Audit Logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:38.202736+00:00
+fetched_at: 2026-10-21T14:52:19.540551+00:00
 ---
 
 # Collect Google Cloud Audit Logs  |  Google Security Operations  |  Google Cloud Documentation

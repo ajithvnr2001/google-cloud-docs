@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/revert-snapshot/
 title: Revert a file share to a prior snapshot state \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:15:22.462613+00:00
+fetched_at: 2026-10-21T12:55:52.270941+00:00
 ---
 
 # Revert a file share to a prior snapshot state  |  Filestore  |  Google Cloud Documentation

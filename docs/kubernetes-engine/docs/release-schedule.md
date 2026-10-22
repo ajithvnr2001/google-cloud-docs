@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/release-schedule/
 title: GKE release schedule \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:44:53.206544+00:00
+fetched_at: 2026-10-21T14:29:16.755581+00:00
 ---
 
 # GKE release schedule  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -63,7 +63,7 @@ Available1 | Auto Upgrade2 | Available1 | Auto Upgrade2 | Available1 | Auto Upgr
 1.33 | 2025-05-07 | 2025-06-10 | 2025-06-04 | 2025-09-09 | 2025-07-22 | 2025-10-14 | 2025-06-04 | _2026-12_4 | 2026-08-12 | 2027-06-12  
 1.34 | 2025-09-02 | 2025-10-28 | 2025-11-26 | 2026-03-10 | 2026-02-18 | 2026-06-09 | 2025-12-03 | _2027-Q2_4 | 2027-01-25 | 2027-11-25  
 1.35 | 2025-12-24 | 2026-02-11 | 2026-02-11 | 2026-04-28 | 2026-04-07 | 2026-09-15 | 2026-02-11 | _2027-Q3_4 | 2027-04-11 | 2028-02-11  
-1.36 | 2026-04-28 | 2026-06-19 | 2026-06-09 | _2026-11_4 | _2026-10-21_5 | _2027-Q1_4 | 2026-06-09 | _2027-Q4_4 | 2027-08-09 | 2028-06-09  
+1.36 | 2026-04-28 | 2026-06-19 | 2026-06-09 | _2026-11_4 | _2026-10-21_5 | _2027-01_4 | 2026-06-09 | _2027-Q4_4 | 2027-08-09 | 2028-06-09  
 1.37 | 2026-09-02 | _2026-10-28_5 | _2026-10-21_5 | _2027-Q1_4 | _2027-01_4 | _2027-Q1_4 | _2026-10-21_5 | _2028-Q2_4 | _2027-Q4_4 | _2028-Q4_4  
 **Caution:** GKE version 1.29 and earlier have reached [end of support](https://docs.cloud.google.com/kubernetes-engine/versioning#lifecycle) and are no longer supported.
 
@@ -115,6 +115,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

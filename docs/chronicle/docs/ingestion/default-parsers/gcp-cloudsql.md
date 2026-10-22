@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/gcp-cloudsql/
 title: Collect Google Cloud SQL logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:39.886916+00:00
+fetched_at: 2026-10-21T12:36:35.244089+00:00
 ---
 
 # Collect Google Cloud SQL logs  |  Google Security Operations  |  Google Cloud Documentation

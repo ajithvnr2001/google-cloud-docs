@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/startup-script/
 title: Use startup scripts \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:43.537160+00:00
+fetched_at: 2026-10-21T14:46:12.881360+00:00
 ---
 
 # Use startup scripts  |  Cluster Toolkit  |  Google Cloud Documentation

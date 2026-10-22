@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/choosing-ssd-hdd/
 title: Choose between SSD and HDD storage \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:08.985508+00:00
+fetched_at: 2026-10-21T12:36:18.747179+00:00
 ---
 
 # Choose between SSD and HDD storage  |  Bigtable  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/ca-service/revoke-cert/
 title: Revoke a certificate \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:48:49.040114+00:00
+fetched_at: 2026-10-21T12:57:52.531934+00:00
 ---
 
 # Revoke a certificate  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

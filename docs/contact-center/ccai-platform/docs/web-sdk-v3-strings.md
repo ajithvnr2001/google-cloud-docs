@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/web-sdk-v3-strings/
 title: Web SDK v3 strings guide \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:40:42.416341+00:00
+fetched_at: 2026-10-21T12:29:44.485874+00:00
 ---
 
 # Web SDK v3 strings guide  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

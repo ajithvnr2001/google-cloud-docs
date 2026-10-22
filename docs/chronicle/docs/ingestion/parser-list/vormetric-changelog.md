@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/vormetric-changelog/
 title: Change log for VORMETRIC \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:49:33.674993+00:00
+fetched_at: 2026-10-21T14:43:22.352940+00:00
 ---
 
 # Change log for VORMETRIC  |  Google Security Operations  |  Google Cloud Documentation

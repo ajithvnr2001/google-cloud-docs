@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/php/customizing-the-php-runtime/
 title: Customizing the PHP Runtime \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:09.479901+00:00
+fetched_at: 2026-10-21T14:26:55.684144+00:00
 ---
 
 # Customizing the PHP Runtime  |  App Engine flexible environment  |  Google Cloud Documentation

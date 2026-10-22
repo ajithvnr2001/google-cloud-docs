@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/workstation-software-requirements/
 title: Workstation and software requirements \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:35.987455+00:00
+fetched_at: 2026-10-21T12:29:40.950748+00:00
 ---
 
 # Workstation and software requirements  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

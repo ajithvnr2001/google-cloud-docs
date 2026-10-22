@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/support-deprecation/
 title: Software support and deprecation policy \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:32.572104+00:00
+fetched_at: 2026-10-21T13:33:08.866810+00:00
 ---
 
 # Software support and deprecation policy  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

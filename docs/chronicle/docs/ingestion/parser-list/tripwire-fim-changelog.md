@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/tripwire-fim-changelog/
 title: Change log for TRIPWIRE_FIM \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:12:40.151662+00:00
+fetched_at: 2026-10-21T14:43:30.755491+00:00
 ---
 
 # Change log for TRIPWIRE_FIM  |  Google Security Operations  |  Google Cloud Documentation

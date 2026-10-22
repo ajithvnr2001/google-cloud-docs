@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/samples/string-to-uppercase/
 title: Convert a string to uppercase \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:41:59.310116+00:00
+fetched_at: 2026-10-21T14:26:05.297733+00:00
 ---
 
 # Convert a string to uppercase  |  Application Integration  |  Google Cloud Documentation

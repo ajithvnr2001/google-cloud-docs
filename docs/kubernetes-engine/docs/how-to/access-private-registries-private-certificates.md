@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/access-private-registries-private-certificates/
 title: Access private registries with private CA certificates \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:10.024962+00:00
+fetched_at: 2026-10-21T15:01:18.985782+00:00
 ---
 
 # Access private registries with private CA certificates  |  GKE security  |  Google Cloud Documentation

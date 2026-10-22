@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/support-landing/
 title: Help Center \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:25.875879+00:00
+fetched_at: 2026-10-21T15:08:38.460687+00:00
 ---
 
 # Help Center  |  Looker  |  Google Cloud Documentation

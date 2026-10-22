@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/publish/drupal/get-started-cloud-marketplace/
 title: Get started with Apigee Developer Portal Kickstart from Cloud Marketplace \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:37:58.342134+00:00
+fetched_at: 2026-10-21T12:30:06.727703+00:00
 ---
 
 # Get started with Apigee Developer Portal Kickstart from Cloud Marketplace  |  Google Cloud Documentation

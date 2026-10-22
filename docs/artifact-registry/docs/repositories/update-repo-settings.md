@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/repositories/update-repo-settings/
 title: Update repository settings \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:20.008767+00:00
+fetched_at: 2026-10-21T14:42:50.764797+00:00
 ---
 
 # Update repository settings  |  Artifact Registry  |  Google Cloud Documentation
@@ -21,18 +21,9 @@ Send feedback
 
 #  Update repository settings Stay organized with collections  Save and categorize content based on your preferences. 
 
-You can update the following repository settings:
+Artifact Registry lets you update repository settings for repository descriptions, [labels](https://docs.cloud.google.com/artifact-registry/docs/repositories/label-repos), upstream authentication details, vulnerability [scanning settings](https://docs.cloud.google.com/artifact-analysis/docs/enable-automatic-scanning#disable-repo), and immutable image tags for Docker repositories.
 
-  * Repository description.
-  * Remote repository upstream authentication details.
-  * Immutable image tags for Docker repositories. If you enable this setting, an image tag always points to the same image digest, including the default `latest` tag. 
-
-To learn more about image tags, image digests, and immutable image tags, see [Container image versions](https://docs.cloud.google.com/artifact-registry/docs/docker/names#versions).
-
-  * Repository [labels](https://docs.cloud.google.com/artifact-registry/docs/repositories/label-repos).
-  * Vulnerability [scanning settings](https://docs.cloud.google.com/artifact-analysis/docs/enable-automatic-scanning#disable-repo).
-
-
+**Note:** When you enable immutable image tags, an image tag always points to the same image digest, including the default `latest` tag. To learn more about image tags, image digests, and immutable image tags, see [Container image versions](https://docs.cloud.google.com/artifact-registry/docs/docker/names#versions).
 
 ### Required roles
 
@@ -167,6 +158,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

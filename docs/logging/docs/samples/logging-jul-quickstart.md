@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/samples/logging-jul-quickstart/
 title: Java: Util.logging Usage \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:57:09.342105+00:00
+fetched_at: 2026-10-21T15:10:13.974324+00:00
 ---
 
 # Java: Util.logging Usage  |  Cloud Logging  |  Google Cloud Documentation

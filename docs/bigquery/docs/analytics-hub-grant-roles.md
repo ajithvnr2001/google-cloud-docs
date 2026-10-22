@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/analytics-hub-grant-roles/
 title: Configure BigQuery sharing roles \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:12:03.285062+00:00
+fetched_at: 2026-10-22T05:45:38.120867+00:00
 ---
 
 # Configure BigQuery sharing roles  |  Google Cloud Documentation

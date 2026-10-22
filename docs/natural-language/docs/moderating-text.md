@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/docs/moderating-text/
 title: Moderate text \u00a0|\u00a0 Cloud Natural Language API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:59:54.142499+00:00
+fetched_at: 2026-10-21T15:17:57.587386+00:00
 ---
 
 # Moderate text  |  Cloud Natural Language API  |  Google Cloud Documentation

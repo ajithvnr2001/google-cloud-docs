@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deployment-manager/docs/dm-convert/
 title: Using DM Convert to transition to Terraform or Kubernetes Resource Model (KRM) \u00a0|\u00a0 Cloud Deployment Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:46:58.909475+00:00
+fetched_at: 2026-10-21T12:43:08.872680+00:00
 ---
 
 # Using DM Convert to transition to Terraform or Kubernetes Resource Model (KRM)  |  Cloud Deployment Manager  |  Google Cloud Documentation

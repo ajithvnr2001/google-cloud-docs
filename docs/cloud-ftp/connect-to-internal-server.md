@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-ftp/connect-to-internal-server/
 title: Connect to an internal SFTP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:17:50.233755+00:00
+fetched_at: 2026-10-21T14:23:22.923815+00:00
 ---
 
 # Connect to an internal SFTP server  |  Google Cloud Documentation

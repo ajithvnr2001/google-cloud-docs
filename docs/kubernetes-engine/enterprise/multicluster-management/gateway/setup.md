@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/enterprise/multicluster-management/gateway/setup/
 title: Set up the Connect gateway \u00a0|\u00a0 Fleet management \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:37:14.223601+00:00
+fetched_at: 2026-10-21T15:03:36.012574+00:00
 ---
 
 # Set up the Connect gateway  |  Fleet management  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-optimize/release-notes/
 title: App Optimize API release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:34:15.786762+00:00
+fetched_at: 2026-10-21T14:43:09.058026+00:00
 ---
 
 # App Optimize API release notes  |  Google Cloud Documentation

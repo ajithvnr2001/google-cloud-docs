@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/oci-flow-changelog/
 title: Change log for OCI_FLOW \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:14:58.646412+00:00
+fetched_at: 2026-10-21T14:51:39.295741+00:00
 ---
 
 # Change log for OCI_FLOW  |  Google Security Operations  |  Google Cloud Documentation

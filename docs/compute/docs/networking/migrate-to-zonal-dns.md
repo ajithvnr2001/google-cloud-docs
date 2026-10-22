@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/networking/migrate-to-zonal-dns/
 title: Migrate your projects to zonal DNS \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:25.956066+00:00
+fetched_at: 2026-10-21T12:38:30.595712+00:00
 ---
 
 # Migrate your projects to zonal DNS  |  Compute Engine  |  Google Cloud Documentation

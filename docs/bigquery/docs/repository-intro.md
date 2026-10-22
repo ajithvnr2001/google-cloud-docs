@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/repository-intro/
 title: Introduction to repositories \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:47:00.102352+00:00
+fetched_at: 2026-10-21T12:36:11.528224+00:00
 ---
 
 # Introduction to repositories  |  BigQuery  |  Google Cloud Documentation

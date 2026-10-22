@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/user-soar-only/create-a-collaborator-user/
 title: Create a collaborator user \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:42.363372+00:00
+fetched_at: 2026-10-21T14:21:52.593877+00:00
 ---
 
 # Create a collaborator user  |  Google Security Operations  |  Google Cloud Documentation

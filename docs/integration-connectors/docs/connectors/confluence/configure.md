@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/confluence/configure/
 title: Confluence \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:19.196496+00:00
+fetched_at: 2026-10-21T12:52:46.302473+00:00
 ---
 
 # Confluence  |  Integration Connectors  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/raw-data-export-dictionary/
 title: Raw data export dictionary \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:43:21.994006+00:00
+fetched_at: 2026-10-21T14:45:42.181435+00:00
 ---
 
 # Raw data export dictionary  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

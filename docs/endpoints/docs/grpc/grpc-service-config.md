@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/grpc/grpc-service-config/
 title: Configuring a gRPC service \u00a0|\u00a0 Cloud Endpoints with gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:12:00.940760+00:00
+fetched_at: 2026-10-21T12:51:12.504134+00:00
 ---
 
 # Configuring a gRPC service  |  Cloud Endpoints with gRPC  |  Google Cloud Documentation

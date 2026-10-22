@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/use-embedding-models/
 title: Use embedding models with RAG Engine \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:46:50.129829+00:00
+fetched_at: 2026-10-21T15:41:08.352767+00:00
 ---
 
 # Use embedding models with RAG Engine  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -118,12 +118,12 @@ These code samples demonstrate how to create a RAG corpus with a publisher Gecko
 ###  Agent Platform SDK for Python 
     
     
-      import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+      import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
       from vertexai import rag
     
       # Set Project
       PROJECT_ID = "YOUR_PROJECT_ID"
-      [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=${PROJECT_ID}, location="us-central1")
+      [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=${PROJECT_ID}, location="us-central1")
     
       # Configure a Google first-party embedding model
       embedding_model_config = rag.RagEmbeddingModelConfig(
@@ -179,12 +179,12 @@ These code samples demonstrate how to create a RAG corpus with your deployed, fi
 ###  Agent Platform SDK for Python 
     
     
-      import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+      import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
       from vertexai import rag
     
       # Set Project
       PROJECT_ID = "YOUR_PROJECT_ID"
-      [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=${PROJECT_ID}, location="us-central1")
+      [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=${PROJECT_ID}, location="us-central1")
     
       # Your Vertex Endpoint resource with the deployed fine-tuned Gecko model
       ENDPOINT_ID = "YOUR_MODEL_ENDPOINT_ID"
@@ -284,6 +284,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

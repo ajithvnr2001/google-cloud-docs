@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/sap-change-document-changelog/
 title: Change log for SAP_CHANGE_DOCUMENT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T14:51:24.629113+00:00
+fetched_at: 2026-10-21T14:43:27.148222+00:00
 ---
 
 # Change log for SAP_CHANGE_DOCUMENT  |  Google Security Operations  |  Google Cloud Documentation
@@ -22,6 +22,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 Date | Changes  
 ---|---  
+2026-08-19 |  Enhancement:  
+\- `event.idm.read_only_udm.target.hostname` and `event.idm.read_only_udm.target.asset.hostname`: Newly mapped `SAP_HOST` raw log field with `event.idm.read_only_udm.target.hostname` and `event.idm.read_only_udm.target.asset.hostname` UDM field  
+\- `event.idm.read_only_udm.target.resource.attribute.labels`: Newly mapped `SAP_SID` raw log field with `event.idm.read_only_udm.target.resource.attribute.labels` UDM field.   
 2026-03-17 |  Enhancement:  
 \- Added support for JSON format.  
 \- `event.idm.read_only_udm.metadata.event_timestamp`: Updated new format for timestamp parsing logic for `UDATE`, `UTIME` fields.  
@@ -43,6 +46,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-13 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

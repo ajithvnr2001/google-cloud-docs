@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-schemata-replicas/
 title: SCHEMATA_REPLICAS view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:31:29.439816+00:00
+fetched_at: 2026-10-21T12:35:39.052775+00:00
 ---
 
 # SCHEMATA_REPLICAS view  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aqua-security/
 title: Collect Aqua Security logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:08:26.861440+00:00
+fetched_at: 2026-10-21T14:10:24.932547+00:00
 ---
 
 # Collect Aqua Security logs  |  Google Security Operations  |  Google Cloud Documentation

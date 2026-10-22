@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/apis/policy-match-section/
 title: Organization policy match section \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:06:34.516959+00:00
+fetched_at: 2026-10-21T12:57:41.533478+00:00
 ---
 
 # Organization policy match section  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

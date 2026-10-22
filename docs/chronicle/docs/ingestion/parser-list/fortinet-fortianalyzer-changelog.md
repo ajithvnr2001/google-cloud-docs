@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/fortinet-fortianalyzer-changelog/
 title: Change log for FORTINET_FORTIANALYZER \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:29:33.917225+00:00
+fetched_at: 2026-10-21T14:42:45.202096+00:00
 ---
 
 # Change log for FORTINET_FORTIANALYZER  |  Google Security Operations  |  Google Cloud Documentation

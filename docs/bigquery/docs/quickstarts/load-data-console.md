@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/quickstarts/load-data-console/
 title: Load and query data \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:36.594798+00:00
+fetched_at: 2026-10-21T12:38:34.670496+00:00
 ---
 
 # Load and query data  |  BigQuery  |  Google Cloud Documentation

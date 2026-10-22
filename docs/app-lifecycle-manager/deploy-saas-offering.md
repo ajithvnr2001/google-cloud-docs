@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/deploy-saas-offering/
 title: Deploy an App offering \u00a0|\u00a0 App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:18.690869+00:00
+fetched_at: 2026-10-21T12:30:00.906680+00:00
 ---
 
 # Deploy an App offering  |  App Lifecycle Manager  |  Google Cloud Documentation

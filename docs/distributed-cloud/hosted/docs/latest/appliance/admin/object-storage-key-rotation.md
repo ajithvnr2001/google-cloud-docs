@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/admin/object-storage-key-rotation/
 title: Rotate object storage credentials \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:44.256900+00:00
+fetched_at: 2026-10-21T12:57:44.183998+00:00
 ---
 
 # Rotate object storage credentials  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

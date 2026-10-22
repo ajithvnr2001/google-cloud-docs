@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/canvas-view/
 title: Use the canvas view \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:34.288071+00:00
+fetched_at: 2026-10-21T14:09:58.359388+00:00
 ---
 
 # Use the canvas view  |  Application Integration  |  Google Cloud Documentation

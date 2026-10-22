@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/querying-wildcard-tables/
 title: Query multiple tables using a wildcard table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:09.833141+00:00
+fetched_at: 2026-10-21T12:36:26.230159+00:00
 ---
 
 # Query multiple tables using a wildcard table  |  BigQuery  |  Google Cloud Documentation

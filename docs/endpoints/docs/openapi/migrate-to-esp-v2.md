@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/migrate-to-esp-v2/
 title: Migrate to Extensible Service Proxy V2 \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:49:29.221007+00:00
+fetched_at: 2026-10-21T12:45:54.016958+00:00
 ---
 
 # Migrate to Extensible Service Proxy V2  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation

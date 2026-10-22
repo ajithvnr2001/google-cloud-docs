@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/helm-reference/
 title: Apigee hybrid Helm reference \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:38:12.674046+00:00
+fetched_at: 2026-10-21T14:27:35.760484+00:00
 ---
 
 # Apigee hybrid Helm reference  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/reference/mcp/
 title: MCP server overview \u00a0|\u00a0 App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:43:11.768946+00:00
+fetched_at: 2026-10-21T14:43:09.190395+00:00
 ---
 
 # MCP server overview  |  App Lifecycle Manager  |  Google Cloud Documentation

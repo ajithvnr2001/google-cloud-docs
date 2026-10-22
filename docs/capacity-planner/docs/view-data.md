@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/capacity-planner/docs/view-data/
 title: View usage and forecast data \u00a0|\u00a0 Capacity Planner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:30:07.366524+00:00
+fetched_at: 2026-10-21T14:25:04.459404+00:00
 ---
 
 # View usage and forecast data  |  Capacity Planner  |  Google Cloud Documentation

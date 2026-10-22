@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-compute-images/
 title: gdcloud compute images \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:14:19.229366+00:00
+fetched_at: 2026-10-21T12:58:25.004954+00:00
 ---
 
 # gdcloud compute images  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

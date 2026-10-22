@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/vscode/viewing-cloud-run-logs/
 title: View Cloud Run logs in Cloud Code for VS Code \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:41:14.967735+00:00
+fetched_at: 2026-10-21T12:39:34.258073+00:00
 ---
 
 # View Cloud Run logs in Cloud Code for VS Code  |  Google Cloud Documentation

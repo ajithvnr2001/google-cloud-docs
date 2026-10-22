@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/compute-area/choose-compute-options/
 title: Choose compute options \u00a0|\u00a0 Compute \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:15:32.604209+00:00
+fetched_at: 2026-10-21T14:06:07.101732+00:00
 ---
 
 # Choose compute options  |  Compute  |  Google Cloud Documentation

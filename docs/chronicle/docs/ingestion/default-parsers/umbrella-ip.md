@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/umbrella-ip/
 title: Collect Cisco Umbrella IP logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T11:23:55.189592+00:00
+fetched_at: 2026-10-21T12:39:41.030756+00:00
 ---
 
 # Collect Cisco Umbrella IP logs  |  Google Security Operations  |  Google Cloud Documentation

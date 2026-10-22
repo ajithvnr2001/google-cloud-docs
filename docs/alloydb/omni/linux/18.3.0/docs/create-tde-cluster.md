@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/linux/18.3.0/docs/create-tde-cluster/
 title: Create a TDE-enabled cluster \u00a0|\u00a0 AlloyDB Omni using RPM: 18.3.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:11:27.838516+00:00
+fetched_at: 2026-10-21T14:37:13.551916+00:00
 ---
 
 # Create a TDE-enabled cluster  |  AlloyDB Omni using RPM: 18.3.0  |  Google Cloud Documentation
@@ -25,7 +25,8 @@ Send feedback
 
 Select a documentation version: 18.3.0keyboard_arrow_down
 
-  * [ Current (18.3.0) ](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/create-tde-cluster)
+  * [ Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/create-tde-cluster)
+  * [ 18.4.0 ](https://docs.cloud.google.com/alloydb/omni/linux/18.4.0/docs/create-tde-cluster)
   * [ 18.3.0 ](https://docs.cloud.google.com/alloydb/omni/linux/18.3.0/docs/create-tde-cluster)
   * [ 18.1.1 ](https://docs.cloud.google.com/alloydb/omni/linux/18.1.1/docs/create-tde-cluster)
 
@@ -48,7 +49,7 @@ You can secure your data at rest and protect sensitive information by enabling t
 
 To create a TDE-enabled cluster, you must pass the necessary Key Management Service (KMS) configuration and authentication credentials during the initialization of the database. The only supported authentication type is `jwt`.
 
-  1. [Install AlloyDB Omni using RPM](https://docs.cloud.google.com/alloydb/omni/linux/18-next/docs/deploy-vm) to prepare your environment and install the AlloyDB Omni RPM package.
+  1. [Install AlloyDB Omni using RPM](https://docs.cloud.google.com/alloydb/omni/linux/18.3.0/docs/deploy-vm) to prepare your environment and install the AlloyDB Omni RPM package.
 
 **Note:** Don't initialize the database yet.
   2. Initialize the database.
@@ -127,7 +128,7 @@ Replace the following:
         * `DATA_DIR`: the local directory to mount as the data volume for AlloyDB Omni—for example, `/local/data`.
         * `KEK_DIR`: the directory where the local file-based KEK is stored—for example, `/tmp/alloydb/kms`.
 
-  3. After the database is initialized, follow the instructions in [Install AlloyDB Omni using RPM](https://docs.cloud.google.com/alloydb/omni/linux/18-next/docs/deploy-vm) to prepare the database, set up the host, and start the `systemd` service.
+  3. After the database is initialized, follow the instructions in [Install AlloyDB Omni using RPM](https://docs.cloud.google.com/alloydb/omni/linux/18.3.0/docs/deploy-vm) to prepare the database, set up the host, and start the `systemd` service.
 
   4. To enable TDE for columnar engine cache data spilled to SSD storage, connect to your database instance and run the following query:
          
@@ -181,6 +182,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

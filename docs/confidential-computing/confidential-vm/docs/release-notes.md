@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/release-notes/
 title: Confidential VM release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:26:18.514043+00:00
+fetched_at: 2026-10-21T14:42:27.346888+00:00
 ---
 
 # Confidential VM release notes  |  Google Cloud Documentation

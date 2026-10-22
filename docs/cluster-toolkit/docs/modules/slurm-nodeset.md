@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/slurm-nodeset/
 title: Create a nodeset for a Slurm partition \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:54:43.920065+00:00
+fetched_at: 2026-10-21T14:46:13.309299+00:00
 ---
 
 # Create a nodeset for a Slurm partition  |  Cluster Toolkit  |  Google Cloud Documentation

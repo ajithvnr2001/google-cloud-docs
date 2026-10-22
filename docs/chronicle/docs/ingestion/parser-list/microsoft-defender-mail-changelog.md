@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/microsoft-defender-mail-changelog/
 title: Change log for MICROSOFT_DEFENDER_MAIL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:06:29.505476+00:00
+fetched_at: 2026-10-21T14:43:38.226173+00:00
 ---
 
 # Change log for MICROSOFT_DEFENDER_MAIL  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/tipcommon/tc-smp-time-module/
 title: smp_time module \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:33:06.606274+00:00
+fetched_at: 2026-10-21T14:21:01.727613+00:00
 ---
 
 # smp_time module  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/aws-iam-changelog/
 title: Change log for AWS_IAM \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:00:20.040766+00:00
+fetched_at: 2026-10-21T14:45:43.871580+00:00
 ---
 
 # Change log for AWS_IAM  |  Google Security Operations  |  Google Cloud Documentation

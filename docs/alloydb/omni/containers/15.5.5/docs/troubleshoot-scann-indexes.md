@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/15.5.5/docs/troubleshoot-scann-indexes/
 title: Troubleshoot ScaNN index errors \u00a0|\u00a0 AlloyDB Omni for containers: 15.5.5 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:23:37.152941+00:00
+fetched_at: 2026-10-21T15:27:04.646405+00:00
 ---
 
 # Troubleshoot ScaNN index errors  |  AlloyDB Omni for containers: 15.5.5  |  Google Cloud Documentation

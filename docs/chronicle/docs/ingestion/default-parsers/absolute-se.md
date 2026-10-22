@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/absolute-se/
 title: Collect Absolute Secure Endpoint logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:22:21.255139+00:00
+fetched_at: 2026-10-21T12:27:37.413831+00:00
 ---
 
 # Collect Absolute Secure Endpoint logs  |  Google Security Operations  |  Google Cloud Documentation
@@ -65,7 +65,7 @@ To authenticate the Bindplane agent to Google SecOps, choose one of the followin
   8. Click the service account you created, and then go to the **Keys** tab.
   9. Click **Add key > Create new key**.
   10. Select **JSON** and click **Create**. The key file is downloaded to your computer.
-  11. Save the key file securely on the system where the Bindplane agent will be installed.
+  11. Save the key file as `ingestion-auth.json` in the Bindplane collector directory (`/opt/observiq-otel-collector/ingestion-auth.json` on Linux or `C:\Program Files\observIQ OpenTelemetry Collector\ingestion-auth.json` on Windows), or update `creds_file_path` in `config.yaml` to match the path where you save it.
   12. Go to **IAM & Admin > Settings** and copy the **Project number**. You'll need it for the exporter configuration.
 
 **Note:** The JSON key is a credential. Restrict access to the file on the Bindplane host and rotate the key according to your organization's policy.
@@ -73,7 +73,7 @@ To authenticate the Bindplane agent to Google SecOps, choose one of the followin
 ### Option 2: Download the ingestion authentication file (legacy)
 
   1. Sign in to the Google SecOps console.
-  2. Go to **SIEM Settings > Collection Agent**.
+  2. Go to **SIEM Settings > Collection Agents**.
   3. Download the **ingestion authentication file**.
   4. Save the file securely on the system where the Bindplane agent will be installed.
 
@@ -163,13 +163,13 @@ For additional installation options, see the [Bindplane agent installation guide
      * Replace `<LOCATION>` with the region of your Google SecOps instance. The exporter prefixes `chronicle.googleapis.com` with this value.
      * Replace `<PROJECT_NUMBER>` with the project number from **IAM & Admin > Settings**.
      * Replace `<CUSTOMER_ID>` with the actual Customer ID.
-     * Update `/path/to/secops-key.json` to the file path where the service account key was saved.
+     * Update `/path/to/secops-key.json` to the file path where the service account key file (Option 1) was saved.
 
 
 
 ### Legacy ingestion API exporter
 
-  * If you use the ingestion authentication file from Option 2, replace the `exporters` block with the following.
+  * If you use the ingestion authentication file from Option 2, replace the `exporters` block with the following. Set `creds_file_path` to the path to the ingestion authentication file, and if your instance is outside the US, replace `malachiteingestion-pa.googleapis.com` with your [regional endpoint](https://docs.cloud.google.com/chronicle/docs/reference/ingestion-api#regional-endpoints) (for example, `europe-malachiteingestion-pa.googleapis.com`).
         
         exporters:
           chronicle/chronicle_w_labels:
@@ -183,11 +183,10 @@ For additional installation options, see the [Bindplane agent installation guide
             ingestion_labels:
         
 
+
 **Note:** This exporter will stop working when the Ingestion API is discontinued on July 20, 2027.
 
-
-
-## Restart the Bindplane gent to apply the changes
+## Restart the Bindplane agent to apply the changes
 
   1. To restart the Bindplane agent in **Linux** , run the following command:
          
@@ -294,6 +293,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

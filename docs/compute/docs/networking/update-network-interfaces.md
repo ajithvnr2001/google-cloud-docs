@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/networking/update-network-interfaces/
 title: Update the network interfaces for an instance \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:22:05.799385+00:00
+fetched_at: 2026-10-21T12:40:55.033212+00:00
 ---
 
 # Update the network interfaces for an instance  |  Compute Engine  |  Google Cloud Documentation

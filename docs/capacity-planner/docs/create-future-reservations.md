@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/capacity-planner/docs/create-future-reservations/
 title: Create future reservation requests \u00a0|\u00a0 Capacity Planner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:36:45.435419+00:00
+fetched_at: 2026-10-21T14:25:11.698913+00:00
 ---
 
 # Create future reservation requests  |  Capacity Planner  |  Google Cloud Documentation

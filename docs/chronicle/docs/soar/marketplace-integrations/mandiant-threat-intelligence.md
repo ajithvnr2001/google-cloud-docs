@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/mandiant-threat-intelligence/
 title: Integrate Mandiant Threat Intelligence with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:06:01.174899+00:00
+fetched_at: 2026-10-21T12:29:42.285766+00:00
 ---
 
 # Integrate Mandiant Threat Intelligence with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

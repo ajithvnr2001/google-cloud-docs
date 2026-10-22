@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/manage-the-os/windows-startup-script/
 title: Use a startup script on Windows VMs \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:19:22.082243+00:00
+fetched_at: 2026-10-21T14:08:17.391877+00:00
 ---
 
 # Use a startup script on Windows VMs  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

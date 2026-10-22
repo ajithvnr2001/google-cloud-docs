@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/cluster-backup/view-and-delete-restore/
 title: View and delete a restore \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:10:23.936869+00:00
+fetched_at: 2026-10-21T12:59:55.735466+00:00
 ---
 
 # View and delete a restore  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

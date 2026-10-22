@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/event-processing/data-enrichment/
 title: Configure enrichment \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:17.197070+00:00
+fetched_at: 2026-10-21T14:25:34.045406+00:00
 ---
 
 # Configure enrichment  |  Google Security Operations  |  Google Cloud Documentation

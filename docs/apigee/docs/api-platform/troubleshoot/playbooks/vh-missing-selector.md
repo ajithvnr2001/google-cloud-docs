@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/vh-missing-selector/
 title: Virtual host missing selector \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:20.769823+00:00
+fetched_at: 2026-10-21T14:26:18.068144+00:00
 ---
 
 # Virtual host missing selector  |  Apigee  |  Google Cloud Documentation

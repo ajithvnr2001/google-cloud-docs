@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/about-repair/
 title: About repairing VMs for high availability \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:33:21.653417+00:00
+fetched_at: 2026-10-21T14:19:28.139797+00:00
 ---
 
 # About repairing VMs for high availability  |  Compute Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/hbase-batch-exceptions/
 title: Handle batch exceptions \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:19.360159+00:00
+fetched_at: 2026-10-21T12:36:36.959100+00:00
 ---
 
 # Handle batch exceptions  |  Bigtable  |  Google Cloud Documentation

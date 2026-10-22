@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/iam/standard-clusters/
 title: Manage access to standard clusters \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:06:59.242300+00:00
+fetched_at: 2026-10-21T12:58:04.555789+00:00
 ---
 
 # Manage access to standard clusters  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

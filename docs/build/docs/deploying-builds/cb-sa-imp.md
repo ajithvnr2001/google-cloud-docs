@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/deploying-builds/cb-sa-imp/
 title: Configure Cloud Build service account impersonation for managed services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:10.013390+00:00
+fetched_at: 2026-10-21T14:11:16.260722+00:00
 ---
 
 # Configure Cloud Build service account impersonation for managed services  |  Google Cloud Documentation

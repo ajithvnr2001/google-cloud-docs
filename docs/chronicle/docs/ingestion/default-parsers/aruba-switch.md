@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aruba-switch/
 title: Collect Aruba switch logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T17:41:01.349327+00:00
+fetched_at: 2026-10-21T12:27:49.058361+00:00
 ---
 
 # Collect Aruba switch logs  |  Google Security Operations  |  Google Cloud Documentation

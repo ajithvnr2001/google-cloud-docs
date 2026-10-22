@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-dns-record-sets-delete/
 title: gdcloud dns record-sets delete \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T10:01:04.762358+00:00
+fetched_at: 2026-10-21T12:58:41.935213+00:00
 ---
 
 # gdcloud dns record-sets delete  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/manager-api-user-status/
 title: User status endpoints \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:59:33.259814+00:00
+fetched_at: 2026-10-21T14:09:40.517418+00:00
 ---
 
 # User status endpoints  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

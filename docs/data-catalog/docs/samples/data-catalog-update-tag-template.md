@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-catalog/docs/samples/data-catalog-update-tag-template/
 title: Update tag template \u00a0|\u00a0 Data Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:57:33.314961+00:00
+fetched_at: 2026-10-22T05:41:51.969262+00:00
 ---
 
 # Update tag template  |  Data Catalog  |  Google Cloud Documentation

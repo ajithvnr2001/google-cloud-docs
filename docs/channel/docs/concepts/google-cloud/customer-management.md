@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/channel/docs/concepts/google-cloud/customer-management/
 title: Create and manage your customer accounts using the Cloud Channel API \u00a0|\u00a0 Channel Services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:34.699870+00:00
+fetched_at: 2026-10-21T14:25:21.947270+00:00
 ---
 
 # Create and manage your customer accounts using the Cloud Channel API  |  Channel Services  |  Google Cloud Documentation

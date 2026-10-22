@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure-private-trigger/
 title: Private triggers \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:36.886768+00:00
+fetched_at: 2026-10-21T12:39:26.911414+00:00
 ---
 
 # Private triggers  |  Application Integration  |  Google Cloud Documentation

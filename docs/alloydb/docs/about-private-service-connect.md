@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/about-private-service-connect/
 title: Private Service Connect overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:46:21.083750+00:00
+fetched_at: 2026-10-22T05:46:06.101595+00:00
 ---
 
 # Private Service Connect overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

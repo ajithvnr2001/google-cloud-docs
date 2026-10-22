@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/service/resourcemanagerview/v1/resourcemanagerview-v1/
 title: KRM API resourcemanagerview.gdc.goog/v1 \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:13:33.036934+00:00
+fetched_at: 2026-10-21T12:57:07.508132+00:00
 ---
 
 # KRM API resourcemanagerview.gdc.goog/v1  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

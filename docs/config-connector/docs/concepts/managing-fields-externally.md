@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/concepts/managing-fields-externally/
 title: Manage fields externally \u00a0|\u00a0 Config Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:37:31.409190+00:00
+fetched_at: 2026-10-21T14:36:19.399581+00:00
 ---
 
 # Manage fields externally  |  Config Connector  |  Google Cloud Documentation
@@ -41,30 +41,30 @@ If the field is removed, the field is externally managed.
 
 If server-side apply isn't enabled and the resource uses the `Merge` populating behavior, Config Connector populates unspecified fields in the resource `spec` field with the value read from the Google Cloud API and enforces those initially populated values.
 
-For example, suppose you apply a resource configuration without setting a value for the `bar` field in the `spec` section:
+For example, suppose you apply a resource configuration without setting a value for the `field2` field in the `spec` section:
     
     
     spec:
-        foo: "foo"
+        field1: "value-1"
     
 
-If the value of the `bar` field is `"baz"` in the Google Cloud API, the resource in the [API server](https://kubernetes.io/docs/concepts/overview/components/#kube-apiserver) is populated with that value:
+If the value of the `field2` field is `"api-value-1"` in the Google Cloud API, the resource in the [API server](https://kubernetes.io/docs/concepts/overview/components/#kube-apiserver) is populated with that value:
     
     
     # object in the api-server
     spec:
-        foo: "foo"
-        bar: "baz"  # populated by first reconciliation
+        field1: "value-1"
+        field2: "api-value-1"  # populated by first reconciliation
     
 
-If the Google Cloud resource is modified directly so that the `bar` field is now `"baz-2"`, Config Connector reverts the Google Cloud resource to the value that was initially populated in the resource `spec` field (`"baz"`):
+If the Google Cloud resource is modified directly so that the `field2` field is now `"api-value-2"`, Config Connector reverts the Google Cloud resource to the value that was initially populated in the resource `spec` field (`"api-value-1"`):
     
     
     # object in the api-server
     spec:
-        foo: "foo"
+        field1: "value-1"
         # still the originally populated value; overrides the external value
-        bar: "baz"
+        field2: "api-value-1"
     
 
 ## Behavior for list fields in resource spec
@@ -104,6 +104,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

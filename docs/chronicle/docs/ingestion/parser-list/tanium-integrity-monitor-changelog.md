@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/tanium-integrity-monitor-changelog/
 title: Change log for TANIUM_INTEGRITY_MONITOR \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:58:00.670550+00:00
+fetched_at: 2026-10-21T14:43:10.014816+00:00
 ---
 
 # Change log for TANIUM_INTEGRITY_MONITOR  |  Google Security Operations  |  Google Cloud Documentation

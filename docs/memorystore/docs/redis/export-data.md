@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/export-data/
 title: Export data from a Redis instance \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:54.512316+00:00
+fetched_at: 2026-10-21T15:14:36.024377+00:00
 ---
 
 # Export data from a Redis instance  |  Memorystore for Redis  |  Google Cloud Documentation

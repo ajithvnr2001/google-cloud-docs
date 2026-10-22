@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke/concepts/about-locations/
 title: Backup for GKE locations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:12:01.916121+00:00
+fetched_at: 2026-10-21T15:09:13.056171+00:00
 ---
 
 # Backup for GKE locations  |  Google Cloud Documentation

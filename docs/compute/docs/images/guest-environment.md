@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/guest-environment/
 title: Guest environment \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:42:56.103274+00:00
+fetched_at: 2026-10-21T14:21:18.953199+00:00
 ---
 
 # Guest environment  |  Compute Engine  |  Google Cloud Documentation

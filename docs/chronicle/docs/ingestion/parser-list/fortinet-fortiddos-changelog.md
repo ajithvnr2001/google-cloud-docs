@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/fortinet-fortiddos-changelog/
 title: Change log for FORTINET_FORTIDDOS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:07:06.632414+00:00
+fetched_at: 2026-10-21T14:42:44.854172+00:00
 ---
 
 # Change log for FORTINET_FORTIDDOS  |  Google Security Operations  |  Google Cloud Documentation

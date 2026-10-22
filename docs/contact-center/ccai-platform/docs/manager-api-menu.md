@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/manager-api-menu/
 title: Menu endpoints \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:26:15.516785+00:00
+fetched_at: 2026-10-21T14:08:59.281946+00:00
 ---
 
 # Menu endpoints  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

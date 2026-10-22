@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure-hl7-trigger/
 title: HL7 trigger \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:38.686774+00:00
+fetched_at: 2026-10-21T12:38:49.321374+00:00
 ---
 
 # HL7 trigger  |  Application Integration  |  Google Cloud Documentation

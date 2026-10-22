@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/ruby/authentication/
 title: Configure authentication to Artifact Registry for Ruby gem repositories \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:24.478922+00:00
+fetched_at: 2026-10-21T14:25:11.990174+00:00
 ---
 
 # Configure authentication to Artifact Registry for Ruby gem repositories  |  Google Cloud Documentation

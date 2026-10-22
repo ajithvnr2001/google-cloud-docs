@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/office_365_changelog/
 title: Change log for OFFICE_365 \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:42:29.573116+00:00
+fetched_at: 2026-10-21T14:47:10.579122+00:00
 ---
 
 # Change log for OFFICE_365  |  Google Security Operations  |  Google Cloud Documentation

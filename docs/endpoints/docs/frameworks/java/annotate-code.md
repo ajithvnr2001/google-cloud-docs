@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/java/annotate-code/
 title: Writing and annotating the code \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:38:18.371455+00:00
+fetched_at: 2026-10-21T12:45:46.330453+00:00
 ---
 
 # Writing and annotating the code  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

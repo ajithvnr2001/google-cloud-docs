@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/email-oauth-profiles-ms/
 title: Email OAuth profiles and Microsoft 365 client credentials \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:19.256726+00:00
+fetched_at: 2026-10-21T14:23:05.101564+00:00
 ---
 
 # Email OAuth profiles and Microsoft 365 client credentials  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

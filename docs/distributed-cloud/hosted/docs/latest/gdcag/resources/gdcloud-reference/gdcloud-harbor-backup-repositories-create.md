@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-harbor-backup-repositories-create/
 title: gdcloud harbor backup-repositories create \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:52:17.368917+00:00
+fetched_at: 2026-10-21T12:58:23.645173+00:00
 ---
 
 # gdcloud harbor backup-repositories create  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

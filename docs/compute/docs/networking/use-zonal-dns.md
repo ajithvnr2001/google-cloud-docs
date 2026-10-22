@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/networking/use-zonal-dns/
 title: Set Zonal DNS as the default for new projects \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:25.449000+00:00
+fetched_at: 2026-10-21T12:37:44.612784+00:00
 ---
 
 # Set Zonal DNS as the default for new projects  |  Compute Engine  |  Google Cloud Documentation

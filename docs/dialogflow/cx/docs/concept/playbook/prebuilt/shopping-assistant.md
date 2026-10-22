@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/playbook/prebuilt/shopping-assistant/
 title: Shopping assistant prebuilt agent with Vertex AI Search for retail \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:35.089168+00:00
+fetched_at: 2026-10-21T12:43:51.314051+00:00
 ---
 
 # Shopping assistant prebuilt agent with Vertex AI Search for retail  |  Dialogflow CX  |  Google Cloud Documentation

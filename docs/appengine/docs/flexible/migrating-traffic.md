@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/migrating-traffic/
 title: Migrating traffic \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:12.967788+00:00
+fetched_at: 2026-10-21T12:30:24.017180+00:00
 ---
 
 # Migrating traffic  |  App Engine flexible environment  |  Google Cloud Documentation

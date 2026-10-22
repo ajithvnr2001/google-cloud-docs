@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-harbor-backup-plans-list/
 title: gdcloud harbor backup-plans list \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:03:44.188752+00:00
+fetched_at: 2026-10-21T12:58:43.726556+00:00
 ---
 
 # gdcloud harbor backup-plans list  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

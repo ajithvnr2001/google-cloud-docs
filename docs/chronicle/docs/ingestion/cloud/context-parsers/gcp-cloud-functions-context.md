@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/cloud/context-parsers/gcp-cloud-functions-context/
 title: Collect Google Cloud Run functions context logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:39.182462+00:00
+fetched_at: 2026-10-21T12:37:04.409326+00:00
 ---
 
 # Collect Google Cloud Run functions context logs  |  Google Security Operations  |  Google Cloud Documentation

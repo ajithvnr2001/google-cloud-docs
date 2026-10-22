@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/samples/datastore-update-entity/
 title: Example datastore mark task done \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:26:31.876133+00:00
+fetched_at: 2026-10-22T05:41:20.234147+00:00
 ---
 
 # Example datastore mark task done  |  Firestore in Datastore mode  |  Google Cloud Documentation
@@ -196,7 +196,7 @@ To authenticate to Datastore mode, set up Application Default Credentials. For m
     def mark_done task_id
       require "google/cloud/datastore"
     
-      datastore = Google::Cloud::[Datastore](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-datastore-admin/latest/Google-Cloud-Datastore.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-datastore/latest/Google-Cloud-Datastore.html)
+      datastore = Google::Cloud::[Datastore](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-datastore/latest/Google-Cloud-Datastore.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-datastore/latest/Google-Cloud-Datastore.html)
     
       task = datastore.find "Task", task_id
     

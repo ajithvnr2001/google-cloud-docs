@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/enterprise/identity/setup/user-access/
 title: Set up an authentication method for user access \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:36:51.374426+00:00
+fetched_at: 2026-10-21T15:03:42.539579+00:00
 ---
 
 # Set up an authentication method for user access  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

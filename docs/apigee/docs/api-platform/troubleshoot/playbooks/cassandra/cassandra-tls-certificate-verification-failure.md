@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/cassandra/cassandra-tls-certificate-verification-failure/
 title: Cassandra TLS certificate verification failure \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:45:21.488751+00:00
+fetched_at: 2026-10-21T14:27:43.301790+00:00
 ---
 
 # Cassandra TLS certificate verification failure  |  Apigee  |  Google Cloud Documentation

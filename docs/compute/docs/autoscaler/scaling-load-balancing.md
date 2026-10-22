@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/autoscaler/scaling-load-balancing/
 title: Scaling based on load balancing serving capacity \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T11:35:10.764175+00:00
+fetched_at: 2026-10-21T12:39:19.959417+00:00
 ---
 
 # Scaling based on load balancing serving capacity  |  Compute Engine  |  Google Cloud Documentation

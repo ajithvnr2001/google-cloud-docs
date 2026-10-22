@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/import-user-events/
 title: Import historical user events \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:42:04.490838+00:00
+fetched_at: 2026-10-21T12:55:36.950915+00:00
 ---
 
 # Import historical user events  |  Agent Search  |  Google Cloud Documentation

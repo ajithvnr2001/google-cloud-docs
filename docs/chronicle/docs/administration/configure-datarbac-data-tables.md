@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/administration/configure-datarbac-data-tables/
 title: Control access to data tables \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:40.333303+00:00
+fetched_at: 2026-10-21T14:10:59.349805+00:00
 ---
 
 # Control access to data tables  |  Google Security Operations  |  Google Cloud Documentation

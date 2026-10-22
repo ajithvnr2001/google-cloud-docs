@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/deprecations/webhookcompatibility/
 title: Ensuring compatibility of webhook certificates before upgrading to v1.23 \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:10:07.062693+00:00
+fetched_at: 2026-10-21T15:00:34.182612+00:00
 ---
 
 # Ensuring compatibility of webhook certificates before upgrading to v1.23  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

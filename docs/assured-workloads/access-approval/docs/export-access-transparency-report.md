@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/access-approval/docs/export-access-transparency-report/
 title: Generate or download an Access Transparency report \u00a0|\u00a0 Access Approval \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:29:51.204879+00:00
+fetched_at: 2026-10-21T14:09:38.623903+00:00
 ---
 
 # Generate or download an Access Transparency report  |  Access Approval  |  Google Cloud Documentation

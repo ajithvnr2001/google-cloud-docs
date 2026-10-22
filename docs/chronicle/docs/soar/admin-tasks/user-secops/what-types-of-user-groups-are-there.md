@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/user-secops/what-types-of-user-groups-are-there/
 title: Understand user groups \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:41.897784+00:00
+fetched_at: 2026-10-21T14:21:16.909077+00:00
 ---
 
 # Understand user groups  |  Google Security Operations  |  Google Cloud Documentation

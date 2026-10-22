@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/overview/
 title: Benchmarking recipes \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:41:44.659301+00:00
+fetched_at: 2026-10-21T14:29:13.559998+00:00
 ---
 
 # Benchmarking recipes  |  AI Hypercomputer  |  Google Cloud Documentation

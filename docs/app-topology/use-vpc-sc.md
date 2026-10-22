@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-topology/use-vpc-sc/
 title: Use VPC Service Controls with App Topology \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:57:09.044924+00:00
+fetched_at: 2026-10-21T14:24:52.065717+00:00
 ---
 
 # Use VPC Service Controls with App Topology  |  Google Cloud Documentation

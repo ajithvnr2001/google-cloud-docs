@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/entrust-hsm-changelog/
 title: Change log for ENTRUST_HSM \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:11:15.342922+00:00
+fetched_at: 2026-10-21T14:43:45.989969+00:00
 ---
 
 # Change log for ENTRUST_HSM  |  Google Security Operations  |  Google Cloud Documentation

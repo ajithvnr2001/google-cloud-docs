@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/claroty-emc-changelog/
 title: Change log for CLAROTY_EMC \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:50:21.745297+00:00
+fetched_at: 2026-10-21T14:44:41.636621+00:00
 ---
 
 # Change log for CLAROTY_EMC  |  Google Security Operations  |  Google Cloud Documentation

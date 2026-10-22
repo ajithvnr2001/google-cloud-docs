@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigqueryreservation-reservationservice-reservationgroup-create/
 title: Create a reservation group \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:48.179941+00:00
+fetched_at: 2026-10-21T12:37:34.748952+00:00
 ---
 
 # Create a reservation group  |  BigQuery  |  Google Cloud Documentation

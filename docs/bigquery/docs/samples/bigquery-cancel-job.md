@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-cancel-job/
 title: Cancel a job \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:44.079940+00:00
+fetched_at: 2026-10-21T12:40:24.606575+00:00
 ---
 
 # Cancel a job  |  BigQuery  |  Google Cloud Documentation

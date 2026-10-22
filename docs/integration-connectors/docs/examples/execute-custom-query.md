@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/examples/execute-custom-query/
 title: Execute custom query \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:34.263966+00:00
+fetched_at: 2026-10-21T12:53:19.573342+00:00
 ---
 
 # Execute custom query  |  Integration Connectors  |  Google Cloud Documentation

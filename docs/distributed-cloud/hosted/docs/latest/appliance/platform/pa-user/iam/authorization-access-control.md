@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/platform/pa-user/iam/authorization-access-control/
 title: Authorization and access control \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:39.803204+00:00
+fetched_at: 2026-10-21T12:57:02.137240+00:00
 ---
 
 # Authorization and access control  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/smart-compose-console/
 title: Create a smart compose model using the console \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:44:31.525420+00:00
+fetched_at: 2026-10-21T12:55:10.756887+00:00
 ---
 
 # Create a smart compose model using the console  |  Agent Assist  |  Google Cloud Documentation

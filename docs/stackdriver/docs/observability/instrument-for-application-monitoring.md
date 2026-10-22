@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/stackdriver/docs/observability/instrument-for-application-monitoring/
 title: Instrument an application for Application Monitoring \u00a0|\u00a0 Google Cloud Observability \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:49.844744+00:00
+fetched_at: 2026-10-21T14:16:35.854107+00:00
 ---
 
 # Instrument an application for Application Monitoring  |  Google Cloud Observability  |  Google Cloud Documentation
@@ -73,7 +73,7 @@ To have Google Cloud Observability attach application labels to metric data gene
 
   1. Instrument the application with OpenTelemetry.
 
-     * For general information, see [Instrumentation and observability](https://docs.cloud.google.com/stackdriver/docs/instrumentation/overview).
+     * For general information, see [Observability for application developers](https://docs.cloud.google.com/stackdriver/docs/opentelemetry/application-developers).
      * For links to Go, Java, Node.js, and Python samples along with information about those samples, see [Instrumentation samples overview](https://docs.cloud.google.com/stackdriver/docs/instrumentation/setup/sample-overview).
   2. Deploy either the Google-built Collector or the OpenTelemetry Collector, and configure the collector as follows:
 
@@ -251,6 +251,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

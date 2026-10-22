@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/yubico-otp-changelog/
 title: Change log for YUBICO_OTP \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:39:15.572895+00:00
+fetched_at: 2026-10-21T14:47:04.316578+00:00
 ---
 
 # Change log for YUBICO_OTP  |  Google Security Operations  |  Google Cloud Documentation

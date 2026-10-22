@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/video/generate-videos-from-an-image/
 title: Generate videos from an image \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:45:45.881130+00:00
+fetched_at: 2026-10-21T15:44:11.077064+00:00
 ---
 
 # Generate videos from an image  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -40,8 +40,6 @@ The following models support generating videos from an image:
   * [`veo-3.1-lite-generate-001`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-lite-generate-001-preview) preview
   * [`veo-3.1-generate-001`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-generate-001)
   * [`veo-3.1-fast-generate-001`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate#3.1-fast-generate-001)
-  * [`veo-3.0-generate-001`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-generate-001)
-  * [`veo-3.0-fast-generate-001`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-fast-generate-001)
 
 
 
@@ -1307,8 +1305,6 @@ Before using any of the request data, make the following replacements:
 
      * `PROJECT_ID`: A string representing your Google Cloud project ID. 
      * `MODEL_ID`: A string representing the model ID to use. The following are accepted values: 
-       * **Veo 2:**`veo-2.0-generate-001`
-       * **Veo 3:**`veo-3.0-generate-001`
        * **Veo 3.1:**`veo-3.1-generate-001`
        * **Veo 3.1:**`veo-3.1-fast-generate-001`
      * `TEXT_PROMPT`: The text prompt used to guide video generation. 
@@ -1321,9 +1317,7 @@ Before using any of the request data, make the following replacements:
        * `"crop"`: Crop the video to fit the new size.
        * `"pad"`: Pad the video to fit the new size.
      * `RESPONSE_COUNT`: The number of video files to generate. The accepted range of values is `1`-`4`. 
-     * `DURATION`: An integer representing the length of the generated video files. The following are the accepted values for each model: 
-       * Veo 2 models: `5`-`8`. The default is `8`.
-       * Veo 3 models: `4`, `6`, or `8`. The default is `8`.
+     * `DURATION`: An integer representing the length of the generated video files. The accepted values are `4`, `6`, or `8`. The default is `8`. 
      * **Additional optional parameters**
 
 Use the following optional variables depending on your use case. Add some or all of the following parameters in the `"parameters": {}` object. 
@@ -1517,6 +1511,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/manage-skills/
 title: Manage skills \u00a0|\u00a0 Agent Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:37:02.284212+00:00
+fetched_at: 2026-10-21T14:28:59.783179+00:00
 ---
 
 # Manage skills  |  Agent Registry  |  Google Cloud Documentation

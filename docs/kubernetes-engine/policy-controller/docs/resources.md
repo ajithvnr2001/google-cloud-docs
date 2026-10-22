@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/policy-controller/docs/resources/
 title: Resources \u00a0|\u00a0 Policy Controller \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:16:01.405988+00:00
+fetched_at: 2026-10-21T15:01:03.188159+00:00
 ---
 
 # Resources  |  Policy Controller  |  Google Cloud Documentation

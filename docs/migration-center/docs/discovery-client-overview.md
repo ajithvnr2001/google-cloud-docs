@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/discovery-client-overview/
 title: Migration Center discovery client overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:20.774156+00:00
+fetched_at: 2026-10-21T15:17:03.007110+00:00
 ---
 
 # Migration Center discovery client overview  |  Google Cloud Documentation

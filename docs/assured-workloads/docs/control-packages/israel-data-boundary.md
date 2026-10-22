@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/control-packages/israel-data-boundary/
 title: Israel Data Boundary \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:44.546895+00:00
+fetched_at: 2026-10-21T14:25:57.611091+00:00
 ---
 
 # Israel Data Boundary  |  Assured Workloads  |  Google Cloud Documentation

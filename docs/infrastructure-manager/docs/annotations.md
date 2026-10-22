@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/annotations/
 title: Annotations and labels \u00a0|\u00a0 Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:45:44.292623+00:00
+fetched_at: 2026-10-21T12:54:24.611124+00:00
 ---
 
 # Annotations and labels  |  Infrastructure Manager  |  Google Cloud Documentation

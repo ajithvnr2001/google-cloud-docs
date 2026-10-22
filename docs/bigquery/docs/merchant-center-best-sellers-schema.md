@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/merchant-center-best-sellers-schema/
 title: Google Merchant Center best sellers table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:56:00.058032+00:00
+fetched_at: 2026-10-21T12:36:41.368411+00:00
 ---
 
 # Google Merchant Center best sellers table  |  BigQuery  |  Google Cloud Documentation

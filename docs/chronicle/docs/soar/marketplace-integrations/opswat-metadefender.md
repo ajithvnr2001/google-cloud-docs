@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/opswat-metadefender/
 title: OPSWAT MetaDefender \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:02:55.274783+00:00
+fetched_at: 2026-10-21T14:22:04.604369+00:00
 ---
 
 # OPSWAT MetaDefender  |  Google Security Operations  |  Google Cloud Documentation

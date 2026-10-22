@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/oslogin/view-audit-logs/
 title: Monitor OS Login audit logs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:21.324272+00:00
+fetched_at: 2026-10-21T14:22:09.064172+00:00
 ---
 
 # Monitor OS Login audit logs  |  Compute Engine  |  Google Cloud Documentation

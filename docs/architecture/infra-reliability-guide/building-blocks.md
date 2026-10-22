@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/infra-reliability-guide/building-blocks/
 title: Building blocks of reliability in Google Cloud \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:54:59.456335+00:00
+fetched_at: 2026-10-21T14:25:40.601142+00:00
 ---
 
 # Building blocks of reliability in Google Cloud  |  Cloud Architecture Center  |  Google Cloud Documentation

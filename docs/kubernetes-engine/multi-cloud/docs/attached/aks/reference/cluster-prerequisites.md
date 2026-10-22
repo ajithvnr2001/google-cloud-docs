@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/aks/reference/cluster-prerequisites/
 title: Prerequisites for your AKS attached cluster \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:20.102498+00:00
+fetched_at: 2026-10-21T15:01:51.537196+00:00
 ---
 
 # Prerequisites for your AKS attached cluster  |  GKE attached clusters  |  Google Cloud Documentation

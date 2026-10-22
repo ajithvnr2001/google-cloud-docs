@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigqueryconnection-create-connection/
 title: Create a Cloud SQL connection \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:46.324943+00:00
+fetched_at: 2026-10-22T05:45:43.416679+00:00
 ---
 
 # Create a Cloud SQL connection  |  BigQuery  |  Google Cloud Documentation

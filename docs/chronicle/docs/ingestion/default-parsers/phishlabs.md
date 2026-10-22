@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/phishlabs/
 title: Collect PhishLabs logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:59:20.953660+00:00
+fetched_at: 2026-10-21T14:11:26.473184+00:00
 ---
 
 # Collect PhishLabs logs  |  Google Security Operations  |  Google Cloud Documentation

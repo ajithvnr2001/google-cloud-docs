@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/samples/container-quickstart/
 title: Client library quickstart \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:28:25.190352+00:00
+fetched_at: 2026-10-21T15:09:02.493245+00:00
 ---
 
 # Client library quickstart  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/pci-dss-compliance-in-gcp/
 title: PCI Data Security Standard compliance \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:31:01.267109+00:00
+fetched_at: 2026-10-21T14:53:23.710058+00:00
 ---
 
 # PCI Data Security Standard compliance  |  Cloud Architecture Center  |  Google Cloud Documentation

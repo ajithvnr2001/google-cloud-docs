@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/intent/
 title: Intents \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:38.196745+00:00
+fetched_at: 2026-10-21T12:56:09.556488+00:00
 ---
 
 # Intents  |  Dialogflow CX  |  Google Cloud Documentation

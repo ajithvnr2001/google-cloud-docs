@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/how/intent-manage-api/
 title: Manage intents with the API \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:57.125454+00:00
+fetched_at: 2026-10-21T12:44:15.405560+00:00
 ---
 
 # Manage intents with the API  |  Dialogflow CX  |  Google Cloud Documentation

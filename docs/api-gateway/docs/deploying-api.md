@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/deploying-api/
 title: Deploy an API to a gateway \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:20:27.359062+00:00
+fetched_at: 2026-10-21T14:10:00.110387+00:00
 ---
 
 # Deploy an API to a gateway  |  API Gateway  |  Google Cloud Documentation

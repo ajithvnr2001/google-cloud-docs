@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-database-connection-profiles/
 title: gdcloud database connection-profiles \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:59:49.613255+00:00
+fetched_at: 2026-10-21T12:58:58.891448+00:00
 ---
 
 # gdcloud database connection-profiles  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

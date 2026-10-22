@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/claroty-ctd-changelog/
 title: Change log for CLAROTY_CTD \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:48:18.080565+00:00
+fetched_at: 2026-10-21T14:44:41.607103+00:00
 ---
 
 # Change log for CLAROTY_CTD  |  Google Security Operations  |  Google Cloud Documentation

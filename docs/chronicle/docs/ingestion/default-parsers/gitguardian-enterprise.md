@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/gitguardian-enterprise/
 title: Collect GitGuardian Enterprise logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:58:44.274431+00:00
+fetched_at: 2026-10-21T12:28:48.047020+00:00
 ---
 
 # Collect GitGuardian Enterprise logs  |  Google Security Operations  |  Google Cloud Documentation
@@ -83,13 +83,10 @@ After creating the feed, you must generate a secret key for authentication:
   2. In the **Endpoint Information** section, copy the **Feed endpoint URL**.
   3. The URL format is:
          
-         https://malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate
+         https://{region}-chronicle.googleapis.com/v1/{parent}/logs:import
          
 
-or
-         
-         https://<REGION>-malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate
-         
+Where `{region}` is the region of your Google SecOps instance (for example, `us`, `europe`, or `asia-southeast1`), and `{parent}` is the resource path in the format `projects/<PROJECT_ID>/locations/<LOCATION>/instances/<INSTANCE_ID>/logTypes/<LOG_TYPE>`.
 
   4. Save this URL for the next steps.
 
@@ -142,7 +139,7 @@ Google SecOps requires an API key for authentication. Create a restricted API ke
 
 **Example:**
         
-        https://malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate?key=AIzaSyD...
+        https://{region}-chronicle.googleapis.com/v1/{parent}/logs:import?key=AIzaSyD...
         
 
 
@@ -261,7 +258,7 @@ GitGuardian custom webhooks work best with credentials appended to the URL.
 
 **Example:**
         
-        https://malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate?key=AIzaSyD...
+        https://{region}-chronicle.googleapis.com/v1/{parent}/logs:import?key=AIzaSyD...
         
 
 **GitGuardian webhook configuration:**
@@ -340,27 +337,25 @@ Where:
 
 
 ### Verification example (Python)
-
-  * import hmac
-        import hashlib
+    
+    
+    import hmac
+    import hashlib
+    
+    def verify_signature(signature: str, timestamp: str, signature_token: str, payload: str) -> bool:
+        if not signature.startswith("sha256="):
+            return False
         
-        def verify_signature(signature: str, timestamp: str, signature_token: str, payload: str) -> bool:
-            if not signature.startswith("sha256="):
-                return False
+        signature = signature.split("sha256=")[-1]
         
-            signature = signature.split("sha256=")[-1]
+        hmac_digest = hmac.new(
+            key=bytes(timestamp + signature_token, "utf-8"),
+            msg=bytes(payload, "utf-8"),
+            digestmod=hashlib.sha256
+        ).hexdigest()
         
-            hmac_digest = hmac.new(
-                key=bytes(timestamp + signature_token, "utf-8"),
-                msg=bytes(payload, "utf-8"),
-                digestmod=hashlib.sha256
-            ).hexdigest()
-        
-            return hmac.compare_digest(signature, hmac_digest)
-        
-
-
-
+        return hmac.compare_digest(signature, hmac_digest)
+    
 
 ### Replay attack protection
 
@@ -485,6 +480,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

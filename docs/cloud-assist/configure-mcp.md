@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/configure-mcp/
 title: Integrate Gemini Cloud Assist with third-party tools using MCP \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:14:00.710006+00:00
+fetched_at: 2026-10-21T14:10:27.752927+00:00
 ---
 
 # Integrate Gemini Cloud Assist with third-party tools using MCP  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/sap-gateway/
 title: Collect SAP logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:26:51.043736+00:00
+fetched_at: 2026-10-21T12:36:07.970205+00:00
 ---
 
 # Collect SAP logs  |  Google Security Operations  |  Google Cloud Documentation

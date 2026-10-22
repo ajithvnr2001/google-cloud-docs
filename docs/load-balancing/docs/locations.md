@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/load-balancing/docs/locations/
 title: Locations \u00a0|\u00a0 Cloud Load Balancing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:44:55.937400+00:00
+fetched_at: 2026-10-21T15:10:22.783180+00:00
 ---
 
 # Locations  |  Cloud Load Balancing  |  Google Cloud Documentation

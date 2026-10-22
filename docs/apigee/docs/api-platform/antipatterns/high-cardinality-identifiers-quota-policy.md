@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/high-cardinality-identifiers-quota-policy/
 title: Antipattern: Use high-cardinality identifiers in Quota policies \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:18.567348+00:00
+fetched_at: 2026-10-21T12:30:00.395622+00:00
 ---
 
 # Antipattern: Use high-cardinality identifiers in Quota policies  |  Apigee  |  Google Cloud Documentation

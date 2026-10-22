@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/aws-waf-changelog/
 title: Change log for AWS_WAF \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:18:04.130306+00:00
+fetched_at: 2026-10-21T14:45:42.684788+00:00
 ---
 
 # Change log for AWS_WAF  |  Google Security Operations  |  Google Cloud Documentation

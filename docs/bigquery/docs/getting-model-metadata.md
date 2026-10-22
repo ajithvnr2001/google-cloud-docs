@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/getting-model-metadata/
 title: Get model metadata \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:45:16.389106+00:00
+fetched_at: 2026-10-21T14:21:56.080847+00:00
 ---
 
 # Get model metadata  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/asset-inventory/docs/view-resource-policies/
 title: View allow and organization policies on resources with Policy Analyzer \u00a0|\u00a0 Cloud Asset Inventory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:39:57.101469+00:00
+fetched_at: 2026-10-21T14:41:36.060658+00:00
 ---
 
 # View allow and organization policies on resources with Policy Analyzer  |  Cloud Asset Inventory  |  Google Cloud Documentation

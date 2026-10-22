@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/cyberark-pta/
 title: Collect CyberArk Privileged Threat Analytics logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T14:25:27.319399+00:00
+fetched_at: 2026-10-21T12:28:53.178710+00:00
 ---
 
 # Collect CyberArk Privileged Threat Analytics logs  |  Google Security Operations  |  Google Cloud Documentation

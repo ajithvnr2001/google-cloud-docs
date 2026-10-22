@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/answer-feedback/
 title: Answer feedback \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:53.376084+00:00
+fetched_at: 2026-10-21T12:55:55.137367+00:00
 ---
 
 # Answer feedback  |  Dialogflow CX  |  Google Cloud Documentation

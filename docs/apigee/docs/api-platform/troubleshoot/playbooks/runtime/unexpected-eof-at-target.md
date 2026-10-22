@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/runtime/unexpected-eof-at-target/
 title: API requests fail with 502 Bad Gateway \"Unexpected EOF at target\" error \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:24.786125+00:00
+fetched_at: 2026-10-21T14:26:46.978073+00:00
 ---
 
 # API requests fail with 502 Bad Gateway "Unexpected EOF at target" error  |  Apigee  |  Google Cloud Documentation

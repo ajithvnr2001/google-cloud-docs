@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/cluster/billing-questions/
 title: Billing questions \u00a0|\u00a0 Memorystore for Redis Cluster \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:43:54.465607+00:00
+fetched_at: 2026-10-21T15:12:25.607748+00:00
 ---
 
 # Billing questions  |  Memorystore for Redis Cluster  |  Google Cloud Documentation

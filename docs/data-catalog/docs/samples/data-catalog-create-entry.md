@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-catalog/docs/samples/data-catalog-create-entry/
 title: Create entry \u00a0|\u00a0 Data Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:57:30.212008+00:00
+fetched_at: 2026-10-22T05:41:53.163144+00:00
 ---
 
 # Create entry  |  Data Catalog  |  Google Cloud Documentation

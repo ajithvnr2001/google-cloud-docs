@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-configuration-scanning/
 title: About Kubernetes security posture scanning \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:14.402067+00:00
+fetched_at: 2026-10-21T15:00:20.893351+00:00
 ---
 
 # About Kubernetes security posture scanning  |  GKE security  |  Google Cloud Documentation

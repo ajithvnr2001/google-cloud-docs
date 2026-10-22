@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/yara-l/events-syntax/
 title: Events section syntax \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:10:23.148817+00:00
+fetched_at: 2026-10-21T14:10:04.151829+00:00
 ---
 
 # Events section syntax  |  Google Security Operations  |  Google Cloud Documentation

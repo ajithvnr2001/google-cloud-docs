@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/memcache/audit-logging/
 title: App Engine Memcache audit logging \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:35:13.948040+00:00
+fetched_at: 2026-10-21T14:19:57.400719+00:00
 ---
 
 # App Engine Memcache audit logging  |  App Engine standard environment  |  Google Cloud Documentation

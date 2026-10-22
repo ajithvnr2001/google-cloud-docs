@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/getting-support/
 title: Getting support \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:45:19.290384+00:00
+fetched_at: 2026-10-21T12:30:24.950916+00:00
 ---
 
 # Getting support  |  Artifact Registry  |  Google Cloud Documentation

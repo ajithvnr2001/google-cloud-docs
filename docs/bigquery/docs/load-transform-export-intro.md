@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/load-transform-export-intro/
 title: Introduction to loading, transforming, and exporting data \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:46:37.019003+00:00
+fetched_at: 2026-10-22T05:42:31.978922+00:00
 ---
 
 # Introduction to loading, transforming, and exporting data  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/crowdstrike-ioc-changelog/
 title: Change log for CROWDSTRIKE_IOC \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:09:53.491081+00:00
+fetched_at: 2026-10-21T14:44:38.557985+00:00
 ---
 
 # Change log for CROWDSTRIKE_IOC  |  Google Security Operations  |  Google Cloud Documentation

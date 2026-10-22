@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/entity/
 title: Entities \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:38.076448+00:00
+fetched_at: 2026-10-21T12:55:54.989931+00:00
 ---
 
 # Entities  |  Dialogflow CX  |  Google Cloud Documentation

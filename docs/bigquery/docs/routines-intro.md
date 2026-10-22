@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/routines-intro/
 title: Introduction to routines \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:14.597596+00:00
+fetched_at: 2026-10-21T12:29:28.087915+00:00
 ---
 
 # Introduction to routines  |  BigQuery  |  Google Cloud Documentation
@@ -231,10 +231,14 @@ Stored procedures for [Spark in BigQuery](https://docs.cloud.google.com/bigquery
 
 To learn more about stored procedures, see [SQL stored procedures](https://docs.cloud.google.com/bigquery/docs/procedures).
 
+## Use routines with AI agents
+
+If you build AI agents that work with BigQuery data, the agents can retrieve routine metadata from Knowledge Catalog, including the routine's arguments, return type, and source code, to understand what a routine does and how to call it. For more information, see [Retrieve context for routines](https://docs.cloud.google.com/knowledge-catalog/docs/retrieve-data-context#retrieve-routine-context).
+
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

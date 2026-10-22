@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/misp/
 title: Integrate MISP with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:11:36.407656+00:00
+fetched_at: 2026-10-21T14:22:08.390898+00:00
 ---
 
 # Integrate MISP with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

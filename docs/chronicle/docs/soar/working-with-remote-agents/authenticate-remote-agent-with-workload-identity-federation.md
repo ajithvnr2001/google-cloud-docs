@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/working-with-remote-agents/authenticate-remote-agent-with-workload-identity-federation/
 title: Authenticate Remote Agent with Workload Identity Federation \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:56.958519+00:00
+fetched_at: 2026-10-21T12:38:55.663923+00:00
 ---
 
 # Authenticate Remote Agent with Workload Identity Federation  |  Google Security Operations  |  Google Cloud Documentation

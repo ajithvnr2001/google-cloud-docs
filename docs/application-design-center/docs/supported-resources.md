@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/supported-resources/
 title: Supported resources for templates and applications \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:38:31.144711+00:00
+fetched_at: 2026-10-21T14:26:41.113001+00:00
 ---
 
 # Supported resources for templates and applications  |  Application Design Center  |  Google Cloud Documentation

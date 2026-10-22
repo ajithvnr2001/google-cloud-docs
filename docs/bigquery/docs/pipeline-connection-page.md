@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/pipeline-connection-page/
 title: Create data integration workflows using the Pipelines & Connections page \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:51.292391+00:00
+fetched_at: 2026-10-21T14:21:10.518723+00:00
 ---
 
 # Create data integration workflows using the Pipelines & Connections page  |  BigQuery  |  Google Cloud Documentation

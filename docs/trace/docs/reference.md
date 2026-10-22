@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/trace/docs/reference/
 title: Cloud Trace API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:38:48.769755+00:00
+fetched_at: 2026-10-21T14:18:44.238122+00:00
 ---
 
 # Cloud Trace API  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Cloud Trace API Stay organized with collections  Save and categorize content based on your preferences. 
 
-The Cloud Trace API lets you send latency data to, and retrieve latency data from, [Cloud Trace](https://docs.cloud.google.com/trace/docs/overview). To send data to Cloud Trace, we recommend that you use [OpenTelemetry](https://opentelemetry.io/). OpenTelemetry is a Google-supported open source project with Google engineers staffed to ensure support for Cloud Trace. For more information about instrumenting an application, including instrumentation examples, see [Instrumentation and observability](https://docs.cloud.google.com/stackdriver/docs/instrumentation/overview).
+The Cloud Trace API lets you send latency data to, and retrieve latency data from, [Cloud Trace](https://docs.cloud.google.com/trace/docs/overview). To send data to Cloud Trace, we recommend that you use [OpenTelemetry](https://opentelemetry.io/). OpenTelemetry is a Google-supported open source project with Google engineers staffed to ensure support for Cloud Trace. For more information about instrumenting an application, including instrumentation examples, see [Observability for application developers](https://docs.cloud.google.com/stackdriver/docs/opentelemetry/application-developers).
 
 To retrieve data from Cloud Trace, we recommend that you use the Cloud Trace API. By using the API, you have access to the exact data stored by Cloud Trace.
 
@@ -114,6 +114,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

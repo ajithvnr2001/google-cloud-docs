@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/subscribe-build-notifications/
 title: Subscribe to build notifications \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:23:47.322227+00:00
+fetched_at: 2026-10-21T14:11:13.076100+00:00
 ---
 
 # Subscribe to build notifications  |  Cloud Build  |  Google Cloud Documentation

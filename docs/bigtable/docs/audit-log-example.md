@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/audit-log-example/
 title: Audit log example \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:13.208661+00:00
+fetched_at: 2026-10-21T12:36:55.778114+00:00
 ---
 
 # Audit log example  |  Bigtable  |  Google Cloud Documentation

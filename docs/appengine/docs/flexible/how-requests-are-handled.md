@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/how-requests-are-handled/
 title: How requests are handled \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:37:07.985608+00:00
+fetched_at: 2026-10-21T12:31:02.331565+00:00
 ---
 
 # How requests are handled  |  App Engine flexible environment  |  Google Cloud Documentation

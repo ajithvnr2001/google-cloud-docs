@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/deployment-strategies/canary/
 title: Use a canary deployment strategy \u00a0|\u00a0 Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:15:49.402066+00:00
+fetched_at: 2026-10-21T12:42:43.816360+00:00
 ---
 
 # Use a canary deployment strategy  |  Cloud Deploy  |  Google Cloud Documentation

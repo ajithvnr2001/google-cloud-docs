@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/gpu/gemma4-finetune-a4-gke-multi-host-cluster/
 title: Fine-tune Gemma 4 on a multi-host A4 GKE cluster \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T10:28:10.434091+00:00
+fetched_at: 2026-10-22T05:46:01.504918+00:00
 ---
 
 # Fine-tune Gemma 4 on a multi-host A4 GKE cluster  |  AI Hypercomputer  |  Google Cloud Documentation
@@ -682,6 +682,9 @@ To create the configuration files and scripts that your fine-tuning workload use
          
          kubectl apply --server-side \
              -f https://github.com/kubernetes-sigs/jobset/releases/download/v0.12.0/manifests.yaml
+         
+         # Wait for JobSet controller webhook to become ready to prevent intermittent failures during deploy
+         kubectl rollout status deployment/jobset-controller-manager -n jobset-system --timeout=600s
 
   3. In the `llm-finetuning-gemma` directory that you created in an earlier step, submit the container build to Cloud Build:
          
@@ -775,6 +778,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-15 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

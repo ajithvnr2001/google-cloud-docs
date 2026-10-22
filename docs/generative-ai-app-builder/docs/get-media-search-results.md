@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/get-media-search-results/
 title: Get search results for media apps \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:05.668353+00:00
+fetched_at: 2026-10-21T12:55:30.494658+00:00
 ---
 
 # Get search results for media apps  |  Agent Search  |  Google Cloud Documentation

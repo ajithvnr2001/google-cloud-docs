@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerystorage-bigquerywrite-writestream-get/
 title: Get write stream details \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T13:29:08.882360+00:00
+fetched_at: 2026-10-21T12:36:23.620115+00:00
 ---
 
 # Get write stream details  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/registry/release-notes/
 title: Apigee Registry release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:39:10.961118+00:00
+fetched_at: 2026-10-21T14:54:04.882297+00:00
 ---
 
 # Apigee Registry release notes  |  Google Cloud Documentation

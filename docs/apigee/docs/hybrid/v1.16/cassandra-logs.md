@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/cassandra-logs/
 title: Cassandra logs \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T11:36:18.268506+00:00
+fetched_at: 2026-10-21T12:36:06.136112+00:00
 ---
 
 # Cassandra logs  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/enable-multiple-languages/
 title: Enable multiple languages for IVR, mobile, and web channels \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:35:59.052500+00:00
+fetched_at: 2026-10-21T14:21:35.446183+00:00
 ---
 
 # Enable multiple languages for IVR, mobile, and web channels  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/web-sdk-strings/
 title: Web SDK string reference \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:43:39.258389+00:00
+fetched_at: 2026-10-21T14:21:25.013073+00:00
 ---
 
 # Web SDK string reference  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

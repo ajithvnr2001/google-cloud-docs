@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/obsidian-changelog/
 title: Change log for OBSIDIAN \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:22:33.272751+00:00
+fetched_at: 2026-10-21T14:51:39.051410+00:00
 ---
 
 # Change log for OBSIDIAN  |  Google Security Operations  |  Google Cloud Documentation

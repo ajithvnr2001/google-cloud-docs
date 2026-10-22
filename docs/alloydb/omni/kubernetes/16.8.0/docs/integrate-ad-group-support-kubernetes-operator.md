@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/16.8.0/docs/integrate-ad-group-support-kubernetes-operator/
 title: Integrate Active Directory group support on Kubernetes \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 16.8.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:42:52.873839+00:00
+fetched_at: 2026-10-21T15:28:53.505790+00:00
 ---
 
 # Integrate Active Directory group support on Kubernetes  |  AlloyDB Omni for Kubernetes: 16.8.0  |  Google Cloud Documentation

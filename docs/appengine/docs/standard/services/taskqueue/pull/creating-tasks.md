@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/taskqueue/pull/creating-tasks/
 title: Creating Pull Tasks \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:45:32.636465+00:00
+fetched_at: 2026-10-21T14:24:59.391182+00:00
 ---
 
 # Creating Pull Tasks  |  App Engine standard environment  |  Google Cloud Documentation

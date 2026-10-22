@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/db-create-user/
 title: Create a user \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T09:54:50.478009+00:00
+fetched_at: 2026-10-21T12:56:11.362611+00:00
 ---
 
 # Create a user  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

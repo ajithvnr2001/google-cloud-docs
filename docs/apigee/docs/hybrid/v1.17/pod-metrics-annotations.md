@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/pod-metrics-annotations/
 title: Pod metrics annotations details \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:49:36.305612+00:00
+fetched_at: 2026-10-21T14:28:29.533178+00:00
 ---
 
 # Pod metrics annotations details  |  Apigee  |  Google Cloud Documentation

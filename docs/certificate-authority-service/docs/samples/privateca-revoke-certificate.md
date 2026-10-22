@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/samples/privateca-revoke-certificate/
 title: Revoke a Certificate \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T14:58:09.252424+00:00
+fetched_at: 2026-10-21T12:38:39.512471+00:00
 ---
 
 # Revoke a Certificate  |  Certificate Authority Service  |  Google Cloud Documentation

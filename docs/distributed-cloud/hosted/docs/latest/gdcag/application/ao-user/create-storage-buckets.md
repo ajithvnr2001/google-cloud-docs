@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/create-storage-buckets/
 title: Create storage buckets for projects \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:42:51.085482+00:00
+fetched_at: 2026-10-21T12:56:18.113356+00:00
 ---
 
 # Create storage buckets for projects  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

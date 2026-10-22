@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/excelonline/configure/
 title: Excel Online \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:20.737026+00:00
+fetched_at: 2026-10-21T12:52:19.732833+00:00
 ---
 
 # Excel Online  |  Integration Connectors  |  Google Cloud Documentation

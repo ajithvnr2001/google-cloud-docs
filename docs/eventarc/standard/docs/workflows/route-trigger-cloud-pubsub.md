@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/workflows/route-trigger-cloud-pubsub/
 title: Route Pub/Sub events to Workflows \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:47.333958+00:00
+fetched_at: 2026-10-21T12:45:54.890878+00:00
 ---
 
 # Route Pub/Sub events to Workflows  |  Eventarc Standard  |  Google Cloud Documentation

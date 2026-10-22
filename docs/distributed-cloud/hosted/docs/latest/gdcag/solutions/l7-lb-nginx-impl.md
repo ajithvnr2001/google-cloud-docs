@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/l7-lb-nginx-impl/
 title: NGINX Layer 7 load balancing reference implementation \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:12:30.650327+00:00
+fetched_at: 2026-10-21T12:58:13.055904+00:00
 ---
 
 # NGINX Layer 7 load balancing reference implementation  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

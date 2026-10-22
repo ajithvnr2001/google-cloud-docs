@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/16.13.0/docs/use-connection-pooler-kubernetes/
 title: Use the PgBouncer connection pooler \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 16.13.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:37:25.682428+00:00
+fetched_at: 2026-10-21T15:19:17.597215+00:00
 ---
 
 # Use the PgBouncer connection pooler  |  AlloyDB Omni using the container orchestrator: 16.13.0  |  Google Cloud Documentation

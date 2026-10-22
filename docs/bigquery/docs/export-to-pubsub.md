@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/export-to-pubsub/
 title: Export data to Pub/Sub (reverse ETL) \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:03.347182+00:00
+fetched_at: 2026-10-21T14:06:33.138481+00:00
 ---
 
 # Export data to Pub/Sub (reverse ETL)  |  BigQuery  |  Google Cloud Documentation

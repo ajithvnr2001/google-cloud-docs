@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/tutorials/deploy/database/
 title: Query a database \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:59.406832+00:00
+fetched_at: 2026-10-21T14:08:55.884723+00:00
 ---
 
 # Query a database  |  Dialogflow CX  |  Google Cloud Documentation

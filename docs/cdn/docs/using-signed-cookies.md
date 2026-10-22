@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/using-signed-cookies/
 title: Use signed cookies \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:23:57.195977+00:00
+fetched_at: 2026-10-21T14:23:49.595862+00:00
 ---
 
 # Use signed cookies  |  Cloud CDN  |  Google Cloud Documentation

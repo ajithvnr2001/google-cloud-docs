@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/urlf_best_practices/
 title: Best practices for URL filtering service \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:58:47.884487+00:00
+fetched_at: 2026-10-21T12:55:24.152374+00:00
 ---
 
 # Best practices for URL filtering service  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/harness-io/
 title: Collect Harness IO audit logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:28:13.176753+00:00
+fetched_at: 2026-10-21T12:38:08.165894+00:00
 ---
 
 # Collect Harness IO audit logs  |  Google Security Operations  |  Google Cloud Documentation

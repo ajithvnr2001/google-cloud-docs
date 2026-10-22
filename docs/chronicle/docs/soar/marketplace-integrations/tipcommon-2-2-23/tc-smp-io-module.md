@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/tipcommon-2-2-23/tc-smp-io-module/
 title: TIPCommon.smp_io \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:55:23.362620+00:00
+fetched_at: 2026-10-21T14:19:22.046204+00:00
 ---
 
 # TIPCommon.smp_io  |  Google Security Operations  |  Google Cloud Documentation

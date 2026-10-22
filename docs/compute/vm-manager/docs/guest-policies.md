@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/vm-manager/docs/guest-policies/
 title: OS guest policies (legacy) \u00a0|\u00a0 VM Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:45:20.080583+00:00
+fetched_at: 2026-10-21T14:21:48.851881+00:00
 ---
 
 # OS guest policies (legacy)  |  VM Manager  |  Google Cloud Documentation

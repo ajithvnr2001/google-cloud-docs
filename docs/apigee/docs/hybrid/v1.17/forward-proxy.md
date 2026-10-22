@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/forward-proxy/
 title: Configure forward proxying for API proxies \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:11:12.854766+00:00
+fetched_at: 2026-10-21T14:26:20.496867+00:00
 ---
 
 # Configure forward proxying for API proxies  |  Apigee  |  Google Cloud Documentation

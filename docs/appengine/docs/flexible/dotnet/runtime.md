@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/dotnet/runtime/
 title: The .NET runtime \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:08.132209+00:00
+fetched_at: 2026-10-21T14:09:55.459382+00:00
 ---
 
 # The .NET runtime  |  App Engine flexible environment  |  Google Cloud Documentation

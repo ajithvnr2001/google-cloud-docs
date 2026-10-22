@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/release-notes/
 title: Chrome Enterprise Premium release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:57:48.174216+00:00
+fetched_at: 2026-10-21T14:51:44.576408+00:00
 ---
 
 # Chrome Enterprise Premium release notes  |  Google Cloud Documentation

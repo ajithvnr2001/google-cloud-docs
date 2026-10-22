@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/admin/boot-disk-encryption/
 title: Boot disk encryption \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:45.058955+00:00
+fetched_at: 2026-10-21T12:57:42.236342+00:00
 ---
 
 # Boot disk encryption  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

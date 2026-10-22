@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/ai-developer-tools-overview/
 title: AI developer tools overview \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:33:40.411991+00:00
+fetched_at: 2026-10-21T12:42:10.607055+00:00
 ---
 
 # AI developer tools overview  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -33,7 +33,7 @@ AI developer tool | Description
 ---|---  
 **Google Antigravity** |  An AI-powered development environment designed to help developers build applications using autonomous AI agents.   
   
-**Supported tools:** Antigravity 2.0 and Antigravity CLI.   
+**Supported tools:** Antigravity app and Antigravity CLI.   
   
 To get started, see [Get started with Antigravity](https://antigravity.google/docs/enterprise).   
 **Antigravity for IDEs** |  An AI-powered extension for integrated development environments (IDEs) that brings autonomous AI agent capabilities into your developer workflow.   
@@ -56,7 +56,7 @@ Use case | Description
 Automated code reviews and quality checks |  Autonomous agents analyze code changes and pull requests to detect bugs, security vulnerabilities, and style violations, offering actionable suggestions and automated fixes before code is merged.   
 Accelerated debugging and root-cause analysis |  Agents investigate test failures, build breakages, and runtime errors across large codebases by inspecting logs, tracing stack traces, and proposing validated code corrections.   
 End-to-end feature development and refactoring |  Developers can delegate multi-step software engineering tasks—such as implementing new features, refactoring legacy modules, migrating APIs, and generating comprehensive test suites—directly to autonomous AI agents.   
-Seamless CLI and IDE integration |  With support for Antigravity 2.0, the Antigravity CLI, Antigravity for IDEs, and Android Studio, developers can incorporate AI agents into their daily IDE development, terminal workflows, and automated pipelines.   
+Seamless CLI and IDE integration |  With support for the Antigravity app, the Antigravity CLI, Antigravity for IDEs, and Android Studio, developers can incorporate AI agents into their daily IDE development, terminal workflows, and automated pipelines.   
   
 ## Before you begin
 
@@ -115,6 +115,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-12 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-12 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

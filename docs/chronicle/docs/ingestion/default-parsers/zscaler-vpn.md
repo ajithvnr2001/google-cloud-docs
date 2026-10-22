@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/zscaler-vpn/
 title: Collect Zscaler VPN logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:54:57.931955+00:00
+fetched_at: 2026-10-21T14:25:43.159536+00:00
 ---
 
 # Collect Zscaler VPN logs  |  Google Security Operations  |  Google Cloud Documentation

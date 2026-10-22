@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/monitor-cassandra-backups/
 title: Monitoring backups \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:05:15.352034+00:00
+fetched_at: 2026-10-21T14:26:44.726057+00:00
 ---
 
 # Monitoring backups  |  Apigee  |  Google Cloud Documentation

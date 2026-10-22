@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/15.5.5/docs/error-codes/ec-DBSE2411/
 title: DBSE2411. PostgreSQL: Failed to create physical replication slot \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 15.5.5 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:34:45.691225+00:00
+fetched_at: 2026-10-21T15:25:53.553130+00:00
 ---
 
 # DBSE2411. PostgreSQL: Failed to create physical replication slot  |  AlloyDB Omni for Kubernetes: 15.5.5  |  Google Cloud Documentation

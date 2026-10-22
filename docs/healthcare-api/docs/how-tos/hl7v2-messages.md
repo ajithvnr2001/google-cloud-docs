@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/how-tos/hl7v2-messages/
 title: Creating and managing HL7v2 messages \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:40:48.748978+00:00
+fetched_at: 2026-10-21T14:29:29.738650+00:00
 ---
 
 # Creating and managing HL7v2 messages  |  Cloud Healthcare API  |  Google Cloud Documentation

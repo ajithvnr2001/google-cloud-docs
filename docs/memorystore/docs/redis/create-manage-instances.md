@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/create-manage-instances/
 title: Create and manage Redis instances \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:50.756353+00:00
+fetched_at: 2026-10-21T15:16:53.669560+00:00
 ---
 
 # Create and manage Redis instances  |  Memorystore for Redis  |  Google Cloud Documentation

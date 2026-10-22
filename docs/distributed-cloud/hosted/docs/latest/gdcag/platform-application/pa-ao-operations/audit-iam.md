@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/audit-iam/
 title: Identity and access management (IAM) \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:44:09.060156+00:00
+fetched_at: 2026-10-21T12:59:28.019200+00:00
 ---
 
 # Identity and access management (IAM)  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/ip-addresses/configure-static-internal-ip-address/
 title: Configure static internal IP addresses \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:35:14.450161+00:00
+fetched_at: 2026-10-21T14:23:57.688163+00:00
 ---
 
 # Configure static internal IP addresses  |  Compute Engine  |  Google Cloud Documentation

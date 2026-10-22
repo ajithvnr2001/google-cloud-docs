@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/fhir-pitr/
 title: Recover FHIR resources with point-in-time recovery (PITR) \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:01:49.986807+00:00
+fetched_at: 2026-10-21T14:30:41.863757+00:00
 ---
 
 # Recover FHIR resources with point-in-time recovery (PITR)  |  Cloud Healthcare API  |  Google Cloud Documentation

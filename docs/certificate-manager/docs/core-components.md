@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/core-components/
 title: Core components of Certificate Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:00:03.401813+00:00
+fetched_at: 2026-10-21T15:18:23.665946+00:00
 ---
 
 # Core components of Certificate Manager  |  Google Cloud Documentation

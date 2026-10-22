@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/cloudm/
 title: Collect CloudM logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:44:02.205102+00:00
+fetched_at: 2026-10-21T12:37:58.685202+00:00
 ---
 
 # Collect CloudM logs  |  Google Security Operations  |  Google Cloud Documentation

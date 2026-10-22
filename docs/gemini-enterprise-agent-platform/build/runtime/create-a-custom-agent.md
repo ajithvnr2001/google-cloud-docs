@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/runtime/create-a-custom-agent/
 title: Create a custom agent \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:15:56.621184+00:00
+fetched_at: 2026-10-21T15:43:23.355194+00:00
 ---
 
 # Create a custom agent  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -58,11 +58,11 @@ To give a basic example, the following Python class is a template for instantiat
             self.location = location
     
         def set_up(self):
-            import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+            import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
             from langchain_google_vertexai import ChatVertexAI
             from langgraph.prebuilt import create_react_agent
     
-            [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=self.project, location=self.location)
+            [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=self.project, location=self.location)
     
             model = ChatVertexAI(model_name=self.model_name)
             self.graph = create_react_agent(model, tools=self.tools)
@@ -387,11 +387,11 @@ Next, import and initialize the instrumentor:
             LangChainInstrumentor().instrument()
             # end of additional code required
     
-            import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+            import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
             from langchain_google_vertexai import ChatVertexAI
             from langgraph.prebuilt import create_react_agent
     
-            [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=self.project, location=self.location)
+            [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=self.project, location=self.location)
     
             model = ChatVertexAI(model_name=self.model_name)
             self.graph = create_react_agent(model, tools=self.tools)
@@ -450,11 +450,11 @@ Next, import and initialize the instrumentor:
             LangchainInstrumentor().instrument()
             # end of additional code required
     
-            import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+            import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
             from langchain_google_vertexai import ChatVertexAI
             from langgraph.prebuilt import create_react_agent
     
-            [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=self.project, location=self.location)
+            [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=self.project, location=self.location)
     
             model = ChatVertexAI(model_name=self.model_name)
             self.graph = create_react_agent(model, tools=self.tools)
@@ -623,9 +623,9 @@ If you don't have an access token, you can use `google_auth_oauthlib.flow` to pe
     # After obtaining the credentials, you can then authorize API requests on behalf
     # of the given user or service account. For example, to authorize API requests
     # to vertexai services, you'll specify it in vertexai.init(credentials=)
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
     
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(
         project="PROJECT_ID",
         location="LOCATION",
         credentials=credentials, # specify the credentials here
@@ -735,6 +735,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

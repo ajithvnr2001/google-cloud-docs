@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/ibm-maas360/
 title: Collect IBM MaaS360 logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:57:17.220404+00:00
+fetched_at: 2026-10-21T12:36:42.329876+00:00
 ---
 
 # Collect IBM MaaS360 logs  |  Google Security Operations  |  Google Cloud Documentation

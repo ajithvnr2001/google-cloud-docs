@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/how/filter/
 title: List data with a filter \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:58.783598+00:00
+fetched_at: 2026-10-21T12:45:21.381151+00:00
 ---
 
 # List data with a filter  |  Dialogflow CX  |  Google Cloud Documentation

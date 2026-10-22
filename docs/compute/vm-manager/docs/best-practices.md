@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/vm-manager/docs/best-practices/
 title: Best practices for using VM Manager across an organization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:45:18.177576+00:00
+fetched_at: 2026-10-21T14:08:58.231552+00:00
 ---
 
 # Best practices for using VM Manager across an organization  |  Google Cloud Documentation

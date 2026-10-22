@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/overview/
 title: What is Pub/Sub? \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:35:03.229600+00:00
+fetched_at: 2026-10-21T15:08:35.550445+00:00
 ---
 
 # What is Pub/Sub?  |  Google Cloud Documentation
@@ -78,8 +78,8 @@ Pub/Sub has many integrations with other Google Cloud products to create a fully
   * **Authentication and IAM.** Pub/Sub relies on a standard OAuth authentication used by other Google Cloud products and supports granular IAM, enabling access control for individual resources.
   * **APIs.** Pub/Sub uses standard [gRPC and REST service API technologies](https://docs.cloud.google.com/pubsub/docs/apis) along with [client libraries](https://docs.cloud.google.com/pubsub/docs/reference/libraries) for several languages.
   * **Triggers, notifications, and webhooks.** Pub/Sub offers push-based delivery of messages as HTTP POST requests to webhooks. You can implement workflow automation using [Cloud Functions](https://docs.cloud.google.com/functions/docs) or other serverless products.
-  * **Orchestration.** Pub/Sub can be integrated into multistep serverless [Workflows](https://docs.cloud.google.com/workflows) declaratively. Big data and analytic orchestration often done with [Managed Airflow](https://docs.cloud.google.com/composer/docs), which supports Pub/Sub triggers. You can also integrate Pub/Sub with [Application Integration](https://docs.cloud.google.com/application-integration/docs/overview) ([Preview](https://cloud.google.com/products/#product-launch-stages)) which is an Integration-Platform-as-a-Service (iPaaS) solution. Application Integration provides a [Pub/Sub trigger](https://docs.cloud.google.com/application-integration/docs/configuring-pubsub-trigger) to trigger or start integrations.
-  * **Integration Connectors.**([Preview](https://cloud.google.com/products/#product-launch-stages)) These [connectors](https://docs.cloud.google.com/integration-connectors/docs/about-connectors) let you connect to various data sources. With connectors, both Google Cloud services and third-party business applications are exposed to your integrations through a transparent, standard interface. For Pub/Sub, you can create a Pub/Sub [connection](https://docs.cloud.google.com/integration-connectors/docs/connectors/cloudpubsub/configure) for use in your integrations.
+  * **Orchestration.** Pub/Sub can be integrated into multistep serverless [Workflows](https://docs.cloud.google.com/workflows) declaratively. Big data and analytic orchestration often done with [Managed Airflow](https://docs.cloud.google.com/composer/docs), which supports Pub/Sub triggers. You can also integrate Pub/Sub with [Application Integration](https://docs.cloud.google.com/application-integration/docs/overview), which is an Integration-Platform-as-a-Service (iPaaS) solution. Application Integration provides a [Pub/Sub trigger](https://docs.cloud.google.com/application-integration/docs/configuring-pubsub-trigger) to trigger or start integrations.
+  * **Integration Connectors.** These [connectors](https://docs.cloud.google.com/integration-connectors/docs/about-connectors) let you connect to various data sources. With connectors, both Google Cloud services and third-party business applications are exposed to your integrations through a transparent, standard interface. For Pub/Sub, you can create a [Pub/Sub connector](https://docs.cloud.google.com/integration-connectors/docs/connectors/pubsub/configure) for use in your integrations.
 
 
 
@@ -99,6 +99,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

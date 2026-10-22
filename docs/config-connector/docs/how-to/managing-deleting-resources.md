@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/how-to/managing-deleting-resources/
 title: Managing and deleting resources \u00a0|\u00a0 Config Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:17.675833+00:00
+fetched_at: 2026-10-21T14:24:52.259829+00:00
 ---
 
 # Managing and deleting resources  |  Config Connector  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/bitwarden-event/
 title: Collect Bitwarden Enterprise Event Logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:50:14.933249+00:00
+fetched_at: 2026-10-21T14:09:49.740899+00:00
 ---
 
 # Collect Bitwarden Enterprise Event Logs  |  Google Security Operations  |  Google Cloud Documentation

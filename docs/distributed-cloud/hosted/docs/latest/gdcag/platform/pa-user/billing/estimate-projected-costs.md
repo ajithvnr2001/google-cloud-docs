@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/billing/estimate-projected-costs/
 title: Estimate projected costs \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:01:18.131041+00:00
+fetched_at: 2026-10-21T12:59:05.491710+00:00
 ---
 
 # Estimate projected costs  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/go/release-notes/
 title: App Engine flexible environment for Go release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:33:24.310842+00:00
+fetched_at: 2026-10-21T14:43:08.553919+00:00
 ---
 
 # App Engine flexible environment for Go release notes  |  Google Cloud Documentation

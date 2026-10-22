@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/merchant-center-product-targeting-schema/
 title: Google Merchant Center Product Targeting table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:16:59.111231+00:00
+fetched_at: 2026-10-21T12:35:46.270088+00:00
 ---
 
 # Google Merchant Center Product Targeting table  |  BigQuery  |  Google Cloud Documentation

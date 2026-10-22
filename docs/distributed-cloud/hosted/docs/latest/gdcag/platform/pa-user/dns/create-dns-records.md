@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/dns/create-dns-records/
 title: Create DNS records \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:45.800988+00:00
+fetched_at: 2026-10-21T12:58:52.661225+00:00
 ---
 
 # Create DNS records  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/organization-policy/resources/
 title: Resources \u00a0|\u00a0 Organization Policy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:00:37.969983+00:00
+fetched_at: 2026-10-21T14:59:14.852806+00:00
 ---
 
 # Resources  |  Organization Policy  |  Google Cloud Documentation

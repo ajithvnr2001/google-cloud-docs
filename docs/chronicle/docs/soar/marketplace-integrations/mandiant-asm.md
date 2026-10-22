@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/mandiant-asm/
 title: Integrate Mandiant Attack Surface Management with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:31:42.918721+00:00
+fetched_at: 2026-10-21T14:20:49.468937+00:00
 ---
 
 # Integrate Mandiant Attack Surface Management with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/sandbox/latest/resources/specifications/
 title: Specifications \u00a0|\u00a0 Google Distributed Cloud Sandbox \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:55:42.896866+00:00
+fetched_at: 2026-10-21T14:06:50.029110+00:00
 ---
 
 # Specifications  |  Google Distributed Cloud Sandbox  |  Google Cloud Documentation

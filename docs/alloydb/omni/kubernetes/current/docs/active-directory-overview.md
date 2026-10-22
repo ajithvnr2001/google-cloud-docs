@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/active-directory-overview/
 title: Active Directory overview \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:42:51.771664+00:00
+fetched_at: 2026-10-21T15:32:07.165211+00:00
 ---
 
 # Active Directory overview  |  AlloyDB Omni using the container orchestrator: Current (18.4.0)  |  Google Cloud Documentation

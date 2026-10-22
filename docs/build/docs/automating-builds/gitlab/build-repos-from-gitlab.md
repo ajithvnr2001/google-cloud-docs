@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/gitlab/build-repos-from-gitlab/
 title: Build repositories from GitLab \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:05.803736+00:00
+fetched_at: 2026-10-21T14:11:30.019042+00:00
 ---
 
 # Build repositories from GitLab  |  Google Cloud Documentation

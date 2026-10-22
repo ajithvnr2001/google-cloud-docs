@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/testing-db-connectivity/
 title: Testing database connectivity for customer-hosted instances \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:05:42.640821+00:00
+fetched_at: 2026-10-21T15:08:44.177610+00:00
 ---
 
 # Testing database connectivity for customer-hosted instances  |  Looker  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/burst-limits/
 title: Understand quotas and burst limits \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:33.970725+00:00
+fetched_at: 2026-10-21T12:38:11.339152+00:00
 ---
 
 # Understand quotas and burst limits  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/f5-shape-changelog/
 title: Change log for F5_SHAPE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:53:20.837448+00:00
+fetched_at: 2026-10-21T14:43:45.272771+00:00
 ---
 
 # Change log for F5_SHAPE  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/audit-logging-container-security/
 title: Container Security API audit logging \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:13.988388+00:00
+fetched_at: 2026-10-21T15:00:29.441101+00:00
 ---
 
 # Container Security API audit logging  |  GKE security  |  Google Cloud Documentation

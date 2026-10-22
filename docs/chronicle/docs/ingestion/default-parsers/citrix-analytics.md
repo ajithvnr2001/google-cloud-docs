@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/citrix-analytics/
 title: Collect Citrix Analytics logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:42:59.063727+00:00
+fetched_at: 2026-10-21T14:19:06.528265+00:00
 ---
 
 # Collect Citrix Analytics logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/migrate-firewall-rules-no-dependencies/
 title: Migrate VPC firewall rules that don't use network tags and service accounts \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:24:00.495726+00:00
+fetched_at: 2026-10-21T12:45:47.836461+00:00
 ---
 
 # Migrate VPC firewall rules that don't use network tags and service accounts  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

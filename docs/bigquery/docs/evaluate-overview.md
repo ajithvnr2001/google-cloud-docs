@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/evaluate-overview/
 title: BigQuery ML model evaluation overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:07:03.298388+00:00
+fetched_at: 2026-10-21T14:09:40.440758+00:00
 ---
 
 # BigQuery ML model evaluation overview  |  Google Cloud Documentation

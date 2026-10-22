@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/cloud/context-parsers/collect-gcp-bigquery-context-logs/
 title: Collect Google Cloud BigQuery context logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:30.667622+00:00
+fetched_at: 2026-10-21T12:37:33.867972+00:00
 ---
 
 # Collect Google Cloud BigQuery context logs  |  Google Security Operations  |  Google Cloud Documentation

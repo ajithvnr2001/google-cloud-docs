@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/terraform/policy-validation/create-cai-constraints/
 title: Create CAI constraints \u00a0|\u00a0 Terraform on Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:13:28.096574+00:00
+fetched_at: 2026-10-21T14:06:48.616740+00:00
 ---
 
 # Create CAI constraints  |  Terraform on Google Cloud  |  Google Cloud Documentation

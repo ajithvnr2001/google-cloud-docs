@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/set-up/
 title: Setting up Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:01.099809+00:00
+fetched_at: 2026-10-21T14:11:42.619063+00:00
 ---
 
 # Setting up Cloud Build  |  Google Cloud Documentation

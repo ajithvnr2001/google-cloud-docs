@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.7/install/
 title: Install Kf on Google Cloud \u00a0|\u00a0 Kf 2.7 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:45:54.764760+00:00
+fetched_at: 2026-10-21T15:15:28.590772+00:00
 ---
 
 # Install Kf on Google Cloud  |  Kf 2.7  |  Google Cloud Documentation

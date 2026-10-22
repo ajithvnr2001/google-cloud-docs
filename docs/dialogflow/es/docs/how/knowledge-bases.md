@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/how/knowledge-bases/
 title: Manage knowledge bases \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:45:47.463053+00:00
+fetched_at: 2026-10-21T12:43:53.728333+00:00
 ---
 
 # Manage knowledge bases  |  Dialogflow ES  |  Google Cloud Documentation

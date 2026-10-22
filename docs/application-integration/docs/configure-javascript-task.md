@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure-javascript-task/
 title: JavaScript task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:43.528168+00:00
+fetched_at: 2026-10-21T12:39:56.071933+00:00
 ---
 
 # JavaScript task  |  Application Integration  |  Google Cloud Documentation

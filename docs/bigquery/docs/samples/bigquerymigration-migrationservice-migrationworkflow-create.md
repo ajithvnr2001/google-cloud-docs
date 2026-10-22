@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerymigration-migrationservice-migrationworkflow-create/
 title: Create a migration workflow \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:47.694844+00:00
+fetched_at: 2026-10-21T12:36:23.455414+00:00
 ---
 
 # Create a migration workflow  |  BigQuery  |  Google Cloud Documentation

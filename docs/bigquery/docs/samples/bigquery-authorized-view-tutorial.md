@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-authorized-view-tutorial/
 title: Create an authorized view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:49.177413+00:00
+fetched_at: 2026-10-21T12:41:18.662477+00:00
 ---
 
 # Create an authorized view  |  BigQuery  |  Google Cloud Documentation

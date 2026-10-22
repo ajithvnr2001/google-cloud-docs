@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/merchant-center-regional-inventories-schema/
 title: Google Merchant Center regional inventories table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:15:52.542810+00:00
+fetched_at: 2026-10-21T14:20:44.924314+00:00
 ---
 
 # Google Merchant Center regional inventories table  |  BigQuery  |  Google Cloud Documentation

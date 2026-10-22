@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/configure-notification-channels/
 title: Configure notification channels for alerts \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:44:06.279559+00:00
+fetched_at: 2026-10-21T12:58:46.206191+00:00
 ---
 
 # Configure notification channels for alerts  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

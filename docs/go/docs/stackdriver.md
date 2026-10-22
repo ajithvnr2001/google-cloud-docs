@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/go/docs/stackdriver/
 title: Monitoring and logging for Go \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:43:17.052560+00:00
+fetched_at: 2026-10-21T12:54:35.903296+00:00
 ---
 
 # Monitoring and logging for Go  |  Google Cloud Documentation

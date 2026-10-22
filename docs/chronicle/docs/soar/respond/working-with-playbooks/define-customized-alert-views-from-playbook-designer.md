@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/define-customized-alert-views-from-playbook-designer/
 title: Configure custom alert views \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:33:49.407253+00:00
+fetched_at: 2026-10-21T12:38:52.891154+00:00
 ---
 
 # Configure custom alert views  |  Google Security Operations  |  Google Cloud Documentation

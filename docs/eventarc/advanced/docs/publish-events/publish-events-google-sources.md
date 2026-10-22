@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/advanced/docs/publish-events/publish-events-google-sources/
 title: Publish events from Google sources \u00a0|\u00a0 Eventarc Advanced \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:24:25.117851+00:00
+fetched_at: 2026-10-21T12:52:30.092593+00:00
 ---
 
 # Publish events from Google sources  |  Eventarc Advanced  |  Google Cloud Documentation

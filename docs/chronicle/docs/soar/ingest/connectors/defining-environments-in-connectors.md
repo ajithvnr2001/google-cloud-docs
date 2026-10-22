@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/ingest/connectors/defining-environments-in-connectors/
 title: Define environments in SOAR connectors \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:21.746436+00:00
+fetched_at: 2026-10-21T14:21:24.686474+00:00
 ---
 
 # Define environments in SOAR connectors  |  Google Security Operations  |  Google Cloud Documentation

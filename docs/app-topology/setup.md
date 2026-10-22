@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-topology/setup/
 title: Set up App Topology \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:20:26.643920+00:00
+fetched_at: 2026-10-21T14:23:51.736588+00:00
 ---
 
 # Set up App Topology  |  Google Cloud Documentation

@@ -1,21 +1,21 @@
 ---
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/backup-kubernetes/
-title: Back up and restore in Kubernetes \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: Current (18.3.0) \u00a0|\u00a0 Google Cloud Documentation
+title: Back up and restore in Kubernetes \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:23:26.911599+00:00
+fetched_at: 2026-10-21T15:33:26.545262+00:00
 ---
 
-# Back up and restore in Kubernetes  |  AlloyDB Omni using the container orchestrator: Current (18.3.0)  |  Google Cloud Documentation
+# Back up and restore in Kubernetes  |  AlloyDB Omni using the container orchestrator: Current (18.4.0)  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/backup-kubernetes/
 
-This page documents AlloyDB Omni version **18.3.0** using the **container orchestrator** deployment option. [Choose a different deployment option](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment). 
+This page documents AlloyDB Omni version **18.4.0** using the **container orchestrator** deployment option. [Choose a different deployment option](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment). 
 
   * [ Home ](https://docs.cloud.google.com/)
   * [ Documentation ](https://docs.cloud.google.com/docs)
   * [ Databases ](https://docs.cloud.google.com/docs/databases)
   * [ AlloyDB Omni ](https://docs.cloud.google.com/alloydb/omni/docs)
-  * [ Container orchestrator: Current (18.3.0) ](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/overview)
+  * [ Container orchestrator: Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/overview)
 
 
 
@@ -23,7 +23,7 @@ Send feedback
 
 #  Back up and restore in Kubernetes Stay organized with collections  Save and categorize content based on your preferences. 
 
-Select a documentation version: 18.3.0keyboard_arrow_down
+Select a documentation version: 18.4.0keyboard_arrow_down
 
   * [ Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/backup-kubernetes)
   * [ 18.4.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.4.0/docs/backup-kubernetes)

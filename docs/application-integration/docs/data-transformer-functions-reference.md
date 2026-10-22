@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/data-transformer-functions-reference/
 title: Data Transformer functions \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:59:44.180561+00:00
+fetched_at: 2026-10-21T12:39:45.245961+00:00
 ---
 
 # Data Transformer functions  |  Application Integration  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/networking/tcp-optimization-for-network-resiliency/
 title: Use Protective ReRoute to optimize TCP network resiliency \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:00:19.129354+00:00
+fetched_at: 2026-10-21T12:40:21.159085+00:00
 ---
 
 # Use Protective ReRoute to optimize TCP network resiliency  |  Compute Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/quickstart/
 title: Quickstarts \u00a0|\u00a0 Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:16:45.844402+00:00
+fetched_at: 2026-10-21T14:20:35.897250+00:00
 ---
 
 # Quickstarts  |  Cloud Code for Cloud Shell  |  Google Cloud Documentation

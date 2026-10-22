@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples-map-reduce/
 title: Hadoop MapReduce job with Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:01:39.501367+00:00
+fetched_at: 2026-10-21T14:10:04.230181+00:00
 ---
 
 # Hadoop MapReduce job with Bigtable  |  Google Cloud Documentation

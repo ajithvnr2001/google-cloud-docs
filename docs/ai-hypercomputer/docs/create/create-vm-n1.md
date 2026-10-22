@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-vm-n1/
 title: Create an AI-optimized N1 instance with GPUs \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:34:56.878007+00:00
+fetched_at: 2026-10-21T14:25:38.238963+00:00
 ---
 
 # Create an AI-optimized N1 instance with GPUs  |  AI Hypercomputer  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/analyticshub-quickstart/
 title: Create a data exchange and listing using Analytics Hub \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:42.405439+00:00
+fetched_at: 2026-10-21T12:41:03.250678+00:00
 ---
 
 # Create a data exchange and listing using Analytics Hub  |  BigQuery  |  Google Cloud Documentation

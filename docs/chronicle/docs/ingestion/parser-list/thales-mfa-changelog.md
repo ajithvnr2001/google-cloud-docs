@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/thales-mfa-changelog/
 title: Change log for THALES_MFA \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:43:27.772594+00:00
+fetched_at: 2026-10-21T14:43:34.256459+00:00
 ---
 
 # Change log for THALES_MFA  |  Google Security Operations  |  Google Cloud Documentation

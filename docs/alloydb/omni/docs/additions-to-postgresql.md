@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/docs/additions-to-postgresql/
 title: AlloyDB Omni additions to standard PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:27:58.135108+00:00
+fetched_at: 2026-10-21T15:26:35.252530+00:00
 ---
 
 # AlloyDB Omni additions to standard PostgreSQL  |  Google Cloud Documentation

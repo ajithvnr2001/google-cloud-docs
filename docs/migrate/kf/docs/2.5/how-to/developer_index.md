@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.5/how-to/developer_index/
 title: Application How-to Guides \u00a0|\u00a0 Kf 2.5 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:12:53.508464+00:00
+fetched_at: 2026-10-21T15:18:05.091993+00:00
 ---
 
 # Application How-to Guides  |  Kf 2.5  |  Google Cloud Documentation

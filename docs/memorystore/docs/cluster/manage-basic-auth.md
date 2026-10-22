@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/cluster/manage-basic-auth/
 title: Secure access to your clusters by using basic token-based authentication \u00a0|\u00a0 Memorystore for Redis Cluster \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:23:01.843114+00:00
+fetched_at: 2026-10-21T15:10:41.425570+00:00
 ---
 
 # Secure access to your clusters by using basic token-based authentication  |  Memorystore for Redis Cluster  |  Google Cloud Documentation
@@ -608,7 +608,7 @@ In the following sections, each connection method is explained.
 To connect from a Compute Engine VM or a [supported environment](https://docs.cloud.google.com/memorystore/docs/cluster/supported-environments) by using a URI string, use the following command:
     
     
-    redis-cli -u
+    redis-cli -c -u
     redis://USERNAME:TOKEN@IP_ADDRESS:PORT
     
 
@@ -621,11 +621,11 @@ Make the following replacements:
 
 
 
-If you enable in-transit encryption on the cluster, then you must use the secure Redis protocol (`rediss://`). For example:
+If you enable in-transit encryption on the cluster, then you must use the secure Redis protocol (`rediss://`) and append the TLS flags. For example:
     
     
-    redis-cli -u
-    rediss://USERNAME:TOKEN@IP_ADDRESS:PORT
+    redis-cli -c -u
+    rediss://USERNAME:TOKEN@IP_ADDRESS:PORT --cacert /tmp/server_ca.pem
     
 
 ### Use flags
@@ -633,7 +633,7 @@ If you enable in-transit encryption on the cluster, then you must use the secure
 To connect from a Compute Engine VM or a [supported environment](https://docs.cloud.google.com/memorystore/docs/cluster/supported-environments) by using flags, use the following command:
     
     
-    redis-cli --user USERNAME -a TOKEN -h IP_ADDRESS -p PORT
+    redis-cli -c --user USERNAME -a TOKEN -h IP_ADDRESS -p PORT
     
 
 Make the following replacements:
@@ -648,7 +648,7 @@ Make the following replacements:
 If you enable in-transit encryption on the cluster, then you must append the TLS flags. For example:
     
     
-    redis-cli --user USERNAME -a TOKEN -h IP_ADDRESS -p PORT --tls --cacert /tmp/server_ca.pem
+    redis-cli -c --user USERNAME -a TOKEN -h IP_ADDRESS -p PORT --tls --cacert /tmp/server_ca.pem
     
 
 ## Rotate a user's authentication token with zero downtime
@@ -669,6 +669,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-13 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

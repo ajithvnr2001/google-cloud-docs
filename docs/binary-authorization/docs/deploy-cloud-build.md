@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/deploy-cloud-build/
 title: Deploy only images built by Cloud Build \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:11.476453+00:00
+fetched_at: 2026-10-21T14:11:42.539508+00:00
 ---
 
 # Deploy only images built by Cloud Build  |  Binary Authorization  |  Google Cloud Documentation

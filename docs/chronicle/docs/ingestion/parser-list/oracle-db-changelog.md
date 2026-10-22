@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/oracle-db-changelog/
 title: Change log for ORACLE_DB \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:19:18.032473+00:00
+fetched_at: 2026-10-21T14:47:08.447505+00:00
 ---
 
 # Change log for ORACLE_DB  |  Google Security Operations  |  Google Cloud Documentation

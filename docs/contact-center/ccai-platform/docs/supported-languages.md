@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/supported-languages/
 title: Supported languages \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:35:59.499486+00:00
+fetched_at: 2026-10-21T14:22:35.660331+00:00
 ---
 
 # Supported languages  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

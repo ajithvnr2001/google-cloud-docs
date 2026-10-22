@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/test-phone-numbers/
 title: Registering test phone numbers \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:18.539328+00:00
+fetched_at: 2026-10-21T12:54:24.409950+00:00
 ---
 
 # Registering test phone numbers  |  Identity Platform  |  Google Cloud Documentation

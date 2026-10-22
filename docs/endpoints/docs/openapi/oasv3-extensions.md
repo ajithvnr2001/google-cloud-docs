@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/oasv3-extensions/
 title: OpenAPI 3.x extensions \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:49:29.101633+00:00
+fetched_at: 2026-10-21T12:46:17.927168+00:00
 ---
 
 # OpenAPI 3.x extensions  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/dashboards-csat/
 title: CSAT dashboards \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:07:14.607532+00:00
+fetched_at: 2026-10-21T14:23:18.006315+00:00
 ---
 
 # CSAT dashboards  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

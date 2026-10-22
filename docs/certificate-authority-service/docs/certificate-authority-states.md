@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/certificate-authority-states/
 title: Certificate authority states \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:30:14.796674+00:00
+fetched_at: 2026-10-21T14:24:49.046182+00:00
 ---
 
 # Certificate authority states  |  Certificate Authority Service  |  Google Cloud Documentation

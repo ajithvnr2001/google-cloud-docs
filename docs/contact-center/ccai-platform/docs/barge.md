@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/barge/
 title: Barge for calls and chat \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:11.121385+00:00
+fetched_at: 2026-10-21T14:21:44.007037+00:00
 ---
 
 # Barge for calls and chat  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

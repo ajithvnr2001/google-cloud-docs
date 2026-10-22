@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/ai-developer-tools-creating-custom-roles/
 title: Create a custom role to restrict access to AI developer tools \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:24:19.638914+00:00
+fetched_at: 2026-10-21T12:40:36.810967+00:00
 ---
 
 # Create a custom role to restrict access to AI developer tools  |  Gemini Enterprise  |  Google Cloud Documentation

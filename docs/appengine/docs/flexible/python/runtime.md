@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/python/runtime/
 title: The Python runtime \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:08.264330+00:00
+fetched_at: 2026-10-21T14:29:02.864473+00:00
 ---
 
 # The Python runtime  |  App Engine flexible environment  |  Google Cloud Documentation

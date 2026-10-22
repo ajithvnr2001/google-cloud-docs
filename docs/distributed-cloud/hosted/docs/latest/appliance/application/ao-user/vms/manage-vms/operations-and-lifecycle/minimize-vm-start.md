@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/vms/manage-vms/operations-and-lifecycle/minimize-vm-start/
 title: Minimize the VM start time \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:22:07.235125+00:00
+fetched_at: 2026-10-21T12:56:44.822970+00:00
 ---
 
 # Minimize the VM start time  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

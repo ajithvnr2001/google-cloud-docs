@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/scale/
 title: Scale capacity \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:42:35.558256+00:00
+fetched_at: 2026-10-21T14:59:29.179818+00:00
 ---
 
 # Scale capacity  |  Filestore  |  Google Cloud Documentation
@@ -51,12 +51,10 @@ Scaling an instance does not affect its availability and can be performed while 
 Service tier | Basic HDD | Basic SSD | Zonal, lower capacity | Zonal, higher capacity | Regional, lower capacity | Regional, higher capacity | Enterprise  
 ---|---|---|---|---|---|---|---  
 Scaling direction | Up only | Up only | Up and down | Up and down | Up and down | Up and down | Up and down  
-Scaling increment | 1 GiB | 1 GiB | 256 GiB | 2.5 TiB | 1 GiB*/256 GiB | 2.5 TiB | 256 GiB  
-Minimum capacity | 1 TiB | 2.5 TiB | 1 TiB | 10 TiB | 100 GiB*/1 TiB | 10 TiB | 1 TiB  
-Maximum capacity | 63.9 TiB | 63.9 TiB | 9.75 TiB | 100 TiB | 10,239 GiB*9.75 TiB | 100 TiB | 10 TiB  
+Scaling increment | 1 GiB | 1 GiB | 256 GiB | 2.5 TiB | 1 GiB | 2.5 TiB | 256 GiB  
+Minimum capacity | 1 TiB | 2.5 TiB | 1 TiB | 10 TiB | 100 GiB | 10 TiB | 1 TiB  
+Maximum capacity | 63.9 TiB | 63.9 TiB | 9.75 TiB | 100 TiB | 10,239 GiB | 100 TiB | 10 TiB  
   
-* If small capacity instances are available in the region where your instance is located, Regional instance capacity ranges from 100 GiB to 10,239 GiB. Otherwise, the range is 1 TiB to 9.75 TiB. For more information, see [Small capacity instances](https://docs.cloud.google.com/filestore/docs/service-tiers#small-instances).
-
 Scaling the capacity of a zonal tier instance with a higher capacity range can take longer than enterprise and basic tier instances. The actual time required varies depending on the amount of data stored in the instance and the load on the Filestore instance. To ensure that your instances don't run out of capacity, perform these operations in advance.
 
 When a scaling operation is taking place, you cannot cancel the operation or make any other edits to the instance, but read and write operations are uninterrupted. You also cannot scale an enterprise-tier and zonal-tier instance to a capacity level that's lower than what's needed for storing its existing file data and metadata. Attempting to do so results in an error.
@@ -140,6 +138,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

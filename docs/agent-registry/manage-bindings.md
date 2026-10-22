@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/manage-bindings/
 title: Manage bindings \u00a0|\u00a0 Agent Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:41:37.558819+00:00
+fetched_at: 2026-10-21T14:29:11.035720+00:00
 ---
 
 # Manage bindings  |  Agent Registry  |  Google Cloud Documentation

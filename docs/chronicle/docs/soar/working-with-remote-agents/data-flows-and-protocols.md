@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/working-with-remote-agents/data-flows-and-protocols/
 title: Review data flows and protocols \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:09.218266+00:00
+fetched_at: 2026-10-21T12:39:19.470919+00:00
 ---
 
 # Review data flows and protocols  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/db-upload-server-cert/
 title: Sign and upload a server certificate \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:16:23.126767+00:00
+fetched_at: 2026-10-21T12:58:19.112647+00:00
 ---
 
 # Sign and upload a server certificate  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/cmek/
 title: Enable customer-managed encryption keys (CMEK) for Cloud Healthcare API datasets \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:10:13.361419+00:00
+fetched_at: 2026-10-21T14:30:43.588954+00:00
 ---
 
 # Enable customer-managed encryption keys (CMEK) for Cloud Healthcare API datasets  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-iam-service-accounts-keys-delete/
 title: gdcloud iam service-accounts keys delete \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:53:07.342531+00:00
+fetched_at: 2026-10-21T12:59:41.034619+00:00
 ---
 
 # gdcloud iam service-accounts keys delete  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

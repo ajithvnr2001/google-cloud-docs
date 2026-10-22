@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/input-feature-types/
 title: Supported input feature types \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:59:10.114614+00:00
+fetched_at: 2026-10-21T12:36:41.471590+00:00
 ---
 
 # Supported input feature types  |  BigQuery  |  Google Cloud Documentation

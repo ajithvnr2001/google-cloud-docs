@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/qualys-vm/
 title: Collect Qualys Vulnerability Management logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:26:41.350137+00:00
+fetched_at: 2026-10-21T14:10:13.177815+00:00
 ---
 
 # Collect Qualys Vulnerability Management logs  |  Google Security Operations  |  Google Cloud Documentation

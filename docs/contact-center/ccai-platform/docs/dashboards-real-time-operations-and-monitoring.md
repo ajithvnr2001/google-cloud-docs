@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/dashboards-real-time-operations-and-monitoring/
 title: Real-time operations and monitoring \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:41:03.317108+00:00
+fetched_at: 2026-10-21T14:21:33.309712+00:00
 ---
 
 # Real-time operations and monitoring  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

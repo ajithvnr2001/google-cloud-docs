@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-ftp/locations/
 title: Cloud FTP locations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:57:35.968210+00:00
+fetched_at: 2026-10-21T14:22:49.759849+00:00
 ---
 
 # Cloud FTP locations  |  Google Cloud Documentation

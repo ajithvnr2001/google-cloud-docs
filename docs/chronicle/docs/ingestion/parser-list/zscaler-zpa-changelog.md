@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/zscaler-zpa-changelog/
 title: Change log for ZSCALER_ZPA \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:58:24.882163+00:00
+fetched_at: 2026-10-21T14:43:20.438904+00:00
 ---
 
 # Change log for ZSCALER_ZPA  |  Google Security Operations  |  Google Cloud Documentation

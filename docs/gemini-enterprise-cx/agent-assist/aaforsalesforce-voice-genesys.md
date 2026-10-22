@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/aaforsalesforce-voice-genesys/
 title: Agent Assist for Salesforce voice with Genesys CX Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:44:27.439640+00:00
+fetched_at: 2026-10-21T12:54:52.709346+00:00
 ---
 
 # Agent Assist for Salesforce voice with Genesys CX Cloud  |  Google Cloud Documentation

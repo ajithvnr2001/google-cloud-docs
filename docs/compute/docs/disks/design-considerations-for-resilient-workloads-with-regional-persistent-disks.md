@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/design-considerations-for-resilient-workloads-with-regional-persistent-disks/
 title: Design considerations for resilient workloads with regional disks \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:24:07.810776+00:00
+fetched_at: 2026-10-22T05:48:43.845941+00:00
 ---
 
 # Design considerations for resilient workloads with regional disks  |  Compute Engine  |  Google Cloud Documentation

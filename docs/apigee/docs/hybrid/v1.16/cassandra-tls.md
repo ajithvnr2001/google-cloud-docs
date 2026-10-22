@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/cassandra-tls/
 title: Configuring authentication for Cassandra \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:45:43.349064+00:00
+fetched_at: 2026-10-21T14:28:55.927486+00:00
 ---
 
 # Configuring authentication for Cassandra  |  Apigee  |  Google Cloud Documentation

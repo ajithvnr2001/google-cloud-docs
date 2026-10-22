@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-marketplace-catalogs-delete/
 title: gdcloud marketplace catalogs delete \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:10:00.997482+00:00
+fetched_at: 2026-10-21T13:00:10.283277+00:00
 ---
 
 # gdcloud marketplace catalogs delete  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

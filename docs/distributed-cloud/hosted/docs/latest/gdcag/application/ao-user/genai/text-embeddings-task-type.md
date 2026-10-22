@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/genai/text-embeddings-task-type/
 title: Choose an embeddings task type \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:08:30.798819+00:00
+fetched_at: 2026-10-21T12:57:49.021031+00:00
 ---
 
 # Choose an embeddings task type  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

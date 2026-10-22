@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/repositories/download-files/
 title: Download files \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:19.945384+00:00
+fetched_at: 2026-10-21T14:25:10.577470+00:00
 ---
 
 # Download files  |  Artifact Registry  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/build-config-file-schema/
 title: Build configuration file schema \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:02.309140+00:00
+fetched_at: 2026-10-21T12:38:18.382967+00:00
 ---
 
 # Build configuration file schema  |  Google Cloud Documentation

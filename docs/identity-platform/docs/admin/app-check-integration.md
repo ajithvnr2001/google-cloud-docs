@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/admin/app-check-integration/
 title: Enable App Check for a project \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:23.753878+00:00
+fetched_at: 2026-10-21T12:54:08.115918+00:00
 ---
 
 # Enable App Check for a project  |  Identity Platform  |  Google Cloud Documentation

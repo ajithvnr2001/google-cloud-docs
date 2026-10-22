@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/model-armor/model-armor-vertex-integration/
 title: Integrate Model Armor with Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:49:15.462627+00:00
+fetched_at: 2026-10-21T15:16:06.639697+00:00
 ---
 
 # Integrate Model Armor with Gemini Enterprise Agent Platform  |  Google Cloud Documentation

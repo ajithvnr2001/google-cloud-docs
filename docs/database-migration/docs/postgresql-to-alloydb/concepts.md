@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/database-migration/docs/postgresql-to-alloydb/concepts/
 title: Concepts \u00a0|\u00a0 Database Migration Service for PostgreSQL to AlloyDB \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:59:43.736612+00:00
+fetched_at: 2026-10-22T05:41:27.312167+00:00
 ---
 
 # Concepts  |  Database Migration Service for PostgreSQL to AlloyDB  |  Google Cloud Documentation

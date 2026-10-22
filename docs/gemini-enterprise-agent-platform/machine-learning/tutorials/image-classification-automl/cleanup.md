@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tutorials/image-classification-automl/cleanup/
 title: Hello image data: Clean up your project \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:31:00.137516+00:00
+fetched_at: 2026-10-21T12:52:23.721817+00:00
 ---
 
 # Hello image data: Clean up your project  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

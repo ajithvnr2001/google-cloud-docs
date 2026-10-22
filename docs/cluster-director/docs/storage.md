@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-director/docs/storage/
 title: Supported storage services for Cluster Director \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:52.656619+00:00
+fetched_at: 2026-10-21T14:41:58.578581+00:00
 ---
 
 # Supported storage services for Cluster Director  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-region-igm-redistribution/
 title: Create a regional MIG with proactive instance redistribution disabled \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:18.126232+00:00
+fetched_at: 2026-10-21T14:20:44.363555+00:00
 ---
 
 # Create a regional MIG with proactive instance redistribution disabled  |  Compute Engine  |  Google Cloud Documentation

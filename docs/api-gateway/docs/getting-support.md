@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/getting-support/
 title: Get support \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:12:31.160766+00:00
+fetched_at: 2026-10-21T14:10:32.779136+00:00
 ---
 
 # Get support  |  API Gateway  |  Google Cloud Documentation

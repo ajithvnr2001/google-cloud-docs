@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/looker-block-youtube/
 title: Looker Block for YouTube (with DV360) \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:12:24.953665+00:00
+fetched_at: 2026-10-21T14:10:07.262795+00:00
 ---
 
 # Looker Block for YouTube (with DV360)  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

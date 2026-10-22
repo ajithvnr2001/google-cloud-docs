@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/samples/healthcare-delete-resource-purge/
 title: Delete FHIR resource purge \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:25:57.822493+00:00
+fetched_at: 2026-10-21T12:52:40.636669+00:00
 ---
 
 # Delete FHIR resource purge  |  Cloud Healthcare API  |  Google Cloud Documentation

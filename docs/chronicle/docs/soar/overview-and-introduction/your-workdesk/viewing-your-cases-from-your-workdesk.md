@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/overview-and-introduction/your-workdesk/viewing-your-cases-from-your-workdesk/
 title: Monitor cases from your workdesk \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:32:21.107179+00:00
+fetched_at: 2026-10-21T14:10:29.817288+00:00
 ---
 
 # Monitor cases from your workdesk  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/infoblox-rpz-changelog/
 title: Change log for INFOBLOX_RPZ \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:11:45.518899+00:00
+fetched_at: 2026-10-21T14:43:42.635874+00:00
 ---
 
 # Change log for INFOBLOX_RPZ  |  Google Security Operations  |  Google Cloud Documentation

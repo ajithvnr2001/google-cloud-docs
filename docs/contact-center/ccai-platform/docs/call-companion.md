@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/call-companion/
 title: Call companion \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:22.817765+00:00
+fetched_at: 2026-10-21T14:10:32.078862+00:00
 ---
 
 # Call companion  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

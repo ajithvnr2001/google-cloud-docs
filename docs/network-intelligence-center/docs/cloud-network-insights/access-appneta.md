@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-intelligence-center/docs/cloud-network-insights/access-appneta/
 title: Access AppNeta \u00a0|\u00a0 Network Intelligence Center - Cloud Network Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:29:22.571757+00:00
+fetched_at: 2026-10-21T15:14:51.340699+00:00
 ---
 
 # Access AppNeta  |  Network Intelligence Center - Cloud Network Insights  |  Google Cloud Documentation

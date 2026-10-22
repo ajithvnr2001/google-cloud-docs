@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.1/how-to/managed-services/
 title: Managed Services \u00a0|\u00a0 Kf 2.1 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:44.526949+00:00
+fetched_at: 2026-10-21T15:12:05.568657+00:00
 ---
 
 # Managed Services  |  Kf 2.1  |  Google Cloud Documentation

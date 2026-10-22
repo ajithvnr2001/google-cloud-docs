@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/docs/zones/peering-zones/
 title: Create a peering zone \u00a0|\u00a0 Cloud DNS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:57.195835+00:00
+fetched_at: 2026-10-21T14:06:06.914118+00:00
 ---
 
 # Create a peering zone  |  Cloud DNS  |  Google Cloud Documentation

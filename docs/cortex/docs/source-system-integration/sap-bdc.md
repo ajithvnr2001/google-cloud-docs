@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/source-system-integration/sap-bdc/
 title: Integrate and synchronize SAP Business Data Cloud data products with Cortex Framework using Lakehouse runtime catalog. \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:36:57.115881+00:00
+fetched_at: 2026-10-21T14:23:52.979338+00:00
 ---
 
 # Integrate and synchronize SAP Business Data Cloud data products with Cortex Framework using Lakehouse runtime catalog.  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

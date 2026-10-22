@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/cuds-attribution/
 title: Attribution of committed use discount fees and credits \u00a0|\u00a0 Get started \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:28.605346+00:00
+fetched_at: 2026-10-21T14:05:55.009357+00:00
 ---
 
 # Attribution of committed use discount fees and credits  |  Get started  |  Google Cloud Documentation

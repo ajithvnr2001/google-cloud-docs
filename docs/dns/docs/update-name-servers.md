@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/docs/update-name-servers/
 title: Update your domain's name servers \u00a0|\u00a0 Cloud DNS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:58.371825+00:00
+fetched_at: 2026-10-21T14:06:31.621789+00:00
 ---
 
 # Update your domain's name servers  |  Cloud DNS  |  Google Cloud Documentation

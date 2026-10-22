@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/create-manage-parameterized-views/
 title: Create and manage parameterized views \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:18.128234+00:00
+fetched_at: 2026-10-21T12:37:17.854748+00:00
 ---
 
 # Create and manage parameterized views  |  Bigtable  |  Google Cloud Documentation

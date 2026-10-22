@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/aws-import-data/
 title: Directly import asset inventory data from AWS \u00a0|\u00a0 Migration Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:22.636687+00:00
+fetched_at: 2026-10-21T15:16:49.162953+00:00
 ---
 
 # Directly import asset inventory data from AWS  |  Migration Center  |  Google Cloud Documentation

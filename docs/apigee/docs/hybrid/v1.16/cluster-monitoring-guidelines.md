@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/cluster-monitoring-guidelines/
 title: Cluster monitoring guidelines \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:06:38.534933+00:00
+fetched_at: 2026-10-21T14:41:20.701527+00:00
 ---
 
 # Cluster monitoring guidelines  |  Apigee  |  Google Cloud Documentation
@@ -468,6 +468,7 @@ Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["
     * [ Code samples ](https://docs.cloud.google.com/docs/samples)
     * [ Cloud Architecture Center ](https://docs.cloud.google.com/architecture/)
     * [ Training and Certification ](https://cloud.google.com/learn/training/)
+    * [ Builders Hub ](https://me.developers.google.com/)
   * ### Engage
 
     * [ Blog ](https://cloud.google.com/blog/)

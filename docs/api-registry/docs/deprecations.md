@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-registry/docs/deprecations/
 title: Feature deprecations \u00a0|\u00a0 Cloud API Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:24:03.235276+00:00
+fetched_at: 2026-10-21T14:54:08.061215+00:00
 ---
 
 # Feature deprecations  |  Cloud API Registry  |  Google Cloud Documentation

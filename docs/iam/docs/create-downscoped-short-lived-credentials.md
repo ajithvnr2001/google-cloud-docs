@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/create-downscoped-short-lived-credentials/
 title: Create a downscoped short-lived credential \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:10:13.949041+00:00
+fetched_at: 2026-10-21T12:53:03.095343+00:00
 ---
 
 # Create a downscoped short-lived credential  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

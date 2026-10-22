@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/fireeye-etp-changelog/
 title: Change log for FIREEYE_ETP \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:02:25.178307+00:00
+fetched_at: 2026-10-21T14:42:47.172341+00:00
 ---
 
 # Change log for FIREEYE_ETP  |  Google Security Operations  |  Google Cloud Documentation

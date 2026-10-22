@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/domaintools-threatintel-changelog/
 title: Change log for DOMAINTOOLS_THREATINTEL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:11:07.425450+00:00
+fetched_at: 2026-10-21T14:43:48.364237+00:00
 ---
 
 # Change log for DOMAINTOOLS_THREATINTEL  |  Google Security Operations  |  Google Cloud Documentation

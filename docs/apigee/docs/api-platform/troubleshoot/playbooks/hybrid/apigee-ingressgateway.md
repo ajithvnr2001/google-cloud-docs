@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/hybrid/apigee-ingressgateway/
 title: Apigee ingress gateway pods show 1 of 2 containers running \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:25.174319+00:00
+fetched_at: 2026-10-21T14:27:23.068127+00:00
 ---
 
 # Apigee ingress gateway pods show 1 of 2 containers running  |  Google Cloud Documentation

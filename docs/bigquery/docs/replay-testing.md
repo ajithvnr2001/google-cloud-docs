@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/replay-testing/
 title: How BigQuery uses replay testing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:04:27.529001+00:00
+fetched_at: 2026-10-21T12:35:27.908372+00:00
 ---
 
 # How BigQuery uses replay testing  |  Google Cloud Documentation

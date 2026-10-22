@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/advisory-notifications/docs/threat-horizons-overview/
 title: Overview of Threat Horizons previews \u00a0|\u00a0 Advisory Notifications \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:14.552882+00:00
+fetched_at: 2026-10-21T14:29:12.234902+00:00
 ---
 
 # Overview of Threat Horizons previews  |  Advisory Notifications  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/virtual-machines/docs/5.0/reference/
 title: APIs and Reference \u00a0|\u00a0 Migrate to Virtual Machines \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:37:30.410553+00:00
+fetched_at: 2026-10-21T15:17:26.755612+00:00
 ---
 
 # APIs and Reference  |  Migrate to Virtual Machines  |  Google Cloud Documentation

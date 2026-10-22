@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-database-clusters-delete/
 title: gdcloud database clusters delete \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T11:06:45.211303+00:00
+fetched_at: 2026-10-21T12:59:10.446327+00:00
 ---
 
 # gdcloud database clusters delete  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

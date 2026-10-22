@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/workflows/route-trigger-cloud-storage/
 title: Route Cloud Storage events to Workflows \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:48.221062+00:00
+fetched_at: 2026-10-21T12:45:54.701512+00:00
 ---
 
 # Route Cloud Storage events to Workflows  |  Eventarc Standard  |  Google Cloud Documentation

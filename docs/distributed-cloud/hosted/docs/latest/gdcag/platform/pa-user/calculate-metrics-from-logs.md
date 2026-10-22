@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/calculate-metrics-from-logs/
 title: Create metrics from logs \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:44:04.383660+00:00
+fetched_at: 2026-10-21T12:58:46.095952+00:00
 ---
 
 # Create metrics from logs  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

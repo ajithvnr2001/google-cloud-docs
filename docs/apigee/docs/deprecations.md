@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/deprecations/
 title: Feature deprecations \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:39:13.011978+00:00
+fetched_at: 2026-10-21T14:29:01.214724+00:00
 ---
 
 # Feature deprecations  |  Apigee  |  Google Cloud Documentation

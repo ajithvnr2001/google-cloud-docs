@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/backup-restore-notebook-data/
 title: Create a backup and restore notebook data \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:10:49.104554+00:00
+fetched_at: 2026-10-21T12:57:07.621093+00:00
 ---
 
 # Create a backup and restore notebook data  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

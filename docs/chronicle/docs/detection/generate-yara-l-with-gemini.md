@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/generate-yara-l-with-gemini/
 title: Generate rules with Gemini \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:46:02.031952+00:00
+fetched_at: 2026-10-21T12:37:50.024961+00:00
 ---
 
 # Generate rules with Gemini  |  Google Security Operations  |  Google Cloud Documentation

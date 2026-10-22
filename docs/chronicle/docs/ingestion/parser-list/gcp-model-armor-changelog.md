@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/gcp-model-armor-changelog/
 title: Change log for GCP_MODEL_ARMOR \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:27:13.284702+00:00
+fetched_at: 2026-10-21T14:51:59.859924+00:00
 ---
 
 # Change log for GCP_MODEL_ARMOR  |  Google Security Operations  |  Google Cloud Documentation

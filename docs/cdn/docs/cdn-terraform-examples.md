@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/cdn-terraform-examples/
 title: Automate Cloud CDN setup with Terraform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:29:49.351979+00:00
+fetched_at: 2026-10-21T14:24:44.346486+00:00
 ---
 
 # Automate Cloud CDN setup with Terraform  |  Google Cloud Documentation

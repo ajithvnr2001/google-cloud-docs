@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/reference/mcp/sqlserver/mcp/tools_list/clone_instance/
 title: MCP Tools Reference: cloud-sql \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:58:02.828610+00:00
+fetched_at: 2026-10-21T14:56:35.168579+00:00
 ---
 
 # MCP Tools Reference: cloud-sql  |  Cloud SQL for SQL Server  |  Google Cloud Documentation

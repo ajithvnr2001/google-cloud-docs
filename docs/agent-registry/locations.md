@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/locations/
 title: Agent Registry locations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:37:03.787141+00:00
+fetched_at: 2026-10-21T14:29:10.297438+00:00
 ---
 
 # Agent Registry locations  |  Google Cloud Documentation

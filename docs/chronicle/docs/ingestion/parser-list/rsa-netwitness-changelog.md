@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/rsa-netwitness-changelog/
 title: Change log for RSA_NETWITNESS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:05:54.945897+00:00
+fetched_at: 2026-10-21T14:43:27.717931+00:00
 ---
 
 # Change log for RSA_NETWITNESS  |  Google Security Operations  |  Google Cloud Documentation

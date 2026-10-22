@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/regions/
 title: Regions and zones \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:15:14.911375+00:00
+fetched_at: 2026-10-21T12:55:52.940468+00:00
 ---
 
 # Regions and zones  |  Filestore  |  Google Cloud Documentation

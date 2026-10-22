@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data/
 title: Query an Explore in natural language \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:33:39.025637+00:00
+fetched_at: 2026-10-21T14:56:42.870088+00:00
 ---
 
 # Query an Explore in natural language  |  Looker  |  Google Cloud Documentation
@@ -23,7 +23,7 @@ Send feedback
 
 Conversational analytics, powered by [Gemini for Google Cloud](https://docs.cloud.google.com/gemini/docs/overview), lets you investigate your data by asking questions about it in conversational language through an intuitive chat interface. Conversational analytics provides multiple ways to "converse" with your data. When using Conversational Analytics with Explore data, you can ask questions about a single Explore in a conversation or create an Explore data agent to chat with as many as five Explores at once. You can also use Explore data agents that other users have created and shared with you.
 
-**Note:** This page refers to Explore data agents — data agents that query Explores. For information about data agents that query user-defined and LookML dashboards, see the [Query a user-defined dashboard with a dashboard agent](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-dashboards) and [Create and manage data agents for LookML dashboards](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-lookml-dashboards) [[Preview](https://cloud.google.com/products#product-launch-stages)] documentation pages, respectively.
+**Note:** This page refers to Explore data agents — data agents that query Explores. For information about data agents that query user-defined and LookML dashboards, see the [Query a user-defined dashboard with a dashboard agent](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-dashboards) and [Create and manage data agents for LookML dashboards](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-lookml-dashboards) documentation pages, respectively.
 
 This page discusses how to use Conversational Analytics to engage with Explore data. It covers the following topics:
 
@@ -62,7 +62,7 @@ Once you have created a conversation, you can ask questions about the data in th
 
 ## Start a conversation with an existing data agent that queries Explores
 
-**Note:** To create a new data agent to chat with Explore data, see the [Create and manage Explore data agents](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents) documentation page. To query a user-defined or LookML dashboard with a data agent, see the [Query a user-defined dashboard with a dashboard agent](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-dashboards) and [Create and manage data agents for LookML dashboards](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-lookml-dashboards) [[Preview](https://cloud.google.com/products#product-launch-stages)] documentation pages, respectively.
+**Note:** To create a new data agent to chat with Explore data, see the [Create and manage Explore data agents](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents) documentation page. To query a user-defined or LookML dashboard with a data agent, see the [Query a user-defined dashboard with a dashboard agent](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-dashboards) and [Create and manage data agents for LookML dashboards](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-lookml-dashboards) documentation pages, respectively.
 
 Data agents are customized with context and instructions that are specific to your data. You can start a conversation with an existing [data agent that you created](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents#create-and-edit-data-agents) or that another user has [shared with you](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents#share-data-agents). To start a conversation with an existing data agent that's connected to up to five Looker Explores follow these steps:
 
@@ -218,7 +218,7 @@ To restore or permanently delete a conversation from the trash, follow these ste
   * **[Conversational analytics in Looker overview](https://docs.cloud.google.com/looker/docs/conversational-analytics-overview)** : The landing page for Conversational Analytics with a list of key features links to all Conversational Analytics documentation.
   * **[Create and manage Explore data agents](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents)** : With Explore data agents, you can customize the AI-powered data querying agent by providing context and instructions that are specific to your Explore data, which helps Conversational Analytics generate more accurate and contextually relevant responses.
   * **[Query a user-defined dashboard with a dashboard agent](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-dashboards)** : Chat with a Looker user-defined dashboard using a dashboard data agent.
-  * **[Create and manage data agents for LookML dashboards](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-lookml-dashboards)** [[Preview](https://cloud.google.com/products#product-launch-stages)]: Use LookML to configure and manage version-controlled data agents for LookML dashboards.
+  * **[Create and manage data agents for LookML dashboards](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-lookml-dashboards)** : Use LookML to configure and manage version-controlled data agents for LookML dashboards.
   * **[Best practices for configuring Conversational Analytics in Looker](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-best-practices)** : Strategies and best practices to help Looker administrators and LookML developers successfully configure and optimize Conversational Analytics.
   * **[Enable Advanced Analytics](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-advanced-analytics)** : Advanced Analytics within Conversational Analytics translates your natural language questions into Python code and executes that code. Compared to standard SQL-based queries, the Advanced Analytics feature's use of Python enables more complex analysis and visualizations.
 
@@ -228,6 +228,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

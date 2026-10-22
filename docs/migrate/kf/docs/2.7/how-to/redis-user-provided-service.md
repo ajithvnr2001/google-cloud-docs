@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.7/how-to/redis-user-provided-service/
 title: Set up Redis as a user-provided service \u00a0|\u00a0 Kf 2.7 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:26:25.834775+00:00
+fetched_at: 2026-10-21T15:17:27.196935+00:00
 ---
 
 # Set up Redis as a user-provided service  |  Kf 2.7  |  Google Cloud Documentation

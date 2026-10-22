@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-os-login-google-compute-instance-ssh-keys/
 title: Add SSH key to instance metadata \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:07.502063+00:00
+fetched_at: 2026-10-22T05:47:43.630732+00:00
 ---
 
 # Add SSH key to instance metadata  |  Compute Engine  |  Google Cloud Documentation

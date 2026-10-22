@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/repair-vm-in-alternate-zone/
 title: Repair a VM in an alternate zone \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:11:20.635074+00:00
+fetched_at: 2026-10-21T14:21:56.329971+00:00
 ---
 
 # Repair a VM in an alternate zone  |  Compute Engine  |  Google Cloud Documentation

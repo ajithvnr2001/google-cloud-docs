@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/cluster/
 title: Maintain Kubernetes clusters \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:56.895942+00:00
+fetched_at: 2026-10-21T12:59:08.637129+00:00
 ---
 
 # Maintain Kubernetes clusters  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

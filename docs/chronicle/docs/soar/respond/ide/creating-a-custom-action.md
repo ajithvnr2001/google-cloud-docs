@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/ide/creating-a-custom-action/
 title: Create custom actions \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:05.695686+00:00
+fetched_at: 2026-10-21T14:09:54.264483+00:00
 ---
 
 # Create custom actions  |  Google Security Operations  |  Google Cloud Documentation

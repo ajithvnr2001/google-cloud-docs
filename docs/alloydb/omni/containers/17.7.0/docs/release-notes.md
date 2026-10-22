@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/17.7.0/docs/release-notes/
 title: AlloyDB Omni (Containers) version 17.7.0 release notes \u00a0|\u00a0 AlloyDB Omni using containers: 17.7.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:54:04.763686+00:00
+fetched_at: 2026-10-21T14:55:23.511536+00:00
 ---
 
 # AlloyDB Omni (Containers) version 17.7.0 release notes  |  AlloyDB Omni using containers: 17.7.0  |  Google Cloud Documentation
@@ -68,7 +68,13 @@ Fixes for the following vulnerabilities are available for version 18.4.0:
 
 Announcement
 
-AlloyDB Omni version 17.10.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) and includes the following: \- Support for [PostgreSQL version 17.10](https://www.postgresql.org/docs/release/17.10/). \- Critical security patches and internal stability improvements. \- Support for [advanced query insights](https://docs.cloud.google.com/alloydb/omni/containers/17.10.0/docs/monitor-query-insights) for standalone AlloyDB Omni instances using containers. You can use the `google_insights_v2` extension to access granular metrics, including query execution statistics and wait events, for near real-time performance troubleshooting.
+AlloyDB Omni version 17.10.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) and includes the following:
+
+  * Support for [PostgreSQL version 17.10](https://www.postgresql.org/docs/release/17.10/).
+  * Critical security patches and internal stability improvements.
+  * Support for [advanced query insights](https://docs.cloud.google.com/alloydb/omni/containers/17.10.0/docs/monitor-query-insights) for standalone AlloyDB Omni instances using containers. You can use the `google_insights_v2` extension to access granular metrics, including query execution statistics and wait events, for near real-time performance troubleshooting.
+
+
 
 Security
 
@@ -95,7 +101,13 @@ Fixes for the following vulnerabilities are available for version 17.10.0:
 
 Announcement
 
-AlloyDB Omni version 16.14.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) and includes the following: \- Support for [PostgreSQL version 16.14](https://www.postgresql.org/docs/release/16.14/). \- Critical security patches and internal stability improvements. \- Support for [advanced query insights](https://docs.cloud.google.com/alloydb/omni/containers/16.14.0/docs/monitor-query-insights) for standalone AlloyDB Omni instances using containers. You can use the `google_insights_v2` extension to access granular metrics, including query execution statistics and wait events, for near real-time performance troubleshooting.
+AlloyDB Omni version 16.14.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) and includes the following:
+
+  * Support for [PostgreSQL version 16.14](https://www.postgresql.org/docs/release/16.14/).
+  * Critical security patches and internal stability improvements.
+  * Support for [advanced query insights](https://docs.cloud.google.com/alloydb/omni/containers/16.14.0/docs/monitor-query-insights) for standalone AlloyDB Omni instances using containers. You can use the `google_insights_v2` extension to access granular metrics, including query execution statistics and wait events, for near real-time performance troubleshooting.
+
+
 
 Security
 
@@ -122,7 +134,13 @@ Fixes for the following vulnerabilities are available for version 16.14.0:
 
 Announcement
 
-AlloyDB Omni version 15.18.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) and includes the following: \- Support for [PostgreSQL version 15.18](https://www.postgresql.org/docs/release/15.18/). \- Critical security patches and internal stability improvements. \- Support for [advanced query insights](https://docs.cloud.google.com/alloydb/omni/containers/15.18.0/docs/monitor-query-insights) for standalone AlloyDB Omni instances using containers. You can use the `google_insights_v2` extension to access granular metrics, including query execution statistics and wait events, for near real-time performance troubleshooting.
+AlloyDB Omni version 15.18.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) and includes the following:
+
+  * Support for [PostgreSQL version 15.18](https://www.postgresql.org/docs/release/15.18/).
+  * Critical security patches and internal stability improvements.
+  * Support for [advanced query insights](https://docs.cloud.google.com/alloydb/omni/containers/15.18.0/docs/monitor-query-insights) for standalone AlloyDB Omni instances using containers. You can use the `google_insights_v2` extension to access granular metrics, including query execution statistics and wait events, for near real-time performance troubleshooting.
+
+
 
 Security
 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/sip-trunk/overview/
 title: Telephony integration overview \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:48.147268+00:00
+fetched_at: 2026-10-21T12:42:32.479578+00:00
 ---
 
 # Telephony integration overview  |  Dialogflow CX  |  Google Cloud Documentation

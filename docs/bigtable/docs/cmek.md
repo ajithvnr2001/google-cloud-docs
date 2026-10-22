@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/cmek/
 title: Customer-managed encryption keys (CMEK) \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:13.272568+00:00
+fetched_at: 2026-10-21T12:36:38.590436+00:00
 ---
 
 # Customer-managed encryption keys (CMEK)  |  Bigtable  |  Google Cloud Documentation

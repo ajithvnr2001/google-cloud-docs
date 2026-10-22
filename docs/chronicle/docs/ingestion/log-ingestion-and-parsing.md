@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/log-ingestion-and-parsing/
 title: Ingest and parse log data \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:16.485868+00:00
+fetched_at: 2026-10-21T12:36:35.733950+00:00
 ---
 
 # Ingest and parse log data  |  Google Security Operations  |  Google Cloud Documentation

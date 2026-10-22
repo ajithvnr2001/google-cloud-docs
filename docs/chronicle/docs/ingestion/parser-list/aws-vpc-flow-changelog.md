@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/aws-vpc-flow-changelog/
 title: Change log for AWS_VPC_FLOW \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:37:09.236827+00:00
+fetched_at: 2026-10-21T14:45:43.240263+00:00
 ---
 
 # Change log for AWS_VPC_FLOW  |  Google Security Operations  |  Google Cloud Documentation

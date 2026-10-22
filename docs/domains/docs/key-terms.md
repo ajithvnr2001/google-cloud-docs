@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/domains/docs/key-terms/
 title: Important terminology \u00a0|\u00a0 Cloud Domains \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:33:32.104142+00:00
+fetched_at: 2026-10-21T14:06:38.029402+00:00
 ---
 
 # Important terminology  |  Cloud Domains  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-template-gpu/
 title: Create an instance template for a MIG of GPU VMs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:20.811723+00:00
+fetched_at: 2026-10-22T05:50:16.180053+00:00
 ---
 
 # Create an instance template for a MIG of GPU VMs  |  Compute Engine  |  Google Cloud Documentation

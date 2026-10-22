@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/security/configure-node-service-accounts/
 title: Configure GKE node service accounts \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:08.278124+00:00
+fetched_at: 2026-10-21T15:18:17.051441+00:00
 ---
 
 # Configure GKE node service accounts  |  GKE security  |  Google Cloud Documentation

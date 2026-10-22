@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/automox/
 title: Integrate Automox with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T09:12:53.002784+00:00
+fetched_at: 2026-10-21T14:19:34.108212+00:00
 ---
 
 # Integrate Automox with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

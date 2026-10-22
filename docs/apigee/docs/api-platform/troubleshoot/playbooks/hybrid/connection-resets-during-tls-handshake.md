@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/hybrid/connection-resets-during-tls-handshake/
 title: Connection resets during TLS handshake for non-SNI clients \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:25.411689+00:00
+fetched_at: 2026-10-21T14:28:34.668044+00:00
 ---
 
 # Connection resets during TLS handshake for non-SNI clients  |  Apigee  |  Google Cloud Documentation

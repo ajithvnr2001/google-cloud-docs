@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/reference/soar-sdk-overview/
 title: SOAR SDK overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:36:28.646898+00:00
+fetched_at: 2026-10-21T14:10:11.951910+00:00
 ---
 
 # SOAR SDK overview  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/vtpm-nv-storage/
 title: Confidential VM vTPM non-volatile storage contents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:36:32.896465+00:00
+fetched_at: 2026-10-21T14:21:11.400222+00:00
 ---
 
 # Confidential VM vTPM non-volatile storage contents  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/sso-idaptive/
 title: Configure SSO using Idaptive \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:16:11.602085+00:00
+fetched_at: 2026-10-21T14:23:08.169753+00:00
 ---
 
 # Configure SSO using Idaptive  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

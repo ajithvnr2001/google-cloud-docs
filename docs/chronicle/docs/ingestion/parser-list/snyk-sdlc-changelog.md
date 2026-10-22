@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/snyk-sdlc-changelog/
 title: Change log for SNYK_SDLC \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:54:22.120789+00:00
+fetched_at: 2026-10-21T14:42:38.653822+00:00
 ---
 
 # Change log for SNYK_SDLC  |  Google Security Operations  |  Google Cloud Documentation

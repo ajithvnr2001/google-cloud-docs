@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-connectivity/docs/concepts/
 title: Network Connectivity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:29:33.379799+00:00
+fetched_at: 2026-10-21T15:14:16.020696+00:00
 ---
 
 # Network Connectivity  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/apihub/search-apis/
 title: Search API resources using semantic search \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:01:45.009609+00:00
+fetched_at: 2026-10-21T14:55:08.560030+00:00
 ---
 
 # Search API resources using semantic search  |  Apigee  |  Google Cloud Documentation

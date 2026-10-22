@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/tpus/tpu-resources-in-compute-engine/
 title: TPU resources in Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:39.342074+00:00
+fetched_at: 2026-10-21T14:21:05.464515+00:00
 ---
 
 # TPU resources in Compute Engine  |  Google Cloud Documentation

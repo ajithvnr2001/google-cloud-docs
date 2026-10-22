@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/overview/
 title: SIEM platform overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:45:33.517351+00:00
+fetched_at: 2026-10-21T14:11:15.862121+00:00
 ---
 
 # SIEM platform overview  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/terraform/best-practices/reusable-modules/
 title: Best practices for reusable modules \u00a0|\u00a0 Terraform on Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:32:24.349423+00:00
+fetched_at: 2026-10-21T14:07:15.665904+00:00
 ---
 
 # Best practices for reusable modules  |  Terraform on Google Cloud  |  Google Cloud Documentation

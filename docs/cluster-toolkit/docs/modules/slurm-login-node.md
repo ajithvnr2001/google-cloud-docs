@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/slurm-login-node/
 title: Create a Slurm login node \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:41.030531+00:00
+fetched_at: 2026-10-21T14:46:13.361446+00:00
 ---
 
 # Create a Slurm login node  |  Cluster Toolkit  |  Google Cloud Documentation

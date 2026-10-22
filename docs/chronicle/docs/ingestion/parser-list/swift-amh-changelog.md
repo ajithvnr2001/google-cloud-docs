@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/swift-amh-changelog/
 title: Change log for SWIFT_AMH \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:01:14.035530+00:00
+fetched_at: 2026-10-21T14:43:11.786761+00:00
 ---
 
 # Change log for SWIFT_AMH  |  Google Security Operations  |  Google Cloud Documentation

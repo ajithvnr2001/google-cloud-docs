@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/docs/release-notes/
 title: Cloud DNS release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:52:46.676525+00:00
+fetched_at: 2026-10-21T14:39:48.452422+00:00
 ---
 
 # Cloud DNS release notes  |  Google Cloud Documentation

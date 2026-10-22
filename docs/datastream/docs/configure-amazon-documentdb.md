@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/configure-amazon-documentdb/
 title: Configure an Amazon DocumentDB database for CDC \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:50:51.561131+00:00
+fetched_at: 2026-10-22T05:41:17.650887+00:00
 ---
 
 # Configure an Amazon DocumentDB database for CDC  |  Datastream  |  Google Cloud Documentation
@@ -21,11 +21,7 @@ Send feedback
 
 #  Configure an Amazon DocumentDB database for CDC Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to configure your source Amazon DocumentDB database to work with Datastream.
-
-Amazon DocumentDB (with MongoDB compatibility) is a fully managed database service. To connect Datastream to an Amazon DocumentDB cluster running inside an Amazon Virtual Private Cloud (VPC), you use a bastion host and configure a forward SSH tunnel.
-
-**Note:** Datastream doesn't support Amazon DocumentDB Elastic Clusters.
+Datastream lets you stream change data capture (CDC) updates from an Amazon DocumentDB (with MongoDB compatibility) database to a [supported destination](https://docs.cloud.google.com/datastream/docs/destinations), such as BigQuery or Cloud Storage. To prepare your cluster in an Amazon Virtual Private Cloud, you enable change streams, set up a bastion host SSH tunnel, and configure SSL/TLS encryption. Datastream doesn't support Amazon DocumentDB Elastic Clusters.
 
 ## Enable change streams
 
@@ -75,6 +71,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

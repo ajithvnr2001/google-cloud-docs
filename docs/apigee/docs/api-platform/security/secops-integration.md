@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/security/secops-integration/
 title: Integrate Apigee with Google SecOps \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:09:27.916243+00:00
+fetched_at: 2026-10-21T12:30:33.847332+00:00
 ---
 
 # Integrate Apigee with Google SecOps  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy/
 title: SanitizeModelResponse policy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:42:56.680452+00:00
+fetched_at: 2026-10-21T12:35:38.774948+00:00
 ---
 
 # SanitizeModelResponse policy  |  Apigee  |  Google Cloud Documentation

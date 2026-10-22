@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/info-vector-metrics/
 title: INFO command metrics \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:55.109185+00:00
+fetched_at: 2026-10-21T15:15:04.971784+00:00
 ---
 
 # INFO command metrics  |  Memorystore for Redis  |  Google Cloud Documentation

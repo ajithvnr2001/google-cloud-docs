@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/migration-risks/
 title: Evaluate and mitigate migration risks \u00a0|\u00a0 Migration Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:25.206298+00:00
+fetched_at: 2026-10-21T15:13:43.154695+00:00
 ---
 
 # Evaluate and mitigate migration risks  |  Migration Center  |  Google Cloud Documentation

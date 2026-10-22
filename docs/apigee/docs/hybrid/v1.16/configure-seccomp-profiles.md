@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/configure-seccomp-profiles/
 title: Configure Seccomp profiles for pod security \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:51:33.258160+00:00
+fetched_at: 2026-10-21T14:41:14.841659+00:00
 ---
 
 # Configure Seccomp profiles for pod security  |  Apigee  |  Google Cloud Documentation

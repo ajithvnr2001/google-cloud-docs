@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/upload-sboms/
 title: Upload SBOMs \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:44:44.098312+00:00
+fetched_at: 2026-10-21T12:39:45.298278+00:00
 ---
 
 # Upload SBOMs  |  Artifact Analysis  |  Google Cloud Documentation

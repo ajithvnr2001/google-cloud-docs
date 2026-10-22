@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/deletion/
 title: Data deletion on Google Cloud \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:57:08.495678+00:00
+fetched_at: 2026-10-21T14:08:22.125010+00:00
 ---
 
 # Data deletion on Google Cloud  |  Security  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/database-migration/docs/postgresql-to-alloydb/db-versions/
 title: How-to guides \u00a0|\u00a0 Database Migration Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T11:59:24.384415+00:00
+fetched_at: 2026-10-22T05:41:24.935360+00:00
 ---
 
 # How-to guides  |  Database Migration Service  |  Google Cloud Documentation

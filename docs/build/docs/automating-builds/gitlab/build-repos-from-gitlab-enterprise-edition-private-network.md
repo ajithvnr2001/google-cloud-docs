@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/gitlab/build-repos-from-gitlab-enterprise-edition-private-network/
 title: Build repositories from GitLab Enterprise Edition in a private network \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:06.280703+00:00
+fetched_at: 2026-10-21T14:11:12.044893+00:00
 ---
 
 # Build repositories from GitLab Enterprise Edition in a private network  |  Google Cloud Documentation

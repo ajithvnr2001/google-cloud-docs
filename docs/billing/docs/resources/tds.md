@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/docs/resources/tds/
 title: Google Cloud India TDS Certificates \u00a0|\u00a0 Cloud Billing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:27:06.304237+00:00
+fetched_at: 2026-10-21T14:11:39.374794+00:00
 ---
 
 # Google Cloud India TDS Certificates  |  Cloud Billing  |  Google Cloud Documentation

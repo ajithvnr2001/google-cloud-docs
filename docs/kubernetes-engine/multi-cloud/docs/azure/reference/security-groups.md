@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/reference/security-groups/
 title: Network security groups \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:53.427576+00:00
+fetched_at: 2026-10-21T15:02:42.111449+00:00
 ---
 
 # Network security groups  |  GKE on Azure  |  Google Cloud Documentation

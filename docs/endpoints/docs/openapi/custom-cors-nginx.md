@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/custom-cors-nginx/
 title: Creating a Custom nginx.conf to Support CORS \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:49:28.182527+00:00
+fetched_at: 2026-10-21T12:51:06.443519+00:00
 ---
 
 # Creating a Custom nginx.conf to Support CORS  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation

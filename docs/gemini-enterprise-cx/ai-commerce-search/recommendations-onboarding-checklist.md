@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/ai-commerce-search/recommendations-onboarding-checklist/
 title: Recommendations onboarding checklist \u00a0|\u00a0 AI Commerce Search in Gemini Enterprise for Customer Experience \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:02:59.255384+00:00
+fetched_at: 2026-10-21T12:55:05.672493+00:00
 ---
 
 # Recommendations onboarding checklist  |  AI Commerce Search in Gemini Enterprise for Customer Experience  |  Google Cloud Documentation

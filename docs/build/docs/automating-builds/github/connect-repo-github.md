@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/github/connect-repo-github/
 title: Connect to a GitHub repository \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:05.434102+00:00
+fetched_at: 2026-10-21T14:11:26.717556+00:00
 ---
 
 # Connect to a GitHub repository  |  Cloud Build  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/backups-before-you-start/
 title: Get started with backups \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:15:22.378296+00:00
+fetched_at: 2026-10-21T12:52:44.090936+00:00
 ---
 
 # Get started with backups  |  Filestore  |  Google Cloud Documentation

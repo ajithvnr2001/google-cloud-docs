@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/cloud-ids/
 title: Collect Cloud Intrusion Detection System (Cloud IDS) logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:07:09.845362+00:00
+fetched_at: 2026-10-21T14:11:28.312996+00:00
 ---
 
 # Collect Cloud Intrusion Detection System (Cloud IDS) logs  |  Google Security Operations  |  Google Cloud Documentation

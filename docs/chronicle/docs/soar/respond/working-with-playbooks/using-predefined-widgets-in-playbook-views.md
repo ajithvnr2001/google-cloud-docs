@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/using-predefined-widgets-in-playbook-views/
 title: Configure predefined widgets in playbook views \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:55:43.302177+00:00
+fetched_at: 2026-10-21T12:38:36.122208+00:00
 ---
 
 # Configure predefined widgets in playbook views  |  Google Security Operations  |  Google Cloud Documentation

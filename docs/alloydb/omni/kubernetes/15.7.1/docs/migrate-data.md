@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/15.7.1/docs/migrate-data/
 title: Migrate data to AlloyDB Omni \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 15.7.1 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:41:10.602357+00:00
+fetched_at: 2026-10-21T15:25:18.580208+00:00
 ---
 
 # Migrate data to AlloyDB Omni  |  AlloyDB Omni for Kubernetes: 15.7.1  |  Google Cloud Documentation

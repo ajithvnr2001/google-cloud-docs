@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/creating-an-image-from-an-iso-file/
 title: Create a persistent disk image from an ISO file \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:35:37.872452+00:00
+fetched_at: 2026-10-21T14:21:19.809933+00:00
 ---
 
 # Create a persistent disk image from an ISO file  |  Compute Engine  |  Google Cloud Documentation

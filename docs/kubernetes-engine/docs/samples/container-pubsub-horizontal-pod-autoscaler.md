@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/samples/container-pubsub-horizontal-pod-autoscaler/
 title: Pub/Sub HPA \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:28:28.291647+00:00
+fetched_at: 2026-10-21T15:09:11.230993+00:00
 ---
 
 # Pub/Sub HPA  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

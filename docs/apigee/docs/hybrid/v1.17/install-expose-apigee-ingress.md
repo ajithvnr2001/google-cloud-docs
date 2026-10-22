@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/install-expose-apigee-ingress/
 title: Step 1: Expose Apigee ingress gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:53:09.173401+00:00
+fetched_at: 2026-10-21T14:27:20.397610+00:00
 ---
 
 # Step 1: Expose Apigee ingress gateway  |  Google Cloud Documentation

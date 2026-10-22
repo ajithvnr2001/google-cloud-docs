@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/enforce-confidential-vm-use/
 title: Enforce Confidential VM use \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:27.536708+00:00
+fetched_at: 2026-10-21T14:21:43.531979+00:00
 ---
 
 # Enforce Confidential VM use  |  Google Cloud Documentation

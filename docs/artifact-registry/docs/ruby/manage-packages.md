@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/ruby/manage-packages/
 title: Manage Ruby gems \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:24.622287+00:00
+fetched_at: 2026-10-21T14:25:31.886165+00:00
 ---
 
 # Manage Ruby gems  |  Artifact Registry  |  Google Cloud Documentation

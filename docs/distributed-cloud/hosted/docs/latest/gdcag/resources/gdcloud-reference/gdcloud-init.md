@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-init/
 title: gdcloud init \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:51:01.663052+00:00
+fetched_at: 2026-10-21T12:59:32.232226+00:00
 ---
 
 # gdcloud init  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

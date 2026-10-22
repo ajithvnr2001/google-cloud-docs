@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/enable-cv-fleet/
 title: Enable continuous validation at fleet level \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:13.912819+00:00
+fetched_at: 2026-10-21T14:18:47.164106+00:00
 ---
 
 # Enable continuous validation at fleet level  |  Binary Authorization  |  Google Cloud Documentation

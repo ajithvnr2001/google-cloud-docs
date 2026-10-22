@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/platform/pa-user/query-and-view-metrics/
 title: Query and view metrics \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:46.080547+00:00
+fetched_at: 2026-10-21T12:56:41.121192+00:00
 ---
 
 # Query and view metrics  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

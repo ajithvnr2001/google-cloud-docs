@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/import/migrate-to-new-vm/
 title: Move your workload to a new compute instance \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:16.810740+00:00
+fetched_at: 2026-10-21T14:19:55.818792+00:00
 ---
 
 # Move your workload to a new compute instance  |  Compute Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/start-developing/my-first-connector/
 title: Develop your first email connector \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:05.137333+00:00
+fetched_at: 2026-10-21T12:38:52.576642+00:00
 ---
 
 # Develop your first email connector  |  Google Security Operations  |  Google Cloud Documentation

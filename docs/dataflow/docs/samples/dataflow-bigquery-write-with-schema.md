@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/samples/dataflow-bigquery-write-with-schema/
 title: Write to BigQuery using a table schema \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:20:14.676458+00:00
+fetched_at: 2026-10-22T05:42:43.737685+00:00
 ---
 
 # Write to BigQuery using a table schema  |  Cloud Dataflow  |  Google Cloud Documentation

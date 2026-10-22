@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/steelhead-changelog/
 title: Change log for STEELHEAD \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:00:56.480790+00:00
+fetched_at: 2026-10-21T14:43:12.591682+00:00
 ---
 
 # Change log for STEELHEAD  |  Google Security Operations  |  Google Cloud Documentation

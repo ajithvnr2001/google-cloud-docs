@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/concepts/
 title: Concepts \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:39:18.869143+00:00
+fetched_at: 2026-10-21T14:26:05.330713+00:00
 ---
 
 # Concepts  |  Access Context Manager  |  Google Cloud Documentation

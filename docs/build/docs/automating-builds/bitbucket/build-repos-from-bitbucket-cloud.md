@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/bitbucket/build-repos-from-bitbucket-cloud/
 title: Build repositories from Bitbucket Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:07.566001+00:00
+fetched_at: 2026-10-21T14:11:39.906663+00:00
 ---
 
 # Build repositories from Bitbucket Cloud  |  Google Cloud Documentation

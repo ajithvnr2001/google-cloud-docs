@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/fast-starting-nodes/
 title: About quicker workload startup with fast-starting nodes \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:01:55.820699+00:00
+fetched_at: 2026-10-21T15:31:50.211114+00:00
 ---
 
 # About quicker workload startup with fast-starting nodes  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

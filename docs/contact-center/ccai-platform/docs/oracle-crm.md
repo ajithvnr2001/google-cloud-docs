@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/oracle-crm/
 title: Oracle CRM \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:00:18.604668+00:00
+fetched_at: 2026-10-21T14:09:01.344006+00:00
 ---
 
 # Oracle CRM  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

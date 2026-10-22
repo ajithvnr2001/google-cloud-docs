@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/store-dicom-data-console/
 title: Quickstart: Store DICOM healthcare data with the Google Cloud console \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:53:55.750433+00:00
+fetched_at: 2026-10-21T14:30:38.801531+00:00
 ---
 
 # Quickstart: Store DICOM healthcare data with the Google Cloud console  |  Cloud Healthcare API  |  Google Cloud Documentation

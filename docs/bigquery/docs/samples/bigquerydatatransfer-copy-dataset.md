@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerydatatransfer-copy-dataset/
 title: Copy a dataset \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:53:45.580099+00:00
+fetched_at: 2026-10-22T05:45:44.977816+00:00
 ---
 
 # Copy a dataset  |  BigQuery  |  Google Cloud Documentation

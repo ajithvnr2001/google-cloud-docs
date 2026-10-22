@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/valkey/connect-instance/
 title: Connect to a Memorystore for Valkey instance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:43:19.791970+00:00
+fetched_at: 2026-10-21T15:14:41.287663+00:00
 ---
 
 # Connect to a Memorystore for Valkey instance  |  Google Cloud Documentation

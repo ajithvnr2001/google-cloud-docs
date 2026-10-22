@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/marketplace/purchase-connector/
 title: Purchase and use a Marketplace connector \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:35.982913+00:00
+fetched_at: 2026-10-21T12:55:01.193917+00:00
 ---
 
 # Purchase and use a Marketplace connector  |  Integration Connectors  |  Google Cloud Documentation

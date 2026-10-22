@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/third-parties/subscribe-to-cloudguard/
 title: Subscribe to events from Check Point CloudGuard \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:55.679959+00:00
+fetched_at: 2026-10-21T14:35:34.126325+00:00
 ---
 
 # Subscribe to events from Check Point CloudGuard  |  Eventarc Standard  |  Google Cloud Documentation

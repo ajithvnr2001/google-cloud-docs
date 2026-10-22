@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/Shared.Types/Artifact/
 title: Artifact \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:56:57.188457+00:00
+fetched_at: 2026-10-21T12:56:04.951266+00:00
 ---
 
 # Artifact  |  Data Agents  |  Google Cloud Documentation

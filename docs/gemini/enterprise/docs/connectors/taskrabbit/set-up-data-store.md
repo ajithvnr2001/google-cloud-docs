@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/taskrabbit/set-up-data-store/
 title: Set up a Taskrabbit data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T13:58:30.555726+00:00
+fetched_at: 2026-10-21T12:40:00.884631+00:00
 ---
 
 # Set up a Taskrabbit data store  |  Gemini Enterprise  |  Google Cloud Documentation

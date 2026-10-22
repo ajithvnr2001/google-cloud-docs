@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/compare-snapshots-and-backups/
 title: Compare snapshots and backups \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:15:21.201367+00:00
+fetched_at: 2026-10-21T12:52:31.084122+00:00
 ---
 
 # Compare snapshots and backups  |  Filestore  |  Google Cloud Documentation

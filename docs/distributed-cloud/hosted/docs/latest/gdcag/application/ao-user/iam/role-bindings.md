@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/iam/role-bindings/
 title: Grant access to project resources \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:18:31.595426+00:00
+fetched_at: 2026-10-21T12:57:54.151946+00:00
 ---
 
 # Grant access to project resources  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

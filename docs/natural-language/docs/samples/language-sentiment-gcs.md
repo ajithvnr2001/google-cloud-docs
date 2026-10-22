@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/docs/samples/language-sentiment-gcs/
 title: Analyze sentiment in a Cloud Storage file \u00a0|\u00a0 Cloud Natural Language API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:41:35.971375+00:00
+fetched_at: 2026-10-21T15:17:45.479124+00:00
 ---
 
 # Analyze sentiment in a Cloud Storage file  |  Cloud Natural Language API  |  Google Cloud Documentation

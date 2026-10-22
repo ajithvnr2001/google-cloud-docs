@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-encryption-keys/
 title: Set up encryption keys for a server \u00a0|\u00a0 Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:07:35.951496+00:00
+fetched_at: 2026-10-21T14:26:15.604354+00:00
 ---
 
 # Set up encryption keys for a server  |  Bare Metal Solution  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/google-chat/
 title: Google Chat \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:50.986435+00:00
+fetched_at: 2026-10-21T12:43:20.288718+00:00
 ---
 
 # Google Chat  |  Dialogflow CX  |  Google Cloud Documentation

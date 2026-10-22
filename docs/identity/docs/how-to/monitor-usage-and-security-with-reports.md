@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/monitor-usage-and-security-with-reports/
 title: Monitor usage and security with reports \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:19.139600+00:00
+fetched_at: 2026-10-21T12:54:43.045905+00:00
 ---
 
 # Monitor usage and security with reports  |  Cloud Identity  |  Google Cloud Documentation

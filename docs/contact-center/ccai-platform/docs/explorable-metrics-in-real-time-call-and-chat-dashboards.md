@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/explorable-metrics-in-real-time-call-and-chat-dashboards/
 title: Explorable metrics in real-time call and chat dashboards \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:42.222422+00:00
+fetched_at: 2026-10-21T14:06:06.587196+00:00
 ---
 
 # Explorable metrics in real-time call and chat dashboards  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

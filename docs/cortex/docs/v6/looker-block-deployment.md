@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/looker-block-deployment/
 title: Deploy Looker Blocks \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:12:24.230904+00:00
+fetched_at: 2026-10-21T14:10:37.391063+00:00
 ---
 
 # Deploy Looker Blocks  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

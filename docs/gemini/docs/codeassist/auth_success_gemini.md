@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/auth_success_gemini/
 title: Gemini Code Assist is now authorized to access your account \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T13:11:15.552294+00:00
+fetched_at: 2026-10-21T12:51:15.036934+00:00
 ---
 
 # Gemini Code Assist is now authorized to access your account  |  Gemini for Google Cloud  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/vm-manager/docs/terraform/
 title: Provision VM Manager resources with Terraform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:39:47.317292+00:00
+fetched_at: 2026-10-21T14:09:19.665095+00:00
 ---
 
 # Provision VM Manager resources with Terraform  |  Google Cloud Documentation

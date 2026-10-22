@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/control-api-callers/
 title: Controlling who can enable your API \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:38:16.837288+00:00
+fetched_at: 2026-10-21T12:46:14.638242+00:00
 ---
 
 # Controlling who can enable your API  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

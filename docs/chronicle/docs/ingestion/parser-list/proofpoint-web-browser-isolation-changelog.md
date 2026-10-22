@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/proofpoint-web-browser-isolation-changelog/
 title: Change log for PROOFPOINT_WEB_BROWSER_ISOLATION \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:43:08.113713+00:00
+fetched_at: 2026-10-21T14:51:47.552479+00:00
 ---
 
 # Change log for PROOFPOINT_WEB_BROWSER_ISOLATION  |  Google Security Operations  |  Google Cloud Documentation

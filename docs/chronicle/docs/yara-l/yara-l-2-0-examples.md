@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/yara-l/yara-l-2-0-examples/
 title: Single and multiple event rules in YARA-L \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:29:32.943190+00:00
+fetched_at: 2026-10-21T14:09:38.912871+00:00
 ---
 
 # Single and multiple event rules in YARA-L  |  Google Security Operations  |  Google Cloud Documentation

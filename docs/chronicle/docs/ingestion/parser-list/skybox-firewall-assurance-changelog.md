@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/skybox-firewall-assurance-changelog/
 title: Change log for SKYBOX_FIREWALL_ASSURANCE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:32:06.293826+00:00
+fetched_at: 2026-10-21T14:42:39.556394+00:00
 ---
 
 # Change log for SKYBOX_FIREWALL_ASSURANCE  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/getting-support/
 title: Get support \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:57.210378+00:00
+fetched_at: 2026-10-21T15:02:52.329050+00:00
 ---
 
 # Get support  |  GKE on Azure  |  Google Cloud Documentation

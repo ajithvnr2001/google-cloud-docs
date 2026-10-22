@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/generate-table/
 title: Generate structured data by using the AI.GENERATE_TABLE function \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:47:15.134040+00:00
+fetched_at: 2026-10-22T05:49:47.596045+00:00
 ---
 
 # Generate structured data by using the AI.GENERATE_TABLE function  |  BigQuery  |  Google Cloud Documentation

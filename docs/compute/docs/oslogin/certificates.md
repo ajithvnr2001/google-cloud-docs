@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/oslogin/certificates/
 title: Set up OS Login to require SSH certificates for SSH connections \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:19.944575+00:00
+fetched_at: 2026-10-21T12:37:02.649493+00:00
 ---
 
 # Set up OS Login to require SSH certificates for SSH connections  |  Compute Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/aws-elastic-compute-cloud-ec2/
 title: Integrate Amazon EC2 with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T09:16:51.723439+00:00
+fetched_at: 2026-10-21T14:19:41.640792+00:00
 ---
 
 # Integrate Amazon EC2 with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

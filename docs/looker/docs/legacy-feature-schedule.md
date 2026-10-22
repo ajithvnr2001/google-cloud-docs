@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/legacy-feature-schedule/
 title: Admin settings - Legacy features \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:35:13.020567+00:00
+fetched_at: 2026-10-21T15:03:26.139143+00:00
 ---
 
 # Admin settings - Legacy features  |  Looker  |  Google Cloud Documentation

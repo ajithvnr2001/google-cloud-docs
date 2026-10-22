@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/16.11.0/docs/connection-overview/
 title: Container orchestrator connection overview \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 16.11.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:41:31.741964+00:00
+fetched_at: 2026-10-21T15:27:55.847366+00:00
 ---
 
 # Container orchestrator connection overview  |  AlloyDB Omni using the container orchestrator: 16.11.0  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-garden/deploy-models-with-custom-weights/
 title: Deploy models with custom weights \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T23:41:28.632264+00:00
+fetched_at: 2026-10-21T15:46:15.614272+00:00
 ---
 
 # Deploy models with custom weights  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -274,11 +274,11 @@ This command demonstrates how to deploy the model to a specific region with its 
 ###  Python 
     
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
     from google.cloud import aiplatform
     from vertexai.preview import model_garden
     
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).[init](https://docs.cloud.google.com/python/docs/reference/aiplatform/latest/google.cloud.aiplatform.html)(project=${PROJECT_ID}, location=${REGION})
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).[init](https://docs.cloud.google.com/python/docs/reference/aiplatform/latest/google.cloud.aiplatform.html)(project=${PROJECT_ID}, location=${REGION})
     custom_model = model_garden.[CustomModel](https://docs.cloud.google.com/python/docs/reference/aiplatform/latest/google.cloud.aiplatform_v1beta1.types.DeployRequest.CustomModel.html)(
       gcs_uri=GCS_URI,
     )
@@ -295,11 +295,11 @@ This command demonstrates how to deploy the model to a specific region with its 
 Alternatively, you don't have to pass a parameter to the `custom_model.deploy()` method.
     
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
     from google.cloud import aiplatform
     from vertexai.preview import model_garden
     
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).[init](https://docs.cloud.google.com/python/docs/reference/aiplatform/latest/google.cloud.aiplatform.html)(project=${PROJECT_ID}, location=${REGION})
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).[init](https://docs.cloud.google.com/python/docs/reference/aiplatform/latest/google.cloud.aiplatform.html)(project=${PROJECT_ID}, location=${REGION})
     custom_model = model_garden.[CustomModel](https://docs.cloud.google.com/python/docs/reference/aiplatform/latest/google.cloud.aiplatform_v1beta1.types.DeployRequest.CustomModel.html)(
       gcs_uri=GCS_URI,
     )
@@ -713,6 +713,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

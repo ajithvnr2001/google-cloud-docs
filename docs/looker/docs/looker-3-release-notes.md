@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/looker-3-release-notes/
 title: 3.x Release Notes \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:35:12.854123+00:00
+fetched_at: 2026-10-21T15:02:50.279123+00:00
 ---
 
 # 3.x Release Notes  |  Looker  |  Google Cloud Documentation

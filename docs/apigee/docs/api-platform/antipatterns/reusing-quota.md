@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/reusing-quota/
 title: Antipattern: Re-use a Quota policy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:18.476429+00:00
+fetched_at: 2026-10-21T12:29:51.002122+00:00
 ---
 
 # Antipattern: Re-use a Quota policy  |  Apigee  |  Google Cloud Documentation

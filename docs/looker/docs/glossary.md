@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/glossary/
 title: Glossary \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:33:16.619313+00:00
+fetched_at: 2026-10-21T14:56:47.129304+00:00
 ---
 
 # Glossary  |  Looker  |  Google Cloud Documentation
@@ -224,6 +224,13 @@ datagroup
     
 
 You can use one or more [datagroup](https://docs.cloud.google.com/looker/docs/admin-panel-database-datagroups) [parameters](https://docs.cloud.google.com/looker/docs/reference/param-model-datagroup) to define a [caching policy](https://docs.cloud.google.com/looker/docs/caching-and-datagroups), to specify when to rebuild persistent derived tables (PDTs), and to trigger schedules.
+
+default agent, default data agent
+    
+
+A default agent is a single, shared [dashboard data agent](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-dashboards) that is associated with a user-defined dashboard or LookML dashboard. All users with permission to chat with the dashboard converse with this shared agent. Users with edit permissions on the dashboard can customize the agent's instructions and settings, which updates the agent's behavior for all viewers of that dashboard.
+
+_see also_ [**`default_dashboard_agent`**](https://docs.cloud.google.com/looker/docs/reference/param-lookml-dashboard#default_dashboard_agent), **dashboard**
 
 derived table
     
@@ -899,6 +906,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

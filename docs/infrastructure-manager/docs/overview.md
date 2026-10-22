@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/overview/
 title: Infrastructure Manager overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:29:31.290629+00:00
+fetched_at: 2026-10-21T12:54:34.607667+00:00
 ---
 
 # Infrastructure Manager overview  |  Google Cloud Documentation

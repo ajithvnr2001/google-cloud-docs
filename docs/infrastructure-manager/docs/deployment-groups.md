@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/deployment-groups/
 title: Manage deployment groups \u00a0|\u00a0 Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:45:45.640502+00:00
+fetched_at: 2026-10-21T12:54:01.834254+00:00
 ---
 
 # Manage deployment groups  |  Infrastructure Manager  |  Google Cloud Documentation

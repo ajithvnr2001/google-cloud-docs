@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/release-notes/
 title: Certificate Authority Service release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:23:38.257290+00:00
+fetched_at: 2026-10-21T14:51:45.299996+00:00
 ---
 
 # Certificate Authority Service release notes  |  Google Cloud Documentation

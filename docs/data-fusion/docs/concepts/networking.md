@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/concepts/networking/
 title: Introduction to Cloud Data Fusion networking \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:35:06.546508+00:00
+fetched_at: 2026-10-22T05:45:01.311887+00:00
 ---
 
 # Introduction to Cloud Data Fusion networking  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback
 
 #  Introduction to Cloud Data Fusion networking Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page provides background information about connecting to your data sources from public or private Cloud Data Fusion instances from design and execution environments.
+Cloud Data Fusion lets you connect to your data sources from public or private instances across pipeline design and execution environments.
 
-**Note:** This information is valid for Cloud Data Fusion versions higher than 6.4
+**Note:** This guidance applies to Cloud Data Fusion versions higher than 6.4.
 
 ## Before you begin
 
@@ -173,6 +173,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

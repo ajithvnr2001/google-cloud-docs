@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/gpus/monitor-gpus-windows/
 title: Monitoring GPU performance on Windows VMs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:44:46.460242+00:00
+fetched_at: 2026-10-21T14:21:39.415383+00:00
 ---
 
 # Monitoring GPU performance on Windows VMs  |  Compute Engine  |  Google Cloud Documentation

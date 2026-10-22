@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/18.3.0/docs/kubernetes-dr-backup-singleserver-gcs/
 title: Clone a database cluster in a single server using a Cloud Storage backup \u00a0|\u00a0 AlloyDB Omni using containers: 18.3.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:04.835960+00:00
+fetched_at: 2026-10-21T15:20:05.405995+00:00
 ---
 
 # Clone a database cluster in a single server using a Cloud Storage backup  |  AlloyDB Omni using containers: 18.3.0  |  Google Cloud Documentation

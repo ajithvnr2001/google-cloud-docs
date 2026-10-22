@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/verify-control-plane-vm-integrity/
 title: Verify GKE control plane VM integrity \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:13.361987+00:00
+fetched_at: 2026-10-21T15:01:04.350093+00:00
 ---
 
 # Verify GKE control plane VM integrity  |  GKE security  |  Google Cloud Documentation

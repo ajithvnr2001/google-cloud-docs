@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/docs/languages/
 title: Language Support \u00a0|\u00a0 Cloud Natural Language API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:31:37.896314+00:00
+fetched_at: 2026-10-21T15:17:51.145856+00:00
 ---
 
 # Language Support  |  Cloud Natural Language API  |  Google Cloud Documentation

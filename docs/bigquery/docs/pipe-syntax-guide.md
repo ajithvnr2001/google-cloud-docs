@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/pipe-syntax-guide/
 title: Work with pipe query syntax \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:08.045398+00:00
+fetched_at: 2026-10-21T14:21:09.838357+00:00
 ---
 
 # Work with pipe query syntax  |  BigQuery  |  Google Cloud Documentation

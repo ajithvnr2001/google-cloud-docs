@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/gcp-apigee-x-changelog/
 title: Change log for GCP_APIGEE_X \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:29:38.674133+00:00
+fetched_at: 2026-10-21T14:42:44.284731+00:00
 ---
 
 # Change log for GCP_APIGEE_X  |  Google Security Operations  |  Google Cloud Documentation

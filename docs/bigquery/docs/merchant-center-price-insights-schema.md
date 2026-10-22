@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/merchant-center-price-insights-schema/
 title: Google Merchant Center Price Insights table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:25:21.566392+00:00
+fetched_at: 2026-10-21T12:37:14.640337+00:00
 ---
 
 # Google Merchant Center Price Insights table  |  BigQuery  |  Google Cloud Documentation

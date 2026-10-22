@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/configuration/define-domains-for-mssps/
 title: Define domains for MSSPs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:54.276459+00:00
+fetched_at: 2026-10-21T14:23:48.760924+00:00
 ---
 
 # Define domains for MSSPs  |  Google Security Operations  |  Google Cloud Documentation

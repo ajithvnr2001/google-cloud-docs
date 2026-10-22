@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/sandbox/latest/platform-admin/
 title: Set up the Platform Admin account \u00a0|\u00a0 Google Distributed Cloud Sandbox \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:13:52.152215+00:00
+fetched_at: 2026-10-21T14:06:07.579292+00:00
 ---
 
 # Set up the Platform Admin account  |  Google Distributed Cloud Sandbox  |  Google Cloud Documentation

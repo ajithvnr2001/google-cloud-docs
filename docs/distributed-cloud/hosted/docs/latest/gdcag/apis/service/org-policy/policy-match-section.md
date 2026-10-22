@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/service/org-policy/policy-match-section/
 title: Organization policy match section \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:13:32.907596+00:00
+fetched_at: 2026-10-21T12:57:09.321600+00:00
 ---
 
 # Organization policy match section  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

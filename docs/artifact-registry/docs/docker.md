@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/docker/
 title: Work with container images \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:53:21.699721+00:00
+fetched_at: 2026-10-21T14:27:45.783647+00:00
 ---
 
 # Work with container images  |  Artifact Registry  |  Google Cloud Documentation

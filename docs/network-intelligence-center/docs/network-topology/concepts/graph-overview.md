@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-intelligence-center/docs/network-topology/concepts/graph-overview/
 title: Topology interface elements \u00a0|\u00a0 Network Intelligence Center - Network Topology \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:36:03.550805+00:00
+fetched_at: 2026-10-21T15:15:26.464120+00:00
 ---
 
 # Topology interface elements  |  Network Intelligence Center - Network Topology  |  Google Cloud Documentation

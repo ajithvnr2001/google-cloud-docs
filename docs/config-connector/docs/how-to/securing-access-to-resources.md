@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/how-to/securing-access-to-resources/
 title: Securing access to resources with IAM \u00a0|\u00a0 Config Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:18.895739+00:00
+fetched_at: 2026-10-21T14:51:38.379782+00:00
 ---
 
 # Securing access to resources with IAM  |  Config Connector  |  Google Cloud Documentation
@@ -184,6 +184,33 @@ Use `kubectl delete` to remove the Pub/Sub topic and IAMPolicyMember from your G
     kubectl delete -f pubsub-topic-sample.yaml --namespace CC_NAMESPACE
     
 
+## Security best practices for multi-tenant isolation
+
+To help prevent unauthorized privilege escalation and enforce tenant isolation, follow these best practices:
+
+  * **Enforce namespaced mode** : avoid cluster mode in multi-tenant environments. In cluster mode, all namespaces share a single IAM service account. Any user who can create Config Connector resources in any namespace can act with the full IAM permissions of that service account.
+
+  * **Restrict RBAC for IAM resources** : limit creation and modification permissions for `IAMPolicy`, `IAMPartialPolicy`, and `IAMPolicyMember` resources by using Kubernetes role-based access control (RBAC). If developers have broad write access to these resources, they can alter Google Cloud IAM bindings.
+
+  * **Scope IAM bindings for Workload Identity Federation for GKE** : configure these bindings strictly for designated Kubernetes ServiceAccounts in specific namespaces. In namespaced mode, bind each IAM service account only to the Config Connector Kubernetes ServiceAccount for its namespace:
+        
+        gcloud iam service-accounts add-iam-policy-binding \
+            GSA_NAME@PROJECT_ID.iam.gserviceaccount.com \
+            --member="serviceAccount:PROJECT_ID.svc.id.goog[cnrm-system/cnrm-controller-manager-CC_NAMESPACE]" \
+            --role="roles/iam.workloadIdentityUser"
+        
+
+Replace the following:
+
+    * `GSA_NAME`: the name of the IAM service account that Config Connector uses for the namespace.
+    * `PROJECT_ID`: the ID of the project that contains your cluster and the IAM service account.
+    * `CC_NAMESPACE`: the namespace that Config Connector manages resources from.
+
+Don't grant the `roles/iam.workloadIdentityUser` role to a [principal set](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/workload-identity#kubernetes-resources-iam-policies), such as all Pods in the `cnrm-system` namespace. In namespaced mode, the Config Connector controllers for all namespaces run in `cnrm-system`, so this type of binding lets every namespace's controller impersonate the IAM service account.
+
+
+
+
 ## What's next
 
 Use [Secrets](https://docs.cloud.google.com/config-connector/docs/how-to/secrets) to pass information securely to Google Cloud resources.
@@ -192,6 +219,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

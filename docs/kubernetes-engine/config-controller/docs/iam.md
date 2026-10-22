@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/config-controller/docs/iam/
 title: IAM permissions for Config Controller \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:36:42.763532+00:00
+fetched_at: 2026-10-21T15:03:12.303133+00:00
 ---
 
 # IAM permissions for Config Controller  |  Google Cloud Documentation

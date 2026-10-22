@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/performance/
 title: About instance performance \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:15:20.806094+00:00
+fetched_at: 2026-10-21T14:59:29.023419+00:00
 ---
 
 # About instance performance  |  Filestore  |  Google Cloud Documentation
@@ -27,8 +27,7 @@ The following table provides a summary of performance limits for the lower and h
 
 Capacity range | Service tier | Capacity | Provisioned IOPS per TiB  
 ---|---|---|---  
-**Lower capacity range** | Regional ([small instances](https://docs.cloud.google.com/filestore/docs/service-tiers-regional/small-instances) available in region) | 100 GiB to 10,239 GiB | 4,000 to 17,000  
-| Regional (small instances unavailable in region) | 1 TiB to 9.75 TiB | 4,000 to 17,000  
+**Lower capacity range** | Regional | 100 GiB to 10,239 GiB | 4,000 to 17,000  
 | Zonal | 1 TiB to 9.75 TiB | 4,000 to 17,000  
 **Higher capacity range** | Regional | 10 TiB to 100 TiB | 3,000 to 7,500  
 | Zonal | 10 TiB to 100 TiB | 3,000 to 7,500  
@@ -55,7 +54,7 @@ Higher capacity range
 (10 TiB to 100 TiB) | 3,000 | 10 TiB | 30,000 | 9,000 | 705 | 240 | 705 | 240  
 7,500 | 100 TiB | 750,000 | 225,000 | 17,625 | 6,000 | 1,600 | 800  
   
-* If small capacity instances are available in the region where your instance is located, Regional instance capacity ranges from 100 GiB to 10,239 GiB. Otherwise, the range is 1 TiB to 9.75 TiB. For more information, see [Small capacity instances](https://docs.cloud.google.com/filestore/docs/service-tiers#small-instances).
+* 1,024 GiB instances require enabled custom performance with a minimum of 2,000 IOPS. For more information, see [Small capacity instances](https://docs.cloud.google.com/filestore/docs/%C2%A7/filestore/docs/service-tiers#small-instances).
 
 ## Performance scaling
 
@@ -177,6 +176,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

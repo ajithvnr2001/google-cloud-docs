@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/akamai-dns-changelog/
 title: Change log for AKAMAI_DNS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:06:41.681036+00:00
+fetched_at: 2026-10-21T14:46:19.377638+00:00
 ---
 
 # Change log for AKAMAI_DNS  |  Google Security Operations  |  Google Cloud Documentation

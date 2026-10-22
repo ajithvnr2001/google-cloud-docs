@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/change-history/
 title: Change history \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:52.924088+00:00
+fetched_at: 2026-10-21T12:56:10.130510+00:00
 ---
 
 # Change history  |  Dialogflow CX  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/ingestion-notifications-for-health-metrics/
 title: Analyze ingestion with Cloud Monitoring \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:11.072220+00:00
+fetched_at: 2026-10-21T12:38:09.413388+00:00
 ---
 
 # Analyze ingestion with Cloud Monitoring  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/fhir-etag/
 title: Prevent FHIR resource conflicts using ETags \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:10:16.086953+00:00
+fetched_at: 2026-10-21T14:30:41.971014+00:00
 ---
 
 # Prevent FHIR resource conflicts using ETags  |  Cloud Healthcare API  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-security-integration/docs/out-of-band/deployment-groups-overview/
 title: Mirroring deployment groups overview \u00a0|\u00a0 Network Security Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:21.231712+00:00
+fetched_at: 2026-10-21T15:15:56.862494+00:00
 ---
 
 # Mirroring deployment groups overview  |  Network Security Integration  |  Google Cloud Documentation

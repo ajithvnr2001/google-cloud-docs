@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/kubernetes-secrets/
 title: Sensitive information storage in Kubernetes using Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:16:51.061704+00:00
+fetched_at: 2026-10-21T14:20:53.247678+00:00
 ---
 
 # Sensitive information storage in Kubernetes using Cloud Code for Cloud Shell  |  Google Cloud Documentation

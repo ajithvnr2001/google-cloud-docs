@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/vpc-sc/
 title: Securing instances with a service perimeter \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:53:05.417862+00:00
+fetched_at: 2026-10-21T12:55:52.854337+00:00
 ---
 
 # Securing instances with a service perimeter  |  Filestore  |  Google Cloud Documentation

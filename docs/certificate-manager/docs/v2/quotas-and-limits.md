@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/v2/quotas-and-limits/
 title: Quotas and limits \u00a0|\u00a0 Certificate Manager (2nd gen) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:39:09.293289+00:00
+fetched_at: 2026-10-21T14:25:18.006509+00:00
 ---
 
 # Quotas and limits  |  Certificate Manager (2nd gen)  |  Google Cloud Documentation

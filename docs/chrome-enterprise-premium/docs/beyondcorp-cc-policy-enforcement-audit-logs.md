@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/beyondcorp-cc-policy-enforcement-audit-logs/
 title: Client Connector - policy enforcement audit logging \u00a0|\u00a0 Chrome Enterprise Premium \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:36:14.352949+00:00
+fetched_at: 2026-10-21T14:25:23.585324+00:00
 ---
 
 # Client Connector - policy enforcement audit logging  |  Chrome Enterprise Premium  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/proximitybeacon/
 title: Proximity Beacon roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:48:26.716651+00:00
+fetched_at: 2026-10-21T14:29:34.054005+00:00
 ---
 
 # Proximity Beacon roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

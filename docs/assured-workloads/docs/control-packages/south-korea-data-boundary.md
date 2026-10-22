@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/control-packages/south-korea-data-boundary/
 title: South Korea Data Boundary \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:45.639345+00:00
+fetched_at: 2026-10-21T14:26:15.179350+00:00
 ---
 
 # South Korea Data Boundary  |  Assured Workloads  |  Google Cloud Documentation

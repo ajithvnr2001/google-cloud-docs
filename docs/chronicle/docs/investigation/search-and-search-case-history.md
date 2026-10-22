@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/search-and-search-case-history/
 title: Search cases overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:21.543313+00:00
+fetched_at: 2026-10-21T14:11:44.891882+00:00
 ---
 
 # Search cases overview  |  Google Security Operations  |  Google Cloud Documentation

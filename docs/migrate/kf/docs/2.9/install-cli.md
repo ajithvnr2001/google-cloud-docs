@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.9/install-cli/
 title: Install the Kf CLI \u00a0|\u00a0 Kf 2.9 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:34:54.129439+00:00
+fetched_at: 2026-10-21T15:18:15.093815+00:00
 ---
 
 # Install the Kf CLI  |  Kf 2.9  |  Google Cloud Documentation

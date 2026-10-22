@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/
 title: Config Connector documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:48:42.344445+00:00
+fetched_at: 2026-10-21T14:21:49.202538+00:00
 ---
 
 # Config Connector documentation  |  Google Cloud Documentation

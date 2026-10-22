@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/blueprints/confidential-data-warehouse-blueprint/
 title: Import data into a secured BigQuery data warehouse \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:41.294956+00:00
+fetched_at: 2026-10-21T14:53:25.252647+00:00
 ---
 
 # Import data into a secured BigQuery data warehouse  |  Cloud Architecture Center  |  Google Cloud Documentation

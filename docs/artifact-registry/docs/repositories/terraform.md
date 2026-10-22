@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/repositories/terraform/
 title: Provision Artifact Registry resources with Terraform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:19.469030+00:00
+fetched_at: 2026-10-21T14:25:09.885639+00:00
 ---
 
 # Provision Artifact Registry resources with Terraform  |  Google Cloud Documentation

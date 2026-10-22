@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/admin/configure-hsm-network-connection/
 title: Configure external HSM network connection \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:39.070853+00:00
+fetched_at: 2026-10-21T12:57:19.599867+00:00
 ---
 
 # Configure external HSM network connection  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

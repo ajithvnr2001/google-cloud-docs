@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/admin-panel-general-settings/
 title: Admin settings - General settings \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:44:17.916292+00:00
+fetched_at: 2026-10-21T15:03:56.635666+00:00
 ---
 
 # Admin settings - General settings  |  Looker  |  Google Cloud Documentation

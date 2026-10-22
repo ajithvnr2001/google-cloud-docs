@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/jdbc-for-bigquery/
 title: Use the JDBC driver for BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:46:28.393652+00:00
+fetched_at: 2026-10-22T05:46:14.568101+00:00
 ---
 
 # Use the JDBC driver for BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aws-session-manager/
 title: Collect AWS Session Manager logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:27:27.013605+00:00
+fetched_at: 2026-10-21T14:24:07.813034+00:00
 ---
 
 # Collect AWS Session Manager logs  |  Google Security Operations  |  Google Cloud Documentation

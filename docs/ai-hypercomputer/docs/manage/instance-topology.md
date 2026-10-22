@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/manage/instance-topology/
 title: View topology of a compute instance \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:25:50.335499+00:00
+fetched_at: 2026-10-21T14:26:19.357663+00:00
 ---
 
 # View topology of a compute instance  |  AI Hypercomputer  |  Google Cloud Documentation

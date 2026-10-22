@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/iam/
 title: IAM roles and permissions \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:15:17.270944+00:00
+fetched_at: 2026-10-21T12:52:34.358151+00:00
 ---
 
 # IAM roles and permissions  |  Filestore  |  Google Cloud Documentation

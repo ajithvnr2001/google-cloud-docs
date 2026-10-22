@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/customize-mobile-web-messages/
 title: Customize mobile and web SDK channel messages \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:35:59.858295+00:00
+fetched_at: 2026-10-21T14:22:26.506793+00:00
 ---
 
 # Customize mobile and web SDK channel messages  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

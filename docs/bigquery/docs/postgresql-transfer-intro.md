@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/postgresql-transfer-intro/
 title: Introduction to PostgreSQL data transfers \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T16:09:02.585649+00:00
+fetched_at: 2026-10-21T12:36:12.349863+00:00
 ---
 
 # Introduction to PostgreSQL data transfers  |  BigQuery  |  Google Cloud Documentation

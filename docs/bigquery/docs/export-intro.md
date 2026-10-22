@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/export-intro/
 title: Introduction to data export \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:39:01.310607+00:00
+fetched_at: 2026-10-21T14:09:39.593013+00:00
 ---
 
 # Introduction to data export  |  BigQuery  |  Google Cloud Documentation

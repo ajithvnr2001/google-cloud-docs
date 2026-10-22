@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/best-practices/rbac/
 title: Best practices for GKE RBAC \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:08.665292+00:00
+fetched_at: 2026-10-21T15:01:28.695241+00:00
 ---
 
 # Best practices for GKE RBAC  |  GKE security  |  Google Cloud Documentation

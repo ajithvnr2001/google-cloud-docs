@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/troubleshooting/troubleshooting-using-serial-console/
 title: Troubleshooting using the serial console \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:42:59.082523+00:00
+fetched_at: 2026-10-21T14:23:12.156581+00:00
 ---
 
 # Troubleshooting using the serial console  |  Compute Engine  |  Google Cloud Documentation

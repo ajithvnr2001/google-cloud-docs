@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/headless-mobile-sdk-android-getting-started/
 title: Headless Mobile SDK for Android: Get started \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:22:32.952705+00:00
+fetched_at: 2026-10-21T14:06:06.150466+00:00
 ---
 
 # Headless Mobile SDK for Android: Get started  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

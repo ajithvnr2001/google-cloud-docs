@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/food-ai/locations/
 title: Food Ordering AI Agent locations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:01:06.796413+00:00
+fetched_at: 2026-10-21T12:55:36.413218+00:00
 ---
 
 # Food Ordering AI Agent locations  |  Google Cloud Documentation

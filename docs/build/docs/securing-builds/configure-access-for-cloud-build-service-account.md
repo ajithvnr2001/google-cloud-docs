@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/securing-builds/configure-access-for-cloud-build-service-account/
 title: Configure access for the default Cloud Build service account \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:27:19.498452+00:00
+fetched_at: 2026-10-21T14:26:05.095143+00:00
 ---
 
 # Configure access for the default Cloud Build service account  |  Google Cloud Documentation

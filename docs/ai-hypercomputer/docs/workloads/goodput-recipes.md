@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/goodput-recipes/
 title: Goodput optimization recipes \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:35:06.960885+00:00
+fetched_at: 2026-10-21T14:28:53.015661+00:00
 ---
 
 # Goodput optimization recipes  |  AI Hypercomputer  |  Google Cloud Documentation

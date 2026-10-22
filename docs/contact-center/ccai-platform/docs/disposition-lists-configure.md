@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/disposition-lists-configure/
 title: Configure nested disposition lists \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:09:03.214708+00:00
+fetched_at: 2026-10-21T14:21:52.712298+00:00
 ---
 
 # Configure nested disposition lists  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

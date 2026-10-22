@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/kong-gateway-changelog/
 title: Change log for KONG_GATEWAY \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:10:32.537110+00:00
+fetched_at: 2026-10-21T14:43:17.562172+00:00
 ---
 
 # Change log for KONG_GATEWAY  |  Google Security Operations  |  Google Cloud Documentation

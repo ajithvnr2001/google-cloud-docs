@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/telemetry/
 title: Telemetry in Cortex Framework \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:36:58.719912+00:00
+fetched_at: 2026-10-21T14:23:21.365585+00:00
 ---
 
 # Telemetry in Cortex Framework  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

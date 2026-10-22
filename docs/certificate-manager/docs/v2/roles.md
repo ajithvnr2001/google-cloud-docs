@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/v2/roles/
 title: Roles and permissions \u00a0|\u00a0 Certificate Manager (2nd gen) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:57:17.267894+00:00
+fetched_at: 2026-10-21T14:25:18.181583+00:00
 ---
 
 # Roles and permissions  |  Certificate Manager (2nd gen)  |  Google Cloud Documentation

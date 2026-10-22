@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/create-a-confidential-vm-instance-with-gpu/
 title: Create a Confidential VM instance with GPU \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:27.295356+00:00
+fetched_at: 2026-10-21T12:29:23.549621+00:00
 ---
 
 # Create a Confidential VM instance with GPU  |  Google Cloud Documentation
@@ -94,25 +94,9 @@ Provide the following values:
 
   * `ZONE_NAME`: The [supported zone](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#supported-zones) to create the VM in.
 
-  * `IMAGE_PROJECT`: The project that contains the supported operating system image. Choose one of the following:
+  * `IMAGE_PROJECT`: The project that contains the [Confidential VM-supported operating system image for GPU](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#supported-images-gpu).
 
-    * **A3 High machine type** : `ubuntu-os-cloud` for Ubuntu images or `confidential-vm-images` for Container-Optimized OS images.
-
-    * **G4 machine type** : `ubuntu-os-cloud` for Ubuntu images or `cos-cloud` for Container-Optimized OS images.
-
-  * `IMAGE_FAMILY_NAME`: The family for the [Confidential VM-supported operating system image](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#operating-systems). Choose the image family based on your machine type:
-
-    * **A3 High machine type** :
-
-      * `ubuntu-2204-lts` for Ubuntu image projects.
-
-      * `cos-tdx-113-lts` for Container-Optimized OS image projects.
-
-    * **G4 machine type** :
-
-      * `ubuntu-2404-lts-amd64` for Ubuntu image projects.
-
-      * `cos-125-lts` for Container-Optimized OS image projects.
+  * `IMAGE_FAMILY_NAME`: The family for the [Confidential VM-supported operating system image for GPU](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#supported-images-gpu).
 
 
 
@@ -185,25 +169,9 @@ Provide the following values:
 
     * **G4 machine type** : `STANDARD` for standard (on-demand) VM instances or `SPOT` for Spot VM instances. If not specified, this value defaults to `STANDARD`.
 
-  * `IMAGE_PROJECT`: The project that contains the supported operating system image. Choose one of the following:
+  * `IMAGE_PROJECT`: The project that contains the [Confidential VM-supported operating system image for GPU](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#supported-images-gpu).
 
-    * **A3 High machine type** : `ubuntu-os-cloud` for Ubuntu images or `confidential-vm-images` for Container-Optimized OS images.
-
-    * **G4 machine type** : `ubuntu-os-cloud` for Ubuntu images or `cos-cloud` for Container-Optimized OS images.
-
-  * `IMAGE_FAMILY`: The family for the [Confidential VM-supported operating system image](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#operating-systems). Choose the image family based on your machine type:
-
-    * **A3 High machine type** :
-
-      * `ubuntu-2204-lts` for Ubuntu image projects.
-
-      * `cos-tdx-113-lts` for Container-Optimized OS image projects.
-
-    * **G4 machine type** :
-
-      * `ubuntu-2404-lts-amd64` for Ubuntu image projects.
-
-      * `cos-125-lts` for Container-Optimized OS image projects.
+  * `IMAGE_FAMILY`: The family for the [Confidential VM-supported operating system image for GPU](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#supported-images-gpu).
 
 
 
@@ -258,25 +226,9 @@ Provide the following values:
 
        * `g4-standard-48`
 
-     * `IMAGE_PROJECT`: The project that contains the supported operating system image. Choose one of the following:
+     * `IMAGE_PROJECT`: The project that contains the [Confidential VM-supported operating system image for GPU](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#supported-images-gpu).
 
-       * **A3 High machine type** : `ubuntu-os-cloud` for Ubuntu images or `confidential-vm-images` for Container-Optimized OS images.
-
-       * **G4 machine type** : `ubuntu-os-cloud` for Ubuntu images or `cos-cloud` for Container-Optimized OS images.
-
-     * `IMAGE_FAMILY_NAME`: The family for the [Confidential VM-supported operating system image](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#operating-systems) to use. Choose the image family based on your machine type:
-
-       * **A3 High machine type** :
-
-         * `ubuntu-2204-lts` for Ubuntu image projects.
-
-         * `cos-tdx-113-lts` for Container-Optimized OS image projects.
-
-       * **G4 machine type** :
-
-         * `ubuntu-2404-lts-amd64` for Ubuntu image projects.
-
-         * `cos-125-lts` for Container-Optimized OS image projects.
+     * `IMAGE_FAMILY_NAME`: The family for the [Confidential VM-supported operating system image for GPU](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#supported-images-gpu) to use.
 
      * `RUN_DURATION`: The duration you want the requested VM instances to run. You must format the value as the number of days, hours, minutes, or seconds followed by `d`, `h`, `m`, and `s`, respectively. For example: `6d8h44m`.
 
@@ -375,25 +327,9 @@ Provide the following values:
 
      * `RUN_DURATION_IN_SECONDS`: The duration, in seconds, that you want the requested VM instances to run. The value must be between `600` and `604800` seconds.
 
-     * `IMAGE_PROJECT`: The project that contains the supported operating system image. Choose one of the following:
+     * `IMAGE_PROJECT`: The project that contains the [Confidential VM-supported operating system image for GPU](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#supported-images-gpu).
 
-       * **A3 High machine type** : `ubuntu-os-cloud` for Ubuntu images or `confidential-vm-images` for Container-Optimized OS images.
-
-       * **G4 machine type** : `ubuntu-os-cloud` for Ubuntu images or `cos-cloud` for Container-Optimized OS images.
-
-     * `IMAGE_FAMILY_NAME`: The family for the [Confidential VM-supported operating system image](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#operating-systems) to use. Choose the image family based on your machine type:
-
-       * **A3 High machine type** :
-
-         * `ubuntu-2204-lts` for Ubuntu image projects.
-
-         * `cos-tdx-113-lts` for Container-Optimized OS image projects.
-
-       * **G4 machine type** :
-
-         * `ubuntu-2404-lts-amd64` for Ubuntu image projects.
-
-         * `cos-125-lts` for Container-Optimized OS image projects.
+     * `IMAGE_FAMILY_NAME`: The family for the [Confidential VM-supported operating system image for GPU](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#supported-images-gpu) to use.
 
   2. [Create a MIG and a resize request](https://docs.cloud.google.com/compute/docs/instance-groups/create-mig-with-gpu-vms#create-mig-and-add-gpu-vms-all-at-once) to add GPU VM instances all at once.
 
@@ -546,6 +482,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

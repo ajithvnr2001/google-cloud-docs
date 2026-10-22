@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-microsoft-ad/docs/access-control/
 title: Access control with IAM \u00a0|\u00a0 Managed Service for Microsoft Active Directory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:38:22.391682+00:00
+fetched_at: 2026-10-21T14:29:23.985693+00:00
 ---
 
 # Access control with IAM  |  Managed Service for Microsoft Active Directory  |  Google Cloud Documentation

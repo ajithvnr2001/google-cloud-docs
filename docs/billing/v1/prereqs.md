@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/v1/prereqs/
 title: Prerequisites \u00a0|\u00a0 Cloud Billing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:13:41.974142+00:00
+fetched_at: 2026-10-21T14:27:12.055869+00:00
 ---
 
 # Prerequisites  |  Cloud Billing  |  Google Cloud Documentation

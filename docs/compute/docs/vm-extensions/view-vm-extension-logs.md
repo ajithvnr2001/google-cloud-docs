@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/vm-extensions/view-vm-extension-logs/
 title: View VM extension logs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:27:48.659940+00:00
+fetched_at: 2026-10-21T14:09:22.864136+00:00
 ---
 
 # View VM extension logs  |  Compute Engine  |  Google Cloud Documentation

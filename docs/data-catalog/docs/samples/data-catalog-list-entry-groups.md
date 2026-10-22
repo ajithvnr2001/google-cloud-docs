@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-catalog/docs/samples/data-catalog-list-entry-groups/
 title: List entry groups \u00a0|\u00a0 Data Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:57:32.318772+00:00
+fetched_at: 2026-10-22T05:41:52.273165+00:00
 ---
 
 # List entry groups  |  Data Catalog  |  Google Cloud Documentation

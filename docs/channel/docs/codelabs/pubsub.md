@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/channel/docs/codelabs/pubsub/
 title: Pub/Sub notifications \u00a0|\u00a0 Channel Services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:47:03.022665+00:00
+fetched_at: 2026-10-21T14:25:45.622487+00:00
 ---
 
 # Pub/Sub notifications  |  Channel Services  |  Google Cloud Documentation

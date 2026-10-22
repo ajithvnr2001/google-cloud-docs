@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/estimate/specify-datawarehouse-requirements/
 title: Specify data warehousing requirements \u00a0|\u00a0 Migration Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:19.643205+00:00
+fetched_at: 2026-10-21T15:13:45.124294+00:00
 ---
 
 # Specify data warehousing requirements  |  Migration Center  |  Google Cloud Documentation

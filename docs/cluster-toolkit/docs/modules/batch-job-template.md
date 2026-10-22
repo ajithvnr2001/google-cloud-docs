@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/batch-job-template/
 title: Create a Batch job template \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:40.640864+00:00
+fetched_at: 2026-10-21T14:42:19.658270+00:00
 ---
 
 # Create a Batch job template  |  Cluster Toolkit  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/linux-dhcp-changelog/
 title: Change log for LINUX_DHCP \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:36:46.393428+00:00
+fetched_at: 2026-10-21T14:43:16.473792+00:00
 ---
 
 # Change log for LINUX_DHCP  |  Google Security Operations  |  Google Cloud Documentation

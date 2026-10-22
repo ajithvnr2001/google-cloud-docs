@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/nccl/install-nccl/
 title: Install gIB NCCL plugins \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:35:05.691167+00:00
+fetched_at: 2026-10-21T14:28:41.160275+00:00
 ---
 
 # Install gIB NCCL plugins  |  AI Hypercomputer  |  Google Cloud Documentation

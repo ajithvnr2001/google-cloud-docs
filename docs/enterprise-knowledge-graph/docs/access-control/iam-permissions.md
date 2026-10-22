@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/enterprise-knowledge-graph/docs/access-control/iam-permissions/
 title: IAM permissions for Enterprise Knowledge Graph \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:33:29.206902+00:00
+fetched_at: 2026-10-21T12:51:24.769043+00:00
 ---
 
 # IAM permissions for Enterprise Knowledge Graph  |  Google Cloud Documentation

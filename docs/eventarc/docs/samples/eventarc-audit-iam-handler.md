@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/docs/samples/eventarc-audit-iam-handler/
 title: Create an event handler that receives and processes a Cloud Audit Log event with IAM data \u00a0|\u00a0 Eventarc \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:53:06.734849+00:00
+fetched_at: 2026-10-21T12:46:34.788632+00:00
 ---
 
 # Create an event handler that receives and processes a Cloud Audit Log event with IAM data  |  Eventarc  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/ibm-sva-changelog/
 title: Change log for IBM_SVA \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:40:22.939460+00:00
+fetched_at: 2026-10-21T14:52:02.723579+00:00
 ---
 
 # Change log for IBM_SVA  |  Google Security Operations  |  Google Cloud Documentation

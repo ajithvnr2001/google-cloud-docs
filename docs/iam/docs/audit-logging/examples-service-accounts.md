@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/audit-logging/examples-service-accounts/
 title: Example logs for service accounts \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:10:16.294356+00:00
+fetched_at: 2026-10-21T12:54:12.587797+00:00
 ---
 
 # Example logs for service accounts  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

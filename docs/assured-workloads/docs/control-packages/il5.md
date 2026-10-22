@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/control-packages/il5/
 title: Data Boundary for Impact Level 5 (IL5) \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:47.328386+00:00
+fetched_at: 2026-10-21T14:26:17.180429+00:00
 ---
 
 # Data Boundary for Impact Level 5 (IL5)  |  Assured Workloads  |  Google Cloud Documentation

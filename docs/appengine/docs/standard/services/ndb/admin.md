@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/ndb/admin/
 title: NDB Administration \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:52:19.271972+00:00
+fetched_at: 2026-10-21T14:20:48.381613+00:00
 ---
 
 # NDB Administration  |  App Engine standard environment  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/about-upgrading-version/
 title: About upgrading the Redis version of an instance \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:50.799357+00:00
+fetched_at: 2026-10-21T15:11:43.883784+00:00
 ---
 
 # About upgrading the Redis version of an instance  |  Memorystore for Redis  |  Google Cloud Documentation

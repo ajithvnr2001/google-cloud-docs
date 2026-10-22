@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/backup-disaster-recovery/docs/configuration/decommission/
 title: Decommission Backup and DR and backup/recovery appliances \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:19:41.645451+00:00
+fetched_at: 2026-10-21T14:35:51.096585+00:00
 ---
 
 # Decommission Backup and DR and backup/recovery appliances  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/import/importing-virtual-disks/
 title: Import virtual disks \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:13.913845+00:00
+fetched_at: 2026-10-21T14:19:58.174598+00:00
 ---
 
 # Import virtual disks  |  Compute Engine  |  Google Cloud Documentation

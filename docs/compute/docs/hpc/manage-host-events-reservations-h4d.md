@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/hpc/manage-host-events-reservations-h4d/
 title: Manage host events across reservations \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:34:02.103008+00:00
+fetched_at: 2026-10-21T14:21:18.044024+00:00
 ---
 
 # Manage host events across reservations  |  Compute Engine  |  Google Cloud Documentation

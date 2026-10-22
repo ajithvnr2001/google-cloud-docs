@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/import-govern-agent-registry/
 title: Import A2A agents from Agent Registry \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T10:38:51.686269+00:00
+fetched_at: 2026-10-21T12:52:16.957561+00:00
 ---
 
 # Import A2A agents from Agent Registry  |  Gemini Enterprise  |  Google Cloud Documentation

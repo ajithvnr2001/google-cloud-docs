@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/squarespace/set-up-data-store/
 title: Set up a Squarespace data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T09:19:53.604291+00:00
+fetched_at: 2026-10-21T12:40:04.492060+00:00
 ---
 
 # Set up a Squarespace data store  |  Gemini Enterprise  |  Google Cloud Documentation

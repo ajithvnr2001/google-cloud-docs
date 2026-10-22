@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/apihub/vpc-service-control/
 title: VPC Service Controls for API hub \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:40:12.540403+00:00
+fetched_at: 2026-10-21T14:55:05.344632+00:00
 ---
 
 # VPC Service Controls for API hub  |  Apigee  |  Google Cloud Documentation

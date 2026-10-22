@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/python3/services/deferred/
 title: Deferred API for Python 3 \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:45.724821+00:00
+fetched_at: 2026-10-21T14:26:01.107710+00:00
 ---
 
 # Deferred API for Python 3  |  App Engine standard environment  |  Google Cloud Documentation

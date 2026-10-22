@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/load-balancing/docs/load-balancer-resource-model/
 title: Cloud Load Balancing resource model \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:24:48.223482+00:00
+fetched_at: 2026-10-21T14:58:34.526550+00:00
 ---
 
 # Cloud Load Balancing resource model  |  Google Cloud Documentation
@@ -96,7 +96,7 @@ For more information, see [SNI-based routing with TLS routes](https://docs.cloud
 
 A backend service defines how your load balancer distributes traffic. The backend service configuration contains a set of values, such as the protocol used to connect to backends, various distribution and session settings, health checks, and timeouts.
 
-These settings provide fine-grained control over how your load balancer behaves and let you direct traffic to the correct backends, which can be either VM instance groups or [network endpoint groups (NEGs)](https://docs.cloud.google.com/load-balancing/docs/negs).
+These settings provide fine-grained control over how your load balancer behaves and let you direct traffic to the correct backends, which can be either [VM instance groups](https://docs.cloud.google.com/compute/docs/instance-groups) or [network endpoint groups (NEGs)](https://docs.cloud.google.com/load-balancing/docs/negs).
 
 For more information, see [Backend services overview](https://docs.cloud.google.com/load-balancing/docs/backend-service).
 
@@ -135,6 +135,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

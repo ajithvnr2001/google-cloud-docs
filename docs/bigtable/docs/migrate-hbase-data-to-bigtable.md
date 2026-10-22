@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/migrate-hbase-data-to-bigtable/
 title: Migrate data from HBase to Bigtable offline \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:20.722454+00:00
+fetched_at: 2026-10-21T14:09:18.326609+00:00
 ---
 
 # Migrate data from HBase to Bigtable offline  |  Google Cloud Documentation

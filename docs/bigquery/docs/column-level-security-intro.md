@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/column-level-security-intro/
 title: Introduction to column-level access control \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:38.428242+00:00
+fetched_at: 2026-10-21T12:39:32.038628+00:00
 ---
 
 # Introduction to column-level access control  |  BigQuery  |  Google Cloud Documentation

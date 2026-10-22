@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/taskqueue/push/creating-handlers/
 title: Creating Task Handlers \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:57.177287+00:00
+fetched_at: 2026-10-21T14:25:26.420864+00:00
 ---
 
 # Creating Task Handlers  |  App Engine standard environment  |  Google Cloud Documentation

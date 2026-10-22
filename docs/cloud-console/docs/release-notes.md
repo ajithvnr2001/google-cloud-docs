@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-console/docs/release-notes/
 title: Google Cloud console release notes \u00a0|\u00a0 Google Cloud console - Web UI Admin \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:32:55.536517+00:00
+fetched_at: 2026-10-21T14:43:07.143697+00:00
 ---
 
 # Google Cloud console release notes  |  Google Cloud console - Web UI Admin  |  Google Cloud Documentation

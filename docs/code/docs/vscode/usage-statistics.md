@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/vscode/usage-statistics/
 title: Usage statistics \u00a0|\u00a0 Cloud Code for VS Code \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:37:56.311936+00:00
+fetched_at: 2026-10-21T12:39:03.266490+00:00
 ---
 
 # Usage statistics  |  Cloud Code for VS Code  |  Google Cloud Documentation

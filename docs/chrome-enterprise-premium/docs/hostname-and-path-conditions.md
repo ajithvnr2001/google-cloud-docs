@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/hostname-and-path-conditions/
 title: Using hostname and path conditions \u00a0|\u00a0 Chrome Enterprise Premium \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:36:14.879359+00:00
+fetched_at: 2026-10-21T14:23:11.520173+00:00
 ---
 
 # Using hostname and path conditions  |  Chrome Enterprise Premium  |  Google Cloud Documentation

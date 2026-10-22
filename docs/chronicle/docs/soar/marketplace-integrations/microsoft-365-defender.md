@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/microsoft-365-defender/
 title: Microsoft 365 Defender \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:39:12.160997+00:00
+fetched_at: 2026-10-21T14:20:50.212924+00:00
 ---
 
 # Microsoft 365 Defender  |  Google Security Operations  |  Google Cloud Documentation

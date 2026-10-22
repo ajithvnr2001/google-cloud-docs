@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/conversational-analytics-scheduled-agentic-workflows/
 title: Create a scheduled agentic workflow \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:33:40.308874+00:00
+fetched_at: 2026-10-21T14:56:42.667517+00:00
 ---
 
 # Create a scheduled agentic workflow  |  Looker  |  Google Cloud Documentation
@@ -33,7 +33,7 @@ This product or feature is subject to the "Pre-GA Offerings Terms" in the Genera
 
 
 
-You can use Conversational Analytics to generate a scheduled agentic workflow with an [Explore data agent](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data#start-a-conversation), [dashboard agents](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-dashboards), or within a Conversational Analytics [conversation with a standalone Explore](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data#start-conversation-single-explore).
+You can use Conversational Analytics to generate a scheduled agentic workflow with an [Explore data agent](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data#start-a-conversation), [dashboard agents](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-dashboards), or within a Conversational Analytics [direct chat with an Explore](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data#start-conversation-single-explore).
 
 A scheduled workflow delivers data reports and natural language insights to designated recipients at specified intervals without requiring a threshold trigger condition. Workflows can deliver notifications to Slack and email in accordance with [Looker email domain allowlists](https://docs.cloud.google.com/looker/docs/admin-panel-general-settings#email_domain_allowlist_for_scheduled_content).
 
@@ -121,6 +121,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/how-tos/long-running-operations/
 title: Managing long-running operations \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:01:56.494980+00:00
+fetched_at: 2026-10-21T14:29:28.940426+00:00
 ---
 
 # Managing long-running operations  |  Cloud Healthcare API  |  Google Cloud Documentation

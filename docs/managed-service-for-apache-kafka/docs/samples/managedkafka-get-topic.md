@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/samples/managedkafka-get-topic/
 title: Get a Kafka topic \u00a0|\u00a0 Managed Service for Apache Kafka \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:31:39.984759+00:00
+fetched_at: 2026-10-21T15:10:59.530264+00:00
 ---
 
 # Get a Kafka topic  |  Managed Service for Apache Kafka  |  Google Cloud Documentation

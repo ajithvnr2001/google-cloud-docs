@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/sign-in-user-phone/
 title: Signing in users with a phone number on Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:18.053683+00:00
+fetched_at: 2026-10-21T12:53:27.624962+00:00
 ---
 
 # Signing in users with a phone number on Identity Platform  |  Google Cloud Documentation

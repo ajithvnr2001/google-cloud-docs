@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/import/requirements-export-import-images/
 title: Prerequisites for importing and exporting VM images \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:13.232883+00:00
+fetched_at: 2026-10-21T14:20:52.564124+00:00
 ---
 
 # Prerequisites for importing and exporting VM images  |  Compute Engine  |  Google Cloud Documentation

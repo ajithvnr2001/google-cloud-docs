@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/product-comparison/
 title: Differences between Identity Platform and Firebase Authentication \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:23.853207+00:00
+fetched_at: 2026-10-21T12:53:38.948046+00:00
 ---
 
 # Differences between Identity Platform and Firebase Authentication  |  Google Cloud Documentation

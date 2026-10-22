@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/juniper-junos-changelog/
 title: Change log for JUNIPER_JUNOS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:21:17.919920+00:00
+fetched_at: 2026-10-21T14:43:38.876870+00:00
 ---
 
 # Change log for JUNIPER_JUNOS  |  Google Security Operations  |  Google Cloud Documentation

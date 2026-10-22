@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/building/build-vm-images-with-packer/
 title: Building VM images using Packer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:58:38.718948+00:00
+fetched_at: 2026-10-21T14:18:47.239926+00:00
 ---
 
 # Building VM images using Packer  |  Google Cloud Documentation

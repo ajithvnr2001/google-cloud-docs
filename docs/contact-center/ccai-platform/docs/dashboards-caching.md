@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/dashboards-caching/
 title: Caching \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:12:00.523586+00:00
+fetched_at: 2026-10-21T14:23:04.793585+00:00
 ---
 
 # Caching  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

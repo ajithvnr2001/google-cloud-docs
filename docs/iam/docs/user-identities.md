@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/user-identities/
 title: Identities for users \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:09:57.068182+00:00
+fetched_at: 2026-10-21T12:53:07.471699+00:00
 ---
 
 # Identities for users  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

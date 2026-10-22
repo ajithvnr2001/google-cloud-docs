@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/how-to/configure-iam-permissions/
 title: Access control with IAM \u00a0|\u00a0 Config Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:18.527321+00:00
+fetched_at: 2026-10-21T14:51:37.170106+00:00
 ---
 
 # Access control with IAM  |  Config Connector  |  Google Cloud Documentation
@@ -23,7 +23,7 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 This document describes how to use Identity and Access Management to control how Config Connector can create and manage Google Cloud resources.
 
-To install Config Connector, you authenticate by creating an IAM service account and then using Workload Identity Federation for GKE for GKE to bind the IAM service accounts with the Kubernetes service accounts. IAM lets Config Connector take action on specific resources. By limiting the permissions assigned to your service accounts, you have greater control over what kinds of resources Config Connector can create.
+To install Config Connector, you authenticate by creating an IAM service account and then using Workload Identity Federation for GKE to bind the IAM service accounts with the Kubernetes service accounts. IAM lets Config Connector take action on specific resources. By limiting the permissions assigned to your service accounts, you have greater control over what kinds of resources Config Connector can create.
 
 You can choose to manage resources with a single service account or multiple service accounts.
 
@@ -36,6 +36,8 @@ When you install Config Connector with the GKE add-on or manual installation, yo
 The following diagram shows you how this mode works, where the same service account, which is called `my-service-account`, manages two projects:
 
 ![Config Connector using one service account to manage multiple projects](https://docs.cloud.google.com/static/config-connector/docs/images/cc-project-types.svg)
+
+**Caution:** Using a single service account across multiple projects or namespaces creates a shared privilege boundary. Any user or workload that can create Config Connector resources in any namespace can act with the permissions of the cluster-wide service account. For multi-tenant environments, use namespaced mode.
 
 ## Multiple service accounts
 
@@ -68,6 +70,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

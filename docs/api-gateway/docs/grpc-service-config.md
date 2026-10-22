@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/grpc-service-config/
 title: Configure a gRPC Service \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:14:04.559916+00:00
+fetched_at: 2026-10-21T14:09:56.891702+00:00
 ---
 
 # Configure a gRPC Service  |  API Gateway  |  Google Cloud Documentation

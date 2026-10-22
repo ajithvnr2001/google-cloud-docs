@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/quotas/configure-vpc-service-controls/
 title: Configure VPC Service Controls for Cloud Quotas \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:40:31.390192+00:00
+fetched_at: 2026-10-21T14:07:55.915641+00:00
 ---
 
 # Configure VPC Service Controls for Cloud Quotas  |  Google Cloud Documentation

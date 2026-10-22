@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/eset-ioc/
 title: Collect ESET Threat Intelligence logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:46:57.565781+00:00
+fetched_at: 2026-10-21T14:11:38.700059+00:00
 ---
 
 # Collect ESET Threat Intelligence logs  |  Google Security Operations  |  Google Cloud Documentation

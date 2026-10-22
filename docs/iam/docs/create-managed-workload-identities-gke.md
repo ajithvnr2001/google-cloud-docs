@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/create-managed-workload-identities-gke/
 title: Configure managed workload identity authentication for GKE \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:23:24.736173+00:00
+fetched_at: 2026-10-21T12:52:20.270456+00:00
 ---
 
 # Configure managed workload identity authentication for GKE  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/db-start-stop-cluster/
 title: Start and stop database clusters \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:08:45.645664+00:00
+fetched_at: 2026-10-21T12:58:16.623540+00:00
 ---
 
 # Start and stop database clusters  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

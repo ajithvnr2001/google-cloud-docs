@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/delinea-distributed-engine-changelog/
 title: Change log for DELINEA_DISTRIBUTED_ENGINE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:35:13.034648+00:00
+fetched_at: 2026-10-21T14:45:31.853922+00:00
 ---
 
 # Change log for DELINEA_DISTRIBUTED_ENGINE  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/
 title: IAM roles and permissions index \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:51:44.941707+00:00
+fetched_at: 2026-10-21T14:29:30.865433+00:00
 ---
 
 # IAM roles and permissions index  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

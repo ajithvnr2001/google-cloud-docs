@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/salesforce-transfer-intro/
 title: Introduction to Salesforce data transfers \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:42:16.403385+00:00
+fetched_at: 2026-10-21T12:36:59.050421+00:00
 ---
 
 # Introduction to Salesforce data transfers  |  BigQuery  |  Google Cloud Documentation

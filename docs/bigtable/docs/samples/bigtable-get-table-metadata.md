@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-get-table-metadata/
 title: Get table metadata and apply a view \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:23:53.886629+00:00
+fetched_at: 2026-10-21T14:10:54.210780+00:00
 ---
 
 # Get table metadata and apply a view  |  Bigtable  |  Google Cloud Documentation

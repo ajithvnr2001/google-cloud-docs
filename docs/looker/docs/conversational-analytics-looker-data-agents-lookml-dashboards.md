@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-lookml-dashboards/
 title: Create and manage data agents for LookML dashboards \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:33:39.662278+00:00
+fetched_at: 2026-10-21T14:56:44.860137+00:00
 ---
 
 # Create and manage data agents for LookML dashboards  |  Looker  |  Google Cloud Documentation
@@ -21,21 +21,9 @@ Send feedback
 
 #  Create and manage data agents for LookML dashboards Stay organized with collections  Save and categorize content based on your preferences. 
 
-**Preview**
-
-This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
-
-**Note:** Data agents for LookML dashboards are in preview with limited support. We encourage you to share your feedback to help us improve. To report bugs or issues, email [conversational-analytics-feedback@google.com](https://docs.cloud.google.com/looker/docs/conversational-analytics-feedback@google.com) with the following details: 
-
-  * A clear description of the problem and the expected behavior
-  * Steps to reproduce the issue
-  * Any additional relevant details
-
-
-
 Conversational Analytics, powered by [Gemini for Google Cloud](https://docs.cloud.google.com/gemini/docs/overview), lets you investigate your data by asking questions in conversational language through an intuitive chat interface. When you use Conversational Analytics with a [LookML dashboard](https://docs.cloud.google.com/looker/docs/reference/lookml-dashboard-overview), you can define and customize a data agent directly in your version-controlled LookML code.
 
-Data agents for LookML dashboards let developers inject tailored business logic, custom instructions, and analytical settings into LookML-managed dashboards. Because LookML dashboards represent governed, version-controlled sources of truth across organizations, LookML dashboard agents ensure that AI interactions remain consistent across environments and adhere to organizational data standards.
+Data agents for LookML dashboards let developers inject tailored business logic, custom instructions, and analytical settings into LookML-managed dashboards. Each dashboard provides a single, shared [default agent](https://docs.cloud.google.com/looker/docs/glossary#default-agent) that is available to all users with permission to chat with the dashboard. Because LookML dashboards represent governed, version-controlled sources of truth across organizations, LookML dashboard agents ensure that AI interactions remain consistent across environments and adhere to organizational data standards.
 
 **Note:** This page describes data agents for LookML dashboards. For information about data agents on user-defined dashboards, see the [Query a user-defined dashboard with a dashboard agent](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-dashboards) documentation page. For information about Explore data agents, see the [Create and manage Explore data agents](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents) documentation page.
 
@@ -55,13 +43,7 @@ This page covers the following topics:
 
 ## Before you begin
 
-Before you can configure or use LookML dashboard agents, ensure that the following requirements are met:
-
-  * **Instance requirements** : A Looker admin must enable **Conversational Analytics** on the **Gemini in Looker** admin page. The admin must also turn on the **Enable Trusted Tester Features** and the **Enabled Dashboard Agents** settings. [Advanced Analytics](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-advanced-analytics) for dashboard agents, the **Advanced Analytics** admin setting must also be enabled. This setting doesn't apply to LookML dashboard agents in Looker 26.14.
-  * **Permissions for developers** : To create, edit, or configure LookML dashboard agents and dashboards, you must have a Looker role with the [`develop`](https://docs.cloud.google.com/looker/docs/admin-panel-users-roles#develop) and [`see_lookml_dashboards`](https://docs.cloud.google.com/looker/docs/admin-panel-users-roles#see_lookml_dashboards) permissions, as well as access to the [LookML models](https://docs.cloud.google.com/looker/docs/admin-panel-users-roles#model_sets) that underlie the dashboard.
-  * **Permissions for viewers** : To chat with a LookML dashboard agent, users must have the [`see_lookml_dashboards`](https://docs.cloud.google.com/looker/docs/admin-panel-users-roles#see_lookml_dashboards) permission and access to the LookML models that underlie the dashboard tiles.
-
-
+Before you can use Conversational Analytics to engage with your dashboard data, make sure that the [setup and requirements for your Looker instance](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-setup#setup-and-requirements) have been satisfied and that you have been granted the [appropriate permissions](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-setup#required-permissions) to perform the tasks that are described on this page.
 
 ## Define a dashboard agent in LookML
 
@@ -143,7 +125,7 @@ To attach a dashboard agent to a LookML dashboard, configure the dashboard-level
 The following dashboard parameters control agent behavior for LookML dashboards:
 
   * **[`enabled_dashboard_agent`](https://docs.cloud.google.com/looker/docs/reference/param-lookml-dashboard#enabled_dashboard_agent)** : (Optional) Accepts `true` or `false`. Determines whether users can see the spark **Chat with this dashboard** icon and interact with the dashboard agent. If omitted, this parameter defaults to `true` at the API layer.
-  * **[`default_dashboard_agent`](https://docs.cloud.google.com/looker/docs/reference/param-lookml-dashboard#default_dashboard_agent)** : (Optional) Specifies the name of the LookML agent (defined with the [`agent`](https://docs.cloud.google.com/looker/docs/reference/param-agent) parameter) that serves as the default agent for the dashboard. 
+  * **[`default_dashboard_agent`](https://docs.cloud.google.com/looker/docs/reference/param-lookml-dashboard#default_dashboard_agent)** : (Optional) Specifies the name of the LookML agent (defined with the [`agent`](https://docs.cloud.google.com/looker/docs/reference/param-agent) parameter) that serves as the [default agent](https://docs.cloud.google.com/looker/docs/glossary#default-agent) for the dashboard. 
 
 
 
@@ -273,6 +255,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

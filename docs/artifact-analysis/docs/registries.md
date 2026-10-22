@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/registries/
 title: Registry integration \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:44:45.219564+00:00
+fetched_at: 2026-10-21T12:39:22.982682+00:00
 ---
 
 # Registry integration  |  Artifact Analysis  |  Google Cloud Documentation

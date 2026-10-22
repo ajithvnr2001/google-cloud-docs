@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/how-tos/mllp-adapter/
 title: Transmitting HL7v2 messages over TCP/IP connections \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:01:51.458182+00:00
+fetched_at: 2026-10-21T14:29:28.520576+00:00
 ---
 
 # Transmitting HL7v2 messages over TCP/IP connections  |  Cloud Healthcare API  |  Google Cloud Documentation

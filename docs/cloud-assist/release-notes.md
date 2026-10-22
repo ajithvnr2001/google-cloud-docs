@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/release-notes/
 title: Gemini Cloud Assist release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:22:39.208670+00:00
+fetched_at: 2026-10-21T14:43:06.957224+00:00
 ---
 
 # Gemini Cloud Assist release notes  |  Google Cloud Documentation

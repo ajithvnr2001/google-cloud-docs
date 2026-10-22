@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/release-notes/
 title: Bigtable release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:21:13.773241+00:00
+fetched_at: 2026-10-21T14:45:12.040074+00:00
 ---
 
 # Bigtable release notes  |  Google Cloud Documentation

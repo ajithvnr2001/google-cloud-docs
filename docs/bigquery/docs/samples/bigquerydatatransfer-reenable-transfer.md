@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerydatatransfer-reenable-transfer/
 title: Re-enable a transfer configuration \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:22:23.931285+00:00
+fetched_at: 2026-10-22T05:46:02.592293+00:00
 ---
 
 # Re-enable a transfer configuration  |  BigQuery  |  Google Cloud Documentation

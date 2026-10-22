@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/flags/flags-gradual-rollout/
 title: Use gradual feature rollouts \u00a0|\u00a0 App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:10:24.526327+00:00
+fetched_at: 2026-10-21T12:31:01.215282+00:00
 ---
 
 # Use gradual feature rollouts  |  App Lifecycle Manager  |  Google Cloud Documentation

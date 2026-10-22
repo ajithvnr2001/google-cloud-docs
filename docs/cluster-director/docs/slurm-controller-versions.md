@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-director/docs/slurm-controller-versions/
 title: Slurm controller versions in Cluster Director \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:52.973532+00:00
+fetched_at: 2026-10-21T14:41:58.975963+00:00
 ---
 
 # Slurm controller versions in Cluster Director  |  Google Cloud Documentation

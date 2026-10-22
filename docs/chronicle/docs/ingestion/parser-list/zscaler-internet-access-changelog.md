@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/zscaler-internet-access-changelog/
 title: Change log for ZSCALER_INTERNET_ACCESS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:14:25.342414+00:00
+fetched_at: 2026-10-21T14:43:20.951386+00:00
 ---
 
 # Change log for ZSCALER_INTERNET_ACCESS  |  Google Security Operations  |  Google Cloud Documentation

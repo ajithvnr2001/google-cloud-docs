@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/plan-ip-architecture/
 title: IP address planning and architecture \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:49.501949+00:00
+fetched_at: 2026-10-21T13:00:21.341530+00:00
 ---
 
 # IP address planning and architecture  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

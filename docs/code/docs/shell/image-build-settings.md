@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/image-build-settings/
 title: Explore your build options with buildpacks, Jib, or Docker \u00a0|\u00a0 Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:16:48.004960+00:00
+fetched_at: 2026-10-21T14:21:17.506214+00:00
 ---
 
 # Explore your build options with buildpacks, Jib, or Docker  |  Cloud Code for Cloud Shell  |  Google Cloud Documentation

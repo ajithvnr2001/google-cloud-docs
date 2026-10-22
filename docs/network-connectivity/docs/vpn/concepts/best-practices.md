@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-connectivity/docs/vpn/concepts/best-practices/
 title: Best practices for Cloud VPN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:48.365296+00:00
+fetched_at: 2026-10-21T14:58:34.399712+00:00
 ---
 
 # Best practices for Cloud VPN  |  Google Cloud Documentation
@@ -40,6 +40,17 @@ For high availability and better SLA, use HA VPN with BGP. If your setup require
 
 For more information, see [types of VPN](https://docs.cloud.google.com/network-connectivity/docs/vpn/concepts/overview#vpn-types) in the Cloud VPN overview.
 
+### Configuring peer Cloud VPN gateway
+
+We recommend using the default values from the configuration templates provided by Google Cloud. These templates often specify shorter IKE lifetimes than the Google Cloud defaults to ensure maximum compatibility across third-party VPN vendors.
+
+To avoid connectivity drops or tunnel instability, don't change the generated lifetime values unless your third-party vendor explicitly recommends a different configuration.
+
+Best practice | Recommended action | Description  
+---|---|---  
+**SA lifetime alignment** | If you are configuring tunnels manually using the API, Google Cloud CLI, or Terraform, set **Phase 1** to `36000` seconds and **Phase 2** to `10800` seconds. For more information, see the [Supported IKE Ciphers table](https://docs.cloud.google.com/network-connectivity/docs/vpn/concepts/supported-ike-ciphers#ikev2-aead-ciphers). | Mismatched SA lifetimes cause intermittent connection drops and packet loss during key rotation.  
+**Template usage** | If you are using a [ downloadable peer template](https://docs.cloud.google.com/network-connectivity/docs/vpn/how-to/download-config) from the console, use the exact lifetime values defined in that template. | Downloaded templates are optimized for vendor-specific compatibility, but both endpoints must match.  
+  
 ### Choose the appropriate tunnel configuration
 
 Choose the appropriate tunnel configuration based on the number of HA VPN tunnels:
@@ -130,6 +141,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

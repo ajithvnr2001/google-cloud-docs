@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/tags-firewalls-overview/
 title: Secure tags for firewalls \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:40:26.691811+00:00
+fetched_at: 2026-10-21T12:55:35.628382+00:00
 ---
 
 # Secure tags for firewalls  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

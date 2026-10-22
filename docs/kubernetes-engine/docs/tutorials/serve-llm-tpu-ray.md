@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-llm-tpu-ray/
 title: Serve an LLM using TPUs on GKE with KubeRay \u00a0|\u00a0 GKE AI/ML \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:26:17.308934+00:00
+fetched_at: 2026-10-21T15:09:16.668268+00:00
 ---
 
 # Serve an LLM using TPUs on GKE with KubeRay  |  GKE AI/ML  |  Google Cloud Documentation

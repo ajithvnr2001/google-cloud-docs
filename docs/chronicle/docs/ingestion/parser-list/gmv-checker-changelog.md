@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/gmv-checker-changelog/
 title: Change log for GMV_CHECKER \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:16:18.686394+00:00
+fetched_at: 2026-10-21T14:51:56.743171+00:00
 ---
 
 # Change log for GMV_CHECKER  |  Google Security Operations  |  Google Cloud Documentation

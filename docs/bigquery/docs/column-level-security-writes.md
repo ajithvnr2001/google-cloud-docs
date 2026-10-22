@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/column-level-security-writes/
 title: Impact on writes from column-level access control \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:50:37.167884+00:00
+fetched_at: 2026-10-21T12:40:28.660101+00:00
 ---
 
 # Impact on writes from column-level access control  |  BigQuery  |  Google Cloud Documentation

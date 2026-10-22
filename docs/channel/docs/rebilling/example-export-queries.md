@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/channel/docs/rebilling/example-export-queries/
 title: BigQuery export query examples \u00a0|\u00a0 Channel Services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:34.554140+00:00
+fetched_at: 2026-10-21T14:25:32.436657+00:00
 ---
 
 # BigQuery export query examples  |  Channel Services  |  Google Cloud Documentation

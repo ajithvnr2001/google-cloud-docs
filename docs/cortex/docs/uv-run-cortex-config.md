@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/uv-run-cortex-config/
 title: CLI config \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:36:58.071455+00:00
+fetched_at: 2026-10-21T14:23:38.272171+00:00
 ---
 
 # CLI config  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

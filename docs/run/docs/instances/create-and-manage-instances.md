@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/instances/create-and-manage-instances/
 title: Create and manage Cloud Run instances \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:02:01.208613+00:00
+fetched_at: 2026-10-21T15:40:56.702444+00:00
 ---
 
 # Create and manage Cloud Run instances  |  Google Cloud Documentation
@@ -90,7 +90,7 @@ Replace the following:
 
   * `INSTANCE_NAME`: the name of the instance you are creating. The instance name must be unique within your project and region. You cannot create an instance with the same name as an existing Cloud Run instance or service.
   * `IMAGE_URL`: a reference to the container image, for example, `us-docker.pkg.dev/cloudrun/container/instances:latest`.
-  * `REGION`: the Google Cloud region where you are running your instance, for example `europe-west1`.
+  * `REGION`: the Google Cloud region where you are running your instance, for example `europe-west4`.
 
 
 
@@ -377,6 +377,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

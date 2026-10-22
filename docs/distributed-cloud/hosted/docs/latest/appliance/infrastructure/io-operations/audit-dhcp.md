@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/infrastructure/io-operations/audit-dhcp/
 title: Dynamic Host Configuration Protocol (DHCP) \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:50.484716+00:00
+fetched_at: 2026-10-21T12:59:50.341020+00:00
 ---
 
 # Dynamic Host Configuration Protocol (DHCP)  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

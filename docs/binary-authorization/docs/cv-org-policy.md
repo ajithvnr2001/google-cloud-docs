@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/cv-org-policy/
 title: Require continuous validation check-based platform policies for all GKE clusters \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:13.033036+00:00
+fetched_at: 2026-10-21T14:11:19.664711+00:00
 ---
 
 # Require continuous validation check-based platform policies for all GKE clusters  |  Binary Authorization  |  Google Cloud Documentation

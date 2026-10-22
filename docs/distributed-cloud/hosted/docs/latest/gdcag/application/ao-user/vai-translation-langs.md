@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vai-translation-langs/
 title: Supported languages for Vertex AI Translation \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:11:41.788730+00:00
+fetched_at: 2026-10-21T12:58:11.833682+00:00
 ---
 
 # Supported languages for Vertex AI Translation  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

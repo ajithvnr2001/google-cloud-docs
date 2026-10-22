@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/buildpacks/release-notes/
 title: Buildpacks release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:27:04.317946+00:00
+fetched_at: 2026-10-21T14:39:48.394720+00:00
 ---
 
 # Buildpacks release notes  |  Google Cloud Documentation

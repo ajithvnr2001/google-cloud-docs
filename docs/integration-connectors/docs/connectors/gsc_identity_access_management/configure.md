@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/gsc_identity_access_management/configure/
 title: Identity and Access Management \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:16.348162+00:00
+fetched_at: 2026-10-21T12:53:50.139810+00:00
 ---
 
 # Identity and Access Management  |  Integration Connectors  |  Google Cloud Documentation

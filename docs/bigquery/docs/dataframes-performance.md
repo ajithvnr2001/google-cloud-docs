@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/dataframes-performance/
 title: Optimize BigQuery DataFrames performance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:13.103216+00:00
+fetched_at: 2026-10-21T14:09:13.409544+00:00
 ---
 
 # Optimize BigQuery DataFrames performance  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/agent-desktop-general-desktop-settings/
 title: General desktop settings \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:29.954174+00:00
+fetched_at: 2026-10-21T14:21:31.397745+00:00
 ---
 
 # General desktop settings  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

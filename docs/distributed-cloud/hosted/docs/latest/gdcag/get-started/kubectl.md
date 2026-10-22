@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/get-started/kubectl/
 title: Install the kubectl CLI \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:36.525941+00:00
+fetched_at: 2026-10-21T12:58:11.060587+00:00
 ---
 
 # Install the kubectl CLI  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

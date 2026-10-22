@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/context-aware-analytics/
 title: Create context-aware analytics \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:08:00.297787+00:00
+fetched_at: 2026-10-21T12:37:52.027145+00:00
 ---
 
 # Create context-aware analytics  |  Google Security Operations  |  Google Cloud Documentation

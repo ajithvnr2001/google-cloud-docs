@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-add-column-load-append/
 title: Add a column using a load job \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:43.004072+00:00
+fetched_at: 2026-10-21T12:40:11.920386+00:00
 ---
 
 # Add a column using a load job  |  BigQuery  |  Google Cloud Documentation

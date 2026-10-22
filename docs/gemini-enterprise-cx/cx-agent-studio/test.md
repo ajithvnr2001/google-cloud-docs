@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/test/
 title: Test agents \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T10:02:15.064646+00:00
+fetched_at: 2026-10-21T12:55:04.646406+00:00
 ---
 
 # Test agents  |  CX Agent Studio  |  Google Cloud Documentation

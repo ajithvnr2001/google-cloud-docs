@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/search-ads-migration-guide/
 title: Search Ads 360 migration guide \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:51:25.352772+00:00
+fetched_at: 2026-10-21T12:36:20.123426+00:00
 ---
 
 # Search Ads 360 migration guide  |  BigQuery  |  Google Cloud Documentation

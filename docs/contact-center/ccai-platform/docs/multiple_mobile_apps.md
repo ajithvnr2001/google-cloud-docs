@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/multiple_mobile_apps/
 title: Multiple Mobile Apps (MMA) \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:27:15.977256+00:00
+fetched_at: 2026-10-21T12:29:31.554963+00:00
 ---
 
 # Multiple Mobile Apps (MMA)  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

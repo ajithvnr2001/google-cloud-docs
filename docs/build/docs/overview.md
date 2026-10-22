@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/overview/
 title: Overview of Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:29:36.009876+00:00
+fetched_at: 2026-10-21T14:18:49.084170+00:00
 ---
 
 # Overview of Cloud Build  |  Google Cloud Documentation

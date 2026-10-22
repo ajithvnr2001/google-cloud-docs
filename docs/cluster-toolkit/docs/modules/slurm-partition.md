@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/slurm-partition/
 title: Create a partition for a Slurm controller \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:40.311365+00:00
+fetched_at: 2026-10-21T14:46:13.093496+00:00
 ---
 
 # Create a partition for a Slurm controller  |  Cluster Toolkit  |  Google Cloud Documentation

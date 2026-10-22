@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/monitoring/custom-metrics/creating-metrics/
 title: Create user-defined metrics with the API \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:45:29.106162+00:00
+fetched_at: 2026-10-21T14:16:42.696831+00:00
 ---
 
 # Create user-defined metrics with the API  |  Cloud Monitoring  |  Google Cloud Documentation
@@ -23,7 +23,7 @@ Send feedback
 
 Creating user-defined metrics (also called _custom metrics_) with the Cloud Monitoring API lets you capture application-specific measurements and chart or alert on them just like built-in Cloud Monitoring metrics. Like built-in metrics, each user-defined metric combines data points, a metric type that defines what the points represent, and a monitored resource that identifies where the data originated.
 
-To instrument your application, we recommend that you use an open-source, vendor-neutral instrumentation framework, such as [OpenTelemetry](https://opentelemetry.io/), instead of vendor- and product-specific APIs or client libraries. For information about these frameworks, see [ Instrumentation and observability](https://docs.cloud.google.com/stackdriver/docs/instrumentation/overview) and [Choose an instrumentation approach](https://docs.cloud.google.com/stackdriver/docs/instrumentation/choose-approach).
+To instrument your application, we recommend that you use an open-source, vendor-neutral instrumentation framework, such as [OpenTelemetry](https://opentelemetry.io/), instead of vendor- and product-specific APIs or client libraries. For information about these frameworks, see [ Observability for application developers](https://docs.cloud.google.com/stackdriver/docs/opentelemetry/application-developers) and [Choose an instrumentation approach](https://docs.cloud.google.com/stackdriver/docs/instrumentation/choose-approach).
 
 You can't use the Monitoring API to create log-based metrics, which derive metric data from log entries. Instead, Cloud Logging creates the metric structures and sends the data to Cloud Monitoring for you; see [Create counter metrics](https://docs.cloud.google.com/logging/docs/logs-based-metrics/counter-metrics) and [Create distribution metrics](https://docs.cloud.google.com/logging/docs/logs-based-metrics/distribution-metrics). User-defined metrics are a chargeable feature of Cloud Monitoring; for pricing details, see the Cloud Monitoring sections of the [Google Cloud Observability pricing](https://cloud.google.com/products/observability/pricing) page.
 
@@ -428,13 +428,13 @@ To authenticate to Monitoring, set up Application Default Credentials. For more 
     # Example metric type
     # metric_type = "custom.googleapis.com/my_metric"
     
-    client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-dashboard-v1/latest/Google-Cloud-Monitoring.html).[metric_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
+    client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html).[metric_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
     project_name = client.project_path project: project_id
     
-    descriptor = Google::Api::[MetricDescriptor](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-logging-v2/latest/Google-Api-MetricDescriptor.html).new(
+    descriptor = Google::Api::[MetricDescriptor](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Api-MetricDescriptor.html).new(
       type:        metric_type,
-      metric_kind: Google::Api::[MetricDescriptor](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-logging-v2/latest/Google-Api-MetricDescriptor.html)::[MetricKind](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-logging-v2/latest/Google-Api-MetricDescriptor-MetricKind.html)::GAUGE,
-      value_type:  Google::Api::[MetricDescriptor](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-logging-v2/latest/Google-Api-MetricDescriptor.html)::[ValueType](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-logging-v2/latest/Google-Api-MetricDescriptor-ValueType.html)::DOUBLE,
+      metric_kind: Google::Api::[MetricDescriptor](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Api-MetricDescriptor.html)::[MetricKind](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Api-MetricDescriptor-MetricKind.html)::GAUGE,
+      value_type:  Google::Api::[MetricDescriptor](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Api-MetricDescriptor.html)::[ValueType](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Api-MetricDescriptor-ValueType.html)::DOUBLE,
       description: "This is a simple example of a custom metric."
     )
     
@@ -847,21 +847,21 @@ To authenticate to Monitoring, set up Application Default Credentials. For more 
     # Example metric type
     # metric_type = "custom.googleapis.com/my_metric"
     
-    client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-dashboard-v1/latest/Google-Cloud-Monitoring.html).[metric_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
+    client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html).[metric_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
     project_name = client.project_path project: project_id
     
-    series = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-dashboard-v1/latest/Google-Cloud-Monitoring.html)::[V3](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3.html)::TimeSeries.new
-    series.[metric](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3-TimeSeries.html) = Google::Api::[Metric](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-logging-v2/latest/Google-Api-Metric.html).new type: metric_type
+    series = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)::[V3](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3.html)::TimeSeries.new
+    series.[metric](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3-TimeSeries.html) = Google::Api::[Metric](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Api-Metric.html).new type: metric_type
     
-    resource = Google::Api::[MonitoredResource](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-dashboard-v1/latest/Google-Api-MonitoredResource.html).new type: "global"
+    resource = Google::Api::[MonitoredResource](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-service_usage-v1/latest/Google-Api-MonitoredResource.html).new type: "global"
     resource.labels["project_id"] = project_id
     series.[resource](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3-TimeSeries.html) = resource
     
-    point = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-dashboard-v1/latest/Google-Cloud-Monitoring.html)::[V3](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3.html)::Point.new
-    point.value = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-dashboard-v1/latest/Google-Cloud-Monitoring.html)::[V3](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3.html)::TypedValue.new double_value: 3.14
+    point = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)::[V3](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3.html)::Point.new
+    point.value = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)::[V3](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3.html)::TypedValue.new double_value: 3.14
     now = Time.now
-    end_time = Google::Protobuf::[Timestamp](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-binary_authorization-v1/latest/Google-Protobuf-Timestamp.html).new seconds: now.to_i, nanos: now.nsec
-    point.interval = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-dashboard-v1/latest/Google-Cloud-Monitoring.html)::[V3](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3.html)::TimeInterval.new end_time: end_time
+    end_time = Google::Protobuf::[Timestamp](https://docs.cloud.google.com/ruby/docs/reference/google-iam-credentials-v1/latest/Google-Protobuf-Timestamp.html).new seconds: now.to_i, nanos: now.nsec
+    point.interval = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)::[V3](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3.html)::TimeInterval.new end_time: end_time
     series.[points](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3-TimeSeries.html) << point
     
     client.create_time_series name: project_name, time_series: [series]
@@ -1048,7 +1048,7 @@ To authenticate to Monitoring, set up Application Default Credentials. For more 
     # Example metric type
     # metric_type = "custom.googleapis.com/my_metric"
     
-    client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-dashboard-v1/latest/Google-Cloud-Monitoring.html).[metric_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
+    client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html).[metric_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
     metric_name = client.[metric_descriptor_path](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3-MetricService-Paths.html) project:           project_id,
                                                 metric_descriptor: metric_type
     
@@ -1081,6 +1081,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recaptcha/docs/samples/recaptcha-enterprise-get-metrics-site-key/
 title: Get reCAPTCHA site key metrics \u00a0|\u00a0 Google Cloud Fraud Defense \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:21:15.058421+00:00
+fetched_at: 2026-10-21T14:58:00.676943+00:00
 ---
 
 # Get reCAPTCHA site key metrics  |  Google Cloud Fraud Defense  |  Google Cloud Documentation

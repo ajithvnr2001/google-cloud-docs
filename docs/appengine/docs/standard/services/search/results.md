@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/search/results/
 title: Handling search results \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:53.505313+00:00
+fetched_at: 2026-10-21T14:25:27.546960+00:00
 ---
 
 # Handling search results  |  App Engine standard environment  |  Google Cloud Documentation

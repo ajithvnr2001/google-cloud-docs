@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/docs/resources/
 title: Resources \u00a0|\u00a0 Eventarc \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:32.655010+00:00
+fetched_at: 2026-10-21T12:52:19.798024+00:00
 ---
 
 # Resources  |  Eventarc  |  Google Cloud Documentation

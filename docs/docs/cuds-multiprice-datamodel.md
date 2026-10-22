@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/cuds-multiprice-datamodel/
 title: Spend-based CUDs data model updates \u00a0|\u00a0 Get started \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:28.157970+00:00
+fetched_at: 2026-10-21T14:05:55.327694+00:00
 ---
 
 # Spend-based CUDs data model updates  |  Get started  |  Google Cloud Documentation

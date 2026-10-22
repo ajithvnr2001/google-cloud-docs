@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/workload-identity/
 title: About Workload Identity Federation for GKE \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:38:36.528450+00:00
+fetched_at: 2026-10-21T14:08:51.283362+00:00
 ---
 
 # About Workload Identity Federation for GKE  |  GKE security  |  Google Cloud Documentation
@@ -310,7 +310,7 @@ Entry | Description
 
   * The GKE metadata server uses memory resources proportional to the total number of Kubernetes service accounts in your cluster. If your cluster has more than 3000 Kubernetes service accounts, the kubelet might terminate the metadata server Pods. For mitigations, refer to [Troubleshooting](https://docs.cloud.google.com/kubernetes-engine/docs/troubleshooting/troubleshooting-security#metadata-server-crashes).
 
-  * Workload Identity Federation for GKE operates within a VPC Service Controls perimeter, allowing access to resources within it. However, [VPC Service Controls](https://docs.cloud.google.com/vpc-service-controls/docs/configure-identity-groups) does not enforce access control for cross-perimeter requests based on these federated identities. You can use [service account impersonation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#kubernetes-sa-to-iam) to access resources in a different perimeter.
+  * Workload Identity Federation for GKE operates within a VPC Service Controls perimeter, allowing access to resources within it. You can also configure Workload Identity Federation for GKE principals in [VPC Service Controls ingress and egress rules](https://docs.cloud.google.com/vpc-service-controls/docs/configure-identity-groups) ([Preview](https://cloud.google.com/products#product-launch-stages)) to allow cross-perimeter access without requiring intermediate IAM service account impersonation.
 
 
 
@@ -343,6 +343,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/samples/ecom-order-processing/
 title: E-commerce sample integration \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:00.023555+00:00
+fetched_at: 2026-10-21T14:26:04.537395+00:00
 ---
 
 # E-commerce sample integration  |  Application Integration  |  Google Cloud Documentation

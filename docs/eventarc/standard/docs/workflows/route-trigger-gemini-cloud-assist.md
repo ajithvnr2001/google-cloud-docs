@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/workflows/route-trigger-gemini-cloud-assist/
 title: Route Gemini Cloud Assist events to Workflows \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:49.592184+00:00
+fetched_at: 2026-10-21T12:46:38.089492+00:00
 ---
 
 # Route Gemini Cloud Assist events to Workflows  |  Eventarc Standard  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/how-install-agent-sandbox/
 title: Enable Agent Sandbox on GKE \u00a0|\u00a0 GKE AI/ML \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:26:15.448298+00:00
+fetched_at: 2026-10-21T14:37:28.459256+00:00
 ---
 
 # Enable Agent Sandbox on GKE  |  GKE AI/ML  |  Google Cloud Documentation
@@ -24,13 +24,13 @@ Send feedback
 
 [ Autopilot ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview) [ Standard ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode)
 
-This document explains how to enable the Agent Sandbox feature in a Google Kubernetes Engine (GKE) cluster. It also explains how to create a sandboxed environment on the cluster to safely execute untrusted code.
+This document explains how to enable Agent Sandbox on Google Kubernetes Engine (GKE) in a cluster. It also explains how to create a sandboxed environment on the cluster to safely execute untrusted code.
 
-For an overview of how the Agent Sandbox feature isolates untrusted AI-generated code, see [About GKE Agent Sandbox](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox).
+For an overview of how Agent Sandbox on GKE isolates untrusted AI-generated code, see [About Agent Sandbox on GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox).
 
 ## Costs
 
-Agent Sandbox is offered at no extra charge in GKE. [GKE pricing](https://cloud.google.com/kubernetes-engine/pricing) applies to the resources that you create.
+Agent Sandbox on GKE is offered at no extra charge. [GKE pricing](https://cloud.google.com/kubernetes-engine/pricing) applies to the resources that you create.
 
 To avoid unnecessary charges, ensure that you disable GKE or delete the project after you have completed this document.
 
@@ -88,17 +88,17 @@ Here's an explanation of these environment variables:
 
 
 
-## Enable Agent Sandbox
+## Enable Agent Sandbox on GKE
 
-You can enable the Agent Sandbox feature when you create a new cluster, or when updating an existing cluster.
+You can enable Agent Sandbox on GKE when you create a new cluster, or when updating an existing cluster.
 
-### Enable Agent Sandbox when creating a new GKE cluster
+### Enable Agent Sandbox on GKE when creating a new cluster
 
 We recommend that you use a Autopilot cluster for a fully managed Kubernetes experience. To choose the GKE mode of operation that's the best fit for your workloads, see [Choose a GKE mode of operation](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode).
 
 ### Autopilot
 
-To create a new GKE Autopilot cluster with Agent Sandbox enabled, include the `--enable-agent-sandbox` flag:
+To create a new GKE Autopilot cluster with Agent Sandbox on GKE enabled, include the `--enable-agent-sandbox` flag:
     
     
     gcloud beta container clusters create-auto ${CLUSTER_NAME} \
@@ -111,7 +111,7 @@ For an Autopilot cluster, ensure that the `LOCATION` environment variable is set
 
 ### Standard
 
-To create a new GKE Standard cluster with Agent Sandbox enabled, you must create the cluster, add a node pool with gVisor enabled, and then enable the Agent Sandbox feature. To save costs, we recommend creating a zonal cluster with a single node per pool:
+To create a new GKE Standard cluster with Agent Sandbox on GKE enabled, you must create the cluster, add a node pool with gVisor enabled, and then enable Agent Sandbox on GKE. To save costs, we recommend creating a zonal cluster with a single node per pool:
 
   1. Create the cluster:
          
@@ -136,7 +136,7 @@ For this Standard cluster, ensure that the `LOCATION` environment variable is se
 
 The `LOCATION` must be the same zone you used when creating the cluster.
 
-  3. Update the cluster to enable the Agent Sandbox feature:
+  3. Update the cluster to enable Agent Sandbox on GKE:
          
          gcloud beta container clusters update ${CLUSTER_NAME} \
              --location=${LOCATION} \
@@ -146,13 +146,13 @@ The `LOCATION` must be the same zone you used when creating the cluster.
 
 
 
-### Enable Agent Sandbox when updating an existing GKE cluster
+### Enable Agent Sandbox on GKE when updating an existing cluster
 
-To enable Agent Sandbox on an existing cluster, the cluster must be running version 1.36.3-gke.1767000 or later, which supports the `v1beta1` API.
+To enable Agent Sandbox on GKE in an existing cluster, the cluster must be running version 1.36.3-gke.1767000 or later, which supports the `v1beta1` API.
 
 Ensure that your `LOCATION` environment variable is set to the region or zone where your existing cluster is located.
 
-  1. If you are using a GKE Standard cluster, Agent Sandbox relies on gVisor. If your Standard cluster doesn't have a gVisor-enabled node pool, you must create one first:
+  1. If you are using a GKE Standard cluster, Agent Sandbox on GKE relies on gVisor. If your Standard cluster doesn't have a gVisor-enabled node pool, you must create one first:
          
          gcloud container node-pools create ${NODE_POOL_NAME} \
              --cluster=${CLUSTER_NAME} \
@@ -162,7 +162,7 @@ Ensure that your `LOCATION` environment variable is set to the region or zone wh
              --sandbox=type=gvisor
          
 
-  2. Update the cluster to enable the Agent Sandbox feature:
+  2. Update the cluster to enable Agent Sandbox on GKE:
          
          gcloud beta container clusters update ${CLUSTER_NAME} \
              --location=${LOCATION} \
@@ -174,7 +174,7 @@ Ensure that your `LOCATION` environment variable is set to the region or zone wh
 
 ## Verify the configuration
 
-You can verify whether the Agent Sandbox feature is enabled by inspecting the cluster description.
+You can verify whether Agent Sandbox on GKE is enabled by inspecting the cluster description.
     
     
     gcloud beta container clusters describe ${CLUSTER_NAME} \
@@ -186,7 +186,7 @@ If you created an Autopilot cluster, the location is the region (for example, `u
 
 If the feature is successfully enabled, the command returns `True`.
 
-## Agent Sandbox deployment requirements
+## Agent Sandbox on GKE deployment requirements
 
 To successfully deploy a workload, such as a `Sandbox` or `SandboxTemplate`, your YAML manifest must include specific security and configuration settings. GKE enforces these requirements using a Validating Admission Policy (VAP). If these requirements are not met, the admission controller rejects the deployment.
 
@@ -391,11 +391,11 @@ To deploy a sandboxed environment by creating a Sandbox directly, complete the f
 
 
 
-## Migrate Agent Sandbox from `v1alpha1` to `v1beta1`
+## Migrate Agent Sandbox on GKE from `v1alpha1` to `v1beta1`
 
-If your cluster was deployed with an earlier version of Agent Sandbox by using `v1alpha1` custom resources, you can upgrade to GKE version 1.36.3-gke.1767000 or later with _near-zero workload downtime_.
+If your cluster was deployed with an earlier version of Agent Sandbox on GKE by using `v1alpha1` custom resources, you can upgrade to GKE version 1.36.3-gke.1767000 or later with _near-zero workload downtime_.
 
-> **Note:** This migration procedure applies to clusters using the managed GKE Agent Sandbox feature (`--enable-agent-sandbox`). If you deployed Agent Sandbox using open-source manifests, refer to the [upstream migration guide](https://github.com/kubernetes-sigs/agent-sandbox/blob/v0.5.6/docs/api-migration-guide.md).
+> **Note:** This migration procedure applies to clusters using the managed Agent Sandbox on GKE feature (`--enable-agent-sandbox`). If you deployed Agent Sandbox using open-source manifests, refer to the [upstream migration guide](https://github.com/kubernetes-sigs/agent-sandbox/blob/v0.5.6/docs/api-migration-guide.md).
 
 ### Main API differences between `v1alpha1` and `v1beta1`
 
@@ -425,14 +425,14 @@ To migrate an existing cluster with near-zero workload downtime, complete the fo
 
 > **Important:** The bootstrap phase _must_ be executed while the cluster is running `v1alpha1`. You can't run the bootstrap phase after upgrading because the `v1beta1` API schema will no longer expose the previous `spec.sandboxTemplateRef` on claims.
 
-  1. **Back up existing resources:** Save a YAML backup of your declarative Agent Sandbox resources (`sandboxtemplates`, `sandboxwarmpools`, and `sandboxclaims`):
+  1. **Back up existing resources:** Save a YAML backup of your declarative Agent Sandbox on GKE resources (`sandboxtemplates`, `sandboxwarmpools`, and `sandboxclaims`):
          
          kubectl get sandboxtemplates,sandboxwarmpools,sandboxclaims \
              --all-namespaces -o yaml > agent-sandbox-v1alpha1-backup.yaml
          
 
 **Note:** This command excludes `Sandbox` objects managed by a `SandboxClaim` or `SandboxWarmPool` because the controller dynamically recreates them when claims and warm pools are restored. If you created standalone `Sandbox` resources directly without a claim or warm pool, include `sandboxes` in your backup (or back them up separately) so they are not lost on restore.
-  2. Verify template security compliance: ensure that existing `SandboxTemplate` resources meet the Agent Sandbox deployment requirements. During the storage migration in Phase 3, the admission controller rejects updates to any templates that do not comply with these security policies.
+  2. Verify template security compliance: ensure that existing `SandboxTemplate` resources meet the Agent Sandbox on GKE deployment requirements. During the storage migration in Phase 3, the admission controller rejects updates to any templates that do not comply with these security policies.
 
   3. Preview the shadow pools to be created:
          
@@ -534,16 +534,16 @@ If you encounter issues after upgrading the control plane or running the storage
 
     * If a claim named a specific warm pool that no longer exists, create the missing `SandboxWarmPool` resource with that name, or update `spec.warmPoolRef.name` on the claim to reference an existing warm pool.
 
-  * **Claim condition`Ready=False`:** Run `kubectl describe sandboxclaim` to inspect the events on the claim. Ensure that the referenced `SandboxTemplate` meets all Agent Sandbox deployment requirements, and re-apply the template if needed.
+  * **Claim condition`Ready=False`:** Run `kubectl describe sandboxclaim` to inspect the events on the claim. Ensure that the referenced `SandboxTemplate` meets all Agent Sandbox on GKE deployment requirements, and re-apply the template if needed.
 
   * **Conversion or controller errors:** Verify that the control plane leader election lease is active by running `kubectl get leases -n gke-managed-agentsandbox`. If issues persist, contact [Cloud Customer Care](https://docs.cloud.google.com/support).
 
 
 
 
-## Disable Agent Sandbox
+## Disable Agent Sandbox on GKE
 
-To disable the Agent Sandbox feature, use the `gcloud beta container clusters update` command with the `--no-enable-agent-sandbox` flag.
+To disable Agent Sandbox on GKE, use the `gcloud beta container clusters update` command with the `--no-enable-agent-sandbox` flag.
     
     
     gcloud beta container clusters update ${CLUSTER_NAME} \
@@ -567,11 +567,11 @@ If you created an Autopilot cluster, the location is the region (for example, `u
 
 ## What's next
 
-  * Learn how to [save and restore Agent Sandbox environments with Pod snapshots](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-pod-snapshots).
-  * Learn about the underlying technology used by [Agent Sandbox](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/sandbox-pods).
+  * Learn how to [save and restore Agent Sandbox on GKE environments with Pod snapshots](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-pod-snapshots).
+  * Learn about the underlying technology used by [Agent Sandbox on GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/sandbox-pods).
   * Learn more about [GKE security](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/security-overview).
   * Explore the [Agent Sandbox open-source project](https://github.com/kubernetes-sigs/agent-sandbox) on GitHub.
-  * Learn how to use open source [Kata Containers with Agent Sandbox](https://github.com/kubernetes-sigs/agent-sandbox/tree/main/examples/kata-gke-sandbox). Kata Containers isn't a Google Cloud product. If you install and use this software, then you're responsible for management and troubleshooting. Google's support and SLAs don't apply to Kata Containers.
+  * Learn how to use open source [Kata Containers with Agent Sandbox on GKE](https://github.com/kubernetes-sigs/agent-sandbox/tree/main/examples/kata-gke-sandbox). Kata Containers isn't a Google Cloud product. If you install and use this software, then you're responsible for management and troubleshooting. Google's support and SLAs don't apply to Kata Containers.
 
 
 
@@ -579,6 +579,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

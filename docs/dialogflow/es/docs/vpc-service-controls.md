@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/vpc-service-controls/
 title: Using VPC Service Controls \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:45:46.927987+00:00
+fetched_at: 2026-10-21T12:44:48.273241+00:00
 ---
 
 # Using VPC Service Controls  |  Dialogflow ES  |  Google Cloud Documentation

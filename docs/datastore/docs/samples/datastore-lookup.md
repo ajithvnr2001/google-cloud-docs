@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/samples/datastore-lookup/
 title: Lookup \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:27.899740+00:00
+fetched_at: 2026-10-22T05:42:09.871801+00:00
 ---
 
 # Lookup  |  Firestore in Datastore mode  |  Google Cloud Documentation

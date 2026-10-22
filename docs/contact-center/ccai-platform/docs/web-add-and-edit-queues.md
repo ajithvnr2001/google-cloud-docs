@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/web-add-and-edit-queues/
 title: Web: Add and edit queues \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:05.487187+00:00
+fetched_at: 2026-10-21T14:19:32.611815+00:00
 ---
 
 # Web: Add and edit queues  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

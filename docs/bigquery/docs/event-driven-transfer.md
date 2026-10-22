@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/event-driven-transfer/
 title: Event-Driven Transfers \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:54.181552+00:00
+fetched_at: 2026-10-21T15:41:29.628704+00:00
 ---
 
 # Event-Driven Transfers  |  BigQuery  |  Google Cloud Documentation
@@ -21,11 +21,7 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Event-Driven Transfers
 
-You can use the BigQuery Data Transfer Service to create event-driven transfers that automatically loads data based on event notifications. We recommend using event-driven transfers if you require incremental data ingestion that optimizes cost efficiency.
-
-When you set up event-driven transfers, there can be a delay of a few minutes between each data transfer. If you require immediate data availability, we recommend using the [Storage Write API](https://docs.cloud.google.com/bigquery/docs/write-api) that streams data directly into BigQuery with the lowest possible latency. The Storage Write API provides real-time updates for the most demanding use cases.
-
-When choosing between the two, consider whether you need to prioritize cost-effective incremental batch ingestion with event-driven transfers, or whether you prefer the flexibility of the Storage Write API.
+Event-driven transfers in the BigQuery Data Transfer Service let you automatically load data into BigQuery in response to event notifications. You can use this approach for cost-effective, incremental batch ingestion when your workload can tolerate a delay of a few minutes between transfer runs. If you require real-time data availability with lower latency, use the [Storage Write API](https://docs.cloud.google.com/bigquery/docs/write-api) to stream data directly into BigQuery.
 
 ## Data sources with event-driven transfers support
 
@@ -212,6 +208,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

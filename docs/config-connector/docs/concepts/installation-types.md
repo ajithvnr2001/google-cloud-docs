@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/concepts/installation-types/
 title: Choosing an installation type \u00a0|\u00a0 Config Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:46:18.121996+00:00
+fetched_at: 2026-10-21T14:24:47.188612+00:00
 ---
 
 # Choosing an installation type  |  Config Connector  |  Google Cloud Documentation

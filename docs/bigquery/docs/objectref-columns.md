@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/objectref-columns/
 title: Specify ObjectRef columns in table schemas \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:42.455481+00:00
+fetched_at: 2026-10-21T14:19:12.349614+00:00
 ---
 
 # Specify ObjectRef columns in table schemas  |  BigQuery  |  Google Cloud Documentation

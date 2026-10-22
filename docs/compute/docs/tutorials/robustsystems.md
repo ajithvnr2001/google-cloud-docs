@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/tutorials/robustsystems/
 title: Designing resilient systems \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:43.231851+00:00
+fetched_at: 2026-10-21T14:08:56.451432+00:00
 ---
 
 # Designing resilient systems  |  Compute Engine  |  Google Cloud Documentation

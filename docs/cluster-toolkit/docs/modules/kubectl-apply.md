@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/kubectl-apply/
 title: Apply Kubernetes manifests \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:43.666318+00:00
+fetched_at: 2026-10-21T14:42:17.923354+00:00
 ---
 
 # Apply Kubernetes manifests  |  Cluster Toolkit  |  Google Cloud Documentation

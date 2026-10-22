@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-create-unwrapped-push-subscription/
 title: v1 Create a push subscription with payload unwrapping enabled (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T14:59:49.617241+00:00
+fetched_at: 2026-10-21T14:58:59.474511+00:00
 ---
 
 # v1 Create a push subscription with payload unwrapping enabled (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

@@ -1,21 +1,21 @@
 ---
 url: https://docs.cloud.google.com/alloydb/omni/linux/current/docs/quickstart-linux/
-title: Install AlloyDB Omni using RPM \u00a0|\u00a0 AlloyDB Omni using RPM: Current (18.3.0) \u00a0|\u00a0 Google Cloud Documentation
+title: Install AlloyDB Omni using RPM \u00a0|\u00a0 AlloyDB Omni using RPM: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:54:30.886715+00:00
+fetched_at: 2026-10-21T14:55:20.547432+00:00
 ---
 
-# Install AlloyDB Omni using RPM  |  AlloyDB Omni using RPM: Current (18.3.0)  |  Google Cloud Documentation
+# Install AlloyDB Omni using RPM  |  AlloyDB Omni using RPM: Current (18.4.0)  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/alloydb/omni/linux/current/docs/quickstart-linux/
 
-This page documents AlloyDB Omni version **18.3.0** using the **RPM** deployment option. [Choose a different deployment option](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment). 
+This page documents AlloyDB Omni version **18.4.0** using the **RPM** deployment option. [Choose a different deployment option](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment). 
 
   * [ Home ](https://docs.cloud.google.com/)
   * [ Documentation ](https://docs.cloud.google.com/docs)
   * [ Databases ](https://docs.cloud.google.com/docs/databases)
   * [ AlloyDB Omni ](https://docs.cloud.google.com/alloydb/omni/docs)
-  * [ RPM: Current (18.3.0) ](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/overview)
+  * [ RPM: Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/overview)
 
 
 
@@ -23,14 +23,15 @@ Send feedback
 
 #  Install AlloyDB Omni using RPM Stay organized with collections  Save and categorize content based on your preferences. 
 
-Select a documentation version: 18.3.0keyboard_arrow_down
+Select a documentation version: 18.4.0keyboard_arrow_down
 
-  * [ Current (18.3.0) ](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/quickstart-linux)
+  * [ Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/quickstart-linux)
+  * [ 18.4.0 ](https://docs.cloud.google.com/alloydb/omni/linux/18.4.0/docs/quickstart-linux)
   * [ 18.3.0 ](https://docs.cloud.google.com/alloydb/omni/linux/18.3.0/docs/quickstart-linux)
 
 This quickstart shows you how to use the RPM package to install AlloyDB Omni on a Linux machine or bare metal server that supports RHEL 9. 
 
-For an overview of AlloyDB Omni, see [AlloyDB Omni overview](https://docs.cloud.google.com/alloydb/omni/linux/18-next/docs/overview).
+For an overview of AlloyDB Omni, see [AlloyDB Omni overview](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/overview).
 
 ## Before you begin
 
@@ -38,7 +39,7 @@ Before you install AlloyDB Omni, make sure that you meet the following requireme
 
 ### Choose a download or installation option
 
-AlloyDB Omni can be downloaded and installed using a YUM repository for RHEL environments. See [Available download and installation options](https://docs.cloud.google.com/alloydb/omni/linux/18-next/docs/available-download-install-options).
+AlloyDB Omni can be downloaded and installed using a YUM repository for RHEL environments. See [Available download and installation options](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/available-download-install-options).
 
 ### Fulfill hardware and software requirements
 
@@ -156,9 +157,9 @@ To uninstall the AlloyDB Omni package and clean up the service you created durin
 
 ## What's next
 
-  * [Run and connect to AlloyDB Omni](https://docs.cloud.google.com/alloydb/omni/linux/18-next/docs/run-connect)
-  * [Customize your AlloyDB Omni installation](https://docs.cloud.google.com/alloydb/omni/linux/18-next/docs/install)
-  * [Set up your AlloyDB Omni for production](https://docs.cloud.google.com/alloydb/omni/linux/18-next/docs/configure-omni)
+  * [Run and connect to AlloyDB Omni](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/run-connect)
+  * [Install AlloyDB Omni using RPM](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/deploy-vm)
+  * [Run AlloyDB Omni in production](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/run-alloydb-omni-production)
 
 
 
@@ -166,6 +167,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

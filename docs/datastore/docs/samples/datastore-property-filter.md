@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/samples/datastore-property-filter/
 title: Property filter \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:29.009486+00:00
+fetched_at: 2026-10-22T05:42:08.978627+00:00
 ---
 
 # Property filter  |  Firestore in Datastore mode  |  Google Cloud Documentation

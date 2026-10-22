@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-security-integration/docs/in-band/configure-intercept-endpoint-groups/
 title: Create and manage intercept endpoint groups \u00a0|\u00a0 Network Security Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:23.912894+00:00
+fetched_at: 2026-10-21T15:15:30.264834+00:00
 ---
 
 # Create and manage intercept endpoint groups  |  Network Security Integration  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/docs/migrating/
 title: Migrate to Cloud DNS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:57.937691+00:00
+fetched_at: 2026-10-21T14:07:10.337881+00:00
 ---
 
 # Migrate to Cloud DNS  |  Google Cloud Documentation

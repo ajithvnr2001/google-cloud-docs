@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/elb-service/
 title: Configure external load balancers \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:03:58.315526+00:00
+fetched_at: 2026-10-21T13:32:52.591511+00:00
 ---
 
 # Configure external load balancers  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

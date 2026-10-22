@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/advanced/rebranding/
 title: Rebrand your platform \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:41:19.139249+00:00
+fetched_at: 2026-10-21T14:23:48.092770+00:00
 ---
 
 # Rebrand your platform  |  Google Security Operations  |  Google Cloud Documentation

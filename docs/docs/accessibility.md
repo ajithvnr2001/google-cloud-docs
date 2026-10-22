@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/accessibility/
 title: Google Cloud accessibility \u00a0|\u00a0 Accessibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:27.584860+00:00
+fetched_at: 2026-10-21T14:06:01.338061+00:00
 ---
 
 # Google Cloud accessibility  |  Accessibility  |  Google Cloud Documentation

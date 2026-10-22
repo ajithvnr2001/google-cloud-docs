@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/call-adapter-in-call/
 title: In-call interface \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:35.512649+00:00
+fetched_at: 2026-10-21T14:10:24.258392+00:00
 ---
 
 # In-call interface  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

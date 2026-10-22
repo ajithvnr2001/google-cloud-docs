@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/multi-zone/data-protection/
 title: Data protection with multi-zone storage \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:35.344831+00:00
+fetched_at: 2026-10-21T12:58:47.386573+00:00
 ---
 
 # Data protection with multi-zone storage  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

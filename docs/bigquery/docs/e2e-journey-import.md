@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/e2e-journey-import/
 title: End-to-end user journeys for imported models \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:16:17.165834+00:00
+fetched_at: 2026-10-21T14:07:53.730767+00:00
 ---
 
 # End-to-end user journeys for imported models  |  BigQuery  |  Google Cloud Documentation

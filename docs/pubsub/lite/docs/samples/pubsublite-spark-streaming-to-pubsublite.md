@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/lite/docs/samples/pubsublite-spark-streaming-to-pubsublite/
 title: Write to Pub/Sub Lite from Spark (streaming) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:45:46.521645+00:00
+fetched_at: 2026-10-21T15:15:07.409282+00:00
 ---
 
 # Write to Pub/Sub Lite from Spark (streaming)  |  Google Cloud Documentation

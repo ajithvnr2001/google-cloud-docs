@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-regional-disk-resize/
 title: Resize a regional persistent disk \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:25.495608+00:00
+fetched_at: 2026-10-22T05:47:50.075890+00:00
 ---
 
 # Resize a regional persistent disk  |  Compute Engine  |  Google Cloud Documentation

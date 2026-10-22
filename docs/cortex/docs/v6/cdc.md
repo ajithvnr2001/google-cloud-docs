@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/cdc/
 title: Change Data Capture (CDC) ingestion processing \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:12:23.804904+00:00
+fetched_at: 2026-10-21T14:23:52.119263+00:00
 ---
 
 # Change Data Capture (CDC) ingestion processing  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

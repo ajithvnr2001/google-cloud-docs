@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/metadata-management-overview/
 title: Metadata management overview \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:44:44.307697+00:00
+fetched_at: 2026-10-21T12:40:27.754429+00:00
 ---
 
 # Metadata management overview  |  Artifact Analysis  |  Google Cloud Documentation

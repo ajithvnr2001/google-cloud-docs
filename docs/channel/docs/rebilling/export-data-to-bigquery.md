@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/channel/docs/rebilling/export-data-to-bigquery/
 title: Export Channel Services data to BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:37:45.266996+00:00
+fetched_at: 2026-10-21T14:25:55.036467+00:00
 ---
 
 # Export Channel Services data to BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/troubleshoot-kubernetes-operator/
 title: Troubleshoot the AlloyDB Omni Kubernetes operator \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 18.1.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:27:48.857466+00:00
+fetched_at: 2026-10-21T15:19:53.098107+00:00
 ---
 
 # Troubleshoot the AlloyDB Omni Kubernetes operator  |  AlloyDB Omni using the container orchestrator: 18.1.0  |  Google Cloud Documentation
@@ -25,17 +25,21 @@ Send feedback
 
 Select a documentation version: 18.1.0keyboard_arrow_down
 
-  * [ Current (18.3.0) ](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/troubleshoot-kubernetes-operator)
+  * [ Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/troubleshoot-kubernetes-operator)
+  * [ 18.4.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.4.0/docs/troubleshoot-kubernetes-operator)
   * [ 18.3.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/troubleshoot-kubernetes-operator)
   * [ 18.1.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/troubleshoot-kubernetes-operator)
+  * [ 17.10.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.10.0/docs/troubleshoot-kubernetes-operator)
   * [ 17.9.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.9.0/docs/troubleshoot-kubernetes-operator)
   * [ 17.7.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.7.0/docs/troubleshoot-kubernetes-operator)
   * [ 17.5.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.5.0/docs/troubleshoot-kubernetes-operator)
+  * [ 16.14.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.14.0/docs/troubleshoot-kubernetes-operator)
   * [ 16.13.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.13.0/docs/troubleshoot-kubernetes-operator)
   * [ 16.11.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.11.0/docs/troubleshoot-kubernetes-operator)
   * [ 16.9.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.9.0/docs/troubleshoot-kubernetes-operator)
   * [ 16.8.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.8.0/docs/troubleshoot-kubernetes-operator)
   * [ 16.3.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.3.0/docs/troubleshoot-kubernetes-operator)
+  * [ 15.18.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/15.18.0/docs/troubleshoot-kubernetes-operator)
   * [ 15.17.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/15.17.0/docs/troubleshoot-kubernetes-operator)
   * [ 15.15.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/15.15.0/docs/troubleshoot-kubernetes-operator)
   * [ 15.13.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/15.13.0/docs/troubleshoot-kubernetes-operator)
@@ -208,6 +212,65 @@ If the error message refers to the database pod, check the instances and pod res
     kubectl get instances.alloydbomni.internal.dbadmin.goog -l alloydbomni.internal.dbadmin.goog/dbcluster=DB_CLUSTER_NAME -n DB_CLUSTER_NAMESPACE -o yaml > instance_DB_CLUSTER_NAME.yaml
     kubectl get pods -l alloydbomni.internal.dbadmin.goog/dbcluster=DB_CLUSTER_NAME,alloydbomni.internal.dbadmin.goog/task-type=database -n DB_CLUSTER_NAMESPACE
     
+
+## Resolve certificate issuance failures in cert-manager
+
+The AlloyDB Omni operator uses cert-manager to provision Transport Layer Security (TLS) certificates for the operator and database clusters. In `cert-manager` version 1.21.2 and earlier, a known race condition ([cert-manager issue #6331](https://github.com/cert-manager/cert-manager/issues/6331)) might cause certificate issuance to fail and enter a one-hour retry backoff.
+
+### Symptoms
+
+When this issue occurs, you might observe the following symptoms:
+
+  * A `DBCluster` resource stays in the `DBClusterWaitingForCertificate` phase, and database cluster creation or upgrade times out.
+  * A Helm installation of the AlloyDB Omni operator fails because a `Certificate` resource, such as `local-serving-cert` in the `alloydb-omni-system` namespace, isn't ready.
+  * The status conditions of a `Certificate` resource include the `CSR not signed by referenced private key` message with the `Failed` or `ErrorKeyMatch` reason.
+
+
+
+To find the `Certificate` resources that this issue affects, run the following command:
+    
+    
+    kubectl get certificates.cert-manager.io --all-namespaces \
+        -o jsonpath='{range .items[*]}{.metadata.namespace}{"\t"}{.metadata.name}{"\t"}{.status.conditions[*].message}{"\n"}{end}' \
+        | grep "CSR not signed by referenced private key"
+    
+
+The output lists the namespace, the name, and the status condition messages of each affected `Certificate` resource. If you view an affected `Certificate` resource in YAML format, its `status` field is similar to the following:
+    
+    
+    status:
+      conditions:
+      - message: 'The certificate request has failed to complete and will be retried: Error generating certificate template: CSR not signed by referenced private key'
+        reason: Failed
+        status: "False"
+        type: Issuing
+      failedIssuanceAttempts: 1
+    
+
+### Workaround
+
+To prevent controller update conflicts and reduce the retry delay for failed certificate requests from one hour to 15 seconds, upgrade `cert-manager` with the `ServerSideApply` feature gate and reduced backoff durations:
+    
+    
+    helm upgrade cert-manager oci://quay.io/jetstack/charts/cert-manager \
+        --version CERT_MANAGER_VERSION \
+        --namespace cert-manager \
+        --reuse-values \
+        --set featureGates="ServerSideApply=true" \
+        --set "extraArgs={--certificate-request-minimum-backoff-duration=15s,--certificate-request-maximum-backoff-duration=5m}"
+    
+
+Replace `CERT_MANAGER_VERSION` with the version of cert-manager that's installed in your Kubernetes cluster—for example, `v1.21.2`. To find the installed version, run the `helm list --namespace cert-manager` command. For example, `v1.12.2`.
+
+**Note:** Passing the `--set` flags for the `featureGates` and `extraArgs` keys. replaces their existing values on the Helm release, even when you include the `--reuse-values` flag. If your `cert-manager` release already configures other feature gates or extra arguments, include them in the comma-separated lists. For GKE Autopilot clusters, also include the `--set global.leaderElection.namespace=cert-manager` flag.
+
+After the cert-manager controller restarts, verify that all certificates show `True` in the `READY` column:
+    
+    
+    kubectl get certificates.cert-manager.io --all-namespaces
+    
+
+If an installation of the AlloyDB Omni operator failed because of this issue, run the installation again.
 
 ## Debug memory issues
 

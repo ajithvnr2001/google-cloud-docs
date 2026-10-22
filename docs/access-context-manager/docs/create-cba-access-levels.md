@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/create-cba-access-levels/
 title: Create access levels for certificate-based access \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:39:17.867471+00:00
+fetched_at: 2026-10-21T14:26:02.422635+00:00
 ---
 
 # Create access levels for certificate-based access  |  Access Context Manager  |  Google Cloud Documentation

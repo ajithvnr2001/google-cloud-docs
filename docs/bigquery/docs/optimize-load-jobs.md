@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/optimize-load-jobs/
 title: Optimize load jobs \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:00.151093+00:00
+fetched_at: 2026-10-21T14:19:12.072137+00:00
 ---
 
 # Optimize load jobs  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/working-with-remote-agents/test-agents/
 title: Test the Remote Agent connection flow \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:12.514456+00:00
+fetched_at: 2026-10-21T14:08:09.126539+00:00
 ---
 
 # Test the Remote Agent connection flow  |  Google Security Operations  |  Google Cloud Documentation

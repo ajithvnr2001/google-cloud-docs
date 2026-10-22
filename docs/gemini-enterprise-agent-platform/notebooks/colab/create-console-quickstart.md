@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/notebooks/colab/create-console-quickstart/
 title: Quickstart: Create a Colab Enterprise notebook by using the Google Cloud console \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:27:29.899558+00:00
+fetched_at: 2026-10-21T12:53:51.416232+00:00
 ---
 
 # Quickstart: Create a Colab Enterprise notebook by using the Google Cloud console  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/adding-labels/
 title: Add labels to resources \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:15:20.012057+00:00
+fetched_at: 2026-10-22T05:43:54.797814+00:00
 ---
 
 # Add labels to resources  |  BigQuery  |  Google Cloud Documentation

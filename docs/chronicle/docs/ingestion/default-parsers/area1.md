@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/area1/
 title: Collect Area 1 logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:04:44.678038+00:00
+fetched_at: 2026-10-21T14:11:20.270119+00:00
 ---
 
 # Collect Area 1 logs  |  Google Security Operations  |  Google Cloud Documentation

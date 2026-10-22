@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/supported-products/
 title: Supported products by control package \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:51.009525+00:00
+fetched_at: 2026-10-21T14:53:22.156638+00:00
 ---
 
 # Supported products by control package  |  Assured Workloads  |  Google Cloud Documentation

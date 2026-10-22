@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/spaces/create-spaces/
 title: Create and manage Apigee Spaces \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:08:38.672941+00:00
+fetched_at: 2026-10-21T14:27:30.531347+00:00
 ---
 
 # Create and manage Apigee Spaces  |  Google Cloud Documentation

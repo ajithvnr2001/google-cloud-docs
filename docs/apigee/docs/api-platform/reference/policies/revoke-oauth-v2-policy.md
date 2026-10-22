@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy/
 title: RevokeOAuthV2 policy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:09:23.993095+00:00
+fetched_at: 2026-10-21T12:30:15.250539+00:00
 ---
 
 # RevokeOAuthV2 policy  |  Apigee  |  Google Cloud Documentation

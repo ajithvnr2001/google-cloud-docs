@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/cluster-backup/cluster-backup-overview/
 title: Overview \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:58:16.919827+00:00
+fetched_at: 2026-10-21T12:59:28.319748+00:00
 ---
 
 # Overview  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

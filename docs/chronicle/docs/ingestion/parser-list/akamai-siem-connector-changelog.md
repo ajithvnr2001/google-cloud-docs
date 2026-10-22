@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/akamai-siem-connector-changelog/
 title: Change log for AKAMAI_SIEM_CONNECTOR \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:53:29.878801+00:00
+fetched_at: 2026-10-21T14:46:19.027757+00:00
 ---
 
 # Change log for AKAMAI_SIEM_CONNECTOR  |  Google Security Operations  |  Google Cloud Documentation

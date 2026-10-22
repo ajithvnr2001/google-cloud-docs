@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/terraform/
 title: Terraform overview \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T09:53:20.004872+00:00
+fetched_at: 2026-10-21T13:33:00.640066+00:00
 ---
 
 # Terraform overview  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

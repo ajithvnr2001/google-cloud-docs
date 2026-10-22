@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/15.7.0/docs/kubernetes-dr-backup-overview/
 title: Clone a database cluster from a Kubernetes backup overview \u00a0|\u00a0 AlloyDB Omni for containers: 15.7.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:07:06.929602+00:00
+fetched_at: 2026-10-21T15:32:35.947734+00:00
 ---
 
 # Clone a database cluster from a Kubernetes backup overview  |  AlloyDB Omni for containers: 15.7.0  |  Google Cloud Documentation

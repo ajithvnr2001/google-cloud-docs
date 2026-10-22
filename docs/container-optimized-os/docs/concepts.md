@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/container-optimized-os/docs/concepts/
 title: Concepts \u00a0|\u00a0 Container-Optimized OS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:24:51.460410+00:00
+fetched_at: 2026-10-21T14:22:40.065796+00:00
 ---
 
 # Concepts  |  Container-Optimized OS  |  Google Cloud Documentation

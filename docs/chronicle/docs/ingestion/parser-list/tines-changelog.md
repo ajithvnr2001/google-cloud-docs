@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/tines-changelog/
 title: Change log for TINES \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:59:18.476389+00:00
+fetched_at: 2026-10-21T14:43:33.079929+00:00
 ---
 
 # Change log for TINES  |  Google Security Operations  |  Google Cloud Documentation

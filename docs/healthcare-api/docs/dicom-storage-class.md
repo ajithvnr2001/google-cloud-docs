@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/dicom-storage-class/
 title: DICOM storage classes \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:01:46.404317+00:00
+fetched_at: 2026-10-21T14:30:42.624172+00:00
 ---
 
 # DICOM storage classes  |  Cloud Healthcare API  |  Google Cloud Documentation

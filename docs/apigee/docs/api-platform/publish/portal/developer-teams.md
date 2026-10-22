@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/publish/portal/developer-teams/
 title: Managing developer teams (Preview) \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:19:34.437134+00:00
+fetched_at: 2026-10-21T14:28:17.756811+00:00
 ---
 
 # Managing developer teams (Preview)  |  Apigee  |  Google Cloud Documentation

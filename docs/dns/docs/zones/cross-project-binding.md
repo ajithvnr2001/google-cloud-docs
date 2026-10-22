@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/docs/zones/cross-project-binding/
 title: Create a zone with cross-project binding \u00a0|\u00a0 Cloud DNS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:57.237112+00:00
+fetched_at: 2026-10-21T14:06:07.983478+00:00
 ---
 
 # Create a zone with cross-project binding  |  Cloud DNS  |  Google Cloud Documentation

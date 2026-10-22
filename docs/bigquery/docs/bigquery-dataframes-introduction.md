@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/bigquery-dataframes-introduction/
 title: Introduction to BigQuery DataFrames \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:10.880635+00:00
+fetched_at: 2026-10-21T12:39:31.053528+00:00
 ---
 
 # Introduction to BigQuery DataFrames  |  Google Cloud Documentation

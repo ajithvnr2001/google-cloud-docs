@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/concepts/namespaces-and-projects/
 title: Namespaces and Google Cloud projects \u00a0|\u00a0 Config Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:15.954665+00:00
+fetched_at: 2026-10-21T14:24:34.521505+00:00
 ---
 
 # Namespaces and Google Cloud projects  |  Config Connector  |  Google Cloud Documentation

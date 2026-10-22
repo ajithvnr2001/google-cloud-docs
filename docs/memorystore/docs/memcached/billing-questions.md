@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/memcached/billing-questions/
 title: Billing questions \u00a0|\u00a0 Memorystore for Memcached \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:00:59.145552+00:00
+fetched_at: 2026-10-21T15:13:56.997214+00:00
 ---
 
 # Billing questions  |  Memorystore for Memcached  |  Google Cloud Documentation

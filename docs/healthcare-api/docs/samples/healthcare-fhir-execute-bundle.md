@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/samples/healthcare-fhir-execute-bundle/
 title: Execute FHIR bundle \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:25:58.406139+00:00
+fetched_at: 2026-10-21T12:53:08.977978+00:00
 ---
 
 # Execute FHIR bundle  |  Cloud Healthcare API  |  Google Cloud Documentation

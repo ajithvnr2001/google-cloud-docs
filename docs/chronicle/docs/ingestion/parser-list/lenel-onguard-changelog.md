@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/lenel-onguard-changelog/
 title: Change log for LENEL_ONGUARD \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:33:54.844881+00:00
+fetched_at: 2026-10-21T14:43:17.540726+00:00
 ---
 
 # Change log for LENEL_ONGUARD  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers
 title: REST Resource: projects.locations.triggers \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:59:22.417679+00:00
+fetched_at: 2026-10-21T14:35:15.676159+00:00
 ---
 
 # REST Resource: projects.locations.triggers  |  Cloud Build  |  Google Cloud Documentation
@@ -115,7 +115,8 @@ JSON representation
         object ([DeveloperConnectEventConfig](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.DeveloperConnectEventConfig))
       },
     
-      // Union field build_template can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "autodetect": boolean,
       "build": {
         object ([Build](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build))
@@ -124,7 +125,7 @@ JSON representation
       "gitFileSource": {
         object ([GitFileSource](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.GitFileSource))
       }
-      // End of list of possible types for union field build_template.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
@@ -158,7 +159,7 @@ Fields
 `includeBuildLogs` |  `enum (`[IncludeBuildLogs](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.IncludeBuildLogs)`)` If set to INCLUDE_BUILD_LOGS_WITH_STATUS, log url will be shown on GitHub page when build status is final. Setting this field to INCLUDE_BUILD_LOGS_WITH_STATUS for non GitHub triggers results in INVALID_ARGUMENT error.  
 `repositoryEventConfig` |  `object (`[RepositoryEventConfig](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.RepositoryEventConfig)`)` The configuration of a trigger that creates a build whenever an event from Repo API is received.  
 `developerConnectEventConfig` |  `object (`[DeveloperConnectEventConfig](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.DeveloperConnectEventConfig)`)` Optional. The configuration of a trigger that creates a build whenever an event from the DeveloperConnect API is received.  
-Union field `build_template`. Template describing the Build request to make when the trigger is matched. At least one of the template fields must be provided. `build_template` can be only one of the following:  
+Template describing the Build request to make when the trigger is matched. At least one of the template fields must be provided. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `autodetect` |  `boolean` Autodetect build configuration. The following precedence is used (case insensitive):
 
   1. cloudbuild.yaml
@@ -170,6 +171,7 @@ Currently only available for GitHub App Triggers.
 `build` |  `object (`[Build](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.builds#Build)`)` Contents of the build template.  
 `filename` |  `string` Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).  
 `gitFileSource` |  `object (`[GitFileSource](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.GitFileSource)`)` The file source describing the local or remote Build template.  
+End of mutually exclusive fields.  
   
 ### GitHubEventsConfig
 
@@ -185,14 +187,15 @@ JSON representation
       "name": string,
       "enterpriseConfigResourceName": string,
     
-      // Union field event can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "pullRequest": {
         object ([PullRequestFilter](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PullRequestFilter))
       },
       "push": {
         object ([PushFilter](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PushFilter))
       }
-      // End of list of possible types for union field event.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
@@ -202,9 +205,10 @@ Fields
 `owner` |  `string` Owner of the repository. For example: The owner for <https://github.com/googlecloudplatform/cloud-builders> is "googlecloudplatform".  
 `name` |  `string` Name of the repository. For example: The name for <https://github.com/googlecloudplatform/cloud-builders> is "cloud-builders".  
 `enterpriseConfigResourceName` |  `string` The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$projectId}/locations/{$locationId}/githubEnterpriseConfigs/{$configId}"  
-Union field `event`. Filter describing the types of events to trigger a build. Currently supported event types: push, pull_request. `event` can be only one of the following:  
+Filter describing the types of events to trigger a build. Currently supported event types: push, pull_request. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `pullRequest` |  `object (`[PullRequestFilter](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PullRequestFilter)`)` filter to match changes in pull requests.  
 `push` |  `object (`[PushFilter](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PushFilter)`)` filter to match changes in refs like branches, tags.  
+End of mutually exclusive fields.  
   
 ### PullRequestFilter
 
@@ -218,17 +222,19 @@ JSON representation
       "commentControl": enum ([CommentControl](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.CommentControl)),
       "invertRegex": boolean,
     
-      // Union field git_ref can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "branch": string
-      // End of list of possible types for union field git_ref.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
 ---  
 `commentControl` |  `enum (`[CommentControl](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.CommentControl)`)` If CommentControl is enabled, depending on the setting, builds may not fire until a repository writer comments `/gcbrun` on a pull request or `/gcbrun` is in the pull request description. Only PR comments that contain `/gcbrun` will trigger builds.If CommentControl is set to disabled, comments with `/gcbrun` from a user with repository write permission or above will still trigger builds to run.  
 `invertRegex` |  `boolean` If true, branches that do NOT match the gitRef will trigger a build.  
-Union field `git_ref`. Target refs to match. A target ref is the git reference where the pull request will be applied. `git_ref` can be only one of the following:  
+Target refs to match. A target ref is the git reference where the pull request will be applied. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `branch` |  `string` Regex of branches to match.The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at <https://github.com/google/re2/wiki/Syntax>  
+End of mutually exclusive fields.  
   
 ### CommentControl
 
@@ -251,18 +257,20 @@ JSON representation
     {
       "invertRegex": boolean,
     
-      // Union field git_ref can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "branch": string,
       "tag": string
-      // End of list of possible types for union field git_ref.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
 ---  
 `invertRegex` |  `boolean` When true, only trigger a build if the revision regex does NOT match the gitRef regex.  
-Union field `git_ref`. Modified refs to match. A modified refs are the refs modified by a git push operation. `git_ref` can be only one of the following:  
+Modified refs to match. A modified refs are the refs modified by a git push operation. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `branch` |  `string` Regexes matching branches to build.The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at <https://github.com/google/re2/wiki/Syntax>  
 `tag` |  `string` Regexes matching tags to build.The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at <https://github.com/google/re2/wiki/Syntax>  
+End of mutually exclusive fields.  
   
 ### PubsubConfig
 
@@ -309,16 +317,18 @@ JSON representation
     {
       "state": enum ([State](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.State_1)),
     
-      // Union field auth_method can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "secret": string
-      // End of list of possible types for union field auth_method.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
 ---  
 `state` |  `enum (`[State](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.State_1)`)` Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.  
-Union field `auth_method`. Auth method specifies how the webhook authenticates with GCP. `auth_method` can be only one of the following:  
+Auth method specifies how the webhook authenticates with GCP. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `secret` |  `string` Required. Resource name for the secret required as a URL parameter.  
+End of mutually exclusive fields.  
   
 ### State
 
@@ -346,14 +356,15 @@ JSON representation
         object ([BitbucketServerConfig](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.bitbucketServerConfigs#BitbucketServerConfig))
       },
     
-      // Union field event can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "pullRequest": {
         object ([PullRequestFilter](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PullRequestFilter))
       },
       "push": {
         object ([PushFilter](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PushFilter))
       }
-      // End of list of possible types for union field event.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
@@ -362,9 +373,10 @@ Fields
 `projectKey` |  `string` Required. Key of the project that the repo is in. For example: The key for <https://mybitbucket.server/projects/TEST/repos/test-repo> is "TEST".  
 `bitbucketServerConfigResource` |  `string` Required. The Bitbucket server config resource that this trigger config maps to.  
 `bitbucketServerConfig` |  `object (`[BitbucketServerConfig](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.bitbucketServerConfigs#BitbucketServerConfig)`)` Output only. The BitbucketServerConfig specified in the bitbucketServerConfigResource field.  
-Union field `event`. Filter describing the types of events to trigger a build. Currently supported event types: push, pull_request. `event` can be only one of the following:  
+Filter describing the types of events to trigger a build. Currently supported event types: push, pull_request. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `pullRequest` |  `object (`[PullRequestFilter](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PullRequestFilter)`)` Filter to match changes in pull requests.  
 `push` |  `object (`[PushFilter](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PushFilter)`)` Filter to match changes in refs like branches, tags.  
+End of mutually exclusive fields.  
   
 ### GitFileSource
 
@@ -380,14 +392,16 @@ JSON representation
       "repoType": enum ([RepoType](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.RepoType)),
       "revision": string,
     
-      // Union field source can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "repository": string
-      // End of list of possible types for union field source.
+      // End of mutually exclusive fields.
     
-      // Union field enterprise_config can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "githubEnterpriseConfig": string,
       "bitbucketServerConfig": string
-      // End of list of possible types for union field enterprise_config.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
@@ -396,11 +410,13 @@ Fields
 `uri` |  `string` The URI of the repo. Either uri or repository can be specified. If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.  
 `repoType` |  `enum (`[RepoType](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.RepoType)`)` See RepoType above.  
 `revision` |  `string` The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: <https://git-scm.com/docs/gitrevisions> If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.  
-Union field `source`. The source of the SCM repo. `source` can be only one of the following:  
+The source of the SCM repo. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `repository` |  `string` The fully qualified resource name of the Repos API repository. Either URI or repository can be specified. If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.  
-Union field `enterprise_config`. The resource name of the enterprise config that should be applied to this source. `enterprise_config` can be only one of the following:  
+End of mutually exclusive fields.  
+The resource name of the enterprise config that should be applied to this source. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `githubEnterpriseConfig` |  `string` The full resource name of the github enterprise config. Format: `projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}`. `projects/{project}/githubEnterpriseConfigs/{id}`.  
 `bitbucketServerConfig` |  `string` The full resource name of the bitbucket server config. Format: `projects/{project}/locations/{location}/bitbucketServerConfigs/{id}`.  
+End of mutually exclusive fields.  
   
 ### RepoType
 
@@ -428,14 +444,16 @@ JSON representation
       "ref": string,
       "repoType": enum ([RepoType](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.RepoType)),
     
-      // Union field source can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "repository": string
-      // End of list of possible types for union field source.
+      // End of mutually exclusive fields.
     
-      // Union field enterprise_config can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "githubEnterpriseConfig": string,
       "bitbucketServerConfig": string
-      // End of list of possible types for union field enterprise_config.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
@@ -443,11 +461,13 @@ Fields
 `uri` |  `string` The URI of the repo (e.g. <https://github.com/user/repo.git)>. Either `uri` or `repository` can be specified and is required.  
 `ref` |  `string` The branch or tag to use. Must start with "refs/" (required).  
 `repoType` |  `enum (`[RepoType](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.RepoType)`)` See RepoType below.  
-Union field `source`. The source of the SCM repo. `source` can be only one of the following:  
+The source of the SCM repo. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `repository` |  `string` The connected repository resource name, in the format `projects/*/locations/*/connections/*/repositories/*`. Either `uri` or `repository` can be specified and is required.  
-Union field `enterprise_config`. The resource name of the enterprise config that should be applied to this source. `enterprise_config` can be only one of the following:  
+End of mutually exclusive fields.  
+The resource name of the enterprise config that should be applied to this source. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `githubEnterpriseConfig` |  `string` The full resource name of the github enterprise config. Format: `projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}`. `projects/{project}/githubEnterpriseConfigs/{id}`.  
 `bitbucketServerConfig` |  `string` The full resource name of the bitbucket server config. Format: `projects/{project}/locations/{location}/bitbucketServerConfigs/{id}`.  
+End of mutually exclusive fields.  
   
 ### EventType
 
@@ -482,23 +502,25 @@ JSON representation
       "repository": string,
       "repositoryType": enum ([RepositoryType](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.RepositoryType)),
     
-      // Union field filter can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "pullRequest": {
         object ([PullRequestFilter](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PullRequestFilter))
       },
       "push": {
         object ([PushFilter](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PushFilter))
       }
-      // End of list of possible types for union field filter.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
 ---  
 `repository` |  `string` The resource name of the Repo API resource.  
 `repositoryType` |  `enum (`[RepositoryType](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.RepositoryType)`)` Output only. The type of the SCM vendor the repository points to.  
-Union field `filter`. The types of filter to trigger a build. `filter` can be only one of the following:  
+The types of filter to trigger a build. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `pullRequest` |  `object (`[PullRequestFilter](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PullRequestFilter)`)` Filter to match changes in pull requests.  
 `push` |  `object (`[PushFilter](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PushFilter)`)` Filter to match changes in refs like branches, tags.  
+End of mutually exclusive fields.  
   
 ### RepositoryType
 
@@ -525,23 +547,25 @@ JSON representation
       "gitRepositoryLink": string,
       "gitRepositoryLinkType": enum ([GitRepositoryLinkType](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.GitRepositoryLinkType)),
     
-      // Union field filter can be only one of the following:
+      // The following is a list of mutually exclusive fields. At most one of the
+      // fields will be set in a response:
       "pullRequest": {
         object ([PullRequestFilter](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PullRequestFilter))
       },
       "push": {
         object ([PushFilter](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PushFilter))
       }
-      // End of list of possible types for union field filter.
+      // End of mutually exclusive fields.
     }  
   
 Fields  
 ---  
 `gitRepositoryLink` |  `string` Required. The Developer Connect Git repository link, formatted as `projects/*/locations/*/connections/*/gitRepositoryLink/*`.  
 `gitRepositoryLinkType` |  `enum (`[GitRepositoryLinkType](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.GitRepositoryLinkType)`)` Output only. The type of DeveloperConnect GitRepositoryLink.  
-Union field `filter`. The types of filter to trigger a build. `filter` can be only one of the following:  
+The types of filter to trigger a build. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:  
 `pullRequest` |  `object (`[PullRequestFilter](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PullRequestFilter)`)` Filter to match changes in pull requests.  
 `push` |  `object (`[PushFilter](https://docs.cloud.google.com/build/docs/api/reference/rest/v1/projects.locations.triggers#BuildTrigger.PushFilter)`)` Filter to match changes in refs like branches and tags.  
+End of mutually exclusive fields.  
   
 ### GitRepositoryLinkType
 
@@ -593,6 +617,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-07-10 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-07-10 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

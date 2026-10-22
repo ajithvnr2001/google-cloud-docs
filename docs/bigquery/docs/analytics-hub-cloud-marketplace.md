@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/analytics-hub-cloud-marketplace/
 title: Commercialize listings on Google Cloud Marketplace \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:12:02.898101+00:00
+fetched_at: 2026-10-22T05:45:03.364131+00:00
 ---
 
 # Commercialize listings on Google Cloud Marketplace  |  BigQuery  |  Google Cloud Documentation
@@ -21,11 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Commercialize listings on Google Cloud Marketplace
 
-As a BigQuery sharing publisher, you can use the integration of BigQuery sharing (formerly Analytics Hub) with [Google Cloud Marketplace](https://docs.cloud.google.com/marketplace) to create revenue by listing your own data products on Cloud Marketplace. By using the publisher-subscriber model, you can share data offerings with your customers at scale, without having to manage every transaction and subscription. You can configure aspects of the data product, such as the kind of data you provide (for example, BigQuery datasets), the price of the subscription (paid, free, or trial), and the duration.
+BigQuery sharing (formerly Analytics Hub) lets you offer and purchase data products through [Google Cloud Marketplace](https://docs.cloud.google.com/marketplace). As a publisher, you can share BigQuery datasets on Cloud Marketplace at scale and configure paid, free, or trial subscription plans and durations without managing individual transactions.
 
-As a BigQuery sharing subscriber, you can use this integration to discover and consume a wide range of Google and third-party data products and commercial datasets.
-
-Before you continue, familiarize yourself with [BigQuery sharing data exchanges](https://docs.cloud.google.com/bigquery/docs/analytics-hub-manage-exchanges).
+As a subscriber, you can discover and consume Google and third-party commercial datasets through Cloud Marketplace. Before you continue, familiarize yourself with [BigQuery sharing data exchanges](https://docs.cloud.google.com/bigquery/docs/analytics-hub-manage-exchanges).
 
 ## Before you begin
 
@@ -225,6 +223,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

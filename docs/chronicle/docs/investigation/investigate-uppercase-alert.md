@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/investigate-uppercase-alert/
 title: Investigate GCTI alerts \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:36:35.934374+00:00
+fetched_at: 2026-10-21T14:19:19.185228+00:00
 ---
 
 # Investigate GCTI alerts  |  Google Security Operations  |  Google Cloud Documentation

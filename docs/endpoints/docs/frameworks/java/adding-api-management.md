@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/java/adding-api-management/
 title: Adding API management \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:38:19.690575+00:00
+fetched_at: 2026-10-21T12:45:40.523540+00:00
 ---
 
 # Adding API management  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

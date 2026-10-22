@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/migration-center-reports/
 title: Available reports in Migration Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:24.591569+00:00
+fetched_at: 2026-10-21T15:12:38.435130+00:00
 ---
 
 # Available reports in Migration Center  |  Google Cloud Documentation

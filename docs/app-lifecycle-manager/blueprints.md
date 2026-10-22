@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/blueprints/
 title: Blueprints in App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:52:24.094360+00:00
+fetched_at: 2026-10-21T12:30:17.770361+00:00
 ---
 
 # Blueprints in App Lifecycle Manager  |  Google Cloud Documentation

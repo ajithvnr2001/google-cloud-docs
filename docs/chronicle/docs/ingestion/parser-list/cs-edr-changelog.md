@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cs-edr-changelog/
 title: Change log for CS_EDR \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:53:40.625066+00:00
+fetched_at: 2026-10-21T14:44:38.663354+00:00
 ---
 
 # Change log for CS_EDR  |  Google Security Operations  |  Google Cloud Documentation

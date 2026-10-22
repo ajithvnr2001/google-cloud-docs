@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/vm-backup/clean-up-labels-after-restore/
 title: Clean up labels after restoring VM-attached disks \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:04:57.635372+00:00
+fetched_at: 2026-10-21T12:59:35.614529+00:00
 ---
 
 # Clean up labels after restoring VM-attached disks  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

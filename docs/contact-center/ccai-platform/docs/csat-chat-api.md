@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/csat-chat-api/
 title: CSAT in the chat API \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:14:28.421118+00:00
+fetched_at: 2026-10-21T14:23:20.718385+00:00
 ---
 
 # CSAT in the chat API  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

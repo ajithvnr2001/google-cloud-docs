@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-set-client-endpoint/
 title: set the service endpoint \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:10.907668+00:00
+fetched_at: 2026-10-22T05:50:03.388345+00:00
 ---
 
 # set the service endpoint  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/endpoints/
 title: Configure data locality by using regional endpoints \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:44:44.374350+00:00
+fetched_at: 2026-10-21T12:39:38.843137+00:00
 ---
 
 # Configure data locality by using regional endpoints  |  Artifact Analysis  |  Google Cloud Documentation

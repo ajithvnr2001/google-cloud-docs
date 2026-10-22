@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/docs/resources/vat-overview/
 title: Taxes in your country \u00a0|\u00a0 Cloud Billing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:27:06.268357+00:00
+fetched_at: 2026-10-21T14:10:09.498860+00:00
 ---
 
 # Taxes in your country  |  Cloud Billing  |  Google Cloud Documentation

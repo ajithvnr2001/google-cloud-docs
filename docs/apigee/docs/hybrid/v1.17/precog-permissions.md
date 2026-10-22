@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/precog-permissions/
 title: Permissions and roles for installing Apigee hybrid \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:35:25.654810+00:00
+fetched_at: 2026-10-21T14:28:02.481425+00:00
 ---
 
 # Permissions and roles for installing Apigee hybrid  |  Google Cloud Documentation

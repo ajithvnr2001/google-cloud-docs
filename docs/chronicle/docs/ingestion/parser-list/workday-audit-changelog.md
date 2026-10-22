@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/workday-audit-changelog/
 title: Change log for WORKDAY_AUDIT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:06:05.548679+00:00
+fetched_at: 2026-10-21T14:47:05.876974+00:00
 ---
 
 # Change log for WORKDAY_AUDIT  |  Google Security Operations  |  Google Cloud Documentation

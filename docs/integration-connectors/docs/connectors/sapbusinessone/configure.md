@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/sapbusinessone/configure/
 title: SAP Business One \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:28.426899+00:00
+fetched_at: 2026-10-21T12:52:55.606526+00:00
 ---
 
 # SAP Business One  |  Integration Connectors  |  Google Cloud Documentation

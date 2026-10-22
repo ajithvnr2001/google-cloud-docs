@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.1/how-to/autoscaling/
 title: Autoscaling \u00a0|\u00a0 Kf 2.1 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:44.685028+00:00
+fetched_at: 2026-10-21T15:11:22.824558+00:00
 ---
 
 # Autoscaling  |  Kf 2.1  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/administration/configure-datarbac-users/
 title: Configure data RBAC \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:40:46.578653+00:00
+fetched_at: 2026-10-21T14:11:13.030208+00:00
 ---
 
 # Configure data RBAC  |  Google Security Operations  |  Google Cloud Documentation

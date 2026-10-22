@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cisco-router-changelog/
 title: Change log for CISCO_ROUTER \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:46:19.548018+00:00
+fetched_at: 2026-10-21T14:44:55.812363+00:00
 ---
 
 # Change log for CISCO_ROUTER  |  Google Security Operations  |  Google Cloud Documentation

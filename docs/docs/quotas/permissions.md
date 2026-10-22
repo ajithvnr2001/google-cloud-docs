@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/quotas/permissions/
 title: Quota permissions \u00a0|\u00a0 Cloud Quotas \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:40:31.519175+00:00
+fetched_at: 2026-10-21T14:07:57.511736+00:00
 ---
 
 # Quota permissions  |  Cloud Quotas  |  Google Cloud Documentation

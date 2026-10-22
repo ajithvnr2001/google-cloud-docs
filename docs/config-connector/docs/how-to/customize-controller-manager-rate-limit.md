@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/how-to/customize-controller-manager-rate-limit/
 title: Configure the controller manager rate limit \u00a0|\u00a0 Config Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:21:03.739470+00:00
+fetched_at: 2026-10-21T14:24:36.105948+00:00
 ---
 
 # Configure the controller manager rate limit  |  Config Connector  |  Google Cloud Documentation

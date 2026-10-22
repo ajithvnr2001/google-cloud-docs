@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/wordpress-cms-changelog/
 title: Change log for WORDPRESS_CMS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:04:18.531724+00:00
+fetched_at: 2026-10-21T14:47:05.630634+00:00
 ---
 
 # Change log for WORDPRESS_CMS  |  Google Security Operations  |  Google Cloud Documentation

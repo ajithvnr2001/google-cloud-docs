@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-recommendations-by-org/
 title: INFORMATION_SCHEMA.RECOMMENDATIONS_BY_ORGANIZATION view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T10:14:15.037586+00:00
+fetched_at: 2026-10-21T12:36:11.236719+00:00
 ---
 
 # INFORMATION_SCHEMA.RECOMMENDATIONS_BY_ORGANIZATION view  |  BigQuery  |  Google Cloud Documentation

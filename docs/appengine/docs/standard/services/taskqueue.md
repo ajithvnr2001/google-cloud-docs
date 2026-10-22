@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/taskqueue/
 title: Task Queue Overview \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:56.206389+00:00
+fetched_at: 2026-10-21T14:23:23.806244+00:00
 ---
 
 # Task Queue Overview  |  App Engine standard environment  |  Google Cloud Documentation

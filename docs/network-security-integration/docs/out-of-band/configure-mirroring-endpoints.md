@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-security-integration/docs/out-of-band/configure-mirroring-endpoints/
 title: Create and manage mirroring endpoints \u00a0|\u00a0 Network Security Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:22.643393+00:00
+fetched_at: 2026-10-21T15:15:56.015292+00:00
 ---
 
 # Create and manage mirroring endpoints  |  Network Security Integration  |  Google Cloud Documentation

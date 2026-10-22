@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/colab/docs/release-notes/
 title: Colab Enterprise release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:30:20.075937+00:00
+fetched_at: 2026-10-21T14:43:05.979613+00:00
 ---
 
 # Colab Enterprise release notes  |  Google Cloud Documentation

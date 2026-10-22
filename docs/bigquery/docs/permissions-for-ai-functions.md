@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/permissions-for-ai-functions/
 title: Set permissions for generative AI functions that call Gemini Enterprise Agent Platform LLMs \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:07:37.460165+00:00
+fetched_at: 2026-10-21T14:21:08.988310+00:00
 ---
 
 # Set permissions for generative AI functions that call Gemini Enterprise Agent Platform LLMs  |  BigQuery  |  Google Cloud Documentation

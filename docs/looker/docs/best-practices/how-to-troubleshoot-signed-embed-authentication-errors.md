@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/best-practices/how-to-troubleshoot-signed-embed-authentication-errors/
 title: Troubleshooting signed embed authentication errors \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:11:16.419154+00:00
+fetched_at: 2026-10-21T15:09:15.713158+00:00
 ---
 
 # Troubleshooting signed embed authentication errors  |  Looker  |  Google Cloud Documentation

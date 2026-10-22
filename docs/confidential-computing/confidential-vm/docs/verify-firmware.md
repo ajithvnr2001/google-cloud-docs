@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/verify-firmware/
 title: Verify a Confidential VM instance's firmware \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:27.759034+00:00
+fetched_at: 2026-10-21T14:21:47.607311+00:00
 ---
 
 # Verify a Confidential VM instance's firmware  |  Google Cloud Documentation

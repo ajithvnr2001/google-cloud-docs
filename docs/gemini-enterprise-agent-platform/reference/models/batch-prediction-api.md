@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/batch-prediction-api/
 title: Get batch predictions for Gemini \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T23:39:46.298466+00:00
+fetched_at: 2026-10-21T15:41:59.078319+00:00
 ---
 
 # Get batch predictions for Gemini  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -318,7 +318,7 @@ You should receive a JSON response similar to the following.
     }
     
 
-The response includes a unique identifier for the batch job. You can poll for the status of the batch job using the BATCH_JOB_ID. For more information, see [Monitor the job status](https://docs.cloud.google.com/gemini-enterprise-agent-platform#monitor). Note: Custom Service account, live progress, CMEK, and VPCSC reports are not supported. 
+The response includes a unique identifier for the batch job. You can poll for the status of the batch job using the BATCH_JOB_ID. For more information, see [Monitor the job status](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/batch-inference/new-job-from-bigquery#monitor). Note: Custom Service account, live progress, CMEK, and VPCSC reports are not supported. 
 
 ### Python
 
@@ -966,6 +966,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

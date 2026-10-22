@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/intel-ema-changelog/
 title: Change log for INTEL_EMA \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:42:33.836484+00:00
+fetched_at: 2026-10-21T14:43:42.452407+00:00
 ---
 
 # Change log for INTEL_EMA  |  Google Security Operations  |  Google Cloud Documentation

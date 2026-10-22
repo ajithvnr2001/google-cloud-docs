@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/cloud/context-parsers/gcp-sql-context/
 title: Collect Cloud SQL context logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:27.650856+00:00
+fetched_at: 2026-10-21T12:36:34.198254+00:00
 ---
 
 # Collect Cloud SQL context logs  |  Google Security Operations  |  Google Cloud Documentation

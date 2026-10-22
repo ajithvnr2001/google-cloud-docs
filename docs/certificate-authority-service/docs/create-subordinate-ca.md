@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/create-subordinate-ca/
 title: Create a subordinate certificate authority \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:27:19.631161+00:00
+fetched_at: 2026-10-21T14:24:40.808257+00:00
 ---
 
 # Create a subordinate certificate authority  |  Certificate Authority Service  |  Google Cloud Documentation

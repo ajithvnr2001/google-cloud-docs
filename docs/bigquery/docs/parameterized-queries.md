@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/parameterized-queries/
 title: Run parameterized queries \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:08.535693+00:00
+fetched_at: 2026-10-21T14:20:17.999934+00:00
 ---
 
 # Run parameterized queries  |  BigQuery  |  Google Cloud Documentation

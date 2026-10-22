@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/configure-nfsv4/
 title: About NFSv4.1 protocol \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:15:19.854875+00:00
+fetched_at: 2026-10-21T12:52:34.015448+00:00
 ---
 
 # About NFSv4.1 protocol  |  Filestore  |  Google Cloud Documentation

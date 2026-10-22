@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/configuration/create-block-list-to-exclude-entities-from-alerts/
 title: Exclude entities from alerts \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:53.140439+00:00
+fetched_at: 2026-10-21T14:24:33.054881+00:00
 ---
 
 # Exclude entities from alerts  |  Google Security Operations  |  Google Cloud Documentation

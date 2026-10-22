@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines/
 title: GPU machines in accelerator-optimized machine family \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:41.654012+00:00
+fetched_at: 2026-10-21T14:51:38.060820+00:00
 ---
 
 # GPU machines in accelerator-optimized machine family  |  Compute Engine  |  Google Cloud Documentation
@@ -161,7 +161,7 @@ For durable storage, you can attach up to 512 TiB of Hyperdisk storage. For more
 
 A4X Max and A4X instances support the following consumption and discount options:
 
-  * [Future reservations in AI Hypercomputer](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity)
+  * [Future reservations for capacity blocks](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity)
   * Resource-based committed use discounts (CUDs)
 
 
@@ -362,7 +362,7 @@ A4 instances support the following consumption and discount options:
   * [Spot VMs](https://docs.cloud.google.com/compute/docs/instances/spot)
   * [Flex-start](https://docs.cloud.google.com/compute/docs/instances/about-flex-start-vms)
   * [Future reservations in calendar mode](https://docs.cloud.google.com/compute/docs/instances/future-reservations-calendar-mode-overview)
-  * [Future reservations in AI Hypercomputer](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity)
+  * [Future reservations for capacity blocks](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity)
   * Resource-based committed use discounts (CUDs)
 
 
@@ -498,7 +498,7 @@ A3 instances support the following consumption and discount options:
     * [Spot VMs](https://docs.cloud.google.com/compute/docs/instances/spot)
     * [Flex-start](https://docs.cloud.google.com/compute/docs/instances/about-flex-start-vms)
     * [Future reservations in calendar mode](https://docs.cloud.google.com/compute/docs/instances/future-reservations-calendar-mode-overview)
-    * [Future reservations in AI Hypercomputer](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity)
+    * [Future reservations for capacity blocks](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity)
     * Resource-based committed use discounts (CUDs)
   * **A3 Mega, A3 High (8 GPUs), and A3 Edge** : 
     * On-demand
@@ -507,7 +507,7 @@ A3 instances support the following consumption and discount options:
     * [On-demand reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-overview)
     * [Future reservations](https://docs.cloud.google.com/compute/docs/instances/future-reservations-overview)
     * [Future reservations in calendar mode](https://docs.cloud.google.com/compute/docs/instances/future-reservations-calendar-mode-overview)
-    * [Future reservations in AI Hypercomputer](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity)
+    * [Future reservations for capacity blocks](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity)
     * Resource-based CUDs
   * **A3 High (1, 2, or 4 GPUs)** : 
     * [Spot VMs](https://docs.cloud.google.com/compute/docs/instances/spot)
@@ -1376,7 +1376,7 @@ For more pricing information for accelerator-optimized instances, see the [Accel
 
 The following table summarizes the availability of each consumption option by machine types. For more information about how to choose a consumption option, see [Choose a consumption model](https://docs.cloud.google.com/ai-hypercomputer/docs/consumption-models#choose) in the AI Hypercomputer documentation.
 
-**Note:** Before you create and submit a future reservation request for a supported GPU machine type, you must contact your [account team](https://cloud.google.com/tam) or the [sales team](https://cloud.google.com/contact) to discuss your request. Otherwise, Google Cloud is likely to decline it.Machine type (GPU model) | On-demand | [Spot](https://docs.cloud.google.com/compute/docs/instances/spot) | [Flex-start](https://docs.cloud.google.com/compute/docs/instances/about-flex-start-vms) | [On-demand reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-overview) | [Future reservations](https://docs.cloud.google.com/compute/docs/instances/future-reservations-overview) | [Future reservations in calendar mode](https://docs.cloud.google.com/compute/docs/instances/future-reservations-calendar-mode-overview) | [Future reservations in AI Hypercomputer](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity)  
+**Note:** Before you create and submit a future reservation request for a supported GPU machine type, you must contact your [account team](https://cloud.google.com/tam) or the [sales team](https://cloud.google.com/contact) to discuss your request. Otherwise, Google Cloud is likely to decline it.Machine type (GPU model) | On-demand | [Spot](https://docs.cloud.google.com/compute/docs/instances/spot) | [Flex-start](https://docs.cloud.google.com/compute/docs/instances/about-flex-start-vms) | [On-demand reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-overview) | [Future reservations](https://docs.cloud.google.com/compute/docs/instances/future-reservations-overview) | [Future reservations in calendar mode](https://docs.cloud.google.com/compute/docs/instances/future-reservations-calendar-mode-overview) | [Future reservations for capacity blocks](https://docs.cloud.google.com/ai-hypercomputer/docs/reserve-capacity)  
 ---|---|---|---|---|---|---|---  
 A4X Max (GB300) and A4X (GB200) | No | No | No | No | No | No | Yes  
 A4 (B200) | No | Yes | Yes | No | No | Yes | Yes  
@@ -1404,6 +1404,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

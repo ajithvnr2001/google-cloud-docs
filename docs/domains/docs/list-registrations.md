@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/domains/docs/list-registrations/
 title: List registered domains \u00a0|\u00a0 Cloud Domains \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:10:45.897522+00:00
+fetched_at: 2026-10-21T14:07:15.968207+00:00
 ---
 
 # List registered domains  |  Cloud Domains  |  Google Cloud Documentation

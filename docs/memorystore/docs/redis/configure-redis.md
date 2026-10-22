@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/configure-redis/
 title: Configure a Redis instance \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:52.862901+00:00
+fetched_at: 2026-10-21T15:14:25.768109+00:00
 ---
 
 # Configure a Redis instance  |  Memorystore for Redis  |  Google Cloud Documentation

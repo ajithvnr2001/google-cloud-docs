@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/trendmicro-apex-one-changelog/
 title: Change log for TRENDMICRO_APEX_ONE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:46:32.305939+00:00
+fetched_at: 2026-10-21T14:43:32.051192+00:00
 ---
 
 # Change log for TRENDMICRO_APEX_ONE  |  Google Security Operations  |  Google Cloud Documentation

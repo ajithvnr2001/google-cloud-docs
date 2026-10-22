@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.7/how-to/buildpacks-getting-started/
 title: Get started with buildpacks \u00a0|\u00a0 Kf 2.7 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:45:53.020518+00:00
+fetched_at: 2026-10-21T15:17:59.752099+00:00
 ---
 
 # Get started with buildpacks  |  Kf 2.7  |  Google Cloud Documentation

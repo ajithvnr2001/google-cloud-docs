@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/netapp/volumes/docs/configure-and-use/active-directory/test-ad-policy-connection/
 title: Test the Active Directory policy connection \u00a0|\u00a0 NetApp Volumes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:44:35.283306+00:00
+fetched_at: 2026-10-21T15:10:42.801514+00:00
 ---
 
 # Test the Active Directory policy connection  |  NetApp Volumes  |  Google Cloud Documentation
@@ -27,7 +27,7 @@ This page provides instructions for how to test your Active Directory policy con
 
   * Make sure you have entered the parameters of your Active Directory policy correctly.
 
-  * Make sure you have associated an Active Directory policy with a storage pool of the Standard, Premium, or Extreme service level. The Flex service levels aren't supported. You can create an SMB volume instead. If connectivity breaks, the volume creation fails with an error message that describes the problem.
+  * Make sure that you have associated an Active Directory policy with a storage pool of the Standard, Premium, Extreme, or Flex Unified service level. Testing the Active Directory policy connection is in Preview for the Flex Unified service level and isn't supported for the Flex File service level. For the Flex File service level, you can create an SMB volume instead. If connectivity fails, volume creation fails with an error message that describes the problem.
 
   * For Flex Unified ONTAP-mode, see [Display information about ONTAP SMB discovered servers](https://docs.netapp.com/us-en/ontap/smb-admin/display-discovered-servers-task.html) after you set up SMB access.
 
@@ -86,6 +86,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/about-rdb-snapshots/
 title: About RDB snapshots \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:53.844238+00:00
+fetched_at: 2026-10-21T15:11:19.526150+00:00
 ---
 
 # About RDB snapshots  |  Memorystore for Redis  |  Google Cloud Documentation

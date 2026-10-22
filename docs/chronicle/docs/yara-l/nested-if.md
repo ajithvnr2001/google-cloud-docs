@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/yara-l/nested-if/
 title: Use nested if statements for more complex logic \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:48:59.908840+00:00
+fetched_at: 2026-10-21T14:09:29.184397+00:00
 ---
 
 # Use nested if statements for more complex logic  |  Google Security Operations  |  Google Cloud Documentation

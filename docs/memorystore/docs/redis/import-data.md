@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/import-data/
 title: Import data to a Redis instance \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:54.093414+00:00
+fetched_at: 2026-10-21T15:16:37.670081+00:00
 ---
 
 # Import data to a Redis instance  |  Memorystore for Redis  |  Google Cloud Documentation

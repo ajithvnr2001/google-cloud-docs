@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/docker/pushing-and-pulling/
 title: Push and pull images \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:20.457762+00:00
+fetched_at: 2026-10-21T12:39:50.164039+00:00
 ---
 
 # Push and pull images  |  Artifact Registry  |  Google Cloud Documentation

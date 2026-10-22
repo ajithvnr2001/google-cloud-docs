@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerydatatransfer-create-scheduled-query/
 title: Create a scheduled query \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:12.154500+00:00
+fetched_at: 2026-10-22T05:45:35.920601+00:00
 ---
 
 # Create a scheduled query  |  BigQuery  |  Google Cloud Documentation

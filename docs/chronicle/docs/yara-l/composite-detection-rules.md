@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/yara-l/composite-detection-rules/
 title: Construct composite detection rules \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:48:18.158133+00:00
+fetched_at: 2026-10-21T14:09:36.631714+00:00
 ---
 
 # Construct composite detection rules  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/amazon-guard-duty/
 title: Integrate Amazon GuardDuty with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:47:42.247596+00:00
+fetched_at: 2026-10-21T14:19:03.814570+00:00
 ---
 
 # Integrate Amazon GuardDuty with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

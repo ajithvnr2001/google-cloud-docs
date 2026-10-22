@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-compute-instances-add-metadata/
 title: gdcloud compute instances add-metadata \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:14:19.989774+00:00
+fetched_at: 2026-10-21T12:58:54.098396+00:00
 ---
 
 # gdcloud compute instances add-metadata  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

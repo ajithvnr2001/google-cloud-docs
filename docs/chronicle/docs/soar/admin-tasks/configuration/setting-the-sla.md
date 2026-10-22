@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/configuration/setting-the-sla/
 title: Set the SLA \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:01.719165+00:00
+fetched_at: 2026-10-21T14:24:08.940650+00:00
 ---
 
 # Set the SLA  |  Google Security Operations  |  Google Cloud Documentation

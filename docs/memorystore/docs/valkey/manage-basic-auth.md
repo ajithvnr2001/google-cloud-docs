@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/valkey/manage-basic-auth/
 title: Secure access to your instances by using basic token-based authentication \u00a0|\u00a0 Memorystore for Valkey \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:43:20.397836+00:00
+fetched_at: 2026-10-21T15:11:27.951172+00:00
 ---
 
 # Secure access to your instances by using basic token-based authentication  |  Memorystore for Valkey  |  Google Cloud Documentation

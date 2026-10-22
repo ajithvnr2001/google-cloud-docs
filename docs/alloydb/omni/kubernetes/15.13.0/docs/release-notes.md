@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/15.13.0/docs/release-notes/
 title: AlloyDB Omni (Kubernetes) version 15.13.0 release notes \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 15.13.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:50:37.226129+00:00
+fetched_at: 2026-10-21T15:33:17.439739+00:00
 ---
 
 # AlloyDB Omni (Kubernetes) version 15.13.0 release notes  |  AlloyDB Omni for Kubernetes: 15.13.0  |  Google Cloud Documentation
@@ -29,6 +29,81 @@ This page contains release notes for features and updates to AlloyDB Omni.
 You can see the latest product updates for all of Google Cloud on the [ Google Cloud](https://docs.cloud.google.com/release-notes) page, browse and filter all release notes in the [Google Cloud console](https://console.cloud.google.com/release-notes), or programmatically access release notes in [BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_cloud_release_notes&t=release_notes&page=table). 
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/alloydbomni-release-notes.xml) directly. 
+
+## October 13, 2026
+
+Announcement
+
+The [AlloyDB Omni Kubernetes operator](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/deploy-kubernetes) version 1.9.0 is generally available ([GA](https://docs.cloud.google.com/products#product-launch-stages)). Version 1.9.0 includes the following features and changes:
+
+AlloyDB Omni provides support for the following new PostgreSQL minor versions:
+
+  * [PostgreSQL 18.4](https://www.postgresql.org/docs/release/18.4/)
+  * [PostgreSQL 17.10](https://www.postgresql.org/docs/release/17.10/)
+  * [PostgreSQL 16.14](https://www.postgresql.org/docs/release/16.14/)
+  * [PostgreSQL 15.18](https://www.postgresql.org/docs/release/15.18/)
+
+
+
+Change
+
+  * The `DBCluster` custom resource now supports configuring CPU and memory resource limits for [PgBouncer](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/use-connection-pooler-kubernetes) and [system control plane agents](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/configure-log-rotation) such as the `logrotate` agent.
+  * The `UserDefinedAuthentication` resource now supports configuring custom `pg_hba.conf` entries. This lets you [customize client authentication behavior](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/configure-client-authentication), such as restricting client subnets, specifying custom authentication methods, or configuring user mapping.
+  * The `DBCluster` custom resource now supports configuring an image pull secret for `DBCluster` service accounts. You can operate with private image registries to automatically pull pod images without needing to manually pre-create service accounts. For more information, see [Install AlloyDB Omni using the container orchestrator](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/deploy-kubernetes).
+  * The `TdeConfig` custom resource now supports Thales CipherTrust Manager as an external Key Management Service (KMS) provider for Transparent Data Encryption (TDE), in addition to HashiCorp Vault. For more information, see [Create a TDE-enabled cluster](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/create-tde-cluster).
+  * Cross-data-center replication now supports auto-heal of standbys. For more information, see [Work with cross-data-center replication](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/cross-data-center-replication/work-with-cross-data-center-replication).
+  * The `DBCluster` custom resource now supports using external, non-cert-manager custom issuer kinds, for example, `VenafiIssuer` from the `jetstack.io` API group. For more information, see [Configure custom issuers](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/manage-certificates-kubernetes-operator#configure-custom-issuer).
+
+
+
+Security
+
+Resolved the following security vulnerabilities in the operator images:
+
+  * [CVE-2026-54370](https://nvd.nist.gov/vuln/detail/CVE-2026-54370)
+  * [CVE-2026-54369](https://nvd.nist.gov/vuln/detail/CVE-2026-54369)
+  * [CVE-2026-6238](https://nvd.nist.gov/vuln/detail/CVE-2026-6238)
+  * [CVE-2026-5928](https://nvd.nist.gov/vuln/detail/CVE-2026-5928)
+  * [CVE-2026-5450](https://nvd.nist.gov/vuln/detail/CVE-2026-5450)
+  * [CVE-2026-5435](https://nvd.nist.gov/vuln/detail/CVE-2026-5435)
+  * [CVE-2026-4438](https://nvd.nist.gov/vuln/detail/CVE-2026-4438)
+  * [CVE-2026-4437](https://nvd.nist.gov/vuln/detail/CVE-2026-4437)
+  * [CVE-2026-4046](https://nvd.nist.gov/vuln/detail/CVE-2026-4046)
+
+
+
+Backported fixes for the following vulnerabilities in the kernel images:
+
+  * [CVE-2026-19385](https://nvd.nist.gov/vuln/detail/CVE-2026-19385)
+  * [CVE-2026-18408](https://nvd.nist.gov/vuln/detail/CVE-2026-18408)
+  * [CVE-2026-16239](https://nvd.nist.gov/vuln/detail/CVE-2026-16239)
+  * [CVE-2026-15742](https://nvd.nist.gov/vuln/detail/CVE-2026-15742)
+  * [CVE-2026-15741](https://nvd.nist.gov/vuln/detail/CVE-2026-15741)
+  * [CVE-2026-14680](https://nvd.nist.gov/vuln/detail/CVE-2026-14680)
+  * [CVE-2026-14679](https://nvd.nist.gov/vuln/detail/CVE-2026-14679)
+  * [CVE-2026-14677](https://nvd.nist.gov/vuln/detail/CVE-2026-14677)
+  * [CVE-2026-14671](https://nvd.nist.gov/vuln/detail/CVE-2026-14671)
+  * [CVE-2026-14670](https://nvd.nist.gov/vuln/detail/CVE-2026-14670)
+  * [CVE-2026-14669](https://nvd.nist.gov/vuln/detail/CVE-2026-14669)
+  * [CVE-2026-14668](https://nvd.nist.gov/vuln/detail/CVE-2026-14668)
+  * [CVE-2026-14664](https://nvd.nist.gov/vuln/detail/CVE-2026-14664)
+  * [CVE-2026-14662](https://nvd.nist.gov/vuln/detail/CVE-2026-14662)
+  * [CVE-2026-6471](https://nvd.nist.gov/vuln/detail/CVE-2026-6471)
+  * [CVE-2026-6464](https://nvd.nist.gov/vuln/detail/CVE-2026-6464)
+
+
+
+Fixed
+
+Resolved an issue where the `logrotate-agent` could fail or hang during high audit log volumes, such as when `pgaudit.log` is set to `all`, which could lead to `logrotate-agent` out-of-memory errors, unbounded log growth, and disk exhaustion. The log rotate workflow has been improved, and resource limits for sidecar containers are now configurable to prevent resource constraints. For more information about the operator's logging mechanism and supported parameters, see [Configure log rotation](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/configure-log-rotation).
+
+Issue
+
+After you enable cross-data-center replication, the monitoring agent might encounter permission errors when attempting to gather `cgroups` information. If this error occurs, delete the downstream database Pod so that the operator recreates and restarts the Pod.
+
+Issue
+
+The AlloyDB Omni Kubernetes operator uses `cert-manager`, a third-party open source component, to provision Transport Layer Security (TLS) certificates. In `cert-manager` version 1.21.2 and earlier, a known race condition might cause certificate issuance to fail. For more information, see [Resolve certificate issuance failures in cert-manager](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/troubleshoot-kubernetes-operator#cert-manager-issuance-failures).
 
 ## October 05, 2026
 

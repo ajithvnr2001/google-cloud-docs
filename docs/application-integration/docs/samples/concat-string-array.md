@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/samples/concat-string-array/
 title: Concat a string to a string array \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:41:59.180833+00:00
+fetched_at: 2026-10-21T14:26:02.694911+00:00
 ---
 
 # Concat a string to a string array  |  Application Integration  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-subscribe-proto-messages/
 title: v1 Receive messages of Proto schema type (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:53:11.935248+00:00
+fetched_at: 2026-10-21T14:58:42.616799+00:00
 ---
 
 # v1 Receive messages of Proto schema type (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

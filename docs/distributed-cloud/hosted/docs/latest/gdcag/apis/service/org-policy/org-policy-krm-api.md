@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/service/org-policy/org-policy-krm-api/
 title: KRM API constraints.gatekeeper.sh/v1beta1 \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:19:02.784076+00:00
+fetched_at: 2026-10-21T12:57:08.553593+00:00
 ---
 
 # KRM API constraints.gatekeeper.sh/v1beta1  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

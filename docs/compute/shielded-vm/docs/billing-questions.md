@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/shielded-vm/docs/billing-questions/
 title: Billing questions \u00a0|\u00a0 Shielded VM \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:41:15.408113+00:00
+fetched_at: 2026-10-21T12:29:31.698176+00:00
 ---
 
 # Billing questions  |  Shielded VM  |  Google Cloud Documentation

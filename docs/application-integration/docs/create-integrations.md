@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/create-integrations/
 title: Create a new integration \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:33:43.791995+00:00
+fetched_at: 2026-10-21T12:38:50.958553+00:00
 ---
 
 # Create a new integration  |  Application Integration  |  Google Cloud Documentation

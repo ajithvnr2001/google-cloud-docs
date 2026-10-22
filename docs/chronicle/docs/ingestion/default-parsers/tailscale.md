@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/tailscale/
 title: Collect Tailscale logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:41:56.725014+00:00
+fetched_at: 2026-10-21T12:38:01.358805+00:00
 ---
 
 # Collect Tailscale logs  |  Google Security Operations  |  Google Cloud Documentation

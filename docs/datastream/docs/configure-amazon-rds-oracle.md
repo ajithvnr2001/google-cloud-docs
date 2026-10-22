@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/configure-amazon-rds-oracle/
 title: Configure an Amazon RDS Oracle database for CDC \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:50:47.944547+00:00
+fetched_at: 2026-10-22T05:41:17.444629+00:00
 ---
 
 # Configure an Amazon RDS Oracle database for CDC  |  Datastream  |  Google Cloud Documentation
@@ -21,18 +21,7 @@ Send feedback
 
 #  Configure an Amazon RDS Oracle database for CDC Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to configure change data capture (CDC) to stream data from an Amazon RDS Oracle database to a [supported destination](https://docs.cloud.google.com/datastream/docs/destinations), such as BigQuery or Cloud Storage.
-
-You can configure your source Oracle database for use with the following CDC methods:
-
-  * Binary log reader ([Preview](https://cloud.google.com/products/#product-launch-stages))
-  * LogMiner API
-
-
-
-For more information about the binary log reader and the LogMiner API, see [Work with Oracle database redo log files](https://docs.cloud.google.com/datastream/docs/work-with-oracle-database-redo-log-files).
-
-For detailed instructions about how to configure your source Oracle database for each of these methods, see the sections that follow.
+Datastream lets you stream change data capture (CDC) updates from an Amazon RDS for Oracle database to a [supported destination](https://docs.cloud.google.com/datastream/docs/destinations), such as BigQuery or Cloud Storage. You can configure your source for the binary log reader ([Preview](https://cloud.google.com/products#product-launch-stages)) or the LogMiner API by enabling `ARCHIVELOG` mode and supplemental logging, and granting user privileges. For more information about these CDC methods, see [Work with Oracle database redo log files](https://docs.cloud.google.com/datastream/docs/work-with-oracle-database-redo-log-files).
 
 ## Configure your Amazon RDS Oracle database for binary log reader
 
@@ -209,6 +198,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

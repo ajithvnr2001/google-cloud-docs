@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/slot-recommender/
 title: View edition slot recommendations \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:16:04.154582+00:00
+fetched_at: 2026-10-21T12:36:11.404646+00:00
 ---
 
 # View edition slot recommendations  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-create-topic-with-cloud-storage-ingestion/
 title: v1 Create topic with Cloud Storage ingestion (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:53:08.771130+00:00
+fetched_at: 2026-10-21T14:58:52.583306+00:00
 ---
 
 # v1 Create topic with Cloud Storage ingestion (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

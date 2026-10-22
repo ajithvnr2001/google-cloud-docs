@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/client-side-metrics/
 title: Client-side metrics overview \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:21.961904+00:00
+fetched_at: 2026-10-21T12:36:38.973227+00:00
 ---
 
 # Client-side metrics overview  |  Bigtable  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/starter-tier/
 title: Learn about the Google Cloud Starter Tier \u00a0|\u00a0 Get started \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:23:10.276574+00:00
+fetched_at: 2026-10-21T14:06:50.339262+00:00
 ---
 
 # Learn about the Google Cloud Starter Tier  |  Get started  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/import/import-ovf-files/
 title: Import virtual appliances \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:14.088431+00:00
+fetched_at: 2026-10-21T14:21:19.958485+00:00
 ---
 
 # Import virtual appliances  |  Compute Engine  |  Google Cloud Documentation

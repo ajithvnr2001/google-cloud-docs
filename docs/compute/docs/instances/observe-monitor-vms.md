@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/observe-monitor-vms/
 title: Observe and monitor VMs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:44:18.535702+00:00
+fetched_at: 2026-10-21T14:19:40.780249+00:00
 ---
 
 # Observe and monitor VMs  |  Compute Engine  |  Google Cloud Documentation

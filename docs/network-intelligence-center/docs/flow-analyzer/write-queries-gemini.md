@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-intelligence-center/docs/flow-analyzer/write-queries-gemini/
 title: Write queries with Gemini assistance \u00a0|\u00a0 Network Intelligence Center - Flow Analyzer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:35:02.202981+00:00
+fetched_at: 2026-10-21T15:15:54.181467+00:00
 ---
 
 # Write queries with Gemini assistance  |  Network Intelligence Center - Flow Analyzer  |  Google Cloud Documentation

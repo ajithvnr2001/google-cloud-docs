@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/use-client-side-metrics/
 title: Use client-side metrics to troubleshoot high latency \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:58.234969+00:00
+fetched_at: 2026-10-21T15:13:04.282525+00:00
 ---
 
 # Use client-side metrics to troubleshoot high latency  |  Memorystore for Redis  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/creating-root-ca/
 title: Create a root CA \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:59:35.477131+00:00
+fetched_at: 2026-10-21T14:23:58.652885+00:00
 ---
 
 # Create a root CA  |  Certificate Authority Service  |  Google Cloud Documentation

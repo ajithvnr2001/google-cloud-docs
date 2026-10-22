@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/atlassian-bitbucket-changelog/
 title: Change log for ATLASSIAN_BITBUCKET \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:09:35.300523+00:00
+fetched_at: 2026-10-21T14:46:16.344290+00:00
 ---
 
 # Change log for ATLASSIAN_BITBUCKET  |  Google Security Operations  |  Google Cloud Documentation

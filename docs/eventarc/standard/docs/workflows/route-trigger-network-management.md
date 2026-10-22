@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/workflows/route-trigger-network-management/
 title: Route Network Management events to Workflows \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:50.660201+00:00
+fetched_at: 2026-10-21T12:46:26.889959+00:00
 ---
 
 # Route Network Management events to Workflows  |  Eventarc Standard  |  Google Cloud Documentation

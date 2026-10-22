@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/queue-info-transfer-history-agent-adapter/
 title: Transfer history and queue information in the agent adapter \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:12.445253+00:00
+fetched_at: 2026-10-21T14:08:58.551687+00:00
 ---
 
 # Transfer history and queue information in the agent adapter  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

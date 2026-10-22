@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/create-vm-with-additional-non-boot-disks/
 title: Create an instance with additional non-boot disks \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:00:08.733575+00:00
+fetched_at: 2026-10-22T05:48:33.720879+00:00
 ---
 
 # Create an instance with additional non-boot disks  |  Compute Engine  |  Google Cloud Documentation
@@ -406,13 +406,13 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     	// instanceName := "your_instance_name"
     
     	ctx := context.Background()
-    	instancesClient, err := compute.NewInstancesRESTClient(ctx)
+    	instancesClient, err := compute.[NewInstancesRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_InstancesClient_NewInstancesRESTClient)(ctx)
     	if err != nil {
     		return fmt.Errorf("NewInstancesRESTClient: %w", err)
     	}
     	defer instancesClient.Close()
     
-    	imagesClient, err := compute.NewImagesRESTClient(ctx)
+    	imagesClient, err := compute.[NewImagesRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_ImagesClient_NewImagesRESTClient)(ctx)
     	if err != nil {
     		return fmt.Errorf("NewImagesRESTClient: %w", err)
     	}
@@ -442,7 +442,7 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     					},
     					AutoDelete: proto.Bool(true),
     					Boot:       proto.Bool(true),
-    					Type:       proto.String(computepb.AttachedDisk_PERSISTENT.String()),
+    					Type:       proto.String(computepb.[AttachedDisk_PERSISTENT](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1/computepb.html#cloud_google_com_go_compute_apiv1_computepb_AttachedDisk_UNDEFINED_TYPE_AttachedDisk_PERSISTENT_AttachedDisk_SCRATCH).String()),
     				},
     				{
     					InitializeParams: &computepb.AttachedDiskInitializeParams{
@@ -451,7 +451,7 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     					},
     					AutoDelete: proto.Bool(true),
     					Boot:       proto.Bool(false),
-    					Type:       proto.String(computepb.AttachedDisk_PERSISTENT.String()),
+    					Type:       proto.String(computepb.[AttachedDisk_PERSISTENT](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1/computepb.html#cloud_google_com_go_compute_apiv1_computepb_AttachedDisk_UNDEFINED_TYPE_AttachedDisk_PERSISTENT_AttachedDisk_SCRATCH).String()),
     				},
     			},
     			MachineType: proto.String(fmt.Sprintf("zones/%s/machineTypes/n1-standard-1", zone)),
@@ -485,17 +485,17 @@ Before trying this sample, follow the Java setup instructions in the [Compute En
 To authenticate to Compute Engine, set up Application Default Credentials. For more information, see [Set up authentication for client libraries](https://docs.cloud.google.com/compute/docs/authentication#client-libs). 
     
     
-    import com.google.api.gax.longrunning.OperationFuture;
-    import com.google.cloud.compute.v1.AttachedDisk;
-    import com.google.cloud.compute.v1.AttachedDisk.Type;
-    import com.google.cloud.compute.v1.AttachedDiskInitializeParams;
-    import com.google.cloud.compute.v1.Image;
-    import com.google.cloud.compute.v1.ImagesClient;
-    import com.google.cloud.compute.v1.InsertInstanceRequest;
-    import com.google.cloud.compute.v1.Instance;
-    import com.google.cloud.compute.v1.InstancesClient;
-    import com.google.cloud.compute.v1.NetworkInterface;
-    import com.google.cloud.compute.v1.Operation;
+    import com.google.api.gax.longrunning.[OperationFuture](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationFuture.html);
+    import com.google.cloud.compute.v1.[AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html);
+    import com.google.cloud.compute.v1.[AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html).Type;
+    import com.google.cloud.compute.v1.[AttachedDiskInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDiskInitializeParams.html);
+    import com.google.cloud.compute.v1.[Image](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Image.html);
+    import com.google.cloud.compute.v1.[ImagesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ImagesClient.html);
+    import com.google.cloud.compute.v1.[InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html);
+    import com.google.cloud.compute.v1.[Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html);
+    import com.google.cloud.compute.v1.[InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html);
+    import com.google.cloud.compute.v1.[NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html);
+    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html);
     import java.io.IOException;
     import java.util.Vector;
     import java.util.concurrent.ExecutionException;
@@ -520,17 +520,17 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
        * "projects/{project_name}/global/images/{image_name}"
        * @return AttachedDisk object configured to be created using the specified image.
        */
-      private static AttachedDisk diskFromImage(String diskType, int diskSizeGb, boolean boot,
+      private static [AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html) diskFromImage(String diskType, int diskSizeGb, boolean boot,
           String sourceImage) {
-        AttachedDisk disk =
-            AttachedDisk.newBuilder()
+        [AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html) disk =
+            [AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html).newBuilder()
                 .setBoot(boot)
                 // Remember to set auto_delete to True if you want the disk to be deleted when
                 // you delete your VM instance.
                 .setAutoDelete(true)
                 .setType(Type.PERSISTENT.toString())
-                .setInitializeParams(
-                    AttachedDiskInitializeParams.newBuilder()
+                .[setInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.Builder.html#com_google_cloud_compute_v1_AttachedDisk_Builder_setInitializeParams_com_google_cloud_compute_v1_AttachedDiskInitializeParams_)(
+                    [AttachedDiskInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDiskInitializeParams.html).newBuilder()
                         .setSourceImage(sourceImage)
                         .setDiskSizeGb(diskSizeGb)
                         .setDiskType(diskType)
@@ -550,16 +550,16 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
        * @param diskSizeGb size of the new disk in gigabytes
        * @return AttachedDisk object configured to be created as an empty disk.
        */
-      private static AttachedDisk emptyDisk(String diskType, int diskSizeGb) {
-        AttachedDisk disk =
-            AttachedDisk.newBuilder()
+      private static [AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html) emptyDisk(String diskType, int diskSizeGb) {
+        [AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html) disk =
+            [AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html).newBuilder()
                 .setBoot(false)
                 // Remember to set auto_delete to True if you want the disk to be deleted when
                 // you delete your VM instance.
                 .setAutoDelete(true)
                 .setType(Type.PERSISTENT.toString())
-                .setInitializeParams(
-                    AttachedDiskInitializeParams.newBuilder()
+                .[setInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.Builder.html#com_google_cloud_compute_v1_AttachedDisk_Builder_setInitializeParams_com_google_cloud_compute_v1_AttachedDiskInitializeParams_)(
+                    [AttachedDiskInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDiskInitializeParams.html).newBuilder()
                         .setDiskSizeGb(diskSizeGb)
                         .setDiskType(diskType)
                         .build())
@@ -585,26 +585,26 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
        * following format: "regions/{region}/subnetworks/{subnetwork_name}"
        * @return Instance object.
        */
-      private static Instance createWithDisks(String project, String zone, String instanceName,
+      private static [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html) createWithDisks(String project, String zone, String instanceName,
           Vector<AttachedDisk> disks, String machineType, String network, String subnetwork)
           throws IOException, InterruptedException, ExecutionException, TimeoutException {
-        try (InstancesClient instancesClient = InstancesClient.create()) {
+        try ([InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html) instancesClient = [InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html).create()) {
           // Use the network interface provided in the networkName argument.
-          NetworkInterface networkInterface;
+          [NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html) networkInterface;
           if (subnetwork != null) {
-            networkInterface = NetworkInterface.newBuilder()
+            networkInterface = [NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html).newBuilder()
                 .setName(network).setSubnetwork(subnetwork)
                 .build();
           } else {
-            networkInterface = NetworkInterface.newBuilder()
+            networkInterface = [NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html).newBuilder()
                 .setName(network).build();
           }
     
           machineType = String.format("zones/%s/machineTypes/%s", zone, machineType);
     
           // Bind `instanceName`, `machineType`, `disk`, and `networkInterface` to an instance.
-          Instance instanceResource =
-              Instance.newBuilder()
+          [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html) instanceResource =
+              [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html).newBuilder()
                   .setName(instanceName)
                   .setMachineType(machineType)
                   .addAllDisks(disks)
@@ -614,7 +614,7 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
           System.out.printf("Creating instance: %s at %s ", instanceName, zone);
     
           // Insert the instance in the specified project and zone.
-          InsertInstanceRequest insertInstanceRequest = InsertInstanceRequest.newBuilder()
+          [InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html) insertInstanceRequest = [InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html).newBuilder()
               .setProject(project)
               .setZone(zone)
               .setInstanceResource(instanceResource).build();
@@ -623,13 +623,13 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
               insertInstanceRequest);
     
           // Wait for the operation to complete.
-          Operation response = operation.get(3, TimeUnit.MINUTES);
+          [Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html) response = operation.get(3, TimeUnit.MINUTES);
     
-          if (response.hasError()) {
+          if (response.[hasError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_hasError__)()) {
             System.out.println("Instance creation failed ! ! " + response);
             return null;
           }
-          System.out.println("Operation Status: " + response.getStatus());
+          System.out.println("Operation Status: " + response.[getStatus](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_getStatus__)());
     
           return instancesClient.get(project, zone, instanceName);
         }
@@ -643,14 +643,14 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
        * @param instanceName name of the new virtual machine (VM) instance.
        * @return Instance object.
        */
-      public static Instance createWithAdditionalDisk(String project, String zone, String instanceName)
+      public static [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html) createWithAdditionalDisk(String project, String zone, String instanceName)
           throws IOException, InterruptedException, ExecutionException, TimeoutException {
-        try (ImagesClient imagesClient = ImagesClient.create()) {
+        try ([ImagesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ImagesClient.html) imagesClient = [ImagesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ImagesClient.html).create()) {
           // List of public operating system (OS) images: https://cloud.google.com/compute/docs/images/os-details
-          Image image = imagesClient.getFromFamily("debian-cloud", "debian-13");
+          [Image](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Image.html) image = imagesClient.[getFromFamily](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ImagesClient.html#com_google_cloud_compute_v1_ImagesClient_getFromFamily_com_google_cloud_compute_v1_GetFromFamilyImageRequest_)("debian-cloud", "debian-13");
           String diskType = String.format("zones/%s/diskTypes/pd-standard", zone);
           Vector<AttachedDisk> disks = new Vector<>();
-          disks.add(diskFromImage(diskType, 10, true, image.getSelfLink()));
+          disks.add(diskFromImage(diskType, 10, true, image.[getSelfLink](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Image.html#com_google_cloud_compute_v1_Image_getSelfLink__)()));
           disks.add(emptyDisk(diskType, 11));
           return createWithDisks(project, zone, instanceName, disks, "n1-standard-1",
               "global/networks/default", null);
@@ -671,12 +671,12 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     // const zone = 'europe-central2-b';
     // const instanceName = 'YOUR_INSTANCE_NAME';
     
-    const compute = require('@google-cloud/compute');
+    const compute = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)');
     
     // Create a new VM instance with Debian 10 operating system and a 11 GB additional empty disk.
     async function createWithAdditionalDisk() {
-      const instancesClient = new compute.InstancesClient();
-      const imagesClient = new compute.ImagesClient();
+      const instancesClient = new compute.[InstancesClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+      const imagesClient = new compute.[ImagesClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
     
       // List of public operating system (OS) images: https://cloud.google.com/compute/docs/images/os-details.
       const [newestDebian] = await imagesClient.getFromFamily({
@@ -719,7 +719,7 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
         },
       });
       let operation = response.latestResponse;
-      const operationsClient = new compute.ZoneOperationsClient();
+      const operationsClient = new compute.[ZoneOperationsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
     
       // Wait for the create operation to complete.
       while (operation.status !== 'DONE') {
@@ -1152,6 +1152,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

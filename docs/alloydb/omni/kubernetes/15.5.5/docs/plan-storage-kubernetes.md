@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/15.5.5/docs/plan-storage-kubernetes/
 title: Plan storage and PVC sizes \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 15.5.5 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:34:42.256419+00:00
+fetched_at: 2026-10-21T15:28:20.800171+00:00
 ---
 
 # Plan storage and PVC sizes  |  AlloyDB Omni for Kubernetes: 15.5.5  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/repositories/repo-locations/
 title: Artifact Registry locations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:45:19.712821+00:00
+fetched_at: 2026-10-21T14:25:42.504528+00:00
 ---
 
 # Artifact Registry locations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/mcafee-ips-changelog/
 title: Change log for MCAFEE_IPS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:02:38.983341+00:00
+fetched_at: 2026-10-21T14:43:14.911329+00:00
 ---
 
 # Change log for MCAFEE_IPS  |  Google Security Operations  |  Google Cloud Documentation

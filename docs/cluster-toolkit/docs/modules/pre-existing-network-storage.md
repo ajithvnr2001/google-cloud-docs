@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/pre-existing-network-storage/
 title: Use pre-existing network storage \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:42.030569+00:00
+fetched_at: 2026-10-21T14:42:16.095223+00:00
 ---
 
 # Use pre-existing network storage  |  Cluster Toolkit  |  Google Cloud Documentation

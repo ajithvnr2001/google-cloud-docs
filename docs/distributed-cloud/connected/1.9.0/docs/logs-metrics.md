@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.9.0/docs/logs-metrics/
 title: Logs and metrics \u00a0|\u00a0 Google Distributed Cloud connected, version 1.9.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:30:46.758880+00:00
+fetched_at: 2026-10-21T12:45:10.395464+00:00
 ---
 
 # Logs and metrics  |  Google Distributed Cloud connected, version 1.9.0  |  Google Cloud Documentation

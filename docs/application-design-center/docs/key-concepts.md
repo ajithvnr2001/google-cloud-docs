@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/key-concepts/
 title: Key concepts \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:38:31.424470+00:00
+fetched_at: 2026-10-21T14:27:13.758018+00:00
 ---
 
 # Key concepts  |  Application Design Center  |  Google Cloud Documentation

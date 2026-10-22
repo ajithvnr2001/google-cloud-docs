@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/import/configuring-imported-images/
 title: Manually configure imported disks \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:14.555253+00:00
+fetched_at: 2026-10-21T14:20:52.109723+00:00
 ---
 
 # Manually configure imported disks  |  Compute Engine  |  Google Cloud Documentation

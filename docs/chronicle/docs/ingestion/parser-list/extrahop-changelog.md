@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/extrahop-changelog/
 title: Change log for EXTRAHOP \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:31:46.724650+00:00
+fetched_at: 2026-10-21T14:43:45.559585+00:00
 ---
 
 # Change log for EXTRAHOP  |  Google Security Operations  |  Google Cloud Documentation

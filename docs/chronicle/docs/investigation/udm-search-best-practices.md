@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/udm-search-best-practices/
 title: Search best practices \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:13.618789+00:00
+fetched_at: 2026-10-21T14:26:02.152751+00:00
 ---
 
 # Search best practices  |  Google Security Operations  |  Google Cloud Documentation

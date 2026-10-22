@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/vectra-stream-changelog/
 title: Change log for VECTRA_STREAM \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:58:31.598708+00:00
+fetched_at: 2026-10-21T14:43:24.079815+00:00
 ---
 
 # Change log for VECTRA_STREAM  |  Google Security Operations  |  Google Cloud Documentation

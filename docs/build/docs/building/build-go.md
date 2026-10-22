@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/building/build-go/
 title: Build and test Go applications \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:03.533959+00:00
+fetched_at: 2026-10-21T14:11:27.776643+00:00
 ---
 
 # Build and test Go applications  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/mainframe-assessment-tool/docs/release-notes/
 title: Mainframe Assessment Tool release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:00:58.625491+00:00
+fetched_at: 2026-10-21T12:56:11.072193+00:00
 ---
 
 # Mainframe Assessment Tool release notes  |  Google Cloud Documentation
@@ -26,6 +26,39 @@ This page contains release notes for features and updates to Mainframe Assessmen
 You can see the latest product updates for all of Google Cloud on the [ Google Cloud](https://docs.cloud.google.com/release-notes) page, browse and filter all release notes in the [Google Cloud console](https://console.cloud.google.com/release-notes), or programmatically access release notes in [BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_cloud_release_notes&t=release_notes&page=table). 
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/mainframeassessmenttool-release-notes.xml) directly. 
+
+## October 15, 2026
+
+Feature
+
+Mainframe Assessment Tool version 3.6.0 is available with the following new features and improvements:
+
+  * Upgraded the model routing to Gemini 3.8 Flash, improving response quality and execution speed.
+
+For more information, see [Create and update assessments](https://docs.cloud.google.com/mainframe-assessment-tool/docs/perform-assessment).
+
+  * Introduced a **Use with Antigravity** menu on the **Assessments** page with options to **Configure MCP** and **Download Skill**.
+
+For more information, see [Enable the Mainframe Assessment Tool MCP server](https://docs.cloud.google.com/mainframe-assessment-tool/docs/mcp-server#mat-mcp-configure-antigravity) and [Modernize and validate](https://docs.cloud.google.com/mainframe-assessment-tool/docs/modernize-validate).
+
+  * Improved support for resolving advanced dynamic `CALL` statements in COBOL.
+
+  * Enhanced parsing to resolve inline data and dataset concatenations across `SYSTSIN` and `SYSIN` statements.
+
+
+
+
+Fixed
+
+Mainframe Assessment Tool version 3.6.0 fixes the following issues:
+
+  * Fixed an issue where generating a support bundle for a large assessment could time out with a `504 Gateway Timeout` error.
+  * Fixed an issue where UniVerse BASIC source files were misclassified.
+  * Fixed an issue where exporting HTML documentation could display a false partial-export warning.
+  * Fixed an issue where **Ask Gemini** did not display an error banner when an AI response stream failed mid-request.
+  * Fixed an issue where deleting a large assessment took several minutes and triggered a `504 Gateway Timeout` error if you clicked **Delete** multiple times.
+
+
 
 ## August 18, 2026
 
@@ -990,6 +1023,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-13 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

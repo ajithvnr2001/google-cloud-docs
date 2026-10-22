@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/concepts/resources/
 title: About Config Connector CRDs \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:16.742647+00:00
+fetched_at: 2026-10-21T14:24:40.920719+00:00
 ---
 
 # About Config Connector CRDs  |  Google Cloud Documentation

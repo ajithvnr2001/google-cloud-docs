@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/16.8.0/docs/cross-data-center-replication/work-with-cross-data-center-replication/
 title: Work with cross-data-center replication \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 16.8.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:23:46.508152+00:00
+fetched_at: 2026-10-21T15:27:02.878701+00:00
 ---
 
 # Work with cross-data-center replication  |  AlloyDB Omni for Kubernetes: 16.8.0  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/access-protection/
 title: Chrome Enterprise Premium access protection overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:01:28.187587+00:00
+fetched_at: 2026-10-21T14:25:41.782630+00:00
 ---
 
 # Chrome Enterprise Premium access protection overview  |  Google Cloud Documentation

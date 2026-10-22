@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/datastore/api-overview/
 title: App Engine Datastore API for App Engine \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:46.732867+00:00
+fetched_at: 2026-10-21T14:20:31.243394+00:00
 ---
 
 # App Engine Datastore API for App Engine  |  App Engine standard environment  |  Google Cloud Documentation

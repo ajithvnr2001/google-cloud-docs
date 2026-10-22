@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/resources/
 title: Resources \u00a0|\u00a0 Gemini Cloud Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:40:51.042992+00:00
+fetched_at: 2026-10-21T14:22:32.816918+00:00
 ---
 
 # Resources  |  Gemini Cloud Assist  |  Google Cloud Documentation

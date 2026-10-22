@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/sso/
 title: Single sign-on (SSO) \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:02.216503+00:00
+fetched_at: 2026-10-21T14:22:35.452067+00:00
 ---
 
 # Single sign-on (SSO)  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

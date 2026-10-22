@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/set-up-app-hub-host-project/
 title: Set up a host project (Legacy) \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:05:58.079768+00:00
+fetched_at: 2026-10-21T12:29:56.341589+00:00
 ---
 
 # Set up a host project (Legacy)  |  App Hub  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/use-cmek/
 title: Use customer-managed encryption keys (CMEK) \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:53.779114+00:00
+fetched_at: 2026-10-21T15:13:32.152249+00:00
 ---
 
 # Use customer-managed encryption keys (CMEK)  |  Memorystore for Redis  |  Google Cloud Documentation

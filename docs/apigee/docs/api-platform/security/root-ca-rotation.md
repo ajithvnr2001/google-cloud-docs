@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/security/root-ca-rotation/
 title: About the Apigee root CA certificate and rotation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:07:12.615234+00:00
+fetched_at: 2026-10-21T12:36:00.520244+00:00
 ---
 
 # About the Apigee root CA certificate and rotation  |  Google Cloud Documentation

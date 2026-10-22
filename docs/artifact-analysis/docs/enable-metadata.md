@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/enable-metadata/
 title: Enable or disable metadata storage \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:27:04.246817+00:00
+fetched_at: 2026-10-21T12:39:45.078890+00:00
 ---
 
 # Enable or disable metadata storage  |  Artifact Analysis  |  Google Cloud Documentation

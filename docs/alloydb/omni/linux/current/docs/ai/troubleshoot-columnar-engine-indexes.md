@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/linux/current/docs/ai/troubleshoot-columnar-engine-indexes/
 title: Troubleshoot vector indexes in the columnar engine \u00a0|\u00a0 AlloyDB Omni using RPM: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:48:18.796004+00:00
+fetched_at: 2026-10-21T14:37:38.556010+00:00
 ---
 
 # Troubleshoot vector indexes in the columnar engine  |  AlloyDB Omni using RPM: Current (18.4.0)  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/create-managed-workload-identities-compute/
 title: Configure managed workload identity authentication for Compute Engine \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:10:02.421721+00:00
+fetched_at: 2026-10-21T12:53:25.812062+00:00
 ---
 
 # Configure managed workload identity authentication for Compute Engine  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

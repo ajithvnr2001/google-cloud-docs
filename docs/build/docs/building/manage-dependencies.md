@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/building/manage-dependencies/
 title: Manage build dependencies \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:48:59.819624+00:00
+fetched_at: 2026-10-21T14:11:49.288414+00:00
 ---
 
 # Manage build dependencies  |  Cloud Build  |  Google Cloud Documentation

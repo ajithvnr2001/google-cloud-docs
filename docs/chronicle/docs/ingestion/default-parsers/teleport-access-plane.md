@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/teleport-access-plane/
 title: Collect Teleport Access Plane logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:09:42.120511+00:00
+fetched_at: 2026-10-21T12:38:21.638793+00:00
 ---
 
 # Collect Teleport Access Plane logs  |  Google Security Operations  |  Google Cloud Documentation

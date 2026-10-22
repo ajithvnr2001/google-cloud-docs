@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/secret-manager-ux/
 title: Manage secrets with Secret Manager in Cloud Code for IntelliJ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:06:44.224024+00:00
+fetched_at: 2026-10-21T12:40:25.775082+00:00
 ---
 
 # Manage secrets with Secret Manager in Cloud Code for IntelliJ  |  Google Cloud Documentation

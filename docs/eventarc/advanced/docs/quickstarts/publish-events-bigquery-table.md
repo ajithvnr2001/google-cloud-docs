@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/advanced/docs/quickstarts/publish-events-bigquery-table/
 title: Quickstart: Publish events to a BigQuery table \u00a0|\u00a0 Eventarc Advanced \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:24:24.081713+00:00
+fetched_at: 2026-10-21T12:52:05.376878+00:00
 ---
 
 # Quickstart: Publish events to a BigQuery table  |  Eventarc Advanced  |  Google Cloud Documentation

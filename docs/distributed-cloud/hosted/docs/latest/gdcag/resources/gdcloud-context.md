@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-context/
 title: View and switch context \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:46:03.236224+00:00
+fetched_at: 2026-10-21T13:00:03.083689+00:00
 ---
 
 # View and switch context  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

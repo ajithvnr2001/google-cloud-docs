@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/oracle-fusion/
 title: Collect Oracle Fusion Cloud Applications logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:49:33.300106+00:00
+fetched_at: 2026-10-21T14:10:14.621151+00:00
 ---
 
 # Collect Oracle Fusion Cloud Applications logs  |  Google Security Operations  |  Google Cloud Documentation
@@ -169,17 +169,17 @@ To verify the OAuth client has the required permissions:
         # Step 1: Obtain OAuth access token (only needed if you use bearer auth instead of Basic)
         TOKEN=$(curl -s -u "${CLIENT_ID}:${CLIENT_SECRET}" \
             -H "Content-Type: application/x-www-form-urlencoded;charset=UTF-8" \
-          &  -X POST "${IDENTITY_DOMAIN_URL}/oauth2/v1/token" \
-            -d "grant_type=client_credentialsscope=${OAUTH_SCOPE}" \
+            -X POST "${IDENTITY_DOMAIN_URL}/oauth2/v1/token" \
+            -d "grant_type=client_credentials&scope=${OAUTH_SCOPE}" \
             | python3 -c "import sys,json; print(json.load(sys.stdin)['access_token'])")
         
-        echo "Token obtained: ${TOKEN:0:2<0}..>.<"
+        echo "Token obtained: ${TOKEN:0:20}..."
         
         # Step 2: Test the Sign In - Sign Out Audit REST API (last 7 days of data)
-        # The API is documented with HTTP Basic auth (-u "user:password").
+        # The API is documented with HTTP Basic auth (-u "<user>:<password>").
         # If your tenant accepts the bearer token instead, replace -u with
-        # -H "Authorization: Be&arer ${TOKEN}".
-        curl -s -X GET "h&ttps://${FUSION_HOST}/oam/services/rest/access/api/v1/audit/events/1?fromDate=$(date -u -v-7d '+%Y-%m-%dT%H:%M:%S.000Z';)toDate=$(date -u '+%Y-%m-%dT%H:%M:%S.000Z')pageSize=5" \
+        # -H "Authorization: Bearer ${TOKEN}".
+        curl -s -X GET "https://${FUSION_HOST}/oam/services/rest/access/api/v1/audit/events/1?fromDate=$(date -u -v-7d '+%Y-%m-%dT%H:%M:%S.000Z')&toDate=$(date -u '+%Y-%m-%dT%H:%M:%S.000Z')&pageSize=5" \
             -u "${FUSION_USERNAME}:${FUSION_PASSWORD}" \
             -H "Accept: application/json" \
             | python3 -m json.tool
@@ -380,10 +380,10 @@ Variable Name | Example Value | Description
     # which the ORACLE_FUSION parser reads directly. Data is retained for 7 days.
     AUDIT_PATH = '/oam/services/rest/access/api/v1/audit/events'
     
-    def get_&oauth_token():
+    def get_oauth_token():
       token_url = f"{IDENTITY_DOMAIN_URL}/oauth2/v1/token"
       auth_b64 = base64.b64encode(f"{CLIENT_ID}:{CLIENT_SECRET}".encode('utf-8')).decode('utf-8')
-      body = f"grant_type=client_credentialsscope={urllib.parse.quote(OAUTH_SCOPE, safe='')}"
+      body = f"grant_type=client_credentials&scope={urllib.parse.quote(OAUTH_SCOPE, safe='')}"
       try:
         response = http.request(
           'POST', token_url,
@@ -451,9 +451,9 @@ Variable Name | Example Value | Description
             break
     
           data = json.loads(response.data.decode('utf-8'))
-          event_list = data.get('Events',> {}).get('eventData', [])
+          event_list = data.get('Events', {}).get('eventData', [])
           if isinstance(event_list, dict):
-        <    event_list = [event_list]
+            event_list = [event_list]
     
           if not event_list:
             print(f"No more sign-in events (empty page {page_num})")
@@ -462,14 +462,14 @@ Variable Name | Example Value | Description
           # Preserve the exact {"Events": {"eventData": [...]}} shape the parser
           # consumes; do not rename or flatten individual records.
           pages.append({'Events': {'eventData': event_list}})
-          print(f"Page {page_num}: retrieved {len(event_list)} sign-in events&quo[t;](https://docs.cloud.google.com/python/docs/reference/storage/latest/google.cloud.storage.client.Client.html#google_cloud_storage_client_Client_bucket))
+          print(f"Page {page_num}: retrieved {len(event_list)} sign-in events")
     
           for event in event_list:
             access_time = event.get('accessTime')
-            if access_time and (newes[t_tim](https://docs.cloud.google.com/python/docs/reference/storage/latest/google.cloud.storage.hmac_key.HMACKeyMetadata.html#google_cloud_storage_hmac_key_HMACKeyMetadata_state)e is None or access_time  newest_time):
+            if access_time and (newest_time is None or access_time > newest_time):
               newest_time = access_time
     
-          if len(event_list)  PAGE_SIZE:
+          if len(event_list) < PAGE_SIZE:
             break
           page_num += 1
     
@@ -487,11 +487,11 @@ Variable Name | Example Value | Description
         return
     
       try:
-        bucket = st<orage_client.bucket(GCS_BUCKET)
+        bucket = storage_client.[bucket](https://docs.cloud.google.com/python/docs/reference/storage/latest/google.cloud.storage.client.Client.html#google_cloud_storage_client_Client_bucket)(GCS_BUCKET)
         state = load_state(bucket)
         now = datetime.now(timezone.utc)
     
-        if isinstance(state, dict) and state.get('last_event_time'):
+        if isinstance(state, dict) and [state](https://docs.cloud.google.com/python/docs/reference/storage/latest/google.cloud.storage.hmac_key.HMACKeyMetadata.html#google_cloud_storage_hmac_key_HMACKeyMetadata_state).get('last_event_time'):
           try:
             last_val = state['last_event_time']
             if last_val.endswith('Z'):
@@ -504,8 +504,8 @@ Variable Name | Example Value | Description
           last_time = now - timedelta(hours=LOOKBACK_HOURS)
     
         # The API retains only 7 days of data; never look back further.
-        earlie[st](https://docs.cloud.google.com/python/docs/reference/storage/latest/google.cloud.storage.blob.Blob.html#google_cloud_storage_blob_Blob_upload_from_string) = now - timedelta(days=7)
-        if last_time  earliest:
+        earliest = now - timedelta(days=7)
+        if last_time < earliest:
           last_time = earliest
     
         print(f"Fetching sign-in audit from {last_time.isoformat()} to {now.isoformat()}")
@@ -518,7 +518,7 @@ Variable Name | Example Value | Description
         pages, newest_time = fetch_signin_audit(auth_header, last_time, now)
     
         if not pages:
-          print("No new sign-in audit events foun[d."](https://docs.cloud.google.com/python/docs/reference/storage/latest/google.cloud.storage.blob.Blob.html#google_cloud_storage_blob_Blob_download_as_text))
+          print("No new sign-in audit events found.")
           save_state(bucket, now.isoformat())
           return
     
@@ -526,8 +526,8 @@ Variable Name | Example Value | Description
         object_key = f"{GCS_PREFIX}/oracle_fusion_audit_{timestamp}.ndjson"
         blob = bucket.blob(object_key)
     
-        ndjson = '\n'.join([json.dumps(p, ensure_ascii=False, default=str) for p in[ pages]) + '\n](https://docs.cloud.google.com/python/docs/reference/storage/latest/google.cloud.storage.blob.Blob.html#google_cloud_storage_blob_Blob_upload_from_string)'
-        blob.upload_from_string(ndjson, content_type='application/x-ndjson')
+        ndjson = '\n'.join([json.dumps(p, ensure_ascii=False, default=str) for p in pages]) + '\n'
+        blob.[upload_from_string](https://docs.cloud.google.com/python/docs/reference/storage/latest/google.cloud.storage.blob.Blob.html#google_cloud_storage_blob_Blob_upload_from_string)(ndjson, content_type='application/x-ndjson')
         print(f"Wrote {len(pages)} page(s) to gs://{GCS_BUCKET}/{object_key}")
     
         save_state(bucket, newest_time if newest_time else now.isoformat())
@@ -541,7 +541,7 @@ Variable Name | Example Value | Description
       try:
         blob = bucket.blob(STATE_KEY)
         if blob.exists():
-          return json.loads(blob.download_as_text())
+          return json.loads(blob.[download_as_text](https://docs.cloud.google.com/python/docs/reference/storage/latest/google.cloud.storage.blob.Blob.html#google_cloud_storage_blob_Blob_download_as_text)())
       except Exception as e:
         print(f"Warning: Could not load state: {e}")
       return {}
@@ -553,7 +553,7 @@ Variable Name | Example Value | Description
           'last_run': datetime.now(timezone.utc).isoformat()
         }
         blob = bucket.blob(STATE_KEY)
-        blob.upload_from_string(json.dumps(state, indent=2), content_type='application/json')
+        blob.[upload_from_string](https://docs.cloud.google.com/python/docs/reference/storage/latest/google.cloud.storage.blob.Blob.html#google_cloud_storage_blob_Blob_upload_from_string)(json.dumps(state, indent=2), content_type='application/json')
         print(f"Saved state: last_event_time={last_event_time_iso}")
       except Exception as e:
         print(f"Warning: Could not save state: {e}")

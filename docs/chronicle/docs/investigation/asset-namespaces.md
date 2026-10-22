@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/asset-namespaces/
 title: Manage asset namespaces \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:33:50.939256+00:00
+fetched_at: 2026-10-21T14:11:05.266553+00:00
 ---
 
 # Manage asset namespaces  |  Google Security Operations  |  Google Cloud Documentation

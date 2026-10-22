@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/how-to/install-upgrade-uninstall/
 title: Installing with the GKE add-on \u00a0|\u00a0 Config Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:16.399611+00:00
+fetched_at: 2026-10-21T14:24:38.306288+00:00
 ---
 
 # Installing with the GKE add-on  |  Config Connector  |  Google Cloud Documentation

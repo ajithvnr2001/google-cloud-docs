@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/licenses/about/
 title: About licenses \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:54:53.679807+00:00
+fetched_at: 2026-10-21T14:24:39.312477+00:00
 ---
 
 # About licenses  |  Compute Engine  |  Google Cloud Documentation

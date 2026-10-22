@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/java/using-guice/
 title: Using Guice with Cloud Endpoints Frameworks \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:33:30.271535+00:00
+fetched_at: 2026-10-21T12:46:10.158104+00:00
 ---
 
 # Using Guice with Cloud Endpoints Frameworks  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

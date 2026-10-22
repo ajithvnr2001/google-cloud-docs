@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/data-store/handler/
 title: Data store tools \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:36.763513+00:00
+fetched_at: 2026-10-21T12:43:42.103623+00:00
 ---
 
 # Data store tools  |  Dialogflow CX  |  Google Cloud Documentation

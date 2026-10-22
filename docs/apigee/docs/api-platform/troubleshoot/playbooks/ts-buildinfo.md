@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/ts-buildinfo/
 title: Print build info \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:18:01.955568+00:00
+fetched_at: 2026-10-21T14:26:47.551486+00:00
 ---
 
 # Print build info  |  Apigee  |  Google Cloud Documentation

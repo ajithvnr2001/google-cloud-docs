@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/list-get-devices/
 title: Listing device users \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:19.866828+00:00
+fetched_at: 2026-10-21T12:54:10.114584+00:00
 ---
 
 # Listing device users  |  Cloud Identity  |  Google Cloud Documentation

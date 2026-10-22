@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/google-cloud-storage/
 title: Google Cloud Storage \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:58:54.117509+00:00
+fetched_at: 2026-10-21T14:06:30.589428+00:00
 ---
 
 # Google Cloud Storage  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/guides/delta-lake-cdc-df-lakehouse-integration/
 title: Migrate Delta Lake change data capture (CDC) data into borderless Lakehouse using Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:02:56.467183+00:00
+fetched_at: 2026-10-22T05:42:20.113017+00:00
 ---
 
 # Migrate Delta Lake change data capture (CDC) data into borderless Lakehouse using Dataflow  |  Google Cloud Documentation
@@ -101,8 +101,14 @@ Add the following dependencies to your `pom.xml` file:
       <version>${beam.version}</version>
     </dependency>
     
+    <dependency>
+      <groupId>org.apache.beam</groupId>
+      <artifactId>beam-sdks-java-io-delta</artifactId>
+      <version>${beam.version}</version>
+    </dependency>
+    
 
-The following Java snippet demonstrates how to configure and execute a batch CDC pipeline from Delta Lake to Lakehouse: 
+The following Java snippet demonstrates how to configure and execute a batch CDC pipeline from Delta Lake to Lakehouse. For a full Beam example, see [DeltaLakeCdcToLakehouse.java](https://github.com/apache/beam/blob/master/examples/java/iceberg/src/main/java/org/apache/beam/examples/iceberg/DeltaLakeToLakehouseCdcExample.java). 
     
     
     import java.util.Arrays;
@@ -182,6 +188,7 @@ Replace the following:
   * `TARGET_NAMESPACE`: the namespace of the target Lakehouse table.
   * `TARGET_TABLE`: the name of the target Lakehouse table.
   * `PRIMARY_KEY_COLUMN`: the primary-key column name used to identify rows for CDC updates and deletes. 
+  * Add any additional dependencies needed for Delta Lake and Iceberg based on the [Beam example](https://github.com/apache/beam/blob/master/examples/java/iceberg/build.gradle).
 
 **Note:** The `change_type_column` and `change_type_map` properties are only required when running the pipeline with the [Portable Runner](https://docs.cloud.google.com/dataflow/docs/portable-runner).
 
@@ -221,6 +228,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/web-risk/
 title: Integrate Web Risk with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:51:32.511741+00:00
+fetched_at: 2026-10-21T12:38:55.093132+00:00
 ---
 
 # Integrate Web Risk with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

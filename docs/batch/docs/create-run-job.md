@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/create-run-job/
 title: Job creation and execution overview \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:29:18.924861+00:00
+fetched_at: 2026-10-21T12:30:47.817564+00:00
 ---
 
 # Job creation and execution overview  |  Batch  |  Google Cloud Documentation

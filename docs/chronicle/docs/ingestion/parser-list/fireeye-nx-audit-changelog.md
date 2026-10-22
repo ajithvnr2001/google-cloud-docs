@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/fireeye-nx-audit-changelog/
 title: Change log for FIREEYE_NX_AUDIT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:03:59.519929+00:00
+fetched_at: 2026-10-21T14:42:46.819112+00:00
 ---
 
 # Change log for FIREEYE_NX_AUDIT  |  Google Security Operations  |  Google Cloud Documentation

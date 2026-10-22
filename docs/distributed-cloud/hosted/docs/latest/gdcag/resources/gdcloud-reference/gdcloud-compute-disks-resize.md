@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-compute-disks-resize/
 title: gdcloud compute disks resize \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:14:18.328941+00:00
+fetched_at: 2026-10-21T12:58:51.288259+00:00
 ---
 
 # gdcloud compute disks resize  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

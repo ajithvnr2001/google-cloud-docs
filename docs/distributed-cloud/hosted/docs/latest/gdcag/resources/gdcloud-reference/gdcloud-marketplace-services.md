@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-marketplace-services/
 title: gdcloud marketplace services \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:13:40.908403+00:00
+fetched_at: 2026-10-21T13:00:15.416480+00:00
 ---
 
 # gdcloud marketplace services  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

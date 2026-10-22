@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/java/war-packaging/
 title: Re-package a WAR file into a JAR file \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:07.938628+00:00
+fetched_at: 2026-10-21T14:26:44.884642+00:00
 ---
 
 # Re-package a WAR file into a JAR file  |  App Engine flexible environment  |  Google Cloud Documentation

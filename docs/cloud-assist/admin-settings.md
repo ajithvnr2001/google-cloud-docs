@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/admin-settings/
 title: Configure administrator settings \u00a0|\u00a0 Gemini Cloud Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:00:14.779470+00:00
+fetched_at: 2026-10-21T14:09:39.884748+00:00
 ---
 
 # Configure administrator settings  |  Gemini Cloud Assist  |  Google Cloud Documentation

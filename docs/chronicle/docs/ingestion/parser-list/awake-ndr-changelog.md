@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/awake-ndr-changelog/
 title: Change log for AWAKE_NDR \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:03:22.558473+00:00
+fetched_at: 2026-10-21T14:45:45.708721+00:00
 ---
 
 # Change log for AWAKE_NDR  |  Google Security Operations  |  Google Cloud Documentation

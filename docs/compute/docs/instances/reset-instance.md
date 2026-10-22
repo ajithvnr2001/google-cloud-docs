@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instances/reset-instance/
 title: Reboot or reset a Compute Engine instance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:02:25.934700+00:00
+fetched_at: 2026-10-22T05:50:13.992283+00:00
 ---
 
 # Reboot or reset a Compute Engine instance  |  Google Cloud Documentation
@@ -279,7 +279,7 @@ Replace the following:
     	// instanceName := "your_instance_name"
     
     	ctx := context.Background()
-    	instancesClient, err := compute.[NewInstancesRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_InstancesClient_NewInstancesRESTClient)(ctx)
+    	instancesClient, err := compute.NewInstancesRESTClient(ctx)
     	if err != nil {
     		return fmt.Errorf("NewInstancesRESTClient: %w", err)
     	}
@@ -309,11 +309,11 @@ Replace the following:
 ###  Java 
     
     
-    import com.google.api.gax.longrunning.[OperationFuture](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationFuture.html);
-    import com.google.cloud.compute.v1.[InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html);
-    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html);
-    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html).[Status](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Status.html);
-    import com.google.cloud.compute.v1.[ResetInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ResetInstanceRequest.html);
+    import com.google.api.gax.longrunning.OperationFuture;
+    import com.google.cloud.compute.v1.InstancesClient;
+    import com.google.cloud.compute.v1.Operation;
+    import com.google.cloud.compute.v1.Operation.Status;
+    import com.google.cloud.compute.v1.ResetInstanceRequest;
     import java.io.IOException;
     import java.util.concurrent.ExecutionException;
     import java.util.concurrent.TimeUnit;
@@ -342,19 +342,19 @@ Replace the following:
            once, and can be reused for multiple requests. After completing all of your requests, call
            the `instancesClient.close()` method on the client to safely
            clean up any remaining background resources. */
-        try ([InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html) instancesClient = [InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html).create()) {
+        try (InstancesClient instancesClient = InstancesClient.create()) {
     
-          [ResetInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ResetInstanceRequest.html) resetInstanceRequest = [ResetInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ResetInstanceRequest.html).newBuilder()
+          ResetInstanceRequest resetInstanceRequest = ResetInstanceRequest.newBuilder()
               .setProject(project)
               .setZone(zone)
               .setInstance(instanceName)
               .build();
     
-          OperationFuture<Operation, Operation> operation = instancesClient.[resetAsync](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html#com_google_cloud_compute_v1_InstancesClient_resetAsync_com_google_cloud_compute_v1_ResetInstanceRequest_)(
+          OperationFuture<Operation, Operation> operation = instancesClient.resetAsync(
               resetInstanceRequest);
-          [Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html) response = operation.get(3, TimeUnit.MINUTES);
+          Operation response = operation.get(3, TimeUnit.MINUTES);
     
-          if (response.[getStatus](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_getStatus__)() == [Status](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Status.html).DONE) {
+          if (response.getStatus() == Status.DONE) {
             System.out.println("Instance reset successfully ! ");
           }
         }
@@ -372,10 +372,10 @@ Replace the following:
     // const zone = 'europe-central2-b'
     // const instanceName = 'YOUR_INSTANCE_NAME'
     
-    const compute = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)');
+    const compute = require('@google-cloud/compute');
     
     async function resetInstance() {
-      const instancesClient = new compute.[InstancesClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+      const instancesClient = new compute.InstancesClient();
     
       const [response] = await instancesClient.reset({
         project: projectId,
@@ -383,7 +383,7 @@ Replace the following:
         instance: instanceName,
       });
       let operation = response.latestResponse;
-      const operationsClient = new compute.[ZoneOperationsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+      const operationsClient = new compute.ZoneOperationsClient();
     
       // Wait for the operation to complete.
       while (operation.status !== 'DONE') {
@@ -448,7 +448,7 @@ Replace the following:
     from typing import Any
     
     from google.api_core.extended_operation import ExtendedOperation
-    from google.cloud import [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest)
+    from google.cloud import compute_v1
     
     
     def wait_for_extended_operation(
@@ -507,9 +507,9 @@ Replace the following:
             zone: name of the zone your instance belongs to.
             instance_name: name of the instance your want to reset.
         """
-        instance_client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[InstancesClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html)()
+        instance_client = compute_v1.InstancesClient()
     
-        operation = instance_client.[reset](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.instances.InstancesClient.html#google_cloud_compute_v1_services_instances_InstancesClient_reset)(
+        operation = instance_client.reset(
             project=project_id, zone=zone, instance=instance_name
         )
     
@@ -549,6 +549,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

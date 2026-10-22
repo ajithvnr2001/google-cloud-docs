@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/reservations-assignments/
 title: Manage workload assignments \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T13:53:56.565999+00:00
+fetched_at: 2026-10-21T12:35:27.249268+00:00
 ---
 
 # Manage workload assignments  |  BigQuery  |  Google Cloud Documentation

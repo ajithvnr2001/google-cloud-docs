@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/mandiant-threat-defense-rbac/
 title: Mandiant Threat Defense and RBAC \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:56:25.766136+00:00
+fetched_at: 2026-10-21T12:38:47.685712+00:00
 ---
 
 # Mandiant Threat Defense and RBAC  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/cloudflare-waf/
 title: Collect Cloudflare WAF logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:31:41.078720+00:00
+fetched_at: 2026-10-21T14:10:19.832777+00:00
 ---
 
 # Collect Cloudflare WAF logs  |  Google Security Operations  |  Google Cloud Documentation

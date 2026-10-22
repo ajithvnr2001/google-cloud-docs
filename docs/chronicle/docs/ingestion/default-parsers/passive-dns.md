@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/passive-dns/
 title: Collect Passive DNS logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:47:50.411741+00:00
+fetched_at: 2026-10-21T14:18:49.774533+00:00
 ---
 
 # Collect Passive DNS logs  |  Google Security Operations  |  Google Cloud Documentation

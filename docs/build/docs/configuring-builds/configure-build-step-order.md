@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/configuring-builds/configure-build-step-order/
 title: Configuring the order of build steps \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:02.604210+00:00
+fetched_at: 2026-10-21T14:11:02.161900+00:00
 ---
 
 # Configuring the order of build steps  |  Cloud Build  |  Google Cloud Documentation

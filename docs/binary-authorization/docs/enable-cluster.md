@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/enable-cluster/
 title: Enable enforcement on an existing cluster \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:10.629729+00:00
+fetched_at: 2026-10-21T14:11:18.847429+00:00
 ---
 
 # Enable enforcement on an existing cluster  |  Binary Authorization  |  Google Cloud Documentation

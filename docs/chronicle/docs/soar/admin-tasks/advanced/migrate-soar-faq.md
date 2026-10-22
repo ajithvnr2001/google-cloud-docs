@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/advanced/migrate-soar-faq/
 title: Frequently Asked Questions on SOAR migration \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:57.489828+00:00
+fetched_at: 2026-10-21T14:23:48.568656+00:00
 ---
 
 # Frequently Asked Questions on SOAR migration  |  Google Security Operations  |  Google Cloud Documentation

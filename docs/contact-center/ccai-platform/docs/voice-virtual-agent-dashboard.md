@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/voice-virtual-agent-dashboard/
 title: Voice virtual agent dashboard \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:41.670127+00:00
+fetched_at: 2026-10-21T14:22:51.484500+00:00
 ---
 
 # Voice virtual agent dashboard  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

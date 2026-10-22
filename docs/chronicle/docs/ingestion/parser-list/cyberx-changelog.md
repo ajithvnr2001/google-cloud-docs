@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cyberx-changelog/
 title: Change log for CYBERX \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:07:06.356655+00:00
+fetched_at: 2026-10-21T14:45:32.496230+00:00
 ---
 
 # Change log for CYBERX  |  Google Security Operations  |  Google Cloud Documentation

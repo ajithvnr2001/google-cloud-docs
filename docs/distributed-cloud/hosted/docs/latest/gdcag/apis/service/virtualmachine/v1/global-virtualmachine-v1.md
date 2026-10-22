@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/service/virtualmachine/v1/global-virtualmachine-v1/
 title: KRM API virtualmachine.global.gdc.goog/v1 \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:39:08.738326+00:00
+fetched_at: 2026-10-21T12:56:43.130079+00:00
 ---
 
 # KRM API virtualmachine.global.gdc.goog/v1  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

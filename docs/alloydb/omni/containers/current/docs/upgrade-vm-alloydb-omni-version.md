@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/current/docs/upgrade-vm-alloydb-omni-version/
 title: Upgrade to AlloyDB Omni version 18.4.0 on a VM \u00a0|\u00a0 AlloyDB Omni using containers: Current (18.4.0) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:42:33.547788+00:00
+fetched_at: 2026-10-21T15:29:04.884017+00:00
 ---
 
 # Upgrade to AlloyDB Omni version 18.4.0 on a VM  |  AlloyDB Omni using containers: Current (18.4.0)  |  Google Cloud Documentation

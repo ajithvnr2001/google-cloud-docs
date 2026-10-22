@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/prebuilt-component/credit-card-enrollment/
 title: Credit card enrollment prebuilt component \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:41.847746+00:00
+fetched_at: 2026-10-21T12:44:20.577179+00:00
 ---
 
 # Credit card enrollment prebuilt component  |  Dialogflow CX  |  Google Cloud Documentation

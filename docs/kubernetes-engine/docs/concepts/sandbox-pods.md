@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/sandbox-pods/
 title: GKE Sandbox \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:10.552026+00:00
+fetched_at: 2026-10-21T15:00:36.152029+00:00
 ---
 
 # GKE Sandbox  |  GKE security  |  Google Cloud Documentation

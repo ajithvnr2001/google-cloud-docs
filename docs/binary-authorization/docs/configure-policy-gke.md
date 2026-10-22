@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/configure-policy-gke/
 title: Quickstart: Configure a Binary Authorization policy with GKE \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:25:50.375755+00:00
+fetched_at: 2026-10-21T14:12:00.347789+00:00
 ---
 
 # Quickstart: Configure a Binary Authorization policy with GKE  |  Google Cloud Documentation

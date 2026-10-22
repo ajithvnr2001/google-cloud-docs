@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/data-dictionary/
 title: Data dictionary and references \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:49:26.749386+00:00
+fetched_at: 2026-10-21T14:22:23.121747+00:00
 ---
 
 # Data dictionary and references  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

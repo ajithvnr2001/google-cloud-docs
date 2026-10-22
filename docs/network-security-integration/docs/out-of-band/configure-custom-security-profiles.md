@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-security-integration/docs/out-of-band/configure-custom-security-profiles/
 title: Create and manage custom mirroring security profiles \u00a0|\u00a0 Network Security Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:23.740260+00:00
+fetched_at: 2026-10-21T15:15:37.314102+00:00
 ---
 
 # Create and manage custom mirroring security profiles  |  Network Security Integration  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/concepts/ignore-unspecified-fields/
 title: Ignore unspecified fields \u00a0|\u00a0 Config Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:17.984130+00:00
+fetched_at: 2026-10-21T14:36:18.904129+00:00
 ---
 
 # Ignore unspecified fields  |  Config Connector  |  Google Cloud Documentation
@@ -45,19 +45,19 @@ Because the `cnrm.cloud.google.com/state-into-spec` annotation is immutable afte
 
 When a resource uses the `Merge` behavior, fields that aren't specified in your original YAML manifest are populated into the custom resource `spec` field in the Kubernetes API server. This behavior means that when you run the `kubectl get RESOURCE_KIND RESOURCE_NAME -o yaml` command, the `spec` field in the output can include subfields that aren't in your applied YAML file.
 
-For example, assume the CRD schema lets you specify two fields named `foo` and `bar` in the `spec` field, but your applied YAML file specifies only the `foo` field:
+For example, assume the CRD schema lets you specify two fields named `field1` and `field2` in the `spec` field, but your applied YAML file specifies only the `field1` field:
     
     
     spec:
-      foo: "foo"
+      field1: "value-1"
     
 
-If the YAML manifest is applied successfully and the resource is [UpToDate](https://docs.cloud.google.com/config-connector/docs/how-to/monitoring-your-resources#-specific_events), the `bar` field appears in the custom resource:
+If the YAML manifest is applied successfully and the resource is [UpToDate](https://docs.cloud.google.com/config-connector/docs/how-to/monitoring-your-resources#-specific_events), the `field2` field appears in the custom resource:
     
     
     spec:
-      foo: "foo"
-      bar: "bar"
+      field1: "value-1"
+      field2: "value-2"
     
 
 Config Connector doesn't populate unspecified resource reference fields, such as `projectRef`, `folderRef`, `organizationRef`, or `billingAccountRef`, from Google Cloud into `spec`. For example, even though the `Project` kind supports `Merge`, all of its optional `spec` fields (`billingAccountRef`, `folderRef`, and `organizationRef`) are resource reference fields. As a result, `Merge` doesn't populate any unspecified fields on a `Project` resource.
@@ -116,54 +116,54 @@ This annotation is immutable, which means you can't update the annotation value 
 To further explain the difference introduced by this annotation, assume that a resource has a `spec` field with the following schema:
     
     
-    foo1: string
-    foo2: string
-    bars:
-    - br1: string
-      br2: string
-    barz:
-      bz1: string
-      bz2: string
+    field1: string
+    field2: string
+    listField:
+    - itemField1: string
+      itemField2: string
+    objectField:
+      subField1: string
+      subField2: string
     
 
 Also assume that you specified the `spec` field in your YAML manifest as:
     
     
     spec:
-      foo1: "foo1"
-      bars:
-      - br1: "1_br1"
-      - br1: "2_br1"
-      barz:
-        bz1: "bz1"
+      field1: "value-1"
+      listField:
+      - itemField1: "1_value1"
+      - itemField1: "2_value1"
+      objectField:
+        subField1: "sub-value-1"
     
 
 When the value of the `cnrm.cloud.google.com/state-into-spec` annotation is set to `merge`, the populated `spec` field in the created Kubernetes resource looks like the following:
     
     
     spec:
-      foo1: "foo1"
-      foo2: "foo2"
-      bars:
-      - br1: "1_br1"
-        br2: "1_br2"
-      - br1: "2_br1"
-        br2: "2_br2"
-      barz:
-        bz1: "bz1"
-        bz2: "bz2"
+      field1: "value-1"
+      field2: "value-2"
+      listField:
+      - itemField1: "1_value1"
+        itemField2: "1_value2"
+      - itemField1: "2_value1"
+        itemField2: "2_value2"
+      objectField:
+        subField1: "sub-value-1"
+        subField2: "sub-value-2"
     
 
 When you set the `cnrm.cloud.google.com/state-into-spec: absent` annotation, the final `spec` field in the created Kubernetes resource remains:
     
     
     spec:
-      foo1: "foo1"
-      bars:
-      - br1: "1_br1"
-      - br1: "2_br1"
-      barz:
-        bz1: "bz1"
+      field1: "value-1"
+      listField:
+      - itemField1: "1_value1"
+      - itemField1: "2_value1"
+      objectField:
+        subField1: "sub-value-1"
     
 
 ## Migrate resources from `Merge` to `Absent`
@@ -270,18 +270,18 @@ Config Connector treats all list fields in the Kubernetes resource `spec` field 
 
 If you're using configuration management tools like [Config Sync](https://docs.cloud.google.com/anthos-config-management/docs/config-sync-overview) or [Argo CD](https://argoproj.github.io/cd/), you might notice conflicts between the configuration management tool and Config Connector. An example is the [KNV2005 error](https://docs.cloud.google.com/config-connector/docs/troubleshooting#knv2005_syncer_excessively_updating_resource) explained in the troubleshooting guide. These issues occur for the following reasons:
 
-  * When the value of the `state-into-spec` annotation is set to `merge`, Config Connector populates and defaults unspecified values in lists in the `spec` field, such as the `spec.bars[0].br2` field.
-  * Both configuration management tools and Config Connector treat list fields as atomic, so configuration management tools treat the added `spec.bars[0].br2` field as drift and remove it.
+  * When the value of the `state-into-spec` annotation is set to `merge`, Config Connector populates and defaults unspecified values in lists in the `spec` field, such as the `spec.listField[0].itemField2` field.
+  * Both configuration management tools and Config Connector treat list fields as atomic, so configuration management tools treat the added `spec.listField[0].itemField2` field as drift and remove it.
 
 
 
-To resolve these issues, you can set the `cnrm.cloud.google.com/state-into-spec: absent` annotation so that Config Connector doesn't add the unspecified `spec.bars[0].br2` field into the `spec` field.
+To resolve these issues, you can set the `cnrm.cloud.google.com/state-into-spec: absent` annotation so that Config Connector doesn't add the unspecified `spec.listField[0].itemField2` field into the `spec` field.
 
 ### Resolve GET/PUT symmetry issues
 
 GET/PUT symmetry refers to a design principle in REST APIs. Specifically, it means that when a GET response is sent as a PUT request to the same URL, the expected result is an HTTP `200 OK` status code with no change in the state of the underlying REST resource.
 
-When the value of the `state-into-spec` annotation is set to `merge`, the unspecified fields populated by Config Connector in the Kubernetes resource `spec` field are the result of a GET request. This behavior means that in future [reconciliations](https://docs.cloud.google.com/config-connector/docs/concepts/reconciliation), Config Connector might send a PUT or PATCH request to the underlying Google Cloud API with these unspecified field values learned from the GET request. This behavior usually isn't a problem, but some Google Cloud APIs might reject the PUT or PATCH request because of these unspecified field values. In the same example, the populated `spec.barz.bz2` field with value `"bz2"` might result in an HTTP 400 client error or other unexpected responses if the API implementation violates the GET/PUT symmetry principle.
+When the value of the `state-into-spec` annotation is set to `merge`, the unspecified fields populated by Config Connector in the Kubernetes resource `spec` field are the result of a GET request. This behavior means that in future [reconciliations](https://docs.cloud.google.com/config-connector/docs/concepts/reconciliation), Config Connector might send a PUT or PATCH request to the underlying Google Cloud API with these unspecified field values learned from the GET request. This behavior usually isn't a problem, but some Google Cloud APIs might reject the PUT or PATCH request because of these unspecified field values. In the same example, the populated `spec.objectField.subField2` field with value `"sub-value-2"` might result in an HTTP 400 client error or other unexpected responses if the API implementation violates the GET/PUT symmetry principle.
 
 To avoid this category of issues, you can set the `cnrm.cloud.google.com/state-into-spec: absent` annotation and check if the errors during reconciliation go away.
 
@@ -514,6 +514,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

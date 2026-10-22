@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/e2e-journey-forecast/
 title: End-to-end user journeys for time series forecasting models \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:54:21.868754+00:00
+fetched_at: 2026-10-21T14:07:56.492530+00:00
 ---
 
 # End-to-end user journeys for time series forecasting models  |  BigQuery  |  Google Cloud Documentation

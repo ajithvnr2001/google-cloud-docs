@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/cv-view-logs/
 title: View continuous validation logs \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:14.244367+00:00
+fetched_at: 2026-10-21T14:18:47.120152+00:00
 ---
 
 # View continuous validation logs  |  Binary Authorization  |  Google Cloud Documentation

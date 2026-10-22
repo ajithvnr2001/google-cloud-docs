@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/use-ragmanageddb-with-rag/
 title: Use RagManagedDb with RAG Engine on Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T23:38:28.661444+00:00
+fetched_at: 2026-10-21T15:41:14.072396+00:00
 ---
 
 # Use RagManagedDb with RAG Engine on Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -62,14 +62,14 @@ This code samples demonstrates how to create a RAG corpus using KNN `RagManagedD
     
     
     from vertexai.preview import rag
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
     
     PROJECT_ID = YOUR_PROJECT_ID
     LOCATION = YOUR_RAG_ENGINE_LOCATION
     DISPLAY_NAME = YOUR_RAG_CORPUS_DISPLAY_NAME
     
     # Initialize Agent Platform API once per session
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=PROJECT_ID, location=LOCATION)
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=PROJECT_ID, location=LOCATION)
     
     vector_db = rag.RagManagedDb(retrieval_strategy=rag.KNN())
     rag_corpus = rag.create_corpus(
@@ -133,7 +133,7 @@ The `leaf_count` determines the number of leaf nodes in the tree-based structure
     
     
     from vertexai.preview import rag
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
     
     PROJECT_ID = YOUR_PROJECT_ID
     LOCATION = YOUR_RAG_ENGINE_LOCATION
@@ -142,7 +142,7 @@ The `leaf_count` determines the number of leaf nodes in the tree-based structure
     LEAF_COUNT = YOUR_LEAF_COUNT # Optional: Default is 500.
     
     # Initialize Agent Platform API once per session
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=PROJECT_ID, location=LOCATION)
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=PROJECT_ID, location=LOCATION)
     
     ann_config = rag.ANN(tree_depth=TREE_DEPTH, leaf_count=LEAF_COUNT)
     vector_db = rag.RagManagedDb(retrieval_strategy=ann_config)
@@ -207,7 +207,7 @@ To upload your local file into your RAG corpus, see [Upload a RAG file](https://
     
     
     from vertexai.preview import rag
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
     
     PROJECT_ID = YOUR_PROJECT_ID
     LOCATION = YOUR_RAG_ENGINE_LOCATION
@@ -216,7 +216,7 @@ To upload your local file into your RAG corpus, see [Upload a RAG file](https://
     REBUILD_ANN_INDEX = REBUILD_ANN_INDEX # Choose true or false.
     
     # Initialize Agent Platform API once per session
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=PROJECT_ID, location=LOCATION)
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=PROJECT_ID, location=LOCATION)
     
     corpus_name = f"projects/{PROJECT_ID}/locations/{LOCATION}/ragCorpora/{CORPUS_ID}"
     # This is a non blocking call.
@@ -227,7 +227,7 @@ To upload your local file into your RAG corpus, see [Upload a RAG file](https://
     )
     
     # Wait for the import to complete.
-    await response.[result](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.CheckQueryJobResultDict.html#vertexai__genai_types_CheckQueryJobResultDict_result)()
+    await response.[result](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.CheckQueryJobResultDict.html#vertexai__genai_types_CheckQueryJobResultDict_result)()
     
 
 ###  REST 
@@ -388,7 +388,7 @@ Replace the variables in the following code samples:
 ###  Python 
     
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
     from google.cloud import aiplatform
     from vertexai import rag
     from google.cloud.aiplatform_v1.types.encryption_spec import [EncryptionSpec](https://docs.cloud.google.com/python/docs/reference/aiplatform/latest/google.cloud.aiplatform_v1.types.EncryptionSpec.html)
@@ -398,7 +398,7 @@ Replace the variables in the following code samples:
     DISPLAY_NAME = YOUR_RAG_CORPUS_DISPLAY_NAME
     KMS_KEY_NAME = YOUR_KMS_KEY_NAME
     
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).[init](https://docs.cloud.google.com/python/docs/reference/aiplatform/latest/google.cloud.aiplatform.html)(project=PROJECT_ID)
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).[init](https://docs.cloud.google.com/python/docs/reference/aiplatform/latest/google.cloud.aiplatform.html)(project=PROJECT_ID)
     
     rag_corpus = rag.create_corpus(display_name=DISPLAY_NAME, encryption_spec=EncryptionSpec(kms_key_name=KMS_KEY_NAME))
     
@@ -445,6 +445,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

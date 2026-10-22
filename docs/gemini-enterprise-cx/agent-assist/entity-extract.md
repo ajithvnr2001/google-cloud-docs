@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/entity-extract/
 title: Real-time entity extraction \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:44:19.276108+00:00
+fetched_at: 2026-10-21T12:54:37.698879+00:00
 ---
 
 # Real-time entity extraction  |  Agent Assist  |  Google Cloud Documentation

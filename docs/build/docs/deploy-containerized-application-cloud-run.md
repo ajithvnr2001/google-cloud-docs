@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/deploy-containerized-application-cloud-run/
 title: Quickstart: Deploy a containerized application to Cloud Run \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:00.780000+00:00
+fetched_at: 2026-10-21T12:38:16.627055+00:00
 ---
 
 # Quickstart: Deploy a containerized application to Cloud Run  |  Cloud Build  |  Google Cloud Documentation

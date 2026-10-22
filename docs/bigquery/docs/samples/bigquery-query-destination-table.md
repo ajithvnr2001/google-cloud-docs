@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-query-destination-table/
 title: Save query results \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:06.544852+00:00
+fetched_at: 2026-10-22T05:49:57.172737+00:00
 ---
 
 # Save query results  |  BigQuery  |  Google Cloud Documentation

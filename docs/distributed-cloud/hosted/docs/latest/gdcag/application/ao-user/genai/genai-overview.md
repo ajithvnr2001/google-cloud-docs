@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/genai/genai-overview/
 title: Generative AI overview \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:39:37.789281+00:00
+fetched_at: 2026-10-21T12:57:49.922642+00:00
 ---
 
 # Generative AI overview  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

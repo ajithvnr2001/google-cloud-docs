@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/enterprise/knative-serving/docs/locations/
 title: Knative serving locations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:59:04.817862+00:00
+fetched_at: 2026-10-21T15:03:43.665654+00:00
 ---
 
 # Knative serving locations  |  Google Cloud Documentation

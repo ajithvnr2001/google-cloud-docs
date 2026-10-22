@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/looker-core-connect-to-private-ip-lsp-looker-reports/
 title: Connect to a private connections Looker (Google Cloud core) instance from a report \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:38:32.437109+00:00
+fetched_at: 2026-10-21T15:10:39.442191+00:00
 ---
 
 # Connect to a private connections Looker (Google Cloud core) instance from a report  |  Google Cloud Documentation

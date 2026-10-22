@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/gitlab/connect-repo-gitlab-enterprise-edition/
 title: Connect to a GitLab Enterprise Edition repository \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:06.837341+00:00
+fetched_at: 2026-10-21T14:18:51.473995+00:00
 ---
 
 # Connect to a GitLab Enterprise Edition repository  |  Cloud Build  |  Google Cloud Documentation

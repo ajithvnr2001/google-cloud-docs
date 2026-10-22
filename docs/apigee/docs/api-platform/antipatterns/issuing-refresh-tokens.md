@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/issuing-refresh-tokens/
 title: Antipattern: Issuing refresh tokens without invoking refresh flow \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:17.468097+00:00
+fetched_at: 2026-10-21T12:29:49.294393+00:00
 ---
 
 # Antipattern: Issuing refresh tokens without invoking refresh flow  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/secops/investigate/investigation-management/create-case-from-search/
 title: Attach SIEM search results to cases \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:17:27.409568+00:00
+fetched_at: 2026-10-21T14:24:01.930575+00:00
 ---
 
 # Attach SIEM search results to cases  |  Google Security Operations  |  Google Cloud Documentation

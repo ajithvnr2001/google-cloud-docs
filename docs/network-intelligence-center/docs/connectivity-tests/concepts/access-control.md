@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-intelligence-center/docs/connectivity-tests/concepts/access-control/
 title: Roles and permissions \u00a0|\u00a0 Network Intelligence Center - Connectivity Tests \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:36:06.903457+00:00
+fetched_at: 2026-10-21T14:29:41.127619+00:00
 ---
 
 # Roles and permissions  |  Network Intelligence Center - Connectivity Tests  |  Google Cloud Documentation

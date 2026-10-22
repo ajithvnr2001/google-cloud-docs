@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/php/create-app/
 title: Quickstart: Create a PHP app in the App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:08.424457+00:00
+fetched_at: 2026-10-21T14:26:36.073556+00:00
 ---
 
 # Quickstart: Create a PHP app in the App Engine flexible environment  |  Google Cloud Documentation

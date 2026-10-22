@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/designcenter/
 title: Application Design Center roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:36:45.887614+00:00
+fetched_at: 2026-10-21T14:29:57.260516+00:00
 ---
 
 # Application Design Center roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

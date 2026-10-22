@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/portable-runner/
 title: Use the Dataflow Portable Runner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:02:45.135603+00:00
+fetched_at: 2026-10-22T05:43:17.403645+00:00
 ---
 
 # Use the Dataflow Portable Runner  |  Google Cloud Documentation
@@ -71,9 +71,7 @@ The Dataflow Portable Runner has the following requirements and limitations:
     * Splittable DoFns. Support for the Non-Portable runner is being explored.
   * The Dataflow Portable Runner requires [Streaming Engine](https://docs.cloud.google.com/dataflow/docs/streaming-engine) for streaming jobs.
   * Because the Dataflow Portable Runner requires Streaming Engine for streaming jobs, any Apache Beam transform that requires the Dataflow Portable Runner also requires the use of Streaming Engine for streaming jobs. For example, the [Pub/Sub Lite I/O connector](https://beam.apache.org/releases/pydoc/current/apache_beam.io.gcp.pubsublite.html) for the Apache Beam SDK for Python is a cross-language transform that requires the Dataflow Portable Runner. If you try to disable Streaming Engine for a job or template that uses this transform, the job fails.
-  * For streaming pipelines that use the Apache Beam Java SDK, the classes [`MapState`](https://beam.apache.org/releases/javadoc/current/index.html?org/apache/beam/sdk/state/MapState.html) and [`SetState`](https://beam.apache.org/releases/javadoc/current/index.html?org/apache/beam/sdk/state/SetState.html) are not supported with the Portable Runner. To use the `MapState` and `SetState` classes with Java pipelines, enable Streaming Engine, disable the Portable Runner, and use the Apache Beam SDK version 2.58.0 or later.
-  * For batch and streaming pipelines that use the Apache Beam Java SDK, the class [`AfterSynchronizedProcessingTime`](https://beam.apache.org/releases/javadoc/current/org/apache/beam/sdk/transforms/windowing/AfterSynchronizedProcessingTime.html) isn't supported.
-  * While the Portable Runner scales better than the Non-Portable runner in many cases, the memory usage might be higher for fixed sharding.
+  * While the Portable Runner scales better than the Non-Portable runner in many batch cases, the memory usage might be higher for fixed sharding.
   * Dataflow [classic templates](https://docs.cloud.google.com/dataflow/docs/guides/templates/running-templates) can't be run with a different version of the Dataflow runner than they were built with. This means that Google-provided classic templates can't enable the Portable Runner. To enable the Portable Runner for custom templates, set the appropriate flag when you build the template. This flag depends on the SDK version you're using: 
     * Beam SDK versions 2.74 and later: `--experiments=enable_portable_runner`.
     * Beam SDK versions 2.73 and earlier: `--experiments=use_runner_v2`.
@@ -176,6 +174,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

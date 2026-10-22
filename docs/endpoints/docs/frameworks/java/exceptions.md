@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/java/exceptions/
 title: Exceptions and HTTP status codes \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:45:02.431330+00:00
+fetched_at: 2026-10-21T12:45:44.954985+00:00
 ---
 
 # Exceptions and HTTP status codes  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/extensibility-guide-data-foundation/
 title: Data foundation module creation \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:49:39.988752+00:00
+fetched_at: 2026-10-21T14:21:51.779701+00:00
 ---
 
 # Data foundation module creation  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

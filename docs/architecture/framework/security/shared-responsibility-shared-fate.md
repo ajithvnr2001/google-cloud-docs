@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/security/shared-responsibility-shared-fate/
 title: Shared responsibilities and shared fate on Google Cloud \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:18.645311+00:00
+fetched_at: 2026-10-21T14:27:58.229889+00:00
 ---
 
 # Shared responsibilities and shared fate on Google Cloud  |  Cloud Architecture Center  |  Google Cloud Documentation

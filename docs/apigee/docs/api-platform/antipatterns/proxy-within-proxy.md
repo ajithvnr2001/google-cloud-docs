@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/proxy-within-proxy/
 title: Antipattern: Invoking a proxy within a proxy using custom code or as a target \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:19.515582+00:00
+fetched_at: 2026-10-21T12:30:04.448109+00:00
 ---
 
 # Antipattern: Invoking a proxy within a proxy using custom code or as a target  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/vm-backup/backup-repository/create-backup-repository/
 title: Create a backup repository \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:05:58.446486+00:00
+fetched_at: 2026-10-21T12:59:55.135523+00:00
 ---
 
 # Create a backup repository  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

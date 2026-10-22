@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/
 title: Chrome Enterprise Premium documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:36:04.334055+00:00
+fetched_at: 2026-10-21T14:25:56.830460+00:00
 ---
 
 # Chrome Enterprise Premium documentation  |  Google Cloud Documentation

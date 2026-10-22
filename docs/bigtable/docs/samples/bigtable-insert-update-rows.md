@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-insert-update-rows/
 title: Update or insert rows \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:24:05.039834+00:00
+fetched_at: 2026-10-21T14:11:30.066751+00:00
 ---
 
 # Update or insert rows  |  Bigtable  |  Google Cloud Documentation

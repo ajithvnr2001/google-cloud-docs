@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/grpc/architecture-overview/
 title: Architectural overview of Cloud Endpoints \u00a0|\u00a0 Cloud Endpoints with gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:36:11.768694+00:00
+fetched_at: 2026-10-21T12:45:55.354790+00:00
 ---
 
 # Architectural overview of Cloud Endpoints  |  Cloud Endpoints with gRPC  |  Google Cloud Documentation

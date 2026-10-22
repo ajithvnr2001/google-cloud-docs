@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/data-replication/
 title: Cross-region dataset replication \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:46:28.529151+00:00
+fetched_at: 2026-10-22T05:48:55.667010+00:00
 ---
 
 # Cross-region dataset replication  |  BigQuery  |  Google Cloud Documentation

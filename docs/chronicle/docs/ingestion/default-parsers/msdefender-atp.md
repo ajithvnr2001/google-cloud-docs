@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/msdefender-atp/
 title: Collect Microsoft Windows Defender ATP logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:03:40.651885+00:00
+fetched_at: 2026-10-21T14:18:52.651430+00:00
 ---
 
 # Collect Microsoft Windows Defender ATP logs  |  Google Security Operations  |  Google Cloud Documentation

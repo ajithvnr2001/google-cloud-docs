@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/wildfire/
 title: WildFire \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:43:19.324893+00:00
+fetched_at: 2026-10-21T12:38:53.806483+00:00
 ---
 
 # WildFire  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/aks/concepts/workload-identity/
 title: Workload identity \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:22.850832+00:00
+fetched_at: 2026-10-21T15:01:51.586786+00:00
 ---
 
 # Workload identity  |  GKE attached clusters  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/monitor-integrity/
 title: Monitor Confidential VM integrity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:30:08.832507+00:00
+fetched_at: 2026-10-21T14:21:36.265253+00:00
 ---
 
 # Monitor Confidential VM integrity  |  Google Cloud Documentation

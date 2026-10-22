@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/v2/issuance-configuration/
 title: Create issuance configuration \u00a0|\u00a0 Certificate Manager (2nd gen) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:39:09.102916+00:00
+fetched_at: 2026-10-21T14:25:39.307326+00:00
 ---
 
 # Create issuance configuration  |  Certificate Manager (2nd gen)  |  Google Cloud Documentation

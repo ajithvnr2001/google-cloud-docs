@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/controlling-costs/
 title: Control your vulnerability scanning costs \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:51:02.390511+00:00
+fetched_at: 2026-10-21T12:40:25.328608+00:00
 ---
 
 # Control your vulnerability scanning costs  |  Artifact Analysis  |  Google Cloud Documentation

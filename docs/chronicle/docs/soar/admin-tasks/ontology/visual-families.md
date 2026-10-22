@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/ontology/visual-families/
 title: Visual families overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:38:27.755652+00:00
+fetched_at: 2026-10-21T14:21:41.736726+00:00
 ---
 
 # Visual families overview  |  Google Security Operations  |  Google Cloud Documentation

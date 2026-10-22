@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/install-carbon-black-event-forwarder/
 title: Install Carbon Black Event Forwarder \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T14:48:19.712263+00:00
+fetched_at: 2026-10-21T12:36:32.146044+00:00
 ---
 
 # Install Carbon Black Event Forwarder  |  Google Security Operations  |  Google Cloud Documentation

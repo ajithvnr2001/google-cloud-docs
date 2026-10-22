@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/manage-certificates-kubernetes-operator/
 title: Manage certificates \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 18.3.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:59:31.591407+00:00
+fetched_at: 2026-10-21T15:32:33.223196+00:00
 ---
 
 # Manage certificates  |  AlloyDB Omni using the container orchestrator: 18.3.0  |  Google Cloud Documentation
@@ -25,14 +25,19 @@ Send feedback
 
 Select a documentation version: 18.3.0keyboard_arrow_down
 
+  * [ Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/manage-certificates-kubernetes-operator)
+  * [ 18.4.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.4.0/docs/manage-certificates-kubernetes-operator)
   * [ 18.3.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/manage-certificates-kubernetes-operator)
   * [ 18.1.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/manage-certificates-kubernetes-operator)
+  * [ 17.10.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.10.0/docs/manage-certificates-kubernetes-operator)
   * [ 17.9.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.9.0/docs/manage-certificates-kubernetes-operator)
   * [ 17.7.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.7.0/docs/manage-certificates-kubernetes-operator)
   * [ 17.5.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/17.5.0/docs/manage-certificates-kubernetes-operator)
+  * [ 16.14.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.14.0/docs/manage-certificates-kubernetes-operator)
   * [ 16.13.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.13.0/docs/manage-certificates-kubernetes-operator)
   * [ 16.11.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.11.0/docs/manage-certificates-kubernetes-operator)
   * [ 16.9.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/16.9.0/docs/manage-certificates-kubernetes-operator)
+  * [ 15.18.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/15.18.0/docs/manage-certificates-kubernetes-operator)
   * [ 15.17.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/15.17.0/docs/manage-certificates-kubernetes-operator)
   * [ 15.15.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/15.15.0/docs/manage-certificates-kubernetes-operator)
   * [ 15.13.0 ](https://docs.cloud.google.com/alloydb/omni/kubernetes/15.13.0/docs/manage-certificates-kubernetes-operator)
@@ -209,6 +214,23 @@ Replace the following:
 ### Operator and backup client certificates
 
 To customize certificate attributes for the operator and the backup client (which are shared across all instances in a namespace and aren't managed by a database cluster specification), modify the `Certificate` custom resources. The operator retains these manual modifications.
+
+## Clean up certificate secrets
+
+When you delete a `DBCluster` resource, the AlloyDB Omni operator deletes the associated `Certificate` resources, but cert-manager does not clean up the certificate `Secret` resources by default. To configure the cert-manager controller to clean up secrets when certificates are deleted, see [Cleaning up secrets when certificates are deleted](https://cert-manager.io/docs/usage/certificate/#cleaning-up-secrets-when-certificates-are-deleted) in cert-manager documentation.
+
+If you have already deleted a `DBCluster` resource without configuring the automated cleanup, delete the dangling certificate secrets manually:
+    
+    
+    kubectl delete secret CERTIFICATE_SECRET_NAME -n NAMESPACE
+    
+
+Replace the following:
+
+  * `CERTIFICATE_SECRET_NAME`: the name of the certificate secret to delete.
+  * `NAMESPACE`: the namespace of the database cluster.
+
+
 
 ## Verify
 

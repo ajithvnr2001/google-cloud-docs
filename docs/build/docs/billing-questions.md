@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/billing-questions/
 title: Billing questions \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:45:59.306311+00:00
+fetched_at: 2026-10-21T12:38:43.158982+00:00
 ---
 
 # Billing questions  |  Cloud Build  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/model-armor/access-control/service-accounts/
 title: Model Armor service accounts \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:49:15.143056+00:00
+fetched_at: 2026-10-21T15:15:52.423630+00:00
 ---
 
 # Model Armor service accounts  |  Google Cloud Documentation

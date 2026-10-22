@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/model-armor/best-practices/
 title: Best practices for scaling and high traffic \u00a0|\u00a0 Model Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:21:35.198514+00:00
+fetched_at: 2026-10-21T15:16:05.000645+00:00
 ---
 
 # Best practices for scaling and high traffic  |  Model Armor  |  Google Cloud Documentation

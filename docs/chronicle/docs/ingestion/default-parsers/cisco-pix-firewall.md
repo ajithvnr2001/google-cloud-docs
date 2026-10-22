@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/cisco-pix-firewall/
 title: Collect Cisco PIX logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T16:57:05.134924+00:00
+fetched_at: 2026-10-21T12:27:23.310727+00:00
 ---
 
 # Collect Cisco PIX logs  |  Google Security Operations  |  Google Cloud Documentation

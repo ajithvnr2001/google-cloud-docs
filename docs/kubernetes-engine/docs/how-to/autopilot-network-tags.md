@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/autopilot-network-tags/
 title: Use network tags to apply firewall rules to nodes \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:12.526650+00:00
+fetched_at: 2026-10-21T15:01:35.403336+00:00
 ---
 
 # Use network tags to apply firewall rules to nodes  |  GKE security  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/
 title: Google Security Operations documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:35:02.572597+00:00
+fetched_at: 2026-10-21T14:23:59.715239+00:00
 ---
 
 # Google Security Operations documentation  |  Google Cloud Documentation

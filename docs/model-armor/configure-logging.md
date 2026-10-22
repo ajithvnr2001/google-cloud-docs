@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/model-armor/configure-logging/
 title: Configure logging \u00a0|\u00a0 Model Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:49:12.964357+00:00
+fetched_at: 2026-10-21T15:15:19.845062+00:00
 ---
 
 # Configure logging  |  Model Armor  |  Google Cloud Documentation

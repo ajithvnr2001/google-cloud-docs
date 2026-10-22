@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/device-streaming/docs/
 title: Device Streaming API documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:55:33.995361+00:00
+fetched_at: 2026-10-21T12:45:24.614749+00:00
 ---
 
 # Device Streaming API documentation  |  Google Cloud Documentation

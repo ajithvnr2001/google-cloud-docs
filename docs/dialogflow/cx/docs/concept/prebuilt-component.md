@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/prebuilt-component/
 title: Prebuilt components overview \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:40.166080+00:00
+fetched_at: 2026-10-21T12:45:25.631881+00:00
 ---
 
 # Prebuilt components overview  |  Dialogflow CX  |  Google Cloud Documentation

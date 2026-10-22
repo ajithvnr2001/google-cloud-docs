@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/configuring-notifications/notifiers/
 title: Cloud Build notifiers \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:08.023307+00:00
+fetched_at: 2026-10-21T14:11:14.917585+00:00
 ---
 
 # Cloud Build notifiers  |  Google Cloud Documentation

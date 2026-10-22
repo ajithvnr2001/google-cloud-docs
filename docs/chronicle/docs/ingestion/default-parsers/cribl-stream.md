@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/cribl-stream/
 title: Collect Cribl Stream logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:18:16.616881+00:00
+fetched_at: 2026-10-21T12:27:40.107587+00:00
 ---
 
 # Collect Cribl Stream logs  |  Google Security Operations  |  Google Cloud Documentation

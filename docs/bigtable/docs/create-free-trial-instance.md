@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/create-free-trial-instance/
 title: Create a free trial instance and import sample data \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:06.970674+00:00
+fetched_at: 2026-10-21T12:36:16.369798+00:00
 ---
 
 # Create a free trial instance and import sample data  |  Bigtable  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-connectivity/docs/vpn/tutorials/create-ha-vpn-connections-google-cloud-aws/
 title: Create HA VPN connections between Google Cloud and AWS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:49.420907+00:00
+fetched_at: 2026-10-21T15:14:49.130248+00:00
 ---
 
 # Create HA VPN connections between Google Cloud and AWS  |  Google Cloud Documentation

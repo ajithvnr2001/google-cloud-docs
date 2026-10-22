@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/reference/mcp/tools_list/investigate_issue/
 title: MCP Tools Reference: geminicloudassist.googleapis.com \u00a0|\u00a0 Gemini Cloud Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:40:55.001502+00:00
+fetched_at: 2026-10-21T14:46:14.032217+00:00
 ---
 
 # MCP Tools Reference: geminicloudassist.googleapis.com  |  Gemini Cloud Assist  |  Google Cloud Documentation

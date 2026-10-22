@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/domains/docs/faq/
 title: Squarespace purchase of Google Domains FAQ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:43:58.857040+00:00
+fetched_at: 2026-10-21T14:06:54.516482+00:00
 ---
 
 # Squarespace purchase of Google Domains FAQ  |  Google Cloud Documentation

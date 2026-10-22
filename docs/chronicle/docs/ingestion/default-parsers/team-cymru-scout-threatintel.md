@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/team-cymru-scout-threatintel/
 title: Collect Team Cymru Scout Threat Intelligence logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T13:11:56.642515+00:00
+fetched_at: 2026-10-21T12:36:57.553385+00:00
 ---
 
 # Collect Team Cymru Scout Threat Intelligence logs  |  Google Security Operations  |  Google Cloud Documentation

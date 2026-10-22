@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/cloud-run/
 title: Deploy a Cloud Run service \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:07:10.064354+00:00
+fetched_at: 2026-10-21T14:42:18.800252+00:00
 ---
 
 # Deploy a Cloud Run service  |  Cluster Toolkit  |  Google Cloud Documentation

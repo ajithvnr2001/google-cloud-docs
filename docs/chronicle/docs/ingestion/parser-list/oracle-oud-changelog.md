@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/oracle-oud-changelog/
 title: Change log for ORACLE_OUD \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:12:08.504277+00:00
+fetched_at: 2026-10-21T14:47:07.870833+00:00
 ---
 
 # Change log for ORACLE_OUD  |  Google Security Operations  |  Google Cloud Documentation

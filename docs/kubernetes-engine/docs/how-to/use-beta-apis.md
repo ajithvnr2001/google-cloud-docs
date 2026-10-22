@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/use-beta-apis/
 title: Use Kubernetes beta APIs with GKE clusters \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:27:26.859876+00:00
+fetched_at: 2026-10-21T14:59:35.598409+00:00
 ---
 
 # Use Kubernetes beta APIs with GKE clusters  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

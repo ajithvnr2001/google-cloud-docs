@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/service/ipam/v1/ipam-v1/
 title: KRM API ipam.gdc.goog/v1 \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:32:33.392656+00:00
+fetched_at: 2026-10-21T12:57:02.965793+00:00
 ---
 
 # KRM API ipam.gdc.goog/v1  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

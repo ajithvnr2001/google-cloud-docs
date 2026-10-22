@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/use-existing-kubernetes-app/
 title: Use an existing application in Cloud Code for IntelliJ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:21:35.037672+00:00
+fetched_at: 2026-10-21T12:39:54.665827+00:00
 ---
 
 # Use an existing application in Cloud Code for IntelliJ  |  Google Cloud Documentation

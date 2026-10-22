@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/nat-settings/
 title: View NAT settings \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:48.877662+00:00
+fetched_at: 2026-10-21T13:32:54.373686+00:00
 ---
 
 # View NAT settings  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

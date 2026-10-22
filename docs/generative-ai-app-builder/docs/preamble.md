@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/preamble/
 title: About custom preambles \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:05.730721+00:00
+fetched_at: 2026-10-21T12:55:32.120881+00:00
 ---
 
 # About custom preambles  |  Agent Search  |  Google Cloud Documentation

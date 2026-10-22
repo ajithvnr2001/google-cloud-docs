@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/apihub/view-api-resource-insights/
 title: View API resource insights \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:40:08.053437+00:00
+fetched_at: 2026-10-21T14:55:06.419057+00:00
 ---
 
 # View API resource insights  |  Apigee  |  Google Cloud Documentation

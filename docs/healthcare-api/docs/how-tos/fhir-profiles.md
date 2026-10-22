@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/how-tos/fhir-profiles/
 title: Configure FHIR profiles \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:01:49.890595+00:00
+fetched_at: 2026-10-21T12:52:27.703219+00:00
 ---
 
 # Configure FHIR profiles  |  Cloud Healthcare API  |  Google Cloud Documentation

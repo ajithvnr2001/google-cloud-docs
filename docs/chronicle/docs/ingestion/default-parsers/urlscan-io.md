@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/urlscan-io/
 title: Collect URLScan IO logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:15:57.155527+00:00
+fetched_at: 2026-10-21T12:38:19.983428+00:00
 ---
 
 # Collect URLScan IO logs  |  Google Security Operations  |  Google Cloud Documentation

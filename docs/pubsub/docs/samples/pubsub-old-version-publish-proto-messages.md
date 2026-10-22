@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-publish-proto-messages/
 title: v1 Publish messages of protobuf schema type (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:53:10.894450+00:00
+fetched_at: 2026-10-21T14:58:48.461296+00:00
 ---
 
 # v1 Publish messages of protobuf schema type (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

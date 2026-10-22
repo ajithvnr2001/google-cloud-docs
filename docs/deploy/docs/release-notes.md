@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/release-notes/
 title: Cloud Deploy release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:08:36.391030+00:00
+fetched_at: 2026-10-21T14:40:59.706334+00:00
 ---
 
 # Cloud Deploy release notes  |  Google Cloud Documentation

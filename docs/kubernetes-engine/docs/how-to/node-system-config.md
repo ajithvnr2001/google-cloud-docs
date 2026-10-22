@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-system-config/
 title: Customizing node system configuration \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:27:27.283311+00:00
+fetched_at: 2026-10-21T14:56:10.127322+00:00
 ---
 
 # Customizing node system configuration  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -478,6 +478,7 @@ The following table describes the CPU management options for the `kubelet`.
   
 Ignoring CPU limits might be beneficial in certain scenarios where Pods are sensitive to CPU limits. The risk of disabling `cpuCFSQuota` is that a rogue Pod can consume more CPU resources than intended.  
 [`cpuCFSQuotaPeriod`](https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt) | Must be a duration of time. | `"100ms"` | This setting sets the CPU CFS quota period value, `cpu.cfs_period_us`, which specifies the period of how often a cgroup's access to CPU resources should be reallocated. This option lets you tune the CPU throttling behavior.  
+[`reservedSystemCPUs`](https://kubernetes.io/docs/tasks/administer-cluster/reserve-compute-resources/#explicitly-reserved-cpu-list) ([Preview](https://cloud.google.com/products#product-launch-stages))  | Must be a list of specific CPU cores to reserve (for example, `0-1` or `0,1` to reserve cores 0 and 1). Because cores are zero-indexed, the values must be less than the number of vCPUs on the machine type. | `none` |  Explicitly reserves specific CPU cores for host system services, such as OS daemons and the `kubelet` service. By default, these services can run on any CPU core, which can cause performance issues for CPU-sensitive workloads. While the `cpuManagerPolicy: static` setting assigns dedicated cores to `Guaranteed` Pods with integer CPU requests, it doesn't prevent host system services from using those cores. Adding the `reservedSystemCPUs` setting confines host system services to their own reserved cores, preventing them from interrupting your workloads' exclusive cores. To do this task, GKE automatically pins the `system.slice` cgroup to the reserved cores at node startup. Reserving system CPUs reduces the overall allocatable capacity of your nodes. While `Burstable` and `BestEffort` Pods can still run on these reserved cores, their CPU requests, including fractional requests from GKE DaemonSets, still count against the node's allocatable capacity. Because exclusive `Guaranteed` workloads require whole cores, even small fractional requests reduce the number of exclusive cores available. Ensure that you reserve sufficient CPU cores in `reservedSystemCPUs`. If you reserve too few cores, host system daemons and OS processes might become CPU-constrained under high load, which can cause instability or dropped network packets.  
   
 ### Memory management and eviction
 
@@ -1001,6 +1002,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

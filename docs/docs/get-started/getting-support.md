@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/get-started/getting-support/
 title: Getting support \u00a0|\u00a0 Get started \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:27.652459+00:00
+fetched_at: 2026-10-21T14:06:09.698065+00:00
 ---
 
 # Getting support  |  Get started  |  Google Cloud Documentation

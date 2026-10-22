@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/asset-inventory/docs/audit-logging/
 title: Cloud Asset Inventory audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:05:33.041896+00:00
+fetched_at: 2026-10-21T14:41:38.227626+00:00
 ---
 
 # Cloud Asset Inventory audit logging  |  Google Cloud Documentation

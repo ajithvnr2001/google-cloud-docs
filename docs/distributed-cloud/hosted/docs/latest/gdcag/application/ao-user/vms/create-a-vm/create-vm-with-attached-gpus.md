@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/create-a-vm/create-vm-with-attached-gpus/
 title: Create a VM with attached GPUs \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T09:40:51.165734+00:00
+fetched_at: 2026-10-21T14:08:21.003417+00:00
 ---
 
 # Create a VM with attached GPUs  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-topology/about-queries/
 title: About queries \u00a0|\u00a0 App Topology \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:20:26.695748+00:00
+fetched_at: 2026-10-21T12:30:48.379801+00:00
 ---
 
 # About queries  |  App Topology  |  Google Cloud Documentation

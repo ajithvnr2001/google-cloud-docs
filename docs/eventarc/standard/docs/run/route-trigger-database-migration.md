@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/run/route-trigger-database-migration/
 title: Route Database Migration events to Cloud Run \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:36.482345+00:00
+fetched_at: 2026-10-21T12:51:15.562077+00:00
 ---
 
 # Route Database Migration events to Cloud Run  |  Eventarc Standard  |  Google Cloud Documentation

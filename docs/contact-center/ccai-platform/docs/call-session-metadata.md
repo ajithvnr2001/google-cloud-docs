@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/call-session-metadata/
 title: Call session metadata \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:39.076200+00:00
+fetched_at: 2026-10-21T14:10:23.672906+00:00
 ---
 
 # Call session metadata  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

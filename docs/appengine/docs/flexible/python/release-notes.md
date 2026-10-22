@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/python/release-notes/
 title: App Engine flexible environment for Python release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:40:24.073287+00:00
+fetched_at: 2026-10-21T14:43:08.704145+00:00
 ---
 
 # App Engine flexible environment for Python release notes  |  Google Cloud Documentation

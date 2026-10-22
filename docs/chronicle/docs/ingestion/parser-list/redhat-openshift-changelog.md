@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/redhat-openshift-changelog/
 title: Change log for REDHAT_OPENSHIFT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:07:17.395694+00:00
+fetched_at: 2026-10-21T14:43:28.692545+00:00
 ---
 
 # Change log for REDHAT_OPENSHIFT  |  Google Security Operations  |  Google Cloud Documentation

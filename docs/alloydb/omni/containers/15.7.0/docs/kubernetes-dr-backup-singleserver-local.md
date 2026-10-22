@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/15.7.0/docs/kubernetes-dr-backup-singleserver-local/
 title: Clone a database cluster in a single server using a local backup \u00a0|\u00a0 AlloyDB Omni for containers: 15.7.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:07:07.531963+00:00
+fetched_at: 2026-10-21T15:19:09.218972+00:00
 ---
 
 # Clone a database cluster in a single server using a local backup  |  AlloyDB Omni for containers: 15.7.0  |  Google Cloud Documentation

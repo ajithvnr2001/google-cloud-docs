@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/environments/environment-groups/
 title: Manage environment groups \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:43.082293+00:00
+fetched_at: 2026-10-21T14:21:24.297761+00:00
 ---
 
 # Manage environment groups  |  Google Security Operations  |  Google Cloud Documentation

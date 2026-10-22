@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/workspaces/
 title: Create and manage workspaces \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:29:13.539940+00:00
+fetched_at: 2026-10-21T12:39:36.216606+00:00
 ---
 
 # Create and manage workspaces  |  BigQuery  |  Google Cloud Documentation

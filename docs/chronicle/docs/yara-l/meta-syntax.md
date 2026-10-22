@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/yara-l/meta-syntax/
 title: Meta section syntax \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:14:26.393238+00:00
+fetched_at: 2026-10-21T14:10:06.006530+00:00
 ---
 
 # Meta section syntax  |  Google Security Operations  |  Google Cloud Documentation

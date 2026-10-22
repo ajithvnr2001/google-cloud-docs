@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/private-pools/private-pools-overview/
 title: Private pools overview \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:01.164432+00:00
+fetched_at: 2026-10-21T14:11:15.036534+00:00
 ---
 
 # Private pools overview  |  Cloud Build  |  Google Cloud Documentation

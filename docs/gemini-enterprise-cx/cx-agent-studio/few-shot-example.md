@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/few-shot-example/
 title: Few-shot examples \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:45:43.778413+00:00
+fetched_at: 2026-10-21T12:54:32.365715+00:00
 ---
 
 # Few-shot examples  |  CX Agent Studio  |  Google Cloud Documentation

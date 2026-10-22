@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/deploy-resources/
 title: Deploy infrastructure using Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:13:25.307460+00:00
+fetched_at: 2026-10-21T12:53:59.806438+00:00
 ---
 
 # Deploy infrastructure using Infrastructure Manager  |  Google Cloud Documentation

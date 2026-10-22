@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/billing/link-billing-account/
 title: Link billing account to project \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:40.533333+00:00
+fetched_at: 2026-10-21T12:59:12.559738+00:00
 ---
 
 # Link billing account to project  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/
 title: App Lifecycle Manager documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:29:59.196530+00:00
+fetched_at: 2026-10-21T14:22:55.079662+00:00
 ---
 
 # App Lifecycle Manager documentation  |  Google Cloud Documentation

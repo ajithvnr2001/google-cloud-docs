@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/quickstart-scanning-os-manually/
 title: Quickstart: Scan OS packages manually \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:44:38.970044+00:00
+fetched_at: 2026-10-21T12:39:23.709068+00:00
 ---
 
 # Quickstart: Scan OS packages manually  |  Artifact Analysis  |  Google Cloud Documentation

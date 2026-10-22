@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/pipelines-introduction/
 title: Introduction to BigQuery pipelines \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:01.942441+00:00
+fetched_at: 2026-10-21T14:20:47.296334+00:00
 ---
 
 # Introduction to BigQuery pipelines  |  Google Cloud Documentation

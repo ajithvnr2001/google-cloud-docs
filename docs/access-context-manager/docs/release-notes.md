@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/release-notes/
 title: Access Context Manager release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:07:42.115071+00:00
+fetched_at: 2026-10-21T14:55:18.204451+00:00
 ---
 
 # Access Context Manager release notes  |  Google Cloud Documentation

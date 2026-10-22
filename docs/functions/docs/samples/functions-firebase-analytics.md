@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/samples/functions-firebase-analytics/
 title: Firebase Analytics \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:03:35.284964+00:00
+fetched_at: 2026-10-21T12:51:58.579220+00:00
 ---
 
 # Firebase Analytics  |  Cloud Run functions  |  Google Cloud Documentation

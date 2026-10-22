@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/xmltojson-deployment-errors/
 title: XML to JSON policy deployment error troubleshooting \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:38:52.701059+00:00
+fetched_at: 2026-10-21T12:35:26.785414+00:00
 ---
 
 # XML to JSON policy deployment error troubleshooting  |  Apigee  |  Google Cloud Documentation

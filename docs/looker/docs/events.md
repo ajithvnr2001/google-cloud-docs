@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/events/
 title: Looker events \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:13:44.373638+00:00
+fetched_at: 2026-10-21T15:09:43.570502+00:00
 ---
 
 # Looker events  |  Google Cloud Documentation

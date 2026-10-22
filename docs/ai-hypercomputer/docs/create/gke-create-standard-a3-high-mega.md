@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/create/gke-create-standard-a3-high-mega/
 title: Create a GKE Standard cluster that uses A3 Mega or A3 High \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:34:53.988273+00:00
+fetched_at: 2026-10-21T14:27:02.694739+00:00
 ---
 
 # Create a GKE Standard cluster that uses A3 Mega or A3 High  |  AI Hypercomputer  |  Google Cloud Documentation

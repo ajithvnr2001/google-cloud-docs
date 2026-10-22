@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/investigate/working-with-alerts/define-default-alert-view-admin/
 title: Define the default alert view \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:52.943645+00:00
+fetched_at: 2026-10-21T14:21:35.233232+00:00
 ---
 
 # Define the default alert view  |  Google Security Operations  |  Google Cloud Documentation

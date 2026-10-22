@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/risk-analytics-faq/
 title: Risk analytics FAQ \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:33:04.885711+00:00
+fetched_at: 2026-10-21T12:37:48.268340+00:00
 ---
 
 # Risk analytics FAQ  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/advanced/docs/quickstarts/publish-events-create-bus/
 title: Quickstart: Publish and receive events by creating a bus and enrollment (Google Cloud CLI) \u00a0|\u00a0 Eventarc Advanced \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:24:23.738035+00:00
+fetched_at: 2026-10-21T12:52:35.522365+00:00
 ---
 
 # Quickstart: Publish and receive events by creating a bus and enrollment (Google Cloud CLI)  |  Eventarc Advanced  |  Google Cloud Documentation

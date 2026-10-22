@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/java-gen2/runtime/
 title: Java runtime environment \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:31:11.953437+00:00
+fetched_at: 2026-10-21T14:27:39.754725+00:00
 ---
 
 # Java runtime environment  |  App Engine standard environment  |  Google Cloud Documentation

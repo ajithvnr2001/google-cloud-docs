@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/ivr-purchase-flow-messages/
 title: IVR Purchase Flow Messages \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:00.023371+00:00
+fetched_at: 2026-10-21T14:06:16.575608+00:00
 ---
 
 # IVR Purchase Flow Messages  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

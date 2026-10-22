@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/common/
 title: common.sh \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:19:44.966746+00:00
+fetched_at: 2026-10-21T14:28:52.945010+00:00
 ---
 
 # common.sh  |  Apigee  |  Google Cloud Documentation

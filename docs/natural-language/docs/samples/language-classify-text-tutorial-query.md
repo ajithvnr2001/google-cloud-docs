@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/docs/samples/language-classify-text-tutorial-query/
 title: Query text \u00a0|\u00a0 Cloud Natural Language API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:41:37.083865+00:00
+fetched_at: 2026-10-21T15:17:34.645690+00:00
 ---
 
 # Query text  |  Cloud Natural Language API  |  Google Cloud Documentation

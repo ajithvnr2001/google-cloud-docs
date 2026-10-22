@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/audit-logging/
 title: Audit Logging \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:22:27.093951+00:00
+fetched_at: 2026-10-21T12:54:39.819236+00:00
 ---
 
 # Audit Logging  |  CX Agent Studio  |  Google Cloud Documentation

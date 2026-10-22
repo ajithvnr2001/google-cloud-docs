@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/global-network-app-lb/
 title: Use global network firewall policies to protect Envoy-based load balancers \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:40:25.062143+00:00
+fetched_at: 2026-10-21T12:46:28.294192+00:00
 ---
 
 # Use global network firewall policies to protect Envoy-based load balancers  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

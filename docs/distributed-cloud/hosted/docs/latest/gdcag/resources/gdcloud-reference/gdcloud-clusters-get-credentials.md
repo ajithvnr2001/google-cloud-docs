@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-clusters-get-credentials/
 title: gdcloud clusters get-credentials \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:14:09.162173+00:00
+fetched_at: 2026-10-21T12:58:28.265632+00:00
 ---
 
 # gdcloud clusters get-credentials  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

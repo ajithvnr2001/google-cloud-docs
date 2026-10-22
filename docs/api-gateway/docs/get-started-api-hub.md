@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/get-started-api-hub/
 title: Get started with API Gateway and API hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:14:03.898912+00:00
+fetched_at: 2026-10-21T14:10:23.718923+00:00
 ---
 
 # Get started with API Gateway and API hub  |  Google Cloud Documentation

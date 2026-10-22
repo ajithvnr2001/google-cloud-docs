@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/v1/how-tos/catalog-api/
 title: Get publicly available Google Cloud pricing information \u00a0|\u00a0 Cloud Billing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:13:43.080471+00:00
+fetched_at: 2026-10-21T14:10:00.026700+00:00
 ---
 
 # Get publicly available Google Cloud pricing information  |  Cloud Billing  |  Google Cloud Documentation

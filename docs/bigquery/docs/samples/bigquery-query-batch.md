@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-query-batch/
 title: Run a query with batch priority \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:27:22.275198+00:00
+fetched_at: 2026-10-22T05:49:13.978711+00:00
 ---
 
 # Run a query with batch priority  |  BigQuery  |  Google Cloud Documentation

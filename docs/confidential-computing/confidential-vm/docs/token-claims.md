@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/token-claims/
 title: Google Cloud Attestation token claims \u00a0|\u00a0 Confidential VM \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:39:26.116681+00:00
+fetched_at: 2026-10-21T14:21:11.667275+00:00
 ---
 
 # Google Cloud Attestation token claims  |  Confidential VM  |  Google Cloud Documentation

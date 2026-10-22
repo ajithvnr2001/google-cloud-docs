@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/about-firewall-endpoints/
 title: Firewall endpoint overview \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:40:28.041640+00:00
+fetched_at: 2026-10-21T12:46:37.649695+00:00
 ---
 
 # Firewall endpoint overview  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

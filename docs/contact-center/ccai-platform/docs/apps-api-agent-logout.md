@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-agent-logout/
 title: Force agent logout endpoints \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:28:39.287226+00:00
+fetched_at: 2026-10-21T14:21:32.153578+00:00
 ---
 
 # Force agent logout endpoints  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

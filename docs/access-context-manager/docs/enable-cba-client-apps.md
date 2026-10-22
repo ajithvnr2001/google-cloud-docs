@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/enable-cba-client-apps/
 title: Enable certificate-based access in client applications \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:39:18.043983+00:00
+fetched_at: 2026-10-21T14:26:00.956508+00:00
 ---
 
 # Enable certificate-based access in client applications  |  Access Context Manager  |  Google Cloud Documentation

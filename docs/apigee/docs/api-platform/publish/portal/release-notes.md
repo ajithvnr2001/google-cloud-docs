@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/publish/portal/release-notes/
 title: Apigee Integrated Portal release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:39:11.308779+00:00
+fetched_at: 2026-10-21T12:54:53.721901+00:00
 ---
 
 # Apigee Integrated Portal release notes  |  Google Cloud Documentation
@@ -60,6 +60,18 @@ You can see the latest product updates for all of Google Cloud on the [ Google C
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/apigee-integrated-portal-release-notes.xml) directly. 
 
+## October 15, 2026
+
+Announcement
+
+On October 15, 2026, we released a new version of the Apigee integrated portal.
+
+Fixed
+
+Bug ID | Description  
+---|---  
+**560310696** | Fixed an issue where the Portal SSO endpoint inadvertently accepted deprecated TLS 1.1 connections. The endpoint now strictly enforces TLS 1.2+.  
+  
 ## March 05, 2026
 
 Announcement

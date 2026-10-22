@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/json-schemas/
 title: JSON schemas \u00a0|\u00a0 Agent Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:06:27.456584+00:00
+fetched_at: 2026-10-21T14:29:11.882514+00:00
 ---
 
 # JSON schemas  |  Agent Registry  |  Google Cloud Documentation

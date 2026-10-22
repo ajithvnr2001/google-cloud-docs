@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/samples/batch-create-container-job/
 title: Create and submit a basic container job \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:40:33.078736+00:00
+fetched_at: 2026-10-22T05:44:17.464528+00:00
 ---
 
 # Create and submit a basic container job  |  Batch  |  Google Cloud Documentation

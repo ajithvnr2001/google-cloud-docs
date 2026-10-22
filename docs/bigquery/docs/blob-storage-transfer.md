@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/blob-storage-transfer/
 title: Load Blob Storage data into BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:35:30.485040+00:00
+fetched_at: 2026-10-21T12:40:50.143632+00:00
 ---
 
 # Load Blob Storage data into BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/infrastructure/io-operations/audit-ar/
 title: Artifact Registry (AR) \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:49.968662+00:00
+fetched_at: 2026-10-21T12:59:47.232868+00:00
 ---
 
 # Artifact Registry (AR)  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

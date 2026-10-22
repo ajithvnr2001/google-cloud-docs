@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/infra-reliability-guide/traffic-load/
 title: Manage traffic and load for your workloads in Google Cloud \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:10:14.252200+00:00
+fetched_at: 2026-10-21T14:25:37.367816+00:00
 ---
 
 # Manage traffic and load for your workloads in Google Cloud  |  Cloud Architecture Center  |  Google Cloud Documentation

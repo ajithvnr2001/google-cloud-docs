@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/networking/using-gvnic/
 title: Using Google Virtual NIC \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:14:32.380675+00:00
+fetched_at: 2026-10-21T12:38:29.755171+00:00
 ---
 
 # Using Google Virtual NIC  |  Compute Engine  |  Google Cloud Documentation

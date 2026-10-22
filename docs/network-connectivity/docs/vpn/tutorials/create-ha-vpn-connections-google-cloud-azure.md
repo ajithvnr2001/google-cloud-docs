@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-connectivity/docs/vpn/tutorials/create-ha-vpn-connections-google-cloud-azure/
 title: Create HA VPN connections between Google Cloud and Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:49.555274+00:00
+fetched_at: 2026-10-21T15:14:51.905498+00:00
 ---
 
 # Create HA VPN connections between Google Cloud and Azure  |  Google Cloud Documentation

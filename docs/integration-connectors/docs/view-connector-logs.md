@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/view-connector-logs/
 title: View Integration Connectors logs \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:37.094933+00:00
+fetched_at: 2026-10-21T12:53:03.186600+00:00
 ---
 
 # View Integration Connectors logs  |  Google Cloud Documentation

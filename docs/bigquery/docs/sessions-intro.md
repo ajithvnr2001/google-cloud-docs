@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/sessions-intro/
 title: Introduction to sessions \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:21.783656+00:00
+fetched_at: 2026-10-21T12:36:34.291529+00:00
 ---
 
 # Introduction to sessions  |  BigQuery  |  Google Cloud Documentation

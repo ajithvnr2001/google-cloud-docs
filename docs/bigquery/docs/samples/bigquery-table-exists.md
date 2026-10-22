@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-table-exists/
 title: Table exists \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:07.962634+00:00
+fetched_at: 2026-10-22T05:49:48.560518+00:00
 ---
 
 # Table exists  |  BigQuery  |  Google Cloud Documentation

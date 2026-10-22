@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/create-mig-with-spot-vms/
 title: Create a MIG that uses Spot VMs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:05.703092+00:00
+fetched_at: 2026-10-21T14:23:36.223325+00:00
 ---
 
 # Create a MIG that uses Spot VMs  |  Compute Engine  |  Google Cloud Documentation

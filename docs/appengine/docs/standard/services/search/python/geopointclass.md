@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/search/python/geopointclass/
 title: The GeoPoint Class \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:44:15.471832+00:00
+fetched_at: 2026-10-21T14:53:39.943272+00:00
 ---
 
 # The GeoPoint Class  |  App Engine standard environment  |  Google Cloud Documentation

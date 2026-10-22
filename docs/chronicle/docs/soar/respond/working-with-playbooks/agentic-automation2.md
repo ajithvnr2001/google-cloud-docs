@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/agentic-automation2/
 title: Embed AI agents in playbooks \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:50:56.762611+00:00
+fetched_at: 2026-10-21T12:39:15.624812+00:00
 ---
 
 # Embed AI agents in playbooks  |  Google Security Operations  |  Google Cloud Documentation

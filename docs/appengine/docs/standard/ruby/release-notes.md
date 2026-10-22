@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/ruby/release-notes/
 title: App Engine standard environment for Ruby release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:38:40.780808+00:00
+fetched_at: 2026-10-21T14:42:49.396438+00:00
 ---
 
 # App Engine standard environment for Ruby release notes  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/billing-questions/
 title: Billing questions \u00a0|\u00a0 Agent Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:36:43.424577+00:00
+fetched_at: 2026-10-21T14:29:13.651232+00:00
 ---
 
 # Billing questions  |  Agent Registry  |  Google Cloud Documentation

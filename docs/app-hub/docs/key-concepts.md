@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/key-concepts/
 title: Key concepts \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:05:58.012901+00:00
+fetched_at: 2026-10-21T14:25:36.859371+00:00
 ---
 
 # Key concepts  |  App Hub  |  Google Cloud Documentation

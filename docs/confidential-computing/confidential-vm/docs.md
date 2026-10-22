@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/
 title: Confidential VM documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:26:17.218956+00:00
+fetched_at: 2026-10-21T14:22:31.169958+00:00
 ---
 
 # Confidential VM documentation  |  Google Cloud Documentation

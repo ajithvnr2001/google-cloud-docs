@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-os-login-metadata-based-ssh-keys/
 title: Add SSH key to project metadata \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:54:02.258754+00:00
+fetched_at: 2026-10-22T05:49:31.225567+00:00
 ---
 
 # Add SSH key to project metadata  |  Compute Engine  |  Google Cloud Documentation

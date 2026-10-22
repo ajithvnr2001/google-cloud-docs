@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/caa-enforcement-points/
 title: Context-Aware Access enforcement points \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:39:17.340327+00:00
+fetched_at: 2026-10-21T14:26:06.290590+00:00
 ---
 
 # Context-Aware Access enforcement points  |  Access Context Manager  |  Google Cloud Documentation

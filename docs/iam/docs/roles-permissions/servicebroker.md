@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/servicebroker/
 title: Open Service Broker for Google Cloud roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:32:51.205758+00:00
+fetched_at: 2026-10-21T14:30:13.473033+00:00
 ---
 
 # Open Service Broker for Google Cloud roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

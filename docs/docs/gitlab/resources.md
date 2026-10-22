@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/gitlab/resources/
 title: Resources \u00a0|\u00a0 GitLab on Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:53:32.875254+00:00
+fetched_at: 2026-10-21T14:39:43.572344+00:00
 ---
 
 # Resources  |  GitLab on Google Cloud  |  Google Cloud Documentation

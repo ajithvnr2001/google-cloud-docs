@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/model-saas-offering/
 title: Model and package units of deployment \u00a0|\u00a0 App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:18.119385+00:00
+fetched_at: 2026-10-21T12:30:47.310833+00:00
 ---
 
 # Model and package units of deployment  |  App Lifecycle Manager  |  Google Cloud Documentation

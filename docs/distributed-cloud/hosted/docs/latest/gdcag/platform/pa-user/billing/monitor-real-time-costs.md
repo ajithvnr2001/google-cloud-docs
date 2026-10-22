@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/billing/monitor-real-time-costs/
 title: Monitor real-time costs \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:19:32.710980+00:00
+fetched_at: 2026-10-21T12:59:17.662116+00:00
 ---
 
 # Monitor real-time costs  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

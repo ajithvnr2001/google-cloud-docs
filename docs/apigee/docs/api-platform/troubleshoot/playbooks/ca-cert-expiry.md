@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/ca-cert-expiry/
 title: Ingress mTLS CA cert expiry \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:21.214412+00:00
+fetched_at: 2026-10-21T14:27:36.018864+00:00
 ---
 
 # Ingress mTLS CA cert expiry  |  Apigee  |  Google Cloud Documentation

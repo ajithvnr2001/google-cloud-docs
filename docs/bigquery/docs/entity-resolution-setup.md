@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/entity-resolution-setup/
 title: Configure and use entity resolution in BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:12:02.768631+00:00
+fetched_at: 2026-10-21T15:25:16.260168+00:00
 ---
 
 # Configure and use entity resolution in BigQuery  |  Google Cloud Documentation
@@ -151,7 +151,7 @@ When you use the TransUnion TruAudience Identity Resolution and Enrichment servi
 
 ##### Create an external connection
 
-To connect your Google Cloud account to the identity resolution service hosted in the TransUnion Google Cloud account, [create a Cloud resource connection](https://docs.cloud.google.com/bigquery/docs/create-cloud-resource-connection#create-cloud-resource-connection). When you configure the connection, select **Vertex AI remote models, remote functions and BigLake (Cloud Resource)** as the connection type.
+To connect your Google Cloud account to the identity resolution service hosted in the TransUnion Google Cloud account, [create a Cloud resource connection](https://docs.cloud.google.com/bigquery/docs/create-cloud-resource-connection#create-cloud-resource-connection). When you configure the connection, select **Vertex AI remote models, remote functions, BigLake and Spanner (Cloud Resource)** as the connection type.
 
 After you create the connection, copy the connection ID and service account ID, and then share these identifiers with the TransUnion customer delivery team.
 
@@ -195,26 +195,24 @@ The `TransUnion_get_identities` stored procedure packages your configuration met
     
     
     -- create service invocation procedure
-    CREATE OR REPLACE
-      PROCEDURE
-        `PROJECT_ID.DATASET_ID.TransUnion_get_identities`(metadata_table STRING, config_id STRING)
-          begin
-            declare sql_query STRING;
+    CREATE OR REPLACE PROCEDURE
+      `PROJECT_ID.DATASET_ID.TransUnion_get_identities`(metadata_table STRING, config_id STRING)
+    BEGIN
+      DECLARE sql_query STRING;
+      DECLARE json_result STRING;
+      DECLARE base64_result STRING;
     
-    declare json_result STRING;
-    declare base64_result STRING;
+      SET sql_query =
+        '''SELECT TO_JSON_STRING(ARRAY_AGG(STRUCT(config_id, key, value))) FROM `''' || metadata_table
+        || '''` WHERE config_id="''' || config_id || '''" ''';
     
-    SET sql_query =
-      '''select to_json_string(array_agg(struct(config_id,key,value))) from `''' || metadata_table
-      || '''` where  config_id="''' || config_id || '''" ''';
+      EXECUTE IMMEDIATE sql_query INTO json_result;
     
-    EXECUTE immediate sql_query INTO json_result;
+      SET base64_result = (SELECT TO_BASE64(CAST(json_result AS BYTES)));
     
-    SET base64_result = (SELECT to_base64(CAST(json_result AS bytes)));
-    
-    SELECT
-      `PROJECT_ID.DATASET_ID.remote_call_TransUnion_er`(
-        base64_result);
+      SELECT
+        `PROJECT_ID.DATASET_ID.remote_call_TransUnion_er`(
+          base64_result);
     END;
     
 
@@ -337,13 +335,13 @@ To process entity resolution requests from end users, deploy an orchestrator end
   1. To process matching requests from your remote function, create a [Cloud Run](https://docs.cloud.google.com/run/docs/overview/what-is-cloud-run) job or a [Cloud Run function](https://docs.cloud.google.com/functions/docs/concepts/overview). You can use either option for your endpoint.
   2. To find the service account email address that's associated with your Cloud Run job or Cloud Run function, complete these steps:
 
-     1. In the Google Cloud console, go to the **Cloud Functions** page.
+     1. In the Google Cloud console, go to the **Cloud Run** page.
 
-[Go to Cloud Functions](https://console.cloud.google.com/functions)
+[Go to Cloud Run](https://console.cloud.google.com/run)
 
-     2. To open the function details, click the name of your function, and then click the **Details** tab.
+     2. Click the name of your function or job, and then click the **Security** tab.
 
-     3. In the **General Information** pane, find and record the service account email address for the remote function.
+     3. In the **Service account** field, find and record the service account email address for the remote function.
 
   3. In your control plane dataset, [create a remote function](https://docs.cloud.google.com/bigquery/docs/remote-functions#create_a_remote_function) that connects to your Cloud Run job or Cloud Run function endpoint.
 
@@ -372,7 +370,7 @@ To provide job metadata to your end users, you can expose a separate remote func
 
 ### Integrate with Cloud Marketplace for billing
 
-To manage customer billing and onboarding through Google, integrate your entity resolution service with [Cloud Marketplace](https://docs.cloud.google.com/marketplace). This integration lets you configure a [pricing model](https://docs.cloud.google.com/marketplace/docs/partners/integrated-saas/select-pricing) based on entity resolution job usage while Google handles billing for your service. For more information, see [Offering software as a service (SaaS) products](https://docs.cloud.google.com/marketplace/docs/partners/integrated-saas).
+To manage customer billing and onboarding through Google, integrate your entity resolution service with [Cloud Marketplace](https://cloud.google.com/marketplace). This integration lets you configure a [pricing model](https://docs.cloud.google.com/marketplace/docs/partners/integrated-saas/select-pricing) based on entity resolution job usage while Google handles billing for your service. For more information, see [Offering software as a service (SaaS) products](https://docs.cloud.google.com/marketplace/docs/partners/integrated-saas).
 
 ## What's next
 
@@ -387,6 +385,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

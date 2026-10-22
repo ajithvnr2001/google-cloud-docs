@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/develop/
 title: Developing for Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:03.196301+00:00
+fetched_at: 2026-10-21T12:38:57.884887+00:00
 ---
 
 # Developing for Cloud Build  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/map-entries/
 title: Manage certificate map entries \u00a0|\u00a0 Certificate Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:34:44.163939+00:00
+fetched_at: 2026-10-21T14:25:31.968107+00:00
 ---
 
 # Manage certificate map entries  |  Certificate Manager  |  Google Cloud Documentation

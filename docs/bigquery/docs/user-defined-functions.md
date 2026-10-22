@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/user-defined-functions/
 title: User-defined functions \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:14.848136+00:00
+fetched_at: 2026-10-21T12:38:46.885360+00:00
 ---
 
 # User-defined functions  |  BigQuery  |  Google Cloud Documentation

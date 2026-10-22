@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/attestation-overview/
 title: Remote attestation overview \u00a0|\u00a0 Confidential VM \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:27.411731+00:00
+fetched_at: 2026-10-21T14:20:53.068463+00:00
 ---
 
 # Remote attestation overview  |  Confidential VM  |  Google Cloud Documentation

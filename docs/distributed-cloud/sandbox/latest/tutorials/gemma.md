@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/sandbox/latest/tutorials/gemma/
 title: Deploying Gemma using Ollama and Open-WebUI \u00a0|\u00a0 Google Distributed Cloud Sandbox \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:13:53.661359+00:00
+fetched_at: 2026-10-21T14:06:09.309415+00:00
 ---
 
 # Deploying Gemma using Ollama and Open-WebUI  |  Google Distributed Cloud Sandbox  |  Google Cloud Documentation

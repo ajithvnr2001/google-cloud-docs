@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/call-adapter-emergency/
 title: Emergency and special services calling \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:02:03.586711+00:00
+fetched_at: 2026-10-21T14:10:20.508859+00:00
 ---
 
 # Emergency and special services calling  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

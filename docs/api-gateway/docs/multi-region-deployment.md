@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/multi-region-deployment/
 title: Creating multi-region deployments for API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:14:06.817320+00:00
+fetched_at: 2026-10-21T14:10:22.634308+00:00
 ---
 
 # Creating multi-region deployments for API Gateway  |  Google Cloud Documentation

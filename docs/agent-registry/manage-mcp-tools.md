@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/manage-mcp-tools/
 title: Manage MCP servers and tools \u00a0|\u00a0 Agent Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:37:02.066167+00:00
+fetched_at: 2026-10-21T14:29:12.648319+00:00
 ---
 
 # Manage MCP servers and tools  |  Agent Registry  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/encrypt-etcd-control-plane-disks/
 title: Encrypt etcd and control plane boot disks \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:12.894747+00:00
+fetched_at: 2026-10-21T15:00:14.699825+00:00
 ---
 
 # Encrypt etcd and control plane boot disks  |  GKE security  |  Google Cloud Documentation

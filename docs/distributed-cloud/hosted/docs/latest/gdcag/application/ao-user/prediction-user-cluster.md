@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/prediction-user-cluster/
 title: Create the prediction cluster \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:01:22.358032+00:00
+fetched_at: 2026-10-21T12:58:25.919895+00:00
 ---
 
 # Create the prediction cluster  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

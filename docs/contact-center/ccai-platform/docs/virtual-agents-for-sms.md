@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/virtual-agents-for-sms/
 title: Virtual agents for SMS \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:19.974129+00:00
+fetched_at: 2026-10-21T14:22:17.784762+00:00
 ---
 
 # Virtual agents for SMS  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

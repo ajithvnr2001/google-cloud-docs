@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/use-datastream-mcp/
 title: Use the Datastream remote MCP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:50:57.253574+00:00
+fetched_at: 2026-10-21T12:58:01.386593+00:00
 ---
 
 # Use the Datastream remote MCP server  |  Google Cloud Documentation

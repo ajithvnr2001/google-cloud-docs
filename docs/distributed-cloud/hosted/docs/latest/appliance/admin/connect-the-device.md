@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/admin/connect-the-device/
 title: Connect the laptop to the switch \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:38.678382+00:00
+fetched_at: 2026-10-21T12:57:31.500950+00:00
 ---
 
 # Connect the laptop to the switch  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

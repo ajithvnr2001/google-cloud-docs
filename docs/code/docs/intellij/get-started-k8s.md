@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/get-started-k8s/
 title: Get started with Cloud Code for IntelliJ for Kubernetes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:21:34.496612+00:00
+fetched_at: 2026-10-21T12:40:46.718217+00:00
 ---
 
 # Get started with Cloud Code for IntelliJ for Kubernetes  |  Google Cloud Documentation

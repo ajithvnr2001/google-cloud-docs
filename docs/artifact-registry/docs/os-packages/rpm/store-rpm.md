@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/os-packages/rpm/store-rpm/
 title: Quickstart: Store RPM packages in Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:17.930746+00:00
+fetched_at: 2026-10-21T12:40:41.580155+00:00
 ---
 
 # Quickstart: Store RPM packages in Artifact Registry  |  Google Cloud Documentation

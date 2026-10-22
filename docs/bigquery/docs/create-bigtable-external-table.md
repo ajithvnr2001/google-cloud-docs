@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/create-bigtable-external-table/
 title: Create a Bigtable external table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:12:02.198432+00:00
+fetched_at: 2026-10-22T05:47:19.175233+00:00
 ---
 
 # Create a Bigtable external table  |  BigQuery  |  Google Cloud Documentation

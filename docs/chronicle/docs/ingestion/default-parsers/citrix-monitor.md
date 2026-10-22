@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/citrix-monitor/
 title: Collect Citrix Monitor Service logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:58:48.061880+00:00
+fetched_at: 2026-10-21T14:11:27.637663+00:00
 ---
 
 # Collect Citrix Monitor Service logs  |  Google Security Operations  |  Google Cloud Documentation

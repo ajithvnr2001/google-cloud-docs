@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/managing-clusters/
 title: Manage cluster lifecycle changes to minimize disruption \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:42:58.433416+00:00
+fetched_at: 2026-10-21T15:00:33.691633+00:00
 ---
 
 # Manage cluster lifecycle changes to minimize disruption  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

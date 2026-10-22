@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-tiers/docs/apis/
 title: APIs and reference \u00a0|\u00a0 Network Service Tiers \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:28:04.646613+00:00
+fetched_at: 2026-10-21T15:15:13.194387+00:00
 ---
 
 # APIs and reference  |  Network Service Tiers  |  Google Cloud Documentation

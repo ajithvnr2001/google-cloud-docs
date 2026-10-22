@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/admin/storage-auth-key-and-cert-rotation/
 title: Rotate storage authentication keys and certificates \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:44.545719+00:00
+fetched_at: 2026-10-21T12:57:17.883171+00:00
 ---
 
 # Rotate storage authentication keys and certificates  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

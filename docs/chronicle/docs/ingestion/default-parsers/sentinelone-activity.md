@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/sentinelone-activity/
 title: Collect SentinelOne Activity logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:09:44.751126+00:00
+fetched_at: 2026-10-21T12:37:10.741513+00:00
 ---
 
 # Collect SentinelOne Activity logs  |  Google Security Operations  |  Google Cloud Documentation

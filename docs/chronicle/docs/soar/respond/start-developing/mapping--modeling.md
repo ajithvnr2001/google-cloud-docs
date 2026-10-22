@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/start-developing/mapping--modeling/
 title: Map and model alerts \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:07.662618+00:00
+fetched_at: 2026-10-21T12:38:53.045731+00:00
 ---
 
 # Map and model alerts  |  Google Security Operations  |  Google Cloud Documentation

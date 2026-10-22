@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/billing-questions/
 title: Billing questions \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:59:22.134620+00:00
+fetched_at: 2026-10-21T14:10:31.169758+00:00
 ---
 
 # Billing questions  |  API Gateway  |  Google Cloud Documentation

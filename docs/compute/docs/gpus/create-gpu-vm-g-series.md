@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/gpus/create-gpu-vm-g-series/
 title: Create a G2 or G4 instance \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:55.852630+00:00
+fetched_at: 2026-10-21T14:21:40.140094+00:00
 ---
 
 # Create a G2 or G4 instance  |  Compute Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cynet-360-autoxdr-changelog/
 title: Change log for CYNET_360_AUTOXDR \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:43:01.497258+00:00
+fetched_at: 2026-10-21T14:45:32.053879+00:00
 ---
 
 # Change log for CYNET_360_AUTOXDR  |  Google Security Operations  |  Google Cloud Documentation

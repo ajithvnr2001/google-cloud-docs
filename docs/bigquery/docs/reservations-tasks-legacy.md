@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/reservations-tasks-legacy/
 title: Work with legacy slot reservations \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:14:45.544534+00:00
+fetched_at: 2026-10-21T12:36:11.024537+00:00
 ---
 
 # Work with legacy slot reservations  |  BigQuery  |  Google Cloud Documentation

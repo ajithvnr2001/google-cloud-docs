@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/restore-deleted-tables/
 title: Restore deleted tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T10:27:54.761179+00:00
+fetched_at: 2026-10-21T12:36:09.070940+00:00
 ---
 
 # Restore deleted tables  |  BigQuery  |  Google Cloud Documentation

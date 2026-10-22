@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/openldap-changelog/
 title: Change log for OPENLDAP \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:14:43.338186+00:00
+fetched_at: 2026-10-21T14:47:08.671026+00:00
 ---
 
 # Change log for OPENLDAP  |  Google Security Operations  |  Google Cloud Documentation

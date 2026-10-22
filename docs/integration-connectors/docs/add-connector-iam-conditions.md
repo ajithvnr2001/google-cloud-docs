@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/add-connector-iam-conditions/
 title: IAM Conditions for fine-grained access \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:36.491734+00:00
+fetched_at: 2026-10-21T12:53:50.221677+00:00
 ---
 
 # IAM Conditions for fine-grained access  |  Integration Connectors  |  Google Cloud Documentation

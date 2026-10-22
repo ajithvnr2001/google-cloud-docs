@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/deployment-step-four/
 title: Step 4: Set up components \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:12:20.914156+00:00
+fetched_at: 2026-10-21T14:10:35.832545+00:00
 ---
 
 # Step 4: Set up components  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

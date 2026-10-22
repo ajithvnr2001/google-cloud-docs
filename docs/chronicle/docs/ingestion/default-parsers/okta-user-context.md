@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/okta-user-context/
 title: Collect Okta User Context logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:07:13.705926+00:00
+fetched_at: 2026-10-21T14:06:38.204409+00:00
 ---
 
 # Collect Okta User Context logs  |  Google Security Operations  |  Google Cloud Documentation

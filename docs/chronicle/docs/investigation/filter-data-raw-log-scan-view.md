@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/filter-data-raw-log-scan-view/
 title: Filter data in raw log search \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:21:33.003124+00:00
+fetched_at: 2026-10-21T14:11:44.567391+00:00
 ---
 
 # Filter data in raw log search  |  Google Security Operations  |  Google Cloud Documentation

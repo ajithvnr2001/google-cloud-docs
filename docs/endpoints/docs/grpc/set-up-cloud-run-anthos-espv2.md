@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/grpc/set-up-cloud-run-anthos-espv2/
 title: Quickstart: Set up Cloud Endpoints gRPC for Knative serving with ESPv2 \u00a0|\u00a0 Cloud Endpoints with gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:36:06.836772+00:00
+fetched_at: 2026-10-21T12:51:12.153529+00:00
 ---
 
 # Quickstart: Set up Cloud Endpoints gRPC for Knative serving with ESPv2  |  Cloud Endpoints with gRPC  |  Google Cloud Documentation

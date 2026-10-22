@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/gcp-tasks/configure-firestore-batchget-task/
 title: Firestore - Batch Get task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:15:04.666739+00:00
+fetched_at: 2026-10-21T14:27:10.600859+00:00
 ---
 
 # Firestore - Batch Get task  |  Application Integration  |  Google Cloud Documentation

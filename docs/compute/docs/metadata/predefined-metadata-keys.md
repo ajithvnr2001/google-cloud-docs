@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/metadata/predefined-metadata-keys/
 title: Predefined metadata keys \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:11:16.469811+00:00
+fetched_at: 2026-10-21T12:37:45.237367+00:00
 ---
 
 # Predefined metadata keys  |  Compute Engine  |  Google Cloud Documentation

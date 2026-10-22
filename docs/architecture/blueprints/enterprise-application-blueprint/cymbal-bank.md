@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/blueprints/enterprise-application-blueprint/cymbal-bank/
 title: Cymbal Bank application architecture \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:37.479765+00:00
+fetched_at: 2026-10-21T14:27:04.228926+00:00
 ---
 
 # Cymbal Bank application architecture  |  Cloud Architecture Center  |  Google Cloud Documentation

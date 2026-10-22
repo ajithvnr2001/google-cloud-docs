@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-delete-schema-revision/
 title: Delete a revision from a schema \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:52:59.199377+00:00
+fetched_at: 2026-10-21T14:58:54.403749+00:00
 ---
 
 # Delete a revision from a schema  |  Pub/Sub  |  Google Cloud Documentation

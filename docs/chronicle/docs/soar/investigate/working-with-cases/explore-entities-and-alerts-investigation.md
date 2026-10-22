@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/investigate/working-with-cases/explore-entities-and-alerts-investigation/
 title: Investigate entities and alerts \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:10:24.002499+00:00
+fetched_at: 2026-10-21T14:19:14.058188+00:00
 ---
 
 # Investigate entities and alerts  |  Google Security Operations  |  Google Cloud Documentation

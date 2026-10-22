@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/composite-rules-category/
 title: Composite rules \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:59:53.914946+00:00
+fetched_at: 2026-10-21T12:37:31.107072+00:00
 ---
 
 # Composite rules  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/16.11.0/docs/upgrade-kubernetes-operator-version/
 title: Upgrade your AlloyDB Omni Kubernetes operator to version 1.7.0 \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 16.11.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:41:36.814970+00:00
+fetched_at: 2026-10-21T15:19:55.713326+00:00
 ---
 
 # Upgrade your AlloyDB Omni Kubernetes operator to version 1.7.0  |  AlloyDB Omni using the container orchestrator: 16.11.0  |  Google Cloud Documentation

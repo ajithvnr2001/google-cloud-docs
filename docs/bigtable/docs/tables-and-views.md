@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/tables-and-views/
 title: Tables and views \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:10.043050+00:00
+fetched_at: 2026-10-21T14:24:51.860036+00:00
 ---
 
 # Tables and views  |  Bigtable  |  Google Cloud Documentation

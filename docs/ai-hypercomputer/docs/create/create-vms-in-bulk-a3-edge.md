@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-vms-in-bulk-a3-edge/
 title: Create AI-optimized instances in bulk with A3 Edge \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:01:49.369633+00:00
+fetched_at: 2026-10-21T14:28:01.345622+00:00
 ---
 
 # Create AI-optimized instances in bulk with A3 Edge  |  AI Hypercomputer  |  Google Cloud Documentation

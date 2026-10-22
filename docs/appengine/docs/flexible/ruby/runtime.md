@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/ruby/runtime/
 title: The Ruby runtime \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:25:25.170442+00:00
+fetched_at: 2026-10-21T14:26:55.769748+00:00
 ---
 
 # The Ruby runtime  |  App Engine flexible environment  |  Google Cloud Documentation

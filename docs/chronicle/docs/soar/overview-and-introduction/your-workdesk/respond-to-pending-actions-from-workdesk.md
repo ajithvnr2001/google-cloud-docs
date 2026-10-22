@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/overview-and-introduction/your-workdesk/respond-to-pending-actions-from-workdesk/
 title: Respond to pending actions from your workdesk \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:36:58.668978+00:00
+fetched_at: 2026-10-21T14:09:52.986763+00:00
 ---
 
 # Respond to pending actions from your workdesk  |  Google Security Operations  |  Google Cloud Documentation

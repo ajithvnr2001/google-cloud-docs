@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/migrate-detects-api-to-alerts-api/
 title: Migrate from CrowdStrike Detects API to Alerts API \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:00.318115+00:00
+fetched_at: 2026-10-21T12:38:07.643421+00:00
 ---
 
 # Migrate from CrowdStrike Detects API to Alerts API  |  Google Security Operations  |  Google Cloud Documentation

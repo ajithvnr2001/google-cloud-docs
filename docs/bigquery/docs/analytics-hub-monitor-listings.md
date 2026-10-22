@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/analytics-hub-monitor-listings/
 title: Monitor listings \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:11:57.279556+00:00
+fetched_at: 2026-10-22T05:38:57.480511+00:00
 ---
 
 # Monitor listings  |  BigQuery  |  Google Cloud Documentation

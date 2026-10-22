@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/schemas/
 title: Specify a schema \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:43.029899+00:00
+fetched_at: 2026-10-21T12:36:59.983704+00:00
 ---
 
 # Specify a schema  |  BigQuery  |  Google Cloud Documentation

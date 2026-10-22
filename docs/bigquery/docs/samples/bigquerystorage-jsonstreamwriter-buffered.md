@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerystorage-jsonstreamwriter-buffered/
 title: Append buffered records \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:43.221735+00:00
+fetched_at: 2026-10-21T12:36:37.562750+00:00
 ---
 
 # Append buffered records  |  BigQuery  |  Google Cloud Documentation

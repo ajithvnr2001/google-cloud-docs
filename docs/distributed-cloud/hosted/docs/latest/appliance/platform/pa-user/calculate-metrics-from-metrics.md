@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/platform/pa-user/calculate-metrics-from-metrics/
 title: Create new metrics from existing metrics \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:46.460215+00:00
+fetched_at: 2026-10-21T12:58:00.684036+00:00
 ---
 
 # Create new metrics from existing metrics  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

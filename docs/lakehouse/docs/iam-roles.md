@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/lakehouse/docs/iam-roles/
 title: Borderless Lakehouse IAM roles \u00a0|\u00a0 BigLake API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:19:51.170460+00:00
+fetched_at: 2026-10-21T14:56:24.199094+00:00
 ---
 
 # Borderless Lakehouse IAM roles  |  BigLake API  |  Google Cloud Documentation
@@ -87,7 +87,22 @@ Role | Permissions
   
 #### BigLake Editor Beta
 
-(`roles/biglake.editor`) Provides read and write access to all BigLake resources.  |  `biglake.catalogs.create` `biglake.catalogs.delete` `biglake.catalogs.get` `biglake.catalogs.getIamPolicy` `biglake.catalogs.list` `biglake.catalogs.update` `biglake.namespaces.create` `biglake.namespaces.delete` `biglake.namespaces.get` `biglake.namespaces.getIamPolicy` `biglake.namespaces.list` `biglake.namespaces.update` `biglake.tables.create` `biglake.tables.createPartitions` `biglake.tables.delete` `biglake.tables.deletePartitions` `biglake.tables.get` `biglake.tables.getData` `biglake.tables.getIamPolicy` `biglake.tables.list` `biglake.tables.listPartitions` `biglake.tables.update` `biglake.tables.updateData` `biglake.tables.updatePartitions` `resourcemanager.projects.get` `resourcemanager.projects.list`  
+(`roles/biglake.editor`) Provides read and write access to all BigLake resources.  |  `biglake.catalogs.create` `biglake.catalogs.delete` `biglake.catalogs.get` `biglake.catalogs.getIamPolicy` `biglake.catalogs.list` `biglake.catalogs.update` `biglake.databases.*`
+
+  * `biglake.databases.create`
+  * `biglake.databases.delete`
+  * `biglake.databases.get`
+  * `biglake.databases.list`
+  * `biglake.databases.update`
+
+`biglake.locks.*`
+
+  * `biglake.locks.check`
+  * `biglake.locks.create`
+  * `biglake.locks.delete`
+  * `biglake.locks.list`
+
+`biglake.namespaces.create` `biglake.namespaces.delete` `biglake.namespaces.get` `biglake.namespaces.getIamPolicy` `biglake.namespaces.list` `biglake.namespaces.update` `biglake.tables.create` `biglake.tables.createPartitions` `biglake.tables.delete` `biglake.tables.deletePartitions` `biglake.tables.get` `biglake.tables.getData` `biglake.tables.getIamPolicy` `biglake.tables.list` `biglake.tables.listPartitions` `biglake.tables.lock` `biglake.tables.update` `biglake.tables.updateData` `biglake.tables.updatePartitions` `resourcemanager.projects.get` `resourcemanager.projects.list`  
   
 #### BigLake Viewer 
 
@@ -106,6 +121,6 @@ Role | Permissions
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

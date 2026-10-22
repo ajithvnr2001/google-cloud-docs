@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/aks/how-to/create-tags/
 title: Create and manage Tags on AKS attached clusters \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:21.613854+00:00
+fetched_at: 2026-10-21T15:01:39.185210+00:00
 ---
 
 # Create and manage Tags on AKS attached clusters  |  GKE attached clusters  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/ca-service-desk-manager/
 title: CA Service Desk Manager \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:40:55.104793+00:00
+fetched_at: 2026-10-21T14:20:23.535353+00:00
 ---
 
 # CA Service Desk Manager  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/known-issues/
 title: Known issues and limitations in Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:35:27.531773+00:00
+fetched_at: 2026-10-21T14:25:07.050100+00:00
 ---
 
 # Known issues and limitations in Bare Metal Solution  |  Google Cloud Documentation

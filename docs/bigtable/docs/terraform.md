@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/terraform/
 title: Provision Bigtable resources with Terraform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:20.276134+00:00
+fetched_at: 2026-10-21T14:24:24.941120+00:00
 ---
 
 # Provision Bigtable resources with Terraform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/monitoring-dashboard/
 title: Use Application Integration dashboard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:51.670724+00:00
+fetched_at: 2026-10-21T12:35:23.223252+00:00
 ---
 
 # Use Application Integration dashboard  |  Google Cloud Documentation

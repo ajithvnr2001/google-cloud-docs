@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/e2e-journey/
 title: End-to-end user journeys for ML models \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:56:47.265833+00:00
+fetched_at: 2026-10-21T14:07:10.769814+00:00
 ---
 
 # End-to-end user journeys for ML models  |  BigQuery  |  Google Cloud Documentation

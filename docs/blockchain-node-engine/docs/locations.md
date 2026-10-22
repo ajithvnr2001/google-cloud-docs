@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/blockchain-node-engine/docs/locations/
 title: Blockchain Node Engine locations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:30:06.625547+00:00
+fetched_at: 2026-10-21T14:09:20.900686+00:00
 ---
 
 # Blockchain Node Engine locations  |  Google Cloud Documentation

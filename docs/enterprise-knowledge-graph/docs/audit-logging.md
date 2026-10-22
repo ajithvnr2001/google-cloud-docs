@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/enterprise-knowledge-graph/docs/audit-logging/
 title: Enterprise Knowledge Graph audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:33:29.300068+00:00
+fetched_at: 2026-10-21T12:51:04.506726+00:00
 ---
 
 # Enterprise Knowledge Graph audit logging  |  Google Cloud Documentation

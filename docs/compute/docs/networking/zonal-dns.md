@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/networking/zonal-dns/
 title: Overview of using Zonal DNS \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:25.156931+00:00
+fetched_at: 2026-10-21T12:37:01.120415+00:00
 ---
 
 # Overview of using Zonal DNS  |  Compute Engine  |  Google Cloud Documentation

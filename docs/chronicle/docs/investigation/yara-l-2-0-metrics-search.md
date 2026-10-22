@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/yara-l-2-0-metrics-search/
 title: Use metrics in search \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:06:51.322330+00:00
+fetched_at: 2026-10-21T14:25:39.056276+00:00
 ---
 
 # Use metrics in search  |  Google Security Operations  |  Google Cloud Documentation

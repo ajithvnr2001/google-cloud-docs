@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/managing-policy-tags-across-locations/
 title: Managing policy tags across locations \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:37:01.183651+00:00
+fetched_at: 2026-10-21T12:36:22.136391+00:00
 ---
 
 # Managing policy tags across locations  |  BigQuery  |  Google Cloud Documentation

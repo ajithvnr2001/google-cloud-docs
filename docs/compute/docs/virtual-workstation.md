@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/virtual-workstation/
 title: About creating virtual workstations \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:11.189152+00:00
+fetched_at: 2026-10-21T14:22:13.658408+00:00
 ---
 
 # About creating virtual workstations  |  Compute Engine  |  Google Cloud Documentation

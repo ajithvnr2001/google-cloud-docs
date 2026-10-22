@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/eks/how-to/update-cluster/
 title: Update your EKS attached cluster \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:44:20.158680+00:00
+fetched_at: 2026-10-21T15:02:23.813079+00:00
 ---
 
 # Update your EKS attached cluster  |  GKE attached clusters  |  Google Cloud Documentation

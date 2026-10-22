@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dotnet/docs/modernization-path-dotnet-applications-google-cloud/
 title: Modernization path for .NET applications on Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:47:58.384158+00:00
+fetched_at: 2026-10-21T12:51:04.087522+00:00
 ---
 
 # Modernization path for .NET applications on Google Cloud  |  Google Cloud Documentation

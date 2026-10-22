@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/dashboards-create-dashboard-from-tile/
 title: Create a dashboard from an existing metrics tile \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:03:27.543848+00:00
+fetched_at: 2026-10-21T14:22:13.846311+00:00
 ---
 
 # Create a dashboard from an existing metrics tile  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

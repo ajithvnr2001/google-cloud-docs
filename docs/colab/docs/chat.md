@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/colab/docs/chat/
 title: Chat about your notebook with Gemini \u00a0|\u00a0 Colab Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:30:20.231530+00:00
+fetched_at: 2026-10-21T14:19:26.241568+00:00
 ---
 
 # Chat about your notebook with Gemini  |  Colab Enterprise  |  Google Cloud Documentation

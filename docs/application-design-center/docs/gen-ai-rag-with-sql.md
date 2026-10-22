@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/gen-ai-rag-with-sql/
 title: Generative AI RAG with Cloud SQL \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:38:32.326678+00:00
+fetched_at: 2026-10-21T12:29:51.202464+00:00
 ---
 
 # Generative AI RAG with Cloud SQL  |  Application Design Center  |  Google Cloud Documentation

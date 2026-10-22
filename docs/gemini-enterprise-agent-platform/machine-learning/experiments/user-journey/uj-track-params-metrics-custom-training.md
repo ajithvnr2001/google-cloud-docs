@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/experiments/user-journey/uj-track-params-metrics-custom-training/
 title: Track parameters and metrics for custom training jobs: Notebook \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:20:17.738382+00:00
+fetched_at: 2026-10-21T12:55:24.800971+00:00
 ---
 
 # Track parameters and metrics for custom training jobs: Notebook  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-list-jobs/
 title: List jobs \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:59.336694+00:00
+fetched_at: 2026-10-22T05:49:57.525627+00:00
 ---
 
 # List jobs  |  BigQuery  |  Google Cloud Documentation

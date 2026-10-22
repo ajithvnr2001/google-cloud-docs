@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/proactive-cost-optimization/
 title: Proactive cost optimization \u00a0|\u00a0 Gemini Cloud Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:14:01.658540+00:00
+fetched_at: 2026-10-21T14:22:47.855393+00:00
 ---
 
 # Proactive cost optimization  |  Gemini Cloud Assist  |  Google Cloud Documentation

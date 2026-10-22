@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/administration/cli-user-guide/
 title: Google SecOps CLI reference \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:15:15.760465+00:00
+fetched_at: 2026-10-21T14:11:36.452067+00:00
 ---
 
 # Google SecOps CLI reference  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/modernize/hub/assess-dotnet/
 title: Assess .NET applications for modernization \u00a0|\u00a0 Modernization Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:15.237946+00:00
+fetched_at: 2026-10-21T15:16:41.363932+00:00
 ---
 
 # Assess .NET applications for modernization  |  Modernization Hub  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/dashboards-manage-looks/
 title: Manage Looks \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:05:14.463121+00:00
+fetched_at: 2026-10-21T14:21:34.897609+00:00
 ---
 
 # Manage Looks  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

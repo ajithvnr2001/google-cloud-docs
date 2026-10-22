@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/analytics/api-proxy-performance-dashboard/
 title: API Proxy Performance \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T09:48:03.104328+00:00
+fetched_at: 2026-10-21T12:29:53.554861+00:00
 ---
 
 # API Proxy Performance  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/investigate/working-with-cases/cases-overview2/
 title: Case management overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:10:59.069325+00:00
+fetched_at: 2026-10-21T14:19:53.645065+00:00
 ---
 
 # Case management overview  |  Google Security Operations  |  Google Cloud Documentation

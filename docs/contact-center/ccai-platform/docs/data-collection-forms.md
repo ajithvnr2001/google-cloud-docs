@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/data-collection-forms/
 title: Data collection forms \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:38.202585+00:00
+fetched_at: 2026-10-21T14:21:33.696431+00:00
 ---
 
 # Data collection forms  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

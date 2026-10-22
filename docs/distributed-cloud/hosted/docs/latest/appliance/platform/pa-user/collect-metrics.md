@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/platform/pa-user/collect-metrics/
 title: Collect metrics from your workloads \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:45.626040+00:00
+fetched_at: 2026-10-21T12:58:03.918611+00:00
 ---
 
 # Collect metrics from your workloads  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

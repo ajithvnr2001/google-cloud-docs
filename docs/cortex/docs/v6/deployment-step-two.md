@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/deployment-step-two/
 title: Step 2: Clone repository \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:03:57.780990+00:00
+fetched_at: 2026-10-21T14:10:35.052979+00:00
 ---
 
 # Step 2: Clone repository  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

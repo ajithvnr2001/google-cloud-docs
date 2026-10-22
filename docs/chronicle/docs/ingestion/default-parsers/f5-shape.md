@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/f5-shape/
 title: Collect F5 Shape logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:53:58.263711+00:00
+fetched_at: 2026-10-21T14:08:16.720970+00:00
 ---
 
 # Collect F5 Shape logs  |  Google Security Operations  |  Google Cloud Documentation

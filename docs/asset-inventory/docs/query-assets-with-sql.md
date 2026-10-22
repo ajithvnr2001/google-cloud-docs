@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/asset-inventory/docs/query-assets-with-sql/
 title: Query assets with SQL \u00a0|\u00a0 Cloud Asset Inventory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:39:57.660464+00:00
+fetched_at: 2026-10-21T14:41:37.752030+00:00
 ---
 
 # Query assets with SQL  |  Cloud Asset Inventory  |  Google Cloud Documentation

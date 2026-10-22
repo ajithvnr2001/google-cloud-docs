@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/model-armor/configure-floor-settings/
 title: Configure floor settings \u00a0|\u00a0 Model Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:49:13.702149+00:00
+fetched_at: 2026-10-21T15:15:22.297198+00:00
 ---
 
 # Configure floor settings  |  Model Armor  |  Google Cloud Documentation

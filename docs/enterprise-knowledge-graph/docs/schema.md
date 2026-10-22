@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/enterprise-knowledge-graph/docs/schema/
 title: Supported schema \u00a0|\u00a0 Enterprise Knowledge Graph \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:32:17.367298+00:00
+fetched_at: 2026-10-21T12:51:04.980810+00:00
 ---
 
 # Supported schema  |  Enterprise Knowledge Graph  |  Google Cloud Documentation

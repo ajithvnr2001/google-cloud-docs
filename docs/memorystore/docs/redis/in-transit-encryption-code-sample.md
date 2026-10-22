@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/in-transit-encryption-code-sample/
 title: In-transit encryption client library code sample \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:53.102873+00:00
+fetched_at: 2026-10-21T15:16:34.617627+00:00
 ---
 
 # In-transit encryption client library code sample  |  Memorystore for Redis  |  Google Cloud Documentation

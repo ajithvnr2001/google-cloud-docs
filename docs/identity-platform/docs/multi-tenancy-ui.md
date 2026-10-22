@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/multi-tenancy-ui/
 title: Create a sign-in page for multiple tenants with Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:21.958303+00:00
+fetched_at: 2026-10-21T12:53:30.095410+00:00
 ---
 
 # Create a sign-in page for multiple tenants with Identity Platform  |  Google Cloud Documentation

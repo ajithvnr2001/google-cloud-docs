@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/publish/portal/view-live-portal/
 title: Viewing your live portal \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:53:02.465699+00:00
+fetched_at: 2026-10-21T14:27:56.137094+00:00
 ---
 
 # Viewing your live portal  |  Apigee  |  Google Cloud Documentation

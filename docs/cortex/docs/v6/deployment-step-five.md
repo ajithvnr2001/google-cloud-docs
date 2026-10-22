@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/deployment-step-five/
 title: Step 5: Configure deployment \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:31:56.927737+00:00
+fetched_at: 2026-10-21T14:09:47.278195+00:00
 ---
 
 # Step 5: Configure deployment  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/proofpoint-on-demand-changelog/
 title: Change log for PROOFPOINT_ON_DEMAND \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:22:45.775879+00:00
+fetched_at: 2026-10-21T14:51:47.720745+00:00
 ---
 
 # Change log for PROOFPOINT_ON_DEMAND  |  Google Security Operations  |  Google Cloud Documentation

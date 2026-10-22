@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/apihub/view-security-scores-multi-gateway/
 title: View security scores for multiple Apigee organizations and gateways \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:36:25.410926+00:00
+fetched_at: 2026-10-21T14:55:04.700258+00:00
 ---
 
 # View security scores for multiple Apigee organizations and gateways  |  Google Cloud Documentation

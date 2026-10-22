@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/org-policy/
 title: Configure organization policies \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:07:05.107304+00:00
+fetched_at: 2026-10-21T13:32:53.671392+00:00
 ---
 
 # Configure organization policies  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

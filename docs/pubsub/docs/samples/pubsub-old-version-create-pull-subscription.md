@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-create-pull-subscription/
 title: v1 Create pull subscription (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:53:07.476983+00:00
+fetched_at: 2026-10-21T14:58:40.100385+00:00
 ---
 
 # v1 Create pull subscription (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

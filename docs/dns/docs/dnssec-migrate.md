@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/docs/dnssec-migrate/
 title: Migrate or transfer DNSSEC-enabled zones \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:59.075309+00:00
+fetched_at: 2026-10-21T14:06:40.865144+00:00
 ---
 
 # Migrate or transfer DNSSEC-enabled zones  |  Google Cloud Documentation

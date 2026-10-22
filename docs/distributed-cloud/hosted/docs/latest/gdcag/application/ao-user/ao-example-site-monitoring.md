@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/ao-example-site-monitoring/
 title: Monitor system health and trigger failovers \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:50:14.951306+00:00
+fetched_at: 2026-10-21T12:56:13.993769+00:00
 ---
 
 # Monitor system health and trigger failovers  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

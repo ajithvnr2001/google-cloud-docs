@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pki/change-default-issuer/
 title: Change the default certificate issuer \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:43.797881+00:00
+fetched_at: 2026-10-21T12:59:30.459132+00:00
 ---
 
 # Change the default certificate issuer  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

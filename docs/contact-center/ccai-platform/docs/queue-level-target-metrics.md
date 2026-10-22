@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/queue-level-target-metrics/
 title: Queue level target metrics \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:03.915157+00:00
+fetched_at: 2026-10-21T14:09:04.704233+00:00
 ---
 
 # Queue level target metrics  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

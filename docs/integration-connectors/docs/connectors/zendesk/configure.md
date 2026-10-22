@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/zendesk/configure/
 title: Zendesk \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:33.051199+00:00
+fetched_at: 2026-10-21T12:52:13.900354+00:00
 ---
 
 # Zendesk  |  Integration Connectors  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/gcp-tasks/configure-cloudkms-encrypt-task/
 title: Cloud KMS - encrypt task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:40.856958+00:00
+fetched_at: 2026-10-21T12:35:39.600711+00:00
 ---
 
 # Cloud KMS - encrypt task  |  Application Integration  |  Google Cloud Documentation

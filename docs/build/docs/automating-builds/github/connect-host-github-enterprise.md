@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/github/connect-host-github-enterprise/
 title: Connect to a GitHub Enterprise host \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:24:14.048756+00:00
+fetched_at: 2026-10-21T14:11:42.189248+00:00
 ---
 
 # Connect to a GitHub Enterprise host  |  Cloud Build  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/gcp-cloudsql-changelog/
 title: Change log for GCP_CLOUDSQL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:29:28.858392+00:00
+fetched_at: 2026-10-21T14:42:43.120028+00:00
 ---
 
 # Change log for GCP_CLOUDSQL  |  Google Security Operations  |  Google Cloud Documentation

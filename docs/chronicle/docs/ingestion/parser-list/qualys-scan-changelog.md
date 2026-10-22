@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/qualys-scan-changelog/
 title: Change log for QUALYS_SCAN \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:20:42.028540+00:00
+fetched_at: 2026-10-21T14:43:30.010872+00:00
 ---
 
 # Change log for QUALYS_SCAN  |  Google Security Operations  |  Google Cloud Documentation

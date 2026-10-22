@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/copy-mod-storage-objects/
 title: Copy, modify, and move storage objects in projects \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:00:57.304669+00:00
+fetched_at: 2026-10-21T12:57:06.569287+00:00
 ---
 
 # Copy, modify, and move storage objects in projects  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

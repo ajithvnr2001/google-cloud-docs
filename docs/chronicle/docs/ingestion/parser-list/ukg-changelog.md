@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/ukg-changelog/
 title: Change log for UKG \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:05:22.465202+00:00
+fetched_at: 2026-10-21T14:43:25.685384+00:00
 ---
 
 # Change log for UKG  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/marketing-dv360/
 title: Integration with YouTube (DV360) \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:12:23.183990+00:00
+fetched_at: 2026-10-21T14:09:30.660854+00:00
 ---
 
 # Integration with YouTube (DV360)  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

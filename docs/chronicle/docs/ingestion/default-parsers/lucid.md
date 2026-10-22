@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/lucid/
 title: Collect Lucid audit logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:37:31.156281+00:00
+fetched_at: 2026-10-21T12:38:33.773063+00:00
 ---
 
 # Collect Lucid audit logs  |  Google Security Operations  |  Google Cloud Documentation

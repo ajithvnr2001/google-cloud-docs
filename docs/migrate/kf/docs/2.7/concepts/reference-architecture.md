@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.7/concepts/reference-architecture/
 title: Kf reference architecture diagrams \u00a0|\u00a0 Kf 2.7 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:45:50.822467+00:00
+fetched_at: 2026-10-21T15:18:05.543264+00:00
 ---
 
 # Kf reference architecture diagrams  |  Kf 2.7  |  Google Cloud Documentation

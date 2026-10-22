@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/private-pools/use-in-private-network/
 title: Using Cloud Build in a private network \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:35:46.149504+00:00
+fetched_at: 2026-10-21T14:11:02.220986+00:00
 ---
 
 # Using Cloud Build in a private network  |  Google Cloud Documentation

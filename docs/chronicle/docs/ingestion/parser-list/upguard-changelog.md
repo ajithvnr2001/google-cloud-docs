@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/upguard-changelog/
 title: Change log for UPGUARD \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:09:11.148195+00:00
+fetched_at: 2026-10-21T14:43:25.431266+00:00
 ---
 
 # Change log for UPGUARD  |  Google Security Operations  |  Google Cloud Documentation

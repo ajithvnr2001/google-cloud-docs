@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/search/python/facetclasses/
 title: Facet Classes \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:36:01.308839+00:00
+fetched_at: 2026-10-21T14:53:41.998855+00:00
 ---
 
 # Facet Classes  |  App Engine standard environment  |  Google Cloud Documentation

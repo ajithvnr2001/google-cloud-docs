@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/image-opt-supportedops/
 title: Supported operations \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:29:50.636364+00:00
+fetched_at: 2026-10-21T14:23:27.937639+00:00
 ---
 
 # Supported operations  |  Cloud CDN  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/pure-storage-changelog/
 title: Change log for PURE_STORAGE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:58:44.801241+00:00
+fetched_at: 2026-10-21T14:51:46.884805+00:00
 ---
 
 # Change log for PURE_STORAGE  |  Google Security Operations  |  Google Cloud Documentation

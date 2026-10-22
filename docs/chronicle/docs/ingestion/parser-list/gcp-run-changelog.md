@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/gcp-run-changelog/
 title: Change log for GCP_RUN \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:15:03.215883+00:00
+fetched_at: 2026-10-21T14:51:59.385735+00:00
 ---
 
 # Change log for GCP_RUN  |  Google Security Operations  |  Google Cloud Documentation

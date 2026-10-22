@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/symantec-dlp-changelog/
 title: Change log for SYMANTEC_DLP \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:31:48.421900+00:00
+fetched_at: 2026-10-21T14:43:11.856789+00:00
 ---
 
 # Change log for SYMANTEC_DLP  |  Google Security Operations  |  Google Cloud Documentation

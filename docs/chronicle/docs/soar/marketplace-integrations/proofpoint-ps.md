@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/proofpoint-ps/
 title: Proofpoint Email Protection \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:16.509290+00:00
+fetched_at: 2026-10-21T14:23:22.187922+00:00
 ---
 
 # Proofpoint Email Protection  |  Google Security Operations  |  Google Cloud Documentation

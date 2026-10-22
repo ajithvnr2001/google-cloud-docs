@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/reference/mkt-images-1143/
 title: Marketplace images in 1.14.3 \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T09:57:26.361601+00:00
+fetched_at: 2026-10-21T12:59:59.402570+00:00
 ---
 
 # Marketplace images in 1.14.3  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

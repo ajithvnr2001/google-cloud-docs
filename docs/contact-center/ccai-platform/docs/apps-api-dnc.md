@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-dnc/
 title: Company do not call (DNC) list endpoints \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:44:58.594504+00:00
+fetched_at: 2026-10-21T14:21:45.329130+00:00
 ---
 
 # Company do not call (DNC) list endpoints  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

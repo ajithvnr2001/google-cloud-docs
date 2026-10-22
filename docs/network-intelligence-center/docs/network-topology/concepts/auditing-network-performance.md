@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-intelligence-center/docs/network-topology/concepts/auditing-network-performance/
 title: Use case: Audit network performance \u00a0|\u00a0 Network Intelligence Center - Network Topology \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:36:04.141007+00:00
+fetched_at: 2026-10-21T15:16:11.928158+00:00
 ---
 
 # Use case: Audit network performance  |  Network Intelligence Center - Network Topology  |  Google Cloud Documentation

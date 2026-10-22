@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/looker-block-oracle-ebs/
 title: Looker Block for Oracle EBS \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:12:25.108414+00:00
+fetched_at: 2026-10-21T14:09:48.102310+00:00
 ---
 
 # Looker Block for Oracle EBS  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

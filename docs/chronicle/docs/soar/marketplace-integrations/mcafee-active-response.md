@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/mcafee-active-response/
 title: McAfee Active Response \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:23:37.382096+00:00
+fetched_at: 2026-10-21T14:21:27.059811+00:00
 ---
 
 # McAfee Active Response  |  Google Security Operations  |  Google Cloud Documentation

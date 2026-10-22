@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/load-balancing/docs/negs/serverless-neg-concepts/
 title: Serverless network endpoint groups overview \u00a0|\u00a0 Cloud Load Balancing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:45:38.257360+00:00
+fetched_at: 2026-10-21T15:09:13.922052+00:00
 ---
 
 # Serverless network endpoint groups overview  |  Cloud Load Balancing  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/standard-reports-queue-data-sets/
 title: Standard Reports: Queue Datasets \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:35:12.701987+00:00
+fetched_at: 2026-10-21T14:21:59.718159+00:00
 ---
 
 # Standard Reports: Queue Datasets  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

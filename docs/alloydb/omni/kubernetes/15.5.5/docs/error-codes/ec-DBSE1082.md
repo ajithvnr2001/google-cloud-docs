@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/15.5.5/docs/error-codes/ec-DBSE1082/
 title: DBSE1082. Failed to rewind the database \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 15.5.5 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:34:45.380655+00:00
+fetched_at: 2026-10-21T15:28:18.372044+00:00
 ---
 
 # DBSE1082. Failed to rewind the database  |  AlloyDB Omni for Kubernetes: 15.5.5  |  Google Cloud Documentation

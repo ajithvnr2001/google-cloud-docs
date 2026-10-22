@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/shielded-vm/docs/retrieving-endorsement-key/
 title: Retrieving endorsement keys \u00a0|\u00a0 Shielded VM \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:05:06.814412+00:00
+fetched_at: 2026-10-21T12:29:29.607746+00:00
 ---
 
 # Retrieving endorsement keys  |  Shielded VM  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/enable-automatic-scanning/
 title: Enable or disable automatic scanning \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:44:36.557381+00:00
+fetched_at: 2026-10-21T12:39:21.667735+00:00
 ---
 
 # Enable or disable automatic scanning  |  Artifact Analysis  |  Google Cloud Documentation

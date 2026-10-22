@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/datasets-intro/
 title: Introduction to datasets \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:37.551393+00:00
+fetched_at: 2026-10-21T14:07:11.049904+00:00
 ---
 
 # Introduction to datasets  |  BigQuery  |  Google Cloud Documentation

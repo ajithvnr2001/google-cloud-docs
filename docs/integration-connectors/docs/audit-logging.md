@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/audit-logging/
 title: Integration Connectors audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:37.748299+00:00
+fetched_at: 2026-10-21T12:53:28.466320+00:00
 ---
 
 # Integration Connectors audit logging  |  Google Cloud Documentation

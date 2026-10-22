@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/gcp-apigee-x/
 title: Collect Apigee logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:25.489433+00:00
+fetched_at: 2026-10-21T12:37:51.697717+00:00
 ---
 
 # Collect Apigee logs  |  Google Security Operations  |  Google Cloud Documentation

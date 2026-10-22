@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/samples/
 title: All Agent Search code samples \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:07:31.861958+00:00
+fetched_at: 2026-10-21T12:55:57.911003+00:00
 ---
 
 # All Agent Search code samples  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/experiments/user-journey/uj-tensorboard-custom-training-custom-container/
 title: Vertex AI TensorBoard custom training with custom container: Notebook \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:27:36.037189+00:00
+fetched_at: 2026-10-21T12:55:24.554849+00:00
 ---
 
 # Vertex AI TensorBoard custom training with custom container: Notebook  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

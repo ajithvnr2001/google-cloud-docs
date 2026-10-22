@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/query-azure-data/
 title: Query Blob Storage BigLake tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:49:24.777186+00:00
+fetched_at: 2026-10-21T12:36:26.536545+00:00
 ---
 
 # Query Blob Storage BigLake tables  |  BigQuery  |  Google Cloud Documentation

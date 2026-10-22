@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/menlo-security/
 title: Collect Menlo Security Isolation Platform (MSIP) logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:03:43.044448+00:00
+fetched_at: 2026-10-21T12:38:34.463856+00:00
 ---
 
 # Collect Menlo Security Isolation Platform (MSIP) logs  |  Google Security Operations  |  Google Cloud Documentation

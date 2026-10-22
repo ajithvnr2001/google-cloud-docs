@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-query-partitioned-table/
 title: Query a column-based time-partitioned table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:04.368896+00:00
+fetched_at: 2026-10-22T05:49:34.038894+00:00
 ---
 
 # Query a column-based time-partitioned table  |  BigQuery  |  Google Cloud Documentation

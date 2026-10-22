@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/samples/dataflow-v1beta3-generated-JobsV1Beta3-UpdateJob-async/
 title: Update the state of an existing job (async) \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:20:13.980447+00:00
+fetched_at: 2026-10-22T05:42:34.733441+00:00
 ---
 
 # Update the state of an existing job (async)  |  Cloud Dataflow  |  Google Cloud Documentation

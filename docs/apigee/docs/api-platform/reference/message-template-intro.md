@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/message-template-intro/
 title: Message templates \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T13:06:30.813758+00:00
+fetched_at: 2026-10-21T12:30:09.791454+00:00
 ---
 
 # Message templates  |  Apigee  |  Google Cloud Documentation

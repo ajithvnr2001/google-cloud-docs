@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/create-custom-confidential-vm-images/
 title: Create custom Confidential VM images \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:34:33.753839+00:00
+fetched_at: 2026-10-21T14:21:10.340425+00:00
 ---
 
 # Create custom Confidential VM images  |  Google Cloud Documentation

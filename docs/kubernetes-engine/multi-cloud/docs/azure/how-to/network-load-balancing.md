@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/how-to/network-load-balancing/
 title: Network load balancing \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:56.420830+00:00
+fetched_at: 2026-10-21T15:10:39.109094+00:00
 ---
 
 # Network load balancing  |  GKE on Azure  |  Google Cloud Documentation

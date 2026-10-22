@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/try-sample-integration-ecommerce/
 title: Try the sample integration \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:33.808365+00:00
+fetched_at: 2026-10-21T12:30:29.753536+00:00
 ---
 
 # Try the sample integration  |  Application Integration  |  Google Cloud Documentation

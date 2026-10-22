@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/migrate-shared-vpc-direct-vpc/
 title: Migrate Shared VPC connector to Direct VPC egress \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:41.810653+00:00
+fetched_at: 2026-10-21T14:20:35.019236+00:00
 ---
 
 # Migrate Shared VPC connector to Direct VPC egress  |  App Engine standard environment  |  Google Cloud Documentation

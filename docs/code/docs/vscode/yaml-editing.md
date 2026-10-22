@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/vscode/yaml-editing/
 title: Work with Google Cloud and Kubernetes YAML in Cloud Code for VS Code \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:41:14.282829+00:00
+fetched_at: 2026-10-21T12:39:35.646961+00:00
 ---
 
 # Work with Google Cloud and Kubernetes YAML in Cloud Code for VS Code  |  Google Cloud Documentation

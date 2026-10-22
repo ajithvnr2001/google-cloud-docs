@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/overview-and-introduction/soar-gradual-release/
 title: Release plan for Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:28:59.464446+00:00
+fetched_at: 2026-10-21T14:10:24.741400+00:00
 ---
 
 # Release plan for Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

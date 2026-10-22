@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/building/store-artifacts-in-cloud-storage/
 title: Storing build artifacts in Cloud Storage \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:35:42.354202+00:00
+fetched_at: 2026-10-21T14:11:28.392250+00:00
 ---
 
 # Storing build artifacts in Cloud Storage  |  Cloud Build  |  Google Cloud Documentation

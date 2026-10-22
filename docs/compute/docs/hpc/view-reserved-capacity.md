@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/hpc/view-reserved-capacity/
 title: View reserved capacity \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:08.254358+00:00
+fetched_at: 2026-10-21T14:22:37.528062+00:00
 ---
 
 # View reserved capacity  |  Compute Engine  |  Google Cloud Documentation

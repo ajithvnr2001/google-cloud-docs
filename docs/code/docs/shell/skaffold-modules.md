@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/skaffold-modules/
 title: Skaffold modules in Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:16:51.375013+00:00
+fetched_at: 2026-10-21T14:20:40.511818+00:00
 ---
 
 # Skaffold modules in Cloud Code for Cloud Shell  |  Google Cloud Documentation

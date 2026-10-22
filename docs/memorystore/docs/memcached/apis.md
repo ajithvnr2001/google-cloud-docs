@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/memcached/apis/
 title: APIs and reference \u00a0|\u00a0 Memorystore for Memcached \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:27:48.298841+00:00
+fetched_at: 2026-10-21T15:12:54.665169+00:00
 ---
 
 # APIs and reference  |  Memorystore for Memcached  |  Google Cloud Documentation

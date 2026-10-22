@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-config-configurations-describe/
 title: gdcloud config configurations describe \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:33:23.827367+00:00
+fetched_at: 2026-10-21T12:59:07.004576+00:00
 ---
 
 # gdcloud config configurations describe  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-open-source-software/docs/download-java-packages/
 title: Download Java packages using direct repository access for the free tier \u00a0|\u00a0 Assured Open Source Software \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:41:44.770162+00:00
+fetched_at: 2026-10-21T14:09:36.070528+00:00
 ---
 
 # Download Java packages using direct repository access for the free tier  |  Assured Open Source Software  |  Google Cloud Documentation

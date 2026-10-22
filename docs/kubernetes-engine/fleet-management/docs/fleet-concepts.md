@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs/fleet-concepts/
 title: How fleets work \u00a0|\u00a0 Fleet management \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:37:11.727413+00:00
+fetched_at: 2026-10-21T15:02:35.164183+00:00
 ---
 
 # How fleets work  |  Fleet management  |  Google Cloud Documentation

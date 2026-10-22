@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/reference/region/
 title: Regionalization and data residency \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:22:26.657737+00:00
+fetched_at: 2026-10-21T12:55:31.272600+00:00
 ---
 
 # Regionalization and data residency  |  CX Agent Studio  |  Google Cloud Documentation

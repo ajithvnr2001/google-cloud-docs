@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/lacework/
 title: Collect FortiCNAPP (formerly Lacework) logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:25:44.887458+00:00
+fetched_at: 2026-10-21T12:39:13.825572+00:00
 ---
 
 # Collect FortiCNAPP (formerly Lacework) logs  |  Google Security Operations  |  Google Cloud Documentation

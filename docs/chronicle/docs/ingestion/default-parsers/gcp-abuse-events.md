@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/gcp-abuse-events/
 title: Collect Google Cloud Abuse Events logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:30.283543+00:00
+fetched_at: 2026-10-21T12:37:52.329719+00:00
 ---
 
 # Collect Google Cloud Abuse Events logs  |  Google Security Operations  |  Google Cloud Documentation

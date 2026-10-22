@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/vertex-ai/
 title: Integrate Vertex AI with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:44:47.812585+00:00
+fetched_at: 2026-10-21T12:38:15.702132+00:00
 ---
 
 # Integrate Vertex AI with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

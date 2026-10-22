@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/provisioned-throughput/supported-models/
 title: Supported models \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T23:39:20.447755+00:00
+fetched_at: 2026-10-21T15:43:35.388791+00:00
 ---
 
 # Supported models  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -259,12 +259,6 @@ Video seconds (1080p) | 1 | 1 (1080p) output video second = 1.30 (720p) output v
 Video + Audio seconds (1080p) | 1 | 1 (1080p) output video + audio second = 1.60 (720p) output video seconds  
 Video seconds (4k) | 1 | 1 (4k) output video second = 3.40 (720p) output video seconds  
 Video + Audio seconds (4k) | 1 | 1 (4k) output video + audio second = 4 (720p) output video seconds  
-[Veo 3](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-generate-001)Latest supported version: `veo-3.0-generate-001` | 0.0040 | Video seconds | 1 | 1 output video second = 1 output video second  
-Video+audio seconds | 1 | 1 output video+audio second = 2 output video seconds  
-[Veo 3 Fast](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-0-generate#3.0-fast-generate-001)Latest supported version: `veo-3.0-fast-generate-001` | 0.01 | Video seconds (720p) | 1 | 1 (720p) output video sec = 1 output video second  
-Video + Audio seconds (720p) | 1 | 1 (720p) output video + audio second = 1.30 output video seconds  
-Video seconds (1080p) | 1 | 1 (1080p) output video second = 1.30 (720p) output video seconds  
-Video + Audio seconds (1080p) | 1 | 1 (1080p) output video + audio second = 1.60 (720p) output video seconds  
   
 For information about a model's capabilities and input or output limits, see the documentation for the model.
 
@@ -549,6 +543,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

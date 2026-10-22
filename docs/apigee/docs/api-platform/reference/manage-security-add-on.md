@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/manage-security-add-on/
 title: Manage the Advanced API Security add-on \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:39:15.330999+00:00
+fetched_at: 2026-10-21T12:29:58.652154+00:00
 ---
 
 # Manage the Advanced API Security add-on  |  Apigee  |  Google Cloud Documentation

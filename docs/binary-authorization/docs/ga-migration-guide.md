@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/ga-migration-guide/
 title: GA migration guide \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:09.530991+00:00
+fetched_at: 2026-10-21T14:23:27.107956+00:00
 ---
 
 # GA migration guide  |  Binary Authorization  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/atlassian-confluence-server/
 title: Integrate Atlassian Confluence Server with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:55:32.648538+00:00
+fetched_at: 2026-10-21T14:11:22.497339+00:00
 ---
 
 # Integrate Atlassian Confluence Server with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

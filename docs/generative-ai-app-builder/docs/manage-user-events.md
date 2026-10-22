@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/manage-user-events/
 title: Manage user events \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:58:50.218056+00:00
+fetched_at: 2026-10-21T12:55:41.394328+00:00
 ---
 
 # Manage user events  |  Agent Search  |  Google Cloud Documentation

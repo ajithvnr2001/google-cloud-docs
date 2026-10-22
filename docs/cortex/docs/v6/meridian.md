@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/meridian/
 title: Cortex for Meridian \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:12:23.608740+00:00
+fetched_at: 2026-10-21T14:09:32.397518+00:00
 ---
 
 # Cortex for Meridian  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

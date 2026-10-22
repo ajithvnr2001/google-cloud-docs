@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/modules/
 title: Using the Modules API \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:50.537937+00:00
+fetched_at: 2026-10-21T14:19:34.317133+00:00
 ---
 
 # Using the Modules API  |  App Engine standard environment  |  Google Cloud Documentation

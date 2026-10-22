@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/uv-run-cortex-build/
 title: CLI Cortex Framework build \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:03:10.583886+00:00
+fetched_at: 2026-10-21T14:23:39.916889+00:00
 ---
 
 # CLI Cortex Framework build  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/create-test-cases/
 title: Create test cases \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:46.750598+00:00
+fetched_at: 2026-10-21T12:38:47.577348+00:00
 ---
 
 # Create test cases  |  Application Integration  |  Google Cloud Documentation

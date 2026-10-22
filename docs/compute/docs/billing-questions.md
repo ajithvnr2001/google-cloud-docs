@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/billing-questions/
 title: Billing Questions \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:11.429607+00:00
+fetched_at: 2026-10-21T14:24:54.142356+00:00
 ---
 
 # Billing Questions  |  Compute Engine  |  Google Cloud Documentation

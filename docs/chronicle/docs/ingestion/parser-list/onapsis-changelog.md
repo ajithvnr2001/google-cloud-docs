@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/onapsis-changelog/
 title: Change log for ONAPSIS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T15:15:55.061342+00:00
+fetched_at: 2026-10-21T14:47:09.543573+00:00
 ---
 
 # Change log for ONAPSIS  |  Google Security Operations  |  Google Cloud Documentation
@@ -47,7 +47,7 @@ Date | Changes
 \- event.idm.read_only_udm.security_result.action: Newly mapped `success` raw log field with `event.idm.read_only_udm.security_result.action` UDM field.  
 \- event.idm.read_only_udm.intermediary.ip: Newly mapped `inter_ip` raw log field with `event.idm.read_only_udm.intermediary.ip` and `event.idm.read_only_udm.intermediary.asset.ip` UDM fields.  
 \- event.idm.read_only_udm.metadata.event_type: If `event_type` is `UserLogin` and `has_target` is `true`, updated to `USER_LOGIN`.  
-\- The `created_at` field now supports `RFC 3339` and `ISO8601` date formats.  
+\- The `created_at` field now supports `RFC3339` and `ISO8601` date formats.  
 \- The logic for populating `principal.ip`, `principal.asset.ip`, `principal.hostname`, and `principal.asset.hostname` has been updated to check if the source fields (`host`, `src`, `terminal_source`) are valid IP addresses.   
 2023-12-08 |  \- Newly created parser.   
   
@@ -55,6 +55,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-13 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

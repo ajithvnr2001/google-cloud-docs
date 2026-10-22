@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/basics/
 title: Flow-based agent basics \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:37.265212+00:00
+fetched_at: 2026-10-21T12:44:33.312109+00:00
 ---
 
 # Flow-based agent basics  |  Dialogflow CX  |  Google Cloud Documentation

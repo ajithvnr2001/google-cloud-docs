@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-compute-machine-types/
 title: gdcloud compute machine-types \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:14:20.787760+00:00
+fetched_at: 2026-10-21T12:58:29.615432+00:00
 ---
 
 # gdcloud compute machine-types  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

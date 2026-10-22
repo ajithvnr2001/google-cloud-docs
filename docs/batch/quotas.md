@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/quotas/
 title: Quotas and limits \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:45:09.795489+00:00
+fetched_at: 2026-10-21T12:31:01.169182+00:00
 ---
 
 # Quotas and limits  |  Batch  |  Google Cloud Documentation

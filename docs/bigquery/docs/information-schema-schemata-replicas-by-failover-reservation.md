@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-schemata-replicas-by-failover-reservation/
 title: SCHEMATA_REPLICAS_BY_FAILOVER_RESERVATION view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T13:48:31.748304+00:00
+fetched_at: 2026-10-21T12:36:01.239328+00:00
 ---
 
 # SCHEMATA_REPLICAS_BY_FAILOVER_RESERVATION view  |  BigQuery  |  Google Cloud Documentation

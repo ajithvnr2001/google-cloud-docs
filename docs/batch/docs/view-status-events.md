@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/view-status-events/
 title: View a job's history through status events \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:38:19.246081+00:00
+fetched_at: 2026-10-21T14:24:51.782138+00:00
 ---
 
 # View a job's history through status events  |  Batch  |  Google Cloud Documentation

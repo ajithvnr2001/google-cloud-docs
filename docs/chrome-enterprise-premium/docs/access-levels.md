@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/access-levels/
 title: Creating and applying access levels to IAP-secured resources \u00a0|\u00a0 Chrome Enterprise Premium \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:01:29.130834+00:00
+fetched_at: 2026-10-21T14:25:43.417060+00:00
 ---
 
 # Creating and applying access levels to IAP-secured resources  |  Chrome Enterprise Premium  |  Google Cloud Documentation

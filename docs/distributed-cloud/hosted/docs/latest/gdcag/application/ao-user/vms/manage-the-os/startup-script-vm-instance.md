@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/manage-the-os/startup-script-vm-instance/
 title: Use a startup script on Linux VMs \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:01:03.800332+00:00
+fetched_at: 2026-10-21T14:08:18.618675+00:00
 ---
 
 # Use a startup script on Linux VMs  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

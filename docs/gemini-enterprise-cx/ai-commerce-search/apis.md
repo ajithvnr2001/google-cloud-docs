@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/ai-commerce-search/apis/
 title: APIs and reference \u00a0|\u00a0 AI Commerce Search in Gemini Enterprise for Customer Experience \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:39:06.943159+00:00
+fetched_at: 2026-10-21T12:55:29.556325+00:00
 ---
 
 # APIs and reference  |  AI Commerce Search in Gemini Enterprise for Customer Experience  |  Google Cloud Documentation

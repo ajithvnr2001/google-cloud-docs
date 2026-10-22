@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/channel/docs/concepts/sku-groups/
 title: Google Cloud SKU groups \u00a0|\u00a0 Channel Services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:33.919943+00:00
+fetched_at: 2026-10-21T14:25:21.699289+00:00
 ---
 
 # Google Cloud SKU groups  |  Channel Services  |  Google Cloud Documentation

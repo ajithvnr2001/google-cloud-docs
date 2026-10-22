@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/cv-sigstore-check/
 title: Use the Sigstore signature check \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:13.524540+00:00
+fetched_at: 2026-10-21T14:11:18.146618+00:00
 ---
 
 # Use the Sigstore signature check  |  Binary Authorization  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/db-deploy-self-managed-oracle/
 title: Deploy self-managed Oracle databases \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:06:33.093635+00:00
+fetched_at: 2026-10-21T12:58:47.112638+00:00
 ---
 
 # Deploy self-managed Oracle databases  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

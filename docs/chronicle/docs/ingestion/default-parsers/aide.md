@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aide/
 title: Collect AIDE (Advanced Intrusion Detection Environment) logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T17:29:16.700448+00:00
+fetched_at: 2026-10-21T12:27:23.054031+00:00
 ---
 
 # Collect AIDE (Advanced Intrusion Detection Environment) logs  |  Google Security Operations  |  Google Cloud Documentation

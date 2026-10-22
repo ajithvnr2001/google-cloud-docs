@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/docs/how-to/budget-api-overview/
 title: Get started with the Cloud Billing Budget API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:54:15.774472+00:00
+fetched_at: 2026-10-21T12:37:42.628395+00:00
 ---
 
 # Get started with the Cloud Billing Budget API  |  Google Cloud Documentation

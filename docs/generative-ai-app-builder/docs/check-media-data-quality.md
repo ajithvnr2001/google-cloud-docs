@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/check-media-data-quality/
 title: Check data quality for media recommendations \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:10.676272+00:00
+fetched_at: 2026-10-21T12:55:39.412734+00:00
 ---
 
 # Check data quality for media recommendations  |  Agent Search  |  Google Cloud Documentation

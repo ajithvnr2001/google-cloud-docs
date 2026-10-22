@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/recommendation-overview/
 title: Recommendation overview \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:34:35.942368+00:00
+fetched_at: 2026-10-21T12:36:27.565723+00:00
 ---
 
 # Recommendation overview  |  BigQuery  |  Google Cloud Documentation

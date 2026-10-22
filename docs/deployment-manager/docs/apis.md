@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deployment-manager/docs/apis/
 title: Deployment Manager APIs and Reference \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:15:29.839889+00:00
+fetched_at: 2026-10-22T05:42:05.775974+00:00
 ---
 
 # Deployment Manager APIs and Reference  |  Google Cloud Documentation

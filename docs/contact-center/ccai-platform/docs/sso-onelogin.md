@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/sso-onelogin/
 title: Configure SSO using OneLogin \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:03.330326+00:00
+fetched_at: 2026-10-21T14:22:18.388389+00:00
 ---
 
 # Configure SSO using OneLogin  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

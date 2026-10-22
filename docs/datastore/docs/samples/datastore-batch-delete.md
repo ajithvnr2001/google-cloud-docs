@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/samples/datastore-batch-delete/
 title: Batch delete \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:23.520383+00:00
+fetched_at: 2026-10-22T05:42:14.127289+00:00
 ---
 
 # Batch delete  |  Firestore in Datastore mode  |  Google Cloud Documentation

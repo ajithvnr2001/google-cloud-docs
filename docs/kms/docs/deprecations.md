@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kms/docs/deprecations/
 title: Feature deprecations \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:25:58.684560+00:00
+fetched_at: 2026-10-21T15:00:35.762392+00:00
 ---
 
 # Feature deprecations  |  Cloud Key Management Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/about-media-recommendations-types/
 title: About media app recommendations types \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:01.825277+00:00
+fetched_at: 2026-10-21T12:55:38.799365+00:00
 ---
 
 # About media app recommendations types  |  Agent Search  |  Google Cloud Documentation

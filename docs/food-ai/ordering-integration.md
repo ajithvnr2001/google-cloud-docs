@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/food-ai/ordering-integration/
 title: Build a multimodal ordering experience using the streaming API \u00a0|\u00a0 Food Ordering AI Agent \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:14:53.831131+00:00
+fetched_at: 2026-10-21T12:55:30.327871+00:00
 ---
 
 # Build a multimodal ordering experience using the streaming API  |  Food Ordering AI Agent  |  Google Cloud Documentation

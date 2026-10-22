@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/vpc-sc/
 title: VPC Service Controls for BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T10:02:43.983504+00:00
+fetched_at: 2026-10-21T14:35:21.821123+00:00
 ---
 
 # VPC Service Controls for BigQuery  |  Google Cloud Documentation
@@ -202,7 +202,7 @@ As an extra layer of defense, you can use VPC Service Controls perimeters to res
 
 ## What's next
 
-  * Learn more about [VPC Service Controls in BigQuery sharing](https://docs.cloud.google.com/bigquery/docs/analytics-hub-vpc-sc-rules).
+  * Learn how to [configure VPC Service Controls rules for BigQuery sharing](https://docs.cloud.google.com/bigquery/docs/analytics-hub-vpc-sc-rules).
   * Learn how to [restrict BigQuery Omni access with an external cloud service](https://docs.cloud.google.com/bigquery/docs/omni-azure-create-external-table#vpc-service).
   * Understand [risks and mitigation through VPC Service Controls](https://cloud.google.com/security/vpc-service-controls).
   * Learn more about [VPC Service Controls support and limitations in BigQuery](https://docs.cloud.google.com/vpc-service-controls/docs/supported-products#table_bigquery).
@@ -214,6 +214,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

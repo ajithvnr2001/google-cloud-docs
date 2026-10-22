@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/solaris-system-changelog/
 title: Change log for SOLARIS_SYSTEM \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:26:32.447282+00:00
+fetched_at: 2026-10-21T14:42:38.611562+00:00
 ---
 
 # Change log for SOLARIS_SYSTEM  |  Google Security Operations  |  Google Cloud Documentation

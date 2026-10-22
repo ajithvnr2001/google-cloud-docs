@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/metrics-upg/
 title: Upgrade orchestrator (UPG) \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T09:29:18.697060+00:00
+fetched_at: 2026-10-21T12:59:15.226450+00:00
 ---
 
 # Upgrade orchestrator (UPG)  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

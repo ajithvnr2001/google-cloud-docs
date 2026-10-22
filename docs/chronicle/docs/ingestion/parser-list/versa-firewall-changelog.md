@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/versa-firewall-changelog/
 title: Change log for VERSA_FIREWALL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:23:24.318789+00:00
+fetched_at: 2026-10-21T14:43:23.628491+00:00
 ---
 
 # Change log for VERSA_FIREWALL  |  Google Security Operations  |  Google Cloud Documentation

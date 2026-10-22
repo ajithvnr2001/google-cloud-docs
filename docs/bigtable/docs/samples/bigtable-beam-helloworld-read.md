@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-beam-helloworld-read/
 title: Read data \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:23:59.969068+00:00
+fetched_at: 2026-10-21T14:25:12.760987+00:00
 ---
 
 # Read data  |  Bigtable  |  Google Cloud Documentation

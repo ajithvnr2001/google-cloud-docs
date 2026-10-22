@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/blockchain-node-engine/docs/permissions/
 title: Permissions and roles \u00a0|\u00a0 Blockchain Node Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:30:37.049798+00:00
+fetched_at: 2026-10-21T14:09:34.428351+00:00
 ---
 
 # Permissions and roles  |  Blockchain Node Engine  |  Google Cloud Documentation

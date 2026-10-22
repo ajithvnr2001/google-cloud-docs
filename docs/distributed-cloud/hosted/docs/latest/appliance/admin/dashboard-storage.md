@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/admin/dashboard-storage/
 title: Configure the dashboard storage \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:12:58.700879+00:00
+fetched_at: 2026-10-21T12:57:22.048182+00:00
 ---
 
 # Configure the dashboard storage  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

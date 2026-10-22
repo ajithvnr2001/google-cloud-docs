@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/timestamp-definitions/
 title: Timestamp definitions \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:06.240677+00:00
+fetched_at: 2026-10-21T12:37:38.712984+00:00
 ---
 
 # Timestamp definitions  |  Google Security Operations  |  Google Cloud Documentation

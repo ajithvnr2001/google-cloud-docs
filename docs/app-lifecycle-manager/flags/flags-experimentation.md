@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/flags/flags-experimentation/
 title: Configure experimentation and A/B testing using feature flags \u00a0|\u00a0 App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:51:12.996758+00:00
+fetched_at: 2026-10-21T12:30:46.858995+00:00
 ---
 
 # Configure experimentation and A/B testing using feature flags  |  App Lifecycle Manager  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/vpc-dual-stack-subnet/
 title: Set up dual-stack (IPv4 and IPv6) \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:40.861097+00:00
+fetched_at: 2026-10-21T12:30:39.601014+00:00
 ---
 
 # Set up dual-stack (IPv4 and IPv6)  |  App Engine standard environment  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/regional-endpoints/
 title: Regional and global endpoints \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:13.449223+00:00
+fetched_at: 2026-10-21T14:09:18.629025+00:00
 ---
 
 # Regional and global endpoints  |  Bigtable  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/view-analytics/
 title: View analytics \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:08.052643+00:00
+fetched_at: 2026-10-21T12:55:37.631784+00:00
 ---
 
 # View analytics  |  Agent Search  |  Google Cloud Documentation

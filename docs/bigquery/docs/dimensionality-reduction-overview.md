@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/dimensionality-reduction-overview/
 title: Dimensionality reduction overview \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:01:53.801945+00:00
+fetched_at: 2026-10-21T14:07:09.881233+00:00
 ---
 
 # Dimensionality reduction overview  |  BigQuery  |  Google Cloud Documentation

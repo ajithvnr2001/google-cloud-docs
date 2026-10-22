@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/document-ai/docs/samples/documentai-process-document/
 title: Send an online processing request \u00a0|\u00a0 Document AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:50:19.944780+00:00
+fetched_at: 2026-10-21T14:07:17.645329+00:00
 ---
 
 # Send an online processing request  |  Document AI  |  Google Cloud Documentation

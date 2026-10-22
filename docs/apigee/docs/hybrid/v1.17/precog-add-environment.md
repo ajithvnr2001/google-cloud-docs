@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/precog-add-environment/
 title: Step 3: Create an environment group \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:36:44.848589+00:00
+fetched_at: 2026-10-21T14:28:39.199332+00:00
 ---
 
 # Step 3: Create an environment group  |  Apigee  |  Google Cloud Documentation

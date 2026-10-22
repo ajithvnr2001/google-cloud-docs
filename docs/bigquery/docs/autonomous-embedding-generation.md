@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/autonomous-embedding-generation/
 title: Autonomous embedding generation \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:51:22.676857+00:00
+fetched_at: 2026-10-21T12:30:43.920614+00:00
 ---
 
 # Autonomous embedding generation  |  BigQuery  |  Google Cloud Documentation

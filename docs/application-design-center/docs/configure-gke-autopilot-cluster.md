@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/configure-gke-autopilot-cluster/
 title: Configure a GKE Autopilot cluster \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:52:45.835276+00:00
+fetched_at: 2026-10-21T12:30:46.449214+00:00
 ---
 
 # Configure a GKE Autopilot cluster  |  Application Design Center  |  Google Cloud Documentation

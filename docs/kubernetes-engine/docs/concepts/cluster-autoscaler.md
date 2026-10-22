@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler/
 title: About GKE cluster autoscaling \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:01:59.136940+00:00
+fetched_at: 2026-10-21T12:29:24.306896+00:00
 ---
 
 # About GKE cluster autoscaling  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -371,6 +371,23 @@ A scale-up operation can fail due to node creation errors such as insufficient q
 
 You can find more information about cluster autoscaler in the [Autoscaling FAQ in the open-source Kubernetes project](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/FAQ.md).
 
+## Observing cluster autoscaler
+
+To understand the behavior and decisions of the cluster autoscaler, GKE provides several observability tools:
+
+  * **Visibility events:** The cluster autoscaler emits events detailing scale-up, scale-down, and other significant decisions. These events are available as log entries in Cloud Logging. For more information, see [View cluster autoscaler events](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cluster-autoscaler-visibility).
+
+  * **Kubernetes events:** The cluster autoscaler generates standard Kubernetes events on Pods (such as `TriggeredScaleUp` or `NotTriggeredScaleUp`) and nodes (such as `ScaleDown`). The cluster autoscaler also generates status updates on the `cluster-autoscaler-status` ConfigMap in the `kube-system` namespace. You can view these events by using the `kubectl get events -n kube-system` command or by inspecting specific resources.
+
+  * **Pending Pods metric:** Available in GKE version 1.37 and later, the `kubernetes.io/autoscaler/cluster_pending_pods_per_ccc` metric in Cloud Monitoring offers a real-time view of the number of Pods that the cluster autoscaler is processing. This metric helps you assess scaling demand and diagnose issues. More specifically, this metric is associated with the `k8s_entity` resource and can be broken down by ComputeClass, the reason the Pod is pending from the cluster autoscaler's perspective, and Pod type. The `resource.labels.entity_name` label indicates the ComputeClass name; an empty string ("") means no specific ComputeClass is associated. For more information, see [Monitor pending Pod status with Cloud Monitoring](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cluster-autoscaler-visibility#monitor_pending_pod_status).
+
+  * **Node provisioning failures metric:** Available in GKE version 1.37 and later, the `kubernetes.io/autoscaler/cluster_node_provisioning_failed_attempts_count_per_ccc` metric tracks failed attempts to add nodes, categorized by specific reasons. This metric can help you to identify why a cluster isn't scaling as expected. For more information, see [Monitor node provisioning failures](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cluster-autoscaler-visibility#monitor_provisioning_failures).
+
+  * **Node provisioning attempts metric:** Available in GKE version 1.37 and later, the `kubernetes.io/autoscaler/cluster_node_provisioning_attempts_count_per_ccc` metric provides a count of every time the autoscaler initiates a scale-up. This metric helps you to confirm that the autoscaler is responding to demand. For more information, see [Monitor node provisioning attempts](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cluster-autoscaler-visibility#monitor_provisioning_attempts).
+
+
+
+
 ## Limitations
 
 Cluster autoscaler has the following limitations:
@@ -420,6 +437,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-advanced-analytics/
 title: Enable and use Advanced Analytics \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:33:40.608312+00:00
+fetched_at: 2026-10-21T14:56:45.633949+00:00
 ---
 
 # Enable and use Advanced Analytics  |  Looker  |  Google Cloud Documentation
@@ -55,8 +55,8 @@ In the Looker (original) instance, a Looker admin must follow these steps to ena
 
   1. In the **Admin** panel, navigate to the **Platform** section and select the **Gemini in Looker** page.
   2. Under **Gemini in Looker enablement** , turn on the **Enable Gemini in Looker** setting.
-  3. Under **Enable Gemini in Looker** , turn on the **Conversational Analytics** setting.
-  4. Under **Conversational Analytics** , turn on the **Advanced Analytics** setting. When this setting is enabled, data agent creators can choose to enable Advanced Analytics for all conversations with their data agents.
+  3. Under **Conversational Analytics** , turn on the **Conversational Analytics (Conversations page)** setting (for Explores) or the **Dashboard agents** setting (for dashboards), or both.
+  4. Under **Additional options** , turn on the **Advanced Analytics** setting. When this setting is enabled, data agent creators can choose to enable Advanced Analytics for all conversations with their data agents.
 
 
 
@@ -68,8 +68,8 @@ In the Looker (Google Cloud core) instance, a Looker admin must follow these ste
 
   1. In the **Admin** panel, navigate to the **Platform** section and select the **Gemini in Looker** page.
   2. Under **Gemini in Looker enablement** , make sure that the **Gemini Enablement status** is **On**. If it isn't on, [enable Gemini in Looker](https://docs.cloud.google.com/looker/docs/looker-core-admin-gemini#enable-and-disable-gil-core) for this instance in the Google Cloud console, and then return to the **Gemini in Looker** admin page in the Looker (Google Cloud core) instance.
-  3. Under **Gemini Enablement status** , turn on the **Conversational Analytics** setting.
-  4. Under **Conversational Analytics** , turn on the **Advanced Analytics** setting. When this setting is enabled, data agent creators can choose to enable Advanced Analytics for all conversations with their data agents.
+  3. Under **Conversational Analytics** , turn on the **Conversational Analytics (Conversations page)** setting (for Explores) or the **Dashboard agents** setting (for dashboards), or both.
+  4. Under **Additional options** , turn on the **Advanced Analytics** setting. When this setting is enabled, data agent creators can choose to enable Advanced Analytics for all conversations with their data agents.
 
 
 
@@ -88,10 +88,7 @@ You can enable Advanced Analytics for a data agent when you are [creating or edi
   * Advanced Analytics uses Python to solve problems. Since Python is more flexible than structured query languages, Advanced Analytics responses might have more variability than responses from the core Conversational Analytics experience.
   * Advanced Analytics supports only these Python libraries.
   * Map visualization chart types are not supported in Advanced Analytics responses.
-  * Advanced Analytics isn't available when you're chatting with the following types of content: 
-    * [A standalone conversation with an Explore](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data)
-    * [A data agent that belongs to a user-defined dashboard](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-dashboards)
-    * [A data agent that is defined for a LookML dashboard](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-lookml-dashboards) [[Preview](https://cloud.google.com/products#product-launch-stages)]
+  * Advanced Analytics isn't available in [a direct chat with an Explore](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data).
 
 
 
@@ -187,6 +184,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

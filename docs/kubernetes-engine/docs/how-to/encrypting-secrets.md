@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/encrypting-secrets/
 title: Encrypt secrets at the application layer \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:11.285492+00:00
+fetched_at: 2026-10-21T15:00:55.937066+00:00
 ---
 
 # Encrypt secrets at the application layer  |  GKE security  |  Google Cloud Documentation

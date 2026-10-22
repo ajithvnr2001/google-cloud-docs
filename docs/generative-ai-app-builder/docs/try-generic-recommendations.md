@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/try-generic-recommendations/
 title: Get started with custom recommendations \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:49:40.880425+00:00
+fetched_at: 2026-10-21T12:55:44.589554+00:00
 ---
 
 # Get started with custom recommendations  |  Agent Search  |  Google Cloud Documentation

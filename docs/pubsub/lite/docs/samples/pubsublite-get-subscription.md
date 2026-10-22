@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/lite/docs/samples/pubsublite-get-subscription/
 title: Get Lite subscription \u00a0|\u00a0 Pub/Sub Lite \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:45:44.489012+00:00
+fetched_at: 2026-10-21T15:15:09.437000+00:00
 ---
 
 # Get Lite subscription  |  Pub/Sub Lite  |  Google Cloud Documentation

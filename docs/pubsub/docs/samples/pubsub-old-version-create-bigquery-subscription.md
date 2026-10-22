@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-create-bigquery-subscription/
 title: v1 Create a BigQuery subscription (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:53:07.068575+00:00
+fetched_at: 2026-10-21T14:58:43.767415+00:00
 ---
 
 # v1 Create a BigQuery subscription (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

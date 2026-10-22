@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-create-cloud-storage-subscription/
 title: Create a Cloud Storage subscription \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:26:35.471503+00:00
+fetched_at: 2026-10-21T14:58:59.690117+00:00
 ---
 
 # Create a Cloud Storage subscription  |  Pub/Sub  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/vmware-avinetworks-iwaf-changelog/
 title: Change log for VMWARE_AVINETWORKS_IWAF \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:59:37.362247+00:00
+fetched_at: 2026-10-21T14:43:22.976551+00:00
 ---
 
 # Change log for VMWARE_AVINETWORKS_IWAF  |  Google Security Operations  |  Google Cloud Documentation

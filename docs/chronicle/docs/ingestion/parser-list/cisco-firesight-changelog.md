@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cisco-firesight-changelog/
 title: Change log for CISCO_FIRESIGHT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T13:26:01.923739+00:00
+fetched_at: 2026-10-21T14:44:56.215294+00:00
 ---
 
 # Change log for CISCO_FIRESIGHT  |  Google Security Operations  |  Google Cloud Documentation
@@ -22,6 +22,15 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 Date | Changes  
 ---|---  
+2026-08-27 |  Enhancement:  
+\- `event.idm.read_only_udm.additional.fields`: Newly mapped `IntrusionPolicy`, `SnortRuleGroups`, `GID` raw log fields with `event.idm.read_only_udm.additional.fields` UDM field.  
+\- `event.idm.read_only_udm.security_result.detection_fields`: Newly mapped `Revision` and `Classification` raw log fields with `event.idm.read_only_udm.security_result.detection_fields` UDM field.  
+\- `event.idm.read_only_udm.security_result.rule_id`: Newly mapped `SID` raw log field with `event.idm.read_only_udm.security_result.rule_id` UDM field.  
+\- `event.idm.read_only_udm.security_result.action_details`: Newly mapped `InlineResult` raw log field with `event.idm.read_only_udm.security_result.action_details` UDM field.  
+\- `event.idm.read_only_udm.metadata.description`: Newly mapped `Message` raw log field with `event.idm.read_only_udm.metadata.description` UDM field.  
+\- `event.idm.read_only_udm.network.application_protocol`: If `ApplicationProtocol` is `dns`, updated the value of `event.idm.read_only_udm.network.application_protocol` to `DNS`.  
+\- `event.idm.read_only_udm.security_result.severity`: Newly mapped `Priority` raw log field with `event.idm.read_only_udm.security_result.severity` UDM field.  
+\- `event.idm.read_only_udm.security_result.attack_details.tactics` and `event.idm.read_only_udm.security_result.attack_details.techniques`: Newly mapped `MitreAttackGroups` raw log field with `event.idm.read_only_udm.security_result.attack_details.tactics` and `event.idm.read_only_udm.security_result.attack_details.techniques` UDM fields.   
 2026-07-31 |  Enhancement:  
 \- `event.idm.read_only_udm.additional.fields`: Newly mapped `rec_type_category` raw log field with `event.idm.read_only_udm.additional.fields` UDM field.   
 2026-07-16 |  Enhancement:  
@@ -109,6 +118,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-13 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

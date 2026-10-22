@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/how/page-manage/
 title: Manage pages with the API \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:58.449581+00:00
+fetched_at: 2026-10-21T12:44:41.581755+00:00
 ---
 
 # Manage pages with the API  |  Dialogflow CX  |  Google Cloud Documentation

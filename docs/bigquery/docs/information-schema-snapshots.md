@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-snapshots/
 title: TABLE_SNAPSHOTS view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:01:13.732875+00:00
+fetched_at: 2026-10-21T12:35:58.653931+00:00
 ---
 
 # TABLE_SNAPSHOTS view  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/network-configuration/psc/
 title: Apigee connectivity issue with northbound Private Service Connect \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:23.814442+00:00
+fetched_at: 2026-10-21T14:26:17.457545+00:00
 ---
 
 # Apigee connectivity issue with northbound Private Service Connect  |  Google Cloud Documentation

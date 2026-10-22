@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/nat/docs/set-up-private-nat/
 title: Set up and manage network address translation with Private NAT \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:52.671121+00:00
+fetched_at: 2026-10-21T15:17:12.467069+00:00
 ---
 
 # Set up and manage network address translation with Private NAT  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/terraform/basic-commands/
 title: Basic Terraform commands \u00a0|\u00a0 Terraform on Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:22:15.781491+00:00
+fetched_at: 2026-10-21T14:06:28.844092+00:00
 ---
 
 # Basic Terraform commands  |  Terraform on Google Cloud  |  Google Cloud Documentation

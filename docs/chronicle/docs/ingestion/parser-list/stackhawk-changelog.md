@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/stackhawk-changelog/
 title: Change log for STACKHAWK \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:11:46.758166+00:00
+fetched_at: 2026-10-21T14:43:12.655526+00:00
 ---
 
 # Change log for STACKHAWK  |  Google Security Operations  |  Google Cloud Documentation

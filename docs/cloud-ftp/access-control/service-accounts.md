@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-ftp/access-control/service-accounts/
 title: Cloud FTP service accounts \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:17:51.455122+00:00
+fetched_at: 2026-10-21T14:19:05.316292+00:00
 ---
 
 # Cloud FTP service accounts  |  Google Cloud Documentation

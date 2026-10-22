@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/15.13.0/docs/manage-certificates-kubernetes-operator/
 title: Manage certificates \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 15.13.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:57:00.293755+00:00
+fetched_at: 2026-10-21T15:18:47.671906+00:00
 ---
 
 # Manage certificates  |  AlloyDB Omni for Kubernetes: 15.13.0  |  Google Cloud Documentation

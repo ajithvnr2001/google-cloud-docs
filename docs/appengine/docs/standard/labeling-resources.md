@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/labeling-resources/
 title: Labeling App Engine resources \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:43.712447+00:00
+fetched_at: 2026-10-21T14:21:27.900344+00:00
 ---
 
 # Labeling App Engine resources  |  App Engine standard environment  |  Google Cloud Documentation

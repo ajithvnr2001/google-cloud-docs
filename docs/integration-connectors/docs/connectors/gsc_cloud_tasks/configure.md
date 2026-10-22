@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/gsc_cloud_tasks/configure/
 title: Cloud Tasks \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:48:16.549063+00:00
+fetched_at: 2026-10-21T12:52:56.518609+00:00
 ---
 
 # Cloud Tasks  |  Integration Connectors  |  Google Cloud Documentation

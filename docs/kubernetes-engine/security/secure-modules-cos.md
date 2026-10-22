@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/security/secure-modules-cos/
 title: Configure secure kernel module loading \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:10.476961+00:00
+fetched_at: 2026-10-21T15:18:19.633417+00:00
 ---
 
 # Configure secure kernel module loading  |  GKE security  |  Google Cloud Documentation

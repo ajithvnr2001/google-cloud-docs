@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/lite/docs/samples/pubsublite-seek-subscription/
 title: Seek to a location in a Pub/Sub Lite subscription \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:24:12.500833+00:00
+fetched_at: 2026-10-21T15:15:07.840346+00:00
 ---
 
 # Seek to a location in a Pub/Sub Lite subscription  |  Google Cloud Documentation

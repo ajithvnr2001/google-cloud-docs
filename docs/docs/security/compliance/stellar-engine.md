@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/compliance/stellar-engine/
 title: Stellar Engine overview \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:05:06.601797+00:00
+fetched_at: 2026-10-21T14:06:47.645272+00:00
 ---
 
 # Stellar Engine overview  |  Security  |  Google Cloud Documentation

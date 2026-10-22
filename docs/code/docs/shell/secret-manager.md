@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/secret-manager/
 title: Manage secrets with Secret Manager in Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:16:50.558384+00:00
+fetched_at: 2026-10-21T14:20:13.160466+00:00
 ---
 
 # Manage secrets with Secret Manager in Cloud Code for Cloud Shell  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/samples/functions-bearer-token/
 title: HTTP Bearer token \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:03:36.018728+00:00
+fetched_at: 2026-10-21T12:52:03.714217+00:00
 ---
 
 # HTTP Bearer token  |  Cloud Run functions  |  Google Cloud Documentation

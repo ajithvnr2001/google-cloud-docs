@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/memorystore-for-redis-overview/
 title: Memorystore for Redis overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:50.299514+00:00
+fetched_at: 2026-10-21T15:16:35.511278+00:00
 ---
 
 # Memorystore for Redis overview  |  Google Cloud Documentation

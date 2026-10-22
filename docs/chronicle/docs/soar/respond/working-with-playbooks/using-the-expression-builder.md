@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/using-the-expression-builder/
 title: Build logic with the Expression Builder \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:29:27.361877+00:00
+fetched_at: 2026-10-21T12:38:35.279889+00:00
 ---
 
 # Build logic with the Expression Builder  |  Google Security Operations  |  Google Cloud Documentation

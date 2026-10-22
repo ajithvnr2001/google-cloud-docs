@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/create-run-job-gpus/
 title: Create and run a job that uses GPUs \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:29:21.426415+00:00
+fetched_at: 2026-10-21T12:31:00.945435+00:00
 ---
 
 # Create and run a job that uses GPUs  |  Batch  |  Google Cloud Documentation

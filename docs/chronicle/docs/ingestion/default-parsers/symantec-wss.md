@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/symantec-wss/
 title: Collect Symantec Web Security Service (WSS) logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:57:55.857429+00:00
+fetched_at: 2026-10-21T12:36:18.441739+00:00
 ---
 
 # Collect Symantec Web Security Service (WSS) logs  |  Google Security Operations  |  Google Cloud Documentation

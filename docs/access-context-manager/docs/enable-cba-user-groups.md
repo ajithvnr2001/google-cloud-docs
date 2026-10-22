@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/enable-cba-user-groups/
 title: Enforce certificate-based access for a user group \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:39:17.797074+00:00
+fetched_at: 2026-10-21T14:29:15.638816+00:00
 ---
 
 # Enforce certificate-based access for a user group  |  Access Context Manager  |  Google Cloud Documentation

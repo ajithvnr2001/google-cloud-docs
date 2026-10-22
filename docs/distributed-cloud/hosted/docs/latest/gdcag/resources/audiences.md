@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/audiences/
 title: Documentation audiences for Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:14.775514+00:00
+fetched_at: 2026-10-21T13:00:04.003805+00:00
 ---
 
 # Documentation audiences for Google Distributed Cloud air-gapped  |  Google Cloud Documentation

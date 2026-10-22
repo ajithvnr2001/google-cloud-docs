@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/mimecast-mail-v2/
 title: Collect Mimecast Mail V2 logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:29:17.480778+00:00
+fetched_at: 2026-10-21T12:37:08.783376+00:00
 ---
 
 # Collect Mimecast Mail V2 logs  |  Google Security Operations  |  Google Cloud Documentation

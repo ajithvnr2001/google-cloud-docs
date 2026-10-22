@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/threatq/
 title: ThreatQ \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T14:10:57.448081+00:00
+fetched_at: 2026-10-21T12:38:13.657816+00:00
 ---
 
 # ThreatQ  |  Google Security Operations  |  Google Cloud Documentation

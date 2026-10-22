@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/oauth-scopes/
 title: Bigtable OAuth scopes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:36:25.855446+00:00
+fetched_at: 2026-10-21T14:09:17.578091+00:00
 ---
 
 # Bigtable OAuth scopes  |  Google Cloud Documentation

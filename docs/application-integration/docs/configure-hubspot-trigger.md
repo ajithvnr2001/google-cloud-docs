@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure-hubspot-trigger/
 title: HubSpot trigger \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:36:25.836777+00:00
+fetched_at: 2026-10-21T12:39:14.189448+00:00
 ---
 
 # HubSpot trigger  |  Application Integration  |  Google Cloud Documentation

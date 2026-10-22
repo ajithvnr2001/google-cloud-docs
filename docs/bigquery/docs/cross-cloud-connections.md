@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/cross-cloud-connections/
 title: Create cross-cloud connections \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T13:50:17.769976+00:00
+fetched_at: 2026-10-22T05:48:27.551736+00:00
 ---
 
 # Create cross-cloud connections  |  BigQuery  |  Google Cloud Documentation
@@ -33,11 +33,11 @@ Workloads can benefit from cross-cloud connections versus standard connections f
 
   * **Feature consistency.** By bringing your data from other clouds into BigQuery, you gain direct access to BigQuery AI capabilities, Gemini Enterprise Agent Platform, materialized views, user-defined functions, and other features that aren't available through standard connections.
   * **Cost efficiency.** Workloads that use cross-cloud connections consume standard slot reservations and commitments, eliminating the need to manage separate compute capacities.
-  * **Intelligent caching.** While data is transferred across clouds, BigQuery automatically caches fragments locally, avoiding significant cross-cloud egress fees on subsequent queries. For more information, see [Intelligent caching](https://docs.cloud.google.com/lakehouse/docs/about-borderless-lakehouse#intelligent-caching).
+  * **Intelligent caching.** While data is transferred across clouds, BigQuery automatically caches fragments locally, avoiding significant cross-cloud egress fees on subsequent queries. For more information, see [Intelligent caching](https://docs.cloud.google.com/lakehouse/docs/about-cross-cloud-data-access#intelligent-caching).
 
 
 
-If your workload involves Apache Iceberg catalogs or you need query support across engines other than BigQuery, consider using the [cross-cloud data access capability of borderless Lakehouse](https://docs.cloud.google.com/lakehouse/docs/about-borderless-lakehouse) instead.
+If your workload involves Apache Iceberg catalogs or you need query support across engines other than BigQuery, consider using the [cross-cloud data access capability of borderless Lakehouse](https://docs.cloud.google.com/lakehouse/docs/about-cross-cloud-data-access) instead.
 
 ## Before you begin
 
@@ -400,6 +400,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

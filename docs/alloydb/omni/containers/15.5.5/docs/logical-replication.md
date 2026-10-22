@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/15.5.5/docs/logical-replication/
 title: Configure logical replication in Kubernetes \u00a0|\u00a0 AlloyDB Omni for containers: 15.5.5 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:23:39.636608+00:00
+fetched_at: 2026-10-21T15:25:51.467917+00:00
 ---
 
 # Configure logical replication in Kubernetes  |  AlloyDB Omni for containers: 15.5.5  |  Google Cloud Documentation

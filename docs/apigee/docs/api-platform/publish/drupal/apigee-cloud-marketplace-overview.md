@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/publish/drupal/apigee-cloud-marketplace-overview/
 title: Deploy a Drupal-based developer portal for Apigee from Cloud Marketplace \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T13:01:39.189467+00:00
+fetched_at: 2026-10-21T12:36:27.181494+00:00
 ---
 
 # Deploy a Drupal-based developer portal for Apigee from Cloud Marketplace  |  Google Cloud Documentation

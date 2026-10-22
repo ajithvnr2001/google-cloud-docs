@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/scan-java-automatically/
 title: Scan Java packages automatically \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:44:39.549495+00:00
+fetched_at: 2026-10-21T12:40:25.650831+00:00
 ---
 
 # Scan Java packages automatically  |  Artifact Analysis  |  Google Cloud Documentation

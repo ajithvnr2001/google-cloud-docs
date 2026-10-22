@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cloud-storage-fuse-csi-driver-ephemeral/
 title: Mount Cloud Storage buckets as CSI ephemeral volumes \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:02:07.383249+00:00
+fetched_at: 2026-10-21T15:01:23.097932+00:00
 ---
 
 # Mount Cloud Storage buckets as CSI ephemeral volumes  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

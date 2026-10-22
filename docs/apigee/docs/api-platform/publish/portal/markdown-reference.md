@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/publish/portal/markdown-reference/
 title: Markdown syntax quick reference \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:03:21.845889+00:00
+fetched_at: 2026-10-21T14:28:51.232088+00:00
 ---
 
 # Markdown syntax quick reference  |  Apigee  |  Google Cloud Documentation

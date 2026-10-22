@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/teradata-db-changelog/
 title: Change log for TERADATA_DB \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:25:39.650031+00:00
+fetched_at: 2026-10-21T14:43:33.623765+00:00
 ---
 
 # Change log for TERADATA_DB  |  Google Security Operations  |  Google Cloud Documentation

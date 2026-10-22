@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/nix-system-changelog/
 title: Change log for NIX_SYSTEM \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:02:19.107750+00:00
+fetched_at: 2026-10-22T05:50:37.340372+00:00
 ---
 
 # Change log for NIX_SYSTEM  |  Google Security Operations  |  Google Cloud Documentation
@@ -22,6 +22,19 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 Date | Changes  
 ---|---  
+2026-09-21 |  \- `additional.fields`: Newly mapped `audit_id` raw log field from `msg=audit(timestamp:audit_id)` with `additional.fields` UDM field.  
+\- `target.process.pid`: Newly mapped `pid` from `event[pid]` with `target.process.pid` UDM field for groupadd, groupmod, and groupdel events.   
+2026-09-01 |  \- Updated grok pattern to support new structure of kernel logs.   
+2026-08-28 |  \- `metadata.event_type`: Mapped the value `SERVICE_STOP` with `metadata.event_type` UDM field for JSON format logs having `Closed` in `message` raw log field for `systemd` process.  
+\- `principal.hostname`: Newly mapped `labels.compute.googleapis.com/resource_name` with `principal.hostname` UDM field for `systemd` process for JSON format logs.  
+\- `principal.asset.attribute.cloud.project.id`: Newly mapped `resource.labels.project_id` with `principal.asset.attribute.cloud.project.id` UDM field for `systemd` process for JSON format logs.  
+\- `principal.process.pid`: Newly mapped `jsonPayload.pid` with `principal.process.pid` UDM field for `systemd` process for JSON format logs.  
+\- `principal.asset.asset_id`: Newly mapped `labels.compute.googleapis.com/resource_id` with `principal.asset.asset_id` UDM field for `systemd` process for JSON format logs.  
+\- `principal.asset.attribute.cloud.availability_zone`: Newly mapped `labels.compute.googleapis.com/zone` with `principal.asset.attribute.cloud.availability_zone` UDM field for `systemd` process for JSON format logs.  
+\- `metadata.product_log_id`: Newly mapped `insertId` raw log field with `metadata.product_log_id` UDM field for `systemd` process for JSON format logs.  
+\- `principal.resource.resource_subtype`: Newly mapped `resource.type` with `principal.resource.resource_subtype` UDM field for `systemd` process for JSON format logs.  
+\- `metadata.description`: Newly mapped `jsonPayload.message` with `metadata.description` UDM field for `systemd` process for JSON format logs.  
+\- `target.application`: Newly mapped `jsonPayload.ident` with `target.application` UDM field for `systemd` process for JSON format logs.   
 2026-08-14 |  \- `security_result.description`: Newly mapped `op` raw log field with `security_result.description` UDM field unconditionally when `op` is present in audit logs.  
 \- `metadata.event_type`: Mapped the value `GROUP_MODIFICATION` with `metadata.event_type` UDM field if the raw log field `eventType` has value `USER_MGMT` and if the raw log field `op` has value `add-user-to-group`, `add-user-to-shadow-group`, `delete-user-from-group`, `delete-user-from-shadow-group`, `deleting-user-from-group`, or `deleting-user-from-shadow-group`.  
 \- `metadata.event_type`: Mapped the value `USER_CHANGE_PASSWORD` with `metadata.event_type` UDM field if the raw log field `eventType` has value `USER_CHAUTHTOK` and if the raw log field `op` has value `PAM:chauthtok`, `attempted-to-change-password`, `updating-password`, `changing`, or `updating`.  
@@ -134,6 +147,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/docs/resources/upi-payment-india/
 title: Use UPI for Google Cloud payments \u00a0|\u00a0 Cloud Billing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:27:06.346895+00:00
+fetched_at: 2026-10-21T12:29:31.417391+00:00
 ---
 
 # Use UPI for Google Cloud payments  |  Cloud Billing  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/junipervsrx/
 title: Juniper vSRX \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:36:30.523887+00:00
+fetched_at: 2026-10-21T14:06:58.778884+00:00
 ---
 
 # Juniper vSRX  |  Google Security Operations  |  Google Cloud Documentation

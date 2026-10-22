@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/delete-storage-objects/
 title: Delete storage objects \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:44:00.320330+00:00
+fetched_at: 2026-10-21T13:32:56.347440+00:00
 ---
 
 # Delete storage objects  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

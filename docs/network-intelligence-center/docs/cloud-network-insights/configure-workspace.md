@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-intelligence-center/docs/cloud-network-insights/configure-workspace/
 title: Configure Google Workspace \u00a0|\u00a0 Network Intelligence Center - Cloud Network Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:29:22.842065+00:00
+fetched_at: 2026-10-21T15:14:20.283356+00:00
 ---
 
 # Configure Google Workspace  |  Network Intelligence Center - Cloud Network Insights  |  Google Cloud Documentation

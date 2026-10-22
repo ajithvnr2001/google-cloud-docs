@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-connectivity/docs/router/how-to/viewing-logs-metrics/
 title: View logs and metrics \u00a0|\u00a0 Cloud Router \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:23:22.111600+00:00
+fetched_at: 2026-10-21T12:29:23.226352+00:00
 ---
 
 # View logs and metrics  |  Cloud Router  |  Google Cloud Documentation
@@ -342,6 +342,11 @@ Received packets count
 `DELTA`, `INT64`, `{packet}`   
 **[nat_gateway](https://docs.cloud.google.com/monitoring/api/resources#tag_nat_gateway)** |  _Count of packets received (destination - > VMs) via the NAT gateway. Sampled every 60 seconds. After sampling, data is not visible for up to 225 seconds._   
 `ip_protocol`: The protocol of the connection. Can be TCP, UDP or ICMP.   
+`nat/rule/nat_allocation_failed` GA ** _(project)_**   
+NAT allocation failed per rule   
+`GAUGE`, `BOOL`, ``   
+**[nat_gateway](https://docs.cloud.google.com/monitoring/api/resources#tag_nat_gateway)** |  _Indicates if there is a failure in allocating NAT IPs to any VM in the NAT gateway for a specific NAT rule._   
+`nat_rule_priority`: The priority number of the NAT rule associated with the error.   
 `nat/sent_bytes_count` GA ** _(project)_**   
 Sent bytes count   
 `DELTA`, `INT64`, `By`   
@@ -361,7 +366,7 @@ Sent routes count
 `GAUGE`, `INT64`, `1`   
 **[gce_router](https://docs.cloud.google.com/monitoring/api/resources#tag_gce_router)** |  _Current number of routes sent by router. Sampled every 60 seconds. After sampling, data is not visible for up to 180 seconds._  
   
-Table generated at 2026-10-08 15:22:12 UTC.
+Table generated at 2026-10-14 20:24:33 UTC.
 
 ## What's next
 
@@ -373,6 +378,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

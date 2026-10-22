@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/google-security-command-center/
 title: Integrate Security Command Center with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:37:40.929519+00:00
+fetched_at: 2026-10-21T14:07:47.720110+00:00
 ---
 
 # Integrate Security Command Center with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

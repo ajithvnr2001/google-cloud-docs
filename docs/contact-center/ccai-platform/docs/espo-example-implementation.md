@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/espo-example-implementation/
 title: EspoCRM reference implementation \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:15:43.328272+00:00
+fetched_at: 2026-10-21T14:22:20.304784+00:00
 ---
 
 # EspoCRM reference implementation  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

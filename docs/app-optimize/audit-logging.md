@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-optimize/audit-logging/
 title: App Optimize API audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:05:47.789720+00:00
+fetched_at: 2026-10-21T12:30:37.591178+00:00
 ---
 
 # App Optimize API audit logging  |  Google Cloud Documentation

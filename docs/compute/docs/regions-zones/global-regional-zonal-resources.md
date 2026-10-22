@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/regions-zones/global-regional-zonal-resources/
 title: Global, regional, and zonal resources \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:41.055343+00:00
+fetched_at: 2026-10-21T14:22:22.295071+00:00
 ---
 
 # Global, regional, and zonal resources  |  Compute Engine  |  Google Cloud Documentation

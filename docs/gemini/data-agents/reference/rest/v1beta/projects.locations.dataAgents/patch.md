@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1beta/projects.locations.dataAgents/patch/
 title: Method: projects.locations.dataAgents.patch \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:43:02.849164+00:00
+fetched_at: 2026-10-21T12:55:59.152635+00:00
 ---
 
 # Method: projects.locations.dataAgents.patch  |  Data Agents  |  Google Cloud Documentation

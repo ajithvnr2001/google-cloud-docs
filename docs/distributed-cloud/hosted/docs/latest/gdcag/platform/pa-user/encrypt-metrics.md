@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/encrypt-metrics/
 title: Encrypt metrics from your applications \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:44:02.515884+00:00
+fetched_at: 2026-10-21T13:32:53.406486+00:00
 ---
 
 # Encrypt metrics from your applications  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

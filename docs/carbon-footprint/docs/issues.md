@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/carbon-footprint/docs/issues/
 title: Known issues for Carbon Footprint \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:31:35.859962+00:00
+fetched_at: 2026-10-21T14:25:01.621211+00:00
 ---
 
 # Known issues for Carbon Footprint  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/metadata/overview/
 title: About VM metadata \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:18.049458+00:00
+fetched_at: 2026-10-21T12:37:03.448711+00:00
 ---
 
 # About VM metadata  |  Compute Engine  |  Google Cloud Documentation

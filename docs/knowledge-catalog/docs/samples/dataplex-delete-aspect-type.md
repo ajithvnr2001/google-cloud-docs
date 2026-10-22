@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/samples/dataplex-delete-aspect-type/
 title: Delete aspect type \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:19:07.658470+00:00
+fetched_at: 2026-10-21T15:03:09.031279+00:00
 ---
 
 # Delete aspect type  |  Knowledge Catalog  |  Google Cloud Documentation

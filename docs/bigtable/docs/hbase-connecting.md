@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/hbase-connecting/
 title: Create a connection object \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:19.007137+00:00
+fetched_at: 2026-10-21T12:37:06.118089+00:00
 ---
 
 # Create a connection object  |  Bigtable  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/trace/docs/overview/
 title: Cloud Trace overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:48.179803+00:00
+fetched_at: 2026-10-21T14:18:43.869007+00:00
 ---
 
 # Cloud Trace overview  |  Google Cloud Documentation
@@ -83,7 +83,7 @@ For incoming and outgoing HTTP requests, latency data is automatically sent to T
 
 Instrument your application to collect specific information that helps you understand its performance and troubleshoot failures. Several open-source instrumentation frameworks collect log, metric, and trace data, and can send that data to any vendor, including Google Cloud. For your agentic applications, some frameworks can collect your prompts and responses or pass context that allows tracing of some remote [Google Cloud MCP servers](https://docs.cloud.google.com/mcp/overview) calls.
 
-To instrument your application, we recommend that you use an open-source, vendor-neutral instrumentation framework, such as [OpenTelemetry](https://opentelemetry.io/), instead of vendor- and product-specific APIs or client libraries. For information about these frameworks, see [ Instrumentation and observability](https://docs.cloud.google.com/stackdriver/docs/instrumentation/overview) and [Choose an instrumentation approach](https://docs.cloud.google.com/stackdriver/docs/instrumentation/choose-approach).
+To instrument your application, we recommend that you use an open-source, vendor-neutral instrumentation framework, such as [OpenTelemetry](https://opentelemetry.io/), instead of vendor- and product-specific APIs or client libraries. For information about these frameworks, see [ Observability for application developers](https://docs.cloud.google.com/stackdriver/docs/opentelemetry/application-developers) and [Choose an instrumentation approach](https://docs.cloud.google.com/stackdriver/docs/instrumentation/choose-approach).
 
 The instrumentation samples we provide use [OpenTelemetry](https://opentelemetry.io):
 
@@ -98,7 +98,7 @@ These samples send metric and trace data that follows the [OpenTelemetry Protoco
 
   * For information about how to use a direct export of trace data and send that data to the Telemetry API, see [Migrate from the Trace exporter to the OTLP endpoint](https://docs.cloud.google.com/trace/docs/migrate-to-otlp-endpoints).
 
-  * For samples that show you how to configure an agentic application to collect prompts and responses, see [How to instrument your generative AI applications](https://docs.cloud.google.com/stackdriver/docs/instrumentation/ai-agent-overview#how).
+  * For samples that show you how to configure an agentic application to collect prompts and responses, see [Observability for AI agent developers](https://docs.cloud.google.com/stackdriver/docs/opentelemetry/ai-agent-developers).
 
 
 
@@ -112,7 +112,7 @@ Although you can use Cloud Trace client libraries to instrument your application
 
 To understand the behavior of your agentic applications, configure them to collect prompts and responses or to generate spans when they call remote [Google Cloud MCP servers](https://docs.cloud.google.com/mcp/overview). Prompts and responses help you understand the reasoning your agentic application uses. Spans that record tool calls help you confirm tool invocation, call statuses, and request latencies.
 
-Several instrumentation samples show you how to configure an application to collect prompts and responses. These samples rely on [OpenTelemetry](https://opentelemetry.io). For more information, see [How to instrument your generative AI applications](https://docs.cloud.google.com/stackdriver/docs/instrumentation/ai-agent-overview#how).
+Several instrumentation samples show you how to configure an application to collect prompts and responses. These samples rely on [OpenTelemetry](https://opentelemetry.io). For more information, see [How you can instrument your generative AI applications](https://docs.cloud.google.com/stackdriver/docs/opentelemetry/ai-agent-developers#how).
 
 Google Cloud MCP servers can generate trace spans. For more information, see [Investigate MCP calls using Trace](https://docs.cloud.google.com/trace/docs/trace-remote-mcp-server-calls).
 
@@ -202,6 +202,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

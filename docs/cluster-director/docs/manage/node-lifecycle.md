@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-director/docs/manage/node-lifecycle/
 title: Node lifecycle \u00a0|\u00a0 Cluster Director \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:54.429107+00:00
+fetched_at: 2026-10-21T14:42:00.777394+00:00
 ---
 
 # Node lifecycle  |  Cluster Director  |  Google Cloud Documentation

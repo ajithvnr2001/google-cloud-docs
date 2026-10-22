@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/sso-azure/
 title: Configure SSO using Azure \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:02.449474+00:00
+fetched_at: 2026-10-21T14:06:55.964670+00:00
 ---
 
 # Configure SSO using Azure  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

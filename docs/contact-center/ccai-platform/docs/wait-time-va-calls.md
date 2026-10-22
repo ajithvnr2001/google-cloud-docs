@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/wait-time-va-calls/
 title: Wait-time virtual agents for calls \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:21:10.548111+00:00
+fetched_at: 2026-10-21T12:29:39.665277+00:00
 ---
 
 # Wait-time virtual agents for calls  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-campaign/
 title: Campaign endpoints \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:28:15.758136+00:00
+fetched_at: 2026-10-21T14:22:37.694359+00:00
 ---
 
 # Campaign endpoints  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

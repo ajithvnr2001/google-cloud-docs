@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox/
-title: Isolate AI code execution with Agent Sandbox \u00a0|\u00a0 GKE AI/ML \u00a0|\u00a0 Google Cloud Documentation
+title: Isolate AI code execution with Agent Sandbox on GKE \u00a0|\u00a0 GKE AI/ML \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:26:15.571810+00:00
+fetched_at: 2026-10-21T14:37:29.454261+00:00
 ---
 
-# Isolate AI code execution with Agent Sandbox  |  GKE AI/ML  |  Google Cloud Documentation
+# Isolate AI code execution with Agent Sandbox on GKE  |  GKE AI/ML  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox/
 
@@ -20,15 +20,15 @@ fetched_at: 2026-10-14T05:26:15.571810+00:00
 
 Send feedback 
 
-#  Isolate AI code execution with Agent Sandbox Stay organized with collections  Save and categorize content based on your preferences. 
+#  Isolate AI code execution with Agent Sandbox on GKE Stay organized with collections  Save and categorize content based on your preferences. 
 
 [ Autopilot ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview) [ Standard ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode)
 
-You can deploy a developer environment to use the Agent Sandbox Python client on a Google Kubernetes Engine (GKE) cluster. This setup helps you safely execute and test AI-generated code by isolating untrusted code within a sandboxed Python environment. This isolation is crucial for protecting your system from potential vulnerabilities in AI-generated code, increasing development velocity, and ensuring secure deployments. For an overview of how the Agent Sandbox feature isolates untrusted AI-generated code, see [About GKE Agent Sandbox](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox).
+You can deploy a developer environment to use the Agent Sandbox Python client on a Google Kubernetes Engine (GKE) cluster. This setup helps you safely execute and test AI-generated code by isolating untrusted code within a sandboxed Python environment. This isolation is crucial for protecting your system from potential vulnerabilities in AI-generated code, increasing development velocity, and ensuring secure deployments. For an overview of how Agent Sandbox on GKE isolates untrusted AI-generated code, see [About Agent Sandbox on GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox).
 
 ## Costs
 
-Agent Sandbox is offered at no extra charge in GKE. [GKE pricing](https://cloud.google.com/kubernetes-engine/pricing) applies to the resources that you create.
+Agent Sandbox on GKE is offered at no extra charge. [GKE pricing](https://cloud.google.com/kubernetes-engine/pricing) applies to the resources that you create.
 
 ## Before you begin
 
@@ -57,7 +57,7 @@ To enable APIs, you need the `serviceusage.services.enable` permission. If you c
 [Activate Cloud Shell](https://console.cloud.google.com/?cloudshell=true)
 
   5. Verify that you have the permissions required to complete this document.
-  6. You must have a GKE cluster with the Agent Sandbox feature enabled. If you don't have one, follow the instructions in [Enable Agent Sandbox on GKE](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/how-install-agent-sandbox) to create a new cluster or update an existing one.
+  6. You must have a GKE cluster with Agent Sandbox on GKE enabled. If you don't have one, follow the instructions in [Enable Agent Sandbox on GKE](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/how-install-agent-sandbox) to create a new cluster or update an existing one.
 
 
 
@@ -313,7 +313,7 @@ With all the setup components in place, you can now create and interact with a s
 
 You should see the message "Hello from the sandboxed environment!" which is output from the sandbox.
 
-Congratulations! You have successfully run a shell command inside a secure sandbox. Using the `sandbox.run()` method, you can execute any shell command, and the Agent Sandbox runs the command within a secure barrier that protects your cluster's nodes and other workloads from untrusted code. This provides a safe and reliable way for an AI agent or any automated workflow to execute tasks.
+Congratulations! You have successfully run a shell command inside a secure sandbox. Using the `sandbox.run()` method, you can execute any shell command, and Agent Sandbox on GKE runs the command within a secure barrier that protects your cluster's nodes and other workloads from untrusted code. This provides a safe and reliable way for an AI agent or any automated workflow to execute tasks.
 
 When you run the script, the `SandboxClient` handles all the steps for you. It creates the `SandboxClaim` resource to start the sandbox, waits for the sandbox to be ready, and then uses the `sandbox.run()` method to execute bash shell commands inside the secure container. The client then captures and prints the `stdout` from that command. The sandbox is automatically deleted after the program runs.
 
@@ -325,7 +325,7 @@ To verify if a specific sandbox is claimed or available, check the `ownerReferen
 
 In this document, you interact with sandboxes from outside of the cluster by using Cloud Shell. The Python client uses your user credentials to authenticate to the cluster and manage sandbox resources, and uses the `kubectl port-forward` command to establish a connection with sandboxes. These steps work well for development scenarios.
 
-In a production scenario, a controller application (like an AI orchestrator) is responsible for creating and managing sandbox resources. To use Agent Sandbox in production, consider the following:
+In a production scenario, a controller application (like an AI orchestrator) is responsible for creating and managing sandbox resources. To use Agent Sandbox on GKE in production, consider the following:
 
   * **Authentication** : your controller application must authenticate to the cluster API server to run sandboxes. How you configure authentication depends on where the controller application runs, as follows:
 
@@ -340,7 +340,7 @@ For more information about these routing methods, see the [usage examples on Git
 
   * **Sandbox access to Google Cloud resources** : if your sandbox code needs to send requests to Google Cloud APIs, such as Cloud Storage, use an IAM policy with [Workload Identity Federation for GKE](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) to give the Kubernetes ServiceAccount that the sandbox Pod uses the permissions that are required for that access. Because the default network policy blocks access to the Google Cloud metadata server (`169.254.169.254`), you must customize the network policy to allow this traffic.
 
-  * **Network Policy restrictions** : by default, Agent Sandbox enforces a strict _Secure-by-Default_ network posture (`networkPolicyManagement: Managed`). The following restrictions apply under this posture:
+  * **Network Policy restrictions** : by default, Agent Sandbox on GKE enforces a strict _Secure-by-Default_ network posture (`networkPolicyManagement: Managed`). The following restrictions apply under this posture:
 
     * **Ingress** is blocked from all sources except the designated Sandbox Router.
     * **Egress** is allowed to the public internet, but egress to private LAN ranges (RFC 1918), internal cluster DNS (CoreDNS), and the Cloud Provider Metadata Server (`169.254.0.0/16`) is explicitly blocked.
@@ -352,7 +352,7 @@ To use Workload Identity Federation for GKE or access other private resources, y
 
 ## Sandbox security policies
 
-To help ensure a Secure-by-Default environment, the GKE Agent Sandbox addon uses Kubernetes Validating Admission Policies (VAPs) to enforce security constraints on `Sandbox` and `SandboxTemplate` resources. These policies are applied automatically.
+To help ensure a Secure-by-Default environment, the Agent Sandbox on GKE addon uses Kubernetes Validating Admission Policies (VAPs) to enforce security constraints on `Sandbox` and `SandboxTemplate` resources. These policies are applied automatically.
 
 **Note:** The policy split is supported in cluster version `1.36.0-gke.2459000` or later. To update the VAP for an existing cluster, upgrade the cluster version to `1.36.0-gke.2459000` or later before following the steps to modify the policy.
 
@@ -386,7 +386,7 @@ Alternatively, if you want to disable the hardening policy entirely for your clu
 
 ## Known issues
 
-This section describes known issues when using Agent Sandbox in GKE, and how to resolve or work around them.
+This section describes known issues when using Agent Sandbox on GKE, and how to resolve or work around them.
 
 ### Security policy blocks capabilities when using a service mesh
 
@@ -431,9 +431,9 @@ To avoid incurring charges to your Google Cloud account, you should delete the G
 
 ## What's next
 
-  * Learn how to [Save and restore Agent Sandbox environments with Pod snapshots](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-pod-snapshots).
+  * Learn how to [Save and restore Agent Sandbox on GKE environments with Pod snapshots](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-pod-snapshots).
   * Learn more about the Agent Sandbox open-source project on [GitHub](https://github.com/kubernetes-sigs/agent-sandbox).
-  * Learn how to use open source [Kata Containers with Agent Sandbox](https://github.com/kubernetes-sigs/agent-sandbox/tree/main/examples/kata-gke-sandbox). Kata Containers isn't a Google Cloud product. If you install and use this software, then you're responsible for management and troubleshooting. Google's support and SLAs don't apply to Kata Containers.
+  * Learn how to use open source [Kata Containers with Agent Sandbox on GKE](https://github.com/kubernetes-sigs/agent-sandbox/tree/main/examples/kata-gke-sandbox). Kata Containers isn't a Google Cloud product. If you install and use this software, then you're responsible for management and troubleshooting. Google's support and SLAs don't apply to Kata Containers.
   * To understand the underlying technology that provides security isolation for your workloads, see [GKE Sandbox](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/sandbox-pods).
   * For more information about enhancing security for your clusters and workloads, see [GKE security overview](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/security-overview).
 
@@ -443,6 +443,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

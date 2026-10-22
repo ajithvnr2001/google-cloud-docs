@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/troubleshooting/authentication/
 title: Troubleshoot GKE authentication issues \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:15.440351+00:00
+fetched_at: 2026-10-21T15:08:58.774001+00:00
 ---
 
 # Troubleshoot GKE authentication issues  |  GKE security  |  Google Cloud Documentation

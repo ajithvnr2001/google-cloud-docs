@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/release/get-release-notifications/
 title: Get Apigee Edge release notifications \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:39:14.941318+00:00
+fetched_at: 2026-10-21T14:26:35.256403+00:00
 ---
 
 # Get Apigee Edge release notifications  |  Google Cloud Documentation

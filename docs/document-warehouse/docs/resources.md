@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/document-warehouse/docs/resources/
 title: Resources \u00a0|\u00a0 Document AI Warehouse \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:42:33.980187+00:00
+fetched_at: 2026-10-21T14:06:43.560589+00:00
 ---
 
 # Resources  |  Document AI Warehouse  |  Google Cloud Documentation

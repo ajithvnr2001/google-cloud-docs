@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/concepts/
 title: Concepts \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:38:40.714604+00:00
+fetched_at: 2026-10-21T14:10:35.299689+00:00
 ---
 
 # Concepts  |  API Gateway  |  Google Cloud Documentation

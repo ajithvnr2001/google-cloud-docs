@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/manage-wildfire-submissions/
 title: Manage Advanced malware sandbox submissions \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:40:29.135169+00:00
+fetched_at: 2026-10-21T12:46:06.664486+00:00
 ---
 
 # Manage Advanced malware sandbox submissions  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

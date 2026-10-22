@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/dns-authorizations/
 title: Manage DNS authorizations \u00a0|\u00a0 Certificate Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:02:43.721352+00:00
+fetched_at: 2026-10-21T14:25:32.154277+00:00
 ---
 
 # Manage DNS authorizations  |  Certificate Manager  |  Google Cloud Documentation

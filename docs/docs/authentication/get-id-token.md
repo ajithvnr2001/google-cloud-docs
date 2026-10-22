@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/authentication/get-id-token/
 title: Get an ID token \u00a0|\u00a0 Authentication \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:41:07.470280+00:00
+fetched_at: 2026-10-21T14:07:06.110613+00:00
 ---
 
 # Get an ID token  |  Authentication  |  Google Cloud Documentation

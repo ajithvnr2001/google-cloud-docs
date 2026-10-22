@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/flags/flags-java/
 title: Use App Lifecycle Manager feature flags with Java \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:03:33.480197+00:00
+fetched_at: 2026-10-21T12:31:01.034913+00:00
 ---
 
 # Use App Lifecycle Manager feature flags with Java  |  Google Cloud Documentation

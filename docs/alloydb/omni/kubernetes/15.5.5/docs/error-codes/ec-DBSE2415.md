@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/15.5.5/docs/error-codes/ec-DBSE2415/
 title: DBSE2415. PostgreSQL: failed to connect to database \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 15.5.5 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:04:21.439602+00:00
+fetched_at: 2026-10-21T15:28:03.444852+00:00
 ---
 
 # DBSE2415. PostgreSQL: failed to connect to database  |  AlloyDB Omni for Kubernetes: 15.5.5  |  Google Cloud Documentation

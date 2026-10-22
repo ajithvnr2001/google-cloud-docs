@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/use-cloud-sql/
 title: Use Cloud SQL \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:42.134092+00:00
+fetched_at: 2026-10-21T12:30:26.754330+00:00
 ---
 
 # Use Cloud SQL  |  App Engine standard environment  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/v1/first-app/
 title: Write Your Cloud Billing Account Application \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:13:42.113731+00:00
+fetched_at: 2026-10-21T14:27:12.576664+00:00
 ---
 
 # Write Your Cloud Billing Account Application  |  Google Cloud Documentation

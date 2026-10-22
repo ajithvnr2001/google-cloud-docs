@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/disabling/
 title: Disable Binary Authorization (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:12.402034+00:00
+fetched_at: 2026-10-21T14:11:20.680877+00:00
 ---
 
 # Disable Binary Authorization (GKE)  |  Google Cloud Documentation

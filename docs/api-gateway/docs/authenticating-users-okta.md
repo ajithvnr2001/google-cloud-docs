@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/authenticating-users-okta/
 title: Using Okta to authenticate users \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:14:05.521511+00:00
+fetched_at: 2026-10-21T14:29:02.918864+00:00
 ---
 
 # Using Okta to authenticate users  |  API Gateway  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/reservations-monitoring/
 title: Monitor BigQuery reservations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:53:07.519168+00:00
+fetched_at: 2026-10-21T12:37:16.600120+00:00
 ---
 
 # Monitor BigQuery reservations  |  Google Cloud Documentation

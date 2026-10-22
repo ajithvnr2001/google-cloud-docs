@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/region/
 title: Regionalization and location settings \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:54.066087+00:00
+fetched_at: 2026-10-21T12:56:08.187689+00:00
 ---
 
 # Regionalization and location settings  |  Dialogflow CX  |  Google Cloud Documentation

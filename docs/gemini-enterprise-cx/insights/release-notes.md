@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/release-notes/
 title: Customer Experience Insights release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:23:43.557688+00:00
+fetched_at: 2026-10-21T14:30:46.740182+00:00
 ---
 
 # Customer Experience Insights release notes  |  Google Cloud Documentation

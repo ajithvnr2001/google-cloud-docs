@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-create-iam-policy/
 title: Create IAM policy \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:45.605323+00:00
+fetched_at: 2026-10-21T12:40:10.960268+00:00
 ---
 
 # Create IAM policy  |  BigQuery  |  Google Cloud Documentation

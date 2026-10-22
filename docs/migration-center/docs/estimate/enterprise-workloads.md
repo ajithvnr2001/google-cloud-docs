@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/estimate/enterprise-workloads/
 title: Specify workload and license details \u00a0|\u00a0 Migration Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:19.479639+00:00
+fetched_at: 2026-10-21T15:13:44.517396+00:00
 ---
 
 # Specify workload and license details  |  Migration Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/locations/
 title: Metadata storage locations \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:45:21.923713+00:00
+fetched_at: 2026-10-21T12:40:03.180403+00:00
 ---
 
 # Metadata storage locations  |  Artifact Analysis  |  Google Cloud Documentation

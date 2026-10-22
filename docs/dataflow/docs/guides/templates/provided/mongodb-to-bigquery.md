@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/guides/templates/provided/mongodb-to-bigquery/
 title: MongoDB to BigQuery template \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:06:12.384199+00:00
+fetched_at: 2026-10-21T14:08:44.364706+00:00
 ---
 
 # MongoDB to BigQuery template  |  Cloud Dataflow  |  Google Cloud Documentation
@@ -87,6 +87,8 @@ If `userOption` is `JSON`, the pipeline stores the document in the BigQuery JSON
   * **filter** : Bson filter in json format. For example, `{ "val": { $gt: 0, $lt: 9 }}`.
   * **useStorageWriteApi** : If `true`, the pipeline uses the BigQuery Storage Write API (<https://cloud.google.com/bigquery/docs/write-api>). The default value is `false`. For more information, see Using the Storage Write API (<https://beam.apache.org/documentation/io/built-in/google-bigquery/#storage-write-api>).
   * **useStorageWriteApiAtLeastOnce** : When using the Storage Write API, specifies the write semantics. To use at-least-once semantics (<https://beam.apache.org/documentation/io/built-in/google-bigquery/#at-least-once-semantics>), set this parameter to `true`. To use exactly-once semantics, set the parameter to `false`. This parameter applies only when `useStorageWriteApi` is `true`. The default value is `false`.
+  * **bucketAuto** : If `true`, the collection is split into partitions by `_id` using the `$bucketAuto` aggregation stage, so the read is parallelized across workers. Unlike `splitVector`, `$bucketAuto` is also permitted on MongoDB Atlas. The number of partitions is controlled by `numSplits`. Collections whose `_id` values are not ObjectIds require Apache Beam 2.77.0 or later. Defaults to `false`.
+  * **numSplits** : The number of partitions to split the read into. When `bucketAuto` is `true`, `0` uses 10 partitions. When `bucketAuto` is `false`, a value greater than `0` splits the read with the `splitVector` command, which is not permitted on MongoDB Atlas, and `0` reads the collection as a single partition. Defaults to `0`.
   * **bigQuerySchemaPath** : The Cloud Storage path for the BigQuery JSON schema. For example, `gs://your-bucket/your-schema.json`.
   * **javascriptDocumentTransformGcsPath** : The Cloud Storage URI of the `.js` file that defines the JavaScript user-defined function (UDF) to use. For example, `gs://your-bucket/your-transforms/*.js`.
   * **javascriptDocumentTransformFunctionName** : The name of the JavaScript user-defined function (UDF) to use. For example, if your JavaScript function code is `myTransform(inJson) { /*...do stuff...*/ }`, then the function name is myTransform. For sample JavaScript UDFs, see UDF Examples (<https://github.com/GoogleCloudPlatform/DataflowTemplates#udf-examples>). For example, `transform`.
@@ -415,6 +417,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

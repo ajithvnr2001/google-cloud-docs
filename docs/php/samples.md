@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/php/samples/
 title: Code samples \u00a0|\u00a0 PHP \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:02:34.702212+00:00
+fetched_at: 2026-10-21T14:59:09.473719+00:00
 ---
 
 # Code samples  |  PHP  |  Google Cloud Documentation

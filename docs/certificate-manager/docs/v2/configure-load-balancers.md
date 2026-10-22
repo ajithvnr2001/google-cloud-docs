@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/v2/configure-load-balancers/
 title: Configure lifecycle management for load balancers \u00a0|\u00a0 Certificate Manager (2nd gen) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:39:09.016205+00:00
+fetched_at: 2026-10-21T14:25:29.785766+00:00
 ---
 
 # Configure lifecycle management for load balancers  |  Certificate Manager (2nd gen)  |  Google Cloud Documentation

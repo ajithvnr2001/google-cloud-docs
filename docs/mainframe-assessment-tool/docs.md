@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/mainframe-assessment-tool/docs/
 title: Mainframe Assessment Tool documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:53:03.374395+00:00
+fetched_at: 2026-10-21T12:29:27.087494+00:00
 ---
 
 # Mainframe Assessment Tool documentation  |  Google Cloud Documentation
@@ -50,15 +50,15 @@ format_list_numbered
 
   * [ Configure your project ](https://docs.cloud.google.com/mainframe-assessment-tool/docs/configure-your-project)
 
-  * [ Enable the MCP server ](https://docs.cloud.google.com/mainframe-assessment-tool/docs/mcp-server)
-
   * [ Set up and access Mainframe Assessment Tool ](https://docs.cloud.google.com/mainframe-assessment-tool/docs/create-instance)
 
   * [ Create an assessment ](https://docs.cloud.google.com/mainframe-assessment-tool/docs/perform-assessment)
 
-  * [ Review and understand assessment results ](https://docs.cloud.google.com/mainframe-assessment-tool/docs/review-results)
+  * [ Review assessment results ](https://docs.cloud.google.com/mainframe-assessment-tool/docs/review-results)
 
   * [ Extract business rules ](https://docs.cloud.google.com/mainframe-assessment-tool/docs/business-rules-extraction)
+
+  * [ Configure the MCP server and agent skills ](https://docs.cloud.google.com/mainframe-assessment-tool/docs/mcp-server)
 
   * [ Mainframe modernization overview ](https://docs.cloud.google.com/mainframe-assessment-tool/docs/mainframe-modernization-overview)
 
@@ -78,6 +78,6 @@ info
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

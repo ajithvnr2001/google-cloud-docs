@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-reservation-timeline/
 title: RESERVATIONS_TIMELINE view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:30:32.033796+00:00
+fetched_at: 2026-10-21T12:35:22.747454+00:00
 ---
 
 # RESERVATIONS_TIMELINE view  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/exchange/configure/
 title: Microsoft Exchange connector \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:24.713389+00:00
+fetched_at: 2026-10-21T12:54:00.469320+00:00
 ---
 
 # Microsoft Exchange connector  |  Integration Connectors  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/error-reporting/docs/setup/ruby/
 title: Instrument Ruby apps for Error Reporting \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T20:44:45.415707+00:00
+fetched_at: 2026-10-21T14:18:41.953455+00:00
 ---
 
 # Instrument Ruby apps for Error Reporting  |  Google Cloud Documentation
@@ -247,7 +247,7 @@ You can manually report an error by calling the `report` method, as seen in the 
     begin
       raise "Something went wrong"
     rescue StandardError => e
-      Google::Cloud::[ErrorReporting](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-error_reporting/latest/Google-Cloud-ErrorReporting.html).report e
+      Google::Cloud::[ErrorReporting](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-error_reporting-v1beta1/latest/Google-Cloud-ErrorReporting.html).report e
     end
 
 ## Run apps in a local development environment
@@ -347,6 +347,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

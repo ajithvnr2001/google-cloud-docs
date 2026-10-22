@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/triggers/
 title: Cloud Build triggers \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:04.383542+00:00
+fetched_at: 2026-10-21T14:11:07.993264+00:00
 ---
 
 # Cloud Build triggers  |  Google Cloud Documentation

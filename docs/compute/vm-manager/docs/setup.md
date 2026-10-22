@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/vm-manager/docs/setup/
 title: Set up VM Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:45:18.017273+00:00
+fetched_at: 2026-10-21T14:08:55.717551+00:00
 ---
 
 # Set up VM Manager  |  Google Cloud Documentation

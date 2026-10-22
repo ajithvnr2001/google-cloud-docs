@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/colab/docs/manage-access-runtime-template/
 title: Manage access to a runtime template in Colab Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:30:22.207707+00:00
+fetched_at: 2026-10-21T14:20:40.706068+00:00
 ---
 
 # Manage access to a runtime template in Colab Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/oracle-fusion-changelog/
 title: Change log for ORACLE_FUSION \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:43:08.076343+00:00
+fetched_at: 2026-10-21T14:47:07.956333+00:00
 ---
 
 # Change log for ORACLE_FUSION  |  Google Security Operations  |  Google Cloud Documentation

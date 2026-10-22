@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/trendmicro-vision-one-observed-attack-techniques/
 title: Collect Trend Micro Vision One Observed Attack Techniques logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:16:34.724418+00:00
+fetched_at: 2026-10-21T12:39:39.089957+00:00
 ---
 
 # Collect Trend Micro Vision One Observed Attack Techniques logs  |  Google Security Operations  |  Google Cloud Documentation

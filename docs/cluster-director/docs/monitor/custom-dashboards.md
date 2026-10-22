@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-director/docs/monitor/custom-dashboards/
 title: Monitor clusters with custom dashboards or alerts \u00a0|\u00a0 Cluster Director \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:54.893110+00:00
+fetched_at: 2026-10-21T14:42:00.376115+00:00
 ---
 
 # Monitor clusters with custom dashboards or alerts  |  Cluster Director  |  Google Cloud Documentation

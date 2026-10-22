@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/hashicorp-changelog/
 title: Change log for HASHICORP \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:35:44.467187+00:00
+fetched_at: 2026-10-21T14:52:04.620885+00:00
 ---
 
 # Change log for HASHICORP  |  Google Security Operations  |  Google Cloud Documentation

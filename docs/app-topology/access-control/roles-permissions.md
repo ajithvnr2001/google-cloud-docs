@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-topology/access-control/roles-permissions/
 title: App Topology roles and permissions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:20:26.942675+00:00
+fetched_at: 2026-10-21T14:24:16.722392+00:00
 ---
 
 # App Topology roles and permissions  |  Google Cloud Documentation

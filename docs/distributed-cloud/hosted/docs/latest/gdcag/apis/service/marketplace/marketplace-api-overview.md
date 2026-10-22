@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/service/marketplace/marketplace-api-overview/
 title: Marketplace API overview \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:13:28.377267+00:00
+fetched_at: 2026-10-21T12:57:43.091194+00:00
 ---
 
 # Marketplace API overview  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

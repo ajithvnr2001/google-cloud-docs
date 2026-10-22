@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/understand-ingestion-metrics/
 title: Ingestion metrics overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:35.628675+00:00
+fetched_at: 2026-10-21T12:37:29.783232+00:00
 ---
 
 # Ingestion metrics overview  |  Google Security Operations  |  Google Cloud Documentation

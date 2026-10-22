@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/blueprints/security-foundations/operation-best-practices/
 title: Operations best practices \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:51:51.133654+00:00
+fetched_at: 2026-10-21T14:27:40.147927+00:00
 ---
 
 # Operations best practices  |  Cloud Architecture Center  |  Google Cloud Documentation

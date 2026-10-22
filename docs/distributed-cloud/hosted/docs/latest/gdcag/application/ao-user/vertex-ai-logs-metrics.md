@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-logs-metrics/
 title: View Vertex AI logs and metrics \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:47:39.901759+00:00
+fetched_at: 2026-10-21T12:58:16.475708+00:00
 ---
 
 # View Vertex AI logs and metrics  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/manufacturing-data-engine/docs/resources/
 title: Resources \u00a0|\u00a0 Manufacturing Data Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:48:35.152197+00:00
+fetched_at: 2026-10-21T15:10:50.831495+00:00
 ---
 
 # Resources  |  Manufacturing Data Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/configure-vpc-sc/
 title: Configure VPC Service Controls for Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:48.949001+00:00
+fetched_at: 2026-10-21T14:23:54.959676+00:00
 ---
 
 # Configure VPC Service Controls for Assured Workloads  |  Google Cloud Documentation

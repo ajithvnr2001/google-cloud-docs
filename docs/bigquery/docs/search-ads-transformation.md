@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/search-ads-transformation/
 title: Search Ads 360 report transformation \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T11:59:51.573875+00:00
+fetched_at: 2026-10-21T12:36:32.837004+00:00
 ---
 
 # Search Ads 360 report transformation  |  BigQuery  |  Google Cloud Documentation

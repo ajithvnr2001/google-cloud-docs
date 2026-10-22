@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/recaptcha-enterprise/
 title: Integrate Identity Platform with the reCAPTCHA Enterprise API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:23.262202+00:00
+fetched_at: 2026-10-21T12:53:30.762115+00:00
 ---
 
 # Integrate Identity Platform with the reCAPTCHA Enterprise API  |  Google Cloud Documentation

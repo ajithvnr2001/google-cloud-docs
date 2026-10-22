@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/quest-change-auditor-emc-changelog/
 title: Change log for QUEST_CHANGE_AUDITOR_EMC \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:41:27.641244+00:00
+fetched_at: 2026-10-21T14:43:29.659094+00:00
 ---
 
 # Change log for QUEST_CHANGE_AUDITOR_EMC  |  Google Security Operations  |  Google Cloud Documentation

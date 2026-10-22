@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/docs/understand-locations/
 title: Understand Eventarc locations \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:51.690123+00:00
+fetched_at: 2026-10-21T12:52:13.747265+00:00
 ---
 
 # Understand Eventarc locations  |  Eventarc Standard  |  Google Cloud Documentation

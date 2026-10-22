@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/f5-dcs/
 title: Collect F5 Distributed Cloud Services logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:57:30.975171+00:00
+fetched_at: 2026-10-21T14:08:26.430494+00:00
 ---
 
 # Collect F5 Distributed Cloud Services logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/unified-rules/search-rules-list/
 title: Search the rules list \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:27:01.563222+00:00
+fetched_at: 2026-10-21T14:26:05.040950+00:00
 ---
 
 # Search the rules list  |  Google Security Operations  |  Google Cloud Documentation

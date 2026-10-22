@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/task-va-chat-api/
 title: Use virtual task assistants with the chat API platform \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:33:55.612666+00:00
+fetched_at: 2026-10-21T14:23:06.432405+00:00
 ---
 
 # Use virtual task assistants with the chat API platform  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

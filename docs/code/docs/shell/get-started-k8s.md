@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/get-started-k8s/
 title: Get started with Cloud Code for Cloud Shell for Kubernetes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:36:04.950048+00:00
+fetched_at: 2026-10-21T14:20:18.043283+00:00
 ---
 
 # Get started with Cloud Code for Cloud Shell for Kubernetes  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/bigquery-web-ui/
 title: Explore BigQuery in the Google Cloud console \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:36.482801+00:00
+fetched_at: 2026-10-21T14:56:38.189367+00:00
 ---
 
 # Explore BigQuery in the Google Cloud console  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Explore BigQuery in the Google Cloud console
 
-The BigQuery Google Cloud console is a graphical interface where you can create and manage your BigQuery resources. You can use the Google Cloud console to view tables and datasets, create and run SQL queries, build pipelines, and perform other tasks to help you manage your BigQuery workflows.
+BigQuery in the Google Cloud console is a graphical interface where you can create and manage your BigQuery resources. You can use the Google Cloud console to view tables and datasets, create and run SQL queries, build pipelines, and perform other tasks to help you manage your BigQuery workflows.
 
 ## Before you begin
 
@@ -166,7 +166,7 @@ The **Explorer** pane lists different code assets and data resources, and it let
 
 BigQuery [public datasets](https://docs.cloud.google.com/bigquery/public-data) are stored in BigQuery and made available to the general public through the Google Cloud Public Dataset Program.
 
-  4. In the list, click the `austin_crime` dataset.
+  4. In the list, click the `america_health_rankings` dataset.
 
   5. On the **Overview** tab, view the resources stored in the dataset such as tables, models, and routines.
 
@@ -450,6 +450,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

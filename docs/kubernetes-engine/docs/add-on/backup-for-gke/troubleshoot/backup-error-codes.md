@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke/troubleshoot/backup-error-codes/
 title: Overview of Backup for GKE error codes for failed backup operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:13:42.685792+00:00
+fetched_at: 2026-10-21T15:01:13.072322+00:00
 ---
 
 # Overview of Backup for GKE error codes for failed backup operations  |  Google Cloud Documentation

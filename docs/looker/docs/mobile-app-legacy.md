@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/mobile-app-legacy/
 title: Looker Mobile (Legacy) application \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:44:18.002227+00:00
+fetched_at: 2026-10-21T15:03:03.496774+00:00
 ---
 
 # Looker Mobile (Legacy) application  |  Google Cloud Documentation

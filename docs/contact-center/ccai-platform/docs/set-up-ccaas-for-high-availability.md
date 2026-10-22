@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/set-up-ccaas-for-high-availability/
 title: Set up CCAI Platform for high availability \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:50:19.429094+00:00
+fetched_at: 2026-10-21T14:09:52.223720+00:00
 ---
 
 # Set up CCAI Platform for high availability  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

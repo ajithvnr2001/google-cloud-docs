@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/tpus/quickstart-create-tpu-multi-host-slice/
 title: Quickstart: Create a multi-host TPU slice \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:51.726034+00:00
+fetched_at: 2026-10-21T14:21:08.635262+00:00
 ---
 
 # Quickstart: Create a multi-host TPU slice  |  Compute Engine  |  Google Cloud Documentation

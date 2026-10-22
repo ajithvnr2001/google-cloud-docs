@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-topology/release-notes/
 title: App Topology release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:16:40.483503+00:00
+fetched_at: 2026-10-21T14:43:08.918168+00:00
 ---
 
 # App Topology release notes  |  Google Cloud Documentation

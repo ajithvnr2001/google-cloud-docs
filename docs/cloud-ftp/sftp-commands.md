@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-ftp/sftp-commands/
 title: Transfer data by using SFTP commands \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:17:50.462460+00:00
+fetched_at: 2026-10-21T14:23:22.352146+00:00
 ---
 
 # Transfer data by using SFTP commands  |  Google Cloud Documentation

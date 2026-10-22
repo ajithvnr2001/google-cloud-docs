@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/playbook/prebuilt/movie-expert/
 title: Movie expert prebuilt agent \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:33.549702+00:00
+fetched_at: 2026-10-21T12:45:19.455174+00:00
 ---
 
 # Movie expert prebuilt agent  |  Dialogflow CX  |  Google Cloud Documentation

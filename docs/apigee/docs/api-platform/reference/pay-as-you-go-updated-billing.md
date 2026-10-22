@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/pay-as-you-go-updated-billing/
 title: Monitor Pay-as-you-go billing \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:39:15.152243+00:00
+fetched_at: 2026-10-21T12:30:42.517735+00:00
 ---
 
 # Monitor Pay-as-you-go billing  |  Apigee  |  Google Cloud Documentation

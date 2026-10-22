@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/connect/ssh-using-bastion-host/
 title: Connect to Linux VMs using a bastion host \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:17.827783+00:00
+fetched_at: 2026-10-21T12:40:33.579778+00:00
 ---
 
 # Connect to Linux VMs using a bastion host  |  Compute Engine  |  Google Cloud Documentation

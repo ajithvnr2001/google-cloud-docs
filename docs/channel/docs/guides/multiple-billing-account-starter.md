@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/channel/docs/guides/multiple-billing-account-starter/
 title: Reseller account with multiple Google Workspace billing account Account Starter Guide \u00a0|\u00a0 Channel Services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:34.080858+00:00
+fetched_at: 2026-10-21T14:25:42.032080+00:00
 ---
 
 # Reseller account with multiple Google Workspace billing account Account Starter Guide  |  Channel Services  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/dns/update-dns-zones/
 title: Update DNS zones \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:45.934969+00:00
+fetched_at: 2026-10-21T12:59:19.502676+00:00
 ---
 
 # Update DNS zones  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

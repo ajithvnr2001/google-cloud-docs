@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/16.13.0/docs/assign-nodes-cluster-scheduling/
 title: Assign a database cluster to a node using scheduling \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 16.13.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:40:52.178276+00:00
+fetched_at: 2026-10-21T15:19:30.802333+00:00
 ---
 
 # Assign a database cluster to a node using scheduling  |  AlloyDB Omni using the container orchestrator: 16.13.0  |  Google Cloud Documentation

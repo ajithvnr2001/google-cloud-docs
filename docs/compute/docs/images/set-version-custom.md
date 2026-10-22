@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/set-version-custom/
 title: Set the image version in an image family \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:20:10.384843+00:00
+fetched_at: 2026-10-21T14:21:20.335274+00:00
 ---
 
 # Set the image version in an image family  |  Compute Engine  |  Google Cloud Documentation

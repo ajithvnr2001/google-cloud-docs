@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/winevtlog_changelog/
 title: Change log for WINEVTLOG \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:37:49.422498+00:00
+fetched_at: 2026-10-21T14:47:06.270777+00:00
 ---
 
 # Change log for WINEVTLOG  |  Google Security Operations  |  Google Cloud Documentation

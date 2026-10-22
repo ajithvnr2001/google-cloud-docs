@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/custom-roles-permissions-support/
 title: Support levels for permissions in custom roles \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:25:22.640933+00:00
+fetched_at: 2026-10-22T05:48:04.746387+00:00
 ---
 
 # Support levels for permissions in custom roles  |  Identity and Access Management (IAM)  |  Google Cloud Documentation
@@ -96,6 +96,7 @@ Permission name | Custom roles support level
 `agentidentity.accessSummaries.list` | `SUPPORTED`  
 `agentidentity.authProviders.create` | `SUPPORTED`  
 `agentidentity.authProviders.delete` | `SUPPORTED`  
+`agentidentity.authProviders.exchangeCredentials` | `SUPPORTED`  
 `agentidentity.authProviders.get` | `SUPPORTED`  
 `agentidentity.authProviders.getIamPolicy` | `SUPPORTED`  
 `agentidentity.authProviders.list` | `SUPPORTED`  
@@ -105,9 +106,14 @@ Permission name | Custom roles support level
 `agentidentity.authProviders.setIamPolicy` | `SUPPORTED`  
 `agentidentity.authProviders.undelete` | `SUPPORTED`  
 `agentidentity.authProviders.update` | `SUPPORTED`  
+`agentidentity.authorizations.create` | `SUPPORTED`  
 `agentidentity.authorizations.delete` | `SUPPORTED`  
+`agentidentity.authorizations.exchangeCredentials` | `SUPPORTED`  
 `agentidentity.authorizations.get` | `SUPPORTED`  
+`agentidentity.authorizations.getIamPolicy` | `SUPPORTED`  
 `agentidentity.authorizations.list` | `SUPPORTED`  
+`agentidentity.authorizations.retrieveCredentials` | `SUPPORTED`  
+`agentidentity.authorizations.setIamPolicy` | `SUPPORTED`  
 `agentidentity.locations.get` | `SUPPORTED`  
 `agentidentity.locations.list` | `SUPPORTED`  
 `agentregistry.agents.get` | `SUPPORTED`  
@@ -2356,6 +2362,7 @@ Permission name | Custom roles support level
 `ces.apps.list` | `SUPPORTED`  
 `ces.apps.runEvaluation` | `SUPPORTED`  
 `ces.apps.update` | `SUPPORTED`  
+`ces.arcSessions.get` | `SUPPORTED`  
 `ces.assistantSessions.create` | `SUPPORTED`  
 `ces.assistantSessions.get` | `SUPPORTED`  
 `ces.assistantSessions.list` | `SUPPORTED`  
@@ -4563,6 +4570,11 @@ Permission name | Custom roles support level
 `commerceproducer.analyticsHubListingProductConfigs.get` | `SUPPORTED`  
 `commerceproducer.analyticsHubListingProductConfigs.list` | `SUPPORTED`  
 `commerceproducer.analyticsHubListingProductConfigs.update` | `SUPPORTED`  
+`commerceproducer.consumerEnforcementActions.create` | `SUPPORTED`  
+`commerceproducer.consumerEnforcementActions.delete` | `SUPPORTED`  
+`commerceproducer.consumerEnforcementActions.get` | `SUPPORTED`  
+`commerceproducer.consumerEnforcementActions.list` | `SUPPORTED`  
+`commerceproducer.consumerEnforcementActions.update` | `SUPPORTED`  
 `commerceproducer.locations.get` | `SUPPORTED`  
 `commerceproducer.locations.list` | `SUPPORTED`  
 `commerceproducer.privateOfferDocuments.create` | `SUPPORTED`  
@@ -4752,6 +4764,16 @@ Permission name | Custom roles support level
 `compute.firewalls.listEffectiveTags` | `SUPPORTED`  
 `compute.firewalls.listTagBindings` | `SUPPORTED`  
 `compute.firewalls.update` | `SUPPORTED`  
+`compute.folderRolloutPlans.create` | `SUPPORTED`  
+`compute.folderRolloutPlans.delete` | `SUPPORTED`  
+`compute.folderRolloutPlans.get` | `SUPPORTED`  
+`compute.folderRolloutPlans.list` | `SUPPORTED`  
+`compute.folderRollouts.cancel` | `SUPPORTED`  
+`compute.folderRollouts.delete` | `SUPPORTED`  
+`compute.folderRollouts.get` | `SUPPORTED`  
+`compute.folderRollouts.list` | `SUPPORTED`  
+`compute.folderRollouts.pause` | `SUPPORTED`  
+`compute.folderRollouts.resume` | `SUPPORTED`  
 `compute.folderVmExtensionPolicies.create` | `SUPPORTED`  
 `compute.folderVmExtensionPolicies.delete` | `SUPPORTED`  
 `compute.folderVmExtensionPolicies.get` | `SUPPORTED`  
@@ -6639,7 +6661,7 @@ Permission name | Custom roles support level
 `databaseinsights.locations.get` | `SUPPORTED`  
 `databaseinsights.locations.list` | `SUPPORTED`  
 `databaseinsights.logs.fetch` | `SUPPORTED`  
-`databaseinsights.operations.get` | `TESTING`  
+`databaseinsights.operations.get` | `SUPPORTED`  
 `databaseinsights.performanceIssues.detect` | `SUPPORTED`  
 `databaseinsights.performanceIssues.investigate` | `SUPPORTED`  
 `databaseinsights.queryMetrics.fetch` | `SUPPORTED`  
@@ -6658,8 +6680,8 @@ Permission name | Custom roles support level
 `databaseinsights.virtualDbaAgent.deleteAgentPolicy` | `TESTING`  
 `databaseinsights.virtualDbaAgent.deleteContextService` | `TESTING`  
 `databaseinsights.virtualDbaAgent.deleteGoal` | `TESTING`  
-`databaseinsights.virtualDbaAgent.disable` | `TESTING`  
-`databaseinsights.virtualDbaAgent.enable` | `TESTING`  
+`databaseinsights.virtualDbaAgent.disable` | `SUPPORTED`  
+`databaseinsights.virtualDbaAgent.enable` | `SUPPORTED`  
 `databaseinsights.virtualDbaAgent.fetchContextService` | `TESTING`  
 `databaseinsights.virtualDbaAgent.getAgentPolicy` | `TESTING`  
 `databaseinsights.virtualDbaAgent.getGoal` | `TESTING`  
@@ -7196,26 +7218,37 @@ Permission name | Custom roles support level
 `dataplex.entities.list` | `SUPPORTED`  
 `dataplex.entities.update` | `SUPPORTED`  
 `dataplex.entries.create` | `SUPPORTED`  
+`dataplex.entries.createContext` | `SUPPORTED`  
 `dataplex.entries.delete` | `SUPPORTED`  
+`dataplex.entries.deleteContext` | `SUPPORTED`  
 `dataplex.entries.get` | `SUPPORTED`  
+`dataplex.entries.getContext` | `SUPPORTED`  
 `dataplex.entries.getData` | `SUPPORTED`  
 `dataplex.entries.link` | `SUPPORTED`  
 `dataplex.entries.list` | `SUPPORTED`  
+`dataplex.entries.listContext` | `SUPPORTED`  
 `dataplex.entries.update` | `SUPPORTED`  
+`dataplex.entries.updateContext` | `SUPPORTED`  
 `dataplex.entryGroups.create` | `SUPPORTED`  
+`dataplex.entryGroups.createContextSet` | `SUPPORTED`  
 `dataplex.entryGroups.createTagBinding` | `SUPPORTED`  
 `dataplex.entryGroups.delete` | `SUPPORTED`  
+`dataplex.entryGroups.deleteContextSet` | `SUPPORTED`  
 `dataplex.entryGroups.deleteTagBinding` | `SUPPORTED`  
 `dataplex.entryGroups.export` | `SUPPORTED`  
 `dataplex.entryGroups.get` | `SUPPORTED`  
+`dataplex.entryGroups.getContextSet` | `SUPPORTED`  
 `dataplex.entryGroups.getIamPolicy` | `SUPPORTED`  
 `dataplex.entryGroups.import` | `SUPPORTED`  
 `dataplex.entryGroups.list` | `SUPPORTED`  
 `dataplex.entryGroups.listEffectiveTags` | `SUPPORTED`  
 `dataplex.entryGroups.listTagBindings` | `SUPPORTED`  
 `dataplex.entryGroups.requestChanges` | `SUPPORTED`  
+`dataplex.entryGroups.requestContextChanges` | `SUPPORTED`  
 `dataplex.entryGroups.setIamPolicy` | `SUPPORTED`  
 `dataplex.entryGroups.update` | `SUPPORTED`  
+`dataplex.entryGroups.updateContextSet` | `SUPPORTED`  
+`dataplex.entryGroups.useCertificationAspect` | `SUPPORTED`  
 `dataplex.entryGroups.useContactsAspect` | `SUPPORTED`  
 `dataplex.entryGroups.useContextAspect` | `SUPPORTED`  
 `dataplex.entryGroups.useContextEntry` | `SUPPORTED`  
@@ -7239,6 +7272,8 @@ Permission name | Custom roles support level
 `dataplex.entryGroups.useOverviewAspect` | `SUPPORTED`  
 `dataplex.entryGroups.usePostgreSQLConnectorTypes` | `SUPPORTED`  
 `dataplex.entryGroups.useQueriesAspect` | `SUPPORTED`  
+`dataplex.entryGroups.useQueryTemplateAspect` | `SUPPORTED`  
+`dataplex.entryGroups.useQueryTemplateEntry` | `SUPPORTED`  
 `dataplex.entryGroups.useReferenceEntryLink` | `SUPPORTED`  
 `dataplex.entryGroups.useRefreshCadenceAspect` | `SUPPORTED`  
 `dataplex.entryGroups.useRelatedEntryLink` | `SUPPORTED`  
@@ -9485,6 +9520,8 @@ Permission name | Custom roles support level
 `gkeonprem.vmwareNodePools.unenroll` | `SUPPORTED`  
 `gkeonprem.vmwareNodePools.update` | `SUPPORTED`  
 `gsuiteaddons.authorizations.get` | `SUPPORTED`  
+`gsuiteaddons.chatAppConfigs.get` | `SUPPORTED`  
+`gsuiteaddons.chatAppConfigs.update` | `SUPPORTED`  
 `gsuiteaddons.deployments.create` | `SUPPORTED`  
 `gsuiteaddons.deployments.delete` | `SUPPORTED`  
 `gsuiteaddons.deployments.execute` | `SUPPORTED`  
@@ -11524,6 +11561,7 @@ Permission name | Custom roles support level
 `oracledatabase.databaseConnections.list` | `SUPPORTED`  
 `oracledatabase.databaseConnections.test` | `SUPPORTED`  
 `oracledatabase.databaseConnections.update` | `SUPPORTED`  
+`oracledatabase.databaseConnections.use` | `SUPPORTED`  
 `oracledatabase.databases.get` | `SUPPORTED`  
 `oracledatabase.databases.list` | `SUPPORTED`  
 `oracledatabase.dbNodes.list` | `SUPPORTED`  
@@ -11578,6 +11616,10 @@ Permission name | Custom roles support level
 `oracledatabase.locations.get` | `SUPPORTED`  
 `oracledatabase.locations.list` | `SUPPORTED`  
 `oracledatabase.minorVersions.list` | `SUPPORTED`  
+`oracledatabase.odbDnsZones.create` | `SUPPORTED`  
+`oracledatabase.odbDnsZones.delete` | `SUPPORTED`  
+`oracledatabase.odbDnsZones.get` | `SUPPORTED`  
+`oracledatabase.odbDnsZones.list` | `SUPPORTED`  
 `oracledatabase.odbNetworks.create` | `SUPPORTED`  
 `oracledatabase.odbNetworks.delete` | `SUPPORTED`  
 `oracledatabase.odbNetworks.get` | `SUPPORTED`  
@@ -11596,6 +11638,10 @@ Permission name | Custom roles support level
 `oracledatabase.operations.list` | `SUPPORTED`  
 `oracledatabase.pluggableDatabases.get` | `SUPPORTED`  
 `oracledatabase.pluggableDatabases.list` | `SUPPORTED`  
+`oracledatabase.serviceIntegrations.create` | `SUPPORTED`  
+`oracledatabase.serviceIntegrations.delete` | `SUPPORTED`  
+`oracledatabase.serviceIntegrations.get` | `SUPPORTED`  
+`oracledatabase.serviceIntegrations.list` | `SUPPORTED`  
 `oracledatabase.systemVersions.list` | `SUPPORTED`  
 `orgpolicy.constraints.list` | `SUPPORTED`  
 `orgpolicy.customConstraints.create` | `NOT_SUPPORTED`  
@@ -13249,6 +13295,7 @@ Permission name | Custom roles support level
 `serviceusage.apiKeys.regenerate` | `TESTING`  
 `serviceusage.apiKeys.revert` | `TESTING`  
 `serviceusage.apiKeys.update` | `SUPPORTED`  
+`serviceusage.catalogs.listMembers` | `SUPPORTED`  
 `serviceusage.consumerpolicy.analyze` | `SUPPORTED`  
 `serviceusage.consumerpolicy.get` | `SUPPORTED`  
 `serviceusage.consumerpolicy.update` | `SUPPORTED`  
@@ -13268,6 +13315,8 @@ Permission name | Custom roles support level
 `serviceusage.services.enable` | `SUPPORTED`  
 `serviceusage.services.get` | `SUPPORTED`  
 `serviceusage.services.list` | `SUPPORTED`  
+`serviceusage.services.listApis` | `SUPPORTED`  
+`serviceusage.services.listDependentServices` | `SUPPORTED`  
 `serviceusage.services.use` | `SUPPORTED`  
 `serviceusage.values.check` | `SUPPORTED`  
 `serviceusage.values.test` | `SUPPORTED`  
@@ -14247,6 +14296,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-15 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

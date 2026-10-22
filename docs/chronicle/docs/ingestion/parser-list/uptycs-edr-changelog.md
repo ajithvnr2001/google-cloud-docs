@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/uptycs-edr-changelog/
 title: Change log for UPTYCS_EDR \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:07:36.947446+00:00
+fetched_at: 2026-10-21T14:43:25.392791+00:00
 ---
 
 # Change log for UPTYCS_EDR  |  Google Security Operations  |  Google Cloud Documentation

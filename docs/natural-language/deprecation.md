@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/deprecation/
 title: Cloud Natural Language API v1beta1 Deprecation Notice \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:17:13.857884+00:00
+fetched_at: 2026-10-21T15:16:43.015268+00:00
 ---
 
 # Cloud Natural Language API v1beta1 Deprecation Notice  |  Google Cloud Documentation

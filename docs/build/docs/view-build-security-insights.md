@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/view-build-security-insights/
 title: View build security insights \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:07.970562+00:00
+fetched_at: 2026-10-21T14:11:42.969898+00:00
 ---
 
 # View build security insights  |  Cloud Build  |  Google Cloud Documentation

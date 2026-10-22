@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/admin-panel-platform-embed/
 title: Admin settings - Embed \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:14:23.222980+00:00
+fetched_at: 2026-10-21T15:08:43.367950+00:00
 ---
 
 # Admin settings - Embed  |  Looker  |  Google Cloud Documentation

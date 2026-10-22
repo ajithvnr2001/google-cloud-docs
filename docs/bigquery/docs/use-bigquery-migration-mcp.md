@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/use-bigquery-migration-mcp/
 title: Use the BigQuery Migration Service MCP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:50:54.309749+00:00
+fetched_at: 2026-10-21T12:39:54.437960+00:00
 ---
 
 # Use the BigQuery Migration Service MCP server  |  Google Cloud Documentation

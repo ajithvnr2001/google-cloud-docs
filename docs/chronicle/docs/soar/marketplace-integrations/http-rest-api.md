@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/http-rest-api/
 title: HTTP REST API \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:06:36.509854+00:00
+fetched_at: 2026-10-21T14:06:28.078973+00:00
 ---
 
 # HTTP REST API  |  Google Security Operations  |  Google Cloud Documentation

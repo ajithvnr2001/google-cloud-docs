@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/shielded-vm/docs/modifying-shielded-vm/
 title: Modifying Shielded VM options on a VM instance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:05:07.035182+00:00
+fetched_at: 2026-10-21T14:09:13.991320+00:00
 ---
 
 # Modifying Shielded VM options on a VM instance  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-harbor-backup-repositories-delete/
 title: gdcloud harbor backup-repositories delete \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:07:08.070817+00:00
+fetched_at: 2026-10-21T12:59:03.185683+00:00
 ---
 
 # gdcloud harbor backup-repositories delete  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

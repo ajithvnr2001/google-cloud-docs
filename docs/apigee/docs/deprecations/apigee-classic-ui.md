@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/deprecations/apigee-classic-ui/
 title: Apigee Classic UI shutdown \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:02:42.130308+00:00
+fetched_at: 2026-10-21T14:29:07.184938+00:00
 ---
 
 # Apigee Classic UI shutdown  |  Google Cloud Documentation

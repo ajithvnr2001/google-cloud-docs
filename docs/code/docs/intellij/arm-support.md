@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/arm-support/
 title: Cloud Code support for Arm and mixed-architecture GKE clusters \u00a0|\u00a0 Cloud Code for IntelliJ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:21:37.358308+00:00
+fetched_at: 2026-10-21T12:41:05.060632+00:00
 ---
 
 # Cloud Code support for Arm and mixed-architecture GKE clusters  |  Cloud Code for IntelliJ  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/signed-embedding/
 title: Signed embedding \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:52:34.640911+00:00
+fetched_at: 2026-10-21T14:56:45.454073+00:00
 ---
 
 # Signed embedding  |  Looker  |  Google Cloud Documentation
@@ -235,7 +235,7 @@ Parameter | Default Value | Description | Data Type | Example
 * Save the embedded dashboard or Look with the [default time zone](https://docs.cloud.google.com/looker/docs/editing-legacy-dashboards#default_timezone) set to **Viewer Time Zone** , which will use the user's time zone by default for both embed users and non-embed users.
 | JSON string or null | `"US/Pacific"`\- or -`null`  
 `force_logout_login` | Value Required | If a normal Looker user is already logged in to Looker, and they view a signed embedded item, you can choose if:1) they should view the item with their current credentialsor2) they should be logged out and logged back in with the signed embed credentials. | Boolean (true or false) | `true`  
-`ca_chat` | `true` | If you've enabled Conversational Analytics and the **Enable Dashboard Agents** feature, sets whether the dashboard agent conversation pane is visible to embed users. If `true`, the ![](https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/chat_spark/default/24px.svg) Gemini spark is visible to users who have the [appropriate permissions to interact with dashboard agents](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-setup#required-permissions). Applies to embedded dashboards only. | Boolean (true or false) | `true`  
+`ca_chat` | `true` | If you've enabled Conversational Analytics and the **Dashboard agents** setting, sets whether the dashboard agent conversation pane is visible to embed users. If `true`, the ![](https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/chat_spark/default/24px.svg) Gemini spark is visible to users who have the [appropriate permissions to interact with dashboard agents](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-setup#required-permissions). Applies to embedded dashboards only. | Boolean (true or false) | `true`  
   
 #### Signature
 
@@ -335,6 +335,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/umbrella-dns/
 title: Collect Cisco Umbrella DNS logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T17:59:19.318350+00:00
+fetched_at: 2026-10-21T12:37:54.318900+00:00
 ---
 
 # Collect Cisco Umbrella DNS logs  |  Google Security Operations  |  Google Cloud Documentation

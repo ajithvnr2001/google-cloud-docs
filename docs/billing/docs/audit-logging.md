@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/docs/audit-logging/
 title: Cloud Billing audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:27:06.450186+00:00
+fetched_at: 2026-10-21T12:36:51.315091+00:00
 ---
 
 # Cloud Billing audit logging  |  Google Cloud Documentation

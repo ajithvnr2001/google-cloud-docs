@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/export-collected-data/
 title: Export data to Migration Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:20.521474+00:00
+fetched_at: 2026-10-21T15:17:09.796958+00:00
 ---
 
 # Export data to Migration Center  |  Google Cloud Documentation

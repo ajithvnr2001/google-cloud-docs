@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cisco-email-security-changelog/
 title: Change log for CISCO_EMAIL_SECURITY \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:07:13.345748+00:00
+fetched_at: 2026-10-21T14:44:56.856149+00:00
 ---
 
 # Change log for CISCO_EMAIL_SECURITY  |  Google Security Operations  |  Google Cloud Documentation

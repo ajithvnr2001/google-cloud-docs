@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/updating-selected-instances-in-a-mig/
 title: Selectively apply VM configuration updates in a MIG \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:09:12.004444+00:00
+fetched_at: 2026-10-21T14:22:19.963062+00:00
 ---
 
 # Selectively apply VM configuration updates in a MIG  |  Compute Engine  |  Google Cloud Documentation

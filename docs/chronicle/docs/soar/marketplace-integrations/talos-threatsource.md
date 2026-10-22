@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/talos-threatsource/
 title: Talos ThreatSource \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:48:23.765861+00:00
+fetched_at: 2026-10-21T12:38:14.549345+00:00
 ---
 
 # Talos ThreatSource  |  Google Security Operations  |  Google Cloud Documentation

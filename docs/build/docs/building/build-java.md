@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/building/build-java/
 title: Build and test Java applications \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:03.467532+00:00
+fetched_at: 2026-10-21T14:11:14.980093+00:00
 ---
 
 # Build and test Java applications  |  Google Cloud Documentation

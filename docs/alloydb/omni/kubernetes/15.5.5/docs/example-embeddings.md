@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/15.5.5/docs/example-embeddings/
 title: Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:34:44.255118+00:00
+fetched_at: 2026-10-21T15:27:02.502541+00:00
 ---
 
 # Google Cloud Documentation

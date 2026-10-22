@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/microsoft-dynamics-365-changelog/
 title: Change log for MICROSOFT_DYNAMICS_365 \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:44:39.704767+00:00
+fetched_at: 2026-10-21T14:43:38.060486+00:00
 ---
 
 # Change log for MICROSOFT_DYNAMICS_365  |  Google Security Operations  |  Google Cloud Documentation

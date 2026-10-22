@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/playbook/goal/
 title: Playbook goals \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:35.155341+00:00
+fetched_at: 2026-10-21T12:43:17.934442+00:00
 ---
 
 # Playbook goals  |  Dialogflow CX  |  Google Cloud Documentation

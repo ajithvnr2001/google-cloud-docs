@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/networking/monitor-dns-failures/
 title: Use Cloud DNS logs to monitor DNS failure rates \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:25.720004+00:00
+fetched_at: 2026-10-21T12:38:29.921664+00:00
 ---
 
 # Use Cloud DNS logs to monitor DNS failure rates  |  Compute Engine  |  Google Cloud Documentation

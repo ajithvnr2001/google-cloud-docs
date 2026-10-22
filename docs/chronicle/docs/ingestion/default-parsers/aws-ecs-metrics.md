@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aws-ecs-metrics/
 title: Collect AWS ECS Metrics logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:31.355785+00:00
+fetched_at: 2026-10-21T14:24:18.310821+00:00
 ---
 
 # Collect AWS ECS Metrics logs  |  Google Security Operations  |  Google Cloud Documentation

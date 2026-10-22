@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/query-stats/
 title: Get query stats \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:23.207996+00:00
+fetched_at: 2026-10-21T14:09:24.412752+00:00
 ---
 
 # Get query stats  |  Bigtable  |  Google Cloud Documentation

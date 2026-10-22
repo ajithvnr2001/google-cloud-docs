@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/builder-apis/
 title: Vertex AI APIs for building search and RAG experiences \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:11.624025+00:00
+fetched_at: 2026-10-21T12:55:33.982757+00:00
 ---
 
 # Vertex AI APIs for building search and RAG experiences  |  Agent Search  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/cs-stream/
 title: Collect CrowdStrike Falcon Event Streams logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:25:28.821398+00:00
+fetched_at: 2026-10-21T12:38:28.165497+00:00
 ---
 
 # Collect CrowdStrike Falcon Event Streams logs  |  Google Security Operations  |  Google Cloud Documentation

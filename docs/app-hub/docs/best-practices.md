@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/best-practices/
 title: Best practices for application management \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:05:57.849167+00:00
+fetched_at: 2026-10-21T14:25:17.652919+00:00
 ---
 
 # Best practices for application management  |  App Hub  |  Google Cloud Documentation

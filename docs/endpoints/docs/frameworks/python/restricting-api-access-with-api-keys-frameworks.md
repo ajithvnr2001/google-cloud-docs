@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/python/restricting-api-access-with-api-keys-frameworks/
 title: Restricting API access with API keys \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:38:22.094560+00:00
+fetched_at: 2026-10-21T12:46:02.368219+00:00
 ---
 
 # Restricting API access with API keys  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/how-to/configure-cloud-sdk/
 title: Configure the Google Cloud CLI \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:49.548562+00:00
+fetched_at: 2026-10-21T15:10:28.416599+00:00
 ---
 
 # Configure the Google Cloud CLI  |  GKE on Azure  |  Google Cloud Documentation

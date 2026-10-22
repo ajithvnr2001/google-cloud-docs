@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/google-big-query/
 title: Integrate BigQuery with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:41:46.002620+00:00
+fetched_at: 2026-10-21T14:06:05.387193+00:00
 ---
 
 # Integrate BigQuery with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

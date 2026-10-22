@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/scale-instances/
 title: Scale Redis instances \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:50.450123+00:00
+fetched_at: 2026-10-21T15:13:46.757690+00:00
 ---
 
 # Scale Redis instances  |  Memorystore for Redis  |  Google Cloud Documentation

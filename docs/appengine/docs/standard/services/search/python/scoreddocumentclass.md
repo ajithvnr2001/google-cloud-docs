@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/search/python/scoreddocumentclass/
 title: class ScoredDocument \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:24:24.113913+00:00
+fetched_at: 2026-10-21T14:53:39.115692+00:00
 ---
 
 # class ScoredDocument  |  App Engine standard environment  |  Google Cloud Documentation

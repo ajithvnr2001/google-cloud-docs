@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/google-alert-center/
 title: Integrate Google Alert Center with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:48:08.103615+00:00
+fetched_at: 2026-10-21T14:07:07.186877+00:00
 ---
 
 # Integrate Google Alert Center with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

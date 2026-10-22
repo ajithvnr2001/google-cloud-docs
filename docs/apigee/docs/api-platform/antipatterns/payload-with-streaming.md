@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/payload-with-streaming/
 title: Antipattern: Accessing the request/response payload when streaming is enabled \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:19.458461+00:00
+fetched_at: 2026-10-21T12:29:53.010037+00:00
 ---
 
 # Antipattern: Accessing the request/response payload when streaming is enabled  |  Apigee  |  Google Cloud Documentation

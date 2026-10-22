@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/debug/audit-logging/
 title: Apigee audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:45:40.290995+00:00
+fetched_at: 2026-10-21T14:27:22.971357+00:00
 ---
 
 # Apigee audit logging  |  Google Cloud Documentation

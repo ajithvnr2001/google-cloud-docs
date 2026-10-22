@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/twingate/
 title: Collect Twingate VPN logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:00:59.308989+00:00
+fetched_at: 2026-10-21T12:38:44.286466+00:00
 ---
 
 # Collect Twingate VPN logs  |  Google Security Operations  |  Google Cloud Documentation

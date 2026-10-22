@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/create-mig-with-basic-stateful-disks/
 title: Create a MIG with stateful disks \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:06.346953+00:00
+fetched_at: 2026-10-21T14:22:22.433304+00:00
 ---
 
 # Create a MIG with stateful disks  |  Compute Engine  |  Google Cloud Documentation

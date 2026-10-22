@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/base-path-routing/
 title: Configure virtual hosts \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:15:04.725543+00:00
+fetched_at: 2026-10-21T14:10:45.319074+00:00
 ---
 
 # Configure virtual hosts  |  Apigee  |  Google Cloud Documentation

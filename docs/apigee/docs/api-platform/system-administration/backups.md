@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/backups/
 title: Backups \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:11:24.777585+00:00
+fetched_at: 2026-10-21T14:28:05.995274+00:00
 ---
 
 # Backups  |  Apigee  |  Google Cloud Documentation

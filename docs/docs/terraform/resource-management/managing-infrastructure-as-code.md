@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/terraform/resource-management/managing-infrastructure-as-code/
 title: Managing infrastructure as code with Terraform, Cloud Build, and GitOps \u00a0|\u00a0 Terraform on Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:20:59.456486+00:00
+fetched_at: 2026-10-21T14:06:34.714311+00:00
 ---
 
 # Managing infrastructure as code with Terraform, Cloud Build, and GitOps  |  Terraform on Google Cloud  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/flags/flags-standalone-quickstart/
 title: Quickstart: Use feature flags Standalone \u00a0|\u00a0 App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:32:54.396918+00:00
+fetched_at: 2026-10-21T12:30:34.955565+00:00
 ---
 
 # Quickstart: Use feature flags Standalone  |  App Lifecycle Manager  |  Google Cloud Documentation

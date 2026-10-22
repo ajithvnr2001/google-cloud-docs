@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/slow-backend/
 title: Antipattern: Allow a slow backend \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:19.746707+00:00
+fetched_at: 2026-10-21T12:30:06.896337+00:00
 ---
 
 # Antipattern: Allow a slow backend  |  Apigee  |  Google Cloud Documentation

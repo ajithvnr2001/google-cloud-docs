@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/metadata/querying-metadata/
 title: View and query VM metadata \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:19:49.601865+00:00
+fetched_at: 2026-10-21T12:40:53.445992+00:00
 ---
 
 # View and query VM metadata  |  Compute Engine  |  Google Cloud Documentation

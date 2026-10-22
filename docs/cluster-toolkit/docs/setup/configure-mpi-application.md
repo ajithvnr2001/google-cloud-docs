@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-mpi-application/
 title: Set up and scale MPI applications on H4D instances with Cloud RDMA \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:45.924708+00:00
+fetched_at: 2026-10-21T14:46:08.998815+00:00
 ---
 
 # Set up and scale MPI applications on H4D instances with Cloud RDMA  |  Cluster Toolkit  |  Google Cloud Documentation

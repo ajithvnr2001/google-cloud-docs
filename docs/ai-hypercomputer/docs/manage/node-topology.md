@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/manage/node-topology/
 title: View GKE node topology \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:35:04.932583+00:00
+fetched_at: 2026-10-21T14:28:40.136834+00:00
 ---
 
 # View GKE node topology  |  AI Hypercomputer  |  Google Cloud Documentation

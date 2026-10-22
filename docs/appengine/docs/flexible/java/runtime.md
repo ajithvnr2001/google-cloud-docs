@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/java/runtime/
 title: The Java runtime \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:07.413765+00:00
+fetched_at: 2026-10-21T14:26:44.051001+00:00
 ---
 
 # The Java runtime  |  App Engine flexible environment  |  Google Cloud Documentation

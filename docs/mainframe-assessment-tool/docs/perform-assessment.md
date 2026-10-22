@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/mainframe-assessment-tool/docs/perform-assessment/
 title: Create and update assessments \u00a0|\u00a0 Mainframe Assessment Tool \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:15.769747+00:00
+fetched_at: 2026-10-21T12:29:27.371339+00:00
 ---
 
 # Create and update assessments  |  Mainframe Assessment Tool  |  Google Cloud Documentation
@@ -21,86 +21,110 @@ Send feedback
 
 #  Create and update assessments Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to upload your applications to Mainframe Assessment Tool and perform an assessment of the assets that Mainframe Assessment Tool discovers in the uploaded codebase.
+This page describes how to upload your mainframe application files to Mainframe Assessment Tool and create an assessment.
 
-You can perform an asset discovery on your own, or request for assistance from a Google customer engineer.
+You can perform an asset discovery on your own, or request assistance from a Google Customer Engineer.
 
 ## Before you begin
 
 To prepare for your assessment, make sure that you have completed the following prerequisites:
 
-  * [Configure your Google Cloud project for Mainframe Assessment Tool](https://docs.cloud.google.com/mainframe-assessment-tool/docs/configure-your-project)
-  * [Set up and access Mainframe Assessment Tool](https://docs.cloud.google.com/mainframe-assessment-tool/docs/create-vm)
+  1. [Configure your Google Cloud project for Mainframe Assessment Tool](https://docs.cloud.google.com/mainframe-assessment-tool/docs/configure-your-project).
+  2. [Set up and access Mainframe Assessment Tool](https://docs.cloud.google.com/mainframe-assessment-tool/docs/create-instance).
+  3. Create a zip file containing all the applications that you want to migrate: 
+     * Mainframe Assessment Tool supports only zip files with a maximum size of 400 MB. If your application zip file is larger than 400 MB, consider splitting the file into smaller zip files based on business domains and uploading a zip file for each domain.
+     * If the applications contain references to external artifacts such as programs or tables, we recommend that you include these dependencies as well. For the list of supported languages, databases, transaction monitors, and scheduler configurations, see [Supported languages](https://docs.cloud.google.com/mainframe-assessment-tool/docs/overview#supported-languages).
+     * Don't include binaries and other non-source files in the zip file.
 
 
 
-## Upload your mainframe application files to Mainframe Assessment Tool
+## Create an assessment
 
-To upload the application files to Mainframe Assessment Tool, follow these steps:
+To upload the zip file and create an assessment in Mainframe Assessment Tool, follow these steps:
 
-  1. Create a zip file containing all the applications that you want to migrate.
+**Assessment details**
 
-Mainframe Assessment Tool supports only zip files with a maximum size of 400 MB. If your application zip file is larger than 400 MB, then consider splitting the file into smaller zip files based on business domains and upload a zip file for each domain.
+  1. To open Mainframe Assessment Tool on your local machine, open a web browser window and go to `http://localhost:PORT`.
 
-If the applications contain references to external artifacts such as programs or tables, we recommend that you include these dependencies as well. If available, provide the source code of the following types:
+Replace `PORT` with the port number you used on your local machine for the tunneled connection to Mainframe Assessment Tool.
 
-     * COBOL programs (`cob` and `cbl`)
-     * COBOL copybooks (`inc` and `cpy`)
-     * Easytrieve programs (`ezt`)
-     * HLASM programs (`asm`)
-     * JCL jobs (`jcl`)
-     * JCL procedures (`proc`)
-     * JCL includes
-     * JCL card data (`ctl`)
-     * PL/I programs (`pli` and `pl1`)
-     * RPG/RPGLE programs (`rpg` and `rpgle`)
-     * RPG/RPGLE include files (`rpginc` and `rpgleinc`)
-     * Scheduler configurations for BMC Control-M
+  2. On the **Home** page, click **Create assessment**.
 
-Don't include binaries and other non-source files in the zip file.
+  3. For **Name** , enter a name for the assessment.
 
-  2. To upload the zip file to Mainframe Assessment Tool, follow these steps:
+  4. Optional: For **Description** , enter a description for the assessment.
 
-     1. To open Mainframe Assessment Tool on your local machine, open a web browser window and go to `http://localhost:PORT`.
-
-Replace `PORT` with the port number you used on your local machine for the tunneled connection to the Mainframe Assessment Tool.
-
-     2. On the **Home** page, click **Create assessment**.
-
-     3. For name, enter a name.
-
-     4. Optional: For Description, enter a description for the assessment.
-
-     5. To upload a zip file, click **Select file**. The file browser opens. Select a zip file that you want to upload. You can upload only one file at a time.
-
-     6. Click **Next**.
-
-  3. To configure AI-generated insights, follow these steps:
-
-     1. To generate paragraph-level summaries for COBOL code, select **Detailed summaries**. By default, this option is selected.
-
-     2. To generate test cases for the assessment specifications generated by Gemini, select **Test cases**. By default, this option is not selected.
-
-     3. For **Additional generation guidance** , enter text to add to the Gemini prompts during AI generation.
-
-     4. Click **Next**.
-
-  4. To configure the Gemini models and quality level for the assessment, configure the **Model & quality** step, and then click **Next**.
-
-By default, Mainframe Assessment Tool uses the recommended **Balanced** quality level. For more information about quality levels, choosing a specific model, and keeping data in your region, see Choose models and quality.
-
-  5. Optional: To add one or more domains that represent a distinct area of functionality, click **Add domain**.
-
-Domains let you filter and review results based on specific contexts after the assessment is complete.
+  5. To upload a zip file, click **Select file**. The file browser opens. Select a zip file that you want to upload. You can upload only one file at a time.
 
   6. Click **Next**.
 
-  7. Click **Create assessment**.
+
+
+
+**AI insights**
+
+  1. Optional: To enable AI insights for the assessment, select **Enable AI insights**.
+  2. To generate paragraph-level summaries for COBOL code, select **Detailed summaries**. By default, this option is selected.
+  3. To generate test cases for the assessment specifications generated by Gemini, select **Test cases**. By default, this option isn't selected.
+  4. To extract information about databases and files accessed by the application, select **Data sources**.
+
+**Note:** Enabling **Detailed summaries** , **Test cases** , or **Data sources** for zip files larger than 5 MB is discouraged because it can increase processing time and cost.
+  5. Optional: For **Additional generation guidance** , enter free-text guidance to add to the Gemini prompts during AI generation.
+
+  6. Click **Next**.
 
 
 
 
-After you upload the zip file, Mainframe Assessment Tool unpacks and processes the source code. The **Assessments** page displays a new entry in the table for each discovered asset, showing its assessment status.
+**Model & quality**
+
+Configure the Gemini models for the assessment. These settings apply only to this assessment.
+
+  1. Select how Mainframe Assessment Tool routes assessment steps to Gemini models:
+
+     * **Fast** : returns the quickest results by using lighter models.
+     * **Balanced** (recommended): balances speed and depth for most assessments by routing complex reasoning steps to heavier models and simpler steps to lighter models. This is the default option.
+     * **Extended** : maximizes analysis depth by using heavier models.
+
+**Note:** The **Extended** level uses heavier models and can significantly increase costs, especially for large assessments.
+     * **Use a specific model instead** : runs all assessment steps on a single model rather than optimizing by level. Select a model from the list. Each model is labeled either [**General Availability**](https://docs.cloud.google.com/products#product-launch-stages) or [**Preview**](https://docs.cloud.google.com/products#product-launch-stages).
+
+Each quality level lists the Gemini models used for each step. Mainframe Assessment Tool supports all zones within the available [Agent Platform regions](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/locations#available-regions).
+
+  2. Optional: To restrict model calls to the assessment region and its associated multi-region, enable **Keep data in my region**.
+
+By default, Mainframe Assessment Tool routes model calls to the optimal location for the selected models, including the assessment region, a multi-region, or the global Agent Platform endpoint. When this setting is enabled, Mainframe Assessment Tool performs the following actions:
+
+     * Disables quality levels that require a Gemini model that isn't available in the assessment region. These levels are labeled **Not available in this region**.
+     * Hides models from the specific-model list that aren't available in the assessment region.
+
+If no supported model is available in the assessment region, the assessment can't run with **Keep data in my region** enabled. To proceed with the assessment, disable **Keep data in my region** to allow model calls outside the region.
+
+If your Mainframe Assessment Tool instance doesn't have an external IP address and you enable **Keep data in my region** , models served only on a multi-region endpoint might be unavailable. This happens because [Private Google Access](https://docs.cloud.google.com/vpc/docs/private-google-access) can't reach multi-region endpoints. To make these models available while adhering to data residency requirements, set up private connectivity to the multi-region endpoint. For instructions, see [Configure private connectivity for data residency](https://docs.cloud.google.com/mainframe-assessment-tool/docs/configure-your-project#private-connectivity).
+
+  3. Click **Next**.
+
+
+
+
+**Optional: Domains**
+
+  1. Optional: To add one or more domains that represent a distinct area of functionality, click **Add domain**.
+
+Domains let you filter and review results based on specific contexts after the assessment is complete.
+
+  2. Click **Next**.
+
+
+
+
+**Create assessment**
+
+  1. Click **Create assessment**.
+
+
+
+After you upload the zip file, Mainframe Assessment Tool unpacks and processes the source code. The **Assessments** page displays a new entry in the table for each discovered asset, showing its assessment status:
 
   * **Pending:** assessment is waiting its turn.
   * **In Progress:** analysis is in progress.
@@ -113,47 +137,6 @@ If you see errors after importing your file, you can review the error message di
 
 To view more details about the assessment progress for an item, click the reference ID next to it in the table. This opens a page that shows all the steps together with the status.
 
-## Choose models and quality
-
-Configure Gemini models for an assessment during create or edit an assessment. These settings apply only to that assessment.
-
-By default, Mainframe Assessment Tool optimizes models for each assessment step based on the selected quality level. The tool routes complex reasoning steps to heavier models and simpler steps to lighter models.
-
-### Select a quality level
-
-For **Optimize for** , select one of the following quality levels:
-
-  * **Balanced** (recommended): balances speed and depth for most assessments. This is the default level.
-  * **Fast** : returns the quickest results by using lighter models.
-  * **Extended** : maximizes analysis depth by using heavier models.
-
-
-
-Each quality level lists the Gemini models used for each step.
-
-**Note:** The **Extended** level uses heavier models and can significantly increase costs, especially for large assessments.
-
-### Specify a single model
-
-To run all assessment steps on a single model rather than optimizing by level, select **Use a specific model instead** and choose a model from the list. Each model is labeled either [**General Availability**](https://cloud.google.com/products#product-launch-stages) or [**Preview**](https://cloud.google.com/products#product-launch-stages).
-
-Mainframe Assessment Tool supports all zones within the available [Agent Platform regions](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/locations#available-regions).
-
-### Enforce data residency
-
-By default, Mainframe Assessment Tool routes model calls to the optimal location for the selected models, including the assessment region, a multi-region, or the global Agent Platform endpoint.
-
-To restrict model calls to the assessment region and its associated multi-region, enable **Keep data in my region**. When this setting is enabled, Mainframe Assessment Tool performs the following actions:
-
-  * Disables quality levels that require a Gemini model that is not available in the assessment region. These levels are labeled **Not available in this region**.
-  * Hides models from the specific-model list that are not available in the assessment region.
-
-
-
-If no supported model is available in the assessment region, the assessment cannot run with **Keep data in my region** enabled. To proceed with the assessment, disable **Keep data in my region** to allow model calls outside the region.
-
-If your Mainframe Assessment Tool instance doesn't have an external IP address and you enable **Keep data in my region** , models served only on a multi-region endpoint might be unavailable. This happens because [Private Google Access](https://docs.cloud.google.com/vpc/docs/private-google-access) cannot reach multi-region endpoints. To make these models available while adhering to data residency requirements, set up private connectivity to the multi-region endpoint. For instructions, see [Configure private connectivity for data residency](https://docs.cloud.google.com/mainframe-assessment-tool/docs/configure-your-project#private-connectivity).
-
 ## Add files to an existing assessment
 
 After you create an assessment, you can add additional zip files to it. The files from the new zip file are merged with the existing files in the assessment. If you want to **replace** existing files, the new zip file must include the files that you're replacing with the exact same path structure.
@@ -163,7 +146,7 @@ To add files to an existing assessment, follow these steps:
   1. Open Mainframe Assessment Tool in a web browser.
   2. In the navigation menu, click **Assessments**.
   3. On the **Assessments** page, find the assessment that you want to modify, and click arrow_forward **Open assessment**.
-  4. Click add**Add a file**.
+  4. Click add **Add a file**.
   5. Click **Select file** , and select a zip file that you want to upload. You can upload only one file at a time.
   6. Click **Add**.
 
@@ -180,11 +163,11 @@ To update assessment details or settings, follow these steps:
   1. Open Mainframe Assessment Tool in a web browser.
   2. In the navigation menu, click **Assessments**.
   3. On the **Assessments** page, find the assessment that you want to modify, and click arrow_forward **Open assessment**.
-  4. Click settings**Edit assessment settings**.
+  4. Click settings **Edit assessment settings**.
   5. Optional: On the **Assessment details** step, edit the name and description and then click **Next**.
-  6. Optional: On the **AI settings** step, modify AI settings as needed, and then click **Next**.
-  7. Optional: On the **Model & quality** step, configure the models or quality level, and then click **Next**. For more information, see Choose models and quality.
-  8. On the **Domains** step, click **Next**. You cannot edit domains after you create an assessment.
+  6. Optional: On the **AI insights** step, modify AI settings as needed, and then click **Next**.
+  7. Optional: On the **Model & quality** step, configure the models or quality level, and then click **Next**.
+  8. On the **Domains (optional)** step, click **Next**. You can't edit domains after you create an assessment.
   9. Click **Update assessment**.
 
 
@@ -201,6 +184,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

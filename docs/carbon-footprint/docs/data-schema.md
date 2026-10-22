@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/carbon-footprint/docs/data-schema/
 title: Carbon Footprint export data schema \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:39:03.332984+00:00
+fetched_at: 2026-10-21T14:25:00.768557+00:00
 ---
 
 # Carbon Footprint export data schema  |  Google Cloud Documentation

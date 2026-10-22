@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/data-boost-overview/
 title: Bigtable Data Boost overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:35:10.930196+00:00
+fetched_at: 2026-10-21T12:36:38.327145+00:00
 ---
 
 # Bigtable Data Boost overview  |  Google Cloud Documentation

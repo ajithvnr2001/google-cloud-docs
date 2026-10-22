@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke/how-to/platform-logging-backup-for-gke/
 title: Backup for GKE platform logging information \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:13:42.816697+00:00
+fetched_at: 2026-10-21T15:01:31.522678+00:00
 ---
 
 # Backup for GKE platform logging information  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/adaptation-model-guide/
 title: Set up Speech-to-Text model adaptation \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:44:28.074363+00:00
+fetched_at: 2026-10-21T12:54:52.426311+00:00
 ---
 
 # Set up Speech-to-Text model adaptation  |  Agent Assist  |  Google Cloud Documentation

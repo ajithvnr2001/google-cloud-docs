@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/query-templates/
 title: Use query templates \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:27:49.784324+00:00
+fetched_at: 2026-10-21T15:25:16.057765+00:00
 ---
 
 # Use query templates  |  BigQuery  |  Google Cloud Documentation
@@ -65,7 +65,7 @@ To enable the Analytics Hub API for your Google Cloud project, select one of the
 
 
 
-###  bq 
+###  gcloud 
 
 Run the [`gcloud services enable` command](https://docs.cloud.google.com/sdk/gcloud/reference/services/enable):
     
@@ -133,7 +133,7 @@ You might also be able to get these permissions with [custom roles](https://docs
 As a query template creator, you can do the following:
 
   * Add a listing to a data clean room.
-  * Add an existing TVF to a data clean room
+  * Add an existing TVF to a data clean room.
   * Create a query template.
   * Update a query template.
   * Submit a query template for review.
@@ -176,8 +176,8 @@ Use the [`projects.locations.dataExchanges.listings.create` method](https://docs
 The following example shows how to call the `projects.locations.dataExchanges.listings.create` method by using the `curl` command:
     
     
-        curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -H 'x-goog-user-project:DCR_PROJECT_ID' -X POST https://analyticshub.googleapis.com/v1/projects/DCR_PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID/listings?listingId=LISTING_ID -d
-        '{"bigqueryDataset":{"dataset":"projects/PROJECT_ID/datasets/DATASET_ID","selectedResources":[{"routine":"projects/PROJECT_ID/datasets/DATASET_ID/tables/ROUTINE_ID"}]},"displayName":"LISTING_NAME"}'
+        curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -H 'x-goog-user-project:DCR_PROJECT_ID' -X POST https://analyticshub.googleapis.com/v1/projects/DCR_PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID/listings?listingId=LISTING_ID -d \
+        '{"bigqueryDataset":{"dataset":"projects/PROJECT_ID/datasets/DATASET_ID","selectedResources":[{"routine":"projects/PROJECT_ID/datasets/DATASET_ID/routines/ROUTINE_ID"}]},"displayName":"LISTING_NAME"}'
 
 Replace the following:
 
@@ -240,11 +240,12 @@ You can update the query template or submit the query template for review.
 The following example shows how to create a query template by using the `curl` command:
     
     
-    curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -H 'x-goog-user-project:DCR_PROJECT_ID' -X POST https://analyticshub.googleapis.com/v1/projects/DCR_PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID/queryTemplates?queryTemplateId=QUERY_TEMPLATE_ID -d
-      'query_template {
-      display_name: "DISPLAY_NAME",
-      routine {
-        definition_body: "QUERY_TEMPLATE_ID(TVF arguments) AS (TVF_DEFINITION)"
+    curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -H 'x-goog-user-project:DCR_PROJECT_ID' -X POST https://analyticshub.googleapis.com/v1/projects/DCR_PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID/queryTemplates?queryTemplateId=QUERY_TEMPLATE_ID -d \
+    '{
+      "displayName": "DISPLAY_NAME",
+      "routine": {
+        "routineType": "TABLE_VALUED_FUNCTION",
+        "definitionBody": "QUERY_TEMPLATE_ID(TVF arguments) AS (TVF_DEFINITION)"
       }
     }'
 
@@ -268,9 +269,11 @@ The following code sample shows a `definition_body` example for the API call. Yo
 The `definition_body` is analogous to the definition of a routine. The preceding `definition_body` translates to the following routine:
     
     
-      CREATE OR REPLACE TABLE FUNCTION <approvers_dataset>.query_template1(t1 TABLE, y INT64)
+      CREATE OR REPLACE TABLE FUNCTION APPROVERS_DATASET.query_template1(t1 TABLE, y INT64)
       AS (SELECT * FROM t1 WHERE year > y)
     
+
+Replace `APPROVERS_DATASET` with the ID of the dataset where the template approver creates the routine.
 
 You can update the query template or submit the query template for review.
 
@@ -314,9 +317,7 @@ The following example shows how to update a query template by using the `curl` c
      -H 'x-goog-user-project:DCR_PROJECT_ID' \
      -X PATCH "https://analyticshub.googleapis.com/v1/projects/DCR_PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID/queryTemplates/QUERY_TEMPLATE_ID?updateMask=description" \
      -d '{
-       "query_template": {
-         "description": "New query template"
-       }
+       "description": "New query template"
      }'
 
 Replace the following:
@@ -390,7 +391,7 @@ To delete a query template, select one of the following options:
 The following example shows how to delete a query template by using the `curl` command:
     
     
-      curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -H 'x-goog-user-project:DCR_PROJECT_ID' -X DELETE https://analyticshub.googleapis.com/v1/projects/DCR_PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID/queryTemplates?queryTemplateId=QUERY_TEMPLATE_ID
+      curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -H 'x-goog-user-project:DCR_PROJECT_ID' -X DELETE https://analyticshub.googleapis.com/v1/projects/DCR_PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID/queryTemplates/QUERY_TEMPLATE_ID
 
 Replace the following:
 
@@ -438,7 +439,7 @@ To approve a query template, select one of the following options:
 
 ###  API 
 
-  1. Create the routine from the query template by calling the `jobserver.query` method:
+  1. Create the routine from the query template by calling the [`jobs.query` method](https://docs.cloud.google.com/bigquery/docs/reference/rest/v2/jobs/query):
          
          curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -L -X POST https://bigquery.googleapis.com/bigquery/v2/projects/ROUTINE_PROJECT_ID/queries --data '{"query":"ROUTINE_CREATION_QUERY","useLegacySql":false}'
 
@@ -448,8 +449,8 @@ Replace the following:
      * `ROUTINE_CREATION_QUERY`: the query to create the routine.
   2. Add the routine that you created to the data clean room:
          
-         curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -H 'x-goog-user-project:DCR_PROJECT_ID' -X POST https://analyticshub.googleapis.com/v1/projects/DCR_PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID/listings?listingId=LISTING_ID -d
-         '{"bigqueryDataset":{"dataset":"projects/PROJECT_ID/datasets/DATASET_ID","selectedResources":[{"routine":"projects/PROJECT_ID/datasets/DATASET_ID/tables/ROUTINE_ID"}]},"displayName":"LISTING_NAME"}'
+         curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -H 'x-goog-user-project:DCR_PROJECT_ID' -X POST https://analyticshub.googleapis.com/v1/projects/DCR_PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID/listings?listingId=LISTING_ID -d \
+         '{"bigqueryDataset":{"dataset":"projects/PROJECT_ID/datasets/DATASET_ID","selectedResources":[{"routine":"projects/PROJECT_ID/datasets/DATASET_ID/routines/ROUTINE_ID"}]},"displayName":"LISTING_NAME"}'
 
 Replace the following:
 
@@ -608,8 +609,8 @@ The following table summarizes pricing for BigQuery data clean room query templa
 
 Role | Pricing details  
 ---|---  
-Data contributor | Charged only for [data storage](https://docs.cloud.google.com/bigquery/pricing#storage).  
-Template subscriber | Charged only for [compute (analysis)](https://docs.cloud.google.com/bigquery/pricing#overview_of_pricing) when running queries.  
+Data contributor | Charged only for [data storage](https://cloud.google.com/bigquery/pricing#storage).  
+Template subscriber | Charged only for [compute (analysis)](https://cloud.google.com/bigquery/pricing#overview_of_pricing) when running queries.  
   
 ## What's next
 
@@ -624,6 +625,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

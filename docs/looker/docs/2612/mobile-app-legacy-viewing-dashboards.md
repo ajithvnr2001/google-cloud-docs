@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/2612/mobile-app-legacy-viewing-dashboards/
 title: Viewing dashboards in the Looker Mobile (Legacy) app \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:37:03.951332+00:00
+fetched_at: 2026-10-21T15:10:26.349618+00:00
 ---
 
 # Viewing dashboards in the Looker Mobile (Legacy) app  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/migrate-dataframes/
 title: Migrate to BigQuery DataFrames version 2.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:32:42.228705+00:00
+fetched_at: 2026-10-21T14:19:34.556910+00:00
 ---
 
 # Migrate to BigQuery DataFrames version 2.0  |  Google Cloud Documentation

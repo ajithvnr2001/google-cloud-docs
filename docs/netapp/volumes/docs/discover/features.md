@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/netapp/volumes/docs/discover/features/
 title: Google Cloud NetApp Volumes features \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:44:26.790081+00:00
+fetched_at: 2026-10-21T12:29:28.876218+00:00
 ---
 
 # Google Cloud NetApp Volumes features  |  Google Cloud Documentation
@@ -271,7 +271,7 @@ Users who have large amounts of inactive data can reduce their overall storage c
 
 SnapMirror copies data from a primary source volume to a secondary destination volume. The destination can be on the same site or at a remote location. This copy is used for backup and disaster recovery to restore data if the primary system is unavailable.
 
-SnapMirror supports both asynchronous and synchronous replication and can manage many source and destination pairs simultaneously.
+SnapMirror supports asynchronous replication between an ONTAP-based source system and NetApp Volumes destination volumes. Volumes in Flex Unified storage pools can also serve as source volumes. Synchronous SnapMirror isn't supported.
 
 After the first full copy, SnapMirror transfers only changed data, which reduces bandwidth and accelerates updates. It also supports storage features such as deduplication and compression.
 
@@ -335,6 +335,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

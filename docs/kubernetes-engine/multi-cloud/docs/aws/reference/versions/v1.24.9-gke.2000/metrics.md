@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/aws/reference/versions/v1.24.9-gke.2000/metrics/
 title: Metrics available in 1.24.9-gke.2000 \u00a0|\u00a0 GKE on AWS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:39:50.182815+00:00
+fetched_at: 2026-10-21T15:02:59.489914+00:00
 ---
 
 # Metrics available in 1.24.9-gke.2000  |  GKE on AWS  |  Google Cloud Documentation

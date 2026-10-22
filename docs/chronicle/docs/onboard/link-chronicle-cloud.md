@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/onboard/link-chronicle-cloud/
 title: Link an instance to Google Cloud \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:39.080534+00:00
+fetched_at: 2026-10-21T14:25:23.167257+00:00
 ---
 
 # Link an instance to Google Cloud  |  Google Security Operations  |  Google Cloud Documentation

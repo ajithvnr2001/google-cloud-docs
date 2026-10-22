@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/lakehouse-in-bigquery/
 title: Interact with borderless Lakehouse data in BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:12:01.770746+00:00
+fetched_at: 2026-10-22T05:43:08.913704+00:00
 ---
 
 # Interact with borderless Lakehouse data in BigQuery  |  Google Cloud Documentation

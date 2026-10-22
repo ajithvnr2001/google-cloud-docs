@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/reference/rest/
 title: REST overview \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:22:28.035764+00:00
+fetched_at: 2026-10-21T12:55:50.209677+00:00
 ---
 
 # REST overview  |  CX Agent Studio  |  Google Cloud Documentation

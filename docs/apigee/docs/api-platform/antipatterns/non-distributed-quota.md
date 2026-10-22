@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/non-distributed-quota/
 title: Antipattern: Configure non-distributed quota \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:17.919228+00:00
+fetched_at: 2026-10-21T12:29:57.281802+00:00
 ---
 
 # Antipattern: Configure non-distributed quota  |  Apigee  |  Google Cloud Documentation

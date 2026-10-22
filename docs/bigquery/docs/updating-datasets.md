@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/updating-datasets/
 title: Update dataset properties \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:07:07.864254+00:00
+fetched_at: 2026-10-21T12:38:18.880294+00:00
 ---
 
 # Update dataset properties  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/reservations-commitments-legacy/
 title: Purchase and manage legacy slot commitments \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:09:17.757249+00:00
+fetched_at: 2026-10-21T12:36:13.811565+00:00
 ---
 
 # Purchase and manage legacy slot commitments  |  BigQuery  |  Google Cloud Documentation

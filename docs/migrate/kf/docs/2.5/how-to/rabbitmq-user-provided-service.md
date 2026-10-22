@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.5/how-to/rabbitmq-user-provided-service/
 title: Setting Up RabbitMQ as a User-Provided Service \u00a0|\u00a0 Kf 2.5 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T14:46:16.634179+00:00
+fetched_at: 2026-10-21T15:17:32.156216+00:00
 ---
 
 # Setting Up RabbitMQ as a User-Provided Service  |  Kf 2.5  |  Google Cloud Documentation
@@ -80,7 +80,7 @@ You can confirm the new environment variables being provided to your App:
 If there are changes to the environment (for example password or host update in the URI, or the addition of new key-value pairs) that need to be passed on to any App bound to it, you can update the user-provided instance.
     
     
-    kf uups service-instance-name -p '{&quot;uri&quot;:"new-uri&quot;, "some-new-key": "some-new-value"}'
+    kf uups service-instance-name -p '{"uri":"new-uri", "some-new-key": "some-new-value"}'
 
 # Related documents
 
@@ -94,6 +94,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-13 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

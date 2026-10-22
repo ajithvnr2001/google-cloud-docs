@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/connect-third-party-data-source/
 title: Connect a third-party data source \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:21:20.859419+00:00
+fetched_at: 2026-10-21T12:29:46.291157+00:00
 ---
 
 # Connect a third-party data source  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -296,11 +296,16 @@ GammaLaunch date | Action | Description
 8/17/26 | Generate Gamma | Creates a new presentation, document, webpage, or social media post in Gamma.  
 GitHubLaunch date | Action | Description  
 ---|---|---  
-07/15/26 | Reply to pull request comment | Add a reply to an existing pull request comment.  
+07/15/26 | Create gist | Create a new GitHub Gist.  
+Dismiss notification | Mark a GitHub notification as read or done.  
+Manage notification subscription | Ignore, watch, or delete a notification thread subscription.  
+Manage repository notification subscription |  Ignore, watch, or delete a repository's notification subscription.   
+Mark all notifications read |  Mark all notifications as read, optionally scoped to a repository.   
+Reply to pull request comment | Add a reply to an existing pull request comment.  
 Star repository | Star a repository on behalf of the authenticated user.  
 Trigger Actions workflow | Trigger a GitHub Actions workflow (run, cancel, or rerun jobs).  
-Triage issue | Update labels, assignees, or state on an issue.  
 Unstar repository | Unstar a repository on behalf of the authenticated user.  
+Update gist | Update an existing GitHub Gist.  
 Write discussion comment | Add, reply to, update, delete, or mark/unmark as answer a discussion comment.  
 Write GitHub project | Create or update GitHub Projects (project, items, fields, status updates).  
 Write repository label | Create, update, or delete a label on a repository.  
@@ -325,7 +330,10 @@ Jira CloudLaunch date | Action | Description
 8/5/26 | Assign issue | Assigns an existing Jira issue to a specified user.  
 Create project |  Creates a new Jira project with a specified name, key, project type, and template.   
 Create worklog | Adds a time-tracking worklog entry to a Jira issue.  
+Get board | Gets a board in Jira.  
+Get issues for board | Gets issues for a board in Jira.  
 Link issues |  Creates a link between two Jira issues (for example, blocks, is blocked by, relates to).   
+List boards | Lists boards in Jira.  
 Update project |  Updates an existing Jira project's settings, such as name, key, description, or lead.   
 Update worklog | Updates an existing worklog entry on a Jira issue.  
 1/23/26 | Upload attachment | Uploads an attachment to an existing issue in Jira.  
@@ -343,7 +351,6 @@ Create comment | Adds a comment on an issue.
 Update comment | Modifies an existing comment on an issue.  
 Download attachment | Downloads an attachment from an issue.  
 Upload attachment | Adds an attachment to an issue.  
-1/30/26 | Update issue | Updates an existing issue in Jira Data Center.  
 LinearLaunch date | Action | Description  
 ---|---|---  
 2/6/26 | Save comment | Saves a comment to a Linear issue.  
@@ -361,12 +368,32 @@ Set project knowledge | Set a project's knowledge content.
 Set project visibility | Set a project's visibility level: draft, private, or public.  
 Microsoft OneDriveLaunch date | Action | Description  
 ---|---|---  
+9/17/26 | Copy folder | Copies a folder in OneDrive to a destination folder.  
+Move file | Moves a file in OneDrive to another folder.  
+Move folder | Moves a folder in OneDrive to another folder.  
+Rename file | Renames a file in OneDrive.  
+Rename folder | Renames a folder in OneDrive.  
+Share file or folder | Shares a file or folder in OneDrive with specified recipients.  
+Update file properties | Updates metadata properties on a file in OneDrive.  
 1/23/26 | Upload file | Uploads a file to OneDrive.  
 Download file | Downloads a file from OneDrive.  
 12/12/25 | Create folder | Creates a new folder in OneDrive at a specified path.  
 Copy file | Copies a file in OneDrive from a source to a destination.  
 Microsoft OutlookLaunch date | Action | Description  
 ---|---|---  
+9/22/26 | Create message |  Creates a new draft email message in the signed-in user's mailbox.   
+Reply to message | Replies to an email message.  
+Update message |  Updates an existing draft email message in the signed-in user's mailbox.   
+9/17/26 | Add attachments | Adds an attachment to an existing message.  
+Forward mail | Forwards an email message.  
+Move mail | Moves an email message to another folder.  
+Create calendar | Creates a new calendar for the signed-in user.  
+Update calendar | Updates an existing calendar for the signed-in user.  
+RSVP to event |  Responds (accept, decline, or tentatively accept) to a calendar event invitation.   
+Create Word document | Creates a new Word (.docx) document in the user's OneDrive.  
+Convert Word document to PDF |  Converts a Word (.docx) document stored in OneDrive or SharePoint to PDF.   
+Create PowerPoint presentation |  Creates a new PowerPoint (.pptx) presentation in the user's OneDrive.   
+Convert PowerPoint to PDF |  Converts a PowerPoint (.pptx) presentation stored in OneDrive or SharePoint to PDF.   
 1/23/26 | Download attachment | Downloads an attachment from an email.  
 12/19/25 | Create contact | Creates a new Outlook contact.  
 Update contact | Updates an existing Outlook contact.  
@@ -375,6 +402,16 @@ Update event | Updates an existing event.
 Send mail | Sends an email, including attachments.  
 Microsoft SharePointLaunch date | Action | Description  
 ---|---|---  
+9/17/26 | Discard check out document | Discards the check out of a document in a SharePoint library.  
+Share resource |  Shares a file, folder, or site in SharePoint with specified recipients.   
+Update file properties | Updates metadata fields on a document in a SharePoint library.  
+Update page | Updates an existing page on a SharePoint site.  
+Update list | Updates properties of an existing SharePoint list.  
+Create list item | Creates a new item in a SharePoint list.  
+Update list item | Updates an existing item in a SharePoint list.  
+List lists | Lists all SharePoint lists on a site.  
+Get list item | Retrieves a specific item from a SharePoint list.  
+Get list fields | Retrieves column field definitions for a SharePoint list.  
 3/11/26 | Add page | Creates a new page on the SharePoint site.  
 Check out document | Checks out a document from a SharePoint library.  
 Check in document | Checks a document into a SharePoint library.  
@@ -386,6 +423,16 @@ Download document | Downloads a file attached to a SharePoint list item.
 Add list | Creates a new structured data list (for example, tasks, contacts) on SharePoint.  
 Microsoft TeamsLaunch date | Action | Description  
 ---|---|---  
+9/17/26 | Update channel message | Updates an existing message in a Microsoft Teams channel.  
+Update chat message | Updates an existing message in a Microsoft Teams chat.  
+Create channel | Creates a new channel in a Microsoft Teams team.  
+Update channel | Updates an existing channel in a Microsoft Teams team.  
+Create chat | Creates a new chat in Microsoft Teams.  
+Update chat | Updates an existing chat in Microsoft Teams.  
+Add member to channel | Adds a member to a Microsoft Teams channel.  
+Create schedule | Creates a schedule for a team in Microsoft Teams Shifts.  
+Create time off entry | Creates a time-off entry in Microsoft Teams Shifts.  
+Update time off entry | Updates an existing time-off entry in Microsoft Teams Shifts.  
 12/19/25 | Send channel message | Sends a message to a specified channel.  
 Send chat message | Sends a message in a chat.  
 MiroLaunch date | Action | Description  
@@ -423,6 +470,9 @@ Create on-call override | Create an override for a specific user covering a spec
 Search | Search for incidents, services, users, schedules, and escalation policies.  
 List on-call entries | List the on-call entries during a given time range.  
 List log entries | Get the full timeline of an incident.  
+SalesforceLaunch date | Action | Description  
+---|---|---  
+6/23/26 | Create case | Creates a case in Salesforce.  
 ServiceM8Launch date | Action | Description  
 ---|---|---  
 7/31/26 | Add job note | Adds a note to a job specified by its UUID.  
@@ -493,6 +543,7 @@ ZendeskLaunch date | Action | Description
 Create category | Creates a new category in Zendesk.  
 Update post | Updates a post in Zendesk.  
 Merge tickets | Merges multiple tickets in Zendesk.  
+Add a comment to a ticket | Adds a comment to a ticket in Zendesk.  
 1/30/26 | Create ticket | Creates a new ticket in Zendesk.  
 Zoho BooksLaunch date | Action | Description  
 ---|---|---  
@@ -545,6 +596,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

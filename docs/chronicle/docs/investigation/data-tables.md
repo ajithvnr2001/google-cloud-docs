@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/data-tables/
 title: Search data tables \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:14.663047+00:00
+fetched_at: 2026-10-21T14:11:47.105499+00:00
 ---
 
 # Search data tables  |  Google Security Operations  |  Google Cloud Documentation

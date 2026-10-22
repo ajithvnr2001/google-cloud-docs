@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/onboard/change-third-party-idp/
 title: Change authentication \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:39.255385+00:00
+fetched_at: 2026-10-21T14:25:36.011741+00:00
 ---
 
 # Change authentication  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/sip-trunk/cloud-setup/
 title: Google Cloud project setup \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:48.533558+00:00
+fetched_at: 2026-10-21T12:43:41.030804+00:00
 ---
 
 # Google Cloud project setup  |  Dialogflow CX  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/solutions/keyfactor-ejbca-architecture/
 title: Keyfactor EJBCA reference architecture \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:36:24.688033+00:00
+fetched_at: 2026-10-21T12:58:13.139222+00:00
 ---
 
 # Keyfactor EJBCA reference architecture  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

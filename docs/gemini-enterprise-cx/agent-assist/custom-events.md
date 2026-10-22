@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/custom-events/
 title: Custom events and custom UI module connectors \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:04:31.513791+00:00
+fetched_at: 2026-10-21T12:54:55.447702+00:00
 ---
 
 # Custom events and custom UI module connectors  |  Agent Assist  |  Google Cloud Documentation

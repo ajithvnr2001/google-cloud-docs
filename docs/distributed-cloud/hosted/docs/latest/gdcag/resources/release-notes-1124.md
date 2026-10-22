@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/release-notes-1124/
 title: Google Distributed Cloud air-gapped 1.12.4 release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:25.568145+00:00
+fetched_at: 2026-10-21T13:00:11.933559+00:00
 ---
 
 # Google Distributed Cloud air-gapped 1.12.4 release notes  |  Google Cloud Documentation

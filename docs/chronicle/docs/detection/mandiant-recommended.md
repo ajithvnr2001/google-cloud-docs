@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/mandiant-recommended/
 title: Mandiant Recommended rules \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:08:50.420307+00:00
+fetched_at: 2026-10-21T12:37:33.034572+00:00
 ---
 
 # Mandiant Recommended rules  |  Google Security Operations  |  Google Cloud Documentation

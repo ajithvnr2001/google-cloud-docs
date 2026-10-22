@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/malshare/
 title: MalShare \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:57:22.276799+00:00
+fetched_at: 2026-10-21T14:06:28.781468+00:00
 ---
 
 # MalShare  |  Google Security Operations  |  Google Cloud Documentation

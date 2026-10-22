@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke/how-to/vpc-sc/
 title: Protect Backup for GKE resources using VPC Service Controls \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:13:42.738555+00:00
+fetched_at: 2026-10-21T15:00:42.136071+00:00
 ---
 
 # Protect Backup for GKE resources using VPC Service Controls  |  Google Cloud Documentation

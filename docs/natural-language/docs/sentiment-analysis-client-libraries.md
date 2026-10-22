@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/docs/sentiment-analysis-client-libraries/
 title: Quickstart: Perform sentiment analysis by using client libraries \u00a0|\u00a0 Cloud Natural Language API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:59:53.191316+00:00
+fetched_at: 2026-10-21T15:17:44.575241+00:00
 ---
 
 # Quickstart: Perform sentiment analysis by using client libraries  |  Cloud Natural Language API  |  Google Cloud Documentation

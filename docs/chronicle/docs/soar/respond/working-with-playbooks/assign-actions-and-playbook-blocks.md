@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/assign-actions-and-playbook-blocks/
 title: Assign actions and playbook blocks \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:48:34.084121+00:00
+fetched_at: 2026-10-21T12:39:21.107643+00:00
 ---
 
 # Assign actions and playbook blocks  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/release-notes/
 title: IAM release notes \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:33:07.144047+00:00
+fetched_at: 2026-10-21T14:29:30.502994+00:00
 ---
 
 # IAM release notes  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/java-gen2/building-app/
 title: Build a Java app on App Engine \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:32.160621+00:00
+fetched_at: 2026-10-21T14:22:39.905976+00:00
 ---
 
 # Build a Java app on App Engine  |  App Engine standard environment  |  Google Cloud Documentation

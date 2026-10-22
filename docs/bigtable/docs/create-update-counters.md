@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/create-update-counters/
 title: Quickstart: Create and update counters in Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:32:32.993992+00:00
+fetched_at: 2026-10-21T12:38:09.987183+00:00
 ---
 
 # Quickstart: Create and update counters in Bigtable  |  Google Cloud Documentation

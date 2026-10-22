@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-config-configurations-delete/
 title: gdcloud config configurations delete \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:52:57.230729+00:00
+fetched_at: 2026-10-21T12:59:14.542876+00:00
 ---
 
 # gdcloud config configurations delete  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

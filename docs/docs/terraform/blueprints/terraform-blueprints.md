@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/terraform/blueprints/terraform-blueprints/
 title: Terraform blueprints and modules for Google Cloud \u00a0|\u00a0 Terraform on Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:13:25.525136+00:00
+fetched_at: 2026-10-21T14:07:21.231168+00:00
 ---
 
 # Terraform blueprints and modules for Google Cloud  |  Terraform on Google Cloud  |  Google Cloud Documentation

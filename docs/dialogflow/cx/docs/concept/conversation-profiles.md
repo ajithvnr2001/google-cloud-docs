@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/conversation-profiles/
 title: Conversation profiles \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:54.940931+00:00
+fetched_at: 2026-10-21T12:55:58.324789+00:00
 ---
 
 # Conversation profiles  |  Dialogflow CX  |  Google Cloud Documentation

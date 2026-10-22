@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/gcp-storage-context-changelog/
 title: Change log for GCP_STORAGE_CONTEXT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:12:18.656231+00:00
+fetched_at: 2026-10-21T14:51:58.039607+00:00
 ---
 
 # Change log for GCP_STORAGE_CONTEXT  |  Google Security Operations  |  Google Cloud Documentation

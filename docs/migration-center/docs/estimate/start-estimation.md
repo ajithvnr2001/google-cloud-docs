@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/estimate/start-estimation/
 title: Start a cost estimation \u00a0|\u00a0 Migration Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:18.922874+00:00
+fetched_at: 2026-10-21T15:13:24.233548+00:00
 ---
 
 # Start a cost estimation  |  Migration Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/flags/flags-quickstart/
 title: Quickstart: Deploy feature flags \u00a0|\u00a0 App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:30:00.269685+00:00
+fetched_at: 2026-10-21T12:30:48.664143+00:00
 ---
 
 # Quickstart: Deploy feature flags  |  App Lifecycle Manager  |  Google Cloud Documentation

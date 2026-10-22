@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/handoff-cx/
 title: Dialogflow CX handoff \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:44:12.521497+00:00
+fetched_at: 2026-10-21T12:54:54.032484+00:00
 ---
 
 # Dialogflow CX handoff  |  Agent Assist  |  Google Cloud Documentation

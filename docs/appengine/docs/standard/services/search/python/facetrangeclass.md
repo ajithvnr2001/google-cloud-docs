@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/search/python/facetrangeclass/
 title: The FacetRange Class \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:42:06.764646+00:00
+fetched_at: 2026-10-21T14:53:40.672264+00:00
 ---
 
 # The FacetRange Class  |  App Engine standard environment  |  Google Cloud Documentation

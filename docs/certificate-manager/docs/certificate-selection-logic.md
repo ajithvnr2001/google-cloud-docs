@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/certificate-selection-logic/
 title: How Certificate Manager works \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:00:03.447946+00:00
+fetched_at: 2026-10-21T12:37:45.971932+00:00
 ---
 
 # How Certificate Manager works  |  Google Cloud Documentation

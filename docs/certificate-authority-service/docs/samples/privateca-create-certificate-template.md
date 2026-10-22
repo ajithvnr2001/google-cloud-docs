@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/samples/privateca-create-certificate-template/
 title: Create a Certificate template \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:55:11.900005+00:00
+fetched_at: 2026-10-21T12:38:01.199943+00:00
 ---
 
 # Create a Certificate template  |  Certificate Authority Service  |  Google Cloud Documentation

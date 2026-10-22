@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/control-packages/us-data-boundary-healthcare-life-sciences/
 title: US Data Boundary for Healthcare and Life Sciences \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:47.695998+00:00
+fetched_at: 2026-10-21T14:27:08.191105+00:00
 ---
 
 # US Data Boundary for Healthcare and Life Sciences  |  Assured Workloads  |  Google Cloud Documentation

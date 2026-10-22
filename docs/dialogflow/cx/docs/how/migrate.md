@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/how/migrate/
 title: Migrating from Dialogflow ES to Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:56.470810+00:00
+fetched_at: 2026-10-21T12:44:16.773876+00:00
 ---
 
 # Migrating from Dialogflow ES to Dialogflow CX  |  Google Cloud Documentation

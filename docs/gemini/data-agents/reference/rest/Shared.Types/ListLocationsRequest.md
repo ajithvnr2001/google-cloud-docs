@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/Shared.Types/ListLocationsRequest/
 title: ListLocationsRequest \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:43:05.159974+00:00
+fetched_at: 2026-10-21T12:56:05.569793+00:00
 ---
 
 # ListLocationsRequest  |  Data Agents  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/gcp-tasks/configure-language-annotatetext-task/
 title: Language - Annotate Text task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:41.969129+00:00
+fetched_at: 2026-10-21T14:26:38.272778+00:00
 ---
 
 # Language - Annotate Text task  |  Application Integration  |  Google Cloud Documentation

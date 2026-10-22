@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigqueryconnection-connectionservice-connection-create/
 title: Create a connection \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:37:11.657383+00:00
+fetched_at: 2026-10-21T14:18:45.385402+00:00
 ---
 
 # Create a connection  |  BigQuery  |  Google Cloud Documentation
@@ -35,7 +35,6 @@ For detailed documentation that includes this code sample, see the following:
   * [Generate text embeddings by using the AI.GENERATE_EMBEDDING function](https://docs.cloud.google.com/bigquery/docs/generate-text-embedding)
   * [Generate text with the AI.GENERATE function](https://docs.cloud.google.com/bigquery/docs/generate-text-scalar)
   * [Generate video embeddings by using the AI.GENERATE_EMBEDDING function](https://docs.cloud.google.com/bigquery/docs/generate-video-embedding)
-  * [Parse PDFs in a retrieval-augmented generation pipeline](https://docs.cloud.google.com/bigquery/docs/rag-pipeline-pdf)
   * [Process documents with the ML.PROCESS_DOCUMENT function](https://docs.cloud.google.com/bigquery/docs/process-document)
   * [Run federated queries with Data Boost](https://docs.cloud.google.com/spanner/docs/databoost/databoost-run-queries)
   * [Set permissions for generative AI functions that call Gemini Enterprise Agent Platform LLMs](https://docs.cloud.google.com/bigquery/docs/permissions-for-ai-functions)

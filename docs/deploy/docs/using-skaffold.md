@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/deploy/docs/using-skaffold/
 title: Use Skaffold with Cloud Deploy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:15:49.059189+00:00
+fetched_at: 2026-10-21T12:42:44.089546+00:00
 ---
 
 # Use Skaffold with Cloud Deploy  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/configuration/define-requests-for-users-admin/
 title: Create user requests \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:50.172581+00:00
+fetched_at: 2026-10-21T14:24:31.300290+00:00
 ---
 
 # Create user requests  |  Google Security Operations  |  Google Cloud Documentation

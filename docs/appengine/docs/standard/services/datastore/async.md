@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/datastore/async/
 title: Async Datastore API \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:03:39.122802+00:00
+fetched_at: 2026-10-21T14:28:41.344268+00:00
 ---
 
 # Async Datastore API  |  App Engine standard environment  |  Google Cloud Documentation

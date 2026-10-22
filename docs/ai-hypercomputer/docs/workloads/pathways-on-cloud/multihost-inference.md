@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/pathways-on-cloud/multihost-inference/
 title: Perform multihost inference using Pathways \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:35:00.545780+00:00
+fetched_at: 2026-10-21T14:29:11.199915+00:00
 ---
 
 # Perform multihost inference using Pathways  |  AI Hypercomputer  |  Google Cloud Documentation

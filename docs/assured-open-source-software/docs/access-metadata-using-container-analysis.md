@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-open-source-software/docs/access-metadata-using-container-analysis/
 title: Access metadata using the Artifact Analysis API \u00a0|\u00a0 Assured Open Source Software \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:41:45.394957+00:00
+fetched_at: 2026-10-21T14:09:59.935090+00:00
 ---
 
 # Access metadata using the Artifact Analysis API  |  Assured Open Source Software  |  Google Cloud Documentation

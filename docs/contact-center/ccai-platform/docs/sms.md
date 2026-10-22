@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/sms/
 title: SMS messaging \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:17.198664+00:00
+fetched_at: 2026-10-21T14:07:49.625549+00:00
 ---
 
 # SMS messaging  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

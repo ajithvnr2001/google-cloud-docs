@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/sign-in-user-email/
 title: Sign in a user with an email by using Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:16.220641+00:00
+fetched_at: 2026-10-21T12:53:53.490636+00:00
 ---
 
 # Sign in a user with an email by using Identity Platform  |  Google Cloud Documentation

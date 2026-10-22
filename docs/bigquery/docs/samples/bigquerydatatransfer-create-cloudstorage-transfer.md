@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerydatatransfer-create-cloudstorage-transfer/
 title: Create a data transfer configuration \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:11.699992+00:00
+fetched_at: 2026-10-22T05:45:50.237938+00:00
 ---
 
 # Create a data transfer configuration  |  BigQuery  |  Google Cloud Documentation

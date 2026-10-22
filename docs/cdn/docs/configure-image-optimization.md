@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/configure-image-optimization/
 title: Getting started \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:29:50.234271+00:00
+fetched_at: 2026-10-21T14:24:06.369041+00:00
 ---
 
 # Getting started  |  Cloud CDN  |  Google Cloud Documentation

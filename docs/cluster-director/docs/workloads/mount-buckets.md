@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-director/docs/workloads/mount-buckets/
 title: Mount Cloud Storage buckets for specific jobs \u00a0|\u00a0 Cluster Director \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:11:41.368852+00:00
+fetched_at: 2026-10-21T14:41:57.962006+00:00
 ---
 
 # Mount Cloud Storage buckets for specific jobs  |  Cluster Director  |  Google Cloud Documentation

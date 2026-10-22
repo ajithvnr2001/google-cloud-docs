@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/Shared.Types/GetLocationRequest/
 title: GetLocationRequest \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:16:28.947159+00:00
+fetched_at: 2026-10-21T12:56:06.544588+00:00
 ---
 
 # GetLocationRequest  |  Data Agents  |  Google Cloud Documentation

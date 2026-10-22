@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/turn-off-enterprise-search/
 title: Turn off Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:12.251495+00:00
+fetched_at: 2026-10-21T12:55:38.338251+00:00
 ---
 
 # Turn off Agent Search  |  Google Cloud Documentation

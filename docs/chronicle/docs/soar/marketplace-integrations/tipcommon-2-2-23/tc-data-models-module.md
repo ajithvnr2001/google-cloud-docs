@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/tipcommon-2-2-23/tc-data-models-module/
 title: data_models module \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:42:51.977966+00:00
+fetched_at: 2026-10-21T14:19:52.315419+00:00
 ---
 
 # data_models module  |  Google Security Operations  |  Google Cloud Documentation

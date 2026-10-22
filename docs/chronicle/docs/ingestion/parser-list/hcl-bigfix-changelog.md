@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/hcl-bigfix-changelog/
 title: Change log for HCL_BIGFIX \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:24:47.369910+00:00
+fetched_at: 2026-10-21T14:52:04.372685+00:00
 ---
 
 # Change log for HCL_BIGFIX  |  Google Security Operations  |  Google Cloud Documentation

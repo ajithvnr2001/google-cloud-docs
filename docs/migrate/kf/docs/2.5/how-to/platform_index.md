@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.5/how-to/platform_index/
 title: Platform How-to Guides \u00a0|\u00a0 Kf 2.5 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:42:14.710530+00:00
+fetched_at: 2026-10-21T15:17:33.254406+00:00
 ---
 
 # Platform How-to Guides  |  Kf 2.5  |  Google Cloud Documentation

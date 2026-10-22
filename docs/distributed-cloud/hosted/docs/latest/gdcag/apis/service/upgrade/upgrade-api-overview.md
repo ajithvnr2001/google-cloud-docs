@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/service/upgrade/upgrade-api-overview/
 title: Overview of Upgrade API \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:13:35.024684+00:00
+fetched_at: 2026-10-21T12:56:43.638246+00:00
 ---
 
 # Overview of Upgrade API  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

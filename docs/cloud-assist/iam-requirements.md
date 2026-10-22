@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/iam-requirements/
 title: IAM requirements for using Gemini Cloud Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:58:21.073463+00:00
+fetched_at: 2026-10-21T14:23:03.705211+00:00
 ---
 
 # IAM requirements for using Gemini Cloud Assist  |  Google Cloud Documentation

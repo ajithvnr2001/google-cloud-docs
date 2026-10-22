@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-list-schemas/
 title: v1 List schemas (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:53:09.681389+00:00
+fetched_at: 2026-10-21T14:58:48.320293+00:00
 ---
 
 # v1 List schemas (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

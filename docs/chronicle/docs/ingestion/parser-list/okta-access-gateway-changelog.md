@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/okta-access-gateway-changelog/
 title: Change log for OKTA_ACCESS_GATEWAY \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:34:09.627564+00:00
+fetched_at: 2026-10-21T14:47:10.513410+00:00
 ---
 
 # Change log for OKTA_ACCESS_GATEWAY  |  Google Security Operations  |  Google Cloud Documentation

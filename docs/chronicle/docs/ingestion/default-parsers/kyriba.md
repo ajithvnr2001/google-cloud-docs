@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/kyriba/
 title: Collect Kyriba Treasury Management logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:03:58.090852+00:00
+fetched_at: 2026-10-21T12:37:09.974259+00:00
 ---
 
 # Collect Kyriba Treasury Management logs  |  Google Security Operations  |  Google Cloud Documentation

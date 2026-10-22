@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-create-route-windows-activation/
 title: Create a route to Windows activation host \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:19.185485+00:00
+fetched_at: 2026-10-21T14:19:15.158297+00:00
 ---
 
 # Create a route to Windows activation host  |  Compute Engine  |  Google Cloud Documentation

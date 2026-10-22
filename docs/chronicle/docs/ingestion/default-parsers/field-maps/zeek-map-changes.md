@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/field-maps/zeek-map-changes/
 title: Mapping changes in Zeek (Bro) parser \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:34:46.927488+00:00
+fetched_at: 2026-10-21T14:51:45.157338+00:00
 ---
 
 # Mapping changes in Zeek (Bro) parser  |  Google Security Operations  |  Google Cloud Documentation

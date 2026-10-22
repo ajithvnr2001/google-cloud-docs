@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/verint/
 title: Verint integration \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:28.085889+00:00
+fetched_at: 2026-10-21T14:22:52.195930+00:00
 ---
 
 # Verint integration  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

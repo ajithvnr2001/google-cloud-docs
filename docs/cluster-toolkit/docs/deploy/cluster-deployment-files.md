@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/deploy/cluster-deployment-files/
 title: Cluster deployment files \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:43:25.570273+00:00
+fetched_at: 2026-10-21T14:42:19.771897+00:00
 ---
 
 # Cluster deployment files  |  Cluster Toolkit  |  Google Cloud Documentation

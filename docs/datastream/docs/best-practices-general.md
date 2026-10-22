@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/best-practices-general/
 title: General best practices when using Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:13:44.377159+00:00
+fetched_at: 2026-10-22T05:41:19.008594+00:00
 ---
 
 # General best practices when using Datastream  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  General best practices when using Datastream Stay organized with collections  Save and categorize content based on your preferences. 
 
-In this page, you'll find best practices for using Datastream. These include general best practices when using Datastream.
+To maintain reliable replication and minimize downtime in Datastream, you can apply operational best practices across your streams and source databases. These practices help you switch the source database of a stream, configure metric alerts, troubleshoot latency, and plan table limits per stream.
 
 ## Change a stream's source database
 
@@ -127,6 +127,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

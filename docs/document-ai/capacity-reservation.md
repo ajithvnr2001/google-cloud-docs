@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/document-ai/capacity-reservation/
 title: Capacity reservation \u00a0|\u00a0 Document AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:36:03.953130+00:00
+fetched_at: 2026-10-21T14:08:10.406119+00:00
 ---
 
 # Capacity reservation  |  Document AI  |  Google Cloud Documentation

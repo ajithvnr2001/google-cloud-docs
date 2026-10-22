@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/develop-service/
 title: Develop a service locally in Cloud Code for IntelliJ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:10:23.340038+00:00
+fetched_at: 2026-10-21T12:40:44.748219+00:00
 ---
 
 # Develop a service locally in Cloud Code for IntelliJ  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/metrics-anthos/
 title: View Google Distributed Cloud metrics \u00a0|\u00a0 Google Distributed Cloud software only for VMware \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:19:59.165086+00:00
+fetched_at: 2026-10-21T12:57:31.005314+00:00
 ---
 
 # View Google Distributed Cloud metrics  |  Google Distributed Cloud software only for VMware  |  Google Cloud Documentation
@@ -1926,21 +1926,23 @@ apiserver_audit_requests_rejected_total
 apiserver_cache_list_fetched_objects_total   
 `CUMULATIVE`, `DOUBLE`, `1`   
 **[k8s_container](https://docs.cloud.google.com/monitoring/api/resources#tag_k8s_container)** |  _[ALPHA] Number of objects read from watch cache in the course of serving a LIST request. Sampled every 60 seconds._   
+`group`: group.   
 `index`: index.   
 `resource_prefix`: resource_prefix.   
 `apiserver_cache_list_returned_objects_total` ALPHA ** _(project)_**   
 apiserver_cache_list_returned_objects_total   
 `CUMULATIVE`, `DOUBLE`, `1`   
 **[k8s_container](https://docs.cloud.google.com/monitoring/api/resources#tag_k8s_container)** |  _[ALPHA] Number of objects returned for a LIST request from watch cache. Sampled every 60 seconds._   
+`group`: group.   
 `resource_prefix`: resource_prefix.   
 `apiserver_cache_list_total` ALPHA ** _(project)_**   
 apiserver_cache_list_total   
 `CUMULATIVE`, `DOUBLE`, `1`   
 **[k8s_container](https://docs.cloud.google.com/monitoring/api/resources#tag_k8s_container)** |  _[ALPHA] Number of LIST requests served from watch cache. Sampled every 60 seconds._   
+`group`: group.   
 `index`: index.   
 `resource`: resource.   
 `resource_prefix`: resource_prefix.   
-`group`: group.   
 `apiserver_cache_list_total/counter` ALPHA ** _(project)_**   
 apiserver_cache_list_total   
 `CUMULATIVE`, `DOUBLE`, `1`   
@@ -2527,6 +2529,7 @@ apiserver_response_sizes
 apiserver_selfrequest_total   
 `CUMULATIVE`, `DOUBLE`, `1`   
 **[k8s_container](https://docs.cloud.google.com/monitoring/api/resources#tag_k8s_container)** |  _Counter of apiserver self-requests broken out for each verb, API resource and subresource. Sampled every 60 seconds._   
+`group`: group.   
 `resource`: resource.   
 `subresource`: subresource.   
 `verb`: verb.   
@@ -2571,8 +2574,8 @@ apiserver_storage_envelope_transformation_cache_misses_total
 apiserver_storage_list_evaluated_objects_total   
 `CUMULATIVE`, `DOUBLE`, `1`   
 **[k8s_container](https://docs.cloud.google.com/monitoring/api/resources#tag_k8s_container)** |  _[ALPHA] Number of objects tested in the course of serving a LIST request from storage. Sampled every 60 seconds._   
-`resource`: resource.   
 `group`: group.   
+`resource`: resource.   
 `apiserver_storage_list_evaluated_objects_total/counter` ALPHA ** _(project)_**   
 apiserver_storage_list_evaluated_objects_total   
 `CUMULATIVE`, `DOUBLE`, `1`   
@@ -2582,8 +2585,8 @@ apiserver_storage_list_evaluated_objects_total
 apiserver_storage_list_fetched_objects_total   
 `CUMULATIVE`, `DOUBLE`, `1`   
 **[k8s_container](https://docs.cloud.google.com/monitoring/api/resources#tag_k8s_container)** |  _[ALPHA] Number of objects read from storage in the course of serving a LIST request. Sampled every 60 seconds._   
-`resource`: resource.   
 `group`: group.   
+`resource`: resource.   
 `apiserver_storage_list_fetched_objects_total/counter` ALPHA ** _(project)_**   
 apiserver_storage_list_fetched_objects_total   
 `CUMULATIVE`, `DOUBLE`, `1`   
@@ -2593,8 +2596,8 @@ apiserver_storage_list_fetched_objects_total
 apiserver_storage_list_returned_objects_total   
 `CUMULATIVE`, `DOUBLE`, `1`   
 **[k8s_container](https://docs.cloud.google.com/monitoring/api/resources#tag_k8s_container)** |  _[ALPHA] Number of objects returned for a LIST request from storage. Sampled every 60 seconds._   
-`resource`: resource.   
 `group`: group.   
+`resource`: resource.   
 `apiserver_storage_list_returned_objects_total/counter` ALPHA ** _(project)_**   
 apiserver_storage_list_returned_objects_total   
 `CUMULATIVE`, `DOUBLE`, `1`   
@@ -2604,8 +2607,8 @@ apiserver_storage_list_returned_objects_total
 apiserver_storage_list_total   
 `CUMULATIVE`, `DOUBLE`, `1`   
 **[k8s_container](https://docs.cloud.google.com/monitoring/api/resources#tag_k8s_container)** |  _[ALPHA] Number of LIST requests served from storage. Sampled every 60 seconds._   
-`resource`: resource.   
 `group`: group.   
+`resource`: resource.   
 `apiserver_storage_list_total/counter` ALPHA ** _(project)_**   
 apiserver_storage_list_total   
 `CUMULATIVE`, `DOUBLE`, `1`   
@@ -2615,11 +2618,13 @@ apiserver_storage_list_total
 apiserver_storage_objects   
 `GAUGE`, `DOUBLE`, `1`   
 **[k8s_container](https://docs.cloud.google.com/monitoring/api/resources#tag_k8s_container)** |  _[STABLE] Number of stored objects at the time of last check split by kind. Sampled every 60 seconds._   
+`group`: group.   
 `resource`: resource.   
 `apiserver_storage_objects/gauge` ALPHA ** _(project)_**   
 apiserver_storage_objects   
 `GAUGE`, `DOUBLE`, `1`   
 **[prometheus_target](https://docs.cloud.google.com/monitoring/api/resources#tag_prometheus_target)** |  _[STABLE] Number of stored objects at the time of last check split by kind. Sampled every 30 seconds._   
+`group`: group.   
 `resource`: resource.   
 `apiserver_storage_transformation_duration_seconds` ALPHA ** _(project)_**   
 apiserver_storage_transformation_duration_seconds   
@@ -2663,13 +2668,14 @@ apiserver_tls_handshake_errors_total
 apiserver_watch_cache_events_dispatched_total   
 `CUMULATIVE`, `DOUBLE`, `1`   
 **[k8s_container](https://docs.cloud.google.com/monitoring/api/resources#tag_k8s_container)** |  _[ALPHA] Counter of events dispatched in watch cache broken by resource type. Sampled every 60 seconds._   
+`group`: group.   
 `resource`: resource.   
 `apiserver_watch_cache_initializations_total` ALPHA ** _(project)_**   
 apiserver_watch_cache_initializations_total   
 `CUMULATIVE`, `DOUBLE`, `1`   
 **[k8s_container](https://docs.cloud.google.com/monitoring/api/resources#tag_k8s_container)** |  _[ALPHA] Counter of watch cache initializations broken by resource type. Sampled every 60 seconds._   
-`resource`: resource.   
 `group`: group.   
+`resource`: resource.   
 `apiserver_watch_cache_initializations_total/counter` ALPHA ** _(project)_**   
 apiserver_watch_cache_initializations_total   
 `CUMULATIVE`, `DOUBLE`, `1`   
@@ -2684,9 +2690,9 @@ apiserver_watch_cache_watch_cache_initializations_total
 apiserver_watch_events_sizes   
 `CUMULATIVE`, `DISTRIBUTION`, `1`   
 **[k8s_container](https://docs.cloud.google.com/monitoring/api/resources#tag_k8s_container)** |  _Watch event size distribution in bytes. Sampled every 60 seconds._   
-`resource`: resource.   
 `group`: group.   
 `kind`: kind.   
+`resource`: resource.   
 `version`: version.   
 `apiserver_watch_events_sizes/histogram` ALPHA ** _(project)_**   
 apiserver_watch_events_sizes   
@@ -2699,9 +2705,9 @@ apiserver_watch_events_sizes
 apiserver_watch_events_total   
 `CUMULATIVE`, `DOUBLE`, `1`   
 **[k8s_container](https://docs.cloud.google.com/monitoring/api/resources#tag_k8s_container)** |  _Number of events sent in watch clients. Sampled every 60 seconds._   
-`resource`: resource.   
 `group`: group.   
 `kind`: kind.   
+`resource`: resource.   
 `version`: version.   
 `apiserver_watch_events_total/counter` ALPHA ** _(project)_**   
 apiserver_watch_events_total   
@@ -5321,6 +5327,7 @@ esxi_memory_total_bytes
 etcd_bookmark_counts   
 `GAUGE`, `DOUBLE`, `1`   
 **[k8s_container](https://docs.cloud.google.com/monitoring/api/resources#tag_k8s_container)** |  _Number of etcd bookmarks (progress notify events) split by kind. Sampled every 60 seconds._   
+`group`: group.   
 `resource`: resource.   
 `etcd_cluster_version` ALPHA ** _(project)_**   
 etcd_cluster_version   
@@ -5917,8 +5924,8 @@ etcd_request_duration_seconds
 `CUMULATIVE`, `DISTRIBUTION`, `s`   
 **[k8s_container](https://docs.cloud.google.com/monitoring/api/resources#tag_k8s_container)** |  _[ALPHA] Etcd request latency in seconds for each operation and object type. Sampled every 60 seconds._   
 `group`: group.   
-`resource`: resource.   
 `operation`: operation.   
+`resource`: resource.   
 `type`: type.   
 `etcd_request_duration_seconds/histogram` ALPHA ** _(project)_**   
 etcd_request_duration_seconds   
@@ -18977,8 +18984,8 @@ vsphere_vm_operations_total
 watch_cache_capacity   
 `GAUGE`, `DOUBLE`, `1`   
 **[k8s_container](https://docs.cloud.google.com/monitoring/api/resources#tag_k8s_container)** |  _Total capacity of watch cache broken by resource type. Sampled every 60 seconds._   
-`resource`: resource.   
 `group`: group.   
+`resource`: resource.   
 `watch_cache_capacity/gauge` ALPHA ** _(project)_**   
 watch_cache_capacity   
 `GAUGE`, `DOUBLE`, `1`   
@@ -19065,12 +19072,12 @@ workqueue_work_duration_seconds
 **[prometheus_target](https://docs.cloud.google.com/monitoring/api/resources#tag_prometheus_target)** |  _How long in seconds processing an item from workqueue takes. Sampled every 30 seconds._   
 `name`: name.   
   
-Table generated at 2026-10-08 15:22:12 UTC.
+Table generated at 2026-10-14 20:24:33 UTC.
 
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

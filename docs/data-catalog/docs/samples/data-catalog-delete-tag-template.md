@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-catalog/docs/samples/data-catalog-delete-tag-template/
 title: Delete tag template \u00a0|\u00a0 Data Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:57:30.910501+00:00
+fetched_at: 2026-10-22T05:41:53.296791+00:00
 ---
 
 # Delete tag template  |  Data Catalog  |  Google Cloud Documentation

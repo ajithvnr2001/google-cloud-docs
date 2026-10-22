@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/15.7.1/docs/overview/
 title: AlloyDB Omni overview \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 15.7.1 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:32:52.978850+00:00
+fetched_at: 2026-10-21T15:28:03.260462+00:00
 ---
 
 # AlloyDB Omni overview  |  AlloyDB Omni for Kubernetes: 15.7.1  |  Google Cloud Documentation

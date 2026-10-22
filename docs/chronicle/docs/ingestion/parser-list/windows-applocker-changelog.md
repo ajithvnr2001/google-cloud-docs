@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/windows-applocker-changelog/
 title: Change log for WINDOWS_APPLOCKER \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:12:35.786270+00:00
+fetched_at: 2026-10-21T14:47:07.137413+00:00
 ---
 
 # Change log for WINDOWS_APPLOCKER  |  Google Security Operations  |  Google Cloud Documentation

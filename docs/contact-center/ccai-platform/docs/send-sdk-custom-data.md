@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/send-sdk-custom-data/
 title: Send SDK custom data \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:26.854811+00:00
+fetched_at: 2026-10-21T14:07:38.428616+00:00
 ---
 
 # Send SDK custom data  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

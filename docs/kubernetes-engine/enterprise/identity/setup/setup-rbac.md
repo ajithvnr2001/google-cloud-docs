@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/enterprise/identity/setup/setup-rbac/
 title: Set up RBAC policies for third-party identities \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:36:51.107846+00:00
+fetched_at: 2026-10-21T15:03:45.891038+00:00
 ---
 
 # Set up RBAC policies for third-party identities  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

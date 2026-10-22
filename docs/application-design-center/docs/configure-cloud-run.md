@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/configure-cloud-run/
 title: Configure a Cloud Run service \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:22:28.020449+00:00
+fetched_at: 2026-10-21T15:08:36.251144+00:00
 ---
 
 # Configure a Cloud Run service  |  Application Design Center  |  Google Cloud Documentation
@@ -20,9 +20,7 @@ Send feedback
 
 #  Configure a Cloud Run service Stay organized with collections  Save and categorize content based on your preferences. 
 
-Cloud Run is a fully managed application platform that lets you run containers directly on top of Google's scalable infrastructure. For more information, see [Cloud Run overview](https://docs.cloud.google.com/run/docs/overview/what-is-cloud-run).
-
-This document describes the connections and parameters you can configure when using App Design Center to create a Cloud Run service. The configuration parameters are based on the [terraform-google-cloud-run](https://github.com/GoogleCloudPlatform/terraform-google-cloud-run/tree/main/modules/v2) Terraform module.
+In Application Design Center, you can configure a [Cloud Run](https://docs.cloud.google.com/run/docs/overview/what-is-cloud-run) service to run stateless containers directly on Google's scalable, fully managed infrastructure. You can customize the service for your specific component connections and configuration parameters. The configuration parameters are listed in the [terraform-google-cloud-run](https://github.com/GoogleCloudPlatform/terraform-google-cloud-run/tree/main/modules/v2) Terraform module.
 
 ## Component connections
 
@@ -262,6 +260,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

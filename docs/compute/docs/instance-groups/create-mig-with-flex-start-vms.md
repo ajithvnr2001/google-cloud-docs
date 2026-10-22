@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/create-mig-with-flex-start-vms/
 title: Create a MIG that uses Flex-start VMs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:05.533281+00:00
+fetched_at: 2026-10-21T14:21:54.072486+00:00
 ---
 
 # Create a MIG that uses Flex-start VMs  |  Compute Engine  |  Google Cloud Documentation

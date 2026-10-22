@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.4-sandbox/cassandra-backup-non-gcs/
 title: Backup and recovery without Google Cloud \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:12:01.559242+00:00
+fetched_at: 2026-10-21T12:30:50.279931+00:00
 ---
 
 # Backup and recovery without Google Cloud  |  Apigee  |  Google Cloud Documentation

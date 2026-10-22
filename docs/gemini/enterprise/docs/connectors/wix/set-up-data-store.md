@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/wix/set-up-data-store/
 title: Set up a Wix data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:23:35.674736+00:00
+fetched_at: 2026-10-21T12:51:44.561406+00:00
 ---
 
 # Set up a Wix data store  |  Gemini Enterprise  |  Google Cloud Documentation

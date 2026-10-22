@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/powershell/
 title: Collect Microsoft PowerShell logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T18:05:58.944985+00:00
+fetched_at: 2026-10-21T12:29:18.242796+00:00
 ---
 
 # Collect Microsoft PowerShell logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/configuring-builds/use-community-and-custom-builders/
 title: Using community-contributed builders and custom builders \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:02.521334+00:00
+fetched_at: 2026-10-21T14:11:47.429555+00:00
 ---
 
 # Using community-contributed builders and custom builders  |  Cloud Build  |  Google Cloud Documentation

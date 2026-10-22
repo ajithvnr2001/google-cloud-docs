@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/deprecations/
 title: Config Sync feature deprecations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:17:48.540223+00:00
+fetched_at: 2026-10-21T15:08:53.318102+00:00
 ---
 
 # Config Sync feature deprecations  |  Google Cloud Documentation

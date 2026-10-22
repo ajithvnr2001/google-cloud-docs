@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/locations/
 title: BigQuery locations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:12:25.646864+00:00
+fetched_at: 2026-10-21T12:36:21.579041+00:00
 ---
 
 # BigQuery locations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/tipcommon/tc-filters-module/
 title: Filters module \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:13:06.690353+00:00
+fetched_at: 2026-10-21T14:19:23.103546+00:00
 ---
 
 # Filters module  |  Google Security Operations  |  Google Cloud Documentation

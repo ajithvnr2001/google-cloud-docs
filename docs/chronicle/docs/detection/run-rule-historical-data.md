@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/run-rule-historical-data/
 title: Run a rule against historical data \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T16:58:56.076072+00:00
+fetched_at: 2026-10-21T12:38:46.010737+00:00
 ---
 
 # Run a rule against historical data  |  Google Security Operations  |  Google Cloud Documentation

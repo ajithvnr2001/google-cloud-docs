@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/securelink/
 title: Collect SecureLink logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:21:16.745864+00:00
+fetched_at: 2026-10-21T12:39:20.566024+00:00
 ---
 
 # Collect SecureLink logs  |  Google Security Operations  |  Google Cloud Documentation

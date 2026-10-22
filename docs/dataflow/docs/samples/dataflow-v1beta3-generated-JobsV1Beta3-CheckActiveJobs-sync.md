@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/samples/dataflow-v1beta3-generated-JobsV1Beta3-CheckActiveJobs-sync/
 title: Check if active jobs exist for a project \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:20:05.834195+00:00
+fetched_at: 2026-10-22T05:42:36.298223+00:00
 ---
 
 # Check if active jobs exist for a project  |  Cloud Dataflow  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/integrations-setup/version-rollback/
 title: Roll back response integrations \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:16:05.026446+00:00
+fetched_at: 2026-10-21T14:09:51.941555+00:00
 ---
 
 # Roll back response integrations  |  Google Security Operations  |  Google Cloud Documentation

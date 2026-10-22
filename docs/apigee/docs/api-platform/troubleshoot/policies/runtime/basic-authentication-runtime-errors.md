@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/runtime/basic-authentication-runtime-errors/
 title: BasicAuthentication policy runtime error troubleshooting \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:29.893832+00:00
+fetched_at: 2026-10-21T12:35:42.810823+00:00
 ---
 
 # BasicAuthentication policy runtime error troubleshooting  |  Apigee  |  Google Cloud Documentation

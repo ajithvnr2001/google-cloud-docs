@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-add-persistent-disk-parent-tag/
 title: Add a persistent disk to Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:07.711033+00:00
+fetched_at: 2026-10-21T14:22:09.396233+00:00
 ---
 
 # Add a persistent disk to Compute Engine  |  Google Cloud Documentation

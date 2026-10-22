@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/vpc-service-controls/
 title: Configure VPC Service Controls for CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:22:26.173509+00:00
+fetched_at: 2026-10-21T12:55:23.256134+00:00
 ---
 
 # Configure VPC Service Controls for CX Agent Studio  |  Google Cloud Documentation

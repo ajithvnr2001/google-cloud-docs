@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/use-existing-kubernetes-app/
 title: Use an existing application in Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:16:48.142613+00:00
+fetched_at: 2026-10-21T14:20:40.599439+00:00
 ---
 
 # Use an existing application in Cloud Code for Cloud Shell  |  Google Cloud Documentation

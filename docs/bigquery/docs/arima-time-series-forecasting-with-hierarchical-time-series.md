@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/arima-time-series-forecasting-with-hierarchical-time-series/
 title: Forecast hierarchical time series with an ARIMA_PLUS univariate model \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:08:45.598808+00:00
+fetched_at: 2026-10-21T12:30:44.544763+00:00
 ---
 
 # Forecast hierarchical time series with an ARIMA_PLUS univariate model  |  BigQuery  |  Google Cloud Documentation

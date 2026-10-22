@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/docs/basics/
 title: Natural Language API Basics \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:38:12.697772+00:00
+fetched_at: 2026-10-21T15:17:09.208808+00:00
 ---
 
 # Natural Language API Basics  |  Google Cloud Documentation

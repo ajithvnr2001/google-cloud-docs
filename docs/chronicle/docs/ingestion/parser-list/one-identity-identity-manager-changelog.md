@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/one-identity-identity-manager-changelog/
 title: Change log for ONE_IDENTITY_IDENTITY_MANAGER \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:49:35.855144+00:00
+fetched_at: 2026-10-21T14:47:09.698519+00:00
 ---
 
 # Change log for ONE_IDENTITY_IDENTITY_MANAGER  |  Google Security Operations  |  Google Cloud Documentation

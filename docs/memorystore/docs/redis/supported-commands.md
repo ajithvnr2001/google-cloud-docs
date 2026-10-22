@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/supported-commands/
 title: Supported and blocked commands \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:49.791036+00:00
+fetched_at: 2026-10-21T15:12:59.055559+00:00
 ---
 
 # Supported and blocked commands  |  Memorystore for Redis  |  Google Cloud Documentation

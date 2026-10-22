@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/forcepoint-casb-changelog/
 title: Change log for FORCEPOINT_CASB \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:34:32.284004+00:00
+fetched_at: 2026-10-21T14:42:46.458808+00:00
 ---
 
 # Change log for FORCEPOINT_CASB  |  Google Security Operations  |  Google Cloud Documentation

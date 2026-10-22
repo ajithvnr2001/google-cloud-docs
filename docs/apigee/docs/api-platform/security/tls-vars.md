@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/security/tls-vars/
 title: Accessing TLS connection information in an API proxy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:48:03.664528+00:00
+fetched_at: 2026-10-21T12:36:01.712044+00:00
 ---
 
 # Accessing TLS connection information in an API proxy  |  Apigee  |  Google Cloud Documentation

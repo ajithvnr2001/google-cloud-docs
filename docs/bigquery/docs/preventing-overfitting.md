@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/preventing-overfitting/
 title: Prevent overfitting \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:51:34.749202+00:00
+fetched_at: 2026-10-21T12:36:44.315948+00:00
 ---
 
 # Prevent overfitting  |  BigQuery  |  Google Cloud Documentation

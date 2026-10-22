@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/gsc_youtube_analytics/configure/
 title: Youtube Analytics \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:16.867058+00:00
+fetched_at: 2026-10-21T12:53:05.008211+00:00
 ---
 
 # Youtube Analytics  |  Integration Connectors  |  Google Cloud Documentation

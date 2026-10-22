@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/samples/healthcare-create-fhir-store/
 title: Create FHIR store \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:25:57.458387+00:00
+fetched_at: 2026-10-21T12:53:01.968485+00:00
 ---
 
 # Create FHIR store  |  Cloud Healthcare API  |  Google Cloud Documentation

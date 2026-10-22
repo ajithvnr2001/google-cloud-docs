@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/concepts/overview-allowlisted-domains/
 title: Allowlisted Domains API overview \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:24.537035+00:00
+fetched_at: 2026-10-21T12:54:30.296267+00:00
 ---
 
 # Allowlisted Domains API overview  |  Cloud Identity  |  Google Cloud Documentation

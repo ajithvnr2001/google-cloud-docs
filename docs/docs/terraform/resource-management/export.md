@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/terraform/resource-management/export/
 title: Export your Google Cloud resources to Terraform format \u00a0|\u00a0 Terraform on Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:13:26.007157+00:00
+fetched_at: 2026-10-21T14:06:57.913120+00:00
 ---
 
 # Export your Google Cloud resources to Terraform format  |  Terraform on Google Cloud  |  Google Cloud Documentation

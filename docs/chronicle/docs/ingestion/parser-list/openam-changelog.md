@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/openam-changelog/
 title: Change log for OPENAM \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:59:42.508559+00:00
+fetched_at: 2026-10-21T14:47:08.804872+00:00
 ---
 
 # Change log for OPENAM  |  Google Security Operations  |  Google Cloud Documentation

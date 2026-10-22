@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/iam-security-architecture/
 title: Security architecture and IAM \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:09:56.056255+00:00
+fetched_at: 2026-10-21T12:52:01.603601+00:00
 ---
 
 # Security architecture and IAM  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

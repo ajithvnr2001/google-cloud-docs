@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/slack/
 title: Slack \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:50.790300+00:00
+fetched_at: 2026-10-21T12:43:21.471094+00:00
 ---
 
 # Slack  |  Dialogflow CX  |  Google Cloud Documentation

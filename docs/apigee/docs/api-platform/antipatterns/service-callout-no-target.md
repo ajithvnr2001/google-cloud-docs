@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/service-callout-no-target/
 title: Antipattern: Use Service Callout Policy to invoke a backend service in a No Target API Proxy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:18.936043+00:00
+fetched_at: 2026-10-21T12:30:06.840245+00:00
 ---
 
 # Antipattern: Use Service Callout Policy to invoke a backend service in a No Target API Proxy  |  Apigee  |  Google Cloud Documentation

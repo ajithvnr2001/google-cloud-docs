@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/duo-activity-changelog/
 title: Change log for DUO_ACTIVITY \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:43:09.247569+00:00
+fetched_at: 2026-10-21T14:43:47.685476+00:00
 ---
 
 # Change log for DUO_ACTIVITY  |  Google Security Operations  |  Google Cloud Documentation

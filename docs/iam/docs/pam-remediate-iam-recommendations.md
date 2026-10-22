@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/pam-remediate-iam-recommendations/
 title: Remediate excessive permissions with Privileged Access Manager \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:10:11.687001+00:00
+fetched_at: 2026-10-21T12:54:00.523919+00:00
 ---
 
 # Remediate excessive permissions with Privileged Access Manager  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

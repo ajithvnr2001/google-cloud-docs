@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/packer/
 title: Build custom images with Packer \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:43.215025+00:00
+fetched_at: 2026-10-21T14:42:16.281900+00:00
 ---
 
 # Build custom images with Packer  |  Cluster Toolkit  |  Google Cloud Documentation

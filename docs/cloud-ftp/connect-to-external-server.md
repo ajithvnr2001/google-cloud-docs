@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-ftp/connect-to-external-server/
 title: Connect to an external SFTP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:17:50.420600+00:00
+fetched_at: 2026-10-21T14:22:49.333324+00:00
 ---
 
 # Connect to an external SFTP server  |  Google Cloud Documentation

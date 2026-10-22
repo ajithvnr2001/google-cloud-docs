@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/turn-off/
 title: Remove Gemini Cloud Assist access \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:14:01.866596+00:00
+fetched_at: 2026-10-21T14:23:34.372769+00:00
 ---
 
 # Remove Gemini Cloud Assist access  |  Google Cloud Documentation

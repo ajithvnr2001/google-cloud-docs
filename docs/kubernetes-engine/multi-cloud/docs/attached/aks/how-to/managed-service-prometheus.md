@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/aks/how-to/managed-service-prometheus/
 title: Install Cloud Monitoring on AKS attached clusters \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:22.020294+00:00
+fetched_at: 2026-10-21T15:02:46.147937+00:00
 ---
 
 # Install Cloud Monitoring on AKS attached clusters  |  GKE attached clusters  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/youtube-channel-transformation/
 title: YouTube Channel report transformation \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:25:18.211783+00:00
+fetched_at: 2026-10-21T12:37:50.455868+00:00
 ---
 
 # YouTube Channel report transformation  |  BigQuery  |  Google Cloud Documentation

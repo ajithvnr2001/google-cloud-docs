@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/go/specifying-dependencies/
 title: Specify dependencies \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:38.105721+00:00
+fetched_at: 2026-10-21T12:30:55.676893+00:00
 ---
 
 # Specify dependencies  |  App Engine standard environment  |  Google Cloud Documentation

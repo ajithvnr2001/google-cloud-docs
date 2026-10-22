@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/resources/
 title: Resources \u00a0|\u00a0 Config Sync \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:20:20.117079+00:00
+fetched_at: 2026-10-21T15:00:43.465764+00:00
 ---
 
 # Resources  |  Config Sync  |  Google Cloud Documentation

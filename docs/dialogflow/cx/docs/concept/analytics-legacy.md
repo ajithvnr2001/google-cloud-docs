@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/analytics-legacy/
 title: Legacy Analytics \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:53.236368+00:00
+fetched_at: 2026-10-21T12:56:09.377291+00:00
 ---
 
 # Legacy Analytics  |  Dialogflow CX  |  Google Cloud Documentation

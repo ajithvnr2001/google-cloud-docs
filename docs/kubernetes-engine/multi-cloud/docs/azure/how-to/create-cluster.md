@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/how-to/create-cluster/
 title: Create a cluster \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:51.035492+00:00
+fetched_at: 2026-10-21T15:09:29.381428+00:00
 ---
 
 # Create a cluster  |  GKE on Azure  |  Google Cloud Documentation

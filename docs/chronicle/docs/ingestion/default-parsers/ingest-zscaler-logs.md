@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/ingest-zscaler-logs/
 title: Zscaler parsers overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:50:50.852712+00:00
+fetched_at: 2026-10-21T12:36:04.989769+00:00
 ---
 
 # Zscaler parsers overview  |  Google Security Operations  |  Google Cloud Documentation

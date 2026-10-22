@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/create-workload-policies/
 title: Create workload policies for MIGs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:05:16.771733+00:00
+fetched_at: 2026-10-21T14:23:34.909054+00:00
 ---
 
 # Create workload policies for MIGs  |  Compute Engine  |  Google Cloud Documentation

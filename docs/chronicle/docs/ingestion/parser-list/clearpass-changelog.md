@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/clearpass-changelog/
 title: Change log for CLEARPASS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:53:39.768982+00:00
+fetched_at: 2026-10-21T14:44:41.159662+00:00
 ---
 
 # Change log for CLEARPASS  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/tutorials/using-3pi-with-reflection/
 title: Issue certificates that attest to third-party identity \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:59:36.999904+00:00
+fetched_at: 2026-10-21T12:37:44.709211+00:00
 ---
 
 # Issue certificates that attest to third-party identity  |  Certificate Authority Service  |  Google Cloud Documentation

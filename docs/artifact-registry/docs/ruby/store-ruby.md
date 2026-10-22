@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/ruby/store-ruby/
 title: Quickstart: Store Ruby gems in Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:17.514383+00:00
+fetched_at: 2026-10-21T14:25:09.131322+00:00
 ---
 
 # Quickstart: Store Ruby gems in Artifact Registry  |  Google Cloud Documentation

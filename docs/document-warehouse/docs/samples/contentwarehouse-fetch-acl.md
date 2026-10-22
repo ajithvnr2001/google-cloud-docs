@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/document-warehouse/docs/samples/contentwarehouse-fetch-acl/
 title: Get access control list (ACL) \u00a0|\u00a0 Document AI Warehouse \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:44:25.369265+00:00
+fetched_at: 2026-10-21T14:07:13.967698+00:00
 ---
 
 # Get access control list (ACL)  |  Document AI Warehouse  |  Google Cloud Documentation

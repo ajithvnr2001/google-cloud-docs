@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/sessions/
 title: Work with sessions \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:22.282421+00:00
+fetched_at: 2026-10-21T12:36:58.756391+00:00
 ---
 
 # Work with sessions  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/retail/
 title: AI Commerce Search API roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:11:20.545682+00:00
+fetched_at: 2026-10-21T14:29:32.924885+00:00
 ---
 
 # AI Commerce Search API roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

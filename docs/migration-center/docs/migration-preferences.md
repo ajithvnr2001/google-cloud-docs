@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migration-center/docs/migration-preferences/
 title: Create and manage migration preferences \u00a0|\u00a0 Migration Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:23.967392+00:00
+fetched_at: 2026-10-21T15:12:40.044192+00:00
 ---
 
 # Create and manage migration preferences  |  Migration Center  |  Google Cloud Documentation

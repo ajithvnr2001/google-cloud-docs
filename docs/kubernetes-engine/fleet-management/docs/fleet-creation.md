@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs/fleet-creation/
 title: Fleet creation overview \u00a0|\u00a0 Fleet management \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:37:12.297218+00:00
+fetched_at: 2026-10-21T15:03:47.486203+00:00
 ---
 
 # Fleet creation overview  |  Fleet management  |  Google Cloud Documentation

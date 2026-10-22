@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/samples/dataflow-v1beta3-generated-SnapshotsV1Beta3-GetSnapshot-sync/
 title: Get a snapshot \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:20:08.363469+00:00
+fetched_at: 2026-10-22T05:42:32.575048+00:00
 ---
 
 # Get a snapshot  |  Cloud Dataflow  |  Google Cloud Documentation

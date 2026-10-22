@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.1/how-to/deploying-spring-cloud-config/
 title: Deploying Spring Cloud Config \u00a0|\u00a0 Kf 2.1 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:43.572771+00:00
+fetched_at: 2026-10-21T15:11:25.012083+00:00
 ---
 
 # Deploying Spring Cloud Config  |  Kf 2.1  |  Google Cloud Documentation

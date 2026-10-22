@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/multi-zone/api-servers/
 title: Global and zonal resources \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:35.163609+00:00
+fetched_at: 2026-10-21T12:59:08.996764+00:00
 ---
 
 # Global and zonal resources  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

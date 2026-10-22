@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/best-practices-move-table-to-another-region/
 title: Migrate a CDC table to another region \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:13:45.196689+00:00
+fetched_at: 2026-10-22T05:41:18.585978+00:00
 ---
 
 # Migrate a CDC table to another region  |  Datastream  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback
 
 #  Migrate a CDC table to another region Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes best practices for a use case where you've set up Datastream replication to BigQuery but configured the destination dataset in an incorrect region. You then want to move the dataset to another region (or multi-region) without having to re-synchronise all of the data from the source database to BigQuery.
+You can move a Datastream destination dataset to another BigQuery region or multi-region by using cross-region dataset replication. This workflow updates the location of an active change data capture (CDC) dataset while minimizing stream downtime and avoiding a full historical backfill from your source database.
 
-Querying the secondary region during the migration procedure might return incorrect or incomplete results. For more information about the limitations related to the migration procedure described on this page, see [Cross-region dataset replication](https://docs.cloud.google.com/bigquery/docs/data-replication#limitations).
+During the migration, querying the secondary region might return incomplete or inaccurate results. For more information about migration limitations, see [Cross-region dataset replication](https://docs.cloud.google.com/bigquery/docs/data-replication#limitations).
 
 ## Before you begin
 
@@ -34,7 +34,7 @@ Before you start migrating your data to another region, consider the following:
     * To find the maximum `max_staleness` in the dataset, see [Determine the current `max_staleness` value of a table](https://docs.cloud.google.com/bigquery/docs/change-data-capture#determine-max-staleness) and adjust the query to your specific needs.
     * If the estimated pause is too long for your source database to support, you might want to consider temporarily reducing the value of `max_staleness` for the tables in the dataset.
   * Verify that the user performing the migration has sufficient BigQuery resources in the destination region (query reservation and background reservation). For more information about reservations, see [Reservation assignments](https://docs.cloud.google.com/bigquery/docs/reservations-intro#assignments).
-  * Verify that the user performing the migration has sufficient permissions to perform this operation, such as [Identity and Access Management (IAM)](https://docs.cloud.google.com/iam) controls or [VPC Service Controls](https://docs.cloud.google.com/security/vpc-service-controls).
+  * Verify that the user performing the migration has sufficient permissions to perform this operation, such as [Identity and Access Management (IAM)](https://docs.cloud.google.com/iam) controls or [VPC Service Controls](https://docs.cloud.google.com/vpc-service-controls/docs/overview).
 
 
 
@@ -136,6 +136,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

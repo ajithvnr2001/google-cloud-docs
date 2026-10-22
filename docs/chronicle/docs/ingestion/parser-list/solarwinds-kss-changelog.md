@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/solarwinds-kss-changelog/
 title: Change log for SOLARWINDS_KSS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:31:07.530260+00:00
+fetched_at: 2026-10-21T14:42:38.528183+00:00
 ---
 
 # Change log for SOLARWINDS_KSS  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/permissions/working-with-permission-groups/
 title: Permission groups overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:40.824661+00:00
+fetched_at: 2026-10-21T14:21:13.932191+00:00
 ---
 
 # Permission groups overview  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/external-dags-migration/
 title: External DAGs migration from v4.2 to v5.0 \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:35:38.661202+00:00
+fetched_at: 2026-10-21T14:10:20.692958+00:00
 ---
 
 # External DAGs migration from v4.2 to v5.0  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

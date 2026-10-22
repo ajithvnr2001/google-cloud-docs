@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-hw-create-filter/
 title: Version limit \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:24:05.195335+00:00
+fetched_at: 2026-10-21T14:10:48.459370+00:00
 ---
 
 # Version limit  |  Bigtable  |  Google Cloud Documentation

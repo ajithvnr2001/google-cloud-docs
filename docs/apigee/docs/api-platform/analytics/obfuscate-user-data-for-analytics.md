@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/analytics/obfuscate-user-data-for-analytics/
 title: Obfuscate user data for Apigee API Analytics \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:06:48.055403+00:00
+fetched_at: 2026-10-21T12:29:59.121988+00:00
 ---
 
 # Obfuscate user data for Apigee API Analytics  |  Google Cloud Documentation

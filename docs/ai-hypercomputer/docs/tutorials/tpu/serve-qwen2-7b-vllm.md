@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/serve-qwen2-7b-vllm/
 title: Serve Qwen2-7B with vLLM on TPUs \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:18.673427+00:00
+fetched_at: 2026-10-22T05:41:14.466027+00:00
 ---
 
 # Serve Qwen2-7B with vLLM on TPUs  |  AI Hypercomputer  |  Google Cloud Documentation

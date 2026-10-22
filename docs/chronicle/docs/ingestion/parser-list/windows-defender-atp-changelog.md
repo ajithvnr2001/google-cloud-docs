@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/windows-defender-atp-changelog/
 title: Change log for WINDOWS_DEFENDER_ATP \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:44:08.413967+00:00
+fetched_at: 2026-10-21T14:47:07.615352+00:00
 ---
 
 # Change log for WINDOWS_DEFENDER_ATP  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/openapi-limitations/
 title: OpenAPI 2.0 feature limitations \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:14:16.948042+00:00
+fetched_at: 2026-10-21T12:45:53.552046+00:00
 ---
 
 # OpenAPI 2.0 feature limitations  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation

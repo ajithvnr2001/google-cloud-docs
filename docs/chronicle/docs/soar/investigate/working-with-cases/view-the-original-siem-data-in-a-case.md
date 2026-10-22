@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/investigate/working-with-cases/view-the-original-siem-data-in-a-case/
 title: View SIEM data in a case \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:05:35.257873+00:00
+fetched_at: 2026-10-21T14:20:29.633520+00:00
 ---
 
 # View SIEM data in a case  |  Google Security Operations  |  Google Cloud Documentation

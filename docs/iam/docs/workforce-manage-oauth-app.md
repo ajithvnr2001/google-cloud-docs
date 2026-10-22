@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/workforce-manage-oauth-app/
 title: Manage OAuth application \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:09:59.881232+00:00
+fetched_at: 2026-10-21T12:53:39.794687+00:00
 ---
 
 # Manage OAuth application  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/configure-compute-engine-instance/
 title: Configure a Compute Engine instance template \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:12:45.108402+00:00
+fetched_at: 2026-10-21T15:08:36.327341+00:00
 ---
 
 # Configure a Compute Engine instance template  |  Application Design Center  |  Google Cloud Documentation
@@ -20,14 +20,7 @@ Send feedback
 
 #  Configure a Compute Engine instance template Stay organized with collections  Save and categorize content based on your preferences. 
 
-A Compute Engine instance template lets you describe a VM instance. You can then create groups of identical instances based on the template. For more information, see the following:
-
-  * [Compute Engine overview](https://docs.cloud.google.com/compute/docs/overview)
-  * [Instance templates](https://docs.cloud.google.com/compute/docs/instance-templates)
-
-
-
-This document describes the connections and parameters you can configure when using App Design Center to create a Compute Engine instance template. The configuration parameters are based on the [instance_template](https://github.com/terraform-google-modules/terraform-google-vm/tree/main/modules/instance_template) Terraform module.
+In Application Design Center, you can configure a Compute Engine [instance template](https://docs.cloud.google.com/compute/docs/instance-templates) to define the virtual machine (VM) configuration for creating identical VM instances and instance groups. You can customize the instance template for your specific component connections and configuration parameters. The configuration parameters are listed in the [instance_template](https://github.com/terraform-google-modules/terraform-google-vm/tree/main/modules/instance_template) Terraform module.
 
 ## Component connections
 
@@ -219,6 +212,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-monitoring/compare/
 title: Compare API Monitoring with Apigee Analytics \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:39:03.608619+00:00
+fetched_at: 2026-10-21T14:26:59.000573+00:00
 ---
 
 # Compare API Monitoring with Apigee Analytics  |  Google Cloud Documentation

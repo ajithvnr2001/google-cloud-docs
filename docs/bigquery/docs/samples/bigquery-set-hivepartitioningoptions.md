@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-set-hivepartitioningoptions/
 title: Set hive partitioning options \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:07.180538+00:00
+fetched_at: 2026-10-22T05:49:10.260253+00:00
 ---
 
 # Set hive partitioning options  |  BigQuery  |  Google Cloud Documentation

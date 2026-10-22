@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/doubleclick-publisher-transfer/
 title: Load Google Ad Manager data into BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:01:31.270159+00:00
+fetched_at: 2026-10-21T14:09:15.567852+00:00
 ---
 
 # Load Google Ad Manager data into BigQuery  |  Google Cloud Documentation

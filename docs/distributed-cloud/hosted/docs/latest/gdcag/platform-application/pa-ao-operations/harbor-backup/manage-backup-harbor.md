@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/harbor-backup/manage-backup-harbor/
 title: Manage a backup \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:01:30.059857+00:00
+fetched_at: 2026-10-21T12:59:23.445657+00:00
 ---
 
 # Manage a backup  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

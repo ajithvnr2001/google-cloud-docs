@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/serve-qwen3-coder-gke-ironwood-multi-host-torchtpu/
 title: Serve Qwen3-Coder-480B on GKE with multi-host SGLang TorchTPU on TPU7x accelerators \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:28:15.658634+00:00
+fetched_at: 2026-10-22T05:46:03.096597+00:00
 ---
 
 # Serve Qwen3-Coder-480B on GKE with multi-host SGLang TorchTPU on TPU7x accelerators  |  AI Hypercomputer  |  Google Cloud Documentation

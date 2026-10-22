@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/call-adapter-transfer/
 title: Transfer calls \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:34.280919+00:00
+fetched_at: 2026-10-21T14:10:34.475680+00:00
 ---
 
 # Transfer calls  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

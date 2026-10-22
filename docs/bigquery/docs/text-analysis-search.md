@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/text-analysis-search/
 title: Work with text analyzers \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:18.057514+00:00
+fetched_at: 2026-10-21T14:08:47.527450+00:00
 ---
 
 # Work with text analyzers  |  BigQuery  |  Google Cloud Documentation

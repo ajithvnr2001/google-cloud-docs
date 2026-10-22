@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/sandbox-trigger-inside-cluster/
-title: Trigger Agent Sandbox snapshots from inside a cluster \u00a0|\u00a0 GKE AI/ML \u00a0|\u00a0 Google Cloud Documentation
+title: Trigger Agent Sandbox on GKE snapshots from inside a cluster \u00a0|\u00a0 GKE AI/ML \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:26:16.492123+00:00
+fetched_at: 2026-10-21T14:37:30.308993+00:00
 ---
 
-# Trigger Agent Sandbox snapshots from inside a cluster  |  GKE AI/ML  |  Google Cloud Documentation
+# Trigger Agent Sandbox on GKE snapshots from inside a cluster  |  GKE AI/ML  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/sandbox-trigger-inside-cluster/
 
@@ -20,17 +20,17 @@ fetched_at: 2026-10-14T05:26:16.492123+00:00
 
 Send feedback 
 
-#  Trigger Agent Sandbox snapshots from inside a cluster Stay organized with collections  Save and categorize content based on your preferences. 
+#  Trigger Agent Sandbox on GKE snapshots from inside a cluster Stay organized with collections  Save and categorize content based on your preferences. 
 
 [ Autopilot ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview) [ Standard ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode)
 
-Use Agent Sandbox snapshots within a Google Kubernetes Engine (GKE) cluster to preserve the state of your sandboxed environments. This approach provides consistent debugging, accelerates development iteration, and facilitates rapid recovery of complex setups. In this tutorial, you deploy and test this capability by running a client application that programmatically creates, pauses, and resumes sandboxed environments inside the cluster.
+Use Agent Sandbox on Google Kubernetes Engine (GKE) snapshots within a cluster to preserve the state of your sandboxed environments. This approach provides consistent debugging, accelerates development iteration, and facilitates rapid recovery of complex setups. In this tutorial, you deploy and test this capability by running a client application that programmatically creates, pauses, and resumes sandboxed environments inside the cluster.
 
 For more information about taking snapshots of Pods, see [Restore from a Pod snapshot](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/pod-snapshots).
 
 ## Costs
 
-Agent Sandbox is offered at no extra charge in GKE. [GKE pricing](https://cloud.google.com/kubernetes-engine/pricing) applies to the resources that you create.
+Agent Sandbox on GKE is offered at no extra charge. [GKE pricing](https://cloud.google.com/kubernetes-engine/pricing) applies to the resources that you create.
 
 ## Before you begin
 
@@ -111,7 +111,7 @@ Here's an explanation of these environment variables:
 
 ## Overview of configuration steps
 
-To enable and test Pod snapshots of Agent Sandbox environments from within your cluster, you need to perform several configuration steps. To understand these steps, it's helpful to first understand the components involved in the overall workflow.
+To enable and test Pod snapshots of Agent Sandbox on GKE environments from within your cluster, you need to perform several configuration steps. To understand these steps, it's helpful to first understand the components involved in the overall workflow.
 
 ### Key components
 
@@ -126,7 +126,7 @@ This tutorial uses the following two Python applications to test the snapshot pr
 
 The following list summarizes the steps you need to perform to set up your environment and run the test:
 
-  1. **Create a cluster** : create an Autopilot or Standard cluster with Pod snapshots and the Agent Sandbox feature enabled.
+  1. **Create a cluster** : create an Autopilot or Standard cluster with Pod snapshots and Agent Sandbox on GKE enabled.
   2. **Create an Artifact Registry repository** : create a Docker repository to store the container image for your client application.
   3. **Install Agent Sandbox** : install the core agent-sandbox components and extensions on your cluster.
   4. **Configure storage and permissions** : create a Cloud Storage bucket and configure Workload Identity permissions to allow snapshots to be saved securely.
@@ -190,7 +190,7 @@ Create a Docker repository in Artifact Registry to store the container image for
 
 ## Install Agent Sandbox
 
-**Note:** To support the snapshot suspend and resume workflow, this tutorial uses a manual installation method to deploy the Agent Sandbox components directly from the open-source GitHub repository. This manual installation is a temporary workaround until the snapshot features are fully available in the GKE Agent Sandbox add-on.
+**Note:** To support the snapshot suspend and resume workflow, this tutorial uses a manual installation method to deploy the Agent Sandbox components directly from the open-source GitHub repository. This manual installation is a temporary workaround until the snapshot features are fully available in the Agent Sandbox on GKE add-on.
 
 Install the Agent Sandbox core components and extensions on your cluster (using version v0.4.6 as an example):
     
@@ -719,10 +719,10 @@ To avoid incurring charges to your Google Cloud account, delete the resources th
 ## What's next
 
   * Learn how to [Isolate AI code execution: external trigger](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox).
-  * Learn how to [Save and restore Agent Sandbox environments](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-pod-snapshots).
+  * Learn how to [Save and restore Agent Sandbox on GKE environments](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-pod-snapshots).
   * To understand the isolation layers that protect your untrusted workloads, see [GKE Sandbox](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/sandbox-pods).
   * Explore the open-source [Agent Sandbox project](https://github.com/kubernetes-sigs/agent-sandbox) on GitHub.
-  * Learn how to use open source [Kata Containers with Agent Sandbox](https://github.com/kubernetes-sigs/agent-sandbox/tree/main/examples/kata-gke-sandbox). Kata Containers isn't a Google Cloud product. If you install and use this software, then you're responsible for management and troubleshooting. Google's support and SLAs don't apply to Kata Containers.
+  * Learn how to use open source [Kata Containers with Agent Sandbox on GKE](https://github.com/kubernetes-sigs/agent-sandbox/tree/main/examples/kata-gke-sandbox). Kata Containers isn't a Google Cloud product. If you install and use this software, then you're responsible for management and troubleshooting. Google's support and SLAs don't apply to Kata Containers.
 
 
 
@@ -730,6 +730,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

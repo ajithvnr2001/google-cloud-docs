@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/column-level-security/
 title: Restrict access with column-level access control \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:39:14.202152+00:00
+fetched_at: 2026-10-21T12:38:38.842115+00:00
 ---
 
 # Restrict access with column-level access control  |  BigQuery  |  Google Cloud Documentation

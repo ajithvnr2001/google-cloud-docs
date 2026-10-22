@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/ctix-changelog/
 title: Change log for CTIX \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:34:21.833096+00:00
+fetched_at: 2026-10-21T14:45:34.058651+00:00
 ---
 
 # Change log for CTIX  |  Google Security Operations  |  Google Cloud Documentation

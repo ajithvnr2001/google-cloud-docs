@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-hw-create-table/
 title: Create a table \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:23:51.775065+00:00
+fetched_at: 2026-10-21T14:10:53.374995+00:00
 ---
 
 # Create a table  |  Bigtable  |  Google Cloud Documentation

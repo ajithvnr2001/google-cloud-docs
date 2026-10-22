@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/grpc/planning-cloud-projects/
 title: Planning Your Cloud Projects \u00a0|\u00a0 Cloud Endpoints with gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:36:10.821567+00:00
+fetched_at: 2026-10-21T12:46:09.939177+00:00
 ---
 
 # Planning Your Cloud Projects  |  Cloud Endpoints with gRPC  |  Google Cloud Documentation

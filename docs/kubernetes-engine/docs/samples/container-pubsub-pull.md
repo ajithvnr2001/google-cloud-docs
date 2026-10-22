@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/samples/container-pubsub-pull/
 title: Pull Pub/Sub messages from subscription \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:28:27.541509+00:00
+fetched_at: 2026-10-21T15:09:07.770260+00:00
 ---
 
 # Pull Pub/Sub messages from subscription  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

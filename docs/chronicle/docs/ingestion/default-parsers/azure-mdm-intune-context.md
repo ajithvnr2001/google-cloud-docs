@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/azure-mdm-intune-context/
 title: Collect Microsoft Intune Context logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:25:55.782359+00:00
+fetched_at: 2026-10-21T14:23:34.326803+00:00
 ---
 
 # Collect Microsoft Intune Context logs  |  Google Security Operations  |  Google Cloud Documentation

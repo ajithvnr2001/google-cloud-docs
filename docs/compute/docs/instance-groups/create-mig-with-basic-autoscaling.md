@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/create-mig-with-basic-autoscaling/
 title: Create a MIG with autoscaling enabled \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:07:35.889298+00:00
+fetched_at: 2026-10-21T14:23:35.107774+00:00
 ---
 
 # Create a MIG with autoscaling enabled  |  Compute Engine  |  Google Cloud Documentation

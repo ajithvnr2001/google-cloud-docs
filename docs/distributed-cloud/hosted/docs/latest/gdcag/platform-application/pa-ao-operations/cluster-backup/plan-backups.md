@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/cluster-backup/plan-backups/
 title: Plan a set of backups \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:52:53.197702+00:00
+fetched_at: 2026-10-21T12:59:22.849590+00:00
 ---
 
 # Plan a set of backups  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

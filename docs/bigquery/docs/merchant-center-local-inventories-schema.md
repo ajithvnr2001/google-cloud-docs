@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/merchant-center-local-inventories-schema/
 title: Google Merchant Center local inventories table \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:59:18.950053+00:00
+fetched_at: 2026-10-21T12:36:03.643167+00:00
 ---
 
 # Google Merchant Center local inventories table  |  BigQuery  |  Google Cloud Documentation

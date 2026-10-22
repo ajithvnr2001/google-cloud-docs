@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/about-manual-failover/
 title: About manual failover \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:51.483353+00:00
+fetched_at: 2026-10-21T15:11:19.811422+00:00
 ---
 
 # About manual failover  |  Memorystore for Redis  |  Google Cloud Documentation

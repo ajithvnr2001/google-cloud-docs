@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/sierra-wireless-changelog/
 title: Change log for SIERRA_WIRELESS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:55:05.988407+00:00
+fetched_at: 2026-10-21T14:42:39.528533+00:00
 ---
 
 # Change log for SIERRA_WIRELESS  |  Google Security Operations  |  Google Cloud Documentation

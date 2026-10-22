@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/e2e-journey-genai/
 title: End-to-end user journeys for generative AI models \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:50:35.180993+00:00
+fetched_at: 2026-10-21T14:07:25.181797+00:00
 ---
 
 # End-to-end user journeys for generative AI models  |  BigQuery  |  Google Cloud Documentation

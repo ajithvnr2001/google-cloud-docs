@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ruby/docs/reference/
 title: Ruby Cloud Client Libraries \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:58:22.402390+00:00
+fetched_at: 2026-10-21T15:15:05.947118+00:00
 ---
 
 # Ruby Cloud Client Libraries  |  Google Cloud Documentation

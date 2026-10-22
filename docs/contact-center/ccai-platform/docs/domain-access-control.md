@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/domain-access-control/
 title: Domain-based access control \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:36.156829+00:00
+fetched_at: 2026-10-21T14:22:06.937077+00:00
 ---
 
 # Domain-based access control  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

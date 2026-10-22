@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/flags/flags-golang/
 title: Use App Lifecycle Manager feature flags with Go \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:53:18.859236+00:00
+fetched_at: 2026-10-21T12:30:35.253616+00:00
 ---
 
 # Use App Lifecycle Manager feature flags with Go  |  Google Cloud Documentation

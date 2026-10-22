@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/splunk/
 title: Collect Splunk CIM logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:09:49.199839+00:00
+fetched_at: 2026-10-21T12:36:53.561545+00:00
 ---
 
 # Collect Splunk CIM logs  |  Google Security Operations  |  Google Cloud Documentation

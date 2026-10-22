@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/watchguard-changelog/
 title: Change log for WATCHGUARD \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:21:43.442869+00:00
+fetched_at: 2026-10-21T14:43:21.577861+00:00
 ---
 
 # Change log for WATCHGUARD  |  Google Security Operations  |  Google Cloud Documentation

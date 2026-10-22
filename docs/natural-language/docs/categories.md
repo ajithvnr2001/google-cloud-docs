@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/docs/categories/
 title: Content Categories \u00a0|\u00a0 Cloud Natural Language API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:31:37.833309+00:00
+fetched_at: 2026-10-21T15:16:27.014675+00:00
 ---
 
 # Content Categories  |  Cloud Natural Language API  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/generic/how-to/view-cluster/
 title: View your CNCF conformant attached cluster's status \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:34:56.657859+00:00
+fetched_at: 2026-10-21T15:02:14.695992+00:00
 ---
 
 # View your CNCF conformant attached cluster's status  |  GKE attached clusters  |  Google Cloud Documentation

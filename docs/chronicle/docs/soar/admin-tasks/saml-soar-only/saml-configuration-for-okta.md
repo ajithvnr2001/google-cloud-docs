@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/saml-soar-only/saml-configuration-for-okta/
 title: Configure Okta for SAML \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:43:36.079168+00:00
+fetched_at: 2026-10-21T14:21:33.132542+00:00
 ---
 
 # Configure Okta for SAML  |  Google Security Operations  |  Google Cloud Documentation

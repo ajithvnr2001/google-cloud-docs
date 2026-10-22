@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/tanium-audit/
 title: Collect Tanium audit logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:36:22.273414+00:00
+fetched_at: 2026-10-21T12:36:53.919935+00:00
 ---
 
 # Collect Tanium audit logs  |  Google Security Operations  |  Google Cloud Documentation

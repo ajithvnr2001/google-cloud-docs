@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/googlesql-overview/
 title: GoogleSQL for Bigtable overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:16.666547+00:00
+fetched_at: 2026-10-21T12:37:43.199335+00:00
 ---
 
 # GoogleSQL for Bigtable overview  |  Google Cloud Documentation

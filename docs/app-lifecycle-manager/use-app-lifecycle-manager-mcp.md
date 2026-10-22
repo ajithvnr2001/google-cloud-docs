@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/use-app-lifecycle-manager-mcp/
 title: Use the App Lifecycle Manager remote MCP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:19.793037+00:00
+fetched_at: 2026-10-21T12:30:49.419337+00:00
 ---
 
 # Use the App Lifecycle Manager remote MCP server  |  Google Cloud Documentation

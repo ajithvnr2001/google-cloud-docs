@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cato-networks-changelog/
 title: Change log for CATO_NETWORKS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:00:49.250226+00:00
+fetched_at: 2026-10-21T14:44:58.635570+00:00
 ---
 
 # Change log for CATO_NETWORKS  |  Google Security Operations  |  Google Cloud Documentation

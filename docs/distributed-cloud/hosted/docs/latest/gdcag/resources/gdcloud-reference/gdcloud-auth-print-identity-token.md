@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-auth-print-identity-token/
 title: gdcloud auth print-identity-token \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:14:02.327535+00:00
+fetched_at: 2026-10-21T12:58:33.030304+00:00
 ---
 
 # gdcloud auth print-identity-token  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

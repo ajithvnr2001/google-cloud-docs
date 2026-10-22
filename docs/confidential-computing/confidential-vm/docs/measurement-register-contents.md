@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/measurement-register-contents/
 title: Confidential VM measurement register contents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:02:03.449044+00:00
+fetched_at: 2026-10-21T14:21:44.534481+00:00
 ---
 
 # Confidential VM measurement register contents  |  Google Cloud Documentation

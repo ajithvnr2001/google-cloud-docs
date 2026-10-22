@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/create-access-levels-intune/
 title: Create and assign custom access levels using Microsoft Intune data \u00a0|\u00a0 Chrome Enterprise Premium \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:02:34.336037+00:00
+fetched_at: 2026-10-21T14:23:37.913546+00:00
 ---
 
 # Create and assign custom access levels using Microsoft Intune data  |  Chrome Enterprise Premium  |  Google Cloud Documentation

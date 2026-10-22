@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/regional-network-app-lb/
 title: Use regional network firewall policies to protect internal Application Load Balancers and internal proxy Network Load Balancers \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:40:25.517347+00:00
+fetched_at: 2026-10-21T12:55:36.017042+00:00
 ---
 
 # Use regional network firewall policies to protect internal Application Load Balancers and internal proxy Network Load Balancers  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

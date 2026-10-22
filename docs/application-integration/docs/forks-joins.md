@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/forks-joins/
 title: Forks and joins \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:35.298350+00:00
+fetched_at: 2026-10-21T12:30:24.539184+00:00
 ---
 
 # Forks and joins  |  Application Integration  |  Google Cloud Documentation

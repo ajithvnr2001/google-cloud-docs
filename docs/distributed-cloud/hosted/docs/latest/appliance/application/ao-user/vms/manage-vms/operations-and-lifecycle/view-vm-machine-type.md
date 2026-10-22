@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/vms/manage-vms/operations-and-lifecycle/view-vm-machine-type/
 title: View machine type \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:22:07.863921+00:00
+fetched_at: 2026-10-21T12:59:48.990515+00:00
 ---
 
 # View machine type  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

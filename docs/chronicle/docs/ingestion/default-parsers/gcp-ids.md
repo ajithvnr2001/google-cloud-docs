@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/gcp-ids/
 title: Collect Google Cloud IDS logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T14:18:49.349374+00:00
+fetched_at: 2026-10-21T12:39:05.916313+00:00
 ---
 
 # Collect Google Cloud IDS logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/how-to/secrets/
 title: Using Secrets to store sensitive data \u00a0|\u00a0 Config Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:18.696168+00:00
+fetched_at: 2026-10-21T14:51:37.121829+00:00
 ---
 
 # Using Secrets to store sensitive data  |  Config Connector  |  Google Cloud Documentation
@@ -26,6 +26,12 @@ You can use a [Secret](https://kubernetes.io/docs/concepts/configuration/secret/
 ## Overview
 
 This section presents an overview on using Secrets with Config Connector.
+
+### Security and Secret encryption at rest
+
+Because Kubernetes Secrets contain sensitive credentials and connection strings, enable [application-layer secrets encryption](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/encrypting-secrets) on your cluster. GKE encrypts Secrets at rest by default. Application-layer secrets encryption adds another layer of security by using Cloud Key Management Service envelope encryption.
+
+Additionally, use role-based access control (RBAC) to restrict read access to Secrets only to authorized cluster administrators. Apply the same restriction to Config Connector resources that store sensitive values in their `status` fields, such as `IAMServiceAccountKey`.
 
 ### Using a Secret when creating a resource
 
@@ -189,6 +195,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

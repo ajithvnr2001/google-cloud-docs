@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/network-ip-requirements/
 title: Network configuration and IP resource requirements \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:20:04.538080+00:00
+fetched_at: 2026-10-21T12:50:59.995468+00:00
 ---
 
 # Network configuration and IP resource requirements  |  Filestore  |  Google Cloud Documentation
@@ -38,6 +38,7 @@ Create an instance on using Google Cloud console. | Yes | Yes | Yes
 Create an instance on using Google Cloud CLI, Filestore API. | Yes | Yes | Yes  
 Use centralized IP range management for multiple Google services. | No | Yes | Yes  
 Access an instance from on-premises networks using Cloud VPN or Cloud Interconnect. | Yes | Yes | Yes  
+Specify a manually selected IP address for Filestore instances. | No | No | Yes  
   
 Filestore supports the following connectivity scenarios:
 
@@ -72,7 +73,7 @@ You can't use a legacy network with Filestore instances. If necessary, create a 
 
 Each Filestore instance must have an IP address range associated with it. Both [RFC 1918](https://tools.ietf.org/html/rfc1918) and non-RFC 1918 IP address ranges ([GA](https://cloud.google.com/products#product-launch-stages)) are supported.
 
-During instance creation, Filestore can automatically allocate an IP address range and assign IP addresses from that range to the instance. You can also manually provide a specific IP address range for your instance. 
+During instance creation, Filestore can either manually provide a specific IP address range for your instance or let Filestore automatically allocate an IP address range and assign IP addresses from that range to the instance. When you create an instance with Private Service Connect through Google Cloud CLI or Filestore API, you can manually provide a specific IPv4 or IPv6 address.
 
 After you create the instance, you can't change the assigned IP addresses. If you want to introduce changes, delete and recreate the instance with a new IP address range.
 
@@ -94,6 +95,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

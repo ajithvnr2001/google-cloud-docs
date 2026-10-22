@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/investigate-detections-in-search/
 title: Investigate detections in search \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:10.799709+00:00
+fetched_at: 2026-10-21T14:19:18.576260+00:00
 ---
 
 # Investigate detections in search  |  Google Security Operations  |  Google Cloud Documentation

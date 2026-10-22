@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/ping-directory-changelog/
 title: Change log for PING_DIRECTORY \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:12:46.506514+00:00
+fetched_at: 2026-10-21T14:51:49.291371+00:00
 ---
 
 # Change log for PING_DIRECTORY  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/Shared.Types/GetOperationRequest/
 title: GetOperationRequest \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:56:36.251718+00:00
+fetched_at: 2026-10-21T12:56:06.828350+00:00
 ---
 
 # GetOperationRequest  |  Data Agents  |  Google Cloud Documentation

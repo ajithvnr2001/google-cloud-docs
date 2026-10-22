@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/start-developing/testing-the-connector/
 title: Test custom connectors \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:07.134346+00:00
+fetched_at: 2026-10-21T12:38:55.231804+00:00
 ---
 
 # Test custom connectors  |  Google Security Operations  |  Google Cloud Documentation

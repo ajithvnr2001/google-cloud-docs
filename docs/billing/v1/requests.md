@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/v1/requests/
 title: Send Requests \u00a0|\u00a0 Cloud Billing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:13:42.414032+00:00
+fetched_at: 2026-10-21T14:27:12.519337+00:00
 ---
 
 # Send Requests  |  Cloud Billing  |  Google Cloud Documentation
@@ -283,6 +283,7 @@ Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["
     * [ Code samples ](https://docs.cloud.google.com/docs/samples)
     * [ Cloud Architecture Center ](https://docs.cloud.google.com/architecture/)
     * [ Training and Certification ](https://cloud.google.com/learn/training/)
+    * [ Builders Hub ](https://me.developers.google.com/)
   * ### Engage
 
     * [ Blog ](https://cloud.google.com/blog/)
@@ -293,7 +294,7 @@ Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["
 
 
 
-[ ![Google Developers](https://www.gstatic.com/devrel-devsite/prod/v097103d8ccd7b257790809ea4cc5e5fee6daa6e24890a4af388296e58364bc31/clouddocs/images/lockup-google-for-developers.svg)](https://developers.google.com/)
+[ ![Google Developers](https://www.gstatic.com/devrel-devsite/prod/v9ce9cb5b22b62a465ff52c45061a0a6a2d86a80b685e9aa8a182b203fdfbf420/clouddocs/images/lockup-google-for-developers.svg)](https://developers.google.com/)
 
   * [ Android ](https://developer.android.com/)
   * [ Chrome ](https://developer.chrome.com/)

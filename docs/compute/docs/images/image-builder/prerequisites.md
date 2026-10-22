@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/image-builder/prerequisites/
 title: Prepare your environment \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:26:51.962157+00:00
+fetched_at: 2026-10-21T14:21:39.303232+00:00
 ---
 
 # Prepare your environment  |  Compute Engine  |  Google Cloud Documentation

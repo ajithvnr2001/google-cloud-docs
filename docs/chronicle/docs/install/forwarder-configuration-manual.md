@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/install/forwarder-configuration-manual/
 title: Manage forwarder configurations manually \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:23.079702+00:00
+fetched_at: 2026-10-21T14:11:21.462724+00:00
 ---
 
 # Manage forwarder configurations manually  |  Google Security Operations  |  Google Cloud Documentation

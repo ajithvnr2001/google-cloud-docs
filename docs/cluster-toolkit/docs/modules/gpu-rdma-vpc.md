@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/gpu-rdma-vpc/
 title: Create a GPU RDMA VPC network \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:42.534353+00:00
+fetched_at: 2026-10-21T14:42:17.706348+00:00
 ---
 
 # Create a GPU RDMA VPC network  |  Cluster Toolkit  |  Google Cloud Documentation

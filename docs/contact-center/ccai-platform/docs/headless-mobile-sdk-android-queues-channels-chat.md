@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/headless-mobile-sdk-android-queues-channels-chat/
 title: Headless mobile SDK for Android: Queues, channels, and chat \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:09:42.213621+00:00
+fetched_at: 2026-10-21T14:06:17.362492+00:00
 ---
 
 # Headless mobile SDK for Android: Queues, channels, and chat  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

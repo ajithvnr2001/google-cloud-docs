@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/samples/dataplex-update-entry/
 title: Update entry (with aspect update) \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:19:09.404831+00:00
+fetched_at: 2026-10-21T15:03:22.868960+00:00
 ---
 
 # Update entry (with aspect update)  |  Knowledge Catalog  |  Google Cloud Documentation

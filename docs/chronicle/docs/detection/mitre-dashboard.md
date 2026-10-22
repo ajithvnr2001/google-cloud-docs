@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/mitre-dashboard/
 title: Monitor threat coverage (MITRE) \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:26:28.086321+00:00
+fetched_at: 2026-10-21T12:37:31.620184+00:00
 ---
 
 # Monitor threat coverage (MITRE)  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-director/docs/monitor/audit-logging/
 title: Audit Logging \u00a0|\u00a0 Cluster Director \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:55.190768+00:00
+fetched_at: 2026-10-21T14:42:00.464192+00:00
 ---
 
 # Audit Logging  |  Cluster Director  |  Google Cloud Documentation

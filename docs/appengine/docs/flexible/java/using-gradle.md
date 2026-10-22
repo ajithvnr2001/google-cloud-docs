@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/java/using-gradle/
 title: Using Gradle and the App Engine Plugin \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:23:26.243014+00:00
+fetched_at: 2026-10-21T14:26:45.460676+00:00
 ---
 
 # Using Gradle and the App Engine Plugin  |  App Engine flexible environment  |  Google Cloud Documentation

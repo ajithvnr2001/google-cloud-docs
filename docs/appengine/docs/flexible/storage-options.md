@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/storage-options/
 title: Understanding data and file storage \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:11.191402+00:00
+fetched_at: 2026-10-21T12:35:16.811190+00:00
 ---
 
 # Understanding data and file storage  |  App Engine flexible environment  |  Google Cloud Documentation

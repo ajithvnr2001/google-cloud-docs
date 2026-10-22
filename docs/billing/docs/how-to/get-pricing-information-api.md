@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/docs/how-to/get-pricing-information-api/
 title: Get Google Cloud pricing information \u00a0|\u00a0 Cloud Billing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:13:34.638824+00:00
+fetched_at: 2026-10-21T12:38:30.232533+00:00
 ---
 
 # Get Google Cloud pricing information  |  Cloud Billing  |  Google Cloud Documentation

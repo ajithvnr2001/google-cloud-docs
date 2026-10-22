@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/adaudit-plus-changelog/
 title: Change log for ADAUDIT_PLUS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:47:58.102565+00:00
+fetched_at: 2026-10-21T14:51:44.224484+00:00
 ---
 
 # Change log for ADAUDIT_PLUS  |  Google Security Operations  |  Google Cloud Documentation

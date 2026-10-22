@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/repositories/virtual-repo/
 title: Create virtual repositories \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:18.451969+00:00
+fetched_at: 2026-10-21T14:25:09.544084+00:00
 ---
 
 # Create virtual repositories  |  Artifact Registry  |  Google Cloud Documentation

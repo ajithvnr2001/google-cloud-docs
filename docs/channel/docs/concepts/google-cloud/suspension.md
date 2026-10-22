@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/channel/docs/concepts/google-cloud/suspension/
 title: Google Cloud suspensions overview \u00a0|\u00a0 Channel Services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:34.045906+00:00
+fetched_at: 2026-10-21T14:25:23.320267+00:00
 ---
 
 # Google Cloud suspensions overview  |  Channel Services  |  Google Cloud Documentation

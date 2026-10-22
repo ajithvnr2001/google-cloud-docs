@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/cassandra-csi-backup-restore/
 title: Cassandra CSI backup and restore \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:02:58.158912+00:00
+fetched_at: 2026-10-21T14:11:04.830757+00:00
 ---
 
 # Cassandra CSI backup and restore  |  Apigee  |  Google Cloud Documentation

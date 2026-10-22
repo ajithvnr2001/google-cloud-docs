@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/deprecations/apigee-tool/
 title: Gemini Code Assist @Apigee tool deprecation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:01:11.410265+00:00
+fetched_at: 2026-10-21T14:29:05.862570+00:00
 ---
 
 # Gemini Code Assist @Apigee tool deprecation  |  Google Cloud Documentation

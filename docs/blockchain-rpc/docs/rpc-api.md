@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/blockchain-rpc/docs/rpc-api/
 title: Ethereum RPC API \u00a0|\u00a0 Blockchain RPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:43:38.184695+00:00
+fetched_at: 2026-10-21T14:16:25.004978+00:00
 ---
 
 # Ethereum RPC API  |  Blockchain RPC  |  Google Cloud Documentation

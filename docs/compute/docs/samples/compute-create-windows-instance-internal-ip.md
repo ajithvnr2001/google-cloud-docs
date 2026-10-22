@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-create-windows-instance-internal-ip/
 title: Create a Windows Server VM with internal IP address \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:15.920972+00:00
+fetched_at: 2026-10-22T05:50:37.145412+00:00
 ---
 
 # Create a Windows Server VM with internal IP address  |  Compute Engine  |  Google Cloud Documentation
@@ -63,7 +63,7 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     	// subnetworkLink := "regions/europe-central2/subnetworks/default"
     
     	ctx := context.Background()
-    	instancesClient, err := compute.[NewInstancesRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_InstancesClient_NewInstancesRESTClient)(ctx)
+    	instancesClient, err := compute.NewInstancesRESTClient(ctx)
     	if err != nil {
     		return fmt.Errorf("NewInstancesRESTClient: %w", err)
     	}
@@ -144,13 +144,13 @@ Before trying this sample, follow the Java setup instructions in the [Compute En
 To authenticate to Compute Engine, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
     
     
-    import com.google.cloud.compute.v1.[AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html);
-    import com.google.cloud.compute.v1.[AttachedDiskInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDiskInitializeParams.html);
-    import com.google.cloud.compute.v1.[InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html);
-    import com.google.cloud.compute.v1.[Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html);
-    import com.google.cloud.compute.v1.[InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html);
-    import com.google.cloud.compute.v1.[NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html);
-    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html);
+    import com.google.cloud.compute.v1.AttachedDisk;
+    import com.google.cloud.compute.v1.AttachedDiskInitializeParams;
+    import com.google.cloud.compute.v1.InsertInstanceRequest;
+    import com.google.cloud.compute.v1.Instance;
+    import com.google.cloud.compute.v1.InstancesClient;
+    import com.google.cloud.compute.v1.NetworkInterface;
+    import com.google.cloud.compute.v1.Operation;
     import java.io.IOException;
     import java.util.concurrent.ExecutionException;
     import java.util.concurrent.TimeUnit;
@@ -200,11 +200,11 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
         String sourceImageFamily = "windows-2022";
     
         // Instantiates a client.
-        try ([InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html) instancesClient = [InstancesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InstancesClient.html).create()) {
+        try (InstancesClient instancesClient = InstancesClient.create()) {
     
-          [AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html) attachedDisk = [AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html).newBuilder()
+          AttachedDisk attachedDisk = AttachedDisk.newBuilder()
               // Describe the size and source image of the boot disk to attach to the instance.
-              .[setInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.Builder.html#com_google_cloud_compute_v1_AttachedDisk_Builder_setInitializeParams_com_google_cloud_compute_v1_AttachedDiskInitializeParams_)([AttachedDiskInitializeParams](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDiskInitializeParams.html).newBuilder()
+              .setInitializeParams(AttachedDiskInitializeParams.newBuilder()
                   .setDiskSizeGb(64)
                   .setSourceImage(
                       String.format("projects/windows-cloud/global/images/family/%s",
@@ -212,14 +212,14 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
                   .build())
               .setAutoDelete(true)
               .setBoot(true)
-              .setType([AttachedDisk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AttachedDisk.html).Type.PERSISTENT.toString())
+              .setType(AttachedDisk.Type.PERSISTENT.toString())
               .build();
     
-          [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html) instance = [Instance](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Instance.html).newBuilder()
+          Instance instance = Instance.newBuilder()
               .setName(instanceName)
               .setMachineType(String.format("zones/%s/machineTypes/%s", zone, machineType))
               .addDisks(attachedDisk)
-              .addNetworkInterfaces([NetworkInterface](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.NetworkInterface.html).newBuilder()
+              .addNetworkInterfaces(NetworkInterface.newBuilder()
                   // You must verify or configure routes and firewall rules in your VPC network
                   // to allow access to kms.windows.googlecloud.com.
                   // More information about access to kms.windows.googlecloud.com: https://cloud.google.com/compute/docs/instances/windows/creating-managing-windows-instances#kms-server
@@ -239,17 +239,17 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
               //    .build())
               .build();
     
-          [InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html) request = [InsertInstanceRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertInstanceRequest.html).newBuilder()
+          InsertInstanceRequest request = InsertInstanceRequest.newBuilder()
               .setProject(projectId)
               .setZone(zone)
               .setInstanceResource(instance)
               .build();
     
           // Wait for the operation to complete.
-          [Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html) operation = instancesClient.insertAsync(request).get(5, TimeUnit.MINUTES);
+          Operation operation = instancesClient.insertAsync(request).get(5, TimeUnit.MINUTES);
     
-          if (operation.[hasError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_hasError__)()) {
-            System.out.printf("Error in creating instance %s", operation.[getError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_getError__)());
+          if (operation.hasError()) {
+            System.out.printf("Error in creating instance %s", operation.getError());
             return;
           }
     
@@ -276,10 +276,10 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
     // const networkLink = 'global/networks/default';
     // const subnetworkLink = 'regions/europe-central2/subnetworks/default';
     
-    const compute = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)');
+    const compute = require('@google-cloud/compute');
     
     async function createWindowsServerInstanceInternalIP() {
-      const instancesClient = new compute.[InstancesClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+      const instancesClient = new compute.InstancesClient();
     
       const [response] = await instancesClient.insert({
         instanceResource: {
@@ -321,7 +321,7 @@ To authenticate to Compute Engine, set up Application Default Credentials. For m
         zone,
       });
       let operation = response.latestResponse;
-      const operationsClient = new compute.[ZoneOperationsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
+      const operationsClient = new compute.ZoneOperationsClient();
     
       // Wait for the create operation to complete.
       while (operation.status !== 'DONE') {

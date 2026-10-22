@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/advisory-notifications/docs/security-msas-overview/
 title: Overview of Security MSAs \u00a0|\u00a0 Advisory Notifications \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:14.154426+00:00
+fetched_at: 2026-10-21T14:29:00.652633+00:00
 ---
 
 # Overview of Security MSAs  |  Advisory Notifications  |  Google Cloud Documentation

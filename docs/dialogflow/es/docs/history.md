@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/history/
 title: History \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:45:44.553051+00:00
+fetched_at: 2026-10-21T12:43:51.522353+00:00
 ---
 
 # History  |  Dialogflow ES  |  Google Cloud Documentation

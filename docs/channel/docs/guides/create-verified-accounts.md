@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/channel/docs/guides/create-verified-accounts/
 title: Create verified Google Workspace and Google Chrome accounts \u00a0|\u00a0 Channel Services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:34.193158+00:00
+fetched_at: 2026-10-21T14:25:33.437608+00:00
 ---
 
 # Create verified Google Workspace and Google Chrome accounts  |  Channel Services  |  Google Cloud Documentation

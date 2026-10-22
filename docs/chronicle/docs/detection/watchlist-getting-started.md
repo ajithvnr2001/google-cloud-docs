@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/watchlist-getting-started/
 title: Manage entity watchlists \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:38:05.624191+00:00
+fetched_at: 2026-10-21T14:26:06.599169+00:00
 ---
 
 # Manage entity watchlists  |  Google Security Operations  |  Google Cloud Documentation

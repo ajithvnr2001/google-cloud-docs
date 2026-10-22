@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-streaming-by-folder/
 title: STREAMING_TIMELINE_BY_FOLDER view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:24:27.161467+00:00
+fetched_at: 2026-10-21T12:36:15.096115+00:00
 ---
 
 # STREAMING_TIMELINE_BY_FOLDER view  |  BigQuery  |  Google Cloud Documentation

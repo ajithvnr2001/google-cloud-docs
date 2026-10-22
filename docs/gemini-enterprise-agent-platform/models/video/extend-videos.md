@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/video/extend-videos/
 title: Extend videos \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T23:38:48.836038+00:00
+fetched_at: 2026-10-21T15:44:12.207728+00:00
 ---
 
 # Extend videos  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -1037,9 +1037,9 @@ For more information about the Veo API, see the following:
 Before using any of the request data, make the following replacements: 
 
      * `PROJECT_ID`: A string representing your Google Cloud project ID. 
-     * `MODEL_ID`: A string that represents the model ID to use. Use one of the following when specifying a first or last video frame: 
-       * **Veo 3:`veo-3.1-generate-001`**
-       * **Veo 3:`veo-3.1-fast-generate-001`**
+     * `MODEL_ID`: A string that represents the model ID to use. Use one of the following when extending a video: 
+       * **Veo 3.1:`veo-3.1-generate-001`**
+       * **Veo 3.1:`veo-3.1-fast-generate-001`**
      * `TEXT_PROMPT`: The text prompt used to guide video generation. 
      * `PATH_TO_VIDEO`: A string that represents the Cloud Storage path to the Veo video that you're extending. For example: `"gs://video-bucket/input/veo-video.mp4"`. 
      * `OUTPUT_STORAGE_URI`: Optional: A string representing the Cloud Storage bucket to store the output videos. If not provided, video bytes are returned in the response. For example: `"gs://video-bucket/output/"`. 
@@ -1237,6 +1237,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

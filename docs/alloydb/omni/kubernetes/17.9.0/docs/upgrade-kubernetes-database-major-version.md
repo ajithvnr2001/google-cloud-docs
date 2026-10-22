@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/17.9.0/docs/upgrade-kubernetes-database-major-version/
 title: Upgrade to AlloyDB Omni version 17.9.0 on 1.8.2 \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 17.9.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:49:37.205343+00:00
+fetched_at: 2026-10-21T15:19:40.522149+00:00
 ---
 
 # Upgrade to AlloyDB Omni version 17.9.0 on 1.8.2  |  AlloyDB Omni using the container orchestrator: 17.9.0  |  Google Cloud Documentation

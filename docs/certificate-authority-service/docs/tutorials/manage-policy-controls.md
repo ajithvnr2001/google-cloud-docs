@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/tutorials/manage-policy-controls/
 title: Manage policy controls \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:59:35.714456+00:00
+fetched_at: 2026-10-21T12:38:16.780164+00:00
 ---
 
 # Manage policy controls  |  Certificate Authority Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/create-data-store/
 title: Connect a Google data source \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:21:14.297463+00:00
+fetched_at: 2026-10-21T12:29:25.626300+00:00
 ---
 
 # Connect a Google data source  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -88,11 +88,13 @@ Add reaction | Adds a reaction to a Google Chat message.
 Create conversation | Creates a Google Chat conversation (named space, direct message, or group direct message).  
 List memberships | Lists memberships in a Google Chat conversation.  
 List messages | Retrieves messages from a specified Google Chat conversation (space, direct message, or group direct message).  
+List messages (Markdown) |  Retrieves messages from a specified Google Chat conversation in Markdown format.   
 Remove membership | Removes a user membership from a Google Chat conversation.  
 Remove reaction | Removes a reaction from a Google Chat message.  
 Search conversations | Searches for Google Chat conversations by display name.  
 Search messages | Searches for Google Chat messages using keywords and filters. Works across all spaces the user has access to, or can be scoped to a specific conversation.  
 Send message | Sends a Google Chat message to a conversation.  
+Send message (Markdown) |  Sends a Google Chat message to a conversation with Markdown formatting.   
 Update membership | Updates a user membership in a Google Chat conversation.  
 GmailLaunch date | Action | Description  
 ---|---|---  
@@ -129,6 +131,7 @@ Download file content | Downloads the content of a Google Drive file.
 Get file metadata | Fetches metadata for a Google Drive file.  
 Get file permissions | Lists the permissions on a Google Drive file.  
 List recent files | Lists recent files in Google Drive.  
+List shared drives | Lists shared drives in Google Drive.  
 Read file content | Reads the contents of a Google Drive file.  
 Search files | Searches for Google Drive files matching a query.  
 Share file | Shares a Google Drive file with one or more users.  
@@ -157,6 +160,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

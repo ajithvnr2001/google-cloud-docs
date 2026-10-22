@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/skaffold-modules/
 title: Skaffold modules \u00a0|\u00a0 Cloud Code for IntelliJ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:21:38.187638+00:00
+fetched_at: 2026-10-21T12:41:02.260749+00:00
 ---
 
 # Skaffold modules  |  Cloud Code for IntelliJ  |  Google Cloud Documentation

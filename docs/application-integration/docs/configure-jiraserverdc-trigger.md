@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure-jiraserverdc-trigger/
 title: Jira Server (Data Center) trigger \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:39.029865+00:00
+fetched_at: 2026-10-21T12:39:27.128554+00:00
 ---
 
 # Jira Server (Data Center) trigger  |  Application Integration  |  Google Cloud Documentation

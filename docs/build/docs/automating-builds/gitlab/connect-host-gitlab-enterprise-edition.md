@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/gitlab/connect-host-gitlab-enterprise-edition/
 title: Connect to a GitLab Enterprise Edition host \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:14:07.618304+00:00
+fetched_at: 2026-10-21T14:11:10.395758+00:00
 ---
 
 # Connect to a GitLab Enterprise Edition host  |  Cloud Build  |  Google Cloud Documentation

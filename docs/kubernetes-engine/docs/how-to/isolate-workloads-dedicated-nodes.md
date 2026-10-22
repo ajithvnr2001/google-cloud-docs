@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/isolate-workloads-dedicated-nodes/
 title: Isolate your workloads in dedicated node pools \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:10.755049+00:00
+fetched_at: 2026-10-21T15:01:58.098023+00:00
 ---
 
 # Isolate your workloads in dedicated node pools  |  GKE security  |  Google Cloud Documentation

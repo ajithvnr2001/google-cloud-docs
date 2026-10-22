@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/develop-service/
 title: Develop a Cloud Run service locally in Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:16:49.074691+00:00
+fetched_at: 2026-10-21T14:20:40.642747+00:00
 ---
 
 # Develop a Cloud Run service locally in Cloud Code for Cloud Shell  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/tipping-point-changelog/
 title: Change log for TIPPING_POINT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:52:38.456415+00:00
+fetched_at: 2026-10-21T14:43:33.123923+00:00
 ---
 
 # Change log for TIPPING_POINT  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/gsc_google_forms/configure/
 title: Google Forms \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:15.400224+00:00
+fetched_at: 2026-10-21T12:53:50.501878+00:00
 ---
 
 # Google Forms  |  Integration Connectors  |  Google Cloud Documentation

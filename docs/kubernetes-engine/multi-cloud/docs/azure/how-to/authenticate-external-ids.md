@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/how-to/authenticate-external-ids/
 title: Authenticate to GKE on Azure with external identities \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:52.908140+00:00
+fetched_at: 2026-10-21T15:09:28.963091+00:00
 ---
 
 # Authenticate to GKE on Azure with external identities  |  Google Cloud Documentation

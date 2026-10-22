@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/troubleshoot/
 title: Troubleshoot access to Gemini Code Assist features \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:02:48.105351+00:00
+fetched_at: 2026-10-21T12:51:28.567101+00:00
 ---
 
 # Troubleshoot access to Gemini Code Assist features  |  Gemini for Google Cloud  |  Google Cloud Documentation

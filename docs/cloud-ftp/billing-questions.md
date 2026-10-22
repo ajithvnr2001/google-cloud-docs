@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-ftp/billing-questions/
 title: Billing questions \u00a0|\u00a0 Cloud FTP \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:20:39.407976+00:00
+fetched_at: 2026-10-21T14:22:35.714104+00:00
 ---
 
 # Billing questions  |  Cloud FTP  |  Google Cloud Documentation

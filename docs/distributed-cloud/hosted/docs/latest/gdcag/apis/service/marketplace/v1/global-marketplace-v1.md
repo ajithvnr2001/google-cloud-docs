@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/service/marketplace/v1/global-marketplace-v1/
 title: KRM API marketplace.global.gdc.goog/v1 \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:13:29.121416+00:00
+fetched_at: 2026-10-21T12:56:59.173370+00:00
 ---
 
 # KRM API marketplace.global.gdc.goog/v1  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/sentry/
 title: Collect Sentry logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:28:23.925381+00:00
+fetched_at: 2026-10-21T12:37:55.497730+00:00
 ---
 
 # Collect Sentry logs  |  Google Security Operations  |  Google Cloud Documentation

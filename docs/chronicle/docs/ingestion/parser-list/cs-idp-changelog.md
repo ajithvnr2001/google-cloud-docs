@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cs-idp-changelog/
 title: Change log for CS_IDP \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:27:39.974265+00:00
+fetched_at: 2026-10-21T14:45:34.155364+00:00
 ---
 
 # Change log for CS_IDP  |  Google Security Operations  |  Google Cloud Documentation

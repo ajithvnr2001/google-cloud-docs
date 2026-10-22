@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/servicenow-transfer/
 title: Load ServiceNow data into BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T17:36:11.450955+00:00
+fetched_at: 2026-10-21T12:36:19.675918+00:00
 ---
 
 # Load ServiceNow data into BigQuery  |  Google Cloud Documentation

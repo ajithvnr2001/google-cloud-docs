@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/samples/datastore-property-by-kind-run-query/
 title: Property by kind query \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:34:01.941281+00:00
+fetched_at: 2026-10-22T05:42:09.312017+00:00
 ---
 
 # Property by kind query  |  Firestore in Datastore mode  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/vertex-ai-enable-pre-trained-apis/
 title: Provision GPUs and enable Vertex AI pre-trained APIs \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:22:12.668294+00:00
+fetched_at: 2026-10-21T12:55:49.871381+00:00
 ---
 
 # Provision GPUs and enable Vertex AI pre-trained APIs  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

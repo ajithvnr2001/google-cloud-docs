@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/secure-service-account-keys/
 title: Secure service account keys \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:39.450510+00:00
+fetched_at: 2026-10-21T12:59:17.021056+00:00
 ---
 
 # Secure service account keys  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

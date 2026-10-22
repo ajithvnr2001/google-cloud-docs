@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/docs/threat-detector-locations/
 title: DNS Armor locations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:48:33.021425+00:00
+fetched_at: 2026-10-21T14:07:00.909058+00:00
 ---
 
 # DNS Armor locations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/access-transparency/docs/overview/
 title: Overview of Access Transparency \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:57.367094+00:00
+fetched_at: 2026-10-21T14:27:51.520488+00:00
 ---
 
 # Overview of Access Transparency  |  Google Cloud Documentation

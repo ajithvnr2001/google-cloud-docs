@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-intelligence-center/docs/performance-dashboard/concepts/use-cases-workload-optimization/
 title: Planning for performance use cases \u00a0|\u00a0 Network Intelligence Center - Performance Dashboard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:28:42.383376+00:00
+fetched_at: 2026-10-21T15:14:55.894679+00:00
 ---
 
 # Planning for performance use cases  |  Network Intelligence Center - Performance Dashboard  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/email-adapter/
 title: Email adapter \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:35.797239+00:00
+fetched_at: 2026-10-21T14:21:50.521365+00:00
 ---
 
 # Email adapter  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

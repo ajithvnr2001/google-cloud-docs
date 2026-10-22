@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/samples/dataflow-v1beta3-generated-Metrics-GetStageExecutionDetails-sync/
 title: Get stage execution details (Ruby) \u00a0|\u00a0 Cloud Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:16:39.359780+00:00
+fetched_at: 2026-10-22T05:42:33.896993+00:00
 ---
 
 # Get stage execution details (Ruby)  |  Cloud Dataflow  |  Google Cloud Documentation

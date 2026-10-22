@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/enable-new-region/
 title: Manage regions \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:47.651682+00:00
+fetched_at: 2026-10-21T12:39:27.579516+00:00
 ---
 
 # Manage regions  |  Application Integration  |  Google Cloud Documentation

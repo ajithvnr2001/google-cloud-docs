@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/hybrid-multicloud-patterns-and-practices/partitioned-multicloud-pattern/
 title: Partitioned multicloud pattern \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:35:45.580891+00:00
+fetched_at: 2026-10-21T14:28:13.438693+00:00
 ---
 
 # Partitioned multicloud pattern  |  Cloud Architecture Center  |  Google Cloud Documentation

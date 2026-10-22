@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/load-balancing/docs/url-map-concepts/
 title: URL maps overview \u00a0|\u00a0 Cloud Load Balancing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:49:21.630481+00:00
+fetched_at: 2026-10-21T15:10:26.485221+00:00
 ---
 
 # URL maps overview  |  Cloud Load Balancing  |  Google Cloud Documentation

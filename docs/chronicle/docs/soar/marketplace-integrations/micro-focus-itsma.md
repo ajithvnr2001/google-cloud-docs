@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/micro-focus-itsma/
 title: Micro Focus ITSMA \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:33:56.000906+00:00
+fetched_at: 2026-10-21T14:21:07.230493+00:00
 ---
 
 # Micro Focus ITSMA  |  Google Security Operations  |  Google Cloud Documentation

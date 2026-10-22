@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/tools/
 title: OpenAPI and Integration Connectors tools \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:44:13.974535+00:00
+fetched_at: 2026-10-21T12:54:55.642244+00:00
 ---
 
 # OpenAPI and Integration Connectors tools  |  Agent Assist  |  Google Cloud Documentation

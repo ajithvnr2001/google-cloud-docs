@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.7/concepts/backing-services/
 title: Backing services \u00a0|\u00a0 Kf 2.7 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:45:54.959891+00:00
+fetched_at: 2026-10-21T15:18:01.167984+00:00
 ---
 
 # Backing services  |  Kf 2.7  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/area1-changelog/
 title: Change log for AREA1 \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:39:48.141966+00:00
+fetched_at: 2026-10-21T14:46:17.864341+00:00
 ---
 
 # Change log for AREA1  |  Google Security Operations  |  Google Cloud Documentation

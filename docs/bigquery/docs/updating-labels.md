@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/updating-labels/
 title: Updating labels \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:08:57.798015+00:00
+fetched_at: 2026-10-21T12:39:01.576017+00:00
 ---
 
 # Updating labels  |  BigQuery  |  Google Cloud Documentation

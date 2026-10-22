@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/key-concepts/
 title: Key concepts \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:48.073597+00:00
+fetched_at: 2026-10-21T14:23:39.885255+00:00
 ---
 
 # Key concepts  |  Assured Workloads  |  Google Cloud Documentation

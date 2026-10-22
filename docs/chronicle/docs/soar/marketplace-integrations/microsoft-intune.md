@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/microsoft-intune/
 title: Microsoft Intune \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:27:59.976750+00:00
+fetched_at: 2026-10-21T14:22:02.339920+00:00
 ---
 
 # Microsoft Intune  |  Google Security Operations  |  Google Cloud Documentation

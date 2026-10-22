@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kms/docs/bare-metal-rack-hsm/
 title: Bare Metal Rack HSM \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:21:09.005804+00:00
+fetched_at: 2026-10-21T15:09:41.157373+00:00
 ---
 
 # Bare Metal Rack HSM  |  Cloud Key Management Service  |  Google Cloud Documentation

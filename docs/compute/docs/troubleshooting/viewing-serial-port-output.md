@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/troubleshooting/viewing-serial-port-output/
 title: Viewing serial port output \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:50:28.228325+00:00
+fetched_at: 2026-10-21T14:22:04.886856+00:00
 ---
 
 # Viewing serial port output  |  Compute Engine  |  Google Cloud Documentation

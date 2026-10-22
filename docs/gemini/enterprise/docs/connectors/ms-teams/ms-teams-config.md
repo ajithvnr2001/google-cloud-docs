@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/ms-teams/ms-teams-config/
 title: Microsoft Teams configuration \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T11:27:27.209131+00:00
+fetched_at: 2026-10-21T12:40:02.957981+00:00
 ---
 
 # Microsoft Teams configuration  |  Gemini Enterprise  |  Google Cloud Documentation

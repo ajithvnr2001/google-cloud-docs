@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/working-with-remote-agents/upgrade-agent-requirements-for-centos/
 title: Perform a major upgrade using installer for CentOS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:15.344799+00:00
+fetched_at: 2026-10-21T14:08:07.941171+00:00
 ---
 
 # Perform a major upgrade using installer for CentOS  |  Google Security Operations  |  Google Cloud Documentation

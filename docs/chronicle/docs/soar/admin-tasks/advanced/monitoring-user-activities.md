@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/advanced/monitoring-user-activities/
 title: Monitor SOAR activity \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:48.581867+00:00
+fetched_at: 2026-10-21T14:24:03.263174+00:00
 ---
 
 # Monitor SOAR activity  |  Google Security Operations  |  Google Cloud Documentation

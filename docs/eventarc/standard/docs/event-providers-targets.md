@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/event-providers-targets/
 title: Event providers and destinations \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:35:16.239932+00:00
+fetched_at: 2026-10-21T12:45:59.584788+00:00
 ---
 
 # Event providers and destinations  |  Eventarc Standard  |  Google Cloud Documentation

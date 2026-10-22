@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/java/migrating-android/
 title: Migrating Android projects to Cloud Endpoints Frameworks 2.0 \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:38:18.008460+00:00
+fetched_at: 2026-10-21T12:45:45.740365+00:00
 ---
 
 # Migrating Android projects to Cloud Endpoints Frameworks 2.0  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

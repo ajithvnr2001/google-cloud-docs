@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/crowdstrike-cef/
 title: Collect CrowdStrike Falcon logs in CEF \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T17:40:51.240164+00:00
+fetched_at: 2026-10-21T12:26:44.335111+00:00
 ---
 
 # Collect CrowdStrike Falcon logs in CEF  |  Google Security Operations  |  Google Cloud Documentation

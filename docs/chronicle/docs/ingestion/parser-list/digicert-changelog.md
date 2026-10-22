@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/digicert-changelog/
 title: Change log for DIGICERT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:03:16.487989+00:00
+fetched_at: 2026-10-21T14:45:31.044631+00:00
 ---
 
 # Change log for DIGICERT  |  Google Security Operations  |  Google Cloud Documentation

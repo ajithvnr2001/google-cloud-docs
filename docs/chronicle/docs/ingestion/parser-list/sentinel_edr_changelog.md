@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/sentinel_edr_changelog/
 title: Change log for SENTINEL_EDR \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:00:24.965334+00:00
+fetched_at: 2026-10-21T14:42:41.474771+00:00
 ---
 
 # Change log for SENTINEL_EDR  |  Google Security Operations  |  Google Cloud Documentation

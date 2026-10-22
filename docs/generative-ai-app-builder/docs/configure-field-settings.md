@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/configure-field-settings/
 title: Configure field settings \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:04.346599+00:00
+fetched_at: 2026-10-21T12:54:32.342118+00:00
 ---
 
 # Configure field settings  |  Agent Search  |  Google Cloud Documentation

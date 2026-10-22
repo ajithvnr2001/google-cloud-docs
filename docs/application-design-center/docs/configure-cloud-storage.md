@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/configure-cloud-storage/
 title: Configure a Cloud Storage bucket \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:30:06.181568+00:00
+fetched_at: 2026-10-21T12:30:35.336566+00:00
 ---
 
 # Configure a Cloud Storage bucket  |  Application Design Center  |  Google Cloud Documentation

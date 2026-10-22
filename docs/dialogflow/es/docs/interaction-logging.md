@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/es/docs/interaction-logging/
 title: Interaction logging \u00a0|\u00a0 Dialogflow ES \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:45:44.006255+00:00
+fetched_at: 2026-10-21T12:45:22.189163+00:00
 ---
 
 # Interaction logging  |  Dialogflow ES  |  Google Cloud Documentation

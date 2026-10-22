@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/docs/support/billing-questions/
 title: Billing Questions \u00a0|\u00a0 Dialogflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:50:56.008296+00:00
+fetched_at: 2026-10-21T12:43:45.825449+00:00
 ---
 
 # Billing Questions  |  Dialogflow  |  Google Cloud Documentation

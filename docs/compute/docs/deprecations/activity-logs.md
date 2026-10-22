@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/deprecations/activity-logs/
 title: Compute Engine activity logs deprecation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:31:27.166340+00:00
+fetched_at: 2026-10-21T12:39:14.125074+00:00
 ---
 
 # Compute Engine activity logs deprecation  |  Google Cloud Documentation

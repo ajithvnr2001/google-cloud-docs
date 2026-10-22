@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/about-regional-persistent-disk/
 title: About synchronous disk replication \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:17.285427+00:00
+fetched_at: 2026-10-22T05:47:33.401573+00:00
 ---
 
 # About synchronous disk replication  |  Compute Engine  |  Google Cloud Documentation
@@ -145,17 +145,19 @@ The following sections list the limitations that apply for Regional Persistent D
 
   * You can attach regional Persistent Disk only to VMs that use [E2](https://docs.cloud.google.com/compute/docs/general-purpose-machines#e2_machine_types), [N1](https://docs.cloud.google.com/compute/docs/general-purpose-machines#n1_machines), [N2](https://docs.cloud.google.com/compute/docs/general-purpose-machines#n2_machines), and [N2D](https://docs.cloud.google.com/compute/docs/general-purpose-machines#n2d_machines) machine types.
   * You can attach Hyperdisk Balanced High Availability only to [supported machine types](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced-ha#machine-series-support). 
-  * You can't create a regional disk by cloning a Hyperdisk ML or Hyperdisk Throughput disk. You must create a snapshot of the source disk and then create a Hyperdisk Balanced High Availability disk from the snapshot. For more information, see [Change a zonal disk to a Hyperdisk Balanced High Availability disk.](https://docs.cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hdbha)
   * When using read-only mode, you can attach a regional Balanced Persistent Disk to a maximum of 10 VM instances.
   * The minimum size of a regional Standard Persistent Disk is 200 GiB.
   * You can only increase the size of a regional Persistent Disk or Hyperdisk Balanced High Availability volume; you can't decrease its size.
   * Regional Persistent Disk and Hyperdisk Balanced High Availability volumes have different performance characteristics than their corresponding zonal disks. For more information, see [About Persistent Disk performance](https://docs.cloud.google.com/compute/docs/disks/performance) and [Hyperdisk Balanced High Availability performance limits](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-balanced-ha#perf-limits). 
+  * You can't change the size of a Hyperdisk Balanced High Availability volume that's in multi-writer mode if any of the instances that the volume is attached to is in a zone that's experiencing an outage. 
   * You can't use a Hyperdisk Balanced High Availability volume that's in multi-writer mode as a boot disk.
   * If you create a replicated disk by cloning a zonal disk, then the two zonal replicas aren't fully in sync at the time of creation. After creation, you can use the regional disk clone within 3 minutes, on average. However, you might need to wait for tens of minutes before the disk reaches a fully replicated state and the [ recovery point objective (RPO)](https://wikipedia.org/wiki/Recovery_point_objective) is close to zero. Learn how to [ check if your replicated disk is fully replicated](https://docs.cloud.google.com/compute/docs/disks/monitor-regional-persistent-disk-replica-state#determine_repd_replication_state).
   * You can't create regional disks in [AI zones](https://docs.cloud.google.com/compute/docs/regions-zones/ai-zones).
   * Creating a regional disk from an image has the following limitations: 
     * When you create a regional disk from an image, you can create one disk within a project every 5 minutes. You can issue up to 5 requests at once but you can't create more than 5 disks within a 25-minute period. 
     * Creating a regional disk from an image is in [Preview](https://cloud.google.com/products#product-launch-stages), and is slower than creating a zonal disk from an image. 
+  * You can't create a regional disk by cloning the source disk if the source disk is a Hyperdisk ML or Hyperdisk Throughput volume. You must [create a new Hyperdisk Balanced High Availability volume from a snapshot of the zonal disk](https://docs.cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hdbha). 
+
 
 
 
@@ -186,6 +188,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/airwatch-changelog/
 title: Change log for AIRWATCH \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:15:48.627851+00:00
+fetched_at: 2026-10-21T14:46:20.367696+00:00
 ---
 
 # Change log for AIRWATCH  |  Google Security Operations  |  Google Cloud Documentation

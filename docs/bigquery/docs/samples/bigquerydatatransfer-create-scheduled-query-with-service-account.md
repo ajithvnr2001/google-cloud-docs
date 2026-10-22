@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerydatatransfer-create-scheduled-query-with-service-account/
 title: Create a scheduled query with a service account \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:11.967055+00:00
+fetched_at: 2026-10-22T05:45:38.377182+00:00
 ---
 
 # Create a scheduled query with a service account  |  BigQuery  |  Google Cloud Documentation

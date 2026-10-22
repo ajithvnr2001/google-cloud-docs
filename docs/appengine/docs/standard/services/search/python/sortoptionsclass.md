@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/search/python/sortoptionsclass/
 title: The SortOptions Class \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:55.913814+00:00
+fetched_at: 2026-10-21T14:53:42.141615+00:00
 ---
 
 # The SortOptions Class  |  App Engine standard environment  |  Google Cloud Documentation

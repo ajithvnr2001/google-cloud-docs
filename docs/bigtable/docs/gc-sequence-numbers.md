@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/gc-sequence-numbers/
 title: Garbage collection for sequential numbers in timestamps \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:11.775432+00:00
+fetched_at: 2026-10-21T12:37:41.506727+00:00
 ---
 
 # Garbage collection for sequential numbers in timestamps  |  Bigtable  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/atlassian-jira-changelog/
 title: Change log for ATLASSIAN_JIRA \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:05:21.068389+00:00
+fetched_at: 2026-10-21T14:46:16.059557+00:00
 ---
 
 # Change log for ATLASSIAN_JIRA  |  Google Security Operations  |  Google Cloud Documentation

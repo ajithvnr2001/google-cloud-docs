@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples-hbase-java-hello/
 title: HBase APIs for Java hello world \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:07.685007+00:00
+fetched_at: 2026-10-21T12:29:30.605450+00:00
 ---
 
 # HBase APIs for Java hello world  |  Bigtable  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/samples/call-rest-api/
 title: Make a REST call to a public API \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:41:59.836160+00:00
+fetched_at: 2026-10-21T14:26:40.367087+00:00
 ---
 
 # Make a REST call to a public API  |  Application Integration  |  Google Cloud Documentation

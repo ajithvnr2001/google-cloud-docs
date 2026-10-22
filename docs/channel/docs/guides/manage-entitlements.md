@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/channel/docs/guides/manage-entitlements/
 title: Manage Google Workspace and Google Chrome entitlements \u00a0|\u00a0 Channel Services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:34.300189+00:00
+fetched_at: 2026-10-21T14:25:29.481971+00:00
 ---
 
 # Manage Google Workspace and Google Chrome entitlements  |  Channel Services  |  Google Cloud Documentation

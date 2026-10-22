@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kms/docs/resources/
 title: Resources \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:14:46.366821+00:00
+fetched_at: 2026-10-21T15:01:20.323436+00:00
 ---
 
 # Resources  |  Cloud Key Management Service  |  Google Cloud Documentation

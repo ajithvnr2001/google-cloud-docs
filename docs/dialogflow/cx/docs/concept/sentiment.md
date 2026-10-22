@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/sentiment/
 title: Sentiment analysis \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:55.984054+00:00
+fetched_at: 2026-10-21T12:42:32.865236+00:00
 ---
 
 # Sentiment analysis  |  Dialogflow CX  |  Google Cloud Documentation

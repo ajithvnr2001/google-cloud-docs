@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/kemp-loadbalancer-changelog/
 title: Change log for KEMP_LOADBALANCER \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:40:56.880606+00:00
+fetched_at: 2026-10-21T14:43:18.612832+00:00
 ---
 
 # Change log for KEMP_LOADBALANCER  |  Google Security Operations  |  Google Cloud Documentation

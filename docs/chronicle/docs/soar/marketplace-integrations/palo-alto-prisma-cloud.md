@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/palo-alto-prisma-cloud/
 title: Palo Alto Networks Prisma Cloud \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:59:38.831530+00:00
+fetched_at: 2026-10-21T14:20:48.250588+00:00
 ---
 
 # Palo Alto Networks Prisma Cloud  |  Google Security Operations  |  Google Cloud Documentation

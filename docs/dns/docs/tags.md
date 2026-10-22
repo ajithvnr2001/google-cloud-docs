@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/docs/tags/
 title: Create and manage tags \u00a0|\u00a0 Cloud DNS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:59.012126+00:00
+fetched_at: 2026-10-21T14:06:53.057558+00:00
 ---
 
 # Create and manage tags  |  Cloud DNS  |  Google Cloud Documentation

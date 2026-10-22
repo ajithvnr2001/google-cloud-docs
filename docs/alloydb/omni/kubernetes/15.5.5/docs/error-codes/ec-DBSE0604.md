@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/15.5.5/docs/error-codes/ec-DBSE0604/
 title: DBSE0604. pgBackRest: Failed to restore \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 15.5.5 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:34:45.983797+00:00
+fetched_at: 2026-10-21T15:27:10.349601+00:00
 ---
 
 # DBSE0604. pgBackRest: Failed to restore  |  AlloyDB Omni for Kubernetes: 15.5.5  |  Google Cloud Documentation

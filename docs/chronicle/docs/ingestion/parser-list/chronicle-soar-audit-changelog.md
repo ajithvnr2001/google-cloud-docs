@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/chronicle-soar-audit-changelog/
 title: Change log for CHRONICLE_SOAR_AUDIT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:54:31.850623+00:00
+fetched_at: 2026-10-21T14:44:59.462122+00:00
 ---
 
 # Change log for CHRONICLE_SOAR_AUDIT  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/unified-rules/unified-rules-api/
 title: Manage unified rules with Rules API \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:04:32.726865+00:00
+fetched_at: 2026-10-21T14:26:03.979906+00:00
 ---
 
 # Manage unified rules with Rules API  |  Google Security Operations  |  Google Cloud Documentation

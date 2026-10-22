@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-logging-rules-describe/
 title: gdcloud logging rules describe \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:19:18.066900+00:00
+fetched_at: 2026-10-21T12:59:27.129975+00:00
 ---
 
 # gdcloud logging rules describe  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

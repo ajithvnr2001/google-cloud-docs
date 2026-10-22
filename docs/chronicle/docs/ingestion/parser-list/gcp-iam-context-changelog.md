@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/gcp-iam-context-changelog/
 title: Change log for GCP_IAM_CONTEXT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:32:23.993905+00:00
+fetched_at: 2026-10-21T14:52:00.311576+00:00
 ---
 
 # Change log for GCP_IAM_CONTEXT  |  Google Security Operations  |  Google Cloud Documentation

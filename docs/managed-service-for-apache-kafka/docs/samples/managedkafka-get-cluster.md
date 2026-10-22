@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/samples/managedkafka-get-cluster/
 title: Get a Kafka cluster \u00a0|\u00a0 Managed Service for Apache Kafka \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:58:37.304947+00:00
+fetched_at: 2026-10-21T15:10:51.930049+00:00
 ---
 
 # Get a Kafka cluster  |  Managed Service for Apache Kafka  |  Google Cloud Documentation

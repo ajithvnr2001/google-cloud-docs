@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/deprecations/container-startup-agent-on-compute/
 title: Compute Engine container startup agent deprecation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:15.595173+00:00
+fetched_at: 2026-10-21T12:39:54.150460+00:00
 ---
 
 # Compute Engine container startup agent deprecation  |  Google Cloud Documentation

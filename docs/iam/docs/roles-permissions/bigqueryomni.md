@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/bigqueryomni/
 title: BigQuery Omni roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:28:36.569203+00:00
+fetched_at: 2026-10-21T14:30:25.255532+00:00
 ---
 
 # BigQuery Omni roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

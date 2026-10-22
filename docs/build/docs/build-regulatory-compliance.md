@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/build-regulatory-compliance/
 title: Regulatory support in Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:33:29.250926+00:00
+fetched_at: 2026-10-21T12:38:55.843919+00:00
 ---
 
 # Regulatory support in Cloud Build  |  Google Cloud Documentation

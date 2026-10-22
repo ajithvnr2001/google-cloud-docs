@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/using-vpc-service-controls/
 title: Use VPC Service Controls with App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:05:59.786476+00:00
+fetched_at: 2026-10-21T12:30:17.921712+00:00
 ---
 
 # Use VPC Service Controls with App Hub  |  Google Cloud Documentation

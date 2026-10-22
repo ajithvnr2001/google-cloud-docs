@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/shibboleth-idp-changelog/
 title: Change log for SHIBBOLETH_IDP \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:46:18.626428+00:00
+fetched_at: 2026-10-21T14:42:40.848387+00:00
 ---
 
 # Change log for SHIBBOLETH_IDP  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api/
 title: Apps API \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:43:54.017821+00:00
+fetched_at: 2026-10-21T14:21:31.633567+00:00
 ---
 
 # Apps API  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/primary-foreign-keys/
 title: Use primary and foreign keys \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:24.147473+00:00
+fetched_at: 2026-10-21T12:36:43.916708+00:00
 ---
 
 # Use primary and foreign keys  |  BigQuery  |  Google Cloud Documentation

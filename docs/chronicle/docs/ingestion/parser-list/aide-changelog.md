@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/aide-changelog/
 title: Change log for AIDE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:54:55.155623+00:00
+fetched_at: 2026-10-21T14:51:44.015904+00:00
 ---
 
 # Change log for AIDE  |  Google Security Operations  |  Google Cloud Documentation

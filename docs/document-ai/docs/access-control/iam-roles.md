@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/document-ai/docs/access-control/iam-roles/
 title: IAM roles for Document AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:49:49.287187+00:00
+fetched_at: 2026-10-21T14:39:47.737969+00:00
 ---
 
 # IAM roles for Document AI  |  Google Cloud Documentation

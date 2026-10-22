@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/turn-off-automatic-google-workspace-licensing-during-setup/
 title: Turn off automatic Google Workspace licensing during setup \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:16.525549+00:00
+fetched_at: 2026-10-21T12:54:44.884125+00:00
 ---
 
 # Turn off automatic Google Workspace licensing during setup  |  Cloud Identity  |  Google Cloud Documentation

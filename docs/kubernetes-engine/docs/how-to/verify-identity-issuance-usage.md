@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/verify-identity-issuance-usage/
 title: Verify identity issuance and usage \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:13.209487+00:00
+fetched_at: 2026-10-21T15:01:47.640899+00:00
 ---
 
 # Verify identity issuance and usage  |  GKE security  |  Google Cloud Documentation

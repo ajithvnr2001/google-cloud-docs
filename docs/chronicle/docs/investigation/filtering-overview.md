@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/filtering-overview/
 title: Procedural filtering overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:16:42.686680+00:00
+fetched_at: 2026-10-21T14:18:58.472134+00:00
 ---
 
 # Procedural filtering overview  |  Google Security Operations  |  Google Cloud Documentation

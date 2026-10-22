@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/gcp-vpc-flow/
 title: Collect Google Cloud VPC Flow Logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:29:39.398273+00:00
+fetched_at: 2026-10-21T12:36:36.090153+00:00
 ---
 
 # Collect Google Cloud VPC Flow Logs  |  Google Security Operations  |  Google Cloud Documentation

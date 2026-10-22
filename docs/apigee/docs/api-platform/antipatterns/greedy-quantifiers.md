@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/greedy-quantifiers/
 title: Antipattern: Use greedy quantifiers in the RegularExpressionProtection policy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:18.237282+00:00
+fetched_at: 2026-10-21T12:30:12.277240+00:00
 ---
 
 # Antipattern: Use greedy quantifiers in the RegularExpressionProtection policy  |  Apigee  |  Google Cloud Documentation

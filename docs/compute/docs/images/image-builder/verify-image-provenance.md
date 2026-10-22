@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/image-builder/verify-image-provenance/
 title: Verify image provenance \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:49:13.206326+00:00
+fetched_at: 2026-10-21T14:19:27.493861+00:00
 ---
 
 # Verify image provenance  |  Compute Engine  |  Google Cloud Documentation

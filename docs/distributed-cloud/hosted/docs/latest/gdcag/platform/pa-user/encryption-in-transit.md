@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/encryption-in-transit/
 title: Encryption in transit \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:51:20.482731+00:00
+fetched_at: 2026-10-21T13:32:51.472136+00:00
 ---
 
 # Encryption in transit  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

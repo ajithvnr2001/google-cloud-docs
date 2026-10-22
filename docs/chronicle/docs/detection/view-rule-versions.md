@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/view-rule-versions/
 title: View rule versions \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:59:28.403606+00:00
+fetched_at: 2026-10-21T14:26:03.770698+00:00
 ---
 
 # View rule versions  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/insert-data-bigquery-for-each-parallel-task/
 title: Insert data into BigQuery using a For Each Parallel task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:48.901753+00:00
+fetched_at: 2026-10-21T12:35:23.080741+00:00
 ---
 
 # Insert data into BigQuery using a For Each Parallel task  |  Application Integration  |  Google Cloud Documentation

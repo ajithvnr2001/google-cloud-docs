@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/meta-workplace/
 title: Workplace from Meta \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:50.904871+00:00
+fetched_at: 2026-10-21T12:42:52.590691+00:00
 ---
 
 # Workplace from Meta  |  Dialogflow CX  |  Google Cloud Documentation

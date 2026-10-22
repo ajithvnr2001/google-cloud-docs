@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/add-on/backup-for-gke/how-to/roles/
 title: IAM roles and permissions \u00a0|\u00a0 Backup for GKE \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:13:41.883174+00:00
+fetched_at: 2026-10-21T15:00:38.250444+00:00
 ---
 
 # IAM roles and permissions  |  Backup for GKE  |  Google Cloud Documentation

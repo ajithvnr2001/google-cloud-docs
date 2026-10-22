@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/configure-cross-project-adk-agents/
 title: Configure cross-project ADK agent access \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T11:27:49.750109+00:00
+fetched_at: 2026-10-21T12:46:32.197778+00:00
 ---
 
 # Configure cross-project ADK agent access  |  Gemini Enterprise  |  Google Cloud Documentation

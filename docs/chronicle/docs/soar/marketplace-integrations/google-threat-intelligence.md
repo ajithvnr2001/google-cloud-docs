@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/google-threat-intelligence/
 title: Integrate Google Threat Intelligence with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:10:41.835279+00:00
+fetched_at: 2026-10-21T14:56:50.927364+00:00
 ---
 
 # Integrate Google Threat Intelligence with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation
@@ -1763,7 +1763,7 @@ The following example shows the JSON result output received when using the **Get
      "deleted": false,
      "deny_list": false,
      "details":
-       <! CONTENT OMITTED —>
+       <! CONTENT OMITTED >
        "http": {
          "code": 404,
          "title": "404 Not Found",
@@ -3597,6 +3597,7 @@ Parameter | Description
 `Proxy Server Address` | Optional.The address of the proxy server to use.  
 `Proxy Username` | Optional.The proxy username to authenticate with.  
 `Proxy Password` | Optional.The proxy password to authenticate with.  
+`Anonymize Passwords` | Optional. If selected, the connector anonymizes password fields in the alert data by replacing the characters with asterisks, leaving only the first and last characters visible.  
   
 #### Connector rules
 
@@ -3895,7 +3896,7 @@ The example of the **Google Threat Intelligence - Livehunt Connector** event is 
             "type_description": "Win32 DLL",
             "tlsh": "T1E6A25B41AF6020B3EAF508F135F6D913A930B7110AA4C957774B86511FB4BC3BE7AA2D",
             "vhash": "124056651d15155bzevz36z1",
-            <! CONTENT OMITTED —>
+            <! CONTENT OMITTED >
             "last_analysis_date": 1645620534,
             "unique_sources": 8,
             "first_submission_date": 1562871116,
@@ -3947,6 +3948,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

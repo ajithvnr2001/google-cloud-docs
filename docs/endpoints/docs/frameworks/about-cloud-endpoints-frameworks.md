@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/about-cloud-endpoints-frameworks/
 title: Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:38:15.294612+00:00
+fetched_at: 2026-10-21T12:46:13.295795+00:00
 ---
 
 # Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

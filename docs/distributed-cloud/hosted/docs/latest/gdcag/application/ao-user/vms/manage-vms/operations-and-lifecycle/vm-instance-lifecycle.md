@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/manage-vms/operations-and-lifecycle/vm-instance-lifecycle/
 title: Manage the VM instance lifecycle \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:43:48.135218+00:00
+fetched_at: 2026-10-21T14:08:26.644446+00:00
 ---
 
 # Manage the VM instance lifecycle  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

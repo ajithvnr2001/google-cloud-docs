@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/model-armor/configure-exclusion-rules/
 title: Configure template-specific exclusion rules \u00a0|\u00a0 Model Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:49:12.828685+00:00
+fetched_at: 2026-10-21T15:15:55.678509+00:00
 ---
 
 # Configure template-specific exclusion rules  |  Model Armor  |  Google Cloud Documentation

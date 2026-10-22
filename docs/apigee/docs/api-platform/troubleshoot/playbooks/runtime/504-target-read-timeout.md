@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/runtime/504-target-read-timeout/
 title: 504 Gateway timeout - Target read timeout \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:24.536726+00:00
+fetched_at: 2026-10-21T14:26:16.049910+00:00
 ---
 
 # 504 Gateway timeout - Target read timeout  |  Apigee  |  Google Cloud Documentation

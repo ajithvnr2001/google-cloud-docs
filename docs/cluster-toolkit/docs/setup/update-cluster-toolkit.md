@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/setup/update-cluster-toolkit/
 title: Update Cluster Toolkit version \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:46.239328+00:00
+fetched_at: 2026-10-21T14:46:08.771245+00:00
 ---
 
 # Update Cluster Toolkit version  |  Google Cloud Documentation

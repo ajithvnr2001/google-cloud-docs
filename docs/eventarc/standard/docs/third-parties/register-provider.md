@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/third-parties/register-provider/
 title: Register as an event provider \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:56.562360+00:00
+fetched_at: 2026-10-21T14:35:32.858063+00:00
 ---
 
 # Register as an event provider  |  Eventarc Standard  |  Google Cloud Documentation

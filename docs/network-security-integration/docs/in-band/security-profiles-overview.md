@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-security-integration/docs/in-band/security-profiles-overview/
 title: Security profiles overview \u00a0|\u00a0 Network Security Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:24.094118+00:00
+fetched_at: 2026-10-21T15:15:38.676917+00:00
 ---
 
 # Security profiles overview  |  Network Security Integration  |  Google Cloud Documentation

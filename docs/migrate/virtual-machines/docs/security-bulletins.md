@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/virtual-machines/docs/security-bulletins/
 title: Security bulletins \u00a0|\u00a0 Migrate to Virtual Machines \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:00:58.271473+00:00
+fetched_at: 2026-10-21T15:15:32.712783+00:00
 ---
 
 # Security bulletins  |  Migrate to Virtual Machines  |  Google Cloud Documentation

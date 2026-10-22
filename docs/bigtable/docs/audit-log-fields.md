@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/audit-log-fields/
 title: Data Access audit log fields \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:12.808027+00:00
+fetched_at: 2026-10-21T12:36:39.329746+00:00
 ---
 
 # Data Access audit log fields  |  Bigtable  |  Google Cloud Documentation

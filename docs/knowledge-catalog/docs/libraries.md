@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/libraries/
 title: Client libraries \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:47:38.442589+00:00
+fetched_at: 2026-10-21T15:03:32.548737+00:00
 ---
 
 # Client libraries  |  Knowledge Catalog  |  Google Cloud Documentation

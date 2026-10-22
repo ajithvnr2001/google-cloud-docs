@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataform/docs/use-dataform-mcp/
 title: Use the Dataform remote MCP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:40.724741+00:00
+fetched_at: 2026-10-21T12:45:41.998236+00:00
 ---
 
 # Use the Dataform remote MCP server  |  Google Cloud Documentation

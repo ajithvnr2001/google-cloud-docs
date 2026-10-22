@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs/quickstarts/create-multi-tenant-cluster/
 title: Create a multi-tenant cluster using Terraform \u00a0|\u00a0 Fleet management \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:37:15.584771+00:00
+fetched_at: 2026-10-21T15:03:34.882683+00:00
 ---
 
 # Create a multi-tenant cluster using Terraform  |  Fleet management  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/gitlab/
 title: Collect GitLab logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T14:24:24.875098+00:00
+fetched_at: 2026-10-21T12:39:03.987465+00:00
 ---
 
 # Collect GitLab logs  |  Google Security Operations  |  Google Cloud Documentation

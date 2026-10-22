@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/looker-core-qs-overview/
 title: Looker (Google Cloud core) quickstart overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:25.846393+00:00
+fetched_at: 2026-10-21T15:10:00.552512+00:00
 ---
 
 # Looker (Google Cloud core) quickstart overview  |  Google Cloud Documentation

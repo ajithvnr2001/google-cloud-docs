@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/quotas/
 title: Quotas and limits \u00a0|\u00a0 Cloud DNS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:38.302649+00:00
+fetched_at: 2026-10-21T14:06:09.534975+00:00
 ---
 
 # Quotas and limits  |  Cloud DNS  |  Google Cloud Documentation

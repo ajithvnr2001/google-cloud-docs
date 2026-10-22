@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/ingest/connectors/elasticsearch-connector-mapping-custom-datetime/
 title: Map custom date and time in Elasticsearch \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:21.131639+00:00
+fetched_at: 2026-10-21T14:21:29.809863+00:00
 ---
 
 # Map custom date and time in Elasticsearch  |  Google Security Operations  |  Google Cloud Documentation

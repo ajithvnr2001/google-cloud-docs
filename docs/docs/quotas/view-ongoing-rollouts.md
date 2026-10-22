@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/quotas/view-ongoing-rollouts/
 title: View ongoing rollouts \u00a0|\u00a0 Cloud Quotas \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:45:38.542694+00:00
+fetched_at: 2026-10-21T14:08:06.450592+00:00
 ---
 
 # View ongoing rollouts  |  Cloud Quotas  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/nagios/
 title: Collect Nagios XI logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:39:58.991219+00:00
+fetched_at: 2026-10-21T14:09:42.114505+00:00
 ---
 
 # Collect Nagios XI logs  |  Google Security Operations  |  Google Cloud Documentation

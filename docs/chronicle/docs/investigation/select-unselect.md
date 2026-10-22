@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/select-unselect/
 title: Control columns with select and unselect keywords \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:58:18.507159+00:00
+fetched_at: 2026-10-21T14:25:21.493662+00:00
 ---
 
 # Control columns with select and unselect keywords  |  Google Security Operations  |  Google Cloud Documentation

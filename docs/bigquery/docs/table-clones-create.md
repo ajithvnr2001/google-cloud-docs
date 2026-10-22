@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/table-clones-create/
 title: Create table clones \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:19:15.505524+00:00
+fetched_at: 2026-10-21T14:08:32.003458+00:00
 ---
 
 # Create table clones  |  BigQuery  |  Google Cloud Documentation

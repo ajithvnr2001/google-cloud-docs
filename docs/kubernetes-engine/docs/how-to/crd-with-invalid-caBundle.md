@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/crd-with-invalid-caBundle/
 title: Troubleshoot CRDs with an invalid CA bundle \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:16.005276+00:00
+fetched_at: 2026-10-21T15:03:29.629805+00:00
 ---
 
 # Troubleshoot CRDs with an invalid CA bundle  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

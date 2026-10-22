@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.2/how-to/
 title: How to guides \u00a0|\u00a0 Kf 2.2 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:37:40.203447+00:00
+fetched_at: 2026-10-21T15:16:42.391812+00:00
 ---
 
 # How to guides  |  Kf 2.2  |  Google Cloud Documentation

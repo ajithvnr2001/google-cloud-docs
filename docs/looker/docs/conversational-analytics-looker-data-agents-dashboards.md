@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-dashboards/
 title: Query a user-defined dashboard with a dashboard agent \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:33:39.786074+00:00
+fetched_at: 2026-10-21T14:56:44.490236+00:00
 ---
 
 # Query a user-defined dashboard with a dashboard agent  |  Looker  |  Google Cloud Documentation
@@ -21,13 +21,9 @@ Send feedback
 
 #  Query a user-defined dashboard with a dashboard agent Stay organized with collections  Save and categorize content based on your preferences. 
 
-**Preview**
+Conversational Analytics, powered by [Gemini for Google Cloud](https://docs.cloud.google.com/gemini/docs/overview), lets you investigate your data by asking questions about it in conversational language through an intuitive chat interface. When you use Conversational Analytics with a [user-defined dashboard](https://docs.cloud.google.com/looker/docs/editing-user-defined-dashboards), Conversational Analytics provides a single, shared [default agent](https://docs.cloud.google.com/looker/docs/glossary#default-agent) that is connected to the dashboard. All users with permission to chat with the dashboard converse with this shared agent. As you converse with the dashboard agent, the agent will query your dashboard and any of its [query-linked tiles](https://docs.cloud.google.com/looker/docs/viewing-dashboards#dashboard_tiles). Users with edit permissions on the dashboard can customize the default agent with context and instructions that are specific to your dashboard data, which updates the agent's behavior for all users querying the dashboard.
 
-This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
-
-Conversational Analytics, powered by [Gemini for Google Cloud](https://docs.cloud.google.com/gemini/docs/overview), lets you investigate your data by asking questions about it in conversational language through an intuitive chat interface. When you use Conversational Analytics with a [user-defined dashboard](https://docs.cloud.google.com/looker/docs/editing-user-defined-dashboards), Conversational Analytics creates a data agent for you that is connected to the dashboard. As you converse with the dashboard agent, the agent will query your dashboard and any of its [query-linked tiles](https://docs.cloud.google.com/looker/docs/viewing-dashboards#dashboard_tiles). You can customize user-defined dashboard agents with context and instructions that are specific to your dashboard data.
-
-**Note:** This page describes dashboard agents for user-defined dashboards. For information about configuring and managing data agents for LookML dashboards, see the [Create and manage data agents for LookML dashboards](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-lookml-dashboards) [[Preview](https://cloud.google.com/products#product-launch-stages)] documentation page. For information about Explore data agents — data agents that query Explores, see the [Query an Explore in natural language](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data) documentation page. For information about creating Explore data agents, see the [Create and manage Explore data agents](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents) documentation page.
+**Note:** This page describes dashboard agents for user-defined dashboards. For information about configuring and managing data agents for LookML dashboards, see the [Create and manage data agents for LookML dashboards](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-lookml-dashboards) documentation page. For information about Explore data agents — data agents that query Explores, see the [Query an Explore in natural language](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data) documentation page. For information about creating Explore data agents, see the [Create and manage Explore data agents](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents) documentation page.
 
 This page discusses how to use Conversational Analytics to engage with user-defined dashboard data. It covers the following topics:
 
@@ -230,7 +226,7 @@ To restore or permanently delete a conversation from the trash, follow these ste
 
   * **[Conversational Analytics in Looker overview](https://docs.cloud.google.com/looker/docs/conversational-analytics-overview)** : The landing page for Conversational Analytics with a list of key features links to all Conversational Analytics documentation.
 
-  * **[Create and manage data agents for LookML dashboards](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-lookml-dashboards)** [[Preview](https://cloud.google.com/products#product-launch-stages)]: Use LookML to configure and manage version-controlled data agents for LookML dashboards.
+  * **[Create and manage data agents for LookML dashboards](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data-agents-lookml-dashboards)** : Use LookML to configure and manage version-controlled data agents for LookML dashboards.
 
   * **[Query an Explore in natural language](https://docs.cloud.google.com/looker/docs/conversational-analytics-looker-data)** : Start a conversation with a Looker Explore to ask about Explore data using natural language.
 
@@ -245,6 +241,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

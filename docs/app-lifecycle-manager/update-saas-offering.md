@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/update-saas-offering/
 title: Rollout a release \u00a0|\u00a0 App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:19.260107+00:00
+fetched_at: 2026-10-21T12:30:00.953919+00:00
 ---
 
 # Rollout a release  |  App Lifecycle Manager  |  Google Cloud Documentation

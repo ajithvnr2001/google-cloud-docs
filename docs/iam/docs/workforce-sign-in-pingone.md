@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/workforce-sign-in-pingone/
 title: Configure Workforce Identity Federation with PingOne AIC \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:09:58.425170+00:00
+fetched_at: 2026-10-21T12:54:33.558981+00:00
 ---
 
 # Configure Workforce Identity Federation with PingOne AIC  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

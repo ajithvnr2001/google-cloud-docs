@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/orchestrate-dags/
 title: Schedule Airflow DAGs \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:29:36.657185+00:00
+fetched_at: 2026-10-21T14:19:14.435158+00:00
 ---
 
 # Schedule Airflow DAGs  |  BigQuery  |  Google Cloud Documentation

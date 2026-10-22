@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/admin/stow-device/
 title: Package the device \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:22:00.787816+00:00
+fetched_at: 2026-10-21T12:57:43.140704+00:00
 ---
 
 # Package the device  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

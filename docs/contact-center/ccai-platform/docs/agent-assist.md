@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/agent-assist/
 title: Agent Assist \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:22.717349+00:00
+fetched_at: 2026-10-21T14:23:37.224951+00:00
 ---
 
 # Agent Assist  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

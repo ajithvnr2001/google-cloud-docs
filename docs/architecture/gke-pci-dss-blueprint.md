@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/gke-pci-dss-blueprint/
 title: Security blueprint: PCI on GKE \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:36:01.012447+00:00
+fetched_at: 2026-10-21T14:26:38.581972+00:00
 ---
 
 # Security blueprint: PCI on GKE  |  Cloud Architecture Center  |  Google Cloud Documentation

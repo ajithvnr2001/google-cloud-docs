@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/hackerone/
 title: Collect HackerOne logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:37:27.474185+00:00
+fetched_at: 2026-10-21T12:29:12.389276+00:00
 ---
 
 # Collect HackerOne logs  |  Google Security Operations  |  Google Cloud Documentation
@@ -82,13 +82,10 @@ After creating the feed, you must generate a secret key for authentication:
   2. In the **Endpoint Information** section, copy the **Feed endpoint URL**.
   3. The URL format is:
          
-         https://malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate
+         https://{region}-chronicle.googleapis.com/v1/{parent}/logs:import
          
 
-or for regional endpoints:
-         
-         https://<REGION>-malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate
-         
+Where `{region}` is the region of your Google SecOps instance (for example, `us`, `europe`, or `asia-southeast1`), and `{parent}` is the resource path in the format `projects/<PROJECT_ID>/locations/<LOCATION>/instances/<INSTANCE_ID>/logTypes/<LOG_TYPE>`.
 
   4. Save this URL for the next steps.
 
@@ -144,7 +141,7 @@ Combine the Google SecOps endpoint URL, API key, and secret key into a single UR
     
     
     ```none
-    https://malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate?key=AIzaSyD...&secret=abcd1234...
+    https://{region}-chronicle.googleapis.com/v1/{parent}/logs:import?key=AIzaSyD...&secret=abcd1234...
     ```
     
 
@@ -159,7 +156,7 @@ Replace the following: \- `<ENDPOINT_URL>`: The feed endpoint URL from the **Get
   3. Go to **Automation > Webhooks**.
   4. Click **New webhook**.
   5. Provide the following configuration details: 
-     * **Payload URL** : Paste the complete URL with API key and secret from above (for example, `https://malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate?key=AIzaSyD...&secret=abcd1234...`).
+     * **Payload URL** : Paste the complete URL with API key and secret from above. For example, `https://{region}-chronicle.googleapis.com/v1/{parent}/logs:import?key=AIzaSyD...&secret=abcd1234...`.
      * **Secret** : Leave this field **blank**.
   6. Select which events you'd like to trigger the webhook. Choose one of the following: 
      * **Send me everything** : All events will trigger the webhook.
@@ -180,7 +177,7 @@ Replace the following: \- `<ENDPOINT_URL>`: The feed endpoint URL from the **Get
 
 
 
-If you receive an error: \- **HTTP 403** : Verify the API key and secret key are correctly appended as query parameters in the Payload URL. Confirm the HackerOne **Secret** field is blank. \- **HTTP 401** : Verify the API key is valid and restricted to the Google SecOps API. \- **HTTP 404** : Verify the endpoint URL is correct and includes the full path (`/v2/unstructuredlogentries:batchCreate`).
+If you receive an error: \- **HTTP 403** : Verify the API key and secret key are correctly appended as query parameters in the Payload URL. Confirm the HackerOne **Secret** field is blank. \- **HTTP 401** : Verify the API key is valid and restricted to the Google SecOps API. \- **HTTP 404** : Verify the endpoint URL is correct and includes the full path (`/v1/{parent}/logs:import`).
 
 ### Verify ingestion in Google SecOps
 
@@ -233,6 +230,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/time-travel/
 title: Data retention with time travel and fail-safe \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:38.772968+00:00
+fetched_at: 2026-10-21T12:29:30.424649+00:00
 ---
 
 # Data retention with time travel and fail-safe  |  BigQuery  |  Google Cloud Documentation

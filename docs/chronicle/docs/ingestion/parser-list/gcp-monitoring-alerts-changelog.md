@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/gcp-monitoring-alerts-changelog/
 title: Change log for GCP_MONITORING_ALERTS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:22:39.851806+00:00
+fetched_at: 2026-10-21T14:51:59.718014+00:00
 ---
 
 # Change log for GCP_MONITORING_ALERTS  |  Google Security Operations  |  Google Cloud Documentation

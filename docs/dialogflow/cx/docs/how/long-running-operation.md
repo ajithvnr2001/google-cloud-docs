@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/how/long-running-operation/
 title: Long-running operations \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:59.130781+00:00
+fetched_at: 2026-10-21T12:44:41.976876+00:00
 ---
 
 # Long-running operations  |  Dialogflow CX  |  Google Cloud Documentation

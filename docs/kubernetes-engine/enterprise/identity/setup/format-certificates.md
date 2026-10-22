@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/enterprise/identity/setup/format-certificates/
 title: Format certificates for authentication \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:12:31.233887+00:00
+fetched_at: 2026-10-21T15:08:41.813705+00:00
 ---
 
 # Format certificates for authentication  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

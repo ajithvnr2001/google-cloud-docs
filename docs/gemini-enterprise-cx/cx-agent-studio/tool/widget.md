@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/tool/widget/
 title: Widget tools \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:22:24.283547+00:00
+fetched_at: 2026-10-21T12:54:44.054300+00:00
 ---
 
 # Widget tools  |  CX Agent Studio  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/gitlab/connect-repo-gitlab/
 title: Connect to a GitLab repository \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:05.885744+00:00
+fetched_at: 2026-10-21T14:11:31.220768+00:00
 ---
 
 # Connect to a GitLab repository  |  Cloud Build  |  Google Cloud Documentation

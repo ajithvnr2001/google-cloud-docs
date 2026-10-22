@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/configuring-notifications/automate/
 title: Automating configuration for notifications \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:57:21.779950+00:00
+fetched_at: 2026-10-21T14:11:26.627938+00:00
 ---
 
 # Automating configuration for notifications  |  Cloud Build  |  Google Cloud Documentation

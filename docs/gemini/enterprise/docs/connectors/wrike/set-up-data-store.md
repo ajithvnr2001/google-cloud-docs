@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/wrike/set-up-data-store/
 title: Set up a Wrike data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T12:42:43.867792+00:00
+fetched_at: 2026-10-21T12:42:53.604084+00:00
 ---
 
 # Set up a Wrike data store  |  Gemini Enterprise  |  Google Cloud Documentation

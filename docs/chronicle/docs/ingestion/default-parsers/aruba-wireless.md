@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aruba-wireless/
 title: Collect Aruba Wireless Controller and Access Point logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T16:41:06.818705+00:00
+fetched_at: 2026-10-21T12:26:43.356349+00:00
 ---
 
 # Collect Aruba Wireless Controller and Access Point logs  |  Google Security Operations  |  Google Cloud Documentation

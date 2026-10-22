@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/virtual-machines/docs/5.0/resources/vm-adaptations/
 title: Adapt VM instances to run on Google Cloud \u00a0|\u00a0 Migrate to Virtual Machines \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:00:58.235784+00:00
+fetched_at: 2026-10-21T15:18:07.087719+00:00
 ---
 
 # Adapt VM instances to run on Google Cloud  |  Migrate to Virtual Machines  |  Google Cloud Documentation

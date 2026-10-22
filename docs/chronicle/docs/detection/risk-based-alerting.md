@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/risk-based-alerting/
 title: Enable risk-based alerting \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:01:16.479925+00:00
+fetched_at: 2026-10-21T12:38:43.529103+00:00
 ---
 
 # Enable risk-based alerting  |  Google Security Operations  |  Google Cloud Documentation

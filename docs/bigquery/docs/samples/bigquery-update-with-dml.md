@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-update-with-dml/
 title: Update table with DML \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:10.636040+00:00
+fetched_at: 2026-10-22T05:45:31.442659+00:00
 ---
 
 # Update table with DML  |  BigQuery  |  Google Cloud Documentation

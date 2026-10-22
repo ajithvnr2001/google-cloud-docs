@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/yara-l/getting-started2/
 title: Get Started: YARA-L 2.0 in SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T09:04:54.281050+00:00
+fetched_at: 2026-10-21T14:09:38.592390+00:00
 ---
 
 # Get Started: YARA-L 2.0 in SecOps  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/projects.locations.dataAgents/deleteSync/
 title: Method: projects.locations.dataAgents.deleteSync \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:42:54.142448+00:00
+fetched_at: 2026-10-21T12:51:32.231695+00:00
 ---
 
 # Method: projects.locations.dataAgents.deleteSync  |  Data Agents  |  Google Cloud Documentation

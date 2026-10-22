@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/model-routing-overview/
 title: Overview of model routing \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:48:40.104987+00:00
+fetched_at: 2026-10-21T14:10:34.254090+00:00
 ---
 
 # Overview of model routing  |  API Gateway  |  Google Cloud Documentation

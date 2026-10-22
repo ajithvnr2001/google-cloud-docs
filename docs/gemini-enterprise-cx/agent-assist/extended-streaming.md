@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/extended-streaming/
 title: Extended streaming \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:44:27.739821+00:00
+fetched_at: 2026-10-21T12:54:16.425577+00:00
 ---
 
 # Extended streaming  |  Agent Assist  |  Google Cloud Documentation

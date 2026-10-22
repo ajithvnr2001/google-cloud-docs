@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/how-tos/mllp-adapter-binary-auth/
 title: Transmitting HL7v2 messages over TCP/IP connections using a signed MLLP image \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:01:50.993643+00:00
+fetched_at: 2026-10-21T14:29:28.681324+00:00
 ---
 
 # Transmitting HL7v2 messages over TCP/IP connections using a signed MLLP image  |  Cloud Healthcare API  |  Google Cloud Documentation

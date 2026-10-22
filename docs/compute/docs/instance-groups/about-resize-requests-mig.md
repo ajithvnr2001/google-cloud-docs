@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/about-resize-requests-mig/
 title: About resize requests in a MIG \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:21:09.524497+00:00
+fetched_at: 2026-10-21T14:21:17.778307+00:00
 ---
 
 # About resize requests in a MIG  |  Compute Engine  |  Google Cloud Documentation

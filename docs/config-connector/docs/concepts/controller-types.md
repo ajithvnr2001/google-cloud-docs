@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/concepts/controller-types/
 title: Config Connector controller types \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:17.016538+00:00
+fetched_at: 2026-10-21T14:24:45.064751+00:00
 ---
 
 # Config Connector controller types  |  Google Cloud Documentation

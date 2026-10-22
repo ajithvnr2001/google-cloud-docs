@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/rule-exclusion-api/
 title: Manage rule exclusions \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:04:44.994921+00:00
+fetched_at: 2026-10-21T14:11:49.732521+00:00
 ---
 
 # Manage rule exclusions  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-key-column-usage/
 title: KEY_COLUMN_USAGE view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T02:05:23.885779+00:00
+fetched_at: 2026-10-21T12:35:22.997115+00:00
 ---
 
 # KEY_COLUMN_USAGE view  |  BigQuery  |  Google Cloud Documentation

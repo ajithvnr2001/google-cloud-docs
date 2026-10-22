@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/create-run-job-custom-service-account/
 title: Control access for a job using a custom service account \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:29:24.033392+00:00
+fetched_at: 2026-10-21T12:30:30.275003+00:00
 ---
 
 # Control access for a job using a custom service account  |  Batch  |  Google Cloud Documentation

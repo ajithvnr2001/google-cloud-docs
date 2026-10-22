@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/aws-ecs-metrics-changelog/
 title: Change log for AWS_ECS_METRICS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:41:33.040263+00:00
+fetched_at: 2026-10-21T14:45:45.088223+00:00
 ---
 
 # Change log for AWS_ECS_METRICS  |  Google Security Operations  |  Google Cloud Documentation

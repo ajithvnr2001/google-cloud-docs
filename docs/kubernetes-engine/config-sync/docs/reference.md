@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/reference/
 title: Reference \u00a0|\u00a0 Config Sync \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:20:20.079174+00:00
+fetched_at: 2026-10-21T15:00:40.060762+00:00
 ---
 
 # Reference  |  Config Sync  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/securing/cmek/
 title: Protect your data with CMEK \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:10:31.303725+00:00
+fetched_at: 2026-10-21T12:51:23.653324+00:00
 ---
 
 # Protect your data with CMEK  |  Cloud Run functions  |  Google Cloud Documentation

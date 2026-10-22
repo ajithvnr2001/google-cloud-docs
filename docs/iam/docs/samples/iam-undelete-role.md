@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/samples/iam-undelete-role/
 title: Restore a deleted custom role \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:40:11.176868+00:00
+fetched_at: 2026-10-21T12:53:32.555098+00:00
 ---
 
 # Restore a deleted custom role  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

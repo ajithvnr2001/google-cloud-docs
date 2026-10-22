@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.11/concepts/compare-services/
 title: Compare Cloud Foundry and Kf services \u00a0|\u00a0 Kf 2.11 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:29.102583+00:00
+fetched_at: 2026-10-21T15:13:27.986431+00:00
 ---
 
 # Compare Cloud Foundry and Kf services  |  Kf 2.11  |  Google Cloud Documentation

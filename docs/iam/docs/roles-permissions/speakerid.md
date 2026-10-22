@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/speakerid/
 title: Speaker ID roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:08:58.382552+00:00
+fetched_at: 2026-10-21T14:30:12.262505+00:00
 ---
 
 # Speaker ID roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

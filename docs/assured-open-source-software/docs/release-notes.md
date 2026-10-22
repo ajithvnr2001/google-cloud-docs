@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-open-source-software/docs/release-notes/
 title: Assured OSS release notes \u00a0|\u00a0 Assured Open Source Software \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:41:44.285331+00:00
+fetched_at: 2026-10-21T14:53:14.694649+00:00
 ---
 
 # Assured OSS release notes  |  Assured Open Source Software  |  Google Cloud Documentation

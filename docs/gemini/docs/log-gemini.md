@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/log-gemini/
 title: View Gemini Code Assist logs \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:02:17.144780+00:00
+fetched_at: 2026-10-21T14:56:44.630555+00:00
 ---
 
 # View Gemini Code Assist logs  |  Gemini for Google Cloud  |  Google Cloud Documentation
@@ -21,14 +21,7 @@ Send feedback
 
 #  View Gemini Code Assist logs Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document describes how you can enable the collection and storage of Gemini Code Assist activity, including the following:
-
-  * Gemini Code Assist prompts and response logs, such as user input, contextual information, and responses.
-  * Gemini Code Assist metadata logs, such as telemetry metadata and lines of code accepted by the user.
-
-
-
-If you need to generate Gemini Code Assist metrics, see [Monitor Gemini Code Assist usage](https://docs.cloud.google.com/gemini/docs/codeassist/generate-metrics).
+Collecting Gemini Code Assist activity in Cloud Logging lets you audit developer prompts, model responses, and metadata logs such as telemetry data and accepted lines of code. You can query these log entries to evaluate assistant interactions across your organization. To track aggregated trends instead of raw logs, see [Monitor Gemini Code Assist usage](https://docs.cloud.google.com/gemini/docs/codeassist/generate-metrics).
 
 Gemini Code Assist doesn't collect or send to Cloud Logging any other user interactions the user might have had with Gemini Code Assist, including written feedback. The collected data is sent to Cloud Logging for storage. You can review this data by searching for log entries with the resource type `cloudaicompanion.googleapis.com/Instance`.
 
@@ -796,6 +789,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

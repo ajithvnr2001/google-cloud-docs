@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/resources-v7/
 title: Resources \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:36:56.588909+00:00
+fetched_at: 2026-10-21T14:23:19.316012+00:00
 ---
 
 # Resources  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

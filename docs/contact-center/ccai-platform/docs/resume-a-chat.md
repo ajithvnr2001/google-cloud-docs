@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/resume-a-chat/
 title: Resume a chat \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:53:05.193804+00:00
+fetched_at: 2026-10-21T14:07:28.933800+00:00
 ---
 
 # Resume a chat  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

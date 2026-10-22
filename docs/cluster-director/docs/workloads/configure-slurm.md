@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-director/docs/workloads/configure-slurm/
 title: Submit and monitor jobs with Slurm \u00a0|\u00a0 Cluster Director \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:54.048992+00:00
+fetched_at: 2026-10-21T14:41:58.269355+00:00
 ---
 
 # Submit and monitor jobs with Slurm  |  Cluster Director  |  Google Cloud Documentation

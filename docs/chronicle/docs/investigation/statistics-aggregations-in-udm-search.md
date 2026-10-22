@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/statistics-aggregations-in-udm-search/
 title: Analyze search data with statistics \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:26.537115+00:00
+fetched_at: 2026-10-21T14:25:20.669347+00:00
 ---
 
 # Analyze search data with statistics  |  Google Security Operations  |  Google Cloud Documentation

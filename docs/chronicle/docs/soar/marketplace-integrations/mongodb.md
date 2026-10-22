@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/mongodb/
 title: MongoDB \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:42:27.793469+00:00
+fetched_at: 2026-10-21T14:22:05.924928+00:00
 ---
 
 # MongoDB  |  Google Security Operations  |  Google Cloud Documentation

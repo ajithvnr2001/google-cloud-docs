@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cybergatekeeper-nac-changelog/
 title: Change log for CYBERGATEKEEPER_NAC \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:00:11.909550+00:00
+fetched_at: 2026-10-21T14:45:32.935584+00:00
 ---
 
 # Change log for CYBERGATEKEEPER_NAC  |  Google Security Operations  |  Google Cloud Documentation

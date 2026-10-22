@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/working-with-remote-agents/deploy-agent-with-podman/
 title: Create an agent using Podman \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:10.361861+00:00
+fetched_at: 2026-10-21T12:40:10.102159+00:00
 ---
 
 # Create an agent using Podman  |  Google Security Operations  |  Google Cloud Documentation

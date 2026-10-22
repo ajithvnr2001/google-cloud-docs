@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/admin-panel-platform-api/
 title: Admin settings - API \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:44:18.187964+00:00
+fetched_at: 2026-10-21T15:08:41.149736+00:00
 ---
 
 # Admin settings - API  |  Looker  |  Google Cloud Documentation

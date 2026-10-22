@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads/
 title: Google Distributed Cloud for VMware downloads \u00a0|\u00a0 Google Distributed Cloud software only for VMware \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:20:05.075680+00:00
+fetched_at: 2026-10-21T15:13:58.506537+00:00
 ---
 
 # Google Distributed Cloud for VMware downloads  |  Google Distributed Cloud software only for VMware  |  Google Cloud Documentation
@@ -56,7 +56,7 @@ The `gkeadm` command-line tool is available for 64-bit Linux.
 Replace `VERSION` with the version of Google Distributed Cloud you want to install or upgrade your clusters to. Here's the list of the latest patch versions for supported minor versions:
 
   * 1.36.100-gke.144
-  * 1.35.600-gke.140
+  * 1.35.600-gke.141
   * 1.34.900-gke.135
 
 
@@ -103,7 +103,7 @@ If your environment is air-gapped or if your proxy connection is slow, you can d
 Replace `VERSION` with the version of Google Distributed Cloud you want to install or upgrade your clusters to. Here's the list of the latest patch versions for supported minor versions:
 
   * 1.36.100-gke.144
-  * 1.35.600-gke.140
+  * 1.35.600-gke.141
   * 1.34.900-gke.135
 
 
@@ -147,7 +147,7 @@ Normally there is no reason for your to download the `gkectl` command-line tool.
 Replace `VERSION` with the version of Google Distributed Cloud you want to install or upgrade your clusters to. Here's the list of the latest patch versions for supported minor versions:
 
   * 1.36.100-gke.144
-  * 1.35.600-gke.140
+  * 1.35.600-gke.141
   * 1.34.900-gke.135
 
 
@@ -182,7 +182,7 @@ To download the admin workstation OVA:
 Replace `VERSION` with the version of Google Distributed Cloud you want to install or upgrade your clusters to. Here's the list of the latest patch versions for supported minor versions:
 
   * 1.36.100-gke.144
-  * 1.35.600-gke.140
+  * 1.35.600-gke.141
   * 1.34.900-gke.135
 
 
@@ -208,6 +208,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

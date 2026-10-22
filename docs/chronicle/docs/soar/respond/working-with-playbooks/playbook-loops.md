@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/playbook-loops/
 title: Automate tasks with playbook loops \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:46:40.912987+00:00
+fetched_at: 2026-10-21T12:39:15.915562+00:00
 ---
 
 # Automate tasks with playbook loops  |  Google Security Operations  |  Google Cloud Documentation

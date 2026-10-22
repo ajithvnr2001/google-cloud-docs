@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tutorials/image-classification-automl/dataset/
 title: Hello image data: Create an image classification dataset and import images \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:30:58.883853+00:00
+fetched_at: 2026-10-21T12:52:10.934098+00:00
 ---
 
 # Hello image data: Create an image classification dataset and import images  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

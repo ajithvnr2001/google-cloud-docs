@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/php-gen2/config/php_ini/
 title: The php.ini File \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:32:13.103866+00:00
+fetched_at: 2026-10-21T14:28:59.714711+00:00
 ---
 
 # The php.ini File  |  App Engine standard environment  |  Google Cloud Documentation

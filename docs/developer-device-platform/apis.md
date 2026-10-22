@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/developer-device-platform/apis/
 title: Developer Device Platform API Reference \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:44:45.449701+00:00
+fetched_at: 2026-10-22T05:40:05.466956+00:00
 ---
 
 # Developer Device Platform API Reference  |  Google Cloud Documentation

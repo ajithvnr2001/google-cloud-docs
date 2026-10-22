@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/nodejs/
 title: Get started with Node.js packages \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:22.906250+00:00
+fetched_at: 2026-10-21T14:27:49.618748+00:00
 ---
 
 # Get started with Node.js packages  |  Artifact Registry  |  Google Cloud Documentation

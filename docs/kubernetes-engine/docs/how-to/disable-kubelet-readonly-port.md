@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/disable-kubelet-readonly-port/
 title: Disable the kubelet read-only port in GKE clusters \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:10.203057+00:00
+fetched_at: 2026-10-21T15:01:01.482382+00:00
 ---
 
 # Disable the kubelet read-only port in GKE clusters  |  GKE security  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/samples/
 title: All Datastore mode code samples \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:54:32.459370+00:00
+fetched_at: 2026-10-22T05:42:14.666416+00:00
 ---
 
 # All Datastore mode code samples  |  Firestore in Datastore mode  |  Google Cloud Documentation

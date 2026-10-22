@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/release-notes/
 title: Cloud Healthcare API release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:14:09.513165+00:00
+fetched_at: 2026-10-21T14:29:31.374705+00:00
 ---
 
 # Cloud Healthcare API release notes  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/samples/genappbuilder-delete-engine/
 title: Delete an app \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:11:27.214558+00:00
+fetched_at: 2026-10-21T12:54:54.558524+00:00
 ---
 
 # Delete an app  |  Agent Search  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/migration/snowflake-private-connectivity/
 title: Configure private connectivity for Snowflake transfers \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:45:43.784366+00:00
+fetched_at: 2026-10-21T12:37:10.930647+00:00
 ---
 
 # Configure private connectivity for Snowflake transfers  |  BigQuery  |  Google Cloud Documentation

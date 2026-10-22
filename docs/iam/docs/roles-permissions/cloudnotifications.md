@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/cloudnotifications/
 title: Cloud Notifications roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:54:13.917799+00:00
+fetched_at: 2026-10-21T14:29:59.764322+00:00
 ---
 
 # Cloud Notifications roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

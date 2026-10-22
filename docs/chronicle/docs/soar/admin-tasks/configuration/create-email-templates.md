@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/configuration/create-email-templates/
 title: Create email templates \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:49.276422+00:00
+fetched_at: 2026-10-21T14:24:35.017779+00:00
 ---
 
 # Create email templates  |  Google Security Operations  |  Google Cloud Documentation

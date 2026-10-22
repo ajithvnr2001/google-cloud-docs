@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/analytics/data-studio/
 title: Data Studio Integration \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T18:59:27.054641+00:00
+fetched_at: 2026-10-21T12:30:03.677794+00:00
 ---
 
 # Data Studio Integration  |  Apigee  |  Google Cloud Documentation

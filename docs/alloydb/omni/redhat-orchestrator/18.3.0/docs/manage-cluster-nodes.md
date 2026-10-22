@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18.3.0/docs/manage-cluster-nodes/
 title: Manage cluster nodes in AlloyDB Omni \u00a0|\u00a0 AlloyDB Omni using the RPM orchestrator: 18.3.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:12.290991+00:00
+fetched_at: 2026-10-21T14:37:21.810179+00:00
 ---
 
 # Manage cluster nodes in AlloyDB Omni  |  AlloyDB Omni using the RPM orchestrator: 18.3.0  |  Google Cloud Documentation
@@ -25,7 +25,8 @@ Send feedback
 
 Select a documentation version: 18.3.0keyboard_arrow_down
 
-  * [ Current (18.3.0) ](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/manage-cluster-nodes)
+  * [ Current (18.4.0) ](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/manage-cluster-nodes)
+  * [ 18.4.0 ](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18.4.0/docs/manage-cluster-nodes)
   * [ 18.3.0 ](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18.3.0/docs/manage-cluster-nodes)
 
 This page describes how to add or remove database nodes in an existing AlloyDB Omni cluster using the RPM orchestrator. 
@@ -34,7 +35,7 @@ You can add standby nodes to an existing cluster to scale your read workloads or
 
 ## Before you begin
 
-  * Make sure [your cluster is in a healthy state](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18-next/docs/cluster-status) and that `status.phase` is `Ready`.
+  * Make sure [your cluster is in a healthy state](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18.3.0/docs/cluster-status) and that `status.phase` is `Ready`.
   * If you add a new node, verify that it meets the [System requirements](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18.3.0/docs/overview#requirements) and has the required AlloyDB Omni components installed.
 
 
@@ -120,7 +121,7 @@ To remove a specific standby node from your cluster, you must remove it from the
 
 **Note:** The following restrictions apply when removing a database node:
 
-  * Standby nodes: You can only remove standby nodes. You cannot directly remove the primary database node. To identify the primary node, fetch [your cluster status](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18-next/docs/cluster-status) and check the IP address or hostname returned in the `.status.primary.endpoint` field. If you need to remove a primary node, you must [perform a manual switchover](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18-next/docs/manage-high-availability#switchover) first, and then remove the old primary node.
+  * Standby nodes: You can only remove standby nodes. You cannot directly remove the primary database node. To identify the primary node, fetch [your cluster status](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18.3.0/docs/cluster-status) and check the IP address or hostname returned in the `.status.primary.endpoint` field. If you need to remove a primary node, you must [perform a manual switchover](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18.3.0/docs/manage-high-availability#switchover) first, and then remove the old primary node.
   * High availability (HA) clusters: You cannot remove a node from a standalone cluster. To remove a standalone node, you must delete the entire database cluster instead.
 
 
@@ -205,6 +206,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

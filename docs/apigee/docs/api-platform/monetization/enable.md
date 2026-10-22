@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/monetization/enable/
 title: Enable Apigee monetization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:18:11.767414+00:00
+fetched_at: 2026-10-21T14:54:45.922246+00:00
 ---
 
 # Enable Apigee monetization  |  Google Cloud Documentation

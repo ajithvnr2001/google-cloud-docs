@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/run/route-trigger-cloud-firestore/
 title: Route Cloud Firestore events to Cloud Run \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:36.250796+00:00
+fetched_at: 2026-10-21T12:46:30.013676+00:00
 ---
 
 # Route Cloud Firestore events to Cloud Run  |  Eventarc Standard  |  Google Cloud Documentation

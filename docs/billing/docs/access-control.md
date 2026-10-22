@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/docs/access-control/
 title: Access control for Cloud Billing APIs \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:03:52.292449+00:00
+fetched_at: 2026-10-21T12:36:52.405129+00:00
 ---
 
 # Access control for Cloud Billing APIs  |  Google Cloud Documentation

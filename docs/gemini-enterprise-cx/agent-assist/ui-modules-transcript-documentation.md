@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/ui-modules-transcript-documentation/
 title: Transcript \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:13:48.905855+00:00
+fetched_at: 2026-10-21T12:54:40.430104+00:00
 ---
 
 # Transcript  |  Agent Assist  |  Google Cloud Documentation

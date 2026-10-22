@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/number-registry/view-update-delete-registry-books/
 title: View, update, and delete registry books \u00a0|\u00a0 Cloud Number Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:20:01.264109+00:00
+fetched_at: 2026-10-21T14:59:19.084757+00:00
 ---
 
 # View, update, and delete registry books  |  Cloud Number Registry  |  Google Cloud Documentation

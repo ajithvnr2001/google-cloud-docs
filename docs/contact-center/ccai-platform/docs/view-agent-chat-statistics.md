@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/view-agent-chat-statistics/
 title: View agent chat statistics \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:32.616079+00:00
+fetched_at: 2026-10-21T14:22:52.064251+00:00
 ---
 
 # View agent chat statistics  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

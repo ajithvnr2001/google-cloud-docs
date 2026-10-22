@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/explore-vulnerabilities-with-gemini-assistance/
 title: Explore vulnerabilities with Gemini assistance \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:51:39.474250+00:00
+fetched_at: 2026-10-21T12:40:01.124891+00:00
 ---
 
 # Explore vulnerabilities with Gemini assistance  |  Artifact Analysis  |  Google Cloud Documentation

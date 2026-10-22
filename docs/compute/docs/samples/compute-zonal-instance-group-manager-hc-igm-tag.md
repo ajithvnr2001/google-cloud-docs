@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-zonal-instance-group-manager-hc-igm-tag/
 title: Configure an autohealing policy in a MIG \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:14:08.951366+00:00
+fetched_at: 2026-10-21T14:19:53.133288+00:00
 ---
 
 # Configure an autohealing policy in a MIG  |  Compute Engine  |  Google Cloud Documentation

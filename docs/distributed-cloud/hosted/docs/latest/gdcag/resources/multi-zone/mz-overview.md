@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/multi-zone/mz-overview/
 title: Zones in GDC air-gapped \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:35.258728+00:00
+fetched_at: 2026-10-21T12:58:26.170248+00:00
 ---
 
 # Zones in GDC air-gapped  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

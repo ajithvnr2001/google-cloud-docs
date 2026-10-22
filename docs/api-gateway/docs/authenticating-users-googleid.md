@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/authenticating-users-googleid/
 title: Using Google ID tokens to authenticate users \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:14:06.009025+00:00
+fetched_at: 2026-10-21T14:29:05.096155+00:00
 ---
 
 # Using Google ID tokens to authenticate users  |  API Gateway  |  Google Cloud Documentation

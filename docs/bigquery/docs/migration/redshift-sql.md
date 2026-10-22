@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/migration/redshift-sql/
 title: Amazon Redshift SQL translation guide \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:58:42.931594+00:00
+fetched_at: 2026-10-21T12:37:51.436803+00:00
 ---
 
 # Amazon Redshift SQL translation guide  |  BigQuery  |  Google Cloud Documentation

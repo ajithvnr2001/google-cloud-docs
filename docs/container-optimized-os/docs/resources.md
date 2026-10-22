@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/container-optimized-os/docs/resources/
 title: Resources \u00a0|\u00a0 Container-Optimized OS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:16:39.566324+00:00
+fetched_at: 2026-10-21T14:24:58.517760+00:00
 ---
 
 # Resources  |  Container-Optimized OS  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/integrations/ai-infra/
 title: AI/ML orchestration on GKE documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:02:14.772210+00:00
+fetched_at: 2026-10-21T14:37:29.230734+00:00
 ---
 
 # AI/ML orchestration on GKE documentation  |  Google Cloud Documentation
@@ -210,7 +210,7 @@ Tutorial
 
 Training and tutorials
 
-###  [ Isolate AI code execution with Agent Sandbox ](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox)
+###  [ Isolate AI code execution with Agent Sandbox on GKE ](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox)
 
 Learn how to install and run the Agent Sandbox controller on GKE, and deploy a sandboxed environment on the cluster for testing untrusted shell commands. 
 
@@ -222,7 +222,7 @@ Training and tutorials
 
 ###  [ Choose storage for AI agentic workloads ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-learning/agent-sandbox-storage)
 
-Learn how to choose storage options for AI agentic workloads on GKE Agent Sandbox. 
+Learn how to choose storage options for AI agentic workloads on Agent Sandbox on GKE. 
 
 Agent Sandbox Agentic AI Storage
 
@@ -230,9 +230,9 @@ Tutorial
 
 Training and tutorials
 
-###  [ Manage Agent Sandbox storage ](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-storage)
+###  [ Manage Agent Sandbox on GKE storage ](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-storage)
 
-Learn how to implement storage for Agent Sandboxes on GKE for different data lifecycle patterns. 
+Learn how to implement storage for Agent Sandbox on GKE for different data lifecycle patterns. 
 
 Tutorial Agent Sandbox Agentic AI Storage
 
@@ -240,7 +240,7 @@ Tutorial
 
 Training and tutorials
 
-###  [ Use open source Kata Containers with GKE Agent Sandbox ](https://github.com/kubernetes-sigs/agent-sandbox/tree/main/examples/kata-gke-sandbox)
+###  [ Use open source Kata Containers with Agent Sandbox on GKE ](https://github.com/kubernetes-sigs/agent-sandbox/tree/main/examples/kata-gke-sandbox)
 
 Learn how to use open source Kata Containers with Agent Sandbox on GKE to isolate untrusted code execution. 
 
@@ -804,6 +804,6 @@ View reference architectures and solutions for deploying accelerated workloads o
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-12 UTC.
+Last updated 2026-10-14 UTC.
 
-[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-12 UTC."],[],[]] 
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

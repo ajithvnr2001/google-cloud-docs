@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/connect-to-vm/network-policy/
 title: Network policy \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:08:14.286360+00:00
+fetched_at: 2026-10-21T14:07:59.302102+00:00
 ---
 
 # Network policy  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

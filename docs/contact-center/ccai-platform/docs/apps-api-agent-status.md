@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-agent-status/
 title: Agent status endpoints \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:51:12.007137+00:00
+fetched_at: 2026-10-21T14:23:03.490064+00:00
 ---
 
 # Agent status endpoints  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

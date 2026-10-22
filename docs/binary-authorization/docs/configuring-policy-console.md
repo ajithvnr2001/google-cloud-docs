@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/configuring-policy-console/
 title: Configure a policy using the Google Cloud console \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:59:03.635918+00:00
+fetched_at: 2026-10-21T14:11:40.667277+00:00
 ---
 
 # Configure a policy using the Google Cloud console  |  Binary Authorization  |  Google Cloud Documentation

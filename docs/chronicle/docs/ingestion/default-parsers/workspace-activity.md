@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/workspace-activity/
 title: Collect Google Workspace logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:48.753830+00:00
+fetched_at: 2026-10-21T14:44:07.138668+00:00
 ---
 
 # Collect Google Workspace logs  |  Google Security Operations  |  Google Cloud Documentation

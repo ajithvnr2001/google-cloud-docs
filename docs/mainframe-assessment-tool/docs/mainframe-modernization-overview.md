@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/mainframe-assessment-tool/docs/mainframe-modernization-overview/
 title: Mainframe modernization overview \u00a0|\u00a0 Mainframe Assessment Tool \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:38:08.809146+00:00
+fetched_at: 2026-10-21T12:29:27.124485+00:00
 ---
 
 # Mainframe modernization overview  |  Mainframe Assessment Tool  |  Google Cloud Documentation
@@ -54,15 +54,9 @@ Google Cloud provides a phased approach and tools to guide your mainframe modern
 
 
 
-The following diagram shows a high-level overview of the mainframe modernization process:
-
-![Diagram showing the three phases of mainframe modernization: Assess, Modernize, and Validate, with the Google Cloud tools used in each phase.](https://docs.cloud.google.com/static/mainframe-assessment-tool/docs/images/mainframe-modernization-overview.png)
-
 ## Key modernization activities
 
-Successful mainframe modernization involves several key activities, supported by Google Cloud tools. The following diagram illustrates these activities:
-
-![Diagram illustrating the key activities in mainframe modernization: Assess, Generate and Transform, Modernize Data, and Reduce Risks, each associated with specific Google Cloud tools.](https://docs.cloud.google.com/static/mainframe-assessment-tool/docs/images/mainframe-modernization-activities.png)
+Successful mainframe modernization involves several key activities, supported by Google Cloud tools:
 
   1. **Assess mainframe applications:** Use Mainframe Assessment Tool to assess your mainframe applications. Mainframe Assessment Tool helps you understand the existing codebase, application and data dependencies, and extract business rules. This automated assessment and extracted business rules help you plan your migration to Google Cloud. In the modernization workflow, this process is referred to as reverse engineering.
 
@@ -77,11 +71,7 @@ Successful mainframe modernization involves several key activities, supported by
 
 ## Modernization phases
 
-The modernization process has three phases to guide you from initial discovery all the way to final production deployment and cutover.
-
-The following diagram shows the three key phases of the mainframe modernization journey:
-
-![Mainframe modernization phases.](https://docs.cloud.google.com/static/mainframe-assessment-tool/docs/images/mainframe-modernization-phases.png)
+The modernization process has three phases that guide you from initial discovery to final production deployment and cutover.
 
 ### Phase 1: Assess your mainframe application (reverse engineering)
 
@@ -92,7 +82,7 @@ In this phase, you use [Mainframe Assessment Tool](https://docs.cloud.google.com
 Use Mainframe Assessment Tool to perform the following tasks:
 
   * [Create a mainframe application assessment](https://docs.cloud.google.com/mainframe-assessment-tool/docs/perform-assessment): create an assessment to analyze your mainframe application, including source code in supported [languages](https://docs.cloud.google.com/mainframe-assessment-tool/docs/overview#languages), [database schemas](https://docs.cloud.google.com/mainframe-assessment-tool/docs/overview#database_schemas), [transaction monitors](https://docs.cloud.google.com/mainframe-assessment-tool/docs/overview#transaction_monitors), and [scheduler configurations](https://docs.cloud.google.com/mainframe-assessment-tool/docs/overview#scheduler_configurations).
-  * [Upload your mainframe application files and define business domains](https://docs.cloud.google.com/mainframe-assessment-tool/docs/perform-assessment#upload-data): define domains when you create an assessment to break down and map your mainframe application into logical business domains and smaller, migratable units to prioritize your migration strategy.
+  * [Define business domains when you create an assessment](https://docs.cloud.google.com/mainframe-assessment-tool/docs/perform-assessment#upload-data): break down and map your mainframe application into logical business domains and smaller, migratable units to prioritize your migration strategy.
   * [Review and understand assessment results](https://docs.cloud.google.com/mainframe-assessment-tool/docs/review-results): review reports to understand dependencies, databases, and call trees. For more information about the available report types, see [Discover and analyze source code](https://docs.cloud.google.com/mainframe-assessment-tool/docs/review-results#discover-analyze). 
     * Review migratable units to prepare a migration plan: the **migratable units** report partitions assets into migration units to generate a preliminary migration plan.
   * [Extract business rules](https://docs.cloud.google.com/mainframe-assessment-tool/docs/business-rules-extraction): isolate and verify the core business logic within your mainframe application code. This ensures that only valid and critical rules are preserved during the modernization process. This process lets you review and validate the business rules.
@@ -111,7 +101,7 @@ You can also use the exported assessment results for further analysis:
   * **Export Neo4j Assessment data from the asset relations:** export data to a Neo4j database to visualize and analyze complex relationships within your mainframe applications. 
     * [Export assessment data to your Neo4j database](https://docs.cloud.google.com/mainframe-assessment-tool/docs/export-results#export-to-neo4j)
   * **Mainframe Assessment Tool MCP server** : use natural language prompts with the Mainframe Assessment Tool MCP server to get further insights into your mainframe assessments. 
-    * [Enable Mainframe Assessment Tool MCP server](https://docs.cloud.google.com/mainframe-assessment-tool/docs/mcp-server#enable_the_mcp_server)
+    * [Configure Mainframe Assessment Tool MCP server and agent skills](https://docs.cloud.google.com/mainframe-assessment-tool/docs/mcp-server#enable-mcp-server)
 
 
 
@@ -162,6 +152,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

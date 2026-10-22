@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/export-compliance/
 title: Export compliance license exception \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:55:50.495489+00:00
+fetched_at: 2026-10-21T15:01:08.635310+00:00
 ---
 
 # Export compliance license exception  |  GKE on Azure  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/glossary/
 title: App Lifecycle Manager glossary \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:17.544856+00:00
+fetched_at: 2026-10-21T12:30:32.706282+00:00
 ---
 
 # App Lifecycle Manager glossary  |  Google Cloud Documentation

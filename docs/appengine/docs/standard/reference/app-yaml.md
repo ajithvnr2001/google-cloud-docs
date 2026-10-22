@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/reference/app-yaml/
 title: App Engine app.yaml reference \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:07:22.694700+00:00
+fetched_at: 2026-10-21T14:26:07.963768+00:00
 ---
 
 # App Engine app.yaml reference  |  App Engine standard environment  |  Google Cloud Documentation

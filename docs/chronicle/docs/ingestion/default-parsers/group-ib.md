@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/group-ib/
 title: Collect Group-IB Threat Intelligence logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:36:24.984047+00:00
+fetched_at: 2026-10-21T12:37:08.436351+00:00
 ---
 
 # Collect Group-IB Threat Intelligence logs  |  Google Security Operations  |  Google Cloud Documentation

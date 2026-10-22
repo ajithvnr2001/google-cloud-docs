@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/rule-replays/
 title: Understand rule replays and MTTD \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:23:27.697044+00:00
+fetched_at: 2026-10-21T12:38:44.562038+00:00
 ---
 
 # Understand rule replays and MTTD  |  Google Security Operations  |  Google Cloud Documentation

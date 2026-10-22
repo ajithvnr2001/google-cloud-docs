@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/field-maps/cisco-firewall-map-changes/
 title: Mapping changes in Cisco ASA firewall parser \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:06:28.120669+00:00
+fetched_at: 2026-10-21T14:51:44.824911+00:00
 ---
 
 # Mapping changes in Cisco ASA firewall parser  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/sap-identity-and-auth-data/
 title: Collect SAP Cloud Identity Services logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:52:36.762845+00:00
+fetched_at: 2026-10-21T12:37:12.852243+00:00
 ---
 
 # Collect SAP Cloud Identity Services logs  |  Google Security Operations  |  Google Cloud Documentation

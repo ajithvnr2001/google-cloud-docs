@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/getting-support/
 title: Get support \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:03:07.460296+00:00
+fetched_at: 2026-10-21T14:27:34.691092+00:00
 ---
 
 # Get support  |  BigQuery  |  Google Cloud Documentation

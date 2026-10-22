@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-intelligence-center/docs/cloud-network-insights/deploy-gce-monitoring-points/
 title: Deploy Compute Engine Monitoring Points \u00a0|\u00a0 Network Intelligence Center - Cloud Network Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:18:06.107105+00:00
+fetched_at: 2026-10-21T15:14:35.595610+00:00
 ---
 
 # Deploy Compute Engine Monitoring Points  |  Network Intelligence Center - Cloud Network Insights  |  Google Cloud Documentation

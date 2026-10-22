@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/service-tiers-zonal/
 title: Zonal tier \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:23:55.211811+00:00
+fetched_at: 2026-10-21T12:55:56.477586+00:00
 ---
 
 # Zonal tier  |  Filestore  |  Google Cloud Documentation

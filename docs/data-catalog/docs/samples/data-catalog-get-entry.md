@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-catalog/docs/samples/data-catalog-get-entry/
 title: Get entry \u00a0|\u00a0 Data Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:57:31.415952+00:00
+fetched_at: 2026-10-22T05:41:54.455434+00:00
 ---
 
 # Get entry  |  Data Catalog  |  Google Cloud Documentation

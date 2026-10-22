@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/extensibility-guide/
 title: Cortex Framework extensibility guide \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:36:57.747555+00:00
+fetched_at: 2026-10-21T14:23:37.945413+00:00
 ---
 
 # Cortex Framework extensibility guide  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

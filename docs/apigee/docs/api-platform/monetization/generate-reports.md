@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/monetization/generate-reports/
 title: Generating monetization reports \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:51:25.049039+00:00
+fetched_at: 2026-10-21T14:54:46.952301+00:00
 ---
 
 # Generating monetization reports  |  Apigee  |  Google Cloud Documentation

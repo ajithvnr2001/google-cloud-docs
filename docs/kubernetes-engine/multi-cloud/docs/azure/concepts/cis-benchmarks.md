@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/concepts/cis-benchmarks/
 title: CIS benchmarks \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:55.138759+00:00
+fetched_at: 2026-10-21T15:10:39.702698+00:00
 ---
 
 # CIS benchmarks  |  GKE on Azure  |  Google Cloud Documentation

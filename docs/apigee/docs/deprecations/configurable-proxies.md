@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/deprecations/configurable-proxies/
 title: Configurable API proxies (preview) deprecation \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:09:35.505240+00:00
+fetched_at: 2026-10-21T14:29:05.704130+00:00
 ---
 
 # Configurable API proxies (preview) deprecation  |  Apigee  |  Google Cloud Documentation

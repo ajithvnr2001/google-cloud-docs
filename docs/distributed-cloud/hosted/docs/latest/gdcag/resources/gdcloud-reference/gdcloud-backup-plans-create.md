@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-backup-plans-create/
 title: gdcloud backup plans create \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:14:03.547090+00:00
+fetched_at: 2026-10-21T12:58:52.265393+00:00
 ---
 
 # gdcloud backup plans create  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

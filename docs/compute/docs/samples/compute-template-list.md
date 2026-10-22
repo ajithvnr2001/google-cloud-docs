@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-template-list/
 title: List instance templates in a project \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:44:01.844313+00:00
+fetched_at: 2026-10-22T05:50:02.214750+00:00
 ---
 
 # List instance templates in a project  |  Compute Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/search/
 title: Search indexed data \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:18.343140+00:00
+fetched_at: 2026-10-21T12:37:18.986862+00:00
 ---
 
 # Search indexed data  |  BigQuery  |  Google Cloud Documentation

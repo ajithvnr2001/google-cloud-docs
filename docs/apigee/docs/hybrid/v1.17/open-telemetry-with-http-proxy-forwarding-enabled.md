@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/open-telemetry-with-http-proxy-forwarding-enabled/
 title: OpenTelemetry collector with HTTP proxy forwarding enabled \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:57:41.507519+00:00
+fetched_at: 2026-10-21T14:27:10.541283+00:00
 ---
 
 # OpenTelemetry collector with HTTP proxy forwarding enabled  |  Apigee  |  Google Cloud Documentation

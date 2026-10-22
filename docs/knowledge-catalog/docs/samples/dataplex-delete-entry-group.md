@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/samples/dataplex-delete-entry-group/
 title: Delete entry group \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:19:07.772518+00:00
+fetched_at: 2026-10-21T15:03:27.744671+00:00
 ---
 
 # Delete entry group  |  Knowledge Catalog  |  Google Cloud Documentation

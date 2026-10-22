@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.9/how-to/spring-music/
 title: Deploy Spring Music \u00a0|\u00a0 Kf 2.9 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:34:54.992239+00:00
+fetched_at: 2026-10-21T15:15:31.994048+00:00
 ---
 
 # Deploy Spring Music  |  Kf 2.9  |  Google Cloud Documentation

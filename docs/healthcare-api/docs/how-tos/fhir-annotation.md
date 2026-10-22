@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/how-tos/fhir-annotation/
 title: Write de-identify operation metadata to a FHIR store \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:01:52.794500+00:00
+fetched_at: 2026-10-21T12:52:33.317092+00:00
 ---
 
 # Write de-identify operation metadata to a FHIR store  |  Cloud Healthcare API  |  Google Cloud Documentation

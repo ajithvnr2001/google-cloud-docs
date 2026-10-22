@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/write-api-batch/
 title: Batch load data using the Storage Write API (gRPC) \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:08:47.477154+00:00
+fetched_at: 2026-10-21T12:38:21.263799+00:00
 ---
 
 # Batch load data using the Storage Write API (gRPC)  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/admin/keycloak-compliance/
 title: Manage Keycloak compliance \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:41.291139+00:00
+fetched_at: 2026-10-21T12:57:39.879901+00:00
 ---
 
 # Manage Keycloak compliance  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

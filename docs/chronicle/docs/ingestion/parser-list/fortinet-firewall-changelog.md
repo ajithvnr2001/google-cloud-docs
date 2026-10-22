@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/fortinet-firewall-changelog/
 title: Change log for FORTINET_FIREWALL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:45:33.756537+00:00
+fetched_at: 2026-10-21T14:42:45.316487+00:00
 ---
 
 # Change log for FORTINET_FIREWALL  |  Google Security Operations  |  Google Cloud Documentation

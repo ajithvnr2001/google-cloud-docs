@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/run-rule-live-data/
 title: Apply a rule to live data \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:40:23.014366+00:00
+fetched_at: 2026-10-21T12:38:27.944160+00:00
 ---
 
 # Apply a rule to live data  |  Google Security Operations  |  Google Cloud Documentation

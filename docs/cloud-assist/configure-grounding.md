@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/configure-grounding/
 title: Configure grounding for Gemini Cloud Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:07:40.451873+00:00
+fetched_at: 2026-10-21T14:09:30.542901+00:00
 ---
 
 # Configure grounding for Gemini Cloud Assist  |  Google Cloud Documentation

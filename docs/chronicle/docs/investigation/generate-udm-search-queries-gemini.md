@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/generate-udm-search-queries-gemini/
 title: Generate search queries with Gemini \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:56:39.550853+00:00
+fetched_at: 2026-10-21T14:11:49.201953+00:00
 ---
 
 # Generate search queries with Gemini  |  Google Security Operations  |  Google Cloud Documentation

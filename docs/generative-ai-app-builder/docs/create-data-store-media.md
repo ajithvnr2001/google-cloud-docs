@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/create-data-store-media/
 title: Create a media data store \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:01.895468+00:00
+fetched_at: 2026-10-21T12:55:33.544392+00:00
 ---
 
 # Create a media data store  |  Agent Search  |  Google Cloud Documentation

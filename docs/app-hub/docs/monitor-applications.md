@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/monitor-applications/
 title: Monitor application health and performance \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:05:59.667368+00:00
+fetched_at: 2026-10-21T14:25:35.458503+00:00
 ---
 
 # Monitor application health and performance  |  App Hub  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/billing-questions/
 title: Billing questions \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:27:37.782378+00:00
+fetched_at: 2026-10-21T12:55:46.482154+00:00
 ---
 
 # Billing questions  |  Cloud Run functions  |  Google Cloud Documentation

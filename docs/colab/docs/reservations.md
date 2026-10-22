@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/colab/docs/reservations/
 title: Use reservations with Colab Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:30:21.774780+00:00
+fetched_at: 2026-10-21T14:20:38.440098+00:00
 ---
 
 # Use reservations with Colab Enterprise  |  Google Cloud Documentation

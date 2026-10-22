@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/create-run-basic-job/
 title: Create and run a basic job \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:29:20.359857+00:00
+fetched_at: 2026-10-21T12:30:58.617312+00:00
 ---
 
 # Create and run a basic job  |  Batch  |  Google Cloud Documentation

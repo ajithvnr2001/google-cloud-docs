@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/docs/sentiment-analysis-gcloud/
 title: Quickstart: Perform sentiment analysis by using the gcloud tool \u00a0|\u00a0 Cloud Natural Language API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:59:54.083233+00:00
+fetched_at: 2026-10-21T15:17:36.490652+00:00
 ---
 
 # Quickstart: Perform sentiment analysis by using the gcloud tool  |  Cloud Natural Language API  |  Google Cloud Documentation

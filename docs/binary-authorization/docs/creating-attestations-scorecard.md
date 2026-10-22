@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/creating-attestations-scorecard/
 title: Create attestations with OpenSSF Scorecard \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:12.171242+00:00
+fetched_at: 2026-10-21T14:11:15.704144+00:00
 ---
 
 # Create attestations with OpenSSF Scorecard  |  Binary Authorization  |  Google Cloud Documentation

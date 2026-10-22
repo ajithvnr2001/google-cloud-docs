@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/generate-store-sboms/
 title: Generate and store SBOMs \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:44:44.029484+00:00
+fetched_at: 2026-10-21T12:39:35.976936+00:00
 ---
 
 # Generate and store SBOMs  |  Artifact Analysis  |  Google Cloud Documentation

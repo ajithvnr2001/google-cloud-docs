@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/store-container-images/
 title: Store your container images in Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:48:14.349449+00:00
+fetched_at: 2026-10-21T14:20:53.104464+00:00
 ---
 
 # Store your container images in Cloud Code for Cloud Shell  |  Google Cloud Documentation

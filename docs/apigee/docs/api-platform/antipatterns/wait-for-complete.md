@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/wait-for-complete/
 title: Antipattern: Use waitForComplete() in JavaScript code \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:17.285034+00:00
+fetched_at: 2026-10-21T12:29:51.169462+00:00
 ---
 
 # Antipattern: Use waitForComplete() in JavaScript code  |  Apigee  |  Google Cloud Documentation

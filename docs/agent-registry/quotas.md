@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/quotas/
 title: Quotas and system limits \u00a0|\u00a0 Agent Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:07:44.790577+00:00
+fetched_at: 2026-10-21T14:29:14.351164+00:00
 ---
 
 # Quotas and system limits  |  Agent Registry  |  Google Cloud Documentation

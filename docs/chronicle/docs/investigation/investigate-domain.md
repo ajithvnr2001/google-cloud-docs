@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/investigate-domain/
 title: Investigate domains \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:45:08.732335+00:00
+fetched_at: 2026-10-21T14:18:56.919758+00:00
 ---
 
 # Investigate domains  |  Google Security Operations  |  Google Cloud Documentation

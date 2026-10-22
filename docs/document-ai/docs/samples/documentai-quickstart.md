@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/document-ai/docs/samples/documentai-quickstart/
 title: Quickstart \u00a0|\u00a0 Document AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:23:19.112628+00:00
+fetched_at: 2026-10-21T14:07:33.281605+00:00
 ---
 
 # Quickstart  |  Document AI  |  Google Cloud Documentation

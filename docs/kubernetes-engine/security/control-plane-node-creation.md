@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/security/control-plane-node-creation/
 title: Prevent node self-registration in GKE clusters \u00a0|\u00a0 GKE security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:10.256874+00:00
+fetched_at: 2026-10-21T15:18:07.672667+00:00
 ---
 
 # Prevent node self-registration in GKE clusters  |  GKE security  |  Google Cloud Documentation

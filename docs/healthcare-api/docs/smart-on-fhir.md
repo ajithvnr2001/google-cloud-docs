@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/smart-on-fhir/
 title: Connect to applications using SMART on FHIR \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:01:50.574097+00:00
+fetched_at: 2026-10-21T14:30:38.866421+00:00
 ---
 
 # Connect to applications using SMART on FHIR  |  Cloud Healthcare API  |  Google Cloud Documentation

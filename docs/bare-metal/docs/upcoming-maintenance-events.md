@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/upcoming-maintenance-events/
 title: Upcoming maintenance events \u00a0|\u00a0 Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:53:39.528251+00:00
+fetched_at: 2026-10-21T14:25:08.982172+00:00
 ---
 
 # Upcoming maintenance events  |  Bare Metal Solution  |  Google Cloud Documentation

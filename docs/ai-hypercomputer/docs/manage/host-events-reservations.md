@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/manage/host-events-reservations/
 title: Manage host events across reservations \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:35:05.046346+00:00
+fetched_at: 2026-10-21T14:26:19.046259+00:00
 ---
 
 # Manage host events across reservations  |  AI Hypercomputer  |  Google Cloud Documentation

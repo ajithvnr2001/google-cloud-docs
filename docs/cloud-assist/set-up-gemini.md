@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/set-up-gemini/
 title: Set up Gemini Cloud Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:43:30.079274+00:00
+fetched_at: 2026-10-21T14:23:20.828932+00:00
 ---
 
 # Set up Gemini Cloud Assist  |  Google Cloud Documentation

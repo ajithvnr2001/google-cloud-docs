@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/release-notes-archive/
 title: Archived release notes \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:50:53.886622+00:00
+fetched_at: 2026-10-21T14:42:28.499422+00:00
 ---
 
 # Archived release notes  |  Compute Engine  |  Google Cloud Documentation

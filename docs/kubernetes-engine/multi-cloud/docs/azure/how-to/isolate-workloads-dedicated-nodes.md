@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/how-to/isolate-workloads-dedicated-nodes/
 title: Isolate workloads in dedicated node pools \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:55.040592+00:00
+fetched_at: 2026-10-21T15:09:29.708183+00:00
 ---
 
 # Isolate workloads in dedicated node pools  |  GKE on Azure  |  Google Cloud Documentation

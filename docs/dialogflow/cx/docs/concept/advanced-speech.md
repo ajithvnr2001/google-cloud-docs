@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/advanced-speech/
 title: Advanced speech settings \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:47.074778+00:00
+fetched_at: 2026-10-21T12:55:57.970440+00:00
 ---
 
 # Advanced speech settings  |  Dialogflow CX  |  Google Cloud Documentation

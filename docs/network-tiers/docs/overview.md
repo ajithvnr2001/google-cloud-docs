@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-tiers/docs/overview/
 title: Network Service Tiers overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:31:38.907325+00:00
+fetched_at: 2026-10-21T14:59:14.908978+00:00
 ---
 
 # Network Service Tiers overview  |  Google Cloud Documentation

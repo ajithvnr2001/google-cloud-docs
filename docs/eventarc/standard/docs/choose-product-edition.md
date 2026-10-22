@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/choose-product-edition/
 title: Choose Eventarc Advanced or Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:32.732482+00:00
+fetched_at: 2026-10-21T12:46:03.212707+00:00
 ---
 
 # Choose Eventarc Advanced or Eventarc Standard  |  Google Cloud Documentation

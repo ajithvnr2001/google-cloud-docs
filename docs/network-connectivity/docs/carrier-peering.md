@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-connectivity/docs/carrier-peering/
 title: Carrier Peering overview \u00a0|\u00a0 Network Connectivity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:36:07.096426+00:00
+fetched_at: 2026-10-21T15:16:32.475588+00:00
 ---
 
 # Carrier Peering overview  |  Network Connectivity  |  Google Cloud Documentation

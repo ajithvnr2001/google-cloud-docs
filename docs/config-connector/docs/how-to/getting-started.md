@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/how-to/getting-started/
 title: Getting started with Config Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:36:44.420835+00:00
+fetched_at: 2026-10-21T14:24:43.546082+00:00
 ---
 
 # Getting started with Config Connector  |  Google Cloud Documentation

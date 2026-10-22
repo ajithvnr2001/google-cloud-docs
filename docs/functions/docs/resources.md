@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/resources/
 title: Resources \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:10:17.845527+00:00
+fetched_at: 2026-10-21T12:55:54.031855+00:00
 ---
 
 # Resources  |  Cloud Run functions  |  Google Cloud Documentation

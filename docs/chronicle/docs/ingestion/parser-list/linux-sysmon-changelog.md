@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/linux-sysmon-changelog/
 title: Change log for LINUX_SYSMON \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:44:54.475897+00:00
+fetched_at: 2026-10-21T14:43:17.090185+00:00
 ---
 
 # Change log for LINUX_SYSMON  |  Google Security Operations  |  Google Cloud Documentation

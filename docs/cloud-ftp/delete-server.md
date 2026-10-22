@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-ftp/delete-server/
 title: Delete an SFTP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:17:50.957024+00:00
+fetched_at: 2026-10-21T14:23:04.261142+00:00
 ---
 
 # Delete an SFTP server  |  Google Cloud Documentation

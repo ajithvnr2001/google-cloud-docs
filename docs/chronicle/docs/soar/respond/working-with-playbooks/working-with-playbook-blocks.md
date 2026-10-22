@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/working-with-playbook-blocks/
 title: Work with playbook blocks \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:58:10.013366+00:00
+fetched_at: 2026-10-21T12:40:00.136272+00:00
 ---
 
 # Work with playbook blocks  |  Google Security Operations  |  Google Cloud Documentation

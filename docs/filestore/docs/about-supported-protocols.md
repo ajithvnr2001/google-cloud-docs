@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/about-supported-protocols/
 title: About supported file system protocols \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:15:19.917492+00:00
+fetched_at: 2026-10-21T12:53:08.623707+00:00
 ---
 
 # About supported file system protocols  |  Filestore  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/service/billing/v1/overview/
 title: Billing API overview \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:13:20.902728+00:00
+fetched_at: 2026-10-21T12:57:09.058078+00:00
 ---
 
 # Billing API overview  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/create-manage-tags/
 title: Create and manage tags for Certificate Manager resources \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:00:06.000237+00:00
+fetched_at: 2026-10-21T12:38:16.327091+00:00
 ---
 
 # Create and manage tags for Certificate Manager resources  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/seqrite-endpoint-changelog/
 title: Change log for SEQRITE_ENDPOINT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:03:14.395843+00:00
+fetched_at: 2026-10-21T14:42:41.060920+00:00
 ---
 
 # Change log for SEQRITE_ENDPOINT  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/notebooks/workbench/instances/shut-down/
 title: Shut down a Agent Platform Workbench instance \u00a0|\u00a0 Gemini Enterprise Agent Platform Workbench \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:27:33.972145+00:00
+fetched_at: 2026-10-21T12:53:51.663307+00:00
 ---
 
 # Shut down a Agent Platform Workbench instance  |  Gemini Enterprise Agent Platform Workbench  |  Google Cloud Documentation

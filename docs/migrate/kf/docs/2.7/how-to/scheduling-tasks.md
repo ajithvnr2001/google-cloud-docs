@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.7/how-to/scheduling-tasks/
 title: Schedule Tasks \u00a0|\u00a0 Kf 2.7 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:45:55.691724+00:00
+fetched_at: 2026-10-21T15:17:17.958630+00:00
 ---
 
 # Schedule Tasks  |  Kf 2.7  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/docs/samples/language-entity-sentiment-gcs/
 title: Analyze entity sentiment in a Cloud Storage file \u00a0|\u00a0 Cloud Natural Language API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:41:35.173334+00:00
+fetched_at: 2026-10-21T15:18:01.110878+00:00
 ---
 
 # Analyze entity sentiment in a Cloud Storage file  |  Cloud Natural Language API  |  Google Cloud Documentation

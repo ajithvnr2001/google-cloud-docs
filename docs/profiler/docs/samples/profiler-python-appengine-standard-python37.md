@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/profiler/docs/samples/profiler-python-appengine-standard-python37/
 title: Python App Engine standard environment \u00a0|\u00a0 Cloud Profiler \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:33:33.946222+00:00
+fetched_at: 2026-10-21T15:26:50.708072+00:00
 ---
 
 # Python App Engine standard environment  |  Cloud Profiler  |  Google Cloud Documentation

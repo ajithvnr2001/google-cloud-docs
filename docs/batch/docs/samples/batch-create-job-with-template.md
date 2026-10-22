@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/samples/batch-create-job-with-template/
 title: Create and submit a job using a VM instance template \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:40:33.763688+00:00
+fetched_at: 2026-10-22T05:45:20.954265+00:00
 ---
 
 # Create and submit a job using a VM instance template  |  Batch  |  Google Cloud Documentation

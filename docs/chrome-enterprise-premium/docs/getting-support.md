@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chrome-enterprise-premium/docs/getting-support/
 title: Getting Support \u00a0|\u00a0 Chrome Enterprise Premium \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:23:21.790547+00:00
+fetched_at: 2026-10-21T14:23:40.493605+00:00
 ---
 
 # Getting Support  |  Chrome Enterprise Premium  |  Google Cloud Documentation

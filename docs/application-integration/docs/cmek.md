@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/cmek/
 title: Customer-managed encryption keys \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:51.221107+00:00
+fetched_at: 2026-10-21T14:10:19.896285+00:00
 ---
 
 # Customer-managed encryption keys  |  Application Integration  |  Google Cloud Documentation

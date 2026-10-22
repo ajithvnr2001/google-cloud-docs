@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/merchant-center-transfer/
 title: Load Google Merchant Center data into BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:46:07.084496+00:00
+fetched_at: 2026-10-21T14:20:50.598268+00:00
 ---
 
 # Load Google Merchant Center data into BigQuery  |  Google Cloud Documentation

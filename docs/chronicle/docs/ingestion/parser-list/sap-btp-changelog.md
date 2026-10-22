@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/sap-btp-changelog/
 title: Change log for SAP_BTP \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:08:22.657758+00:00
+fetched_at: 2026-10-21T14:43:27.179612+00:00
 ---
 
 # Change log for SAP_BTP  |  Google Security Operations  |  Google Cloud Documentation

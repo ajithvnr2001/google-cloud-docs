@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace/using-the-marketplace/
 title: Use the Content Hub for SOAR standalone \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:20:49.270018+00:00
+fetched_at: 2026-10-21T14:20:30.669405+00:00
 ---
 
 # Use the Content Hub for SOAR standalone  |  Google Security Operations  |  Google Cloud Documentation

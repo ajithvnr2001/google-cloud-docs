@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/claroty-xdome-changelog/
 title: Change log for CLAROTY_XDOME \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:34:32.972891+00:00
+fetched_at: 2026-10-21T14:44:41.570949+00:00
 ---
 
 # Change log for CLAROTY_XDOME  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apis/docs/monitoring/
 title: Monitoring API usage \u00a0|\u00a0 Cloud APIs \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:11:59.817950+00:00
+fetched_at: 2026-10-21T12:29:24.094221+00:00
 ---
 
 # Monitoring API usage  |  Cloud APIs  |  Google Cloud Documentation
@@ -20,21 +20,7 @@ Send feedback
 
 #  Monitoring API usage Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to use _API metrics_ to track and understand your usage of Google APIs and Google Cloud APIs.
-
-Google APIs produce detailed usage metrics that can help you:
-
-  * Track and understand your usage of Google APIs.
-  * Monitor performance of your applications and Google APIs.
-  * Discover problems between your applications and Google APIs.
-
-
-
-It can dramatically speed up resolution times when you troubleshoot problems or need technical support from Google.
-
-The metrics that Google APIs produce are the standard signals that Google's own Site Reliability Engineers use to assess the health of a service. These metrics covers request counts, error rates, total latencies, backend latencies, request sizes, and response sizes. For the API metric definitions, see [Cloud Monitoring documentation](https://docs.cloud.google.com/monitoring/api/metrics_gcp_p_z#gcp-serviceruntime).
-
-You can view API metrics in two places: [API Dashboard](https://console.cloud.google.com/apis/dashboard) and [Cloud Monitoring](https://docs.cloud.google.com/monitoring/docs). The metrics you see are specific to your project, and they don't reflect the overall service status.
+_API metrics_ let you track signals such as request counts, error rates, and latencies for Google APIs and Google Cloud APIs, helping you monitor application performance and troubleshoot errors. You can inspect telemetry in the [API Dashboard](https://console.cloud.google.com/apis/dashboard) and [Cloud Monitoring](https://docs.cloud.google.com/monitoring/docs), where metrics reflect traffic for your project rather than overall service status. For API metric definitions, see the [Cloud Monitoring documentation](https://docs.cloud.google.com/monitoring/api/metrics_gcp_p_z#gcp-serviceruntime).
 
 ## Using the API Dashboard
 
@@ -203,7 +189,7 @@ Windowed Rate Quota usage
 `window_size`: The window size for rate operation limits.   
 `window_start_time`: The start time of the window.   
   
-Table generated at 2026-10-08 15:22:12 UTC.
+Table generated at 2026-10-14 20:24:33 UTC.
 
 To see API metrics in Metrics Explorer, select **Consumed API** as the resource type, then select one of the `serviceruntime` metrics. Then use the filter and aggregation options to refine your data. After you've found the API usage information you want, you can use Cloud Monitoring to create custom dashboards and alerts that will help you continue to monitor and maintain a robust application. You can find out how to do this in the following pages:
 
@@ -255,6 +241,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

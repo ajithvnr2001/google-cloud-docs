@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/create-configure-gke-cluster/
 title: Configure a GKE cluster in Cloud Code for IntelliJ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:21:34.777642+00:00
+fetched_at: 2026-10-21T12:40:22.154511+00:00
 ---
 
 # Configure a GKE cluster in Cloud Code for IntelliJ  |  Google Cloud Documentation

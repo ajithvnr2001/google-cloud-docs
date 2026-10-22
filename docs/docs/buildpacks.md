@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/buildpacks/
 title: Buildpacks documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:53:00.355549+00:00
+fetched_at: 2026-10-21T14:05:58.743807+00:00
 ---
 
 # Buildpacks documentation  |  Google Cloud Documentation

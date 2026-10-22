@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/workforce-console-sso/
 title: Set up user access to the console (federated) \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:09:59.693238+00:00
+fetched_at: 2026-10-21T12:53:08.210261+00:00
 ---
 
 # Set up user access to the console (federated)  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

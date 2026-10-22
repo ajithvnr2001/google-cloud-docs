@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/advanced/control-access-to-platform/
 title: SOAR access overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:41.368315+00:00
+fetched_at: 2026-10-21T14:24:10.194961+00:00
 ---
 
 # SOAR access overview  |  Google Security Operations  |  Google Cloud Documentation

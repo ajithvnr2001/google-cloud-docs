@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/chat-transcript-metadata/
 title: Chat transcript metadata \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:40.006101+00:00
+fetched_at: 2026-10-21T14:11:56.094574+00:00
 ---
 
 # Chat transcript metadata  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

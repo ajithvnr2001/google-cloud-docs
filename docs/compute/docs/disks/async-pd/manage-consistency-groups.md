@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/disks/async-pd/manage-consistency-groups/
 title: Manage consistency groups \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:50:09.034251+00:00
+fetched_at: 2026-10-22T05:49:06.863067+00:00
 ---
 
 # Manage consistency groups  |  Compute Engine  |  Google Cloud Documentation
@@ -177,7 +177,7 @@ Replace the following:
     	// groupName := "your_group_name"
     
     	ctx := context.Background()
-    	disksClient, err := compute.NewResourcePoliciesRESTClient(ctx)
+    	disksClient, err := compute.[NewResourcePoliciesRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_ResourcePoliciesClient_NewResourcePoliciesRESTClient)(ctx)
     	if err != nil {
     		return fmt.Errorf("NewResourcePoliciesRESTClient: %w", err)
     	}
@@ -210,11 +210,11 @@ Replace the following:
 ###  Java 
     
     
-    import com.google.cloud.compute.v1.InsertResourcePolicyRequest;
-    import com.google.cloud.compute.v1.Operation;
-    import com.google.cloud.compute.v1.Operation.Status;
-    import com.google.cloud.compute.v1.ResourcePoliciesClient;
-    import com.google.cloud.compute.v1.ResourcePolicy;
+    import com.google.cloud.compute.v1.[InsertResourcePolicyRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertResourcePolicyRequest.html);
+    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html);
+    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html).[Status](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Status.html);
+    import com.google.cloud.compute.v1.[ResourcePoliciesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ResourcePoliciesClient.html);
+    import com.google.cloud.compute.v1.[ResourcePolicy](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ResourcePolicy.html);
     import java.io.IOException;
     import java.util.concurrent.ExecutionException;
     import java.util.concurrent.TimeUnit;
@@ -236,33 +236,33 @@ Replace the following:
       }
     
       // Creates a new consistency group resource policy in the specified project and region.
-      public static Status createConsistencyGroup(
+      public static [Status](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Status.html) createConsistencyGroup(
           String project, String region, String consistencyGroupName)
               throws IOException, ExecutionException, InterruptedException, TimeoutException {
         // Initialize client that will be used to send requests. This client only needs to be created
         // once, and can be reused for multiple requests.
-        try (ResourcePoliciesClient  regionResourcePoliciesClient = ResourcePoliciesClient.create()) {
-          ResourcePolicy resourcePolicy =
-              ResourcePolicy.newBuilder()
+        try ([ResourcePoliciesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ResourcePoliciesClient.html)  regionResourcePoliciesClient = [ResourcePoliciesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ResourcePoliciesClient.html).create()) {
+          [ResourcePolicy](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ResourcePolicy.html) resourcePolicy =
+              [ResourcePolicy](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ResourcePolicy.html).newBuilder()
                   .setName(consistencyGroupName)
                   .setRegion(region)
-                  .setDiskConsistencyGroupPolicy(
-                      ResourcePolicy.newBuilder().getDiskConsistencyGroupPolicy())
+                  .[setDiskConsistencyGroupPolicy](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ResourcePolicy.Builder.html#com_google_cloud_compute_v1_ResourcePolicy_Builder_setDiskConsistencyGroupPolicy_com_google_cloud_compute_v1_ResourcePolicyDiskConsistencyGroupPolicy_)(
+                      [ResourcePolicy](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ResourcePolicy.html).newBuilder().getDiskConsistencyGroupPolicy())
                   .build();
     
-          InsertResourcePolicyRequest request = InsertResourcePolicyRequest.newBuilder()
+          [InsertResourcePolicyRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertResourcePolicyRequest.html) request = [InsertResourcePolicyRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.InsertResourcePolicyRequest.html).newBuilder()
                   .setProject(project)
                   .setRegion(region)
                   .setResourcePolicyResource(resourcePolicy)
                   .build();
     
-          Operation response =
+          [Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html) response =
               regionResourcePoliciesClient.insertAsync(request).get(1, TimeUnit.MINUTES);
     
-          if (response.hasError()) {
-            throw new Error("Error creating consistency group! " + response.getError());
+          if (response.[hasError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_hasError__)()) {
+            throw new [Error](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Error.html)("Error creating consistency group! " + response.[getError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_getError__)());
           }
-          return response.getStatus();
+          return response.[getStatus](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_getStatus__)();
         }
       }
     }
@@ -271,13 +271,13 @@ Replace the following:
     
     
     // Import the Compute library
-    const computeLib = require('@google-cloud/compute');
+    const computeLib = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)');
     const compute = computeLib.protos.google.cloud.compute.v1;
     
     // Instantiate a resourcePoliciesClient
-    const resourcePoliciesClient = new computeLib.ResourcePoliciesClient();
+    const resourcePoliciesClient = new computeLib.[ResourcePoliciesClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
     // Instantiate a regionOperationsClient
-    const regionOperationsClient = new computeLib.RegionOperationsClient();
+    const regionOperationsClient = new computeLib.[RegionOperationsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
     
     /**
      * TODO(developer): Update/uncomment these variables before running the sample.
@@ -332,7 +332,7 @@ Replace the following:
     from typing import Any
     
     from google.api_core.extended_operation import ExtendedOperation
-    from google.cloud import compute_v1
+    from google.cloud import [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest)
     
     
     def wait_for_extended_operation(
@@ -398,23 +398,23 @@ Replace the following:
         """
     
         # Initialize the ResourcePoliciesClient
-        client = compute_v1.ResourcePoliciesClient()
+        client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[ResourcePoliciesClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.resource_policies.ResourcePoliciesClient.html)()
     
         # Create the ResourcePolicy object with the provided name, description, and policy
-        resource_policy_resource = compute_v1.ResourcePolicy(
+        resource_policy_resource = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[ResourcePolicy](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.ResourcePolicy.html)(
             name=group_name,
             description=group_description,
-            disk_consistency_group_policy=compute_v1.ResourcePolicyDiskConsistencyGroupPolicy(),
+            disk_consistency_group_policy=[compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[ResourcePolicyDiskConsistencyGroupPolicy](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.ResourcePolicyDiskConsistencyGroupPolicy.html)(),
         )
     
-        operation = client.insert(
+        operation = client.[insert](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.resource_policies.ResourcePoliciesClient.html#google_cloud_compute_v1_services_resource_policies_ResourcePoliciesClient_insert)(
             project=project_id,
             region=region,
             resource_policy_resource=resource_policy_resource,
         )
         wait_for_extended_operation(operation, "Consistency group creation")
     
-        return client.get(project=project_id, region=region, resource_policy=group_name)
+        return client.[get](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.resource_policies.ResourcePoliciesClient.html#google_cloud_compute_v1_services_resource_policies_ResourcePoliciesClient_get)(project=project_id, region=region, resource_policy=group_name)
     
     
 
@@ -519,7 +519,7 @@ Replace the following:
     
     	ctx := context.Background()
     	// To check for zonal disks in consistency group use compute.NewDisksRESTClient
-    	disksClient, err := compute.NewRegionDisksRESTClient(ctx)
+    	disksClient, err := compute.[NewRegionDisksRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_RegionDisksClient_NewRegionDisksRESTClient)(ctx)
     	if err != nil {
     		return fmt.Errorf("NewRegionDisksRESTClient: %w", err)
     	}
@@ -534,7 +534,7 @@ Replace the following:
     	it := disksClient.List(ctx, req)
     	for {
     		disk, err := it.Next()
-    		if err == iterator.Done {
+    		if err == iterator.[Done](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_Operation_Done) {
     			break
     		}
     		if err != nil {
@@ -557,9 +557,9 @@ Replace the following:
 #### List zonal disks in a consistency group
     
     
-    import com.google.cloud.compute.v1.Disk;
-    import com.google.cloud.compute.v1.DisksClient;
-    import com.google.cloud.compute.v1.ListDisksRequest;
+    import com.google.cloud.compute.v1.[Disk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Disk.html);
+    import com.google.cloud.compute.v1.[DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html);
+    import com.google.cloud.compute.v1.[ListDisksRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ListDisksRequest.html);
     import java.io.IOException;
     import java.util.ArrayList;
     import java.util.List;
@@ -592,15 +592,15 @@ Replace the following:
         List<Disk> disksList = new ArrayList<>();
         // Initialize client that will be used to send requests. This client only needs to be created
         // once, and can be reused for multiple requests.
-        try (DisksClient disksClient = DisksClient.create()) {
-          ListDisksRequest request =
-                  ListDisksRequest.newBuilder()
+        try ([DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html) disksClient = [DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html).create()) {
+          [ListDisksRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ListDisksRequest.html) request =
+                  [ListDisksRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ListDisksRequest.html).newBuilder()
                           .setProject(project)
                           .setZone(disksLocation)
                           .build();
-          DisksClient.ListPagedResponse response = disksClient.list(request);
+          [DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html).ListPagedResponse response = disksClient.list(request);
     
-          for (Disk disk : response.iterateAll()) {
+          for ([Disk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Disk.html) disk : response.iterateAll()) {
             if (disk.getResourcePoliciesList().contains(filter)) {
               disksList.add(disk);
             }
@@ -614,9 +614,9 @@ Replace the following:
 #### List regional disks in a consistency group
     
     
-    import com.google.cloud.compute.v1.Disk;
-    import com.google.cloud.compute.v1.ListRegionDisksRequest;
-    import com.google.cloud.compute.v1.RegionDisksClient;
+    import com.google.cloud.compute.v1.[Disk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Disk.html);
+    import com.google.cloud.compute.v1.[ListRegionDisksRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ListRegionDisksRequest.html);
+    import com.google.cloud.compute.v1.[RegionDisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RegionDisksClient.html);
     import java.io.IOException;
     import java.util.ArrayList;
     import java.util.List;
@@ -650,15 +650,15 @@ Replace the following:
     
         // Initialize client that will be used to send requests. This client only needs to be created
         // once, and can be reused for multiple requests.
-        try (RegionDisksClient disksClient = RegionDisksClient.create()) {
-          ListRegionDisksRequest request =
-                  ListRegionDisksRequest.newBuilder()
+        try ([RegionDisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RegionDisksClient.html) disksClient = [RegionDisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RegionDisksClient.html).create()) {
+          [ListRegionDisksRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ListRegionDisksRequest.html) request =
+                  [ListRegionDisksRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ListRegionDisksRequest.html).newBuilder()
                           .setProject(project)
                           .setRegion(disksLocation)
                           .build();
     
-          RegionDisksClient.ListPagedResponse response = disksClient.list(request);
-          for (Disk disk : response.iterateAll()) {
+          [RegionDisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RegionDisksClient.html).ListPagedResponse response = disksClient.list(request);
+          for ([Disk](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Disk.html) disk : response.iterateAll()) {
             if (disk.getResourcePoliciesList().contains(filter)) {
               disksList.add(disk);
             }
@@ -673,11 +673,11 @@ Replace the following:
     
     
     // Import the Compute library
-    const computeLib = require('@google-cloud/compute');
+    const computeLib = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)');
     
     // If you want to get regional disks, you should use: RegionDisksClient.
     // Instantiate a disksClient
-    const disksClient = new computeLib.DisksClient();
+    const disksClient = new computeLib.[DisksClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
     
     /**
      * TODO(developer): Update/uncomment these variables before running the sample.
@@ -717,7 +717,7 @@ Replace the following:
 ###  Python 
     
     
-    from google.cloud import compute_v1
+    from google.cloud import [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest)
     
     
     def list_disks_consistency_group(
@@ -743,13 +743,13 @@ Replace the following:
         )
         # If the final character of the disk_location is a digit, it is a regional disk
         if disk_location[-1].isdigit():
-            region_client = compute_v1.RegionDisksClient()
-            disks = region_client.list(project=project_id, region=disk_location)
+            region_client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[RegionDisksClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.region_disks.RegionDisksClient.html)()
+            disks = region_client.[list](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.region_disks.RegionDisksClient.html#google_cloud_compute_v1_services_region_disks_RegionDisksClient_list)(project=project_id, region=disk_location)
         # For zonal disks we use DisksClient
         else:
-            client = compute_v1.DisksClient()
-            disks = client.list(project=project_id, zone=disk_location)
-        return [disk for disk in disks if consistency_group_link in disk.resource_policies]
+            client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[DisksClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.disks.DisksClient.html)()
+            disks = client.[list](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.disks.DisksClient.html#google_cloud_compute_v1_services_disks_DisksClient_list)(project=project_id, zone=disk_location)
+        return [disk for disk in disks if consistency_group_link in disk.[resource_policies](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.resource_policies.html)]
     
     
 
@@ -845,7 +845,7 @@ Replace the following:
     	// groupName := "your_group_name"
     
     	ctx := context.Background()
-    	disksClient, err := compute.NewRegionDisksRESTClient(ctx)
+    	disksClient, err := compute.[NewRegionDisksRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_RegionDisksClient_NewRegionDisksRESTClient)(ctx)
     	if err != nil {
     		return fmt.Errorf("NewResourcePoliciesRESTClient: %w", err)
     	}
@@ -880,14 +880,14 @@ Replace the following:
 ###  Java 
     
     
-    import com.google.cloud.compute.v1.AddResourcePoliciesDiskRequest;
-    import com.google.cloud.compute.v1.AddResourcePoliciesRegionDiskRequest;
-    import com.google.cloud.compute.v1.DisksAddResourcePoliciesRequest;
-    import com.google.cloud.compute.v1.DisksClient;
-    import com.google.cloud.compute.v1.Operation;
-    import com.google.cloud.compute.v1.Operation.Status;
-    import com.google.cloud.compute.v1.RegionDisksAddResourcePoliciesRequest;
-    import com.google.cloud.compute.v1.RegionDisksClient;
+    import com.google.cloud.compute.v1.[AddResourcePoliciesDiskRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AddResourcePoliciesDiskRequest.html);
+    import com.google.cloud.compute.v1.[AddResourcePoliciesRegionDiskRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AddResourcePoliciesRegionDiskRequest.html);
+    import com.google.cloud.compute.v1.[DisksAddResourcePoliciesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksAddResourcePoliciesRequest.html);
+    import com.google.cloud.compute.v1.[DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html);
+    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html);
+    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html).[Status](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Status.html);
+    import com.google.cloud.compute.v1.[RegionDisksAddResourcePoliciesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RegionDisksAddResourcePoliciesRequest.html);
+    import com.google.cloud.compute.v1.[RegionDisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RegionDisksClient.html);
     import java.io.IOException;
     import java.util.Arrays;
     import java.util.concurrent.ExecutionException;
@@ -914,49 +914,49 @@ Replace the following:
       }
     
       // Adds a disk to a consistency group.
-      public static Status addDiskToConsistencyGroup(
+      public static [Status](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Status.html) addDiskToConsistencyGroup(
           String project, String location, String diskName,
           String consistencyGroupName, String consistencyGroupLocation)
               throws IOException, ExecutionException, InterruptedException, TimeoutException {
         String consistencyGroupUrl = String.format(
             "https://www.googleapis.com/compute/v1/projects/%s/regions/%s/resourcePolicies/%s",
             project, consistencyGroupLocation, consistencyGroupName);
-        Operation response;
+        [Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html) response;
         if (Character.isDigit(location.charAt(location.length() - 1))) {
           // Initialize client that will be used to send requests. This client only needs to be created
           // once, and can be reused for multiple requests.
-          try (RegionDisksClient disksClient = RegionDisksClient.create()) {
-            AddResourcePoliciesRegionDiskRequest request =
-                    AddResourcePoliciesRegionDiskRequest.newBuilder()
+          try ([RegionDisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RegionDisksClient.html) disksClient = [RegionDisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RegionDisksClient.html).create()) {
+            [AddResourcePoliciesRegionDiskRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AddResourcePoliciesRegionDiskRequest.html) request =
+                    [AddResourcePoliciesRegionDiskRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AddResourcePoliciesRegionDiskRequest.html).newBuilder()
                         .setDisk(diskName)
                         .setRegion(location)
                         .setProject(project)
-                        .setRegionDisksAddResourcePoliciesRequestResource(
-                                RegionDisksAddResourcePoliciesRequest.newBuilder()
+                        .[setRegionDisksAddResourcePoliciesRequestResource](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AddResourcePoliciesRegionDiskRequest.Builder.html#com_google_cloud_compute_v1_AddResourcePoliciesRegionDiskRequest_Builder_setRegionDisksAddResourcePoliciesRequestResource_com_google_cloud_compute_v1_RegionDisksAddResourcePoliciesRequest_)(
+                                [RegionDisksAddResourcePoliciesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RegionDisksAddResourcePoliciesRequest.html).newBuilder()
                                     .addAllResourcePolicies(Arrays.asList(consistencyGroupUrl))
                                     .build())
                         .build();
             response = disksClient.addResourcePoliciesAsync(request).get(1, TimeUnit.MINUTES);
           }
         } else {
-          try (DisksClient disksClient = DisksClient.create()) {
-            AddResourcePoliciesDiskRequest request =
-                    AddResourcePoliciesDiskRequest.newBuilder()
+          try ([DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html) disksClient = [DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html).create()) {
+            [AddResourcePoliciesDiskRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AddResourcePoliciesDiskRequest.html) request =
+                    [AddResourcePoliciesDiskRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AddResourcePoliciesDiskRequest.html).newBuilder()
                         .setDisk(diskName)
                         .setZone(location)
                         .setProject(project)
-                        .setDisksAddResourcePoliciesRequestResource(
-                                DisksAddResourcePoliciesRequest.newBuilder()
+                        .[setDisksAddResourcePoliciesRequestResource](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.AddResourcePoliciesDiskRequest.Builder.html#com_google_cloud_compute_v1_AddResourcePoliciesDiskRequest_Builder_setDisksAddResourcePoliciesRequestResource_com_google_cloud_compute_v1_DisksAddResourcePoliciesRequest_)(
+                                [DisksAddResourcePoliciesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksAddResourcePoliciesRequest.html).newBuilder()
                                     .addAllResourcePolicies(Arrays.asList(consistencyGroupUrl))
                                     .build())
                         .build();
             response = disksClient.addResourcePoliciesAsync(request).get(1, TimeUnit.MINUTES);
           }
         }
-        if (response.hasError()) {
-          throw new Error("Error adding disk to consistency group! " + response.getError());
+        if (response.[hasError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_hasError__)()) {
+          throw new [Error](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Error.html)("Error adding disk to consistency group! " + response.[getError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_getError__)());
         }
-        return response.getStatus();
+        return response.[getStatus](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_getStatus__)();
       }
     }
 
@@ -964,15 +964,15 @@ Replace the following:
     
     
     // Import the Compute library
-    const computeLib = require('@google-cloud/compute');
+    const computeLib = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)');
     const compute = computeLib.protos.google.cloud.compute.v1;
     
     // If you want to add regional disk,
     // you should use: RegionDisksClient and RegionOperationsClient.
     // Instantiate a disksClient
-    const disksClient = new computeLib.DisksClient();
+    const disksClient = new computeLib.[DisksClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
     // Instantiate a zone
-    const zoneOperationsClient = new computeLib.ZoneOperationsClient();
+    const zoneOperationsClient = new computeLib.[ZoneOperationsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
     
     /**
      * TODO(developer): Update/uncomment these variables before running the sample.
@@ -1029,7 +1029,7 @@ Replace the following:
 ###  Python 
     
     
-    from google.cloud import compute_v1
+    from google.cloud import [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest)
     
     
     def add_disk_consistency_group(
@@ -1056,11 +1056,11 @@ Replace the following:
         # Checking if the disk is zonal or regional
         # If the final character of the disk_location is a digit, it is a regional disk
         if disk_location[-1].isdigit():
-            policy = compute_v1.RegionDisksAddResourcePoliciesRequest(
+            policy = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[RegionDisksAddResourcePoliciesRequest](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.RegionDisksAddResourcePoliciesRequest.html)(
                 resource_policies=[consistency_group_link]
             )
-            disk_client = compute_v1.RegionDisksClient()
-            disk_client.add_resource_policies(
+            disk_client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[RegionDisksClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.region_disks.RegionDisksClient.html)()
+            disk_client.[add_resource_policies](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.disks.DisksClient.html#google_cloud_compute_v1_services_disks_DisksClient_add_resource_policies)(
                 project=project_id,
                 region=disk_location,
                 disk=disk_name,
@@ -1069,11 +1069,11 @@ Replace the following:
         # For zonal disks we use DisksClient
         else:
             print("Using DisksClient")
-            policy = compute_v1.DisksAddResourcePoliciesRequest(
+            policy = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[DisksAddResourcePoliciesRequest](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.DisksAddResourcePoliciesRequest.html)(
                 resource_policies=[consistency_group_link]
             )
-            disk_client = compute_v1.DisksClient()
-            disk_client.add_resource_policies(
+            disk_client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[DisksClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.disks.DisksClient.html)()
+            disk_client.[add_resource_policies](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.disks.DisksClient.html#google_cloud_compute_v1_services_disks_DisksClient_add_resource_policies)(
                 project=project_id,
                 zone=disk_location,
                 disk=disk_name,
@@ -1199,7 +1199,7 @@ Replace the following:
     	// groupName := "your_group_name"
     
     	ctx := context.Background()
-    	disksClient, err := compute.NewRegionDisksRESTClient(ctx)
+    	disksClient, err := compute.[NewRegionDisksRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_RegionDisksClient_NewRegionDisksRESTClient)(ctx)
     	if err != nil {
     		return fmt.Errorf("NewResourcePoliciesRESTClient: %w", err)
     	}
@@ -1234,14 +1234,14 @@ Replace the following:
 ###  Java 
     
     
-    import com.google.cloud.compute.v1.DisksClient;
-    import com.google.cloud.compute.v1.DisksRemoveResourcePoliciesRequest;
-    import com.google.cloud.compute.v1.Operation;
-    import com.google.cloud.compute.v1.Operation.Status;
-    import com.google.cloud.compute.v1.RegionDisksClient;
-    import com.google.cloud.compute.v1.RegionDisksRemoveResourcePoliciesRequest;
-    import com.google.cloud.compute.v1.RemoveResourcePoliciesDiskRequest;
-    import com.google.cloud.compute.v1.RemoveResourcePoliciesRegionDiskRequest;
+    import com.google.cloud.compute.v1.[DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html);
+    import com.google.cloud.compute.v1.[DisksRemoveResourcePoliciesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksRemoveResourcePoliciesRequest.html);
+    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html);
+    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html).[Status](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Status.html);
+    import com.google.cloud.compute.v1.[RegionDisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RegionDisksClient.html);
+    import com.google.cloud.compute.v1.[RegionDisksRemoveResourcePoliciesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RegionDisksRemoveResourcePoliciesRequest.html);
+    import com.google.cloud.compute.v1.[RemoveResourcePoliciesDiskRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RemoveResourcePoliciesDiskRequest.html);
+    import com.google.cloud.compute.v1.[RemoveResourcePoliciesRegionDiskRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RemoveResourcePoliciesRegionDiskRequest.html);
     import java.io.IOException;
     import java.util.Arrays;
     import java.util.concurrent.ExecutionException;
@@ -1269,25 +1269,25 @@ Replace the following:
       }
     
       // Removes a disk from a consistency group.
-      public static Status removeDiskFromConsistencyGroup(
+      public static [Status](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Status.html) removeDiskFromConsistencyGroup(
           String project, String location, String diskName,
           String consistencyGroupName, String consistencyGroupLocation)
               throws IOException, ExecutionException, InterruptedException, TimeoutException {
         String consistencyGroupUrl = String.format(
             "https://www.googleapis.com/compute/v1/projects/%s/regions/%s/resourcePolicies/%s",
             project, consistencyGroupLocation, consistencyGroupName);
-        Operation response;
+        [Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html) response;
         if (Character.isDigit(location.charAt(location.length() - 1))) {
           // Initialize client that will be used to send requests. This client only needs to be created
           // once, and can be reused for multiple requests.
-          try (RegionDisksClient disksClient = RegionDisksClient.create()) {
-            RemoveResourcePoliciesRegionDiskRequest request =
-                RemoveResourcePoliciesRegionDiskRequest.newBuilder()
+          try ([RegionDisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RegionDisksClient.html) disksClient = [RegionDisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RegionDisksClient.html).create()) {
+            [RemoveResourcePoliciesRegionDiskRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RemoveResourcePoliciesRegionDiskRequest.html) request =
+                [RemoveResourcePoliciesRegionDiskRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RemoveResourcePoliciesRegionDiskRequest.html).newBuilder()
                     .setDisk(diskName)
                     .setRegion(location)
                     .setProject(project)
-                    .setRegionDisksRemoveResourcePoliciesRequestResource(
-                        RegionDisksRemoveResourcePoliciesRequest.newBuilder()
+                    .[setRegionDisksRemoveResourcePoliciesRequestResource](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RemoveResourcePoliciesRegionDiskRequest.Builder.html#com_google_cloud_compute_v1_RemoveResourcePoliciesRegionDiskRequest_Builder_setRegionDisksRemoveResourcePoliciesRequestResource_com_google_cloud_compute_v1_RegionDisksRemoveResourcePoliciesRequest_)(
+                        [RegionDisksRemoveResourcePoliciesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RegionDisksRemoveResourcePoliciesRequest.html).newBuilder()
                             .addAllResourcePolicies(Arrays.asList(consistencyGroupUrl))
                             .build())
                     .build();
@@ -1295,24 +1295,24 @@ Replace the following:
             response = disksClient.removeResourcePoliciesAsync(request).get(1, TimeUnit.MINUTES);
           }
         } else {
-          try (DisksClient disksClient = DisksClient.create()) {
-            RemoveResourcePoliciesDiskRequest request =
-                RemoveResourcePoliciesDiskRequest.newBuilder()
+          try ([DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html) disksClient = [DisksClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksClient.html).create()) {
+            [RemoveResourcePoliciesDiskRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RemoveResourcePoliciesDiskRequest.html) request =
+                [RemoveResourcePoliciesDiskRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RemoveResourcePoliciesDiskRequest.html).newBuilder()
                     .setDisk(diskName)
                     .setZone(location)
                     .setProject(project)
-                    .setDisksRemoveResourcePoliciesRequestResource(
-                        DisksRemoveResourcePoliciesRequest.newBuilder()
+                    .[setDisksRemoveResourcePoliciesRequestResource](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.RemoveResourcePoliciesDiskRequest.Builder.html#com_google_cloud_compute_v1_RemoveResourcePoliciesDiskRequest_Builder_setDisksRemoveResourcePoliciesRequestResource_com_google_cloud_compute_v1_DisksRemoveResourcePoliciesRequest_)(
+                        [DisksRemoveResourcePoliciesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.DisksRemoveResourcePoliciesRequest.html).newBuilder()
                             .addAllResourcePolicies(Arrays.asList(consistencyGroupUrl))
                             .build())
                     .build();
             response = disksClient.removeResourcePoliciesAsync(request).get(1, TimeUnit.MINUTES);
           }
         }
-        if (response.hasError()) {
-          throw new Error("Error removing disk from consistency group! " + response.getError());
+        if (response.[hasError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_hasError__)()) {
+          throw new [Error](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Error.html)("Error removing disk from consistency group! " + response.[getError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_getError__)());
         }
-        return response.getStatus();
+        return response.[getStatus](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_getStatus__)();
       }
     }
 
@@ -1320,15 +1320,15 @@ Replace the following:
     
     
     // Import the Compute library
-    const computeLib = require('@google-cloud/compute');
+    const computeLib = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)');
     const compute = computeLib.protos.google.cloud.compute.v1;
     
     // If you want to remove regional disk,
     // you should use: RegionDisksClient and RegionOperationsClient.
     // Instantiate a disksClient
-    const disksClient = new computeLib.DisksClient();
+    const disksClient = new computeLib.[DisksClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
     // Instantiate a zone
-    const zoneOperationsClient = new computeLib.ZoneOperationsClient();
+    const zoneOperationsClient = new computeLib.[ZoneOperationsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
     
     /**
      * TODO(developer): Update/uncomment these variables before running the sample.
@@ -1385,7 +1385,7 @@ Replace the following:
 ###  Python 
     
     
-    from google.cloud import compute_v1
+    from google.cloud import [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest)
     
     
     def remove_disk_consistency_group(
@@ -1411,11 +1411,11 @@ Replace the following:
         # Checking if the disk is zonal or regional
         # If the final character of the disk_location is a digit, it is a regional disk
         if disk_location[-1].isdigit():
-            policy = compute_v1.RegionDisksRemoveResourcePoliciesRequest(
+            policy = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[RegionDisksRemoveResourcePoliciesRequest](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.RegionDisksRemoveResourcePoliciesRequest.html)(
                 resource_policies=[consistency_group_link]
             )
-            disk_client = compute_v1.RegionDisksClient()
-            disk_client.remove_resource_policies(
+            disk_client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[RegionDisksClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.region_disks.RegionDisksClient.html)()
+            disk_client.[remove_resource_policies](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.disks.DisksClient.html#google_cloud_compute_v1_services_disks_DisksClient_remove_resource_policies)(
                 project=project_id,
                 region=disk_location,
                 disk=disk_name,
@@ -1423,11 +1423,11 @@ Replace the following:
             )
         # For zonal disks we use DisksClient
         else:
-            policy = compute_v1.DisksRemoveResourcePoliciesRequest(
+            policy = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[DisksRemoveResourcePoliciesRequest](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.types.DisksRemoveResourcePoliciesRequest.html)(
                 resource_policies=[consistency_group_link]
             )
-            disk_client = compute_v1.DisksClient()
-            disk_client.remove_resource_policies(
+            disk_client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[DisksClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.disks.DisksClient.html)()
+            disk_client.[remove_resource_policies](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.disks.DisksClient.html#google_cloud_compute_v1_services_disks_DisksClient_remove_resource_policies)(
                 project=project_id,
                 zone=disk_location,
                 disk=disk_name,
@@ -1530,7 +1530,7 @@ Replace the following:
     	// groupName := "your_group_name"
     
     	ctx := context.Background()
-    	disksClient, err := compute.NewResourcePoliciesRESTClient(ctx)
+    	disksClient, err := compute.[NewResourcePoliciesRESTClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/compute/latest/apiv1.html#cloud_google_com_go_compute_apiv1_ResourcePoliciesClient_NewResourcePoliciesRESTClient)(ctx)
     	if err != nil {
     		return fmt.Errorf("NewResourcePoliciesRESTClient: %w", err)
     	}
@@ -1560,9 +1560,9 @@ Replace the following:
 ###  Java 
     
     
-    import com.google.cloud.compute.v1.Operation;
-    import com.google.cloud.compute.v1.Operation.Status;
-    import com.google.cloud.compute.v1.ResourcePoliciesClient;
+    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html);
+    import com.google.cloud.compute.v1.[Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html).[Status](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Status.html);
+    import com.google.cloud.compute.v1.[ResourcePoliciesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ResourcePoliciesClient.html);
     import java.io.IOException;
     import java.util.concurrent.ExecutionException;
     import java.util.concurrent.TimeUnit;
@@ -1584,19 +1584,19 @@ Replace the following:
       }
     
       // Deletes a consistency group resource policy in the specified project and region.
-      public static Status deleteConsistencyGroup(
+      public static [Status](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Status.html) deleteConsistencyGroup(
           String project, String region, String consistencyGroupName)
               throws IOException, ExecutionException, InterruptedException, TimeoutException {
         // Initialize client that will be used to send requests. This client only needs to be created
         // once, and can be reused for multiple requests.
-        try (ResourcePoliciesClient resourcePoliciesClient = ResourcePoliciesClient.create()) {
-          Operation response = resourcePoliciesClient
+        try ([ResourcePoliciesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ResourcePoliciesClient.html) resourcePoliciesClient = [ResourcePoliciesClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.ResourcePoliciesClient.html).create()) {
+          [Operation](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html) response = resourcePoliciesClient
               .deleteAsync(project, region, consistencyGroupName).get(1, TimeUnit.MINUTES);
     
-          if (response.hasError()) {
-            throw new Error("Error deleting disk! " + response.getError());
+          if (response.[hasError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_hasError__)()) {
+            throw new [Error](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Error.html)("Error deleting disk! " + response.[getError](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_getError__)());
           }
-          return response.getStatus();
+          return response.[getStatus](https://docs.cloud.google.com/java/docs/reference/google-cloud-compute/latest/com.google.cloud.compute.v1.Operation.html#com_google_cloud_compute_v1_Operation_getStatus__)();
         }
       }
     }
@@ -1605,12 +1605,12 @@ Replace the following:
     
     
     // Import the Compute library
-    const computeLib = require('@google-cloud/compute');
+    const computeLib = require('[@google-cloud/compute](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)');
     
     // Instantiate a resourcePoliciesClient
-    const resourcePoliciesClient = new computeLib.ResourcePoliciesClient();
+    const resourcePoliciesClient = new computeLib.[ResourcePoliciesClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
     // Instantiate a regionOperationsClient
-    const regionOperationsClient = new computeLib.RegionOperationsClient();
+    const regionOperationsClient = new computeLib.[RegionOperationsClient](https://docs.cloud.google.com/nodejs/docs/reference/compute/latest/overview.html)();
     
     /**
      * TODO(developer): Update/uncomment these variables before running the sample.
@@ -1658,7 +1658,7 @@ Replace the following:
     from typing import Any
     
     from google.api_core.extended_operation import ExtendedOperation
-    from google.cloud import compute_v1
+    from google.cloud import [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest)
     
     
     def wait_for_extended_operation(
@@ -1721,10 +1721,10 @@ Replace the following:
         """
     
         # Initialize the ResourcePoliciesClient
-        client = compute_v1.ResourcePoliciesClient()
+        client = [compute_v1](https://docs.cloud.google.com/python/docs/reference/compute/latest).[ResourcePoliciesClient](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.resource_policies.ResourcePoliciesClient.html)()
     
         # Delete the (consistency group) from the specified project and region
-        operation = client.delete(
+        operation = client.[delete](https://docs.cloud.google.com/python/docs/reference/compute/latest/google.cloud.compute_v1.services.resource_policies.ResourcePoliciesClient.html#google_cloud_compute_v1_services_resource_policies_ResourcePoliciesClient_delete)(
             project=project_id,
             region=region,
             resource_policy=group_name,
@@ -1761,6 +1761,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-20 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 

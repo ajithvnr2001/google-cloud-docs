@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/interconnects/create-vlan-attachment/
 title: Create a VLAN attachment \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:01:46.171278+00:00
+fetched_at: 2026-10-21T12:58:47.875307+00:00
 ---
 
 # Create a VLAN attachment  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

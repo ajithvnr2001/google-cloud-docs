@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/third-parties/subscribe-to-datadog/
 title: Subscribe to events from Datadog \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:55.953713+00:00
+fetched_at: 2026-10-21T14:35:33.916123+00:00
 ---
 
 # Subscribe to events from Datadog  |  Eventarc Standard  |  Google Cloud Documentation

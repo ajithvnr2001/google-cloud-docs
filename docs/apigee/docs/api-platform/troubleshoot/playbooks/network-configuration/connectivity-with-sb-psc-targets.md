@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/network-configuration/connectivity-with-sb-psc-targets/
 title: Apigee connectivity issues with southbound Private Service Connect targets \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:22:23.527303+00:00
+fetched_at: 2026-10-21T14:27:44.925656+00:00
 ---
 
 # Apigee connectivity issues with southbound Private Service Connect targets  |  Google Cloud Documentation

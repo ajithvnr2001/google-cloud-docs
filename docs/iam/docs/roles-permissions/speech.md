@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/speech/
 title: Speech-to-Text roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:15:39.860798+00:00
+fetched_at: 2026-10-21T14:30:11.495500+00:00
 ---
 
 # Speech-to-Text roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

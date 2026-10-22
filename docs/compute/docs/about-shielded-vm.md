@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/about-shielded-vm/
 title: About Shielded VMs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:52:31.465390+00:00
+fetched_at: 2026-10-21T12:29:45.562526+00:00
 ---
 
 # About Shielded VMs  |  Compute Engine  |  Google Cloud Documentation

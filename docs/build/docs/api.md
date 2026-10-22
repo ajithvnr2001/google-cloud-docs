@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/api/
 title: APIs \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:00.596244+00:00
+fetched_at: 2026-10-21T12:39:13.210578+00:00
 ---
 
 # APIs  |  Cloud Build  |  Google Cloud Documentation

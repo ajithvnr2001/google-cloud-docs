@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/dashboards-save-look/
 title: Save a Look to a dashboard \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:50:43.027991+00:00
+fetched_at: 2026-10-21T14:21:35.673376+00:00
 ---
 
 # Save a Look to a dashboard  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

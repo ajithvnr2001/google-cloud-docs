@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/samples/managedkafka-delete-topic/
 title: Delete a Kafka topic \u00a0|\u00a0 Managed Service for Apache Kafka \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:50:56.193239+00:00
+fetched_at: 2026-10-21T15:11:09.627989+00:00
 ---
 
 # Delete a Kafka topic  |  Managed Service for Apache Kafka  |  Google Cloud Documentation

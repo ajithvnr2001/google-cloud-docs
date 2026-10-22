@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/tenable-audit/
 title: Collect Tenable Audit logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:18:07.300816+00:00
+fetched_at: 2026-10-21T12:38:45.011509+00:00
 ---
 
 # Collect Tenable Audit logs  |  Google Security Operations  |  Google Cloud Documentation

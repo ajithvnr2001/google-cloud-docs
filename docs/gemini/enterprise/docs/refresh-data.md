@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/refresh-data/
 title: Refresh structured and unstructured data \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T16:10:36.844209+00:00
+fetched_at: 2026-10-21T12:43:40.130621+00:00
 ---
 
 # Refresh structured and unstructured data  |  Gemini Enterprise  |  Google Cloud Documentation

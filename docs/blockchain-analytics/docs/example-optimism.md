@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/blockchain-analytics/docs/example-optimism/
 title: Optimism example queries \u00a0|\u00a0 Blockchain Analytics \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:13:19.024382+00:00
+fetched_at: 2026-10-21T14:09:33.439084+00:00
 ---
 
 # Optimism example queries  |  Blockchain Analytics  |  Google Cloud Documentation

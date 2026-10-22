@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/deploy-app/
 title: Quickstart: Deploy an application on GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:50.517733+00:00
+fetched_at: 2026-10-21T15:01:07.544063+00:00
 ---
 
 # Quickstart: Deploy an application on GKE on Azure  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/aws-cloud-trail/
 title: Integrate AWS CloudTrail with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:11:51.866858+00:00
+fetched_at: 2026-10-21T14:11:53.064125+00:00
 ---
 
 # Integrate AWS CloudTrail with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

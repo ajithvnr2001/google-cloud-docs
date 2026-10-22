@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/kiteworks-changelog/
 title: Change log for KITEWORKS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:22:37.516880+00:00
+fetched_at: 2026-10-21T14:43:17.992496+00:00
 ---
 
 # Change log for KITEWORKS  |  Google Security Operations  |  Google Cloud Documentation

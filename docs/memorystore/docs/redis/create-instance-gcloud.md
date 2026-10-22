@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/create-instance-gcloud/
 title: Quickstart: Create a Memorystore for Redis instance by using the gcloud CLI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:50.180202+00:00
+fetched_at: 2026-10-21T15:16:56.504928+00:00
 ---
 
 # Quickstart: Create a Memorystore for Redis instance by using the gcloud CLI  |  Google Cloud Documentation

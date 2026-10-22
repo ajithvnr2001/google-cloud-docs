@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/third-parties/subscribe-to-lacework/
 title: Subscribe to events from Lacework \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:58:26.442281+00:00
+fetched_at: 2026-10-21T14:35:33.622946+00:00
 ---
 
 # Subscribe to events from Lacework  |  Eventarc Standard  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/gke-persistent-volume/
 title: Create a Google Kubernetes Engine persistent volume \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:41.909619+00:00
+fetched_at: 2026-10-21T14:42:18.131334+00:00
 ---
 
 # Create a Google Kubernetes Engine persistent volume  |  Cluster Toolkit  |  Google Cloud Documentation

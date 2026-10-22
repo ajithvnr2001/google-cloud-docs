@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/view-sboms-dependencies/
 title: View and filter SBOMs \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:44:44.238831+00:00
+fetched_at: 2026-10-21T12:29:55.275450+00:00
 ---
 
 # View and filter SBOMs  |  Artifact Analysis  |  Google Cloud Documentation

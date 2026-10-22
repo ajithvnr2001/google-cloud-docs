@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/go/getting-started/supported-go-versions/
 title: Supported Go Versions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:10:04.234558+00:00
+fetched_at: 2026-10-21T12:54:30.988510+00:00
 ---
 
 # Supported Go Versions  |  Google Cloud Documentation

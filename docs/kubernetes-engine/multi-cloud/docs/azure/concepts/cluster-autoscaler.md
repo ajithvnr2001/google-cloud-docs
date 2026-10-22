@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/concepts/cluster-autoscaler/
 title: About cluster autoscaler \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:51.692414+00:00
+fetched_at: 2026-10-21T15:09:55.698581+00:00
 ---
 
 # About cluster autoscaler  |  GKE on Azure  |  Google Cloud Documentation

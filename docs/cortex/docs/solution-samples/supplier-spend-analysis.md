@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/solution-samples/supplier-spend-analysis/
 title: Supplier Spend Analysis \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:48:02.764757+00:00
+fetched_at: 2026-10-21T14:23:38.471527+00:00
 ---
 
 # Supplier Spend Analysis  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

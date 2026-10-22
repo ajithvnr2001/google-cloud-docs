@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/datastore/datastore-statistics/
 title: Viewing Datastore statistics in the console \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:03:34.757884+00:00
+fetched_at: 2026-10-21T14:19:44.431180+00:00
 ---
 
 # Viewing Datastore statistics in the console  |  App Engine standard environment  |  Google Cloud Documentation

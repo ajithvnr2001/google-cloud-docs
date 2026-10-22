@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/how-to/
 title: How-to Guides \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:15.523521+00:00
+fetched_at: 2026-10-21T12:53:38.843243+00:00
 ---
 
 # How-to Guides  |  Identity Platform  |  Google Cloud Documentation

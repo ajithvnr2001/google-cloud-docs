@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/running-janusgraph-with-bigtable/
 title: JanusGraph on GKE with Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:20.219899+00:00
+fetched_at: 2026-10-21T14:09:16.099919+00:00
 ---
 
 # JanusGraph on GKE with Bigtable  |  Google Cloud Documentation

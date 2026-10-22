@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/secops/investigate/investigation-management/investigation-management-overview/
 title: Investigation and case management overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:12.234645+00:00
+fetched_at: 2026-10-21T14:24:05.522139+00:00
 ---
 
 # Investigation and case management overview  |  Google Security Operations  |  Google Cloud Documentation

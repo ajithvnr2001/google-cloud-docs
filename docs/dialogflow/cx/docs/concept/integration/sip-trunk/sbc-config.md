@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/sip-trunk/sbc-config/
 title: SBC configuration and validation \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:48.603058+00:00
+fetched_at: 2026-10-21T12:43:06.858245+00:00
 ---
 
 # SBC configuration and validation  |  Dialogflow CX  |  Google Cloud Documentation

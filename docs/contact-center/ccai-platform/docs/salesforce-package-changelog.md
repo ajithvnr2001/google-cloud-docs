@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/salesforce-package-changelog/
 title: Salesforce package changelog \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:44:04.344107+00:00
+fetched_at: 2026-10-21T14:09:54.487780+00:00
 ---
 
 # Salesforce package changelog  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

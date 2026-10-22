@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/apply-machine-type-recommendations-managed-instance-groups/
 title: Apply machine type recommendations to MIGs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:11:15.632046+00:00
+fetched_at: 2026-10-21T14:21:21.096742+00:00
 ---
 
 # Apply machine type recommendations to MIGs  |  Compute Engine  |  Google Cloud Documentation

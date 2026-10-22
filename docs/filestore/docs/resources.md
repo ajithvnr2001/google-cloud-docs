@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/resources/
 title: Resources \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:15:49.299611+00:00
+fetched_at: 2026-10-21T12:55:48.290762+00:00
 ---
 
 # Resources  |  Filestore  |  Google Cloud Documentation

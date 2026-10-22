@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/custom-runtimes/configuring-your-app-with-app-yaml/
 title: Configuring your app with app.yaml \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:10.774461+00:00
+fetched_at: 2026-10-21T14:09:58.557653+00:00
 ---
 
 # Configuring your app with app.yaml  |  App Engine flexible environment  |  Google Cloud Documentation

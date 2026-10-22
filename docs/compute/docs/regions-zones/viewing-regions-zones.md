@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/regions-zones/viewing-regions-zones/
 title: View available regions and zones \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:42.386648+00:00
+fetched_at: 2026-10-21T14:22:08.943643+00:00
 ---
 
 # View available regions and zones  |  Compute Engine  |  Google Cloud Documentation

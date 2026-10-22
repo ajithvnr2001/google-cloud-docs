@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/visualize-data-colab/
 title: Visualize query results \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:10.566400+00:00
+fetched_at: 2026-10-21T12:38:17.833020+00:00
 ---
 
 # Visualize query results  |  BigQuery  |  Google Cloud Documentation

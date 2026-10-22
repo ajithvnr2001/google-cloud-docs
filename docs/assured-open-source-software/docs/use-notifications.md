@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-open-source-software/docs/use-notifications/
 title: Subscribe to notifications \u00a0|\u00a0 Assured Open Source Software \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:50:03.737962+00:00
+fetched_at: 2026-10-21T12:29:34.048037+00:00
 ---
 
 # Subscribe to notifications  |  Assured Open Source Software  |  Google Cloud Documentation

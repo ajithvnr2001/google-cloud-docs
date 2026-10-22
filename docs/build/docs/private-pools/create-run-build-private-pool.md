@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/private-pools/create-run-build-private-pool/
 title: Quickstart: Create and run a build in a private pool \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:00.961338+00:00
+fetched_at: 2026-10-21T14:11:15.557411+00:00
 ---
 
 # Quickstart: Create and run a build in a private pool  |  Cloud Build  |  Google Cloud Documentation

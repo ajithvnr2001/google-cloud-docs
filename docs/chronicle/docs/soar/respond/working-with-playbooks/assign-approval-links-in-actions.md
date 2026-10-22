@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/assign-approval-links-in-actions/
 title: Assign approval links in actions \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:16:55.134190+00:00
+fetched_at: 2026-10-21T12:38:36.243323+00:00
 ---
 
 # Assign approval links in actions  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/ingest-custom-sources/
 title: Manage entries and ingest custom sources \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:37:31.833741+00:00
+fetched_at: 2026-10-21T14:58:28.073301+00:00
 ---
 
 # Manage entries and ingest custom sources  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -23,28 +23,17 @@ Send feedback
 
 #  Manage entries and ingest custom sources Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document explains how to bring information about your unique, custom data sources into Knowledge Catalog (formerly Dataplex Universal Catalog).
-
-Knowledge Catalog serves as a central registry for all your data assets. To integrate a custom source, you need three key components:
-
-  * Entry group: This is a secured container that holds your custom data records. Think of it as a folder that defines access permissions and the geographic location (region) for your records.
-
-  * Entry type: This acts as a template or schema. It defines the required metadata fields (like data owner, update frequency, or quality score) for a specific kind of data asset.
-
-  * Entry: This is the individual record or asset itself (for example, a specific proprietary file or database table).
-
-
-
+Knowledge Catalog (formerly Dataplex Universal Catalog) lets you ingest metadata from custom data sources so that you can catalog and manage all your data assets in a central registry. To integrate a custom data source, you configure entry groups, entry types, and entries that define access permissions, metadata schemas, and individual asset records.
 
 ## The integration process
 
-To register a custom data source, you need to set up this structure:
+To register a custom data source in Knowledge Catalog, you need three key components that you set up in the following order:
 
-  1. Create an entry group (the folder).
+  1. **Create an entry group.** An entry group is a secured container that holds your custom data records. Think of it as a folder that defines access permissions and the geographic location (region) for your records.
 
-  2. Define an entry type (the template/schema).
+  2. **Define an entry type.** An entry type acts as a template or schema. It defines the required metadata fields (such as data owner, update frequency, or quality score) for a specific kind of data asset.
 
-  3. Create the custom entry (the data record) using the template within the folder.
+  3. **Create the custom entry.** An entry is the individual data record or asset itself (for example, a specific proprietary file or database table) that you create using the entry type template within the entry group folder.
 
 
 
@@ -3485,6 +3474,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

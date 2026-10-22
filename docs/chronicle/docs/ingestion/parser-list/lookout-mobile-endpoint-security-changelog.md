@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/lookout-mobile-endpoint-security-changelog/
 title: Change log for LOOKOUT_MOBILE_ENDPOINT_SECURITY \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:19:18.880633+00:00
+fetched_at: 2026-10-21T14:43:16.096656+00:00
 ---
 
 # Change log for LOOKOUT_MOBILE_ENDPOINT_SECURITY  |  Google Security Operations  |  Google Cloud Documentation

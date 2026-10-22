@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vms/vm-high-mem/
 title: Create a high-performance VM \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:43:08.760221+00:00
+fetched_at: 2026-10-21T14:08:38.111900+00:00
 ---
 
 # Create a high-performance VM  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

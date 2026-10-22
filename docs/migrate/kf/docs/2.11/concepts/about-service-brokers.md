@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.11/concepts/about-service-brokers/
 title: Service brokers \u00a0|\u00a0 Kf 2.11 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:31.991847+00:00
+fetched_at: 2026-10-21T15:13:02.539586+00:00
 ---
 
 # Service brokers  |  Kf 2.11  |  Google Cloud Documentation

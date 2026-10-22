@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/access-approval/docs/audit-logging/
 title: Access Approval audit logging information \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:51:48.093517+00:00
+fetched_at: 2026-10-21T14:09:35.078759+00:00
 ---
 
 # Access Approval audit logging information  |  Google Cloud Documentation

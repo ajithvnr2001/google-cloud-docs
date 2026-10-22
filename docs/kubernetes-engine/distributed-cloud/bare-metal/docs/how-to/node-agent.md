@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/how-to/node-agent/
 title: Migrate clusters to use Node Agent \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:30:43.820766+00:00
+fetched_at: 2026-10-21T14:57:20.962030+00:00
 ---
 
 # Migrate clusters to use Node Agent  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -279,22 +279,24 @@ The `enable` command activates Node Agent mode within an existing running cluste
 
 You can enable Node Agent on existing version 1.33 and later clusters.
 
-  * To enable Node Agent on an existing cluster, use the following command:
-        
-        ./bmctl nodeagent enable \
-            --kubeconfig KUBECONFIG \
-            --cluster CLUSTER_NAME \
-            --namespace CLUSTER_NAMESPACE \
-            --ensure-status=true
-        
+To enable Node Agent on an existing cluster, do the following:
+
+  1. Enable Node Agent on the cluster:
+         
+         ./bmctl nodeagent enable \
+             --kubeconfig KUBECONFIG \
+             --cluster CLUSTER_NAME \
+             --namespace CLUSTER_NAMESPACE \
+             --ensure-status=true
+         
 
 Replace the following:
 
-    * `KUBECONFIG`: the path of the kubeconfig file for the cluster for which you are enabling Node Agent.
+     * `KUBECONFIG`: the path of the kubeconfig file for the cluster for which you are enabling Node Agent.
 
-    * `CLUSTER_NAME`: the name of the cluster upon whose nodes you want to deploy Node Agent.
+     * `CLUSTER_NAME`: the name of the cluster upon whose nodes you want to deploy Node Agent.
 
-    * `CLUSTER_NAMESPACE`: the namespace of the cluster to use to find the target cluster and cluster credentials and update the cluster resource. Defaults to `cluster-<CLUSTER-NAME>`.
+     * `CLUSTER_NAMESPACE`: the namespace of the cluster to use to find the target cluster and cluster credentials and update the cluster resource. Defaults to `cluster-<CLUSTER-NAME>`.
 
 The command output resembles the following example:
     
@@ -324,6 +326,13 @@ The command output resembles the following example:
     [2025-08-19 18:31:00+0000] ----------------------------------------------------------
     [2025-08-19 18:31:00+0000] Verified Node Agent status on all nodes in cluster
     
+
+  2. Include the Node Agent enable annotation in the cluster metadata section of the cluster configuration file:
+         
+         kind: Cluster
+         metadata:
+           annotations:**    baremetal.cluster.gke.io/enable-node-agent: ""**
+         
 
 
 
@@ -680,6 +689,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

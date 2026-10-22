@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/channel/docs/rebilling/create-customer-cost-dashboards/
 title: Create customer cost dashboards using Data Studio \u00a0|\u00a0 Channel Services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:35.402179+00:00
+fetched_at: 2026-10-21T14:25:26.086136+00:00
 ---
 
 # Create customer cost dashboards using Data Studio  |  Channel Services  |  Google Cloud Documentation

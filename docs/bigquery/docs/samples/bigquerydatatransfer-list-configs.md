@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquerydatatransfer-list-configs/
 title: List data transfer configurations \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:13.393321+00:00
+fetched_at: 2026-10-22T05:45:45.700812+00:00
 ---
 
 # List data transfer configurations  |  BigQuery  |  Google Cloud Documentation

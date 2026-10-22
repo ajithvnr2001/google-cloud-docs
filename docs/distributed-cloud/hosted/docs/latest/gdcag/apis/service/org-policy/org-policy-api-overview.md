@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/service/org-policy/org-policy-api-overview/
 title: Organization Policy API overview \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:13:31.866561+00:00
+fetched_at: 2026-10-21T12:57:14.743874+00:00
 ---
 
 # Organization Policy API overview  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

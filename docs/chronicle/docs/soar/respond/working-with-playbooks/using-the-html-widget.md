@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/using-the-html-widget/
 title: Configure the HTML widget \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:01:13.337518+00:00
+fetched_at: 2026-10-21T12:39:58.943319+00:00
 ---
 
 # Configure the HTML widget  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/google-cloud-armor/
 title: Integrate Cloud Armor with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:28:48.857309+00:00
+fetched_at: 2026-10-21T14:09:53.750258+00:00
 ---
 
 # Integrate Cloud Armor with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

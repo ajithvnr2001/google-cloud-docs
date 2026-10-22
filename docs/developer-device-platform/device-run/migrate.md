@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/developer-device-platform/device-run/migrate/
 title: Migrate from Firebase Test Lab to Developer Device Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:12:06.155033+00:00
+fetched_at: 2026-10-21T12:43:49.447500+00:00
 ---
 
 # Migrate from Firebase Test Lab to Developer Device Platform  |  Google Cloud Documentation
@@ -119,7 +119,7 @@ Follow our [command and flag translations](https://docs.cloud.google.com/develop
     * _`software-versions`_ : Direct CLI access to supported software versions (such as Xcode and Android Test Orchestrator versions), replacing legacy `firebase test ios xcode-versions list`.
     * _`sessions`_ : End-to-end session lifecycle management directly in the terminal, including `sessions submit instrumentation`, `sessions submit xctest`, `sessions wait`, `sessions describe [--full]`, `sessions list`, and `sessions cancel`.
   * _Subcommand structure_ : Test types are standardized and nested under `sessions submit` as clean subcommands rather than using type flags. 
-    * DDP: `gcloud beta device-run sessions submit instrumentation` (Android) or `gcloud beta device-run sessions submit xctest` (iOS)
+    * DDP: `gcloud beta device-run sessions submit instrumentation` (Android) or `gcloud alpha device-run sessions submit xctest` (iOS)
     * Test Lab: `gcloud firebase test android run --type=instrumentation` (Android) or `gcloud firebase test ios run --type=xctest` (iOS)
   * _Pluralized and merged apps_ : Standard and supplementary APKs are merged under the pluralized `--apps` flag list (ex. `--apps=app.apk,helper.apk`) instead of split into `--app` and `--additional-apks`.
   * _Structured dictionary and list arguments_ : Replaced comma-separated files or environment lists with structured CLI dictionary and list formats: `--other-files-to-push KEY=VALUE`, `--additional-test-options KEY=VALUE`, `--paths-to-pull`, and `--test-targets`.
@@ -142,6 +142,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-13 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/forgerock-openidm/
 title: Collect PingIDM (formerly ForgeRock OpenIDM) logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:59:29.284418+00:00
+fetched_at: 2026-10-21T14:10:06.521606+00:00
 ---
 
 # Collect PingIDM (formerly ForgeRock OpenIDM) logs  |  Google Security Operations  |  Google Cloud Documentation

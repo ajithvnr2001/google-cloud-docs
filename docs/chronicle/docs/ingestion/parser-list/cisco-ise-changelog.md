@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cisco-ise-changelog/
 title: Change log for CISCO_ISE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:48:33.549901+00:00
+fetched_at: 2026-10-21T14:44:55.994406+00:00
 ---
 
 # Change log for CISCO_ISE  |  Google Security Operations  |  Google Cloud Documentation

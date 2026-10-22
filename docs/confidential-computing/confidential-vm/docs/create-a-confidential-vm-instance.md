@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/create-a-confidential-vm-instance/
 title: Create a Confidential VM instance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:27.484589+00:00
+fetched_at: 2026-10-21T14:21:14.112134+00:00
 ---
 
 # Create a Confidential VM instance  |  Google Cloud Documentation

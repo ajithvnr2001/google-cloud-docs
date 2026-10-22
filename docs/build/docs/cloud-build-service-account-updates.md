@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/cloud-build-service-account-updates/
 title: Cloud Build default service account change \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:27:41.008620+00:00
+fetched_at: 2026-10-21T12:38:43.043666+00:00
 ---
 
 # Cloud Build default service account change  |  Google Cloud Documentation

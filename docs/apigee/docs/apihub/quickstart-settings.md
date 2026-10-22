@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/apihub/quickstart-settings/
 title: Create and edit attributes \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:24:48.322973+00:00
+fetched_at: 2026-10-21T14:55:09.396889+00:00
 ---
 
 # Create and edit attributes  |  Apigee  |  Google Cloud Documentation

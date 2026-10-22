@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/data-clean-rooms/
 title: Share sensitive data with data clean rooms \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T07:12:02.392723+00:00
+fetched_at: 2026-10-21T15:24:59.610169+00:00
 ---
 
 # Share sensitive data with data clean rooms  |  BigQuery  |  Google Cloud Documentation
@@ -50,7 +50,7 @@ Data clean rooms also support several use cases beyond the marketing industry:
 
 There are three main roles in BigQuery data clean rooms:
 
-  * **Data clean room owner** : manages permissions, visibility, and membership of one or more data clean rooms within a Google Cloud project. The data clean room owner can assign the data contributor and data clean room subscriber roles to users. This role is analogous to the [Analytics Hub Admin](https://docs.cloud.google.com/bigquery/docs/analytics-hub-grant-roles#ah-admin-role) IAM role.
+  * **Data clean room owner** : manages permissions, visibility, and membership of one or more data clean rooms within a Google Cloud project. The data clean room owner can assign the data contributor and data clean room subscriber roles to users. This role is analogous to the [Analytics Hub Admin](https://docs.cloud.google.com/bigquery/docs/analytics-hub-grant-roles#ah-admin-role) Identity and Access Management (IAM) role.
   * **Data contributor** : publishes data to a data clean room. In many cases, a data clean room owner is also a data contributor. This role is analogous to the [Analytics Hub Publisher](https://docs.cloud.google.com/bigquery/docs/analytics-hub-grant-roles#ah-publisher-role) IAM role.
   * **Data clean room subscriber** : subscribes to the data published in a data clean room and runs queries on the data. This role is analogous to a combination of the [Analytics Hub Subscriber](https://docs.cloud.google.com/bigquery/docs/analytics-hub-grant-roles#ah-subscriber-role) and [Analytics Hub Subscription Owner](https://docs.cloud.google.com/iam/docs/roles-permissions/analyticshub#analyticshub.subscriptionOwner) IAM roles.
 
@@ -111,7 +111,7 @@ BigQuery data clean rooms have the following limitations:
 
 ## Before you begin
 
-Grant Identity and Access Management (IAM) roles to ensure that you have the required permissions to complete the tasks in this document, enable the Analytics Hub API, and assign the Analytics Hub Admin role to your data clean room owner.
+Grant IAM roles to ensure that you have the required permissions to complete the tasks in this document, enable the Analytics Hub API, and assign the Analytics Hub Admin role to your data clean room owner.
 
 ### Required permissions
 
@@ -143,7 +143,7 @@ Go to the **Analytics Hub API** page and enable the API for your Google Cloud pr
 
 [Enable the Analytics Hub API](https://console.cloud.google.com/apis/library/analyticshub.googleapis.com)
 
-###  bq 
+###  gcloud 
 
 Run the [`gcloud services enable` command](https://docs.cloud.google.com/sdk/gcloud/reference/services/enable):
     
@@ -208,10 +208,10 @@ Use the [`projects.locations.dataExchanges.create` method](https://docs.cloud.go
 The following example shows how to call the `projects.locations.dataExchanges.create` method using the `curl` command:
     
     
-      curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -L -X POST https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/dataExchanges?data_exchange_id=CLEAN_ROOM_ID -d
+      curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -L -X POST https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/dataExchanges?dataExchangeId=CLEAN_ROOM_ID -d \
       '{
-        display_name: "CLEAN_ROOM_NAME",
-        sharing_environment_config: {dcr_exchange_config: {}}
+        "displayName": "CLEAN_ROOM_NAME",
+        "sharingEnvironmentConfig": {"dcrExchangeConfig": {}}
       }'
 
 Replace the following: 
@@ -258,10 +258,10 @@ Use the [`projects.locations.dataExchanges.patch` method](https://docs.cloud.goo
 The following example shows how to call the `projects.locations.dataExchanges.patch` method using the `curl` command:
     
     
-    curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -L -X PATCH https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID?updateMask=UPDATEMASK -d
+    curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -L -X PATCH https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID?updateMask=UPDATEMASK -d \
     '{
-      display_name: "CLEAN_ROOM_NAME",
-      sharing_environment_config: {dcr_exchange_config: {}}
+      "displayName": "CLEAN_ROOM_NAME",
+      "sharingEnvironmentConfig": {"dcrExchangeConfig": {}}
     }'
 
 Replace the following: 
@@ -269,11 +269,10 @@ Replace the following:
   * `PROJECT_ID`: your project ID
   * `LOCATION`: the location of the data clean room
   * `CLEAN_ROOM_ID`: your data clean room ID
+  * `UPDATEMASK`: the comma-separated list of fields that you want to update—for example, `displayName,primaryContact`
   * `CLEAN_ROOM_NAME`: the display name of your data clean room
 
 
-
-Replace `UPDATEMASK` with the list of fields that you want to update. To update multiple values, use a comma-separated list. For example, to update the display name and primary contact for a data exchange, enter `displayName,primaryContact`.
 
 In the body of the request, specify updated values for the following fields:
 
@@ -308,12 +307,12 @@ To delete a data clean room, select one of the following options:
 
 ###  API 
 
-Use the [`projects.locations.dataExchanges.delete` method](https://docs.cloud.google.com/bigquery/docs/reference/analytics-hub/rest/v1/projects.locations.dataExchanges/delete) and set the [sharing environment](https://docs.cloud.google.com/bigquery/docs/reference/analytics-hub/rest/v1/projects.locations.dataExchanges#sharingenvironmentconfig) to `dcrExchangeConfig`.
+Use the [`projects.locations.dataExchanges.delete` method](https://docs.cloud.google.com/bigquery/docs/reference/analytics-hub/rest/v1/projects.locations.dataExchanges/delete).
 
 The following example shows how to call the `projects.locations.dataExchanges.delete` method using the `curl` command:
     
     
-    curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -L -X DELETE https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/dataExchanges?data_exchange_id=CLEAN_ROOM_ID
+    curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -L -X DELETE https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID
 
 Replace the following: 
 
@@ -359,7 +358,7 @@ Use the [`projects.locations.dataExchanges.setIamPolicy` method](https://docs.cl
 The following example shows how to call the `projects.locations.dataExchanges.setIamPolicy` method using the `curl` command:
     
     
-    curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -L -X POST https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID:setIamPolicy -d
+    curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -L -X POST https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID:setIamPolicy -d \
     '{
       "policy": {
         "bindings": [
@@ -373,7 +372,7 @@ The following example shows how to call the `projects.locations.dataExchanges.se
       }
     }'
 
-The policy in the request body must conform to the structure of a [Policy](https://docs.cloud.google.com/iam/reference/rest/v1/Policy).
+The policy in the request body must conform to the structure of a [Policy](https://docs.cloud.google.com/iam/docs/reference/rest/v1/Policy).
 
 You can grant the Analytics Hub Publisher role (`roles/analyticshub.publisher`) for an entire project on the [IAM page](https://console.cloud.google.com/iam-admin). This grants permission to add data to any data clean room in that project. Granting this role at the project level isn't recommended because it can result in overly permissive access.
 
@@ -415,7 +414,7 @@ Use the [`projects.locations.dataExchanges.setIamPolicy` method](https://docs.cl
 The following example shows how to call the `projects.locations.dataExchanges.setIamPolicy` method using the `curl` command:
     
     
-    curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -L -X POST https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID:setIamPolicy -d
+    curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -L -X POST https://analyticshub.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID:setIamPolicy -d \
     '{
       "policy": {
         "bindings": [
@@ -435,7 +434,7 @@ The following example shows how to call the `projects.locations.dataExchanges.se
       }
     }'
 
-The policy in the request body must conform to the structure of a [Policy](https://docs.cloud.google.com/iam/reference/rest/v1/Policy).
+The policy in the request body must conform to the structure of a [Policy](https://docs.cloud.google.com/iam/docs/reference/rest/v1/Policy).
 
 You can grant the Analytics Hub Subscriber role (`roles/analyticshub.subscriber`) and Analytics Hub Subscription Owner role (`roles/analyticshub.subscriptionOwner`) for an entire project on the [IAM page](https://console.cloud.google.com/iam-admin). These roles give permission to subscribe to any data clean room in that project. Avoid granting these roles at the project level because it can result in overly permissive access.
 
@@ -472,7 +471,7 @@ To complete data contributor tasks, you must have the [Analytics Hub Publisher r
 
 In addition, you need the `bigquery.datasets.get`, `bigquery.datasets.update`, and `bigquery.tables.get` permissions on the source dataset and table. These permissions are available in the [BigQuery Data Owner role](https://docs.cloud.google.com/bigquery/docs/access-control#bigquery.dataOwner) (`roles/bigquery.dataOwner`).
 
-To view data clean rooms in your organization that aren't in your current project, you need the `resourcemanager.organization.get` permission.
+To view data clean rooms in your organization that aren't in your current project, you need the `resourcemanager.organizations.get` permission.
 
 To use the data clean room creation process to create a [BigQuery view](https://docs.cloud.google.com/bigquery/docs/views#creating_a_view) with [analysis rules](https://docs.cloud.google.com/bigquery/docs/analysis-rules), you need the `bigquery.tables.setPrivacyPolicy` and `bigquery.tables.create` permissions. If you reference the view directly, this permission isn't required.
 
@@ -522,8 +521,8 @@ Use the [`projects.locations.dataExchanges.listings.create` method](https://docs
 The following example shows how to call the `projects.locations.dataExchanges.listings.create` method using the `curl` command:
     
     
-      curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -H 'x-goog-user-project:DCR_PROJECT_ID' -X POST https://analyticshub.googleapis.com/v1/projects/DCR_PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID/listings?listingId=LISTING_ID -d
-      '{"bigqueryDataset":{"dataset":"projects/PROJECT_ID/datasets/DATASET_ID","selectedResources":[{"table":"projects/PROJECT_ID/datasets/DATASET_ID/tables/VIEW_ID"}],},"displayName":LISTING_NAME"}'
+      curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -H 'x-goog-user-project:DCR_PROJECT_ID' -X POST https://analyticshub.googleapis.com/v1/projects/DCR_PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID/listings?listingId=LISTING_ID -d \
+      '{"bigqueryDataset":{"dataset":"projects/PROJECT_ID/datasets/DATASET_ID","selectedResources":[{"table":"projects/PROJECT_ID/datasets/DATASET_ID/tables/VIEW_ID"}]},"displayName":"LISTING_NAME"}'
 
 Replace the following: 
 
@@ -578,8 +577,8 @@ Use the [`projects.locations.dataExchanges.listings.patch` method](https://docs.
 The following example shows how to call the `projects.locations.dataExchanges.listings.patch` method using the `curl` command:
     
     
-    curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -H 'x-goog-user-project:DCR_PROJECT_ID' -X PATCH https://analyticshub.googleapis.com/v1/projects/DCR_PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID/listings/listingId=LISTING_ID?updateMask=displayName -d
-    '{"displayName":LISTING_NAME"}'
+    curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -H 'x-goog-user-project:DCR_PROJECT_ID' -X PATCH https://analyticshub.googleapis.com/v1/projects/DCR_PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID/listings/LISTING_ID?updateMask=displayName -d \
+    '{"displayName":"LISTING_NAME"}'
 
 Replace the following: 
 
@@ -619,7 +618,7 @@ Use the [`projects.locations.dataExchanges.listings.delete` method](https://docs
 The following example shows how to call the `projects.locations.dataExchanges.listings.delete` method using the `curl` command:
     
     
-    curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -H 'x-goog-user-project:DCR_PROJECT_ID' -X DELETE https://analyticshub.googleapis.com/v1/projects/DCR_PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID/listings?listingId=LISTING_ID
+    curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json" -H 'x-goog-user-project:DCR_PROJECT_ID' -X DELETE https://analyticshub.googleapis.com/v1/projects/DCR_PROJECT_ID/locations/LOCATION/dataExchanges/CLEAN_ROOM_ID/listings/LISTING_ID
 
 Replace the following: 
 
@@ -745,7 +744,7 @@ In the body of the request, specify the destination location, subscription name,
     }
     
 
-If the request is successful, the response body contains the [subscription object](https://docs.cloud.google.com/bigquery/docs/reference/analytics-hub/rest/v1/projects.locations.dataExchanges.listings/subscribe#response-body).
+If the request is successful, the response body contains an [`Operation` object](https://docs.cloud.google.com/bigquery/docs/reference/analytics-hub/rest/v1/projects.locations.dataExchanges/subscribe#body.response_body).
 
 If you enable subscriber email logging for the data clean room with the `logLinkedDatasetQueryUserEmail` field, the subscription response contains `log_linked_dataset_query_user_email: true`. The logged data appears in the `job_principal_subject` field of the [`INFORMATION_SCHEMA.SHARED_DATASET_USAGE` view](https://docs.cloud.google.com/bigquery/docs/information-schema-shared-dataset-usage).
 
@@ -832,9 +831,9 @@ All the data clean rooms that you can access are listed.
 To find all the linked datasets created by data clean rooms in your project, run the following command in a command-line environment:
     
     
-    PROJECT=PROJECT_ID \
+    PROJECT=PROJECT_ID; \
     for dataset in $(bq ls --project_id $PROJECT | tail +3); \
-    do [ "$(bq show -d --project_id $PROJECT $dataset | egrep LINKED)" ] \
+    do [ "$(bq show -d --project_id $PROJECT $dataset | grep -E LINKED)" ] \
     && echo $dataset; done
 
 Replace `PROJECT_ID` with the project that contains your linked datasets.
@@ -862,6 +861,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

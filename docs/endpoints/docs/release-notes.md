@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/release-notes/
 title: Cloud Endpoints release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:45:09.169536+00:00
+fetched_at: 2026-10-21T14:35:33.307108+00:00
 ---
 
 # Cloud Endpoints release notes  |  Google Cloud Documentation

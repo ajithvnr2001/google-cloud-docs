@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/release/notes/apigee-release-notes/
 title: Apigee release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:39:12.307800+00:00
+fetched_at: 2026-10-21T14:26:36.928736+00:00
 ---
 
 # Apigee release notes  |  Google Cloud Documentation

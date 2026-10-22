@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-connectivity/docs/vpn/concepts/supported-ike-ciphers/
 title: Supported IKE ciphers \u00a0|\u00a0 Cloud VPN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:51.612369+00:00
+fetched_at: 2026-10-21T14:58:34.279662+00:00
 ---
 
 # Supported IKE ciphers  |  Cloud VPN  |  Google Cloud Documentation
@@ -151,7 +151,7 @@ Diffie-Hellman (DH) |
   * Group-31
 
 | The modp_8192 cipher is not supported for HA VPN gateways with IPv6 interfaces (`gatewayIpVersion=IPv6`).  
-Phase 1 lifetime | 36,000 seconds (10 hours) |  |   
+Phase 1 lifetime | 36,000 seconds (10 hours) |  | When you generate a configuration template for a peer VPN device, the template might use shorter lifetimes, such as 28,800 seconds, for Phase 1 for better compatibility with the default settings of most third-party VPN vendors. As a best practice, don't change the generated template values unless your third-party vendor explicitly recommends a different configuration.  
   
 #### Phase 2
 
@@ -205,7 +205,7 @@ PFS Algorithm (required) |
 
 | The modp_8192 cipher is not supported for HA VPN gateways with IPv6 interfaces (`gatewayIpVersion=IPv6`).  
 Diffie-Hellman (DH) | Refer to Phase 1. | Refer to Phase 1. | If your VPN gateway requires DH settings for Phase 2, use the same settings that you used for Phase 1.  
-Phase 2 lifetime | 10,800 seconds (3 hours) |  |   
+Phase 2 lifetime | 10,800 seconds (3 hours) |  | When you generate a configuration template for a peer VPN device, the template might use shorter lifetimes, such as 3,600 seconds for Phase 2 for better compatibility with the default settings of most third-party VPN vendors. As a best practice, don't change the generated template values unless your third-party vendor explicitly recommends a different configuration.  
   
 ### IKEv2 ciphers that don't use AEAD
 
@@ -397,6 +397,24 @@ PFS Algorithm (required) | modp_1024 (Group 2)
 Diffie-Hellman (DH) | If you need to specify DH for your VPN gateway, use the same setting that you used for Phase 1.  
 Phase 2 lifetime | 10,800 seconds (3 hours)  
   
+### IKE SA and IPsec SA lifetimes
+
+To establish an encrypted VPN tunnel, Cloud VPN and your peer VPN gateway negotiate security associations (SAs) with defined lifetimes.
+
+  * Peer VPN device configuration templates are downloadable configuration files available in the Google Cloud console. They contain vendor-specific configuration commands, such as for Cisco, Palo Alto Networks, or Juniper, to simplify the setup of your peer gateway.
+
+  * Depending on the peer device vendor, the downloadable templates might generate shorter lifetime values than the Cloud VPN defaults to match vendor-recommended standards.
+
+
+
+
+Use the following table to synchronize your lifetime settings. Ensure that the lifetime values configured on your peer VPN gateway match the Cloud VPN values exactly to prevent tunnel drops.
+
+Security Association (SA) phase | Google Cloud VPN default | UI configuration template value | Best practice  
+---|---|---|---  
+**Phase 1 (IKE SA) Lifetime** | `36000` seconds (10 hours) | `28800` or `36000` seconds (depending on vendor) | Ensure the peer gateway value matches Cloud VPN exactly. See [VPN Best Practices](https://docs.cloud.google.com/network-connectivity/docs/vpn/concepts/best-practices) for details.  
+**Phase 2 (IPsec/Child SA) Lifetime** | `10800` seconds (3 hours) | `3600` or `10800` seconds (depending on vendor) | Ensure the peer gateway value matches the Cloud VPN value exactly. For more information, see [VPN Best Practices](https://docs.cloud.google.com/network-connectivity/docs/vpn/concepts/best-practices) for details.  
+  
 ## What's next
 
   * To learn about the basic concepts of Cloud VPN, see the [Cloud VPN overview](https://docs.cloud.google.com/network-connectivity/docs/vpn/concepts/overview).
@@ -408,6 +426,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

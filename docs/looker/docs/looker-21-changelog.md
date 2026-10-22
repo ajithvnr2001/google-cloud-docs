@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/looker-21-changelog/
 title: Looker 21 changelog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:35:11.762152+00:00
+fetched_at: 2026-10-21T15:03:15.084801+00:00
 ---
 
 # Looker 21 changelog  |  Google Cloud Documentation

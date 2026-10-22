@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-auth-drive-scope/
 title: Create credentials with scopes \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:50.197204+00:00
+fetched_at: 2026-10-21T12:41:01.573581+00:00
 ---
 
 # Create credentials with scopes  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/samples/container-helloapp-redis/
 title: Hello app redistribution deployment \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:28:26.843429+00:00
+fetched_at: 2026-10-21T15:09:44.970730+00:00
 ---
 
 # Hello app redistribution deployment  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/networking/
 title: Networking \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:51.433510+00:00
+fetched_at: 2026-10-21T15:13:50.065828+00:00
 ---
 
 # Networking  |  Memorystore for Redis  |  Google Cloud Documentation

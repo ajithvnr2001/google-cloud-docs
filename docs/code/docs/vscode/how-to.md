@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/vscode/how-to/
 title: How-to Guides \u00a0|\u00a0 Cloud Code for VS Code \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:08:21.603195+00:00
+fetched_at: 2026-10-22T05:48:04.812740+00:00
 ---
 
 # How-to Guides  |  Cloud Code for VS Code  |  Google Cloud Documentation

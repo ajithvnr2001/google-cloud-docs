@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/playbook/playbook-settings/
 title: Playbook Settings \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:35.952751+00:00
+fetched_at: 2026-10-21T12:43:42.203711+00:00
 ---
 
 # Playbook Settings  |  Dialogflow CX  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/platform-application/pa-ao-operations/audit-storage/
 title: Storage \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:21:52.711183+00:00
+fetched_at: 2026-10-21T12:56:52.471805+00:00
 ---
 
 # Storage  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

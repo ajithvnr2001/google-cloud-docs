@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/sendmail-changelog/
 title: Change log for SENDMAIL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:27:46.521971+00:00
+fetched_at: 2026-10-21T14:42:41.452398+00:00
 ---
 
 # Change log for SENDMAIL  |  Google Security Operations  |  Google Cloud Documentation

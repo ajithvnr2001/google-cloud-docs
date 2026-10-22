@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/activity-logging/
 title: Activity logging \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:13:09.925242+00:00
+fetched_at: 2026-10-21T12:54:03.256819+00:00
 ---
 
 # Activity logging  |  Identity Platform  |  Google Cloud Documentation

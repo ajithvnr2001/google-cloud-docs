@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/meta-messenger/
 title: Messenger from Meta \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:50.173763+00:00
+fetched_at: 2026-10-21T12:42:32.432820+00:00
 ---
 
 # Messenger from Meta  |  Dialogflow CX  |  Google Cloud Documentation

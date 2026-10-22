@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/disaster-recovery-migration/
 title: Migrate to managed disaster recovery \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:39.565109+00:00
+fetched_at: 2026-10-21T14:07:51.633033+00:00
 ---
 
 # Migrate to managed disaster recovery  |  BigQuery  |  Google Cloud Documentation

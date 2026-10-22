@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/spycloud-changelog/
 title: Change log for SPYCLOUD \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:02:13.791014+00:00
+fetched_at: 2026-10-21T14:43:14.055924+00:00
 ---
 
 # Change log for SPYCLOUD  |  Google Security Operations  |  Google Cloud Documentation

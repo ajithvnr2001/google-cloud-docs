@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/configure-disposition-timing/
 title: Configure disposition timing \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:23.525726+00:00
+fetched_at: 2026-10-21T14:22:14.262703+00:00
 ---
 
 # Configure disposition timing  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

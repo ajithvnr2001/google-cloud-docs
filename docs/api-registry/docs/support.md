@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-registry/docs/support/
 title: Get support \u00a0|\u00a0 Cloud API Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:30:30.442665+00:00
+fetched_at: 2026-10-21T14:53:14.193097+00:00
 ---
 
 # Get support  |  Cloud API Registry  |  Google Cloud Documentation

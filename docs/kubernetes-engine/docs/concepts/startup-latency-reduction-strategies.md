@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/startup-latency-reduction-strategies/
 title: Strategies to reduce startup latency \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:01:55.441835+00:00
+fetched_at: 2026-10-21T15:00:58.220399+00:00
 ---
 
 # Strategies to reduce startup latency  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

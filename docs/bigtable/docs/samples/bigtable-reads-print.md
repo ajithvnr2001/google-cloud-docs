@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-reads-print/
 title: Read and print \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:23:59.552976+00:00
+fetched_at: 2026-10-21T12:38:00.919405+00:00
 ---
 
 # Read and print  |  Bigtable  |  Google Cloud Documentation

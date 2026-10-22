@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/imperva-audit-trail/
 title: Collect Imperva Audit Trail logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:02:14.964061+00:00
+fetched_at: 2026-10-21T12:36:43.432343+00:00
 ---
 
 # Collect Imperva Audit Trail logs  |  Google Security Operations  |  Google Cloud Documentation

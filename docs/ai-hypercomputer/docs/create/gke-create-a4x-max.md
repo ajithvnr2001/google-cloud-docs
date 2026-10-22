@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/create/gke-create-a4x-max/
 title: Create an AI-optimized GKE cluster that uses A4X Max \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:34:53.500698+00:00
+fetched_at: 2026-10-21T14:25:50.157291+00:00
 ---
 
 # Create an AI-optimized GKE cluster that uses A4X Max  |  AI Hypercomputer  |  Google Cloud Documentation

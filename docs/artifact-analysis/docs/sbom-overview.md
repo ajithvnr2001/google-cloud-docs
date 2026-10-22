@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/sbom-overview/
 title: SBOM overview \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:56:03.248388+00:00
+fetched_at: 2026-10-21T12:40:25.706782+00:00
 ---
 
 # SBOM overview  |  Artifact Analysis  |  Google Cloud Documentation

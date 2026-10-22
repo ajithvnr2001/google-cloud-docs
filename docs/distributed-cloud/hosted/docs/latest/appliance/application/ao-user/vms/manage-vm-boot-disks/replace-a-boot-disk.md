@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/vms/manage-vm-boot-disks/replace-a-boot-disk/
 title: Replace a boot disk \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:22:05.661411+00:00
+fetched_at: 2026-10-21T12:56:51.916530+00:00
 ---
 
 # Replace a boot disk  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

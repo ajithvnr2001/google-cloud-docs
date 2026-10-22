@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/trellix-hx-es-changelog/
 title: Change log for TRELLIX_HX_ES \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:27:56.299526+00:00
+fetched_at: 2026-10-21T14:43:32.354465+00:00
 ---
 
 # Change log for TRELLIX_HX_ES  |  Google Security Operations  |  Google Cloud Documentation

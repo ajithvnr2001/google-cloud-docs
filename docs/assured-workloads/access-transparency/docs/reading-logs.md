@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/access-transparency/docs/reading-logs/
 title: Understanding and using Access Transparency logs \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:49:56.129637+00:00
+fetched_at: 2026-10-21T14:28:00.377757+00:00
 ---
 
 # Understanding and using Access Transparency logs  |  Google Cloud Documentation

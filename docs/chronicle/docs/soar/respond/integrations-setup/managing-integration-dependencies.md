@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/integrations-setup/managing-integration-dependencies/
 title: Manage integration dependencies \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:08.743325+00:00
+fetched_at: 2026-10-21T14:09:55.718388+00:00
 ---
 
 # Manage integration dependencies  |  Google Security Operations  |  Google Cloud Documentation

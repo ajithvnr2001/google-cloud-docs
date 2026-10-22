@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/parse-chunk-documents/
 title: Parse and chunk documents \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T18:09:32.772380+00:00
+fetched_at: 2026-10-21T12:40:08.527376+00:00
 ---
 
 # Parse and chunk documents  |  Gemini Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/pnp/organization-external-traffic/
 title: Create organization-external network policies \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T20:27:51.222042+00:00
+fetched_at: 2026-10-21T12:59:45.056250+00:00
 ---
 
 # Create organization-external network policies  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

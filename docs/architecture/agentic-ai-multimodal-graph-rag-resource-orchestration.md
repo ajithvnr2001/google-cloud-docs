@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/agentic-ai-multimodal-graph-rag-resource-orchestration/
 title: Agentic AI use case: Multimodal GraphRAG resource orchestration \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:22:14.387582+00:00
+fetched_at: 2026-10-22T05:49:45.033501+00:00
 ---
 
 # Agentic AI use case: Multimodal GraphRAG resource orchestration  |  Cloud Architecture Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/jamf-security-cloud/
 title: Collect Jamf Security Cloud logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:14:44.942966+00:00
+fetched_at: 2026-10-21T12:37:34.682265+00:00
 ---
 
 # Collect Jamf Security Cloud logs  |  Google Security Operations  |  Google Cloud Documentation

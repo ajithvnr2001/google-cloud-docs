@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/troubleshooting/cluster-autoscaler-scale-up/
 title: Troubleshoot cluster autoscaler not scaling up \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:47:49.187297+00:00
+fetched_at: 2026-10-21T12:29:24.412627+00:00
 ---
 
 # Troubleshoot cluster autoscaler not scaling up  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -83,6 +83,22 @@ If there are any results listed, then you had unschedulable Pods in the time ran
 ## Check if the issue is caused by a limitation
 
 After you've confirmed that you have unscheduled Pods, make sure your issue with cluster autoscaler isn't caused by one of the [limitations for the cluster autoscaler](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#limitations).
+
+## Analyze Cloud Monitoring metrics for scale-up issues
+
+GKE cluster autoscaler exposes metrics to Cloud Monitoring that provide insights into its decisions, especially in relation to ComputeClasses. These metrics are available on GKE version 1.37 and later, and include the following.
+
+  * **Pending Pods** : `kubernetes.io/autoscaler/cluster_pending_pods_per_ccc` shows Pods the autoscaler is trying to schedule.
+  * **Provisioning attempts** : `kubernetes.io/autoscaler/cluster_node_provisioning_attempts_count_per_ccc` tracks how often autoscaler tries to add nodes.
+  * **Provisioning failures** : `kubernetes.io/autoscaler/cluster_node_provisioning_failed_attempts_count_per_ccc` shows failed node creation attempts and reasons.
+
+
+
+These metrics use the `k8s_entity` resource type, where the value of the `resource.labels.entity_type` field is `ComputeClass`. The value of the `resource.labels.entity_name` field indicates the ComputeClass name. If the `entity_name` field has an empty string (`""`) as the value, the metric is for cluster autoscaler decisions that aren't related to a ComputeClass.
+
+Use Metrics Explorer to filter and group results by the `entity_name` field. For example, use the `resource.labels.entity_name = ""` string to see activities that aren't related to ComputeClasses, and metric labels (like `reason`) to understand whether scale-up issues are specific to a ComputeClass.
+
+For query examples, see [Monitor node provisioning](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cluster-autoscaler-visibility#monitor_provisioning) and [Monitor pending Pod status](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cluster-autoscaler-visibility#monitor_pending_pod_status).
 
 ## View errors
 
@@ -381,6 +397,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

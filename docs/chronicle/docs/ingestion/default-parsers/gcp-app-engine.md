@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/gcp-app-engine/
 title: Collect Google App Engine logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:45:28.777698+00:00
+fetched_at: 2026-10-21T12:36:35.587399+00:00
 ---
 
 # Collect Google App Engine logs  |  Google Security Operations  |  Google Cloud Documentation

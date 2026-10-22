@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/config-connector/docs/how-to/install-manually/
 title: Install Config Connector manually \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:15.703579+00:00
+fetched_at: 2026-10-21T14:51:37.045184+00:00
 ---
 
 # Install Config Connector manually  |  Google Cloud Documentation
@@ -25,7 +25,7 @@ This page explains how to manually install Config Connector. Manual installation
 
 The instructions on this page are focused on installing Config Connector on Google Kubernetes Engine (GKE) clusters. For more information about the different installation options, see [Choosing an installation type](https://docs.cloud.google.com/config-connector/docs/concepts/installation-types).
 
-For most use cases, we recommended manually installing Config Connector in **namespaced mode**. The alternative is **cluster mode**. Namespaced mode is more scalable and offers better permission isolation, which is ideal for multi-tenant use cases or when managing resources from multiple projects.
+For most use cases, you should manually install Config Connector in **namespaced mode**. The alternative is **cluster mode**. Namespaced mode is more scalable and offers better permission isolation, which makes it the recommended mode for multi-tenant clusters or for managing resources across multiple projects. In multi-tenant environments, avoid cluster mode. Cluster mode uses a single, shared Identity and Access Management (IAM) service account. Any user who can create Config Connector resources in any namespace can act with the full IAM permissions of that service account.
 
 If you prefer a single, cluster-wide service account, instead follow the instructions for installing in **cluster mode**.
 
@@ -107,7 +107,7 @@ Replace NAMESPACE with a name for the namespace.
 
 ### Create an identity
 
-Create an Identity and Access Management (IAM) service account and create a binding between the IAM Service Account and the Config Connector Kubernetes service account by completing the following steps:
+Create an IAM service account and create a binding between the IAM Service Account and the Config Connector Kubernetes service account by completing the following steps:
 
   1. Create an IAM service account. If you have an existing service account, you can use it instead of creating a new service account. Use `gcloud` to create the service account by running the following command:
          
@@ -484,6 +484,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/samples/compute-stateful-instance-group-manager-disks-pic/
 title: Configure stateful disks individually for VMs in a MIG \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:51:10.731058+00:00
+fetched_at: 2026-10-22T05:50:27.721173+00:00
 ---
 
 # Configure stateful disks individually for VMs in a MIG  |  Compute Engine  |  Google Cloud Documentation

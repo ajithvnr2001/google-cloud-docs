@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/load-balancing/docs/security-bulletins/
 title: Security bulletins for Cloud Load Balancing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:44:55.848568+00:00
+fetched_at: 2026-10-21T15:10:16.575025+00:00
 ---
 
 # Security bulletins for Cloud Load Balancing  |  Google Cloud Documentation

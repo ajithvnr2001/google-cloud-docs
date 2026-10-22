@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/create-google-groups/
 title: Creating and searching for Google Groups \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:20.192308+00:00
+fetched_at: 2026-10-21T12:54:37.997781+00:00
 ---
 
 # Creating and searching for Google Groups  |  Cloud Identity  |  Google Cloud Documentation

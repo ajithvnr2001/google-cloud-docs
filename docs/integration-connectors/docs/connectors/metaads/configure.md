@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/metaads/configure/
 title: MetaAds \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:24.139449+00:00
+fetched_at: 2026-10-21T12:53:11.222641+00:00
 ---
 
 # MetaAds  |  Integration Connectors  |  Google Cloud Documentation

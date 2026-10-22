@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/investigate-vulnerabilities/
 title: Investigate vulnerabilities \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:44:42.941167+00:00
+fetched_at: 2026-10-21T12:39:23.951058+00:00
 ---
 
 # Investigate vulnerabilities  |  Artifact Analysis  |  Google Cloud Documentation

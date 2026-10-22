@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/pathways-on-cloud/porting-jax-workloads/
 title: Port JAX workloads to Pathways \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:35:01.225259+00:00
+fetched_at: 2026-10-21T14:29:12.869077+00:00
 ---
 
 # Port JAX workloads to Pathways  |  AI Hypercomputer  |  Google Cloud Documentation

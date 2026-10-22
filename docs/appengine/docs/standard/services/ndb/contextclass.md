@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/ndb/contextclass/
 title: NDB Context class \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:52.428085+00:00
+fetched_at: 2026-10-21T14:28:41.690433+00:00
 ---
 
 # NDB Context class  |  App Engine standard environment  |  Google Cloud Documentation

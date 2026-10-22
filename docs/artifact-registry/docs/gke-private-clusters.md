@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/gke-private-clusters/
 title: Configure restricted access for GKE private clusters \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:26.308967+00:00
+fetched_at: 2026-10-21T12:30:21.485502+00:00
 ---
 
 # Configure restricted access for GKE private clusters  |  Artifact Registry  |  Google Cloud Documentation

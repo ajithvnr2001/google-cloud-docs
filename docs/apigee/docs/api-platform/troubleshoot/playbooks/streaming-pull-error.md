@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/playbooks/streaming-pull-error/
 title: StreamingPull has a 100% error rate \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:49:22.430087+00:00
+fetched_at: 2026-10-21T14:27:23.805190+00:00
 ---
 
 # StreamingPull has a 100% error rate  |  Apigee  |  Google Cloud Documentation

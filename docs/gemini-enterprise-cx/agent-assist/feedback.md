@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/feedback/
 title: Send feedback to Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:44:11.623314+00:00
+fetched_at: 2026-10-21T12:54:43.707209+00:00
 ---
 
 # Send feedback to Agent Assist  |  Google Cloud Documentation

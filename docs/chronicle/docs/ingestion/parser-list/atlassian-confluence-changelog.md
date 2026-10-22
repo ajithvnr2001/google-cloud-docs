@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/atlassian-confluence-changelog/
 title: Change log for ATLASSIAN_CONFLUENCE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:09:39.109715+00:00
+fetched_at: 2026-10-21T14:46:16.235906+00:00
 ---
 
 # Change log for ATLASSIAN_CONFLUENCE  |  Google Security Operations  |  Google Cloud Documentation

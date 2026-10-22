@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/chat-transcripts-and-chat-history/
 title: Chat transcripts and chat history \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:16.473870+00:00
+fetched_at: 2026-10-21T12:29:40.424801+00:00
 ---
 
 # Chat transcripts and chat history  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

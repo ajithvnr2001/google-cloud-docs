@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/marketplace/docs/ratings-reviews/
 title: View product ratings, reviews, and compatibility badges \u00a0|\u00a0 Google Cloud Marketplace \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:19:46.925480+00:00
+fetched_at: 2026-10-21T15:12:17.198388+00:00
 ---
 
 # View product ratings, reviews, and compatibility badges  |  Google Cloud Marketplace  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/gc-cell-level/
 title: Simulate cell-level TTL \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:11.080266+00:00
+fetched_at: 2026-10-21T12:36:50.231368+00:00
 ---
 
 # Simulate cell-level TTL  |  Bigtable  |  Google Cloud Documentation

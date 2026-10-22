@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/getting-instance-information/
 title: Get instance information \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:15:15.920147+00:00
+fetched_at: 2026-10-21T12:52:08.063324+00:00
 ---
 
 # Get instance information  |  Filestore  |  Google Cloud Documentation

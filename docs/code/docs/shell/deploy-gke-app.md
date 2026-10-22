@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/deploy-gke-app/
 title: Create and deploy a containerized web app \u00a0|\u00a0 Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:48.180901+00:00
+fetched_at: 2026-10-21T14:20:51.870371+00:00
 ---
 
 # Create and deploy a containerized web app  |  Cloud Code for Cloud Shell  |  Google Cloud Documentation

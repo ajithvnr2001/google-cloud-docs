@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/export-to-alloydb/
 title: Export data to AlloyDB (reverse ETL) \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:03.046717+00:00
+fetched_at: 2026-10-21T14:06:52.701268+00:00
 ---
 
 # Export data to AlloyDB (reverse ETL)  |  BigQuery  |  Google Cloud Documentation

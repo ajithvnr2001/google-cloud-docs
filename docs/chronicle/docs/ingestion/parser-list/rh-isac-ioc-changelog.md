@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/rh-isac-ioc-changelog/
 title: Change log for RH_ISAC_IOC \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:13:17.675625+00:00
+fetched_at: 2026-10-21T14:43:28.118853+00:00
 ---
 
 # Change log for RH_ISAC_IOC  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/vai-set-up-translation/
 title: Set up a translation project \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:22:14.921917+00:00
+fetched_at: 2026-10-21T12:56:13.387779+00:00
 ---
 
 # Set up a translation project  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

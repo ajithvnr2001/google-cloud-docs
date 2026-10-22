@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/guardium/
 title: Collect IBM Guardium logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T19:53:20.579374+00:00
+fetched_at: 2026-10-21T12:27:00.959105+00:00
 ---
 
 # Collect IBM Guardium logs  |  Google Security Operations  |  Google Cloud Documentation

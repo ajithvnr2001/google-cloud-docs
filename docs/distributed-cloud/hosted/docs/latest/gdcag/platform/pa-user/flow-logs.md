@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/flow-logs/
 title: Manage flow logs \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:50.654435+00:00
+fetched_at: 2026-10-21T13:00:21.709648+00:00
 ---
 
 # Manage flow logs  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

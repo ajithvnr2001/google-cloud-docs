@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/v2/comparison/
 title: Compare Certificate Manager versions \u00a0|\u00a0 Certificate Manager (2nd gen) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:39:08.769759+00:00
+fetched_at: 2026-10-21T14:25:29.415193+00:00
 ---
 
 # Compare Certificate Manager versions  |  Certificate Manager (2nd gen)  |  Google Cloud Documentation

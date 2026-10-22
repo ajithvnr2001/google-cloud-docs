@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/samples/functions-firebase-remote-config/
 title: Firebase remote config \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:03:35.833325+00:00
+fetched_at: 2026-10-21T12:51:53.379510+00:00
 ---
 
 # Firebase remote config  |  Cloud Run functions  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/learn/
 title: Start learning about GKE \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:01:43.315584+00:00
+fetched_at: 2026-10-21T14:53:14.509523+00:00
 ---
 
 # Start learning about GKE  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -38,7 +38,7 @@ GKE relies on and can be used with many other Google Cloud services, from IAM fo
 
 GKE is based on Kubernetes, and Kubernetes is a container orchestration platform. If you're completely new to the world of containerized applications, start here!
 
-  * [Kubernetes comic](https://cloud.google.com/kubernetes-engine/kubernetes-comic)
+  * [Kubernetes comic](https://docs.cloud.google.com/kubernetes-engine/kubernetes-comic)
   * [What are containers?](https://cloud.google.com/learn/what-are-containers)
   * [Tutorial: Introducing containers](https://docs.cloud.google.com/kubernetes-engine/docs/learn/containers): Learn about containers and container orchestration with a simple example application deployed on GKE
 
@@ -49,7 +49,7 @@ GKE is based on Kubernetes, and Kubernetes is a container orchestration platform
 A lot of the documentation on this site assumes that you're already familiar with basic Kubernetes concepts and terminology. If you're not, the following resources can help you get started:
 
   * [Start learning about Kubernetes](https://docs.cloud.google.com/kubernetes-engine/docs/learn/get-started-with-kubernetes): A quick overview of Kubernetes fundamentals, with links to recommended reading.
-  * [Kubernetes comic](https://cloud.google.com/kubernetes-engine/kubernetes-comic)
+  * [Kubernetes comic](https://docs.cloud.google.com/kubernetes-engine/kubernetes-comic)
   * [Kubernetes.io](https://kubernetes.io/): The official Kubernetes website, with tutorials, how-tos, reference docs, and more.
   * [Video playlist: Learn Kubernetes with Google](https://www.youtube.com/playlist?list=PLxNYxgaZ8Rscf-XJ5VfXgbDAk1vL4xaMl)
 
@@ -95,6 +95,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/environments/case-federation/
 title: Configure case federation for SOAR standalone \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:15:42.621904+00:00
+fetched_at: 2026-10-21T14:21:24.855649+00:00
 ---
 
 # Configure case federation for SOAR standalone  |  Google Security Operations  |  Google Cloud Documentation

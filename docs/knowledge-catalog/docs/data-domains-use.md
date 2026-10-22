@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/data-domains-use/
 title: Use data domains \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:37:35.229489+00:00
+fetched_at: 2026-10-21T12:29:27.615972+00:00
 ---
 
 # Use data domains  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -159,6 +159,43 @@ Save the request body in a file named `request.json`, and execute the following 
 
 You should receive a successful status code (2xx) and an empty response.
 
+## Retrieve context for data domains
+
+You can use the [`lookupContext`](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations/lookupContext) method to ground AI agents in the business context captured by your data domains. The `lookupContext` method supports data domains in the following ways:
+
+  * **Context for a data domain.** You can pass the entry that represents a data domain in the `resources` list. The response contains the metadata of the data domain, such as its description and the parent data domains in the domain hierarchy.
+  * **Data domain membership of data assets.** When you retrieve context for a data asset that is included in one or more data domains, the response contains a `dataDomains` field that lists the data domains the asset belongs to, starting with the most specific domain and ascending to the top-level domain.
+
+
+
+To retrieve context for a data domain, send the following request:
+    
+    
+    curl --request POST \
+      'https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION:lookupContext' \
+      -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+      -H 'Content-Type: application/json' \
+      -d '{
+        "resources": [
+          "projects/PROJECT_ID/locations/LOCATION/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION/dataDomains/DATA_DOMAIN_ID"
+        ],
+        "options": {
+          "format": "yaml"
+        }
+      }'
+    
+
+Replace the following:
+
+  * PROJECT_ID: the ID of the project that contains the data domain.
+  * PROJECT_NUMBER: the number of the project that contains the data domain.
+  * LOCATION: the location of the data domain.
+  * DATA_DOMAIN_ID: the ID of the data domain.
+
+
+
+For more information about the `lookupContext` method, see [Retrieve context for data assets](https://docs.cloud.google.com/knowledge-catalog/docs/retrieve-data-context).
+
 ## Limitations
 
 When you search for resources outside the domain context, for example when using a global search, the domain's discoverability permissions don't apply. You only see resources that you have access to in the underlying system, such as BigQuery.
@@ -182,6 +219,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

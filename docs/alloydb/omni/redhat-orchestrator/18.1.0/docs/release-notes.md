@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18.1.0/docs/release-notes/
 title: AlloyDB Omni (RPM orchestrator) version 18.1.0 release notes \u00a0|\u00a0 AlloyDB Omni using the RPM orchestrator: 18.1.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:34:34.871543+00:00
+fetched_at: 2026-10-21T14:56:23.510774+00:00
 ---
 
 # AlloyDB Omni (RPM orchestrator) version 18.1.0 release notes  |  AlloyDB Omni using the RPM orchestrator: 18.1.0  |  Google Cloud Documentation
@@ -29,6 +29,41 @@ This page contains release notes for features and updates to AlloyDB Omni.
 You can see the latest product updates for all of Google Cloud on the [ Google Cloud](https://docs.cloud.google.com/release-notes) page, browse and filter all release notes in the [Google Cloud console](https://console.cloud.google.com/release-notes), or programmatically access release notes in [BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_cloud_release_notes&t=release_notes&page=table). 
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/alloydbomni-release-notes.xml) directly. 
+
+## October 14, 2026
+
+Announcement
+
+AlloyDB Omni using the Red Hat RPM orchestrator 1.0.1 is generally available ([GA](https://docs.cloud.google.com/products#product-launch-stages)) for AlloyDB Omni version 18.4.0. It includes the following:
+
+  * Support for [PostgreSQL version 18.4](https://www.postgresql.org/docs/release/18.4/).
+  * Critical security patches, internal stability improvements, and bug fixes.
+  * A [shared responsibility matrix](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/shared-responsibility) that clarifies the operational boundaries between you and Google Cloud when deploying AlloyDB Omni using the Red Hat RPM orchestrator.
+
+
+
+Security
+
+Fixes for the following vulnerabilities are available for version 18.4.0:
+
+  * [CVE-2026-19385](https://nvd.nist.gov/vuln/detail/CVE-2026-19385)
+  * [CVE-2026-18408](https://nvd.nist.gov/vuln/detail/CVE-2026-18408)
+  * [CVE-2026-16239](https://nvd.nist.gov/vuln/detail/CVE-2026-16239)
+  * [CVE-2026-15742](https://nvd.nist.gov/vuln/detail/CVE-2026-15742)
+  * [CVE-2026-15741](https://nvd.nist.gov/vuln/detail/CVE-2026-15741)
+  * [CVE-2026-14680](https://nvd.nist.gov/vuln/detail/CVE-2026-14680)
+  * [CVE-2026-14679](https://nvd.nist.gov/vuln/detail/CVE-2026-14679)
+  * [CVE-2026-14677](https://nvd.nist.gov/vuln/detail/CVE-2026-14677)
+  * [CVE-2026-14671](https://nvd.nist.gov/vuln/detail/CVE-2026-14671)
+  * [CVE-2026-14670](https://nvd.nist.gov/vuln/detail/CVE-2026-14670)
+  * [CVE-2026-14669](https://nvd.nist.gov/vuln/detail/CVE-2026-14669)
+  * [CVE-2026-14668](https://nvd.nist.gov/vuln/detail/CVE-2026-14668)
+  * [CVE-2026-14664](https://nvd.nist.gov/vuln/detail/CVE-2026-14664)
+  * [CVE-2026-14662](https://nvd.nist.gov/vuln/detail/CVE-2026-14662)
+  * [CVE-2026-6471](https://nvd.nist.gov/vuln/detail/CVE-2026-6471)
+  * [CVE-2026-6464](https://nvd.nist.gov/vuln/detail/CVE-2026-6464)
+
+
 
 ## September 08, 2026
 
@@ -94,6 +129,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-09 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-09 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

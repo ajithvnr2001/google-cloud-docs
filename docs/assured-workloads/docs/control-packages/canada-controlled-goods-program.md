@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/control-packages/canada-controlled-goods-program/
 title: Data Boundary for Canada Controlled Goods Program (CGP) \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:34:46.617814+00:00
+fetched_at: 2026-10-21T14:25:40.250061+00:00
 ---
 
 # Data Boundary for Canada Controlled Goods Program (CGP)  |  Assured Workloads  |  Google Cloud Documentation

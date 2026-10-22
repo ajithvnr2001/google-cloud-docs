@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/using-memorystore/
 title: Caching data with Memorystore \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:43.268746+00:00
+fetched_at: 2026-10-21T12:30:55.367917+00:00
 ---
 
 # Caching data with Memorystore  |  App Engine standard environment  |  Google Cloud Documentation

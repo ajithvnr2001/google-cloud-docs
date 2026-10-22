@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/platform-logs/
 title: Use platform logs \u00a0|\u00a0 App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:09:26.814046+00:00
+fetched_at: 2026-10-21T12:30:00.869534+00:00
 ---
 
 # Use platform logs  |  App Lifecycle Manager  |  Google Cloud Documentation

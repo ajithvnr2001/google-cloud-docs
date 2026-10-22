@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/vpcsc/
 title: Protecting data with service perimeters \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:25:55.059030+00:00
+fetched_at: 2026-10-21T12:52:53.297572+00:00
 ---
 
 # Protecting data with service perimeters  |  Cloud Healthcare API  |  Google Cloud Documentation

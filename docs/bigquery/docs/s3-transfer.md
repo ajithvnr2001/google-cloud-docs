@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/s3-transfer/
 title: Load Amazon S3 data into BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:14:55.555155+00:00
+fetched_at: 2026-10-21T12:36:33.652471+00:00
 ---
 
 # Load Amazon S3 data into BigQuery  |  Google Cloud Documentation

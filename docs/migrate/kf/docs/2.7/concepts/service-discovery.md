@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.7/concepts/service-discovery/
 title: Service discovery \u00a0|\u00a0 Kf 2.7 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:45:55.286604+00:00
+fetched_at: 2026-10-21T15:17:45.698079+00:00
 ---
 
 # Service discovery  |  Kf 2.7  |  Google Cloud Documentation

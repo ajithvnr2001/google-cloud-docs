@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/vandyke_sftp_changelog/
 title: Change log for VANDYKE_SFTP \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:12:19.374861+00:00
+fetched_at: 2026-10-21T14:43:24.807846+00:00
 ---
 
 # Change log for VANDYKE_SFTP  |  Google Security Operations  |  Google Cloud Documentation

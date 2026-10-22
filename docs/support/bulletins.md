@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/support/bulletins/
 title: Security bulletins \u00a0|\u00a0 Cloud Customer Care \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:01.979811+00:00
+fetched_at: 2026-10-21T14:35:23.861030+00:00
 ---
 
 # Security bulletins  |  Cloud Customer Care  |  Google Cloud Documentation
@@ -26,6 +26,37 @@ The following security bulletins are related to Google Cloud products.
 
 [ Use this XML feed to subscribe to security bulletins for this page. ![Subscribe](https://docs.cloud.google.com/static/docs/images/feed-icon.png)](https://cloud.google.com/feeds/google-cloud-security-bulletins.xml)
 
+## GCP-2026-070
+
+**Published:** 2026-10-21
+
+### Description
+
+Description | Severity | Notes  
+---|---|---  
+Two remote code execution vulnerabilities were found in the [open-source PHP language](https://www.php.net/archive/2026.php#2026-10-20-1). While Google Cloud itself is not vulnerable, users of this language running on Google Cloud may be vulnerable. The following language versions are affected by this vulnerability:
+
+  * All PHP versions between 5.4 and 8.5
+
+The following framework versions include fixes for this vulnerability:
+
+  * PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35
+
+
+
+#### What should I do?
+
+Customers should take immediate action to protect their workloads by redeploying their workloads with updated dependencies. Some workloads may be automatically patched and updated to the latest PHP if they are on Google App Engine Standard or one of Cloud Run, Cloud Run functions with automatic updates enabled. See the [blog post](https://cloud.google.com/blog/products/identity-security/responding-to-core-php-vulnerabilities-cve-2026-109618-cve-2026-109619) for more information.
+
+#### How can Google help?
+
+Customers using Artifact Analysis receive notifications of these vulnerabilities on both new and existing artifacts to help them identify at-risk workloads. | Critical | 
+
+  * [CVE-2026-109618](https://www.cve.org/CVERecord?id=CVE-2026-109618)
+  * [CVE-2026-109619](https://www.cve.org/CVERecord?id=CVE-2026-109619)
+
+  
+  
 ## GCP-2026-069
 
 **Published:** 2026-10-19
@@ -7362,6 +7393,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

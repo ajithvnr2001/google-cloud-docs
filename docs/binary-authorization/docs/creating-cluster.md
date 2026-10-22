@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/creating-cluster/
 title: Create a cluster \u00a0|\u00a0 Binary Authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:10.470028+00:00
+fetched_at: 2026-10-21T14:11:39.504303+00:00
 ---
 
 # Create a cluster  |  Binary Authorization  |  Google Cloud Documentation

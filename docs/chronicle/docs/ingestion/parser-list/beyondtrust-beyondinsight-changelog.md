@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/beyondtrust-beyondinsight-changelog/
 title: Change log for BEYONDTRUST_BEYONDINSIGHT \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:29:00.291639+00:00
+fetched_at: 2026-10-21T14:51:54.262481+00:00
 ---
 
 # Change log for BEYONDTRUST_BEYONDINSIGHT  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/analytics/using-data-capture/
 title: Collecting custom data with the DataCapture policy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:07:09.169336+00:00
+fetched_at: 2026-10-21T12:30:13.028185+00:00
 ---
 
 # Collecting custom data with the DataCapture policy  |  Apigee  |  Google Cloud Documentation

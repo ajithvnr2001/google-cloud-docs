@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/citrix-analytics-changelog/
 title: Change log for CITRIX_ANALYTICS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:59:37.822314+00:00
+fetched_at: 2026-10-21T14:44:43.088499+00:00
 ---
 
 # Change log for CITRIX_ANALYTICS  |  Google Security Operations  |  Google Cloud Documentation

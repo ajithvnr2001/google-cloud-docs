@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/flow/
 title: Flows \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:38.003418+00:00
+fetched_at: 2026-10-21T12:55:56.000809+00:00
 ---
 
 # Flows  |  Dialogflow CX  |  Google Cloud Documentation

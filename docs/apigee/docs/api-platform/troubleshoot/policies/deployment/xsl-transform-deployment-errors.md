@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/xsl-transform-deployment-errors/
 title: XSL Transform policy deployment error troubleshooting \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:00:05.652422+00:00
+fetched_at: 2026-10-21T12:35:57.974418+00:00
 ---
 
 # XSL Transform policy deployment error troubleshooting  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/release-notes/
 title: Artifact Registry release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:37:02.811237+00:00
+fetched_at: 2026-10-21T14:53:16.088028+00:00
 ---
 
 # Artifact Registry release notes  |  Google Cloud Documentation

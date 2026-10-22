@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/create-instance-write-data-cbt-cli/
 title: Quickstart: Create an instance and write data with the cbt CLI \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:07.047344+00:00
+fetched_at: 2026-10-21T12:37:40.775710+00:00
 ---
 
 # Quickstart: Create an instance and write data with the cbt CLI  |  Bigtable  |  Google Cloud Documentation

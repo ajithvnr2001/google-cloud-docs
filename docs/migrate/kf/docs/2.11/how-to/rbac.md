@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.11/how-to/rbac/
 title: Configure role-based access control \u00a0|\u00a0 Kf 2.11 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:33.084514+00:00
+fetched_at: 2026-10-21T15:13:09.744875+00:00
 ---
 
 # Configure role-based access control  |  Kf 2.11  |  Google Cloud Documentation

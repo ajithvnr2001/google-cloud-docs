@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/domains/docs/reset-authorization-code/
 title: Get or reset an authorization code \u00a0|\u00a0 Cloud Domains \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:33:32.295860+00:00
+fetched_at: 2026-10-21T14:06:37.386311+00:00
 ---
 
 # Get or reset an authorization code  |  Cloud Domains  |  Google Cloud Documentation

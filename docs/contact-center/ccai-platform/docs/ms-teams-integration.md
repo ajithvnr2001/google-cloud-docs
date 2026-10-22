@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/ms-teams-integration/
 title: Microsoft Teams \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:29.402769+00:00
+fetched_at: 2026-10-21T12:29:37.660437+00:00
 ---
 
 # Microsoft Teams  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

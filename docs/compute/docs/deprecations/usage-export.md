@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/deprecations/usage-export/
 title: Compute Engine usage report deprecation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:15.825289+00:00
+fetched_at: 2026-10-21T12:39:34.310976+00:00
 ---
 
 # Compute Engine usage report deprecation  |  Google Cloud Documentation

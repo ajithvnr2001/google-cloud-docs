@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastore/docs/samples/datastore-quickstart-python/
 title: NDB Context Usage \u00a0|\u00a0 Firestore in Datastore mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:28.271416+00:00
+fetched_at: 2026-10-22T05:42:08.282372+00:00
 ---
 
 # NDB Context Usage  |  Firestore in Datastore mode  |  Google Cloud Documentation

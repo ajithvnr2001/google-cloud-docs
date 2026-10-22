@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/bulk-create-instances-in-mig/
 title: Create a MIG that uses the bulk mode \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:23:25.094868+00:00
+fetched_at: 2026-10-21T14:19:29.925509+00:00
 ---
 
 # Create a MIG that uses the bulk mode  |  Compute Engine  |  Google Cloud Documentation

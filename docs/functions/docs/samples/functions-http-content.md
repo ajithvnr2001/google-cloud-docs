@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/samples/functions-http-content/
 title: HTTP request body \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:03:37.013642+00:00
+fetched_at: 2026-10-21T12:52:03.206194+00:00
 ---
 
 # HTTP request body  |  Cloud Run functions  |  Google Cloud Documentation

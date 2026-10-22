@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/aws/reference/versioning/
 title: Versioning \u00a0|\u00a0 GKE on AWS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:37:49.837985+00:00
+fetched_at: 2026-10-21T15:02:30.159715+00:00
 ---
 
 # Versioning  |  GKE on AWS  |  Google Cloud Documentation

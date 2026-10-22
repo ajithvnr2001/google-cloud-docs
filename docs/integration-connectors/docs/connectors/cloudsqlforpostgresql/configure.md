@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/cloudsqlforpostgresql/configure/
 title: Cloud SQL for PostgreSQL \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:13.333409+00:00
+fetched_at: 2026-10-21T12:52:47.264710+00:00
 ---
 
 # Cloud SQL for PostgreSQL  |  Integration Connectors  |  Google Cloud Documentation

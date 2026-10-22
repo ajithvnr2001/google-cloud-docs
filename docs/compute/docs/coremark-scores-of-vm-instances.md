@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/coremark-scores-of-vm-instances/
 title: Benchmark scores for compute instances \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:38.783993+00:00
+fetched_at: 2026-10-21T14:24:41.634828+00:00
 ---
 
 # Benchmark scores for compute instances  |  Compute Engine  |  Google Cloud Documentation

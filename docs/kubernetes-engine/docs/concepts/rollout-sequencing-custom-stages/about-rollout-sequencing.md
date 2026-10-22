@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/rollout-sequencing-custom-stages/about-rollout-sequencing/
 title: About rollout sequencing with custom stages \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:29:06.839318+00:00
+fetched_at: 2026-10-21T15:00:34.931285+00:00
 ---
 
 # About rollout sequencing with custom stages  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/mainframe-assessment-tool/docs/configure-your-project/
 title: Configure your Google Cloud project for Mainframe Assessment Tool \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:15.483722+00:00
+fetched_at: 2026-10-21T15:10:44.612637+00:00
 ---
 
 # Configure your Google Cloud project for Mainframe Assessment Tool  |  Google Cloud Documentation

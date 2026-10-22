@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/verba-rec-changelog/
 title: Change log for VERBA_REC \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:13:36.990095+00:00
+fetched_at: 2026-10-21T14:43:23.650651+00:00
 ---
 
 # Change log for VERBA_REC  |  Google Security Operations  |  Google Cloud Documentation

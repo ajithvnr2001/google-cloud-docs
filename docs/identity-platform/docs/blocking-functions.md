@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/blocking-functions/
 title: Customize the authentication flow using blocking functions \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:20.082574+00:00
+fetched_at: 2026-10-21T12:53:27.521033+00:00
 ---
 
 # Customize the authentication flow using blocking functions  |  Identity Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/amazon-macie/
 title: Integrate Amazon Macie with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:38:48.652962+00:00
+fetched_at: 2026-10-21T14:11:25.703819+00:00
 ---
 
 # Integrate Amazon Macie with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

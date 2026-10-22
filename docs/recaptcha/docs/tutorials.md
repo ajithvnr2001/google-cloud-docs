@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recaptcha/docs/tutorials/
 title: Tutorials \u00a0|\u00a0 Google Cloud Fraud Defense \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:49:04.358581+00:00
+fetched_at: 2026-10-21T14:58:17.579388+00:00
 ---
 
 # Tutorials  |  Google Cloud Fraud Defense  |  Google Cloud Documentation

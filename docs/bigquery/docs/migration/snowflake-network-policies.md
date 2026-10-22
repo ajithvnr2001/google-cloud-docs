@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/migration/snowflake-network-policies/
 title: Configure network policies for Snowflake transfers \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:29:36.349615+00:00
+fetched_at: 2026-10-21T12:39:21.630537+00:00
 ---
 
 # Configure network policies for Snowflake transfers  |  BigQuery  |  Google Cloud Documentation

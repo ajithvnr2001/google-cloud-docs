@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/marketplace/marketplace-connector-overview/
 title: Marketplace connectors overview \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T17:04:35.318006+00:00
+fetched_at: 2026-10-21T14:26:28.106148+00:00
 ---
 
 # Marketplace connectors overview  |  Application Integration  |  Google Cloud Documentation

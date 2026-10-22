@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-agent-kit/resources/
 title: Resources \u00a0|\u00a0 Google Cloud Data Agent Kit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:30:29.664855+00:00
+fetched_at: 2026-10-22T05:40:25.591084+00:00
 ---
 
 # Resources  |  Google Cloud Data Agent Kit  |  Google Cloud Documentation

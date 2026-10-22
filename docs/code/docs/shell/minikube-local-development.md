@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/minikube-local-development/
 title: Use minikube for local development in Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:16:46.795036+00:00
+fetched_at: 2026-10-21T14:20:20.557162+00:00
 ---
 
 # Use minikube for local development in Cloud Code for Cloud Shell  |  Google Cloud Documentation

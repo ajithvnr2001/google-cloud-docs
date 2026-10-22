@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/how-requests-are-routed/
 title: How requests are routed \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:02:25.408558+00:00
+fetched_at: 2026-10-21T12:30:12.331995+00:00
 ---
 
 # How requests are routed  |  App Engine flexible environment  |  Google Cloud Documentation

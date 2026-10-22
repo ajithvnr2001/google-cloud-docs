@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/archer-irm/
 title: Collect Archer IRM logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:20:03.637391+00:00
+fetched_at: 2026-10-21T12:27:35.945548+00:00
 ---
 
 # Collect Archer IRM logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/connect-existing-data-store/
 title: Connect a data store to app and authorize Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:01:03.087783+00:00
+fetched_at: 2026-10-21T12:42:59.621046+00:00
 ---
 
 # Connect a data store to app and authorize Gemini Enterprise  |  Google Cloud Documentation

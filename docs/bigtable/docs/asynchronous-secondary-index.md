@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/asynchronous-secondary-index/
 title: Create an asynchronous secondary index \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:10.861437+00:00
+fetched_at: 2026-10-21T12:37:58.132000+00:00
 ---
 
 # Create an asynchronous secondary index  |  Bigtable  |  Google Cloud Documentation

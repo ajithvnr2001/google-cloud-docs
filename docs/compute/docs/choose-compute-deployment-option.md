@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/choose-compute-deployment-option/
 title: Choose a Compute Engine deployment strategy for your workload \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:42.820236+00:00
+fetched_at: 2026-10-21T14:24:41.932115+00:00
 ---
 
 # Choose a Compute Engine deployment strategy for your workload  |  Google Cloud Documentation

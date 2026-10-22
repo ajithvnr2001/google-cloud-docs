@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/deprecations/serial-console-ssh-host-key-endpoint/
 title: Serial console SSH host key endpoint deprecation \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:15.691614+00:00
+fetched_at: 2026-10-21T12:40:16.255821+00:00
 ---
 
 # Serial console SSH host key endpoint deprecation  |  Compute Engine  |  Google Cloud Documentation

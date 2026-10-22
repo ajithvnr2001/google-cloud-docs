@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-permissions/securesourcemanager/
 title: Secure Source Manager roles and permissions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:09:38.053333+00:00
+fetched_at: 2026-10-21T14:30:14.137346+00:00
 ---
 
 # Secure Source Manager roles and permissions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

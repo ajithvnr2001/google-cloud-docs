@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/tanium-integrity-monitor/
 title: Collect Tanium Integrity Monitor logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:26:56.837187+00:00
+fetched_at: 2026-10-21T12:39:37.316074+00:00
 ---
 
 # Collect Tanium Integrity Monitor logs  |  Google Security Operations  |  Google Cloud Documentation

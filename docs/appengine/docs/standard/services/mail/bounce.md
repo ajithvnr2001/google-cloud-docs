@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/mail/bounce/
 title: Receiving bounce notification \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:49.902721+00:00
+fetched_at: 2026-10-21T14:19:39.891402+00:00
 ---
 
 # Receiving bounce notification  |  App Engine standard environment  |  Google Cloud Documentation

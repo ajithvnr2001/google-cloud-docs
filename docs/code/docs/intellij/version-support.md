@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/intellij/version-support/
 title: IntelliJ version support \u00a0|\u00a0 Cloud Code for IntelliJ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:18:01.177962+00:00
+fetched_at: 2026-10-21T12:40:59.339290+00:00
 ---
 
 # IntelliJ version support  |  Cloud Code for IntelliJ  |  Google Cloud Documentation

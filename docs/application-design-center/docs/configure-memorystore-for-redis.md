@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/configure-memorystore-for-redis/
 title: Configure a Memorystore for Redis instance \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T13:14:46.253328+00:00
+fetched_at: 2026-10-21T12:30:06.938570+00:00
 ---
 
 # Configure a Memorystore for Redis instance  |  Application Design Center  |  Google Cloud Documentation

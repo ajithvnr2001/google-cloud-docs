@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/introduction/
 title: Introduction to Policy Playbooks \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:42:52.122155+00:00
+fetched_at: 2026-10-21T14:19:02.698877+00:00
 ---
 
 # Introduction to Policy Playbooks  |  Apigee  |  Google Cloud Documentation

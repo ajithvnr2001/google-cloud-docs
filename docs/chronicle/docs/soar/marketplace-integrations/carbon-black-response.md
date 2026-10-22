@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/carbon-black-response/
 title: Carbon Black Response \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:32:53.434592+00:00
+fetched_at: 2026-10-21T14:20:24.632590+00:00
 ---
 
 # Carbon Black Response  |  Google Security Operations  |  Google Cloud Documentation

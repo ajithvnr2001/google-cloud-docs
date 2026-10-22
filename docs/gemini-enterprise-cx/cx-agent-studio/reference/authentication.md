@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/reference/authentication/
 title: Authenticate to CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:22:27.533790+00:00
+fetched_at: 2026-10-21T12:55:07.343888+00:00
 ---
 
 # Authenticate to CX Agent Studio  |  Google Cloud Documentation

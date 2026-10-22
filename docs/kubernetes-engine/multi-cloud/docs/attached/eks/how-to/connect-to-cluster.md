@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/eks/how-to/connect-to-cluster/
 title: Connect to your EKS attached cluster \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:44:19.751788+00:00
+fetched_at: 2026-10-21T15:01:53.963495+00:00
 ---
 
 # Connect to your EKS attached cluster  |  GKE attached clusters  |  Google Cloud Documentation

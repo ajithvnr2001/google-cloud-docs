@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/preprocess-overview/
 title: Feature preprocessing overview \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:05:24.811164+00:00
+fetched_at: 2026-10-21T12:36:44.821528+00:00
 ---
 
 # Feature preprocessing overview  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/onelogin-sso/
 title: Collect OneLogin by One Identity logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:18.167391+00:00
+fetched_at: 2026-10-21T14:18:52.375718+00:00
 ---
 
 # Collect OneLogin by One Identity logs  |  Google Security Operations  |  Google Cloud Documentation

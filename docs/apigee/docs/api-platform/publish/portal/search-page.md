@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/publish/portal/search-page/
 title: Creating a custom search page \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T06:27:25.671459+00:00
+fetched_at: 2026-10-21T14:28:58.930807+00:00
 ---
 
 # Creating a custom search page  |  Apigee  |  Google Cloud Documentation

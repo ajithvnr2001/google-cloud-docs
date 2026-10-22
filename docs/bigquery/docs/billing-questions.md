@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/billing-questions/
 title: Billing questions \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:03:07.854140+00:00
+fetched_at: 2026-10-21T12:40:50.485746+00:00
 ---
 
 # Billing questions  |  BigQuery  |  Google Cloud Documentation

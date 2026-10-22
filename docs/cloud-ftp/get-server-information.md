@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-ftp/get-server-information/
 title: Get SFTP server information \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:18:07.153486+00:00
+fetched_at: 2026-10-21T14:22:32.368625+00:00
 ---
 
 # Get SFTP server information  |  Google Cloud Documentation

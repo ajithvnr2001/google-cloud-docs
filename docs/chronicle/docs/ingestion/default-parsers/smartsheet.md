@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/smartsheet/
 title: Collect Smartsheet logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:12:13.130144+00:00
+fetched_at: 2026-10-21T12:37:55.180993+00:00
 ---
 
 # Collect Smartsheet logs  |  Google Security Operations  |  Google Cloud Documentation

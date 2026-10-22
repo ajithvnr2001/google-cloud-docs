@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/creating-test-table/
 title: Create a test table \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:20.162186+00:00
+fetched_at: 2026-10-21T12:37:19.046886+00:00
 ---
 
 # Create a test table  |  Bigtable  |  Google Cloud Documentation

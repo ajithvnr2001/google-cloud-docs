@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/setup/
 title: Setting up the Groups API \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:43:20.615278+00:00
+fetched_at: 2026-10-21T12:54:44.343855+00:00
 ---
 
 # Setting up the Groups API  |  Cloud Identity  |  Google Cloud Documentation

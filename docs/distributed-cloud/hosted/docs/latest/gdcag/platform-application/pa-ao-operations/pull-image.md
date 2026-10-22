@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/pull-image/
 title: Pull an image with Docker \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:45:32.424244+00:00
+fetched_at: 2026-10-21T12:59:16.204005+00:00
 ---
 
 # Pull an image with Docker  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

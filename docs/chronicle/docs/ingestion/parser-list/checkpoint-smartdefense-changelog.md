@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/checkpoint-smartdefense-changelog/
 title: Change log for CHECKPOINT_SMARTDEFENSE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:48:51.511162+00:00
+fetched_at: 2026-10-21T14:44:57.638676+00:00
 ---
 
 # Change log for CHECKPOINT_SMARTDEFENSE  |  Google Security Operations  |  Google Cloud Documentation

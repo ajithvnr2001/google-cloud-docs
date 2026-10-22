@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/intel471-watcher-alerts-changelog/
 title: Change log for INTEL471_WATCHER_ALERTS \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:08:03.264776+00:00
+fetched_at: 2026-10-21T14:43:41.556872+00:00
 ---
 
 # Change log for INTEL471_WATCHER_ALERTS  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/nat/docs/audit-logging/
 title: Cloud NAT audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:53.708142+00:00
+fetched_at: 2026-10-21T15:14:54.607199+00:00
 ---
 
 # Cloud NAT audit logging  |  Google Cloud Documentation

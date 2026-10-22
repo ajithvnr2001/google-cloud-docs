@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/gcp-tasks/configure-dataflow-createjob-task/
 title: Dataflow - Create Job task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:40.512063+00:00
+fetched_at: 2026-10-21T12:30:51.938397+00:00
 ---
 
 # Dataflow - Create Job task  |  Application Integration  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/buildpacks/build-application/
 title: Build an application with buildpacks \u00a0|\u00a0 Buildpacks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:27:04.872070+00:00
+fetched_at: 2026-10-21T14:07:57.469190+00:00
 ---
 
 # Build an application with buildpacks  |  Buildpacks  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/fidelis-network/
 title: Collect Fidelis Network logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T17:19:50.409787+00:00
+fetched_at: 2026-10-21T12:26:47.104775+00:00
 ---
 
 # Collect Fidelis Network logs  |  Google Security Operations  |  Google Cloud Documentation

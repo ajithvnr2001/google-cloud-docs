@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/data-processing-pipeline/
 title: Manage data processing pipelines \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:04.645914+00:00
+fetched_at: 2026-10-21T12:36:56.954364+00:00
 ---
 
 # Manage data processing pipelines  |  Google Security Operations  |  Google Cloud Documentation

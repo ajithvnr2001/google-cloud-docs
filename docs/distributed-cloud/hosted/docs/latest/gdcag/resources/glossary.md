@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/glossary/
 title: Google Distributed Cloud air-gapped glossary \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:13:18.867842+00:00
+fetched_at: 2026-10-21T12:59:57.890659+00:00
 ---
 
 # Google Distributed Cloud air-gapped glossary  |  Google Cloud Documentation

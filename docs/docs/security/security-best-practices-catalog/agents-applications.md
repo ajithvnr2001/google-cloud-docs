@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/security-best-practices-catalog/agents-applications/
 title: Agents and application controls \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:22:40.774606+00:00
+fetched_at: 2026-10-21T14:06:24.092905+00:00
 ---
 
 # Agents and application controls  |  Security  |  Google Cloud Documentation

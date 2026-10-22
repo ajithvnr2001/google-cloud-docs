@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/managing-tables/
 title: Create and manage tables \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:10.335437+00:00
+fetched_at: 2026-10-21T14:10:04.469216+00:00
 ---
 
 # Create and manage tables  |  Bigtable  |  Google Cloud Documentation

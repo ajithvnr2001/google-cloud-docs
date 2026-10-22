@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/about-instance-flexibility/
 title: About instance flexibility in MIGs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:09:44.049634+00:00
+fetched_at: 2026-10-21T14:19:32.021901+00:00
 ---
 
 # About instance flexibility in MIGs  |  Compute Engine  |  Google Cloud Documentation

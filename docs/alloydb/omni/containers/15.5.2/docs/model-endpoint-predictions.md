@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/15.5.2/docs/model-endpoint-predictions/
 title: Invoke predictions with model endpoint management \u00a0|\u00a0 AlloyDB Omni for containers: 15.5.2 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:38:16.064669+00:00
+fetched_at: 2026-10-21T15:27:25.592381+00:00
 ---
 
 # Invoke predictions with model endpoint management  |  AlloyDB Omni for containers: 15.5.2  |  Google Cloud Documentation

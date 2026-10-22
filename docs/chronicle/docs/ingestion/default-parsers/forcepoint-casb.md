@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/forcepoint-casb/
 title: Collect Forcepoint ONE CASB logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:34:41.601817+00:00
+fetched_at: 2026-10-21T14:11:35.150668+00:00
 ---
 
 # Collect Forcepoint ONE CASB logs  |  Google Security Operations  |  Google Cloud Documentation

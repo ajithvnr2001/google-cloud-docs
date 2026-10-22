@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/graph-modeler/
 title: Use the BigQuery Graph visual modeler \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:19.609945+00:00
+fetched_at: 2026-10-21T14:19:42.361631+00:00
 ---
 
 # Use the BigQuery Graph visual modeler  |  Google Cloud Documentation

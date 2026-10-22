@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/iam/connect-identity/
 title: Connect to an identity provider \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:37.624564+00:00
+fetched_at: 2026-10-21T12:58:50.232734+00:00
 ---
 
 # Connect to an identity provider  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

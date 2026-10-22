@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/job-functions/billing/
 title: IAM roles for billing-related job functions \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:10:07.934782+00:00
+fetched_at: 2026-10-21T12:53:56.761166+00:00
 ---
 
 # IAM roles for billing-related job functions  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

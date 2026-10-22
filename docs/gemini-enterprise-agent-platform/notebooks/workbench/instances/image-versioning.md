@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/notebooks/workbench/instances/image-versioning/
 title: Image versioning and lifecycle \u00a0|\u00a0 Gemini Enterprise Agent Platform Workbench \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:27:36.654288+00:00
+fetched_at: 2026-10-21T12:53:52.590420+00:00
 ---
 
 # Image versioning and lifecycle  |  Gemini Enterprise Agent Platform Workbench  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/samples/functions-cloudevent-storage-unit-test/
 title: Cloud Storage (2nd Gen) Unit Test \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:12:42.184733+00:00
+fetched_at: 2026-10-21T12:51:45.111710+00:00
 ---
 
 # Cloud Storage (2nd Gen) Unit Test  |  Cloud Run functions  |  Google Cloud Documentation

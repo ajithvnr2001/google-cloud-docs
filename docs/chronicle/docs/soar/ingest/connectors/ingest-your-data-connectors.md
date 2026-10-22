@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/ingest/connectors/ingest-your-data-connectors/
 title: Ingest data using SOAR connectors \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:20.382242+00:00
+fetched_at: 2026-10-21T14:21:21.535133+00:00
 ---
 
 # Ingest data using SOAR connectors  |  Google Security Operations  |  Google Cloud Documentation

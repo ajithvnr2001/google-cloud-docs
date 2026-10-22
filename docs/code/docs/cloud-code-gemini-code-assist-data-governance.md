@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/cloud-code-gemini-code-assist-data-governance/
 title: How Google Cloud Code with Gemini Code Assist handles your data \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:46.646602+00:00
+fetched_at: 2026-10-21T14:26:14.881340+00:00
 ---
 
 # How Google Cloud Code with Gemini Code Assist handles your data  |  Google Cloud Documentation

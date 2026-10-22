@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/gdrive/
 title: Overview \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:21:16.360284+00:00
+fetched_at: 2026-10-21T12:29:25.453221+00:00
 ---
 
 # Overview  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -36,14 +36,22 @@ Action | Description
 Copy file | Copies a file in Google Drive.  
 Create file | Creates a new file in Google Drive.  
 Download file content | Downloads the content of a Google Drive file.  
+Get cell values | Reads cell values from a Google Sheets spreadsheet.  
 Get file metadata | Fetches metadata for a Google Drive file.  
 Get file permissions | Lists the permissions on a Google Drive file.  
+Get spreadsheet |  Reads the contents and metadata of a Google Sheets spreadsheet.   
+Insert dimension | Inserts rows or columns into a Google Sheets spreadsheet.  
 List recent files | Lists recent files in Google Drive.  
+List shared drives | Lists shared drives in Google Drive.  
+Read document | Reads the contents of a Google Docs document.  
 Read file content | Reads the contents of a Google Drive file.  
+Read presentation | Reads the contents of a Google Slides presentation.  
 Search files | Searches for Google Drive files matching a query.  
 Share file | Shares a Google Drive file with one or more users.  
 Trash file | Moves a Google Drive file to the trash.  
+Update cell values | Writes cell values to a Google Sheets spreadsheet.  
 Update file | Updates an existing Google Drive file.  
+Update formulas | Writes formulas to a Google Sheets spreadsheet.  
 **Note:** The maximum file size for file uploads and downloads in Gemini Enterprise is 75 MB.
 
 ### Required scopes
@@ -103,6 +111,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

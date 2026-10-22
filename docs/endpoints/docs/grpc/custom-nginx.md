@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/grpc/custom-nginx/
 title: Using a custom nginx.conf on GKE \u00a0|\u00a0 Cloud Endpoints with gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:36:11.272176+00:00
+fetched_at: 2026-10-21T12:45:58.943148+00:00
 ---
 
 # Using a custom nginx.conf on GKE  |  Cloud Endpoints with gRPC  |  Google Cloud Documentation

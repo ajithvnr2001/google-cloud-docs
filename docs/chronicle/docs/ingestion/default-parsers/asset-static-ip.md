@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/asset-static-ip/
 title: Collect Static IP asset context data logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:07:16.315112+00:00
+fetched_at: 2026-10-21T14:10:25.631580+00:00
 ---
 
 # Collect Static IP asset context data logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/workflows/route-trigger-cloud-memorystore-redis/
 title: Route Google Cloud Memorystore for Redis events to Workflows \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:25:49.703296+00:00
+fetched_at: 2026-10-21T12:45:55.050442+00:00
 ---
 
 # Route Google Cloud Memorystore for Redis events to Workflows  |  Eventarc Standard  |  Google Cloud Documentation

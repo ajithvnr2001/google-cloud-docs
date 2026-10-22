@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/16.8.0/docs/shared-responsibility/
 title: AlloyDB Omni shared responsibility \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 16.8.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:39:56.730012+00:00
+fetched_at: 2026-10-21T15:19:53.696015+00:00
 ---
 
 # AlloyDB Omni shared responsibility  |  AlloyDB Omni for Kubernetes: 16.8.0  |  Google Cloud Documentation

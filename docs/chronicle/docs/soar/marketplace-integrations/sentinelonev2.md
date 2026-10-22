@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/sentinelonev2/
 title: Integrate SentinelOne v2 with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:55:15.251908+00:00
+fetched_at: 2026-10-21T14:25:17.510945+00:00
 ---
 
 # Integrate SentinelOne v2 with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation

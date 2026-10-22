@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/buildpacks/build-function/
 title: Build a function with buildpacks \u00a0|\u00a0 Buildpacks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:52:06.788296+00:00
+fetched_at: 2026-10-21T14:07:23.031884+00:00
 ---
 
 # Build a function with buildpacks  |  Buildpacks  |  Google Cloud Documentation

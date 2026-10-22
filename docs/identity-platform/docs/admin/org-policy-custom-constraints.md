@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/admin/org-policy-custom-constraints/
 title: Use custom organization policies \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:23.569711+00:00
+fetched_at: 2026-10-21T12:54:07.157346+00:00
 ---
 
 # Use custom organization policies  |  Identity Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cribl-stream-changelog/
 title: Change log for CRIBL_STREAM \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:25:55.471761+00:00
+fetched_at: 2026-10-21T14:44:38.887172+00:00
 ---
 
 # Change log for CRIBL_STREAM  |  Google Security Operations  |  Google Cloud Documentation

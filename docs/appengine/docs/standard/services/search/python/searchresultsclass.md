@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/search/python/searchresultsclass/
 title: The SearchResults Class \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:55.300045+00:00
+fetched_at: 2026-10-21T14:53:38.544534+00:00
 ---
 
 # The SearchResults Class  |  App Engine standard environment  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/saml-soar-only/external-authentication/
 title: Authenticate users \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T21:38:37.102842+00:00
+fetched_at: 2026-10-21T14:21:44.247340+00:00
 ---
 
 # Authenticate users  |  Google Security Operations  |  Google Cloud Documentation

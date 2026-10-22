@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/create-run-job-vm-template/
 title: Define job resources using a VM instance template \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:29:20.750258+00:00
+fetched_at: 2026-10-21T12:35:45.188733+00:00
 ---
 
 # Define job resources using a VM instance template  |  Batch  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/connect/root-ssh/
 title: Connect to Linux VMs as the root user \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:17.990731+00:00
+fetched_at: 2026-10-21T12:40:18.865920+00:00
 ---
 
 # Connect to Linux VMs as the root user  |  Compute Engine  |  Google Cloud Documentation

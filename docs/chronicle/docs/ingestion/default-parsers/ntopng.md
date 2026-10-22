@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/ntopng/
 title: Collect ntopng logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:19:53.693733+00:00
+fetched_at: 2026-10-21T14:09:41.599569+00:00
 ---
 
 # Collect ntopng logs  |  Google Security Operations  |  Google Cloud Documentation

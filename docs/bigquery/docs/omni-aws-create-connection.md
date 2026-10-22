@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/omni-aws-create-connection/
 title: Connect to Amazon S3 \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:43:54.194328+00:00
+fetched_at: 2026-10-21T14:20:13.897947+00:00
 ---
 
 # Connect to Amazon S3  |  BigQuery  |  Google Cloud Documentation

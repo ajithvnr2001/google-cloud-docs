@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/admin-tasks/user-secops/map-users-in-the-secops-platform-first-party/
 title: Map users with Cloud Identity \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:44.318895+00:00
+fetched_at: 2026-10-21T14:21:17.169538+00:00
 ---
 
 # Map users with Cloud Identity  |  Google Security Operations  |  Google Cloud Documentation

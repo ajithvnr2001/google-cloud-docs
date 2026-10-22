@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/gcmvsp/authentication-authorization/
 title: Authentication and authorization guidelines \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:25:31.095519+00:00
+fetched_at: 2026-10-21T14:08:16.877013+00:00
 ---
 
 # Authentication and authorization guidelines  |  Security  |  Google Cloud Documentation

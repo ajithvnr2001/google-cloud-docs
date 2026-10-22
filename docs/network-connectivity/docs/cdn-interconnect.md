@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-connectivity/docs/cdn-interconnect/
 title: CDN Interconnect overview \u00a0|\u00a0 Network Connectivity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:15:13.206234+00:00
+fetched_at: 2026-10-21T15:17:15.212049+00:00
 ---
 
 # CDN Interconnect overview  |  Network Connectivity  |  Google Cloud Documentation

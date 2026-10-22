@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/deployment/
 title: Deployment guide \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:36:57.906553+00:00
+fetched_at: 2026-10-21T14:23:00.220071+00:00
 ---
 
 # Deployment guide  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

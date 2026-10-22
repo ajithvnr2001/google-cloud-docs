@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/generic/reference/supported-regions/
 title: Supported regions for CNCF conformant attached clusters \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:29:48.204314+00:00
+fetched_at: 2026-10-21T15:02:14.506145+00:00
 ---
 
 # Supported regions for CNCF conformant attached clusters  |  GKE attached clusters  |  Google Cloud Documentation

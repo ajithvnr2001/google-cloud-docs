@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/prediction/krm/vertex-ai-prediction-krm-ref/
 title: KRM API prediction.aiplatform.gdc.goog/v1 \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:13:56.022899+00:00
+fetched_at: 2026-10-21T12:56:17.176192+00:00
 ---
 
 # KRM API prediction.aiplatform.gdc.goog/v1  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

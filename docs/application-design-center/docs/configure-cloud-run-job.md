@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/configure-cloud-run-job/
 title: Configure a Cloud Run job \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T08:19:50.843993+00:00
+fetched_at: 2026-10-21T15:08:36.412492+00:00
 ---
 
 # Configure a Cloud Run job  |  Application Design Center  |  Google Cloud Documentation
@@ -20,9 +20,7 @@ Send feedback
 
 #  Configure a Cloud Run job Stay organized with collections  Save and categorize content based on your preferences. 
 
-A Cloud Run job is a containerized application that runs a specific, non-HTTP task and then exits. You might use a Cloud Run job for tasks that don't need to run continuously or serve requests. For example, scheduled batch processing or data transformations.
-
-This document describes the connections and parameters you can configure when using App Design Center to create a Cloud Run job component. The configuration parameters are based on the [terraform-google-cloud-run/modules/job-exec](https://github.com/GoogleCloudPlatform/terraform-google-cloud-run/tree/main/modules/job-exec) Terraform module.
+Cloud Run jobs let you run containerized, non-HTTP tasks, such as scheduled batch processing and data transformations, that execute to completion and exit. Application Design Center helps you configure these job components for your specific component connections and configuration parameters. The configuration parameters are listed in the [terraform-google-cloud-run/modules/job-exec](https://github.com/GoogleCloudPlatform/terraform-google-cloud-run/tree/main/modules/job-exec) Terraform module.
 
 ## Component connections
 
@@ -105,6 +103,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

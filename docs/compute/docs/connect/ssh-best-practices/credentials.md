@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/connect/ssh-best-practices/credentials/
 title: Best practices for protecting SSH credentials \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:18:23.262610+00:00
+fetched_at: 2026-10-21T12:39:52.288603+00:00
 ---
 
 # Best practices for protecting SSH credentials  |  Compute Engine  |  Google Cloud Documentation

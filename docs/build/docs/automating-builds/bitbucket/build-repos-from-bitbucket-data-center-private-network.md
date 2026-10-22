@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/automating-builds/bitbucket/build-repos-from-bitbucket-data-center-private-network/
 title: Build repositories from Bitbucket Data Center in a private network \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:06.962471+00:00
+fetched_at: 2026-10-21T14:18:48.350427+00:00
 ---
 
 # Build repositories from Bitbucket Data Center in a private network  |  Google Cloud Documentation

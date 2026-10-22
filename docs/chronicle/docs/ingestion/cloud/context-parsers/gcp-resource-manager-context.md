@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/cloud/context-parsers/gcp-resource-manager-context/
 title: Collect Resource Manager context logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:28.009311+00:00
+fetched_at: 2026-10-21T12:37:31.312697+00:00
 ---
 
 # Collect Resource Manager context logs  |  Google Security Operations  |  Google Cloud Documentation

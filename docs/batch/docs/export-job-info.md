@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/export-job-info/
 title: Export job information \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:27:56.725675+00:00
+fetched_at: 2026-10-21T12:30:30.388388+00:00
 ---
 
 # Export job information  |  Batch  |  Google Cloud Documentation

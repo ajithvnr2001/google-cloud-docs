@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/vms/create-custom-images/import-virtual-disk/
 title: Import virtual disks \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:22:06.643474+00:00
+fetched_at: 2026-10-21T12:56:34.729928+00:00
 ---
 
 # Import virtual disks  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/search/python/sortexpressionclass/
 title: The SortExpression Class \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:55.705434+00:00
+fetched_at: 2026-10-21T14:53:38.682925+00:00
 ---
 
 # The SortExpression Class  |  App Engine standard environment  |  Google Cloud Documentation

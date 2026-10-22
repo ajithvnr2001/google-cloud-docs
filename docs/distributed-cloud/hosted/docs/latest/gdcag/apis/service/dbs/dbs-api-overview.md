@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/service/dbs/dbs-api-overview/
 title: Overview of Database Service API \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:13:22.771950+00:00
+fetched_at: 2026-10-21T12:57:10.228815+00:00
 ---
 
 # Overview of Database Service API  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

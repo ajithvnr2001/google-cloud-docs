@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/analyze-feed-activity-with-cloud-logging/
 title: Analyze feed activity with Cloud Logging \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:07.966221+00:00
+fetched_at: 2026-10-21T12:39:07.100822+00:00
 ---
 
 # Analyze feed activity with Cloud Logging  |  Google Security Operations  |  Google Cloud Documentation

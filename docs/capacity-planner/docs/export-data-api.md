@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/capacity-planner/docs/export-data-api/
 title: Export data to a Cloud Storage bucket or BigQuery table \u00a0|\u00a0 Capacity Planner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:38:52.903679+00:00
+fetched_at: 2026-10-21T14:24:56.010220+00:00
 ---
 
 # Export data to a Cloud Storage bucket or BigQuery table  |  Capacity Planner  |  Google Cloud Documentation

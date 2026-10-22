@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/hbase-api-changes/
 title: Migrate from earlier HBase versions \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:29:19.427352+00:00
+fetched_at: 2026-10-21T12:36:47.367821+00:00
 ---
 
 # Migrate from earlier HBase versions  |  Bigtable  |  Google Cloud Documentation

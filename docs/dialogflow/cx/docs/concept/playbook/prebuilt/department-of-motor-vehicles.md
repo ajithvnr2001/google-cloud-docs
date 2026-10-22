@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/playbook/prebuilt/department-of-motor-vehicles/
 title: Department of Motor Vehicles (DMV) prebuilt agent \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:33.416258+00:00
+fetched_at: 2026-10-21T12:44:59.215654+00:00
 ---
 
 # Department of Motor Vehicles (DMV) prebuilt agent  |  Dialogflow CX  |  Google Cloud Documentation

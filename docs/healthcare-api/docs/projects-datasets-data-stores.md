@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/projects-datasets-data-stores/
 title: Projects, datasets, and data stores \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:10:12.075123+00:00
+fetched_at: 2026-10-21T14:30:40.677327+00:00
 ---
 
 # Projects, datasets, and data stores  |  Cloud Healthcare API  |  Google Cloud Documentation

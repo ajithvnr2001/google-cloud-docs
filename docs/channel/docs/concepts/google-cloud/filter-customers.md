@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/channel/docs/concepts/google-cloud/filter-customers/
 title: Set up a customer filter using the ListCustomers API \u00a0|\u00a0 Channel Services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:21:34.116068+00:00
+fetched_at: 2026-10-21T14:25:32.715014+00:00
 ---
 
 # Set up a customer filter using the ListCustomers API  |  Channel Services  |  Google Cloud Documentation

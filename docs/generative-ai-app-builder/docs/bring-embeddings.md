@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/bring-embeddings/
 title: Use custom embeddings \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:04.494399+00:00
+fetched_at: 2026-10-21T12:55:03.903021+00:00
 ---
 
 # Use custom embeddings  |  Agent Search  |  Google Cloud Documentation

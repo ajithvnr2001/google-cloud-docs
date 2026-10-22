@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.11/concepts/task/
 title: Tasks overview \u00a0|\u00a0 Kf 2.11 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:32.176120+00:00
+fetched_at: 2026-10-21T15:12:58.112560+00:00
 ---
 
 # Tasks overview  |  Kf 2.11  |  Google Cloud Documentation

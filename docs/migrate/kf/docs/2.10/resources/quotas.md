@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.10/resources/quotas/
 title: Quotas and Limits \u00a0|\u00a0 Kf 2.10 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:44:13.186255+00:00
+fetched_at: 2026-10-21T15:13:35.918298+00:00
 ---
 
 # Quotas and Limits  |  Kf 2.10  |  Google Cloud Documentation

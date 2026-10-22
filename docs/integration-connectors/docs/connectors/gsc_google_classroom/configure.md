@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/gsc_google_classroom/configure/
 title: Google Classroom \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:41:14.545805+00:00
+fetched_at: 2026-10-21T12:54:10.171459+00:00
 ---
 
 # Google Classroom  |  Integration Connectors  |  Google Cloud Documentation

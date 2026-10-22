@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/prepare-for-app-lifecycle-management/
 title: Prepare for application management \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:03:59.983740+00:00
+fetched_at: 2026-10-21T12:30:00.348752+00:00
 ---
 
 # Prepare for application management  |  App Hub  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/mobile-pstn-fallback/
 title: Mobile: PSTN fallback \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:32:04.683619+00:00
+fetched_at: 2026-10-21T12:29:41.436477+00:00
 ---
 
 # Mobile: PSTN fallback  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

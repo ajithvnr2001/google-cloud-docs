@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/containers/15.5.5/docs/overview-ai/
 title: Build generative AI applications using AlloyDB AI \u00a0|\u00a0 AlloyDB Omni for containers: 15.5.5 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:23:33.874056+00:00
+fetched_at: 2026-10-21T15:20:06.313041+00:00
 ---
 
 # Build generative AI applications using AlloyDB AI  |  AlloyDB Omni for containers: 15.5.5  |  Google Cloud Documentation

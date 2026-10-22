@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/prebuilt-component/lock-card/
 title: Lock card prebuilt component \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:43.852518+00:00
+fetched_at: 2026-10-21T12:43:48.651542+00:00
 ---
 
 # Lock card prebuilt component  |  Dialogflow CX  |  Google Cloud Documentation

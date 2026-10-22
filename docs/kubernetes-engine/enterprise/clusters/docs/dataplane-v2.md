@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/enterprise/clusters/docs/dataplane-v2/
 title: Dataplane version support \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:36:50.138369+00:00
+fetched_at: 2026-10-21T15:03:02.500465+00:00
 ---
 
 # Dataplane version support  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

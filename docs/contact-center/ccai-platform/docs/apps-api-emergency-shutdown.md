@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-emergency-shutdown/
 title: Emergency shutdown \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:16:46.541255+00:00
+fetched_at: 2026-10-21T14:21:34.173010+00:00
 ---
 
 # Emergency shutdown  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

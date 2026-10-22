@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/chat-panel/
 title: Use Gemini Cloud Assist in the Google Cloud console \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:14:01.517284+00:00
+fetched_at: 2026-10-21T14:10:27.217279+00:00
 ---
 
 # Use Gemini Cloud Assist in the Google Cloud console  |  Google Cloud Documentation

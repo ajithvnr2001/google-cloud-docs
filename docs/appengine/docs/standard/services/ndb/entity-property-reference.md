@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/ndb/entity-property-reference/
 title: Entity Property Reference \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:47:51.983106+00:00
+fetched_at: 2026-10-21T14:19:45.529138+00:00
 ---
 
 # Entity Property Reference  |  App Engine standard environment  |  Google Cloud Documentation

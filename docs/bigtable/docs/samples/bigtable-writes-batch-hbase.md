@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-writes-batch-hbase/
 title: Perform batch writes (HBase) \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:23:57.975213+00:00
+fetched_at: 2026-10-21T12:38:28.659605+00:00
 ---
 
 # Perform batch writes (HBase)  |  Bigtable  |  Google Cloud Documentation

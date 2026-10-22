@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aws-cloudfront/
 title: Collect Amazon CloudFront logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:46:51.913902+00:00
+fetched_at: 2026-10-21T14:11:22.867336+00:00
 ---
 
 # Collect Amazon CloudFront logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/digitalarts-ifilter-changelog/
 title: Change log for DIGITALARTS_IFILTER \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:42:41.806622+00:00
+fetched_at: 2026-10-21T14:45:30.946282+00:00
 ---
 
 # Change log for DIGITALARTS_IFILTER  |  Google Security Operations  |  Google Cloud Documentation

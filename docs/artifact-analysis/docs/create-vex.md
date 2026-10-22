@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/create-vex/
 title: Create VEX statements \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:44:43.110029+00:00
+fetched_at: 2026-10-21T12:39:35.877715+00:00
 ---
 
 # Create VEX statements  |  Artifact Analysis  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/connect-databricks/
 title: Connect to Databricks \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:08:32.819423+00:00
+fetched_at: 2026-10-21T12:36:31.221290+00:00
 ---
 
 # Connect to Databricks  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/multi-tenancy-billing/
 title: Monitoring billing for tenants \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:23.313599+00:00
+fetched_at: 2026-10-21T12:53:28.844808+00:00
 ---
 
 # Monitoring billing for tenants  |  Identity Platform  |  Google Cloud Documentation

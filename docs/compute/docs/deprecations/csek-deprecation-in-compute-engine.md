@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/deprecations/csek-deprecation-in-compute-engine/
 title: Deprecation of customer-supplied encryption keys (CSEK) in Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:45:26.596174+00:00
+fetched_at: 2026-10-21T12:40:34.292743+00:00
 ---
 
 # Deprecation of customer-supplied encryption keys (CSEK) in Compute Engine  |  Google Cloud Documentation

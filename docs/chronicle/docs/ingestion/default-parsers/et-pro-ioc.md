@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/et-pro-ioc/
 title: Collect Proofpoint Emerging Threats Pro IOC logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:39:08.067175+00:00
+fetched_at: 2026-10-21T14:11:35.458510+00:00
 ---
 
 # Collect Proofpoint Emerging Threats Pro IOC logs  |  Google Security Operations  |  Google Cloud Documentation

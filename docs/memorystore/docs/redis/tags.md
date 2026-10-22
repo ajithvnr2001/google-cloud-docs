@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/tags/
 title: Create and manage tags \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:33:53.716088+00:00
+fetched_at: 2026-10-21T15:13:51.232531+00:00
 ---
 
 # Create and manage tags  |  Memorystore for Redis  |  Google Cloud Documentation

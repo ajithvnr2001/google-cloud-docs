@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/cloud-sql-federated-queries/
 title: Cloud SQL federated queries \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:20:11.565923+00:00
+fetched_at: 2026-10-21T12:39:50.417583+00:00
 ---
 
 # Cloud SQL federated queries  |  BigQuery  |  Google Cloud Documentation

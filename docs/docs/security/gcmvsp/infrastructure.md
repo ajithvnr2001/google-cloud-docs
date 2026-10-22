@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/gcmvsp/infrastructure/
 title: Infrastructure guidelines \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:22:39.064910+00:00
+fetched_at: 2026-10-21T14:06:57.080975+00:00
 ---
 
 # Infrastructure guidelines  |  Security  |  Google Cloud Documentation

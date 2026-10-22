@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/certificate-profile/
 title: Certificate profiles \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:54:04.949398+00:00
+fetched_at: 2026-10-21T14:23:48.172221+00:00
 ---
 
 # Certificate profiles  |  Certificate Authority Service  |  Google Cloud Documentation

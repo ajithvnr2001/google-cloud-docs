@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/asset-inventory/docs/view-effective-policies/
 title: View effective IAM policies \u00a0|\u00a0 Cloud Asset Inventory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:06:27.208697+00:00
+fetched_at: 2026-10-21T14:41:36.565734+00:00
 ---
 
 # View effective IAM policies  |  Cloud Asset Inventory  |  Google Cloud Documentation

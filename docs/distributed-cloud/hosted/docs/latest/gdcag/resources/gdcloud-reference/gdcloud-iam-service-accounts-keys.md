@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-iam-service-accounts-keys/
 title: gdcloud iam service-accounts keys \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:57:07.944096+00:00
+fetched_at: 2026-10-21T12:59:26.840163+00:00
 ---
 
 # gdcloud iam service-accounts keys  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

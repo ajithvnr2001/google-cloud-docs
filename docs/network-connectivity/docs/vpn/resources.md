@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-connectivity/docs/vpn/resources/
 title: Resources \u00a0|\u00a0 Cloud VPN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:48.142748+00:00
+fetched_at: 2026-10-21T15:18:06.673979+00:00
 ---
 
 # Resources  |  Cloud VPN  |  Google Cloud Documentation

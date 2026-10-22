@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/gcp-recaptcha-enterprise/
 title: Collect Google Cloud Fraud Defense logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:00:43.392585+00:00
+fetched_at: 2026-10-21T12:38:11.555334+00:00
 ---
 
 # Collect Google Cloud Fraud Defense logs  |  Google Security Operations  |  Google Cloud Documentation

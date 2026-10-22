@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/document-ai/docs/access-control/iam-permissions/
 title: IAM permissions for Document AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:49:50.107888+00:00
+fetched_at: 2026-10-21T14:39:47.831219+00:00
 ---
 
 # IAM permissions for Document AI  |  Google Cloud Documentation

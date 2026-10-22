@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/search-index/
 title: Manage search indexes \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:17.901346+00:00
+fetched_at: 2026-10-21T12:36:09.690360+00:00
 ---
 
 # Manage search indexes  |  BigQuery  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/authenticate-service-account/
 title: Authentication between services \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:51:25.180843+00:00
+fetched_at: 2026-10-21T14:29:04.382023+00:00
 ---
 
 # Authentication between services  |  API Gateway  |  Google Cloud Documentation

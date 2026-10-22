@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cortex/docs/v6/deployment-step-six/
 title: Step 6: Execute deployment \u00a0|\u00a0 Google Cloud Cortex Framework \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:12:20.979716+00:00
+fetched_at: 2026-10-21T14:09:33.480397+00:00
 ---
 
 # Step 6: Execute deployment  |  Google Cloud Cortex Framework  |  Google Cloud Documentation

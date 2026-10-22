@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/colab/docs/cmek/
 title: Use customer-managed encryption keys (CMEK) \u00a0|\u00a0 Colab Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:30:23.557624+00:00
+fetched_at: 2026-10-21T14:19:25.398436+00:00
 ---
 
 # Use customer-managed encryption keys (CMEK)  |  Colab Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/colab/docs/manage-runtime-templates/
 title: Manage Colab Enterprise runtime templates \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:36:06.448785+00:00
+fetched_at: 2026-10-21T14:19:44.993867+00:00
 ---
 
 # Manage Colab Enterprise runtime templates  |  Google Cloud Documentation

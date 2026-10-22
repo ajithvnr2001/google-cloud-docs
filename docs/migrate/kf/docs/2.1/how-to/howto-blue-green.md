@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.1/how-to/howto-blue-green/
 title: Reduce Deployment Risk with Blue-Green Deployments \u00a0|\u00a0 Kf 2.1 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:42:44.320846+00:00
+fetched_at: 2026-10-21T15:11:23.745023+00:00
 ---
 
 # Reduce Deployment Risk with Blue-Green Deployments  |  Kf 2.1  |  Google Cloud Documentation

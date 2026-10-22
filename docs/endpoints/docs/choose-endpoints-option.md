@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/choose-endpoints-option/
 title: Choosing an Endpoints option \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:13:38.584774+00:00
+fetched_at: 2026-10-21T12:46:13.508174+00:00
 ---
 
 # Choosing an Endpoints option  |  Google Cloud Documentation

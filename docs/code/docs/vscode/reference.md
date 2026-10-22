@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/vscode/reference/
 title: Complete tasks using the Command Palette in Cloud Code for VS Code \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:41:16.154568+00:00
+fetched_at: 2026-10-21T14:46:13.843278+00:00
 ---
 
 # Complete tasks using the Command Palette in Cloud Code for VS Code  |  Google Cloud Documentation

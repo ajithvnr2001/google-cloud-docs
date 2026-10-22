@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/deprecations/global-serial-console/
 title: Global serial console gateway deprecation \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:25:15.730293+00:00
+fetched_at: 2026-10-21T12:39:55.332656+00:00
 ---
 
 # Global serial console gateway deprecation  |  Compute Engine  |  Google Cloud Documentation

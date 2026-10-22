@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1alpha/TableCandidate/
 title: TableCandidate \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T05:04:01.734817+00:00
+fetched_at: 2026-10-21T12:51:57.745254+00:00
 ---
 
 # TableCandidate  |  Data Agents  |  Google Cloud Documentation

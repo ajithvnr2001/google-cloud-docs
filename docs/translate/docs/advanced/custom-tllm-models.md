@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/translate/docs/advanced/custom-tllm-models/
 title: Create and manage Translation LLM models \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:26:59.180467+00:00
+fetched_at: 2026-10-21T15:41:31.072975+00:00
 ---
 
 # Create and manage Translation LLM models  |  Google Cloud Documentation
@@ -62,7 +62,7 @@ Before using any of the request data, make the following replacements:
   * PROJECT_ID: PROJECT_ID.
   * TUNING_JOB_REGION: The [region](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations) where the tuning job runs. This is also the default region for where the tuned model is uploaded. Supported region: `us-central1`.
   * BASE_MODEL: Name of the translation model to tune. Supported values: `translation-llm-002`.
-  * TRAINING_DATASET_URI: Cloud Storage URI of your training dataset. The dataset must be formatted as a JSONL file. For best results, provide at least 100 to 500 examples. For more information, see [About supervised tuning dataset](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/translation-supervised-tuning-prepare).
+  * TRAINING_DATASET_URI: Cloud Storage URI of your training dataset. The dataset must be formatted as a JSONL file. For best results, provide at least 100 to 500 examples. For more information, see [About supervised tuning dataset](https://docs.cloud.google.com/translate/models/translation-supervised-tuning-prepare).
   * VALIDATION_DATASET_URIOptional: The Cloud Storage URI of your validation dataset file.
   * TUNED_MODEL_DISPLAYNAMEOptional: A display name for the tuned model. If not set, a random name is generated.
 
@@ -662,6 +662,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

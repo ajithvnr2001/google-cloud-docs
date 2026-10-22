@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-intelligence-center/docs/cloud-network-insights/access-control/
 title: Roles and permissions \u00a0|\u00a0 Network Intelligence Center - Cloud Network Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:29:22.764840+00:00
+fetched_at: 2026-10-21T14:29:19.143343+00:00
 ---
 
 # Roles and permissions  |  Network Intelligence Center - Cloud Network Insights  |  Google Cloud Documentation
@@ -23,8 +23,6 @@ fetched_at: 2026-10-14T16:29:22.764840+00:00
 This page describes the Identity and Access Management (IAM) roles and permissions needed to access Cloud Network Insights. For a detailed description of IAM, see the [Identity and Access Management documentation](https://docs.cloud.google.com/iam/docs/overview).
 
 You can grant users or service accounts permissions or predefined roles, or you can create a custom role that uses permissions that you specify.
-
-You might need to run the `add-iam-policy` command in the Google Cloud CLI to grant Cloud Network Insights roles to users.
 
 The roles granted to users in Google Cloud are replicated in AppNeta. If you can edit Cloud Network Insights resources in the Google Cloud console, you can edit them in AppNeta.
 
@@ -292,6 +290,6 @@ Edit alerting policies.  |
   
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

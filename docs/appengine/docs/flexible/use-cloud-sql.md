@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/use-cloud-sql/
 title: Use Cloud SQL \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:12.344672+00:00
+fetched_at: 2026-10-21T12:30:32.940148+00:00
 ---
 
 # Use Cloud SQL  |  App Engine flexible environment  |  Google Cloud Documentation

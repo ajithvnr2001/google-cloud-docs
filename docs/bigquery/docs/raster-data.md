@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/raster-data/
 title: Work with raster data using Earth Engine in BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:13.468724+00:00
+fetched_at: 2026-10-21T12:35:50.912022+00:00
 ---
 
 # Work with raster data using Earth Engine in BigQuery  |  Google Cloud Documentation

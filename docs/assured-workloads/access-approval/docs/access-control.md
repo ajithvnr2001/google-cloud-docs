@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/access-approval/docs/access-control/
 title: Access control with IAM \u00a0|\u00a0 Access Approval \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:29:50.766882+00:00
+fetched_at: 2026-10-21T14:09:37.567107+00:00
 ---
 
 # Access control with IAM  |  Access Approval  |  Google Cloud Documentation

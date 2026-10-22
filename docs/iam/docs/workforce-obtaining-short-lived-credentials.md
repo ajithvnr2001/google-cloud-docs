@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/workforce-obtaining-short-lived-credentials/
 title: Obtain short-lived tokens for Workforce Identity Federation \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:09:59.563303+00:00
+fetched_at: 2026-10-21T12:54:13.699077+00:00
 ---
 
 # Obtain short-lived tokens for Workforce Identity Federation  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

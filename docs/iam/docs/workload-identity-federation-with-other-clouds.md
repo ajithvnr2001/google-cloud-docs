@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/workload-identity-federation-with-other-clouds/
 title: Configure Workload Identity Federation with AWS or Azure VMs \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:10:03.169753+00:00
+fetched_at: 2026-10-21T12:53:16.571197+00:00
 ---
 
 # Configure Workload Identity Federation with AWS or Azure VMs  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

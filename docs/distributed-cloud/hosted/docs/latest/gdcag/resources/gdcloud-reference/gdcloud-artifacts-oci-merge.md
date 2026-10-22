@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-artifacts-oci-merge/
 title: gdcloud artifacts oci merge \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:13:58.277075+00:00
+fetched_at: 2026-10-21T13:33:09.057453+00:00
 ---
 
 # gdcloud artifacts oci merge  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

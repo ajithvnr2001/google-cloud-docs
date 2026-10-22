@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/code/docs/shell/how-to/
 title: How-to Guides \u00a0|\u00a0 Cloud Code for Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T12:44:35.318819+00:00
+fetched_at: 2026-10-21T14:21:14.601509+00:00
 ---
 
 # How-to Guides  |  Cloud Code for Cloud Shell  |  Google Cloud Documentation

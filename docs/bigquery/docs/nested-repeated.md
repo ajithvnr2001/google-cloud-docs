@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/nested-repeated/
 title: Specify nested and repeated columns in table schemas \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:39:39.217415+00:00
+fetched_at: 2026-10-21T14:20:45.606506+00:00
 ---
 
 # Specify nested and repeated columns in table schemas  |  BigQuery  |  Google Cloud Documentation

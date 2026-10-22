@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/azure-vpn/
 title: Collect Azure VPN logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:29:08.016755+00:00
+fetched_at: 2026-10-21T14:24:20.612846+00:00
 ---
 
 # Collect Azure VPN logs  |  Google Security Operations  |  Google Cloud Documentation

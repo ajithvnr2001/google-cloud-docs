@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/cloud-logging/
 title: View logs in Cloud Logging \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:17:52.942875+00:00
+fetched_at: 2026-10-21T14:10:34.939371+00:00
 ---
 
 # View logs in Cloud Logging  |  Application Integration  |  Google Cloud Documentation

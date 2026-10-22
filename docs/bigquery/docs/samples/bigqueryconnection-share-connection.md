@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigqueryconnection-share-connection/
 title: Share a connection \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:07.381402+00:00
+fetched_at: 2026-10-22T05:45:21.030793+00:00
 ---
 
 # Share a connection  |  BigQuery  |  Google Cloud Documentation

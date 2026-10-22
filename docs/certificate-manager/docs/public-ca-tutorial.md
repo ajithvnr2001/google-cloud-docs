@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-manager/docs/public-ca-tutorial/
 title: Request a certificate using Public CA and an ACME client \u00a0|\u00a0 Certificate Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:00:05.077931+00:00
+fetched_at: 2026-10-21T14:25:32.313607+00:00
 ---
 
 # Request a certificate using Public CA and an ACME client  |  Certificate Manager  |  Google Cloud Documentation

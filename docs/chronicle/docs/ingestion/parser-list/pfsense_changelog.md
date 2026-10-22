@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/pfsense_changelog/
 title: Change log for PFSENSE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:56:11.359967+00:00
+fetched_at: 2026-10-21T14:51:49.380674+00:00
 ---
 
 # Change log for PFSENSE  |  Google Security Operations  |  Google Cloud Documentation

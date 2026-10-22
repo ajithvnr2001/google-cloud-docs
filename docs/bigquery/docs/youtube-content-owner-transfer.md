@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/youtube-content-owner-transfer/
 title: Load YouTube Content Owner data into BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:02:24.954788+00:00
+fetched_at: 2026-10-21T12:38:34.900684+00:00
 ---
 
 # Load YouTube Content Owner data into BigQuery  |  Google Cloud Documentation

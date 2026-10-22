@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/docs/samples/language-classify-text/
 title: Classify text \u00a0|\u00a0 Cloud Natural Language API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:41:36.073720+00:00
+fetched_at: 2026-10-21T15:17:45.182706+00:00
 ---
 
 # Classify text  |  Cloud Natural Language API  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/tipcommon/tc-transformation-module/
 title: Transformation module \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:16:03.207223+00:00
+fetched_at: 2026-10-21T14:21:00.059285+00:00
 ---
 
 # Transformation module  |  Google Security Operations  |  Google Cloud Documentation

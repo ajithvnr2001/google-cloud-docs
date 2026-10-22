@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/about-confidential-vm/
 title: About Confidential VM \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:57:30.183355+00:00
+fetched_at: 2026-10-21T14:24:57.488189+00:00
 ---
 
 # About Confidential VM  |  Compute Engine  |  Google Cloud Documentation

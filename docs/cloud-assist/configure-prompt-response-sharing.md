@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cloud-assist/configure-prompt-response-sharing/
 title: Configure prompt and response sharing for Gemini Cloud Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:14:01.416012+00:00
+fetched_at: 2026-10-21T14:10:27.590951+00:00
 ---
 
 # Configure prompt and response sharing for Gemini Cloud Assist  |  Google Cloud Documentation

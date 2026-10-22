@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/tipcommon/tc-validation-module/
 title: Validation module \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T07:54:41.705022+00:00
+fetched_at: 2026-10-21T14:19:21.272783+00:00
 ---
 
 # Validation module  |  Google Security Operations  |  Google Cloud Documentation

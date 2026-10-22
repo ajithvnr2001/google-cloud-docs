@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/dataframes-sessions-io/
 title: Manage BigQuery DataFrames sessions and I/O \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T00:40:12.021095+00:00
+fetched_at: 2026-10-21T14:08:07.347897+00:00
 ---
 
 # Manage BigQuery DataFrames sessions and I/O  |  Google Cloud Documentation

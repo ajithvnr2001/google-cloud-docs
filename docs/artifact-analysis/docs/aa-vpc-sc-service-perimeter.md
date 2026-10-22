@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/aa-vpc-sc-service-perimeter/
 title: Protect Artifact Analysis in a service perimeter \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:44:44.793388+00:00
+fetched_at: 2026-10-21T14:28:20.328216+00:00
 ---
 
 # Protect Artifact Analysis in a service perimeter  |  Google Cloud Documentation

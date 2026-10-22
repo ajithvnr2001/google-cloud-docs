@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/rh-isac-ioc/
 title: Collect RH-ISAC IOC logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:07:00.540155+00:00
+fetched_at: 2026-10-21T12:37:59.448919+00:00
 ---
 
 # Collect RH-ISAC IOC logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/view-os-images/
 title: View VM OS images for Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:29:20.803402+00:00
+fetched_at: 2026-10-21T14:24:53.548169+00:00
 ---
 
 # View VM OS images for Batch  |  Google Cloud Documentation

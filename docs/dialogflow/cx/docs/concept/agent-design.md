@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/agent-design/
 title: General agent design best practices \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:51.455101+00:00
+fetched_at: 2026-10-21T12:55:55.888471+00:00
 ---
 
 # General agent design best practices  |  Dialogflow CX  |  Google Cloud Documentation

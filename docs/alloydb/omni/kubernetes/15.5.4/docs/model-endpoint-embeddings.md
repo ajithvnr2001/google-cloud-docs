@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/15.5.4/docs/model-endpoint-embeddings/
 title: Generate vector embeddings with model endpoint management \u00a0|\u00a0 AlloyDB Omni for Kubernetes: 15.5.4 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:58:17.100977+00:00
+fetched_at: 2026-10-21T15:25:18.325494+00:00
 ---
 
 # Generate vector embeddings with model endpoint management  |  AlloyDB Omni for Kubernetes: 15.5.4  |  Google Cloud Documentation

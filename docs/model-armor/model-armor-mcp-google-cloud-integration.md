@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/model-armor/model-armor-mcp-google-cloud-integration/
 title: Integrate Model Armor with Google and Google Cloud MCP servers \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:49:15.184568+00:00
+fetched_at: 2026-10-21T15:16:06.697861+00:00
 ---
 
 # Integrate Model Armor with Google and Google Cloud MCP servers  |  Google Cloud Documentation

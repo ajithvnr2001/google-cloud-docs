@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/clusters/
 title: Kubernetes clusters in GDC \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:56.592135+00:00
+fetched_at: 2026-10-21T12:58:34.942019+00:00
 ---
 
 # Kubernetes clusters in GDC  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/reference/versions/v1.23.16-gke.200/metrics/
 title: Metrics available in 1.23.16-gke.200 \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:39:31.968145+00:00
+fetched_at: 2026-10-21T15:02:06.580575+00:00
 ---
 
 # Metrics available in 1.23.16-gke.200  |  GKE on Azure  |  Google Cloud Documentation

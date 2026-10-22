@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/use-cloud-assist/
 title: Use Gemini Cloud Assist \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:46:12.926305+00:00
+fetched_at: 2026-10-21T12:39:37.474271+00:00
 ---
 
 # Use Gemini Cloud Assist  |  BigQuery  |  Google Cloud Documentation

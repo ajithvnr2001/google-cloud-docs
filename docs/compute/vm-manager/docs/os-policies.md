@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/vm-manager/docs/os-policies/
 title: About OS policies \u00a0|\u00a0 VM Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:45:17.652415+00:00
+fetched_at: 2026-10-21T14:22:33.232953+00:00
 ---
 
 # About OS policies  |  VM Manager  |  Google Cloud Documentation

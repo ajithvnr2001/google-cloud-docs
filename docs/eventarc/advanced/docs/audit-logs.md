@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/advanced/docs/audit-logs/
 title: Eventarc audit logging \u00a0|\u00a0 Eventarc Advanced \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:24:27.016613+00:00
+fetched_at: 2026-10-21T12:53:03.559482+00:00
 ---
 
 # Eventarc audit logging  |  Eventarc Advanced  |  Google Cloud Documentation

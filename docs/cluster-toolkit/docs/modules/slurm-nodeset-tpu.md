@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cluster-toolkit/docs/modules/slurm-nodeset-tpu/
 title: Create a TPU nodeset for a Slurm partition \u00a0|\u00a0 Cluster Toolkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:32:40.081708+00:00
+fetched_at: 2026-10-21T14:46:13.132127+00:00
 ---
 
 # Create a TPU nodeset for a Slurm partition  |  Cluster Toolkit  |  Google Cloud Documentation

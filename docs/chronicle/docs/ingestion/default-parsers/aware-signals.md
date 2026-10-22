@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aware-signals/
 title: Collect Aware Signals logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:31.035849+00:00
+fetched_at: 2026-10-21T12:29:03.104319+00:00
 ---
 
 # Collect Aware Signals logs  |  Google Security Operations  |  Google Cloud Documentation
@@ -80,13 +80,10 @@ After creating the feed, you must generate a secret key for authentication:
   2. In the **Endpoint Information** section, copy the **Feed endpoint URL**.
   3. The URL format is:
          
-         https://malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate
+         https://{region}-chronicle.googleapis.com/v1/{parent}/logs:import
          
 
-or
-         
-         https://<REGION>-malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate
-         
+Where `{region}` is the region of your Google SecOps instance (for example, `us`, `europe`, or `asia-southeast1`), and `{parent}` is the resource path in the format `projects/<PROJECT_ID>/locations/<LOCATION>/instances/<INSTANCE_ID>/logTypes/<LOG_TYPE>`.
 
   4. Save this URL for the next steps.
 
@@ -150,7 +147,7 @@ Aware uses an API key for authenticating external integrations. To obtain the ke
 
   * **Example:**
         
-        https://malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate?key=AIzaSyD...&secret=abcd1234...
+        https://{region}-chronicle.googleapis.com/v1/{parent}/logs:import?key=AIzaSyD...&secret=abcd1234...
         
 
 
@@ -167,7 +164,7 @@ Configure Aware to forward Signal events to the Google SecOps webhook endpoint. 
 
      * **Destination URL** : Paste the complete webhook URL with API key and secret key appended as query parameters:
            
-           https://malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate?key=YOUR_API_KEY&secret=YOUR_SECRET_KEY
+           https://{region}-chronicle.googleapis.com/v1/{parent}/logs:import?key=YOUR_API_KEY&secret=YOUR_SECRET_KEY
            
 
      * **Content Type** : Select `application/json`
@@ -199,7 +196,7 @@ If your Aware version does not support native webhook push for Signal events, yo
 
      * **Example request to forward events:**
            
-           curl -X POST "https://malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate?key=YOUR_API_KEY&secret=YOUR_SECRET_KEY" \
+           curl -X POST "https://{region}-chronicle.googleapis.com/v1/{parent}/logs:import?key=YOUR_API_KEY&secret=YOUR_SECRET_KEY" \
              -H "Content-Type: application/json" \
              -d '{"signal_id":"12345","event_type":"policy_violation","timestamp":"2026-01-15T10:30:00Z","user":"user@example.com","platform":"slack","policy":"Data Loss Prevention","rule":"Credit Card Numbers","message_snippet":"detected content"}'
            
@@ -250,7 +247,7 @@ Append credentials to the webhook URL.
 
   * **Example:**
         
-        https://malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate?key=AIzaSyD...&secret=abcd1234...
+        https://{region}-chronicle.googleapis.com/v1/{parent}/logs:import?key=AIzaSyD...&secret=abcd1234...
         
 
 
@@ -324,7 +321,7 @@ Limit | Value
   2. Verify the secret key matches the one generated during feed creation.
   3. Test the endpoint manually:
          
-         curl -X POST "https://malachiteingestion-pa.googleapis.com/v2/unstructuredlogentries:batchCreate?key=YOUR_API_KEY&secret=YOUR_SECRET_KEY" \
+         curl -X POST "https://{region}-chronicle.googleapis.com/v1/{parent}/logs:import?key=YOUR_API_KEY&secret=YOUR_SECRET_KEY" \
              -H "Content-Type: application/json" \
              -d '{"test": "event"}'
          
@@ -400,6 +397,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

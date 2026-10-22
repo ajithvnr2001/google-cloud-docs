@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/configuring-notifications/configure-githubissues/
 title: Configure GitHub Issue notifications \u00a0|\u00a0 Cloud Build \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:51:11.113422+00:00
+fetched_at: 2026-10-21T14:11:13.844244+00:00
 ---
 
 # Configure GitHub Issue notifications  |  Cloud Build  |  Google Cloud Documentation

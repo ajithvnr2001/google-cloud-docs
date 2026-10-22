@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/colab/docs/sql-cells/
 title: Use SQL cells \u00a0|\u00a0 Colab Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:30:20.626432+00:00
+fetched_at: 2026-10-21T14:20:54.616999+00:00
 ---
 
 # Use SQL cells  |  Colab Enterprise  |  Google Cloud Documentation

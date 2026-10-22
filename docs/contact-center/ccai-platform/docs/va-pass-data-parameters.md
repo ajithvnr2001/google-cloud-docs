@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/va-pass-data-parameters/
 title: Pass data parameters \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:52:28.903395+00:00
+fetched_at: 2026-10-21T14:22:35.573623+00:00
 ---
 
 # Pass data parameters  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

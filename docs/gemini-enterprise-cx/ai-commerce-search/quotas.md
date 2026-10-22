@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/ai-commerce-search/quotas/
 title: Quotas and limits \u00a0|\u00a0 AI Commerce Search in Gemini Enterprise for Customer Experience \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T04:28:56.240008+00:00
+fetched_at: 2026-10-21T12:55:16.390967+00:00
 ---
 
 # Quotas and limits  |  AI Commerce Search in Gemini Enterprise for Customer Experience  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/db-connect-cluster/
 title: Connect to a database cluster \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:10:12.277497+00:00
+fetched_at: 2026-10-21T12:56:43.288687+00:00
 ---
 
 # Connect to a database cluster  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

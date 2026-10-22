@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/configure-psc/
 title: Create a Filestore instance with Private Service Connect \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:15:19.974463+00:00
+fetched_at: 2026-10-21T12:50:59.700090+00:00
 ---
 
 # Create a Filestore instance with Private Service Connect  |  Google Cloud Documentation
@@ -111,7 +111,7 @@ When creating a Filestore instance you must either use a VPC network that alread
           --tier=TIER \
           --protocol=PROTOCOL \
           --file-share=name="FILE_SHARE_NAME",capacity=CAPACITY \
-          --network=name="VPC_NETWORK_NAME",connect-mode=CONNECT_MODE,address-mode=ADDRESS_MODE,psc-endpoint-project=PSC_ENDPOINT_PROJECT \
+          --network=name="VPC_NETWORK_NAME",connect-mode=CONNECT_MODE,address-mode=ADDRESS_MODE,psc-endpoint-project=PSC_ENDPOINT_PROJECT,psc-requested-ip-address=PSC_REQUESTED_IP_ADDRESS \
           --project=CONSUMER_PROJECT_ID
          
 
@@ -136,6 +136,8 @@ You can't specify a [legacy network](https://docs.cloud.google.com/vpc/docs/lega
      * ADDRESS_MODE is the internet protocol version for which the instance has IP address assigned (`MODE_IPV4` or `MODE_IPV6`).
 
      * PSC_ENDPOINT_PROJECT is an optional name of the service project, where Private Service Connect endpoint is created. You can specify PSC_ENDPOINT_PROJECT if you are using Private Service Connect with Shared VPC. For more information, see [Create an instance on a Shared VPC network in service projects](https://docs.cloud.google.com/filestore/docs/shared-vpc).
+
+     * PSC_REQUESTED_IP_ADDRESS is an optional IPv4 or IPv6 address that the instance uses when the Private Service Connect endpoint is created. The IP address must be within the subnet range configured in the service connection policy. If you don't specify an IP address, one is automatically allocated.
 
      * CONSUMER_PROJECT_ID is the project ID of the project that contains the Filestore instance.
 
@@ -180,6 +182,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

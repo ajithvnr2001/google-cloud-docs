@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-connectivity/docs/concepts/key-terms/
 title: Key terms \u00a0|\u00a0 Network Connectivity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:08:41.938743+00:00
+fetched_at: 2026-10-21T15:16:00.941857+00:00
 ---
 
 # Key terms  |  Network Connectivity  |  Google Cloud Documentation

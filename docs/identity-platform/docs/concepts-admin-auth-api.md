@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity-platform/docs/concepts-admin-auth-api/
 title: Introduction to the Admin Auth API \u00a0|\u00a0 Identity Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:49:23.963906+00:00
+fetched_at: 2026-10-21T12:53:30.871641+00:00
 ---
 
 # Introduction to the Admin Auth API  |  Identity Platform  |  Google Cloud Documentation

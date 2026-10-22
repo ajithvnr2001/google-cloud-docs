@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/agent-status-update/
 title: Update an agent's status \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:01.021515+00:00
+fetched_at: 2026-10-21T14:21:34.686578+00:00
 ---
 
 # Update an agent's status  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

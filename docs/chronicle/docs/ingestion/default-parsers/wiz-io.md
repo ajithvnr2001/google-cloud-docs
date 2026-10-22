@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/wiz-io/
 title: Collect Wiz logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:14:35.486017+00:00
+fetched_at: 2026-10-21T14:06:41.616114+00:00
 ---
 
 # Collect Wiz logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/fortinet-switch-changelog/
 title: Change log for FORTINET_SWITCH \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:40:30.523560+00:00
+fetched_at: 2026-10-21T14:42:44.037504+00:00
 ---
 
 # Change log for FORTINET_SWITCH  |  Google Security Operations  |  Google Cloud Documentation

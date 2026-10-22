@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/upgrade-cluster/
 title: Upgrade a cluster \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:51:14.421114+00:00
+fetched_at: 2026-10-21T14:58:24.646638+00:00
 ---
 
 # Upgrade a cluster  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -145,34 +145,28 @@ If the `Succeeded` condition has a status of `False`, the upgrade failed. If you
 
 
 
-## Verify cluster subcomponents after upgrade
+## Verify cluster status after upgrade
 
-After your Kubernetes cluster is successfully upgraded, we recommend confirming that all subcomponents of the cluster are healthy.
+After your Kubernetes cluster is upgraded, confirm that the cluster and its components are healthy by inspecting the `Cluster` resource status:
 
-Check for subcomponent failures in your cluster:
-
-  1. Verify that there are no subcomponents that show a `ReconciliationError` message:
+  1. View the `status.conditions` and `status.componentsConditions` fields of the `Cluster` resource:
          
          kubectl --kubeconfig MANAGEMENT_API_SERVER \
-             get subcomponent -n CLUSTER_NAME -o json | jq -r \
-             '.items[] |  select(.status.conditions[]?.reason == "ReconciliationError") |
-             select(.status.featureDisabled != true) |  "Sub-Component: \(.metadata.name)
-             - \(.status.conditions[]?.message)"'
+             get cluster CLUSTER_NAME \
+             -n CLUSTER_NAMESPACE -o yaml
          
 
-If the output returns any subcomponents, reach out to your infrastructure operator group for further assistance.
+Replace the following:
 
-  2. Verify that there are no subcomponents that show a `Reconciling` message:
-         
-         kubectl --kubeconfig MANAGEMENT_API_SERVER \
-             get subcomponent -n CLUSTER_NAME -o json | jq -r \
-             '.items[] |  select(.status.conditions[]?.reason == "Reconciling") |
-             select(.status.featureDisabled != true) | select( "\(.status)" |
-             contains("PreinstallPending") | not) | "Sub-Component: \(.metadata.name)
-             - \(.status.conditions[]?.message)"'
-         
+     * `MANAGEMENT_API_SERVER`: the path to the kubeconfig file of the management API server.
+     * `CLUSTER_NAME`: the name of the Kubernetes cluster, such as `user-vm-2`.
+     * `CLUSTER_NAMESPACE`: the namespace of the Kubernetes cluster. For shared clusters, use the `platform` namespace. For standard clusters, use the project namespace of the cluster.
+  2. In the output, verify the following in the `status` section:
 
-For Kubernetes clusters with three control plane nodes and three worker nodes, the upgrade time takes approximately 20 minutes. If you still see subcomponents in a state of `Reconciling` after 20 minutes, contact your infrastructure operator group for further assistance.
+     * In `status.conditions`, verify that the `Ready` condition has a `status` of `True`, and the `Reconciling` condition has a `status` of `False`.
+     * In `status.componentsConditions`, verify that the `Ready` condition has a `status` of `True`, the `Reconciling` condition has a `status` of `False`, and no condition shows a `reason` of `ReconciliationError` or `Reconciling`.
+
+For Kubernetes clusters with three control plane nodes and three worker nodes, the upgrade takes approximately 20 minutes. If the cluster or its components remain in a `Reconciling` state after 20 minutes, or if any condition shows `ReconciliationError`, contact your infrastructure operator group for further assistance.
 
 
 
@@ -189,6 +183,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-14 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 

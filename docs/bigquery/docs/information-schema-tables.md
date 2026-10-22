@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-tables/
 title: TABLES view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T20:35:01.382655+00:00
+fetched_at: 2026-10-21T12:37:00.579616+00:00
 ---
 
 # TABLES view  |  BigQuery  |  Google Cloud Documentation

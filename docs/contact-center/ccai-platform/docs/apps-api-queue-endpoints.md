@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/apps-api-queue-endpoints/
 title: Queue endpoints \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T18:34:19.219266+00:00
+fetched_at: 2026-10-21T15:25:17.996518+00:00
 ---
 
 # Queue endpoints  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation
@@ -47,8 +47,8 @@ Key | Value | Description
 lang | string | The two-letter language code for the queue, in ISO 639-1 format (for example, `en` or `es`). Required.  
 menu_id[] | string | A single queue ID or an array of multiple queue IDs. Required.  
 menu_type | string | The menu type. Possible values are `ivr_menu`, `mobile_menu`, and `web_menu`. Required.  
-callback_period_hours | integer | The total future window length in hours for which to return callback-slot periods. Must be less than or equal to 8 hours. Default is 4 hours. Optional.  
-callback_start_from | string | The start of the callback-slot search window, in ISO 8601 datetime format in the queue or company timezone. If omitted, defaults to the current time (server time converted to queue or company timezone). Must not be in the past and must be at most 24 hours in the future. Optional.  
+callback_period_hours | integer | The total future window length in hours for which to return callback-slot periods. Must be between 1 and 24. If omitted, a default 4-hour window is used, unless capacity-based scheduling is enabled for your account. Optional.  
+callback_start_from | string | The start of the callback-slot search window, in ISO 8601 datetime format in the queue or company timezone. If omitted, defaults to the current time (server time converted to queue or company timezone). Must not be in the past. Optional.  
   
 ### Example response
     
@@ -71,14 +71,16 @@ callback_start_from | string | The start of the callback-slot search window, in 
                         "start_time": "17:30",
                         "end_time": "17:45",
                         "scheduled_calls": 0,
-                        "max_slots": 1
+                        "max_slots": 1,
+                        "available_slots": 1
                     },
                     {
                         "date": "20260225",
                         "start_time": "17:45",
                         "end_time": "18:00",
                         "scheduled_calls": 0,
-                        "max_slots": 1
+                        "max_slots": 1,
+                        "available_slots": 1
                     }
                 ],
                 "hoops": {
@@ -142,6 +144,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-21 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 

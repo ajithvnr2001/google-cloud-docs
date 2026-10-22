@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/audit-logging/
 title: Batch audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:29:26.533570+00:00
+fetched_at: 2026-10-21T12:30:29.154418+00:00
 ---
 
 # Batch audit logging  |  Google Cloud Documentation

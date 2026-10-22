@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/certificate-authority-service/docs/samples/privateca-create-certificate-config/
 title: Create a Certificate using a Certificate Authority \u00a0|\u00a0 Certificate Authority Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:49:29.993324+00:00
+fetched_at: 2026-10-21T12:38:42.916079+00:00
 ---
 
 # Create a Certificate using a Certificate Authority  |  Certificate Authority Service  |  Google Cloud Documentation

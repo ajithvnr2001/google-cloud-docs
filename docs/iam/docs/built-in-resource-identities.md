@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/built-in-resource-identities/
 title: Built-in identities for resources \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T03:10:06.439358+00:00
+fetched_at: 2026-10-21T12:53:24.479056+00:00
 ---
 
 # Built-in identities for resources  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

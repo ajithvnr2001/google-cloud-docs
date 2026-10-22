@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/enable-notifications/
 title: Create and run a job that sends Pub/Sub status notifications \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:29:22.965550+00:00
+fetched_at: 2026-10-21T12:35:29.334905+00:00
 ---
 
 # Create and run a job that sends Pub/Sub status notifications  |  Batch  |  Google Cloud Documentation

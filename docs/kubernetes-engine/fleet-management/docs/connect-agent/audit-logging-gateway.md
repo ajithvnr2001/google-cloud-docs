@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/fleet-management/docs/connect-agent/audit-logging-gateway/
 title: Connect Gateway audit logging \u00a0|\u00a0 Fleet management \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:37:15.503128+00:00
+fetched_at: 2026-10-21T15:03:31.978288+00:00
 ---
 
 # Connect Gateway audit logging  |  Fleet management  |  Google Cloud Documentation

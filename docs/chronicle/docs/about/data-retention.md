@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/about/data-retention/
 title: Configure SIEM data retention \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:48.030859+00:00
+fetched_at: 2026-10-21T14:18:47.375200+00:00
 ---
 
 # Configure SIEM data retention  |  Google Security Operations  |  Google Cloud Documentation

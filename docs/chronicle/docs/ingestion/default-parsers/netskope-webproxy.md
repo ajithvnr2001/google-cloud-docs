@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/netskope-webproxy/
 title: Collect Netskope web proxy logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T13:29:28.739602+00:00
+fetched_at: 2026-10-21T12:29:40.140460+00:00
 ---
 
 # Collect Netskope web proxy logs  |  Google Security Operations  |  Google Cloud Documentation

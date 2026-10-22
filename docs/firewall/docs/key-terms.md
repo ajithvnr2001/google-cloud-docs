@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/key-terms/
 title: Cloud NGFW concepts \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:40:23.399018+00:00
+fetched_at: 2026-10-21T12:45:47.118732+00:00
 ---
 
 # Cloud NGFW concepts  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

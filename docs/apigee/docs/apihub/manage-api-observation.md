@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/apihub/manage-api-observation/
 title: Manage API observations in API hub \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:51:01.828588+00:00
+fetched_at: 2026-10-21T14:53:06.638154+00:00
 ---
 
 # Manage API observations in API hub  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/how-to/view-cluster-status/
 title: View a cluster's status \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:35:51.648419+00:00
+fetched_at: 2026-10-21T15:02:57.214851+00:00
 ---
 
 # View a cluster's status  |  GKE on Azure  |  Google Cloud Documentation

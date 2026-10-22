@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/wiz-io-changelog/
 title: Change log for WIZ_IO \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:14:24.760699+00:00
+fetched_at: 2026-10-21T14:47:06.244556+00:00
 ---
 
 # Change log for WIZ_IO  |  Google Security Operations  |  Google Cloud Documentation

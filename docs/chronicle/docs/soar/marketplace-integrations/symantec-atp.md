@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/symantec-atp/
 title: Symantec ATP \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:56:21.828560+00:00
+fetched_at: 2026-10-21T12:38:52.127426+00:00
 ---
 
 # Symantec ATP  |  Google Security Operations  |  Google Cloud Documentation

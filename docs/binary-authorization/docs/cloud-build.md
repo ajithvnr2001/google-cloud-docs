@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/binary-authorization/docs/cloud-build/
 title: Create a Binary Authorization attestation in a Cloud Build pipeline \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:48:12.472215+00:00
+fetched_at: 2026-10-21T14:10:07.645407+00:00
 ---
 
 # Create a Binary Authorization attestation in a Cloud Build pipeline  |  Google Cloud Documentation

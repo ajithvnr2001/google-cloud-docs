@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/cloud-passage-changelog/
 title: Change log for CLOUD_PASSAGE \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T16:30:45.363387+00:00
+fetched_at: 2026-10-21T14:44:40.612144+00:00
 ---
 
 # Change log for CLOUD_PASSAGE  |  Google Security Operations  |  Google Cloud Documentation

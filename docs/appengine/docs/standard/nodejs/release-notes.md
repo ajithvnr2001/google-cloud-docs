@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/nodejs/release-notes/
 title: App Engine standard environment for Node.js release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:23:11.651051+00:00
+fetched_at: 2026-10-21T14:43:07.719373+00:00
 ---
 
 # App Engine standard environment for Node.js release notes  |  Google Cloud Documentation

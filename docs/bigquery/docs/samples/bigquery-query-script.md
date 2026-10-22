@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/samples/bigquery-query-script/
 title: Query script \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:42:05.635959+00:00
+fetched_at: 2026-10-22T05:49:33.057455+00:00
 ---
 
 # Query script  |  BigQuery  |  Google Cloud Documentation

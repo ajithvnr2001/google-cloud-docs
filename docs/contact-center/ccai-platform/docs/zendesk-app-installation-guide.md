@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/zendesk-app-installation-guide/
 title: Zendesk app installation guide \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T03:10:45.005513+00:00
+fetched_at: 2026-10-21T14:19:34.259698+00:00
 ---
 
 # Zendesk app installation guide  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

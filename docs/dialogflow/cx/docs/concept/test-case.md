@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/test-case/
 title: Test cases \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:37:54.635107+00:00
+fetched_at: 2026-10-21T12:43:04.442715+00:00
 ---
 
 # Test cases  |  Dialogflow CX  |  Google Cloud Documentation

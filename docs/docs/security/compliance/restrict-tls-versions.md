@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/docs/security/compliance/restrict-tls-versions/
 title: Restrict TLS versions \u00a0|\u00a0 Security \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:42:49.024965+00:00
+fetched_at: 2026-10-21T14:06:57.280666+00:00
 ---
 
 # Restrict TLS versions  |  Security  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/images/premium/ubuntu-pro-faq/
 title: Ubuntu Pro FAQ \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:44.345814+00:00
+fetched_at: 2026-10-21T14:21:42.571918+00:00
 ---
 
 # Ubuntu Pro FAQ  |  Compute Engine  |  Google Cloud Documentation

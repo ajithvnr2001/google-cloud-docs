@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/detection/macos-threats-category/
 title: MacOS threats \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:19:24.874892+00:00
+fetched_at: 2026-10-21T12:38:46.521665+00:00
 ---
 
 # MacOS threats  |  Google Security Operations  |  Google Cloud Documentation

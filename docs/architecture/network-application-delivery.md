@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/network-application-delivery/
 title: Networking for internet-facing application delivery: Reference architectures \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:13:47.959009+00:00
+fetched_at: 2026-10-21T14:27:33.530356+00:00
 ---
 
 # Networking for internet-facing application delivery: Reference architectures  |  Cloud Architecture Center  |  Google Cloud Documentation

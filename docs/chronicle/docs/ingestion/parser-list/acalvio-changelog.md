@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/acalvio-changelog/
 title: Change log for ACALVIO \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:17:27.517281+00:00
+fetched_at: 2026-10-21T14:51:44.339816+00:00
 ---
 
 # Change log for ACALVIO  |  Google Security Operations  |  Google Cloud Documentation

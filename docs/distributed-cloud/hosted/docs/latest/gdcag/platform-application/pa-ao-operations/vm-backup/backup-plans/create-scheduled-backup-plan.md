@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform-application/pa-ao-operations/vm-backup/backup-plans/create-scheduled-backup-plan/
 title: Create a scheduled backup plan \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:10:52.829619+00:00
+fetched_at: 2026-10-21T12:59:17.130303+00:00
 ---
 
 # Create a scheduled backup plan  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

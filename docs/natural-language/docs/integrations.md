@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/docs/integrations/
 title: Apache Airflow / Cloud Composer operators \u00a0|\u00a0 Cloud Natural Language API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:31:34.454945+00:00
+fetched_at: 2026-10-21T15:17:54.205138+00:00
 ---
 
 # Apache Airflow / Cloud Composer operators  |  Cloud Natural Language API  |  Google Cloud Documentation

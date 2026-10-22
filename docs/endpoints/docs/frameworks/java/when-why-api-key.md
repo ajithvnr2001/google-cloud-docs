@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/java/when-why-api-key/
 title: Why and when to use API keys \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:38:19.908325+00:00
+fetched_at: 2026-10-21T12:46:35.074647+00:00
 ---
 
 # Why and when to use API keys  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

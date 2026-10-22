@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/mobile-app-legacy-navigating-to-content/
 title: Navigating to content in the Looker Mobile (Legacy) app \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T15:44:16.855152+00:00
+fetched_at: 2026-10-21T15:03:35.539410+00:00
 ---
 
 # Navigating to content in the Looker Mobile (Legacy) app  |  Google Cloud Documentation

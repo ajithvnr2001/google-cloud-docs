@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/chat-settings-web-and-mobile/
 title: Chat Settings \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:36:13.489732+00:00
+fetched_at: 2026-10-21T12:29:43.994578+00:00
 ---
 
 # Chat Settings  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

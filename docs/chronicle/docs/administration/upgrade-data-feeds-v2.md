@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/administration/upgrade-data-feeds-v2/
 title: Upgrade cloud storage data feeds to the v2 connector framework \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:59.589733+00:00
+fetched_at: 2026-10-21T14:10:58.682065+00:00
 ---
 
 # Upgrade cloud storage data feeds to the v2 connector framework  |  Google Security Operations  |  Google Cloud Documentation

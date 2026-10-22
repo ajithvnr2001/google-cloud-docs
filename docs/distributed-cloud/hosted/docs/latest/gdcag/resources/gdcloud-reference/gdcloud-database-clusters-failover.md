@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-database-clusters-failover/
 title: gdcloud database clusters failover \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T14:46:23.458151+00:00
+fetched_at: 2026-10-21T12:59:19.693749+00:00
 ---
 
 # gdcloud database clusters failover  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

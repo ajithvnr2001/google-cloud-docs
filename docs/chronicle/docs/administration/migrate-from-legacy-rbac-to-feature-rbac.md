@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/administration/migrate-from-legacy-rbac-to-feature-rbac/
 title: Migrate from legacy RBAC to feature RBAC \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:25:58.530415+00:00
+fetched_at: 2026-10-21T14:12:01.090981+00:00
 ---
 
 # Migrate from legacy RBAC to feature RBAC  |  Google Security Operations  |  Google Cloud Documentation

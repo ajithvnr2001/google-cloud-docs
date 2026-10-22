@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/aws-emr-changelog/
 title: Change log for AWS_EMR \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T02:33:11.250656+00:00
+fetched_at: 2026-10-21T14:45:46.892134+00:00
 ---
 
 # Change log for AWS_EMR  |  Google Security Operations  |  Google Cloud Documentation

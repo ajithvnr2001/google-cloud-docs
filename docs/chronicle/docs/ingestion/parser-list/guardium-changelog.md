@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/guardium-changelog/
 title: Change log for GUARDIUM \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T19:02:01.388367+00:00
+fetched_at: 2026-10-21T14:52:05.334862+00:00
 ---
 
 # Change log for GUARDIUM  |  Google Security Operations  |  Google Cloud Documentation

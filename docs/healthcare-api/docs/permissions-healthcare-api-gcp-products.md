@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/permissions-healthcare-api-gcp-products/
 title: Managing permissions between the Cloud Healthcare API and other Google Cloud products \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:10:12.024926+00:00
+fetched_at: 2026-10-21T14:30:41.071347+00:00
 ---
 
 # Managing permissions between the Cloud Healthcare API and other Google Cloud products  |  Google Cloud Documentation

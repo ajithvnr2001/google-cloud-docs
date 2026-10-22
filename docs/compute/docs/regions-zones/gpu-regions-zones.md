@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/regions-zones/gpu-regions-zones/
 title: GPU locations \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:17:41.498514+00:00
+fetched_at: 2026-10-21T14:22:23.306484+00:00
 ---
 
 # GPU locations  |  Compute Engine  |  Google Cloud Documentation

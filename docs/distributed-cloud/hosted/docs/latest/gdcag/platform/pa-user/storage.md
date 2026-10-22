@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/platform/pa-user/storage/
 title: Storage overview \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T23:43:58.410971+00:00
+fetched_at: 2026-10-21T12:58:56.872673+00:00
 ---
 
 # Storage overview  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

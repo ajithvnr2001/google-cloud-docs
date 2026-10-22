@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-intelligence-center/docs/network-topology/reference/metrics-reference/
 title: Network Topology metrics \u00a0|\u00a0 Network Intelligence Center - Network Topology \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:36:04.794830+00:00
+fetched_at: 2026-10-21T15:16:30.097598+00:00
 ---
 
 # Network Topology metrics  |  Network Intelligence Center - Network Topology  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/list-get-policies/
 title: Listing and getting policies \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:18:37.679243+00:00
+fetched_at: 2026-10-21T12:54:12.979682+00:00
 ---
 
 # Listing and getting policies  |  Cloud Identity  |  Google Cloud Documentation

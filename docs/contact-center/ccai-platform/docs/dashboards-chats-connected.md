@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/dashboards-chats-connected/
 title: Real-time Connected - Chats dashboard \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:59:31.714731+00:00
+fetched_at: 2026-10-21T14:23:19.417818+00:00
 ---
 
 # Real-time Connected - Chats dashboard  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation

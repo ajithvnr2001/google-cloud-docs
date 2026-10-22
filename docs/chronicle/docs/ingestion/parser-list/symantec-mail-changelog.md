@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/symantec-mail-changelog/
 title: Change log for SYMANTEC_MAIL \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T00:50:59.131614+00:00
+fetched_at: 2026-10-21T14:43:11.499410+00:00
 ---
 
 # Change log for SYMANTEC_MAIL  |  Google Security Operations  |  Google Cloud Documentation

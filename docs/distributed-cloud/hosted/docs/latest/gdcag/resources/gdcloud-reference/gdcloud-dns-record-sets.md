@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/gdcloud-reference/gdcloud-dns-record-sets/
 title: gdcloud dns record-sets \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:08:28.738760+00:00
+fetched_at: 2026-10-21T12:58:42.711443+00:00
 ---
 
 # gdcloud dns record-sets  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

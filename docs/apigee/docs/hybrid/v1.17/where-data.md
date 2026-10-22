@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/where-data/
 title: Where is your data stored? \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:49:52.657198+00:00
+fetched_at: 2026-10-21T14:28:23.332139+00:00
 ---
 
 # Where is your data stored?  |  Apigee  |  Google Cloud Documentation

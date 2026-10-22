@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/harness-io-changelog/
 title: Change log for HARNESS_IO \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T06:14:40.451483+00:00
+fetched_at: 2026-10-21T14:52:04.688819+00:00
 ---
 
 # Change log for HARNESS_IO  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/mainframe-connector/docs/archive/
 title: Archive mainframe data to Cloud Storage \u00a0|\u00a0 Mainframe Connector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:35:01.111150+00:00
+fetched_at: 2026-10-21T15:10:52.512565+00:00
 ---
 
 # Archive mainframe data to Cloud Storage  |  Mainframe Connector  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/create-data-store-hc/
 title: Create a healthcare search data store \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T10:28:03.123682+00:00
+fetched_at: 2026-10-21T12:54:51.471216+00:00
 ---
 
 # Create a healthcare search data store  |  Agent Search  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/respond/start-developing/requirements-for-publishing-integration/
 title: Publish custom integrations \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T19:26:07.491703+00:00
+fetched_at: 2026-10-21T12:38:36.367523+00:00
 ---
 
 # Publish custom integrations  |  Google Security Operations  |  Google Cloud Documentation

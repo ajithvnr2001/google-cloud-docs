@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-connectivity/docs/interconnect/concepts/service-providers/
 title: Supported service providers \u00a0|\u00a0 Cloud Interconnect \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T01:55:04.863271+00:00
+fetched_at: 2026-10-21T12:40:05.307659+00:00
 ---
 
 # Supported service providers  |  Cloud Interconnect  |  Google Cloud Documentation
@@ -39,7 +39,7 @@ Locations | Service provider | Type
 ---|---|---  
 Johannesburg | [Equinix](https://www.equinix.com/partners/google-cloud-platform/) | Layer 2 and 3  
 [Liquid Intelligent Technologies](https://liquidc2.com/connect/) | Layer 2 and 3  
-[Open Access DC](https://openaccessdc.net/) | Layer 2 and 3  
+[Open Access Data Centres](https://openaccessdc.net/) | Layer 2 and 3  
 [Teraco](https://teraco.co.za) | Layer 2 and3  
   
 ### Asia
@@ -287,7 +287,7 @@ London | [BSO](http://www.bsonetwork.com/) | Layer 2 and 3
 [JISC](https://www.jisc.ac.uk/) | Layer 2  
 [Lumen](https://www.lumen.com/) | Layer 2 and 3  
 [Megaport](https://www.megaport.com/services/google-cloud-platform-google-apps-business/) | Layer 2 and 3  
-[Open Access DC](https://openaccessdc.net/) | Layer 2 and 3  
+[Open Access Data Centres](https://openaccessdc.net/) | Layer 2 and 3  
 [Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/access-to-google-cloud-platform.htm) | Layer 3  
 [Orange](https://www.orange-business.com/en/products/business-vpn-galeri/) | Layer 2 and 3  
 [PacketFabric](https://www.packetfabric.com/) | Layer 2 and 3  
@@ -642,22 +642,25 @@ Locations | Service provider | Type
 ---|---|---  
 Chennai | [DE-CIX](https://de-cix.net/en/services/directcloud) | Layer 2 and 3  
 [Equinix](https://www.equinix.com/partners/google-cloud-platform/) | Layer 2 and 3  
+[Megaport](https://www.megaport.com/services/google-cloud-platform-google-apps-business/) | Layer 2 and 3  
 Delhi | [Airtel](https://www.airtel.in/b2b/multi-cloud-connect) | Layer 2 and 3  
 [CtrlS](https://www.ctrls.in/cloud-connect-services.php) | Layer 2 and 3  
 [DE-CIX](https://de-cix.net/en/services/directcloud) | Layer 2 and 3  
 [Ishan Technologies](https://ishanitech.biz) | Layer 2 and 3  
+[Megaport](https://www.megaport.com/services/google-cloud-platform-google-apps-business/) | Layer 2 and 3  
 [Lightstorm](https://polarin.lightstorm.net/) | Layer 2 and 3  
 [Netmagic IT Services Pvt. Ltd.](https://www.netmagicsolutions.com/) | Layer 2  
 [Tata Communications](https://www.tatacommunications.com/for-you/google-cloud-platform/) | Layer 2 and 3  
 [Vodafone Idea](https://www.myvi.in/about-us/home) | Layer 2 and 3  
 Hyderabad | [CtrlS](https://www.ctrls.in/cloud-connect-services.php) | Layer 2 and 3  
+[Megaport](https://www.megaport.com/services/google-cloud-platform-google-apps-business/) | Layer 2 and 3  
 [Tata Communications](https://www.tatacommunications.com/for-you/google-cloud-platform/) | Layer 2 and 3  
-Mumbai | [Airtel](https://www.airtel.in/b2b/multi-cloud-connect) | Layer 2 and 3  
-[CtrlS](https://www.ctrls.in/cloud-connect-services.php) | Layer 2 and 3  
+Mumbai | [Airtel](https://www.airtel.in/b2b/multi-cloud-connect) | Layer 2 and 3 | [CtrlS](https://www.ctrls.in/cloud-connect-services.php) | Layer 2 and 3  
 [DE-CIX](https://de-cix.net/en/services/directcloud) | Layer 2 and 3  
 [Equinix](https://www.equinix.com/partners/google-cloud-platform/) | Layer 2 and 3  
 [GPX Global](http://www.gpxglobal.net/) | Layer 2  
 [Ishan Technologies](https://ishanitech.biz) | Layer 2 and 3  
+[Megaport](https://www.megaport.com/services/google-cloud-platform-google-apps-business/) | Layer 2 and 3  
 [Lightstorm](https://polarin.lightstorm.net/) | Layer 2 and 3  
 [Netmagic IT Services Pvt. Ltd.](https://www.netmagicsolutions.com/) | Layer 2  
 [Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/access-to-google-cloud-platform.htm) | Layer 3  
@@ -1289,6 +1292,12 @@ Sydney
   
 **South America**  
 São Paulo  
+  
+**India**  
+Chennai  
+Delhi  
+Hyderabad  
+Mumbai  
 | Layer 2 and 3  
   
 *_Layer 2 only location_  
@@ -1394,7 +1403,7 @@ Warsaw
 [Orixcom](https://www.orixcom.com/platform/google-cloud-interconnect) |  **EMEA**  
 Dubai  
 | Layer 2 and 3  
-[Open Access DC](https://openaccessdc.net/) |  **Africa**  
+[Open Access Data Centres](https://openaccessdc.net/) |  **Africa**  
 Johannesburg  
   
 **EMEA**  
@@ -1680,6 +1689,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-15 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 

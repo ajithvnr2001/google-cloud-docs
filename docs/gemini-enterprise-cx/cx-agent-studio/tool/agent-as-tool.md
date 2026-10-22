@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/tool/agent-as-tool/
 title: Agent as a tool \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:22:21.417797+00:00
+fetched_at: 2026-10-21T12:55:15.482180+00:00
 ---
 
 # Agent as a tool  |  CX Agent Studio  |  Google Cloud Documentation

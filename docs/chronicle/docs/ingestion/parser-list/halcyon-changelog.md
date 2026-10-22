@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/parser-list/halcyon-changelog/
 title: Change log for HALCYON \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:09:18.110234+00:00
+fetched_at: 2026-10-21T14:52:04.794941+00:00
 ---
 
 # Change log for HALCYON  |  Google Security Operations  |  Google Cloud Documentation

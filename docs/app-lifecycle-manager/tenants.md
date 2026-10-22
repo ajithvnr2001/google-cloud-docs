@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-lifecycle-manager/tenants/
 title: Tenants and tenant projects \u00a0|\u00a0 App Lifecycle Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T11:50:17.798835+00:00
+fetched_at: 2026-10-21T12:30:17.890683+00:00
 ---
 
 # Tenants and tenant projects  |  App Lifecycle Manager  |  Google Cloud Documentation

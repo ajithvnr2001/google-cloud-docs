@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/build/docs/building/build-containerize-python/
 title: Build, test, and containerize Python applications \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T05:25:29.180669+00:00
+fetched_at: 2026-10-21T14:11:12.510189+00:00
 ---
 
 # Build, test, and containerize Python applications  |  Google Cloud Documentation

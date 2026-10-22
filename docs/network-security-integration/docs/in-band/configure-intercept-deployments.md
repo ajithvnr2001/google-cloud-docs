@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-security-integration/docs/in-band/configure-intercept-deployments/
 title: Create and manage intercept deployments \u00a0|\u00a0 Network Security Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:40:22.246400+00:00
+fetched_at: 2026-10-21T15:15:15.906136+00:00
 ---
 
 # Create and manage intercept deployments  |  Network Security Integration  |  Google Cloud Documentation

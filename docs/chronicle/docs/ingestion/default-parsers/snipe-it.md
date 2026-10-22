@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/snipe-it/
 title: Collect Snipe-IT logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:13:50.321495+00:00
+fetched_at: 2026-10-21T12:37:53.723678+00:00
 ---
 
 # Collect Snipe-IT logs  |  Google Security Operations  |  Google Cloud Documentation

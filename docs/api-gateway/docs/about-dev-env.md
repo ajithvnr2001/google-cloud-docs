@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/about-dev-env/
 title: About the API Gateway development environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:22:26.548420+00:00
+fetched_at: 2026-10-21T14:29:02.587617+00:00
 ---
 
 # About the API Gateway development environment  |  Google Cloud Documentation

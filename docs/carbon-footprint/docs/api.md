@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/carbon-footprint/docs/api/
 title: Export and read your carbon footprint using an API \u00a0|\u00a0 Carbon Footprint \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:39:03.693314+00:00
+fetched_at: 2026-10-21T14:25:17.763017+00:00
 ---
 
 # Export and read your carbon footprint using an API  |  Carbon Footprint  |  Google Cloud Documentation
