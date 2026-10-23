@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/admin-api/configure-service-controls/
 title: Configure VPC Service Controls \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:52:07.909221+00:00
+fetched_at: 2026-10-23T10:43:52.236278+00:00
 ---
 
 # Configure VPC Service Controls  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -69,7 +69,7 @@ To enable APIs, you need the `serviceusage.services.enable` permission. If you c
 
 [Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=servicenetworking)
 
-  8. Add the [Identity and Access Management (IAM) roles](https://docs.cloud.google.com/vpc-service-controls/docs/access-control#required_roles) to the user or service account you are using to set up and administer VPC Service Controls. See [IAM Roles for Administering VPC Service Controls](https://cloud.google.com/vpc-service-controls/docs/access-control).
+  8. Add the [Identity and Access Management (IAM) roles](https://docs.cloud.google.com/vpc-service-controls/docs/access-control#required_roles) to the user or service account you are using to set up and administer VPC Service Controls. See [IAM Roles for Administering VPC Service Controls](https://docs.cloud.google.com/vpc-service-controls/docs/access-control).
   9. Review [limitations](https://docs.cloud.google.com/vpc-service-controls/docs/supported-products#cloud_sql_admin_api) when using VPC Service Controls with Cloud SQL.
   10. Optionally, add an organization policy that restricts public IP on instances in projects that use that policy. See [Connection organization policies](https://docs.cloud.google.com/sql/docs/postgres/connection-org-policy) and [Configuring the organization policy](https://docs.cloud.google.com/sql/docs/postgres/configure-org-policy#configuring_the_organization_policy).
 
@@ -236,6 +236,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

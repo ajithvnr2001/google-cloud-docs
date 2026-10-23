@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/watchguard-edr/
 title: Collect WatchGuard EDR logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:34:23.875970+00:00
+fetched_at: 2026-10-23T12:55:54.602116+00:00
 ---
 
 # Collect WatchGuard EDR logs  |  Google Security Operations  |  Google Cloud Documentation

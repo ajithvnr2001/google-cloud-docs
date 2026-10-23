@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-print-pubsub-bucket-notification/
 title: Get a Pub/Sub notification \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:31:40.903357+00:00
+fetched_at: 2026-10-23T09:34:44.615946+00:00
 ---
 
 # Get a Pub/Sub notification  |  Cloud Storage  |  Google Cloud Documentation
@@ -299,7 +299,7 @@ To authenticate to Cloud Storage, set up Application Default Credentials. For mo
       # notification_id = "your-notification-id"
     
     
-      storage = Google::Cloud::[Storage](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html)
+      storage = Google::Cloud::[Storage](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage-control-v2/latest/Google-Cloud-Storage.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html)
       bucket  = storage.bucket bucket_name
       notification = bucket.[notification](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage-Bucket.html) notification_id
     

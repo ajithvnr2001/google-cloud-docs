@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/quotas-1st-gen/
 title: Quotas (1st gen) \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:58.151386+00:00
+fetched_at: 2026-10-23T13:13:14.803814+00:00
 ---
 
 # Quotas (1st gen)  |  Cloud Run functions  |  Google Cloud Documentation

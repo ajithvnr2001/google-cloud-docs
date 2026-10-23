@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-dml-standard-update/
 title: DML update data \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:19.667062+00:00
+fetched_at: 2026-10-23T10:10:20.294302+00:00
 ---
 
 # DML update data  |  Spanner  |  Google Cloud Documentation

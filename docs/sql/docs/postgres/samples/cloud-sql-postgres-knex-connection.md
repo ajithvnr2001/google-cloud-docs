@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/samples/cloud-sql-postgres-knex-connection/
 title: PostgreSQL knex connection \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:35.563646+00:00
+fetched_at: 2026-10-23T10:11:27.155594+00:00
 ---
 
 # PostgreSQL knex connection  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation

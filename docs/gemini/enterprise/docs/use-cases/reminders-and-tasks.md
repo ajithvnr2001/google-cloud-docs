@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/use-cases/reminders-and-tasks/
 title: Get reminders and manage tasks \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:40.066142+00:00
+fetched_at: 2026-10-23T13:11:57.309808+00:00
 ---
 
 # Get reminders and manage tasks  |  Gemini Enterprise  |  Google Cloud Documentation

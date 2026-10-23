@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1beta/projects.locations.dataAgents/create/
 title: Method: projects.locations.dataAgents.create \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:21.128557+00:00
+fetched_at: 2026-10-23T13:02:36.840400+00:00
 ---
 
 # Method: projects.locations.dataAgents.create  |  Data Agents  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/create-data-products/
 title: Create data products \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:29.057573+00:00
+fetched_at: 2026-10-23T10:21:32.357464+00:00
 ---
 
 # Create data products  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -40,7 +40,7 @@ By default, creating a data product requires you to manually enter business desc
   * **Business documentation:** Generates documentation templates and clear descriptions for your data product and its individual data assets.
   * **Insights and sample queries:** Constructs ready-to-use sample queries based on the asset's schema layout, enabling data consumers to immediately start querying the product upon approval.
 
-**Note:** This feature is in [Preview](https://cloud.google.com/products#product-launch-stages).
+
 
 If you choose not to enable Gemini, you can skip this section. However, you must manually provide all asset metadata and query templates during creation.
 
@@ -102,14 +102,14 @@ This section outlines the minimum IAM roles required for the following primary s
 
 To get the permissions that you need to create and manage data products, ask your administrator to grant you the following IAM roles on the project: 
 
-  * Full permissions to create, update, delete, manage permissions, and approve or reject access requests for data products: [Dataplex Data Products Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataProductsAdmin) (`roles/dataplex.dataProductsAdmin`) 
-  * Update and manage permissions, and approve or reject access requests for data products: [Dataplex Data Products Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataProductsEditor) (`roles/dataplex.dataProductsEditor`) 
-  * Add metadata aspects (such as `schema`, `overview`, `contacts`, and `queries`): [Dataplex Entry and EntryLink Owner ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryOwner) (`roles/dataplex.entryOwner`) 
-  * Search for and add assets: [Dataplex Catalog Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) 
-  * Edit system aspect types (such as `overview`, `contact`, `contract`, and `queries`): [Dataplex Catalog Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogEditor) (`roles/dataplex.catalogEditor`) 
-  * Create or retrieve insights data scans for automated documentation and insights generation: [Dataplex DataScan Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataScanAdmin) (`roles/dataplex.dataScanAdmin`) 
-  * Access Looker (Google Cloud core) metadata in Knowledge Catalog: Looker Schema Viewer (`roles/looker.schemaViewer`) - on the project that hosts the Looker (Google Cloud core) instance 
-  * Grant `roles/looker.instanceUser` to the access group's Google Group: Project IAM Admin (`roles/resourcemanager.projectIamAdmin`) - on the project that hosts the Looker (Google Cloud core) instance 
+  * Full permissions to create, update, delete, manage permissions, and approve or reject access requests for data products: [**Dataplex Data Products Admin** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataProductsAdmin) (`roles/dataplex.dataProductsAdmin`) 
+  * Update and manage permissions, and approve or reject access requests for data products: [**Dataplex Data Products Editor** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataProductsEditor) (`roles/dataplex.dataProductsEditor`) 
+  * Add metadata aspects (such as `schema`, `overview`, `contacts`, and `queries`): [**Dataplex Entry and EntryLink Owner** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryOwner) (`roles/dataplex.entryOwner`) 
+  * Search for and add assets: [**Dataplex Catalog Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) 
+  * Edit system aspect types (such as `overview`, `contact`, `contract`, and `queries`): [**Dataplex Catalog Editor** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogEditor) (`roles/dataplex.catalogEditor`) 
+  * Create or retrieve insights data scans for automated documentation and insights generation: [**Dataplex DataScan Admin** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataScanAdmin) (`roles/dataplex.dataScanAdmin`) 
+  * Access Looker (Google Cloud core) metadata in Knowledge Catalog: **Looker Schema Viewer** (`roles/looker.schemaViewer`) - on the project that hosts the Looker (Google Cloud core) instance 
+  * Grant `roles/looker.instanceUser` to the access group's Google Group: **Project IAM Admin** (`roles/resourcemanager.projectIamAdmin`) - on the project that hosts the Looker (Google Cloud core) instance 
 
 
 
@@ -152,8 +152,8 @@ You might also be able to get these permissions with [custom roles](https://docs
 
 For the data product consumers to search for, view, and request access to data products, as a data product owner, you must ensure the data product is discoverable. To do this, grant the data product consumers the following IAM roles on the data product:
 
-  * Search for data products and request access to them: Dataplex Data Product Consumer (`dataplex.dataProductsConsumer`) and Dataplex Catalog Viewer (`roles/dataplex.catalogViewer`)
-  * Read-only access to view data product definitions and metadata: Dataplex Data Product Viewer (`dataplex.dataProductsViewer`)
+  * Search for data products and request access to them: **Dataplex Data Product Consumer** (`roles/dataplex.dataProductsConsumer`) and **Dataplex Catalog Viewer** (`roles/dataplex.catalogViewer`)
+  * Read-only access to view data product definitions and metadata: **Dataplex Data Product Viewer** (`roles/dataplex.dataProductsViewer`)
 
 
 
@@ -886,7 +886,7 @@ For more information about creating Google Groups, see [Create and manage Google
 
   5. In the **Access group service account** field, enter the email address of a service account that you want to assign to this access group.
 
-Data product consumers who request access for their service accounts are granted the Service Account Token Creator (`roles/iam.serviceAccountTokenCreator`) IAM role to impersonate the data producer service account mapped to the access group.
+Data product consumers who request access for their service accounts are granted the **Service Account Token Creator** (`roles/iam.serviceAccountTokenCreator`) IAM role to impersonate the data producer service account mapped to the access group.
 
 For more information about creating service accounts, see [Create service accounts](https://docs.cloud.google.com/iam/docs/service-accounts-create).
 
@@ -1893,18 +1893,14 @@ For general information on the import process, refer to the [Terraform import do
 
 #### Generate automated documentation and sample queries using data insights
 
-**Preview**
-
-This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
-
 Before you generate documentation and sample queries using Gemini, complete the following prerequisites:
 
   1. Enable the Gemini for Google Cloud API in the project where you create the data product.
 
   2. Grant insight-specific user roles: Ask your administrator to grant your identity the following roles and permissions on the data product project:
 
-     * Generate and manage data insights: Dataplex DataScan Editor (`roles/dataplex.dataScanEditor`) or Dataplex DataScan Administrator (`roles/dataplex.dataScanAdmin`) on the project where data product resides 
-     * View generated insights: Dataplex DataScan DataViewer (`roles/dataplex.dataScanDataViewer`) on the project where data product resides
+     * Generate and manage data insights: **Dataplex DataScan Editor** (`roles/dataplex.dataScanEditor`) or **Dataplex DataScan Administrator** (`roles/dataplex.dataScanAdmin`) on the project where data product resides 
+     * View generated insights: **Dataplex DataScan DataViewer** (`roles/dataplex.dataScanDataViewer`) on the project where data product resides
   3. Configure cross-project service agent permissions. If your underlying data assets reside in a Google Cloud project different from your data product project, you must grant the Knowledge Catalog service agent (P4SA) access to those assets:
 
      1. To generate or retrieve the service agent identifier for your data product project, run the following Google Cloud CLI command:
@@ -1916,9 +1912,9 @@ Replace DATA_PRODUCT_PROJECT_ID with the Google Cloud project ID where your data
 
      2. In each external project where your assets reside, grant the data product project's service agent the following roles:
 
-        * BigQuery Data Editor (`roles/bigquery.dataEditor`) on the underlying tables and datasets
+        * **BigQuery Data Editor** (`roles/bigquery.dataEditor`) on the underlying tables and datasets
 
-        * BigQuery Studio Admin (`roles/bigquery.studioAdmin`) on the asset project
+        * **BigQuery Studio Admin** (`roles/bigquery.studioAdmin`) on the asset project
 
 
 

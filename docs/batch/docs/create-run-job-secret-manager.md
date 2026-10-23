@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/create-run-job-secret-manager/
 title: Protect sensitive data using Secret Manager with Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:30.673129+00:00
+fetched_at: 2026-10-23T13:18:30.343180+00:00
 ---
 
 # Protect sensitive data using Secret Manager with Batch  |  Google Cloud Documentation

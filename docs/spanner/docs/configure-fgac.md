@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/configure-fgac/
 title: Configure fine-grained access control \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:33.335144+00:00
+fetched_at: 2026-10-23T10:10:01.258098+00:00
 ---
 
 # Configure fine-grained access control  |  Spanner  |  Google Cloud Documentation
@@ -1179,7 +1179,7 @@ The following example grants the database roles `hr_rep` and `hr_manager` to the
       binding = Google::Iam::V1::Binding.new(
         role: "roles/spanner.fineGrainedAccessUser",
         members: [iam_member],
-        condition: Google::Type::[Expr](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-binary_authorization-v1/latest/Google-Type-Expr.html).new(
+        condition: Google::Type::[Expr](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-network_services-v1/latest/Google-Type-Expr.html).new(
           title: title,
           expression: "resource.name.endsWith('/databaseRoles/#{database_role}')"
         )
@@ -1346,7 +1346,7 @@ To obtain an unfiltered list of database roles, enter the following command. It 
     import com.google.cloud.spanner.admin.database.v1.[DatabaseAdminClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.admin.database.v1.DatabaseAdminClient.html).ListDatabaseRolesPage;
     import com.google.cloud.spanner.admin.database.v1.[DatabaseAdminClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.admin.database.v1.DatabaseAdminClient.html).ListDatabaseRolesPagedResponse;
     import com.google.spanner.admin.database.v1.[DatabaseName](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.database.v1.DatabaseName.html);
-    import com.google.spanner.admin.database.v1.[DatabaseRole](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.database.v1.DatabaseRole.html);
+    import com.google.spanner.admin.database.v1.[DatabaseRole](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.DatabaseRole.html);
     
     public class ListDatabaseRoles {
     
@@ -1367,7 +1367,7 @@ To obtain an unfiltered list of database roles, enter the following command. It 
               = databaseAdminClient.listDatabaseRoles(databaseName);
           System.out.println("List of Database roles");
           for (ListDatabaseRolesPage page : response.iteratePages()) {
-            for ([DatabaseRole](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.database.v1.DatabaseRole.html) role : page.iterateAll()) {
+            for ([DatabaseRole](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.DatabaseRole.html) role : page.iterateAll()) {
               System.out.printf("Obtained role %s%n", role.getName());
             }
           }
@@ -2150,6 +2150,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/backup-disaster-recovery/docs/protect/automate-protection/
 title: Automate resource protection \u00a0|\u00a0 Backup and DR \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:58.281269+00:00
+fetched_at: 2026-10-23T10:20:13.035607+00:00
 ---
 
 # Automate resource protection  |  Backup and DR  |  Google Cloud Documentation
@@ -248,7 +248,7 @@ To create an auto-protection policy that automatically assigns a backup plan to 
 
   1. Create an auto-protection policy.
          
-         gcloud backup-dr auto-protection-policies create POLICY_NAME \
+         gcloud beta backup-dr auto-protection-policies create POLICY_NAME \
              --location=LOCATION \
              --criteria=key=LABEL_KEY,values=LABEL_VALUE \
              --backup-plan-details="resource-type=RESOURCE_TYPE,backup-plan=projects/BACKUP_VAULT_PROJECT/locations/LOCATION/backupPlans/BACKUP_PLAN" \
@@ -267,7 +267,7 @@ Replace the following:
      * `DESCRIPTION`: an optional description for the policy.
   2. Add workload projects to the policy by creating a policy binding.
          
-         gcloud backup-dr auto-protection-bindings create BINDING_NAME \
+         gcloud beta backup-dr auto-protection-bindings create BINDING_NAME \
              --auto-protection-policy=POLICY_NAME \
              --location=LOCATION \
              --scope=projects/WORKLOAD_PROJECT_ID
@@ -317,19 +317,19 @@ The **Auto-protection policy details** page appears.
 To list all auto-protection policies in a specific location:
     
     
-    gcloud backup-dr auto-protection-policies list --location=LOCATION
+    gcloud beta backup-dr auto-protection-policies list --location=LOCATION
     
 
 To view details of a specific auto-protection policy:
     
     
-    gcloud backup-dr auto-protection-policies describe POLICY_NAME --location=LOCATION
+    gcloud beta backup-dr auto-protection-policies describe POLICY_NAME --location=LOCATION
     
 
 To list resources matching a specific policy binding (workload project):
     
     
-    gcloud backup-dr binding-matching-resources list \
+    gcloud beta backup-dr binding-matching-resources list \
         --auto-protection-policy-binding=BINDING_NAME \
         --auto-protection-policy=POLICY_NAME \
         --location=LOCATION
@@ -369,7 +369,7 @@ To view applied auto-protection policies in a workload project:
 To list applied auto-protection policies in a specific location:
     
     
-    gcloud backup-dr applied-auto-protection-policies list --location=LOCATION
+    gcloud beta backup-dr applied-auto-protection-policies list --location=LOCATION
     
 
 Replace the following:
@@ -423,7 +423,7 @@ The **Auto-protection policies** page appears.
 To update the description of an auto-protection policy:
     
     
-    gcloud backup-dr auto-protection-policies update POLICY_NAME \
+    gcloud beta backup-dr auto-protection-policies update POLICY_NAME \
         --location=LOCATION \
         --description="UPDATED_DESCRIPTION"
     
@@ -431,7 +431,7 @@ To update the description of an auto-protection policy:
 To update the criteria (labels) of an auto-protection policy:
     
     
-    gcloud backup-dr auto-protection-policies update POLICY_NAME \
+    gcloud beta backup-dr auto-protection-policies update POLICY_NAME \
         --location=LOCATION \
         --criteria=key=NEW_LABEL_KEY,values=NEW_LABEL_VALUE
     
@@ -439,7 +439,7 @@ To update the criteria (labels) of an auto-protection policy:
 To update the backup plan details:
     
     
-    gcloud backup-dr auto-protection-policies update POLICY_NAME \
+    gcloud beta backup-dr auto-protection-policies update POLICY_NAME \
         --location=LOCATION \
         --backup-plan-details="resource-type=RESOURCE_TYPE,backup-plan=projects/BACKUP_VAULT_PROJECT/locations/LOCATION/backupPlans/NEW_BACKUP_PLAN"
     
@@ -497,7 +497,7 @@ A confirmation message appears.
 To add a workload project to an auto-protection policy, create a policy binding:
     
     
-    gcloud backup-dr auto-protection-bindings create BINDING_NAME \
+    gcloud beta backup-dr auto-protection-bindings create BINDING_NAME \
         --auto-protection-policy=POLICY_NAME \
         --location=LOCATION \
         --scope=projects/WORKLOAD_PROJECT_ID
@@ -544,7 +544,7 @@ A confirmation notification appears.
 To remove a workload project from an auto-protection policy, delete the policy binding:
     
     
-    gcloud backup-dr auto-protection-bindings delete BINDING_NAME \
+    gcloud beta backup-dr auto-protection-bindings delete BINDING_NAME \
         --auto-protection-policy=POLICY_NAME \
         --location=LOCATION
     
@@ -587,7 +587,7 @@ To delete an auto-protection policy:
 To delete an auto-protection policy:
     
     
-    gcloud backup-dr auto-protection-policies delete POLICY_NAME --location=LOCATION
+    gcloud beta backup-dr auto-protection-policies delete POLICY_NAME --location=LOCATION
     
 
 Replace the following:
@@ -632,6 +632,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/data-domains-resources/
 title: Include resources in data domains \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:20.494647+00:00
+fetched_at: 2026-10-23T10:21:24.815387+00:00
 ---
 
 # Include resources in data domains  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -65,7 +65,7 @@ In general understanding, the Writer and Admin role types are reserved to enable
 
 
 
-Within the scope of data domains, all three role types allow the data domain to create a binding to the target resource. When the binding is created, the users can search for the resource within the domain and view its metadata. For more information, see [Search for data resources](https://docs.cloud.google.com/knowledge-catalog/docs/data-domains-search).
+Within the scope of data domains, all three role types allow the data domain to create a binding to the target resource. When the binding is created, the users can search for the resource within the domain and view its metadata. For more information, see [Find resources within a data domain](https://docs.cloud.google.com/knowledge-catalog/docs/data-domains-use#search-domain).
 
 When choosing the role type, take into account the long-term level access you want to grant the domain over the resource.
 
@@ -159,7 +159,7 @@ To enable APIs, you need the `serviceusage.services.enable` permission. If you c
 
 To get the permissions that you need to bind resources to data domains, ask your administrator to grant you the following IAM roles on the project: 
 
-  * Manage domains and resource bindings: [Dataplex Data Domain Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataDomainEditor) (`roles/dataplex.dataDomainEditor`) 
+  * Manage domains and resource bindings: [**Dataplex Data Domain Editor** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataDomainEditor) (`roles/dataplex.dataDomainEditor`) 
 
 
 

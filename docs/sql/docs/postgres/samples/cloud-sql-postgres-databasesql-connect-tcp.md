@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/samples/cloud-sql-postgres-databasesql-connect-tcp/
 title: Create a TCP connection by using Go \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:42.356517+00:00
+fetched_at: 2026-10-23T10:19:03.735520+00:00
 ---
 
 # Create a TCP connection by using Go  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation

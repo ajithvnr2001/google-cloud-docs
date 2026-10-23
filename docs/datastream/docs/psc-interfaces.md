@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/psc-interfaces/
 title: Configure Private Service Connect interfaces \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:25:56.978959+00:00
+fetched_at: 2026-10-23T10:03:41.797458+00:00
 ---
 
 # Configure Private Service Connect interfaces  |  Datastream  |  Google Cloud Documentation
@@ -21,17 +21,13 @@ Send feedback
 
 #  Configure Private Service Connect interfaces Stay organized with collections  Save and categorize content based on your preferences. 
 
-Datastream uses Private Service Connect interfaces to let you replicate data in a way that keeps the traffic entirely within Google Cloud.
-
-A Private Service Connect interface is a resource that lets a _producer_ Virtual Private Cloud (VPC) network initiate connections to and receive connections from a _network attachment_ in a _consumer_ VPC network. Producer and consumer networks can be in different projects and organizations.
+In Datastream, Private Service Connect interfaces let you replicate data privately while keeping network traffic entirely within Google Cloud. A Private Service Connect interface connects a producer Virtual Private Cloud (VPC) network to a network attachment in a consumer VPC network. Producer and consumer networks can be in different projects and organizations.
 
 [ ![](https://docs.cloud.google.com/static/datastream/docs/images/psc-overview-interface-overview.svg)](https://docs.cloud.google.com/static/datastream/docs/images/psc-overview-interface-overview.svg)
 
 **Figure 1.** Private Service Connect interfaces let service producers initiate connections to service consumers. 
 
-For key term definitions, see the section that follows.
-
-For more information about Private Service Connect, see the [Virtual Private Cloud documentation](https://docs.cloud.google.com/vpc/docs/private-service-connect).
+Before you configure Private Service Connect, review the key terms, prerequisites, pricing, and required roles and permissions. For more information, see [Private Service Connect](https://docs.cloud.google.com/vpc/docs/private-service-connect) in the VPC documentation.
 
 ## Key terms
 
@@ -183,6 +179,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/tips/services-cost-optimization/
 title: Best practices for cost-optimized Cloud Run services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:59.776944+00:00
+fetched_at: 2026-10-23T12:41:39.131212+00:00
 ---
 
 # Best practices for cost-optimized Cloud Run services  |  Google Cloud Documentation
@@ -119,6 +119,7 @@ You can monitor your spend cap progress directly from the [Cloud Run console](ht
   * Services: any existing service will fail to serve traffic and return `5xx` errors.
   * Jobs: new task executions fail to start, and in-progress tasks fail to complete.
   * Worker pools: any existing instances stop processing tasks.
+  * [Instances](https://docs.cloud.google.com/run/docs/instances/create-and-manage-instances): any running instances shut down, new instances or restarts fail to start, and requests to instance URLs return `5xx` errors.
 
 
 
@@ -158,6 +159,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

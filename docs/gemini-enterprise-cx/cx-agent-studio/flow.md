@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/flow/
 title: Flow-based agents \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:31.168786+00:00
+fetched_at: 2026-10-23T13:13:31.783894+00:00
 ---
 
 # Flow-based agents  |  CX Agent Studio  |  Google Cloud Documentation

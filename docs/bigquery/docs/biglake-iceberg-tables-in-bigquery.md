@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/biglake-iceberg-tables-in-bigquery/
 title: Apache Iceberg managed tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:16:47.042627+00:00
+fetched_at: 2026-10-23T12:55:38.097469+00:00
 ---
 
 # Apache Iceberg managed tables  |  BigQuery  |  Google Cloud Documentation
@@ -21,7 +21,11 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Apache Iceberg managed tables
 
-_Apache Iceberg managed tables_ (formerly BigLake tables for Apache Iceberg in BigQuery) provide the foundation for building open-format lakehouses on Google Cloud. Iceberg managed tables offer the same fully managed experience as standard BigQuery tables, but store data in customer-owned storage buckets. Iceberg managed tables support the open Iceberg table format for better interoperability with open-source and third-party compute engines on a single copy of data.
+Apache Iceberg managed tables for Apache Iceberg in BigQuery let you build open-format lakehouses on Google Cloud. They offer the same fully managed experience as standard BigQuery tables, but store data in storage buckets that you own.
+
+Because Iceberg managed tables use the open Iceberg table format, open source and third-party compute engines can work with a single copy of your data.
+
+## Features
 
 Iceberg managed tables support the following features:
 
@@ -517,6 +521,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

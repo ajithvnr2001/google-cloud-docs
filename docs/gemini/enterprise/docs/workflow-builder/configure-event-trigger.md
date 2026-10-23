@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/workflow-builder/configure-event-trigger/
 title: Set up event triggers \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:39.200429+00:00
+fetched_at: 2026-10-23T13:11:55.934982+00:00
 ---
 
 # Set up event triggers  |  Gemini Enterprise  |  Google Cloud Documentation

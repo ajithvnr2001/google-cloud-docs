@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-delete-data-labeling-job-sample/
 title: Delete a data labeling job \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:52.112747+00:00
+fetched_at: 2026-10-23T09:27:01.940956+00:00
 ---
 
 # Delete a data labeling job  |  Vertex AI  |  Google Cloud Documentation

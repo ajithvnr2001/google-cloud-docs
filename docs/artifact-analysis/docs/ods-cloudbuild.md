@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/ods-cloudbuild/
 title: Use On-Demand Scanning in your Cloud Build pipeline \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:10.078825+00:00
+fetched_at: 2026-10-23T13:18:52.537317+00:00
 ---
 
 # Use On-Demand Scanning in your Cloud Build pipeline  |  Artifact Analysis  |  Google Cloud Documentation

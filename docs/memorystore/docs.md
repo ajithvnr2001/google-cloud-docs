@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/
 title: Memorystore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:14:14.922540+00:00
+fetched_at: 2026-10-23T10:55:33.397708+00:00
 ---
 
 # Memorystore  |  Google Cloud Documentation

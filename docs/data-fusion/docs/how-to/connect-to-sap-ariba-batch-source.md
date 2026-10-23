@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/connect-to-sap-ariba-batch-source/
 title: Connect to an SAP Ariba batch source \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:15.644973+00:00
+fetched_at: 2026-10-23T13:19:43.397537+00:00
 ---
 
 # Connect to an SAP Ariba batch source  |  Cloud Data Fusion  |  Google Cloud Documentation

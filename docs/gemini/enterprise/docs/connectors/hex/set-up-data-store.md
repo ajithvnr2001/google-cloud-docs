@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/hex/set-up-data-store/
 title: Set up a Hex data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:29.922764+00:00
+fetched_at: 2026-10-23T13:08:53.526139+00:00
 ---
 
 # Set up a Hex data store  |  Gemini Enterprise  |  Google Cloud Documentation

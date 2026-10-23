@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-subscriber-error-listener/
 title: Subscribe with error listener \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:03.910414+00:00
+fetched_at: 2026-10-23T10:04:35.050461+00:00
 ---
 
 # Subscribe with error listener  |  Pub/Sub  |  Google Cloud Documentation

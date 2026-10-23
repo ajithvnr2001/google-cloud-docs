@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/authentication-method/
 title: Choosing an Authentication Method \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:18.887525+00:00
+fetched_at: 2026-10-23T13:16:56.792241+00:00
 ---
 
 # Choosing an Authentication Method  |  API Gateway  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/enhanced-proxy-limits/
 title: Enhanced per-environment proxy limits \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:45.300512+00:00
+fetched_at: 2026-10-23T13:15:57.971791+00:00
 ---
 
 # Enhanced per-environment proxy limits  |  Apigee  |  Google Cloud Documentation

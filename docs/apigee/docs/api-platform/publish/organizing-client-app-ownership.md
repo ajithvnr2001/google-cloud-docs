@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/publish/organizing-client-app-ownership/
 title: Organizing client app ownership \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:59.373448+00:00
+fetched_at: 2026-10-23T13:17:03.993154+00:00
 ---
 
 # Organizing client app ownership  |  Apigee  |  Google Cloud Documentation

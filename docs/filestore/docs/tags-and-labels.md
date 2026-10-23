@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/tags-and-labels/
 title: Tags and labels \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:56.590077+00:00
+fetched_at: 2026-10-23T13:02:19.483506+00:00
 ---
 
 # Tags and labels  |  Filestore  |  Google Cloud Documentation

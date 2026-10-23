@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/service-accounts-external-identities/
 title: Using service accounts with external identities \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:27:21.514352+00:00
+fetched_at: 2026-10-23T13:10:06.832681+00:00
 ---
 
 # Using service accounts with external identities  |  Identity-Aware Proxy  |  Google Cloud Documentation

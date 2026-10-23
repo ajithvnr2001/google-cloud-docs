@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/lakehouse/docs/table-options/
 title: Configure table options \u00a0|\u00a0 Lakehouse \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:25:57.384328+00:00
+fetched_at: 2026-10-23T10:42:57.486339+00:00
 ---
 
 # Configure table options  |  Lakehouse  |  Google Cloud Documentation
@@ -27,11 +27,9 @@ Send feedback
 
 This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
-Configuring table options lets you opt in to BigQuery write interoperability or table management (automatic storage optimization) for your Apache Iceberg tables in the _Lakehouse runtime catalog_. These options serve as foundational settings that extend capabilities for operations on the table.
+You can use table options in the _Lakehouse runtime catalog_ to opt in to BigQuery DML write interoperability and automatic table management (storage optimization) for your Apache Iceberg tables.
 
-By configuring specific table properties, you can enable write interoperability with BigQuery DML or enable automatic table management (storage optimization).
-
-When using tables in the Lakehouse runtime catalog, it's helpful to [understand the different table types and their opt-in capabilities](https://docs.cloud.google.com/lakehouse/docs/lakehouse-tables). To learn more about using Apache Iceberg tables specifically, see [Overview of Apache Iceberg tables](https://docs.cloud.google.com/lakehouse/docs/manage-tables).
+To learn more about supported table formats and opt-in capabilities in the Lakehouse runtime catalog, see [Compare table types](https://docs.cloud.google.com/lakehouse/docs/lakehouse-tables) and [Overview of Apache Iceberg tables](https://docs.cloud.google.com/lakehouse/docs/manage-tables).
 
 ## Before you begin
 
@@ -269,6 +267,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-15 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

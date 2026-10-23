@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/samples/cloud-sql-sqlserver-pdo-connect-tcp/
 title: Create a TCP connection by using PHP \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:18.729502+00:00
+fetched_at: 2026-10-23T10:19:10.998190+00:00
 ---
 
 # Create a TCP connection by using PHP  |  Cloud SQL for SQL Server  |  Google Cloud Documentation

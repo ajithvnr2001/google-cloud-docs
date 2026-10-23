@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/advisory-notifications/docs/recommendations-overview/
 title: Apply Advisory Notifications recommendations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:25.240539+00:00
+fetched_at: 2026-10-23T13:18:01.629915+00:00
 ---
 
 # Apply Advisory Notifications recommendations  |  Google Cloud Documentation

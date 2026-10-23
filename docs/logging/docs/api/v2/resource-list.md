@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/api/v2/resource-list/
 title: Monitored resources and services \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:37.424124+00:00
+fetched_at: 2026-10-23T12:38:16.651874+00:00
 ---
 
 # Monitored resources and services  |  Cloud Logging  |  Google Cloud Documentation
@@ -1163,6 +1163,12 @@ Application Load Balancer  |  An Application Load Balancer Instance.
 `target_proxy_name`: The name of the target proxy.   
 `backend_service_name`: The name of the backend service.   
 `zone`: The zone in which the load balancer is running.   
+`iam.googleapis.com/WorkforcePoolProvider`  
+Workforce Identity Pool Provider  |  A workforce identity pool provider.   
+`resource_container`: The identifier of the Google Cloud organization associated with this resource.   
+`location`: The location of the resource.   
+`pool_id`: The ID of the provider's workforce pool parent resource.   
+`provider_id`: The ID of the workforce pool provider resource.   
 `iam_role`  
 IAM Role  |  An IAM role.   
 `project_id`: The identifier of the GCP project associated with this resource, such as "my-project".   
@@ -1810,7 +1816,7 @@ Workflow  |  A Workflows specification of steps to execute.
 `location`: The region in which the workflow is deployed.   
 `workflow_id`: The ID of the workflow.   
   
-This list of monitored-resource types was last generated at 2026-10-14 20:18:30 UTC.
+This list of monitored-resource types was last generated at 2026-10-22 02:17:28 UTC.
 
 ## Mappings for Logging-only resources
 
@@ -1923,6 +1929,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

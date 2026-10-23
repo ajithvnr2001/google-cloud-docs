@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/create-instance/
 title: Create a public instance \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:14.419311+00:00
+fetched_at: 2026-10-23T13:19:18.974740+00:00
 ---
 
 # Create a public instance  |  Cloud Data Fusion  |  Google Cloud Documentation

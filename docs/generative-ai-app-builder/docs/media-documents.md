@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/media-documents/
 title: About media documents and data stores \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:27.978569+00:00
+fetched_at: 2026-10-23T13:12:35.670576+00:00
 ---
 
 # About media documents and data stores  |  Agent Search  |  Google Cloud Documentation

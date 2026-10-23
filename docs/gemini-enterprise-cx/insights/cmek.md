@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/cmek/
 title: Customer-managed encryption keys (CMEK) \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:23.635224+00:00
+fetched_at: 2026-10-23T13:12:27.415951+00:00
 ---
 
 # Customer-managed encryption keys (CMEK)  |  Customer Experience Insights  |  Google Cloud Documentation

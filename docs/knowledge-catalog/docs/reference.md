@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/reference/
 title: APIs & Reference \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:14:10.466391+00:00
+fetched_at: 2026-10-23T10:21:30.146112+00:00
 ---
 
 # APIs & Reference  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -23,10 +23,10 @@ Send feedback
 
 #  APIs & Reference Stay organized with collections  Save and categorize content based on your preferences. 
 
-## Knowledge Catalog API
+## Dataplex API
 
-  * ### [REST Overview of Knowledge Catalog REST API.  ](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest)
-  * ### [RPC Overview of Knowledge Catalog RPC API.  ](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rpc)
+  * ### [REST Overview of the Dataplex API REST interface.  ](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest)
+  * ### [RPC Overview of the Dataplex API RPC interface.  ](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rpc)
 
 
 

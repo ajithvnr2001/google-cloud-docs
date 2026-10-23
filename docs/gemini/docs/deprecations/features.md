@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/deprecations/features/
 title: Feature deprecations \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:15.732369+00:00
+fetched_at: 2026-10-23T13:09:23.879916+00:00
 ---
 
 # Feature deprecations  |  Gemini for Google Cloud  |  Google Cloud Documentation

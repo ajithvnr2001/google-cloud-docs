@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/configure-ad/
 title: Use Managed Microsoft AD with Cloud SQL \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:55.890491+00:00
+fetched_at: 2026-10-23T10:11:18.875962+00:00
 ---
 
 # Use Managed Microsoft AD with Cloud SQL  |  Cloud SQL for SQL Server  |  Google Cloud Documentation
@@ -38,7 +38,7 @@ A Cloud SQL instance that is integrated with Managed Microsoft AD supports [Wind
 ## Before you begin
 
   1. In the Google Cloud console, [select your project name](https://console.cloud.google.com/projectselector2/home/dashboard).
-  2. Make sure that billing is enabled for your Google Cloud project. [Learn how to confirm billing is enabled for your project](https://cloud.google.com/billing/docs/how-to/modify-project).
+  2. Make sure that billing is enabled for your Google Cloud project. [Learn how to confirm billing is enabled for your project](https://docs.cloud.google.com/billing/docs/how-to/modify-project).
   3. Install and initialize [the gcloud CLI](https://docs.cloud.google.com/sdk/docs).
   4. Make sure that you have the `Cloud SQL Admin` role on your user account. [Go to the IAM page](https://console.cloud.google.com/iam-admin/iam).
   5. Review the [ prerequisites for integration](https://docs.cloud.google.com/sql/docs/sqlserver/ad#prerequisites-for-integration).
@@ -212,14 +212,14 @@ While planning your integration, review the constraints.
 
 ### Enable domain peering
 
-Before proceeding with the steps in the sections below, [enable domain peering](https://cloud.google.com/managed-microsoft-ad/docs/quickstart-domain-peering) so your domain is available to all necessary projects with Cloud SQL for SQL Server instances.
+Before proceeding with the steps in the sections below, [enable domain peering](https://docs.cloud.google.com/managed-microsoft-ad/docs/quickstart-domain-peering) so your domain is available to all necessary projects with Cloud SQL for SQL Server instances.
 
 For a list of domains from other projects that already are available, you can specify the following:
     
     
     `gcloud active-directory peerings list`
 
-For more information, see [List domain peerings](https://cloud.google.com/managed-microsoft-ad/docs/list-describe-delete-domain-peering#list_domain_peerings).
+For more information, see [List domain peerings](https://docs.cloud.google.com/managed-microsoft-ad/docs/list-describe-delete-domain-peering#list_domain_peerings).
 
 The `gcloud active-directory peerings list` command requires the `managedidentities.peerings.list` permission. The following roles have this permission:
 
@@ -228,7 +228,7 @@ The `gcloud active-directory peerings list` command requires the `managedidentit
 
 
 
-For more information, see [Access control with IAM](https://cloud.google.com/managed-microsoft-ad/docs/access-control).
+For more information, see [Access control with IAM](https://docs.cloud.google.com/managed-microsoft-ad/docs/access-control).
 
 ### Create a service account
 
@@ -291,7 +291,7 @@ In that case, the accurate FQDN is:
 
 You can remove Windows Authentication, and thus a Managed Microsoft AD integration, from an existing instance.
 
-**Caution:** Removing Windows Authentication causes an instance [to restart](https://cloud.google.com/sql/faq#shutdown). 
+**Caution:** Removing Windows Authentication causes an instance [to restart](https://docs.cloud.google.com/sql/docs/sqlserver/faq#shutdown). 
 
 ### Console
 
@@ -470,8 +470,8 @@ From Ubuntu 16.04, to verify that an NTLM fallback caused an error, use the step
 Fallback onto NTLM is a client misconfiguration that can be associated with the following conditions:
 
   * By default, Windows doesn't attempt Kerberos authentication for a host if the hostname is an IP address. To enable Kerberos authentication from the managed domain, try the method described in the [Microsoft documentation](https://docs.microsoft.com/en-us/windows-server/security/kerberos/configuring-kerberos-over-ip). This method doesn't work with on-premises credentials when you must use FQDNS.
-  * Kerberos authentication over external trusts doesn't work. Use forest trusts instead, as described [here](https://cloud.google.com/managed-microsoft-ad/docs/create-trust).
-  * Kerberos authentication requires name suffix routing to enable the finding of services in another forest. Try the method described [here](https://cloud.google.com/managed-microsoft-ad/docs/manage-trusts).
+  * Kerberos authentication over external trusts doesn't work. Use forest trusts instead, as described [here](https://docs.cloud.google.com/managed-microsoft-ad/docs/create-trust).
+  * Kerberos authentication requires name suffix routing to enable the finding of services in another forest. Try the method described [here](https://docs.cloud.google.com/managed-microsoft-ad/docs/manage-trusts).
   * Kerberos authentication doesn't work if there's no SPN registered for the service. Use only FQDNs or IP addresses you obtain from the Google Cloud console to connect with Windows Authentication.
 
 
@@ -488,22 +488,22 @@ For Windows Authentication in this context, Cloud SQL for SQL Server only suppor
 
 ### Configure one-way or two-way trust
 
-Initially, decide whether to use a [one-way or two-way trust relationship](https://cloud.google.com/managed-microsoft-ad/docs/create-trust). **Note:** We strongly recommend that you use a two-way trust relationship between a Managed AD domain and an on-premises domain because one-way trust instances might experience long-running connection drops and can't run certain privileged operations, such as create and drop login. For more information, see [Understand Active Directory authentication for SQL Server on Linux and containers](https://learn.microsoft.com/th-th/sql/linux/sql-server-linux-ad-auth-understanding?view=sql-server-2017#sql-server-group-refresh). 
+Initially, decide whether to use a [one-way or two-way trust relationship](https://docs.cloud.google.com/managed-microsoft-ad/docs/create-trust). **Note:** We strongly recommend that you use a two-way trust relationship between a Managed AD domain and an on-premises domain because one-way trust instances might experience long-running connection drops and can't run certain privileged operations, such as create and drop login. For more information, see [Understand Active Directory authentication for SQL Server on Linux and containers](https://learn.microsoft.com/th-th/sql/linux/sql-server-linux-ad-auth-understanding?view=sql-server-2017#sql-server-group-refresh). 
 
-Then, follow the [instructions for establishing trust](https://cloud.google.com/managed-microsoft-ad/docs/create-trust#before_you_begin) between the on-premises AD domain and the Managed Microsoft AD domain.
+Then, follow the [instructions for establishing trust](https://docs.cloud.google.com/managed-microsoft-ad/docs/create-trust#before_you_begin) between the on-premises AD domain and the Managed Microsoft AD domain.
 
 ### Set up a Windows VM and create a Windows login
 
 After you establish trust between the on-premises AD domain and the Managed Microsoft AD domain, complete the following steps. For example purposes, these steps use SQL Server Management Studio (SSMS), running on a Windows VM, hosted in your Google Cloud project's VPC:
 
   1. Create a Windows VM. 
-     * [Create a VM](https://cloud.google.com/compute/docs/create-windows-server-vm-instance#create_a_virtual_machine_instance) with a [version of Windows supported by Managed Microsoft AD](https://cloud.google.com/managed-microsoft-ad/docs/os-versions#windows-domain-join).
+     * [Create a VM](https://docs.cloud.google.com/compute/docs/create-windows-server-vm-instance#create_a_virtual_machine_instance) with a [version of Windows supported by Managed Microsoft AD](https://docs.cloud.google.com/managed-microsoft-ad/docs/os-versions#windows-domain-join).
      * Create the VM in the project that hosts your Managed Microsoft AD domain. If there is a Shared VPC that is an authorized network, you can also create the VM in any of its service projects.
      * Create the VM on a VPC network that is an authorized network of the Managed Microsoft AD domain and has configured private service access for Cloud SQL.
-  2. [Join](https://cloud.google.com/managed-microsoft-ad/docs/quickstart-domain-join-windows) the Windows VM to the Managed Microsoft AD domain.
+  2. [Join](https://docs.cloud.google.com/managed-microsoft-ad/docs/quickstart-domain-join-windows) the Windows VM to the Managed Microsoft AD domain.
   3. [Install SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) on the Windows VM.
   4. Resolve the on-premises domain in the VPC network. 
-     * From the authorized network on which the Windows VM is running, enable on-premises DNS resolution using the steps on the [Resolve queries for non-Managed Microsoft AD objects](https://cloud.google.com/managed-microsoft-ad/docs/resolve-non-managed-objects-vpc) page. The steps on that page are prerequisites for Kerberos-based Windows Authentication to work for on-premises users.
+     * From the authorized network on which the Windows VM is running, enable on-premises DNS resolution using the steps on the [Resolve queries for non-Managed Microsoft AD objects](https://docs.cloud.google.com/managed-microsoft-ad/docs/resolve-non-managed-objects-vpc) page. The steps on that page are prerequisites for Kerberos-based Windows Authentication to work for on-premises users.
   5. Create a Windows login for an on-premises user.
 
      * Follow the [CREATE LOGIN instructions](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-login-transact-sql?view=sql-server-ver15) for creating a Windows login for an on-premises user. For example, specify a command similar to the following:
@@ -520,8 +520,8 @@ After you establish trust between the on-premises AD domain and the Managed Micr
 
 If a problem occurs during a login to a Cloud SQL for SQL Server instance, perform these verifications:
 
-  * Verify the firewall configurations of the on-premises network and project-authorized VPC, using the instructions for [creating a trust with an on-premises domain](https://cloud.google.com/managed-microsoft-ad/docs/create-one-way-trust).
-  * Verify the [Name Suffix Routing](https://cloud.google.com/managed-microsoft-ad/docs/manage-trusts#name-suffix-routing) for the on-premises trust relationship.
+  * Verify the firewall configurations of the on-premises network and project-authorized VPC, using the instructions for [creating a trust with an on-premises domain](https://docs.cloud.google.com/managed-microsoft-ad/docs/create-trust).
+  * Verify the [Name Suffix Routing](https://docs.cloud.google.com/managed-microsoft-ad/docs/manage-trusts#name-suffix-routing) for the on-premises trust relationship.
   * Verify that you can perform these DNS resolution operations from the Windows VM that is running SSMS: 
     * `nslookup fqdn-for-managed-ad-domain`
     * `nslookup fqdn-for-on-premises-ad-domain`
@@ -537,17 +537,17 @@ If a problem occurs during a login to a Cloud SQL for SQL Server instance, perfo
   * Before creating an instance, including as a replacement instance, review the following as needed: 
     * [ Learn about using private IP](https://docs.cloud.google.com/sql/docs/sqlserver/private-ip)
     * [ Configure public IP](https://docs.cloud.google.com/sql/docs/sqlserver/configure-ip)
-  * [Terraform](https://cloud.google.com/docs/terraform) is supported.
+  * [Terraform](https://docs.cloud.google.com/docs/terraform) is supported.
   * If you receive one of the following errors, confirm that you have met all of the [ prerequisites for integration](https://docs.cloud.google.com/sql/docs/sqlserver/ad#prerequisites-for-integration): 
     * "Per-Product Per-Project Service Account is not found"
     * "Insufficient permission to integrate with Managed Service for Microsoft Active Directory domain"
   * If you receive the error "Domain not found", verify that the case-sensitive domain name is correct.
   * If Windows Authentication fails from a domain that is connected through a trust relationship, verify that Windows Authentication works for a user from a managed domain. If it does, then: 
     1. Verify that you used a DNS name. IP addresses aren't supported from domains connected using a trust relationship.
-    2. Ensure that you followed [all of the steps for creating a trust with an on-premises domain](https://cloud.google.com/managed-microsoft-ad/docs/create-trust), including the opening of all firewall ports.
-    3. [Validate](https://cloud.google.com/sdk/gcloud/reference/active-directory/domains/trusts/validate-state) the trust.
+    2. Ensure that you followed [all of the steps for creating a trust with an on-premises domain](https://docs.cloud.google.com/managed-microsoft-ad/docs/create-trust), including the opening of all firewall ports.
+    3. [Validate](https://docs.cloud.google.com/sdk/gcloud/reference/active-directory/domains/trusts/validate-state) the trust.
     4. Verify that the direction of the trust allows users from the domain (connected through a trust relationship) to authenticate in the managed domain.
-    5. [Verify](https://cloud.google.com/managed-microsoft-ad/docs/manage-trusts) that the name suffix routing is set on the domain that is connected through a trust relationship.
+    5. [Verify](https://docs.cloud.google.com/managed-microsoft-ad/docs/manage-trusts) that the name suffix routing is set on the domain that is connected through a trust relationship.
     6. Verify that the trust works without using Cloud SQL for SQL Server: 
        1. Create a Windows VM.
        2. Join it to the Managed Microsoft AD domain.
@@ -584,7 +584,7 @@ MSRPC pings are included as additional diagnostics and they might not work on so
     * In certain cases, if you create a Cloud SQL for SQL Server instance and do not enable Managed Microsoft AD at creation, you may receive the same error. After you review the other tips in this section, create a new instance, enabling Managed Microsoft AD at the time you create the instance.
   * An attempt to create a Cloud SQL for SQL Server instance may result in the error, "This instance does not support Managed Service for Microsoft Active Directory." If you receive this error, the project may be unsupported; try using a different project.
 
-  * If an instance has ongoing problems with Windows Authentication (whether or not the instance was recently updated), try unjoining the managed Active Directory domain and then rejoining it. To do so, use the update procedure to unjoin and then to rejoin the domain. Doing so doesn't remove any existing Windows-authenticated users or logins that exist in your databases. However, removing Windows Authentication causes an instance [to restart](https://cloud.google.com/sql/faq#shutdown).
+  * If an instance has ongoing problems with Windows Authentication (whether or not the instance was recently updated), try unjoining the managed Active Directory domain and then rejoining it. To do so, use the update procedure to unjoin and then to rejoin the domain. Doing so doesn't remove any existing Windows-authenticated users or logins that exist in your databases. However, removing Windows Authentication causes an instance [to restart](https://docs.cloud.google.com/sql/docs/sqlserver/faq#shutdown).
 
   * [Use the AD diagnosis tool](https://docs.cloud.google.com/sql/docs/sqlserver/ad-diagnosis-tool) to troubleshoot AD setup issues with your on-premises domain and Cloud SQL for SQL Server instances in Google Cloud console.
 
@@ -601,7 +601,7 @@ For this error... | The issue might be... | Try this...
 `Insufficient permission to integrate with Managed Service for Microsoft Active Directory domain.` | The `managedidentities.sqlintegrator` role is missing on the service account. | From the [ IAM and Admin page](https://console.cloud.google.com/iam-admin/iam/project), add the `managedidentities.sqlintegrator` role on your service account.   
 `Domain not found`. | The domain does not exist or was mistyped. | Ensure the domain name is correct. It is case sensitive.  
 `The domain is busy with another operation. Please retry.` | Another Cloud SQL instance is running an operation on the same Managed Active Directory domain. | Retry the operation. If you are performing a batch of updates to Cloud SQL instances connected to the same domain, limit how many are performed in parallel.  
-`The operation completed but an update to Active Directory failed. You may experience issues with Windows Authentication on this instance, please see [ https://cloud.google.com/sql/docs/sqlserver/configure-ad](https://cloud.google.com/sql/docs/sqlserver/configure-ad) for tips`. | The required updates could not be performed on the Managed Active Directory domain. | If you experience issues with Windows Authentication, you can try unjoining the managed Active Directory domain and then rejoining it. To do so, use the  update procedure to unjoin and then to rejoin the domain. Doing so doesn't remove any existing Windows-authenticated users or logins that exist in your databases. However, removing Windows Authentication causes an instance [to restart](https://cloud.google.com/sql/faq#shutdown).  
+`The operation completed but an update to Active Directory failed. You may experience issues with Windows Authentication on this instance, please see [ https://docs.cloud.google.com/sql/docs/sqlserver/configure-ad](https://docs.cloud.google.com/sql/docs/sqlserver/configure-ad) for tips`. | The required updates could not be performed on the Managed Active Directory domain. | If you experience issues with Windows Authentication, you can try unjoining the managed Active Directory domain and then rejoining it. To do so, use the  update procedure to unjoin and then to rejoin the domain. Doing so doesn't remove any existing Windows-authenticated users or logins that exist in your databases. However, removing Windows Authentication causes an instance [to restart](https://docs.cloud.google.com/sql/docs/sqlserver/faq#shutdown).  
 `This instance would need a more recent creation date to support Managed Service for Microsoft Active Directory.` | In Cloud SQL, if a Cloud SQL for SQL Server instance was created on or before March 12, 2021, it cannot be integrated with Managed Microsoft AD. | Try your operation on an instance created after March 12, 2021.  
   
 ## What's next
@@ -614,6 +614,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

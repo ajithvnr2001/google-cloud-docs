@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/granting-service-account-permission/
 title: Grant service account roles for Managed Service for Apache Spark \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:12.200372+00:00
+fetched_at: 2026-10-23T13:19:46.610395+00:00
 ---
 
 # Grant service account roles for Managed Service for Apache Spark  |  Cloud Data Fusion  |  Google Cloud Documentation

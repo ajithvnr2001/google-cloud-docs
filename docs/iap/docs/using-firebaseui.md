@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/using-firebaseui/
 title: Creating a sign-in page with FirebaseUI \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:27:20.405465+00:00
+fetched_at: 2026-10-23T13:10:07.517839+00:00
 ---
 
 # Creating a sign-in page with FirebaseUI  |  Identity-Aware Proxy  |  Google Cloud Documentation

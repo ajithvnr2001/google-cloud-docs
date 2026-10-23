@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/deployment-archetypes/comparison/
 title: Comparative analysis of Google Cloud deployment archetypes \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:52.577087+00:00
+fetched_at: 2026-10-23T13:18:32.625901+00:00
 ---
 
 # Comparative analysis of Google Cloud deployment archetypes  |  Cloud Architecture Center  |  Google Cloud Documentation

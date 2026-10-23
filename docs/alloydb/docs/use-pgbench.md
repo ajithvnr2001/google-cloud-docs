@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/use-pgbench/
 title: Analyze the performance of an AlloyDB instance with pgbench \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:27:42.219875+00:00
+fetched_at: 2026-10-23T10:43:24.211523+00:00
 ---
 
 # Analyze the performance of an AlloyDB instance with pgbench  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Analyze the performance of an AlloyDB instance with pgbench Stay organized with collections  Save and categorize content based on your preferences. 
 
-In this tutorial, you integrate an AlloyDB instance and a [Compute Engine](https://cloud.google.com/compute) VM instance on a [Virtual Private Cloud (VPC)](https://cloud.google.com/vpc) network. You then verify the integration by installing `pgbench` on the Compute Engine VM instance, and use this benchmarking tool to conduct performance tests against the AlloyDB instance.
+To evaluate baseline database throughput and latency, you can connect an AlloyDB for PostgreSQL instance and a [Compute Engine](https://cloud.google.com/compute) VM instance on a [Virtual Private Cloud (VPC)](https://cloud.google.com/vpc) network, install `pgbench` on the Compute Engine VM, and run performance benchmarks against your AlloyDB instance.
 
 **Note:** While you can use `pgbench` to run basic performance tests with AlloyDB, for Online Transaction Processing (OLTP) benchmarking, see the tools and methodology described in the [AlloyDB Transactional (OLTP) Benchmarking Guide](https://services.google.com/fh/files/misc/alloydb_oltp_benchmarking_guide.pdf).
 
@@ -328,6 +328,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

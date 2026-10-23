@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/docs/samples/eventarc-audit-storage-handler/
 title: Create an event handler that receives and processes a Cloud Audit Log event with Cloud Storage data \u00a0|\u00a0 Eventarc \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:07.760285+00:00
+fetched_at: 2026-10-23T13:01:36.328496+00:00
 ---
 
 # Create an event handler that receives and processes a Cloud Audit Log event with Cloud Storage data  |  Eventarc  |  Google Cloud Documentation

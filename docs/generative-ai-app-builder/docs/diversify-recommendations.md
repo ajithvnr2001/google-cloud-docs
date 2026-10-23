@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/diversify-recommendations/
 title: Diversify media recommendations \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:31.934853+00:00
+fetched_at: 2026-10-23T13:12:16.362884+00:00
 ---
 
 # Diversify media recommendations  |  Agent Search  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-restore-backup/
 title: Restore database from backup \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:11.457968+00:00
+fetched_at: 2026-10-23T10:10:08.354409+00:00
 ---
 
 # Restore database from backup  |  Spanner  |  Google Cloud Documentation

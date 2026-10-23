@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-search-batch-create-jobs/
 title: Batch create jobs (v4beta1) \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:29.272414+00:00
+fetched_at: 2026-10-23T09:34:45.413223+00:00
 ---
 
 # Batch create jobs (v4beta1)  |  Job Search  |  Google Cloud Documentation

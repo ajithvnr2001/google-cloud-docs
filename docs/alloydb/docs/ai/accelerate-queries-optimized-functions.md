@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/accelerate-queries-optimized-functions/
 title: Accelerate queries using optimized functions \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:27:18.508394+00:00
+fetched_at: 2026-10-23T13:08:33.018996+00:00
 ---
 
 # Accelerate queries using optimized functions  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -20,6 +20,10 @@ fetched_at: 2026-10-22T09:27:18.508394+00:00
 Send feedback 
 
 #  Accelerate queries using optimized functions Stay organized with collections  Save and categorize content based on your preferences. 
+
+**Preview**
+
+This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
 Optimized functions in AlloyDB for PostgreSQL let you use a smaller, faster proxy model to process most of your SQL queries that use AI functions, falling back to a larger large language model (LLM) only when necessary. This approach reduces operational costs and improves query responsiveness by minimizing remote LLM calls for row-by-row classification or filtering tasks.
 
@@ -54,7 +58,7 @@ Before you use the optimized functions, do the following:
         
 
 **Note:** To update the extension, run the `ALTER EXTENSION google_ml_integration UPDATE;` statement.
-  * Configure AlloyDB to work with Gemini Enterprise Agent Platform. For more information, see [Integrate your database with Agent Platform](https://cloud.google.com/alloydb/docs/ai/configure-vertex-ai).
+  * Configure AlloyDB to work with Gemini Enterprise Agent Platform. For more information, see [Integrate your database with Agent Platform](https://docs.cloud.google.com/alloydb/docs/ai/configure-vertex-ai).
 
   * Ensure that the following database flags are enabled. For more information, see [Configure an instance's database flags](https://docs.cloud.google.com/alloydb/docs/instance-configure-database-flags).
 
@@ -127,7 +131,7 @@ In these cases, the query falls back to using the LLM, and AlloyDB returns a war
 
   4. Optional. To disable the accuracy validation check for the entire database environment, which is required because accuracy checks are also performed during model training, run the following command.
          
-         ALTER DATABASE DATABASE_NAME SET google_ml_integration.runtime_accuracy_check = off;
+         ALTER DATABASE DATABASE_NAME SET google_ml_integration.proxy_models_enable_accuracy_check = off;
          
 
 Replace `DATABASE_NAME` with the name of your database.
@@ -155,6 +159,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

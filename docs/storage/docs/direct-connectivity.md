@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/direct-connectivity/
 title: gRPC direct connectivity \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:29:32.208634+00:00
+fetched_at: 2026-10-23T13:08:42.149120+00:00
 ---
 
 # gRPC direct connectivity  |  Cloud Storage  |  Google Cloud Documentation
@@ -72,17 +72,17 @@ The Google Cloud CLI can test the diagnostics of direct connectivity on your buc
 
   1. Make sure you have the `storage.buckets.get` IAM permission on the bucket, which can be [granted](https://docs.cloud.google.com/storage/docs/access-control/using-iam-permissions) using the Storage Legacy Bucket Reader (`roles/storage.legacyBucketReader`) role.
 
-  2. The `gcloud alpha storage diagnose` command is only available in the Google Cloud CLI version 531.0.0 or later. To use this command, we recommend [upgrading to the latest Google Cloud CLI version](https://docs.cloud.google.com/sdk/gcloud/reference/components/update).
+  2. The `gcloud storage diagnose` command is only available in the Google Cloud CLI version 531.0.0 or later. To use this command, we recommend [upgrading to the latest Google Cloud CLI version](https://docs.cloud.google.com/sdk/gcloud/reference/components/update).
 
 
 
 
 ### Run the diagnosis
 
-To check whether direct connectivity is available, run [`gcloud alpha storage diagnose`](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/storage/diagnose) with the argument `--test-type=DIRECT_CONNECTIVITY`:
+To check whether direct connectivity is available, run [`gcloud storage diagnose`](https://docs.cloud.google.com/sdk/gcloud/reference/storage/diagnose) with the argument `--test-type=DIRECT_CONNECTIVITY`:
     
     
-    gcloud alpha storage diagnose --test-type=DIRECT_CONNECTIVITY gs://BUCKET_NAME
+    gcloud storage diagnose --test-type=DIRECT_CONNECTIVITY gs://BUCKET_NAME
     
 
 Replace the following:
@@ -157,6 +157,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/understand-gpus/
 title: About GPU accelerators \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:47.431030+00:00
+fetched_at: 2026-10-23T13:18:08.126533+00:00
 ---
 
 # About GPU accelerators  |  AI Hypercomputer  |  Google Cloud Documentation

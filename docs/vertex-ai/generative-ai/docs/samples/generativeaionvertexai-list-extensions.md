@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-list-extensions/
 title: List all Extensions in Vertex AI \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:15.984126+00:00
+fetched_at: 2026-10-23T09:36:49.983692+00:00
 ---
 
 # List all Extensions in Vertex AI  |  Generative AI on Vertex AI  |  Google Cloud Documentation

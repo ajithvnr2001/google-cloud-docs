@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/default-values/
 title: Specify default column values \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:57:42.439941+00:00
+fetched_at: 2026-10-23T12:55:43.843852+00:00
 ---
 
 # Specify default column values  |  BigQuery  |  Google Cloud Documentation
@@ -21,7 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Specify default column values
 
-This page describes how to set a default value for a column in a BigQuery table. When you add a row to a table that doesn't contain data for a column with a default value, the default value is written to the column instead.
+Default column values let you define the value that BigQuery writes to a column when a new row doesn't contain data for that column. This design keeps columns populated consistently without requiring every write to supply a value.
+
+This document describes how to set, change, and remove default values, and how default values work with data manipulation language (DML) statements, load jobs, and the streaming APIs.
 
 ## Default value expression
 
@@ -539,6 +541,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

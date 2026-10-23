@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/cmek/
 title: Enable customer-managed encryption keys \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:42:28.388103+00:00
+fetched_at: 2026-10-23T10:21:55.714747+00:00
 ---
 
 # Enable customer-managed encryption keys  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -76,7 +76,7 @@ Knowledge Catalog encryption administrators in your Google Cloud project can con
 ## Considerations
 
   * By default, each organization is provisioned using Google default encryption.
-  * The Organization Administrator can switch to CMEK in Knowledge Catalog for any location.
+  * The **Organization Administrator** (`roles/resourcemanager.organizationAdmin`) can switch to CMEK in Knowledge Catalog for any location.
   * Knowledge Catalog supports Cloud KMS keys, Cloud HSM keys, and Cloud External Key Manager keys.
   * Key rotation is supported, and after it is available, the new key version is automatically used for data encryption. Existing data is also encrypted with this new version.
   * Knowledge Catalog retains data backups for a maximum of 15 days. Any backups created after you enable CMEK are encrypted using the specified KMS key. Data backed up before enabling CMEK remains encrypted with Google's default encryption for a maximum of 15 days.
@@ -158,7 +158,7 @@ The following instructions explain how to create a key and enable CMEK for Knowl
         * [Create a Cloud KMS key](https://docs.cloud.google.com/kms/docs/create-key).
         * [Create an external key](https://docs.cloud.google.com/kms/docs/create-external-key).
 
-If you use an external key manager (Cloud EKM), you must grant the Cloud KMS service account access to your key in your external key management partner system. If you connect to your external key manager over a VPC, you must also grant the Cloud EKM service account (`service-KEY_PROJECT_NUMBER@gcp-sa-ekms.iam.gserviceaccount.com`) the Service Directory Viewer (`roles/servicedirectory.viewer`) and Private Service Connect Authorized Service (`roles/servicedirectory.pscAuthorizedService`) roles in your VPC project. For more information, see [Create an EKM connection](https://docs.cloud.google.com/kms/docs/create-ekm-connection).
+If you use an external key manager (Cloud EKM), you must grant the Cloud KMS service account access to your key in your external key management partner system. If you connect to your external key manager over a VPC, you must also grant the Cloud EKM service account (`service-KEY_PROJECT_NUMBER@gcp-sa-ekms.iam.gserviceaccount.com`) the **Service Directory Viewer** (`roles/servicedirectory.viewer`) and **Private Service Connect Authorized Service** (`roles/servicedirectory.pscAuthorizedService`) roles in your VPC project. For more information, see [Create an EKM connection](https://docs.cloud.google.com/kms/docs/create-ekm-connection).
 
   2. Create and display the Google-managed service account:
          
@@ -175,7 +175,7 @@ The gcloud CLI `services identity` command creates or gets the specific Google-m
 
 The service account ID is formatted as `service-org-ORG_ID@gcp-sa-dataplex.iam.gserviceaccount.com`. A CMEK-specific service account is also created, formatted as `service-org-ORG_ID@gcp-sa-dataplex-cmek.iam.gserviceaccount.com`. The CMEK-specific service account is used for encrypting and decrypting data stored in Knowledge Catalog. If you use VPC Service Controls for the Cloud KMS key, you must grant access to the CMEK-specific service account by using an [ingress rule](https://docs.cloud.google.com/vpc-service-controls/docs/ingress-egress-rules#ingress-rules-reference).
 
-  3. Grant the [CryptoKey Encrypter/Decrypter IAM role](https://docs.cloud.google.com/iam/docs/roles-permissions/cloudkms) (`roles/cloudkms.cryptoKeyEncrypterDecrypter`) to the Knowledge Catalog service account. Grant this permission on the key you created.
+  3. Grant the [**Cloud KMS CryptoKey Encrypter/Decrypter**](https://docs.cloud.google.com/iam/docs/roles-permissions/cloudkms) (`roles/cloudkms.cryptoKeyEncrypterDecrypter`) IAM role to the Knowledge Catalog service account. Grant this permission on the key you created.
 
 If you are using an external key manager (Cloud EKM), ensure that your external key manager system also grants access permissions to the Cloud KMS service account (`service-KEY_PROJECT_NUMBER@gcp-sa-cloudkms.iam.gserviceaccount.com`).
 
@@ -196,12 +196,12 @@ If you are using an external key manager (Cloud EKM), ensure that your external 
      6. In the **Grant access** pane that opens, follow these steps to grant access to the Knowledge Catalog service account:
 
         1. In **Add principals** , enter the service account `service-org-ORG_ID@gcp-sa-dataplex.iam.gserviceaccount.com`.
-        2. In **Assign roles** , select the Cloud KMS CryptoKey Encrypter/Decrypter role.
+        2. In **Assign roles** , select the **Cloud KMS CryptoKey Encrypter/Decrypter** (`roles/cloudkms.cryptoKeyEncrypterDecrypter`) role.
         3. Click **Save**.
 
 ###  gcloud 
 
-Grant the service account the `cloudkms.cryptoKeyEncrypterDecrypter` role:
+Grant the service account the **Cloud KMS CryptoKey Encrypter/Decrypter** (`roles/cloudkms.cryptoKeyEncrypterDecrypter`) role:
     
     gcloud kms keys add-iam-policy-binding KEY_NAME \
         --location=LOCATION \
@@ -218,7 +218,7 @@ Replace the following:
      * KEY_RING: the key ring
      * KEY_PROJECT_ID: the key project ID
 
-  4. Assign the Dataplex Encryption Admin role to yourself.
+  4. Assign the **Dataplex Encryption Admin** (`roles/dataplex.encryptionAdmin`) role to yourself.
 
 ###  Console 
 
@@ -282,7 +282,7 @@ The data encryption process takes a while to complete. When the process complete
 
 ## Logging and monitoring
 
-Audit Knowledge Catalog requests to Cloud KMS by enabling [audit logging](https://docs.cloud.google.com/logging/docs/audit/configure-data-access#config-console-enable) for the Cloud KMS API.
+Audit Knowledge Catalog requests to Cloud KMS by enabling [audit logging](https://docs.cloud.google.com/logging/docs/audit/configure-data-access#config-console-enable) for the Cloud Key Management Service API.
 
 ## CMEK organization policies
 

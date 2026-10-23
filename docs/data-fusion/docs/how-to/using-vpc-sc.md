@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/using-vpc-sc/
 title: Use VPC Service Controls with Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:41.136687+00:00
+fetched_at: 2026-10-23T13:20:21.681668+00:00
 ---
 
 # Use VPC Service Controls with Cloud Data Fusion  |  Google Cloud Documentation

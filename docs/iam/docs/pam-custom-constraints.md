@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/pam-custom-constraints/
 title: Use custom organization policies for Privileged Access Manager \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:21.294366+00:00
+fetched_at: 2026-10-23T13:09:33.346815+00:00
 ---
 
 # Use custom organization policies for Privileged Access Manager  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

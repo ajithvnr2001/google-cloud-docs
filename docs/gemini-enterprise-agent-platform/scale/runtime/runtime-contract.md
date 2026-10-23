@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/runtime-contract/
-title: Agent Platform runtime contract \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
+title: Gemini Enterprise Agent Platform runtime contract \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:25:38.745678+00:00
+fetched_at: 2026-10-23T12:43:22.031731+00:00
 ---
 
-# Agent Platform runtime contract  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
+# Gemini Enterprise Agent Platform runtime contract  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/runtime-contract/
 
@@ -19,7 +19,7 @@ fetched_at: 2026-10-22T10:25:38.745678+00:00
 
 Send feedback 
 
-#  Agent Platform runtime contract Stay organized with collections  Save and categorize content based on your preferences. 
+#  Gemini Enterprise Agent Platform runtime contract Stay organized with collections  Save and categorize content based on your preferences. 
 
 Agent Runtime is designed to be independent of the application framework. If you choose to deploy your agent using a custom container or a Dockerfile, your container must adhere to the runtime contract to successfully serve queries.
 
@@ -35,7 +35,7 @@ Your container can expose any custom HTTP endpoints. You can invoke these custom
 
 While these endpoints are optional at the API level, implementing them enables the following integration features:
 
-  * **Python SDK support** : Implementing both `/api/reasoning_engine` and `/api/stream_reasoning_engine` lets you use your deployed agent through the [Agent Platform Python SDK](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/use-an-agent#sdk).
+  * **Python SDK support** : Implementing both `/api/reasoning_engine` and `/api/stream_reasoning_engine` lets you use your deployed agent through the [Gemini Enterprise Agent Platform Python SDK](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/use-an-agent#sdk).
   * **Playground support** : Implementing `/api/stream_reasoning_engine` is required if you want to interact with your agent through the Google Cloud console playground. For more information, see [Playground support](https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/use-an-agent#playground_support).
 
 
@@ -201,6 +201,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

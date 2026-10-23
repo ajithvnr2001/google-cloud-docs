@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-v1-generated-Workflows-ListWorkflows-sync/
 title: List workflows using Python or Ruby \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:02:10.727562+00:00
+fetched_at: 2026-10-23T09:37:48.628575+00:00
 ---
 
 # List workflows using Python or Ruby  |  Workflows  |  Google Cloud Documentation
@@ -204,7 +204,7 @@ To authenticate to Workflows, set up Application Default Credentials. For more i
     # - It may require specifying regional endpoints when creating the service
     #   client as shown in:
     #   https://googleapis.dev/python/google-api-core/latest/client_options.html
-    from google.cloud import [workflows](https://docs.cloud.google.com/python/docs/reference/workflows/latest/google.cloud.workflows_v1.services.workflows.html)_v1
+    from google.cloud import [workflows](https://docs.cloud.google.com/python/docs/reference/workflows/latest)_v1
     
     
     def sample_list_workflows():

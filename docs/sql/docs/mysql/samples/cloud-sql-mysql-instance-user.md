@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/samples/cloud-sql-mysql-instance-user/
 title: Create a user in MySQL instance \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:52.732620+00:00
+fetched_at: 2026-10-23T10:18:51.136554+00:00
 ---
 
 # Create a user in MySQL instance  |  Cloud SQL for MySQL  |  Google Cloud Documentation

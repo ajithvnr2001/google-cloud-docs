@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/ar-service-account/
 title: Artifact Registry Service Agent \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:03.983212+00:00
+fetched_at: 2026-10-23T13:18:19.450435+00:00
 ---
 
 # Artifact Registry Service Agent  |  Google Cloud Documentation

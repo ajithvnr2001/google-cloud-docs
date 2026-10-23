@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/database-migration/docs/manage-jobs/
 title: Manage migration jobs \u00a0|\u00a0 Database Migration Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:07.896895+00:00
+fetched_at: 2026-10-23T13:20:53.980260+00:00
 ---
 
 # Manage migration jobs  |  Database Migration Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/register-model-endpoint/
 title: Register and call remote AI models using model endpoint management \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:03.911730+00:00
+fetched_at: 2026-10-23T13:08:37.574117+00:00
 ---
 
 # Register and call remote AI models using model endpoint management  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -34,11 +34,9 @@ Model endpoint management in AlloyDB for PostgreSQL lets you register remote AI 
 
 ### Set up the extension
 
-  1. [Connect to your database using `psql`](https://docs.cloud.google.com/alloydb/docs/connect-psql) or AlloyDB for PostgreSQL Studio using the `postgres` user.
+  1. [Connect to your database using `psql`](https://docs.cloud.google.com/alloydb/docs/connect-psql) or AlloyDB Studio using the `postgres` user.
 
-  2. Optional: [Request access to interact with AlloyDB for PostgreSQL AI functions (](https://docs.google.com/forms/d/e/1FAIpQLSfJ9vHIJ79nI7JWBDELPFL75pDQa4XVZQ2fxShfYddW0RwmLw/viewform)[Preview](https://cloud.google.com/products#product-launch-stages)) features including support for multimodal models, ranking models, and operator functions.
-
-  3. Optional: Grant permission to a non-super PostgreSQL user to manage model metadata:
+  2. Optional: Grant permission to a non-super PostgreSQL user to manage model metadata:
          
          GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA google_ml TO NON_SUPER_USER;
          
@@ -46,7 +44,7 @@ Model endpoint management in AlloyDB for PostgreSQL lets you register remote AI 
 Replace the following variable:
 
      * `NON_SUPER_USER`: the non-super PostgreSQL username.
-  4. Ensure that outbound IP is enabled to access models hosted outside of your VPC, such as third-party models. For more information, see [Add outbound connectivity](https://docs.cloud.google.com/alloydb/docs/connect-public-ip#add-outbound-connectivity).
+  3. Ensure that outbound IP is enabled to access models hosted outside of your Virtual Private Cloud (VPC) network, such as third-party models. For more information, see [Add outbound connectivity](https://docs.cloud.google.com/alloydb/docs/connect-public-ip#add-outbound-connectivity).
 
 
 
@@ -57,7 +55,7 @@ The following sections show how to set up authentication before registering a mo
 
 #### Integrate with Gemini Enterprise Agent Platform and install the extension
 
-To use the Agent Platform model endpoints, you must add Agent Platform permissions to the IAM-based AlloyDB service account you use to connect to the database.
+To use the Agent Platform model endpoints, you must add Agent Platform permissions to the Identity and Access Management (IAM)-based AlloyDB service account you use to connect to the database.
 
   1. [Configure user access to Agent Platform models](https://docs.cloud.google.com/alloydb/docs/ai/configure-vertex-ai).
   2. Verify that the latest version of `google_ml_integration` is installed. 
@@ -136,9 +134,10 @@ The secret path is used in the [`google_ml.create_sm_secret()`](https://docs.clo
 Replace the following:
 
      * `SECRET_NAME`: the secret name in Secret Manager.
+
      * `SERVICE_ACCOUNT_ID`: the ID of the IAM-based service account in the `serviceAccount:service-PROJECT_ID@gcp-sa-alloydb.iam.gserviceaccount.com` format—for example, `service-212340152456@gcp-sa-alloydb.iam.gserviceaccount.com`.
 
-You can also grant this role to the service account at the project level. For more information, see [Add Identity and Access Management policy binding](https://docs.cloud.google.com/sdk/gcloud/reference/projects/add-iam-policy-binding)
+You can also grant this role to the service account at the project level. For more information, see [Add IAM policy binding](https://docs.cloud.google.com/sdk/gcloud/reference/projects/add-iam-policy-binding).
 
 
 
@@ -172,15 +171,17 @@ The following example shows how to set up authentication using a function. The f
 Replace the following:
 
   * `HEADER_GEN_FUNCTION`: the name of the header generation function that you can use when registering a model.
+
   * `API_KEY`: the API key of the model provider.
 
 
 
-### Deploy Model Garden models to an Agent Platform endpoint
+
+### Deploy Model Garden models to a Agent Platform endpoint
 
 In addition to Gemini or other Agent Platform models available by default, you can host models from Model Garden that are optimized for specific tasks. The common process is to first deploy a model from Model Garden to a public Agent Platform endpoint, and then register that endpoint with AlloyDB. These task-specific models are registered with a corresponding `model_type`, such as `ts_forecasting` in case of the `TimesFM` model, and used with specialized SQL functions.
 
-To deploy a model hosted in Model Garden to an Agent Platform endpoint, complete the following steps:
+To deploy a model hosted in Model Garden to a Agent Platform endpoint, complete the following steps:
 
   1. Go to the **Model Garden** page in the Google Cloud console:
 
@@ -188,7 +189,7 @@ To deploy a model hosted in Model Garden to an Agent Platform endpoint, complete
 
   2. Find the model, and select **Deploy**.
 
-  3. In the deployment settings, select **Public (Shared endpoint)** under **Endpoint access** to make the endpoint publicly accessible and reachable by AlloyDB for PostgreSQL.
+  3. In the deployment settings, select **Public (Shared endpoint)** under **Endpoint access** to make the endpoint publicly accessible and reachable by AlloyDB.
 
   4. After the deployment is complete, navigate to the endpoint's details page and copy the model request URL from the **Sample request** pane.
 
@@ -203,7 +204,7 @@ The model endpoint management supports some text embedding and generic Agent Pla
 
 **Note:** Agent Platform model support is governed by Agent Platform model versioning and lifecycle guidelines. For more information about stable versions, see [Model versions and lifecycle](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions).
 
-The `gemini-embedding-001` model is only available in the `us-central1` region.
+Verify that the `gemini-embedding-001` model is available in your region. For more information, see [Supported regions](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/embedding-001#supported-regions).
 
 For example, to call the pre-registered `gemini-embedding-001` model, you can directly call the model using the embedding function:
     
@@ -226,11 +227,11 @@ For models with built-in support, you can set the qualified name as the model qu
 
 #### Agent Platform embedding models
 
-**Note:** Use the the [public.embedding() function](https://docs.cloud.google.com/alloydb/docs/ai/work-with-embeddings) to query Agent Platform models without registration or customization. For passing any custom information such as the task type, you must register the Agent Platform model, and then use the `google_ml.embedding()` function.
+**Note:** Use the [public.embedding() function](https://docs.cloud.google.com/alloydb/docs/ai/work-with-embeddings) to query Agent Platform models without registration or customization. For passing any custom information such as the task type, you must register the Agent Platform model, and then use the `google_ml.embedding()` function.
 
 The following steps show how to register Agent Platform models with built-in support. The `gemini-embedding-001` and the `text-multilingual-embedding-002` model endpoint is used as an example.
 
-**Note:** Only the `text-multilingual-embedding-002` model endpoint requires setting up transform functions provided by model endpoint management.
+**Note:** For models with built-in support, model endpoint management automatically sets up default transform functions, or you can explicitly specify transform functions such as `google_ml.vertexai_text_embedding_input_transform` and `google_ml.vertexai_text_embedding_output_transform`.
 
 Make sure that both the AlloyDB cluster and the Agent Platform model that you're querying are in the same region.
 
@@ -269,9 +270,9 @@ Make sure that both the AlloyDB cluster and the Agent Platform model that you're
 
 
 
-If the model is stored in the another project and region than your AlloyDB cluster, then set the request URL to `projects/PROJECT_ID/locations/REGION_ID/publishers/google/models/MODEL_ID`, where `REGION_ID` is the region where your model is hosted, and the `MODEL_ID` is the qualified model name.
+If the model is stored in another project and region than your AlloyDB cluster, then set the request URL to `projects/PROJECT_ID/locations/REGION_ID/publishers/google/models/MODEL_ID`, where `REGION_ID` is the region where your model is hosted, and the `MODEL_ID` is the qualified model name.
 
-In addition, [grant the Vertex AI User (`roles/aiplatform.user`) role](https://docs.cloud.google.com/alloydb/docs/ai/configure-vertex-ai#enable-access) to AlloyDB service account of the project where AlloyDB instance resides so that AlloyDB can access the model hosted in the other project.
+In addition, [grant the Agent Platform User (`roles/aiplatform.user`) role](https://docs.cloud.google.com/alloydb/docs/ai/configure-vertex-ai#grant-iam-permissions) to the AlloyDB service account of the project where the AlloyDB instance resides so that AlloyDB can access the model hosted in the other project.
 
 #### Open AI text embedding model
 
@@ -407,8 +408,6 @@ Replace the following:
 
 This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
-For information about access to this release, see the [ access request page](https://docs.google.com/forms/d/1Ux9AZoGv9dwraS6lXa9Qgwvj17NTk1stagUXFW5mu5k). 
-
 **Note:** This experimental launch is a Pre-GA offering.
 
 ### Integrate with Vertex AI and install the extension
@@ -490,26 +489,20 @@ The following example uses the `multimodalembedding@001` qualified model name as
 
 Replace the following:
 
-  * IMAGE_PATH_OR_TEXT with Cloud Storage path to the image, for example-`gs://cymbal_user_data/image-85097193-cd9788aacebb.jpeg` to translate into a vector embedding or base64 string of the image.
-  * MIMETYPE with the mimetype of the image.
+  * `IMAGE_PATH_OR_TEXT`: the Cloud Storage path to the image—for example, `gs://cymbal_user_data/image-85097193-cd9788aacebb.jpeg`—to translate into a vector embedding, or the base64 string of the image.
+
+  * `MIMETYPE`: the mimetype of the image.
+
 
 
 
 ## Ranking models
 
-**Preview**
-
-This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
-
-For information about access to this release, see the [ access request page](https://docs.google.com/forms/d/1Ux9AZoGv9dwraS6lXa9Qgwvj17NTk1stagUXFW5mu5k). 
-
-**Note:** This feature is an experimental pre-GA offering.
-
 ### Vertex AI ranking models
 
 You can use Vertex AI models mentioned in [Supported models](https://docs.cloud.google.com/generative-ai-app-builder/docs/ranking#models) without registration.
 
-To learn how to rank your search results using an Agent Platform ranking model, see [Rank search results](https://docs.cloud.google.com/alloydb/docs/ai/rank-rerank-search-results-rag).
+To learn how to rank your search results using a Agent Platform ranking model, see [Rank search results](https://docs.cloud.google.com/alloydb/docs/ai/rank-rerank-search-results-rag).
 
 ### Registering a third-party ranking model
 
@@ -716,8 +709,11 @@ Replace `PROJECT_ID` with the ID of your Google Cloud project.
 The following example adds the `facebook/bart-large-mnli` custom classification model endpoint hosted on Hugging Face.
 
   1. Connect to your database using `psql`.
+
   2. Set up the `google_ml_integration` extension.
-  3. Add the OpenAI API key as a secret to the Secret Manager for authentication. If you have already created a secret for any other OpenAI model, you can reuse the same secret.
+
+  3. Add the Hugging Face API token as a secret to Secret Manager for authentication.
+
   4. Call the secret stored in the Secret Manager:
          
          CALL
@@ -843,9 +839,9 @@ A common use case for task-specific models is [performing time-series forecastin
 
 To deploy and register this model, complete the following steps:
 
-  1. Deploy the TimesFM model from Model Garden to an Agent Platform endpoint to obtain a publicly accessible model request URL. For more information, see [Deploy Model Garden models to an Agent Platform endpoint](https://docs.cloud.google.com/alloydb/docs/ai/register-model-endpoint#deploy-model-model-garden).
+  1. Deploy the TimesFM model from Model Garden to a Agent Platform endpoint to obtain a publicly accessible model request URL. For more information, see [Deploy Model Garden models to a Agent Platform endpoint](https://docs.cloud.google.com/alloydb/docs/ai/register-model-endpoint#deploy-model-model-garden).
 
-  2. To register the deployed TimesFM model in AlloyDB for PostgreSQL, use the `google_ml.create_model` function. For time-series forecasting, the `model_type` must be `ts_forecasting`:
+  2. To register the deployed TimesFM model in AlloyDB, use the `google_ml.create_model` function. For time-series forecasting, the `model_type` must be `ts_forecasting`:
 
 
 
@@ -881,6 +877,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

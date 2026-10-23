@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-a4xmax-mig/
 title: Create an AI-optimized A4X Max MIG \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:53.372004+00:00
+fetched_at: 2026-10-23T13:16:20.843007+00:00
 ---
 
 # Create an AI-optimized A4X Max MIG  |  AI Hypercomputer  |  Google Cloud Documentation

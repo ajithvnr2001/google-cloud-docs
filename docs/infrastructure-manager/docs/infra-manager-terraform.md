@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/infra-manager-terraform/
 title: Terraform and Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:43.144558+00:00
+fetched_at: 2026-10-23T13:09:20.227832+00:00
 ---
 
 # Terraform and Infrastructure Manager  |  Google Cloud Documentation

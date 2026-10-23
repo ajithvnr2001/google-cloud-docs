@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-topology/use-api/
 title: Use the App Topology API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:38.886910+00:00
+fetched_at: 2026-10-23T13:18:12.683679+00:00
 ---
 
 # Use the App Topology API  |  Google Cloud Documentation

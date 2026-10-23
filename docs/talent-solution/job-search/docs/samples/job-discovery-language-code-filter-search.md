@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-discovery-language-code-filter-search/
 title: Language code search (v3) \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:06.328895+00:00
+fetched_at: 2026-10-23T09:41:46.904708+00:00
 ---
 
 # Language code search (v3)  |  Job Search  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-batch-annotate-files/
 title: Annotate a batch of local files \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:09.572183+00:00
+fetched_at: 2026-10-23T09:37:22.028867+00:00
 ---
 
 # Annotate a batch of local files  |  Cloud Vision API  |  Google Cloud Documentation

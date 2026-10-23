@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/guides/delta-lake-cdc-df-lakehouse-integration/
 title: Migrate Delta Lake change data capture (CDC) data into borderless Lakehouse using Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:42:20.113017+00:00
+fetched_at: 2026-10-23T13:20:54.986289+00:00
 ---
 
 # Migrate Delta Lake change data capture (CDC) data into borderless Lakehouse using Dataflow  |  Google Cloud Documentation

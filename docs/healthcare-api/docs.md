@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/
 title: Cloud Healthcare API documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:10.152991+00:00
+fetched_at: 2026-10-23T13:10:36.547098+00:00
 ---
 
 # Cloud Healthcare API documentation  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/resources/
 title: Resources \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:08.901664+00:00
+fetched_at: 2026-10-23T13:02:38.274574+00:00
 ---
 
 # Resources  |  Gemini for Google Cloud  |  Google Cloud Documentation

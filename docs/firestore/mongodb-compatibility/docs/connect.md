@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/connect/
 title: Authenticate and connect to a database \u00a0|\u00a0 Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:43.569422+00:00
+fetched_at: 2026-10-23T13:09:06.479122+00:00
 ---
 
 # Authenticate and connect to a database  |  Firestore with MongoDB compatibility  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/gke/route-trigger-beyondcorp/
 title: Route Chrome Enterprise Premium events to GKE \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:03.332275+00:00
+fetched_at: 2026-10-23T13:00:43.647633+00:00
 ---
 
 # Route Chrome Enterprise Premium events to GKE  |  Eventarc Standard  |  Google Cloud Documentation

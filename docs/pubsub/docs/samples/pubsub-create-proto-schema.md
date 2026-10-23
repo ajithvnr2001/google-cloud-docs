@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-create-proto-schema/
 title: Create Proto-typed schema \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:14.352902+00:00
+fetched_at: 2026-10-23T10:04:53.687488+00:00
 ---
 
 # Create Proto-typed schema  |  Pub/Sub  |  Google Cloud Documentation

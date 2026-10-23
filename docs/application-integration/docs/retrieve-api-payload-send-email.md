@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/retrieve-api-payload-send-email/
 title: Retrieve API payload and send an email \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:06.918986+00:00
+fetched_at: 2026-10-23T13:17:51.655382+00:00
 ---
 
 # Retrieve API payload and send an email  |  Application Integration  |  Google Cloud Documentation

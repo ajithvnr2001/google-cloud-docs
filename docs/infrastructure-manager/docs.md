@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/
 title: Infrastructure Manager documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:25:37.693394+00:00
+fetched_at: 2026-10-23T13:03:14.793955+00:00
 ---
 
 # Infrastructure Manager documentation  |  Google Cloud Documentation

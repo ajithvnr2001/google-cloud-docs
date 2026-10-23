@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kms/docs/samples/kms-update-key-add-rotation-schedule/
 title: Add a rotation schedule to an existing key \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:46:55.371362+00:00
+fetched_at: 2026-10-23T10:25:31.504208+00:00
 ---
 
 # Add a rotation schedule to an existing key  |  Cloud Key Management Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/spanner-external-datasets/
 title: Create Spanner external datasets \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:58:45.208069+00:00
+fetched_at: 2026-10-23T12:55:43.998741+00:00
 ---
 
 # Create Spanner external datasets  |  BigQuery  |  Google Cloud Documentation
@@ -21,13 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Create Spanner external datasets
 
-This document describes how to create an external dataset (also known as a federated dataset) in BigQuery that's linked to an existing GoogleSQL or PostgreSQL database in [Spanner](https://docs.cloud.google.com/spanner/docs).
+External datasets (also known as _federated datasets_) let you query transactional data in Spanner from BigQuery by using GoogleSQL, without copying or importing the data into BigQuery storage. An external dataset links a BigQuery dataset to an existing GoogleSQL or PostgreSQL database in Spanner. Its read-only tables automatically reflect the tables and updates in that database.
 
-An external dataset is a connection between BigQuery and an external data source at the dataset level. It lets you query transactional data in Spanner databases with GoogleSQL without needing to copy or import all of the data from Spanner to BigQuery storage. These query results are [stored in BigQuery](https://docs.cloud.google.com/bigquery/docs/writing-results#temporary_and_permanent_tables).
-
-The tables in an external dataset are automatically populated from the tables in the corresponding external data source. You can query these tables directly in BigQuery, but you cannot make modifications, additions, or deletions. However, any updates that you make in the external data source are automatically reflected in BigQuery.
-
-When you query Spanner, query results are by default saved in temporary tables. They can also optionally be saved as a new BigQuery table, joined with other tables, or merged with existing tables using [DML](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/dml-syntax).
+This document describes how to create, query, and manage a Spanner external dataset.
 
 ## Required permissions
 
@@ -582,6 +578,8 @@ To get information on the tables in your external dataset, such as schema detail
 
 Queries against tables in Spanner external datasets use [Data Boost](https://docs.cloud.google.com/bigquery/docs/spanner-federated-queries#data_boost) by default and it cannot be changed. Because of that you need [additional permissions](https://docs.cloud.google.com/bigquery/docs/spanner-federated-queries#before_you_begin_2) to run such queries.
 
+Query results are [stored in BigQuery](https://docs.cloud.google.com/bigquery/docs/writing-results#temporary_and_permanent_tables). When you query Spanner, query results are by default saved in temporary tables. They can also optionally be saved as a new BigQuery table, joined with other tables, or merged with existing tables using [DML](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/dml-syntax).
+
 ## Create a view in an external dataset
 
 You can't create a view in an external dataset. However, you can create a view in a standard dataset that's based on a table in an external dataset. For more information, see [Create views](https://docs.cloud.google.com/bigquery/docs/views).
@@ -643,6 +641,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

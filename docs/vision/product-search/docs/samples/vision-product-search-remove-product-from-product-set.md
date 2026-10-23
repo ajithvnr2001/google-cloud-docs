@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/product-search/docs/samples/vision-product-search-remove-product-from-product-set/
 title: Remove a product from a product set \u00a0|\u00a0 Vision API Product Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:10.615639+00:00
+fetched_at: 2026-10-23T09:36:43.349196+00:00
 ---
 
 # Remove a product from a product set  |  Vision API Product Search  |  Google Cloud Documentation

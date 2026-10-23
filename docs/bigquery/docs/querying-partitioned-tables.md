@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/querying-partitioned-tables/
 title: Query partitioned tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:58:34.393731+00:00
+fetched_at: 2026-10-23T12:55:44.148254+00:00
 ---
 
 # Query partitioned tables  |  BigQuery  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Query partitioned tables
 
-This document describes some specific considerations for querying [partitioned tables](https://docs.cloud.google.com/bigquery/docs/partitioned-tables) in BigQuery.
+When you query a [partitioned table](https://docs.cloud.google.com/bigquery/docs/partitioned-tables) in BigQuery, filtering on the partitioning column lets BigQuery prune partitions, which reduces the bytes scanned and lowers query costs. This document describes how to query time-unit column-partitioned, ingestion-time partitioned, and integer-range partitioned tables, and gives best practices for partition pruning.
 
-For general information on running queries in BigQuery, see [Running interactive and batch queries](https://docs.cloud.google.com/bigquery/docs/running-queries).
+For general information about running queries, see [Run a query](https://docs.cloud.google.com/bigquery/docs/running-queries).
 
 ## Overview
 
@@ -388,6 +388,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

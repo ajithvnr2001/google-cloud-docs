@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/cmek/
 title: Customer-managed encryption keys (CMEK) \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:36.053889+00:00
+fetched_at: 2026-10-23T13:19:59.976854+00:00
 ---
 
 # Customer-managed encryption keys (CMEK)  |  Data Studio  |  Google Cloud Documentation

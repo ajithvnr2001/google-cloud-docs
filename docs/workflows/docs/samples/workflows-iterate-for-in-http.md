@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-iterate-for-in-http/
 title: Make HTTP requests in a for-in loop \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:48.759816+00:00
+fetched_at: 2026-10-23T08:57:32.051630+00:00
 ---
 
 # Make HTTP requests in a for-in loop  |  Workflows  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/service-mesh/versions/
 title: Versions \u00a0|\u00a0 Cloud Service Mesh \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:09:27.483010+00:00
+fetched_at: 2026-10-23T08:57:23.053970+00:00
 ---
 
 # Versions  |  Cloud Service Mesh  |  Google Cloud Documentation
@@ -38,7 +38,6 @@ All versions listed in the Latest versions table are fully supported for the in-
 1.31.1-asm.19 | [October 19, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#October_19_2026) | [1.31 documentation](https://docs.cloud.google.com/service-mesh/docs)  
 1.30.5-asm.11 | [October 19, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#October_19_2026) | [1.30 documentation](https://docs.cloud.google.com/service-mesh/docs)  
 1.29.8-asm.11 | [October 19, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#October_19_2026) | [1.29 documentation](https://docs.cloud.google.com/service-mesh/v1.29/docs)  
-1.28.10-asm.52 | [October 19, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#October_19_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/v1.28/docs)  
   
 ## Previous versions
 
@@ -47,26 +46,14 @@ Version | Release date | Documentation
 1.31.1-asm.16 | [October 12, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#October_12_2026) | [1.31 documentation](https://docs.cloud.google.com/service-mesh/docs)  
 1.30.5-asm.8 | [October 12, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#October_12_2026) | [1.30 documentation](https://docs.cloud.google.com/service-mesh/docs)  
 1.29.8-asm.8 | [October 12, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#October_12_2026) | [1.29 documentation](https://docs.cloud.google.com/service-mesh/v1.29/docs)  
-1.28.10-asm.49 | [October 12, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#October_12_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/v1.28/docs)  
 1.30.4-asm.14 | [September 23, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#September_23_2026) | [1.30 documentation](https://docs.cloud.google.com/service-mesh/docs)  
 1.29.7-asm.18 | [September 23, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#September_23_2026) | [1.29 documentation](https://docs.cloud.google.com/service-mesh/v1.29/docs)  
-1.28.10-asm.40 | [September 23, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#September_23_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/v1.28/docs)  
 1.30.4-asm.1 | [September 23, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#September_23_2026) | [1.30 documentation](https://docs.cloud.google.com/service-mesh/docs)  
 1.29.7-asm.2 | [September 23, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#September_23_2026) | [1.29 documentation](https://docs.cloud.google.com/service-mesh/docs)  
-1.28.10-asm.24 | [September 23, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#September_23_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/v1.28/docs)  
 1.29.5-asm.12 | [July 15, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#July_15_2026) | [1.29 documentation](https://docs.cloud.google.com/service-mesh/docs)  
-1.28.10-asm.4 | [July 15, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#July_15_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/docs)  
-1.27.9-asm.15 | [July 15, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#July_15_2026) | [1.27 documentation](https://docs.cloud.google.com/service-mesh/v1.27/docs)  
 1.29.5-asm.5 | [June 29, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#June_29_2026) | [1.29 documentation](https://docs.cloud.google.com/service-mesh/docs)  
 1.29.5-asm.3 | [June 23, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#June_23_2026) | [1.29 documentation](https://docs.cloud.google.com/service-mesh/docs)  
 1.29.4-asm.0 | [June 9, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#June_09_2026) | [1.29 documentation](https://docs.cloud.google.com/service-mesh/docs)  
-1.28.9-asm.4 | [June 29, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#June_29_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/docs)  
-1.28.9-asm.2 | [June 23, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#June_23_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/docs)  
-1.28.7-asm.4 | [June 8, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#June_08_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/docs)  
-1.28.7-asm.3 | [June 3, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#June_03_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/docs)  
-1.28.5-asm.12 | [April 13, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#April_13_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/docs)  
-1.28.5-asm.9 | [March 11, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#March_11_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/docs)  
-1.28.2-asm.4 | [January 19, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#January_19_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/docs)  
   
 ### Unsupported in-cluster versions
 
@@ -74,6 +61,18 @@ The following versions are no longer supported. For information on how to upgrad
 
 Version | Release date | Documentation  
 ---|---|---  
+1.28.10-asm.52 | [October 19, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#October_19_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/v1.28/docs)  
+1.28.10-asm.49 | [October 12, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#October_12_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/v1.28/docs)  
+1.28.10-asm.40 | [September 23, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#September_23_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/v1.28/docs)  
+1.28.10-asm.24 | [September 23, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#September_23_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/v1.28/docs)  
+1.28.10-asm.4 | [July 15, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#July_15_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/v1.28/docs)  
+1.28.9-asm.4 | [June 29, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#June_29_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/v1.28/docs)  
+1.28.9-asm.2 | [June 23, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#June_23_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/v1.28/docs)  
+1.28.7-asm.4 | [June 8, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#June_08_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/v1.28/docs)  
+1.28.7-asm.3 | [June 3, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#June_03_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/v1.28/docs)  
+1.28.5-asm.12 | [April 13, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#April_13_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/v1.28/docs)  
+1.28.5-asm.9 | [March 11, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#March_11_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/v1.28/docs)  
+1.28.2-asm.4 | [January 19, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#January_19_2026) | [1.28 documentation](https://docs.cloud.google.com/service-mesh/v1.28/docs)  
 1.27.9-asm.34 | [August 26, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#August_26_2026) | [1.27 documentation](https://docs.cloud.google.com/service-mesh/v1.27/docs)  
 1.27.9-asm.15 | [July 15, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#Jul7_15_2026) | [1.27 documentation](https://docs.cloud.google.com/service-mesh/v1.27/docs)  
 1.27.9-asm.9 | [June 29, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#June_29_2026) | [1.27 documentation](https://docs.cloud.google.com/service-mesh/v1.27/docs)  
@@ -301,6 +300,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

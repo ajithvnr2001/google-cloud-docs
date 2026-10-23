@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud/
 title: Sign in to the gcloud CLI with your federated identity \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:37.982463+00:00
+fetched_at: 2026-10-23T13:09:17.739960+00:00
 ---
 
 # Sign in to the gcloud CLI with your federated identity  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

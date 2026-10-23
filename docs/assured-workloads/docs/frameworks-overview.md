@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/frameworks-overview/
 title: Overview of Assured Workloads frameworks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:08.977761+00:00
+fetched_at: 2026-10-23T13:19:28.413240+00:00
 ---
 
 # Overview of Assured Workloads frameworks  |  Google Cloud Documentation

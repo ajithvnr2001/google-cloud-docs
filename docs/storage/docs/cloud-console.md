@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/cloud-console/
 title: Google Cloud console \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:30:28.654460+00:00
+fetched_at: 2026-10-23T13:08:42.327180+00:00
 ---
 
 # Google Cloud console  |  Cloud Storage  |  Google Cloud Documentation
@@ -140,13 +140,13 @@ The following integrations with other Google Cloud products are available in the
 
   * **Large scale data transfers to and from the bucket using Storage Transfer Service**
 
-[Storage Transfer Service](https://cloud.google.com/storage-transfer-service) is a service that lets you transfer large volumes of data between your bucket and other storage options, such as your on-premises file system, other buckets, or other cloud providers.
+[Storage Transfer Service](https://docs.cloud.google.com/storage-transfer-service) is a service that lets you transfer large volumes of data between your bucket and other storage options, such as your on-premises file system, other buckets, or other cloud providers.
 
 You can initiate a transfer by clicking the **Transfer data** drop-down in the **Objects** tab, selecting either **Transfer data in** or **Transfer data out** , and following the instructions.
 
   * **Scanning the bucket for sensitive data using Sensitive Data Protection**
 
-[Sensitive Data Protection](https://cloud.google.com/security/products/sensitive-data-protection) is a service that lets you identify and protect sensitive data in your buckets, such as credit card numbers, IP IP addresses, and other forms of personally identifiable information (PII).
+[Sensitive Data Protection](https://docs.cloud.google.com/security/products/sensitive-data-protection) is a service that lets you identify and protect sensitive data in your buckets, such as credit card numbers, IP IP addresses, and other forms of personally identifiable information (PII).
 
 For a list of the types of data Sensitive Data Protection detects, see the [Infotype detector reference](https://docs.cloud.google.com/sensitive-data-protection/docs/infotypes-reference).
 
@@ -154,13 +154,13 @@ You can initiate a Sensitive Data Protection scan for a bucket by clicking the *
 
   * **Exporting data from the bucket to Pub/Sub**
 
-[Pub/Sub](https://cloud.google.com/pubsub) is a messaging service that lets you notify subscribers about events that occur for your Google Cloud resources. Pub/Sub supports receiving event records that are stored as text files in your bucket and publishing them to a Pub/Sub topic.
+[Pub/Sub](https://docs.cloud.google.com/pubsub) is a messaging service that lets you notify subscribers about events that occur for your Google Cloud resources. Pub/Sub supports receiving event records that are stored as text files in your bucket and publishing them to a Pub/Sub topic.
 
 You can create an export job for a bucket by clicking the **Other services** drop-down in the **Objects** tab, selecting **Export data to Pub/Sub** , and following the instructions. For more information, see [Cloud Storage text to Pub/Sub (Batch) template](https://docs.cloud.google.com/dataflow/docs/guides/templates/provided/cloud-storage-to-pubsub).
 
   * **Processing data in the bucket using Cloud Run functions**
 
-[Cloud Run functions](https://cloud.google.com/functions) is a service that lets you specify code that should run when certain events occur within the bucket. For example, you could create a Java function that runs every time an object in the bucket is deleted.
+[Cloud Run functions](https://docs.cloud.google.com/functions) is a service that lets you specify code that should run when certain events occur within the bucket. For example, you could create a Java function that runs every time an object in the bucket is deleted.
 
 You can define a function for a bucket by clicking the **Other services** drop-down in the **Objects** tab, selecting **Process data** , and following the instructions.
 
@@ -171,6 +171,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/service-mesh/docs/distributed-services-private-clusters/
 title: Running distributed services on GKE private clusters using Cloud Service Mesh \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:09:34.005242+00:00
+fetched_at: 2026-10-23T09:58:01.498622+00:00
 ---
 
 # Running distributed services on GKE private clusters using Cloud Service Mesh  |  Google Cloud Documentation
@@ -721,7 +721,7 @@ The output looks like the following:
   7. Enable Multi Cluster Ingress features on the `ingress-config` cluster. This creates the `MulticlusterService` and `MulticlusterIngress` CustomResourceDefinitions (CRDs) on the cluster.
          
          gcloud container fleet ingress enable \
-           --config-membership=projects/${PROJECT_ID}/locations/global/memberships/${CLUSTER_INGRESS}
+           --config-membership=projects/${PROJECT_ID}/locations/${CLUSTER_INGRESS_REGION}/memberships/${CLUSTER_INGRESS}
          
 
   8. Verify that Multi Cluster Ingress is enabled on the `ingress-config` cluster:
@@ -890,18 +890,18 @@ If you plan to explore multiple architectures, tutorials, or quickstarts, reusin
 
 ### Delete the clusters
 
-  1. In Cloud Shell, unregister and delete the `blue` and `green` clusters:
+  1. In Cloud Shell, unregister and delete the private clusters:
          
          gcloud container fleet memberships unregister ${CLUSTER_1} \
-           --project=${PROJECT} \
-           --gke-uri=${CLUSTER_1_URI}
+           --project=${PROJECT_ID} \
+           --gke-cluster=${CLUSTER_1_ZONE}/${CLUSTER_1}
          gcloud container clusters delete ${CLUSTER_1} \
            --zone ${CLUSTER_1_ZONE} \
            --quiet
          
          gcloud container fleet memberships unregister ${CLUSTER_2} \
-           --project=${PROJECT} \
-           --gke-uri=${CLUSTER_2_URI}
+           --project=${PROJECT_ID} \
+           --gke-cluster=${CLUSTER_2_ZONE}/${CLUSTER_2}
          gcloud container clusters delete ${CLUSTER_2} \
            --zone ${CLUSTER_2_ZONE} \
            --quiet
@@ -909,7 +909,7 @@ If you plan to explore multiple architectures, tutorials, or quickstarts, reusin
 
   2. Delete the `MuticlusterIngress` resource from the ingress-config cluster:
          
-         kubectl --context ${CLUSTER_INGRESS} -n istio-system delete -f $HOME/mci.yaml
+         kubectl --context ${CLUSTER_INGRESS} -n asm-ingress delete -f $HOME/mci.yaml
          
 
 This deletes the Cloud Load Balancing resources from the project.
@@ -917,8 +917,8 @@ This deletes the Cloud Load Balancing resources from the project.
   3. Unregister and delete the `ingress-config` cluster:
          
          gcloud container fleet memberships unregister ${CLUSTER_INGRESS} \
-           --project=${PROJECT} \
-           --gke-uri=${CLUSTER_INGRESS_URI}
+           --project=${PROJECT_ID} \
+           --gke-cluster=${CLUSTER_INGRESS_ZONE}/${CLUSTER_INGRESS}
          gcloud container clusters delete ${CLUSTER_INGRESS} \
            --zone ${CLUSTER_INGRESS_ZONE} \
            --quiet
@@ -952,6 +952,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

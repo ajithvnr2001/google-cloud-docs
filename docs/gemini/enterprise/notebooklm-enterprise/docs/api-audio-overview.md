@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-audio-overview/
 title: Manage audio overview of your notebook (API) \u00a0|\u00a0 Gemini Notebook Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:55.519056+00:00
+fetched_at: 2026-10-23T13:12:42.036754+00:00
 ---
 
 # Manage audio overview of your notebook (API)  |  Gemini Notebook Enterprise  |  Google Cloud Documentation

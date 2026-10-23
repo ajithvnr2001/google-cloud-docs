@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/database-center/docs/monitor-gce-databases/
 title: Monitor databases on Compute Engine virtual machines \u00a0|\u00a0 Database Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:47.121049+00:00
+fetched_at: 2026-10-23T13:20:42.125912+00:00
 ---
 
 # Monitor databases on Compute Engine virtual machines  |  Database Center  |  Google Cloud Documentation

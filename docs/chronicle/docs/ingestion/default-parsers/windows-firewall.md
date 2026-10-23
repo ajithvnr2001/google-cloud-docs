@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/windows-firewall/
 title: Collect Windows Firewall logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:34:12.809134+00:00
+fetched_at: 2026-10-23T12:56:00.217782+00:00
 ---
 
 # Collect Windows Firewall logs  |  Google Security Operations  |  Google Cloud Documentation

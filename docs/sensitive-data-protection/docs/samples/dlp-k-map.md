@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-k-map/
 title: Computing k-map estimates \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:51:11.972280+00:00
+fetched_at: 2026-10-23T10:52:12.462132+00:00
 ---
 
 # Computing k-map estimates  |  Sensitive Data Protection  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/translate/docs/samples/translate-v3-batch-translate-text-with-glossary-and-model/
 title: Translate text with glossary and model in batches (Advanced edition only) \u00a0|\u00a0 Cloud Translation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:10.513379+00:00
+fetched_at: 2026-10-23T08:58:42.944779+00:00
 ---
 
 # Translate text with glossary and model in batches (Advanced edition only)  |  Cloud Translation  |  Google Cloud Documentation

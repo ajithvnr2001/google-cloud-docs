@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/invoke-predictions/
 title: Invoke predictions \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:09.984104+00:00
+fetched_at: 2026-10-23T13:08:36.632925+00:00
 ---
 
 # Invoke predictions  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -34,7 +34,7 @@ public schema google_ml schema
 To let AlloyDB invoke predictions, do the following:
 
   * You can invoke predictions in regions where generative AI on Agent Platform is available. For a list of regions, see [Deployments and endpoints](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations).
-  * [Connect to your database using `psql`](https://docs.cloud.google.com/alloydb/docs/connect-psql) or AlloyDB for PostgreSQL Studio.
+  * [Connect to your database using `psql`](https://docs.cloud.google.com/alloydb/docs/connect-psql) or AlloyDB Studio.
   * [Verify that the `google_ml_integration` extension is installed](https://docs.cloud.google.com/alloydb/docs/ai/configure-vertex-ai#verify-installed-extension).
   * [Verify that the `google_ml_integration.enable_model_support` flag is set to `on`](https://docs.cloud.google.com/alloydb/docs/instance-configure-database-flags).
   * Before you can invoke predictions from an AlloyDB database, you must configure AlloyDB to work with Agent Platform. For more information, see [Integrate your database with Agent Platform](https://docs.cloud.google.com/alloydb/docs/ai/configure-vertex-ai).
@@ -47,9 +47,9 @@ To let AlloyDB invoke predictions, do the following:
 
 Replace the following:
 
-    * DB_NAME: the name of the database on which the permissions should be granted
+    * `DB_NAME`: the name of the database on which the permissions should be granted
 
-    * USER_NAME: the name of the user for whom the permissions should be granted
+    * `USER_NAME`: the name of the user for whom the permissions should be granted
 
 
 
@@ -72,9 +72,9 @@ Replace the following:
 
   * `PROJECT_ID`: the ID of your Google Cloud project
 
-  * `REGION_ID`: the ID of the Google Cloud region that the model is located in—for example, `us-central1` for gemini-pro
+  * `REGION_ID`: the ID of the Google Cloud region that the model is located in—for example, `us-central1` for gemini-2.5-flash
 
-  * `MODEL_ID`: the ID of the ML model to use—for example, gemini-pro
+  * `MODEL_ID`: the ID of the ML model to use—for example, gemini-2.5-flash
 
   * `CONTENTS`: the inputs to the prediction call, in JSON format
 
@@ -91,9 +91,9 @@ For information about the model's JSON response messages, see [Generative AI fou
 
 For examples, see Example invocations.
 
-### Use an Agent Platform model endpoint
+### Use a Agent Platform model endpoint
 
-To invoke an online prediction using an Agent Platform model endpoint, use the following syntax for the `ml_predict_row()` SQL function:
+To invoke an online prediction using a Agent Platform model endpoint, use the following syntax for the `ml_predict_row()` SQL function:
     
     
     SELECT ml_predict_row('projects/PROJECT_ID/locations/REGION_ID/endpoints/ENDPOINT_ID', '{ CONTENTS }');
@@ -118,15 +118,15 @@ If the endpoint is located in the same project and region as your AlloyDB cluste
     SELECT ml_predict_row('endpoints/ENDPOINT_ID', '{ CONTENTS }');
     
 
-For information about the model's JSON response messages, see [PredictResponse](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.endpoints/predict#response-body).
+For information about the model's JSON response messages, see [PredictResponse](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest/v1/projects.locations.endpoints/predict#body.response_body).
 
 ### Example invocations
 
-The following example uses [gemini-pro](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text-embeddings-api), available in Model Garden, to generate text based on a short prompt that is provided as a literal argument to `ml_predict_row()`:
+The following example uses [gemini-2.5-flash](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/google-models), available in Model Garden, to generate text based on a short prompt that is provided as a literal argument to `ml_predict_row()`:
     
     
     SELECT
-      json_array_elements(ml_predict_row('publishers/google/models/gemini-1.5-pro:streamGenerateContent',
+      json_array_elements(ml_predict_row('publishers/google/models/gemini-2.5-flash:streamGenerateContent',
           '{ "contents": [ { "role": "user", "parts": [ { "text": "For TPCH database schema as mentioned here https://www.tpc.org/TPC_Documents_Current_Versions/pdf/TPC-H_v3.0.1.pdf , generate a SQL query to find all supplier names which are located in the India nation."
     } ] } ] }'))-> 'candidates' -> 0 -> 'content' -> 'parts' -> 0 -> 'text';
     
@@ -143,18 +143,40 @@ The following example modifies the previous example in the following ways:
 
     
     
-    select ml_predict_row('projects/PROJECT_ID/locations/us-central1/publishers/google/models/gemini-1.5-pro:generateContent', json_build_object('contents', json_build_object('text', message))) from messages;
+    SELECT
+      ml_predict_row(
+        'projects/PROJECT_ID/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent',
+        json_build_object(
+          'contents',
+          json_build_object(
+            'role', 'user',
+            'parts', json_build_object('text', message)
+          )
+        )
+      )
+    FROM messages;
     
 
-The returned JSON object now contains one entry in its `predictions` array for every row in the `messages` table.
+The returned JSON object contains a `candidates` array for every row in the `messages` table.
 
 Because the response is a JSON object, you can pull specific fields from it using the PostgreSQL arrow operator:
     
     
-    select ml_predict_row('projects/PROJECT_ID/locations/us-central1/publishers/google/models/gemini-1.5-pro:generateContent', json_build_object('contents', json_build_object('text', message)))->'predictions'->0->'content' FROM messages;
+    SELECT
+      ml_predict_row(
+        'projects/PROJECT_ID/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent',
+        json_build_object(
+          'contents',
+          json_build_object(
+            'role', 'user',
+            'parts', json_build_object('text', message)
+          )
+        )
+      ) -> 'candidates' -> 0 -> 'content' -> 'parts' -> 0 -> 'text'
+    FROM messages;
     
 
-For more example arguments to `ml_predict_row()`, see [Quickstart using the Agent Platform API API](https://docs.cloud.google.com/gemini-enterprise-agent-platform/agent-studio/quickstart).
+For more example arguments to `ml_predict_row()`, see [Quickstart using the Agent Platform API](https://docs.cloud.google.com/gemini-enterprise-agent-platform/agent-studio/quickstart).
 
 ## What's next
 
@@ -167,6 +189,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

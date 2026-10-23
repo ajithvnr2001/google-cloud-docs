@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/tables-intro/
 title: Introduction to tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:45:17.656249+00:00
+fetched_at: 2026-10-23T12:55:44.376933+00:00
 ---
 
 # Introduction to tables  |  BigQuery  |  Google Cloud Documentation
@@ -21,11 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Introduction to tables
 
-A BigQuery table contains individual records organized in rows. Each record is composed of columns (also called _fields_).
+BigQuery tables let you store and query your data as individual records organized in rows, where each record is composed of columns, also called _fields_. Every table is defined by a schema that describes the column names, data types, and other information.
 
-Every table is defined by a _schema_ that describes the column names, data types, and other information. You can specify the schema of a table when it is created, or you can create a table without a schema and declare the schema in the query job or load job that first populates it with data.
-
-Use the format `projectname.datasetname.tablename` to fully qualify a table name when using GoogleSQL, or the format `projectname:datasetname.tablename` to fully qualify a table name when using the bq command-line tool.
+This document describes the types of tables in BigQuery, along with their limitations, quotas, pricing, and security.
 
 ## Table types
 
@@ -36,6 +34,10 @@ The following sections describe the table types that BigQuery supports.
   * Views: logical tables that are created by using a SQL query.
 
 
+
+You can specify the schema of a table when it is created, or you can create a table without a schema and declare the schema in the query job or load job that first populates it with data.
+
+Use the format `projectname.datasetname.tablename` to fully qualify a table name when using GoogleSQL, or the format `projectname:datasetname.tablename` to fully qualify a table name when using the bq command-line tool.
 
 ### Standard BigQuery tables
 
@@ -167,6 +169,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

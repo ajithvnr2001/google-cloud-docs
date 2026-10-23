@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/pam-approve-deny-grants/
 title: Approve or deny grants with Privileged Access Manager \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:21.772249+00:00
+fetched_at: 2026-10-23T13:09:04.389882+00:00
 ---
 
 # Approve or deny grants with Privileged Access Manager  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

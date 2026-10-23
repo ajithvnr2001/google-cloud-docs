@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/import-metadata/
 title: Import metadata using a custom pipeline \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:59:28.405558+00:00
+fetched_at: 2026-10-23T10:21:33.479696+00:00
 ---
 
 # Import metadata using a custom pipeline  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -59,22 +59,22 @@ Before you import metadata, complete the tasks in this section.
 
 ### Required roles
 
-To ensure that the [Knowledge Catalog service account](https://docs.cloud.google.com/knowledge-catalog/docs/iam-and-access-control#service-accounts) has the necessary permissions to access the Cloud Storage bucket, ask your administrator to grant the Knowledge Catalog service account the Storage Object Viewer (`roles/storage.objectViewer`) IAM role and the `storage.buckets.get` permission on the bucket.
+To ensure that the [Knowledge Catalog service account](https://docs.cloud.google.com/knowledge-catalog/docs/iam-and-access-control#service-accounts) has the necessary permissions to access the Cloud Storage bucket, ask your administrator to grant the Knowledge Catalog service account the **Storage Object Viewer** (`roles/storage.objectViewer`) IAM role and the `storage.buckets.get` permission on the bucket.
 
 To get the permissions that you need to manage metadata import jobs, ask your administrator to grant you the following IAM roles: 
 
   * Modify entries and their aspects in a full entry sync metadata job: 
-    * [Dataplex Entry Type User ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryTypeUser) (`roles/dataplex.entryTypeUser`) on the entry type or the project where the entry type is defined
-    * [Dataplex Aspect Type User ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.aspectTypeUser) (`roles/dataplex.aspectTypeUser`) on the aspect type or the project where the aspect type is defined
+    * [**Dataplex Entry Type User** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryTypeUser) (`roles/dataplex.entryTypeUser`) on the entry type or the project where the entry type is defined
+    * [**Dataplex Aspect Type User** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.aspectTypeUser) (`roles/dataplex.aspectTypeUser`) on the aspect type or the project where the aspect type is defined
   * Modify required aspects in an aspect-only metadata job: 
-    * [Dataplex Entry Type User ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryTypeUser) (`roles/dataplex.entryTypeUser`) on the entry type or the project where the entry type is defined
-    * [Dataplex Aspect Type User ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.aspectTypeUser) (`roles/dataplex.aspectTypeUser`) on the aspect type or the project where the aspect type is defined
-  * Modify optional aspects in an aspect-only metadata job: [Dataplex Aspect Type User ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.aspectTypeUser) (`roles/dataplex.aspectTypeUser`) on the aspect type or the project where the aspect type is defined. Note that when modifying optional aspects in an aspect-only metadata job, you don't need permissions for the associated entry type. 
+    * [**Dataplex Entry Type User** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryTypeUser) (`roles/dataplex.entryTypeUser`) on the entry type or the project where the entry type is defined
+    * [**Dataplex Aspect Type User** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.aspectTypeUser) (`roles/dataplex.aspectTypeUser`) on the aspect type or the project where the aspect type is defined
+  * Modify optional aspects in an aspect-only metadata job: [**Dataplex Aspect Type User** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.aspectTypeUser) (`roles/dataplex.aspectTypeUser`) on the aspect type or the project where the aspect type is defined. Note that when modifying optional aspects in an aspect-only metadata job, you don't need permissions for the associated entry type. 
   * Create metadata import jobs: 
-    * [Dataplex Entry Group Importer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryGroupImporter) (`roles/dataplex.entryGroupImporter`) on the project or the resource
-    * [Dataplex Entry and EntryLink Owner ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryOwner) (`roles/dataplex.entryOwner`) on the project or the resource
-  * View metadata jobs: [Dataplex Metadata Job Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.metadataJobViewer) (`roles/dataplex.metadataJobViewer`) on the project 
-  * Create, view, and cancel metadata jobs: [Dataplex Metadata Job Owner ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.metadataJobOwner) (`roles/dataplex.metadataJobOwner`) on the project 
+    * [**Dataplex Entry Group Importer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryGroupImporter) (`roles/dataplex.entryGroupImporter`) on the project or the resource
+    * [**Dataplex Entry and EntryLink Owner** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryOwner) (`roles/dataplex.entryOwner`) on the project or the resource
+  * View metadata jobs: [**Dataplex Metadata Job Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.metadataJobViewer) (`roles/dataplex.metadataJobViewer`) on the project 
+  * Create, view, and cancel metadata jobs: [**Dataplex Metadata Job Owner** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.metadataJobOwner) (`roles/dataplex.metadataJobOwner`) on the project 
 
 
 
@@ -1309,7 +1309,7 @@ You configure the log level when you create a metadata job. The following log le
   * `INFO`: provides logs at the overall job level. Includes aggregate logs about import items, but doesn't specify which import item has an error.
   * `DEBUG`: provides detailed logs for each import item. Use debug-level logging to troubleshoot issues with specific import items. For example, use debug-level logging to identify resources that are missing from the job scope, entries or aspects that don't conform to the associated entry type or aspect type, or other misconfigurations with the metadata import file.
 
-**Note:** Depending on the size of your metadata job and the number of logs that are generated, debug-level logging might incur additional costs. For more information, see [Google Cloud Observability Pricing](https://cloud.google.com/stackdriver/pricing).
+**Note:** Depending on the size of your metadata job and the number of logs that are generated, debug-level logging might incur additional costs. For more information, see [Google Cloud Observability pricing](https://cloud.google.com/stackdriver/pricing).
 
 
 

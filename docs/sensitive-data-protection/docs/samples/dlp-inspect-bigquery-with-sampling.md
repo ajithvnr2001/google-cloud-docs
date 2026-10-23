@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-inspect-bigquery-with-sampling/
 title: Inspect BigQuery for sensitive data with sampling \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:51:13.667746+00:00
+fetched_at: 2026-10-23T11:32:41.189896+00:00
 ---
 
 # Inspect BigQuery for sensitive data with sampling  |  Sensitive Data Protection  |  Google Cloud Documentation

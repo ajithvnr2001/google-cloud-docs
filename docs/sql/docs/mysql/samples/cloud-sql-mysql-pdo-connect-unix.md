@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/samples/cloud-sql-mysql-pdo-connect-unix/
 title: Create a socket connection by using PHP \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:26.824651+00:00
+fetched_at: 2026-10-23T10:20:05.424502+00:00
 ---
 
 # Create a socket connection by using PHP  |  Cloud SQL for MySQL  |  Google Cloud Documentation

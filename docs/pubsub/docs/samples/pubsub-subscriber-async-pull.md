@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-subscriber-async-pull/
 title: Subscribe with asynchronous pull \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:05.014148+00:00
+fetched_at: 2026-10-23T12:55:06.769159+00:00
 ---
 
 # Subscribe with asynchronous pull  |  Pub/Sub  |  Google Cloud Documentation
@@ -187,6 +187,64 @@ To authenticate to Pub/Sub, set up Application Default Credentials. For more inf
           // Shut down the subscriber after 30s. Stop receiving messages.
           subscriber.stopAsync();
         }
+      }
+    }
+
+### Kotlin
+    
+    
+    import com.google.api.gax.rpc.ApiException
+    import com.google.api.gax.rpc.NotFoundException
+    import com.google.cloud.pubsub.v1.AckReplyConsumer
+    import com.google.cloud.pubsub.v1.MessageReceiver
+    import com.google.cloud.pubsub.v1.Subscriber
+    import com.google.pubsub.v1.ProjectSubscriptionName
+    import com.google.pubsub.v1.PubsubMessage
+    import java.util.concurrent.TimeUnit
+    import java.util.concurrent.TimeoutException
+    
+    /**
+     * Receives and acknowledges messages asynchronously from a Pub/Sub pull
+     * subscription over a bounded listening window.
+     *
+     * @param projectId Google Cloud project identifier (for example, "example-project-id").
+     * @param subscriptionId Pub/Sub subscription identifier (for example, "example-subscription-id").
+     */
+    fun subscribeAsync(projectId: String, subscriptionId: String) {
+      val subscriptionName = ProjectSubscriptionName.of(projectId, subscriptionId)
+    
+      val receiver = MessageReceiver { message: PubsubMessage, consumer: AckReplyConsumer ->
+        println("Resource ID: ${message.messageId}")
+        println("Creation Date: ${message.publishTime}")
+        println("Data: ${message.data.toStringUtf8()}")
+        consumer.ack()
+      }
+    
+      var subscriber: Subscriber? = null
+      try {
+        subscriber = Subscriber.newBuilder(subscriptionName, receiver).build()
+        println("Listening for messages on '$subscriptionName'...")
+        subscriber.startAsync().awaitRunning()
+        // Bound the listening window to 5 seconds; awaitTerminated throws
+        // TimeoutException once the window elapses while the subscriber is still running.
+        subscriber.awaitTerminated(5, TimeUnit.SECONDS)
+      } catch (err: TimeoutException) {
+        println("Resource ID: $subscriptionName")
+        println("Status: COMPLETED_WINDOW")
+        println("Subscription ID: $subscriptionId")
+      } catch (err: IllegalStateException) {
+        val message =
+          when (val cause = err.cause) {
+            is NotFoundException ->
+              "error: subscription '$subscriptionId' not found in project '$projectId': ${cause.message}"
+            is ApiException ->
+              "error: failed to receive messages from subscription '$subscriptionId' in project '$projectId': ${cause.message}"
+            else ->
+              "error: subscriber failed on subscription '$subscriptionId' in project '$projectId': ${err.message}"
+          }
+        System.err.println(message)
+      } finally {
+        subscriber?.stopAsync()?.awaitTerminated()
       }
     }
 

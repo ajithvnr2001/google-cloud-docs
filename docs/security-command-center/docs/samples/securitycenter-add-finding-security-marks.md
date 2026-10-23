@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/samples/securitycenter-add-finding-security-marks/
 title: Add security marks to findings \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:10.477337+00:00
+fetched_at: 2026-10-23T08:58:09.964138+00:00
 ---
 
 # Add security marks to findings  |  Security Command Center  |  Google Cloud Documentation

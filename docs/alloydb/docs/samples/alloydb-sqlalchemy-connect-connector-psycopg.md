@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-sqlalchemy-connect-connector-psycopg/
 title: Connect using a psycopg connection pool \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:26.064000+00:00
+fetched_at: 2026-10-23T10:43:41.927826+00:00
 ---
 
 # Connect using a psycopg connection pool  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -39,6 +39,7 @@ To authenticate to AlloyDB, set up Application Default Credentials. For more inf
         password: str,
         db: str,
         refresh_strategy: str = "background",
+        ip_type: str = "PRIVATE",
     ) -> tuple[sqlalchemy.engine.Engine, Connector]:
         """Creates a connection pool for an AlloyDB instance and returns the pool
         and the connector. Callers are responsible for closing the pool and the
@@ -74,6 +75,8 @@ To authenticate to AlloyDB, set up Application Default Credentials. For more inf
                 Refresh strategy for the AlloyDB Connector. Can be one of "lazy"
                 or "background". For serverless environments use "lazy" to avoid
                 errors resulting from CPU being throttled.
+            ip_type (str):
+                IP type used to connect. One of "PUBLIC", "PRIVATE" or "PSC".
         """
         connector = Connector(refresh_strategy=refresh_strategy)
     
@@ -86,6 +89,7 @@ To authenticate to AlloyDB, set up Application Default Credentials. For more inf
                 user=user,
                 password=password,
                 db=db,
+                ip_type=ip_type,
             ),
         )
         return engine, connector

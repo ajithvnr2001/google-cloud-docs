@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/risk-manager/docs/quickstarts/
 title: Quickstarts \u00a0|\u00a0 Cyber Insurance Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:10:44.896121+00:00
+fetched_at: 2026-10-23T10:03:22.535003+00:00
 ---
 
 # Quickstarts  |  Cyber Insurance Hub  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-transcribe-streaming/
 title: Transcribe a streaming feed on a local file \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:54.833771+00:00
+fetched_at: 2026-10-23T10:32:05.422708+00:00
 ---
 
 # Transcribe a streaming feed on a local file  |  Cloud Speech-to-Text  |  Google Cloud Documentation

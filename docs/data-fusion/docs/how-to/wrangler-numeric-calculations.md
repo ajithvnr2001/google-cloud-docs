@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/wrangler-numeric-calculations/
 title: Work with numbers \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:39.027108+00:00
+fetched_at: 2026-10-23T13:20:21.353602+00:00
 ---
 
 # Work with numbers  |  Cloud Data Fusion  |  Google Cloud Documentation

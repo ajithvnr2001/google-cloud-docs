@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/samples/logging-rails-client-configure/
 title: Ruby: Configure Rails Google Cloud Client \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:10:51.864721+00:00
+fetched_at: 2026-10-23T12:36:01.465430+00:00
 ---
 
 # Ruby: Configure Rails Google Cloud Client  |  Cloud Logging  |  Google Cloud Documentation

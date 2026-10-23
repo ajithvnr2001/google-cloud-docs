@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/storage/docs/batch/
-title: Sending batch requests \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
+title: Send batch requests \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:30:23.813295+00:00
+fetched_at: 2026-10-23T13:08:43.259700+00:00
 ---
 
-# Sending batch requests  |  Cloud Storage  |  Google Cloud Documentation
+# Send batch requests  |  Cloud Storage  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/storage/docs/batch/
 
@@ -19,22 +19,11 @@ fetched_at: 2026-10-22T10:30:23.813295+00:00
 
 Send feedback 
 
-#  Sending batch requests Stay organized with collections  Save and categorize content based on your preferences. 
+#  Send batch requests Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document shows how to batch JSON API calls together to reduce the number of HTTP connections your client has to make when accessing Cloud Storage.
+You can reduce network overhead and latency during bulk operations by batching requests. This approach minimizes the number of HTTP connections that your client must establish when accessing Cloud Storage. Each batch request can combine up to 100 JSON API calls into a single HTTP request.
 
-## Overview of batch requests
-
-Each HTTP connection that your client makes results in a certain amount of overhead. The Cloud Storage JSON API supports batching requests, which allows your client to group several API calls into a single HTTP request. Grouping together multiple API calls into a single request lets you reduce network overhead and latency when you need to perform many operations.
-
-Examples of operations you might want to use batch requests for:
-
-  * Updating metadata, such as permissions, on many objects
-  * Deleting many objects
-
-
-
-Cloud Storage does not support batch operations for uploading or downloading.
+For example, you can use batch requests to update metadata, such as permissions, or delete many objects at once. Cloud Storage does not support batch requests for uploading or downloading objects.
 
 ## Batch request structure
 
@@ -390,6 +379,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

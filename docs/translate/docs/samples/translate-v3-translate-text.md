@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/translate/docs/samples/translate-v3-translate-text/
 title: Translate text (Advanced edition) \u00a0|\u00a0 Cloud Translation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:26:21.300773+00:00
+fetched_at: 2026-10-23T08:58:29.637153+00:00
 ---
 
 # Translate text (Advanced edition)  |  Cloud Translation  |  Google Cloud Documentation

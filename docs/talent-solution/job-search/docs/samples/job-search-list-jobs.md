@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-search-list-jobs/
 title: List jobs (v4beta1) \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:42.322913+00:00
+fetched_at: 2026-10-23T08:36:36.626351+00:00
 ---
 
 # List jobs (v4beta1)  |  Job Search  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/metadata-caching-external-tables/
 title: Use metadata caching for external data sources \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:55:48.974640+00:00
+fetched_at: 2026-10-23T12:55:38.213054+00:00
 ---
 
 # Use metadata caching for external data sources  |  BigQuery  |  Google Cloud Documentation
@@ -21,20 +21,21 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Use metadata caching for external data sources
 
-This document describes how to use metadata caching (also known as _column metadata indexing_) to improve query performance on object tables and some types of BigLake tables.
+Metadata caching, also called _column metadata indexing_ , lets you improve query performance on object tables and on Amazon S3 and Cloud Storage BigLake tables. These tables can cache metadata about files in external data stores, such as file names, partitioning information, and row counts.
 
-Object tables and some types of BigLake tables can cache metadata information about files in external datastores—for example, Cloud Storage. The following types of BigLake tables support metadata caching:
+With metadata caching, queries can avoid listing files from the external data source, which can take several minutes for millions of files, and can partition and prune files more quickly. Queries over a large number of files and queries with Hive partition filters benefit the most.
 
+## Supported tables
+
+The following types of tables support metadata caching:
+
+  * Object tables
   * Amazon S3 BigLake tables
   * Cloud Storage BigLake tables
 
 
 
-The metadata includes filenames, partitioning information, and metadata for files such as row counts. You can choose whether to enable metadata caching on a table. Queries with a large number of files and with Hive partition filters benefit the most from metadata caching.
-
-If you don't enable metadata caching, queries on the table must read the external data source to get object metadata. Reading this data increases the query latency; listing millions of files from the external data source can take several minutes. If you enable metadata caching, queries can avoid listing files from the external data source and can partition and prune files more quickly.
-
-You can enable metadata caching on a BigLake or object table when you create the table. For more information about creating object tables, see [Create object tables](https://docs.cloud.google.com/bigquery/docs/object-tables). For more information about creating BigLake tables, see one of the following topics:
+You can choose whether to enable metadata caching on a table. You can enable metadata caching on a BigLake or object table when you create the table. For more information about creating object tables, see [Create object tables](https://docs.cloud.google.com/bigquery/docs/object-tables). For more information about creating BigLake tables, see one of the following topics:
 
   * [Create Amazon S3 BigLake external tables](https://docs.cloud.google.com/bigquery/docs/omni-aws-create-external-table)
   * [Create BigLake external tables for Cloud Storage](https://docs.cloud.google.com/bigquery/docs/create-cloud-storage-table-biglake)
@@ -149,6 +150,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

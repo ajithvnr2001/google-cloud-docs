@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/quotas/
 title: Quotas and limits \u00a0|\u00a0 Cloud SQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:28:25.599286+00:00
+fetched_at: 2026-10-23T10:11:22.543724+00:00
 ---
 
 # Quotas and limits  |  Cloud SQL  |  Google Cloud Documentation
@@ -318,7 +318,7 @@ There's a per-minute login quota for each instance, which includes both successf
 
 #### Forwarding rule quota
 
-Each Cloud SQL instance consists of a forwarding rule and a load balancer. There's quota limit on the forwarding rule, based on the kind of load balancer to which it's pointing. There are multiple quotas on each kind of forwarding rules, per project, [per network](https://cloud.google.com/vpc/docs/quota#per_network) and per [peering group](https://cloud.google.com/vpc/docs/quota#vpc-peering). There's also an override rule for per network quota and per peering group quotas, for Cloud SQL. This means when we bump up the [per network](https://cloud.google.com/vpc/docs/quota#per_network) quota for producer networks, the per [peering group](https://cloud.google.com/vpc/docs/quota#vpc-peering) quota gets bumped to the same value as well.
+Each Cloud SQL instance consists of a forwarding rule and a load balancer. There's quota limit on the forwarding rule, based on the kind of load balancer to which it's pointing. There are multiple quotas on each kind of forwarding rules, per project, [per network](https://docs.cloud.google.com/vpc/docs/quota#per_network) and per [peering group](https://docs.cloud.google.com/vpc/docs/quota#vpc-peering). There's also an override rule for per network quota and per peering group quotas, for Cloud SQL. This means when we bump up the [per network](https://docs.cloud.google.com/vpc/docs/quota#per_network) quota for producer networks, the per [peering group](https://docs.cloud.google.com/vpc/docs/quota#vpc-peering) quota gets bumped to the same value as well.
 
 Cloud SQL producer VPC is peered with customer's VPC, so we often hit per network quota for Cloud SQL producer network, and per peering group quota for customer's VPC.
 
@@ -393,7 +393,7 @@ PostgreSQL metrics are collected for up to 500 databases. If there are more than
 
   * **Shared core:** Up to 3 TB. 
 
-See [Instance pricing](https://docs.cloud.google.com/sql/pricing#instance-pricing) for more information. 
+See [Instance pricing](https://cloud.google.com/sql/pricing#instance-pricing) for more information. 
 
 
 
@@ -441,7 +441,7 @@ Maximum size for each query | 1 MiB
 
   * **Shared core:** Up to 3 TB. 
 
-See [Instance pricing](https://docs.cloud.google.com/sql/pricing#instance-pricing) for more information. 
+See [Instance pricing](https://cloud.google.com/sql/pricing#instance-pricing) for more information. 
 
 
 
@@ -476,6 +476,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

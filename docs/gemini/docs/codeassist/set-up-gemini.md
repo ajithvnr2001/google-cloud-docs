@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/set-up-gemini/
 title: Set up Gemini Code Assist Standard and Enterprise \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:17.527763+00:00
+fetched_at: 2026-10-23T13:09:16.678171+00:00
 ---
 
 # Set up Gemini Code Assist Standard and Enterprise  |  Gemini for Google Cloud  |  Google Cloud Documentation

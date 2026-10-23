@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/java/docs/setup/
 title: Set up a Java development environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:28.870102+00:00
+fetched_at: 2026-10-23T13:10:12.655817+00:00
 ---
 
 # Set up a Java development environment  |  Google Cloud Documentation

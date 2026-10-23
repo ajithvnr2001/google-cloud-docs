@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/caching-large/
 title: Antipattern: Store data greater than 256 KB size in cache \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:53.412692+00:00
+fetched_at: 2026-10-23T13:14:43.071128+00:00
 ---
 
 # Antipattern: Store data greater than 256 KB size in cache  |  Apigee  |  Google Cloud Documentation

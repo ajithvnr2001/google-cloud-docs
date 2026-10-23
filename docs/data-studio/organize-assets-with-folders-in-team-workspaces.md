@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/organize-assets-with-folders-in-team-workspaces/
 title: Organize assets with folders in team workspaces \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:01.643118+00:00
+fetched_at: 2026-10-23T13:20:15.859320+00:00
 ---
 
 # Organize assets with folders in team workspaces  |  Data Studio  |  Google Cloud Documentation

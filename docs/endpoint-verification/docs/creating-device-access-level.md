@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoint-verification/docs/creating-device-access-level/
 title: Create device-based access levels \u00a0|\u00a0 Endpoint Verification \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:47.568379+00:00
+fetched_at: 2026-10-23T13:01:07.981644+00:00
 ---
 
 # Create device-based access levels  |  Endpoint Verification  |  Google Cloud Documentation

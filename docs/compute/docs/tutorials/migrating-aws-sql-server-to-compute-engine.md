@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/tutorials/migrating-aws-sql-server-to-compute-engine/
 title: Migrate SQL Server database from AWS EC2 to Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:29:04.375938+00:00
+fetched_at: 2026-10-23T12:58:10.605829+00:00
 ---
 
 # Migrate SQL Server database from AWS EC2 to Compute Engine  |  Google Cloud Documentation

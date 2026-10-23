@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/tutorials/terraform/
 title: Terraform Tutorial \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:04.330035+00:00
+fetched_at: 2026-10-23T13:11:50.006915+00:00
 ---
 
 # Terraform Tutorial  |  Cloud Run functions  |  Google Cloud Documentation

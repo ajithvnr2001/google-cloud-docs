@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/sources-mongodb/
 title: Stream data from MongoDB databases \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:05.160482+00:00
+fetched_at: 2026-10-23T10:03:43.519354+00:00
 ---
 
 # Stream data from MongoDB databases  |  Datastream  |  Google Cloud Documentation
@@ -21,18 +21,9 @@ Send feedback
 
 #  Stream data from MongoDB databases Stay organized with collections  Save and categorize content based on your preferences. 
 
-Datastream supports replicating change events from a MongoDB source. MongoDB is an open source, NoSQL database that uses JSON-like documents. One document can have other documents embedded in it. The documents are gathered together in collections, and a MongoDB database stores one or more collections of documents.
+Datastream lets you replicate historical data and change events from a MongoDB source for real-time analytics and database synchronization. MongoDB is an open source NoSQL database that organizes JSON-like documents, including embedded documents, into collections. Instead of using relational rows and columns, it stores each record in binary JSON (BSON) format for retrieval as JSON.
 
-Instead of storing data in tables of rows and columns like relational SQL databases, each record in a MongoDB database is a document described in binary JSON (BSON), a binary representation of data. Applications can then retrieve this data in JSON format.
-
-This page contains information about:
-
-  * The key terms that you need to understand when replicating from a MongoDB database
-  * The behavior of how Datastream handles data that's being pulled from a source MongoDB database
-  * The versions and editions of MongoDB that Datastream supports
-  * Known limitations for using MongoDB as a source
-
-
+Before you configure a MongoDB source, review the key terms, replication behavior, supported versions, and known limitations in Datastream.
 
 ## Key terms
 
@@ -97,6 +88,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-22 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/managing-projects-apps-billing/
 title: Setting up your Google Cloud project for App Engine \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:27.284021+00:00
+fetched_at: 2026-10-23T13:16:41.859449+00:00
 ---
 
 # Setting up your Google Cloud project for App Engine  |  App Engine standard environment  |  Google Cloud Documentation

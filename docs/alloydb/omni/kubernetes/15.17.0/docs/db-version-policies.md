@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/15.17.0/docs/db-version-policies/
 title: Database version policies \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 15.17.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:50:27.273063+00:00
+fetched_at: 2026-10-23T12:55:23.388528+00:00
 ---
 
 # Database version policies  |  AlloyDB Omni using the container orchestrator: 15.17.0  |  Google Cloud Documentation
@@ -50,11 +50,11 @@ Select a documentation version: 15.17.0keyboard_arrow_down
 
 
 
-This page describes the support, retirement, and compatibility policies for AlloyDB Omni major and minor versions, and the AlloyDB Omni Kubernetes operator.
+To plan database upgrades and keep your deployments running on supported PostgreSQL releases, you can use the support, retirement, and compatibility policies for AlloyDB Omni major and minor versions and the AlloyDB Omni Kubernetes operator.
 
 For information about AlloyDB for PostgreSQL version policies, see [AlloyDB for PostgreSQL database version policies](https://docs.cloud.google.com/alloydb/docs/db-version-policies).
 
-### AlloyDB Omni version policies
+## AlloyDB Omni version policies
 
 Every version of AlloyDB Omni has compatibility with a specific version of PostgreSQL, as detailed in Support policy.
 
@@ -150,6 +150,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

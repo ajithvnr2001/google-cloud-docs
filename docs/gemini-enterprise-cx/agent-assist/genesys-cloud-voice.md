@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/genesys-cloud-voice/
 title: Genesys Cloud AudioHook integration \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:55.654499+00:00
+fetched_at: 2026-10-23T13:11:59.449416+00:00
 ---
 
 # Genesys Cloud AudioHook integration  |  Agent Assist  |  Google Cloud Documentation

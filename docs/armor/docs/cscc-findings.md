@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/cscc-findings/
 title: Security Command Center findings \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:56.875194+00:00
+fetched_at: 2026-10-23T13:17:22.396934+00:00
 ---
 
 # Security Command Center findings  |  Google Cloud Armor  |  Google Cloud Documentation

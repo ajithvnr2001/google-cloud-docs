@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/samples/healthcare-conditional-update-resource/
 title: Conditional update resource \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:33:14.034713+00:00
+fetched_at: 2026-10-23T13:09:20.496102+00:00
 ---
 
 # Conditional update resource  |  Cloud Healthcare API  |  Google Cloud Documentation

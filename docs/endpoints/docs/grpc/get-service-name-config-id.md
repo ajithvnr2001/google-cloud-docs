@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/grpc/get-service-name-config-id/
 title: Getting the service name and configuration ID \u00a0|\u00a0 Cloud Endpoints with gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:21.098894+00:00
+fetched_at: 2026-10-23T13:00:48.866629+00:00
 ---
 
 # Getting the service name and configuration ID  |  Cloud Endpoints with gRPC  |  Google Cloud Documentation

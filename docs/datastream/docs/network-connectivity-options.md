@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/network-connectivity-options/
 title: Network connectivity methods \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:21.641812+00:00
+fetched_at: 2026-10-23T10:03:42.207353+00:00
 ---
 
 # Network connectivity methods  |  Datastream  |  Google Cloud Documentation
@@ -21,7 +21,9 @@ Send feedback
 
 #  Network connectivity methods Stay organized with collections  Save and categorize content based on your preferences. 
 
-To use Datastream to create a stream from the source database to the destination, you must establish connectivity to the source database. Use the information in the following table to help you decide which method works best for you for your specific workload.
+Before you create a stream in Datastream, you must establish network connectivity between Datastream and your source database. Depending on your security requirements and network topology, you can connect using public [IP allowlists](https://docs.cloud.google.com/datastream/docs/ip-allowlists), an encrypted [forward SSH tunnel](https://docs.cloud.google.com/datastream/docs/ssh-tunnel), or [private connectivity](https://docs.cloud.google.com/datastream/docs/create-a-private-connectivity-configuration).
+
+Use the following table to compare the network connectivity methods and choose the option that best fits your workload:
 
 Network connectivity method | Description | Things to consider  
 ---|---|---  
@@ -65,6 +67,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

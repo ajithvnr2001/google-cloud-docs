@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/service-extensions/docs/resources/
 title: Resources \u00a0|\u00a0 Service Extensions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:49:06.565378+00:00
+fetched_at: 2026-10-23T11:32:52.120345+00:00
 ---
 
 # Resources  |  Service Extensions  |  Google Cloud Documentation

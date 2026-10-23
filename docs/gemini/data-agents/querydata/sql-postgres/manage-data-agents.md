@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/querydata/sql-postgres/manage-data-agents/
 title: Manage context sets in Cloud SQL Studio \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:16.260647+00:00
+fetched_at: 2026-10-23T13:08:51.336513+00:00
 ---
 
 # Manage context sets in Cloud SQL Studio  |  Data Agents  |  Google Cloud Documentation

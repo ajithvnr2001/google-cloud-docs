@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-localize-objects-beta/
 title: Detect multiple objects in a local file (beta) \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:21.370204+00:00
+fetched_at: 2026-10-23T09:36:59.984390+00:00
 ---
 
 # Detect multiple objects in a local file (beta)  |  Cloud Vision API  |  Google Cloud Documentation

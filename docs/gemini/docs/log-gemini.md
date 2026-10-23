@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/log-gemini/
 title: View Gemini Code Assist logs \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:11.877359+00:00
+fetched_at: 2026-10-23T13:03:49.677384+00:00
 ---
 
 # View Gemini Code Assist logs  |  Gemini for Google Cloud  |  Google Cloud Documentation

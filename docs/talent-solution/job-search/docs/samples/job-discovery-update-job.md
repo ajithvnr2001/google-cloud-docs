@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-discovery-update-job/
 title: Update job (v3) \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:12.111624+00:00
+fetched_at: 2026-10-23T09:41:46.023141+00:00
 ---
 
 # Update job (v3)  |  Job Search  |  Google Cloud Documentation

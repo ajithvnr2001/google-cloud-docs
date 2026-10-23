@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/configuring/instances/containers/
 title: Configure containers for instances \u00a0|\u00a0 Cloud Run \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:09:42.205539+00:00
+fetched_at: 2026-10-23T10:42:56.821268+00:00
 ---
 
 # Configure containers for instances  |  Cloud Run  |  Google Cloud Documentation
@@ -64,14 +64,14 @@ Replace the following:
 To specify entrypoint and arguments during [deployment](https://docs.cloud.google.com/sdk/gcloud/reference/run/instances/deploy) of a new or existing instance:
     
     
-    gcloud beta run instances deploy --image IMAGE_URL --command COMMAND --args ARG1,ARG-N
+    gcloud beta run instances deploy INSTANCE --image IMAGE_URL --command COMMAND --args ARG1,ARG-N
 
 Replace `IMAGE_URL` with a reference to the container image, such as `us-docker.pkg.dev/cloudrun/container/hello:latest`..
 
 If you want to restore the container defaults for the entrypoint commands and arguments, supply empty strings as follows:
     
     
-    gcloud beta run instances --image IMAGE_URL --command "" --args ""
+    gcloud beta run instances update INSTANCE --command "" --args ""
 
 ### YAML
 
@@ -127,7 +127,7 @@ Use the Google Cloud CLI or YAML to specify the startup order:
 
 ###  gcloud 
 
-Before using the Google Cloud CLI to specify startup order, [configure a startup health check](https://docs.cloud.google.com/run/docs/configuring/instances/healthchecks).
+Before using the Google Cloud CLI to specify startup order, [configure a startup health check](https://docs.cloud.google.com/run/docs/configuring/instances/healthchecks) for any sidecar container that another container depends on. The ingress container (the container with an exposed port) has a default TCP startup health check.
 
   1. In the Google Cloud console, activate Cloud Shell.
 
@@ -142,15 +142,18 @@ At the bottom of the Google Cloud console, a [Cloud Shell](https://docs.cloud.go
     
     
     gcloud beta run instances deploy INSTANCE \
-             --container CONTAINER_1_NAME --image='INSTANCE_IMAGE'
+         --container CONTAINER_1_NAME --image='IMAGE_URL' --port='CONTAINER_PORT' \
          --container CONTAINER_2_NAME --image='SIDECAR_IMAGE' --depends-on=CONTAINER_1_NAME \
+         --startup-probe=tcpSocket.port=SIDECAR_PORT \
          --container CONTAINER_3_NAME --image='SIDECAR_IMAGE' --depends-on=CONTAINER_1_NAME,CONTAINER_2_NAME
 
 Replace the following:
 
   * INSTANCE: the name of the instance.
-  * `IMAGE_URL`: a reference to the container image, such as `us-docker.pkg.dev/cloudrun/container/hello:latest`..
+  * `IMAGE_URL`: a reference to the container image, such as `us-docker.pkg.dev/cloudrun/container/hello:latest`.
+  * CONTAINER_PORT: the port where the ingress container listens for incoming requests. For an instance with multiple containers, you must explicitly configure the container port for the ingress container.
   * `SIDECAR_IMAGE`: a reference to the sidecar container image.
+  * SIDECAR_PORT: the port on the sidecar container checked by its TCP startup probe. Every sidecar container that another container depends on must configure a startup probe.
 
 If you want to configure each container in the deploy command, supply each container's configuration after the `container` parameters.
 
@@ -169,11 +172,8 @@ If you want to configure each container in the deploy command, supply each conta
          kind: Instance
          metadata:
            name: INSTANCE
-         spec:
-           template:
-             metadata:
-               annotations:
-                 run.googleapis.com/container-dependencies: '{"CONTAINER1":["CONTAINER2"], "CONTAINER3":["CONTAINER1","CONTAINER2"]}'
+           annotations:
+             run.googleapis.com/container-dependencies: '{"CONTAINER1":["CONTAINER2"], "CONTAINER3":["CONTAINER1","CONTAINER2"]}'
 
 Replace the following:
 
@@ -195,6 +195,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

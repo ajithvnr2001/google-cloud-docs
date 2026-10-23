@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/azure-ad-audit/
 title: Collect Microsoft Entra ID Directory Audit (formerly Azure Active Directory) logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:13.236894+00:00
+fetched_at: 2026-10-23T13:20:24.826130+00:00
 ---
 
 # Collect Microsoft Entra ID Directory Audit (formerly Azure Active Directory) logs  |  Google Security Operations  |  Google Cloud Documentation

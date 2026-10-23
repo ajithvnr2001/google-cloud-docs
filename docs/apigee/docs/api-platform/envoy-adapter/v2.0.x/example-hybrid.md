@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/envoy-adapter/v2.0.x/example-hybrid/
 title: Apigee hybrid example with Kubernetes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:25.117768+00:00
+fetched_at: 2026-10-23T13:15:21.892931+00:00
 ---
 
 # Apigee hybrid example with Kubernetes  |  Google Cloud Documentation

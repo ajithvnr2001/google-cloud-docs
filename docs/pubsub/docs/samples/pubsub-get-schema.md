@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-get-schema/
 title: Get schema \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:12.464413+00:00
+fetched_at: 2026-10-23T10:04:02.590477+00:00
 ---
 
 # Get schema  |  Pub/Sub  |  Google Cloud Documentation

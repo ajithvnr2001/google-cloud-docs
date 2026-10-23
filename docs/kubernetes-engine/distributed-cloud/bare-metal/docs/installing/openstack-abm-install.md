@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/openstack-abm-install/
 title: Deploy a cluster on OpenStack \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:21:33.769817+00:00
+fetched_at: 2026-10-23T10:21:40.845601+00:00
 ---
 
 # Deploy a cluster on OpenStack  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -22,22 +22,9 @@ Send feedback
 
 #  Deploy a cluster on OpenStack Stay organized with collections  Save and categorize content based on your preferences. 
 
-This guide walks you through a sample installation of Distributed Cloud software only for bare metal on OpenStack virtual machines (VMs) with supported operating systems. The deployment uses a script to simplify installation of a hybrid cluster in OpenStack VMs. The guide also shows you one way to enable load balancing as a Service (LBaaS). You can use the OpenStack LBaaS and the Kubernetes OpenStack Cloud Provider with Google Distributed Cloud to expose the Kubernetes services outside of the OpenStack cluster.
+Distributed Cloud software only for bare metal lets you deploy a hybrid cluster on OpenStack virtual machines (VMs). This deployment lets you integrate OpenStack Load Balancing as a Service (LBaaS) and the [OpenStack Cloud Provider for Kubernetes](https://github.com/kubernetes/cloud-provider-openstack) to expose Kubernetes services outside your OpenStack environment.
 
-Google Distributed Cloud doesn't provision the OpenStack VMs automatically, and provisioning the VMs is outside the scope of this guide. To learn the VM requirements and review an example deployment, see the [Terraform example to create OpenStack VMs](https://github.com/GoogleCloudPlatform/anthos-samples/tree/master/anthos-bm-openstack-terraform#terraform-example-to-create-openstack-vms-for-anthos).
-
-The guide consists of the following sections:
-
-  1. Deploy Google Distributed Cloud
-
-  2. Configure the [OpenStack Cloud Provider for Kubernetes](https://github.com/kubernetes/cloud-provider-openstack) in the installed cluster to integrate with the Octavia load balancers
-
-  3. Validate the OpenStack Cloud Provider for Kubernetes integration
-
-
-
-
-This guide uses [OpenStack Ussuri](https://www.openstack.org/software/ussuri/), but Google Distributed Cloud doesn't have a requirement for specific versions of OpenStack. The guide uses OpenStack VMs to provide you with a two-node proof of concept environment running on OpenStack. For production installation requirements for Google Distributed Cloud, see the [installation prerequisites](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/install-prereq).
+Google Distributed Cloud doesn't provision OpenStack VMs automatically. To review VM requirements and configure the two-node proof-of-concept environment, see the [Terraform example to create OpenStack VMs](https://github.com/GoogleCloudPlatform/anthos-samples/tree/master/anthos-bm-openstack-terraform#terraform-example-to-create-openstack-vms-for-anthos). Although this deployment demonstrates [OpenStack Ussuri](https://www.openstack.org/software/ussuri/), Google Distributed Cloud doesn't require a specific OpenStack version. For production environments, see the [installation prerequisites](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/install-prereq).
 
 ## Example deployment
 
@@ -373,6 +360,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

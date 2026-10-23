@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-get-service-account/
 title: Get a service account \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:31:52.865051+00:00
+fetched_at: 2026-10-23T09:37:30.460970+00:00
 ---
 
 # Get a service account  |  Cloud Storage  |  Google Cloud Documentation
@@ -220,7 +220,7 @@ To authenticate to Cloud Storage, set up Application Default Credentials. For mo
     def get_service_account
       require "google/cloud/storage"
     
-      storage = Google::Cloud::[Storage](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html)
+      storage = Google::Cloud::[Storage](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage-control-v2/latest/Google-Cloud-Storage.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html)
       email = storage.service_account_email
     
       puts "The GCS service account for project #{storage.project_id} is: #{email}"

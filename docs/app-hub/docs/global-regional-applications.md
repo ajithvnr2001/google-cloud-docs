@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/global-regional-applications/
 title: Global and regional applications \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:16.647140+00:00
+fetched_at: 2026-10-23T13:16:36.529406+00:00
 ---
 
 # Global and regional applications  |  App Hub  |  Google Cloud Documentation

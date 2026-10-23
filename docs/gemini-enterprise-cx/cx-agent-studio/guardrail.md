@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/guardrail/
 title: Guardrails \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:30.662517+00:00
+fetched_at: 2026-10-23T13:12:05.583998+00:00
 ---
 
 # Guardrails  |  CX Agent Studio  |  Google Cloud Documentation

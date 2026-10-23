@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/flags/
 title: Configure database flags \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:39.848360+00:00
+fetched_at: 2026-10-23T10:19:42.518660+00:00
 ---
 
 # Configure database flags  |  Cloud SQL for MySQL  |  Google Cloud Documentation
@@ -2165,7 +2165,7 @@ You can either wait until the regular maintenance window for the CSA release or 
 general_log, slow_query_log
     
 
-To make your `general` or `slow query` logs available, enable the corresponding flag and set the `log_output` flag to `FILE`. This makes the log output available using the [Logs Viewer in the Google Cloud console](https://docs.cloud.google.com/logging/docs/view/logs_viewer). Note that [Google Cloud Observability logging charges](https://docs.cloud.google.com/stackdriver/pricing) apply. To minimize instance storage cost, `general` and `slow query` logs on the instance disk are rotated when the log file is older than 24 hours (and no changes have been made within that duration) or greater than 100MB in size. Old log files are automatically deleted after the rotation.
+To make your `general` or `slow query` logs available, enable the corresponding flag and set the `log_output` flag to `FILE`. This makes the log output available using the [Logs Viewer in the Google Cloud console](https://docs.cloud.google.com/logging/docs/view/logs_viewer). Note that [Google Cloud Observability logging charges](https://cloud.google.com/products/observability/pricing) apply. To minimize instance storage cost, `general` and `slow query` logs on the instance disk are rotated when the log file is older than 24 hours (and no changes have been made within that duration) or greater than 100MB in size. Old log files are automatically deleted after the rotation.
 
 If the `log_output` is set to `NONE`, you can't access the logs. If you set `log_output` to `TABLE`, the log output is placed in a table in the mysql system database. It might consume a considerable amount of disk space. If this table becomes large, it can affect instance restart time or cause the instance to lose its SLA coverage. For this reason, the `TABLE` option is not recommended. In addition, the log content isn't available in [Logs Explorer](https://docs.cloud.google.com/logging/docs/view/logs-explorer-interface) and it isn't rotated. If needed, you can truncate your log tables by using the API. For more information, see the [instances.truncateLog reference page](https://docs.cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/instances/truncateLog).
 
@@ -2546,7 +2546,7 @@ If your Cloud SQL instance is using a deprecated flag name, then edit your Cloud
 
 Issue | Troubleshooting | After enabling a flag the instance loops between panicking and crashing. | Contact [ customer support](https://docs.cloud.google.com/sql/docs/getting-support) to request flag removal followed by a `hard drain`. This forces the instance to restart on a different host with a fresh configuration without the undesired flag or setting.   
 ---|---  
-You see the error message `Bad syntax for dict arg` when trying to set a flag. | [ Complex parameter values](https://cloud.google.com/sdk/gcloud/reference/topic/flags-file), such as comma-separated lists, require special treatment when used with gcloud commands.   
+You see the error message `Bad syntax for dict arg` when trying to set a flag. | [ Complex parameter values](https://docs.cloud.google.com/sdk/gcloud/reference/topic/flags-file), such as comma-separated lists, require special treatment when used with gcloud commands.   
   
 ## What's next
 
@@ -2559,6 +2559,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

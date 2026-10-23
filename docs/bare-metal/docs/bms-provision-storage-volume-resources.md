@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-provision-storage-volume-resources/
 title: Provision storage volume resources \u00a0|\u00a0 Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:13.149199+00:00
+fetched_at: 2026-10-23T13:18:44.040872+00:00
 ---
 
 # Provision storage volume resources  |  Bare Metal Solution  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/samples/cloud-sql-postgres-instance-backup-location/
 title: Set a custom location for backups \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:20.891704+00:00
+fetched_at: 2026-10-23T10:18:57.154362+00:00
 ---
 
 # Set a custom location for backups  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation

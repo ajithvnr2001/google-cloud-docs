@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/advanced/docs/quickstarts/publish-events-cloud-run-job/
 title: Quickstart: Publish events to a Cloud Run job \u00a0|\u00a0 Eventarc Advanced \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:21.536696+00:00
+fetched_at: 2026-10-23T13:13:42.576297+00:00
 ---
 
 # Quickstart: Publish events to a Cloud Run job  |  Eventarc Advanced  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/querydata/
 title: Query databases in natural language with QueryData \u00a0|\u00a0 Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:39.040080+00:00
+fetched_at: 2026-10-23T13:02:42.736249+00:00
 ---
 
 # Query databases in natural language with QueryData  |  Firestore with MongoDB compatibility  |  Google Cloud Documentation

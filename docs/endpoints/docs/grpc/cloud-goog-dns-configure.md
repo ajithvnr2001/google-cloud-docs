@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/grpc/cloud-goog-dns-configure/
 title: Configuring DNS on the cloud.goog domain \u00a0|\u00a0 Cloud Endpoints with gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:23.537102+00:00
+fetched_at: 2026-10-23T13:00:38.294482+00:00
 ---
 
 # Configuring DNS on the cloud.goog domain  |  Cloud Endpoints with gRPC  |  Google Cloud Documentation

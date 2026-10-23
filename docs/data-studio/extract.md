@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/extract/
 title: Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:19.975072+00:00
+fetched_at: 2026-10-23T13:19:52.137747+00:00
 ---
 
 # Data Studio  |  Google Cloud Documentation

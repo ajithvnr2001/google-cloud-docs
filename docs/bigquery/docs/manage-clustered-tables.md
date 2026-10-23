@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/manage-clustered-tables/
 title: Manage clustered tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:58:03.792703+00:00
+fetched_at: 2026-10-23T12:55:43.506678+00:00
 ---
 
 # Manage clustered tables  |  BigQuery  |  Google Cloud Documentation
@@ -21,14 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Manage clustered tables
 
-This document describes how to get information about and control access to clustered tables in BigQuery.
+After you create a clustered table in BigQuery, you can control who can access it, review its properties, and change its clustering columns as your query patterns evolve. This document describes how to control access to clustered tables, get information about them, list the clustered tables in a dataset, and modify the clustering specification.
 
-For more information, see the following:
-
-  * To learn about clustered table support in BigQuery, see [Introduction to clustered tables](https://docs.cloud.google.com/bigquery/docs/clustered-tables).
-  * To learn how to create clustered tables, see [Create clustered tables](https://docs.cloud.google.com/bigquery/docs/creating-clustered-tables).
-
-
+To learn about clustered tables, see [Introduction to clustered tables](https://docs.cloud.google.com/bigquery/docs/clustered-tables). To create one, see [Create clustered tables](https://docs.cloud.google.com/bigquery/docs/creating-clustered-tables).
 
 ## Before you begin
 
@@ -210,6 +205,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

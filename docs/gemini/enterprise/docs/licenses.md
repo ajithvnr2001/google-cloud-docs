@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/licenses/
 title: Get subscriptions and assign licenses for Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:08.846211+00:00
+fetched_at: 2026-10-23T12:44:15.668189+00:00
 ---
 
 # Get subscriptions and assign licenses for Gemini Enterprise  |  Google Cloud Documentation
@@ -223,8 +223,10 @@ To get subscription detail, run the following command:
 
 Replace the following:
 
-  * `PROJECT_NUMBER`: The project number to which you have Service Usage Consumer role
+  * `PROJECT_NUMBER`: the project number or ID used for billing and quota attribution for this API call. You must have the [Service Usage Consumer](https://docs.cloud.google.com/iam/docs/roles-permissions/serviceusage#serviceusage.serviceUsageConsumer) role on this project.
+
   * `BILLING_ACCOUNT_ID`: ID of your Google Cloud billing account.
+
 
 
 
@@ -359,17 +361,24 @@ To distribute licenses to a project or multiple projects, run the following comm
 
 Replace the following:
 
-  * `PROJECT_NUMBER`: the project number to which you have Service Usage Consumer role
+  * `PROJECT_NUMBER`: the project number or ID used for billing and quota attribution for this API call. You must have the [Service Usage Consumer](https://docs.cloud.google.com/iam/docs/roles-permissions/serviceusage#serviceusage.serviceUsageConsumer) role on this project. You can use `TARGET_PROJECT_NUMBER` if Discovery Engine is enabled on that project.
+
   * `ENDPOINT_LOCATION`: the multi-region for your API request. Specify one of the following values: 
+
     * `us` for the US multi-region
     * `eu` for the EU multi-region
     * `global` for the Global location
 For more information, see [Specify a multi-region for your data store](https://docs.cloud.google.com/gemini/enterprise/docs/locations#specify_a_multi-region_for_your_data_store). 
   * `LOCATION`: the multi-region of your data store: `global`, `us`, or `eu`.
+
   * `TARGET_PROJECT_NUMBER`: the project number you want to distribute licenses to.
+
   * `LICENSE_COUNT`: the number of licenses to distribute.
+
   * `BILLING_ACCOUNT_ID`: ID of your Google Cloud billing account.
+
   * `BILLING_ACCOUNT_LICENSE_CONFIG_ID`: locate the Billing Account License Config ID within the subscription detail.
+
   * _Optional_ `LICENSE_CONFIG_ID`: the ID of an existing project-level license configuration. You can find this ID in the `licenseConfigDistributions` field when you view subscription details.
 
 **Note:** If you omit the `LICENSE_CONFIG_ID` from this API request, a new license configuration is created for the specified project number and location. To update an existing license configuration, you must include the `LICENSE_CONFIG_ID`.
@@ -429,18 +438,26 @@ To transfer subscription licenses back to the billing account for re-distributio
 
 Replace the following:
 
-  * `PROJECT_NUMBER`: the project number to which you have Service Usage Consumer role
+  * `PROJECT_NUMBER`: the project number or ID used for billing and quota attribution for this API call. You must have the [Service Usage Consumer](https://docs.cloud.google.com/iam/docs/roles-permissions/serviceusage#serviceusage.serviceUsageConsumer) role on this project. You can use `TARGET_PROJECT_NUMBER` if Discovery Engine is enabled on that project.
+
   * `ENDPOINT_LOCATION`: the multi-region for your API request. Specify one of the following values: 
+
     * `us` for the US multi-region
     * `eu` for the EU multi-region
     * `global` for the Global location
 For more information, see [Specify a multi-region for your data store](https://docs.cloud.google.com/gemini/enterprise/docs/locations#specify_a_multi-region_for_your_data_store). 
   * `LOCATION`: the multi-region of your data store: `global`, `us`, or `eu`.
-  * `TARGET_PROJECT_NUMBER`: the project number you want to reclaim licenses from.
+
+  * `TARGET_PROJECT_NUMBER`: the project number you want to reclaim licenses from. This is the project where the licenses are currently allocated.
+
   * `LICENSE_COUNT`: the number of licenses to reclaim.
+
   * `BILLING_ACCOUNT_ID`: ID of your Google Cloud billing account.
+
   * `BILLING_ACCOUNT_LICENSE_CONFIG_ID`: locate the Billing Account License Config ID within the subscription detail.
+
   * `LICENSE_CONFIG_ID`: the license config ID of an existing project-level license config. 
+
 
 
 
@@ -775,6 +792,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

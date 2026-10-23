@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/hdfs/configure/
 title: HDFS \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:09.495892+00:00
+fetched_at: 2026-10-23T13:09:11.828196+00:00
 ---
 
 # HDFS  |  Integration Connectors  |  Google Cloud Documentation

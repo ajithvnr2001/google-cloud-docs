@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-deidentify-replace-infotype/
 title: De-identify sensitive data by replacing with infoType \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:38:45.565924+00:00
+fetched_at: 2026-10-23T11:32:01.043143+00:00
 ---
 
 # De-identify sensitive data by replacing with infoType  |  Sensitive Data Protection  |  Google Cloud Documentation

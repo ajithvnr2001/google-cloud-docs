@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/connector/
 title: Connector \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:31.472954+00:00
+fetched_at: 2026-10-23T13:20:35.968802+00:00
 ---
 
 # Connector  |  Data Studio  |  Google Cloud Documentation

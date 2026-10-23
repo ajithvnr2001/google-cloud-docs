@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/service-extensions/extension-processor-agent-gateway/
 title: Connect the Apigee extension processor to an Agent Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:44.705667+00:00
+fetched_at: 2026-10-23T13:19:12.671814+00:00
 ---
 
 # Connect the Apigee extension processor to an Agent Gateway  |  Google Cloud Documentation

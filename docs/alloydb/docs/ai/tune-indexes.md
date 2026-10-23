@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/tune-indexes/
 title: Tune vector query performance in AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:24:46.113994+00:00
+fetched_at: 2026-10-23T13:08:31.011921+00:00
 ---
 
 # Tune vector query performance in AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -48,10 +48,6 @@ For more information on configuring database flags, see [Configure database flag
 
 
 ## Tune a ScaNN index
-
-**Preview**
-
-This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
 To determine the number of levels needed for your ScaNN index, see the following table.
 
@@ -100,7 +96,7 @@ Use the following ScaNN indexes as examples for tuning parameters for a table wi
     SET LOCAL scann.num_leaves_to_search = 100;
     SET LOCAL scann.pre_reordering_num_neighbors=50;
     
-    CREATE INDEX my-scann-index ON my-table
+    CREATE INDEX my_scann_index ON my_table
            USING scann (vector_column cosine)
     WITH (num_leaves = [power(1000000, 3/4)], max_num_levels = 3);
 
@@ -191,7 +187,7 @@ For more information about the complete list of metrics, see [Vector index metri
 ## What's next
 
   * [Maintain vector indexes](https://docs.cloud.google.com/alloydb/docs/ai/maintain-vector-indexes).
-  * Learn about an [example embedding workflow](https://docs.cloud.google.com/alloydb/docs/ai/example-embeddings).
+  * [Perform a vector search](https://docs.cloud.google.com/alloydb/docs/ai/perform-vector-search).
 
 
 
@@ -199,6 +195,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

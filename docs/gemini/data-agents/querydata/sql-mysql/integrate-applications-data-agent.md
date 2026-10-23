@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/querydata/sql-mysql/integrate-applications-data-agent/
 title: Integrate QueryData with an application \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:47.322529+00:00
+fetched_at: 2026-10-23T13:03:27.845987+00:00
 ---
 
 # Integrate QueryData with an application  |  Data Agents  |  Google Cloud Documentation

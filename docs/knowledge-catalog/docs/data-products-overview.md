@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/data-products-overview/
 title: About data products \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:26.975995+00:00
+fetched_at: 2026-10-23T12:50:49.938882+00:00
 ---
 
 # About data products  |  Knowledge Catalog  |  Google Cloud Documentation

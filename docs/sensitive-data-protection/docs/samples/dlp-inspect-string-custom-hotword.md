@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-inspect-string-custom-hotword/
 title: Inspect a string from sensitive data by using a custom hotword \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:50:16.789851+00:00
+fetched_at: 2026-10-23T10:52:57.442044+00:00
 ---
 
 # Inspect a string from sensitive data by using a custom hotword  |  Sensitive Data Protection  |  Google Cloud Documentation

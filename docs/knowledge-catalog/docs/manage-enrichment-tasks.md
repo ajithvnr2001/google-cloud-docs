@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/manage-enrichment-tasks/
 title: Manage enrichment tasks \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:21:41.400179+00:00
+fetched_at: 2026-10-23T12:50:53.692436+00:00
 ---
 
 # Manage enrichment tasks  |  Knowledge Catalog  |  Google Cloud Documentation

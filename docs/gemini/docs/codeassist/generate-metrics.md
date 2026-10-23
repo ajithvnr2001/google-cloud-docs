@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/generate-metrics/
 title: Generate Gemini Code Assist metrics \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:12.256028+00:00
+fetched_at: 2026-10-23T13:08:53.929849+00:00
 ---
 
 # Generate Gemini Code Assist metrics  |  Gemini for Google Cloud  |  Google Cloud Documentation

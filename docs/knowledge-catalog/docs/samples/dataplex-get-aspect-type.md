@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/samples/dataplex-get-aspect-type/
 title: Get aspect type \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:03:26.539236+00:00
+fetched_at: 2026-10-23T12:50:53.039389+00:00
 ---
 
 # Get aspect type  |  Knowledge Catalog  |  Google Cloud Documentation

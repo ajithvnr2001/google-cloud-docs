@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/fault-injection-testing/exclusion-windows/
 title: Set up an exclusion windows \u00a0|\u00a0 Fault Injection Testing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:51.987899+00:00
+fetched_at: 2026-10-23T13:10:29.358853+00:00
 ---
 
 # Set up an exclusion windows  |  Fault Injection Testing  |  Google Cloud Documentation

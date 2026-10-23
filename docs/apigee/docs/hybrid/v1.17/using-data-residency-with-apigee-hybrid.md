@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/using-data-residency-with-apigee-hybrid/
 title: Using data residency with Apigee hybrid \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:21.173129+00:00
+fetched_at: 2026-10-23T13:15:49.442369+00:00
 ---
 
 # Using data residency with Apigee hybrid  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/
 title: Eventarc Standard documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:37.693932+00:00
+fetched_at: 2026-10-23T13:03:30.458112+00:00
 ---
 
 # Eventarc Standard documentation  |  Google Cloud Documentation

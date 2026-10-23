@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/samples/cloud-sql-mysql-pdo-connect-tcp/
 title: Create a TCP connection by using PHP \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:53.027092+00:00
+fetched_at: 2026-10-23T10:11:45.148878+00:00
 ---
 
 # Create a TCP connection by using PHP  |  Cloud SQL for MySQL  |  Google Cloud Documentation

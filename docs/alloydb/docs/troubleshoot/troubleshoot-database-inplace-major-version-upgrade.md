@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/troubleshoot/troubleshoot-database-inplace-major-version-upgrade/
 title: Troubleshoot an in-place major version upgrade \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:47.389872+00:00
+fetched_at: 2026-10-23T10:03:38.634441+00:00
 ---
 
 # Troubleshoot an in-place major version upgrade  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,9 +21,7 @@ Send feedback
 
 #  Troubleshoot an in-place major version upgrade Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document describes how to troubleshoot issues you might encounter while upgrading your AlloyDB for PostgreSQL database to an in-place major version. For more information, see [Upgrade a database in-place major version](https://docs.cloud.google.com/alloydb/docs/upgrade-db-inplace-major-version). To learn about in-place major version upgrade errors, see [Database in-place major version upgrade errors](https://docs.cloud.google.com/alloydb/docs/troubleshoot/database-inplace-major-version-upgrade-errors).
-
-To analyze upgrade failures, identify the failed upgrade stage from the response and use the information in this document to identify possible resolutions.
+To diagnose and resolve issues that occur during an in-place major version upgrade of your AlloyDB for PostgreSQL cluster, identify the failed upgrade stage in the operation response and address any pre-upgrade check violations. For step-by-step upgrade instructions, see [Upgrade a database in-place major version](https://docs.cloud.google.com/alloydb/docs/upgrade-db-inplace-major-version). For specific error messages and workarounds, see [Database in-place major version upgrade errors](https://docs.cloud.google.com/alloydb/docs/troubleshoot/database-inplace-major-version-upgrade-errors).
 
 AlloyDB validates your request synchronously and returns an error message if any of the following are true:
 
@@ -104,6 +102,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

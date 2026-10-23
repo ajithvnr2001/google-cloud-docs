@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/access-approval/docs/approval-request-details/
 title: Anatomy of an Access Approval request \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:22.459072+00:00
+fetched_at: 2026-10-23T13:20:15.438127+00:00
 ---
 
 # Anatomy of an Access Approval request  |  Google Cloud Documentation

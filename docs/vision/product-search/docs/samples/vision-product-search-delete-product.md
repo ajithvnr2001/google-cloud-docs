@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/product-search/docs/samples/vision-product-search-delete-product/
 title: Delete a product \u00a0|\u00a0 Vision API Product Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:10:11.103854+00:00
+fetched_at: 2026-10-23T08:57:48.651396+00:00
 ---
 
 # Delete a product  |  Vision API Product Search  |  Google Cloud Documentation

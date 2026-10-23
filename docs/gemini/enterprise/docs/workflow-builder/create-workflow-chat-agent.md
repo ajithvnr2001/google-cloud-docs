@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/workflow-builder/create-workflow-chat-agent/
 title: Create a workflow chat agent \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:38.703410+00:00
+fetched_at: 2026-10-23T13:11:47.780470+00:00
 ---
 
 # Create a workflow chat agent  |  Gemini Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/get-started-cloud-run-grpc/
 title: Get started with API Gateway and Cloud Run for gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:16.282107+00:00
+fetched_at: 2026-10-23T13:16:55.647113+00:00
 ---
 
 # Get started with API Gateway and Cloud Run for gRPC  |  Google Cloud Documentation

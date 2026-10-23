@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/performance-optimization/promote-modular-design/
 title: Promote modular design \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:08:26.311453+00:00
+fetched_at: 2026-10-23T10:42:53.384186+00:00
 ---
 
 # Promote modular design  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -19,7 +19,7 @@ Send feedback
 
 #  Promote modular design Stay organized with collections  Save and categorize content based on your preferences. 
 
-Last reviewed 2024-12-06 UTC
+Last reviewed 2026-10-22 UTC
 
 This principle in the performance optimization pillar of the [Google Cloud Well-Architected Framework](https://docs.cloud.google.com/architecture/framework) provides recommendations to help you promote a modular design. Modular components and clear interfaces can enable flexible scaling, independent updates, and future component separation.
 
@@ -47,15 +47,15 @@ To promote modular designs, consider the recommendations in the following sectio
 
 ### Design for loose coupling
 
-Design a [loosely coupled architecture](https://docs.cloud.google.com/architecture/microservices-architecture-refactoring-monoliths). Independent components with minimal dependencies can help you build [scalable and resilient applications](https://docs.cloud.google.com/architecture/scalable-and-resilient-apps). As you plan the boundaries for your services, you must consider the availability and scalability requirements. For example, if one component has requirements that are different from your other components, you can design the component as a standalone service. Implement a plan for graceful failures for less-important subprocesses or services that don't impact the response time of the primary services.
+Design a [loosely coupled architecture](https://cloud.google.com/learn/what-is-microservices-architecture). Independent components with minimal dependencies can help you build [scalable and resilient applications](https://docs.cloud.google.com/architecture/scalable-and-resilient-apps). As you plan the boundaries for your services, you must consider the availability and scalability requirements. For example, if one component has requirements that are different from your other components, you can design the component as a standalone service. Implement a plan for graceful failures for less-important subprocesses or services that don't impact the response time of the primary services.
 
 ### Design for concurrency and parallelism
 
 Design your application to support multiple tasks concurrently, like processing multiple user requests or running background jobs while users interact with your system. Break large tasks into smaller chunks that can be processed at the same time by multiple service instances. Task concurrency lets you use features like autoscaling to increase the resource allocation in products like the following:
 
   * [Compute Engine](https://docs.cloud.google.com/compute/docs/autoscaler)
-  * [GKE](https://docs.cloud.google.com/spanner/docs/autoscaling-overview)
-  * [BigQuery](https://docs.cloud.google.com/bigquery/docs/slots-autoscaling-intro)
+  * [Google Kubernetes Engine](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler)
+  * [BigQuery](https://docs.cloud.google.com/bigquery/docs/slots#slot-autoscaling)
   * [Spanner](https://docs.cloud.google.com/spanner/docs/autoscaling-overview)
 
 
@@ -79,7 +79,7 @@ Choose technologies that complement the modular design. Evaluate programming lan
 For more information, see the following resources:
 
   * [Re-architecting to cloud native](https://cloud.google.com/resources/rearchitecting-to-cloud-native)
-  * [Introduction to microservices](https://docs.cloud.google.com/architecture/microservices-architecture-introduction)
+  * [Introduction to microservices](https://cloud.google.com/learn/what-is-microservices-architecture)
 
 
 
@@ -91,6 +91,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2024-12-06 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2024-12-06 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

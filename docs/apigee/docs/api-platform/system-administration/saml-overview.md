@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/saml-overview/
 title: SAML overview \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:35.938587+00:00
+fetched_at: 2026-10-23T13:19:12.944195+00:00
 ---
 
 # SAML overview  |  Apigee  |  Google Cloud Documentation

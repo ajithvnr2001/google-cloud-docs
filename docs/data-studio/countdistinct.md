@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/countdistinct/
 title: COUNT_DISTINCT \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:29.665578+00:00
+fetched_at: 2026-10-23T13:19:15.501706+00:00
 ---
 
 # COUNT_DISTINCT  |  Data Studio  |  Google Cloud Documentation

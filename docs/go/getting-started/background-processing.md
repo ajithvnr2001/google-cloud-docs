@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/go/getting-started/background-processing/
 title: Background processing with Go \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:40.083320+00:00
+fetched_at: 2026-10-23T13:10:37.482925+00:00
 ---
 
 # Background processing with Go  |  Google Cloud Documentation

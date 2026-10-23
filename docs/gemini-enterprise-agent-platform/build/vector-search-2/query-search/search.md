@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/vector-search-2/query-search/search/
 title: Searching for Data Objects \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:13:48.613640+00:00
+fetched_at: 2026-10-23T12:43:04.248238+00:00
 ---
 
 # Searching for Data Objects  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -447,19 +447,19 @@ You should receive a response similar to the following:
 ### Python
     
     
-    from google.cloud import [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest)
+    from google.cloud import vectorsearch_v1
     
     # Create the client
-    data_object_search_service_client = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DataObjectSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_search_service.DataObjectSearchServiceClient.html)()
+    data_object_search_service_client = vectorsearch_v1.[DataObjectSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_search_service.DataObjectSearchServiceClient.html)()
     
     # Initialize request
-    vector_search = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[VectorSearch](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.VectorSearch.html)(
+    vector_search = vectorsearch_v1.[VectorSearch](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.VectorSearch.html)(
         search_field="plot_embedding",
         vector={"values": [0.1, 0.2, 0.3]},
         filter={"genre": {"$eq": "Thriller"}},
         top_k=5,
     )
-    request = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[SearchDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.SearchDataObjectsRequest.html)(
+    request = vectorsearch_v1.[SearchDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.SearchDataObjectsRequest.html)(
         parent="projects/PROJECT_ID/locations/LOCATION/collections/COLLECTION_ID",
         vector_search=vector_search,
     )
@@ -547,36 +547,36 @@ Then run the [`gcloud vector-search collections data-objects search`](https://do
 ### Python
     
     
-    from google.cloud import [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest)
+    from google.cloud import vectorsearch_v1
     
     # Create the client
-    data_object_search_service_client = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DataObjectSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_search_service.DataObjectSearchServiceClient.html)()
+    data_object_search_service_client = vectorsearch_v1.[DataObjectSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_search_service.DataObjectSearchServiceClient.html)()
     
     collection = "projects/PROJECT_ID/locations/LOCATION/collections/COLLECTION_ID"
     
     # Set the target recall rate on the index hint
-    search_hint = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[SearchHint](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.SearchHint.html)(
-        index_hint=[vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[SearchHint](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.SearchHint.html).[IndexHint](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.SearchHint.IndexHint.html)(
+    search_hint = vectorsearch_v1.[SearchHint](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.SearchHint.html)(
+        index_hint=vectorsearch_v1.[SearchHint](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.SearchHint.html).[IndexHint](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.SearchHint.IndexHint.html)(
             name=f"{collection}/indexes/INDEX_ID",
-            dense_scann_params=[vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[SearchHint](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.SearchHint.html).[IndexHint](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.SearchHint.IndexHint.html).[DenseScannParams](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.SearchHint.IndexHint.DenseScannParams.html)(
+            dense_scann_params=vectorsearch_v1.[SearchHint](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.SearchHint.html).[IndexHint](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.SearchHint.IndexHint.html).[DenseScannParams](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.SearchHint.IndexHint.DenseScannParams.html)(
                 target_recall=0.95,
             ),
         ),
     )
     
     # Initialize request
-    vector_search = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[VectorSearch](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.VectorSearch.html)(
+    vector_search = vectorsearch_v1.[VectorSearch](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.VectorSearch.html)(
         search_field="plot_embedding",
         vector={"values": [0.42426406871192845, 0.565685424949238, 0.7071067811865475]},
         top_k=10,
         search_hint=search_hint,
-        output_fields=[vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[OutputFields](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.OutputFields.html)(
+        output_fields=vectorsearch_v1.[OutputFields](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.OutputFields.html)(
             data_fields=["*"],
             vector_fields=["*"],
             metadata_fields=["*"],
         ),
     )
-    request = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[SearchDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.SearchDataObjectsRequest.html)(
+    request = vectorsearch_v1.[SearchDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.SearchDataObjectsRequest.html)(
         parent=collection,
         vector_search=vector_search,
     )
@@ -1150,6 +1150,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

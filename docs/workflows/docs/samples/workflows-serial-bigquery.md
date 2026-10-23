@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-serial-bigquery/
 title: Run multiple queries serially using the connector for BigQuery. \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:54:46.287190+00:00
+fetched_at: 2026-10-23T09:37:49.024025+00:00
 ---
 
 # Run multiple queries serially using the connector for BigQuery.  |  Workflows  |  Google Cloud Documentation

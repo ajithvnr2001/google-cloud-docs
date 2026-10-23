@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/drill-into-your-data/
 title: Drill into your data \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:22.867927+00:00
+fetched_at: 2026-10-23T13:19:53.348393+00:00
 ---
 
 # Drill into your data  |  Data Studio  |  Google Cloud Documentation

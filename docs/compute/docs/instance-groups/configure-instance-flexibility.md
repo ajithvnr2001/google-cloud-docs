@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/configure-instance-flexibility/
 title: Add instance flexibility \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:43.156039+00:00
+fetched_at: 2026-10-23T13:00:29.062109+00:00
 ---
 
 # Add instance flexibility  |  Compute Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secure-source-manager/docs/resources/
 title: Resources \u00a0|\u00a0 Secure Source Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:09:09.898766+00:00
+fetched_at: 2026-10-23T10:52:53.304837+00:00
 ---
 
 # Resources  |  Secure Source Manager  |  Google Cloud Documentation

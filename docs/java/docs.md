@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/java/docs/
 title: Java documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:25:36.468418+00:00
+fetched_at: 2026-10-23T13:03:15.686397+00:00
 ---
 
 # Java documentation  |  Google Cloud Documentation

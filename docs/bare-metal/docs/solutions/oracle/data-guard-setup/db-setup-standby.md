@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/solutions/oracle/data-guard-setup/db-setup-standby/
 title: Create Data Guard's standby database \u00a0|\u00a0 Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:02.626947+00:00
+fetched_at: 2026-10-23T13:19:31.818485+00:00
 ---
 
 # Create Data Guard's standby database  |  Bare Metal Solution  |  Google Cloud Documentation

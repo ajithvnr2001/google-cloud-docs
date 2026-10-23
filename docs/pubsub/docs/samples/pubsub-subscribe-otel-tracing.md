@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-subscribe-otel-tracing/
 title: Create a subscriber application with OpenTelemetry enabled \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:57.201423+00:00
+fetched_at: 2026-10-23T10:04:26.030899+00:00
 ---
 
 # Create a subscriber application with OpenTelemetry enabled  |  Pub/Sub  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/samples/cloudrun-service-configuration-description/
 title: Configure service description \u00a0|\u00a0 Cloud Run \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:14:52.829339+00:00
+fetched_at: 2026-10-23T09:58:13.382801+00:00
 ---
 
 # Configure service description  |  Cloud Run  |  Google Cloud Documentation

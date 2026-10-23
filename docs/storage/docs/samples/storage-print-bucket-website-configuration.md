@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-print-bucket-website-configuration/
 title: Print the website configuration for a bucket \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:29:31.588770+00:00
+fetched_at: 2026-10-23T09:37:01.101814+00:00
 ---
 
 # Print the website configuration for a bucket  |  Cloud Storage  |  Google Cloud Documentation

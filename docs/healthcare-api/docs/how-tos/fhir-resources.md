@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/how-tos/fhir-resources/
 title: Creating and managing FHIR resources \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:49.264194+00:00
+fetched_at: 2026-10-23T13:08:58.430612+00:00
 ---
 
 # Creating and managing FHIR resources  |  Cloud Healthcare API  |  Google Cloud Documentation

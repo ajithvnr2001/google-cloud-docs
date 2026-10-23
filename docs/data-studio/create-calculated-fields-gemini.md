@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/create-calculated-fields-gemini/
 title: Create calculated fields with Gemini assistance \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:27.607790+00:00
+fetched_at: 2026-10-23T13:20:35.430109+00:00
 ---
 
 # Create calculated fields with Gemini assistance  |  Data Studio  |  Google Cloud Documentation

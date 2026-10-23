@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/integration-designer-layout/
 title: Explore the Integration editor layout \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:58.121128+00:00
+fetched_at: 2026-10-23T13:17:56.436261+00:00
 ---
 
 # Explore the Integration editor layout  |  Application Integration  |  Google Cloud Documentation

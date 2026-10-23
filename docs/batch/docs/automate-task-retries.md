@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/automate-task-retries/
 title: Automate task retries \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:01.086867+00:00
+fetched_at: 2026-10-23T13:19:54.235349+00:00
 ---
 
 # Automate task retries  |  Batch  |  Google Cloud Documentation

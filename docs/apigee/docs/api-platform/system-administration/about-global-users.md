@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/about-global-users/
 title: About global users \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:42.945793+00:00
+fetched_at: 2026-10-23T13:19:38.743114+00:00
 ---
 
 # About global users  |  Apigee  |  Google Cloud Documentation

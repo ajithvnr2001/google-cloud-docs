@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure-suspend-task/
 title: Suspend task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:02.560911+00:00
+fetched_at: 2026-10-23T13:18:04.245956+00:00
 ---
 
 # Suspend task  |  Application Integration  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/samples/cloud-sql-sqlserver-sqlalchemy-connect-tcp-sslcerts/
 title: Configure SSL certificates for TCP connection by using Python \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:52.768983+00:00
+fetched_at: 2026-10-23T10:18:48.756108+00:00
 ---
 
 # Configure SSL certificates for TCP connection by using Python  |  Cloud SQL for SQL Server  |  Google Cloud Documentation

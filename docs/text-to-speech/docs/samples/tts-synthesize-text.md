@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/text-to-speech/docs/samples/tts-synthesize-text/
 title: Pass text to the Text-to-Speech API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:39:23.134262+00:00
+fetched_at: 2026-10-23T08:36:44.887191+00:00
 ---
 
 # Pass text to the Text-to-Speech API  |  Google Cloud Documentation

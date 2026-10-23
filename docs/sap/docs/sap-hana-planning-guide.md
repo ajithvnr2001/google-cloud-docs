@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sap/docs/sap-hana-planning-guide/
 title: SAP HANA planning guide \u00a0|\u00a0 SAP on Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:07.042821+00:00
+fetched_at: 2026-10-23T10:01:38.480742+00:00
 ---
 
 # SAP HANA planning guide  |  SAP on Google Cloud  |  Google Cloud Documentation
@@ -100,189 +100,17 @@ This section provides guidance to help you identify the resources that you'd req
 
 ### Certified machine types for SAP HANA
 
-For SAP HANA, SAP certifies only a subset of the machine types that are available from Google Cloud.
+For SAP HANA, SAP certifies only a subset of the machine types that are available from Google Cloud. From the machine types that SAP has certified for use with SAP HANA, you can choose to create virtual machine (VM) instances or bare metal instances.
 
-From the machine types that SAP certifies for use with SAP HANA, you can choose to create virtual machine (VM) instances or bare metal instances.
+To view the list of SAP-certified Compute Engine machine types that you can use to run SAP HANA, go to [Certified solutions and machine types](https://docs.cloud.google.com/sap/docs/sap-certifications#certified-machine-types-and-solutions) and in the **Certified SAP solution** menu, select **SAP HANA**.
 
-Custom configurations of the general-purpose `n1-` and `n2-highmem` machine types are also certified by SAP. For more information, see Certified custom machine types for SAP HANA.
-
-For the operating systems that are certified for use with HANA on each machine type, see Certified operating systems for SAP HANA.
+For information about the operating systems that SAP has certified for use with SAP HANA on each machine type, see Certified operating systems for SAP HANA.
 
 Some machine types are not available in all Google Cloud regions. To check the regional availability of a Compute Engine machine type, see [Available regions & zones](https://docs.cloud.google.com/compute/docs/regions-zones#available).
 
 SAP lists the certified machine types for SAP HANA in the [Certified and supported SAP HANA hardware directory](https://www.sap.com/dmc/exp/2014-09-02-hana-hardware/enEN/#/solutions?filters=iaas;ve:29).
 
-For more information about different Compute Engine machine types and their use cases, see [machine types](https://docs.cloud.google.com/compute/docs/machine-types).
-
-#### Certified Compute Engine machine types for SAP HANA
-
-The following table shows Compute Engine machine types that are certified by SAP for SAP HANA:
-
-**Note:** The prefix in the following machine names changed from "`n1`" to "`m1`" to more clearly identify the machines as members of the memory-optimized machine family: 
-
-  * `n1-megamem-96` is now `**m1** -megamem-96`
-  * `n1-ultramem-40` is now `**m1** -ultramem-40`
-  * `n1-ultramem-80` is now `**m1** -ultramem-80`
-  * `n1-ultramem-160` is now `**m1** -ultramem-160`
-
-The machines themselves did not change and the former names are still supported as aliases for these machines. 
-
-The following table shows all of the Google Cloud machine types that are certified by SAP for production use of SAP HANA.
-
-The table does not include the machine types that SAP certifies for SAP Business One on SAP HANA. For the machine types that SAP certifies for SAP HANA with SAP Business One, see [Certified SAP applications on Google Cloud](https://docs.cloud.google.com/sap/docs/certifications-sap-apps#sap-certified-apps-on-gc).
-
-Machine types | vCPUs | Memory | Operating system | CPU platform | Application type | Notes  
----|---|---|---|---|---|---  
-**N1 high-memory, general-purpose machine types**  
-`n1-highmem-32` | 32 | 208 GB | RHEL, SUSE  
-| Intel Broadwell | OLAP or OLTP | Block storage: Compute Engine Persistent Disk or, for scale up only, Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).  
-`n1-highmem-64` | 64 | 416 GB | RHEL, SUSE | Intel Broadwell | OLAP or OLTP | Block storage: Compute Engine Persistent Disk or, for scale up only, Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).  
-`n1-highmem-96` | 96 | 624 GB | RHEL, SUSE | Intel Skylake | OLAP or OLTP | Block storage: Compute Engine Persistent Disk or, for scale up only, Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).  
-**N2 high-memory, general-purpose machine types**  
-`n2-highmem-32` | 32 | 256 GB | RHEL, SUSE | Intel Ice Lake,  
-Intel Cascade Lake | OLAP or OLTP | Scale up only.  
-Block storage: Compute Engine Persistent Disk or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).   
-`n2-highmem-48` | 48 | 384 GB | RHEL, SUSE | Intel Ice Lake,  
-Intel Cascade Lake | OLAP or OLTP | Scale up only.  
-Block storage: Compute Engine Persistent Disk or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).   
-`n2-highmem-64` | 64 | 512 GB | RHEL, SUSE | Intel Ice Lake,  
-Intel Cascade Lake | OLAP or OLTP | Scale up only.  
-Block storage: Compute Engine Persistent Disk or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).   
-`n2-highmem-80` | 80 | 640 GB | RHEL, SUSE | Intel Ice Lake,  
-Intel Cascade Lake | OLAP or OLTP | Scale up only.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Extreme, or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).   
-`n2-highmem-96` | 96 | 768 GB | RHEL, SUSE | Intel Ice Lake | OLAP or OLTP | Scale up only.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Extreme, or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).   
-`n2-highmem-128` | 128 | 864 GB | RHEL, SUSE | Intel Ice Lake | OLAP or OLTP | Scale up only.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Extreme, or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).   
-**C3 general-purpose machine types**  
-`c3-standard-44` | 44 | 176 GB | RHEL, SUSE | Intel Sapphire Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Balanced, or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).   
-`c3-highmem-44` | 44 | 352 GB | RHEL, SUSE | Intel Sapphire Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Balanced, or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).   
-`c3-highmem-88` | 88 | 704 GB | RHEL, SUSE | Intel Sapphire Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Extreme, Hyperdisk Balanced, or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).   
-`c3-highmem-176` | 176 | 1,408 GB | RHEL, SUSE | Intel Sapphire Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Extreme, Hyperdisk Balanced, or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).   
-**C3 general-purpose bare metal machine types**  
-`c3-highmem-192-metal` | 192 | 1,536 GB | RHEL, SUSE | Intel Sapphire Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Extreme, Hyperdisk Balanced.   
-**C4 general-purpose machine types**  
-`c4-highmem-32` | 32 | 248 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Balanced or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).  
-`c4-highmem-48` | 48 | 372 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Balanced or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).  
-`c4-highmem-96` | 96 | 744 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Extreme, Hyperdisk Balanced, or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).  
-`c4-highmem-144` | 144 | 1,116 GB | RHEL, SUSE | Intel Granite Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Extreme or Hyperdisk Balanced  
-`c4-highmem-192` | 192 | 1,488 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Extreme, Hyperdisk Balanced, or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).  
-`c4-highmem-288` | 288 | 2,232 GB | RHEL, SUSE | Intel Granite Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Extreme or Hyperdisk Balanced  
-`c4-highmem-288-metal` | 288 | 2,232 GB | RHEL, SUSE | Intel Granite Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Extreme or Hyperdisk Balanced  
-**M1 memory-optimized machine types**  
-`m1-megamem-96` | 96 | 1,433 GB | RHEL, SUSE | Intel Skylake | OLAP or OLTP | OLAP: scale up, and scale out up to 16 nodes.  
-OLTP: scale up only.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Extreme, Hyperdisk Balanced, or, for OLTP scale up only, Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).  
-`m1-ultramem-40` | 40 | 961 GB | RHEL, SUSE | Intel Broadwell | OLTP only | Scale up only.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Balanced, or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).   
-`m1-ultramem-80` | 80 | 1,922 GB | RHEL, SUSE | Intel Broadwell | OLTP only | Scale up only.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Extreme, Hyperdisk Balanced, or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).   
-`m1-ultramem-160` | 160 | 3,844 GB | RHEL, SUSE | Intel Broadwell | OLAP or OLTP | 2 TB OLAP workloads certified for scale up and scale out up to 16 nodes. Up to 4 TB OLAP workloads supported with workload based sizing.  
-OLTP workloads certified for scale up only.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Extreme, Hyperdisk Balanced, or, for OLTP scale up only, Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).  
-**M2 memory-optimized machine types**  
-`m2-megamem-416` | 416 | 5,888 GB | RHEL, SUSE | Intel Cascade Lake | OLAP or OLTP | OLAP workloads certified for scale up and scale out up to 16 nodes.  
-OLTP workloads are certified for scale up, and scale out up to 4 nodes.  
-Certification for OLTP scale out includes SAP S/4HANA.  
-For scale out with S/4HANA, see [SAP Note 2408419](https://launchpad.support.sap.com/#/notes/2408419).  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Extreme, Hyperdisk Balanced, or, for scale up only, [Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes)](https://docs.cloud.google.com/sap/docs/certifications-sap-hana#gc_netapp_volumes).  
-  
-`m2-ultramem-208` | 208 | 5,888 GB | RHEL, SUSE | Intel Cascade Lake | OLTP only | Scale up only.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Extreme, Hyperdisk Balanced, or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).   
-`m2-ultramem-416` | 416 | 11,776 GB | RHEL, SUSE | Intel Cascade Lake-SP | OLAP or OLTP | OLAP workloads are certified with workload-based sizing for scale up, and scale out up to 16 nodes.  
-OLTP workloads are certified for scale up, and scale out up to 4 nodes.  
-Certification for OLTP scale out includes SAP S/4HANA.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Extreme, Hyperdisk Balanced, or, for scale up only, Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).  
-For scale out with S/4HANA, see [SAP Note 2408419](https://launchpad.support.sap.com/#/notes/2408419).  
-`m2-hypermem-416` | 416 | 8,832 GB | RHEL, SUSE | Intel Cascade Lake | OLAP or OLTP | OLAP workloads certified for scale up in single node.  
-OLTP workloads are certified for scale up, and scale out up to 4 nodes.   
-Certification for OLTP scale out includes SAP S/4HANA.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Extreme, Hyperdisk Balanced, or, for scale up only, Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).  
-For scale out with S/4HANA, see [SAP Note 2408419](https://launchpad.support.sap.com/#/notes/2408419).  
-**M3 memory-optimized machine types**  
-`m3-ultramem-32` | 32 | 976 GB | RHEL, SUSE | Intel Ice Lake | OLTP only | Scale up only.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Balanced, or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).  
-`m3-ultramem-64` | 64 | 1,952 GB | RHEL, SUSE | Intel Ice Lake | OLTP only | Scale up only.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Extreme, Hyperdisk Balanced, or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).  
-`m3-ultramem-128` | 128 | 3,904 GB | RHEL, SUSE | Intel Ice Lake | OLAP or OLTP | OLAP workloads are certified with workload-based sizing for scale-up, and scale-out up to 8 nodes. OLTP workloads are certified for scale up. Block storage: Compute Engine Persistent Disk, Hyperdisk Extreme, Hyperdisk Balanced, or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).  
-`m3-megamem-64` | 64 | 976 GB | RHEL, SUSE | Intel Ice Lake | OLAP or OLTP | Scale up only.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Extreme, Hyperdisk Balanced, or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes).  
-`m3-megamem-128` | 128 | 1,952 GB | RHEL, SUSE | Intel Ice Lake | OLAP or OLTP | Scale up, and scale out up to 16 nodes.  
-Block storage: Compute Engine Persistent Disk, Hyperdisk Extreme, Hyperdisk Balanced, or Google Cloud NetApp Volumes (the Premium or Extreme service level for the SAP HANA data and log volumes) (scale-up only).  
-**M4 memory-optimized machine types**  
-`m4-megamem-28` | 28 | 372 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Balanced.  
-`m4-megamem-56` | 56 | 744 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Balanced.  
-`m4-megamem-112` | 112 | 1,488 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Extreme, Hyperdisk Balanced.  
-`m4-megamem-224` | 224 | 2,976 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up, or scale-out up to 8 nodes  
-Block storage: Hyperdisk Extreme, Hyperdisk Balanced.  
-`m4-ultramem-56` | 56 | 1,488 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-OLAP workloads are certified with workload-based sizing.  
-Block storage: Hyperdisk Balanced.  
-`m4-ultramem-112` | 112 | 2,976 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-OLAP workloads are certified with workload-based sizing.  
-Block storage: Hyperdisk Extreme, Hyperdisk Balanced.  
-`m4-ultramem-224` | 224 | 5,952 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-OLAP workloads are certified with workload-based sizing.  
-Block storage: Hyperdisk Extreme, Hyperdisk Balanced.  
-`m4-hypermem-16` | 16 | 248 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Balanced.  
-`m4-hypermem-32` | 32 | 496 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Balanced.  
-`m4-hypermem-64` | 64 | 992 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | OLAP workloads are certified with workload-based sizing for scale-up and scale-out up to 8 nodes. OLTP workloads are certified for scale up. Block storage: Hyperdisk Balanced.  
-**M4N memory-optimized machine types**  
-`m4n-megamem-28` | 28 | 372 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Balanced, Hyperdisk Extreme.  
-`m4n-megamem-56` | 56 | 744 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Balanced, Hyperdisk Extreme.  
-`m4n-megamem-112` | 112 | 1,488 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Extreme, Hyperdisk Balanced.  
-`m4n-megamem-224` | 224 | 2,976 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up, or scale-out up to 8 nodes  
-Block storage: Hyperdisk Extreme, Hyperdisk Balanced.  
-`m4n-ultramem-56` | 56 | 1,488 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-OLAP workloads are certified with workload-based sizing.  
-Block storage: Hyperdisk Balanced.  
-`m4n-ultramem-112` | 112 | 2,976 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-OLAP workloads are certified with workload-based sizing.  
-Block storage: Hyperdisk Extreme, Hyperdisk Balanced.  
-`m4n-ultramem-224` | 224 | 5,952 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-OLAP workloads are certified with workload-based sizing.  
-Block storage: Hyperdisk Extreme, Hyperdisk Balanced.  
-`m4n-hypermem-16` | 16 | 248 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Balanced, Hyperdisk Extreme.  
-`m4n-hypermem-32` | 32 | 496 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | Scale up only.  
-Block storage: Hyperdisk Balanced, Hyperdisk Extreme.  
-`m4n-hypermem-64` | 64 | 992 GB | RHEL, SUSE | Intel Emerald Rapids | OLAP or OLTP | OLAP workloads are certified with workload-based sizing for scale-up and scale-out up to 8 nodes. OLTP workloads are certified for scale up. Block storage: Hyperdisk Balanced, Hyperdisk Extreme.  
-**X4 memory-optimized bare metal machine types** **Note** : From December 12, 2025, the naming convention for X4 machine types has changed to clarify the memory they offer. For example, `x4-megamem-960-metal` has changed to `x4-960-16t-metal` because it offers 16 TB of memory. While this naming change is backwards compatible, we recommend that you use the updated names for new deployments.  
-`x4-480-6t-metal` | 480 | 6,144 GB | RHEL, SUSE | Intel Sapphire Rapids | OLAP or OLTP |  OLAP workloads are certified with workload-based sizing for scale-up and scale-out up to 8 nodes. OLTP workloads are certified for scale up. Block storage: Hyperdisk Extreme, Hyperdisk Balanced  
-`x4-480-8t-metal` | 480 | 8,192 GB | RHEL, SUSE | Intel Sapphire Rapids | OLAP or OLTP |  OLAP workloads are certified with workload-based sizing for scale-up and scale-out up to 8 nodes. OLTP workloads are certified for scale-up and scale-out up to 4 nodes. Block storage: Hyperdisk Extreme, Hyperdisk Balanced  
-`x4-960-12t-metal` | 960 | 12,288 GB | RHEL, SUSE | Intel Sapphire Rapids | OLAP or OLTP |  OLAP workloads are certified with workload-based sizing for scale-up and scale-out up to 8 nodes. OLTP workloads are certified for scale-up, and scale-out up to 4 nodes. Block storage: Hyperdisk Extreme, Hyperdisk Balanced  
-`x4-960-16t-metal` | 960 | 16,384 GB | RHEL, SUSE | Intel Sapphire Rapids | OLAP or OLTP |  OLTP workloads are certified for scale out up to 4 nodes, and scale up. OLAP workloads are certified for scale out up to 8 nodes, and scale up. Block storage: Hyperdisk Extreme, Hyperdisk Balanced  
-`x4-1440-24t-metal` | 1,440 | 24,576 GB | RHEL, SUSE | Intel Sapphire Rapids | OLAP or OLTP |  OLTP workloads are certified for scale out up to 4 nodes, and scale up. OLAP workloads are certified for scale out up to 8 nodes, and scale up. Block storage: Hyperdisk Extreme, Hyperdisk Balanced  
-`x4-1920-32t-metal` | 1,920 | 32,768 GB | RHEL, SUSE | Intel Sapphire Rapids | OLAP or OLTP |  OLTP workloads are certified for scale out up to 4 nodes, and scale up. OLAP workloads are certified for scale out up to 8 nodes, and scale up. Block storage: Hyperdisk Extreme, Hyperdisk Balanced  
-**X5 memory-optimized bare metal machine types**  
-`x5-688-12T-metal` | 688 | 12,288 GB | RHEL, SUSE | Intel Granite Rapids | OLAP or OLTP | Scale-up only. Block storage: Hyperdisk Extreme, Hyperdisk Balanced  
-`x5-688-16T-metal` | 688 | 16,384 GB | RHEL, SUSE | Intel Granite Rapids | OLAP or OLTP | Scale-up only. Block storage: Hyperdisk Extreme, Hyperdisk Balanced  
-`x5-1376-24T-metal` | 1,376 | 24,576 GB | RHEL, SUSE | Intel Granite Rapids | OLAP or OLTP | Scale-up only. Block storage: Hyperdisk Extreme, Hyperdisk Balanced  
-`x5-1376-32T-metal` | 1,376 | 32,768 GB | RHEL, SUSE | Intel Granite Rapids | OLAP or OLTP | Scale-up only. Block storage: Hyperdisk Extreme, Hyperdisk Balanced  
-`x5-2064-48T-metal` Note | 2,064 | 49,152 GB | RHEL, SUSE | Intel Granite Rapids | OLAP or OLTP | Scale-up only. Block storage: Hyperdisk Extreme, Hyperdisk Balanced  
-  
-**Note:** The `x5-2064-48T-metal` machine type is available for use with SAP workloads that SAP manages under the RISE with SAP program. 
+For more information about different Compute Engine machine types and their use cases, see [Machine families resource and comparison guide](https://docs.cloud.google.com/compute/docs/machine-resource).
 
 #### Certified custom machine types for SAP HANA
 
@@ -900,61 +728,6 @@ If you need more granular or restrictive control over permissions than the prede
 For more information about the IAM roles that SAP programs need on Google Cloud, see [Identity and access management for SAP programs on Google Cloud](https://docs.cloud.google.com/sap/docs/security-for-sap/iam-for-sap-programs).
 
 For an overview of identity and access management for SAP on Google Cloud, see [Identity and access management overview for SAP on Google Cloud](https://docs.cloud.google.com/sap/docs/security-for-sap/iam-for-sap).
-
-### Bare metal machine types for SAP HANA
-
-This section provides information about running SAP HANA on the bare metal machine types provided by Compute Engine, which include the following:
-
-  * **X5** : The fifth generation of memory-optimized machine types offered by Compute Engine. These machines are designed to primarily support SAP workloads that require up to 48 TB of memory.
-
-    * For information about the X5 machine types that SAP has certified for use with SAP HANA, see X5 memory-optimized bare metal machine types.
-    * For information about the operating system versions that you can use with the X5 machine types to run SAP HANA workloads, see Certified operating systems for SAP HANA.
-    * To run SAP HANA workloads on X5 instances, you must use SLES for SAP 15 SP7 or later, or RHEL for SAP 10.0 or later.
-    * For information about the minimum block storage that you need to run SAP HANA on the X5 machine types, see Minimum sizes for SSD-based Persistent Disk and Hyperdisk volumes.
-  * **X4** : The fourth generation of memory-optimized machine types offered by Compute Engine. These machines are designed to primarily support SAP workloads that require up to 32 TB of memory.
-
-    * For information about the X4 machine types that SAP has certified for use with SAP HANA, see X4 memory-optimized bare metal machine types.
-    * For information about the operating system versions that you can use with the X4 machine types to run SAP HANA workloads, see Certified operating systems for SAP HANA.
-    * For information about the minimum block storage that you need to run SAP HANA on the X4 machine types, see Minimum sizes for SSD-based Persistent Disk and Hyperdisk volumes.
-    * For more information about the X4 machine series, see [X4 machine series](https://docs.cloud.google.com/compute/docs/memory-optimized-machines#x4_series).
-  * **C3 bare metal machine types** : The C3 series of general-purpose machines includes bare metal machine types.
-
-    * For information about the C3 bare metal machine types that SAP has certified for use with SAP HANA, see C3 general-purpose bare metal machine types.
-    * For information about the operating system versions that you can use with the C3 bare metal machine types to run SAP HANA workloads, see Certified operating systems for SAP HANA.
-    * For information about the minimum block storage that you need to run SAP HANA on the C3 bare metal machine types, see Minimum sizes for SSD-based Persistent Disk and Hyperdisk volumes.
-    * For more information about the C3 machine series, see [C3 machine series](https://docs.cloud.google.com/compute/docs/general-purpose-machines#c3_series).
-
-
-
-#### Deployment automation
-
-To run SAP HANA, you can deploy the bare metal instances using the Terraform configurations provided by Google Cloud. These configurations are designed to perform the following by default:
-
-  * Deploy Hyperdisk Extreme volumes to host the SAP HANA data and log volumes. To deploy Hyperdisk Balanced volumes instead, use the `disk_type` Terraform argument.
-  * Enable the SAP HANA Fast Restart option.
-  * If you're hosting the SAP HANA backup volume on a disk, then these Terraform configurations deploy a Hyperdisk Balanced volume for it by default. This disk deployment is determined by the `backup_disk_type` Terraform argument.
-
-
-
-For information about the Terraform configurations that Google Cloud provides for deploying SAP HANA, see [Supported SAP solutions](https://docs.cloud.google.com/sap/docs/tf-for-sap#supported_sap_solutions).
-
-#### Post-deployment tasks
-
-After you deploy a bare metal instance to run SAP HANA, we recommend that you do the following:
-
-  * Make sure that version 3.15 (latest) of Google Cloud's Agent for SAP is installed. For information about how to install the agent, see [Install and configure Google Cloud's Agent for SAP on a Compute Engine VM instance](https://docs.cloud.google.com/sap/docs/agent-for-sap/latest/install-config-on-vm). For information about how to update to the latest version, see [Update Google Cloud's Agent for SAP](https://docs.cloud.google.com/sap/docs/agent-for-sap/latest/operations#agent4sap-update).
-  * On X4 instances, optimize the OS configuration to best support SAP HANA workloads. You can do this by using Google Cloud's Agent for SAP. For more information, see [Configure guest OS on bare metal instances](https://docs.cloud.google.com/sap/docs/agent-for-sap/latest/configure-bare-metal-instances).
-  * Evaluate your SAP workload using Workload Manager - a rule-based validation service that lets you scan your workloads and detect deviations from standards, rules, and best practices prescribed by SAP, Google Cloud, and OS vendors. For information about how to evaluate your SAP workload, see [Create and run an evaluation](https://docs.cloud.google.com/workload-manager/docs/create-evaluation). For information about the supported evaluations for SAP workloads, see [Workload Manager best practices for SAP](https://docs.cloud.google.com/workload-manager/docs/reference/best-practices).
-
-
-
-#### Hyperthreading
-
-Hyperthreading is enabled by default and is the recommended setting for all Compute Engine machine types.
-
-For the optimal performance of SAP HANA on compute instances with over 1,000 vCPUs, we strongly recommend that you use SAP HANA 2.0 SPS7 revision 76 or later.
-
-If you're running an older version of SAP HANA with an OLTP workload on compute instances with over 1,000 vCPUs, then turning off hyperthreading might have a marginal performance benefit. We recommend testing this during load testing. For information about how to disable hyperthreading for your X4 instance by using Google Cloud's Agent for SAP, see [Disable hyperthreading for an X4 instance](https://docs.cloud.google.com/sap/docs/agent-for-sap/latest/configure-bare-metal-instances#disable-hyperthreading).
 
 ## Pricing and quota considerations for SAP HANA
 

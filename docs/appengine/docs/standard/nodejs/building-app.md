@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/nodejs/building-app/
 title: Build a Node.js app on App Engine \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:16.779196+00:00
+fetched_at: 2026-10-23T13:18:23.642610+00:00
 ---
 
 # Build a Node.js app on App Engine  |  App Engine standard environment  |  Google Cloud Documentation

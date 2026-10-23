@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/keyword-search/
 title: Use keyword-only search in Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:03:04.465031+00:00
+fetched_at: 2026-10-23T12:50:42.948748+00:00
 ---
 
 # Use keyword-only search in Knowledge Catalog  |  Google Cloud Documentation
@@ -36,11 +36,11 @@ Before you perform search, ensure that you are granted the required roles and ha
 To get the permissions that you need to search for entries and access search results in Knowledge Catalog, ask your administrator to grant you the following IAM roles: 
 
   * Search for entries: 
-    * [Dataplex Catalog Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogAdmin) (`roles/dataplex.catalogAdmin`) on the project used for search
-    * [Dataplex Catalog Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogEditor) (`roles/dataplex.catalogEditor`) on the project used for search
-    * [Dataplex Catalog Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) on the project used for search
-  * Search for metadata for BigQuery datasets and tables: [BigQuery Metadata Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.metadataViewer) (`roles/bigquery.metadataViewer`) on the dataset or table 
-  * Search for custom entries: [Dataplex Catalog Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) on the project 
+    * [**Dataplex Catalog Admin** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogAdmin) (`roles/dataplex.catalogAdmin`) on the project used for search
+    * [**Dataplex Catalog Editor** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogEditor) (`roles/dataplex.catalogEditor`) on the project used for search
+    * [**Dataplex Catalog Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) on the project used for search
+  * Search for metadata for BigQuery datasets and tables: [**BigQuery Metadata Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.metadataViewer) (`roles/bigquery.metadataViewer`) on the dataset or table 
+  * Search for custom entries: [**Dataplex Catalog Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) on the project 
 
 
 
@@ -56,7 +56,7 @@ To search for resources using keyword search, follow these steps:
 
   1. In the Google Cloud console, go to the Knowledge Catalog **Search** page.
 
-[Go to Search](https://console.cloud.google.com/dataplex/dp-search-nl)
+[Go to Search](https://console.cloud.google.com/dataplex/dp-search)
 
   2. In the **Find resources across projects** field, enter your query.
 
@@ -611,7 +611,7 @@ To use abbreviated syntax in your queries, use `|` (vertical bar) for `OR` opera
 
 The following examples show how to use abbreviated syntax with keyword-only search.
 
-  * Search for entries inside one of many projects using the `OR` operator
+  * Search for entries inside one of many projects using the `OR` operator:
         
         projectid:(id1|id2|id3|id4)
         
@@ -640,6 +640,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

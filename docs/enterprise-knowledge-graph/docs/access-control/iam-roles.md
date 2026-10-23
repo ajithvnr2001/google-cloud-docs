@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/enterprise-knowledge-graph/docs/access-control/iam-roles/
 title: IAM roles for Enterprise Knowledge Graph \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:34.222746+00:00
+fetched_at: 2026-10-23T13:11:47.006664+00:00
 ---
 
 # IAM roles for Enterprise Knowledge Graph  |  Google Cloud Documentation

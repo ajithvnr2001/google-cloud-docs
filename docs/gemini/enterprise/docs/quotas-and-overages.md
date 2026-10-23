@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/quotas-and-overages/
 title: Quotas and overages \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:45.577133+00:00
+fetched_at: 2026-10-23T12:55:10.269700+00:00
 ---
 
 # Quotas and overages  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -50,7 +50,50 @@ Within an edition's quota pool, the following rules apply. For example, if you h
 
   * The 10 Standard edition users share a combined pool of 1,600 queries for the day.
   * One power user can use 500 queries, leaving 1,100 queries for the remaining users in that edition.
-  * Individual usage isn't capped at the per-user limit; all users in the edition draw from their edition's shared pool until it is depleted.
+  * By default, users share a single pool of quota for the edition. To restrict individual quota usage, an administrator must configure a single-user quota limit.
+
+
+
+### Single-user quota limits
+
+By default, all users share the edition's quota pool without individual limits. To restrict consumption per user, turn on the **Limit any single-user's quota** setting on the **Usage & Spending > Usage** page in the Google Cloud console.
+
+**Note:** The user quota multiplier doesn't apply to AI developer tools, including Google Antigravity.
+
+For more information, see [Configure a single-user quota limit](https://docs.cloud.google.com/gemini/enterprise/docs/feature-usage#configure-single-user-quota-limit).
+
+When you configure a single-user quota limit, the following rules apply:
+
+  * **Supported editions:** You can configure single-user quota limits for Gemini Enterprise Standard, Gemini Enterprise Plus, and Gemini Enterprise Standard Emerging Market editions.
+  * **Per-edition and per-location configuration:** When you enable the limit, you can set a **Multiplier** (a whole number of 1 or greater) for each edition and location. If you don't specify a value, the multiplier defaults to 10.
+
+Gemini Enterprise calculates a user's maximum quota usage for a feature by multiplying the edition's per-user quota for that feature by the multiplier. This limit applies to all users in the specified edition and location; you can't customize it for individual users.
+
+  * **Uniform across features:** The multiplier applies uniformly across the following pooled subscription features within that edition and location:
+
+    * Assistant queries
+    * No-code agent building tools
+    * Video generation, except in the Standard Emerging Market edition where video generation is overage-only
+    * Image generation, except in the Standard Emerging Market edition where image generation is overage-only
+    * Deep Research
+
+Quota limits are tracked and enforced independently for each feature. If a user reaches their single-user quota limit for one feature, such as image generation, they can still use other features, such as Assistant queries.
+
+  * **Example:** Your project and location have 100 Gemini Enterprise Standard edition licenses. Each license provides a quota of 160 Assistant queries per day and 5 images per day, creating a total shared pool of 16,000 queries and 500 images per day. If you set a 5x multiplier, each user can consume up to 800 Assistant queries per day (5 × 160) and 25 images per day (5 × 5) from the shared pool. If a user reaches their limit of 25 images for the day, they can still use up to 800 Assistant queries and other features.
+
+
+
+
+#### How single-user quota limits interact with overages
+
+Single-user quota limits apply only to the subscription quota pool. They don't restrict pay-as-you-go overage usage:
+
+  * **When the edition's pooled quota has remaining capacity:** If an individual user reaches their single-user quota limit for a feature, Gemini Enterprise restricts usage of that feature for that user until the quota resets (or until the edition's pooled quota for that feature is depleted if **Overages** are enabled). The user can continue using other features that haven't reached their limit, and other users in the edition can continue using the remaining pooled quota.
+
+  * **When the edition's pooled quota is depleted:**
+
+    * If **Overages** are enabled for the edition, the single-user quota limit no longer restricts usage. All users in the edition, including users who previously reached their single-user limit, can continue using the feature at pay-as-you-go overage rates, up to any configured project monthly spend limit.
+    * If **Overages** are disabled for the edition, feature usage stops for all users in that edition until the pooled quota resets.
 
 
 
@@ -403,6 +446,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

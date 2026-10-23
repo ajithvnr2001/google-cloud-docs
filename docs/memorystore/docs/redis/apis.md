@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/redis/apis/
 title: APIs and reference \u00a0|\u00a0 Memorystore for Redis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:16:56.401350+00:00
+fetched_at: 2026-10-23T11:00:57.710663+00:00
 ---
 
 # APIs and reference  |  Memorystore for Redis  |  Google Cloud Documentation

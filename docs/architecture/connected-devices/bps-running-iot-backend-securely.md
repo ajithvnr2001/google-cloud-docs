@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/connected-devices/bps-running-iot-backend-securely/
 title: Best practices for running an IoT backend on Google Cloud \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:53.523849+00:00
+fetched_at: 2026-10-23T13:18:34.291844+00:00
 ---
 
 # Best practices for running an IoT backend on Google Cloud  |  Cloud Architecture Center  |  Google Cloud Documentation

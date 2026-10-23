@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/data-relationships/
 title: View data relationships in Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:29.130747+00:00
+fetched_at: 2026-10-23T10:21:30.436150+00:00
 ---
 
 # View data relationships in Knowledge Catalog  |  Google Cloud Documentation
@@ -46,7 +46,7 @@ Data relationships illustrate how data assets connect. For example, if you locat
 Knowledge Catalog automatically discovers and stores potential links and common relationships between data assets, helping you understand the nature of each connection. The relationship data originates from various sources, such as the following:
 
   * Historical query logs Knowledge Catalog that continuously analyze query history to detect potential `JOIN` patterns between tables.
-  * [Data insights](https://docs.cloud.google.com/knowledge-catalog/docs/data-insights) suggest data relationships on demand by analyzing schema attributes and data overlaps using large language models.
+  * [Data insights](https://docs.cloud.google.com/knowledge-catalog/docs/data-insights-structured-data) suggest data relationships on demand by analyzing schema attributes and data overlaps using large language models.
 
 
 

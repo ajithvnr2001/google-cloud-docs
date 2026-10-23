@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/asana/configure/
 title: Asana \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:44.212122+00:00
+fetched_at: 2026-10-23T13:03:02.875033+00:00
 ---
 
 # Asana  |  Integration Connectors  |  Google Cloud Documentation

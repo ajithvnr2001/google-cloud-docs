@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/xero/configure/
 title: Xero \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:53.371348+00:00
+fetched_at: 2026-10-23T13:00:36.054088+00:00
 ---
 
 # Xero  |  Integration Connectors  |  Google Cloud Documentation

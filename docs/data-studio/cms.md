@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/cms/
 title: Use customer-managed storage \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:35.370369+00:00
+fetched_at: 2026-10-23T13:19:55.755890+00:00
 ---
 
 # Use customer-managed storage  |  Data Studio  |  Google Cloud Documentation

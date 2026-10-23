@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-delete-secret-with-etag/
 title: Delete a secret with ETags \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:47.178365+00:00
+fetched_at: 2026-10-23T09:41:00.010688+00:00
 ---
 
 # Delete a secret with ETags  |  Secret Manager  |  Google Cloud Documentation

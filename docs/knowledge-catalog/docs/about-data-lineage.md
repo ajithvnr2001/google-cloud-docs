@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/about-data-lineage/
 title: About data lineage \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:02:58.066784+00:00
+fetched_at: 2026-10-23T10:21:55.998401+00:00
 ---
 
 # About data lineage  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -172,7 +172,7 @@ You can populate lineage information in Knowledge Catalog in the following ways:
 
 ### BigQuery
 
-**Note:** Data lineage is recorded only for BigQuery tables and views. You can configure the ingestion of data lineage to enable or deactivate automatic data lineage ingestion for BigQuery. The lineage ingestion control feature is in [Preview](https://cloud.google.com/products#product-launch-stages) stage.
+**Note:** Data lineage is recorded only for BigQuery tables and views. You can configure the ingestion of data lineage to enable or deactivate automatic data lineage ingestion for BigQuery.
 
 When you enable data lineage in your BigQuery project, Knowledge Catalog automatically records lineage information for the following:
 
@@ -289,10 +289,6 @@ When you enable the Data Lineage API, Google Cloud systems that support data lin
 
 ## Control lineage ingestion
 
-**Preview**
-
-This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
-
 Controlling lineage data generation helps you manage costs and governance policies. For example, you can disable lineage collection for development projects or high-volume workloads that don't require lineage tracking.
 
 For information on how to configure and control lineage ingestion, see [Control lineage ingestion for a service](https://docs.cloud.google.com/knowledge-catalog/docs/use-lineage#control-ingestion).
@@ -373,7 +369,7 @@ Column-level lineage has the following additional limitations:
 
 ## Pricing
 
-Knowledge Catalog uses the premium processing SKU (measured in Data Compute Units, or DCUs) to charge for data lineage. For rate details, see [Knowledge Catalog pricing](https://cloud.google.com/dataplex/pricing) or use the [ Google Cloud Pricing Calculator](https://cloud.google.com/products/calculator).
+Knowledge Catalog uses the premium processing SKU (measured in Data Compute Units, or DCUs) to charge for data lineage. For rate details, see [Knowledge Catalog pricing](https://cloud.google.com/products/knowledge-catalog/pricing) or use the [Google Cloud Pricing Calculator](https://cloud.google.com/products/calculator).
 
 ### Cost factors and billing impact
 
@@ -398,7 +394,7 @@ When you plan your data lineage implementation, keep the following cost factors 
 
 ## What's next
 
-  * Learn how to [track data lineage for a BigQuery table copy and query jobs](https://docs.cloud.google.com/knowledge-catalog/docs/track-lineage).
+  * Learn how to [track data lineage for a BigQuery table copy and query jobs](https://docs.cloud.google.com/knowledge-catalog/docs/track-lineage-quickstart).
 
   * Learn how to [use data lineage with Google Cloud systems](https://docs.cloud.google.com/knowledge-catalog/docs/use-lineage).
 
@@ -415,6 +411,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

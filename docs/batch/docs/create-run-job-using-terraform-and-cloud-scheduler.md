@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/create-run-job-using-terraform-and-cloud-scheduler/
 title: Create and run Batch jobs using Terraform and Cloud Scheduler \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:30.493791+00:00
+fetched_at: 2026-10-23T13:17:57.792387+00:00
 ---
 
 # Create and run Batch jobs using Terraform and Cloud Scheduler  |  Google Cloud Documentation

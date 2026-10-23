@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/cmek/
 title: CMEK compliance in API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:17.937147+00:00
+fetched_at: 2026-10-23T13:16:29.904513+00:00
 ---
 
 # CMEK compliance in API Gateway  |  Google Cloud Documentation

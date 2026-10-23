@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/concepts/about-bare-metal/
 title: Distributed Cloud software only for bare metal overview \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:22:07.893719+00:00
+fetched_at: 2026-10-23T10:46:03.258364+00:00
 ---
 
 # Distributed Cloud software only for bare metal overview  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -145,6 +145,59 @@ Replace VERSION with a minor version from 1.6 to 1.16 and copy the URL to the ad
 
 Because clusters created using Google Distributed Cloud run in your own infrastructure, they're highly configurable. Once you select the [deployment model](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/install-prep) that meets your particular organizational and use case needs, you can choose from a range of supported load balancing modes, IP addressing options, security features, connectivity options, and more. Setting up a cluster involves making decisions before and during installation. This documentation set includes guides to help your team decide on the right features and options for you. To ensure that your installation meets the needs of your organization, consult with your networking and application teams.
 
+## Where your data is stored
+
+When you run Distributed Cloud software only for bare metal, your clusters, applications, and business data stay in your data center. By default, Google Distributed Cloud sends Google Cloud information about your clusters, such as their settings, health, and usage, but it doesn't send your application data.
+
+### Data that stays in your data center
+
+The following data stays in your data center:
+
+  * Containers, Pods, PersistentVolumes, local storage backends, and the data that your applications process.
+  * The control plane (`kube-apiserver`, `kube-scheduler`, and `kube-controller-manager`) and the `etcd` database, which stores all of your Kubernetes objects.
+  * Private keys for the certificate authorities (CAs), including the cluster CA, the `etcd` CA, and the front-proxy CA. The admin cluster's user cluster namespace stores user cluster CAs.
+  * Application secrets, OAuth tokens, SSH private keys, container registry credentials, and service account key files are stored in `etcd` or on your administrator workstation. They aren't sent to the GKE On-Prem API, and the default diagnostic snapshot doesn't include cluster credentials.
+  * Your cluster configuration file is stored on your administrator workstation. If a cluster is enrolled in the GKE On-Prem API, some settings are sent. See Data that's sent to Google Cloud for more information.
+  * Audit logs are written to disk only if you turn off Cloud Audit Logs on the control plane nodes.
+  * If you set up a service account for diagnostic snapshot uploads, the file is uploaded to Cloud Storage. You can choose whether to share a snapshot with Cloud Customer Care.
+
+
+
+### Data that's sent to Google Cloud
+
+The following table shows what's sent, how it's used and stored, and whether you can turn it off:
+
+Data | What's sent | Use and storage | Default  
+---|---|---|---  
+**Connection and fleet registration**  
+(`gkehub.googleapis.com`, `gkeconnect.googleapis.com`) | 
+
+  * Google Cloud project, fleet membership name, cluster UID, public keys, Kubernetes version, cluster size, and identity provider configuration.
+  * Kubernetes data you request through the Google Cloud console or the connect gateway.
+  * Your encrypted Kubernetes token, if you sign in from the Google Cloud console in your user profile until you sign out.
+
+| Manage clusters from the Google Cloud console, the connect gateway, and fleet with Connect Agent.  | **Required**  
+**Cluster settings and status**  
+(`gkeonprem.googleapis.com`) | 
+
+  * Name, UID, description, annotations, version, lifecycle state, control plane VIP and port.
+  * Node pool names, node IP addresses, Pod and Service CIDRs, load balancer VIPs and address pools, BGP peer IP addresses and ASNs, proxy URLs, local storage paths.
+  * Email addresses of cluster administrators.
+
+| Lets you manage clusters with the Google Cloud console, the Google Cloud CLI, or Terraform. Stored by the GKE On-Prem API in the region set in `gkeOnPremAPI.location`, which defaults to `clusterOperations.location`. | **On** in version 1.16 and later, if the GKE On-Prem API is enabled in your Google Cloud project. To turn it off, set `gkeOnPremAPI.enabled` to `false`.  
+**Billing usage**  
+(`anthos.googleapis.com`) | vCPU capacity, node count, and license entitlement status. | Used for metering, billing, and license checks. | **Required**. Billing records are buffered during an outage and sent later.  
+**System health data**  
+(`logging.googleapis.com`, `monitoring.googleapis.com`, `opsconfigmonitoring.googleapis.com`) | 
+
+  * Metric: CPU, memory, disk, and network use, `kubelet` metrics, and `kube-state-metrics` for nodes and system Pods.
+  * Logs: container logs and health check results from all admin cluster components, and from the `kube-system`, `gke-system`, `gke-connect`, `istio-system`, `config-management-system`, `knative-serving`, `monitoring-system`, `gatekeeper-system`, and `cnrm-system` namespaces in user clusters.
+  * Metadata: names and labels of nodes, Pods, Deployments, and Services.
+
+| Used for Cloud Monitoring, Google Cloud console status views, and Customer Care troubleshooting. Stored in the Google Cloud project set in `clusterOperations.projectID`. Metrics are stored in the region set in `clusterOperations.location`, and logs follow your Log Router settings. | **On** for system logs and metrics, which full Customer Care support and SLA coverage require. **Off** for application logs and metrics, unless you set `enableCloudLoggingForApplications` or `enableGMPForApplications` to `true` in the `Stackdriver` resource.  
+**Audit logs**  
+(`anthosaudit.googleapis.com`) | Admin Activity audit logs (`audit-proxy`): who changed what through the `kube-apiserver`, and when. Entries include the time, cluster, host or VM, user or service account, RBAC role, operation, and result. Read requests aren't recorded. | Stored in Cloud Audit Logs in your Google Cloud project, in the `_Required` bucket, and kept for 400 days. | **On**. To turn it off, set `clusterOperations.disableCloudAuditLogging` to `true`. Audit logs are then kept only on the control plane nodes' disks.  
+  
 ## What's next
 
 To get started with Google Distributed Cloud, see the following guides:
@@ -159,6 +212,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

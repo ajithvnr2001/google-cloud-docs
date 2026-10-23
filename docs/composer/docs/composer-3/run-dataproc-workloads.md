@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/composer/docs/composer-3/run-dataproc-workloads/
 title: Run Managed Service for Apache Spark workloads with Managed Airflow \u00a0|\u00a0 Managed Service for Apache Airflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:40.134893+00:00
+fetched_at: 2026-10-23T13:00:27.934094+00:00
 ---
 
 # Run Managed Service for Apache Spark workloads with Managed Airflow  |  Managed Service for Apache Airflow  |  Google Cloud Documentation

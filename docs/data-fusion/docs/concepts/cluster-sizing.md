@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/concepts/cluster-sizing/
 title: Cluster sizing \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:45:02.397683+00:00
+fetched_at: 2026-10-23T13:19:44.710928+00:00
 ---
 
 # Cluster sizing  |  Cloud Data Fusion  |  Google Cloud Documentation

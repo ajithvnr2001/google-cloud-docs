@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/local-development/vscode/tutorial-test/
 title: Step 4: Test your API \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:47:58.469506+00:00
+fetched_at: 2026-10-23T13:15:03.839468+00:00
 ---
 
 # Step 4: Test your API  |  Apigee  |  Google Cloud Documentation

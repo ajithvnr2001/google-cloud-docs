@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/roles-overview/
 title: Roles overview \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:07.709548+00:00
+fetched_at: 2026-10-23T13:09:58.074279+00:00
 ---
 
 # Roles overview  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/user-events/
 title: About user events \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:42.478634+00:00
+fetched_at: 2026-10-23T13:11:05.131107+00:00
 ---
 
 # About user events  |  Gemini Enterprise  |  Google Cloud Documentation

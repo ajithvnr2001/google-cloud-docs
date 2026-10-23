@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-create-regional-secret/
 title: Create regional secret \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:42.428823+00:00
+fetched_at: 2026-10-23T09:41:23.067744+00:00
 ---
 
 # Create regional secret  |  Secret Manager  |  Google Cloud Documentation

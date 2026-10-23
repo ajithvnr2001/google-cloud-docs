@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/data-governance-in-an-overview/
 title: Data governance in Data Studio: An overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:27.142527+00:00
+fetched_at: 2026-10-23T13:19:37.248948+00:00
 ---
 
 # Data governance in Data Studio: An overview  |  Google Cloud Documentation

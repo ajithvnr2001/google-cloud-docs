@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/datastore/managing-datastore/
 title: Managing Datastore from the console \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:06.755754+00:00
+fetched_at: 2026-10-23T13:17:20.988745+00:00
 ---
 
 # Managing Datastore from the console  |  App Engine standard environment  |  Google Cloud Documentation

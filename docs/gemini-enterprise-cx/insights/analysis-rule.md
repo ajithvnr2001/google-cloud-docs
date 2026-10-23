@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/analysis-rule/
 title: Configure analysis rules \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:28.767784+00:00
+fetched_at: 2026-10-23T13:12:25.631415+00:00
 ---
 
 # Configure analysis rules  |  Customer Experience Insights  |  Google Cloud Documentation

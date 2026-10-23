@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/support/
 title: Getting support \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:14.130322+00:00
+fetched_at: 2026-10-23T13:15:07.900375+00:00
 ---
 
 # Getting support  |  App Hub  |  Google Cloud Documentation

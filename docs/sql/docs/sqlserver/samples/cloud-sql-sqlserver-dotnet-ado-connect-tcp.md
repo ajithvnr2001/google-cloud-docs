@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/samples/cloud-sql-sqlserver-dotnet-ado-connect-tcp/
 title: Create a TCP connection when using ADO.NET \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:10.389543+00:00
+fetched_at: 2026-10-23T10:18:37.668862+00:00
 ---
 
 # Create a TCP connection when using ADO.NET  |  Cloud SQL for SQL Server  |  Google Cloud Documentation

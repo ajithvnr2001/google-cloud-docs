@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-overview/
 title: Bare Metal Solution overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:13.577481+00:00
+fetched_at: 2026-10-23T13:18:51.527450+00:00
 ---
 
 # Bare Metal Solution overview  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-discovery-multi-location-search/
 title: Multiple location search (v3) \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:24.581553+00:00
+fetched_at: 2026-10-23T09:41:46.224884+00:00
 ---
 
 # Multiple location search (v3)  |  Job Search  |  Google Cloud Documentation

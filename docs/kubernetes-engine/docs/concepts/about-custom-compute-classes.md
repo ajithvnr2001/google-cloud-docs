@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes/
 title: About custom ComputeClasses \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:23:07.523893+00:00
+fetched_at: 2026-10-23T12:51:07.047998+00:00
 ---
 
 # About custom ComputeClasses  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -204,7 +204,14 @@ For more information about the supported disk types for each machine series, see
 
 The `machineFamily` field accepts any [Compute Engine machine series that GKE supports](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/machine-support#machine-support), like `n2` or `c3`. If unspecified, the default is `e2`. When you use the `machineFamily` field, GKE provisions nodes from that series with a machine type that is large enough to run your Pods. The autoscaler algorithm determines the most appropriate size based on the aggregate resource requests of all pending Pods. For more control over the exact machine size, use the `machineType` field instead.
 
-Requesting a broader machine family doesn't provision bare metal machine types. For example, requesting `c3` or `c4a` doesn't provision machine types such as `c3-standard-192-metal` or `c4a-standard-72-metal` respectively. Because bare metal node types require requesting an exact machine type, you cannot use the predefined Autopilot `Performance` ComputeClass either. Instead, you must create a custom ComputeClass and specify the exact machine type in the `machineType` field. Using `c3` or `c4a` bare metal machine types with ComputeClasses, node pool auto-creation, or Autopilot mode requires GKE version 1.35.3-gke.1389000 or later.
+Requesting a broader machine family doesn't provision bare metal machine types. For example, requesting `c3` or `c4a` doesn't provision machine types such as `c3-standard-192-metal` or `c4a-standard-72-metal` respectively. Because bare metal node types require requesting an exact machine type, you cannot use the predefined Autopilot `Performance` ComputeClass either.
+
+To provision bare metal machine types, you create a custom ComputeClass and specify the exact machine type in the `machineType` field. Bare metal machine types have the following version requirements:
+
+  * `c3` and `c4a` bare metal machine types with ComputeClasses, node pool auto-creation, or Autopilot mode require GKE version 1.35.3-gke.1389000 or later.
+  * `c4d` bare metal machine types with ComputeClasses, node pool auto-creation, or Autopilot mode require GKE version 1.37.0-gke.4713000 or later. Node pools in Standard mode that use `c4d` bare metal machine types require GKE version 1.36 or later. In versions earlier than 1.37.0-gke.4713000, you must manually create and scale these Standard node pools.
+
+
 
 You can use other `spec.priorities` fields alongside the `machineFamily` field to declaratively define your compute requirements. For example:
 
@@ -1422,6 +1429,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

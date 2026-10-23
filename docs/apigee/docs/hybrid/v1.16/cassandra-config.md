@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/cassandra-config/
 title: StorageClass configuration \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:57.394209+00:00
+fetched_at: 2026-10-23T13:16:14.222363+00:00
 ---
 
 # StorageClass configuration  |  Apigee  |  Google Cloud Documentation

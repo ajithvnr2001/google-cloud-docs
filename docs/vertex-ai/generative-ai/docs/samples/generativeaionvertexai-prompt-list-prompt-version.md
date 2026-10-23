@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-prompt-list-prompt-version/
 title: List available prompt versions \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:35.888813+00:00
+fetched_at: 2026-10-23T09:36:43.834000+00:00
 ---
 
 # List available prompt versions  |  Generative AI on Vertex AI  |  Google Cloud Documentation

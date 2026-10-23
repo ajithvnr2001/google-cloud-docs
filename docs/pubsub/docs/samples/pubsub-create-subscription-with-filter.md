@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-create-subscription-with-filter/
 title: Create subscription with filter \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:13.956641+00:00
+fetched_at: 2026-10-23T10:04:03.826378+00:00
 ---
 
 # Create subscription with filter  |  Pub/Sub  |  Google Cloud Documentation

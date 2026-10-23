@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-create-pull-subscription/
 title: Create pull subscription \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:11.576432+00:00
+fetched_at: 2026-10-23T12:55:06.293811+00:00
 ---
 
 # Create pull subscription  |  Pub/Sub  |  Google Cloud Documentation
@@ -165,6 +165,65 @@ To authenticate to Pub/Sub, set up Application Default Credentials. For more inf
                   subscriptionName, topicName, [PushConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-pubsub/latest/com.google.pubsub.v1.PushConfig.html).getDefaultInstance(), 10);
           System.out.println("Created pull subscription: " + subscription.[getName](https://docs.cloud.google.com/java/docs/reference/google-cloud-pubsub/latest/com.google.pubsub.v1.Subscription.html#com_google_pubsub_v1_Subscription_getName__)());
         }
+      }
+    }
+
+### Kotlin
+    
+    
+    import com.google.api.gax.rpc.AlreadyExistsException
+    import com.google.api.gax.rpc.ApiException
+    import com.google.cloud.pubsub.v1.SubscriptionAdminClient
+    import com.google.pubsub.v1.PushConfig
+    import com.google.pubsub.v1.SubscriptionName
+    import com.google.pubsub.v1.TopicName
+    import java.io.IOException
+    
+    /**
+     * Creates a pull subscription attached to a Google Cloud Pub/Sub topic.
+     *
+     * @param projectId Google Cloud project identifier (for example, "example-project-id").
+     * @param topicId Existing Pub/Sub topic identifier (for example, "example-topic-id").
+     * @param subscriptionId Identifier for the new subscription (for example, "example-subscription-id").
+     */
+    fun createSubscription(
+      projectId: String,
+      topicId: String,
+      subscriptionId: String,
+    ) {
+      val topicName = TopicName.of(projectId, topicId)
+      val subscriptionName = SubscriptionName.of(projectId, subscriptionId)
+    
+      // An empty PushConfig configures standard pull delivery with a 10-second ack deadline.
+      val pushConfig = PushConfig.getDefaultInstance()
+      val ackDeadlineSeconds = 10
+    
+      try {
+        SubscriptionAdminClient.create().use { subscriptionAdminClient ->
+          val response =
+            subscriptionAdminClient.createSubscription(
+              subscriptionName,
+              topicName,
+              pushConfig,
+              ackDeadlineSeconds,
+            )
+    
+          println("Resource ID: ${response.name}")
+          println("Ack Deadline Seconds: ${response.ackDeadlineSeconds}")
+          println("Topic: ${response.topic}")
+        }
+      } catch (err: AlreadyExistsException) {
+        System.err.println(
+          "error: subscription '$subscriptionId' already exists on topic '$topicId' in project '$projectId': ${err.message}"
+        )
+      } catch (err: ApiException) {
+        System.err.println(
+          "error: failed to create subscription '$subscriptionId' on topic '$topicId' in project '$projectId': ${err.message}"
+        )
+      } catch (err: IOException) {
+        System.err.println(
+          "error: failed to initialize SubscriptionAdminClient for subscription '$subscriptionId' on topic '$topicId' in project '$projectId': ${err.message}"
+        )
       }
     }
 

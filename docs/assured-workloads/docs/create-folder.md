@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/create-folder/
 title: Create a new Assured Workloads folder \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:09.509047+00:00
+fetched_at: 2026-10-23T13:19:43.351365+00:00
 ---
 
 # Create a new Assured Workloads folder  |  Google Cloud Documentation

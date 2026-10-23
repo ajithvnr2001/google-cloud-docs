@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/samples/securitycenter-delete-notification-config/
 title: Delete a NotificationConfig \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:36.501586+00:00
+fetched_at: 2026-10-23T11:33:12.066120+00:00
 ---
 
 # Delete a NotificationConfig  |  Security Command Center  |  Google Cloud Documentation
@@ -218,7 +218,7 @@ To authenticate to Security Command Center, set up Application Default Credentia
     # "organizations/123/notificationConfigs/my-config" this would be "my-config".
     # config_id = "YOUR_CONFIG_ID"
     
-    client = Google::Cloud::[SecurityCenter](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security_center-v2/latest/Google-Cloud-SecurityCenter.html).[security_center](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security_center/latest/Google-Cloud-SecurityCenter.html)
+    client = Google::Cloud::[SecurityCenter](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security_center/latest/Google-Cloud-SecurityCenter.html).[security_center](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security_center/latest/Google-Cloud-SecurityCenter.html)
     
     # You can also use a project or folder as a parent.
     config_path = client.notification_config_path organization:        org_id,

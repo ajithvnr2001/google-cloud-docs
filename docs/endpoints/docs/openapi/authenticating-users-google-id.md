@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/authenticating-users-google-id/
 title: Using Google ID tokens to authenticate users \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:13.762985+00:00
+fetched_at: 2026-10-23T13:01:41.086232+00:00
 ---
 
 # Using Google ID tokens to authenticate users  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation

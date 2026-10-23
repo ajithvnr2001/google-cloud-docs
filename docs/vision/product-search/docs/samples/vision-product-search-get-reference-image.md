@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/product-search/docs/samples/vision-product-search-get-reference-image/
 title: Get the reference images. \u00a0|\u00a0 Vision API Product Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:01.051914+00:00
+fetched_at: 2026-10-23T09:35:53.751100+00:00
 ---
 
 # Get the reference images.  |  Vision API Product Search  |  Google Cloud Documentation

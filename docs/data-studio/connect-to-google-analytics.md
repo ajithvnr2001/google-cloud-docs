@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/connect-to-google-analytics/
 title: Connect to Google Analytics \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:33.017782+00:00
+fetched_at: 2026-10-23T13:20:37.261461+00:00
 ---
 
 # Connect to Google Analytics  |  Data Studio  |  Google Cloud Documentation

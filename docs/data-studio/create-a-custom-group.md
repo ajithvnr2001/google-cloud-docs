@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/create-a-custom-group/
 title: Create a custom group \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:28.605635+00:00
+fetched_at: 2026-10-23T13:20:12.264417+00:00
 ---
 
 # Create a custom group  |  Data Studio  |  Google Cloud Documentation

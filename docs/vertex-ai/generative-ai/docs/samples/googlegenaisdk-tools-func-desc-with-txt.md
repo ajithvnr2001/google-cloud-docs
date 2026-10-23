@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/googlegenaisdk-tools-func-desc-with-txt/
 title: Generate Content using Function Calling \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:05.273793+00:00
+fetched_at: 2026-10-23T08:57:55.299453+00:00
 ---
 
 # Generate Content using Function Calling  |  Generative AI on Vertex AI  |  Google Cloud Documentation

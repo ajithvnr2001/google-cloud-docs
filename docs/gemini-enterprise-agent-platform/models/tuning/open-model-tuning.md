@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/tuning/open-model-tuning/
 title: Supervised and distillation fine-tuning for open models \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:26:28.502299+00:00
+fetched_at: 2026-10-23T12:43:24.149410+00:00
 ---
 
 # Supervised and distillation fine-tuning for open models  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -427,7 +427,7 @@ This starts a tuning job, which you can see in the Tuning page under the **Manag
 
 Once the tuning job has finished, you can view the information about the tuned model in the **Details** tab.
 
-### Agent Platform SDK (Supervised)
+###  Agent Platform SDK (Supervised) 
 
 Replace the parameter values with your own and then run the following code to create a tuning job:
     
@@ -516,7 +516,7 @@ To deploy the tuned model to a Gemini Enterprise Agent Platform endpoint:
 
 
 
-### Agent Platform SDK for Python
+###  Agent Platform SDK for Python 
 
 Deploy a [`G2 machine`](https://docs.cloud.google.com/compute/docs/gpus#l4-gpus) using a [prebuilt container](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/pre-built-containers):
     
@@ -596,6 +596,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

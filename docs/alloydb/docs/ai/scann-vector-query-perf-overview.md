@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/scann-vector-query-perf-overview/
 title: ScaNN vector query performance overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:30:37.426619+00:00
+fetched_at: 2026-10-23T13:08:33.071964+00:00
 ---
 
 # ScaNN vector query performance overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -25,7 +25,7 @@ The Scalable Nearest Neighbors (ScaNN) index in AlloyDB for PostgreSQL accelerat
 
 To achieve both a high query-per-second rate (QPS) and a high recall with your nearest-neighbor queries, you must partition the tree of your `ScaNN` index in a way that is most appropriate to your data and your queries.
 
-A common characteristic of the current generation of high-dimensional embedding models is they can still retain much of the information at much lower dimensionality, for example 90% of the information can be retained with only 20% of the embedding's dimensions. To help speed up such datasets, AlloyDB ScaNN will automatically perform dimension reduction using Principal Component Analysis (see `scann.enable_pca` below) on the indexed vectors which further reduces cpu & memory usage for the vector search. Because dimension reduction still causes minor recall loss in the index, AlloyDB ScaNN compensates through an initial ranking step with a larger number of PCA'ed vector candidates from the index then re-ranking them by the original vectors (see `scann.pre_reordering_num_neighbors`).
+A common characteristic of the current generation of high-dimensional embedding models is that they can still retain much of the information at much lower dimensionality; for example, 90% of the information can be retained with only 20% of the embedding's dimensions. To help speed up such datasets, AlloyDB AI ScaNN automatically performs dimension reduction using Principal Component Analysis (`scann.enable_pca` in the [ScaNN index reference](https://docs.cloud.google.com/alloydb/docs/reference/ai/scann-index-reference)) on the indexed vectors, which further reduces CPU and memory usage for the vector search. Because dimension reduction still causes minor recall loss in the index, AlloyDB AI ScaNN compensates through an initial ranking step with a larger number of PCA-reduced vector candidates from the index and then re-ranking them by the original vectors (`scann.pre_reordering_num_neighbors` in the [ScaNN index reference](https://docs.cloud.google.com/alloydb/docs/reference/ai/scann-index-reference)).
 
 ## What's next
 
@@ -37,6 +37,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

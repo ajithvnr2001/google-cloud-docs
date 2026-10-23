@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/saml-attribute-propagation/
 title: Configure SAML attribute propagation \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:27:22.595850+00:00
+fetched_at: 2026-10-23T13:09:45.685785+00:00
 ---
 
 # Configure SAML attribute propagation  |  Identity-Aware Proxy  |  Google Cloud Documentation

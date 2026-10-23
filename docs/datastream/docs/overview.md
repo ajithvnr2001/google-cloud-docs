@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/overview/
 title: Datastream overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:25:51.761138+00:00
+fetched_at: 2026-10-23T10:03:42.306782+00:00
 ---
 
 # Datastream overview  |  Google Cloud Documentation
@@ -21,23 +21,11 @@ Send feedback
 
 #  Datastream overview Stay organized with collections  Save and categorize content based on your preferences. 
 
-Datastream is a serverless and easy-to-use change data capture (CDC) and replication service that lets you synchronize data reliably, and with minimal latency.
+Datastream is a serverless change data capture (CDC) and replication service that lets you synchronize data across heterogeneous databases and applications with minimal latency. Because Datastream is serverless, it scales automatically without requiring you to provision or manage resources.
 
-Datastream provides seamless replication of data from operational databases into BigQuery. In addition, Datastream supports writing the change event stream into Cloud Storage, and offers streamlined integration with Dataflow templates to build custom workflows for loading data into a wide range of destinations, such as Cloud SQL and Spanner. You can also use Datastream to take advantage of the event stream directly from Cloud Storage to realize event-driven architectures. Datastream supports database sources such as MySQL, Oracle, PostgreSQL (including AlloyDB for PostgreSQL), SQL Server, MongoDB, and Spanner. It also supports application sources such as Salesforce, Salesforce Marketing Cloud ([Preview](https://cloud.google.com/products/#product-launch-stages)), Microsoft Dataverse ([Preview](https://cloud.google.com/products/#product-launch-stages)), and ServiceNow ([Preview](https://cloud.google.com/products/#product-launch-stages)).
+You can replicate data into BigQuery for near real-time analytics or write change event streams into Cloud Storage for event-driven architectures. Integrating with Pub/Sub and Dataflow templates lets you load data into destinations such as Cloud SQL and Spanner. Datastream also integrates with Knowledge Catalog for centralized metadata and lineage management across Google Cloud.
 
-Benefits of Datastream include:
-
-  * Seamless setup of ELT (Extract, Load, Transform) pipelines for low-latency data replication to enable near real-time insights in BigQuery.
-  * Being serverless so there are no resources to provision or manage, and the service scales up and down automatically, as needed, with minimal downtime.
-  * Easy-to-use setup and monitoring experiences that achieve super-fast time-to-value.
-  * Integration across the best of Google Cloud data services portfolio for data integration across Datastream, Dataflow, Pub/Sub, BigQuery, Knowledge Catalog, and more.
-  * Centralized metadata and lineage management with Knowledge Catalog, letting you view Datastream resources in the context of all your data sources across Google Cloud.
-  * Synchronizing and unifying data streams across heterogeneous databases and applications.
-  * Security, with private connectivity options and the security you expect from Google Cloud.
-  * Being accurate and reliable, with transparent status reporting and robust processing flexibility in the face of data and schema changes.
-  * Supporting multiple use cases, including analytics, database replication, and synchronization for migrations and hybrid-cloud configurations, and for building event-driven architectures.
-
-
+Datastream supports database sources including MySQL, Oracle, PostgreSQL, AlloyDB for PostgreSQL, SQL Server, MongoDB, and Spanner. You can also stream data from Salesforce and from [Preview](https://cloud.google.com/products#product-launch-stages) sources such as Salesforce Marketing Cloud, Microsoft Dataverse, ServiceNow, and Workday. Private connectivity options, status reporting, and schema change handling support reliable replication for migrations and hybrid-cloud deployments.
 
 ## Use cases
 
@@ -80,6 +68,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

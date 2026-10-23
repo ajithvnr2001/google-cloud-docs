@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/workflows/quickstart-cal/
 title: Quickstart: Trigger Workflows using Cloud Audit Logs (Google Cloud CLI) \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:29.413047+00:00
+fetched_at: 2026-10-23T13:01:27.391303+00:00
 ---
 
 # Quickstart: Trigger Workflows using Cloud Audit Logs (Google Cloud CLI)  |  Eventarc Standard  |  Google Cloud Documentation

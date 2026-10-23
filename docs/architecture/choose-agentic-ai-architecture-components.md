@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/choose-agentic-ai-architecture-components/
 title: Choose your agentic AI architecture components \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:02.078526+00:00
+fetched_at: 2026-10-23T13:18:28.730912+00:00
 ---
 
 # Choose your agentic AI architecture components  |  Cloud Architecture Center  |  Google Cloud Documentation

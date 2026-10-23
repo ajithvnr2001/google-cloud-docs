@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/external-backends-internet-neg-overview/
 title: External backends specified by using internet NEGs \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:54.918340+00:00
+fetched_at: 2026-10-23T13:19:06.321353+00:00
 ---
 
 # External backends specified by using internet NEGs  |  Cloud CDN  |  Google Cloud Documentation

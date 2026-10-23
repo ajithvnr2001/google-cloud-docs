@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/gateway-load-balancing/
 title: Load balancing for API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:17.420175+00:00
+fetched_at: 2026-10-23T13:15:56.000677+00:00
 ---
 
 # Load balancing for API Gateway  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-update-regional-secret-with-alias/
 title: Update regional secret with alias \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:54.911151+00:00
+fetched_at: 2026-10-23T09:40:11.099938+00:00
 ---
 
 # Update regional secret with alias  |  Secret Manager  |  Google Cloud Documentation

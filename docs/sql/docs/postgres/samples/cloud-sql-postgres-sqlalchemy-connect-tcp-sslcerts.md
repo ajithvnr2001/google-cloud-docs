@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/samples/cloud-sql-postgres-sqlalchemy-connect-tcp-sslcerts/
 title: Configure SSL certificates for TCP connection by using Python \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:37.198027+00:00
+fetched_at: 2026-10-23T10:20:08.612594+00:00
 ---
 
 # Configure SSL certificates for TCP connection by using Python  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation

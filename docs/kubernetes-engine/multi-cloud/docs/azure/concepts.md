@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/azure/concepts/
 title: Concepts \u00a0|\u00a0 GKE on Azure \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-16T14:03:02.168852+00:00
+fetched_at: 2026-10-23T10:44:22.988500+00:00
 ---
 
 # Concepts  |  GKE on Azure  |  Google Cloud Documentation

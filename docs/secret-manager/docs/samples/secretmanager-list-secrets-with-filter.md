@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-list-secrets-with-filter/
 title: List secrets with a filter \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:56.534332+00:00
+fetched_at: 2026-10-23T09:40:07.351210+00:00
 ---
 
 # List secrets with a filter  |  Secret Manager  |  Google Cloud Documentation

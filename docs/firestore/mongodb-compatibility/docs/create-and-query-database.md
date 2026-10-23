@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/create-and-query-database/
 title: Quickstart: Connect with mongosh \u00a0|\u00a0 Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:42.696817+00:00
+fetched_at: 2026-10-23T13:02:27.501196+00:00
 ---
 
 # Quickstart: Connect with mongosh  |  Firestore with MongoDB compatibility  |  Google Cloud Documentation

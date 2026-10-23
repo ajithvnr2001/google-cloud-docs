@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/create-a-confidential-vm-instance/
 title: Create a Confidential VM instance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:11:29.591033+00:00
+fetched_at: 2026-10-23T12:36:33.130283+00:00
 ---
 
 # Create a Confidential VM instance  |  Google Cloud Documentation
@@ -90,7 +90,7 @@ To create a Confidential VM instance with the Google Cloud console, complete the
 
   3. In the **Machine configuration** pane, do the following:
 
-     1. Select a [supported region and zone](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#supported-zones).
+     1. Select a [supported region and zone](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#zones).
 
      2. Select one of the following machine families:
 
@@ -100,9 +100,9 @@ To create a Confidential VM instance with the Google Cloud console, complete the
 
         * **GPUs**
 
-     3. If you selected the **GPUs** family, select the appropriate **GPU type** and the **Number of GPUs** based on the [supported machine type](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#machine-type-cpu-zone).
+     3. If you selected the **GPUs** family, select the appropriate **GPU type** and the **Number of GPUs** based on the [supported machine type](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#machine-types).
 
-     4. Select a [supported machine type](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#machine-type-cpu-zone) for the Confidential Computing technology you want to use.
+     4. Select a [supported machine type](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#machine-types) for the Confidential Computing technology you want to use.
 
   4. In the navigation menu, click **Security**.
 
@@ -118,9 +118,9 @@ To create a Confidential VM instance with the Google Cloud console, complete the
 
   7. In the **Enable Confidential Computing** dialog, review the list of settings that are updated when you enable the service. They can include the following fields, if they were set to incompatible values.
 
-     * **Series** and **Machine type**. For more information, see [Machine types, CPUs, and zones](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#machine-type-cpu-zone).
+     * **Series** and **Machine type**. For more information, see [Machine types](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#machine-types).
 
-     * **Region** and **zone**. For more information, see [Machine types, CPUs, and zones](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#machine-type-cpu-zone).
+     * **Region** and **zone**. For more information, see [Zones](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#zones).
 
      * **Boot disk image**. For more information, see [Operating systems](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#operating-systems).
 
@@ -163,7 +163,7 @@ Provide the following values:
 
     * `TDX`
 
-  * `MACHINE_TYPE_NAME`: The VM machine type, for example, `n2d-standard-2`. Valid machine types for Confidential VM instances are determined by the Confidential Computing technology you've chosen. See [Machine types, CPUs, and zones](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#machine-type-cpu-zone).
+  * `MACHINE_TYPE_NAME`: The VM machine type, for example, `n2d-standard-2`. Valid machine types for Confidential VM instances are determined by the Confidential Computing technology you've chosen. See [Machine types](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#machine-types).
 
   * `CPU_PLATFORM`: Choose one of the following values:
 
@@ -175,7 +175,7 @@ Provide the following values:
 
   * `MAINTENANCE_POLICY`: For N2D and C3D machine types that use SEV, set this to `MIGRATE` for live migration support. For all other machine types, set this value to `TERMINATE`, as they [don't support live migration](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/troubleshoot-live-migration).
 
-  * `ZONE_NAME`: The [Confidential VM-supported zone](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#supported-zones) in which to create the instance.
+  * `ZONE_NAME`: The [Confidential VM-supported zone](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#zones) in which to create the instance.
 
   * `IMAGE_PROJECT`: The project containing the supported operating system image.
 
@@ -274,7 +274,7 @@ Provide the following values:
 
     * `TDX`
 
-  * `MACHINE_TYPE_NAME`: The VM machine type, for example, `n2d-standard-2`. Valid machine types for Confidential VM instances are determined by the Confidential Computing technology you've chosen. See [Machine types, CPUs, and zones](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#machine-type-cpu-zone).
+  * `MACHINE_TYPE_NAME`: The VM machine type, for example, `n2d-standard-2`. Valid machine types for Confidential VM instances are determined by the Confidential Computing technology you've chosen. See [Machine types](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#machine-types).
 
   * `CPU_PLATFORM`: Choose one of the following values:
 
@@ -417,6 +417,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

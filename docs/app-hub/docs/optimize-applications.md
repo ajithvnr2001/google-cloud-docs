@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/optimize-applications/
 title: Optimize an application with design recommendations \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:15.537317+00:00
+fetched_at: 2026-10-23T13:15:09.368683+00:00
 ---
 
 # Optimize an application with design recommendations  |  App Hub  |  Google Cloud Documentation

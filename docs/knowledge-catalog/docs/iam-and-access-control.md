@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/iam-and-access-control/
 title: Manage access with IAM \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:03:23.442165+00:00
+fetched_at: 2026-10-23T10:21:31.297739+00:00
 ---
 
 # Manage access with IAM  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -29,7 +29,7 @@ For more information about IAM, see the [IAM documentation](https://docs.cloud.g
 
 ## IAM overview
 
-When you create a new Google Cloud project, the original project creator is granted the Owner role. Other Google-managed service accounts might exist or be created when you enable an API to perform specific tasks. However, no other individual users have access to the project and its resources, including Knowledge Catalog resources. You grant this access only when you explicitly add users as project members or grant them roles on specific resources.
+When you create a new Google Cloud project, the original project creator is granted the **Owner** (`roles/owner`) role. Other Google-managed service accounts might exist or be created when you enable an API to perform specific tasks. However, no other individual users have access to the project and its resources, including Knowledge Catalog resources. You grant this access only when you explicitly add users as project members or grant them roles on specific resources.
 
 IAM lets you grant granular access to specific Google Cloud resources and prevents unwanted access to other resources. IAM lets you adopt the security principle of least privilege by granting only the necessary access to your resources.
 
@@ -94,7 +94,7 @@ For more information about assigning roles, see [Granting, changing, and revokin
 
 To determine which permissions you need for a specific task, see the reference pages for [Knowledge Catalog roles](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles) and [Knowledge Catalog permissions](https://docs.cloud.google.com/knowledge-catalog/docs/iam-permissions).
 
-For example, for a project resource, you can assign the `roles/dataplex.admin` role to a Google Account. That account can then manage Knowledge Catalog resources in the project, but can't manage other resources. You can also use IAM to manage the basic roles granted to project team members.
+For example, for a project resource, you can assign the **Dataplex Administrator** (`roles/dataplex.admin`) role to a Google Account. That account can then manage Knowledge Catalog resources in the project, but can't manage other resources. You can also use IAM to manage the basic roles granted to project team members.
 
 ## IAM policies for resources
 
@@ -114,7 +114,7 @@ You can get and set IAM policies using the Google Cloud console, the Identity an
 
   * Learn more about [IAM roles](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles).
   * Learn more about [IAM permissions](https://docs.cloud.google.com/knowledge-catalog/docs/iam-permissions).
-  * Learn more about [Knowledge Catalog security](https://docs.cloud.google.com/knowledge-catalog/docs/lake-security)
+  * Learn more about [Knowledge Catalog security](https://docs.cloud.google.com/knowledge-catalog/docs/security-privacy-compliance).
 
 
 
@@ -122,6 +122,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

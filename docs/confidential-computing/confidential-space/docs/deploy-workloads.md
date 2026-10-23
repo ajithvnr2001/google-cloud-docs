@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-space/docs/deploy-workloads/
 title: Deploy workloads \u00a0|\u00a0 Confidential Space \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:45:13.483811+00:00
+fetched_at: 2026-10-23T12:36:39.806820+00:00
 ---
 
 # Deploy workloads  |  Confidential Space  |  Google Cloud Documentation
@@ -67,7 +67,7 @@ Provide the following values:
 
     * `TDX`
 
-  * `MACHINE_TYPE_NAME`: The VM machine type, for example, `n2d-standard-2`. Valid machine types for Confidential VM instances are determined by the Confidential Computing technology you've chosen, either AMD SEV or Intel TDX. See [Machine types, CPUs, and zones](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#machine-type-cpu-zone).
+  * `MACHINE_TYPE_NAME`: The VM machine type, for example, `n2d-standard-2`. Valid machine types for Confidential VM instances are determined by the Confidential Computing technology you've chosen, either AMD SEV or Intel TDX. See [Machine types](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#machine-types).
 
   * `MAINTENANCE_POLICY`: For N2D machine types that use SEV, set this to `MIGRATE` for live migration support. For all other machine types, set this value to `TERMINATE`, as they [don't support live migration](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/troubleshoot-live-migration).
 
@@ -91,7 +91,7 @@ Provide the following values:
 
   * `ZONE_NAME`: The zone that the VM instance runs in, for example, `us-west1-b`. Confidential Space requires the following services, which are available in specific locations:
 
-    * [Confidential VM](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations?tab=AMD%20SEV#supported-zones), based on the Confidential Computing technology in use
+    * [Confidential VM](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations?tab=AMD%20SEV#zones), based on the Confidential Computing technology in use
 
     * [Certificate Authority Service](https://docs.cloud.google.com/certificate-authority-service/docs/locations)
 
@@ -524,6 +524,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

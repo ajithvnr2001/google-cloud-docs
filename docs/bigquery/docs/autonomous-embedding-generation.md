@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/autonomous-embedding-generation/
 title: Autonomous embedding generation \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:12:36.564959+00:00
+fetched_at: 2026-10-23T12:55:02.764437+00:00
 ---
 
 # Autonomous embedding generation  |  BigQuery  |  Google Cloud Documentation
@@ -71,6 +71,13 @@ To enable autonomous embedding generation on a table, you must [create a Cloud r
 ## Create an automatically generated embedding column
 
 You can either create an automatically generated embedding column within a new table or add one to an existing table.
+
+When you define the [`AI.EMBED` function](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/bigqueryml-syntax-ai-embed) for an automatically generated embedding column, if you don't specify the `task_type` argument and your model supports `task_type`, then BigQuery sets `task_type` to `RETRIEVAL_DOCUMENT` by default. When you query the table by using the [`AI.SEARCH` function](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/bigqueryml-syntax-ai-search) or the [`VECTOR_SEARCH` function](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/search_functions#vector_search), BigQuery generates the query embedding on the fly using the following `task_type` behavior:
+
+  * If the table's embedding column uses `RETRIEVAL_DOCUMENT`, whether by default or explicitly specified, then BigQuery uses `RETRIEVAL_QUERY` to embed the search query.
+  * Otherwise, BigQuery uses the same `task_type` configured for the table's embedding column.
+
+
 
 ### Create a table with an automatically generated embedding column
 
@@ -404,7 +411,7 @@ The following query shows you information about all of your automatically genera
     WHERE is_generated = 'ALWAYS';
     
 
-The `generation_expression` field shows you the call to the `AI.EMBED` function that is used to generate the embeddings on the column.
+The `generation_expression` field shows you the call to the `AI.EMBED` function that is used to generate the embeddings on the column, including the default `task_type => 'RETRIEVAL_DOCUMENT'` argument if you didn't specify a `task_type` for a model that supports it.
 
 ## Use your own reservation
 
@@ -595,6 +602,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

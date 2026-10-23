@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/manage-costs-overview/
 title: Overview of overages and spend controls \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:07.632647+00:00
+fetched_at: 2026-10-23T13:12:42.646288+00:00
 ---
 
 # Overview of overages and spend controls  |  Gemini Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/samples/securitycenter-create-notification-config/
 title: Create a NotificationConfig \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:09.767997+00:00
+fetched_at: 2026-10-23T11:33:11.417857+00:00
 ---
 
 # Create a NotificationConfig  |  Security Command Center  |  Google Cloud Documentation
@@ -317,7 +317,7 @@ To authenticate to Security Command Center, set up Application Default Credentia
     # The PubSub topic where notifications will be published.
     # pubsub_topic = "YOUR_TOPIC"
     
-    client = Google::Cloud::[SecurityCenter](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security_center-v2/latest/Google-Cloud-SecurityCenter.html).[security_center](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security_center/latest/Google-Cloud-SecurityCenter.html)
+    client = Google::Cloud::[SecurityCenter](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security_center/latest/Google-Cloud-SecurityCenter.html).[security_center](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security_center/latest/Google-Cloud-SecurityCenter.html)
     
     # You can also use a project or folder path as a parent.
     parent = client.organization_location_path organization: org_id, location: location

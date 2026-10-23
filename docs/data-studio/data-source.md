@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/data-source/
 title: Data source \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:25.433061+00:00
+fetched_at: 2026-10-23T13:20:10.702364+00:00
 ---
 
 # Data source  |  Data Studio  |  Google Cloud Documentation

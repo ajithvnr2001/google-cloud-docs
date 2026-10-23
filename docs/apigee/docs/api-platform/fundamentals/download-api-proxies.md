@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/download-api-proxies/
 title: Downloading and uploading an API proxy configuration bundle \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:19.153368+00:00
+fetched_at: 2026-10-23T13:14:40.253845+00:00
 ---
 
 # Downloading and uploading an API proxy configuration bundle  |  Apigee  |  Google Cloud Documentation

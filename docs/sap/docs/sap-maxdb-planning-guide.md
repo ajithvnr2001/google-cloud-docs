@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sap/docs/sap-maxdb-planning-guide/
 title: SAP MaxDB planning guide \u00a0|\u00a0 SAP on Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:12:38.376557+00:00
+fetched_at: 2026-10-23T10:01:49.378487+00:00
 ---
 
 # SAP MaxDB planning guide  |  SAP on Google Cloud  |  Google Cloud Documentation
@@ -115,11 +115,11 @@ Different use cases might require additional devices or databases. For more info
 
 In many ways, running SAP MaxDB on Google Cloud is similar to running it in your own data center. You still need to think about computing resources, storage, and networking considerations. For more information, see [ SAP Note 2456432 - SAP Applications on Google Cloud: Supported Products and Google Cloud machine types](https://launchpad.support.sap.com/#/notes/2456432).
 
-### VM configuration
+### Compute instance configuration
 
-SAP MaxDB is certified to run on all Compute Engine machine types, including custom types. However, if you run MaxDB on the same VM as SAP NetWeaver or Application Server Central Services (ASCS), you must use a VM that is supported by SAP NetWeaver. For a list of the VMs that SAP NetWeaver supports, see the [SAP NetWeaver Planning Guide](https://docs.cloud.google.com/sap/docs/netweaver-planning-guide#machine_types).
+SAP MaxDB is certified by SAP to run on all Compute Engine machine types, including custom machine types. However, if you run MaxDB on the same Compute Engine instance as SAP NetWeaver or Application Server Central Services (ASCS), then you must use a machine type that is certified by SAP to run SAP NetWeaver.
 
-For information about all of the machine types available on Google Cloud and their use cases, see [Machine Types](https://docs.cloud.google.com/compute/docs/machine-types) in the Compute Engine documentation.
+For information about the Compute Engine machine types that SAP has certified for use with SAP NetWeaver, go to [Certified solutions and machine types](https://docs.cloud.google.com/sap/docs/sap-certifications#certified-machine-types-and-solutions) and in the **Certified SAP solution** list, select **SAP NetWeaver**.
 
 #### CPU configuration
 
@@ -412,6 +412,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

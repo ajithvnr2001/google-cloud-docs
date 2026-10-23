@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/enterprise-knowledge-graph/docs/setup/
 title: Set up Enterprise Knowledge Graph API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:28.716405+00:00
+fetched_at: 2026-10-23T13:11:46.269744+00:00
 ---
 
 # Set up Enterprise Knowledge Graph API  |  Google Cloud Documentation

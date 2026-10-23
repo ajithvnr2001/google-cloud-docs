@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/concepts/performance-tuning-overview/
 title: Pipeline performance overview \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:45:00.029172+00:00
+fetched_at: 2026-10-23T13:19:41.067410+00:00
 ---
 
 # Pipeline performance overview  |  Cloud Data Fusion  |  Google Cloud Documentation

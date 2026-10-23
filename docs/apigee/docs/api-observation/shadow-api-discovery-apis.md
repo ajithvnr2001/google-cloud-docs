@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-observation/shadow-api-discovery-apis/
 title: Shadow API Discovery: management APIs \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:06.130736+00:00
+fetched_at: 2026-10-23T13:14:26.386472+00:00
 ---
 
 # Shadow API Discovery: management APIs  |  Apigee  |  Google Cloud Documentation

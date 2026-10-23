@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/v4beta1/docs/apis/
 title: APIs and References (v4beta1) \u00a0|\u00a0 Cloud Talent Solution - Job Search v4beta1 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:24.009644+00:00
+fetched_at: 2026-10-23T08:36:35.195441+00:00
 ---
 
 # APIs and References (v4beta1)  |  Cloud Talent Solution - Job Search v4beta1  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/docs/use-cmek/
 title: Use customer-managed encryption keys \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:24.342206+00:00
+fetched_at: 2026-10-23T13:01:47.591754+00:00
 ---
 
 # Use customer-managed encryption keys  |  Eventarc Standard  |  Google Cloud Documentation

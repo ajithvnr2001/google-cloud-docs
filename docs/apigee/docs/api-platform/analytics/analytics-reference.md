@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/analytics/analytics-reference/
 title: Analytics metrics, dimensions, and filters reference \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:04.368998+00:00
+fetched_at: 2026-10-23T13:15:06.114550+00:00
 ---
 
 # Analytics metrics, dimensions, and filters reference  |  Apigee  |  Google Cloud Documentation

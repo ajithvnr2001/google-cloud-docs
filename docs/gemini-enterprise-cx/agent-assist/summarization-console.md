@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/summarization-console/
 title: Train a Summarization custom model for chat \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:41.850033+00:00
+fetched_at: 2026-10-23T13:12:52.086935+00:00
 ---
 
 # Train a Summarization custom model for chat  |  Agent Assist  |  Google Cloud Documentation

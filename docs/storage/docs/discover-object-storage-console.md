@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/discover-object-storage-console/
 title: Quickstart: Discover object storage with the Google Cloud console \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:55:41.101322+00:00
+fetched_at: 2026-10-23T13:08:41.751324+00:00
 ---
 
 # Quickstart: Discover object storage with the Google Cloud console  |  Cloud Storage  |  Google Cloud Documentation
@@ -260,7 +260,7 @@ To avoid incurring charges to your Google Cloud account for the resources used o
   * [Work through the Cloud Storage quickstart using the Google Cloud CLI](https://docs.cloud.google.com/storage/docs/discover-object-storage-gcloud).
   * Read the [Cloud Storage product overview](https://docs.cloud.google.com/storage/docs/introduction).
   * Learn about [storage classes](https://docs.cloud.google.com/storage/docs/storage-classes). 
-  * Learn about [Cloud Storage pricing](https://cloud.google.com/storage/pricing). 
+  * Learn about [Cloud Storage pricing](https://docs.cloud.google.com/storage/pricing). 
   * Get started with the [Cloud Storage client libraries](https://docs.cloud.google.com/storage/docs/reference/libraries).
 
 
@@ -269,6 +269,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-22 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/introduction-to-self-hosted/
 title: Introduction to self-hosted data sources \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:08.155069+00:00
+fetched_at: 2026-10-23T13:10:59.271333+00:00
 ---
 
 # Introduction to self-hosted data sources  |  Gemini Enterprise  |  Google Cloud Documentation

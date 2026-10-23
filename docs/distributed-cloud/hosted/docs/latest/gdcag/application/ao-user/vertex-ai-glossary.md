@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-glossary/
 title: Create and use a glossary \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:30:19.005114+00:00
+fetched_at: 2026-10-23T12:36:43.132807+00:00
 ---
 
 # Create and use a glossary  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -40,7 +40,7 @@ Method | Description
 ---|---  
 `CreateGlossary` | Create a glossary.  
 `GetGlossary` | Return a stored glossary.  
-`ListGlossaries` | Return a list of glossary IDs in a project.  
+`ListGlossaries` | Return a list of glossaries in a project.  
 `DeleteGlossary` | Delete a glossary that you no longer need.  
   
 ## Before you begin
@@ -100,7 +100,7 @@ The following image shows two columns in a TSV or CSV file. The first column con
 
 ![Equivalent glossary terms example](https://docs.cloud.google.com/static/distributed-cloud/hosted/docs/latest/gdcag/images/tsv-and-csv-format.png)
 
-When you create a glossary file, you can define a header row. The glossary request makes the file available to the Vertex AI Translation API.
+Don't include a header row in a unidirectional TSV or CSV file; the first row must contain term data. The glossary request makes the file available to the Vertex AI Translation API.
 
 ### TMX
 
@@ -185,9 +185,9 @@ You can create the storage bucket by deploying a `Bucket` resource in your proje
                  defaultObjectRetentionDays: 90
          
 
-  3. Grant `read` permissions on the bucket to the service account (`g-vai-translation-sie-sa`) used by the Vertex AI Translation service.
+  3. Grant `read` permissions on the bucket and `get`, `list`, and `watch` permissions on `secrets` in the project namespace to the service accounts (`ai-translation-system-sa` and `g-vai-translation-sie-sa`) used by the Vertex AI Translation service.
 
-You can follow these steps to create the role and role binding using custom resources:
+Follow these steps to create the role and role binding using custom resources on the management API server. A user who already holds the `secrets` permissions must apply these resources, or the request fails with `attempting to grant RBAC permissions not currently held`:
 
      1. Create the role by deploying a `Role` resource in the project namespace:
             
@@ -204,6 +204,15 @@ You can follow these steps to create the role and role binding using custom reso
                     - buckets
                   verbs:
                     - read-object
+                -
+                  apiGroups:
+                    - ""
+                  resources:
+                    - secrets
+                  verbs:
+                    - get
+                    - list
+                    - watch
             
 
      2. Create the role binding by deploying a `RoleBinding` resource in the project namespace:
@@ -218,6 +227,10 @@ You can follow these steps to create the role and role binding using custom reso
                 kind: Role
                 name: ai-translation-glossary-reader
               subjects:
+                -
+                  kind: ServiceAccount
+                  name: ai-translation-system-sa
+                  namespace: g-vai-translation-sie
                 -
                   kind: ServiceAccount
                   name: g-vai-translation-sie-sa
@@ -237,11 +250,10 @@ To create a glossary, replace the following before using any of the request data
 
   * `ENDPOINT`: the Vertex AI Translation endpoint that you use for your organization. For more information, [view service status and endpoints](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-api-status).
   * `PROJECT_ID`: your project ID.
-  * `GLOSSARY_ID`: your glossary ID, which is your resource name.
   * `BUCKET_NAME`: the name of the storage bucket where your glossary file is located.
   * `GLOSSARY_FILENAME`: the name of your glossary file in the storage bucket.
 
-
+**Note:** The service assigns `GLOSSARY_ID` (`G` followed by digits) and ignores any `name` field in the create request. Read the `GLOSSARY_ID` suffix from `projects/PROJECT_ID/glossaries/GLOSSARY_ID` in `metadata.name` of the create operation response or from List glossaries, and pass that `GLOSSARY_ID` in get, translate, and delete requests.
 
 The following is the syntax for an HTTP request to create a glossary:
     
@@ -260,12 +272,11 @@ Follow these steps to create a unidirectional glossary:
   1. Save the following request body in a JSON file named `request.json`:
          
          {
-           "name":"projects/PROJECT_ID/glossaries/GLOSSARY_ID,
            "language_pair": {
              "source_language_code": "SOURCE_LANGUAGE",
              "target_language_code": "TARGET_LANGUAGE"
              },
-           "{"input_config": {
+           "input_config": {
              "s3_source": {
                "input_uri": "s3://BUCKET_NAME/GLOSSARY_FILENAME"
              }
@@ -316,7 +327,7 @@ You must receive a JSON response similar to the following:
     
     
     {
-    "name": "projects/PROJECT_ID/operations/operation-id",
+    "name": "projects/PROJECT_ID/operations/OPERATION_ID",
     "metadata": {
         "@type": "type.googleapis.com/google.cloud.translation.v3.CreateGlossaryMetadata",
         "name": "projects/PROJECT_ID/glossaries/GLOSSARY_ID",
@@ -325,6 +336,13 @@ You must receive a JSON response similar to the following:
       }
     }
     
+
+In the response:
+
+  * `OPERATION_ID`: the server-assigned ID of the [long-running operation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/translation/rest/v3/projects.operations#Operation) that creates the glossary. The service returns this ID in the `name` field of the response, or you can find it by calling [`projects.operations.list`](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/translation/rest/v3/projects.operations/list). You can pass `projects/PROJECT_ID/operations/OPERATION_ID` to [`projects.operations.get`](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/translation/rest/v3/projects.operations/get) to check the status of the glossary creation operation.
+  * `GLOSSARY_ID`: the server-assigned ID of the glossary (`G` followed by digits), which you use in get, translate, and delete requests.
+
+
 
 ###  Equivalent term set 
 
@@ -335,7 +353,6 @@ Follow these steps to create an equivalent term set glossary:
   1. Save the following request body in a JSON file named `request.json`:
          
          {
-           "name":"projects/PROJECT_ID/glossaries/GLOSSARY_ID",
            "language_codes_set": {
              "language_codes": ["LANGUAGE_CODE_1",
                                  "LANGUAGE_CODE_2",
@@ -376,7 +393,7 @@ You must receive a JSON response similar to the following:
     
     
     {
-      "name": "projects/PROJECT_ID/operations/GLOSSARY_ID,
+      "name": "projects/PROJECT_ID/operations/OPERATION_ID",
       "metadata": {
         "@type": "type.googleapis.com/google.cloud.translation.v3.CreateGlossaryMetadata",
         "name": "projects/PROJECT_ID/glossaries/GLOSSARY_ID",
@@ -385,6 +402,13 @@ You must receive a JSON response similar to the following:
       }
     }
     
+
+In the response:
+
+  * `OPERATION_ID`: the server-assigned ID of the [long-running operation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/translation/rest/v3/projects.operations#Operation) that creates the glossary. The service returns this ID in the `name` field of the response, or you can find it by calling [`projects.operations.list`](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/translation/rest/v3/projects.operations/list). You can pass `projects/PROJECT_ID/operations/OPERATION_ID` to [`projects.operations.get`](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/translation/rest/v3/projects.operations/get) to check the status of the glossary creation operation.
+  * `GLOSSARY_ID`: the server-assigned ID of the glossary (`G` followed by digits), which you use in get, translate, and delete requests.
+
+
 
 ### PowerShell
     
@@ -407,7 +431,7 @@ You must receive a JSON response similar to the following:
     
     
     {
-      "name": "projects/PROJECT_ID/operations/GLOSSARY_ID",
+      "name": "projects/PROJECT_ID/operations/OPERATION_ID",
       "metadata": {
         "@type": "type.googleapis.com/google.cloud.translation.v3.CreateGlossaryMetadata",
         "name": "projects/PROJECT_ID/glossaries/GLOSSARY_ID",
@@ -416,6 +440,13 @@ You must receive a JSON response similar to the following:
       }
     }
     
+
+In the response:
+
+  * `OPERATION_ID`: the server-assigned ID of the [long-running operation](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/translation/rest/v3/projects.operations#Operation) that creates the glossary. The service returns this ID in the `name` field of the response, or you can find it by calling [`projects.operations.list`](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/translation/rest/v3/projects.operations/list). You can pass `projects/PROJECT_ID/operations/OPERATION_ID` to [`projects.operations.get`](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/translation/rest/v3/projects.operations/get) to check the status of the glossary creation operation.
+  * `GLOSSARY_ID`: the server-assigned ID of the glossary (`G` followed by digits), which you use in get, translate, and delete requests.
+
+
 
 ### Python
 
@@ -430,7 +461,6 @@ You must receive a JSON response similar to the following:
          def create_glossary(
              project_id=PROJECT_ID,
              input_uri= "s3://BUCKET_NAME/GLOSSARY_FILENAME",
-             glossary_id=GLOSSARY_ID,
              timeout=180,
          ):
          
@@ -492,9 +522,9 @@ Replace `TOKEN` with [the authentication token](https://docs.cloud.google.com/di
 
 ## List glossaries
 
-The `ListGlossaries` method returns a list of glossary IDs in a project. If a glossary doesn't exist, the output returns the `NOT_FOUND` value. To call the `ListGlossaries` method, specify your project ID and the [Vertex AI Translation endpoint](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-api-status).
+The `ListGlossaries` method returns a list of `Glossary` resources in a project, each containing the full `name` (`projects/PROJECT_ID/glossaries/GLOSSARY_ID`). If the project has no glossaries, the output returns `{}`. If the project doesn't exist, the output returns the `NOT_FOUND` value. To call the `ListGlossaries` method, specify your project ID and the [Vertex AI Translation endpoint](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-api-status).
 
-For example, the following request returns a list of glossary IDs in your project:
+For example, the following request returns the glossaries in your project:
     
     
     curl -X GET \
@@ -522,6 +552,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

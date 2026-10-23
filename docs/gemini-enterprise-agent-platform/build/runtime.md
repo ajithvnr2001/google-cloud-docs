@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/runtime/
 title: Agent Runtime \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:26:36.491255+00:00
+fetched_at: 2026-10-23T10:21:42.794739+00:00
 ---
 
 # Agent Runtime  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -75,7 +75,7 @@ Support level | Agent frameworks
   
 ## Deploy in production with Agents CLI
 
-The [Agents CLI](https://google.github.io/agents-cli/) is the unified command-line interface and skill set for the Gemini Enterprise Agent Platform. It provides coding agents and developers with a predictable path through the Agent Development Lifecycle: scaffold, evaluate, deploy, publish, and observe. The Agents CLI provides the following:
+The [Agents CLI](https://google.github.io/agents-cli/) is the unified command-line interface and skill set for the Agent Platform. It provides coding agents and developers with a predictable path through the Agent Development Lifecycle: scaffold, evaluate, deploy, publish, and observe. The Agents CLI provides the following:
 
   * **Pre-built agent templates:** ReAct, RAG, multi-agent, and other templates.
   * **Interactive playground** : Test and interact with your agent.
@@ -164,6 +164,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

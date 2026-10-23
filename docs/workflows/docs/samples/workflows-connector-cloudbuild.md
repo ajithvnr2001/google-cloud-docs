@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-connector-cloudbuild/
 title: Connector for Cloud Build \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:12:25.659735+00:00
+fetched_at: 2026-10-23T08:58:05.133969+00:00
 ---
 
 # Connector for Cloud Build  |  Workflows  |  Google Cloud Documentation

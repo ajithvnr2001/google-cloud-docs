@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/version/
 title: Versions \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:29.757061+00:00
+fetched_at: 2026-10-23T13:13:31.996975+00:00
 ---
 
 # Versions  |  CX Agent Studio  |  Google Cloud Documentation

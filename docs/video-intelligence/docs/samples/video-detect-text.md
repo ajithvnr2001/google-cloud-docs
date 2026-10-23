@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-intelligence/docs/samples/video-detect-text/
 title: Detect text in a local video file \u00a0|\u00a0 Video Intelligence API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:08.539535+00:00
+fetched_at: 2026-10-23T09:35:07.634432+00:00
 ---
 
 # Detect text in a local video file  |  Video Intelligence API  |  Google Cloud Documentation

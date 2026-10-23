@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/samples/cloud-sql-postgres-knex-timeout/
 title: Set the connection timeout when using Node.js \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:08.956152+00:00
+fetched_at: 2026-10-23T10:11:42.463749+00:00
 ---
 
 # Set the connection timeout when using Node.js  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation

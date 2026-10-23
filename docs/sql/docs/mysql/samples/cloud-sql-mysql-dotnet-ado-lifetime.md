@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/samples/cloud-sql-mysql-dotnet-ado-lifetime/
 title: Set the connection duration when using ADO.NET \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:06.551540+00:00
+fetched_at: 2026-10-23T10:11:45.469564+00:00
 ---
 
 # Set the connection duration when using ADO.NET  |  Cloud SQL for MySQL  |  Google Cloud Documentation

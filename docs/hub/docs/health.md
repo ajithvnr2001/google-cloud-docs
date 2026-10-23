@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/hub/docs/health/
 title: View application and resource health \u00a0|\u00a0 Cloud Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:26.773436+00:00
+fetched_at: 2026-10-23T13:09:24.916172+00:00
 ---
 
 # View application and resource health  |  Cloud Hub  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/key-access-justifications/docs/access-transparency/
 title: Introduction to Access Transparency \u00a0|\u00a0 Key Access Justifications \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:42.681614+00:00
+fetched_at: 2026-10-23T13:18:58.568026+00:00
 ---
 
 # Introduction to Access Transparency  |  Key Access Justifications  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/transcoder/docs/samples/transcoder-list-jobs/
 title: List jobs \u00a0|\u00a0 Transcoder API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:06.853298+00:00
+fetched_at: 2026-10-23T09:36:04.527790+00:00
 ---
 
 # List jobs  |  Transcoder API  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/fault-injection-testing/experiment-setup/cloud-sql/
 title: Set up an experiment for Failover Cloud SQL \u00a0|\u00a0 Fault Injection Testing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:44.149930+00:00
+fetched_at: 2026-10-23T13:01:30.748338+00:00
 ---
 
 # Set up an experiment for Failover Cloud SQL  |  Fault Injection Testing  |  Google Cloud Documentation

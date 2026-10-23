@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/video/extend-videos/
 title: Extend videos \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:34:24.853504+00:00
+fetched_at: 2026-10-23T10:20:56.904008+00:00
 ---
 
 # Extend videos  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

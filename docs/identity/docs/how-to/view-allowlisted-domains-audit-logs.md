@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/view-allowlisted-domains-audit-logs/
 title: Viewing audit logs \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:46.593158+00:00
+fetched_at: 2026-10-23T13:10:37.736660+00:00
 ---
 
 # Viewing audit logs  |  Cloud Identity  |  Google Cloud Documentation

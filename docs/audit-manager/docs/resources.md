@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/audit-manager/docs/resources/
 title: Resources \u00a0|\u00a0 Audit Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:39.959803+00:00
+fetched_at: 2026-10-23T13:19:08.308898+00:00
 ---
 
 # Resources  |  Audit Manager  |  Google Cloud Documentation

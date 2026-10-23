@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/wrangler-format-strings/
 title: Format strings \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:39.113649+00:00
+fetched_at: 2026-10-23T13:20:47.364624+00:00
 ---
 
 # Format strings  |  Cloud Data Fusion  |  Google Cloud Documentation

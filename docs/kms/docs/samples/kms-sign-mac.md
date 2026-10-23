@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kms/docs/samples/kms-sign-mac/
 title: Create a MAC signature \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:47:00.510841+00:00
+fetched_at: 2026-10-23T10:25:45.591905+00:00
 ---
 
 # Create a MAC signature  |  Cloud Key Management Service  |  Google Cloud Documentation

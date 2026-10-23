@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/writing-results/
 title: Write query results \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:45:33.314633+00:00
+fetched_at: 2026-10-23T12:55:18.321309+00:00
 ---
 
 # Write query results  |  BigQuery  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Write query results
 
-This document describes how to write query results to temporary or permanent tables.
+Writing BigQuery query results to a permanent table lets you safely store, share, and download your analyzed data. While BigQuery automatically caches all query results in temporary tables, saving your output to a destination table lets you preserve large result sets and integrate them into downstream workflows.
 
 ## Temporary and permanent tables
 
@@ -49,7 +49,7 @@ If you don't see the left pane, click last_page **Expand left pane** to open the
 
   * Access to the temporary table data is restricted to the user or service account that created the query job.
 
-  * You cannot share temporary tables, and they are not visible using any of the standard list or other table manipulation methods. If you need to share your query results, write the results to a permanent table, download them, or share them through Google Sheets or Google Drive.
+  * You can't share temporary tables, and they aren't visible using any of the standard list or other table manipulation methods. If you need to share your query results, write the results to a permanent table, download them, or share them through Google Sheets or Google Drive.
 
   * Temporary tables are created in the same region as the table or tables being queried.
 
@@ -482,7 +482,7 @@ When you specify a destination table for large query results, you are charged fo
 In legacy SQL, writing large results is subject to these limitations:
 
   * You must specify a destination table.
-  * You cannot specify a top-level `ORDER BY`, `TOP` or `LIMIT` clause. Doing so negates the benefit of using `allowLargeResults`, because the query output can no longer be computed in parallel.
+  * You can't specify a top-level `ORDER BY`, `TOP` or `LIMIT` clause. Doing so negates the benefit of using `allowLargeResults`, because the query output can no longer be computed in parallel.
   * [Window functions](https://docs.cloud.google.com/bigquery/query-reference#windowfunctions) can return large query results only if used in conjunction with a `PARTITION BY` clause.
 
 
@@ -851,6 +851,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

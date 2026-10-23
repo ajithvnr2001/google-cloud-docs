@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/how-tos/fhir-bundles/
 title: Managing FHIR resources using FHIR bundles \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:51.706214+00:00
+fetched_at: 2026-10-23T13:03:39.537385+00:00
 ---
 
 # Managing FHIR resources using FHIR bundles  |  Cloud Healthcare API  |  Google Cloud Documentation

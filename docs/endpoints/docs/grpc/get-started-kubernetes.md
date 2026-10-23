@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/grpc/get-started-kubernetes/
 title: Getting started with Endpoints for Kubernetes with ESP \u00a0|\u00a0 Cloud Endpoints with gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:20.234535+00:00
+fetched_at: 2026-10-23T13:01:45.772429+00:00
 ---
 
 # Getting started with Endpoints for Kubernetes with ESP  |  Cloud Endpoints with gRPC  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/deprecations/proxyv2-targetv2-metrics/
 title: ProxyV2 and TargetV2 metrics deprecation \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:47:02.891274+00:00
+fetched_at: 2026-10-23T13:16:23.790818+00:00
 ---
 
 # ProxyV2 and TargetV2 metrics deprecation  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage-transfer/docs/support/
 title: Support \u00a0|\u00a0 Storage Transfer Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:52:54.023555+00:00
+fetched_at: 2026-10-23T08:57:56.452181+00:00
 ---
 
 # Support  |  Storage Transfer Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/managing-partitioned-tables/
 title: Manage partitioned tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:55:46.670816+00:00
+fetched_at: 2026-10-23T12:55:42.710546+00:00
 ---
 
 # Manage partitioned tables  |  BigQuery  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Manage partitioned tables
 
-This document describes how to manage partitioned tables in BigQuery.
+After you create a partitioned table in BigQuery, you can manage its partitions to control storage costs, require efficient queries, and maintain your data. This document describes how to get partition metadata, set partition expiration, require partition filters in queries, copy partitioned tables and individual partitions, and delete partitions.
 
-**Note:** The information in [Managing tables](https://docs.cloud.google.com/bigquery/docs/managing-tables) also applies to partitioned tables.
+For general table management tasks, which also apply to partitioned tables, see [Manage tables](https://docs.cloud.google.com/bigquery/docs/managing-tables).
 
 ## Get partition metadata
 
@@ -528,6 +528,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

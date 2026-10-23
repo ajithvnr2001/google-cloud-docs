@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-connector-translate/
 title: Connector for Cloud Translation \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:12:21.381508+00:00
+fetched_at: 2026-10-23T08:57:35.391825+00:00
 ---
 
 # Connector for Cloud Translation  |  Workflows  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-set-temporary-hold/
 title: Set a temporary hold on an object \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:32:24.189991+00:00
+fetched_at: 2026-10-23T09:36:07.285119+00:00
 ---
 
 # Set a temporary hold on an object  |  Cloud Storage  |  Google Cloud Documentation

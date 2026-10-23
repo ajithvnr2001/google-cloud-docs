@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/set-up-external-backend-internet-neg/
 title: Set up an external backend with an internet NEG \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:53.448614+00:00
+fetched_at: 2026-10-23T13:19:24.291532+00:00
 ---
 
 # Set up an external backend with an internet NEG  |  Cloud CDN  |  Google Cloud Documentation

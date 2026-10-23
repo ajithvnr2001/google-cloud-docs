@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/configure-serving-controls/
 title: Configure serving controls for search \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:16.314384+00:00
+fetched_at: 2026-10-23T13:10:28.786571+00:00
 ---
 
 # Configure serving controls for search  |  Agent Search  |  Google Cloud Documentation

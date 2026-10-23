@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/accelerate-ai-queries/
 title: Accelerate performance for queries with AI functions \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:27:19.341540+00:00
+fetched_at: 2026-10-23T13:08:30.923835+00:00
 ---
 
 # Accelerate performance for queries with AI functions  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -51,10 +51,10 @@ To enable smart batching for AI functions at the instance level, use the `gcloud
 
 Replace the following:
 
-  * `INSTANCE_ID`: The ID of the instance you want to update.
-  * `REGION_ID`: The ID of the region where the cluster is located. For more information, see [Supported regions](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash-lite#supported-regions).
-  * `CLUSTER_ID`: The ID of the cluster.
-  * `PROJECT_ID`: The ID of the project.
+  * `INSTANCE_ID`: the ID of the instance you want to update.
+  * `REGION_ID`: the ID of the region where the cluster is located. For more information, see [Supported regions](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite#supported-regions).
+  * `CLUSTER_ID`: the ID of the cluster.
+  * `PROJECT_ID`: the ID of the project.
 
 
 
@@ -135,8 +135,8 @@ The `AIFunctionApply` node in the query plan indicates that the query used smart
     * `ai.rank('Rate this review: ' || r.review)`
   * Only `SELECT` queries with `ai.if` in `WHERE` clauses or `ai.rank` in `ORDER BY` clauses are supported.
   * Only one AI function per table scan is supported.
-  * Only the default Gemini models are supported. For more information, see [Gemini models](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini). To use a different model, you can set the `google_ml_integration.default_llm_model` flag to the model ID you want to use.
-  * The feature is available only in regions that support the `gemini-2.5-flash-lite` model or the regions for the LLM model that you set using the `google_ml_integration.default_llm_model` flag. For more information, see [Supported regions](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash-lite#supported-regions).
+  * Only the default Gemini models are supported. For more information, see [Google models](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/google-models). To use a different model, you can set the `google_ml_integration.default_llm_model` flag to the model ID you want to use.
+  * The feature is available only in regions that support the `gemini-2.5-flash-lite` model or the regions for the LLM model that you set using the `google_ml_integration.default_llm_model` flag. For more information, see [Supported regions](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite#supported-regions).
 
 
 
@@ -152,6 +152,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

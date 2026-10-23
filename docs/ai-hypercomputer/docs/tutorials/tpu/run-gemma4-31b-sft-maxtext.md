@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext/
 title: Run SFT for Gemma 4 31B on multi-host TPU v6e \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:10:20.337100+00:00
+fetched_at: 2026-10-23T12:55:08.339499+00:00
 ---
 
 # Run SFT for Gemma 4 31B on multi-host TPU v6e  |  AI Hypercomputer  |  Google Cloud Documentation
@@ -65,22 +65,6 @@ When you finish the tasks that are described in this document, you can avoid con
 
 ## Before you begin
 
-Authenticate your user account:
-    
-    
-    gcloud auth login
-    
-
-Generate Application Default Credentials (ADC):
-    
-    
-    gcloud auth application-default login
-    
-
-If you're running in a headless or remote SSH session without a browser, append `--no-launch-browser` to both commands.
-
-**Note:** Skipping ADC authentication might result in metadata server errors during cluster provisioning.
-
   * You need a Hugging Face access token to use this tutorial. You can sign up for a free account at [Hugging Face](http://huggingface.co/login). After you have an account, generate an access token:
 
     1. On the [Welcome to Hugging Face](https://huggingface.co/welcome) page, click your account avatar and select **Access tokens**.
@@ -128,9 +112,6 @@ Set up your environment variables:
     export HF_TOKEN="YOUR_HF_TOKEN"
     export MODEL_NAME="gemma4-31b"
     export CLUSTER_TOOLKIT_VERSION="v1.103.0"
-    
-    gcloud config set project "${PROJECT:?}"
-    gcloud auth application-default set-quota-project "${PROJECT:?}" || true
 
 Replace the following:
 
@@ -170,6 +151,19 @@ Download and extract the prebuilt bundle for the specific version of Cluster Too
 
 **Note:** The [Install Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-environment#install-bundle) documentation describes how to download the latest release into a `cluster-toolkit` directory. However, because blueprint variables can differ across Cluster Toolkit versions, for this tutorial you must install the exact version specified in `CLUSTER_TOOLKIT_VERSION` (`v1.103.0`) rather than the latest release. Extracting the bundle provides the `gcluster` binary and the `examples/` blueprints that you use in the steps that follow. If you extracted the bundle into a `cluster-toolkit` directory, make sure that you change to that directory (`cd cluster-toolkit`) before running the subsequent commands.
 
+## Authenticate your environment
+
+To ensure that Cluster Toolkit can provision resources and push images to Artifact Registry on your behalf, authenticate the Google Cloud CLI and set your Application Default Credentials:
+    
+    
+    gcloud auth login
+    gcloud auth application-default login --no-launch-browser
+    gcloud config set project "${PROJECT:?}"
+    gcloud auth application-default set-quota-project "${PROJECT:?}"
+    
+    gcloud auth configure-docker gcr.io --quiet
+    gcloud auth configure-docker "${REGION:?}-docker.pkg.dev" --quiet
+
 ## Create your Cluster Toolkit cluster
 
 To create and deploy a Cluster Toolkit cluster with 32 `v6e` TPU chips, complete the following steps:
@@ -199,11 +193,6 @@ To create and deploy a Cluster Toolkit cluster with 32 `v6e` TPU chips, complete
              --download-dependencies \
              -l IGNORE \
              --auto-approve -w
-
-  5. Configure container registry authentication:
-         
-         gcloud auth configure-docker gcr.io --quiet
-         gcloud auth configure-docker "${REGION:?}-docker.pkg.dev" --quiet
 
 
 
@@ -363,6 +352,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

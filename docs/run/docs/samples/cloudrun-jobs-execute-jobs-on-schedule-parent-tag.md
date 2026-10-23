@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/samples/cloudrun-jobs-execute-jobs-on-schedule-parent-tag/
 title: Running Cloud Run services on a schedule \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:10:47.464232+00:00
+fetched_at: 2026-10-23T10:03:23.694606+00:00
 ---
 
 # Running Cloud Run services on a schedule  |  Google Cloud Documentation

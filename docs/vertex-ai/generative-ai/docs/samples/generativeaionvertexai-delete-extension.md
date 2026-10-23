@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-delete-extension/
 title: Delete an extension \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:08.781151+00:00
+fetched_at: 2026-10-23T09:37:51.333468+00:00
 ---
 
 # Delete an extension  |  Generative AI on Vertex AI  |  Google Cloud Documentation

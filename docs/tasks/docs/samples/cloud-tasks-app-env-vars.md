@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tasks/docs/samples/cloud-tasks-app-env-vars/
 title: Set up environment variables needed for task creation \u00a0|\u00a0 Cloud Tasks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:46.212830+00:00
+fetched_at: 2026-10-23T08:58:51.968564+00:00
 ---
 
 # Set up environment variables needed for task creation  |  Cloud Tasks  |  Google Cloud Documentation

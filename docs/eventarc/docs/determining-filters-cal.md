@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/docs/determining-filters-cal/
 title: Determine event filters for Cloud Audit Logs \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:27.921518+00:00
+fetched_at: 2026-10-23T13:02:04.160794+00:00
 ---
 
 # Determine event filters for Cloud Audit Logs  |  Eventarc Standard  |  Google Cloud Documentation

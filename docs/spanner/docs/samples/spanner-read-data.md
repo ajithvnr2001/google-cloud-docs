@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-read-data/
 title: Read data \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:10.707011+00:00
+fetched_at: 2026-10-23T10:09:30.432661+00:00
 ---
 
 # Read data  |  Spanner  |  Google Cloud Documentation

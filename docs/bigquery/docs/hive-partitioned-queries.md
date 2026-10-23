@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/hive-partitioned-queries/
 title: Manage external Hive partitioned data \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:45:04.427909+00:00
+fetched_at: 2026-10-23T12:55:32.814278+00:00
 ---
 
 # Manage external Hive partitioned data  |  BigQuery  |  Google Cloud Documentation
@@ -20,6 +20,12 @@ fetched_at: 2026-10-22T05:45:04.427909+00:00
 Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
 
 # Manage external Hive partitioned data
+
+Hive partitioning support lets you query externally partitioned data in Cloud Storage, Amazon Simple Storage Service (Amazon S3), and Azure Blob Storage by using BigLake tables or BigQuery external tables. When queries filter on partition keys, BigQuery can prune partitions and read less data.
+
+This document describes the supported Hive partitioning layouts and formats, partition pruning, and limitations. We recommend BigLake tables because they let you enforce fine-grained security at the table level.
+
+## Supported data stores and formats
 
 You can use BigQuery external tables to query partitioned data in the following datastores:
 
@@ -39,7 +45,7 @@ The external partitioned data must use a default Hive partitioning layout and be
 
 
 
-To query externally partitioned data, you must create a [BigLake table](https://docs.cloud.google.com/bigquery/docs/create-cloud-storage-table-biglake) or an [external table](https://docs.cloud.google.com/bigquery/docs/external-data-cloud-storage#create-external-table-partitioned). We recommend using BigLake tables because they let you enforce fine-grained security at the table level. For information about BigLake and external tables, see [Introduction to BigLake tables](https://docs.cloud.google.com/bigquery/docs/biglake-intro) and [Introduction to external tables](https://docs.cloud.google.com/bigquery/docs/external-tables).
+To query externally partitioned data, you must create a [BigLake table](https://docs.cloud.google.com/bigquery/docs/create-cloud-storage-table-biglake) or an [external table](https://docs.cloud.google.com/bigquery/docs/external-data-cloud-storage#create-external-table-partitioned). For information about BigLake and external tables, see [Introduction to BigLake tables](https://docs.cloud.google.com/bigquery/docs/biglake-intro) and [Introduction to external tables](https://docs.cloud.google.com/bigquery/docs/external-tables).
 
 You enable Hive partitioning support by setting the appropriate options in the [table definition file](https://docs.cloud.google.com/bigquery/docs/external-table-definition#create_a_definition_file_for_hive-partitioned_data). For instructions about querying managed partitioned tables, see [Introduction to partitioned tables](https://docs.cloud.google.com/bigquery/docs/partitioned-tables).
 
@@ -144,6 +150,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

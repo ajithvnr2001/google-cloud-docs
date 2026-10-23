@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/service-accounts/
 title: Artifact Analysis service accounts \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:06.113465+00:00
+fetched_at: 2026-10-23T13:18:50.106585+00:00
 ---
 
 # Artifact Analysis service accounts  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/commercetools/configure/
 title: Commercetools \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:41.285180+00:00
+fetched_at: 2026-10-23T13:09:30.971937+00:00
 ---
 
 # Commercetools  |  Integration Connectors  |  Google Cloud Documentation

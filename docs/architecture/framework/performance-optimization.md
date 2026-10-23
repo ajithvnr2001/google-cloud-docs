@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/performance-optimization/
 title: Well-Architected Framework: Performance optimization pillar \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:05.779885+00:00
+fetched_at: 2026-10-23T10:42:53.467263+00:00
 ---
 
 # Well-Architected Framework: Performance optimization pillar  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -19,9 +19,9 @@ Send feedback
 
 #  Well-Architected Framework: Performance optimization pillar Stay organized with collections  Save and categorize content based on your preferences. 
 
-Last reviewed 2026-10-13 UTC
+Last reviewed 2026-10-22 UTC
 
-To view the content in the performance optimization pillar on a single page or to to get a PDF output of the content, see [View on one page](https://docs.cloud.google.com/architecture/framework/performance-optimization/printable). 
+To view the content in the performance optimization pillar on a single page or to get a PDF output of the content, see [View on one page](https://docs.cloud.google.com/architecture/framework/performance-optimization/printable). 
 
 This pillar in the [Google Cloud Well-Architected Framework](https://docs.cloud.google.com/architecture/framework) provides recommendations to optimize the performance of workloads in Google Cloud.
 
@@ -29,7 +29,7 @@ This document is intended for architects, developers, and administrators who pla
 
 The recommendations in this pillar can help your organization to operate efficiently, improve customer satisfaction, increase revenue, and reduce cost. For example, when the backend processing time of an application decreases, users experience faster response times, which can lead to higher user retention and more revenue.
 
-The performance optimization process can involve a trade-off between performance and cost. However, optimizing performance can sometimes help you reduce costs. ​​For example, when the load increases, autoscaling can help to provide predictable performance by ensuring that the system resources aren't overloaded. Autoscaling also helps you to reduce costs by removing unused resources during periods of low load.
+The performance optimization process can involve a trade-off between performance and cost. However, optimizing performance can sometimes help you reduce costs. For example, when the load increases, autoscaling can help to provide predictable performance by ensuring that the system resources aren't overloaded. Autoscaling also helps you to reduce costs by removing unused resources during periods of low load.
 
 Performance optimization is a continuous process, not a one-time activity. The following diagram shows the stages in the performance optimization process:
 
@@ -111,6 +111,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

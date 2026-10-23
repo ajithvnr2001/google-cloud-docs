@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-update-secret/
 title: Update secret \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:56.697016+00:00
+fetched_at: 2026-10-23T09:40:01.576252+00:00
 ---
 
 # Update secret  |  Secret Manager  |  Google Cloud Documentation

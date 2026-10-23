@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/private-access-from-agent-runtime/
 title: Access Apigee privately from Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:34.790972+00:00
+fetched_at: 2026-10-23T13:18:47.562102+00:00
 ---
 
 # Access Apigee privately from Gemini Enterprise Agent Platform  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/marketplace/mp-support/
 title: Marketplace connector support \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:45.644965+00:00
+fetched_at: 2026-10-23T13:11:26.012772+00:00
 ---
 
 # Marketplace connector support  |  Integration Connectors  |  Google Cloud Documentation

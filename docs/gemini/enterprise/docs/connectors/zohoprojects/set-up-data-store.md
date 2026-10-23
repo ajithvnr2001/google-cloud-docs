@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/zohoprojects/set-up-data-store/
 title: Set up a Zoho Projects data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:45.419176+00:00
+fetched_at: 2026-10-23T13:11:14.967470+00:00
 ---
 
 # Set up a Zoho Projects data store  |  Gemini Enterprise  |  Google Cloud Documentation

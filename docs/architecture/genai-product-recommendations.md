@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/genai-product-recommendations/
 title: Generative AI use case: Generate personalized product recommendations \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:57.797139+00:00
+fetched_at: 2026-10-23T13:20:01.826305+00:00
 ---
 
 # Generative AI use case: Generate personalized product recommendations  |  Cloud Architecture Center  |  Google Cloud Documentation

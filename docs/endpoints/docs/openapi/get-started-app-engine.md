@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/get-started-app-engine/
 title: Getting started with Cloud Endpoints for the App Engine flexible environment with ESP \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:34.396397+00:00
+fetched_at: 2026-10-23T13:02:07.138702+00:00
 ---
 
 # Getting started with Cloud Endpoints for the App Engine flexible environment with ESP  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation

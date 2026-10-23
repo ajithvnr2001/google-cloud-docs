@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/samples/functions-pubsub-subscribe/
 title: Pub/Sub Subscribe to a Topic \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:19.196009+00:00
+fetched_at: 2026-10-23T13:03:09.772815+00:00
 ---
 
 # Pub/Sub Subscribe to a Topic  |  Cloud Run functions  |  Google Cloud Documentation

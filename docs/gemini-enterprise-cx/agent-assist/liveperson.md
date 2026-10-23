@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/liveperson/
 title: Integrate UI modules with LivePerson \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:52.966993+00:00
+fetched_at: 2026-10-23T13:12:23.582864+00:00
 ---
 
 # Integrate UI modules with LivePerson  |  Agent Assist  |  Google Cloud Documentation

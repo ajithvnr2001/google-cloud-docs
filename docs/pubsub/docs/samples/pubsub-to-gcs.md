@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-to-gcs/
 title: Pub/Sub to Cloud Storage using Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:59.877458+00:00
+fetched_at: 2026-10-23T10:04:07.448220+00:00
 ---
 
 # Pub/Sub to Cloud Storage using Dataflow  |  Google Cloud Documentation

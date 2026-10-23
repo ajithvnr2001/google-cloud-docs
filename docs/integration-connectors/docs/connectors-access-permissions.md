@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors-access-permissions/
 title: IAM roles and permissions for Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:44.942921+00:00
+fetched_at: 2026-10-23T13:10:13.443362+00:00
 ---
 
 # IAM roles and permissions for Integration Connectors  |  Google Cloud Documentation

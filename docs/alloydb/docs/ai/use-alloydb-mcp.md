@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/use-alloydb-mcp/
 title: Use the AlloyDB remote MCP server \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:43:32.720121+00:00
+fetched_at: 2026-10-23T13:08:30.051793+00:00
 ---
 
 # Use the AlloyDB remote MCP server  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Use the AlloyDB remote MCP server Stay organized with collections  Save and categorize content based on your preferences. 
 
-**Important:** The AlloyDB for PostgreSQL remote MCP server offers a global endpoint and regional endpoints. The Global endpoint is Generally Available. Regional endpoints are in Preview and subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products#product-launch-stages).
+**Important:** The AlloyDB for PostgreSQL remote MCP server offers a global endpoint and regional endpoints. The Global endpoint is Generally Available. Regional endpoints are in Preview and subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products#product-launch-stages).
 
 This document shows you how to use the AlloyDB for PostgreSQL remote Model Context Protocol (MCP) server to connect with AI applications including Antigravity, ChatGPT, Claude, and custom applications you are developing. The AlloyDB for PostgreSQL remote MCP server lets you access and run AlloyDB tools to manage AlloyDB clusters and instances from your AI-enabled development environments and AI agent platforms. The AlloyDB for PostgreSQL remote MCP server is enabled when you enable the AlloyDB for PostgreSQL API. 
 
@@ -50,8 +50,11 @@ For more information about MCP architecture, see the MCP version 2026-07-28 [spe
 You might want to use the AlloyDB local MCP server for the following reasons:
 
   * Local development and testing
+
   * Offline MCP use
+
   * Manage AlloyDB clusters and instances from your AI application
+
 
 
 
@@ -75,9 +78,12 @@ For information about other MCP servers and information about security and gover
 
 The AlloyDB remote MCP server has the following limitations:
 
-  * The `create_user` tool doesn't support creating a [built-in authentication user with a password](https://www.postgresql.org/docs/16/auth-password.html#AUTH-PASSWORD). A user can only be created with [IAM authentication](https://docs.cloud.google.com/alloydb/docs/database-users/manage-iam-auth).
+  * The `create_user` tool doesn't support creating a [built-in authentication user with a password](https://www.postgresql.org/docs/16/auth-password.html#AUTH-PASSWORD). A user can only be created with [Identity and Access Management (IAM) authentication](https://docs.cloud.google.com/alloydb/docs/database-users/manage-iam-auth).
+
   * If the `execute_sql` tool returns a response that's larger than 10 MB, then the response might be truncated.
+
   * `execute_sql_read_only` is only supported for PostgreSQL versions 17 and later.
+
 
 
 
@@ -158,7 +164,7 @@ To get the permissions that you need to use the AlloyDB for PostgreSQL MCP serve
     * [AlloyDB Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/alloydb#alloydb.viewer) (`roles/alloydb.viewer`)
     * [AlloyDB Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/alloydb#alloydb.admin) (`roles/alloydb.admin`)
     * [AlloyDB Database User ](https://docs.cloud.google.com/iam/docs/roles-permissions/alloydb#alloydb.databaseUser) (`roles/alloydb.databaseUser`)
-  * Get a AlloyDB instance or list all AlloyDB instances in a project: [AlloyDB Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/alloydb#alloydb.viewer) (`roles/alloydb.viewer`) 
+  * Get an AlloyDB instance or list all AlloyDB instances in a project: [AlloyDB Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/alloydb#alloydb.viewer) (`roles/alloydb.viewer`) 
   * List AlloyDB users: [AlloyDB Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/alloydb#alloydb.viewer) (`roles/alloydb.viewer`) 
 
 
@@ -273,7 +279,9 @@ Use the [MCP inspector](https://modelcontextprotocol.io/docs/tools/inspector) to
 Replace the following:
 
   * `TOOLSET_ENDPOINT`: the remainder of the MCP endpoint after the service name. For example, for AlloyDB for PostgreSQL, this might be `mcp/toolset-name`.
+
   * `MCP_PROTOCOL_VERSION`: the MCP protocol version. For example, `2026-07-28`.
+
 
 
 
@@ -299,17 +307,23 @@ If the `data_api_access` configuration isn't enabled on an instance, you can ena
 Replace the following:
 
      * `PROJECT_ID`: the ID of your Google Cloud project.
+
      * `LOCATION`: the region where your AlloyDB cluster is located.
+
      * `CLUSTER_ID`: the ID of your AlloyDB cluster.
+
      * `INSTANCE_ID`: the ID of your AlloyDB instance.
+
   2. In the Gemini CLI, enter a prompt similar to the following:
 
-` Enable IAM database authentication on the AlloyDB instance INSTANCE_NAME Make sure that the SQL statements use the privileges associated with the IAM database authentication user account USER_ACCOUNT `
+` Enable IAM database authentication on the AlloyDB instance INSTANCE_NAME. Make sure that the SQL statements use the privileges associated with the IAM database authentication user account USER_ACCOUNT. `
 
 Replace the following:
 
      * `INSTANCE_NAME`: the name of the AlloyDB instance.
+
      * `USER_ACCOUNT`: the IAM user account to use for [authentication](https://docs.cloud.google.com/alloydb/docs/database-users/manage-iam-auth) when executing SQL statements.
+
 
 
 
@@ -327,15 +341,15 @@ A sample use case might be the rapid development of web applications and the pro
 
 **Workflow:** the workflow for setting up a web application might look like the following:
 
-  * **Provisioning** : The agent creates a cluster that the instance can be allocated in. The agent then calls the `create_instance` tool to create a new AlloyDB instance with development environment-sized specifications. You can [enable Public IP connectivity](https://docs.cloud.google.com/alloydb/docs/connect-public-ip) on the new instance. You can also [automate Private Service Connect](https://docs.cloud.google.com/alloydb/docs/configure-private-service-connect) endpoint configuration.
+  * **Provisioning** : the agent creates a cluster that the instance can be allocated in. The agent then calls the `create_instance` tool to create a new AlloyDB instance with development environment-sized specifications. You can [enable Public IP connectivity](https://docs.cloud.google.com/alloydb/docs/connect-public-ip) on the new instance. You can also [automate Private Service Connect](https://docs.cloud.google.com/alloydb/docs/configure-private-service-connect) endpoint configuration.
 
-  * **Verification** : The agent uses the `get_operation` tool to poll the status of the instance creation operation.
+  * **Verification** : the agent uses the `get_operation` tool to poll the status of the instance creation operation.
 
-  * **Connection** : When the operation is complete, the agent uses the `get_instance` tool to retrieve the instance connection metadata.
+  * **Connection** : when the operation is complete, the agent uses the `get_instance` tool to retrieve the instance connection metadata.
 
-  * **Schema setup** : The agent creates the database and then uses the `execute_sql` to run the `CREATE TABLE products` SQL statement.
+  * **Schema setup** : the agent creates the database and then uses the `execute_sql` tool to run the `CREATE TABLE products` SQL statement.
 
-  * **Data seeding** : The agent uses `execute_sql` again to insert initial seed data (DML) into the newly created table.
+  * **Data seeding** : the agent uses `execute_sql` again to insert initial seed data (DML) into the newly created table.
 
 
 
@@ -348,13 +362,13 @@ In this sample use case, you might review existing database instances to help en
 
 "List all the PostgreSQL instances in my project and show me their details to verify that they're using the same configuration and that the most recent list database users has been successfully updated."
 
-**Workflow** : the workflow for checking AlloyDB instance and database user configuration might look like the following.
+**Workflow** : the workflow for checking AlloyDB instance and database user configuration might look like the following:
 
-  * **Discovery** : The agent uses `list_instances` to retrieve a list of all AlloyDB instances in the project.
+  * **Discovery** : the agent uses `list_instances` to retrieve a list of all AlloyDB instances in the project.
 
-  * **Inspection** : For each instance identified, the agent calls `get_instance` to fetch detailed configuration metadata, such as the database version, region, and machine type, and calls `list_users` to check the database users on the instance. This metadata includes information about whether [public IP connectivity](https://docs.cloud.google.com/alloydb/docs/connect-public-ip) is enabled or if [Private Service Connect endpoints](https://docs.cloud.google.com/alloydb/docs/configure-private-service-connect) are configured.
+  * **Inspection** : for each instance identified, the agent calls `get_instance` to fetch detailed configuration metadata, such as the database version, region, and machine type, and calls `list_users` to check the database users on the instance. This metadata includes information about whether [public IP connectivity](https://docs.cloud.google.com/alloydb/docs/connect-public-ip) is enabled or if [Private Service Connect endpoints](https://docs.cloud.google.com/alloydb/docs/configure-private-service-connect) are configured.
 
-  * **Reporting** : The agent summarizes the findings, highlighting any instances or users that deviate from the expected configuration.
+  * **Reporting** : the agent summarizes the findings, highlighting any instances or users that deviate from the expected configuration.
 
 
 
@@ -485,6 +499,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

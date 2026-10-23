@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/alphaevolve/developer-guide/evaluator-patterns/
 title: Evaluator implementation patterns \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:47.918311+00:00
+fetched_at: 2026-10-23T13:10:58.427329+00:00
 ---
 
 # Evaluator implementation patterns  |  Gemini Enterprise  |  Google Cloud Documentation

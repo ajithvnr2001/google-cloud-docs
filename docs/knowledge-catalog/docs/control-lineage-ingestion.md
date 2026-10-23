@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/control-lineage-ingestion/
 title: About data lineage ingestion control \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:02:36.495919+00:00
+fetched_at: 2026-10-23T12:45:45.674948+00:00
 ---
 
 # About data lineage ingestion control  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -33,10 +33,10 @@ Integration name | Ingestion control support | Default value | Integration detai
 ---|---|---|---  
 Managed Service for Apache Spark: Apache Spark clusters | Yes | Enabled | [Using Spark data lineage](https://docs.cloud.google.com/managed-spark/docs/guides/spark-lineage)  
 Managed Service for Apache Spark: Apache Hive clusters | Yes | Enabled | [Enable Hive data lineage](https://docs.cloud.google.com/managed-spark/docs/guides/hive-lineage)  
-Managed Service for Apache Spark: serverless deployment | Yes | Enabled | [Use data lineage with Managed Service for Apache Spark](https://docs.cloud.google.com/dataproc-serverless/docs/guides/data-lineage)  
+Managed Service for Apache Spark: serverless deployment | Yes | Enabled | [Use data lineage with Managed Service for Apache Spark](https://docs.cloud.google.com/managed-spark/docs/guides/data-lineage)  
 BigQuery | Yes | Enabled | [Track lineage for a BigQuery table](https://docs.cloud.google.com/knowledge-catalog/docs/track-lineage-quickstart)  
 Managed Service for Apache Airflow | Yes | Enabled | [Data lineage with Knowledge Catalog](https://docs.cloud.google.com/composer/docs/composer-2/lineage-integration)  
-Looker (Google Cloud core) | Yes ([Preview](https://cloud.google.com/products#product-launch-stages)) | Enabled | [Looker Core data lineage](https://docs.cloud.google.com/looker/docs/looker-core-lineage)  
+Looker (Google Cloud core) | Yes ([Preview](https://docs.cloud.google.com/products#product-launch-stages)) | Enabled | [Looker Core data lineage](https://docs.cloud.google.com/looker/docs/looker-core-lineage)  
 Cloud Data Fusion | No | Enabled | [View lineage in Knowledge Catalog](https://docs.cloud.google.com/data-fusion/docs/how-to/view-lineage-in-dataplex)  
 Dataflow | No | Disabled from Dataflow side | [Use data lineage in Dataflow](https://docs.cloud.google.com/dataflow/docs/guides/lineage)  
 Vertex AI Pipelines | No | Enabled | [Track the lineage of pipeline artifacts](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/lineage)  
@@ -54,7 +54,7 @@ Knowledge Catalog evaluates the [resource hierarchy](https://docs.cloud.google.c
 
 **Note:** The configuration you set at the organization, project, or folder level takes precedence. For example, if you disable lineage ingestion for a service at the project level, lineage data is not ingested for that service, regardless of any service-specific settings.
 
-To manage ingestion control in bulk, enable the Data Lineage API for all projects inside a folder or an organization by following [hierarchical service activation](https://docs.cloud.google.com/service-usage/docs/hierarchical-service-activation/overview) rules. After the Data Lineage API is enabled, to granuarly control data lineage ingestion per service integration for an organization, individual projects or folders.
+To manage ingestion control in bulk, enable the Data Lineage API for all projects inside a folder or an organization by following [hierarchical service activation](https://docs.cloud.google.com/service-usage/docs/hierarchical-service-activation/overview) rules. After you enable the Data Lineage API, you can granularly control data lineage ingestion per service integration for an organization, folder, or project.
 
 ### How data ingestion configuration works for single-service integrations
 
@@ -117,6 +117,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

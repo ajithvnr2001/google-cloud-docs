@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/java/get-started-frameworks-java/
 title: Getting started with Cloud Endpoints Frameworks for Java \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:39.901070+00:00
+fetched_at: 2026-10-23T13:01:50.422670+00:00
 ---
 
 # Getting started with Cloud Endpoints Frameworks for Java  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/advanced/docs/use-cmek/
 title: Use customer-managed encryption keys (CMEK) \u00a0|\u00a0 Eventarc Advanced \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:20.293984+00:00
+fetched_at: 2026-10-23T13:13:19.407370+00:00
 ---
 
 # Use customer-managed encryption keys (CMEK)  |  Eventarc Advanced  |  Google Cloud Documentation

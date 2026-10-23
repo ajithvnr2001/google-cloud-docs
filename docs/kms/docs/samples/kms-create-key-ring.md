@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kms/docs/samples/kms-create-key-ring/
 title: Create a key ring \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:47:06.691110+00:00
+fetched_at: 2026-10-23T12:38:38.371180+00:00
 ---
 
 # Create a key ring  |  Cloud Key Management Service  |  Google Cloud Documentation

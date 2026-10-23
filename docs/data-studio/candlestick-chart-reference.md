@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/candlestick-chart-reference/
 title: Candlestick chart reference \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:37.026329+00:00
+fetched_at: 2026-10-23T13:19:01.108143+00:00
 ---
 
 # Candlestick chart reference  |  Data Studio  |  Google Cloud Documentation

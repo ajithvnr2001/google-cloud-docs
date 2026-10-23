@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/managed-oauth-client/
 title: Enable IAP using a Google-managed OAuth client \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:27:23.708379+00:00
+fetched_at: 2026-10-23T13:10:04.948967+00:00
 ---
 
 # Enable IAP using a Google-managed OAuth client  |  Identity-Aware Proxy  |  Google Cloud Documentation

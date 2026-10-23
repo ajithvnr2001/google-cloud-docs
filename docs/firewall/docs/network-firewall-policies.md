@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/network-firewall-policies/
 title: Global network firewall policies \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:43.184625+00:00
+fetched_at: 2026-10-23T13:12:24.155260+00:00
 ---
 
 # Global network firewall policies  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

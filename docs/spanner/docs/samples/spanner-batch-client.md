@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-batch-client/
 title: Read data in parallel \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:28:30.196778+00:00
+fetched_at: 2026-10-23T08:57:46.954032+00:00
 ---
 
 # Read data in parallel  |  Spanner  |  Google Cloud Documentation

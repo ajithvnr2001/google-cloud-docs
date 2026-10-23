@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/activate-scc-overview/
 title: Overview of activating Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:52.708359+00:00
+fetched_at: 2026-10-23T12:53:10.614018+00:00
 ---
 
 # Overview of activating Security Command Center  |  Google Cloud Documentation
@@ -23,9 +23,9 @@ Send feedback
 
 Standard-legacy, Standard, Premium, and Enterprise (Deprecated) [service tiers](https://docs.cloud.google.com/security-command-center/docs/service-tiers) The Security Command Center Enterprise service tier will shut down on May 21, 2027. If your organization uses the Enterprise service tier, then the organization will automatically move to the Premium service tier on or after May 21, 2027. Contact your account representative or a [Google Cloud sales specialist](https://cloud.google.com/contact) if you have questions. 
 
-You can activate Security Command Center at [different tiers](https://docs.cloud.google.com/security-command-center/docs/service-tiers): Standard, Premium, or Enterprise. If you select the Standard tier or the Premium tier, you can activate Security Command Center for an entire organization (_organization-level activation_) or for individual projects (_project-level activation_). If you select the Enterprise tier, you can activate Security Command Center at the organization level only.
+Security Command Center helps you to identify and manage vulnerabilities, detect threats, and monitor asset posture across your Google Cloud resources.
 
-The activation process varies by tier. Also, when you activate Security Command Center at the project level, certain detection modules and service integrations are not available due to Security Command Center's reduced scope of access.
+You can activate the service at [different tiers](https://docs.cloud.google.com/security-command-center/docs/service-tiers). Standard and Premium support both _organization-level activation_ and _project-level activation_ , which offers a reduced scope of access, while Enterprise supports organization-level activation only.
 
 ## Overview of organization-level activation
 
@@ -157,6 +157,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

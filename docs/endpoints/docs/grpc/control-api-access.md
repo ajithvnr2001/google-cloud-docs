@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/grpc/control-api-access/
 title: Granting and revoking access to the API \u00a0|\u00a0 Cloud Endpoints with gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:22.869747+00:00
+fetched_at: 2026-10-23T13:01:27.228330+00:00
 ---
 
 # Granting and revoking access to the API  |  Cloud Endpoints with gRPC  |  Google Cloud Documentation

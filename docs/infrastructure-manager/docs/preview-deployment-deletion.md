@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/preview-deployment-deletion/
 title: Preview a deletion of a deployment \u00a0|\u00a0 Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:43.043064+00:00
+fetched_at: 2026-10-23T13:10:12.957589+00:00
 ---
 
 # Preview a deletion of a deployment  |  Infrastructure Manager  |  Google Cloud Documentation

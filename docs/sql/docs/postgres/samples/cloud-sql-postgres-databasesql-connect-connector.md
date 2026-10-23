@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/samples/cloud-sql-postgres-databasesql-connect-connector/
 title: Create a connection using the Cloud SQL Go Connector \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:41.888203+00:00
+fetched_at: 2026-10-23T10:18:33.668650+00:00
 ---
 
 # Create a connection using the Cloud SQL Go Connector  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation

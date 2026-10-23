@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/ndb/polymodelclass/
 title: PolyModel Class \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:52.666423+00:00
+fetched_at: 2026-10-23T13:18:18.665865+00:00
 ---
 
 # PolyModel Class  |  App Engine standard environment  |  Google Cloud Documentation

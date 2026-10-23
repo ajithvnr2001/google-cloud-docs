@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/pre-built-tools-with-mcp-toolbox/
 title: Connect LLMs to Cloud Storage with MCP \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:29:24.012429+00:00
+fetched_at: 2026-10-23T12:26:50.829824+00:00
 ---
 
 # Connect LLMs to Cloud Storage with MCP  |  Google Cloud Documentation
@@ -21,29 +21,9 @@ Send feedback
 
 #  Connect LLMs to Cloud Storage with MCP Stay organized with collections  Save and categorize content based on your preferences. 
 
-This guide shows you how to connect Cloud Storage to Integrated Development Environments (IDEs) and developer tools. To do this, you run a local MCP server on your machine by using the [MCP Toolbox for Databases](https://github.com/googleapis/mcp-toolbox).
+You can run a local Model Context Protocol (MCP) server with the [MCP Toolbox for Databases](https://github.com/googleapis/mcp-toolbox) to interact with Cloud Storage directly from your IDE and developer tools. This setup lets large language models (LLMs) in clients such as Antigravity, Claude, Cline, Cursor, Visual Studio Code (Copilot), and Windsurf create buckets, manage object data, and inspect Identity and Access Management (IAM) policies.
 
-The MCP Toolbox for Databases is an open-source repository that contains connectors for databases and datastores, including Cloud Storage, BigQuery, AlloyDB, Spanner, and Cloud SQL. The toolbox supports OAuth2 and OIDC authentication, and integrates with Open Telemetry for observability. The Cloud Storage toolbox integration lets you use an LLM to perform the following actions:
-
-  * Create, list, and delete buckets.
-  * Get bucket and object metadata.
-  * Get Identity and Access Management (IAM) policies on your buckets.
-  * Read, write, upload, and download objects.
-  * Copy or move objects.
-
-
-
-This guide demonstrates the connection process for the following IDEs and tools:
-
-  * Cursor
-  * Windsurf (formerly Codeium)
-  * Visual Studio Code (Copilot)
-  * Cline (VS Code extension)
-  * Claude desktop
-  * Claude code
-  * Antigravity
-
-**Note:** The Cloud Storage integration is available in MCP Toolbox version 1.2.0 or later. If you want to use the Cloud Storage local MCP server as a standalone server outside of the toolbox, see the [Cloud Storage MCP GitHub repository](https://github.com/googleapis/gcloud-mcp/tree/main/packages/storage-mcp).
+The open-source MCP Toolbox supports OAuth2 and OIDC authentication, and integrates with OpenTelemetry for observability. Cloud Storage integration requires MCP Toolbox version 1.2.0 or later. To run a standalone local MCP server without the toolbox, use the [Cloud Storage MCP GitHub repository](https://github.com/googleapis/gcloud-mcp/tree/main/packages/storage-mcp).
 
 ## Before you begin
 
@@ -334,6 +314,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

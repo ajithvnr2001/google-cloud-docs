@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/querydata/spanner/build-context-sets/
 title: Build context sets using the context engineering agent \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:49.459024+00:00
+fetched_at: 2026-10-23T13:03:25.918335+00:00
 ---
 
 # Build context sets using the context engineering agent  |  Data Agents  |  Google Cloud Documentation

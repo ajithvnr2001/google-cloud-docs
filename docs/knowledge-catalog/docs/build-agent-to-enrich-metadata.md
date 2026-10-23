@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/build-agent-to-enrich-metadata/
 title: Build an agent to enrich your metadata \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:02:57.160604+00:00
+fetched_at: 2026-10-23T12:50:49.344269+00:00
 ---
 
 # Build an agent to enrich your metadata  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -49,11 +49,11 @@ To run the Knowledge Catalog enrichment agent, you must meet the following requi
 
 To get the permissions that you need to use the enrichment agent, ask your administrator to grant you the following IAM roles on your Google Cloud project iam.gserviceaccount.com: 
 
-  * To manage sample BigQuery resources: [BigQuery Data Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.dataEditor) (`roles/bigquery.dataEditor`) 
-  * To search for catalog metadata: [Dataplex Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.viewer) (`roles/dataplex.viewer`) 
-  * To manage catalog metadata: [Dataplex Catalog Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogEditor) (`roles/dataplex.catalogEditor`) 
-  * To access Vertex AI features (Gemini LLM APIs): [Vertex AI User ](https://docs.cloud.google.com/iam/docs/roles-permissions/aiplatform#aiplatform.user) (`roles/aiplatform.user`) 
-  * To consume service APIs: [Service Usage Consumer ](https://docs.cloud.google.com/iam/docs/roles-permissions/serviceusage#serviceusage.serviceUsageConsumer) (`roles/serviceusage.serviceUsageConsumer`) 
+  * To manage sample BigQuery resources: [**BigQuery Data Editor** ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.dataEditor) (`roles/bigquery.dataEditor`) 
+  * To search for catalog metadata: [**Dataplex Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.viewer) (`roles/dataplex.viewer`) 
+  * To manage catalog metadata: [**Dataplex Catalog Editor** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogEditor) (`roles/dataplex.catalogEditor`) 
+  * To access Vertex AI features (Gemini LLM APIs): [**Vertex AI User** ](https://docs.cloud.google.com/iam/docs/roles-permissions/aiplatform#aiplatform.user) (`roles/aiplatform.user`) 
+  * To consume service APIs: [**Service Usage Consumer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/serviceusage#serviceusage.serviceUsageConsumer) (`roles/serviceusage.serviceUsageConsumer`) 
 
 
 
@@ -77,10 +77,10 @@ You might also be able to get these permissions with [custom roles](https://docs
 
 ### Enable APIs
 
-To use Knowledge Catalog enrichment agent, enable the following APIs in your project:
+To use the Knowledge Catalog enrichment agent, enable the following APIs in your project:
 
   * BigQuery API
-  * Knowledge Catalog API
+  * Dataplex API
   * Vertex AI API
   * Service Usage API
 
@@ -314,7 +314,7 @@ The following code shows how to publish the generated documentation to the Overv
   * Learn more about working with [metadata](https://docs.cloud.google.com/knowledge-catalog/docs/metadata).
   * Use the Antigravity CLI to [test your data context](https://docs.cloud.google.com/knowledge-catalog/docs/use-antigravity-cli-agent-to-test-data-context).
   * Learn about [managing aspects and enriching metadata](https://docs.cloud.google.com/knowledge-catalog/docs/enrich-entries-metadata).
-  * Explore other classes and methods available in the [Knowledge Catalog client library for Python](https://cloud.google.com/python/docs/reference/dataplex/latest).
+  * Explore other classes and methods available in the [Knowledge Catalog client library for Python](https://docs.cloud.google.com/python/docs/reference/dataplex/latest).
   * Try other [Knowledge Catalog use cases](https://docs.cloud.google.com/knowledge-catalog/docs/use-cases).
 
 
@@ -323,6 +323,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

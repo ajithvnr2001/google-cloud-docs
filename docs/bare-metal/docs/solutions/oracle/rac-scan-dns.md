@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/solutions/oracle/rac-scan-dns/
 title: Configure Single Client Access Name with Cloud DNS \u00a0|\u00a0 Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:02.202618+00:00
+fetched_at: 2026-10-23T13:19:31.186482+00:00
 ---
 
 # Configure Single Client Access Name with Cloud DNS  |  Bare Metal Solution  |  Google Cloud Documentation

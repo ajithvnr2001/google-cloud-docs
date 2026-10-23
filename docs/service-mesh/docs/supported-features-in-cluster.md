@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/service-mesh/docs/supported-features-in-cluster/
 title: In-cluster control plane supported features \u00a0|\u00a0 Cloud Service Mesh \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:12.210373+00:00
+fetched_at: 2026-10-23T11:32:07.937809+00:00
 ---
 
 # In-cluster control plane supported features  |  Cloud Service Mesh  |  Google Cloud Documentation
@@ -46,14 +46,14 @@ Release version | Release date | Earliest end of life date
 1.31 | [October 12, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#October_12_2026) | July 12, 2027  
 1.30 | [August 31, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#August_26_2026) | May 31, 2027  
 1.29 | [June 9, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#June_10_2026) | March 9, 2027  
-1.28 | [January 19, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#January_19_2026) | October 19, 2026  
   
-If you are on an unsupported version of Cloud Service Mesh, then you must upgrade to Cloud Service Mesh 1.28 or later. For information on how to upgrade, see [Upgrade Cloud Service Mesh](https://docs.cloud.google.com/service-mesh/docs/upgrade).
+If you are on an unsupported version of Cloud Service Mesh, then you must upgrade to Cloud Service Mesh 1.29 or later. For information on how to upgrade, see [Upgrade Cloud Service Mesh](https://docs.cloud.google.com/service-mesh/docs/upgrade).
 
 The following table shows the unsupported versions of Cloud Service Mesh and their end-of-life (EOL) date.
 
 Release version | Release date | End-of-life date  
 ---|---|---  
+1.28 | [January 19, 2026](https://docs.cloud.google.com/service-mesh/docs/release-notes#January_19_2026) | Unsupported (October 19, 2026)  
 1.27 | [September 23, 2025](https://docs.cloud.google.com/service-mesh/docs/release-notes#September_23_2025) | Unsupported (August 31, 2026)  
 1.26 | [July 16, 2025](https://docs.cloud.google.com/service-mesh/docs/release-notes#July_16_2025) | Unsupported (June 9, 2026)  
 1.25 | [April 4, 2025](https://docs.cloud.google.com/service-mesh/docs/release-notes#April_04_2025) | Unsupported (January 14, 2026)  
@@ -387,6 +387,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/billing-questions/
 title: Billing questions \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:56.607713+00:00
+fetched_at: 2026-10-23T13:20:00.039877+00:00
 ---
 
 # Billing questions  |  Cloud CDN  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/barracuda-cloudgen-firewall/
 title: Collect Barracuda CloudGen Firewall logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:08.259959+00:00
+fetched_at: 2026-10-23T13:18:37.872090+00:00
 ---
 
 # Collect Barracuda CloudGen Firewall logs  |  Google Security Operations  |  Google Cloud Documentation

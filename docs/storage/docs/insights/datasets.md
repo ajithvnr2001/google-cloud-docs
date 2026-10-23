@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/insights/datasets/
 title: Storage Insights datasets \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:29:08.859998+00:00
+fetched_at: 2026-10-23T13:08:43.003228+00:00
 ---
 
 # Storage Insights datasets  |  Google Cloud Documentation
@@ -23,13 +23,9 @@ Send feedback
 
 Storage Insights datasets is available only if you've configured [Storage Intelligence](https://docs.cloud.google.com/storage/docs/storage-intelligence/overview).
 
-This document explains how Storage Insights datasets help you to manage your Cloud Storage environment by providing the visibility and insights into your data.
+Storage Insights datasets help you manage your Cloud Storage resources by generating a queryable index of metadata and activity across organizations, folders, projects, or specific buckets. After you link the dataset to BigQuery, you can analyze, query, and visualize your bucket and object data.
 
-The Storage Insights datasets create a queryable index of metadata and activity for your Cloud Storage buckets and objects across your organization, folders, projects, or specific buckets. To query the metadata and activity index, you'll need to link the dataset to BigQuery. You can then use the linked BigQuery dataset to analyze, query, and visualize your data. Link the dataset to BigQuery to enable querying of the metadata and activity index.
-
-Storage Insights dataset is an exclusive feature available with the [ Storage Intelligence](https://docs.cloud.google.com/storage/docs/storage-intelligence/overview) subscription. Google Cloud offers a **30-day introductory trial for Storage Intelligence**. You can enable the trial to gain insights into your Cloud Storage usage and take actions. For more information about the trial, see [30-day introductory trial for Storage Intelligence](https://docs.cloud.google.com/storage/docs/storage-intelligence/30-day-introductory-trial/overview).
-
-## Overview
+## Dataset contents and schemas
 
 A Storage Insights dataset provides a rolling snapshot of metadata, activity data, errors, and events for all projects, buckets, and objects within the defined scope. The dataset collects and indexes information to provide a view of your data. This view lets you monitor your Cloud Storage resources and manage your storage estate.
 
@@ -232,6 +228,7 @@ Consider the following for dataset configurations:
 
   * [Configure Storage Insights datasets](https://docs.cloud.google.com/storage/docs/insights/configure-datasets).
   * [Learn about Storage Intelligence](https://docs.cloud.google.com/storage/docs/storage-intelligence/overview).
+  * [Explore the 30-day introductory trial for Storage Intelligence](https://docs.cloud.google.com/storage/docs/storage-intelligence/30-day-introductory-trial/overview).
   * [Run SQL queries on the datasets in BigQuery](https://docs.cloud.google.com/bigquery/docs/running-queries).
   * [Learn about BigQuery analytics](https://docs.cloud.google.com/bigquery/docs/query-overview).
   * [Check the CEL filters reference for batch operations](https://docs.cloud.google.com/storage/docs/batch-operations/cel-filters-reference).
@@ -242,6 +239,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

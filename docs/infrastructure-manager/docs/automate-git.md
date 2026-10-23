@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/automate-git/
 title: Automate the deployment of Google Cloud resources \u00a0|\u00a0 Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:46.085997+00:00
+fetched_at: 2026-10-23T13:09:58.224892+00:00
 ---
 
 # Automate the deployment of Google Cloud resources  |  Infrastructure Manager  |  Google Cloud Documentation

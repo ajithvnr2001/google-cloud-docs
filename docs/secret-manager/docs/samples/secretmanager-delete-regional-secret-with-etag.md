@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-delete-regional-secret-with-etag/
 title: Delete regional secret with Etag \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:28.430435+00:00
+fetched_at: 2026-10-23T09:22:39.419871+00:00
 ---
 
 # Delete regional secret with Etag  |  Secret Manager  |  Google Cloud Documentation

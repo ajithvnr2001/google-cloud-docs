@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-dml-standard-insert/
 title: DML write single row \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:19.851091+00:00
+fetched_at: 2026-10-23T10:10:05.589939+00:00
 ---
 
 # DML write single row  |  Spanner  |  Google Cloud Documentation

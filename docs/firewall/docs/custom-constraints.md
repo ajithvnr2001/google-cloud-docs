@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/custom-constraints/
 title: Manage VPC firewall rule resources by using custom constraints \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:08.139159+00:00
+fetched_at: 2026-10-23T13:02:13.834738+00:00
 ---
 
 # Manage VPC firewall rule resources by using custom constraints  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

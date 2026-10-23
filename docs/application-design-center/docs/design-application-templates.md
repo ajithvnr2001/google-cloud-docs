@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/design-application-templates/
 title: Design standard application templates \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:56.774733+00:00
+fetched_at: 2026-10-23T13:18:10.620890+00:00
 ---
 
 # Design standard application templates  |  Application Design Center  |  Google Cloud Documentation

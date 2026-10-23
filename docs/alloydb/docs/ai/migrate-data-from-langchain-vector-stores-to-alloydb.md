@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/migrate-data-from-langchain-vector-stores-to-alloydb/
 title: Migrate data from a vector database to AlloyDB \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:53.665387+00:00
+fetched_at: 2026-10-23T13:08:32.731644+00:00
 ---
 
 # Migrate data from a vector database to AlloyDB  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -103,8 +103,8 @@ To get the permissions that you need to complete the tasks in this tutorial, hav
   * Owner (`roles/owner`) or Editor (`roles/editor`)
   * If the user is not an owner or editor, the following IAM roles and PostgreSQL privileges are required:
 
-    * AlloyDB Instance Client ([`roles/alloydb.client`](https://docs.cloud.google.com/alloydb/docs/reference/iam-roles-permissions#roles))
-    * Cloud AlloyDB Admin ([`roles/alloydb.admin`](https://docs.cloud.google.com/alloydb/docs/reference/iam-roles-permissions#roles))
+    * AlloyDB Client ([`roles/alloydb.client`](https://docs.cloud.google.com/alloydb/docs/reference/iam-roles-permissions#roles))
+    * AlloyDB Admin ([`roles/alloydb.admin`](https://docs.cloud.google.com/alloydb/docs/reference/iam-roles-permissions#roles))
     * Compute Network User ([`roles/compute.networkUser`](https://docs.cloud.google.com/compute/docs/access/iam#compute.networkUser))
 
 
@@ -114,8 +114,8 @@ If you want to authenticate to your database using IAM authentication instead of
 ## Create an AlloyDB cluster and user
 
   1. [Create an AlloyDB cluster and an instance](https://docs.cloud.google.com/alloydb/docs/cluster-create). 
-     * Enable Public IP to run this tutorial from anywhere. If you're using Private IP, you must run this tutorial from within your VPC.
-  2. [Create or select an AlloyDB database user](https://docs.cloud.google.com/alloydb/docs/database-users/about). 
+     * Enable Public IP to run this tutorial from anywhere. If you're using Private IP, you must run this tutorial from within your Virtual Private Cloud (VPC) network.
+  2. [Create or select an AlloyDB database user](https://docs.cloud.google.com/alloydb/docs/database-users/manage-roles). 
      * When you create the instance, a `postgres` user is created with a password. This user has superuser permissions.
      * This tutorial uses built-in authentication to reduce any authentication friction. IAM authentication is possible using the [AlloyDBEngine](https://docs.cloud.google.com/python/docs/reference/langchain-google-alloydb-pg/latest/langchain_google_alloydb_pg.engine.AlloyDBEngine).
 
@@ -818,7 +818,7 @@ Make the following replacements before you run the sample:
 A successful migration prints logs similar to the following without any errors:  
 `Migration completed, inserted all the batches of data to AlloyDB`
 
-  4. Open AlloyDB Studio to view your migrated data. For more information, see [Manage your data using AlloyDB Studio](https://docs.cloud.google.com/alloydb/docs/manage-data-using-studio).
+  4. Open AlloyDB Studio to view your migrated data. For more information, see [Manage your data using AlloyDB Studio](https://docs.cloud.google.com/alloydb/docs/quickstart/create-and-connect).
 
 
 
@@ -860,6 +860,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

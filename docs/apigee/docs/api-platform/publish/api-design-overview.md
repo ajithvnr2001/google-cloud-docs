@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/publish/api-design-overview/
 title: API design overview \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:47:57.892865+00:00
+fetched_at: 2026-10-23T13:15:08.315736+00:00
 ---
 
 # API design overview  |  Apigee  |  Google Cloud Documentation

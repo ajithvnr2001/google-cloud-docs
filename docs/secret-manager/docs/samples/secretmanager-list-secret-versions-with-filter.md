@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-list-secret-versions-with-filter/
 title: List secret versions containing a filter \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:49:35.218354+00:00
+fetched_at: 2026-10-23T09:18:18.278838+00:00
 ---
 
 # List secret versions containing a filter  |  Secret Manager  |  Google Cloud Documentation

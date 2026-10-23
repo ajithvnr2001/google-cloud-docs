@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/memcached/resources/
 title: Resources \u00a0|\u00a0 Memorystore for Memcached \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:11:35.008544+00:00
+fetched_at: 2026-10-23T12:36:51.663855+00:00
 ---
 
 # Resources  |  Memorystore for Memcached  |  Google Cloud Documentation

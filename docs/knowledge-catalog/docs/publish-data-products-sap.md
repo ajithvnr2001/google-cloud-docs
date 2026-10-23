@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/publish-data-products-sap/
 title: Publish data products to SAP \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:28.569462+00:00
+fetched_at: 2026-10-23T10:21:28.401773+00:00
 ---
 
 # Publish data products to SAP  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -68,8 +68,8 @@ Requirement | Details | Reference
 
 To get the permissions that you need to manage and publish a data product to SAP BDC, ask your administrator to grant you the following IAM roles on the Google Cloud project: 
 
-  * Manage data products in the Google Cloud console: [Dataplex Data Products Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataProductsEditor) (`roles/dataplex.dataProductsEditor`) 
-  * Publish data products to SAP BDC: [BigLake Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/biglake#biglake.admin) (`roles/biglake.admin`) 
+  * Manage data products in the Google Cloud console: [**Dataplex Data Products Editor** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataProductsEditor) (`roles/dataplex.dataProductsEditor`) 
+  * Publish data products to SAP BDC: [**BigLake Admin** ](https://docs.cloud.google.com/iam/docs/roles-permissions/biglake#biglake.admin) (`roles/biglake.admin`) 
 
 
 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/support/feedback/
 title: Provide Gemini Code Assist feedback \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:15.248613+00:00
+fetched_at: 2026-10-23T13:09:14.854538+00:00
 ---
 
 # Provide Gemini Code Assist feedback  |  Gemini for Google Cloud  |  Google Cloud Documentation

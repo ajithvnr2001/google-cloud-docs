@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-sync-recognize-punctuation/
 title: Synchronously recognizes punctuation \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:26.715568+00:00
+fetched_at: 2026-10-23T08:37:02.981899+00:00
 ---
 
 # Synchronously recognizes punctuation  |  Cloud Speech-to-Text  |  Google Cloud Documentation

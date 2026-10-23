@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/envoy-adapter/v2.0.x/example-apigee/
 title: Native Envoy example for Apigee and hybrid \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:25.904573+00:00
+fetched_at: 2026-10-23T13:14:04.812082+00:00
 ---
 
 # Native Envoy example for Apigee and hybrid  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/quickstarts/transcribe-client-libraries/
 title: Transcribe speech to text by using client libraries \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:50:13.634950+00:00
+fetched_at: 2026-10-23T09:51:23.348437+00:00
 ---
 
 # Transcribe speech to text by using client libraries  |  Cloud Speech-to-Text  |  Google Cloud Documentation
@@ -190,50 +190,50 @@ Use the following code to send a [`Recognize`](https://docs.cloud.google.com/spe
     
         // Initialize client that will be used to send requests. This client only needs to be created
         // once, and can be reused for multiple requests. After completing all of your requests, call
-        // the "close" method on the client to safely clean up any r[emaining bac](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.SpeechClient.html)kground resource[s.](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.SpeechClient.html)
-        try (SpeechClient speechClient = SpeechClient.create()) {
+        // the "close" method on the client to safely clean up any remaining background resources.
+        try ([SpeechClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.SpeechClient.html) speechClient = [SpeechClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.SpeechClient.html).create()) {
           Path path = Paths.get(filePath);
-          byte[][ data = Fi](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)les.readAllByt[es](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html)(path);
-     [     ](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html#com_google_protobuf_ByteString_copyFrom_byte___)ByteString audioBytes = ByteString.copyFrom(data);
+          byte[] data = Files.readAllBytes(path);
+          [ByteString](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html) audioBytes = [ByteString](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html).[copyFrom](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.ByteString.html#com_google_protobuf_ByteString_copyFrom_byte___)(data);
     
-          String parent = String.format("projects/%s/locations/global", proje[ctId](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.Recognizer.html));
+          String parent = String.format("projects/%s/locations/global", projectId);
     
-          // First, [create a r](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.Recognizer.html)ecognizer
-          Recognizer recognizer = Recognizer.newBuilder()
+          // First, create a recognizer
+          [Recognizer](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.Recognizer.html) recognizer = [Recognizer](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.Recognizer.html).newBuilder()
               .setModel("latest_long")
-        [      ](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.CreateRecognizerRequest.html).addLanguageCodes("en-US")
-           [   ](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.CreateRecognizerRequest.html).build();
-    
-          CreateRecognizerRequest createRecognizerRequest = CreateR[ecognizerReques](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.CreateRecognizerRequest.Builder.html#com_google_cloud_speech_v2_CreateRecognizerRequest_Builder_setRecognizerId_java_lang_String_)t.newBuilder()
-              .setParent(parent)
-              .setRecognizerId(recognizerId)
-             < .setRecognizer(recognizer)
-     >         .build();
-    
-          OperationFutureR[ecognizer](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.SpeechClient.html#com_google_cloud_speech_v2_SpeechClient_createRecognizerAsync__org_jspecify_annotations_Nullable_com_google_cloud_speech_v2_LocationName_com_google_cloud_speech_v2_Recognizer_java_lang_String_), OperationMetadata operationFuture =
-              speechClient.createRecognizerAsync(createRecognizerRequest);
-          recognizer = operatio[nFuture](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.RecognitionConfig.html).get();
-    
-          // Next, create [the transcription](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.RecognitionConfig.html) request
-          Recognitio[nConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.RecognitionConfig.Builder.html#com_google_cloud_speech_v2_RecognitionConfig_Builder_setAutoDecodingConfig_com_google_cloud_speech_v2_AutoDetectDecodingConfig_) recognitionCon[fig](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.AutoDetectDecodingConfig.html) = RecognitionConfig.newBuilder()
-              .setAutoDecodingConfig(Auto[DetectDecodingCo](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.RecognizeRequest.html)nfig.newBui[lder](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.RecognizeRequest.html)().build())
+              .addLanguageCodes("en-US")
               .build();
     
-          RecognizeRequest request = RecognizeRequest.newBuilder()
-          [    ](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.Recognizer.html#com_google_cloud_speech_v2_Recognizer_getName__).setConfig(recognitionConfig)
-              .setRecognizer(recognizer.ge[tName](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.RecognizeResponse.html)())
+          [CreateRecognizerRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.CreateRecognizerRequest.html) createRecognizerRequest = [CreateRecognizerRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.CreateRecognizerRequest.html).newBuilder()
+              .setParent(parent)
+              .[setRecognizerId](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.CreateRecognizerRequest.Builder.html#com_google_cloud_speech_v2_CreateRecognizerRequest_Builder_setRecognizerId_java_lang_String_)(recognizerId)
+              .setRecognizer(recognizer)
+              .build();
+    
+          OperationFuture<Recognizer, OperationMetadata> operationFuture =
+              speechClient.[createRecognizerAsync](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.SpeechClient.html#com_google_cloud_speech_v2_SpeechClient_createRecognizerAsync__org_jspecify_annotations_Nullable_com_google_cloud_speech_v2_LocationName_com_google_cloud_speech_v2_Recognizer_java_lang_String_)(createRecognizerRequest);
+          recognizer = operationFuture.get();
+    
+          // Next, create the transcription request
+          [RecognitionConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.RecognitionConfig.html) recognitionConfig = [RecognitionConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.RecognitionConfig.html).newBuilder()
+              .[setAutoDecodingConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.RecognitionConfig.Builder.html#com_google_cloud_speech_v2_RecognitionConfig_Builder_setAutoDecodingConfig_com_google_cloud_speech_v2_AutoDetectDecodingConfig_)([AutoDetectDecodingConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.AutoDetectDecodingConfig.html).newBuilder().build())
+              .build();
+    
+          [RecognizeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.RecognizeRequest.html) request = [RecognizeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.RecognizeRequest.html).newBuilder()
+              .setConfig(recognitionConfig)
+              .setRecognizer(recognizer.[getName](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.Recognizer.html#com_google_cloud_speech_v2_Recognizer_getName__)())
               .setContent(audioBytes)
               .build();
     
-          Re<cognizeResponse respons>e = speechClient.rec[ognize](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.RecognizeResponse.html#com_google_cloud_speech_v2_RecognizeResponse_getResultsList__)(request);
-          ListSpe[echRecognitionResult](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.SpeechRecognitionResult.html) results = response.getResultsList();
+          [RecognizeResponse](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.RecognizeResponse.html) response = speechClient.recognize(request);
+          List<SpeechRecognitionResult> results = response.[getResultsList](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.RecognizeResponse.html#com_google_cloud_speech_v2_RecognizeResponse_getResultsList__)();
     
-          for (SpeechRecognitionResult result : results) {
+          for ([SpeechRecognitionResult](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.SpeechRecognitionResult.html) result : results) {
             // There can be several alternative transcripts for a given chunk of speech. Just use the
-            // fi>rst (most likely[) one here.](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.SpeechRecognitionAlternative.html)
-            if (result.getAlternativesCount()  0) {
-              SpeechRecognitionAlternative alternative = result.getAlternativesList().g[et](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.SpeechRecognitionAlternative.html#com_google_cloud_speech_v2_SpeechRecognitionAlternative_getTranscript__)(0);
-              System.out.printf("Transcription: %s%n", alternative.getTranscript());
+            // first (most likely) one here.
+            if (result.getAlternativesCount() > 0) {
+              [SpeechRecognitionAlternative](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.SpeechRecognitionAlternative.html) alternative = result.getAlternativesList().get(0);
+              System.out.printf("Transcription: %s%n", alternative.[getTranscript](https://docs.cloud.google.com/java/docs/reference/google-cloud-speech/latest/com.google.cloud.speech.v2.SpeechRecognitionAlternative.html#com_google_cloud_speech_v2_SpeechRecognitionAlternative_getTranscript__)());
             }
           }
         }
@@ -251,7 +251,7 @@ Use the following code to send a [`Recognize`](https://docs.cloud.google.com/spe
     PROJECT_ID = os.getenv("GOOGLE_CLOUD_PROJECT")
     
     
-    def quickstart_v2(audio_fi>le: str) - cloud_speech.RecognizeResponse:
+    def quickstart_v2(audio_file: str) -> cloud_speech.RecognizeResponse:
         """Transcribe an audio file.
         Args:
             audio_file (str): Path to the local audio file to be transcribed.
@@ -352,6 +352,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

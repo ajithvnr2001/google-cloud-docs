@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workstations/docs/resources/
 title: Resources \u00a0|\u00a0 Cloud Workstations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:07:07.851677+00:00
+fetched_at: 2026-10-23T09:37:45.971470+00:00
 ---
 
 # Resources  |  Cloud Workstations  |  Google Cloud Documentation

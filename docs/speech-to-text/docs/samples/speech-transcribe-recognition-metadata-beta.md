@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-transcribe-recognition-metadata-beta/
 title: Transcribe a local file with recognition metadata (beta) \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:52.649394+00:00
+fetched_at: 2026-10-23T10:32:27.503811+00:00
 ---
 
 # Transcribe a local file with recognition metadata (beta)  |  Cloud Speech-to-Text  |  Google Cloud Documentation

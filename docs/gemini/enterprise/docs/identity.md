@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/identity/
 title: Configure access controls for custom data sources \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:09.083722+00:00
+fetched_at: 2026-10-23T13:13:08.160973+00:00
 ---
 
 # Configure access controls for custom data sources  |  Gemini Enterprise  |  Google Cloud Documentation

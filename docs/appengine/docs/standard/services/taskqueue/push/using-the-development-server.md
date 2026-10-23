@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/taskqueue/push/using-the-development-server/
 title: Testing Push Queues in the Development Server \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:00.677505+00:00
+fetched_at: 2026-10-23T13:18:08.959422+00:00
 ---
 
 # Testing Push Queues in the Development Server  |  App Engine standard environment  |  Google Cloud Documentation

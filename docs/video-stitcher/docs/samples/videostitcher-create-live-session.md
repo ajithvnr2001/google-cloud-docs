@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-stitcher/docs/samples/videostitcher-create-live-session/
 title: Create a live session \u00a0|\u00a0 Video Stitcher API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:24.882732+00:00
+fetched_at: 2026-10-23T09:35:37.549471+00:00
 ---
 
 # Create a live session  |  Video Stitcher API  |  Google Cloud Documentation

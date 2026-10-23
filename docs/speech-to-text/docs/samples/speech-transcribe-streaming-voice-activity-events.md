@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-transcribe-streaming-voice-activity-events/
 title: Transcribe audio with voice activity events \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:33.400166+00:00
+fetched_at: 2026-10-23T10:32:27.741265+00:00
 ---
 
 # Transcribe audio with voice activity events  |  Cloud Speech-to-Text  |  Google Cloud Documentation

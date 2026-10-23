@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/choose-infrastructure/
 title: Choose your accelerator infrastructure \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:54.015175+00:00
+fetched_at: 2026-10-23T13:16:18.954608+00:00
 ---
 
 # Choose your accelerator infrastructure  |  AI Hypercomputer  |  Google Cloud Documentation

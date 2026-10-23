@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/delete-datastores/
 title: Purge data from a data store \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:32.312086+00:00
+fetched_at: 2026-10-23T13:13:17.590223+00:00
 ---
 
 # Purge data from a data store  |  Agent Search  |  Google Cloud Documentation

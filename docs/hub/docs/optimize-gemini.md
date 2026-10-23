@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/hub/docs/optimize-gemini/
 title: Optimize costs with Gemini assistance \u00a0|\u00a0 Cloud Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:26.329490+00:00
+fetched_at: 2026-10-23T13:09:06.578300+00:00
 ---
 
 # Optimize costs with Gemini assistance  |  Cloud Hub  |  Google Cloud Documentation

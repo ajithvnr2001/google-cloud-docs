@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-transcribe-word-level-confidence-beta/
 title: Transcribe a file with word-level confidence (beta) \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:28:51.558392+00:00
+fetched_at: 2026-10-23T10:32:40.257574+00:00
 ---
 
 # Transcribe a file with word-level confidence (beta)  |  Cloud Speech-to-Text  |  Google Cloud Documentation

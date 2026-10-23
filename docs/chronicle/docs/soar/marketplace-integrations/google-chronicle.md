@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/google-chronicle/
 title: Integrate Google Chronicle with Google SecOps \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:57:09.078914+00:00
+fetched_at: 2026-10-23T12:55:35.350283+00:00
 ---
 
 # Integrate Google Chronicle with Google SecOps  |  Google Security Operations  |  Google Cloud Documentation
@@ -219,8 +219,8 @@ Parameter | Description
   * For **Chronicle API** (requires configured Service Account): Use the new format, including your project ID, region, and instance ID. For example, `https://us-chronicle.googleapis.com/v1alpha/projects/PROJECT_ID/locations/us/instances/INSTANCE_ID`. For information on how to find this value, go to Finding the Chronicle API Root. Using the wrong credentials for the API root results in a connection failure.
 
   
-`User's Service Account` | Optional. The full content of the service account JSON key file. **Important:** To use the Chronicle API, you must provide either this field or `Workload Identity Email`. Do not populate this field if you intend to use `Workload Identity Email`, as providing both causes authentication conflicts. If both fields are empty, the integration defaults to the instance service account, which only supports the Backstory API.  
-`Workload Identity Email` | Optional. The client email address of the service account used for Workload Identity impersonation. **Important:** Do not populate this field if `User's Service Account` is already provided. To prevent "Permission Denied" errors, grant the [ `Service Account Token Creator`](https://docs.cloud.google.com/iam/docs/service-account-permissions#token-creator-role) role to the Google SecOps instance service account on the email provided in this field.   
+`User's Service Account` | Optional. The full content of the service account JSON key file. **Important:** To use the Chronicle API, you must provide either this field or `Workload Identity Email`. Don't populate this field if you intend to use `Workload Identity Email`, as providing both causes authentication conflicts. If both fields are empty, the integration defaults to the instance service account, which only supports the Backstory API.  
+`Workload Identity Email` | Optional. The client email address of the service account used for Workload Identity impersonation. **Important:** Don't populate this field if `User's Service Account` is already provided. To prevent "Permission Denied" errors, grant the [ `Service Account Token Creator`](https://docs.cloud.google.com/iam/docs/service-account-permissions#token-creator-role) role to the Google SecOps instance service account on the email provided in this field.   
 `Verify SSL` | Required. If selected, the integration validates the SSL certificate when connecting to the Google SecOps server. Enabled by default.  
   
 For instructions about how to configure an integration in Google SecOps, see [Configure integrations](https://docs.cloud.google.com/chronicle/docs/soar/respond/integrations-setup/configure-integrations).
@@ -2481,7 +2481,7 @@ Script result name | Value
 
 This action doesn't run on Google SecOps entities. 
 
-**Note:** This action requires Chronicle API authentication. The legacy Backstory API authentication isn't supported
+**Note:** This action requires Chronicle API authentication. The legacy Backstory API authentication isn't supported.
 
 #### Action inputs
 
@@ -2493,7 +2493,7 @@ Parameter | Description
   
 #### Action outputs
 
-The **Get Data Tables** action provides the following outputs:
+The **Generate UDM Query** action provides the following outputs:
 
 Action output type | Availability  
 ---|---  
@@ -2538,7 +2538,24 @@ Use the **Get Data Tables** action to retrieve available data tables in Google S
 
 This action doesn't run on Google SecOps entities. 
 
-**Note:** This action only works with Chronicle API authentication. Backstory API is not supported. If you are using a Unified SecOps deployment, ensure you have configured a dedicated service account and provided credentials in the integration parameters.
+**Note:** This action only works with Chronicle API authentication. Backstory API is not supported. If you are using a Unified SecOps deployment, make sure you've configured a dedicated service account and provided credentials in the integration parameters.
+
+#### Data table caching
+
+You can enable caching to reduce repeated requests to Google SecOps and speed up playbook runs:
+
+  * **How caching works** : When `Use Cache` is selected, the action stores retrieved data tables in a shared cache for your Google SecOps environment. Subsequent runs across playbooks and supported Data Table actions in the same environment reuse the cached data until it expires.
+
+  * **Full table caching** : The action always caches all rows for each matched table (even if `Expanded Rows` is disabled or `Max Data Table Rows To Return` is set to a smaller limit) so **Is Value In Data Table** and **Is Value In Data Table Async** can reuse the cache.
+
+  * **Unfiltered first runs** : All rows of every matched table are cached, so running the action without a `Filter Value` can take longer when the cache is empty or expired.
+
+  * **Impact of`Cache TTL`**: Controls how long cached data remains valid before the action fetches fresh data from Google SecOps:
+
+    * **Longer TTL** : Reduces API requests and speeds up playbooks, but data table updates aren't reflected until the cache expires.
+    * **Shorter TTL** : Keeps results more up to date for frequently changing tables, but increases requests to Google SecOps.
+
+
 
 #### Action inputs
 
@@ -2556,9 +2573,11 @@ Parameter | Description
 * `Equal` (for exact matches)
 * `Contains`(for substring matches)
 `Equal` works with the `Title` parameter, while `Contains` works with all values in the response. If nothing is provided, the filter won't be applied.  
-`Expanded Rows` | Optional. If selected, the response includes detailed data table rows. Not enabled by default.  
+`Expanded Rows` | Optional. If selected, the response includes detailed data table rows.  
 `Max Data Tables To Return` | Required. The number of data tables to return. The maximum value is `1000`.  
 `Max Data Table Rows To Return` | Required. The amount of data table rows to return. Only use this parameter if `Expanded Rows` is enabled. The maximum value is `1000`.  
+`Use Cache` | Optional. If selected, the action uses cached data table results when available instead of querying Google SecOps on every run. For details, see Data table caching.  
+`Cache TTL` | Optional. The cache time to live in minutes before the action fetches fresh data from Google SecOps. For details, see Data table caching. The minimum value is `1`. The default value is `60`.  
   
 #### Action outputs
 
@@ -2602,6 +2621,7 @@ The following example describes the JSON result output received when using the *
           ],
           "dataTableUuid": "c3cce57bb8d940d5ac4523c37d540436",
           "approximateRowCount": "2",
+          "Used cache": true,
           "rows": [
               {
                   "name": "projects/365235532452/locations/us/instances/df6f1958-0381-41f9-8794-08a3229744a5/dataTables/data_table/dataTableRows/840d18a85944833e1b97ed6d2fb11377",
@@ -3098,6 +3118,23 @@ This action doesn't run on Google SecOps entities.
 
 **Note:** This action only works with Chronicle API authentication. Backstory API is not supported. If you are using a Unified SecOps deployment, ensure you have configured a dedicated service account and provided credentials in the integration parameters.
 
+#### Data table caching
+
+You can enable caching to reduce repeated requests to Google SecOps and speed up playbook runs:
+
+  * **How caching works** : When `Use Cache` is selected, the action stores retrieved data tables in a shared cache for your Google SecOps environment. Subsequent runs across playbooks and supported Data Table actions in the same environment reuse the cached data until it expires.
+
+  * **Full table caching** : When the cache is empty or expired, the action fetches and caches the entire data table rather than only rows matching `Values`. Subsequent searches for different values in the same table can then reuse the cache without querying Google SecOps.
+
+  * **Output row limit** : `Max Data Table Rows To Return` limits the matching rows returned in the action output for each value, not the rows stored in the cache.
+
+  * **Impact of`Cache TTL`**: Controls how long cached data remains valid before the action fetches fresh data from Google SecOps:
+
+    * **Longer TTL** : Reduces API requests and speeds up playbooks, but data table updates aren't reflected until the cache expires.
+    * **Shorter TTL** : Keeps results more up to date for frequently changing tables, but increases requests to Google SecOps.
+
+
+
 #### Action inputs
 
 The **Is Value In Data Table** action requires the following parameters:
@@ -3109,6 +3146,8 @@ Parameter | Description
 `Values` | Required. A comma-separated list of values to search for.  
 `Case Insensitive Search` | Optional. If selected, the search is case-insensitive. Enabled by default.  
 `Max Data Table Rows To Return` | Required. The number of data table rows to return per matched value. The maximum value is `1000`.  
+`Use Cache` | Optional. If selected, the action uses cached data table results when available instead of querying Google SecOps on every run. For details, see Data table caching.  
+`Cache TTL` | Optional. The cache time to live in minutes before the action fetches fresh data from Google SecOps. For details, see Data table caching. The minimum value is `1`. The default value is `60`.  
   
 #### Action outputs
 
@@ -3133,6 +3172,7 @@ The following example describes the JSON result output received when using the *
       "Entity": "asda",
       "EntityResult": {
           "is_found": true,
+          "Used cache": true,
           "matched_rows": [
               {
                   "name": "projects/365235532452/locations/us/instances/df6f1958-0381-41f9-8794-08a3229744a5/dataTables/data_table/dataTableRows/840d18a85944833e1b97ed6d2fb11377",
@@ -3178,6 +3218,23 @@ This action doesn't run on Google SecOps entities.
 
 This action only works with Chronicle API authentication. Backstory API isn't supported. If you're using a Unified SecOps deployment, make sure you have configured a dedicated service account and provided credentials in the integration parameters.
 
+#### Data table caching
+
+You can enable caching to reduce repeated requests to Google SecOps and speed up playbook runs:
+
+  * **How caching works** : When `Use Cache` is selected, the action stores retrieved data tables in a shared cache for your Google SecOps environment. Subsequent runs across playbooks and supported Data Table actions in the same environment reuse the cached data until it expires.
+
+  * **Immediate completion when cached** : When a valid cache exists for the data table, the action searches the cache and completes immediately without starting an asynchronous search in Google SecOps.
+
+  * **Tables over 1,000,000 rows** : If a data table exceeds 1,000,000 rows, the action still returns your search results, but skips caching the table to avoid storing an incomplete copy.
+
+  * **Impact of`Cache TTL`**: Controls how long cached data remains valid before the action fetches fresh data from Google SecOps:
+
+    * **Longer TTL** : Reduces API requests and speeds up playbooks, but data table updates aren't reflected until the cache expires.
+    * **Shorter TTL** : Keeps results more up to date for frequently changing tables, but increases requests to Google SecOps.
+
+
+
 #### Action inputs
 
 The **Is Value In Data Table Async** action requires the following parameters:
@@ -3189,6 +3246,8 @@ Parameter | Description
 `Values` | Required. A comma-separated list of values to search for inside the data table.  
 `Case Insensitive Search` | Optional. If selected, the search is case-insensitive. Enabled by default.  
 `Max Data Table Rows To Return` | Required. The number of data table rows to return for every matched value. The maximum value is `1000`. The default value is `1000`.  
+`Use Cache` | Optional. If selected, the action uses cached data table results when available instead of querying Google SecOps on every run. For details, see Data table caching.  
+`Cache TTL` | Optional. The cache time to live in minutes before the action fetches fresh data from Google SecOps. For details, see Data table caching. The minimum value is `1`. The default value is `60`.  
   
 #### Action outputs
 
@@ -3214,6 +3273,7 @@ The following example describes the JSON result output received when using the *
         "Entity": "example_value",
         "EntityResult": {
           "is_found": true,
+          "Used cache": true,
           "matched_rows": [
             {
               "createTime": "",
@@ -4659,7 +4719,7 @@ Parameter | Description
   
 ## Jobs
 
-For more information on jobs, see [ Configure a new job](https://docs.cloud.google.com/chronicle/docs/soar/respond/jobs-scheduler/writing-jobs#configure-a-new-job) and [ Advanced scheduling](https://docs.cloud.google.com/chronicle/docs/soar/respond/jobs-scheduler/writing-jobs#advanced-scheduling).
+For more information on jobs, see [ Configure a new job](https://cloud.google.com/chronicle/docs/soar/respond/jobs-scheduler/writing-jobs#configure-a-new-job) and [ Advanced scheduling](https://cloud.google.com/chronicle/docs/soar/respond/jobs-scheduler/writing-jobs#advanced-scheduling). 
 
 ### Job configuration prerequisites
 
@@ -4988,6 +5048,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

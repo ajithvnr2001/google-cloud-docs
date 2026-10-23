@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/how-tos/consent-creating/
 title: Creating and updating user consents \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:54.515019+00:00
+fetched_at: 2026-10-23T13:09:09.256822+00:00
 ---
 
 # Creating and updating user consents  |  Cloud Healthcare API  |  Google Cloud Documentation

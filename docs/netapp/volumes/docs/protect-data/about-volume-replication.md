@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/netapp/volumes/docs/protect-data/about-volume-replication/
 title: About volume replication \u00a0|\u00a0 NetApp Volumes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:24:32.504908+00:00
+fetched_at: 2026-10-23T10:56:15.762554+00:00
 ---
 
 # About volume replication  |  NetApp Volumes  |  Google Cloud Documentation

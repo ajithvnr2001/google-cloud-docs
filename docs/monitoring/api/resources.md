@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/monitoring/api/resources/
 title: Monitored resource types \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:17:59.993512+00:00
+fetched_at: 2026-10-23T12:39:07.751528+00:00
 ---
 
 # Monitored resource types  |  Cloud Monitoring  |  Google Cloud Documentation
@@ -29,7 +29,7 @@ This list is regenerated frequently and time-stamped. The fields listed for each
 
 **Cloud Endpoints** : APIs managed by Cloud Endpoints write [ `serviceruntime`](https://docs.cloud.google.com/monitoring/api/metrics_gcp_p_z#gcp-serviceruntime) metrics against the [`api`](https://docs.cloud.google.com/monitoring/api/resources#tag_api) monitored-resource type.
 
-The following list was last generated at 2026-10-14 20:17:53 UTC.
+The following list was last generated at 2026-10-22 02:20:14 UTC.
 
 ## `abuseevent.googleapis.com/Location`
 
@@ -1934,6 +1934,20 @@ The following list was last generated at 2026-10-14 20:17:53 UTC.
   * `resource_container`: The identifier of the GCP container (i.e. project) associated with the Resource Policy.
   * `location`: Location of the Resource Policy.
   * `resource_policy_id`: Resource Policy resource ID.
+
+
+
+## `compute.googleapis.com/SecurityPolicy`
+
+**Display name** : Security policy
+
+**Description** : Security policy.
+
+**Labels** :
+
+  * `resource_container`: The identifier of the GCP container (i.e. project) associated with the security policy.
+  * `location`: Location of the security policy.
+  * `security_policy_id`: Security policy resource ID.
 
 
 
@@ -6394,12 +6408,12 @@ The following list was last generated at 2026-10-14 20:17:53 UTC.
 
 
 
-Generated at 2026-10-14 20:17:53 UTC.
+Generated at 2026-10-22 02:20:14 UTC.
 
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

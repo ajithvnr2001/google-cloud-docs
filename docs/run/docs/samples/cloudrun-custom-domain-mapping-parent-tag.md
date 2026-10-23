@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/samples/cloudrun-custom-domain-mapping-parent-tag/
 title: Map a Cloud Run service to a custom domain \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:10:45.841877+00:00
+fetched_at: 2026-10-23T09:58:26.533679+00:00
 ---
 
 # Map a Cloud Run service to a custom domain  |  Google Cloud Documentation

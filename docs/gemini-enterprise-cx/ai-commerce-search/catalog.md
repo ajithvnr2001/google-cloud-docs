@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/ai-commerce-search/catalog/
 title: About catalogs and products \u00a0|\u00a0 AI Commerce Search in Gemini Enterprise for Customer Experience \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:48.896850+00:00
+fetched_at: 2026-10-23T13:12:33.362430+00:00
 ---
 
 # About catalogs and products  |  AI Commerce Search in Gemini Enterprise for Customer Experience  |  Google Cloud Documentation

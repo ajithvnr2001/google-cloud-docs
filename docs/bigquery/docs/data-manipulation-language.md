@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/data-manipulation-language/
 title: Transform data with data manipulation language (DML) \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:37:19.205670+00:00
+fetched_at: 2026-10-23T12:56:03.537052+00:00
 ---
 
 # Transform data with data manipulation language (DML)  |  BigQuery  |  Google Cloud Documentation

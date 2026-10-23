@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aws-macie/
 title: Collect AWS Macie logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:17.329096+00:00
+fetched_at: 2026-10-23T13:18:38.564225+00:00
 ---
 
 # Collect AWS Macie logs  |  Google Security Operations  |  Google Cloud Documentation

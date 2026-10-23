@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/backups/
 title: Back up and restore data \u00a0|\u00a0 Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:44.417547+00:00
+fetched_at: 2026-10-23T13:08:48.748249+00:00
 ---
 
 # Back up and restore data  |  Firestore with MongoDB compatibility  |  Google Cloud Documentation

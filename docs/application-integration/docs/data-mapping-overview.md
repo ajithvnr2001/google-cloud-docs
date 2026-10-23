@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/data-mapping-overview/
 title: Data mapping \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:00.892072+00:00
+fetched_at: 2026-10-23T13:18:14.739364+00:00
 ---
 
 # Data mapping  |  Application Integration  |  Google Cloud Documentation

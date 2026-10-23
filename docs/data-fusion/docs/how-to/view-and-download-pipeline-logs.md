@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/view-and-download-pipeline-logs/
 title: View and download pipeline logs \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:40.721872+00:00
+fetched_at: 2026-10-23T13:20:21.830592+00:00
 ---
 
 # View and download pipeline logs  |  Cloud Data Fusion  |  Google Cloud Documentation

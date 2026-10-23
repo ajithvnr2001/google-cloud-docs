@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/google-analytics-4-sampling/
 title: Google Analytics 4 sampling \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:17.998354+00:00
+fetched_at: 2026-10-23T13:19:51.725744+00:00
 ---
 
 # Google Analytics 4 sampling  |  Data Studio  |  Google Cloud Documentation

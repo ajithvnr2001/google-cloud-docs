@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/translate/docs/samples/translate-v3-list-glossary/
 title: List glossaries (Advanced edition only) \u00a0|\u00a0 Cloud Translation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:26:24.682513+00:00
+fetched_at: 2026-10-23T08:36:33.924788+00:00
 ---
 
 # List glossaries (Advanced edition only)  |  Cloud Translation  |  Google Cloud Documentation

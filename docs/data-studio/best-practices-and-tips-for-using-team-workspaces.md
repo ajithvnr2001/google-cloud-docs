@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/best-practices-and-tips-for-using-team-workspaces/
 title: Best practices and tips for using team workspaces \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:46.187664+00:00
+fetched_at: 2026-10-23T13:20:12.676974+00:00
 ---
 
 # Best practices and tips for using team workspaces  |  Data Studio  |  Google Cloud Documentation

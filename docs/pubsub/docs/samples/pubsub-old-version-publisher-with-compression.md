@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-publisher-with-compression/
 title: v1 Publish messages with compression rate (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:45.982522+00:00
+fetched_at: 2026-10-23T10:04:30.646893+00:00
 ---
 
 # v1 Publish messages with compression rate (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

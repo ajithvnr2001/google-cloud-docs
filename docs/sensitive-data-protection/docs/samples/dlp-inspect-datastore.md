@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-inspect-datastore/
 title: Inspect Datastore \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:50:59.247912+00:00
+fetched_at: 2026-10-23T11:32:43.435298+00:00
 ---
 
 # Inspect Datastore  |  Sensitive Data Protection  |  Google Cloud Documentation

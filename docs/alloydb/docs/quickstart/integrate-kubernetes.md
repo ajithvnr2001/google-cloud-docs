@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/quickstart/integrate-kubernetes/
 title: Connect from Google Kubernetes Engine (GKE) to AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:23.913820+00:00
+fetched_at: 2026-10-23T10:03:39.720836+00:00
 ---
 
 # Connect from Google Kubernetes Engine (GKE) to AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,11 +21,9 @@ Send feedback
 
 #  Connect from Google Kubernetes Engine (GKE) to AlloyDB for PostgreSQL Stay organized with collections  Save and categorize content based on your preferences. 
 
-This tutorial describes how to set up a connection from an application running in Google Kubernetes Engine autopilot cluster to an AlloyDB instance.
+To securely connect a containerized application in a Google Kubernetes Engine Autopilot cluster to an AlloyDB for PostgreSQL instance, you can deploy the [AlloyDB Auth Proxy](https://docs.cloud.google.com/alloydb/docs/auth-proxy/overview) as a sidecar container over a private IP network connection.
 
-AlloyDB is a fully-managed, PostgreSQL-compatible database service in Google Cloud.
-
-Google Kubernetes Engine helps you automatically deploy, scale, and manage Kubernetes.
+AlloyDB is a fully managed, PostgreSQL-compatible database service in Google Cloud, and Google Kubernetes Engine helps you automatically deploy, scale, and manage Kubernetes workloads.
 
 ## Objectives
 
@@ -795,17 +793,17 @@ After you create a GKE cluster and build a container image for your application,
 
 In this tutorial, you deploy the sample vote-collecting web application, `gke-alloydb-app`, that uses AlloyDB as the Datastore.
 
-  1. Get the instance connection `INSTANCE_URI` for the AlloyDB primary instance:
+  1. Get the connection URI (`INSTANCE_URI`) for the AlloyDB primary instance:
 
      1. In the Google Cloud console, go to the **Clusters** page.
 
 [Go to Clusters](https://console.cloud.google.com/alloydb/clusters)
 
-     2. To display the cluster **Overview** page, click your cluster name.
+     2. To display the cluster **Overview** page, click your cluster name in the **Resource name** column.
 
-     3. In the **Instances** table, click the name of your primary instance.
+     3. In the **Instances in your cluster** section, locate your primary instance and go to the **Connectivity** section (or click **View connectivity configuration**).
 
-     4. In the **Instance URI** field of the **Overview** page, click content_copy **Copy to clipboard**.
+     4. In the **Connection URI** field, click the **Copy to clipboard** content_copy button.
 
 You specify this `INSTANCE_URI` in the `proxy_sidecar_deployment.yaml` definition file in step 2.b of this section.
 
@@ -1242,6 +1240,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

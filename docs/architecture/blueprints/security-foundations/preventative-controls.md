@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/blueprints/security-foundations/preventative-controls/
 title: Preventative controls for acceptable resource configurations \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:55.458026+00:00
+fetched_at: 2026-10-23T13:17:49.579213+00:00
 ---
 
 # Preventative controls for acceptable resource configurations  |  Cloud Architecture Center  |  Google Cloud Documentation

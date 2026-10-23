@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/tutorials/http-load-balancing-iis/
 title: Set up cross-region load balancing for Microsoft IIS web servers \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:29:04.780439+00:00
+fetched_at: 2026-10-23T12:57:02.359905+00:00
 ---
 
 # Set up cross-region load balancing for Microsoft IIS web servers  |  Compute Engine  |  Google Cloud Documentation

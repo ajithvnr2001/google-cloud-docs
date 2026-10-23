@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/add-reference-lines-and-reference-bands-to-charts/
 title: Add reference lines and reference bands to charts \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:48.645051+00:00
+fetched_at: 2026-10-23T13:19:48.245648+00:00
 ---
 
 # Add reference lines and reference bands to charts  |  Data Studio  |  Google Cloud Documentation

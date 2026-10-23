@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/regional-mig-simulate-zonal-outage/
 title: Simulate a zone outage for a regional MIG \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:41.931404+00:00
+fetched_at: 2026-10-23T13:00:30.597558+00:00
 ---
 
 # Simulate a zone outage for a regional MIG  |  Compute Engine  |  Google Cloud Documentation

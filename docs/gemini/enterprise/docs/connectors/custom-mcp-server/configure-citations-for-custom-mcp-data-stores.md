@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/custom-mcp-server/configure-citations-for-custom-mcp-data-stores/
 title: Configure citations for custom MCP data stores \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:33.294237+00:00
+fetched_at: 2026-10-23T13:03:46.965641+00:00
 ---
 
 # Configure citations for custom MCP data stores  |  Gemini Enterprise  |  Google Cloud Documentation

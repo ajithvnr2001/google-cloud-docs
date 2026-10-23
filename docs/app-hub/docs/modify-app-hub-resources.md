@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/modify-app-hub-resources/
 title: Manage services and workloads \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:15.800596+00:00
+fetched_at: 2026-10-23T13:14:31.231378+00:00
 ---
 
 # Manage services and workloads  |  App Hub  |  Google Cloud Documentation

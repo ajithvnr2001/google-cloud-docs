@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-discovery-keyword-location-search/
 title: Keyword and location search (v3) \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:40.148876+00:00
+fetched_at: 2026-10-23T09:41:46.437435+00:00
 ---
 
 # Keyword and location search (v3)  |  Job Search  |  Google Cloud Documentation

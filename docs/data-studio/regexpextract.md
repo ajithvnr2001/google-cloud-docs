@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/regexpextract/
 title: REGEXP_EXTRACT \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:58.245663+00:00
+fetched_at: 2026-10-23T13:19:47.396947+00:00
 ---
 
 # REGEXP_EXTRACT  |  Data Studio  |  Google Cloud Documentation

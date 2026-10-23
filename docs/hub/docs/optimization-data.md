@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/hub/docs/optimization-data/
 title: About cost and utilization data \u00a0|\u00a0 Cloud Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:26.404088+00:00
+fetched_at: 2026-10-23T13:09:50.043005+00:00
 ---
 
 # About cost and utilization data  |  Cloud Hub  |  Google Cloud Documentation

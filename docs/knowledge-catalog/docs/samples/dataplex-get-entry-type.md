@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/samples/dataplex-get-entry-type/
 title: Get entry type \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:03:12.449783+00:00
+fetched_at: 2026-10-23T12:50:57.016856+00:00
 ---
 
 # Get entry type  |  Knowledge Catalog  |  Google Cloud Documentation

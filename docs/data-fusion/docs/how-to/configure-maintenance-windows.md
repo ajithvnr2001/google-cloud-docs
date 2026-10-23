@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/configure-maintenance-windows/
 title: Configure maintenance windows \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:16.884661+00:00
+fetched_at: 2026-10-23T13:19:21.132594+00:00
 ---
 
 # Configure maintenance windows  |  Cloud Data Fusion  |  Google Cloud Documentation

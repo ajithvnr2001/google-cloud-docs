@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.8/support/
 title: Support \u00a0|\u00a0 Kf 2.8 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:29:28.170585+00:00
+fetched_at: 2026-10-23T12:39:29.312455+00:00
 ---
 
 # Support  |  Kf 2.8  |  Google Cloud Documentation

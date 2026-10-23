@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/monitoring/custom-metrics/creating-metrics/
 title: Create user-defined metrics with the API \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:16:42.696831+00:00
+fetched_at: 2026-10-23T10:54:48.969307+00:00
 ---
 
 # Create user-defined metrics with the API  |  Cloud Monitoring  |  Google Cloud Documentation
@@ -431,10 +431,10 @@ To authenticate to Monitoring, set up Application Default Credentials. For more 
     client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html).[metric_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
     project_name = client.project_path project: project_id
     
-    descriptor = Google::Api::[MetricDescriptor](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Api-MetricDescriptor.html).new(
+    descriptor = Google::Api::[MetricDescriptor](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-migration-v2/latest/Google-Api-MetricDescriptor.html).new(
       type:        metric_type,
-      metric_kind: Google::Api::[MetricDescriptor](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Api-MetricDescriptor.html)::[MetricKind](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Api-MetricDescriptor-MetricKind.html)::GAUGE,
-      value_type:  Google::Api::[MetricDescriptor](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Api-MetricDescriptor.html)::[ValueType](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Api-MetricDescriptor-ValueType.html)::DOUBLE,
+      metric_kind: Google::Api::[MetricDescriptor](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-migration-v2/latest/Google-Api-MetricDescriptor.html)::[MetricKind](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-migration-v2/latest/Google-Api-MetricDescriptor-MetricKind.html)::GAUGE,
+      value_type:  Google::Api::[MetricDescriptor](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-migration-v2/latest/Google-Api-MetricDescriptor.html)::[ValueType](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-migration-v2/latest/Google-Api-MetricDescriptor-ValueType.html)::DOUBLE,
       description: "This is a simple example of a custom metric."
     )
     
@@ -851,7 +851,7 @@ To authenticate to Monitoring, set up Application Default Credentials. For more 
     project_name = client.project_path project: project_id
     
     series = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)::[V3](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3.html)::TimeSeries.new
-    series.[metric](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3-TimeSeries.html) = Google::Api::[Metric](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Api-Metric.html).new type: metric_type
+    series.[metric](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3-TimeSeries.html) = Google::Api::[Metric](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-bigquery-migration-v2/latest/Google-Api-Metric.html).new type: metric_type
     
     resource = Google::Api::[MonitoredResource](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-service_usage-v1/latest/Google-Api-MonitoredResource.html).new type: "global"
     resource.labels["project_id"] = project_id
@@ -860,7 +860,7 @@ To authenticate to Monitoring, set up Application Default Credentials. For more 
     point = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)::[V3](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3.html)::Point.new
     point.value = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)::[V3](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3.html)::TypedValue.new double_value: 3.14
     now = Time.now
-    end_time = Google::Protobuf::[Timestamp](https://docs.cloud.google.com/ruby/docs/reference/google-iam-credentials-v1/latest/Google-Protobuf-Timestamp.html).new seconds: now.to_i, nanos: now.nsec
+    end_time = Google::Protobuf::[Timestamp](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-dataqna-v1alpha/latest/Google-Protobuf-Timestamp.html).new seconds: now.to_i, nanos: now.nsec
     point.interval = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)::[V3](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3.html)::TimeInterval.new end_time: end_time
     series.[points](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3-TimeSeries.html) << point
     
@@ -1081,6 +1081,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

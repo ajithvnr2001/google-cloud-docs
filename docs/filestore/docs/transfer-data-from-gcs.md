@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/transfer-data-from-gcs/
 title: Transfer large datasets from Cloud Storage to Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:56.164952+00:00
+fetched_at: 2026-10-23T13:02:20.467599+00:00
 ---
 
 # Transfer large datasets from Cloud Storage to Filestore  |  Google Cloud Documentation

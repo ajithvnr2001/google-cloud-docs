@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/introduction/
 title: Knowledge Catalog overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:02:25.483811+00:00
+fetched_at: 2026-10-23T10:21:29.791081+00:00
 ---
 
 # Knowledge Catalog overview  |  Google Cloud Documentation
@@ -94,7 +94,7 @@ Knowledge Catalog unifies data management and context through a three-pillar lif
 
 ![Architecture of Knowledge Catalog showing the curation of metadata, business logic, and data relationships into a unified context graph for AI agents.](https://docs.cloud.google.com/static/knowledge-catalog/images/knowledge-catalog-architecture.png)![Architecture of Knowledge Catalog showing the curation of metadata, business logic, and data relationships into a unified context graph for AI agents.](https://docs.cloud.google.com/static/knowledge-catalog/images/knowledge-catalog-architecture.png)**Figure 1.** Architecture of Knowledge Catalog
 
-For more information about these metadata concepts, see [About metadata](https://docs.cloud.google.com/knowledge-catalog/docs/catalog-overview).
+For more information about these metadata concepts, see [About metadata](https://docs.cloud.google.com/knowledge-catalog/docs/metadata-overview).
 
 The following sections describe the three pillars of the metadata lifecycle and illustrate how a retail company applies them to database tables, files, and external catalog entries:
 
@@ -149,7 +149,7 @@ Understanding how Knowledge Catalog integrates with related services is essentia
 
   * **BigQuery**. Knowledge Catalog automatically crawls and indexes BigQuery datasets, tables, and views. It triggers Gemini-powered data insights to analyze query histories, publish descriptions, and suggest verified example queries.
   * **Looker (Google Cloud core)**. Knowledge Catalog ingests Looker Dashboards, Looks, and LookML structures, such as views, explores, dimensions, and measures. This ingestion builds lineage mappings to trace how operational values map to business semantics.
-  * **Lighthouse runtime catalog**. Knowledge Catalog integrates with Lighthouse, the runtime metastore for open-source Iceberg workloads. It automatically indexes technical metadata on top of Lighthouse workloads to provide unified Active Context.
+  * **Lakehouse runtime catalog**. Knowledge Catalog integrates with Lakehouse runtime catalog, the runtime metastore for open-source Iceberg workloads. It automatically indexes technical metadata on top of Lakehouse runtime catalog workloads to provide unified Active Context.
 
 
 
@@ -191,7 +191,7 @@ The following figure shows how Knowledge Catalog orchestrates and delivers data 
 
 The context orchestration workflow consists of the following phases:
 
-  1. **Ingestion and discovery**. Operational databases, warehouses like Spanner and BigQuery, unstructured object stores like Cloud Storage, and runtime metastores like Lighthouse feed technical schemas, lineage maps, and metadata definitions directly into Knowledge Catalog.
+  1. **Ingestion and discovery**. Operational databases, warehouses like Spanner and BigQuery, unstructured object stores like Cloud Storage, and runtime metastores like Lakehouse runtime catalog feed technical schemas, lineage maps, and metadata definitions directly into Knowledge Catalog.
   2. **Context mapping**. Inside Knowledge Catalog, these metadata properties are linked to semantic elements, including technical aspects, business glossaries, and verified queries, to assemble the active context graph.
   3. **Delivery interfaces**. AI applications and orchestrators retrieve this consolidated context graph programmatically by using standard connectors, such as MCP or direct `LookupContext` API endpoints.
   4. **Agent grounding**. Orchestration frameworks, such as the Agent Development Kit (ADK) (ADK) or LangChain, inject this metadata context directly into LLM prompts. This injection grounds the agent's reasoning in verified organizational rules, which lets them query databases or execute automated actions without hallucinations.
@@ -298,6 +298,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

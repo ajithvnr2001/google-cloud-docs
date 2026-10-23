@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/azure-gateway/
 title: Collect Azure Application Gateway logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:10.741082+00:00
+fetched_at: 2026-10-23T13:20:23.627520+00:00
 ---
 
 # Collect Azure Application Gateway logs  |  Google Security Operations  |  Google Cloud Documentation

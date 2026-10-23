@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/setup-user-invitations/
 title: Setting up the User Invitation API \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:48.286433+00:00
+fetched_at: 2026-10-23T13:10:37.582613+00:00
 ---
 
 # Setting up the User Invitation API  |  Cloud Identity  |  Google Cloud Documentation

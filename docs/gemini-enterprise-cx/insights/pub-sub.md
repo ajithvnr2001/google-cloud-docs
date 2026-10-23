@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/pub-sub/
 title: Enable Pub/Sub notifications for Conversational Insights events \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:53.614595+00:00
+fetched_at: 2026-10-23T13:11:32.484390+00:00
 ---
 
 # Enable Pub/Sub notifications for Conversational Insights events  |  Customer Experience Insights  |  Google Cloud Documentation

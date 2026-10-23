@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-stitcher/docs/samples/videostitcher-list-live-ad-tag-details/
 title: List live ad tag details \u00a0|\u00a0 Video Stitcher API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:17.646980+00:00
+fetched_at: 2026-10-23T09:35:36.767435+00:00
 ---
 
 # List live ad tag details  |  Video Stitcher API  |  Google Cloud Documentation

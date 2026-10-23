@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-dml-getting-started-insert/
 title: DML write data \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:16.376943+00:00
+fetched_at: 2026-10-23T10:09:28.483519+00:00
 ---
 
 # DML write data  |  Spanner  |  Google Cloud Documentation

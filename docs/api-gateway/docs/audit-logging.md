@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/audit-logging/
 title: API Gateway audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:19.929355+00:00
+fetched_at: 2026-10-23T13:16:56.690130+00:00
 ---
 
 # API Gateway audit logging  |  Google Cloud Documentation

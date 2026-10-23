@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/publish/portal/custom-scripts/
 title: Adding custom scripts \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:47:52.528830+00:00
+fetched_at: 2026-10-23T13:14:15.628318+00:00
 ---
 
 # Adding custom scripts  |  Apigee  |  Google Cloud Documentation

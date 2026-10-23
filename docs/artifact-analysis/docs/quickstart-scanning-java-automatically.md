@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/quickstart-scanning-java-automatically/
 title: Quickstart: Scan Java packages automatically \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:09.243966+00:00
+fetched_at: 2026-10-23T13:17:18.885633+00:00
 ---
 
 # Quickstart: Scan Java packages automatically  |  Artifact Analysis  |  Google Cloud Documentation

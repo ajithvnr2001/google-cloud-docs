@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-prompt-delete/
 title: Delete a prompt \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:39:44.284014+00:00
+fetched_at: 2026-10-23T09:36:15.798260+00:00
 ---
 
 # Delete a prompt  |  Generative AI on Vertex AI  |  Google Cloud Documentation

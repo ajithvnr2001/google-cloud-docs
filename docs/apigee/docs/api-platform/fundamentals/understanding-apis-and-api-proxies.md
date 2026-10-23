@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/understanding-apis-and-api-proxies/
 title: Understanding APIs and API proxies \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:15.289079+00:00
+fetched_at: 2026-10-23T13:14:04.336776+00:00
 ---
 
 # Understanding APIs and API proxies  |  Apigee  |  Google Cloud Documentation

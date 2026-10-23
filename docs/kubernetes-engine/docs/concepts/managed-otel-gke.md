@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/managed-otel-gke/
 title: Managed OpenTelemetry for GKE \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:09.026951+00:00
+fetched_at: 2026-10-23T10:23:22.418386+00:00
 ---
 
 # Managed OpenTelemetry for GKE  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -45,7 +45,7 @@ For steps to use the Managed OpenTelemetry for GKE, see [Deploy Managed OpenTele
 
 Managed OpenTelemetry for GKE lets you collect OTLP telemetry without having to manage and operate an OpenTelemetry collector. Running your own collector can incur overhead, including authentication, configuration, upgrades, and monitoring. However, if you need collector-level filtering and controls, you can use the [Google-Built OpenTelemetry Collector](https://docs.cloud.google.com/stackdriver/docs/instrumentation/google-built-otel) instead of this managed service.
 
-OpenTelemetry provides APIs, libraries, and SDKs to generate distributed traces, metrics, and logs for application monitoring. For more information about OpenTelemetry, see the documentation about [OpenTelemetry](https://opentelemetry.io/) and the [OpenTelemetry Protocol (OTLP)](https://opentelemetry.io/docs/specs/otel/protocol/). For more details about generating and collecting your application's runtime behavior data, see [Instrumentation and observability](https://docs.cloud.google.com/stackdriver/docs/instrumentation/overview).
+OpenTelemetry provides APIs, libraries, and SDKs to generate distributed traces, metrics, and logs for application monitoring. For more information about OpenTelemetry, see the documentation about [OpenTelemetry](https://opentelemetry.io/) and the [OpenTelemetry Protocol (OTLP)](https://opentelemetry.io/docs/specs/otel/protocol/). For more details about generating and collecting your application's runtime behavior data, see [Observability for application developers](https://docs.cloud.google.com/stackdriver/docs/opentelemetry/application-developers).
 
 ## How Managed OpenTelemetry for GKE works
 
@@ -142,7 +142,7 @@ For details about automatic configuration, see Automatic configuration
 
 Supported workloads are workloads that use OpenTelemetry to collect data about the application's runtime behavior. Workloads natively support OpenTelemetry if they use the OpenTelemetry SDK and are configured using standard OpenTelemetry environment variables. For example, the [Agent Development Kit (ADK)](https://docs.cloud.google.com/stackdriver/docs/instrumentation/ai-agent-adk) natively supports OpenTelemetry.
 
-For more details about how your application's runtime behavior data is generated and collected, see [Instrumentation and observability](https://docs.cloud.google.com/stackdriver/docs/instrumentation/overview).
+For more details about how your application's runtime behavior data is generated and collected, see [Observability for application developers](https://docs.cloud.google.com/stackdriver/docs/opentelemetry/application-developers).
 
 If a workload supports some types of OTLP data and not others, then Managed OpenTelemetry for GKE collects the OTLP data. For example, if a workload uses the OpenTelemetry SDK to implement traces but doesn't use it for logs or metrics, then logs and metrics data is not collected by Managed OpenTelemetry for GKE. For details about how to control the type of data to collect, see [Select the signal types to collect](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/managed-otel-gke#select-signal-type).
 
@@ -169,7 +169,7 @@ When you use Managed OpenTelemetry for GKE, the quotas for Google Cloud Observab
   * To deploy the collector, see [Deploy Managed OpenTelemetry for GKE](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/managed-otel-gke).
   * For a self-deployed alternative to Managed OpenTelemetry for GKE, see [Google-Built OpenTelemetry Collector](https://docs.cloud.google.com/stackdriver/docs/instrumentation/google-built-otel).
   * For information about setting up OpenTelemetry instrumentation to generate traces, metrics, and logs from your applications, see the following: 
-    * [Instrumentation overview](https://docs.cloud.google.com/stackdriver/docs/instrumentation/overview)
+    * [Observability for application developers](https://docs.cloud.google.com/stackdriver/docs/opentelemetry/application-developers)
     * [Choose an instrumentation approach for your application](https://docs.cloud.google.com/stackdriver/docs/instrumentation/choose-approach)
     * [Generate traces and metrics with OpenTelemetry instrumentation](https://docs.cloud.google.com/stackdriver/docs/instrumentation/choose-approach#samples)
   * [Add custom traces and metrics to your app with OpenTelemetry](https://docs.cloud.google.com/monitoring/custom-metrics/open-telemetry).
@@ -180,6 +180,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

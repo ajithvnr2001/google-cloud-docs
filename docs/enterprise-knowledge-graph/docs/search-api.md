@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/enterprise-knowledge-graph/docs/search-api/
 title: Google Knowledge Graph Search API \u00a0|\u00a0 Enterprise Knowledge Graph \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:29.899955+00:00
+fetched_at: 2026-10-23T13:11:55.719907+00:00
 ---
 
 # Google Knowledge Graph Search API  |  Enterprise Knowledge Graph  |  Google Cloud Documentation

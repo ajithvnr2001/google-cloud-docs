@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-iterate-for-range/
 title: Use a basic for-range loop \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:12:18.978221+00:00
+fetched_at: 2026-10-23T08:58:00.944894+00:00
 ---
 
 # Use a basic for-range loop  |  Workflows  |  Google Cloud Documentation

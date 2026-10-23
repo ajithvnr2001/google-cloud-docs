@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/run/route-trigger-dataflow/
 title: Route Dataflow events to Cloud Run \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:36.358226+00:00
+fetched_at: 2026-10-23T13:01:30.089187+00:00
 ---
 
 # Route Dataflow events to Cloud Run  |  Eventarc Standard  |  Google Cloud Documentation

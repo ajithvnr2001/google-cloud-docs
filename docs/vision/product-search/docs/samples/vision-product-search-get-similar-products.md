@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/product-search/docs/samples/vision-product-search-get-similar-products/
 title: Get products similar to a local image file \u00a0|\u00a0 Vision API Product Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:26:59.810380+00:00
+fetched_at: 2026-10-23T09:35:51.491251+00:00
 ---
 
 # Get products similar to a local image file  |  Vision API Product Search  |  Google Cloud Documentation

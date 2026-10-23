@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-intelligence/docs/samples/video-analyze-labels-gcs/
 title: Annotate a video file in Cloud Storage \u00a0|\u00a0 Video Intelligence API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:06:24.539963+00:00
+fetched_at: 2026-10-23T09:37:47.381464+00:00
 ---
 
 # Annotate a video file in Cloud Storage  |  Video Intelligence API  |  Google Cloud Documentation

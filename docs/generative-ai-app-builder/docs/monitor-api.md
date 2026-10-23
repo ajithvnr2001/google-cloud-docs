@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/monitor-api/
 title: Monitor API methods \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:26.051960+00:00
+fetched_at: 2026-10-23T13:12:18.390155+00:00
 ---
 
 # Monitor API methods  |  Agent Search  |  Google Cloud Documentation

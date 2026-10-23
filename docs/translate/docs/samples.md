@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/translate/docs/samples/
 title: All Cloud Translation code samples \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:17.569464+00:00
+fetched_at: 2026-10-23T08:58:55.086786+00:00
 ---
 
 # All Cloud Translation code samples  |  Google Cloud Documentation

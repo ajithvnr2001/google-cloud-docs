@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/yearweek/
 title: Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:50.177776+00:00
+fetched_at: 2026-10-23T13:20:35.493287+00:00
 ---
 
 # Data Studio  |  Google Cloud Documentation

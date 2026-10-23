@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/quickstart-backend-bucket-console/
 title: Quickstart: Set up a backend bucket as an origin \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:53.329659+00:00
+fetched_at: 2026-10-23T13:19:24.477864+00:00
 ---
 
 # Quickstart: Set up a backend bucket as an origin  |  Cloud CDN  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/tutorials/performing-in-place-upgrade-windows-server/
 title: Performing an in-place upgrade of Windows\u00a0Server \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:08:10.349458+00:00
+fetched_at: 2026-10-23T12:59:18.130682+00:00
 ---
 
 # Performing an in-place upgrade of Windows Server  |  Compute Engine  |  Google Cloud Documentation

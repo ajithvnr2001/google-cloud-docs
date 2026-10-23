@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/
 title: Build generative AI applications using AlloyDB AI \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:19:33.605596+00:00
+fetched_at: 2026-10-23T13:08:31.548804+00:00
 ---
 
 # Build generative AI applications using AlloyDB AI  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -27,9 +27,9 @@ To simplify the process of building AI applications, AlloyDB provides the follow
 
   * **vector** extension: the standard [`pgvector` PostgreSQL extension](https://github.com/pgvector/pgvector?tab=readme-ov-file#indexing) is customized for AlloyDB, and referred to as `vector`. It supports storing generated embeddings in a vector column. The extension also adds support for scalar quantization features to create `IVF` indexes. You can also create an `IVFFlat` index or `HNSW` index that are available with stock `pgvector`.
 
-  * **alloydb_scann** extension: the [`alloydb_scann` extension](https://docs.cloud.google.com/alloydb/docs/ai/create-scann-index#create-index) implements a highly efficient nearest-neighbor index powered by the [ScaNN algorithm](https://github.com/google-research/google-research/blob/master/scann/docs/algorithms.md).
+  * **alloydb_scann** extension: the [`alloydb_scann` extension](https://docs.cloud.google.com/alloydb/docs/ai/create-scann-index) implements a highly efficient nearest-neighbor index powered by the [ScaNN algorithm](https://github.com/google-research/google-research/blob/master/scann/docs/algorithms.md).
 
-You can use the `alloydb_scann` extension with PostgreSQL 14, 15, 16, and 17.
+You can use the `alloydb_scann` extension with PostgreSQL 14, 15, 16, 17, and 18.
 
   * **google_columnar_engine** extension: ScaNN index can be loaded into the columnar engine for further accelerating the vector search.
 
@@ -50,7 +50,7 @@ The following are some use cases that these extensions enable:
 
   * [Generate embeddings](https://docs.cloud.google.com/alloydb/docs/ai/work-with-embeddings) and [invoke predictions](https://docs.cloud.google.com/alloydb/docs/ai/invoke-predictions): use Gemini Enterprise Agent Platform text embedding models or registered model endpoints to generate text or multimodal embeddings.
 
-  * [Generate SQL statements from natural language](https://docs.cloud.google.com/alloydb/docs/ai/natural-language-overview): add natural language capabilities to your application, and interact with AlloyDB by asking questions in natural language. The natural language questions are then processed by AlloyDB AI to automatically generate an accurate SQL query that retrieve the answer.
+  * [Generate SQL statements from natural language](https://docs.cloud.google.com/alloydb/docs/ai/natural-language-landing): add natural language capabilities to your application, and interact with AlloyDB by asking questions in natural language. The natural language questions are then processed by AlloyDB AI to automatically generate an accurate SQL query that retrieves the answer.
 
 
 
@@ -70,6 +70,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

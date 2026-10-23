@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-control-update-anywhere-cache/
 title: Storage Control Update Anywhere Cache \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:30:56.402095+00:00
+fetched_at: 2026-10-23T09:36:21.097537+00:00
 ---
 
 # Storage Control Update Anywhere Cache  |  Google Cloud Documentation
@@ -189,7 +189,7 @@ To authenticate to Cloud Storage, set up Application Default Credentials. For mo
         name: name,
         ttl: ttl_in_seconds
       )
-      mask = Google::Protobuf::[FieldMask](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-dataproc-v1beta2/latest/Google-Protobuf-FieldMask.html).new paths: ["ttl"]
+      mask = Google::Protobuf::[FieldMask](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-network_services-v1/latest/Google-Protobuf-FieldMask.html).new paths: ["ttl"]
       # Create a request.
       request = Google::Cloud::Storage::Control::V2::UpdateAnywhereCacheRequest.new(
         anywhere_cache: anywhere_cache,

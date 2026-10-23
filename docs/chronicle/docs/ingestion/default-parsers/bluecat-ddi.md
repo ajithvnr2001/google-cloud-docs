@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/bluecat-ddi/
 title: Collect BlueCat DDI logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:04.803767+00:00
+fetched_at: 2026-10-23T13:19:33.916985+00:00
 ---
 
 # Collect BlueCat DDI logs  |  Google Security Operations  |  Google Cloud Documentation

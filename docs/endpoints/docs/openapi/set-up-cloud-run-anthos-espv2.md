@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/set-up-cloud-run-anthos-espv2/
 title: Quickstart: Set up Cloud Endpoints OpenAPI for Knative serving with ESPv2 \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:29.458797+00:00
+fetched_at: 2026-10-23T13:00:49.416885+00:00
 ---
 
 # Quickstart: Set up Cloud Endpoints OpenAPI for Knative serving with ESPv2  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation

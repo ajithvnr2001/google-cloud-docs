@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-insert-graph-data-with-dml/
 title: Insert graph data with DML \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:15.414045+00:00
+fetched_at: 2026-10-23T10:32:17.872167+00:00
 ---
 
 # Insert graph data with DML  |  Spanner  |  Google Cloud Documentation

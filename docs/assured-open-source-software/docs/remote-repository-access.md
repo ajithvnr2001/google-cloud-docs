@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-open-source-software/docs/remote-repository-access/
 title: Download Assured OSS packages using a remote repository \u00a0|\u00a0 Assured Open Source Software \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:24.643403+00:00
+fetched_at: 2026-10-23T13:19:30.294431+00:00
 ---
 
 # Download Assured OSS packages using a remote repository  |  Assured Open Source Software  |  Google Cloud Documentation

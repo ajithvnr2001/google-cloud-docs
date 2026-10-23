@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-web-detection-include-geo-gcs/
 title: Use geo tagging to detect web annotations on Cloud Storage file \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:18.543694+00:00
+fetched_at: 2026-10-23T09:01:14.879517+00:00
 ---
 
 # Use geo tagging to detect web annotations on Cloud Storage file  |  Cloud Vision API  |  Google Cloud Documentation

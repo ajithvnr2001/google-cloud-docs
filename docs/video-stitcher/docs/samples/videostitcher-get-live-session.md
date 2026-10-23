@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-stitcher/docs/samples/videostitcher-get-live-session/
 title: Get a live session \u00a0|\u00a0 Video Stitcher API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:18.872617+00:00
+fetched_at: 2026-10-23T09:36:39.275911+00:00
 ---
 
 # Get a live session  |  Video Stitcher API  |  Google Cloud Documentation

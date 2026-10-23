@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/databoost/databoost-monitor/
 title: Monitor Data Boost usage \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:27.878220+00:00
+fetched_at: 2026-10-23T10:31:24.384840+00:00
 ---
 
 # Monitor Data Boost usage  |  Spanner  |  Google Cloud Documentation
@@ -87,7 +87,7 @@ To query the audit logs to view Data Boost usage by user, follow these steps:
            proto_payload.audit_log.authentication_info.principal_email AS principal_email
          FROM `PROJECT_NAME.global._Default._AllLogs`
          WHERE
-           ti>mestamp  TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 7 DAY)
+           timestamp > TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 7 DAY)
            AND resource.type = 'spanner_instance' AND operation.last IS NULL
            AND JSON_VALUE(labels.data_boost_usage) != ''
          GROUP BY database, principal_email;
@@ -122,8 +122,8 @@ To query the audit logs to view Data Boost usage broken down by database, user, 
            proto_payload.audit_log.authentication_info.principal_email AS principal_email,
            IFNULL(JSON_VALUE(labels.data_boost_workload_id), 'not from BigQuery') AS job_id
          FROM `PROJECT_NAME.global._Default._AllLogs`
-         WH>ERE
-           timestamp  TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 7 DAY)
+         WHERE
+           timestamp > TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 7 DAY)
            AND resource.type = 'spanner_instance' AND operation.last IS NULL
            AND JSON_VALUE(labels.data_boost_usage) != ''
          GROUP BY database, principal_email, job_id;
@@ -167,7 +167,7 @@ To view Data Boost usage for multiple BigQuery jobs aggregated by the SQL text o
            AND db.resource.type = 'spanner_instance'
            AND JSON_VALUE(db.labels.data_boost_usage) != ''
            AND db.operation.last IS NULL
-           A>ND bq.timestamp  TIMESTAMP_SUB(
+           AND bq.timestamp > TIMESTAMP_SUB(
              CURRENT_TIMESTAMP(), INTERVAL 7 DAY)
            AND bq.proto_payload.audit_log.method_name
              = 'google.cloud.bigquery.v2.JobService.InsertJob'
@@ -204,6 +204,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

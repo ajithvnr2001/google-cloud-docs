@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/maintenance-faq/
 title: Bare Metal Solution maintenance FAQ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:12.003651+00:00
+fetched_at: 2026-10-23T13:18:47.766099+00:00
 ---
 
 # Bare Metal Solution maintenance FAQ  |  Google Cloud Documentation

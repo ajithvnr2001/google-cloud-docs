@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-transcribe-with-speech-to-storage-beta/
 title: Export Speech-to-Text transcript to Cloud Storage (Beta) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:28:46.067290+00:00
+fetched_at: 2026-10-23T10:32:41.442630+00:00
 ---
 
 # Export Speech-to-Text transcript to Cloud Storage (Beta)  |  Google Cloud Documentation

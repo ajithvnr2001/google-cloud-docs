@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/copy-and-paste-style/
 title: Copy and paste style \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:29.586342+00:00
+fetched_at: 2026-10-23T13:19:15.603658+00:00
 ---
 
 # Copy and paste style  |  Data Studio  |  Google Cloud Documentation

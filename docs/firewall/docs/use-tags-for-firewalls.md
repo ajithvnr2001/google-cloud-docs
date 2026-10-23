@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/use-tags-for-firewalls/
 title: Manage VM traffic by using secure tags \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:40.602235+00:00
+fetched_at: 2026-10-23T13:13:10.975796+00:00
 ---
 
 # Manage VM traffic by using secure tags  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

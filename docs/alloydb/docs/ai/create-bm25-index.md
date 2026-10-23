@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/create-bm25-index/
 title: Create and manage a BM25 index \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:27:16.308884+00:00
+fetched_at: 2026-10-23T13:08:36.941971+00:00
 ---
 
 # Create and manage a BM25 index  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -34,7 +34,7 @@ BM25 is a probabilistic ranking algorithm widely used to estimate how relevant a
 To use a BM25 index, you must enable the `pg_textsearch` extension and meet the following requirements:
 
   * Use PostgreSQL 17 or 18: the `pg_textsearch` extension is supported only on AlloyDB instances running PostgreSQL major version 17 or 18.
-  * Database role: you must have the [`alloydbsuperuser` database role](https://docs.cloud.google.com/alloydb/docs/database-users/overview#alloydbsuperuser). For more information, see [Add an IAM user or service account to a cluster](https://docs.cloud.google.com/alloydb/docs/database-users/manage-iam-auth#create-user).
+  * Database role: you must have the [`alloydbsuperuser` database role](https://docs.cloud.google.com/alloydb/docs/database-users/overview#alloydbsuperuser). For more information, see [Add an Identity and Access Management (IAM) user or service account to a cluster](https://docs.cloud.google.com/alloydb/docs/database-users/manage-iam-auth#create-user).
 
 
 
@@ -146,6 +146,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

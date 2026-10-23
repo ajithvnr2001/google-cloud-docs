@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-create-job/
 title: Create an inspection job \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:40:56.340063+00:00
+fetched_at: 2026-10-23T08:38:43.778697+00:00
 ---
 
 # Create an inspection job  |  Sensitive Data Protection  |  Google Cloud Documentation

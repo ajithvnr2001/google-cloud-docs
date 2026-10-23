@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/beyondcorp/security-gateways/applications/remove-iam-policy-binding/
 title: gcloud beta beyondcorp security-gateways applications remove-iam-policy-binding \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:10:53.014112+00:00
+fetched_at: 2026-10-23T09:58:29.550593+00:00
 ---
 
 # gcloud beta beyondcorp security-gateways applications remove-iam-policy-binding  |  Google Cloud SDK  |  Google Cloud Documentation
@@ -40,13 +40,13 @@ DESCRIPTION
         'my-security-gateway':
     
     
-    [gcloud beta beyondcorp security-gateways applications](https://docs.cloud.google.com/sdk/gcloud/reference/beta/beyondcorp/security-gateways/applications) remove-iam-policy-binding my-app --security-gateway=my-security-gateway --member='user:test-user@gmail.com'; --role='roles/beyondcorp.sgApplicationUser' --location=global
+    [gcloud beta beyondcorp security-gateways applications](https://docs.cloud.google.com/sdk/gcloud/reference/beta/beyondcorp/security-gateways/applications) remove-iam-policy-binding my-app --security-gateway=my-security-gateway --member='user:test-user@gmail.com' --role='roles/beyondcorp.sgApplicationUser' --location=global
     
     
     To remove a binding with a condition:
     
     
-    [gcloud beta beyondcorp security-gateways applications](https://docs.cloud.google.com/sdk/gcloud/reference/beta/beyondcorp/security-gateways/applications) remove-iam-policy-binding my-app --security-gateway=my-security-gateway --member='user:test-user@gmail.com'; --role='roles/beyondcorp.sgApplicationUser' --location=global --condition="exp<ression=request.time  timestamp('2026-01-01T00:00:00Z'),title=expires_2026"
+    [gcloud beta beyondcorp security-gateways applications](https://docs.cloud.google.com/sdk/gcloud/reference/beta/beyondcorp/security-gateways/applications) remove-iam-policy-binding my-app --security-gateway=my-security-gateway --member='user:test-user@gmail.com' --role='roles/beyondcorp.sgApplicationUser' --location=global --condition="expression=request.time < timestamp('2026-01-01T00:00:00Z'),title=expires_2026"
 
 POSITIONAL ARGUMENTS
     

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-manage-snapshots/
 title: Manage boot volume snapshots \u00a0|\u00a0 Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:13.787917+00:00
+fetched_at: 2026-10-23T13:19:52.398229+00:00
 ---
 
 # Manage boot volume snapshots  |  Bare Metal Solution  |  Google Cloud Documentation

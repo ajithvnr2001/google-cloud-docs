@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/translation/rest/v3/SupportedLanguages/
 title: SupportedLanguages \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-13T22:13:47.110761+00:00
+fetched_at: 2026-10-23T12:51:08.867722+00:00
 ---
 
 # SupportedLanguages  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -58,7 +58,7 @@ JSON representation
   
 Fields  
 ---  
-`language_code` |  `string` Supported language code, generally consisting of its ISO 639-1 identifier, for example, `en`, `ja`. In certain cases, BCP-47 codes including language and region identifiers are returned (for example, 'zh-TW' and 'zh-CN')  
+`language_code` |  `string` Supported language code, generally consisting of its ISO 639-1 identifier, for example, `en`, `ja`. In certain cases, BCP-47 codes including language and region identifiers are returned (for example, `zh-CN`). **Note:** When `getSupportedLanguages` or `detectLanguage` returns `zh-CN`, `jw`, or `tl`, use `zh`, `jv`, or `fil` in translation requests and glossaries.  
 `display_name` |  `string` Human-readable name of the language localized in the display language specified in the request.  
 `support_source` |  `boolean` Can be used as source language.  
 `support_target` |  `boolean` Can be used as target language.  
@@ -67,6 +67,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-04-10 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-04-10 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

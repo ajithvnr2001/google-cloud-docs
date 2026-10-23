@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/set-up-usage-audit-logs-for-nblme/
 title: Configure usage audit logging for Gemini Notebook Enterprise \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:54.332592+00:00
+fetched_at: 2026-10-23T13:12:04.937604+00:00
 ---
 
 # Configure usage audit logging for Gemini Notebook Enterprise  |  Gemini Enterprise  |  Google Cloud Documentation

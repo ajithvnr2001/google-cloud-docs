@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/code-review/use-code-assist-github/
 title: Use Gemini Code Assist on GitHub \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:14.927677+00:00
+fetched_at: 2026-10-23T13:03:51.102189+00:00
 ---
 
 # Use Gemini Code Assist on GitHub  |  Gemini for Google Cloud  |  Google Cloud Documentation

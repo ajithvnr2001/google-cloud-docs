@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/migrate-to-agent-identity-api/
 title: Migrate to Agent Identity API \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:29.315473+00:00
+fetched_at: 2026-10-23T12:55:29.505492+00:00
 ---
 
 # Migrate to Agent Identity API  |  Identity and Access Management (IAM)  |  Google Cloud Documentation
@@ -51,7 +51,7 @@ When you enable the Agent Identity API, the Agent Registry page in the Google Cl
 
   * **You don't need to recreate your auth providers.** The new API mirrors each legacy auth provider (for example, `projects/PROJECT_ID/locations/LOCATION/**connectors** /AUTH_PROVIDER_NAME`) as an `**authProviders**` resource (`projects/PROJECT_ID/locations/LOCATION/**authProviders** /AUTH_PROVIDER_NAME`).
 
-  * A newly created auth provider using the Google Cloud console or the gcloud CLI appears as an `authProviders/` resource and isn't visible in the legacy API.
+  * An auth provider that you create by using the Google Cloud console, the gcloud CLI, or the REST API appears as an `authProviders/` resource and isn't visible in the legacy API.
 
   * The active agents using legacy `connectors/` strings continue to work during the migration window.
 
@@ -126,6 +126,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/firewall-policies-rule-eval-order/
 title: Evaluation order for firewall policies and rules \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:47.187134+00:00
+fetched_at: 2026-10-23T13:13:25.895590+00:00
 ---
 
 # Evaluation order for firewall policies and rules  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

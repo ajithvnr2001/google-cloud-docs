@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/entities-operation-action/
 title: Entity operations and actions \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:37.746909+00:00
+fetched_at: 2026-10-23T13:10:01.524384+00:00
 ---
 
 # Entity operations and actions  |  Integration Connectors  |  Google Cloud Documentation

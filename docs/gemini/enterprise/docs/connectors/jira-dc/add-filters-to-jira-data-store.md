@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/jira-dc/add-filters-to-jira-data-store/
 title: Add filters to a Jira Data Center data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:28.404464+00:00
+fetched_at: 2026-10-23T13:03:40.665495+00:00
 ---
 
 # Add filters to a Jira Data Center data store  |  Gemini Enterprise  |  Google Cloud Documentation

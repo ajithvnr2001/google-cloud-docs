@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/service-mesh/v1.20/docs/unified-install/upgrade/
 title: Upgrade Cloud Service Mesh \u00a0|\u00a0 Cloud Service Mesh v1.20 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:50:39.781466+00:00
+fetched_at: 2026-10-23T09:01:14.524711+00:00
 ---
 
 # Upgrade Cloud Service Mesh  |  Cloud Service Mesh v1.20  |  Google Cloud Documentation
@@ -56,19 +56,19 @@ The Cloud Service Mesh version that you can upgrade from differs by platform.
 
 You can [upgrade directly](https://docs.cloud.google.com/service-mesh/v1.20/docs/unified-install/upgrade) to Cloud Service Mesh 1.31.1-asm.19 on Google Kubernetes Engine from the following versions:
 
-1.28+
+1.29+
 
 ### On-premises
 
 You can [upgrade directly](https://docs.cloud.google.com/service-mesh/v1.20/docs/unified-install/upgrade) to Cloud Service Mesh 1.31.1-asm.19 on Google Distributed Cloud and Google Distributed Cloud from the following versions:
 
-1.28+
+1.29+
 
 ###  GKE on AWS 
 
 You can [upgrade directly](https://docs.cloud.google.com/service-mesh/v1.20/docs/unified-install/upgrade) to Cloud Service Mesh 1.31.1-asm.19 on GKE on AWS from the following versions:
 
-1.28+
+1.29+
 
 ###  GKE on Azure 
 
@@ -921,6 +921,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

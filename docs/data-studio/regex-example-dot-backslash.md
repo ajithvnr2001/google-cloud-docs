@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/regex-example-dot-backslash/
 title: Handling special characters: dot (.) and backslash () \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:58.270338+00:00
+fetched_at: 2026-10-23T13:20:13.890609+00:00
 ---
 
 # Handling special characters: dot (.) and backslash ()  |  Data Studio  |  Google Cloud Documentation

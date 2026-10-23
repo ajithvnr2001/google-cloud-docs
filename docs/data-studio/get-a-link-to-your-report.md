@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/get-a-link-to-your-report/
 title: Get a link to your report \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:18.285937+00:00
+fetched_at: 2026-10-23T13:20:49.515838+00:00
 ---
 
 # Get a link to your report  |  Data Studio  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-connector-storage/
 title: Connector for Cloud Storage \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:12:22.390293+00:00
+fetched_at: 2026-10-23T08:56:56.428582+00:00
 ---
 
 # Connector for Cloud Storage  |  Workflows  |  Google Cloud Documentation

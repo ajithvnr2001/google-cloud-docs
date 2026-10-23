@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-handwritten-ocr-beta/
 title: Detect handwritten text in a local file (beta) \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:18.708137+00:00
+fetched_at: 2026-10-23T09:01:16.728342+00:00
 ---
 
 # Detect handwritten text in a local file (beta)  |  Cloud Vision API  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/concepts/consent/
 title: Consent and privacy overview \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:56.365981+00:00
+fetched_at: 2026-10-23T13:00:51.751774+00:00
 ---
 
 # Consent and privacy overview  |  Cloud Healthcare API  |  Google Cloud Documentation

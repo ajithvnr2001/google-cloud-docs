@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/knowledge-base/
 title: Create a knowledge base \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:54.506184+00:00
+fetched_at: 2026-10-23T13:12:28.913507+00:00
 ---
 
 # Create a knowledge base  |  Agent Assist  |  Google Cloud Documentation

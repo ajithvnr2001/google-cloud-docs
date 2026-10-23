@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/multiple-proxyendpoints/
 title: Antipattern: Define multiple ProxyEndpoints in an API proxy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:52.408644+00:00
+fetched_at: 2026-10-23T13:15:00.479831+00:00
 ---
 
 # Antipattern: Define multiple ProxyEndpoints in an API proxy  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/Shared.Types/PushNotificationConfig/
 title: PushNotificationConfig \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:04.459824+00:00
+fetched_at: 2026-10-23T13:03:18.127049+00:00
 ---
 
 # PushNotificationConfig  |  Data Agents  |  Google Cloud Documentation

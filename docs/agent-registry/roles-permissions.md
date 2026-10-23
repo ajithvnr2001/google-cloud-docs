@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/roles-permissions/
 title: Roles and permissions \u00a0|\u00a0 Agent Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:19.804076+00:00
+fetched_at: 2026-10-23T12:55:14.832927+00:00
 ---
 
 # Roles and permissions  |  Agent Registry  |  Google Cloud Documentation
@@ -21,15 +21,15 @@ Send feedback
 
 #  Roles and permissions Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page lists the IAM roles and permissions for Agent Registry.
+Identity and Access Management (IAM) roles and permissions let you control who can view, register, and manage agents, MCP servers, tools, standalone skills, endpoints, and bindings in Agent Registry.
 
-Grant appropriate Agent Registry IAM roles to users or groups who manage or view agents, MCP servers, tools, standalone skills, endpoints, and bindings in the registry. To grant roles, you can use the IAM page in the Google Cloud console or the Google Cloud CLI. For detailed instructions, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access).
+To grant Agent Registry IAM roles to users or groups on your [governance project](https://docs.cloud.google.com/agent-registry/overview#governance-project), use the IAM page in the Google Cloud console or the Google Cloud CLI. For detailed instructions, see [Access control with IAM](https://docs.cloud.google.com/agent-registry/access-control) and [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access).
 
 ## Agent Registry roles
 
 The following table describes Agent Registry IAM roles and their typical responsibilities:
 
-**Caution:** Only grant **Agent Registry API Admin** (`roles/agentregistry.admin`) or **Agent Registry API Editor** (`roles/agentregistry.editor`) roles to trusted administrators who require permissions to manage the registry, and avoid granting these roles directly to agents. These roles contain permissions to create, delete, and update services, including modifying critical agent metadata and [tool annotations](https://modelcontextprotocol.io/specification/latest/schema#toolannotations) such as `readOnlyHint` or `destructiveHint`. Malicious changes to metadata and annotations can cause unintended and destructive consequences when an orchestrator uses the modified tool. Additionally, an agent with these permissions can explicitly enroll a malicious external agent into the registry.**Role** | **Description** | **Purpose**  
+**Caution:** Grant the **Agent Registry API Admin** (`roles/agentregistry.admin`) or **Agent Registry API Editor** (`roles/agentregistry.editor`) roles only to trusted administrators who manage the registry. Avoid granting these roles directly to agents. These roles contain permissions to create, delete, and update services, including modifying critical agent metadata and [tool annotations](https://modelcontextprotocol.io/specification/latest/schema#toolannotations) such as `readOnlyHint` or `destructiveHint`. Malicious changes to metadata and annotations can cause unintended and destructive consequences when an orchestrator uses the modified tool. Additionally, an agent with these permissions can explicitly enroll a malicious external agent into the registry.**Role** | **Description** | **Purpose**  
 ---|---|---  
 **Agent Registry API Admin** (`roles/agentregistry.admin`) |  Full access to all Agent Registry resources, including agents, MCP servers, tools, endpoints, standalone skills, skill revisions, bindings, and skill IAM policies. | 
 
@@ -237,10 +237,10 @@ For more information about IAM permissions, see [Find the right predefined roles
 
 ## Access control for registered resources
 
-Agent Registry roles govern who can manage and discover resources in the registry itself. To control which agents can communicate with registered services, endpoints, and MCP servers through [Agent Gateway](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/gateways/agent-gateway-overview), you use [Identity-Aware Proxy](https://docs.cloud.google.com/iap/docs/agent-overview) egress policies:
+Agent Registry roles govern who can manage and discover resources in the registry itself. To control which agents can communicate with registered services, endpoints, and MCP servers through [Agent Gateway](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/gateways/agent-gateway-overview), you use [Identity-Aware Proxy (IAP)](https://docs.cloud.google.com/iap/docs/agent-overview) egress policies:
 
-  * **Egress access permissions** : To authorize an agent to route traffic to a registered agent, MCP server, or endpoint, grant the [**IAP-secured Egressor** (`roles/iap.egressor`)](https://docs.cloud.google.com/iam/docs/roles-permissions/iap#iap.egressor) role to the [agent principal](https://docs.cloud.google.com/agent-registry/identity-and-identifiers#agent-principals) on the target resource.
-  * **Policy administration permissions** : To configure IAP web IAM policies on registered resources, you must obtain the [IAP Policy Admin (`roles/iap.admin`)](https://docs.cloud.google.com/iam/docs/roles-permissions/iap#iap.admin) role on the project hosting the registry.
+  * **Egress access permissions** : to authorize an agent to route traffic to a registered agent, MCP server, or endpoint, grant the [**IAP-secured Egressor** (`roles/iap.egressor`)](https://docs.cloud.google.com/iam/docs/roles-permissions/iap#iap.egressor) role to the [agent principal](https://docs.cloud.google.com/agent-registry/identity-and-identifiers#agent-principals) on the target resource.
+  * **Policy administration permissions** : to configure IAP web IAM policies on registered resources, you must obtain the [IAP Policy Admin (`roles/iap.admin`)](https://docs.cloud.google.com/iam/docs/roles-permissions/iap#iap.admin) role on the governance project hosting the registry.
 
 
 
@@ -250,6 +250,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/known-issues/
 title: Known issues \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:31:17.557176+00:00
+fetched_at: 2026-10-23T10:18:38.957957+00:00
 ---
 
 # Known issues  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -131,7 +131,7 @@ This issue occurs in the following contexts:
 
 
 
-You can mitigate the issue for Alerting in Cloud Monitoring, and for Metrics Explorer, by using [Resource metadata labels](https://cloud.google.com/monitoring/api/v3/metric-model#meta-labels). Use the system metadata label `region` instead of the [cloudsql_database](https://cloud.google.com/monitoring/api/resources#tag_cloudsql_database) monitored resource label `region`.
+You can mitigate the issue for Alerting in Cloud Monitoring, and for Metrics Explorer, by using [Resource metadata labels](https://docs.cloud.google.com/monitoring/api/v3/metric-model#meta-labels). Use the system metadata label `region` instead of the [cloudsql_database](https://docs.cloud.google.com/monitoring/api/resources#tag_cloudsql_database) monitored resource label `region`.
 
 ### Issue related to deleting a PostgreSQL database
 
@@ -166,6 +166,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

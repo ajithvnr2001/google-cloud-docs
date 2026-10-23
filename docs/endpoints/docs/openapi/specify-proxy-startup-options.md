@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/specify-proxy-startup-options/
 title: Extensible Service Proxy startup options \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:28.393448+00:00
+fetched_at: 2026-10-23T13:01:25.463391+00:00
 ---
 
 # Extensible Service Proxy startup options  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation

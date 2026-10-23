@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/quotas/
 title: Quotas and system limits \u00a0|\u00a0 Agent Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:21.288152+00:00
+fetched_at: 2026-10-23T12:55:17.698475+00:00
 ---
 
 # Quotas and system limits  |  Agent Registry  |  Google Cloud Documentation
@@ -76,7 +76,7 @@ The following table lists the system limits that apply to Agent Registry and the
 
 System limit | Value  
 ---|---  
-Display name length | 63 characters  
+Display name length | 63 characters (services and bindings); 128 characters (skills)  
 Description length | 2,048 characters  
 Agent specification content size | 10 KB  
 MCP server specification content size | 10 KB  
@@ -90,7 +90,7 @@ Maximum pagination size | 100
 
 Quotas and system limits have two types of names: display names and metric names. Display names have spaces and capitalization that make them easier for humans to read. Metric names are more likely to be lowercase and delimited by underscores instead of spaces; the exact format depends on the service.
 
-The following instructions show how to get metric names for quotas and system limits by using either the Google Cloud console or the gcloud CLI.
+The following instructions show how to get metric names for quotas and system limits by using either the Google Cloud console or the Google Cloud CLI.
 
 ###  Console 
 
@@ -122,7 +122,7 @@ To get the metric names for a Google Cloud service by using the gcloud CLI, run 
 Replace the following:
 
   * `PROJECT_ID_OR_NUMBER`: the project ID or project number.
-  * `SERVICE_NAME`: the name of the service whose quota metrics you want to see—for example, the service name for Compute Engine is `compute.googleapis.com`. Include the `googleapis.com` portion of the service name.
+  * `SERVICE_NAME`: the name of the service whose quota metrics you want to see, for example, the service name for Compute Engine is `compute.googleapis.com`. Include the `googleapis.com` portion of the service name.
 
 
 
@@ -134,6 +134,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

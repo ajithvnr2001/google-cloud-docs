@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/translate/docs/tutorials/
 title: Tutorials \u00a0|\u00a0 Cloud Translation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:15.383611+00:00
+fetched_at: 2026-10-23T09:35:19.563384+00:00
 ---
 
 # Tutorials  |  Cloud Translation  |  Google Cloud Documentation

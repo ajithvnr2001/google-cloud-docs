@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/gcp-tasks/configure-cloudkms-decrypt-task/
 title: Cloud KMS - decrypt task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:12.049126+00:00
+fetched_at: 2026-10-23T13:17:15.638406+00:00
 ---
 
 # Cloud KMS - decrypt task  |  Application Integration  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure-call-rest-endpoint-task/
 title: Call REST Endpoint task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:45.942750+00:00
+fetched_at: 2026-10-23T13:18:05.221854+00:00
 ---
 
 # Call REST Endpoint task  |  Application Integration  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-mig-with-a2/
 title: Create an AI-optimized A2 MIG \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:53.271981+00:00
+fetched_at: 2026-10-23T13:16:21.784022+00:00
 ---
 
 # Create an AI-optimized A2 MIG  |  AI Hypercomputer  |  Google Cloud Documentation

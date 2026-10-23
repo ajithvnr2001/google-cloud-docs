@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/genesys-cloud-chat/
 title: Configuration for chat integration \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:57.016397+00:00
+fetched_at: 2026-10-23T13:12:45.862002+00:00
 ---
 
 # Configuration for chat integration  |  Agent Assist  |  Google Cloud Documentation

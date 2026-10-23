@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/solutions/oracle/data-guard-setup/db-setup-primary/
 title: Prepare Data Guard's primary database \u00a0|\u00a0 Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:03.091149+00:00
+fetched_at: 2026-10-23T13:20:15.250965+00:00
 ---
 
 # Prepare Data Guard's primary database  |  Bare Metal Solution  |  Google Cloud Documentation

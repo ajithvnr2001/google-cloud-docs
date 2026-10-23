@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-delete-topic/
 title: Delete topic \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:12.188682+00:00
+fetched_at: 2026-10-23T12:55:05.011214+00:00
 ---
 
 # Delete topic  |  Pub/Sub  |  Google Cloud Documentation
@@ -142,6 +142,47 @@ To authenticate to Pub/Sub, set up Application Default Credentials. For more inf
             System.out.println(e.getMessage());
           }
         }
+      }
+    }
+
+### Kotlin
+    
+    
+    import com.google.api.gax.rpc.ApiException
+    import com.google.api.gax.rpc.NotFoundException
+    import com.google.cloud.pubsub.v1.TopicAdminClient
+    import com.google.pubsub.v1.TopicName
+    import java.io.IOException
+    
+    /**
+     * Deletes an existing Google Cloud Pub/Sub topic.
+     *
+     * @param projectId Google Cloud project identifier (for example, "example-project-id").
+     * @param topicId Pub/Sub topic identifier to delete (for example, "example-topic-id").
+     */
+    fun deleteTopic(projectId: String, topicId: String) {
+      val topicName = TopicName.of(projectId, topicId)
+    
+      try {
+        TopicAdminClient.create().use { topicAdminClient ->
+          topicAdminClient.deleteTopic(topicName)
+    
+          println("Resource ID: $topicName")
+          println("Deleted: true")
+          println("Topic ID: $topicId")
+        }
+      } catch (err: NotFoundException) {
+        System.err.println(
+          "error: topic '$topicId' not found in project '$projectId': ${err.message}"
+        )
+      } catch (err: ApiException) {
+        System.err.println(
+          "error: failed to delete topic '$topicId' in project '$projectId': ${err.message}"
+        )
+      } catch (err: IOException) {
+        System.err.println(
+          "error: failed to initialize TopicAdminClient for topic '$topicId' in project '$projectId': ${err.message}"
+        )
       }
     }
 

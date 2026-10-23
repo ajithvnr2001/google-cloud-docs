@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/video/edit-videos/
 title: Edit videos \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:34:24.645292+00:00
+fetched_at: 2026-10-23T12:42:01.779758+00:00
 ---
 
 # Edit videos  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -49,7 +49,7 @@ For information about writing effective text prompts for video generation, see t
 
 [Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)
 
-  3. Enable the Agent Platform API, if it is not already enabled. 
+  3. Enable the Gemini Enterprise Agent Platform API, if it is not already enabled. 
 
 **Roles required to enable APIs**
 
@@ -67,7 +67,7 @@ To enable APIs, you need the `serviceusage.services.enable` permission. If you c
 
 [Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)
 
-  5. Enable the Agent Platform API, if it is not already enabled. 
+  5. Enable the Gemini Enterprise Agent Platform API, if it is not already enabled. 
 
 **Roles required to enable APIs**
 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-intelligence-center/docs/firewall-insights/resources/
 title: Resources \u00a0|\u00a0 Network Intelligence Center - Firewall Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T17:56:12.834011+00:00
+fetched_at: 2026-10-23T12:36:09.329646+00:00
 ---
 
 # Resources  |  Network Intelligence Center - Firewall Insights  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tpu/docs/resources/
 title: Resources \u00a0|\u00a0 Cloud TPU \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:08.647946+00:00
+fetched_at: 2026-10-23T08:36:40.052543+00:00
 ---
 
 # Resources  |  Cloud TPU  |  Google Cloud Documentation

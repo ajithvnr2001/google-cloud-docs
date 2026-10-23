@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/connect-auth-proxy/
 title: Connect using the Cloud SQL Auth Proxy \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:41:37.619133+00:00
+fetched_at: 2026-10-23T10:20:02.058307+00:00
 ---
 
 # Connect using the Cloud SQL Auth Proxy  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -90,7 +90,7 @@ If running on Linux or Mac, you can find this by running the following command:
 
   1. Download the Cloud SQL Auth Proxy: 
          
-         curl -o cloud-sql-proxy https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.26.2/cloud-sql-proxy.linux.amd64
+         curl -o cloud-sql-proxy https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.26.3/cloud-sql-proxy.linux.amd64
 
   2. Make the Cloud SQL Auth Proxy executable: 
          
@@ -103,7 +103,7 @@ If running on Linux or Mac, you can find this by running the following command:
 
   1. Download the Cloud SQL Auth Proxy: 
          
-         curl -o cloud-sql-proxy https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.26.2/cloud-sql-proxy.linux.386
+         curl -o cloud-sql-proxy https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.26.3/cloud-sql-proxy.linux.386
 
   2. If the `curl` command is not found, run `sudo apt install curl` and repeat the download command.
   3. Make the Cloud SQL Auth Proxy executable: 
@@ -117,7 +117,7 @@ If running on Linux or Mac, you can find this by running the following command:
 
   1. Download the Cloud SQL Auth Proxy: 
          
-         curl -o cloud-sql-proxy https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.26.2/cloud-sql-proxy.darwin.amd64
+         curl -o cloud-sql-proxy https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.26.3/cloud-sql-proxy.darwin.amd64
 
   2. Make the Cloud SQL Auth Proxy executable: 
          
@@ -130,7 +130,7 @@ If running on Linux or Mac, you can find this by running the following command:
 
   1. Download the Cloud SQL Auth Proxy: 
          
-         curl -o cloud-sql-proxy https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.26.2/cloud-sql-proxy.darwin.arm64
+         curl -o cloud-sql-proxy https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.26.3/cloud-sql-proxy.darwin.arm64
            
 
   2. Make the Cloud SQL Auth Proxy executable: 
@@ -143,11 +143,11 @@ If running on Linux or Mac, you can find this by running the following command:
 
 ### Windows 64-bit
 
-Right-click <https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.26.2/cloud-sql-proxy.x64.exe> and select **Save Link As** to download the Cloud SQL Auth Proxy. Rename the file to `cloud-sql-proxy.exe`. 
+Right-click <https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.26.3/cloud-sql-proxy.x64.exe> and select **Save Link As** to download the Cloud SQL Auth Proxy. Rename the file to `cloud-sql-proxy.exe`. 
 
 ### Windows 32-bit
 
-Right-click <https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.26.2/cloud-sql-proxy.x86.exe> and select **Save Link As** to download the Cloud SQL Auth Proxy. Rename the file to `cloud-sql-proxy.exe`. 
+Right-click <https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.26.3/cloud-sql-proxy.x86.exe> and select **Save Link As** to download the Cloud SQL Auth Proxy. Rename the file to `cloud-sql-proxy.exe`. 
 
 ### Cloud SQL Auth Proxy Docker image
 
@@ -156,7 +156,7 @@ The Cloud SQL Auth Proxy has different container images, such as `distroless`, `
 You can pull the latest image to your local machine using Docker by using the following command:
     
     
-    docker pull gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.26.2
+    docker pull gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.26.3
     
 
 **Note** : The Cloud SQL Auth Proxy uses a repository that supports the `gcr.io` domain but serves images from Artifact Registry. For more information, see [Transition from Container Registry](https://docs.cloud.google.com/artifact-registry/docs/transition/transition-from-gcr). 
@@ -278,7 +278,7 @@ Depending on your language and environment, you can start the Cloud SQL Auth Pro
     docker run -d \
       -v PATH_TO_KEY_FILE:/path/to/service-account-key.json \
       -p 127.0.0.1:5432:5432 \
-      gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.26.2 \
+      gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.26.3 \
       --address 0.0.0.0 --port 5432 \
       --credentials-file /path/to/service-account-key.json INSTANCE_CONNECTION_NAME
 
@@ -291,7 +291,7 @@ Always specify the `127.0.0.1` prefix in `-p` so that the Cloud SQL Auth Proxy i
     
     docker run -d -v /cloudsql:/cloudsql \
       -v PATH_TO_KEY_FILE:/path/to/service-account-key.json \
-      gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.26.2 \
+      gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.26.3 \
       --unix-socket /cloudsql \
       --credentials-file /path/to/service-account-key.json INSTANCE_CONNECTION_NAME
 
@@ -1170,7 +1170,7 @@ In Windows PowerShell, use the `Start-Process` command to launch the Cloud SQL A
 To run the Cloud SQL Auth Proxy in a Docker container, use the Cloud SQL Auth Proxy Docker image available from the [Google Container Registry](https://docs.cloud.google.com/container-registry). You can install the Cloud SQL Auth Proxy Docker image using the following command:
     
     
-    docker pull gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.26.2
+    docker pull gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.26.3
     
 
 You can start the Cloud SQL Auth Proxy using either TCP sockets or Unix sockets, with the commands shown below. **Note:** Unix sockets aren't supported for applications written in the Java programming language or for the Windows environment. 
@@ -1181,7 +1181,7 @@ You can start the Cloud SQL Auth Proxy using either TCP sockets or Unix sockets,
     docker run -d \
       -v PATH_TO_KEY_FILE:/path/to/service-account-key.json \
       -p 127.0.0.1:5432:5432 \
-      gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.26.2 \
+      gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.26.3 \
       --address 0.0.0.0 --port 5432 \
       --credentials-file /path/to/service-account-key.json \
       INSTANCE_CONNECTION_NAME
@@ -1194,7 +1194,7 @@ Always specify the `127.0.0.1` prefix in `-p` so that the Cloud SQL Auth Proxy i
     docker run -d \
       -v /cloudsql:/cloudsql \
       -v PATH_TO_KEY_FILE:/path/to/service-account-key.json \
-      gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.26.2 \
+      gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.26.3 \
       --unix-socket /cloudsql \
       --credentials-file /path/to/service-account-key.json \
       INSTANCE_CONNECTION_NAME
@@ -1511,6 +1511,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

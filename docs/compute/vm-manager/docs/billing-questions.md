@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/vm-manager/docs/billing-questions/
 title: Billing questions \u00a0|\u00a0 VM Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:29:01.463762+00:00
+fetched_at: 2026-10-23T12:58:10.133982+00:00
 ---
 
 # Billing questions  |  VM Manager  |  Google Cloud Documentation

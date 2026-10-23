@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/grpc/config-file-compare/
 title: Comparing configuration files \u00a0|\u00a0 Cloud Endpoints with gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:23.071278+00:00
+fetched_at: 2026-10-23T13:00:50.914676+00:00
 ---
 
 # Comparing configuration files  |  Cloud Endpoints with gRPC  |  Google Cloud Documentation

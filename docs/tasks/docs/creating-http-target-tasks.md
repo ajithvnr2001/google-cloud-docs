@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tasks/docs/creating-http-target-tasks/
 title: Create HTTP target tasks programmatically \u00a0|\u00a0 Cloud Tasks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:56.388384+00:00
+fetched_at: 2026-10-23T09:34:46.073969+00:00
 ---
 
 # Create HTTP target tasks programmatically  |  Cloud Tasks  |  Google Cloud Documentation
@@ -493,7 +493,7 @@ Note the `requirements.txt` file:
     # @param [Integer] seconds The delay, in seconds, to process your task.
     def create_http_task project_id, location_id, queue_id, url, payload: nil, seconds: nil
       # Instantiates a client.
-      client = Google::Cloud::[Tasks](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-tasks/latest/Google-Cloud-Tasks.html).[cloud_tasks](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-tasks/latest/Google-Cloud-Tasks.html)
+      client = Google::Cloud::[Tasks](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-tasks-v2/latest/Google-Cloud-Tasks.html).[cloud_tasks](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-tasks/latest/Google-Cloud-Tasks.html)
     
       # Construct the fully qualified queue name.
       parent = client.queue_path project: project_id, location: location_id, queue: queue_id
@@ -511,8 +511,8 @@ Note the `requirements.txt` file:
     
       # Add scheduled time to task.
       if seconds
-        timestamp = Google::Protobuf::[Timestamp](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-binary_authorization-v1/latest/Google-Protobuf-Timestamp.html).new
-        timestamp.[seconds](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-binary_authorization-v1/latest/Google-Protobuf-Timestamp.html) = Time.now.to_i + seconds.to_i
+        timestamp = Google::Protobuf::[Timestamp](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-network_services-v1/latest/Google-Protobuf-Timestamp.html).new
+        timestamp.[seconds](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-network_services-v1/latest/Google-Protobuf-Timestamp.html) = Time.now.to_i + seconds.to_i
         task[:schedule_time] = timestamp
       end
     
@@ -1142,6 +1142,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

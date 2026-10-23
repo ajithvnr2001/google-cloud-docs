@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/samples/cloud-sql-sqlserver-pdo-timeout/
 title: Set the connection timeout when using PHP \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:37.254778+00:00
+fetched_at: 2026-10-23T10:12:08.212471+00:00
 ---
 
 # Set the connection timeout when using PHP  |  Cloud SQL for SQL Server  |  Google Cloud Documentation

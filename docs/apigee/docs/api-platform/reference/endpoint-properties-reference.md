@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference/
 title: Endpoint properties reference \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:56.126316+00:00
+fetched_at: 2026-10-23T13:15:11.286555+00:00
 ---
 
 # Endpoint properties reference  |  Apigee  |  Google Cloud Documentation

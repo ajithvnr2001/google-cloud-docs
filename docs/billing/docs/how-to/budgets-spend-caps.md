@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/docs/how-to/budgets-spend-caps/
 title: Manage spend cap budgets \u00a0|\u00a0 Cloud Billing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:00:09.625235+00:00
+fetched_at: 2026-10-23T10:19:13.652191+00:00
 ---
 
 # Manage spend cap budgets  |  Cloud Billing  |  Google Cloud Documentation
@@ -70,7 +70,7 @@ When viewing a spend cap budget, the _estimated_ costs are displayed on the budg
 
 ### Automatic pause of usage and cost accrual when the spend cap is triggered
 
-In the specified project, when your _gross, estimated_ usage costs for the specific service exceed your budget target amount, the spend cap is triggered and enforced for the remainder of the budget period. While enforced, all _new_ usage for the specific service in the specified project is paused, including on-demand, pay-as-you-go usage and usage covered by commitments such as [Committed use discounts (CUDs)](https://docs.cloud.google.com/docs/cuds) and [Provisioned Throughput (PT)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/provisioned-throughput). Any _in-flight_ requests of the specified service are processed to completion, accruing charges as applicable.
+In the specified project, when your _gross, estimated_ usage costs for the specific service exceed your budget target amount, the spend cap is triggered and enforced for the remainder of the budget period. While enforced, all _new_ usage for the specific service in the specified project is paused, including on-demand, pay-as-you-go usage and usage covered by commitments such as [Committed use discounts (CUDs)](https://docs.cloud.google.com/docs/cuds). Any _in-flight_ requests of the specified service are processed to completion, accruing charges as applicable.
 
 Spend caps don't pause any on-going, fixed usage associated with _persistent_ resources (such as compute and storage services), which remain active and continue to accrue charges.
 
@@ -119,7 +119,7 @@ Spend cap budgets are subject to the following limitations:
   * The cost calculations for spend caps are based on _gross, estimated_ costs and don't include savings and credits.
   * Folders, Organizations, Labels, and multi-project or multi-service budgets are out of scope.
   * Spend cap budgets are limited to first-party Google Cloud customers. Reseller accounts are out of scope.
-  * Spend caps apply to on-demand, pay-as-you-go usage and usage covered by commitments such as [Committed use discounts (CUDs)](https://docs.cloud.google.com/docs/cuds) and [Provisioned Throughput (PT)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/provisioned-throughput). Subscription-based costs (such as for [Gemini Enterprise subscriptions](https://docs.cloud.google.com/gemini/enterprise/docs/licenses)) are out of scope.
+  * Spend caps apply to on-demand, pay-as-you-go usage and usage covered by commitments such as [Committed use discounts (CUDs)](https://docs.cloud.google.com/docs/cuds). Subscription-based costs (such as for [Gemini Enterprise subscriptions](https://docs.cloud.google.com/gemini/enterprise/docs/licenses)) are out of scope.
   * Faster enforcement, delayed reporting: Since spend caps are enforced using _gross, estimated_ costs, alerts and caps are triggered much faster than the _actual_ costs that appear on billing reports. Due to the complexity of our billing and processing systems, your _actual_ cost details are typically available within a day, but can sometimes take more than 24 hours to process and appear on billing reports.
 
 **Note:** Even though faster than reports, the enforcement of spend caps isn't instant and any cost overages are billed as normal.
@@ -214,7 +214,7 @@ Complete the following steps to create a spend cap budget:
 
 ![](https://docs.cloud.google.com/static/billing/docs/images/cap-budget-define.png)
 
-### **Define** section
+### 1\. **Define** section
 
   1. Select the **Spend cap enforcement** option (instead of _Alerts only_).
   2. Enter a **Name** for your budget, then click **Next**.
@@ -225,7 +225,7 @@ Complete the following steps to create a spend cap budget:
 
 ![](https://docs.cloud.google.com/static/billing/docs/images/cap-budget-scope.png)
 
-### **Scope** section
+### 2\. **Scope** section
 
   1. For spend cap budgets, the **Time range** selector is automatically set to _Monthly_. You can't edit this setting.
   2. Select a _single_ **Project** and a _single_ eligible **Service** for the spend cap.
@@ -242,7 +242,7 @@ Complete the following steps to create a spend cap budget:
 
 ![](https://docs.cloud.google.com/static/billing/docs/images/cap-budget-amount.png)
 
-### **Amount** section
+### 3\. **Amount** section
 
   1. For spend cap budgets, the **Budget type** selector is automatically set to _Specified amount_. You can't edit this setting.
   2. Enter the **Target amount** of the spend cap.
@@ -259,7 +259,7 @@ Complete the following steps to create a spend cap budget:
 
 ![](https://docs.cloud.google.com/static/billing/docs/images/cap-budget-actions.png)
 
-### **Actions** section
+### 4\. **Actions** section
 
   1. **Spend cap notifications** are automatically configured to notify all billing administrators and project owners at 50%, 80%, and 100% of the budget amount.
   2. For spend cap budgets, the alerts and recipients can't be customized.
@@ -442,6 +442,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

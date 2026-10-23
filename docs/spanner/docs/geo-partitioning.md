@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/geo-partitioning/
 title: Geo-partitioning overview \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:16.967514+00:00
+fetched_at: 2026-10-23T10:31:49.738177+00:00
 ---
 
 # Geo-partitioning overview  |  Spanner  |  Google Cloud Documentation

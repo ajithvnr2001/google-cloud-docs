@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/lite/docs/samples/pubsublite-delete-subscription/
 title: Delete Lite subscription \u00a0|\u00a0 Pub/Sub Lite \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:15:08.986874+00:00
+fetched_at: 2026-10-23T10:20:15.420526+00:00
 ---
 
 # Delete Lite subscription  |  Pub/Sub Lite  |  Google Cloud Documentation

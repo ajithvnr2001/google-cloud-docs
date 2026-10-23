@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/configuring/billing-settings/
 title: Billing settings for services \u00a0|\u00a0 Cloud Run \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:15:27.979284+00:00
+fetched_at: 2026-10-23T12:41:40.119759+00:00
 ---
 
 # Billing settings for services  |  Cloud Run  |  Google Cloud Documentation
@@ -25,9 +25,9 @@ This page describes billing settings assuming the use of the default Cloud Run [
 
 There are two billing settings in Cloud Run services:
 
-  * **Request-based billing** (default): Cloud Run instances are only charged when they process requests, when they start, and when they shut down. See [instance lifecycle](https://docs.cloud.google.com/run/docs/reference/container-contract#lifecycle) for more details. This setting was previously called _CPU only allocated during request processing_.
+  * **Request-based billing** (default): Cloud Run service instances are only charged when they process requests, when they start, and when they shut down. See [instance lifecycle](https://docs.cloud.google.com/run/docs/reference/container-contract#lifecycle) for more details. This setting was previously called _CPU only allocated during request processing_.
 
-  * **Instance-based billing** : Cloud Run instances are charged for the entire lifecycle of instances, even when there are no incoming requests. Instance-based billing can be useful for running short-lived background tasks and other asynchronous processing tasks. This setting was previously called _CPU always allocated_.
+  * **Instance-based billing** : Cloud Run service instances are charged for the entire lifecycle of each instance, even when there are no incoming requests. Instance-based billing can be useful for running short-lived background tasks and other asynchronous processing tasks. This setting was previously called _CPU always allocated_.
 
 
 
@@ -36,7 +36,7 @@ If you choose request-based billing, you are charged per request and only when t
 
 [Recommender](https://docs.cloud.google.com/run/docs/recommender#optimize-billing) automatically looks at traffic received by your Cloud Run service over the past month, and will recommend switching from _request-based billing_ to _instance-based billing_ , if this is cheaper.
 
-**Note:** Unlike Cloud Run services, all Cloud Run jobs have instance-based billing.
+Unlike Cloud Run services, all [Cloud Run jobs](https://docs.cloud.google.com/run/docs/create-jobs) use instance-based billing. [Cloud Run worker pools](https://docs.cloud.google.com/run/docs/deploy-worker-pools) and [Cloud Run instances](https://docs.cloud.google.com/run/docs/instances/create-and-manage-instances) are also billed for the entire lifecycle of each instance using their own dedicated [pricing SKUs](https://cloud.google.com/run/pricing#tables). For a comparison across resource types, see [Cloud Run resource comparison](https://docs.cloud.google.com/run/docs/resource-model#resource-comparison). 
 
 ## CPU allocation impact
 
@@ -56,6 +56,7 @@ You can monitor your spend cap progress directly from the [Cloud Run console](ht
   * Services: any existing service will fail to serve traffic and return `5xx` errors.
   * Jobs: new task executions fail to start, and in-progress tasks fail to complete.
   * Worker pools: any existing instances stop processing tasks.
+  * [Instances](https://docs.cloud.google.com/run/docs/instances/create-and-manage-instances): any running instances shut down, new instances or restarts fail to start, and requests to instance URLs return `5xx` errors.
 
 
 
@@ -90,6 +91,8 @@ Idle instances, including those kept warm using [minimum instances](https://docs
 
 Consider using Cloud Tasks for [executing asynchronous tasks](https://docs.cloud.google.com/run/docs/triggering/using-tasks). Cloud Tasks automatically retries failed tasks and supports running times up to 30 minutes.
 
+If your workload requires a single, long-lived instance that runs continuously for hours or days without horizontal autoscaling, deploy a [Cloud Run instance](https://docs.cloud.google.com/run/docs/instances/create-and-manage-instances) instead of a service. Unlike service instances, which scale down after at most 15 minutes of idle time, a Cloud Run instance can run uninterrupted for up to 7 days and supports configurable [restart policies](https://docs.cloud.google.com/run/docs/configuring/instances/restart-policy). This makes Cloud Run instances well-suited for personal AI agents, stateful workflow engines, and remote development environments. See [When to use Cloud Run instances](https://docs.cloud.google.com/run/docs/overview/what-is-cloud-run#instances-use-cases) and [Cloud Run instance lifecycle](https://docs.cloud.google.com/run/docs/instances/instance-lifecycle) for details.
+
 ### Cost considerations
 
 If you are using _request-based billing_ , _instance-based billing_ can be more economical if:
@@ -100,6 +103,8 @@ If you are using _request-based billing_ , _instance-based billing_ can be more 
 
 
 You can use the [pricing calculator](https://cloud.google.com/products/calculator) to estimate cost differences.
+
+If you only need a single continuously running instance without horizontal autoscaling, a [Cloud Run instance](https://docs.cloud.google.com/run/docs/instances/create-and-manage-instances) can cost less than a service with [minimum instances](https://docs.cloud.google.com/run/docs/configuring/min-instances) and instance-based billing. Cloud Run instances have their own [pricing SKUs](https://cloud.google.com/run/pricing#tables) and support a [shared CPU model with burst capacity](https://docs.cloud.google.com/run/docs/configuring/instances/cpu#burst-throttling) (6.25% baseline vCPU with bursting up to 100%), lowering continuous costs for mostly idle singleton workloads.
 
 ### Autoscaling considerations
 
@@ -116,6 +121,13 @@ See [manual scaling](https://docs.cloud.google.com/run/docs/configuring/services
 Even if the billing setting is set to _instance-based billing_ , Cloud Run [autoscaling](https://docs.cloud.google.com/run/docs/about-instance-autoscaling) is still in effect, and may terminate instances if they aren't needed to handle incoming traffic or current CPU utilization outside of requests. An instance will never stay idle for more than 15 minutes after processing a request unless it is kept active using [minimum instances](https://docs.cloud.google.com/run/docs/configuring/min-instances).
 
 Combining instance-based billing with a number of [minimum instances](https://docs.cloud.google.com/run/docs/configuring/min-instances) results in a number of instances up and running with full access to CPU resources, enabling background processing use cases. When using this pattern, Cloud Run applies [instance autoscaling](https://docs.cloud.google.com/run/docs/about-instance-autoscaling) even if a service is using CPU outside of any requests.
+
+Use a service with instance-based billing and [minimum instances](https://docs.cloud.google.com/run/docs/configuring/min-instances) when your background or agentic workload needs to autoscale beyond a single instance during peak load. For other background patterns, consider these Cloud Run resources:
+
+  * **Single-instance, long-lived workloads** : Use a [Cloud Run instance](https://docs.cloud.google.com/run/docs/instances/create-and-manage-instances) if you only need a single instance with direct start, stop, and restart lifecycle control and no autoscaling.
+  * **Non-HTTP pull-based workloads** : Use a [Cloud Run worker pool](https://docs.cloud.google.com/run/docs/deploy-worker-pools) for continuous background consumers, such as Pub/Sub or Kafka workers, that don't require an HTTP endpoint.
+
+
 
 If you use healthcheck probes, you must use instance-based billing for every probe. See [container healthcheck probes](https://docs.cloud.google.com/run/docs/configuring/healthchecks#billing) for billing details.
 
@@ -279,6 +291,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

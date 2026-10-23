@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/quickstart-register-agent/
 title: Quickstart: Register an agent \u00a0|\u00a0 Agent Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:21.208055+00:00
+fetched_at: 2026-10-23T12:55:15.916317+00:00
 ---
 
 # Quickstart: Register an agent  |  Agent Registry  |  Google Cloud Documentation
@@ -21,38 +21,20 @@ Send feedback
 
 #  Quickstart: Register an agent Stay organized with collections  Save and categorize content based on your preferences. 
 
-Registering an [agent](https://docs.cloud.google.com/agent-registry/concepts#agent) transforms it from an isolated component into a discoverable, integrated part of your AI ecosystem within Agent Registry. By publishing your agent's [A2A skills](https://docs.cloud.google.com/agent-registry/concepts#a2a-skill), you let other developers and orchestrator agents in your organization find and reuse your work, accelerating overall AI development.
+Registering an agent in Agent Registry lets you turn an isolated component into a discoverable part of your AI ecosystem. By publishing your agent's [A2A skills](https://docs.cloud.google.com/agent-registry/skills-architecture#standalone-vs-a2a), you help other developers and orchestrator agents in your organization find and reuse your work.
 
-This quickstart shows you how to manually register a mock agent in Agent Registry using the Google Cloud console. For more information about agent registration mechanisms in Agent Registry, see [Register agents](https://docs.cloud.google.com/agent-registry/register-agents).
+In this quickstart, you manually register a mock agent in Agent Registry using the Google Cloud console. For more information about agent registration mechanisms in Agent Registry, see [Register agents](https://docs.cloud.google.com/agent-registry/register-agents).
 
 ## Before you begin
 
-Before you start, [set up Agent Registry](https://docs.cloud.google.com/agent-registry/setup). You need [the project ID](https://support.google.com/googleapi/answer/7014113) to perform these tasks.
+  1. [Set up Agent Registry](https://docs.cloud.google.com/agent-registry/setup).
+  2. Get [the project ID](https://support.google.com/googleapi/answer/7014113) for the [governance project](https://docs.cloud.google.com/agent-registry/overview#governance-project) where Agent Registry is enabled.
 
-Enable the Agent Registry API:
 
-###  Console 
-
-**Roles required to enable APIs**
-
-To enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
-
-[Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=agentregistry.googleapis.com&redirect=https%3A//console.cloud.google.com)
-
-###  gcloud 
-
-Enable the Agent Registry API in your project:
-    
-    
-    gcloud services enable agentregistry.googleapis.com \
-        --project=PROJECT_ID
-    
-
-Replace `PROJECT_ID` with [your project ID](https://support.google.com/googleapi/answer/7014113).
 
 ### Required roles
 
-To get the permissions that you need to register agents in Agent Registry, ask your administrator to grant you the [Agent Registry API Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/agentregistry#agentregistry.editor) (`roles/agentregistry.editor`) IAM role on the project. For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+To get the permissions that you need to register agents in Agent Registry, ask your administrator to grant you the [Agent Registry API Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/agentregistry#agentregistry.editor) (`roles/agentregistry.editor`) IAM role on the [governance project](https://docs.cloud.google.com/agent-registry/overview#governance-project) where Agent Registry is enabled. For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
 
 You might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
 
@@ -76,11 +58,11 @@ If prompted, click **Enable** to enable the Agent Registry API.
 
   5. In the **Agent details** panel, enter the following details:
 
-     * **Type** : Select **A2A**.
-     * **Region** : Select `global` (Global).
+     * **Type** : select **A2A**.
+     * **Region** : select `global` (Global).
   6. Select the **Paste JSON** tab.
 
-  7. Copy and paste the following sample Agent Card content:
+  7. Paste the following sample Agent Card content:
          
          {
            "supportedInterfaces": [
@@ -121,7 +103,7 @@ If prompted, click **Enable** to enable the Agent Registry API.
 
 
 
-Agent Registry processes the agent card and registers the agent.
+Agent Registry processes the Agent Card and registers the agent.
 
 ## Verify the registration
 
@@ -129,7 +111,7 @@ To confirm that your mock agent was registered successfully, do the following:
 
   1. On the **Agents** tab, locate the mock agent in the list.
   2. Click the agent's name to view its details.
-  3. Verify that the `BookFlight` and `SearchHotels` A2A skills display on the **Overview** tab.
+  3. Verify that the `BookFlight` and `SearchHotels` A2A skills appear on the **Overview** tab.
 
 
 
@@ -139,7 +121,7 @@ To avoid leaving mock resources in your project, delete the registered agent:
 
   1. On the **Agents** tab, locate the mock agent in the list.
   2. Click the more_vert **More options** menu in the **Actions** column of the mock agent, and select **Delete**.
-  3. In the confirmation dialog, type _DELETE_ to confirm the action.
+  3. In the confirmation dialog, enter `DELETE` to confirm the action.
   4. Click **Delete**.
 
 
@@ -156,6 +138,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

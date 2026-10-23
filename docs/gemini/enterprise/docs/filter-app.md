@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/filter-app/
 title: Filter and sort search results in the app (Legacy) \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:11.988724+00:00
+fetched_at: 2026-10-23T13:12:08.066117+00:00
 ---
 
 # Filter and sort search results in the app (Legacy)  |  Gemini Enterprise  |  Google Cloud Documentation

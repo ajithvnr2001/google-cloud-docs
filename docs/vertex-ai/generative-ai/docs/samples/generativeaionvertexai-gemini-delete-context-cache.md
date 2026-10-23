@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-gemini-delete-context-cache/
 title: Delete context cache \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:23.445608+00:00
+fetched_at: 2026-10-23T09:36:28.500891+00:00
 ---
 
 # Delete context cache  |  Generative AI on Vertex AI  |  Google Cloud Documentation

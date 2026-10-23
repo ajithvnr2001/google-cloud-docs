@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/workflow-builder/search-with-filters/
 title: Search with filters \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:36.459340+00:00
+fetched_at: 2026-10-23T13:10:59.382315+00:00
 ---
 
 # Search with filters  |  Gemini Enterprise  |  Google Cloud Documentation

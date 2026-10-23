@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/create-run-job-reservation/
 title: Ensure resource availability using VM reservations \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:31.018045+00:00
+fetched_at: 2026-10-23T13:18:32.975662+00:00
 ---
 
 # Ensure resource availability using VM reservations  |  Batch  |  Google Cloud Documentation

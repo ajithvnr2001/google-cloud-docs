@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/googlegenaisdk-textgen-sys-instr-with-txt/
 title: Set system instructions to Multimodal AI Model \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:29:55.519342+00:00
+fetched_at: 2026-10-23T08:57:52.611795+00:00
 ---
 
 # Set system instructions to Multimodal AI Model  |  Generative AI on Vertex AI  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/ndb/subclassprop/
 title: Writing Property Subclasses \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:52.406269+00:00
+fetched_at: 2026-10-23T13:18:21.320330+00:00
 ---
 
 # Writing Property Subclasses  |  App Engine standard environment  |  Google Cloud Documentation

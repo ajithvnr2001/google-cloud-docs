@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/local-development/vscode/get-started/
 title: Build your first Apigee API proxy using Cloud Code \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:03.529977+00:00
+fetched_at: 2026-10-23T13:15:07.874245+00:00
 ---
 
 # Build your first Apigee API proxy using Cloud Code  |  Google Cloud Documentation

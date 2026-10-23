@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/disable-persistent-connections/
 title: Antipattern: Disable HTTP persistent (reusable keep-alive) connections \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:53.245764+00:00
+fetched_at: 2026-10-23T13:14:33.905568+00:00
 ---
 
 # Antipattern: Disable HTTP persistent (reusable keep-alive) connections  |  Apigee  |  Google Cloud Documentation

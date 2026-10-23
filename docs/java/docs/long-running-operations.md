@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/java/docs/long-running-operations/
 title: Manage long-running operations \u00a0|\u00a0 Java \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:29.593260+00:00
+fetched_at: 2026-10-23T13:09:54.695011+00:00
 ---
 
 # Manage long-running operations  |  Java  |  Google Cloud Documentation

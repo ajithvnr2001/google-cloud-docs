@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/convert-text-and-numbers-to-date-and-date--time/
 title: Convert text and numbers to date and time \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:30.215227+00:00
+fetched_at: 2026-10-23T13:20:14.732173+00:00
 ---
 
 # Convert text and numbers to date and time  |  Data Studio  |  Google Cloud Documentation

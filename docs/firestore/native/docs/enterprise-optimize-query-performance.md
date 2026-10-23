@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/enterprise-optimize-query-performance/
 title: Optimize query performance \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:25.246999+00:00
+fetched_at: 2026-10-23T13:11:16.838641+00:00
 ---
 
 # Optimize query performance  |  Firestore in Native mode  |  Google Cloud Documentation

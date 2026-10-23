@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-nfs/
 title: Add NFS file storage to a Bare Metal Solution environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:13.744912+00:00
+fetched_at: 2026-10-23T13:19:51.512372+00:00
 ---
 
 # Add NFS file storage to a Bare Metal Solution environment  |  Google Cloud Documentation

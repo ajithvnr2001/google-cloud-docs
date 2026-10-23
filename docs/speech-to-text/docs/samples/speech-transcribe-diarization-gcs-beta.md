@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-transcribe-diarization-gcs-beta/
 title: Transcription of a file in Cloud Storage with diarization (beta) \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:53.918831+00:00
+fetched_at: 2026-10-23T08:37:00.153943+00:00
 ---
 
 # Transcription of a file in Cloud Storage with diarization (beta)  |  Cloud Speech-to-Text  |  Google Cloud Documentation

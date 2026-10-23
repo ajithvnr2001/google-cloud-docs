@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/
 title: Cloud Next Generation Firewall documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:36.255717+00:00
+fetched_at: 2026-10-23T13:02:55.493388+00:00
 ---
 
 # Cloud Next Generation Firewall documentation  |  Google Cloud Documentation

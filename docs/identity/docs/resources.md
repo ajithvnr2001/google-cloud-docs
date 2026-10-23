@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/resources/
 title: Resources \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:15.041480+00:00
+fetched_at: 2026-10-23T13:10:44.806350+00:00
 ---
 
 # Resources  |  Cloud Identity  |  Google Cloud Documentation

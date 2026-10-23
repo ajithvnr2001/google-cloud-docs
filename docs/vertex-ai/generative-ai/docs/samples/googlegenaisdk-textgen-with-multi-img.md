@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/googlegenaisdk-textgen-with-multi-img/
 title: Generate text using images from a local and Google Cloud Storage \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:05.423343+00:00
+fetched_at: 2026-10-23T08:57:36.911598+00:00
 ---
 
 # Generate text using images from a local and Google Cloud Storage  |  Generative AI on Vertex AI  |  Google Cloud Documentation

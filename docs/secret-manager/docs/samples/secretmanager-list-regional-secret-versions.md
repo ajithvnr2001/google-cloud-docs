@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-list-regional-secret-versions/
 title: List regional secret version \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:55.483649+00:00
+fetched_at: 2026-10-23T09:39:18.344116+00:00
 ---
 
 # List regional secret version  |  Secret Manager  |  Google Cloud Documentation

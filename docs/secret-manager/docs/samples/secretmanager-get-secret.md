@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-get-secret/
 title: Get secret \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:07.777826+00:00
+fetched_at: 2026-10-23T09:21:35.554581+00:00
 ---
 
 # Get secret  |  Secret Manager  |  Google Cloud Documentation

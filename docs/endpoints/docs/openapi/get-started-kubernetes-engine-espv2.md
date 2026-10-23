@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/get-started-kubernetes-engine-espv2/
 title: Getting started with Cloud Endpoints for GKE with ESPv2 \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:33.913495+00:00
+fetched_at: 2026-10-23T13:02:02.883471+00:00
 ---
 
 # Getting started with Cloud Endpoints for GKE with ESPv2  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation

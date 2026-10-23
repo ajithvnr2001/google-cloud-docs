@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/configure-alloydb/
 title: Configure an AlloyDB for PostgreSQL cluster and instance \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:59.728267+00:00
+fetched_at: 2026-10-23T12:55:31.278791+00:00
 ---
 
 # Configure an AlloyDB for PostgreSQL cluster and instance  |  Application Design Center  |  Google Cloud Documentation
@@ -20,9 +20,7 @@ Send feedback
 
 #  Configure an AlloyDB for PostgreSQL cluster and instance Stay organized with collections  Save and categorize content based on your preferences. 
 
-AlloyDB is a fully managed, PostgreSQL-compatible database service built for your most demanding enterprise workloads, including high transaction rates, large data sizes, and real-time analytics. For more information, see [ AlloyDB overview](https://docs.cloud.google.com/alloydb/docs/overview).
-
-This document describes the parameters you can configure when using App Design Center to create an AlloyDB cluster and instances. The configuration parameters are based on the [terraform-google-alloy-db](https://github.com/GoogleCloudPlatform/terraform-google-alloy-db/tree/v6.1.0) module.
+App Design Center lets you configure clusters and instances for [AlloyDB](https://docs.cloud.google.com/alloydb/docs/overview), a fully managed database service designed for demanding enterprise transactional and analytical workloads. Configurable parameters are based on the [terraform-google-alloy-db](https://github.com/GoogleCloudPlatform/terraform-google-alloy-db/tree/v6.1.0) module.
 
 ## Before you begin
 
@@ -150,6 +148,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

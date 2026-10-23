@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure-sap-erp-trigger/
 title: SAP ERP trigger \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:03.490473+00:00
+fetched_at: 2026-10-23T13:17:44.533143+00:00
 ---
 
 # SAP ERP trigger  |  Application Integration  |  Google Cloud Documentation

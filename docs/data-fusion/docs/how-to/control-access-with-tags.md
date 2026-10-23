@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/control-access-with-tags/
 title: Control access with tags \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:14.923706+00:00
+fetched_at: 2026-10-23T13:19:44.786253+00:00
 ---
 
 # Control access with tags  |  Cloud Data Fusion  |  Google Cloud Documentation

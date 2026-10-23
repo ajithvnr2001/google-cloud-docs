@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/enterprise-knowledge-graph/docs/migrate/
 title: Migrate from legacy Google Knowledge Graph Search API \u00a0|\u00a0 Enterprise Knowledge Graph \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:31.936279+00:00
+fetched_at: 2026-10-23T13:12:12.508286+00:00
 ---
 
 # Migrate from legacy Google Knowledge Graph Search API  |  Enterprise Knowledge Graph  |  Google Cloud Documentation

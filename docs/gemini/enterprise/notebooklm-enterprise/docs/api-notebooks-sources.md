@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks-sources/
 title: Add and manage data sources in a notebook (API) \u00a0|\u00a0 Gemini Notebook Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:56.384492+00:00
+fetched_at: 2026-10-23T13:12:00.287045+00:00
 ---
 
 # Add and manage data sources in a notebook (API)  |  Gemini Notebook Enterprise  |  Google Cloud Documentation

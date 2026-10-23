@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/register-mcp-servers/
 title: Register MCP servers \u00a0|\u00a0 Agent Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:20.484884+00:00
+fetched_at: 2026-10-23T12:55:16.912103+00:00
 ---
 
 # Register MCP servers  |  Agent Registry  |  Google Cloud Documentation
@@ -21,33 +21,48 @@ Send feedback
 
 #  Register MCP servers Stay organized with collections  Save and categorize content based on your preferences. 
 
-Agent Registry acts as a centralized catalog by registering and managing [Model Context Protocol (MCP) server](https://docs.cloud.google.com/agent-registry/concepts#server) endpoints and the specific [tools](https://docs.cloud.google.com/agent-registry/concepts#tool) they expose.
+Agent Registry lets you register Model Context Protocol (MCP) servers automatically or manually so that developers and orchestrator agents can discover and invoke standardized tools across your AI ecosystem.
 
-This document describes how to register MCP servers and how their tool specifications are managed within Agent Registry.
+Automatic registration for custom MCP servers deployed on Google Kubernetes Engine (GKE) or Cloud Run only discovers resources deployed within the [governance project](https://docs.cloud.google.com/agent-registry/overview#governance-project) where Agent Registry is enabled. To register custom MCP servers deployed in separate Google Cloud projects or hosted externally, see Register external MCP servers.
 
-## Automatic discovery of Google Cloud MCP servers
+## Automatic discovery of MCP servers
 
-Official Google and Google Cloud remote MCP servers are automatically registered and ingested into Agent Registry. Available Google and Google Cloud remote MCP servers are listed in [Supported products](https://docs.cloud.google.com/mcp/supported-products) from the Google Cloud MCP servers documentation.
+[Google and Google Cloud remote MCP servers](https://docs.cloud.google.com/mcp/supported-products) are automatically registered and ingested into Agent Registry.
 
-When you enable a supported Google Cloud API in your project, such as the [Compute Engine API](https://docs.cloud.google.com/compute/docs/reference/mcp), the corresponding MCP server and its tools are immediately registered and made available for discovery in Agent Registry. You don't need to manually configure or upload tool specifications for these servers.
+When you enable a Google Cloud API with MCP support in your project, such as the [Compute Engine API](https://docs.cloud.google.com/compute/docs/reference/mcp), the corresponding MCP server and its tools are immediately registered and made available for discovery in Agent Registry. You don't need to manually configure or upload tool specifications for these servers.
 
 **Note:** If your organization uses [Apigee API hub](https://docs.cloud.google.com/apigee/docs/apihub/what-is-api-hub), you can configure it to automatically sync your MCP-styled APIs to Agent Registry. Make sure the sync is enabled in API hub to keep imported MCP API data in Agent Registry. For more information, see [Register MCP APIs](https://docs.cloud.google.com/apigee/docs/apihub/register-mcp-apis).
 
-### Scope and bindings for Google-managed MCP servers
+### Location and conditions
 
-Google-managed remote MCP servers are automatically registered in the `global` location of your project. Because these built-in Google servers reside globally, you must apply any Identity and Access Management (IAM) bindings for them at the global scope by specifying the `--region=global` flag. Regional IAM bindings, such as `--region=us-central1`, aren't supported for these global remote MCP servers and return a `NOT_FOUND` error.
+When Agent Registry automatically registers a Google or Google Cloud remote MCP server, it creates the `McpServer` resource only in the `global` location, not in individual regions such as `us-central1`. If the service provides regional endpoints (REPs), Agent Registry lists those regional URLs in the `interfaces` field of that single `global` `McpServer` resource.
+
+Because the automatically registered resource exists only in `global`, keep the following conditions in mind when querying the server or configuring Identity-Aware Proxy (IAP) access policies:
+
+  * **Use`global` for automatically registered servers**: specify the `global` location when you query the server in Agent Registry with `--location=global` or apply IAP policies to it with `--region=global`. If you specify a region such as `us-central1`, the command returns a `NOT_FOUND` error because no regional `McpServer` resource exists there by default.
+  * **Manually register in a region for data residency** : if you need to keep registry metadata in a specific region, manually register the MCP server and its regional endpoint URL in that region, and then apply your IAP policy in that same region.
+
+
+
+For more information, see [Governance scope across regional and global locations](https://docs.cloud.google.com/agent-registry/locations#governance-scope) and [Remote MCP server not found in a regional location](https://docs.cloud.google.com/agent-registry/troubleshooting#remote-mcp-server-regional-location).
+
+## Before you begin
+
+  1. [Set up Agent Registry](https://docs.cloud.google.com/agent-registry/setup).
+  2. Get [the project ID](https://support.google.com/googleapi/answer/7014113) for the [governance project](https://docs.cloud.google.com/agent-registry/overview#governance-project) where Agent Registry is enabled.
+  3. To use the Google Cloud CLI commands in this document, [set up your gcloud CLI environment](https://docs.cloud.google.com/agent-registry/setup#set-up-cli).
+
+
+
+### Required roles
+
+To get the permissions that you need to register MCP servers in Agent Registry, ask your administrator to grant you the [Agent Registry API Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/agentregistry#agentregistry.editor) (`roles/agentregistry.editor`) IAM role on the [governance project](https://docs.cloud.google.com/agent-registry/overview#governance-project) where Agent Registry is enabled. For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+
+You might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
 
 ## Register MCP servers from GKE
 
-You can configure automatic registration for custom MCP servers deployed on [Google Kubernetes Engine (GKE)](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/agentic-adk-vertex) by adding the `registry.gke.io/functional-type: "MCP_SERVER"` label to your GKE deployments.
-
-**Note:** GKE also supports the `apphub.cloud.google.com/functional-type: "MCP_SERVER"` annotation for backward compatibility. However, we recommend using the `registry.gke.io/functional-type: "MCP_SERVER"` label for your GKE deployments.
-
-To let Agent Registry perform an introspection scan and discover your MCP tools, your deployment must also include annotations declaring the server's endpoint URLs and capability details.
-
-To enable authenticated communication, also configure [Agent Identity](https://docs.cloud.google.com/kubernetes-engine/security/about-agent-identity) by adding the `iam.gke.io/spiffe-identity-type: agent-identity` annotation to the Pod specification.
-
-The following example shows a GKE MCP server deployment manifest using these configurations.
+To register custom MCP servers deployed on [GKE](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/agentic-adk-vertex), add the required Kubernetes [labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) and [annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) to your deployment manifest. The following example shows a GKE MCP server deployment manifest configured for automatic registration:
     
     
     apiVersion: apps/v1
@@ -55,10 +70,10 @@ The following example shows a GKE MCP server deployment manifest using these con
     metadata:
       name: my-mcp-server
       labels:
-        # GKE takes this label and registers the deployment as an MCP server to the registry
+        # GKE takes this label and registers the deployment as an MCP server
         registry.gke.io/functional-type: "MCP_SERVER"
       annotations:
-        # A list of endpoint URLs where the GKE controller can access this MCP server
+        # Endpoint URLs where the GKE controller can access this MCP server
         modelcontextprotocol.info/urls: |
           - https://my-mcp-server.default.svc.cluster.local/mcp
         # Defines structural capabilities for the MCP server card
@@ -80,46 +95,44 @@ The following example shows a GKE MCP server deployment manifest using these con
         spec:
           containers:
           - name: server
-            image: gcr.io/my-project/my-mcp-server:1.0.0
+            image: gcr.io/PROJECT_ID/my-mcp-server:1.0.0
     
 
-When you apply the deployment, GKE automatically attempts to obtain the tool specification from the server and registers the tools directly into the Agent Registry data model. Agent Registry uses your deployment name as the display name for the MCP server.
+Replace `PROJECT_ID` with your Google Cloud project ID.
+
+To configure and apply the deployment manifest, do the following:
+
+  1. In `metadata.labels` of your `Deployment` manifest, add the `registry.gke.io/functional-type: "MCP_SERVER"` label.
+
+**Note:** GKE also supports the `apphub.cloud.google.com/functional-type: "MCP_SERVER"` annotation for backward compatibility. However, use the `registry.gke.io/functional-type: "MCP_SERVER"` label for your GKE deployments.
+  2. In `metadata.annotations` of your `Deployment` manifest, enable automated discovery of your MCP tools by providing the `modelcontextprotocol.info/urls` and `modelcontextprotocol.info/capabilities` annotations to declare the server's endpoint URLs and capability details.
+
+  3. In `spec.template.metadata.annotations` of the Pod template, enable authenticated communication by configuring [Agent Identity](https://docs.cloud.google.com/kubernetes-engine/security/about-agent-identity) with the `iam.gke.io/spiffe-identity-type: agent-identity` annotation.
+
+  4. Apply the deployment manifest to your cluster.
+
+When you apply the deployment, GKE automatically attempts to obtain the tool specification from the server and registers the server and its tools directly into a read-only `McpServer` discovery resource in Agent Registry. Agent Registry uses your deployment name as the display name for the MCP server.
+
+
+
 
 ## Register MCP servers from Cloud Run
 
-You can configure automatic registration for custom MCP servers deployed in [Cloud Run](https://docs.cloud.google.com/run/docs/ai/agent-platform-features) by specifying the `--functional-type=mcp-server` flag when you deploy them.
+You can automatically register custom MCP servers when you deploy them as Cloud Run services by specifying the [`--functional-type=mcp-server`](https://docs.cloud.google.com/sdk/gcloud/reference/beta/run/deploy#--functional-type) flag. The `--functional-type=mcp-server` flag identifies the Cloud Run service as an MCP server rather than a standard containerized workload, instructing Cloud Run to register the server with Agent Registry. During registration, Cloud Run automatically adds the server's name and the `MCP_SERVER` type to the registry.
 
-**Note:** Only Cloud Run services can be exposed as MCP servers. Cloud Run jobs cannot act as MCP servers. 
+**Note:** Only Cloud Run services can be exposed as MCP servers. Cloud Run jobs can't act as MCP servers.
 
-When you deploy a Cloud Run service with `--functional-type=mcp-server`, it is registered to the MCP server catalog in Agent Registry. During registration, Cloud Run registers the server name and type (`MCP_SERVER`).
+You can also specify an identity type using the [`--identity-type`](https://docs.cloud.google.com/sdk/gcloud/reference/beta/run/deploy#--identity-type) flag. For example, specify an `agent-identity` or `service-account` identity. If unspecified, the workload defaults to using a service account identity.
 
-You can also specify an identity type using the `--identity-type` flag. For example, specify an `agent-identity` or `service-account` identity. If unspecified, the workload defaults to using a service account identity.
-
-To learn how to deploy an MCP server service in Cloud Run, see [Configure Agent Platform features for Cloud Run](https://docs.cloud.google.com/run/docs/ai/agent-platform-features).
-
-For more information, see [Host MCP servers on Cloud Run](https://docs.cloud.google.com/run/docs/host-mcp-servers) and [Authenticate MCP servers](https://docs.cloud.google.com/run/docs/ai/authenticate-mcp-servers).
-
-Automatic registration only discovers resources deployed within the same Google Cloud project.
+To configure automatic registration on a new or existing Cloud Run service, see [Configure Gemini Enterprise Agent Platform features for Cloud Run](https://docs.cloud.google.com/run/docs/ai/agent-platform-features#configure-features). To deploy and secure MCP servers on Cloud Run, see [Host MCP servers on Cloud Run](https://docs.cloud.google.com/run/docs/host-mcp-servers) and [Authenticate MCP servers](https://docs.cloud.google.com/run/docs/ai/authenticate-mcp-servers).
 
 ## Register external MCP servers
 
-To manage and reuse tools provided by external servers or custom APIs, you must explicitly register the MCP server.
+To manage and reuse tools provided by external servers or custom APIs, you must manually register the MCP server.
 
-When registering an MCP server manually, Agent Registry registers the endpoint. However, it doesn't automatically introspect the server to determine which tools are available. To let users discover the exact tools available on your MCP server, you must provide the tool specifications during registration by uploading a `toolspec.json` file.
+When registering an MCP server manually, Agent Registry registers the endpoint. However, it doesn't automatically inspect the server to determine which tools are available. To let users discover the exact tools available on your MCP server, you must provide the tool specifications during registration by uploading a `toolspec.json` file.
 
 **Warning:** This feature isn't supported in the `us` and `eu` multi-region locations. You must use a supported region or the `global` location. For more information, see [Agent Registry locations](https://docs.cloud.google.com/agent-registry/locations).
-
-### Before you begin
-
-Before you start, [set up Agent Registry](https://docs.cloud.google.com/agent-registry/setup). You need [the project ID](https://support.google.com/googleapi/answer/7014113) to perform these tasks.
-
-To use the gcloud CLI commands in this document, make sure you have [set up your Google Cloud CLI environment](https://docs.cloud.google.com/agent-registry/setup#set-up-cli).
-
-#### Required roles
-
-To get the permissions that you need to register MCP servers manually in Agent Registry, ask your administrator to grant you the [Agent Registry API Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/agentregistry#agentregistry.editor) (`roles/agentregistry.editor`) IAM role on the project. For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
-
-You might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
 
 ### Prepare your tool specification
 
@@ -175,7 +188,7 @@ Register the MCP server and upload the tool definition simultaneously:
 
   6. In the **Tool specification** section, enter the MCP server endpoint URL and paste the content of your `toolspec.json` file.
 
-Optionally, click **Import tools** in this panel to import the MCP tools from the URL. This option only works if the endpoint URL of your MCP server is publicly hosted over the internet. You cannot use this feature to import tools from privately hosted MCP servers.
+Optionally, click **Import tools** in this panel to import the MCP tools from the URL. This option only works if the endpoint URL of your MCP server is publicly hosted over the internet. You can't use this feature to import tools from privately hosted MCP servers.
 
   7. Click **Next**.
 
@@ -190,34 +203,34 @@ The **Select MCP tools** panel displays a list of tools with names and descripti
 
 ###  gcloud 
 
-The specification flags you use determine which resource collection your service belongs to. For a complete mapping of flags to resource collections, see [API resources](https://docs.cloud.google.com/agent-registry/data-model#api-resources).
+The specification flags you use determine which resource collection your component belongs to. For a complete mapping of flags to resource collections, see [Service resources and discovery resources](/agent-registry/data-model#service-resources).
 
-Register the MCP server with the tool specification:
+Register the MCP server with the tool specification by using the [`gcloud agent-registry services create`](https://docs.cloud.google.com/sdk/gcloud/reference/agent-registry/services/create) command:
     
     
     gcloud agent-registry services create SERVER_NAME \
-      --project=PROJECT_ID \
-      --location=REGION \
-      --display-name="DISPLAY_NAME" \
-      --mcp-server-spec-type=tool-spec \
-      --mcp-server-spec-content=toolspec.json \
-      --interfaces=url=SERVER_URL,protocolBinding=PROTOCOL
+        --project=PROJECT_ID \
+        --location=REGION \
+        --display-name="DISPLAY_NAME" \
+        --mcp-server-spec-type=tool-spec \
+        --mcp-server-spec-content=toolspec.json \
+        --interfaces=url=SERVER_URL,protocolBinding=PROTOCOL
     
 
 Replace the following:
 
-  * `SERVER_NAME`: The name you want to give to your MCP server, for example, `custom-mcp-server`.
-  * `PROJECT_ID`: The project ID.
-  * `REGION`: The registry region.
-  * `DISPLAY_NAME`: The human-readable name that you want to give to your server, for example, `Custom MCP Server`.
-  * `SERVER_URL`: The endpoint URL of the MCP server, for example, `https://api.example.com/mcp`.
-  * `PROTOCOL`: The protocol binding for the endpoint. Valid values are `jsonrpc`, `http-json`, or `grpc`. For MCP servers, this value is often `jsonrpc`.
+  * `SERVER_NAME`: the name you want to give to your MCP server, for example, `custom-mcp-server`. The name must be 4 to 63 characters and can contain only lowercase letters, numbers, and hyphens.
+  * `PROJECT_ID`: the project ID.
+  * `REGION`: the registry region.
+  * `DISPLAY_NAME`: the human-readable name that you want to give to your server, for example, `Custom MCP Server`.
+  * `SERVER_URL`: the endpoint URL of the MCP server, for example, `https://api.example.com/mcp`.
+  * `PROTOCOL`: the protocol binding for the endpoint. Valid values are `jsonrpc`, `http-json`, or `grpc`. For MCP servers, this value is often `jsonrpc`.
 
 
 
 ###  Terraform 
 
-The specification block you configure, for example, `mcp_server_spec`, determines which resource collection your service belongs to. For a complete mapping of specifications to resource collections, see [API resources](https://docs.cloud.google.com/agent-registry/data-model#api-resources).
+The specification block you configure determines which resource collection your component belongs to. For a complete mapping of specifications to resource collections, see [Service resources and discovery resources](/agent-registry/data-model#service-resources).
 
 To register an MCP server and specify its tools, configure a `google_agent_registry_service` resource with the `mcp_server_spec` block:
     
@@ -240,17 +253,17 @@ To register an MCP server and specify its tools, configure a `google_agent_regis
     }
     
     output "server_resource_name" {
-      description = "The generated read-only Server resource name."
+      description = "The generated read-only McpServer resource name."
       value       = google_agent_registry_service.mcp_server.registry_resource
     }
     
 
 Replace the following:
 
-  * `REGION`: The registry region.
-  * `SERVER_NAME`: The name you want to give to your MCP server, for example, `custom-mcp-server`.
-  * `DISPLAY_NAME`: The human-readable name that you want to give to your server, for example, `Custom MCP Server`.
-  * `SERVER_URL`: The endpoint URL of the MCP server, for example, `https://api.example.com/mcp`.
+  * `REGION`: the registry region.
+  * `SERVER_NAME`: the name you want to give to your MCP server, for example, `custom-mcp-server`. The name must be 4 to 63 characters and can contain only lowercase letters, numbers, and hyphens.
+  * `DISPLAY_NAME`: the human-readable name that you want to give to your server, for example, `Custom MCP Server`.
+  * `SERVER_URL`: the endpoint URL of the MCP server, for example, `https://api.example.com/mcp`.
 
 
 
@@ -262,6 +275,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

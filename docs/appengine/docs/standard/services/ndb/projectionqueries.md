@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/ndb/projectionqueries/
 title: Project queries \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:02.962989+00:00
+fetched_at: 2026-10-23T13:18:07.593819+00:00
 ---
 
 # Project queries  |  App Engine standard environment  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/local-development/vscode/manage-apigee-emulator/
 title: What is Apigee Emulator \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:02.820062+00:00
+fetched_at: 2026-10-23T13:15:05.641983+00:00
 ---
 
 # What is Apigee Emulator  |  Google Cloud Documentation

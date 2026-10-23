@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/object-table-introduction/
 title: Introduction to object tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:58:28.746658+00:00
+fetched_at: 2026-10-23T12:55:45.497284+00:00
 ---
 
 # Introduction to object tables  |  BigQuery  |  Google Cloud Documentation
@@ -21,11 +21,13 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Introduction to object tables
 
-This document describes object tables, which are read-only tables over unstructured data objects that reside in Cloud Storage.
+Object tables are read-only tables over unstructured data objects in Cloud Storage. They let you analyze unstructured data by using remote functions or BigQuery ML inference, and then join the results with the rest of your structured data in BigQuery.
 
-Object tables let you analyze unstructured data in Cloud Storage. You can perform analysis with remote functions or perform inference by using BigQuery ML, and then join the results of these operations with the rest of your structured data in BigQuery.
+Like BigLake tables, object tables use access delegation, so you grant users access to the object table instead of to the underlying Cloud Storage objects. This design lets you enforce row-level security and manage which objects users can access.
 
-Like BigLake tables, object tables use access delegation, which decouples access to the object table from access to the Cloud Storage objects. An [external connection](https://docs.cloud.google.com/bigquery/docs/working-with-connections) associated with a service account is used to connect to Cloud Storage, so you only have to grant users access to the object table. This lets you enforce [row-level](https://docs.cloud.google.com/bigquery/docs/row-level-security-intro) security and manage which objects users have access to.
+**Note:** When managing access for users in [external identity providers](https://docs.cloud.google.com/iam/docs/workforce-identity-federation), replace instances of Google Account principal identifiers—like `user:kiran@example.com`, `group:support@example.com`, and `domain:example.com`—with appropriate [Workforce Identity Federation principal identifiers](https://docs.cloud.google.com/iam/docs/principal-identifiers). 
+
+## Create object tables
 
 You can use the [`CREATE EXTERNAL TABLE` statement](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#create_external_table_statement) to create an object table, as shown in the following example:
     
@@ -36,8 +38,6 @@ You can use the [`CREATE EXTERNAL TABLE` statement](https://docs.cloud.google.co
     
 
 To learn more about creating object tables, see [Create object tables](https://docs.cloud.google.com/bigquery/docs/object-tables).
-
-**Note:** When managing access for users in [external identity providers](https://docs.cloud.google.com/iam/docs/workforce-identity-federation), replace instances of Google Account principal identifiers—like `user:kiran@example.com`, `group:support@example.com`, and `domain:example.com`—with appropriate [Workforce Identity Federation principal identifiers](https://docs.cloud.google.com/iam/docs/principal-identifiers). 
 
 ## Object table schema
 
@@ -357,6 +357,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

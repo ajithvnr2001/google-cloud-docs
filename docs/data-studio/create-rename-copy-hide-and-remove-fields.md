@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/create-rename-copy-hide-and-remove-fields/
 title: Create, rename, copy, hide, and remove fields \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:26.084059+00:00
+fetched_at: 2026-10-23T13:20:33.392371+00:00
 ---
 
 # Create, rename, copy, hide, and remove fields  |  Data Studio  |  Google Cloud Documentation

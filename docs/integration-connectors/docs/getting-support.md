@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/getting-support/
 title: Get support \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:37.439494+00:00
+fetched_at: 2026-10-23T13:10:12.751020+00:00
 ---
 
 # Get support  |  Integration Connectors  |  Google Cloud Documentation

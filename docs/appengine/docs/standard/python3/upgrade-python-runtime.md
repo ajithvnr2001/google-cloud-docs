@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/python3/upgrade-python-runtime/
 title: Upgrade an existing application \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:08.192715+00:00
+fetched_at: 2026-10-23T13:17:52.082046+00:00
 ---
 
 # Upgrade an existing application  |  App Engine standard environment  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/storage/
 title: Storage resources \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:18.525706+00:00
+fetched_at: 2026-10-23T13:19:22.611200+00:00
 ---
 
 # Storage resources  |  Cloud Architecture Center  |  Google Cloud Documentation

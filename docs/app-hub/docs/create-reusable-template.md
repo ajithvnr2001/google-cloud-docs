@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/create-reusable-template/
 title: Create a reusable template from a running application \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:16.552979+00:00
+fetched_at: 2026-10-23T13:15:59.815778+00:00
 ---
 
 # Create a reusable template from a running application  |  App Hub  |  Google Cloud Documentation

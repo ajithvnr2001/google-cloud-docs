@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-sdk-chat/
 title: Test chat prompts (Generative AI) \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:00.040725+00:00
+fetched_at: 2026-10-23T09:35:57.353533+00:00
 ---
 
 # Test chat prompts (Generative AI)  |  Vertex AI  |  Google Cloud Documentation

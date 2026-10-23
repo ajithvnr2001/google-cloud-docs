@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/solutions/presence/
 title: Build presence in apps with Cloud Functions \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:28:20.437192+00:00
+fetched_at: 2026-10-23T12:51:08.328426+00:00
 ---
 
 # Build presence in apps with Cloud Functions  |  Firestore in Native mode  |  Google Cloud Documentation
@@ -102,7 +102,7 @@ Next you'll synchronize the presence state to Firestore through the following me
 
 **Note:** Remember that whenever you lose internet connectivity, you have no way to synchronize data, so you must write the same data to the same location, as shown in the following examples. This is necessary to ensure all devices receive the change in online status.
 
-The functions recommended in this tutorial **cannot run in a client app**. They must be deployed to Cloud Functions for Firebase, and they require server-side logic from the Firebase Admin SDK. For detailed guidance, see the [Cloud Functions documentation](https://firebase.google.com/docs/functions/get-started?gen=2nd).
+The functions recommended in this tutorial **cannot run in a client app**. They must be deployed to Cloud Functions for Firebase, and they require server-side logic from the Firebase Admin SDK. For detailed guidance, see the [Cloud Functions documentation](https://firebase.google.com/docs/functions/get-started).
 
 #### Updating Firestore's local cache
 
@@ -245,6 +245,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

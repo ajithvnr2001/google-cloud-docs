@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/monitoring/
 title: Monitoring and logging resources \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:03.502146+00:00
+fetched_at: 2026-10-23T13:18:55.485208+00:00
 ---
 
 # Monitoring and logging resources  |  Cloud Architecture Center  |  Google Cloud Documentation

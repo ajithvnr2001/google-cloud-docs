@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/pub-sub-notifications/
 title: Configure Pub/Sub notifications \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:09.709100+00:00
+fetched_at: 2026-10-23T13:19:48.844405+00:00
 ---
 
 # Configure Pub/Sub notifications  |  Artifact Analysis  |  Google Cloud Documentation

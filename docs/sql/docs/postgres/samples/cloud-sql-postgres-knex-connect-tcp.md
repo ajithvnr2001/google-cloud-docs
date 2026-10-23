@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/samples/cloud-sql-postgres-knex-connect-tcp/
 title: Create a TCP connection by using Node.js \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:36.653730+00:00
+fetched_at: 2026-10-23T10:19:18.684233+00:00
 ---
 
 # Create a TCP connection by using Node.js  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation

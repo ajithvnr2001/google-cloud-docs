@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/obtain-capacity/
 title: Capacity overview \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:48.099667+00:00
+fetched_at: 2026-10-23T13:18:10.170448+00:00
 ---
 
 # Capacity overview  |  AI Hypercomputer  |  Google Cloud Documentation

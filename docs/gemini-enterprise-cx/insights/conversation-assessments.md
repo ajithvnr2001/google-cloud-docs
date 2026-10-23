@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/conversation-assessments/
 title: Conversation assessments \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:23.267571+00:00
+fetched_at: 2026-10-23T13:13:46.775602+00:00
 ---
 
 # Conversation assessments  |  Customer Experience Insights  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/compliance-security-controls/
 title: Compliance and security controls \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:16.458998+00:00
+fetched_at: 2026-10-23T13:11:47.054131+00:00
 ---
 
 # Compliance and security controls  |  Agent Search  |  Google Cloud Documentation

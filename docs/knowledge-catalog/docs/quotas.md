@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/quotas/
 title: Quotas and limits \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:59:27.249722+00:00
+fetched_at: 2026-10-23T10:21:26.352197+00:00
 ---
 
 # Quotas and limits  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -77,21 +77,21 @@ The following quotas apply to Knowledge Catalog requests:
 
 Quota | Default  
 ---|---  
-Read requests for entries and aspects per project per region per minute | 6000  
-Write requests for entries and aspects per project per region per minute | 1500  
-Read requests for aspect types, entry types, and entry groups per project per user per minute | 100  
-Read requests for aspect types, entry types, and entry groups per project per minute | 200  
-Write requests for aspect types, entry types, and entry groups per project per user per minute | 10  
-Write requests for aspect types, entry types, and entry groups per project per minute | 20  
+Read requests for entries and aspects per project per region per minute | 6,000  
+Write requests for entries and aspects per project per region per minute | 1,500  
+Read requests for aspect types, entry types, and entry groups per project per user per region per minute | 100  
+Read requests for aspect types, entry types, and entry groups per project per region per minute | 200  
+Write requests for aspect types, entry types, and entry groups per project per user per region per minute | 10  
+Write requests for aspect types, entry types, and entry groups per project per region per minute | 20  
 Search requests per project per user per minute | 900  
-Search requests per project per minute | 1200  
-Search requests per organization per minute | 2400  
-Search requests per organization per day | 345600  
+Search requests per project per minute | 1,200  
+Search requests per organization per minute | 2,400  
+Search requests per organization per day | 345,600  
 Read requests for metadata jobs per project per region per minute | 400  
 Read requests for metadata jobs per project per user per region per minute | 200  
 Write requests for metadata jobs per project per region per minute | 20  
 Write requests for metadata jobs per project per user per region per minute | 10  
-Read requests for data scans per project per region per minute | 1200  
+Read requests for data scans per project per region per minute | 1,200  
 Read requests for data scans per project per user per region per minute | 600  
 Write requests for data scans per project per region per minute | 200  
 Write requests for data scans per project per user per region per minute | 100  
@@ -128,11 +128,14 @@ The following quotas apply to data lineage requests:
 
 Quota | Default value  
 ---|---  
-Read requests per project per user per region per minute | 1000  
-Write requests per project per user per region per minute | 6000  
-Open Lineage requests per project per user per region per minute | 3000  
+Read requests (`SearchLinks`, `BatchSearchLinkProcesses`, `Get*`, `List*`) per project per region (for example, `us-central1`) per minute | 2,000  
+Read requests (`SearchLinks`, `BatchSearchLinkProcesses`, `Get*`, `List*`) per project per multi-region (`us`, `eu`, `asia`) per minute | 1,000  
+Write requests (`Create*`, `Update*`, `Delete*`) per project per region (for example, `us-central1`) per minute | 12,000  
+Write requests (`Create*`, `Update*`, `Delete*`) per project per multi-region (`us`, `eu`, `asia`) per minute | 6,000  
+OpenLineage requests (`ProcessOpenLineageRunEvent`) per project per region (for example, `us-central1`) per minute | 2,000  
+OpenLineage requests (`ProcessOpenLineageRunEvent`) per project per multi-region (`us`, `eu`, `asia`) per minute | 1,000  
   
-## Quotas for data products API requests
+## Quotas for Dataplex API requests for data products
 
 The Dataplex API enforces rate limits on metadata operations and lifecycle requests for data products and data assets. These limits apply regardless of whether the requests originate from the Google Cloud console, the Google Cloud CLI, client libraries, or direct API calls.
 
@@ -163,7 +166,7 @@ The following quotas apply to Knowledge Studio enrichment tasks:
 
 Quota | Default value  
 ---|---  
-Read requests for enrichment task resources (such as `Get` and `List` for tasks and runs) per project per region per minute | 1200  
+Read requests for enrichment task resources (such as `Get` and `List` for tasks and runs) per project per region per minute | 1,200  
 Write requests for enrichment task resources (such as `Create`, `Update`, and `Delete`) per project per region per minute | 60  
 Run requests for enrichment task resources per project per region per minute | 20  
 Maximum number of enrichment tasks (`AgentTask` resources) per project per region | 100  
@@ -216,11 +219,11 @@ The following limits apply to Knowledge Catalog:
 Limit | Value  
 ---|---  
 Size of a request for entry and aspects (including schema aspect) | 2 MB  
-Length of an entry ID | 4000 characters  
-Length of a fully qualified name in an entry | 4000 characters  
+Length of an entry ID | 4,000 characters  
+Length of a fully qualified name in an entry | 4,000 characters  
 Length of the entry source display name in an entry | 500 characters  
-Length of the entry source description in an entry | 2000 characters  
-Length of the entry source resource in an entry | 4000 characters  
+Length of the entry source description in an entry | 2,000 characters  
+Length of the entry source resource in an entry | 4,000 characters  
 Length of the entry source system in an entry | 64 characters  
 Length of the entry source platform in an entry | 64 characters  
 Length of the entry source labels in an entry | 128 characters for each key and value  
@@ -229,15 +232,15 @@ Size of the JSON content in a data profile aspect | 1 MB
 Total size of an entry | 5 MB  
 Maximum number of aspects in an entry  | 10,000  
 Length of the display name of entry type, aspect type, and entry group | 256  
-Length of the description of entry type, aspect type, and entry group | 1024  
+Length of the description of entry type, aspect type, and entry group | 1,024  
 Length of the field name in an aspect type template | 63  
 Maximum number of required aspect types in an entry type | 20  
-Maximum number of enum values in an aspect type template | 1024  
+Maximum number of enum values in an aspect type template | 1,024  
 Maximum number of items in Knowledge Catalog search results | 500 (keyword-only search mode in the Google Cloud console or `semanticSearch=false` when using API)  
   
 100 (all other search cases)  
-Maximum number of data scans per project per region | 1000  
-Maximum number of data products per project per region | 200  
+Maximum number of data scans per project per region | 1,000  
+Maximum number of data products per project per region | 1,000  
 Maximum number of data assets per data product | 50  
 Maximum number of policy tags per taxonomy | 100  
   

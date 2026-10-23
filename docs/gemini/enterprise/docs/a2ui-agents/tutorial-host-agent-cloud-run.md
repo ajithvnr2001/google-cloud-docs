@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/a2ui-agents/tutorial-host-agent-cloud-run/
 title: Host an A2UI agent with Cloud Run \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:49.396939+00:00
+fetched_at: 2026-10-23T13:10:47.086404+00:00
 ---
 
 # Host an A2UI agent with Cloud Run  |  Gemini Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/samples/healthcare-delete-dicom-store/
 title: Delete DICOM store \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:33:11.937206+00:00
+fetched_at: 2026-10-23T13:09:00.441440+00:00
 ---
 
 # Delete DICOM store  |  Cloud Healthcare API  |  Google Cloud Documentation

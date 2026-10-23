@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/samples/cloud-sql-mysql-sqlalchemy-connection/
 title: MySQL SQLAlchemy opening and closing connections \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:23.894376+00:00
+fetched_at: 2026-10-23T10:19:59.526879+00:00
 ---
 
 # MySQL SQLAlchemy opening and closing connections  |  Cloud SQL for MySQL  |  Google Cloud Documentation

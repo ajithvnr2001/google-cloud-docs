@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/translate/docs/samples/translate-v3-get-supported-languages/
 title: Get supported languages (Advanced edition) \u00a0|\u00a0 Cloud Translation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:09.990490+00:00
+fetched_at: 2026-10-23T08:58:55.881245+00:00
 ---
 
 # Get supported languages (Advanced edition)  |  Cloud Translation  |  Google Cloud Documentation

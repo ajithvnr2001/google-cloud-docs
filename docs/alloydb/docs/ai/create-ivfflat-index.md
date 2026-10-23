@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/create-ivfflat-index/
 title: Create an IVFFLAT index \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:12.133880+00:00
+fetched_at: 2026-10-23T13:08:33.365054+00:00
 ---
 
 # Create an IVFFLAT index  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -76,7 +76,7 @@ To create this index on an embedding column that uses the `real[]` data type ins
     
     
     CREATE INDEX INDEX_NAME ON TABLE
-      USING ivfflat (CAST(EMBEDDING_COLUMN AS vector(DIMENSIONS)))'}} DISTANCE_FUNCTION)
+      USING ivfflat ((CAST(EMBEDDING_COLUMN AS vector(DIMENSIONS))) DISTANCE_FUNCTION)
       WITH (lists = LIST_COUNT);
     
 
@@ -100,15 +100,13 @@ To find the nearest semantic neighbors for an embedding vector, you can run the 
     
     
       SELECT * FROM TABLE
-        ORDER BY EMBEDDING_COLUMN DISTANCE_FUNCTION_QUERY ['EMBEDDING']
-        LIMIT ROW_COUNT
+        ORDER BY EMBEDDING_COLUMN DISTANCE_FUNCTION_QUERY 'EMBEDDING'
+        LIMIT ROW_COUNT;
     
 
 Replace the following:
 
   * `TABLE`: the table containing the embedding to compare the text to.
-
-  * `INDEX_NAME`: the name of the index you want to use—for example, `my-scann-index`.
 
   * `EMBEDDING_COLUMN`: the column containing the stored embeddings.
 
@@ -149,6 +147,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

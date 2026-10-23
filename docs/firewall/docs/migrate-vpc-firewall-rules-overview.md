@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/migrate-vpc-firewall-rules-overview/
 title: VPC firewall rules migration overview \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:43.233608+00:00
+fetched_at: 2026-10-23T13:12:59.499054+00:00
 ---
 
 # VPC firewall rules migration overview  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

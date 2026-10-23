@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/linux/18.3.0/docs/ai/evaluate-semantic-queries-ai-operators/
 title: Perform intelligent SQL queries using AI functions \u00a0|\u00a0 AlloyDB Omni using RPM: 18.3.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:12:45.580030+00:00
+fetched_at: 2026-10-23T12:54:53.432503+00:00
 ---
 
 # Perform intelligent SQL queries using AI functions  |  AlloyDB Omni using RPM: 18.3.0  |  Google Cloud Documentation
@@ -91,30 +91,32 @@ If you experience issues when you run the preceding commands, or if the extensio
             
             ALTER ROLE postgres SET google_ml_integration.enable_ai_query_engine = 'on';
 
+  4. Use a Gemini model that's supported in your region. [Gemini 3.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite) is the AI query engine's default model. If you don't specify a Gemini model in the query, the AI query engine uses the default model. 
 
 
-  * Use a Gemini model that's supported in your region. [Gemini 2.5 Flash Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite) is the AI query engine's default model. If you don't specify a Gemini model in the query, the AI query engine default model is chosen for the queries.
+
+  * Use a Gemini model that's supported in your region. If you don't specify a Gemini model in the query, the AI query engine default model is chosen for the queries.
 
 
 
 ### Use a Gemini model that's supported in your region
 
-If your AlloyDB Omni cluster is in a region where `gemini-2.5-flash-lite` isn't supported, you can use one of the other available Gemini models in your region using the `model_id` parameter.
+The AI query engine's default model is [`gemini-3.5-flash-lite`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite). If you don't specify a `model_id` in your AI functions, your queries use this model. To check model availability, see [Supported regions](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite#supported-regions). For pricing details, see [Agent Platform pricing](https://docs.cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing).
 
-**Note:** Verify model availability in your region. For more information, see [Gemini 2.5 Flash Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite).
+If your AlloyDB Omni cluster is in a region where `gemini-3.5-flash-lite` isn't supported, you can specify another available Gemini model using the `model_id` parameter. For more information, see [Google model endpoint locations](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations#google-models).
 
 Alternatively, you can register a Gemini model endpoint and provide that model ID to the AI operators. For more information, see [Register and call remote AI models using model endpoint management](https://docs.cloud.google.com/alloydb/omni/linux/18.3.0/docs/ai/register-model-endpoint).
 
-The following example shows how to register another Gemini endpoint. In this example, this second Gemini endpoint is the global endpoint for `gemini-2.5-flash-lite`. You can use this registered model with AI operators by passing `model_id => 'gemini-2.5-flash-lite-global'` as an additional argument.
+The following example shows how to register another Gemini endpoint. In this example, this second Gemini endpoint is the global endpoint for `gemini-3.5-flash-lite`. You can use this registered model with AI operators by passing `model_id => 'gemini-3.5-flash-lite-global'` as an additional argument.
     
     
     CALL
       google_ml.create_model(
-        model_id => 'gemini-2.5-flash-lite-global',
+        model_id => 'gemini-3.5-flash-lite-global',
         model_type => 'llm',
         model_provider => 'google',
-        model_qualified_name => 'gemini-2.5-flash-lite',
-        model_request_url =>  'https://aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/global/publishers/google/models/gemini-2.5-flash-lite:generateContent',
+        model_qualified_name => 'gemini-3.5-flash-lite',
+        model_request_url =>  'https://aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/global/publishers/google/models/gemini-3.5-flash-lite:generateContent',
         model_auth_type => 'alloydb_service_agent_iam'
     );
     
@@ -175,7 +177,7 @@ The following shows the same example using the model that you registered in Use 
     SELECT r.name, r.location_city
     FROM restaurant_reviews r
     WHERE
-      AI.IF(r.location_city || ' has a population of more than 100,000 AND the following is a positive review; Review: ' || r.review, model_id => 'gemini-2.5-flash-lite')
+      AI.IF(r.location_city || ' has a population of more than 100,000 AND the following is a positive review; Review: ' || r.review, model_id => 'gemini-3.5-flash-lite')
     GROUP BY r.name, r.location_city
     HAVING COUNT(*) > 500;
     
@@ -194,7 +196,7 @@ To perform a join operation, use the `ai.if`/`google_ml.if` operator with join. 
 
 ### Perform filtering using array-based functions
 
-The following example identifies restaurants with more than 10 positive reviews by using an AI model (`gemini-2.5-flash-lite`) to analyze review sentiment and filter the results. `ARRAY_AGG` is used to transform individual rows of data into structured arrays so they can be processed by the AI model in bulk rather than one row at a time.
+The following example identifies restaurants with more than 10 positive reviews by using an AI model (`gemini-3.5-flash-lite`) to analyze review sentiment and filter the results. `ARRAY_AGG` is used to transform individual rows of data into structured arrays so they can be processed by the AI model in bulk rather than one row at a time.
     
     
     WITH initial_arrays AS (
@@ -203,7 +205,7 @@ The following example identifies restaurants with more than 10 positive reviews 
         -- Assuming ai.if takes an array of prompts and returns a boolean array
         ai.if(
           prompts => ARRAY_AGG('Is the review positive: ' || r.review ORDER BY r.id),
-          model_id => 'gemini-2.5-flash-lite',
+          model_id => 'gemini-3.5-flash-lite',
           batch_size => 20
         ) AS truth_values
       FROM restaurant_reviews r
@@ -247,7 +249,7 @@ The following example shows how to filter a large set of restaurant reviews by s
         result_cursor := ai.if(
             'Is the given statement true? ',
             prompt_cursor,
-            model_id => 'gemini-2.5-flash-lite'
+            model_id => 'gemini-3.5-flash-lite'
         );
     
         -- 3. Fetch results from the output cursor and store them
@@ -292,7 +294,7 @@ The following query uses `UNNEST` and `ai.generate` to summarize multiple review
       UNNEST(
         ai.generate(
           prompts => ARRAY_AGG('Summarize the review in 20 words or less. Review: ' || review),
-          model_id => 'gemini-2.5-flash-lite'
+          model_id => 'gemini-3.5-flash-lite'
         )
       ) AS review_summary
     FROM user_reviews;
@@ -434,6 +436,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

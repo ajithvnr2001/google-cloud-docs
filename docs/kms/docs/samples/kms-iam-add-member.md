@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kms/docs/samples/kms-iam-add-member/
 title: Add an IAM member to a resource \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:37:05.127129+00:00
+fetched_at: 2026-10-23T10:25:31.630643+00:00
 ---
 
 # Add an IAM member to a resource  |  Cloud Key Management Service  |  Google Cloud Documentation

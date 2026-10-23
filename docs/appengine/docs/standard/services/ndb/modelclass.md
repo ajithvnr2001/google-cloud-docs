@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/ndb/modelclass/
 title: NDB Model Class \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:53.226781+00:00
+fetched_at: 2026-10-23T13:18:20.296486+00:00
 ---
 
 # NDB Model Class  |  App Engine standard environment  |  Google Cloud Documentation

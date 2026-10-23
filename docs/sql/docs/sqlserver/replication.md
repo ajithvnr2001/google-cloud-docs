@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/replication/
 title: About replication in Cloud SQL \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:55.270867+00:00
+fetched_at: 2026-10-23T10:19:52.779253+00:00
 ---
 
 # About replication in Cloud SQL  |  Cloud SQL for SQL Server  |  Google Cloud Documentation
@@ -32,7 +32,7 @@ Replication is the ability to create copies of a Cloud SQL instance and offload 
 
 The primary reason for using replication is to scale the use of data in a database without degrading performance.
 
-**Note:** Although this page is primarily concerned with specific read replica scenarios, you can set up replication from external databases (external to Cloud SQL) to Cloud SQL. For example, see [Migrating data from SQL Server 2017 to Cloud SQL for SQL Server using snapshot replication](https://cloud.google.com/solutions/migrating-data-from-sql-server-to-cloud-sql-for-sql-server).
+**Note:** Although this page is primarily concerned with specific read replica scenarios, you can set up replication from external databases (external to Cloud SQL) to Cloud SQL. For example, see [Migrating data from SQL Server 2017 to Cloud SQL for SQL Server using snapshot replication](https://docs.cloud.google.com/solutions/migrating-data-from-sql-server-to-cloud-sql-for-sql-server).
 
 Other reasons for replication include migrating data between regions.
 
@@ -209,7 +209,7 @@ SQL Server replication | Instance external to Cloud SQL | Cloud SQL for SQL Serv
 
 | 
 
-  * [ Migrating data from SQL Server 2017 to Cloud SQL for SQL Server using snapshot replication](https://cloud.google.com/solutions/migrating-data-from-sql-server-to-cloud-sql-for-sql-server)
+  * [ Migrating data from SQL Server 2017 to Cloud SQL for SQL Server using snapshot replication](https://docs.cloud.google.com/solutions/migrating-data-from-sql-server-to-cloud-sql-for-sql-server)
 
   
   
@@ -293,6 +293,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/ms-onedrive/add-filters-to-onedrive-data-store/
 title: Add filters to a Microsoft OneDrive data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:38:04.038496+00:00
+fetched_at: 2026-10-23T13:11:29.284164+00:00
 ---
 
 # Add filters to a Microsoft OneDrive data store  |  Gemini Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tasks/docs/samples/cloud-tasks-list-queues/
 title: List queues \u00a0|\u00a0 Cloud Tasks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:40.102709+00:00
+fetched_at: 2026-10-23T08:58:44.761288+00:00
 ---
 
 # List queues  |  Cloud Tasks  |  Google Cloud Documentation

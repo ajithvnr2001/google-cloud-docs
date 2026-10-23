@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/view-analytics/
 title: View and export analytics data \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:42.004245+00:00
+fetched_at: 2026-10-23T10:03:32.564224+00:00
 ---
 
 # View and export analytics data  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -125,9 +125,10 @@ Successful search rate  | Successful search count / search count  |
 Successful answer rate  | Successful answer count / answer count  |   
 Agents | Monthly active agent users  | Total number of active users who used the agent per month.  |  A user is counted as active for an agent whenever they make an Assistant call to that agent in agent, research, or idea forge mode. This includes activity from the agent's creator during previews or testing in Workflow Builder, because these actions generate regular Assistant calls with the agent's ID, similar to any end-user interaction. Only interactions with unsaved drafts that haven't been assigned an agent ID are excluded from this count.   
 Monthly agent chat sessions  |  Total number of chat sessions initiated by the users interacting with a specific agent per month.  |  A chat session is defined as a user interacting with an agent within the same chat thread on a single day. If the user continues the conversation in the same chat thread on a subsequent day, it will be considered a new session. Preview and test sessions initiated from Workflow Builder are counted, because they flow through the same Assistant API path as end-user sessions and receive a session ID.   
-Monthly agents used  |  Total number of agents that had at least one active user per month.  |  Uses the same definition of active user as **Monthly active agent users**. This count can occasionally exceed **Monthly total chat sessions** in a given month when many agents receive short-lived Assistant calls that don't produce a persisted session ID (for example, aborted or cancelled turns, or single-shot calls that don't open a chat session).   
+Monthly agents used  |  Total number of agents that had at least one active user per month.  |  Uses the same definition of active user as **Monthly active agent users**.   
 Monthly total chat sessions  |  Total number of chat sessions initiated by the users interacting with the agents per month.  |  A chat session is defined as a user interacting with an agent within the same chat thread on a single day. If the user continues the conversation in the same chat thread on a subsequent day, it will be considered a new session. Preview and test sessions initiated from Workflow Builder are counted, because they flow through the same Assistant API path as end-user sessions and receive a session ID.   
 Monthly agents created  | Total number of Agents that were created in the last calendar month.  |   
+Agent name  |  The agent's display name, shown in the **Agent Name** column of the **Leaderboard** next to the agent's ID in the **Agent ID** column.  |  If an agent was renamed, the leaderboard shows its most recent display name. If a display name isn't available for an agent, the **Agent Name** column shows the agent ID.   
 Gemini Notebook Enterprise daily active users  | Count of Gemini Notebook Enterprise active users per day.  | Gemini Notebook Enterprise metrics are calculated across the project and not per engine. **Note** : The Gemini Notebook Enterprise metrics include notebook creation, notebook sharing, audio overview creation, and overall active user counts. Metrics for other generated artifacts — like mind maps, video overviews, slide decks, infographics, and tailored reports — are not yet displayed on this dashboard.   
 Gemini Notebook Enterprise daily notebooks created  | Count of Gemini Notebook Enterprise notebooks created per day.  | Gemini Notebook Enterprise metrics are calculated across the project and not per engine.   
 Gemini Notebook Enterprise daily notebooks created per user  | Count of Gemini Notebook Enterprise notebooks created per user per day.  | Gemini Notebook Enterprise metrics are calculated across the project and not per engine.   
@@ -353,6 +354,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

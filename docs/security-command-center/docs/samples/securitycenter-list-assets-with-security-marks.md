@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/samples/securitycenter-list-assets-with-security-marks/
 title: List assets with security marks \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:51:03.070505+00:00
+fetched_at: 2026-10-23T11:32:49.877829+00:00
 ---
 
 # List assets with security marks  |  Security Command Center  |  Google Cloud Documentation

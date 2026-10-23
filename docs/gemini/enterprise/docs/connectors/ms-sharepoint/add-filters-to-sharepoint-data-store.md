@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/ms-sharepoint/add-filters-to-sharepoint-data-store/
 title: Add filters to a Microsoft SharePoint data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:38:02.823721+00:00
+fetched_at: 2026-10-23T13:11:37.434862+00:00
 ---
 
 # Add filters to a Microsoft SharePoint data store  |  Gemini Enterprise  |  Google Cloud Documentation

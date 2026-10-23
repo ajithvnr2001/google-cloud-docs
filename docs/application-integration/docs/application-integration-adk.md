@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/application-integration-adk/
 title: Application Integration and ADK \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:49.998033+00:00
+fetched_at: 2026-10-23T13:17:12.120585+00:00
 ---
 
 # Application Integration and ADK  |  Google Cloud Documentation

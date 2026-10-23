@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/locations/
 title: Cache locations \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:53.482272+00:00
+fetched_at: 2026-10-23T13:18:38.869731+00:00
 ---
 
 # Cache locations  |  Cloud CDN  |  Google Cloud Documentation

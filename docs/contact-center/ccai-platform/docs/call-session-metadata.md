@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/contact-center/ccai-platform/docs/call-session-metadata/
 title: Call session metadata \u00a0|\u00a0 Google Cloud Contact Center as a Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:11:22.022284+00:00
+fetched_at: 2026-10-23T12:55:30.870432+00:00
 ---
 
 # Call session metadata  |  Google Cloud Contact Center as a Service  |  Google Cloud Documentation
@@ -421,7 +421,7 @@ These sections explain who or what handled the call:
 
     * `id` (integer): Unique identifier for the escalation.
 
-    * `status` (string): Current status (for example, escalating, escalated, or failed).
+    * `status` (string): Current status of the escalation. Possible values: `escalating`, `"escalated"`, `"canceled"`, `"deflecting"`, and `"deflected"`.
 
     * `reason` (string): Reason the session escalated.
 
@@ -438,13 +438,25 @@ These sections explain who or what handled the call:
 
 
 
-### Virtual agent escalations
+### Virtual agent deflected escalations
 
   * `virtual_agent_deflected_escalations` (array): Details of deflected escalations from virtual agents.
 
     * `id` (integer): Unique identifier.
 
-    * `deflection` (string): Deflection type.
+    * `deflection` (string): Deflection type recorded for the deflected escalation. This is a smaller vocabulary than the call-level deflection field described in Definitions: deflection \- it covers only the outcomes a virtual-agent escalation can record. Possible values:
+
+      * Over-capacity: `over_cap`, `over_cap_phone`, `over_cap_voicemail`, `over_cap_callback`, `over_cap_message`, `over_cap_queue`, `over_cap_sip`, `over_cap_extension`, `over_cap_phone_with_extension`
+
+      * After-hours: `after_hours`, `after_hours_phone`, `after_hours_voicemail`, `after_hours_message`, `after_hours_message_only`, `after_hours_queue`, `after_hours_sip`, `after_hours_extension`, `after_hours_phone_with_extension`
+
+      * Temporary redirection: `temp_redirection`, `temp_redirection_phone`, `temp_redirection_voicemail`, `temp_redirection_message`, `temp_redirection_queue`, `temp_redirection_sip`, `temp_redirection_extension`, `temp_redirection_phone_with_extension`
+
+      * IVR pre-session: `ivr_presession_deflection`
+
+      * Virtual-agent-initiated: `va_redirection_phone`, `va_redirection_sip`, `va_third_party_phone`, `va_third_party_sip`
+
+The unsuffixed `over_cap`, `after_hours`, and `temp_redirection` values are recorded when the call ended before a deflection outcome was reached.
 
     * `escalation_id` (integer): Escalation event identifier.
 
@@ -625,7 +637,7 @@ These sections explain who or what handled the call:
 
     * `middle_name` (string or null; present only on agent participants): The agent's middle name.
 
-    * `teams` (array; present only on agent participants): Array of { id, name } objects for the agent's teams.
+    * `teams` (array; present only on agent participants): Array of `{ id, name }` objects for the agent's teams.
 
 
 
@@ -935,6 +947,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

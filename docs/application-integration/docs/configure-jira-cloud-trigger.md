@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure-jira-cloud-trigger/
 title: Jira Cloud trigger \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:43.682800+00:00
+fetched_at: 2026-10-23T13:17:11.661581+00:00
 ---
 
 # Jira Cloud trigger  |  Application Integration  |  Google Cloud Documentation

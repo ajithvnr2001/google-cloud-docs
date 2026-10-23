@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/generic-recommendations-checklist/
 title: Custom recommendations checklist \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:29.658881+00:00
+fetched_at: 2026-10-23T13:12:59.923677+00:00
 ---
 
 # Custom recommendations checklist  |  Agent Search  |  Google Cloud Documentation

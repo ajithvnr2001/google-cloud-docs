@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tasks/docs/samples/cloud-tasks-create-http-task-with-token/
 title: Create HTTP tasks with authentication \u00a0|\u00a0 Cloud Tasks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:38.143043+00:00
+fetched_at: 2026-10-23T08:58:47.402789+00:00
 ---
 
 # Create HTTP tasks with authentication  |  Cloud Tasks  |  Google Cloud Documentation

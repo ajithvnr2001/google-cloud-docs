@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/write-rules-cloud-controls/
 title: Write rules for custom cloud controls \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:04.608149+00:00
+fetched_at: 2026-10-23T13:19:26.940849+00:00
 ---
 
 # Write rules for custom cloud controls  |  Assured Workloads  |  Google Cloud Documentation

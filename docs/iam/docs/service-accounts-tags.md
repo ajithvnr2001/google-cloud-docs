@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/service-accounts-tags/
 title: Creating and managing tags for service accounts \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:02.686414+00:00
+fetched_at: 2026-10-23T13:09:36.072778+00:00
 ---
 
 # Creating and managing tags for service accounts  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

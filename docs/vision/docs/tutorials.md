@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/tutorials/
 title: Tutorials \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:07.358413+00:00
+fetched_at: 2026-10-23T09:24:46.084535+00:00
 ---
 
 # Tutorials  |  Cloud Vision API  |  Google Cloud Documentation

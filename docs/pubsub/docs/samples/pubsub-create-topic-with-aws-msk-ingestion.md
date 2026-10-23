@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-create-topic-with-aws-msk-ingestion/
 title: Create topic with AWS MSK ingestion \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:54.790824+00:00
+fetched_at: 2026-10-23T10:03:58.728940+00:00
 ---
 
 # Create topic with AWS MSK ingestion  |  Pub/Sub  |  Google Cloud Documentation

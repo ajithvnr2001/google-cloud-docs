@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/configure-private-google-access/
 title: Configure Private Google Access in Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:43.261519+00:00
+fetched_at: 2026-10-23T13:08:50.185656+00:00
 ---
 
 # Configure Private Google Access in Firestore with MongoDB compatibility  |  Google Cloud Documentation

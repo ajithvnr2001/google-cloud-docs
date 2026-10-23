@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-spark/docs/samples/dataproc-list-clusters/
 title: List clusters \u00a0|\u00a0 Managed Service for Apache Spark \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:46:57.764947+00:00
+fetched_at: 2026-10-23T10:45:03.249647+00:00
 ---
 
 # List clusters  |  Managed Service for Apache Spark  |  Google Cloud Documentation

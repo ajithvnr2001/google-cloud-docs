@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/api-hub-remove-connection/
 title: Remove an API Gateway connection from API hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:19.975203+00:00
+fetched_at: 2026-10-23T13:15:49.504917+00:00
 ---
 
 # Remove an API Gateway connection from API hub  |  Google Cloud Documentation

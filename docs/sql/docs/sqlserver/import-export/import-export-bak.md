@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/import-export/import-export-bak/
 title: Export and import using BAK files and transaction log files \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:31:33.974495+00:00
+fetched_at: 2026-10-23T10:19:31.401853+00:00
 ---
 
 # Export and import using BAK files and transaction log files  |  Cloud SQL for SQL Server  |  Google Cloud Documentation
@@ -340,7 +340,7 @@ Before using any of the request data, make the following replacements:
      * BUCKET_NAME: the Cloud Storage bucket name
      * PATH_TO_BAK_FILE: the path to the SQL BAK file
      * DATABASE_NAME: the name of the database inside of the Cloud SQL instance
-     * `offload`: to enable and use serverless export, set this value to TRUE **Note:** Serverless export costs extra. See the [pricing page](https://docs.cloud.google.com/sql/pricing#storage-networking-prices).
+     * `offload`: to enable and use serverless export, set this value to TRUE **Note:** Serverless export costs extra. See the [pricing page](https://cloud.google.com/sql/pricing#storage-networking-prices).
 
 HTTP method and URL: 
     
@@ -432,7 +432,7 @@ Before using any of the request data, make the following replacements:
      * path_to_dump_file: The path to the SQL dump fle
      * database_name_1: The name of a database inside the Cloud SQL instance
      * database_name_2: The name of a database inside the Cloud SQL instance
-     * offload: Enables serverless export. Set to `true` to use serverless export. **Note:** Serverless export costs extra. See the [pricing page](https://docs.cloud.google.com/sql/pricing#storage-networking-prices).
+     * offload: Enables serverless export. Set to `true` to use serverless export. **Note:** Serverless export costs extra. See the [pricing page](https://cloud.google.com/sql/pricing#storage-networking-prices).
 
 HTTP method and URL: 
     
@@ -539,7 +539,7 @@ Before using any of the request data, make the following replacements:
      * path_to_dump_file: the path to the SQL dump fle
      * database_name_1: the name of a database inside the Cloud SQL instance
      * database_name_2: the name of a database inside the Cloud SQL instance
-     * offload: to enable and use serverless export, set its value to `true`. **Note:** Serverless export costs extra. For more information, see the [pricing page](https://docs.cloud.google.com/sql/pricing#storage-networking-prices).
+     * offload: to enable and use serverless export, set its value to `true`. **Note:** Serverless export costs extra. For more information, see the [pricing page](https://cloud.google.com/sql/pricing#storage-networking-prices).
 
 HTTP method and URL: 
     
@@ -632,7 +632,7 @@ Before using any of the request data, make the following replacements:
      * path_to_dump_file: the path to the SQL dump fle
      * database_name_1: the name of a database inside the Cloud SQL instance
      * database_name_2: the name of a database inside the Cloud SQL instance
-     * offload: to enable and use serverless exports, set this value to `true`. **Note:** Serverless export costs extra. For more information, see the [pricing page](https://docs.cloud.google.com/sql/pricing#storage-networking-prices).
+     * offload: to enable and use serverless exports, set this value to `true`. **Note:** Serverless export costs extra. For more information, see the [pricing page](https://cloud.google.com/sql/pricing#storage-networking-prices).
 
 HTTP method and URL: 
     
@@ -2881,6 +2881,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

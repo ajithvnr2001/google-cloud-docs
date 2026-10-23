@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/resources/
 title: Resources \u00a0|\u00a0 Cloud SQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:50:14.509180+00:00
+fetched_at: 2026-10-23T10:11:26.959145+00:00
 ---
 
 # Resources  |  Cloud SQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/googlegenaisdk-safety-with-txt/
 title: Generate text with safety settings \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:29:58.457614+00:00
+fetched_at: 2026-10-23T08:57:02.958836+00:00
 ---
 
 # Generate text with safety settings  |  Generative AI on Vertex AI  |  Google Cloud Documentation

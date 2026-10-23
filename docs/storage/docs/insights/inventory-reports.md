@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/insights/inventory-reports/
 title: Inventory reports \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:29:26.159938+00:00
+fetched_at: 2026-10-23T13:08:28.975168+00:00
 ---
 
 # Inventory reports  |  Cloud Storage  |  Google Cloud Documentation
@@ -21,11 +21,13 @@ Send feedback
 
 #  Inventory reports Stay organized with collections  Save and categorize content based on your preferences. 
 
-Inventory reports help you manage your object storage at scale. It is a faster and scheduled alternative to the [`Objects: list`](https://docs.cloud.google.com/storage/docs/json_api/v1/objects/list) API operation. Use inventory reports if you want to validate the migration of large buckets without any performance impact or check the integrity of objects in a single bucket.
+Cloud Storage inventory reports help you manage object storage at scale. Inventory reports provide a faster, scheduled alternative to the [`Objects: list`](https://docs.cloud.google.com/storage/docs/json_api/v1/objects/list) API operation. You can use inventory reports to validate the migration of large buckets without performance impact or to check the integrity of objects in a single bucket.
 
-Inventory reports contain metadata information about your objects, such as the object's storage class, ETag, and content type. This information helps you analyze your storage costs, audit and validate your objects, and ensure data security and compliance. You can export inventory reports as comma-separated value (CSV) or Apache Parquet files so you can further analyze it using tools such as [BigQuery](https://docs.cloud.google.com/bigquery/docs#docs).
+Inventory reports contain metadata about your objects, such as storage class, ETag, and content type. You can use this information to analyze storage costs, audit and validate objects, and help ensure data security and compliance.
 
-This page provides an overview of inventory reports. For instructions on how to use inventory reports, see [Create and manage inventory reports](https://docs.cloud.google.com/storage/docs/insights/using-inventory-reports).
+You can export inventory reports as comma-separated value (CSV) or Apache Parquet files so you can further analyze your data by using tools such as [BigQuery](https://docs.cloud.google.com/bigquery/docs#docs).
+
+For steps to use inventory reports, see [Create and manage inventory reports](https://docs.cloud.google.com/storage/docs/insights/using-inventory-reports).
 
 ## Overview of inventory reports
 
@@ -276,6 +278,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

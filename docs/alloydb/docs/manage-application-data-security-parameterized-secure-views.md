@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/manage-application-data-security-parameterized-secure-views/
 title: Manage application data security using AlloyDB parameterized secure views \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:27:40.501386+00:00
+fetched_at: 2026-10-23T10:03:39.981324+00:00
 ---
 
 # Manage application data security using AlloyDB parameterized secure views  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,11 +21,11 @@ Send feedback
 
 #  Manage application data security using AlloyDB parameterized secure views Stay organized with collections  Save and categorize content based on your preferences. 
 
-**Preview**
+**Preview — Parameterized secure views**
 
 This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
-This page describes how to use parameterized secure views in AlloyDB for PostgreSQL, which let you limit data access based on application-specific named parameters, like application user credentials. Parameterized secure views improve security and access control by extending the functionality of PostgreSQL views. These views also mitigate the risks of running untrusted queries from applications by automatically enforcing restrictions on any query that is executed.
+Parameterized secure views in AlloyDB for PostgreSQL let you restrict row access based on application-specific named parameters, such as application user credentials. These views extend PostgreSQL views to protect your database when running untrusted queries by automatically enforcing restrictions on every query.
 
 For more information, see [Parameterized secure views overview](https://docs.cloud.google.com/alloydb/docs/parameterized-secure-views-overview) and [Secure and control access to application data using parameterized secure views](https://docs.cloud.google.com/alloydb/docs/secure-app-data-parameterized-secure-views).
 
@@ -38,7 +38,7 @@ Before you use parameterized secure views, you must do the following:
   1. Enable the `parameterized_views.enabled` database flag, which loads the required extension libraries. You must enable this flag, even if it was previously enabled by the AlloyDB team. For more information about enabling the database flag, see [Configure an instance's database flags](https://docs.cloud.google.com/alloydb/docs/instance-configure-database-flags).
 
 **Note:** After you enable the `parameterized_views.enabled` database flag, your database restarts to make these changes take effect.
-  2. Use [AlloyDB Studio](https://docs.cloud.google.com/alloydb/docs/manage-data-using-studio) or [psql](https://docs.cloud.google.com/alloydb/docs/connect-psql) to create the `parameterized_views` extension in any database where you want to create a parameterized view:
+  2. Use [AlloyDB Studio](https://docs.cloud.google.com/alloydb/docs/quickstart/create-and-connect#run) or [`psql`](https://docs.cloud.google.com/alloydb/docs/connect-psql) to create the `parameterized_views` extension in any database where you want to create a parameterized view:
          
          -- Requires parameterized_views.enabled set to true
          CREATE EXTENSION parameterized_views;
@@ -87,15 +87,18 @@ For more information, see [Secure and control access to application data using p
 To configure security for your applications using parameterized secure views, follow these steps:
 
   1. Create the secure parameterized views as an administrative user. This user is an AlloyDB database user that performs administrative operations for the application, including database setup and security administration.
-  2. Create a new database role for executing queries against parameterized secure views. This is an AlloyDB database role that the application uses to connect and sign into the database, and to execute queries against parameterized views.
+
+  2. Create a new database role for executing queries against parameterized secure views. This is an AlloyDB database role that the application uses to connect and sign in to the database, and to execute queries against parameterized views.
 
      1. Grant the new role permissions to the secure views, which typically includes `SELECT` privileges to the views and `USAGE` on the schemas.
+
      2. Limit the objects that this role can access to the minimum required set of public functions and objects that the application needs. Avoid providing access to schemas and tables that aren't public.
+
      3. To mitigate security risks, revoke access from this role on any sensitive schemas or objects not strictly required by the role.
 
 When you query the views, the application provides the values of the required view parameters, which are tied to the application user identity.
 
-For more information, see [Create a database user](https://docs.cloud.google.com/alloydb/docs/database-users/manage-roles#grant-roles).
+For more information about creating database users, see [Create a database user](https://docs.cloud.google.com/alloydb/docs/database-users/manage-roles#create).
 
 
 
@@ -104,19 +107,18 @@ For more information, see [Create a database user](https://docs.cloud.google.com
 
 To query a parameterized secure view, use one of the following options that best supports your use case:
 
-  * JSON-based: Use this API to run the query in one-shot and return JSON rows.
-  * CURSOR-based: Use this API when you have longer running queries or when you have large queries and you want to fetch the result in batches. The `execute_parameterized_query` function provided by the `parameterized_views` extension accepts a cursor name.
-  * `PREPARE EXECUTE` statement: Use this for prepared statements that can be executed multiple times with different parameters values.
+  * JSON-based: use this API to run the query in one-shot and return JSON rows.
+
+  * CURSOR-based: use this API when you have longer running queries or when you have large queries and you want to fetch the result in batches. The `execute_parameterized_query` function provided by the `parameterized_views` extension accepts a cursor name.
+
+  * `PREPARE EXECUTE` statement: use this for prepared statements that can be executed multiple times with different parameter values.
+
 
 
 
 To query parameterized secure views, you use the `execute_parameterized_query()` function provided by the `parameterized_views` extension.
 
 ### JSON API
-
-This API has limitations because it declares a cursor for the given query. As a result, the query must be compatible with [PostgreSQL cursors](https://www.postgresql.org/docs/16/plpgsql-cursors.html). For example, the CURSOR API doesn't support `DO` or `SHOW` statements.
-
-This API also doesn't restrict the results by size or by the number of rows returned.
 
 Run the `execute_parameterized_query()` function, which has the following syntax:
     
@@ -132,10 +134,15 @@ Run the `execute_parameterized_query()` function, which has the following syntax
 Replace the following:
 
   * `SQL_QUERY`: a SQL query whose `FROM` clause refers to one or more parameterized secure views.
+
   * `PARAMETER_NAMES`: a list of parameter names to pass in as strings.
-  * `PARAMETER_VALUES`: a list of parameter values to pass in. 
+
+  * `PARAMETER_VALUES`: a list of parameter values to pass in.
+
     * This list must be the same size as the `param_names` list, where the order of the values matches the order of the names.
-    * The exact type of the values is inferred from the query and parameterized view definition. Type conversions are performed when needed and when possible for the given parameter value. In case of a type-mismatch, an error is thrown.
+
+    * The exact type of the values is inferred from the query and parameterized view definition. Type conversions are performed when needed and when possible for the given parameter value. In case of a type mismatch, an error is thrown.
+
 
 
 
@@ -152,9 +159,13 @@ Use the following example to query a parameterized secure view:
     )
     
 
-Using this API limits the size of the result set by size expressed in kilobytes (kB) of the results and by the number of rows. You can configure these limits by using `parameterized_views.json_results_max_size` and `parameterized_views.json_results_max_rows`.
+Using this API limits the size of the result set by size expressed in kilobytes (kB) of the results and by the number of rows. You can configure these limits by using the `parameterized_views.json_results_max_size` and `parameterized_views.json_results_max_rows` flags.
 
 ### CURSOR API
+
+This API has limitations because it declares a cursor for the given query. As a result, the query must be compatible with [PostgreSQL cursors](https://www.postgresql.org/docs/current/plpgsql-cursors.html). For example, the CURSOR API doesn't support `DO` or `SHOW` statements.
+
+This API also doesn't restrict the results by size or by the number of rows returned.
 
 Run the `execute_parameterized_query()` function, which creates and returns a transaction-scoped CURSOR that you use to retrieve query results:
     
@@ -171,28 +182,32 @@ Run the `execute_parameterized_query()` function, which creates and returns a tr
 Replace the following:
 
   * `SQL_QUERY`: a SQL query whose `FROM` clause refers to one or more parameterized secure views.
-  * `CURSOR_NAME`: name of the cursor to be declared.
+
+  * `CURSOR_NAME`: the name of the cursor to be declared.
+
   * `PARAMETER_NAMES`: a list of parameter names to pass in as strings.
+
   * `PARAMETER_VALUES`: a list of parameter values to pass in. This list must be the same size as the `param_names` list, where the order of the values matches the order of the names. The exact type of the values is inferred from the query and parameterized view definition. Type conversions are performed when needed and when possible for the given parameter value. In case of a type mismatch, an error is thrown.
+
 
 
 
 Use the following example to query a parameterized secure view:
     
     
-      -- start a transaction as the that is the default lifetime of a CURSOR
+      -- Start a transaction, which is the default lifetime of a CURSOR
       BEGIN;
-      -- create a cursor called 'mycursor'
+      -- Create a cursor called 'mycursor'
       SELECT * FROM parameterized_views.execute_parameterized_query(
        query => 'SELECT * FROM secure_checked_items',
-       cursor_name => 'mycursor'
+       cursor_name => 'mycursor',
        param_names => ARRAY ['app_end_userid'],
        param_values => ARRAY ['40']
       );
     
-      -- then, to actually fetch the results
+      -- Fetch the results
       FETCH ALL FROM mycursor;
-      -- end the transaction, which will clean up the cursor
+      -- End the transaction, which cleans up the cursor
       END;
     
 
@@ -200,9 +215,9 @@ The returned cursor is a `NO SCROLL` cursor `WITHOUT HOLD`. You can't use the cu
 
 ### PREPARE statement
 
-Use the `PREPARE .. AS RESTRICTED` command to create a prepared statement that references parameterized views. These prepared statements support positional parameters and enforce various restrictions when you execute them. For more information, see [Security mechanism](https://docs.cloud.google.com/alloydb/docs/ai/parameterized-secure-views-overview#security-mechanism).
+Use the `PREPARE .. AS RESTRICTED` command to create a prepared statement that references parameterized views. These prepared statements support positional parameters and enforce various restrictions when you execute them. For more information about how parameterized secure views enforce security, see [Security mechanism](https://docs.cloud.google.com/alloydb/docs/parameterized-secure-views-overview#security-mechanism).
 
-This feature extends the `PREPARE` and `EXECUTE commands` to support named view parameters. Use prepared statements to avoid the overhead of parsing, analyzing, and rewriting each time the statement is executed, which can result in significant performance gains, especially for frequently executed or complex queries. A _prepared statement_ is a server-side object that can optimize performance by pre-compiling and storing a parameterized SQL statement for later execution.
+This feature extends the `PREPARE` and `EXECUTE` commands to support named view parameters. Use prepared statements to avoid the overhead of parsing, analyzing, and rewriting each time the statement is executed, which can result in significant performance gains, especially for frequently executed or complex queries. A _prepared statement_ is a server-side object that can optimize performance by pre-compiling and storing a parameterized SQL statement for later execution.
 
 This API has limitations because the statement must be allowed in a `PREPARE` statement, which means that only `SELECT` and `VALUES` statements are supported.
 
@@ -211,18 +226,24 @@ This API also doesn't restrict the results by size or number of rows returned.
 To create a prepared statement that references parameterized views, run the `PREPARE .. AS RESTRICTED` command:
     
     
-    PREPARE pquery (/POSITIONAL_PARAM_TYPES/)
-            AS RESTRICTED query % a query that may refer to parameterized views
-    EXECUTE pquery (/POSITIONAL_PARAM_VALUES/)
+    PREPARE pquery (POSITIONAL_PARAM_TYPES)
+            AS RESTRICTED SQL_QUERY;
+    EXECUTE pquery (POSITIONAL_PARAM_VALUES)
           WITH VIEW PARAMETERS (VIEW_PARAM_NAME1 = VIEW_PARAM_VALUE1[, ...]);
     
 
 Replace the following:
 
-  * `POSITIONAL_PARAM_TYPES`: one or more positional parameters that are used in the `RESTRICTED` query.
+  * `POSITIONAL_PARAM_TYPES`: one or more positional parameter data types that are used in the `RESTRICTED` query.
+
+  * `SQL_QUERY`: a SQL query that can refer to parameterized views.
+
   * `POSITIONAL_PARAM_VALUES`: the actual values that are substituted for the positional parameters defined in the `PREPARE` statement.
+
   * `VIEW_PARAM_NAME`: the name of the parameter expected by the parameterized views referenced in the `RESTRICTED` query.
-  * `VIEW_PARAM_VALUE`: the actual values being passed to the corresponding `viewParamName` parameters of the parameterized views.
+
+  * `VIEW_PARAM_VALUE`: the actual values being passed to the corresponding `VIEW_PARAM_NAME` parameters of the parameterized views.
+
 
 
 
@@ -245,34 +266,49 @@ Use the following example to query a parameterized secure view:
 
 The following lists the set of restricted operations for queries that you run using the options described in Query a parameterized secure view:
 
-  * Any recursive invocation of any APIs—`execute_parameterized_query`, or by using `EXECUTE .. WITH VIEW PARAMETERS`— is prohibited, so that only the values specified by the application are used. This restriction also prevents the query from being used to circumvent the security envelope of the given set of parameter values.
-  * Some extensions that start a new background session are disallowed, including the `dblink`, `pg_cron` and `pg_background` extensions.
-  * The following lists the set of query constructs permitted that are restricted: 
+  * Any recursive invocation of any APIs—`execute_parameterized_query`, or by using `EXECUTE .. WITH VIEW PARAMETERS`—is prohibited, so that only the values specified by the application are used. This restriction also prevents the query from being used to circumvent the security envelope of the given set of parameter values.
+
+  * Some extensions that start a new background session are disallowed, including the `dblink`, `pg_cron`, and `pg_background` extensions.
+
+  * The following query constructs are permitted or restricted:
+
     * Read-only `SELECT` statements are allowed.
+
     * Read-only `SHOW` statements, `CALL` statements, and `DO` statements are allowed.
+
     * DML statements such as `INSERT`, `UPDATE`, and `DELETE` aren't allowed.
+
     * DDL statements such as `CREATE TABLE` and `ALTER TABLE` aren't allowed.
+
     * Other statement types such as `LOAD`, `SET`, `CLUSTER`, `LOCK`, `CHECKPOINT`, and `EXPLAIN` aren't allowed.
+
   * `EXPLAIN` statements are disallowed by default to avoid the possibility of covert channel attacks using query plans. For more information, see [Covert channel](https://en.wikipedia.org/wiki/Covert_channel). However, to run `EXPLAIN` statements, any database user with [AlloyDB superuser privileges](https://docs.cloud.google.com/alloydb/docs/database-users/overview#alloydbsuperuser) can set the session-level GUC `parameterized_views.enable_explain` to `on`.
+
   * Parameterized secure views provide settings to help you manage resources that are used by the APIs to query parameterized views, such as `parameterized_views.statement_timeout`. For more information, see [Supported database flags](https://docs.cloud.google.com/alloydb/docs/reference/database-flags).
+
 
 
 
 ## List all parameterized views
 
-Use the `parameterized_views` extension to list all the parameterized views in the database by using the `all_parameterized_views` view. The output of this view is the same as the [`pg_views`](https://www.postgresql.org/docs/16/view-pg-views.html) catalog view, but `all_parameterized_views` only lists views with named view parameters.
+Use the `parameterized_views` extension to list all the parameterized views in the database by using the `all_parameterized_views` view. The output of this view is the same as the [`pg_views`](https://www.postgresql.org/docs/current/view-pg-views.html) catalog view, but `all_parameterized_views` only lists views with named view parameters.
 
-To list parameterized views, use the following example:
+To list parameterized views, run the following query:
     
     
-    postgres=# select * from parameterized_views.all_parameterized_views ;
-    schemaname |      viewname      | viewowner |                       definition
-    -----------+--------------------+-----------+---------------------------------------------------------
-    public     | checked_items_view | postgres  |  SELECT checked_items.bag_id,                          +
-               |                    |           |     checked_items."timestamp",                         +
-               |                    |           |     checked_items.location                             +
-               |                    |           |    FROM checked_items                                  +
-               |                    |           |   WHERE (checked_items.customer_id = $@app_end_userid);
+    SELECT * FROM parameterized_views.all_parameterized_views;
+    
+
+The output is similar to the following:
+    
+    
+    schemaname |       viewname       | viewowner |                       definition
+    -----------+----------------------+-----------+---------------------------------------------------------
+    public     | secure_checked_items | postgres  |  SELECT checked_items.bag_id,                          +
+               |                      |           |     checked_items."timestamp",                         +
+               |                      |           |     checked_items.location                             +
+               |                      |           |    FROM checked_items                                  +
+               |                      |           |   WHERE (checked_items.customer_id = $@app_end_userid);
     
 
 To list a parameterized view in `all_parameterized_views`, make sure that the parameterized view contains at least one named view parameter in its definition.
@@ -288,6 +324,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

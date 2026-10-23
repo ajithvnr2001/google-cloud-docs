@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/external-tables/
 title: Introduction to external tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:50:28.183996+00:00
+fetched_at: 2026-10-23T12:55:39.456745+00:00
 ---
 
 # Introduction to external tables  |  BigQuery  |  Google Cloud Documentation
@@ -21,16 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Introduction to external tables
 
-This document describes how to work with data stored outside of BigQuery in external tables. To work with external data sources, you can also use [External datasets](https://docs.cloud.google.com/bigquery/docs/datasets-intro#external_datasets).
+External tables let you query structured data in external data stores, such as Cloud Storage, Bigtable, and Google Drive, without loading it into BigQuery storage. Unlike [BigLake tables](https://docs.cloud.google.com/bigquery/docs/biglake-intro), external tables don't use access delegation, so users need permissions on both the external table and the external data source.
 
-External tables let you query structured data in external datastores. To query an external table, you must have permissions to both the external table and the external data source. For example, to query an external table that uses a data source in Cloud Storage, you must have the following permissions:
-
-  * `bigquery.tables.getData`
-  * `bigquery.jobs.create`
-  * `storage.buckets.get`
-  * `storage.objects.get`
-
-
+To work with external data at the dataset level, you can also use [external datasets](https://docs.cloud.google.com/bigquery/docs/datasets-intro#external_datasets).
 
 ## Supported datastores
 
@@ -210,6 +203,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

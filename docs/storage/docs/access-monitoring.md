@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/access-monitoring/
 title: Access monitoring data in Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:29:16.500944+00:00
+fetched_at: 2026-10-23T13:08:29.384691+00:00
 ---
 
 # Access monitoring data in Cloud Storage  |  Google Cloud Documentation
@@ -103,11 +103,11 @@ You can view egress bandwidth usage for your project's buckets or storage usage 
 
   * **Multiregion Internet Egress Bandwidth per second per region**
 
-  * **Anywhere Cache Egress Bandwidth per second per zone**
+  * **Rapid Cache Egress Bandwidth per second per zone**
 
   * **Rapid Zonal Bytes per zone**
 
-  * **Anywhere Cache Storage Size per region per bucket per cache**
+  * **Rapid Cache Storage Size per region per bucket per cache**
 
 
 
@@ -118,13 +118,9 @@ For more information on viewing and managing quotas, see [View and manage quotas
 
 ### Command line
 
-**Preview**
-
-This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
-
   1. Use the following command to return Cloud Storage quota information for a project:
          
-         gcloud alpha services quota list --service=storage.googleapis.com --consumer=projects/PROJECT_ID
+         gcloud services quota list --service=storage.googleapis.com --consumer=projects/PROJECT_ID
 
 Where PROJECT_ID is the project ID.
 
@@ -203,6 +199,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

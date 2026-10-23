@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-gemini-grounding-with-vais/
 title: Ground Gemini to a Vertex AI Search data store \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:17.709913+00:00
+fetched_at: 2026-10-23T09:36:50.773218+00:00
 ---
 
 # Ground Gemini to a Vertex AI Search data store  |  Generative AI on Vertex AI  |  Google Cloud Documentation

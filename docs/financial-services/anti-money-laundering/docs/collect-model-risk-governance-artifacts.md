@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/financial-services/anti-money-laundering/docs/collect-model-risk-governance-artifacts/
 title: Collect model and risk governance artifacts \u00a0|\u00a0 Anti Money Laundering AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:54.935749+00:00
+fetched_at: 2026-10-23T13:02:58.029964+00:00
 ---
 
 # Collect model and risk governance artifacts  |  Anti Money Laundering AI  |  Google Cloud Documentation

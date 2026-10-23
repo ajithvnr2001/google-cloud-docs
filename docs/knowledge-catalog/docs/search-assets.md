@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/search-assets/
 title: Search for data assets in Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:37:36.303117+00:00
+fetched_at: 2026-10-23T12:50:46.677623+00:00
 ---
 
 # Search for data assets in Knowledge Catalog  |  Google Cloud Documentation
@@ -36,11 +36,11 @@ Before you perform search, ensure that you are granted the required roles and ha
 To get the permissions that you need to search for entries and access search results in Knowledge Catalog, ask your administrator to grant you the following IAM roles: 
 
   * Search for entries: 
-    * [Dataplex Catalog Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogAdmin) (`roles/dataplex.catalogAdmin`) on the project used for search
-    * [Dataplex Catalog Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogEditor) (`roles/dataplex.catalogEditor`) on the project used for search
-    * [Dataplex Catalog Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) on the project used for search
-  * Search for metadata for BigQuery datasets and tables: [BigQuery Metadata Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.metadataViewer) (`roles/bigquery.metadataViewer`) on the dataset or table 
-  * Search for custom entries: [Dataplex Catalog Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) on the project used for search 
+    * [**Dataplex Catalog Admin** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogAdmin) (`roles/dataplex.catalogAdmin`) on the project used for search
+    * [**Dataplex Catalog Editor** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogEditor) (`roles/dataplex.catalogEditor`) on the project used for search
+    * [**Dataplex Catalog Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) on the project used for search
+  * Search for metadata for BigQuery datasets and tables: [**BigQuery Metadata Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.metadataViewer) (`roles/bigquery.metadataViewer`) on the dataset or table 
+  * Search for custom entries: [**Dataplex Catalog Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) on the project used for search 
 
 
 
@@ -50,9 +50,9 @@ You might also be able to get the required permissions through [custom roles](ht
 
 ### Data asset-level permissions
 
-Search results are scoped to your access level, independently of the selected project. To find a data asset in Knowledge Catalog, you must have the appropriate read permissions for that data asset in its underlying source system. 
+Search results are scoped to your access level, independently of the selected project. To find a data asset in Knowledge Catalog, you must have the appropriate read permissions for that data asset in its underlying source system.
 
-For example, finding a BigQuery table requires the `roles/bigquery.metadataViewer` role, while finding a Cloud SQL instance requires its equivalent [Cloud SQL permissions](https://docs.cloud.google.com/sql/docs/mysql/iam-permissions). For more details, see [Search scope](https://docs.cloud.google.com/knowledge-catalog/docs/about-search#search-scope).
+For example, finding a BigQuery table requires the **BigQuery Metadata Viewer** (`roles/bigquery.metadataViewer`) role, while finding a Cloud SQL instance requires its equivalent [Cloud SQL permissions](https://docs.cloud.google.com/sql/docs/mysql/iam-permissions). For more details, see [Search scope](https://docs.cloud.google.com/knowledge-catalog/docs/about-search#search-scope).
 
 ### Enable the API
 
@@ -78,12 +78,12 @@ To search for data assets, follow these steps:
 
   2. If you see the **Try natural language search** button prompt, click it. By default, natural language search is selected.
 
-  3. In the **Find resources across projects with natural language** field, enter your query and then click **Enter**.
+  3. In the **Find resources across projects with natural language** field, enter your query and then press `Enter`.
 
   4. To refine your search, click **Filters**.
 
      * Filters in multiple sections are evaluated with the `AND` logical operator.
-     * Multiple filters within a single section are evaluated with the `OR` logical operator. 
+     * Multiple filters within a single section are evaluated with the `OR` logical operator.
 
 The following filters are available:
 
@@ -515,7 +515,7 @@ To authenticate to Knowledge Catalog, set up Application Default Credentials. Fo
 
 ### REST
 
-To search for data assets, use the [`searchEntries` method](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations/searchEntries) with the `SemanticSearch` parameter set to `true`.
+To search for data assets, use the [`searchEntries` method](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations/searchEntries) with the `semanticSearch` parameter set to `true`.
     
     
     POST https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION:searchEntries?query=foo&semanticSearch=true
@@ -548,7 +548,7 @@ The entry details page opens. The page includes the following sections:
 
 ###  gcloud 
 
-[`gcloud dataplex entries lookup` command](https://docs.cloud.google.com/sdk/gcloud/reference/dataplex/entries/lookup):
+To view the details of a data asset, use the [`gcloud dataplex entries lookup` command](https://docs.cloud.google.com/sdk/gcloud/reference/dataplex/entries/lookup):
     
     
     gcloud dataplex entries lookup ENTRY_ID \
@@ -925,6 +925,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

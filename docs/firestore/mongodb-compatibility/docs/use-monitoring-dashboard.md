@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/use-monitoring-dashboard/
 title: Monitor databases with Cloud Monitoring \u00a0|\u00a0 Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:27.142917+00:00
+fetched_at: 2026-10-23T13:11:19.946227+00:00
 ---
 
 # Monitor databases with Cloud Monitoring  |  Firestore with MongoDB compatibility  |  Google Cloud Documentation

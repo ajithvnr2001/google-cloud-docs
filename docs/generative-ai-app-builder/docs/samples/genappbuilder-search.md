@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/samples/genappbuilder-search/
 title: Search a data store \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:40.661787+00:00
+fetched_at: 2026-10-23T13:10:36.199465+00:00
 ---
 
 # Search a data store  |  Agent Search  |  Google Cloud Documentation

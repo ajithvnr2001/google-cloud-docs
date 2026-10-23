@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/rules-language-reference/
 title: Configure custom rules language attributes \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:55.147034+00:00
+fetched_at: 2026-10-23T13:18:58.539190+00:00
 ---
 
 # Configure custom rules language attributes  |  Google Cloud Armor  |  Google Cloud Documentation

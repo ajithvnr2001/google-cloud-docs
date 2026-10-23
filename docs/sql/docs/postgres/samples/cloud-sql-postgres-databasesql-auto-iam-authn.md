@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/samples/cloud-sql-postgres-databasesql-auto-iam-authn/
 title: Connect to Cloud SQL for Postgres using Go and IAM permissions \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:45.160122+00:00
+fetched_at: 2026-10-23T10:20:10.284027+00:00
 ---
 
 # Connect to Cloud SQL for Postgres using Go and IAM permissions  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation

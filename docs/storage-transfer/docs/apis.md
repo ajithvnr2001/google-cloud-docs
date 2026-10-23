@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage-transfer/docs/apis/
 title: APIs & reference \u00a0|\u00a0 Storage Transfer Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:52:40.680466+00:00
+fetched_at: 2026-10-23T08:36:41.323169+00:00
 ---
 
 # APIs & reference  |  Storage Transfer Service  |  Google Cloud Documentation

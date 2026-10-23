@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-add-numeric-column/
 title: Add NUMERIC column \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:50:03.689298+00:00
+fetched_at: 2026-10-23T10:31:22.385649+00:00
 ---
 
 # Add NUMERIC column  |  Spanner  |  Google Cloud Documentation

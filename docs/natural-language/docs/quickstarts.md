@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/docs/quickstarts/
 title: Quickstarts \u00a0|\u00a0 Cloud Natural Language API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:17:54.112504+00:00
+fetched_at: 2026-10-23T12:37:59.392492+00:00
 ---
 
 # Quickstarts  |  Cloud Natural Language API  |  Google Cloud Documentation

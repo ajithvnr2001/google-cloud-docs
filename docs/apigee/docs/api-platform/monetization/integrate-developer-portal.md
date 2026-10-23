@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/monetization/integrate-developer-portal/
 title: Integrating monetization with your developer portal \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:07.334531+00:00
+fetched_at: 2026-10-23T13:16:08.327865+00:00
 ---
 
 # Integrating monetization with your developer portal  |  Apigee  |  Google Cloud Documentation

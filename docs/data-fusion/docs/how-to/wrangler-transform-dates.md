@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/wrangler-transform-dates/
 title: Transform dates \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:37.904953+00:00
+fetched_at: 2026-10-23T13:20:45.934384+00:00
 ---
 
 # Transform dates  |  Cloud Data Fusion  |  Google Cloud Documentation

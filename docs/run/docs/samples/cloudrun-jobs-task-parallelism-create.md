@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/samples/cloudrun-jobs-task-parallelism-create/
 title: Configure Parallelism \u00a0|\u00a0 Cloud Run \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:11:42.756289+00:00
+fetched_at: 2026-10-23T09:58:29.100674+00:00
 ---
 
 # Configure Parallelism  |  Cloud Run  |  Google Cloud Documentation

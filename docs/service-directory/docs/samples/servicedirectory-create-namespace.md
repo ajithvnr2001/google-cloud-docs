@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/service-directory/docs/samples/servicedirectory-create-namespace/
 title: Create namespace \u00a0|\u00a0 Service Directory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:13.619468+00:00
+fetched_at: 2026-10-23T11:32:27.696698+00:00
 ---
 
 # Create namespace  |  Service Directory  |  Google Cloud Documentation

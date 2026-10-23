@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/samples/cloudrun-identity-parent-tag/
 title: Custom service account on a Cloud Run service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:10:58.438037+00:00
+fetched_at: 2026-10-23T09:58:30.456558+00:00
 ---
 
 # Custom service account on a Cloud Run service  |  Google Cloud Documentation

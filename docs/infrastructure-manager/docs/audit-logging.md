@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/audit-logging/
 title: Infrastructure Manager audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:45.642272+00:00
+fetched_at: 2026-10-23T13:09:18.738826+00:00
 ---
 
 # Infrastructure Manager audit logging  |  Google Cloud Documentation

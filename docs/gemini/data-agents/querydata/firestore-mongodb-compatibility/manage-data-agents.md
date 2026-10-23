@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/querydata/firestore-mongodb-compatibility/manage-data-agents/
 title: Manage context sets in Firestore Studio \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:49.616037+00:00
+fetched_at: 2026-10-23T13:03:36.710730+00:00
 ---
 
 # Manage context sets in Firestore Studio  |  Data Agents  |  Google Cloud Documentation

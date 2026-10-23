@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kms/docs/samples/kms-create-key-version/
 title: Create a new key version \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:46:57.208695+00:00
+fetched_at: 2026-10-23T10:32:49.230431+00:00
 ---
 
 # Create a new key version  |  Cloud Key Management Service  |  Google Cloud Documentation

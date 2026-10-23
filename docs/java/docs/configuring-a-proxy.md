@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/java/docs/configuring-a-proxy/
 title: Configure a proxy \u00a0|\u00a0 Java \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:29.836428+00:00
+fetched_at: 2026-10-23T13:10:20.430823+00:00
 ---
 
 # Configure a proxy  |  Java  |  Google Cloud Documentation

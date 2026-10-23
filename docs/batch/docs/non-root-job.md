@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/non-root-job/
 title: Create and run jobs as a non-root user \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:27.980026+00:00
+fetched_at: 2026-10-23T13:18:31.995436+00:00
 ---
 
 # Create and run jobs as a non-root user  |  Batch  |  Google Cloud Documentation

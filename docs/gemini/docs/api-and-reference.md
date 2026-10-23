@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/api-and-reference/
 title: API and references \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:15.570032+00:00
+fetched_at: 2026-10-23T13:03:04.511448+00:00
 ---
 
 # API and references  |  Gemini for Google Cloud  |  Google Cloud Documentation

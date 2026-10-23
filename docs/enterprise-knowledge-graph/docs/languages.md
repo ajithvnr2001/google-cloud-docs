@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/enterprise-knowledge-graph/docs/languages/
 title: Supported languages \u00a0|\u00a0 Enterprise Knowledge Graph \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:32.066031+00:00
+fetched_at: 2026-10-23T13:12:13.813011+00:00
 ---
 
 # Supported languages  |  Enterprise Knowledge Graph  |  Google Cloud Documentation

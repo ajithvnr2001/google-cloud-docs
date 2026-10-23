@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/manage-tags/
 title: Attach and manage tags on Cloud SQL instances \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:52:56.046101+00:00
+fetched_at: 2026-10-23T10:19:47.691582+00:00
 ---
 
 # Attach and manage tags on Cloud SQL instances  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -28,16 +28,47 @@ This page describes how to attach, detach, and list tags on Cloud SQL instances.
 
 ## Before you begin
 
-Tags are managed through the Resource Manager. You need the following Cloud SQL IAM permissions to view and set tags on Cloud SQL instances:
+Tags are managed through Resource Manager. To create and define tags before attaching them to Cloud SQL instances, see [Creating and managing tags](https://docs.cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing).
 
-  * `cloudsql.instances.createTagBinding`
-  * `cloudsql.instances.deleteTagBinding`
-  * `cloudsql.instances.listTagBindings`
-  * `resourcemanager.tagUser`
+### Required roles
+
+To get the permissions that you need to view and manage tags on Cloud SQL instances, ask your administrator to grant you the following IAM roles: 
+
+  * Manage Cloud SQL instances and tag bindings: [Cloud SQL Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/cloudsql#cloudsql.admin) (`roles/cloudsql.admin`) on the project 
+  * Attach and detach tags on Cloud SQL instances: [Tag User ](https://docs.cloud.google.com/iam/docs/roles-permissions/resourcemanager#resourcemanager.tagUser) (`roles/resourcemanager.tagUser`) on the tag value and the project 
+  * View and list tags on Cloud SQL instances: [Tag Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/resourcemanager#resourcemanager.tagViewer) (`roles/resourcemanager.tagViewer`) on the project 
 
 
 
-The `cloudsql` permissions are inherited through the `cloudsql.admin` IAM role. The `resourcemanager.tagUser` is required to tag and instance during instance creation
+For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+
+These predefined roles contain the permissions required to view and manage tags on Cloud SQL instances. To see the exact permissions that are required, expand the **Required permissions** section: 
+
+#### Required permissions
+
+The following permissions are required to view and manage tags on Cloud SQL instances:
+
+  * Create an instance with a tag attached: 
+    * `cloudsql.instances.create`
+    * `cloudsql.instances.createTagBinding`
+    * `resourcemanager.tagValueBindings.create`
+  * Attach a tag to an instance: 
+    * `cloudsql.instances.createTagBinding`
+    * `resourcemanager.tagValueBindings.create`
+  * Detach a tag from an instance: 
+    * `cloudsql.instances.deleteTagBinding`
+    * `resourcemanager.tagValueBindings.delete`
+  * List tags on an instance: 
+    * `cloudsql.instances.listTagBindings`
+    * `cloudsql.instances.listEffectiveTags`
+    * `resourcemanager.tagKeys.get`
+    * `resourcemanager.tagKeys.list`
+    * `resourcemanager.tagValues.get`
+    * `resourcemanager.tagValues.list`
+
+
+
+You might also be able to get these permissions with [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
 
 ## Create a Cloud SQL instance with a tag
 
@@ -100,6 +131,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

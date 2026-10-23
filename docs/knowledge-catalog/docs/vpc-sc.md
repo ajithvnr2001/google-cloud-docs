@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/vpc-sc/
 title: VPC Service Controls with Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:14:58.008877+00:00
+fetched_at: 2026-10-23T10:21:26.800638+00:00
 ---
 
 # VPC Service Controls with Knowledge Catalog  |  Google Cloud Documentation
@@ -43,7 +43,7 @@ When you secure Knowledge Catalog with a service perimeter, the following featur
 
   * **Knowledge Catalog Search** : you can use the [`SearchEntries` API](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations/searchEntries). When you use Knowledge Catalog search in a project protected by a service perimeter, search results include only resources that are within the same perimeter. For more information, see [Search scope](https://docs.cloud.google.com/knowledge-catalog/docs/about-search#search-scope) and [Isolate search results by environment using VPC Service Controls](https://docs.cloud.google.com/knowledge-catalog/docs/about-search#environments).
 
-  * **Data products ([Preview](https://docs.cloud.google.com/products#product-launch-stages))**: you can use VPC Service Controls to secure data products, ensuring that communication between the data product, its constituent data assets (such as BigQuery tables), and users remains within authorized perimeters. For more information, see [Use VPC Service Controls with data products](https://docs.cloud.google.com/knowledge-catalog/docs/vpcsc-data-products).
+  * **Data products** : you can use VPC Service Controls to secure data products, ensuring that communication between the data product, its constituent data assets (such as BigQuery tables), and users remains within authorized perimeters. For more information, see [Use VPC Service Controls with data products](https://docs.cloud.google.com/knowledge-catalog/docs/vpcsc-data-products).
 
 
 
@@ -156,7 +156,7 @@ For more information, see [Allow access to protected resources from outside a pe
 
   * Learn more about [VPC Service Controls](https://docs.cloud.google.com/vpc-service-controls/docs).
   * Learn more about [Knowledge Catalog access control with IAM](https://docs.cloud.google.com/knowledge-catalog/docs/iam-and-access-control).
-  * Learn more about [Knowledge Catalog security](https://docs.cloud.google.com/knowledge-catalog/docs/lake-security).
+  * Learn more about [Knowledge Catalog security](https://docs.cloud.google.com/knowledge-catalog/docs/security-privacy-compliance).
 
 
 
@@ -164,6 +164,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

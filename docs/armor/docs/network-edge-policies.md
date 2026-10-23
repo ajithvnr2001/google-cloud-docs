@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/network-edge-policies/
 title: Configure network edge security policies \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:55.602335+00:00
+fetched_at: 2026-10-23T13:17:57.258741+00:00
 ---
 
 # Configure network edge security policies  |  Google Cloud Armor  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-gemini-chat-completions-function-calling-config/
 title: Use function calling with Gemini using OpenAI SDK \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:38.549595+00:00
+fetched_at: 2026-10-23T09:36:59.843430+00:00
 ---
 
 # Use function calling with Gemini using OpenAI SDK  |  Generative AI on Vertex AI  |  Google Cloud Documentation

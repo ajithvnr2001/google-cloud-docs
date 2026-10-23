@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/securing/function-identity/
 title: Function Identity \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:04.543107+00:00
+fetched_at: 2026-10-23T13:11:38.404299+00:00
 ---
 
 # Function Identity  |  Cloud Run functions  |  Google Cloud Documentation

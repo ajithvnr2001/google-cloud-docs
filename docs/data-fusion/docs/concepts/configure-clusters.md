@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/concepts/configure-clusters/
 title: Managed Service for Apache Spark cluster configuration \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:45:02.448479+00:00
+fetched_at: 2026-10-23T13:20:19.345662+00:00
 ---
 
 # Managed Service for Apache Spark cluster configuration  |  Cloud Data Fusion  |  Google Cloud Documentation

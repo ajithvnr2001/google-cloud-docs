@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/choose-cdn-product/
 title: Choose a CDN product \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:55.986577+00:00
+fetched_at: 2026-10-23T13:19:05.825574+00:00
 ---
 
 # Choose a CDN product  |  Google Cloud Documentation

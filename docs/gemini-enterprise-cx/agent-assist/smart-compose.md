@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/smart-compose/
 title: Smart compose \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:42.689973+00:00
+fetched_at: 2026-10-23T13:12:35.045060+00:00
 ---
 
 # Smart compose  |  Agent Assist  |  Google Cloud Documentation

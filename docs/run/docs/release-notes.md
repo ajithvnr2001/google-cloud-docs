@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/release-notes/
 title: Cloud Run release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:11:08.781834+00:00
+fetched_at: 2026-10-23T12:51:05.012769+00:00
 ---
 
 # Cloud Run release notes  |  Google Cloud Documentation
@@ -27,9 +27,23 @@ You can see the latest product updates for all of Google Cloud on the [ Google C
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/run-release-notes.xml) directly. 
 
-## October 21, 2026
+## October 22, 2026
 
 Feature
+
+You can configure [Direct VPC ingress for Cloud Run instances](https://docs.cloud.google.com/run/docs/configuring/vpc-direct-vpc#direct-vpc-instance) ([Preview](https://cloud.google.com/products#product-launch-stages)). Direct VPC ingress lets Cloud Run instances on a VPC network use their own ephemeral private IP address to communicate with each other and with other resources on the VPC network.
+
+Security
+
+All supported versions of [PHP 8.2](https://docs.cloud.google.com/run/docs/runtime-support#php) and later are patched. Take immediate protective action by redeploying your resources with updated dependencies.
+
+See [Responding to core PHP vulnerabilities](https://cloud.google.com/blog/products/identity-security/responding-to-core-php-vulnerabilities-cve-2026-109618-cve-2026-109619) for more information.
+
+## October 21, 2026
+
+Security
+
+This note is incorrect; follow guidance in the entry for October 22, 2026.
 
 Patch updates to [supported PHP runtimes](https://docs.cloud.google.com/run/docs/runtime-support#php) are available for Cloud Run resources [deployed from source code](https://docs.cloud.google.com/run/docs/deploying-source-code): `8.5.12`, `8.4.27`, `8.3.36`, and `8.2.35`. Take immediate action to protect your workloads by redeploying your Cloud Run resources with updated dependencies. Cloud Run resources with [automatic base image updates](https://docs.cloud.google.com/run/docs/configuring/services/automatic-base-image-updates) enabled have already been patched. See [Responding to core PHP vulnerabilities](https://cloud.google.com/blog/products/identity-security/responding-to-core-php-vulnerabilities-cve-2026-109618-cve-2026-109619) for more information.
 
@@ -2222,6 +2236,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

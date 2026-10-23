@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/troubleshooting/
 title: Troubleshoot \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:31.493239+00:00
+fetched_at: 2026-10-23T10:12:16.797848+00:00
 ---
 
 # Troubleshoot  |  Cloud SQL for MySQL  |  Google Cloud Documentation
@@ -245,7 +245,7 @@ Issue | Troubleshooting | Error message: `The slave is connecting ... master has
 
 Issue | Troubleshooting | After enabling a flag the instance loops between panicking and crashing. | Contact [ customer support](https://docs.cloud.google.com/sql/docs/getting-support) to request flag removal followed by a `hard drain`. This forces the instance to restart on a different host with a fresh configuration without the undesired flag or setting.   
 ---|---  
-You see the error message `Bad syntax for dict arg` when trying to set a flag. | [ Complex parameter values](https://cloud.google.com/sdk/gcloud/reference/topic/flags-file), such as comma-separated lists, require special treatment when used with gcloud commands.   
+You see the error message `Bad syntax for dict arg` when trying to set a flag. | [ Complex parameter values](https://docs.cloud.google.com/sdk/gcloud/reference/topic/flags-file), such as comma-separated lists, require special treatment when used with gcloud commands.   
   
 ## High availability
 
@@ -284,7 +284,7 @@ Issue | Troubleshooting
 ---|---  
 Error message: `Google ML integration API is supported only on MySQL version 8.0.36 or above.` | To enable the Vertex AI integration in Cloud SQL, you must have a Cloud SQL for MySQL database, version 8.0.36 or later. To upgrade your database to this version, see [Upgrade the database minor version](https://docs.cloud.google.com/sql/docs/mysql/upgrade-minor-db-version).  
 Error message: `Google ML Integration API is not supported on shared core instance. Please upsize your machine type.` | If you selected a shared core for the machine type of your instance, then you can't enable the Vertex AI integration in Cloud SQL. Upgrade your machine type to dedicated core. For more information, see [Machine Type](https://docs.cloud.google.com/sql/docs/mysql/instance-settings#machine-type-2ndgen).  
-Error message: `Google ML Integration is unsupported for this maintenance version. Please follow https://cloud.google.com/sql/docs/mysql/self-service-maintenance to update the maintenance version of the instance.` | To enable the Vertex AI integration in Cloud SQL, the maintenance version of your instance must be `R20240130` or later. To upgrade your instance to this version, see [Self-service maintenance](https://docs.cloud.google.com/sql/docs/mysql/self-service-maintenance).  
+Error message: `Google ML Integration is unsupported for this maintenance version. Please follow https://docs.cloud.google.com/sql/docs/mysql/self-service-maintenance to update the maintenance version of the instance.` | To enable the Vertex AI integration in Cloud SQL, the maintenance version of your instance must be `R20240130` or later. To upgrade your instance to this version, see [Self-service maintenance](https://docs.cloud.google.com/sql/docs/mysql/self-service-maintenance).  
 Error message: `**Cannot invoke ml_predict_row if 'cloudsql.enable_google_ml_integration' is off.**` | The `cloudsql.enable_google_ml_integration `database flag is turned off. Cloud SQL can't integrate with Vertex AI.  
   
 To turn this flag on, use the [`gcloud sql instances patch`](https://docs.cloud.google.com/sdk/gcloud/reference/sql/instances/patch) command:  
@@ -578,6 +578,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

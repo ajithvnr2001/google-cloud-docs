@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/using-advanced-query-insights/
 title: Improve query performance using advanced query insights features for AlloyDB \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:47.894412+00:00
+fetched_at: 2026-10-23T13:08:31.653262+00:00
 ---
 
 # Improve query performance using advanced query insights features for AlloyDB  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Improve query performance using advanced query insights features for AlloyDB Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to use advanced query insights features for AlloyDB to detect and analyze query performance problems in near real time for both primary and read pool instances. For an overview of advanced query insights features for AlloyDB, see [Advanced query insights features for AlloyDB overview](https://docs.cloud.google.com/alloydb/docs/advanced-query-insights-overview).
+To detect and analyze query performance problems in near real time across primary and read pool instances, you can use advanced query insights features for AlloyDB for PostgreSQL. For an overview of these capabilities, see [Advanced query insights features for AlloyDB overview](https://docs.cloud.google.com/alloydb/docs/advanced-query-insights-overview).
 
 To learn how to use standard query insights, see [Improve query performance by using query insights](https://docs.cloud.google.com/alloydb/docs/using-query-insights).
 
@@ -79,7 +79,7 @@ This entails the following configuration changes by default:
 ### gcloud
     
     
-    gcloud alpha alloydb instances update INSTANCE \
+    gcloud alloydb instances update INSTANCE \
     --cluster=CLUSTER \
     --project=PROJECT \
     --region=REGION \
@@ -121,7 +121,7 @@ To learn how to apply or remove a Terraform configuration, see [Basic Terraform 
 
 ###  REST v1 
 
-This example enables advanced query insights on your AlloyDB instance. For a complete list of parameters for this call, see [Method: projects.locations.clusters.instances.patch](https://docs.cloud.google.com/alloydb/docs/reference/rest/v1beta/projects.locations.clusters.instances/patch). For information about advanced query insights settings, see [Edit advanced query insights settings](https://docs.cloud.google.com/alloydb/docs/using-advanced-query-insights#edit-advanced-features-settings).
+This example enables advanced query insights on your AlloyDB instance. For a complete list of parameters for this call, see [Method: projects.locations.clusters.instances.patch](https://docs.cloud.google.com/alloydb/docs/reference/rest/v1/projects.locations.clusters.instances/patch). For information about advanced query insights settings, see Edit advanced query insights settings.
 
 Before you use any of the request data, make the following replacements:
 
@@ -132,10 +132,10 @@ Before you use any of the request data, make the following replacements:
 
 
 
-To enable your instance configuration, use the following [`PATCH`](https://docs.cloud.google.com/alloydb/docs/reference/rest/v1beta/projects.locations.clusters.instances/patch) request:
+To enable advanced query insights on your instance, use the following [`PATCH`](https://docs.cloud.google.com/alloydb/docs/reference/rest/v1/projects.locations.clusters.instances/patch) request:
     
     
-    PATCH https://alloydb.googleapis.com/v1beta/{instance.name=projects/PROJECT_ID/locations/LOCATION_ID/clusters/CLUSTER_ID/instances/INSTANCE_ID}?updateMask=observabilityConfig.enabled
+    PATCH https://alloydb.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION_ID/clusters/CLUSTER_ID/instances/INSTANCE_ID?updateMask=observabilityConfig.enabled
     
 
 The `updateMask=observabilityConfig.enabled` query parameter tells the API to update the `enabled` field within the `observabilityConfig` block.
@@ -187,7 +187,22 @@ To edit the advanced query insights configuration for an AlloyDB instance, follo
 ### gcloud
     
     
-    gcloud alpha alloydb instances update INSTANCE \
+    gcloud alloydb instances update INSTANCE \
+    --cluster=CLUSTER \
+    --project=PROJECT \
+    --region=REGION \
+    --observability-config-enabled \
+    --observability-config-preserve-comments \
+    --observability-config-track-wait-events \
+    --observability-config-max-query-string-length=QUERY_LENGTH \
+    --observability-config-record-application-tags \
+    --observability-config-query-plans-per-minute=QUERY_PLANS \
+    --observability-config-track-active-queries
+
+To also configure client IP address tracking or assistive experiences ([Preview](https://cloud.google.com/products#product-launch-stages)), include the `--observability-config-track-client-address` and `--observability-config-assistive-experiences-enabled` flags with the `gcloud beta alloydb instances update` command:
+    
+    
+    gcloud beta alloydb instances update INSTANCE \
     --cluster=CLUSTER \
     --project=PROJECT \
     --region=REGION \
@@ -216,8 +231,8 @@ Use the following optional observability flags if needed:
 
   * `--observability-config-enabled`: enables collecting and analyzing data on an AlloyDB instance to monitor its performance and health. If you want to disable advanced query insights, use `--no-observability-config-enabled`.
   * `--observability-config-track-active-queries`: enables [tracking of active queries](https://docs.cloud.google.com/alloydb/docs/monitor-active-queries). If you want to disable the feature, use `--no-observability-config-track-active-queries`.
-  * `--observability-config-track-client-address`: enables tracking of client addresses. If you want to disable tracking of client addresses, use `--no-observability-config-track-client-address`.
-  * `--observability-config-assistive-experiences-enabled`: enables assistive experiences to collect enhanced telemetry for monitoring and troubleshooting. If you want to disable assistive experiences, use `--no-observability-config-assistive-experiences-enabled`.
+  * `--observability-config-track-client-address` ([Preview](https://cloud.google.com/products#product-launch-stages)): enables tracking of client addresses. Set using the `gcloud beta alloydb instances update` command. If you want to disable tracking of client addresses, use `--no-observability-config-track-client-address`.
+  * `--observability-config-assistive-experiences-enabled` ([Preview](https://cloud.google.com/products#product-launch-stages)): enables assistive experiences to collect enhanced telemetry for monitoring and troubleshooting. Set using the `gcloud beta alloydb instances update` command. If you want to disable assistive experiences, use `--no-observability-config-assistive-experiences-enabled`.
   * `--observability-config-record-application-tags`: stores application tags that help you determine the APIs and model-view-controller (MVC) routes that make requests and group data to run metrics against it. This option requires you to comment queries with a specific set of tags. If you don't want to store application tags, use `--no-observability-config-record-application-tags`.
   * `--observability-config-preserve-comments`: keeps comments in query strings recorded by query insights. If you don't want to keep comments, use `--no-observability-config-preserve-comments`.
   * `--observability-config-track-wait-events`: enables tracking of wait events during query execution. If you don't want to track wait events, use `--no-observability-config-track-wait-events`.
@@ -273,9 +288,9 @@ To learn how to apply or remove a Terraform configuration, see [Basic Terraform 
 
 ###  REST v1 
 
-This example configures advanced query insights settings on your AlloyDB instance. For a complete list of parameters for this call, see [Method: projects.locations.clusters.instances.patch](https://docs.cloud.google.com/alloydb/docs/reference/rest/v1beta/projects.locations.clusters.instances/patch).
+This example configures advanced query insights settings on your AlloyDB instance. For a complete list of parameters for this call, see [Method: projects.locations.clusters.instances.patch](https://docs.cloud.google.com/alloydb/docs/reference/rest/v1/projects.locations.clusters.instances/patch).
 
-To configure advanced query insights settings, set the `enabled` field to `true` and modify other optional fields as needed. For a complete list of fields for this call, see [ObservabilityInstanceConfig](https://docs.cloud.google.com/alloydb/docs/reference/rest/v1beta/projects.locations.clusters.instances#observabilityinstanceconfig).
+To configure advanced query insights settings, set the `enabled` field to `true` and modify other optional fields as needed. For a complete list of fields for this call, see [ObservabilityInstanceConfig](https://docs.cloud.google.com/alloydb/docs/reference/rest/v1/projects.locations.clusters.instances#ObservabilityInstanceConfig).
 
 Before you use any of the request data, make the following replacements:
 
@@ -286,10 +301,10 @@ Before you use any of the request data, make the following replacements:
 
 
 
-To modify your instance configuration, use the following [`PATCH`](https://docs.cloud.google.com/alloydb/docs/reference/rest/v1beta/projects.locations.clusters.instances/patch) request:
+To modify your instance configuration, use the following [`PATCH`](https://docs.cloud.google.com/alloydb/docs/reference/rest/v1/projects.locations.clusters.instances/patch) request:
     
     
-    PATCH https://alloydb.googleapis.com/v1beta/{instance.name=projects/PROJECT_ID/locations/LOCATION_ID/clusters/CLUSTER_ID/instances/INSTANCE_ID}?updateMask=observabilityConfig.enabled,observabilityConfig.preserveComments,observabilityConfig.trackWaitEvents,observabilityConfig.maxQueryStringLength,observabilityConfig.recordApplicationTags,observabilityConfig.queryPlansPerMinute,observabilityConfig.trackActiveQueries,observabilityConfig.trackClientAddress,observabilityConfig.assistiveExperiencesEnabled
+    PATCH https://alloydb.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION_ID/clusters/CLUSTER_ID/instances/INSTANCE_ID?updateMask=observabilityConfig.enabled,observabilityConfig.preserveComments,observabilityConfig.trackWaitEvents,observabilityConfig.maxQueryStringLength,observabilityConfig.recordApplicationTags,observabilityConfig.queryPlansPerMinute,observabilityConfig.trackActiveQueries
     
 
 The request JSON body that configures all advanced query insights fields looks as follows:
@@ -303,12 +318,12 @@ The request JSON body that configures all advanced query insights fields looks a
        "maxQueryStringLength": 5000,
        "recordApplicationTags": true,
        "queryPlansPerMinute": 20,
-       "trackActiveQueries": true,
-       "trackClientAddress": true,
-       "assistiveExperiencesEnabled": true
+       "trackActiveQueries": true
      }
     }
     
+
+To also configure the `trackClientAddress` or `assistiveExperiencesEnabled` fields ([Preview](https://cloud.google.com/products#product-launch-stages)), use the [`v1beta` `projects.locations.clusters.instances.patch`](https://docs.cloud.google.com/alloydb/docs/reference/rest/v1beta/projects.locations.clusters.instances/patch) method and include those fields in the `updateMask` and [`ObservabilityInstanceConfig`](https://docs.cloud.google.com/alloydb/docs/reference/rest/v1beta/projects.locations.clusters.instances#observabilityinstanceconfig) request body.
 
 ## Detect and diagnose query performance problems
 
@@ -583,7 +598,7 @@ For the standard query insights plugin, the maximum query string length is limit
 
 ### Can I use advanced query insights features with secondary clusters?
 
-You can't enable advanced query insights on clusters with secondary instances. Before creating a secondary instance on a cluster, you must disable advanced query insights on all the instances in the cluster.
+You can enable advanced query insights on primary clusters that have secondary clusters configured, but you can't enable advanced query insights on secondary clusters. If you perform a switchover, you must re-enable advanced query insights on the new primary cluster.
 
 ## What's next
 
@@ -597,6 +612,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

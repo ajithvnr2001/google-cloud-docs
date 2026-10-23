@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/local-development/vscode/manage-apigee-workspace/
 title: Manage the Apigee workspace \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:00.530379+00:00
+fetched_at: 2026-10-23T13:14:35.672230+00:00
 ---
 
 # Manage the Apigee workspace  |  Google Cloud Documentation

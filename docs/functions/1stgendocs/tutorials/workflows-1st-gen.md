@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/1stgendocs/tutorials/workflows-1st-gen/
 title: Workflows Tutorial (1st gen) \u00a0|\u00a0 Cloud Run functions (1st gen) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:33.719392+00:00
+fetched_at: 2026-10-23T13:11:03.765851+00:00
 ---
 
 # Workflows Tutorial (1st gen)  |  Cloud Run functions (1st gen)  |  Google Cloud Documentation

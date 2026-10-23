@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-translation-validation/
 title: Validate a translation request using a callback endpoint \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:54:46.984421+00:00
+fetched_at: 2026-10-23T09:37:33.274677+00:00
 ---
 
 # Validate a translation request using a callback endpoint  |  Workflows  |  Google Cloud Documentation

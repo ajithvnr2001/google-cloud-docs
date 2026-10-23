@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/googlegenaisdk-vertexai-express-mode/
 title: Generate content using Vertex AI Express Mode \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:02.489669+00:00
+fetched_at: 2026-10-23T08:57:07.087135+00:00
 ---
 
 # Generate content using Vertex AI Express Mode  |  Generative AI on Vertex AI  |  Google Cloud Documentation

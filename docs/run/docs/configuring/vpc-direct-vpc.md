@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/configuring/vpc-direct-vpc/
 title: Direct VPC with a VPC network \u00a0|\u00a0 Cloud Run \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:15:47.590310+00:00
+fetched_at: 2026-10-23T09:43:01.225632+00:00
 ---
 
 # Direct VPC with a VPC network  |  Cloud Run  |  Google Cloud Documentation
@@ -722,7 +722,7 @@ The `gcloud run worker-pools replace` command defaults to using `worker-pool.yam
 
 Direct VPC allows your Cloud Run instance to send or receive traffic to or from a VPC network. Each instance receives a private IP address on the configured network and subnet.
 
-Unlike to services or jobs, Direct VPC connectivity for instances allows both egress and ingress. This means that instances can reach resources on the VPC network, and resources on the VPC network can also reach an instance using its private IP address. See how an instance can retrieve its private IP addresses using the metadata server.
+Unlike services or jobs, Direct VPC connectivity for instances allows both egress and ingress. This means that instances can reach resources on the VPC network, and resources on the VPC network can also reach an instance using its private IP address. See how an instance can retrieve its private IP addresses using the metadata server.
 
 You can also [add network tags](https://docs.cloud.google.com/vpc/docs/add-remove-network-tags) directly on Cloud Run instances with Direct VPC egress for more granular network security, such as applying [VPC firewall rules](https://docs.cloud.google.com/firewall/docs/firewalls).
 
@@ -1225,6 +1225,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

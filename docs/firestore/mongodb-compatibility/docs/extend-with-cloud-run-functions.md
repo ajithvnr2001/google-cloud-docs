@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/extend-with-cloud-run-functions/
 title: Extend Firestore with MongoDB compatibility with event triggers using Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:42.241310+00:00
+fetched_at: 2026-10-23T13:02:43.365484+00:00
 ---
 
 # Extend Firestore with MongoDB compatibility with event triggers using Cloud Run functions  |  Google Cloud Documentation

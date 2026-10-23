@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-create-training-pipeline-image-classification-sample/
 title: Create a training pipeline for image classification \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:34:53.900807+00:00
+fetched_at: 2026-10-23T09:27:03.891386+00:00
 ---
 
 # Create a training pipeline for image classification  |  Vertex AI  |  Google Cloud Documentation

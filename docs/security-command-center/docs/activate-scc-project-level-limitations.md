@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/activate-scc-project-level-limitations/
 title: Features available with project-level activations \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:49:15.282188+00:00
+fetched_at: 2026-10-23T12:53:21.412527+00:00
 ---
 
 # Features available with project-level activations  |  Security Command Center  |  Google Cloud Documentation
@@ -23,13 +23,7 @@ Send feedback
 
 Standard-legacy, Standard, and Premium [service tiers](https://docs.cloud.google.com/security-command-center/docs/service-tiers)
 
-Some Security Command Center features, like detection services and finding categories, aren't available with project-level activations because they require access to logs, data, resources, or other services outside the scope of a single project.
-
-Some features can be enabled by activating the Security Command Center Standard tier in the parent organization. However, a few of the listed features are not available with project-level activations.
-
-Activating Security Command Center Standard, which is [free of charge](https://cloud.google.com/security-command-center/pricing), enables the Standard-tier features for your entire organization, including all projects.
-
-The following sections list the Security Command Center services and finding categories that require organization-level activations by service tier.
+Security Command Center project-level activations let you manage security findings within an individual project. However, some detection services and finding categories require access beyond a single project's scope. Activating the [Standard tier](https://cloud.google.com/security-command-center/pricing) at the parent organization level turns on certain cross-project features, while other organization-wide capabilities require an organization-level activation of the Premium tier.
 
 ## Features you can enable by activating the Standard tier in the parent organization
 
@@ -186,6 +180,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-transcribe-async/
 title: Asynchronously transcribe a local audio file \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:33.939442+00:00
+fetched_at: 2026-10-23T08:37:00.903063+00:00
 ---
 
 # Asynchronously transcribe a local audio file  |  Cloud Speech-to-Text  |  Google Cloud Documentation

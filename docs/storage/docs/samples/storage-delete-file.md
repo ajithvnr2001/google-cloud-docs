@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-delete-file/
 title: Delete an object \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:30:57.434653+00:00
+fetched_at: 2026-10-23T09:37:05.669454+00:00
 ---
 
 # Delete an object  |  Cloud Storage  |  Google Cloud Documentation

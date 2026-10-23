@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/samples/securitycenter-create-source/
 title: Create a security source \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:46.063921+00:00
+fetched_at: 2026-10-23T08:58:06.882395+00:00
 ---
 
 # Create a security source  |  Security Command Center  |  Google Cloud Documentation

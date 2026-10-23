@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-intelligence/docs/samples/video-detect-faces/
 title: Detect faces in a local video file \u00a0|\u00a0 Video Intelligence API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:54:40.088989+00:00
+fetched_at: 2026-10-23T09:37:40.376001+00:00
 ---
 
 # Detect faces in a local video file  |  Video Intelligence API  |  Google Cloud Documentation

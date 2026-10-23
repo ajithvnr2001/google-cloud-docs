@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/tool/mcp/
 title: MCP tools \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:07.106193+00:00
+fetched_at: 2026-10-23T13:13:04.809107+00:00
 ---
 
 # MCP tools  |  CX Agent Studio  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/release-notes-2021/
 title: Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:57.078992+00:00
+fetched_at: 2026-10-23T13:20:46.738007+00:00
 ---
 
 # Data Studio  |  Google Cloud Documentation

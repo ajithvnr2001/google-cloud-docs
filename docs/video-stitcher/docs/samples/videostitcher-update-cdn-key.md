@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-stitcher/docs/samples/videostitcher-update-cdn-key/
 title: Update a CDN key \u00a0|\u00a0 Video Stitcher API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:29.937599+00:00
+fetched_at: 2026-10-23T09:35:36.081947+00:00
 ---
 
 # Update a CDN key  |  Video Stitcher API  |  Google Cloud Documentation

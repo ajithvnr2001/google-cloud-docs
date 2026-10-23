@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/transcoder/docs/samples/transcoder-create-job-with-periodic-images-spritesheet/
 title: Create a job that generates a spritesheet with a variable number of images \u00a0|\u00a0 Transcoder API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:44.388637+00:00
+fetched_at: 2026-10-23T09:35:30.750802+00:00
 ---
 
 # Create a job that generates a spritesheet with a variable number of images  |  Transcoder API  |  Google Cloud Documentation

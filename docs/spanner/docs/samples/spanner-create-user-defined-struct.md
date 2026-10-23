@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-create-user-defined-struct/
 title: Create user-defined STRUCT \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:50:03.328211+00:00
+fetched_at: 2026-10-23T10:31:21.629828+00:00
 ---
 
 # Create user-defined STRUCT  |  Spanner  |  Google Cloud Documentation

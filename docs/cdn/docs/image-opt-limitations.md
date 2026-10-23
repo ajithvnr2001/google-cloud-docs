@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/image-opt-limitations/
 title: Limitations \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:54.758653+00:00
+fetched_at: 2026-10-23T13:20:02.276168+00:00
 ---
 
 # Limitations  |  Cloud CDN  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-filters-limit-row-sample-hbase/
 title: Read using a row sample filter (HBase) \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:19.176079+00:00
+fetched_at: 2026-10-23T13:20:03.977754+00:00
 ---
 
 # Read using a row sample filter (HBase)  |  Bigtable  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/memorystore/docs/cluster/resources/
 title: Resources \u00a0|\u00a0 Memorystore for Redis Cluster \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:10:42.750948+00:00
+fetched_at: 2026-10-23T11:00:00.838814+00:00
 ---
 
 # Resources  |  Memorystore for Redis Cluster  |  Google Cloud Documentation

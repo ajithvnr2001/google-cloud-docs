@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/granted/set-up-data-store/
 title: Set up a Granted data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:30.420522+00:00
+fetched_at: 2026-10-23T13:08:54.488478+00:00
 ---
 
 # Set up a Granted data store  |  Gemini Enterprise  |  Google Cloud Documentation

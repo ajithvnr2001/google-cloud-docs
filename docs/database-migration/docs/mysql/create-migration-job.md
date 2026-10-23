@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/database-migration/docs/mysql/create-migration-job/
 title: Create a migration job to a new destination instance \u00a0|\u00a0 Database Migration Service for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:05.538680+00:00
+fetched_at: 2026-10-23T13:20:51.119213+00:00
 ---
 
 # Create a migration job to a new destination instance  |  Database Migration Service for MySQL  |  Google Cloud Documentation

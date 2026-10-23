@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/manage-ssl-instance/
 title: Manage SSL/TLS certificates \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:50.374798+00:00
+fetched_at: 2026-10-23T10:12:24.878883+00:00
 ---
 
 # Manage SSL/TLS certificates  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -2907,7 +2907,7 @@ You should receive a JSON response similar to the following:
   * [Configure SSL/TLS](https://docs.cloud.google.com/sql/docs/postgres/configure-ssl-instance) on your Cloud SQL instance. 
   * [Connect using SSL/TLS](https://docs.cloud.google.com/sql/docs/postgres/connect-admin-ip#connect-ssl) to your Cloud SQL instance. 
   * Learn more about [how PostgreSQL uses SSL/TLS](https://www.postgresql.org/docs/current/static/libpq-ssl.html). 
-  * View all the [Google Cloud services available in locations worldwide](https://docs.cloud.google.com/about/locations).
+  * View all the [Google Cloud services available in locations worldwide](https://cloud.google.com/about/locations).
 
 
 
@@ -2915,6 +2915,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

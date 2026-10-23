@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/metadata-indexing-managed-tables/
 title: Metadata indexing for BigQuery tables \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:56:41.174275+00:00
+fetched_at: 2026-10-23T12:55:33.473047+00:00
 ---
 
 # Metadata indexing for BigQuery tables  |  Google Cloud Documentation
@@ -21,11 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 #  Metadata indexing for BigQuery tables 
 
-This document describes column metadata indexing in BigQuery and explains how to allocate dedicated resources to improve index freshness and query performance.
+BigQuery automatically indexes column metadata for BigQuery tables larger than 1 GiB and uses that index to accelerate your queries. The metadata includes file locations, partitioning information, and column-level attributes. By default, indexing is a free background operation, but index freshness depends on available free resources and has no performance service level objectives (SLOs).
 
-BigQuery automatically indexes metadata for BigQuery tables exceeding 1 GiB. This metadata includes file location, partitioning information, and column-level attributes, which BigQuery uses to optimize and accelerate your queries.
-
-By default, metadata indexing in BigQuery is a free background operation and requires no action on your part. However, index freshness depends on available free resources and doesn't have performance service level objectives (SLOs). If index freshness is critical for your use case, we recommend configuring a [`BACKGROUND` reservation](https://docs.cloud.google.com/bigquery/docs/reservations-workload-management#assignments), which shares resources across background optimization jobs.
+If index freshness is critical for your workload, you can allocate dedicated resources by configuring a [`BACKGROUND` reservation](https://docs.cloud.google.com/bigquery/docs/reservations-workload-management#assignments). This document describes how to monitor index freshness and usage, set up dedicated indexing resources, and configure indexing alerts.
 
 ## View the metadata index refresh time
 
@@ -84,7 +82,7 @@ As another example, the following displays the number of jobs that used column m
 
 To set up resources for metadata indexing updates in your project, you first need to have a reservation assigned to your project. To do so, do the following:
 
-  1. [Create a `BACKGROUND` reservation](https://docs.cloud.google.com/bigquery/docs/reservations-tasks).
+  1. [Create a `BACKGROUND` reservation](https://docs.cloud.google.com/bigquery/docs/reservations-tasks). A `BACKGROUND` reservation shares resources across background optimization jobs.
   2. [Assign your project to the reservation](https://docs.cloud.google.com/bigquery/docs/reservations-assignments#assign_my_prod_project_to_prod_reservation).
 
 
@@ -246,6 +244,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

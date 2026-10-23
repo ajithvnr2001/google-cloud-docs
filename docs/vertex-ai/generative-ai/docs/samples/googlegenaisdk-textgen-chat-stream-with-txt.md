@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/googlegenaisdk-textgen-chat-stream-with-txt/
 title: Generate content stream with Multimodal AI Model \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:29:55.611309+00:00
+fetched_at: 2026-10-23T08:57:07.858310+00:00
 ---
 
 # Generate content stream with Multimodal AI Model  |  Generative AI on Vertex AI  |  Google Cloud Documentation

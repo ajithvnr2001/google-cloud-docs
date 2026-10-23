@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/text-to-speech/docs/samples/tts-synthesize-text-audio-profile/
 title: Synthesize text with audio profiles \u00a0|\u00a0 Cloud Text-to-Speech \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:39:23.557241+00:00
+fetched_at: 2026-10-23T08:36:44.817224+00:00
 ---
 
 # Synthesize text with audio profiles  |  Cloud Text-to-Speech  |  Google Cloud Documentation

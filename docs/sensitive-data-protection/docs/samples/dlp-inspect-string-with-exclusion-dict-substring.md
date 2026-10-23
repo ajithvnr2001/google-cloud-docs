@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-inspect-string-with-exclusion-dict-substring/
 title: Inspect a string with an exclusion dictionary substring \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:50:56.622472+00:00
+fetched_at: 2026-10-23T10:52:56.896456+00:00
 ---
 
 # Inspect a string with an exclusion dictionary substring  |  Sensitive Data Protection  |  Google Cloud Documentation

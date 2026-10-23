@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/guidelines-resources/
 title: Guidelines to name a Knowledge Catalog resource \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T01:31:45.180817+00:00
+fetched_at: 2026-10-23T10:21:26.722610+00:00
 ---
 
 # Guidelines to name a Knowledge Catalog resource  |  Google Cloud Documentation
@@ -85,7 +85,7 @@ Except for entry IDs and data lineage resource IDs, all resource ID variables, s
 The naming guidelines for an {ENTRY_ID} are different:
 
   * Contain up to 4000 characters.
-  * Use an entry ID format based on the Google Cloud [full resource name](https://cloud.google.com/apis/design/resource_names#full_resource_name). The format is the full resource name of the resource without the prefix double slashes in the API service name part. This allows retrieval of entries using their associated resource name.
+  * Use an entry ID format based on the Google Cloud [full resource name](https://docs.cloud.google.com/apis/design/resource_names#full_resource_name). The format is the full resource name of the resource without the prefix double slashes in the API service name part. This allows retrieval of entries using their associated resource name.
 
 For example:
 
@@ -114,7 +114,7 @@ For automated lineage (such as BigQuery queries, Managed Service for Apache Spar
 
 ### BigQuery entry names
 
-When you interact with BigQuery resources through the Knowledge Catalog APIs, you must use specific formatting for the entry group ID and entry ID.
+When you interact with BigQuery resources through the Dataplex API, you must use specific formatting for the entry group ID and entry ID.
 
   * **Entry group ID** : `@bigquery`
   * **Entry ID** : `bigquery.googleapis.com/projects/{PROJECT_ID}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
@@ -131,6 +131,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

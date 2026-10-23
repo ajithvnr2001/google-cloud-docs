@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aws-kms/
 title: Collect AWS Key Management Service logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:18.596594+00:00
+fetched_at: 2026-10-23T13:20:25.443127+00:00
 ---
 
 # Collect AWS Key Management Service logs  |  Google Security Operations  |  Google Cloud Documentation

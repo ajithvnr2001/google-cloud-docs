@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/create-analyze-conversation-ui/
 title: Use the console to import and analyze a conversation \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:22.673784+00:00
+fetched_at: 2026-10-23T13:12:11.872967+00:00
 ---
 
 # Use the console to import and analyze a conversation  |  Customer Experience Insights  |  Google Cloud Documentation

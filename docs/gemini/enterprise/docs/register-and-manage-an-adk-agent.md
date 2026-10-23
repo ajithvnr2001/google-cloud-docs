@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/register-and-manage-an-adk-agent/
 title: Register and manage ADK agents hosted on Agent Runtime \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:44.927372+00:00
+fetched_at: 2026-10-23T13:11:53.532565+00:00
 ---
 
 # Register and manage ADK agents hosted on Agent Runtime  |  Gemini Enterprise  |  Google Cloud Documentation

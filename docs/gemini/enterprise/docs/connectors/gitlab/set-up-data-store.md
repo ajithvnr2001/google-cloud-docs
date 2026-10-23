@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/gitlab/set-up-data-store/
 title: Set up a GitLab data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:32.152200+00:00
+fetched_at: 2026-10-23T13:03:30.566260+00:00
 ---
 
 # Set up a GitLab data store  |  Gemini Enterprise  |  Google Cloud Documentation

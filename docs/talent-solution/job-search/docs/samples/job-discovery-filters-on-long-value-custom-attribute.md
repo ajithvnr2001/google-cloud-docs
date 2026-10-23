@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-discovery-filters-on-long-value-custom-attribute/
 title: Search jobs by long value custom attributes (v3) \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:44.028001+00:00
+fetched_at: 2026-10-23T09:41:46.308844+00:00
 ---
 
 # Search jobs by long value custom attributes (v3)  |  Job Search  |  Google Cloud Documentation

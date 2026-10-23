@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/workflows/roles-permissions/
 title: Roles and permissions for Workflows targets \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:29.284623+00:00
+fetched_at: 2026-10-23T13:01:29.912504+00:00
 ---
 
 # Roles and permissions for Workflows targets  |  Eventarc Standard  |  Google Cloud Documentation

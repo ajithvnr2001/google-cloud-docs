@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/audit-logging/
 title: Cloud Audit Logs with Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:29:39.685727+00:00
+fetched_at: 2026-10-23T13:08:39.255147+00:00
 ---
 
 # Cloud Audit Logs with Cloud Storage  |  Google Cloud Documentation
@@ -532,7 +532,7 @@ You can [route audit logs](https://docs.cloud.google.com/logging/docs/routing/ov
 
   * To keep audit logs for a longer period of time or to use more powerful search capabilities, you can route copies of your audit logs to Cloud Storage, BigQuery, or Pub/Sub. Using Pub/Sub, you can route to other applications, other repositories, and to third parties.
   * To manage your audit logs across an entire organization, you can create [aggregated sinks](https://docs.cloud.google.com/logging/docs/export/aggregated_sinks) that can route logs from any or all Google Cloud projects in the organization.
-  * If your enabled Data Access audit logs are pushing your Google Cloud projects over your [free allotment](https://docs.cloud.google.com/stackdriver/pricing#logging-pricing-summary), you can create sinks that exclude the Data Access audit logs from Logging.
+  * If your enabled Data Access audit logs are pushing your Google Cloud projects over your [free allotment](https://docs.cloud.google.com/logging/pricing#pricing-summary), you can create sinks that exclude the Data Access audit logs from Logging.
 
 
 
@@ -540,12 +540,12 @@ For instructions about routing logs, see [Configure and manage sinks ](https://d
 
 ## Pricing
 
-For information about Cloud Logging pricing, see [Google Cloud Observability pricing: Cloud Logging](https://docs.cloud.google.com/stackdriver/pricing#logging-costs).
+For information about Cloud Logging pricing, see [Google Cloud Observability pricing: Cloud Logging](https://docs.cloud.google.com/logging/pricing#logging-costs).
 
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

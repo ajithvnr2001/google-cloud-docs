@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/samples/cloud-sql-mysql-sqlalchemy-backoff/
 title: Retry a failed connection when using SQLAlchemy \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:31:02.829249+00:00
+fetched_at: 2026-10-23T10:19:30.729129+00:00
 ---
 
 # Retry a failed connection when using SQLAlchemy  |  Cloud SQL for MySQL  |  Google Cloud Documentation

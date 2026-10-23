@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/best-practices/error-redefinition-of-field/
 title: Error: Redefinition of field \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T09:11:41.908866+00:00
+fetched_at: 2026-10-23T12:51:38.587683+00:00
 ---
 
 # Error: Redefinition of field  |  Looker  |  Google Cloud Documentation
@@ -21,17 +21,11 @@ Send feedback
 
 #  Error: Redefinition of field Stay organized with collections  Save and categorize content based on your preferences. 
 
-When you are working on a LookML file, you might come across an error in the form `Redefinition of field 'view_name.field_name'` after you validate your code with the [Content Validator](https://docs.cloud.google.com/looker/docs/content-validation). 
-
-The error will appear under **LookML Errors** in the **Project Health Panel** [after the LookmL validator is run](https://docs.cloud.google.com/looker/docs/lookml-validation#running_validation). 
-
-![](https://docs.cloud.google.com/static/looker/docs/images/hc-error-redefinition-of-field-2210.png)
-
-This page will help you understand the error's meaning, common causes, and how to troubleshoot. 
+The [LookML Validator](https://docs.cloud.google.com/looker/docs/lookml-validation#running_validation) and [Content Validator](https://docs.cloud.google.com/looker/docs/content-validation) let you detect and resolve the `Redefinition of field 'view_name.field_name'` error in your LookML project. By inspecting your view and Explore join definitions, including joins aliased with the `from` parameter, you can locate and rename duplicate dimensions, measures, or joins.
 
 ## Common causes of Error: Redefinition of field 
 
-The error `Redefinition of field 'view_name.field_name'` means that Looker has identified two fields with exactly the same combination of view and field names. 
+The error `Redefinition of field 'view_name.field_name'` appears under **LookML Errors** in the **Project Health Panel** after you run the LookML Validator, and means that Looker has identified two fields with exactly the same combination of view and field names. 
 
 There are several common causes of the error: 
 
@@ -79,6 +73,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2025-07-22 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2025-07-22 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

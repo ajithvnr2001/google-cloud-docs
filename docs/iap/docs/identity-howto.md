@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/identity-howto/
 title: Getting the user's identity \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:27:24.732874+00:00
+fetched_at: 2026-10-23T13:10:05.687588+00:00
 ---
 
 # Getting the user's identity  |  Identity-Aware Proxy  |  Google Cloud Documentation

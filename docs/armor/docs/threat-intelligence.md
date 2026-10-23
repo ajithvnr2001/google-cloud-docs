@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/threat-intelligence/
 title: Apply Google Threat Intelligence \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:54.041561+00:00
+fetched_at: 2026-10-23T13:17:58.213200+00:00
 ---
 
 # Apply Google Threat Intelligence  |  Google Cloud Armor  |  Google Cloud Documentation

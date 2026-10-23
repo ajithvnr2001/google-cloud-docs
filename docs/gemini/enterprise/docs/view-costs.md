@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/view-costs/
 title: View costs \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:41.891858+00:00
+fetched_at: 2026-10-23T13:11:51.597240+00:00
 ---
 
 # View costs  |  Gemini Enterprise  |  Google Cloud Documentation

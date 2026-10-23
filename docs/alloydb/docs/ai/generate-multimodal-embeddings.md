@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/generate-multimodal-embeddings/
 title: Generate multimodal embeddings \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:52.689659+00:00
+fetched_at: 2026-10-23T13:08:30.299466+00:00
 ---
 
 # Generate multimodal embeddings  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -102,7 +102,7 @@ You can modify the value of the `google_ml_integration.enable_ai_query_engine` f
 ### Access data in Cloud Storage to generate multimodal embeddings
 
   * To generate multimodal embeddings, refer to content in Cloud Storage using a `gs://` URI.
-  * Access Cloud Storage content through your current project's Agent Platform service agent. By default, the Agent Platform service agent already has permission to access the bucket in the same project. For more information, see [IAM roles and permissions index](https://docs.cloud.google.com/iam/docs/roles-permissions/aiplatform#aiplatform.serviceAgent).
+  * Access Cloud Storage content through your current project's Agent Platform service agent. By default, the Agent Platform service agent already has permission to access the bucket in the same project. For more information, see [Identity and Access Management (IAM) roles and permissions index](https://docs.cloud.google.com/iam/docs/roles-permissions/aiplatform#aiplatform.serviceAgent).
   * To access data in a Cloud Storage bucket in another Google Cloud project, run the following gcloud CLI command to grant the [Storage Object Viewer role (`roles/storage.objectViewer`)](https://docs.cloud.google.com/storage/docs/access-control/iam-roles) to the Agent Platform service agent of your AlloyDB project.
         
         gcloud projects add-iam-policy-binding <ANOTHER_PROJECT_ID> \
@@ -145,8 +145,10 @@ To generate image embeddings for a registered `multimodalembedding@001` model en
 
 Replace the following:
 
-  * `IMAGE_PATH_OR_TEXT` with the Cloud Storage URI of the image, for example, `gs://my-bucket/embeddings/flowers.jpeg`, or the base64 string of the image.
-  * `MIMETYPE` with the mimetype of the image, for example, `image/jpeg`. For the full list of supported mimetypes, see the [Multimodal embeddings API](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/multimodal-embeddings-api#image).
+  * `IMAGE_PATH_OR_TEXT`: the Cloud Storage URI of the image, for example, `gs://my-bucket/embeddings/flowers.jpeg`, or the base64 string of the image.
+
+  * `MIMETYPE`: the mimetype of the image, for example, `image/jpeg`. For the full list of supported mimetypes, see the [Multimodal embeddings API](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/multimodal-embeddings-api#image).
+
 
 
 
@@ -174,6 +176,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

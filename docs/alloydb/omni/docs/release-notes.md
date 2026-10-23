@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/docs/release-notes/
 title: AlloyDB Omni release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:43:37.925868+00:00
+fetched_at: 2026-10-23T10:04:19.252228+00:00
 ---
 
 # AlloyDB Omni release notes  |  Google Cloud Documentation
@@ -28,19 +28,6 @@ You can see the latest product updates for all of Google Cloud on the [ Google C
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/alloydbomni-release-notes.xml) directly. 
 
 ## October 21, 2026
-
-Feature
-
-The AlloyDB Omni web user interface is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) for AlloyDB Omni version 18.1.0 and later. The web UI provides a centralized graphical dashboard to monitor, analyze, and manage your AlloyDB Omni deployments, including the following capabilities:
-
-  * Connect to the web UI: Set up multiple connection profiles to connect to multiple clusters. For more information, see [Install the AlloyDB Omni web user interface](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/install-web-ui) and [Connect to the AlloyDB Omni web user interface](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/connect-web-ui).
-  * Monitor cluster high availability: view cluster topology, instance roles, and replication status. For more information, see [Monitor cluster high availability](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/monitor-cluster-high-availability).
-  * Analyze query performance with query insights: identify slow queries and high disk I/O statements, and inspect SQL execution statistics. For more information, see [View query performance using query insights](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/monitor-performance#query-insights).
-  * Monitor the columnar engine: view the column store inventory, analyze columnar query execution statistics, and track column store memory usage. For more information, see [Monitor the columnar engine](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/columnar-engine/monitor).
-  * Audit database parameters: search, filter, and audit active database parameters and identify customized flags that differ from default engine values. For more information, see [Audit database parameters using the AlloyDB Omni web user interface](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/configure-database-flags#audit-parameters-ui).
-  * Monitor AI and ML capabilities: view registered machine learning models and external model endpoints available to the database engine; check connectivity status with remote AI endpoints, such as Vertex AI, and local model inference runtimes; and view the status of vector search indexing, vector dimensionality, and index build health.
-
-
 
 Feature
 
@@ -157,73 +144,6 @@ Fixes for the following vulnerabilities are available for version 18.4.0:
 
 Announcement
 
-AlloyDB Omni version 18.4.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) and includes the following:
-
-  * Support for [PostgreSQL version 18.4](https://www.postgresql.org/docs/release/18.4/).
-  * Critical security patches and internal stability improvements.
-  * Support for [advanced query insights](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/monitor-query-insights) for standalone AlloyDB Omni instances using containers. You can use the `google_insights_v2` extension to access granular metrics, including query execution statistics and wait events, for near real-time performance troubleshooting.
-  * Support for Thales CipherTrust Manager as an external Key Management Service (KMS) provider for transparent data encryption (TDE), in addition to HashiCorp Vault. For more information, see [Create a TDE-enabled cluster](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/create-tde-cluster).
-
-
-
-Security
-
-Fixes for the following vulnerabilities are available for version 18.4.0:
-
-  * [CVE-2026-19385](https://nvd.nist.gov/vuln/detail/CVE-2026-19385)
-  * [CVE-2026-18408](https://nvd.nist.gov/vuln/detail/CVE-2026-18408)
-  * [CVE-2026-16239](https://nvd.nist.gov/vuln/detail/CVE-2026-16239)
-  * [CVE-2026-15742](https://nvd.nist.gov/vuln/detail/CVE-2026-15742)
-  * [CVE-2026-15741](https://nvd.nist.gov/vuln/detail/CVE-2026-15741)
-  * [CVE-2026-14680](https://nvd.nist.gov/vuln/detail/CVE-2026-14680)
-  * [CVE-2026-14679](https://nvd.nist.gov/vuln/detail/CVE-2026-14679)
-  * [CVE-2026-14677](https://nvd.nist.gov/vuln/detail/CVE-2026-14677)
-  * [CVE-2026-14671](https://nvd.nist.gov/vuln/detail/CVE-2026-14671)
-  * [CVE-2026-14670](https://nvd.nist.gov/vuln/detail/CVE-2026-14670)
-  * [CVE-2026-14669](https://nvd.nist.gov/vuln/detail/CVE-2026-14669)
-  * [CVE-2026-14668](https://nvd.nist.gov/vuln/detail/CVE-2026-14668)
-  * [CVE-2026-14664](https://nvd.nist.gov/vuln/detail/CVE-2026-14664)
-  * [CVE-2026-14662](https://nvd.nist.gov/vuln/detail/CVE-2026-14662)
-  * [CVE-2026-6471](https://nvd.nist.gov/vuln/detail/CVE-2026-6471)
-  * [CVE-2026-6464](https://nvd.nist.gov/vuln/detail/CVE-2026-6464)
-
-
-
-Announcement
-
-AlloyDB Omni version 17.10.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) and includes the following:
-
-  * Support for [PostgreSQL version 17.10](https://www.postgresql.org/docs/release/17.10/).
-  * Critical security patches and internal stability improvements.
-  * Support for [advanced query insights](https://docs.cloud.google.com/alloydb/omni/containers/17.10.0/docs/monitor-query-insights) for standalone AlloyDB Omni instances using containers. You can use the `google_insights_v2` extension to access granular metrics, including query execution statistics and wait events, for near real-time performance troubleshooting.
-
-
-
-Security
-
-Fixes for the following vulnerabilities are available for version 17.10.0:
-
-  * [CVE-2026-19385](https://nvd.nist.gov/vuln/detail/CVE-2026-19385)
-  * [CVE-2026-18408](https://nvd.nist.gov/vuln/detail/CVE-2026-18408)
-  * [CVE-2026-16239](https://nvd.nist.gov/vuln/detail/CVE-2026-16239)
-  * [CVE-2026-15742](https://nvd.nist.gov/vuln/detail/CVE-2026-15742)
-  * [CVE-2026-15741](https://nvd.nist.gov/vuln/detail/CVE-2026-15741)
-  * [CVE-2026-14680](https://nvd.nist.gov/vuln/detail/CVE-2026-14680)
-  * [CVE-2026-14679](https://nvd.nist.gov/vuln/detail/CVE-2026-14679)
-  * [CVE-2026-14677](https://nvd.nist.gov/vuln/detail/CVE-2026-14677)
-  * [CVE-2026-14671](https://nvd.nist.gov/vuln/detail/CVE-2026-14671)
-  * [CVE-2026-14670](https://nvd.nist.gov/vuln/detail/CVE-2026-14670)
-  * [CVE-2026-14669](https://nvd.nist.gov/vuln/detail/CVE-2026-14669)
-  * [CVE-2026-14668](https://nvd.nist.gov/vuln/detail/CVE-2026-14668)
-  * [CVE-2026-14664](https://nvd.nist.gov/vuln/detail/CVE-2026-14664)
-  * [CVE-2026-14662](https://nvd.nist.gov/vuln/detail/CVE-2026-14662)
-  * [CVE-2026-6471](https://nvd.nist.gov/vuln/detail/CVE-2026-6471)
-  * [CVE-2026-6464](https://nvd.nist.gov/vuln/detail/CVE-2026-6464)
-
-
-
-Announcement
-
 The [AlloyDB Omni Kubernetes operator](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/deploy-kubernetes) version 1.9.0 is generally available ([GA](https://docs.cloud.google.com/products#product-launch-stages)). Version 1.9.0 includes the following features and changes:
 
 AlloyDB Omni provides support for the following new PostgreSQL minor versions:
@@ -235,16 +155,6 @@ AlloyDB Omni provides support for the following new PostgreSQL minor versions:
 
 
 
-Announcement
-
-AlloyDB Omni version 16.14.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) and includes the following:
-
-  * Support for [PostgreSQL version 16.14](https://www.postgresql.org/docs/release/16.14/).
-  * Critical security patches and internal stability improvements.
-  * Support for [advanced query insights](https://docs.cloud.google.com/alloydb/omni/containers/16.14.0/docs/monitor-query-insights) for standalone AlloyDB Omni instances using containers. You can use the `google_insights_v2` extension to access granular metrics, including query execution statistics and wait events, for near real-time performance troubleshooting.
-
-
-
 Change
 
   * The `DBCluster` custom resource now supports configuring CPU and memory resource limits for [PgBouncer](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/use-connection-pooler-kubernetes) and [system control plane agents](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/configure-log-rotation) such as the `logrotate` agent.
@@ -253,29 +163,6 @@ Change
   * The `TdeConfig` custom resource now supports Thales CipherTrust Manager as an external Key Management Service (KMS) provider for Transparent Data Encryption (TDE), in addition to HashiCorp Vault. For more information, see [Create a TDE-enabled cluster](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/create-tde-cluster).
   * Cross-data-center replication now supports auto-heal of standbys. For more information, see [Work with cross-data-center replication](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/cross-data-center-replication/work-with-cross-data-center-replication).
   * The `DBCluster` custom resource now supports using external, non-cert-manager custom issuer kinds, for example, `VenafiIssuer` from the `jetstack.io` API group. For more information, see [Configure custom issuers](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/manage-certificates-kubernetes-operator#configure-custom-issuer).
-
-
-
-Security
-
-Fixes for the following vulnerabilities are available for version 16.14.0:
-
-  * [CVE-2026-19385](https://nvd.nist.gov/vuln/detail/CVE-2026-19385)
-  * [CVE-2026-18408](https://nvd.nist.gov/vuln/detail/CVE-2026-18408)
-  * [CVE-2026-16239](https://nvd.nist.gov/vuln/detail/CVE-2026-16239)
-  * [CVE-2026-15742](https://nvd.nist.gov/vuln/detail/CVE-2026-15742)
-  * [CVE-2026-15741](https://nvd.nist.gov/vuln/detail/CVE-2026-15741)
-  * [CVE-2026-14680](https://nvd.nist.gov/vuln/detail/CVE-2026-14680)
-  * [CVE-2026-14679](https://nvd.nist.gov/vuln/detail/CVE-2026-14679)
-  * [CVE-2026-14677](https://nvd.nist.gov/vuln/detail/CVE-2026-14677)
-  * [CVE-2026-14671](https://nvd.nist.gov/vuln/detail/CVE-2026-14671)
-  * [CVE-2026-14670](https://nvd.nist.gov/vuln/detail/CVE-2026-14670)
-  * [CVE-2026-14669](https://nvd.nist.gov/vuln/detail/CVE-2026-14669)
-  * [CVE-2026-14668](https://nvd.nist.gov/vuln/detail/CVE-2026-14668)
-  * [CVE-2026-14664](https://nvd.nist.gov/vuln/detail/CVE-2026-14664)
-  * [CVE-2026-14662](https://nvd.nist.gov/vuln/detail/CVE-2026-14662)
-  * [CVE-2026-6471](https://nvd.nist.gov/vuln/detail/CVE-2026-6471)
-  * [CVE-2026-6464](https://nvd.nist.gov/vuln/detail/CVE-2026-6464)
 
 
 
@@ -316,42 +203,9 @@ Backported fixes for the following vulnerabilities in the kernel images:
 
 
 
-Announcement
-
-AlloyDB Omni version 15.18.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) and includes the following:
-
-  * Support for [PostgreSQL version 15.18](https://www.postgresql.org/docs/release/15.18/).
-  * Critical security patches and internal stability improvements.
-  * Support for [advanced query insights](https://docs.cloud.google.com/alloydb/omni/containers/15.18.0/docs/monitor-query-insights) for standalone AlloyDB Omni instances using containers. You can use the `google_insights_v2` extension to access granular metrics, including query execution statistics and wait events, for near real-time performance troubleshooting.
-
-
-
 Fixed
 
 Resolved an issue where the `logrotate-agent` could fail or hang during high audit log volumes, such as when `pgaudit.log` is set to `all`, which could lead to `logrotate-agent` out-of-memory errors, unbounded log growth, and disk exhaustion. The log rotate workflow has been improved, and resource limits for sidecar containers are now configurable to prevent resource constraints. For more information about the operator's logging mechanism and supported parameters, see [Configure log rotation](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/configure-log-rotation).
-
-Security
-
-Fixes for the following vulnerabilities are available for version 15.18.0:
-
-  * [CVE-2026-19385](https://nvd.nist.gov/vuln/detail/CVE-2026-19385)
-  * [CVE-2026-18408](https://nvd.nist.gov/vuln/detail/CVE-2026-18408)
-  * [CVE-2026-16239](https://nvd.nist.gov/vuln/detail/CVE-2026-16239)
-  * [CVE-2026-15742](https://nvd.nist.gov/vuln/detail/CVE-2026-15742)
-  * [CVE-2026-15741](https://nvd.nist.gov/vuln/detail/CVE-2026-15741)
-  * [CVE-2026-14680](https://nvd.nist.gov/vuln/detail/CVE-2026-14680)
-  * [CVE-2026-14679](https://nvd.nist.gov/vuln/detail/CVE-2026-14679)
-  * [CVE-2026-14677](https://nvd.nist.gov/vuln/detail/CVE-2026-14677)
-  * [CVE-2026-14671](https://nvd.nist.gov/vuln/detail/CVE-2026-14671)
-  * [CVE-2026-14670](https://nvd.nist.gov/vuln/detail/CVE-2026-14670)
-  * [CVE-2026-14669](https://nvd.nist.gov/vuln/detail/CVE-2026-14669)
-  * [CVE-2026-14668](https://nvd.nist.gov/vuln/detail/CVE-2026-14668)
-  * [CVE-2026-14664](https://nvd.nist.gov/vuln/detail/CVE-2026-14664)
-  * [CVE-2026-14662](https://nvd.nist.gov/vuln/detail/CVE-2026-14662)
-  * [CVE-2026-6471](https://nvd.nist.gov/vuln/detail/CVE-2026-6471)
-  * [CVE-2026-6464](https://nvd.nist.gov/vuln/detail/CVE-2026-6464)
-
-
 
 Issue
 
@@ -455,36 +309,9 @@ Updated the [Database version policies](https://docs.cloud.google.com/alloydb/om
 
 Announcement
 
-External search with AlloyDB Omni now supports [OpenSearch](https://docs.cloud.google.com/alloydb/omni/containers/18.3.0/docs/ai/opensearch) in [Preview](https://cloud.google.com/products#product-launch-stages). You can use the [`external_search_fdw`](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/reference/extensions#external_search_fdw) extension to connect to a OpenSearch cluster and query its data directly from your database.
-
-Announcement
-
 External search with AlloyDB Omni now supports [OpenSearch](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.3.0/docs/ai/opensearch) in [Preview](https://cloud.google.com/products#product-launch-stages). You can use the [`external_search_fdw`](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/reference/extensions#external_search_fdw) extension to connect to a OpenSearch cluster and query its data directly from your database.
 
 ## July 15, 2026
-
-Announcement
-
-[AlloyDB Omni](https://docs.cloud.google.com/alloydb/omni/containers/18.3.0/docs/overview) version 18.3.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)). Version 18.3.0 includes the following features and changes:
-
-  * AlloyDB Omni includes support for [PostgreSQL version 18.3](https://www.postgresql.org/docs/release/18.3/).
-  * [Transparent Data Encryption](https://docs.cloud.google.com/alloydb/omni/containers/18.3.0/docs/transparent-data-encryption-omni) is promoted to generally available ([GA](https://docs.cloud.google.com/products#product-launch-stages)). TDE protects data-at-rest by automatically encrypting database files, backups, and cache spillover to disk.
-  * External search with AlloyDB Omni now supports Apache [Solr](https://docs.cloud.google.com/alloydb/omni/containers/18.3.0/docs/ai/solr-search) in [Preview](https://cloud.google.com/products#product-launch-stages). You can use the [`external_search_fdw`](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/reference/extensions#external_search_fdw) extension to connect to a Solr cluster and query its data directly from your database.
-
-
-
-Change
-
-Updated the [Database version policies](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/db-version-policies) to reflect support for version 18.3.0.
-
-Announcement
-
-[AlloyDB Omni](https://docs.cloud.google.com/alloydb/omni/containers/17.9.0/docs/overview) version 17.9.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)). Version 17.9.0 includes the following features and changes:
-
-  * AlloyDB Omni includes support for [PostgreSQL version 17.9](https://www.postgresql.org/docs/release/17.9/).
-  * External search with AlloyDB Omni now supports Apache [Solr](https://docs.cloud.google.com/alloydb/omni/containers/17.9.0/docs/ai/solr-search) in [Preview](https://cloud.google.com/products#product-launch-stages). You can use the [`external_search_fdw`](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/reference/extensions#external_search_fdw) extension to connect to a Solr cluster and query its data directly from your database.
-
-
 
 Announcement
 
@@ -518,10 +345,6 @@ Fixed
 
 Fixed an issue where rotating internal certificates caused TLS verification failures across database workloads and disrupted control plane management. The operator and its agents now automatically reload TLS configurations after related certificates are rotated.
 
-Announcement
-
-[AlloyDB Omni](https://docs.cloud.google.com/alloydb/omni/containers/16.13.0/docs/overview) version 16.13.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) and supports [PostgreSQL version 16.13](https://www.postgresql.org/docs/release/16.13/).
-
 Deprecated
 
 The legacy high availability (HA) implementation in versions 15.7.0 and earlier is deprecated. Legacy HA database clusters remain supported until their sunset date, which is to be announced.
@@ -538,10 +361,6 @@ If your cluster does not have this annotation, you can migrate to the latest HA 
 
 
 After completing these steps, verify that the new annotation is present on your database cluster.
-
-Announcement
-
-[AlloyDB Omni](https://docs.cloud.google.com/alloydb/omni/containers/15.17.0/docs/overview) version 15.17.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) and supports [PostgreSQL version 15.17](https://www.postgresql.org/docs/release/15.17/).
 
 ## July 07, 2026
 
@@ -588,31 +407,6 @@ Feature
 
 AlloyDB Omni documentation now includes documentation for the following AlloyDB AI features available in [GA](https://cloud.google.com/products#product-launch-stages):
 
-  * [Auto vector embeddings](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/ai/generate-manage-auto-embeddings-for-tables) automate the lifecycle of vector embeddings for large datasets, keeping them in sync with transactional data using real-time or batch updates. This feature includes a bulk mode that performs refreshes and migrations up to 130x faster than row-by-row processing."
-
-  * [AI functions](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/ai/evaluate-semantic-queries-ai-operators) integrate LLMs like Gemini to bring world knowledge to your AlloyDB data and incorporate advanced semantic search and ranking capabilities directly into your SQL workflows.
-
-  * Use array-based AI functions to improve the efficiency of large-scale AI operations by enabling batch processing of natural language prompts in your SQL queries. For more information, see [Perform intelligent SQL queries using AI functions](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/ai/evaluate-semantic-queries-ai-operators).
-
-
-
-
-Feature
-
-AlloyDB Omni documentation now includes documentation for the following AlloyDB AI features, which are available in [Preview](https://cloud.google.com/products#product-launch-stages):
-
-  * The AlloyDB columnar engine provides a read-optimized, in-memory cache for HNSW indexes, increasing the number of queries per second (QPS) that your database can handle for vector search workloads. For more information, see [Accelerate vector search with the columnar engine](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/ai/accelerate-with-ce).
-  * Hybrid search supports Elasticsearch, which lets you use the `external_search_fdw` extension to connect to Elasticsearch and perform hybrid searches in AlloyDB. For more information, see [Access Elasticsearch data from AlloyDB](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/elastic-search).
-  * The sentiment analysis and summarization functions let you process and analyze unstructured data in your database. For more information, see [Analyze text sentiment](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/ai/analyze-sentiment) and [Summarize content](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/ai/summarize-content).
-  * You can defer ScaNN index creation on an empty table or a table with insufficient rows until the table has sufficient data. For more information, see [Create a ScaNN index](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/ai/create-scann-index).
-  * The alloydb_scann extension now supports four-level tree indexes, providing support for tables with up to 10 billion vector rows. For more information, see [Four-level ScaNN tree indexes](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/ai/create-scann-index#create-scann-index-manual).
-
-
-
-Feature
-
-AlloyDB Omni documentation now includes documentation for the following AlloyDB AI features available in [GA](https://cloud.google.com/products#product-launch-stages):
-
   * [Auto vector embeddings](https://docs.cloud.google.com/alloydb/omni/linux/18.1.0/docs/ai/generate-manage-auto-embeddings-for-tables) automate the lifecycle of vector embeddings for large datasets, keeping them in sync with transactional data using real-time or batch updates. This feature includes a bulk mode that performs refreshes and migrations up to 130x faster than row-by-row processing."
 
   * [AI functions](https://docs.cloud.google.com/alloydb/omni/linux/18.1.0/docs/ai/evaluate-semantic-queries-ai-operators) integrate LLMs like Gemini to bring world knowledge to your AlloyDB data and incorporate advanced semantic search and ranking capabilities directly into your SQL workflows.
@@ -636,18 +430,6 @@ AlloyDB Omni documentation includes documentation for the following AlloyDB AI f
 
 
 
-## June 03, 2026
-
-Announcement
-
-The [AlloyDB Omni Kubernetes operator](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/deploy-kubernetes) version 1.7.1 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)) and includes the following vulnerability fixes:
-
-  * [CVE-2026-32288](https://nvd.nist.gov/vuln/detail/CVE-2026-32288) by upgrading to Golang Version [1.26.2](https://go.dev/doc/devel/release#go1.26.minor).
-  * [CVE-2026-4878](https://nvd.nist.gov/vuln/detail/CVE-2026-4878) (`libcap`).
-  * [CVE-2026-40356](https://nvd.nist.gov/vuln/detail/CVE-2026-40356) (`krb5-libs`) in the `g-pgbouncer` container image.
-
-
-
 ## May 27, 2026
 
 Announcement
@@ -660,21 +442,6 @@ AlloyDB Omni using RPM version 18.1.1 is generally available ([GA](https://cloud
 
   * Reduced the RPM bundle size resulting in faster download times and improved deployment efficiency.
 
-
-
-
-## May 08, 2026
-
-Announcement
-
-The AlloyDB Omni Kubernetes operator (version 1.7.0) is officially certified for Red Hat OpenShift. The operator and its associated database images are validated to run optimally and securely on Red Hat OpenShift.
-
-This release includes the following:
-
-  * OpenShift Certified Catalog: the AlloyDB Omni Operator is now officially listed on the [OpenShift Certified Catalog](https://catalog.redhat.com/en/software/container-stacks/detail/6837eb3b9137db6941d32436#overview).
-  * Built-in management: discover, install, and manage the operator using OpenShift's built-in Operator Lifecycle Manager (OLM) user interface.
-  * OLM support: support for OLM bundles is available, facilitating a seamless, one-click installation experience and automated management for enterprise deployments. For more information, see [Install the AlloyDB Omni operator](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/deploy-kubernetes#olm_1).
-  * This certification is supported by AlloyDB Omni versions starting with 16.11.0, 17.7.0, and 18.1.0.
 
 
 
@@ -741,46 +508,7 @@ Red Hat RPM orchestrator |  AlloyDB Omni using the RPM orchestrator
   
 This update clarifies the distinction between AlloyDB Omni deployment environments (such as Kubernetes or standalone Linux) and the packaging and orchestration technologies used to manage them. For more information, see [Choose your deployment environment](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment).
 
-Change
-
-The naming conventions for AlloyDB Omni deployment options are updated to more accurately reflect their respective installation and orchestration methods.  
-The following table summarizes the primary name changes:
-
-**Original name** |  **New name**  
----|---  
-AlloyDB Omni for containers |  AlloyDB Omni using containers  
-AlloyDB Omni for Kubernetes |  AlloyDB Omni using the container orchestrator  
-AlloyDB Omni for Linux |  AlloyDB Omni using RPM  
-Red Hat RPM orchestrator |  AlloyDB Omni using the RPM orchestrator  
-  
-This update clarifies the distinction between AlloyDB Omni deployment environments (such as Kubernetes or standalone Linux) and the packaging and orchestration technologies used to manage them. For more information, see [Choose your deployment environment](https://docs.cloud.google.com/alloydb/omni/docs/choose-deployment).
-
 ## April 09, 2026
-
-Announcement
-
-The [AlloyDB Omni Kubernetes operator](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/deploy-kubernetes) version 1.7.0 is generally available ([GA](https://docs.cloud.google.com/products#product-launch-stages)) and includes the following features and changes:
-
-  * AlloyDB Omni supports PostgreSQL 18.1.0. For more information, see [AlloyDB Omni Kubernetes operator](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/overview). This operator version also supports AlloyDB Omni minor versions 15.15.0, 16.11.0, and 17.7.0.
-  * Enterprise readiness for AlloyDB Omni on [Google Distributed Cloud Software Only](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs) lets the operator manage the full database lifecycle, including [provisioning](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/deploy-kubernetes), [high availability](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/high-availability/setup), and [disaster recovery](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/cross-data-center-replication/about-cross-data-center-replication), directly on your own physical bare metal infrastructure.
-  * Database pods feature a hardened security posture with restricted Kubernetes `securityContext` settings enabled by default, including non-root execution and read-only root filesystems.
-  * Added support for Transparent Data Encryption (TDE) ([Preview](https://cloud.google.com/products#product-launch-stages)), providing at-rest encryption for database clusters. This is available beginning with AlloyDB Omni 18.1.0. For more information, see [Transparent Data Encryption](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/transparent-data-encryption-omni).
-  * Added support for custom configuration of database port numbers for your clusters. For more information, see [Configure custom ports](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/run-connect).
-  * Introduced a framework for defining and collecting custom database metrics to enhance monitoring capabilities. For more information, see [Configure custom metrics](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/improve-observability-custom-monitoring-metrics).
-  * Added detailed memory allocation metrics for improved memory and performance monitoring. For more information, see [AlloyDB Omni metrics](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/reference/omni-metrics).
-  * Improved Active Directory integration with support for `hostssl` connection types, multi-domain LDAP base DNs, and customizable LDAP search attributes. For more information, see [Integrate Active Directory](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/integrate-active-directory-kubernetes-operator).
-  * Added support for rewind trigger functionality in symmetric disaster recovery configurations. For more information, see [Work with cross-data-center replication](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/cross-data-center-replication/work-with-cross-data-center-replication).
-  * You can perform CPU and memory scaling operations with minimal downtime using Low Downtime Maintenance ([Preview](https://cloud.google.com/products#product-launch-stages)). For more information, see [Scale a database cluster](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/deploy-kubernetes#scale).
-  * Additional [database flags](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/reference/database-flags) are supported.
-  * All current and earlier versions of Helm charts are available in the [Artifact Registry](https://pantheon.corp.google.com/artifacts/docker/alloydb-omni/us/gcr.io/alloydbomni-operator?rapt=AEjHL4NMzSdtsKxud4VKouvR3VJJHW7nf35vtrNV5vp_Ct9bJQYJFIb2a-TObQ1goelzrCPt-J2NFHHDIsEcsykeHublDMDJHkxtsSegSCNviRr4MyZExiQ). However, Helm charts are no longer available in Cloud Storage.
-  * Updated manual major version upgrade instructions to use versioned data directory paths. For more information, see [Upgrade database major version](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/upgrade-kubernetes-database-major-version).
-  * Updated [Choose compatible Kubernetes operator and database cluster versions](https://docs.cloud.google.com/alloydb/omni/kubernetes/18.1.0/docs/choose-compatible-versions) with latest versions.
-
-
-
-Change
-
-The AlloyDB Omni Kubernetes operator now automatically scales the `wal_keep_size` and `max_wal_size` database flags based on your configured storage size to optimize storage and [checkpointing](https://www.postgresql.org/docs/current/wal-configuration.html) behavior. If you [manually configure these flags](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/configure-database-flags), your custom values are respected and override the system-selected defaults.
 
 Announcement
 
@@ -801,12 +529,6 @@ Announcement
 
 
 
-Fixed
-
-Reliability improvement for backups from standby instances: Fixed an issue in the AlloyDB Omni Kubernetes operator version 1.7.0 where backups taken from a standby instance could be incomplete if the primary instance were under heavy load. The backup process now performs a checkpoint before starting to ensure data integrity.
-
-Upgrade required: If you use the backup from standby feature, upgrade to the latest versions of the AlloyDB Omni control plane and data plane. After you perform the upgrade, take a new backup to make sure that your data is fully protected.
-
 Announcement
 
 [AlloyDB Omni](https://docs.cloud.google.com/alloydb/omni/containers/16.11.0/docs/overview) version 16.11.0 is generally available ([GA](https://cloud.google.com/products#product-launch-stages)). Version 16.11.0 includes the following features and changes:
@@ -815,10 +537,6 @@ Announcement
   * Support for additional [database flags](https://docs.cloud.google.com/alloydb/omni/containers/16.11.0/docs/reference/database-flags).
 
 
-
-Issue
-
-Restore operations might fail if a database backup is running at the same time. If this occurs, retry the restore operation after some delay.
 
 Announcement
 
@@ -862,37 +580,6 @@ Version 18.1.0 includes the following features and changes:
 
   * AlloyDB Omni only supports the `io_method` of worker and sync mode, with worker as default.
 
-
-
-
-## March 05, 2026
-
-Security
-
-The [AlloyDB Omni Kubernetes operator](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/deploy-kubernetes) version 1.6.3 is generally available ([GA](https://docs.cloud.google.com/products#product-launch-stages)) and includes the following security fixes:
-
-  * A security fix for [CVE-2025-68121](https://security-tracker.debian.org/tracker/CVE-2025-68121) is implemented.
-
-
-
-## February 25, 2026
-
-Announcement
-
-The [AlloyDB Omni Kubernetes operator](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/deploy-kubernetes) version 1.6.2 is generally available ([GA](https://docs.cloud.google.com/products#product-launch-stages)) and includes the following bug fixes:
-
-  * Fixed an issue in Kubernetes clusters where, in some cases, a large number of database parameters in a DBCluster manifest caused redundant configuration updates and reloads, potentially slowing down other operations.
-
-
-
-## February 13, 2026
-
-Announcement
-
-The [AlloyDB Omni Kubernetes operator](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/deploy-kubernetes) version 1.6.1 is generally available ([GA](https://docs.cloud.google.com/products#product-launch-stages)) and includes the following bug fixes:
-
-  * Resolved Kubernetes secret resource quota overcounting by improving Kubernetes client logic and by reducing secret churn.
-  * Fixed PgBouncer status flapping and continuous reconciler requests.
 
 
 
@@ -1785,6 +1472,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

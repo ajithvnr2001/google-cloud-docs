@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-label-detection-gcs/
 title: Detect labels in a Cloud Storage file \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:21.480595+00:00
+fetched_at: 2026-10-23T09:37:41.343330+00:00
 ---
 
 # Detect labels in a Cloud Storage file  |  Cloud Vision API  |  Google Cloud Documentation
@@ -125,6 +125,79 @@ To authenticate to Vision, set up Application Default Credentials. For more info
             }
           }
         }
+      }
+    }
+
+### Kotlin
+    
+    
+    import com.google.api.gax.rpc.ApiException
+    import com.google.api.gax.rpc.InvalidArgumentException
+    import com.google.cloud.vision.v1.AnnotateImageRequest
+    import com.google.cloud.vision.v1.Feature
+    import com.google.cloud.vision.v1.Image
+    import com.google.cloud.vision.v1.ImageAnnotatorClient
+    import com.google.cloud.vision.v1.ImageSource
+    import java.io.IOException
+    
+    /**
+     * Detects labels in an image stored in Google Cloud Storage using Cloud Vision.
+     * Referencing a Cloud Storage URI avoids transferring raw image bytes from the
+     * client workstation.
+     *
+     * @param gcsUri Cloud Storage URI of the target image (for example, "gs://example-bucket/example-image.jpg").
+     */
+    fun annotateImage(gcsUri: String) {
+      val imageSource = ImageSource.newBuilder().setGcsImageUri(gcsUri).build()
+      val image = Image.newBuilder().setSource(imageSource).build()
+    
+      // Limit label detection to 5 results to return only high-confidence annotations.
+      val feature =
+        Feature.newBuilder()
+          .setType(Feature.Type.LABEL_DETECTION)
+          .setMaxResults(5)
+          .build()
+      val request =
+          AnnotateImageRequest.newBuilder()
+            .addFeatures(feature)
+            .setImage(image)
+            .build()
+    
+      try {
+        ImageAnnotatorClient.create().use { client ->
+          val response = client.batchAnnotateImages(listOf(request))
+          val imageResponse = response.responsesList.firstOrNull()
+    
+          if (imageResponse == null) {
+            System.err.println(
+              "error: no response received from Vision API for image '$gcsUri'"
+            )
+          } else if (imageResponse.hasError()) {
+            System.err.println(
+              "error: annotation failed for image '$gcsUri': ${imageResponse.error.message}"
+            )
+          } else {
+            println("Resource ID: $gcsUri")
+            println("Annotation Count: ${imageResponse.labelAnnotationsCount}")
+            for (annotation in imageResponse.labelAnnotationsList) {
+              println("Description: ${annotation.description}")
+              println("Mid: ${annotation.mid}")
+              println("Score: ${annotation.score}")
+            }
+          }
+        }
+      } catch (err: InvalidArgumentException) {
+        System.err.println(
+          "error: invalid annotation request for image '$gcsUri': ${err.message}"
+        )
+      } catch (err: ApiException) {
+        System.err.println(
+          "error: failed to annotate image '$gcsUri': ${err.message}"
+        )
+      } catch (err: IOException) {
+        System.err.println(
+          "error: failed to initialize Vision client for image '$gcsUri': ${err.message}"
+        )
       }
     }
 

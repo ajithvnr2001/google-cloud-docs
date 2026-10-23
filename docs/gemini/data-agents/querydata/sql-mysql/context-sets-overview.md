@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/querydata/sql-mysql/context-sets-overview/
 title: Context sets overview \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:46.203098+00:00
+fetched_at: 2026-10-23T13:08:59.855979+00:00
 ---
 
 # Context sets overview  |  Data Agents  |  Google Cloud Documentation

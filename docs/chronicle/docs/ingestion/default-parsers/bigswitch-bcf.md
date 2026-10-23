@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/bigswitch-bcf/
 title: Collect Big Switch BigCloudFabric logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:05.980045+00:00
+fetched_at: 2026-10-23T13:20:22.317492+00:00
 ---
 
 # Collect Big Switch BigCloudFabric logs  |  Google Security Operations  |  Google Cloud Documentation

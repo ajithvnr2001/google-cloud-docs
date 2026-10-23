@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/samples/cloudrun-service-configuration-h2c/
 title: Configure HTTP/2 \u00a0|\u00a0 Cloud Run \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:54.895285+00:00
+fetched_at: 2026-10-23T09:58:30.577688+00:00
 ---
 
 # Configure HTTP/2  |  Cloud Run  |  Google Cloud Documentation

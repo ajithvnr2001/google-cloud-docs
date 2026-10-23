@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-enable-secret-version/
 title: Enable secret version \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:46.818013+00:00
+fetched_at: 2026-10-23T09:01:52.260557+00:00
 ---
 
 # Enable secret version  |  Secret Manager  |  Google Cloud Documentation

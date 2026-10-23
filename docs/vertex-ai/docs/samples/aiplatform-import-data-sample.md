@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-import-data-sample/
 title: Import data \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:28.570995+00:00
+fetched_at: 2026-10-23T09:26:59.851197+00:00
 ---
 
 # Import data  |  Vertex AI  |  Google Cloud Documentation

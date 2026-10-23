@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/a2ui-agents/a2ui-component-gallery-reference/
 title: A2UI component gallery reference \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:50.593646+00:00
+fetched_at: 2026-10-23T13:11:27.253337+00:00
 ---
 
 # A2UI component gallery reference  |  Gemini Enterprise  |  Google Cloud Documentation

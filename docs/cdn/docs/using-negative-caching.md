@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/using-negative-caching/
 title: Use negative caching \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:52.428105+00:00
+fetched_at: 2026-10-23T13:20:02.453663+00:00
 ---
 
 # Use negative caching  |  Cloud CDN  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/notion/data-store/
 title: Set up a Notion data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:38:01.018772+00:00
+fetched_at: 2026-10-23T13:11:55.185124+00:00
 ---
 
 # Set up a Notion data store  |  Gemini Enterprise  |  Google Cloud Documentation

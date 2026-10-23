@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/deploy/whatsapp/
 title: WhatsApp and Instagram \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:31.861923+00:00
+fetched_at: 2026-10-23T13:12:04.136518+00:00
 ---
 
 # WhatsApp and Instagram  |  Google Cloud Documentation

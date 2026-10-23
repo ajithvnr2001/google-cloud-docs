@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/understand-your-bills-and-charges/
 title: Understand your bills and charges \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:47.388747+00:00
+fetched_at: 2026-10-23T13:10:32.491881+00:00
 ---
 
 # Understand your bills and charges  |  Cloud Identity  |  Google Cloud Documentation

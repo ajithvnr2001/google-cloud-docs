@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/samples/cloudrun-tips-global-lazy/
 title: Lazy variable initialization \u00a0|\u00a0 Cloud Run \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:15:36.951626+00:00
+fetched_at: 2026-10-23T09:58:05.341100+00:00
 ---
 
 # Lazy variable initialization  |  Cloud Run  |  Google Cloud Documentation

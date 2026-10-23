@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-connect-kubernetes-api-request/
 title: Connector for Kubernetes API \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:00:49.885989+00:00
+fetched_at: 2026-10-23T08:58:03.531629+00:00
 ---
 
 # Connector for Kubernetes API  |  Workflows  |  Google Cloud Documentation

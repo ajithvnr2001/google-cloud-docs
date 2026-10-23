@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/configure-enrichment-connectors/
 title: Configure external connectors for enrichment tasks \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:21:48.620526+00:00
+fetched_at: 2026-10-23T12:50:59.926106+00:00
 ---
 
 # Configure external connectors for enrichment tasks  |  Knowledge Catalog  |  Google Cloud Documentation

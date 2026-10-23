@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-query-graph-data-with-parameter/
 title: Query data in a graph with a parameter \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:26.452014+00:00
+fetched_at: 2026-10-23T10:10:20.911926+00:00
 ---
 
 # Query data in a graph with a parameter  |  Spanner  |  Google Cloud Documentation

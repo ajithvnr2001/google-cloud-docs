@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/get-started/authorization-access-control/
 title: Authorization and access control \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:14:44.078930+00:00
+fetched_at: 2026-10-23T12:55:46.079998+00:00
 ---
 
 # Authorization and access control  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation

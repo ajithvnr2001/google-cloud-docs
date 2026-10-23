@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/service-mesh/v1.20/docs/supported-features/
 title: In-cluster control plane supported features \u00a0|\u00a0 Cloud Service Mesh v1.20 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:38:36.301532+00:00
+fetched_at: 2026-10-23T11:31:54.122483+00:00
 ---
 
 # In-cluster control plane supported features  |  Cloud Service Mesh v1.20  |  Google Cloud Documentation
@@ -57,7 +57,7 @@ Release version | Release date | Earliest end of life date
 1.19 | [October 31, 2023](https://docs.cloud.google.com/service-mesh/docs/release-notes#October_31_2023) | July 31, 2024  
 1.18 | [August 3, 2023](https://docs.cloud.google.com/service-mesh/docs/release-notes#August_03_2023) | June 1, 2024  
   
-If you are on an unsupported version of Cloud Service Mesh, then you must upgrade to Cloud Service Mesh 1.28 or later. For information on how to upgrade, see [Upgrade Cloud Service Mesh](https://docs.cloud.google.com/service-mesh/v1.20/docs/unified-install/upgrade).
+If you are on an unsupported version of Cloud Service Mesh, then you must upgrade to Cloud Service Mesh 1.29 or later. For information on how to upgrade, see [Upgrade Cloud Service Mesh](https://docs.cloud.google.com/service-mesh/v1.20/docs/unified-install/upgrade).
 
 The following table shows the unsupported versions of Cloud Service Mesh and their end-of-life (EOL) date.
 
@@ -368,6 +368,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

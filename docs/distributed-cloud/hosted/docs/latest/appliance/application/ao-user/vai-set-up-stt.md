@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/vai-set-up-stt/
 title: Set up a speech recognition project \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:15:41.149653+00:00
+fetched_at: 2026-10-23T12:51:06.305802+00:00
 ---
 
 # Set up a speech recognition project  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation
@@ -23,14 +23,7 @@ Send feedback
 
 #  Set up a speech recognition project Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page helps you set up a project to use the Speech-to-Text service. This process includes creating a project, enabling the Speech-to-Text API, installing client libraries, defining environment variables, and authenticating your credentials. If you are new to Vertex AI, [learn more about speech recognition features](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/vertex-ai-stt).
-
-You set up a speech recognition project using the GDC console and gdcloud CLI as follows:
-
-  * **GDC console** : Enable the Speech-to-Text API and view the service status and endpoint.
-  * **The gdcloud CLI** : Configure service accounts to interact with the Speech-to-Text API, install client libraries, and authenticate API requests.
-
-
+Speech-to-Text in Google Distributed Cloud (GDC) air-gapped appliance lets you transcribe audio files into text in your applications. After creating a project and requesting developer roles, enable the Speech-to-Text API in the GDC console to view the service status and endpoint. You can then install the Python client library, define environment variables, and use the gdcloud CLI to configure service accounts and authenticate requests. If you are new to Vertex AI, see [Learn about speech recognition features](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/application/ao-user/vertex-ai-stt).
 
 ## Create a project
 
@@ -122,6 +115,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

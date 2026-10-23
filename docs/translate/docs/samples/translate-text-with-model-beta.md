@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/translate/docs/samples/translate-text-with-model-beta/
 title: Translate text with model (V3 Beta) \u00a0|\u00a0 Cloud Translation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:26:25.595553+00:00
+fetched_at: 2026-10-23T08:58:55.725444+00:00
 ---
 
 # Translate text with model (V3 Beta)  |  Cloud Translation  |  Google Cloud Documentation

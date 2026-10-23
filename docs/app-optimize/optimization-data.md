@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-optimize/optimization-data/
 title: About cost and utilization data \u00a0|\u00a0 App Optimize \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:41.115050+00:00
+fetched_at: 2026-10-23T13:18:39.438121+00:00
 ---
 
 # About cost and utilization data  |  App Optimize  |  Google Cloud Documentation

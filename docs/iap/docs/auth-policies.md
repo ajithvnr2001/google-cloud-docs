@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/auth-policies/
 title: Use authorization policies to delegate authorization to IAP and IAM \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:27:58.182173+00:00
+fetched_at: 2026-10-23T13:10:22.803260+00:00
 ---
 
 # Use authorization policies to delegate authorization to IAP and IAM  |  Identity-Aware Proxy  |  Google Cloud Documentation

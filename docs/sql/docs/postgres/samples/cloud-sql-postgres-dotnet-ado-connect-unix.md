@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/samples/cloud-sql-postgres-dotnet-ado-connect-unix/
 title: Create a socket connection when using ADO.NET \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:36.779123+00:00
+fetched_at: 2026-10-23T10:11:41.731892+00:00
 ---
 
 # Create a socket connection when using ADO.NET  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation

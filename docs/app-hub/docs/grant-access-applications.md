@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/grant-access-applications/
 title: Grant permissions to applications \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:16.095394+00:00
+fetched_at: 2026-10-23T13:14:33.393302+00:00
 ---
 
 # Grant permissions to applications  |  App Hub  |  Google Cloud Documentation

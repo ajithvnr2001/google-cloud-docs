@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/boost-search-results/
 title: Boost search results (Legacy) \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:39.430766+00:00
+fetched_at: 2026-10-23T13:12:43.576501+00:00
 ---
 
 # Boost search results (Legacy)  |  Gemini Enterprise  |  Google Cloud Documentation

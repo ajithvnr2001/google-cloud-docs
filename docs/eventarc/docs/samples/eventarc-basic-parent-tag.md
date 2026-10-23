@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/docs/samples/eventarc-basic-parent-tag/
 title: Trigger a Cloud Run service using Eventarc when an object is uploaded to a Cloud Storage bucket \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:07.277058+00:00
+fetched_at: 2026-10-23T13:00:44.522738+00:00
 ---
 
 # Trigger a Cloud Run service using Eventarc when an object is uploaded to a Cloud Storage bucket  |  Google Cloud Documentation

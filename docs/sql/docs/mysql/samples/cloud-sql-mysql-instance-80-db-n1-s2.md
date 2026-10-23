@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/samples/cloud-sql-mysql-instance-80-db-n1-s2/
 title: Upgrade the database major version in-place \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:41.002251+00:00
+fetched_at: 2026-10-23T10:19:05.896088+00:00
 ---
 
 # Upgrade the database major version in-place  |  Cloud SQL for MySQL  |  Google Cloud Documentation

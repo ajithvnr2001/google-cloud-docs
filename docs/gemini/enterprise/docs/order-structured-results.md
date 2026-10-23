@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/order-structured-results/
 title: Order results from structured data stores (Legacy) \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:07.168768+00:00
+fetched_at: 2026-10-23T13:12:10.804110+00:00
 ---
 
 # Order results from structured data stores (Legacy)  |  Gemini Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/versioning/
 title: GKE versioning and support \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:03:23.575317+00:00
+fetched_at: 2026-10-23T13:08:26.555133+00:00
 ---
 
 # GKE versioning and support  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -428,7 +428,7 @@ _This section applies only to clusters created in the Standard mode. In Autopilo
 
 When you [create or upgrade a node pool](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-pools), you can specify its version. By default, nodes run the same version of GKE as the control plane. Nodes can be no more than two minor versions older than control planes.
 
-With rare exceptions, node versions remain available even if the cluster version is no longer available.
+Earlier patch versions remain available for nodes until the minor version reaches its end of support, even after those versions are no longer available for the control plane. In rare cases, a node version might become unavailable earlier.
 
 ## Control plane 90-day patch policy
 
@@ -514,6 +514,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

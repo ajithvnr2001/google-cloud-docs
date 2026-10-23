@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/monitor-applications/
 title: Monitor application health and performance \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:54.854403+00:00
+fetched_at: 2026-10-23T13:17:37.767613+00:00
 ---
 
 # Monitor application health and performance  |  Application Design Center  |  Google Cloud Documentation

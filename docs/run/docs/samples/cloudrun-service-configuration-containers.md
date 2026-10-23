@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/samples/cloudrun-service-configuration-containers/
 title: Create a Cloud Run service with command and args \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:10:45.995222+00:00
+fetched_at: 2026-10-23T09:42:00.181974+00:00
 ---
 
 # Create a Cloud Run service with command and args  |  Google Cloud Documentation

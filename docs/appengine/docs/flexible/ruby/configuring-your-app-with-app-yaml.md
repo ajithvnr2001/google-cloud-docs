@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/ruby/configuring-your-app-with-app-yaml/
 title: Configuring your app with app.yaml \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:23.424101+00:00
+fetched_at: 2026-10-23T13:17:17.665132+00:00
 ---
 
 # Configuring your app with app.yaml  |  App Engine flexible environment  |  Google Cloud Documentation

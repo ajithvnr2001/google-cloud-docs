@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/local-development/vscode/manage-resources/
 title: Manage resources \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:01.994097+00:00
+fetched_at: 2026-10-23T13:14:24.659099+00:00
 ---
 
 # Manage resources  |  Apigee  |  Google Cloud Documentation

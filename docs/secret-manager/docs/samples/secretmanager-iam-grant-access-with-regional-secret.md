@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-iam-grant-access-with-regional-secret/
 title: IAM grant access with regional secret \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:08.541129+00:00
+fetched_at: 2026-10-23T09:40:32.131336+00:00
 ---
 
 # IAM grant access with regional secret  |  Secret Manager  |  Google Cloud Documentation

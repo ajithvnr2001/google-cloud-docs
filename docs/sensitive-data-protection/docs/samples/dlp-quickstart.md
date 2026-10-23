@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-quickstart/
 title: Client library quickstart \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:40:12.294902+00:00
+fetched_at: 2026-10-23T08:38:23.836719+00:00
 ---
 
 # Client library quickstart  |  Sensitive Data Protection  |  Google Cloud Documentation
@@ -524,7 +524,7 @@ To authenticate to Sensitive Data Protection, set up Application Default Credent
     require "google/cloud/dlp"
     
     # Instantiates a client
-    dlp = Google::Cloud::[Dlp](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-dlp/latest/Google-Cloud-Dlp.html).[dlp_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-dlp/latest/Google-Cloud-Dlp.html)
+    dlp = Google::Cloud::[Dlp](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-dlp-v2/latest/Google-Cloud-Dlp.html).[dlp_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-dlp/latest/Google-Cloud-Dlp.html)
     
     request_configuration = {
       # The types of information to match

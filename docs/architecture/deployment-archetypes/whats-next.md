@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/deployment-archetypes/whats-next/
 title: Google Cloud deployment archetypes: What's next \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:51.906881+00:00
+fetched_at: 2026-10-23T13:18:36.488041+00:00
 ---
 
 # Google Cloud deployment archetypes: What's next  |  Cloud Architecture Center  |  Google Cloud Documentation

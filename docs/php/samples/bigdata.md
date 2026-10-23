@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/php/samples/bigdata/
 title: Big Data code samples \u00a0|\u00a0 PHP \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T15:32:33.298310+00:00
+fetched_at: 2026-10-23T10:04:22.601353+00:00
 ---
 
 # Big Data code samples  |  PHP  |  Google Cloud Documentation

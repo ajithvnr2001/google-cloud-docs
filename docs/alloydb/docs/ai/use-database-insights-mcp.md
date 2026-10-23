@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/use-database-insights-mcp/
 title: Monitor AlloyDB using the Database Insights MCP server \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:24:58.598010+00:00
+fetched_at: 2026-10-23T13:08:34.233171+00:00
 ---
 
 # Monitor AlloyDB using the Database Insights MCP server  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -163,11 +163,11 @@ The Database Insights remote MCP server uses the [OAuth 2.0](https://developers.
 
 The Database Insights remote MCP server doesn't accept API keys.
 
-We recommend that you create a separate identity for agents that are using MCP tools so that access to resources can be controlled and monitored. For more information about authentication, see [Authenticate to MCP servers](https://docs.cloud.google.com/mcp/authenticate-mcps).
+We recommend that you create a separate identity for agents that are using MCP tools so that access to resources can be controlled and monitored. For more information about authentication, see [Authenticate to MCP servers](https://docs.cloud.google.com/mcp/authenticate-mcp).
 
 ## Database Insights MCP OAuth scopes
 
-Database Insights has the following MCP tool OAuth scopes:
+The Database Insights MCP server has the following MCP tool OAuth scopes:
 
 Scope URI for gcloud CLI | Description  
 ---|---  
@@ -184,7 +184,7 @@ In your AI application, look for a way to add or connect to a remote MCP server.
   * **Server name** : Database Insights MCP server
   * **Server URL** or **Endpoint** : `https://databaseinsights.googleapis.com/mcp`
   * **Transport** : [Streamable HTTP](https://modelcontextprotocol.io/specification/latest/basic/transports/streamable-http)
-  * **Authentication details** : depending on how you want to authenticate, you can enter your Google Cloud credentials, your OAuth Client ID and secret, or an agent identity and credentials. For more information about authentication, see [Authenticate to MCP servers](https://docs.cloud.google.com/mcp/authenticate-mcps).
+  * **Authentication details** : depending on how you want to authenticate, you can enter your Google Cloud credentials, your OAuth Client ID and secret, or an agent identity and credentials. For more information about authentication, see [Authenticate to MCP servers](https://docs.cloud.google.com/mcp/authenticate-mcp).
   * **OAuth scope** : the [OAuth 2.0 scope](https://developers.google.com/identity/protocols/oauth2/scopes) that you want to use when connecting to the Database Insights MCP server.
 
 
@@ -200,7 +200,7 @@ For more general guidance, see the following resources:
 
 ## Available tools
 
-To view details of available MCP tools and their descriptions for the Database Insights MCP server, see the [Database Insights MCP reference](https://docs.cloud.google.com/alloydb/docs/reference/mcp/databaseinsights/mcp).
+To view details of available MCP tools and their descriptions for the Database Insights MCP server, see the [Database Insights MCP server reference](https://docs.cloud.google.com/alloydb/docs/reference/mcp/databaseinsights/mcp).
 
 ### List tools
 
@@ -233,7 +233,7 @@ Use the [MCP inspector](https://modelcontextprotocol.io/docs/tools/inspector) to
 
 Replace the following:
 
-  * `TOOLSET_ENDPOINT`: the remainder of the MCP endpoint after the service name. For example, for Database Insights, this might be `mcp/toolset-name`.
+  * `TOOLSET_ENDPOINT`: the remainder of the MCP endpoint after the service name. For example, for the Database Insights MCP server, this might be `mcp/toolset-name`.
   * `MCP_PROTOCOL_VERSION`: the MCP protocol version. For example, `2026-07-28`.
 
 
@@ -250,13 +250,13 @@ You can use the Database Insights MCP server to identify slow queries and unders
 
 "Find the top 5 queries with the highest execution time on my AlloyDB instance in project PROJECT_ID over the last hour."
 
-**Workflow:** The workflow for monitoring query performance includes the following steps:
+**Workflow:** the workflow for monitoring query performance includes the following steps:
 
-  * **Data fetching** : The agent calls the `query_metrics` tool with a PromQL query configured to fetch `alloydb.googleapis.com/database/postgresql/insights/perquery/execution_time`.
+  * **Data fetching** : the agent calls the `query_metrics` tool with a PromQL query configured to fetch `alloydb.googleapis.com/database/postgresql/insights/perquery/execution_time`.
 
-  * **Analysis** : The agent processes the returned time-series data to identify the queries with the highest accumulated execution time.
+  * **Analysis** : the agent processes the returned time-series data to identify the queries with the highest accumulated execution time.
 
-  * **Reporting** : The agent lists the query hashes and their respective execution times, helping you identify potential bottlenecks.
+  * **Reporting** : the agent lists the query hashes and their respective execution times, helping you identify potential bottlenecks.
 
 
 
@@ -269,13 +269,13 @@ You can monitor the resource utilization of your AlloyDB instances to ensure the
 
 "What has been the average CPU utilization and available memory for my AlloyDB instance INSTANCE_ID over the past 24 hours?"
 
-**Workflow** : The workflow for a system health check includes the following steps:
+**Workflow** : the workflow for a system health check includes the following steps:
 
-  * **Metric retrieval** : The agent uses the `system_metrics` tool to fetch `alloydb.googleapis.com/instance/cpu/average_utilization` and `alloydb.googleapis.com/instance/memory/min_available_memory` for the specified instance.
+  * **Metric retrieval** : the agent uses the `system_metrics` tool to fetch `alloydb.googleapis.com/instance/cpu/average_utilization` and `alloydb.googleapis.com/instance/memory/min_available_memory` for the specified instance.
 
-  * **Summarization** : The agent aggregates the data over the 24-hour period.
+  * **Summarization** : the agent aggregates the data over the 24-hour period.
 
-  * **Reporting** : The agent provides a summary of the CPU and memory trends, alerting you if utilization peaked near the limits.
+  * **Reporting** : the agent provides a summary of the CPU and memory trends, alerting you if utilization peaked near the limits.
 
 
 
@@ -378,7 +378,7 @@ Replace `PROJECT_ID` with the Google Cloud project ID. Model Armor doesn't autom
 
 Model Armor floor settings and general configuration can impact more than just MCP. Because Model Armor integrates with services like Vertex AI, any changes you make to floor settings can affect traffic scanning and safety behaviors across all integrated services, not just MCP.
 
-### Control MCP use with IAM policies
+### Control MCP use with Identity and Access Management (IAM) policies
 
 Identity and Access Management (IAM) [deny policies](https://docs.cloud.google.com/iam/docs/deny-overview) and [allow policies](https://docs.cloud.google.com/iam/docs/allow-policies) help you secure Google Cloud and Google MCP servers.
 
@@ -395,7 +395,7 @@ For more information, see [Control MCP use with Identity and Access Management](
 
 ## What's next
 
-  * Read the [Database Insights MCP reference documentation](https://docs.cloud.google.com/alloydb/docs/reference/mcp/databaseinsights/mcp).
+  * Read the [Database Insights MCP server reference documentation](https://docs.cloud.google.com/alloydb/docs/reference/mcp/databaseinsights/mcp).
   * Learn more about [Google Cloud MCP servers](https://docs.cloud.google.com/mcp/overview).
 
 
@@ -404,6 +404,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

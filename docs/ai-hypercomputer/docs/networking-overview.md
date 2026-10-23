@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/networking-overview/
 title: GPU networking overview \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:48.336879+00:00
+fetched_at: 2026-10-23T13:16:22.892254+00:00
 ---
 
 # GPU networking overview  |  AI Hypercomputer  |  Google Cloud Documentation

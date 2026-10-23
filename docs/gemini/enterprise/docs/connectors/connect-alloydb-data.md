@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/connect-alloydb-data/
 title: Connect to data from AlloyDB for PostgreSQL (Preview) \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:11.570803+00:00
+fetched_at: 2026-10-23T13:11:18.932761+00:00
 ---
 
 # Connect to data from AlloyDB for PostgreSQL (Preview)  |  Gemini Enterprise  |  Google Cloud Documentation

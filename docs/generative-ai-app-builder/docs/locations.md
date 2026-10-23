@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/locations/
 title: Agent Search locations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:28.258505+00:00
+fetched_at: 2026-10-23T13:13:33.580882+00:00
 ---
 
 # Agent Search locations  |  Google Cloud Documentation

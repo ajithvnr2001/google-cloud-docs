@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-upload-model-explain-image-managed-container-sample/
 title: Upload a model for explain image managed container \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:47.129854+00:00
+fetched_at: 2026-10-23T09:36:45.210657+00:00
 ---
 
 # Upload a model for explain image managed container  |  Vertex AI  |  Google Cloud Documentation

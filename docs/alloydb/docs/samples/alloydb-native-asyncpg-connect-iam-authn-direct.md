@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-native-asyncpg-connect-iam-authn-direct/
 title: Connect with IAM database authentication and asyncpg \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:27.578124+00:00
+fetched_at: 2026-10-23T10:42:54.735110+00:00
 ---
 
 # Connect with IAM database authentication and asyncpg  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/tutorials/configure-address-groups/
 title: Configure address groups for firewall policies \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:01.262574+00:00
+fetched_at: 2026-10-23T13:12:01.828766+00:00
 ---
 
 # Configure address groups for firewall policies  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

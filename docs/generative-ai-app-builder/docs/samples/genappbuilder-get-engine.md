@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/samples/genappbuilder-get-engine/
 title: Get an app \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:43.694403+00:00
+fetched_at: 2026-10-23T13:10:31.075298+00:00
 ---
 
 # Get an app  |  Agent Search  |  Google Cloud Documentation

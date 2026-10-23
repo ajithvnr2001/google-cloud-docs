@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/backups/
 title: About backups \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:40.314999+00:00
+fetched_at: 2026-10-23T13:01:31.907569+00:00
 ---
 
 # About backups  |  Filestore  |  Google Cloud Documentation

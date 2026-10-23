@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/concepts/rbac/
 title: Role-based access control (RBAC) overview \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:59.228023+00:00
+fetched_at: 2026-10-23T13:20:46.624564+00:00
 ---
 
 # Role-based access control (RBAC) overview  |  Cloud Data Fusion  |  Google Cloud Documentation

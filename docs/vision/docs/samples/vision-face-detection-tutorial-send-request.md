@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-face-detection-tutorial-send-request/
 title: Send a request for face detection \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:18.461516+00:00
+fetched_at: 2026-10-23T09:37:23.136563+00:00
 ---
 
 # Send a request for face detection  |  Cloud Vision API  |  Google Cloud Documentation

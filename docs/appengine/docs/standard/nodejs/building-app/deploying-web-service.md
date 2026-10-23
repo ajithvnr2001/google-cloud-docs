@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/nodejs/building-app/deploying-web-service/
 title: Deploy Your Web Service \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:12.045222+00:00
+fetched_at: 2026-10-23T13:17:38.818144+00:00
 ---
 
 # Deploy Your Web Service  |  App Engine standard environment  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/samples/securitycenter-list-event-threat-detection-custom-module/
 title: List Event Threat Detection custom modules \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:49:47.389846+00:00
+fetched_at: 2026-10-23T11:32:44.736543+00:00
 ---
 
 # List Event Threat Detection custom modules  |  Security Command Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-dml-batch-update/
 title: Batch DML \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:41.281396+00:00
+fetched_at: 2026-10-23T10:10:19.319543+00:00
 ---
 
 # Batch DML  |  Spanner  |  Google Cloud Documentation

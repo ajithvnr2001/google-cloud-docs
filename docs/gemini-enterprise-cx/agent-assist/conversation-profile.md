@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/conversation-profile/
 title: Create a conversation profile \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:58.647627+00:00
+fetched_at: 2026-10-23T13:11:58.561499+00:00
 ---
 
 # Create a conversation profile  |  Agent Assist  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/supported-platforms/
 title: Apigee hybrid supported platforms and versions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:47:02.825686+00:00
+fetched_at: 2026-10-23T12:50:56.641141+00:00
 ---
 
 # Apigee hybrid supported platforms and versions  |  Google Cloud Documentation
@@ -653,7 +653,7 @@ Apigee hybrid release numbers consist of the following:
 
 
 
-For example: Apigee hybrid v`1.15.8` (`major.minor.patch`)
+For example: Apigee hybrid v`1.15.9` (`major.minor.patch`)
 
 **Note:** Releases that have reached the EOL dates are no longer supported. 
 
@@ -674,7 +674,7 @@ Version | Patch | Patch release date | Minor version EOL date
   
 ### [1.15](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#hybrid_v1150)
 
-|  [1.15.8](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#v1158) [1.15.7](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#v1157) [1.15.6](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#v1156) [1.15.5](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#v1155) [1.15.4](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#v1154) [1.15.3](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#v1153) [1.15.2](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#hybrid_v1152) [1.15.1](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#hybrid_v1151) |  2026-09-24 2026-07-31 2026-07-15 2026-07-03 2026-05-30 2026-05-06 2026-03-11 2025-10-09 | 2027-09-14  
+|  [1.15.9](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#v1159) [1.15.8](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#v1158) [1.15.7](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#v1157) [1.15.6](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#v1156) [1.15.5](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#v1155) [1.15.4](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#v1154) [1.15.3](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#v1153) [1.15.2](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#hybrid_v1152) [1.15.1](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#hybrid_v1151) |  2026-10-21 2026-09-24 2026-07-31 2026-07-15 2026-07-03 2026-05-30 2026-05-06 2026-03-11 2025-10-09 | 2027-09-14  
   
 ### [1.14](https://docs.cloud.google.com/apigee/docs/hybrid/release-notes#hybrid_v1140)
 
@@ -734,4 +734,4 @@ Version | Patch | Patch release date | Minor version EOL date
   
 ###  [1.0](https://docs.cloud.google.com/apigee/docs/release/notes/apigee-release-notes#november-20,-2019---apigee-hybrid-v1.0.0-deprecated)
 
-|  — |  — | 2019-11-20 Send feedback  Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates. Last updated 2026-10-20 UTC. Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+|  — |  — | 2019-11-20 Send feedback  Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates. Last updated 2026-10-22 UTC. Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

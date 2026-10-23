@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/ms-sharepoint/set-up-data-store/
 title: Set up a Microsoft SharePoint data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:38:02.702232+00:00
+fetched_at: 2026-10-23T13:12:07.724988+00:00
 ---
 
 # Set up a Microsoft SharePoint data store  |  Gemini Enterprise  |  Google Cloud Documentation

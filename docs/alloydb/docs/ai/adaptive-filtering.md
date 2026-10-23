@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/adaptive-filtering/
 title: Understand adaptive filtering in AlloyDB AI \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:30:06.605001+00:00
+fetched_at: 2026-10-23T13:08:30.755346+00:00
 ---
 
 # Understand adaptive filtering in AlloyDB AI  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -31,7 +31,7 @@ Adaptive filtering analyzes query patterns and data distributions during query e
 
 The AlloyDB AI query optimizer uses [cost-based analysis](https://www.postgresql.org/docs/current/planner-optimizer.html) to determine whether inline filtering or pre-filtering provides the best performance at any given point during query execution.
 
-This type of optimization supports AlloyDB AI's filtered vector searches, where adaptive filtering automatically switches between vector and metadata index usage, which produces efficient and accurate results without manual intervention.
+This type of optimization supports filtered vector searches in AlloyDB AI, where adaptive filtering automatically switches between vector and metadata index usage, which produces efficient and accurate results without manual intervention.
 
 ## Dynamic switching between filtering strategies
 
@@ -145,6 +145,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

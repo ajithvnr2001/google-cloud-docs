@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/patterns-practices-identity-access-governance-google-cloud/
 title: Patterns and practices for identity and access governance on Google Cloud \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:30.943492+00:00
+fetched_at: 2026-10-23T13:17:06.328933+00:00
 ---
 
 # Patterns and practices for identity and access governance on Google Cloud  |  Cloud Architecture Center  |  Google Cloud Documentation

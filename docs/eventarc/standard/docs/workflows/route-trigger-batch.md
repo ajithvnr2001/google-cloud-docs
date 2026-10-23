@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/workflows/route-trigger-batch/
 title: Route Batch events to Workflows \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:28.977186+00:00
+fetched_at: 2026-10-23T13:01:22.712691+00:00
 ---
 
 # Route Batch events to Workflows  |  Eventarc Standard  |  Google Cloud Documentation

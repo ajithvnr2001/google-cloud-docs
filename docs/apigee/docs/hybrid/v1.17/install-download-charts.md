@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/install-download-charts/
 title: Step 2: Download the Apigee Helm charts \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:43.877537+00:00
+fetched_at: 2026-10-23T13:16:00.317920+00:00
 ---
 
 # Step 2: Download the Apigee Helm charts  |  Google Cloud Documentation

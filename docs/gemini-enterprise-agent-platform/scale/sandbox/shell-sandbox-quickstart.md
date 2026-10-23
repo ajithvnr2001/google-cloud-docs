@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/shell-sandbox-quickstart/
 title: Shell sandbox quickstart \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:03.341195+00:00
+fetched_at: 2026-10-23T10:20:48.198981+00:00
 ---
 
 # Shell sandbox quickstart  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -108,12 +108,12 @@ To authenticate with Application Default Credentials:
 To use a shell sandbox, first create an Agent Platform instance. You don't need to deploy an agent to use a shell sandbox. Without deployment, creating an Agent Platform instance should take a few seconds.
     
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
     
-    client = [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).Client(project='PROJECT_ID', location='LOCATION')
+    client = [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).Client(project='PROJECT_ID', location='LOCATION')
     
-    agent_engine = client.[agent_engines](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.agent_engines.html).create()
-    agent_engine_name = [agent_engine](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.AgentRunConfigDict.html#vertexai__genai_types_AgentRunConfigDict_agent_engine).api_resource.name
+    agent_engine = client.[agent_engines](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.agent_engines.html).create()
+    agent_engine_name = [agent_engine](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.AgentRunConfigDict.html#vertexai__genai_types_AgentRunConfigDict_agent_engine).api_resource.name
     
 
 Replace the following:
@@ -237,6 +237,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

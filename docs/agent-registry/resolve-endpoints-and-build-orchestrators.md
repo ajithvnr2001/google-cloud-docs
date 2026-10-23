@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/resolve-endpoints-and-build-orchestrators/
 title: Resolve endpoints and build orchestrators \u00a0|\u00a0 Agent Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:19.872714+00:00
+fetched_at: 2026-10-23T12:55:14.079625+00:00
 ---
 
 # Resolve endpoints and build orchestrators  |  Agent Registry  |  Google Cloud Documentation
@@ -21,20 +21,17 @@ Send feedback
 
 #  Resolve endpoints and build orchestrators Stay organized with collections  Save and categorize content based on your preferences. 
 
-The [Agent Development Kit (ADK)](https://github.com/google/adk-docs) provides a dedicated `AgentRegistry` client that lets you programmatically discover, look up, and connect to AI agents and Model Context Protocol (MCP) servers cataloged within Agent Registry.
+The Agent Development Kit (ADK) provides a dedicated `AgentRegistry` client that lets you programmatically discover, look up, and connect to AI agents and Model Context Protocol (MCP) servers registered in Agent Registry. Instead of hardcoding endpoint URLs into your application, you can use the [ADK](https://github.com/google/adk-docs) to resolve these endpoints at runtime and compose them into a parent orchestrator agent.
 
-Instead of hardcoding endpoint URLs into your application, you can use the ADK to resolve these endpoints at runtime.
-
-Agent Registry provides the underlying endpoints, but production deployments typically route these invocations through [Agent Gateway](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/gateways/agent-gateway-overview). Agent Gateway helps you enforce security policies, perform protocol mediation, and apply content filtering to the tools you discover.
-
-This document describes how to retrieve remote agents and MCP toolsets from Agent Registry and include them in a parent orchestrator agent.
+Agent Registry provides the underlying endpoints. For production deployments, you can route invocations through [Agent Gateway](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/gateways/agent-gateway-overview) to enforce security policies, perform protocol mediation, and apply content filtering.
 
 ## Before you begin
 
 Before you integrate the ADK with Agent Registry, complete the following:
 
-  1. [Set up Agent Registry](https://docs.cloud.google.com/agent-registry/setup) in your project.
-  2. Install or upgrade to the latest version of the ADK with the A2A, Agent Identity, and MCP dependencies:
+  1. [Set up Agent Registry](https://docs.cloud.google.com/agent-registry/setup).
+  2. Get [the project ID](https://support.google.com/googleapi/answer/7014113) for the [governance project](https://docs.cloud.google.com/agent-registry/overview#governance-project) where Agent Registry is enabled.
+  3. Install or upgrade to the latest version of the ADK with the A2A, Agent Identity, and MCP dependencies:
 
 ###  pip 
          
@@ -48,7 +45,7 @@ Before you integrate the ADK with Agent Registry, complete the following:
 
 You must upgrade to at least `google-adk>=1.29.0`.
 
-  3. Configure [Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc):
+  4. Configure [Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/provide-credentials-adc):
          
          gcloud auth application-default login
          
@@ -56,11 +53,11 @@ You must upgrade to at least `google-adk>=1.29.0`.
 
 
 
-ADC credentials must have the necessary IAM permissions for the underlying services the agents or tools interact with. Optionally, you can also use custom headers for external toolsets. For more information, see [Authenticate to tools and resources](https://docs.cloud.google.com/agent-registry/authenticate-toolsets).
+Your credentials must have the necessary Identity and Access Management (IAM) permissions for the underlying services the agents or tools interact with. Optionally, you can also use custom headers for external toolsets. For more information, see [Authenticate to tools and resources](https://docs.cloud.google.com/agent-registry/authenticate-toolsets).
 
 ## Set environment variables
 
-To follow this guide, set the following environment variables:
+Set up the following environment variables:
     
     
     export GOOGLE_CLOUD_PROJECT=PROJECT_ID
@@ -69,14 +66,14 @@ To follow this guide, set the following environment variables:
 
 Replace the following:
 
-  * `PROJECT_ID`: your project ID.
+  * `PROJECT_ID`: the project ID of your governance project.
   * `LOCATION`: the registry region or location, such as `us-central1`.
 
 
 
 ## Initialize the registry client
 
-To interact with your registry programmatically, initialize the `AgentRegistry` client with your project and location:
+To interact with your registry programmatically, initialize the `AgentRegistry` client with your governance project and location:
     
     
     import os
@@ -101,16 +98,16 @@ The ADK abstracts the underlying connection mechanics, letting you design scalab
 
 You can use the registry client to fetch specific resources and pass them directly into the definition of a new `LlmAgent` agent. Your orchestrator can invoke remote agents as subagents and execute MCP tools as if they were local Python functions.
 
-Use the following methods:
+To fetch a remote agent or MCP toolset, call the following `AgentRegistry` client methods in your Python agent code:
 
-  * **To fetch a remote agent** : Use `get_remote_a2a_agent()`
-  * **To fetch an MCP toolset** : Use `get_mcp_toolset()`
+  * **To fetch a remote agent** : use `get_remote_a2a_agent()`.
+  * **To fetch an MCP toolset** : use `get_mcp_toolset()`.
 
 
 
-The following example demonstrates how to compose a multi-agent system by building an orchestrator agent that takes advantage of a registered travel agent and a registered [Compute Engine MCP server](https://docs.cloud.google.com/compute/docs/use-compute-engine-mcp). In this example, authentication is handled by the agent's own identity, but you can use other methods, such as API keys and OAuth. For more information, see [Authenticate to tools and resources](https://docs.cloud.google.com/agent-registry/authenticate-toolsets).
+The following example demonstrates how to compose a multi-agent system by building an orchestrator agent that takes advantage of a registered travel agent and a registered [Compute Engine MCP server](https://docs.cloud.google.com/compute/docs/use-compute-engine-mcp). In this example, authentication is handled by the agent's own identity, but you can use other methods, such as API keys and OAuth 2.0. For more information, see [Authenticate to tools and resources](https://docs.cloud.google.com/agent-registry/authenticate-toolsets).
 
-To design and orchestrate agents using a visual, low-code interface, configure registered subagents directly in the Agent Studio canvas. For more information, see [Design agents in Agent Studio](https://docs.cloud.google.com/gemini-enterprise-agent-platform/agent-studio/design-agents).
+To design and orchestrate agents using a visual, low-code interface, configure registered subagents directly in the Agent Studio on Gemini Enterprise Agent Platform canvas. For more information, see [Design agents in Agent Studio](https://docs.cloud.google.com/gemini-enterprise-agent-platform/agent-studio/design-agents).
     
     
     import httpx
@@ -162,6 +159,14 @@ To design and orchestrate agents using a visual, low-code interface, configure r
     # You can now run your orchestrator agent
     # response = await main_agent.run('Book a flight to Paris and check my past trips.')
     
+
+Replace the following:
+
+  * `AGENT_ID`: the ID of your registered agent.
+  * `SERVER_ID`: the ID of your registered MCP server.
+  * `MODEL_ID`: the model ID for your orchestrator agent, for example, `gemini-1.5-flash`.
+
+
 
 ## Best practices for reusing agents
 
@@ -217,6 +222,14 @@ The following example shows how to fetch an agent once and clone it for use in d
     )
     
 
+Replace the following:
+
+  * `PROJECT_ID`: the project ID of your governance project.
+  * `LOCATION`: the registry region or location, such as `us-central1`.
+  * `AGENT_ID`: the ID of your registered agent.
+
+
+
 ## What's next
 
   * Learn how to [set up Agent Gateway](https://docs.cloud.google.com/gemini-enterprise-agent-platform/govern/gateways/agent-gateway-overview) to route the traffic for your resolved endpoints.
@@ -229,6 +242,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

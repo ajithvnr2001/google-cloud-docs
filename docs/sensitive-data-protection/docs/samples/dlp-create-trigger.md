@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-create-trigger/
 title: Create a job trigger \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:41:01.342108+00:00
+fetched_at: 2026-10-23T08:38:45.790342+00:00
 ---
 
 # Create a job trigger  |  Sensitive Data Protection  |  Google Cloud Documentation

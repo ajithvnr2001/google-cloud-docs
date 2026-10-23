@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-safe-search-detection/
 title: Detect safe search on a local file \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:20.953943+00:00
+fetched_at: 2026-10-23T08:56:45.647853+00:00
 ---
 
 # Detect safe search on a local file  |  Cloud Vision API  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/advanced-network-ddos/
 title: Configure advanced network DDoS protection \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:59.630197+00:00
+fetched_at: 2026-10-23T13:15:58.682662+00:00
 ---
 
 # Configure advanced network DDoS protection  |  Google Cloud Armor  |  Google Cloud Documentation

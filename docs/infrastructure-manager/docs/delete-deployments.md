@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/delete-deployments/
 title: Delete a deployment \u00a0|\u00a0 Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:45.035279+00:00
+fetched_at: 2026-10-23T12:55:07.214996+00:00
 ---
 
 # Delete a deployment  |  Infrastructure Manager  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback
 
 #  Delete a deployment Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to delete an Infrastructure Manager deployment.
+Infrastructure Manager lets you remove deployments that you no longer need. Deleting a deployment removes its metadata and state, with the option to either delete or retain the underlying provisioned resources.
 
-This page assumes you are familiar with Terraform. For details, see [Terraform and Infrastructure Manager](https://docs.cloud.google.com/infrastructure-manager/docs/infra-manager-terraform).
+This document assumes that you are familiar with Terraform. For details, see [Terraform and Infra Manager](https://docs.cloud.google.com/infrastructure-manager/docs/infra-manager-terraform).
 
 ## Before you begin
 
@@ -119,6 +119,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

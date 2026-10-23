@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/perform-crud-operation-mysql-database/
 title: Perform CRUD operations on a MySQL database \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:07.919106+00:00
+fetched_at: 2026-10-23T13:18:09.910190+00:00
 ---
 
 # Perform CRUD operations on a MySQL database  |  Application Integration  |  Google Cloud Documentation

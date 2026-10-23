@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/regex-dollar/
 title: Dollar sign ($) \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:58.422287+00:00
+fetched_at: 2026-10-23T13:20:13.312838+00:00
 ---
 
 # Dollar sign ($)  |  Data Studio  |  Google Cloud Documentation

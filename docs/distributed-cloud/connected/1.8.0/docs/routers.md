@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/connected/1.8.0/docs/routers/
 title: Create and manage routers \u00a0|\u00a0 Google Distributed Cloud connected, version 1.8.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:39:44.420497+00:00
+fetched_at: 2026-10-23T12:55:51.317382+00:00
 ---
 
 # Create and manage routers  |  Google Distributed Cloud connected, version 1.8.0  |  Google Cloud Documentation

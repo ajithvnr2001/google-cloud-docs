@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/pay-as-you-go-environment-types/
 title: Apigee Pay-as-you-go environment types \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:54.362624+00:00
+fetched_at: 2026-10-23T13:17:00.314385+00:00
 ---
 
 # Apigee Pay-as-you-go environment types  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/ai-commerce-search/sayt/
 title: Dynamic search \u00a0|\u00a0 AI Commerce Search in Gemini Enterprise for Customer Experience \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:34:39.774462+00:00
+fetched_at: 2026-10-23T13:11:51.773905+00:00
 ---
 
 # Dynamic search  |  AI Commerce Search in Gemini Enterprise for Customer Experience  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/omni-aws-create-external-table/
 title: Create Amazon S3 BigLake tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:55:47.771353+00:00
+fetched_at: 2026-10-23T12:55:40.356664+00:00
 ---
 
 # Create Amazon S3 BigLake tables  |  BigQuery  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Create Amazon S3 BigLake tables
 
-This document describes how to create an Amazon Simple Storage Service (Amazon S3) BigLake table. A [BigLake table](https://docs.cloud.google.com/bigquery/docs/biglake-intro) lets you use access delegation to query data in Amazon S3. Access delegation decouples access to the BigLake table from access to the underlying datastore.
+Amazon Simple Storage Service (Amazon S3) BigLake tables let you query data in Amazon S3 from BigQuery by using access delegation. This approach decouples access to the [BigLake table](https://docs.cloud.google.com/bigquery/docs/biglake-intro) from access to the underlying data store, so users need permissions only on the table.
 
-For information about how data flows between BigQuery and Amazon S3, see [Data flow when querying data](https://docs.cloud.google.com/bigquery/docs/omni-introduction#query-data).
+This document describes how to create an Amazon S3 BigLake table. For information about how data flows between BigQuery and Amazon S3, see [Data flow when querying data](https://docs.cloud.google.com/bigquery/docs/omni-introduction#query-data).
 
 ## Before you begin
 
@@ -1097,6 +1097,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

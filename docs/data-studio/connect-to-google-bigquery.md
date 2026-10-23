@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/connect-to-google-bigquery/
 title: Connect to Google BigQuery \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:32.950260+00:00
+fetched_at: 2026-10-23T12:51:37.818639+00:00
 ---
 
 # Connect to Google BigQuery  |  Data Studio  |  Google Cloud Documentation
@@ -23,7 +23,7 @@ Send feedback
 
 #  Connect to Google BigQuery Stay organized with collections  Save and categorize content based on your preferences. 
 
-BigQuery is Google's fully managed, petabyte-scale, low-cost analytics data warehouse. The Data Studio BigQuery connector lets you access and visualize data from your BigQuery tables, views, and custom SQL queries directly within Data Studio.
+BigQuery is Google's fully managed, petabyte-scale, low-cost analytics data warehouse. The Data Studio BigQuery connector lets you access and visualize data from your BigQuery tables, views, graphs, and custom SQL queries directly within Data Studio.
 
 ## Before you begin
 
@@ -35,12 +35,12 @@ BigQuery is a paid analytics platform. You might incur query processing or stora
 
 To query BigQuery data in Data Studio, you need permission to read data and run query jobs. Grant the following IAM roles on your Google Cloud project or dataset:
 
-  * **BigQuery Data Viewer** (`roles/bigquery.dataViewer`): Allows reading data and metadata from tables or views.
-  * **BigQuery Job User** (`roles/bigquery.jobUser`): Allows running query jobs in the billing project.
+  * **BigQuery Data Viewer** (`roles/bigquery.dataViewer`): Lets you read data and metadata from tables, views, or graphs.
+  * **BigQuery Job User** (`roles/bigquery.jobUser`): Lets you run query jobs in the billing project.
 
 
 
-Who needs these roles depends on the data credentials mode that you choose for your data source:
+The roles that are required depend on the data credentials mode that you select for your data source:
 
   * **Owner's credentials (default):** Only the data source owner needs these roles. Report viewers can view charts without needing their own access to BigQuery.
   * **Viewer's credentials:** Every report viewer must have these roles to view data in the report.
@@ -72,7 +72,7 @@ In a moment, a table that is connected to the data source appears on the report 
 
 ## Connection options
 
-A BigQuery data source can fetch data from a table or view, or from a custom SQL query.
+A BigQuery data source can fetch data from a table, view, or graph, or from a custom SQL query.
 
 ### Connect to a BigQuery table, view, or graph
 
@@ -100,9 +100,39 @@ Choose one of the following options in the connector configuration panel:
 
 #### Select a dataset
 
-[Datasets](https://docs.cloud.google.com/bigquery/docs/datasets-intro) organize and control access for groups of tables and views. Select a dataset from the list or search by dataset ID.
+[Datasets](https://docs.cloud.google.com/bigquery/docs/datasets-intro) organize and control access for groups of tables, views, and graphs. Select a dataset from the list or search by dataset ID.
 
 [BigQuery public datasets](https://docs.cloud.google.com/bigquery/public-data) are free sample datasets shared globally across Google. To query public data, you must choose a billing project to pay for query processing costs.
+
+#### Select a table, view, or graph
+
+You can connect a Data Studio data source to a single table, view, or graph. In the **Table** or **Table / Graph** list, select a resource or search for one by name. When a dataset contains graphs, tables and graphs display distinct icons so that you can differentiate between them.
+
+If you select a graph, you can also select a **start node** in the **Start Node** list. The start node determines the starting point for graph traversal and affects the schema of the flattened table. Depending on the graph definition, selecting a start node might be required.
+
+#### Try a public graph dataset
+
+You can try out the BigQuery Graph connector by using the publicly available Look Ecommerce graph. To connect to this graph, follow these steps:
+
+  1. Select **SHARED PROJECTS**.
+  2. Select your billing project.
+  3. Enter `bigquery-public-data` as the shared project name.
+  4. Select `thelook_ecommerce` as the dataset.
+  5. Select `graph` in the **Table / Graph** list.
+  6. Optional: Select a start node in the **Start Node** list.
+
+
+
+#### Work with BigQuery Graph measures
+
+When you connect to a BigQuery Graph, any [measures](https://docs.cloud.google.com/bigquery/docs/graph-measures) that are defined in the graph are imported as metrics in your data source. You can use these measures in charts, [calculated fields](https://docs.cloud.google.com/data-studio/about-calculated-fields), [query result variables](https://docs.cloud.google.com/data-studio/query-result-variables), and [controls across data sources](https://docs.cloud.google.com/data-studio/use-controls-across-data-sources).
+
+Note the following when working with graph measures:
+
+  * **Fixed aggregation** : You can't change the aggregation type of a graph measure in Data Studio. The aggregation is determined by the graph definition in BigQuery.
+  * **Editable properties** : You can edit the data type and description of a graph measure in your Data Studio data source.
+
+
 
 #### Connect to date-partitioned tables
 
@@ -120,7 +150,7 @@ When Data Studio encounters tables formatted with the `YYYYMMDD` suffix during t
 
 ### Connect to BigQuery by using a custom SQL query
 
-The **CUSTOM QUERY** option lets you connect to your data by writing SQL. Custom query syntax follows the [Standard SQL dialect](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql). To use the legacy SQL syntax, select **Use Legacy SQL**.
+The **CUSTOM QUERY** option lets you connect to your data by writing SQL, including queries over a BigQuery Graph. Custom query syntax follows the [Standard SQL dialect](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql). To use the legacy SQL syntax, select **Use Legacy SQL**.
 
 We recommend composing and testing your query directly inside the [BigQuery console](https://console.cloud.google.com/bigquery) first, then copying and pasting the verified SQL script into the Data Studio custom query editor box.
 
@@ -130,7 +160,7 @@ The **Billing Project** setting lets you specify which Google Cloud project pays
 
 To query data inside one project while billing another, specify the billing project in this field and explicitly reference the data project inside the `FROM` clause of your query (`FROM project_id.dataset_id.table_id`).
 
-![Example of a BigQuery custom query configuration, with the billing project set to Looker Studio Project, while the query specifies a BigQuery public data set in the querys FROM clause.](https://docs.cloud.google.com/static/data-studio/images/bq-billing-custom.png)
+![Example of a BigQuery custom query configuration, with the billing project set to Looker Studio Project, while the query specifies a BigQuery public data set in the query's FROM clause.](https://docs.cloud.google.com/static/data-studio/images/bq-billing-custom.png)
 
 #### Use query parameters
 
@@ -183,7 +213,7 @@ If your charts fail to load or return configuration warnings, consult the [Troub
 ## Related resources
 
   * [Create a data source in Data Studio](https://docs.cloud.google.com/data-studio/add-data-to-a-report)
-  * [Identity and Access Management roles and permsissions](https://docs.cloud.google.com/iam/docs/roles-overview)
+  * [Identity and Access Management roles and permissions](https://docs.cloud.google.com/iam/docs/roles-overview)
   * [Google BigQuery documentation home](https://docs.cloud.google.com/bigquery)
 
 
@@ -192,6 +222,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

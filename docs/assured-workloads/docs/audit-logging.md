@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/audit-logging/
 title: Assured Workloads audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:12.343654+00:00
+fetched_at: 2026-10-23T13:19:43.504695+00:00
 ---
 
 # Assured Workloads audit logging  |  Google Cloud Documentation

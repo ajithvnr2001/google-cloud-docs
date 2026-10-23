@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/use-sap-odp-plugin/
 title: SAP ODP batch source \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:41.775113+00:00
+fetched_at: 2026-10-23T13:20:48.556833+00:00
 ---
 
 # SAP ODP batch source  |  Cloud Data Fusion  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/gsc_google_slides/configure/
 title: Google Slides \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:10.083600+00:00
+fetched_at: 2026-10-23T13:08:43.545081+00:00
 ---
 
 # Google Slides  |  Integration Connectors  |  Google Cloud Documentation

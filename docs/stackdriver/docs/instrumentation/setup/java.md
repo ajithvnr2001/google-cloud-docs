@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/stackdriver/docs/instrumentation/setup/java/
 title: Java instrumentation sample \u00a0|\u00a0 Google Cloud Observability \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:20.340820+00:00
+fetched_at: 2026-10-23T10:10:53.579104+00:00
 ---
 
 # Java instrumentation sample  |  Google Cloud Observability  |  Google Cloud Documentation
@@ -164,7 +164,7 @@ The following code sample illustrates a Dockerfile that downloads the OpenTeleme
 To view the full sample, in the sample's toolbar, select the GitHub logo.
     
     
-    RUN wget -O /opentelemetry-javaagent.jar https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v2.29.0/opentelemetry-javaagent.jar
+    RUN wget -O /opentelemetry-javaagent.jar https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v2.32.0/opentelemetry-javaagent.jar
     CMD sh -c "java -javaagent:/opentelemetry-javaagent.jar -jar app.jar \
     	2>&1 | tee /var/log/app.log"
 
@@ -189,29 +189,10 @@ To include the trace information as part of the JSON-formatted logs written to s
     https://cloud.google.com/logging/docs/structured-logging#special-payload-fields -->
     
     <!-- Log4j2's JsonTemplateLayout includes a template for Cloud Logging's special JSON fields
+    (including trace and span IDs from Mapped Diagnostic Context (MDC) so that Cloud Logging can
+    correlate Logs and Spans)
     https://logging.apache.org/log4j/2.x/manual/json-template-layout.html#event-templates -->
-    <JsonTemplateLayout eventTemplateUri="classpath:GcpLayout.json">
-      <!-- Extend the included GcpLayout to include the trace and span IDs from Mapped
-      Diagnostic Context (MDC) so that Cloud Logging can correlate Logs and Spans
-    
-      Since log4j2 2.24.0, GcpLayout.json already includes trace context logging from MDC and
-      the below additional fields are no longer needed -->
-      <EventTemplateAdditionalField
-        key="logging.googleapis.com/trace"
-        format="JSON"
-        value='{"$resolver": "mdc", "key": "trace_id"}'
-      />
-      <EventTemplateAdditionalField
-        key="logging.googleapis.com/spanId"
-        format="JSON"
-        value='{"$resolver": "mdc", "key": "span_id"}'
-      />
-      <EventTemplateAdditionalField
-        key="logging.googleapis.com/trace_sampled"
-        format="JSON"
-        value="true"
-      />
-    </JsonTemplateLayout>
+    <JsonTemplateLayout eventTemplateUri="classpath:GcpLayout.json"/>
 
 The previous configuration extracts information about the active span from SLF4J's [Mapped Diagnostic Context](https://www.slf4j.org/api/org/slf4j/MDC.html) and adds that information as attributes to the log. These attributes can then be used to correlate a log with a trace:
 
@@ -425,6 +406,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

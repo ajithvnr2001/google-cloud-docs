@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-subscriber-async-pull-custom-attributes/
 title: Subscribe with custom attributes \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:06.707589+00:00
+fetched_at: 2026-10-23T10:04:36.191368+00:00
 ---
 
 # Subscribe with custom attributes  |  Pub/Sub  |  Google Cloud Documentation

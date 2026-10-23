@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/ai-developer-tools-track-token-usage/
 title: Track third-party model token usage \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:42.842030+00:00
+fetched_at: 2026-10-23T13:12:40.774472+00:00
 ---
 
 # Track third-party model token usage  |  Gemini Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/vm-manager/docs/overview/
 title: VM Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:29:01.273876+00:00
+fetched_at: 2026-10-23T12:58:09.947997+00:00
 ---
 
 # VM Manager  |  Google Cloud Documentation

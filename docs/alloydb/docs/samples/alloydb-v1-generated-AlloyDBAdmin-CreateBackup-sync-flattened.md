@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-v1-generated-AlloyDBAdmin-CreateBackup-sync-flattened/
 title: Create a backup \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:27:38.910640+00:00
+fetched_at: 2026-10-23T10:43:07.154713+00:00
 ---
 
 # Create a backup  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

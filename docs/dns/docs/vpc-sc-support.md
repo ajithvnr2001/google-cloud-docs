@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/docs/vpc-sc-support/
 title: VPC Service Controls support for Cloud DNS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:12:29.226095+00:00
+fetched_at: 2026-10-23T12:55:52.293880+00:00
 ---
 
 # VPC Service Controls support for Cloud DNS  |  Google Cloud Documentation

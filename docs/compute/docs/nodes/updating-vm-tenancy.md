@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/compute/docs/nodes/updating-vm-tenancy/
-title: Updating VM tenancy \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
+title: Update VM tenancy \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:09:05.847864+00:00
+fetched_at: 2026-10-23T12:55:21.850608+00:00
 ---
 
-# Updating VM tenancy  |  Compute Engine  |  Google Cloud Documentation
+# Update VM tenancy  |  Compute Engine  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/compute/docs/nodes/updating-vm-tenancy/
 
@@ -19,7 +19,7 @@ fetched_at: 2026-10-22T09:09:05.847864+00:00
 
 Send feedback 
 
-#  Updating VM tenancy Stay organized with collections  Save and categorize content based on your preferences. 
+#  Update VM tenancy Stay organized with collections  Save and categorize content based on your preferences. 
 
 Linux  Windows 
 
@@ -80,7 +80,7 @@ For more information, see [Authenticate for using REST](https://docs.cloud.googl
 
 
 
-## Moving a VM into sole-tenancy
+## Move a VM into sole-tenancy
 
 Update tenancy by moving the VM to a specific sole-tenant node or node group from another node or node group or from a multi-tenant host.
 
@@ -177,7 +177,7 @@ Replace the following:
 
 
 
-## Moving a VM out of sole-tenancy
+## Move a VM out of sole-tenancy
 
 If your VM no longer requires dedicated hardware, for example, after an event that required your VM to be isolated from other VMs, move the VM from a sole-tenant node to a multi-tenant host.
 
@@ -271,6 +271,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

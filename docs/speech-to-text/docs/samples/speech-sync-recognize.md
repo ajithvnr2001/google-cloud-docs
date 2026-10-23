@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-sync-recognize/
 title: Recognize a synchronization request \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:28:30.821198+00:00
+fetched_at: 2026-10-23T08:37:57.614418+00:00
 ---
 
 # Recognize a synchronization request  |  Cloud Speech-to-Text  |  Google Cloud Documentation

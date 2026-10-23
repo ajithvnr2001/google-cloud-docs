@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/monetization/purchase-api-products-api/
 title: Purchasing and managing API product subscriptions using the API \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:07.012963+00:00
+fetched_at: 2026-10-23T13:16:53.532400+00:00
 ---
 
 # Purchasing and managing API product subscriptions using the API  |  Apigee  |  Google Cloud Documentation

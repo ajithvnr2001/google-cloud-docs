@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/manage-spaces/
 title: Manage and assign spaces \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:54.723103+00:00
+fetched_at: 2026-10-23T13:18:08.616451+00:00
 ---
 
 # Manage and assign spaces  |  Application Design Center  |  Google Cloud Documentation

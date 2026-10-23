@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/add-charts-and-controls-to-your-report/
 title: Add charts and controls to your report \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:49.437951+00:00
+fetched_at: 2026-10-23T13:19:49.917491+00:00
 ---
 
 # Add charts and controls to your report  |  Data Studio  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/samples/cloud-sql-postgres-sqlalchemy-connect-unix/
 title: Connecting to Cloud SQL for PostgreSQL with Python via a Unix Socket \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:23.513463+00:00
+fetched_at: 2026-10-23T10:18:52.424741+00:00
 ---
 
 # Connecting to Cloud SQL for PostgreSQL with Python via a Unix Socket  |  Google Cloud Documentation

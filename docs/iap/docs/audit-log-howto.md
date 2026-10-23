@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/audit-log-howto/
 title: Identity-Aware Proxy audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:27:58.131687+00:00
+fetched_at: 2026-10-23T13:09:57.572490+00:00
 ---
 
 # Identity-Aware Proxy audit logging  |  Google Cloud Documentation

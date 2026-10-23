@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-intelligence/docs/samples/video-transcoder-quickstart/
 title: Transcoder \u00a0|\u00a0 Video Intelligence API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:26:54.214551+00:00
+fetched_at: 2026-10-23T09:35:42.862538+00:00
 ---
 
 # Transcoder  |  Video Intelligence API  |  Google Cloud Documentation

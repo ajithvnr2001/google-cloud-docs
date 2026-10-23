@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/translate/docs/samples/translate-v3-get-glossary/
 title: Get a glossary (Advanced edition only) \u00a0|\u00a0 Cloud Translation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:28.205466+00:00
+fetched_at: 2026-10-23T08:58:43.041778+00:00
 ---
 
 # Get a glossary (Advanced edition only)  |  Cloud Translation  |  Google Cloud Documentation

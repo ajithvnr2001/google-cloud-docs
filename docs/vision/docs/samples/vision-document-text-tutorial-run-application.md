@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-document-text-tutorial-run-application/
 title: Running the app for document text detection \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:14.630507+00:00
+fetched_at: 2026-10-23T09:37:24.598836+00:00
 ---
 
 # Running the app for document text detection  |  Cloud Vision API  |  Google Cloud Documentation

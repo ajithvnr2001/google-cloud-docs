@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/use-data-products/
 title: Use data products \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:27.307684+00:00
+fetched_at: 2026-10-23T12:50:46.429580+00:00
 ---
 
 # Use data products  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -44,9 +44,9 @@ To enable APIs, you need the `serviceusage.services.enable` permission. If you c
 
 To get the permissions that you need to search for, access, and use data products, ask your administrator to grant you the following IAM roles on the data product or the project: 
 
-  * Search for data products: [Dataplex Catalog Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) 
-  * Search for data assets and request access: [Dataplex Data Products Consumer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataProductsConsumer) (`roles/dataplex.dataProductsConsumer`) 
-  * Read-only access to view data product definitions and metadata: [Dataplex Data Products Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataProductsViewer) (`roles/dataplex.dataProductsViewer`) 
+  * Search for data products: [**Dataplex Catalog Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) 
+  * Search for data assets and request access: [**Dataplex Data Products Consumer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataProductsConsumer) (`roles/dataplex.dataProductsConsumer`) 
+  * Read-only access to view data product definitions and metadata: [**Dataplex Data Products Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataProductsViewer) (`roles/dataplex.dataProductsViewer`) 
 
 
 
@@ -54,7 +54,7 @@ For more information about granting roles, see [Manage access to projects, folde
 
 You might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
 
-As a data product consumer, to view the metadata of an asset, you must have the `viewer` permission to access the corresponding asset in the source system. For example, to search for metadata for a dataset or a table in a data product, you need the BigQuery Metadata Viewer role (`roles/bigquery.metadataViewer`). For more information, see [Required roles for accessing search results](https://docs.cloud.google.com/knowledge-catalog/docs/search-assets#required_roles_for_accessing_search_results).
+As a data product consumer, to view the metadata of an asset, you must have the `viewer` permission to access the corresponding asset in the source system. For example, to search for metadata for a dataset or a table in a data product, you need the **BigQuery Metadata Viewer** (`roles/bigquery.metadataViewer`) role. For more information, see [Required roles for accessing search results](https://docs.cloud.google.com/knowledge-catalog/docs/search-assets#required-roles).
 
 ## Search for data products
 
@@ -291,7 +291,7 @@ You can access details such as schema, insights, and lineage. If the asset is a 
 
 ### Access assets using a service account
 
-If your access request was approved for a service account, you are granted the Service Account Token Creator (`roles/iam.serviceAccountTokenCreator`) IAM role on the data producer service account. This lets you create an impersonation chain to access the underlying assets.
+If your access request was approved for a service account, you are granted the **Service Account Token Creator** (`roles/iam.serviceAccountTokenCreator`) IAM role on the data producer service account. This lets you create an impersonation chain to access the underlying assets.
 
 To access assets using a service account, follow these steps:
 
@@ -304,13 +304,13 @@ To access assets using a service account, follow these steps:
 
 Replace the following:
 
-     * CONSUMER_SERVICE_ACCOUNT: the full qualified email address of the service account belonging to the data product consumer
+     * CONSUMER_SERVICE_ACCOUNT: the fully qualified email address of the service account belonging to the data product consumer
 
      * PRODUCER_SERVICE_ACCOUNT: the fully qualified email address of the service account mapped to the data product access group
 
 For more information, see [Use service account impersonation](https://docs.cloud.google.com/docs/authentication/use-service-account-impersonation).
 
-**Note:** To query BigQuery objects such as tables or routines that require job creation, you must grant the BigQuery Job User (`roles/bigquery.jobUser`) IAM role to both the producer and consumer service accounts within the project where the query is executed.
+**Note:** To query BigQuery objects such as tables or routines that require job creation, you must grant the **BigQuery Job User** (`roles/bigquery.jobUser`) IAM role to both the producer and consumer service accounts within the project where the query is executed.
 
 
 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/configure-gke-standard-cluster/
 title: Configure a GKE Standard cluster \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:58.153252+00:00
+fetched_at: 2026-10-23T13:18:10.025508+00:00
 ---
 
 # Configure a GKE Standard cluster  |  Application Design Center  |  Google Cloud Documentation

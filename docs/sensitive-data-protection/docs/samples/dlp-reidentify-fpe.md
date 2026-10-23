@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-reidentify-fpe/
 title: Re-identify content encrypted by FPE \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:40:49.763025+00:00
+fetched_at: 2026-10-23T09:01:13.832362+00:00
 ---
 
 # Re-identify content encrypted by FPE  |  Sensitive Data Protection  |  Google Cloud Documentation
@@ -123,7 +123,7 @@ To authenticate to Sensitive Data Protection, set up Application Default Credent
             var response = dlp.ReidentifyContent(request);
     
             // Inspect the response.
-            Console.WriteLine($"Reidentified content: {response.Item.[Value](https://docs.cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.WellKnownTypes.Value.html)}");
+            Console.WriteLine($"Reidentified content: {response.Item.[Value](https://docs.cloud.google.com/dotnet/docs/reference/Google.Cloud.Dlp.V2/latest/Google.Cloud.Dlp.V2.Value.html)}");
     
             return response;
         }

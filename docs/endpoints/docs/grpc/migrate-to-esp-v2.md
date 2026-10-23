@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/grpc/migrate-to-esp-v2/
 title: Migrate to Extensible Service Proxy V2 \u00a0|\u00a0 Cloud Endpoints with gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:19.211161+00:00
+fetched_at: 2026-10-23T13:00:49.514709+00:00
 ---
 
 # Migrate to Extensible Service Proxy V2  |  Cloud Endpoints with gRPC  |  Google Cloud Documentation

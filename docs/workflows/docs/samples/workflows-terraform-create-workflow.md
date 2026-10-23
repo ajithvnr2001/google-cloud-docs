@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-terraform-create-workflow/
 title: Create a workflow that executes a Cloud Run job using Terraform \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:02:11.115827+00:00
+fetched_at: 2026-10-23T08:56:58.537051+00:00
 ---
 
 # Create a workflow that executes a Cloud Run job using Terraform  |  Workflows  |  Google Cloud Documentation

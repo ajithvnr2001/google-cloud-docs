@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/architecture-decision-records/
 title: Architecture decision records overview \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:04.013625+00:00
+fetched_at: 2026-10-23T13:18:56.629359+00:00
 ---
 
 # Architecture decision records overview  |  Cloud Architecture Center  |  Google Cloud Documentation

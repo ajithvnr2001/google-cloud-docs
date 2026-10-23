@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-python-migration-client/
 title: Migrate to Python Client Library v0.25.1 \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:19.488501+00:00
+fetched_at: 2026-10-23T09:37:24.484378+00:00
 ---
 
 # Migrate to Python Client Library v0.25.1  |  Cloud Vision API  |  Google Cloud Documentation

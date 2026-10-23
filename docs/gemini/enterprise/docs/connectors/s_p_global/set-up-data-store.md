@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/s_p_global/set-up-data-store/
 title: Set up a S&P Global - Deterministic Retrieval data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:59.746039+00:00
+fetched_at: 2026-10-23T13:11:32.965786+00:00
 ---
 
 # Set up a S&P Global - Deterministic Retrieval data store  |  Gemini Enterprise  |  Google Cloud Documentation

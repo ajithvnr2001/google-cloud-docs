@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure-azuread-trigger/
 title: Azure AD trigger \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:46.974990+00:00
+fetched_at: 2026-10-23T13:17:25.806027+00:00
 ---
 
 # Azure AD trigger  |  Application Integration  |  Google Cloud Documentation

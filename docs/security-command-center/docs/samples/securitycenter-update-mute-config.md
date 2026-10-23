@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/samples/securitycenter-update-mute-config/
 title: Update a mute rule \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:50:25.283312+00:00
+fetched_at: 2026-10-23T11:31:36.876739+00:00
 ---
 
 # Update a mute rule  |  Security Command Center  |  Google Cloud Documentation

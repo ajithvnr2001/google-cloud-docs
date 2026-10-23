@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/concepts/studio-overview/
 title: Introduction to Cloud Data Fusion: Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:58.395120+00:00
+fetched_at: 2026-10-23T13:20:16.491604+00:00
 ---
 
 # Introduction to Cloud Data Fusion: Studio  |  Google Cloud Documentation

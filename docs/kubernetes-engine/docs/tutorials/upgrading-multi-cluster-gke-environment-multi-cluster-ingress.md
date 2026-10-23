@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/upgrading-multi-cluster-gke-environment-multi-cluster-ingress/
 title: Upgrading a multi-cluster GKE environment with Multi Cluster Ingress \u00a0|\u00a0 GKE networking \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:25:34.964289+00:00
+fetched_at: 2026-10-23T10:33:32.119628+00:00
 ---
 
 # Upgrading a multi-cluster GKE environment with Multi Cluster Ingress  |  GKE networking  |  Google Cloud Documentation

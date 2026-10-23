@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/skills/
 title: Create and manage skills \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:43.284959+00:00
+fetched_at: 2026-10-23T13:08:37.650273+00:00
 ---
 
 # Create and manage skills  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -68,9 +68,71 @@ To create a new skill in the Gemini Enterprise web app, follow these steps:
 
 **Note:** You can't upload skills with the Gemini Enterprise Frontline edition. For more information, see Supported editions.
 
-To add existing skills, upload them as Markdown or ZIP files. Gemini Enterprise automatically extracts the skill name and description from the `SKILL.md` file. In the `SKILL.md` file, make sure the description explains when to use the skill.
+To add existing skills, upload them as Markdown or ZIP files. Gemini Enterprise automatically extracts the skill name and description from the `SKILL.md` file.
 
-If you upload a ZIP file containing multiple folders or files, you must include the `SKILL.md` file in the root directory. The ZIP archive can also include optional directories, such as a `scripts/` directory containing Python or Bash code.
+### Skill file format and directory structure
+
+A skill package consists of a required `SKILL.md` prompt file and optional subdirectories for scripts, reference documentation, and assets. You can upload either a standalone `SKILL.md` file or a ZIP archive with the following directory structure:
+    
+    
+    my-skill/
+    ├── SKILL.md              # Required: YAML frontmatter + Markdown instructions
+    ├── scripts/              # Optional: executable helper scripts (Python, Bash)
+    ├── references/           # Optional: supplementary context loaded as needed
+    └── assets/               # Optional: templates or images used in output
+    
+
+File or directory | Required | Description  
+---|---|---  
+`SKILL.md` | Yes | Contains the skill's YAML frontmatter metadata (such as `name` and `description`) followed by Markdown instructions that guide the Gemini Enterprise assistant.  
+`scripts/` | No | Executable Python or Bash helper scripts for deterministic or repeated operations.  
+`references/` | No | Supplementary context loaded on demand, such as schemas, cheat sheets, or API reference documentation.  
+`assets/` | No | Files used in output (such as templates or images) that are not loaded directly into Gemini Enterprise's prompt context.  
+  
+### YAML frontmatter requirements
+
+The `SKILL.md` file must begin with a valid YAML frontmatter block enclosed between `---` delimiters at the very start of the file, followed by the Markdown instructions body (hard limit of 500,000 characters; uploads exceeding this limit fail).
+
+The YAML frontmatter supports the following fields:
+
+Field | Required | Format and constraints  
+---|---|---  
+`name` | Yes | A unique identifier for the skill (1 to 64 characters). Must contain only lowercase letters (`a-z`), numbers (`0-9`), and hyphens (`-`). Must not start or end with a hyphen (`-`) or contain consecutive hyphens (`--`). If uploaded inside a folder, the `name` value must match the parent folder name.  
+`description` | Yes | A functional description (1 to 1,024 characters) explaining what the skill does and when Gemini Enterprise should invoke it. Include trigger keywords to help Gemini Enterprise identify when the skill is relevant. This is a hard limit; if the description exceeds 1,024 characters, the skill upload fails with the error: `A field in your SKILL.md is too long. Shorten the name, description or the instructions.`  
+`license` | No | The software or content distribution license that applies to the skill package (up to 1,024 characters), such as an open-source SPDX license identifier (for example, `Apache-2.0` or `MIT`) or `Proprietary`. This field specifies the usage terms of the skill file itself, not a Gemini Enterprise user or app subscription license. If specified, the value must not be empty.  
+`metadata` | No | An optional key-value map of custom tags, authors, or version parameters. Keys must be scalar strings, and values must be scalar strings or lists of scalar strings.  
+  
+#### Example `SKILL.md` file
+
+The following example shows a valid `SKILL.md` file:
+    
+    
+    ---
+    name: brand-voice-reviewer
+    description: Reviews marketing copy and legal contracts to ensure compliance with brand voice guidelines. Use when asked to review, edit, or draft customer-facing text.
+    ---
+    
+    # Brand Voice Reviewer
+    
+    Follow these guidelines when reviewing or drafting customer-facing text:
+    
+    1. Use clear, concise, and active language.
+    2. Avoid jargon and unverified claims.
+    3. Verify that terminology aligns with the company style guide.
+
+### ZIP archive constraints
+
+When uploading a skill as a ZIP archive, ensure that the archive meets the following validation requirements:
+
+  * **Single`SKILL.md` file:** Each ZIP archive must contain exactly one `SKILL.md` file located either at the archive root (`SKILL.md`) or within a single top-level wrapper folder (up to 3 levels deep, such as `my-skill/SKILL.md`).
+  * **Archive size:** Maximum compressed ZIP archive size of 100 MB and maximum total uncompressed size of 100 MB.
+  * **File count:** Maximum of 100 files per ZIP archive.
+  * **Directory nesting depth:** Maximum directory nesting depth of 10 levels relative to the skill root.
+  * **Path integrity:** Duplicate file paths and parent directory references (`..`) are not allowed.
+
+
+
+### Upload a skill to the web app
 
 To upload a skill, follow these steps:
 
@@ -78,6 +140,13 @@ To upload a skill, follow these steps:
   2. In the navigation menu, click **Skills**.
   3. Click the add icon and click **Upload skill**.
   4. Drag or browse for the Markdown or ZIP file, and click **Import**. Gemini Enterprise turns on the skill by default.
+
+**Note** : If your upload fails with an error such as `Upload failed. Details: Request contains an invalid argument`, verify the following: 
+
+  * Your `SKILL.md` file starts with valid YAML frontmatter enclosed in `---` delimiters.
+  * The frontmatter includes the required `name` and `description` fields within their character limits.
+  * The `name` field uses only lowercase letters, numbers, and hyphens (and matches the parent folder name if uploaded in a ZIP archive).
+  * Your archive complies with the ZIP archive constraints.
 
 
 
@@ -150,7 +219,7 @@ You can test a skill directly from the **Skills** page by starting a new chat se
 
 You can invoke skills dynamically during a conversation to tailor the assistant's responses.
 
-**Note:** You can use skills and agents dynamically, but you cannot invoke both an agent and a skill in the same prompt.
+**Note:** You can use skills and agents dynamically, but you can't invoke both an agent and a skill in the same prompt.
 
 When chatting with the Gemini Enterprise assistant, you can use skills in the following ways:
 
@@ -187,7 +256,7 @@ To remove an installed skill from your **Skills** page, follow these steps:
 
 In addition to turning skills on or off yourself, your administrator can change the state of a skill, which affects its availability:
 
-  * **Suspended:** Your administrator temporarily deactivates the skill. It remains visible on the **Skills** page with a suspended status, but other users cannot invoke it in conversations until the administrator re-enables it. Skill owners can update and test the skill.
+  * **Suspended:** Your administrator temporarily deactivates the skill. It remains visible on the **Skills** page with a suspended status, but other users can't invoke it in conversations until the administrator re-enables it. Skill owners can update and test the skill.
   * **Disabled:** Your administrator temporarily hides the skill from other users, removing it from their **Skills** page. The skill remains visible to the skill owner, who can update and test it until the administrator re-enables it.
   * **Deleted:** Your administrator permanently removes the skill from the Gemini Enterprise web app, so you can no longer use it.
 
@@ -202,6 +271,7 @@ This section lists the limitations for skills in Gemini Enterprise:
   * The web app editor lets you create skills by entering instructions in the form fields or by chatting with the assistant, which automatically generates a single`SKILL.md` file. You must upload more complex skills that require additional scripts or files as a ZIP file.
   * Natural language skill creation does not use your conversation context or connectors as inputs to create a skill.
   * Skills work best with Canvas when a skill has only one `SKILL.md` file.
+  * A `SKILL.md` file has hard length limits of 64 characters for `name`, 1,024 characters for `description`, and 500,000 characters for the Markdown instructions body. Uploaded ZIP archives can't exceed 100 MB (compressed or uncompressed), 100 files, or 10 levels of directory nesting.
 
 
 
@@ -215,6 +285,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

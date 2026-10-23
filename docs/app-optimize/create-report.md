@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-optimize/create-report/
 title: Create a report \u00a0|\u00a0 App Optimize \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:41.731317+00:00
+fetched_at: 2026-10-23T13:18:11.670771+00:00
 ---
 
 # Create a report  |  App Optimize  |  Google Cloud Documentation

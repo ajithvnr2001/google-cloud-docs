@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/locations/
 title: Firestore with MongoDB compatibility locations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:41.022753+00:00
+fetched_at: 2026-10-23T13:09:07.173885+00:00
 ---
 
 # Firestore with MongoDB compatibility locations  |  Google Cloud Documentation

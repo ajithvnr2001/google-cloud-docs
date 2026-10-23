@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-delete-graph-data/
 title: Delete data in a graph \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:26.923778+00:00
+fetched_at: 2026-10-23T10:10:07.239304+00:00
 ---
 
 # Delete data in a graph  |  Spanner  |  Google Cloud Documentation

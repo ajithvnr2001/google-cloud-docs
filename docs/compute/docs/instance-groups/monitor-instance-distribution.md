@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution/
 title: Monitor instance distribution in MIGs \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:19:50.369112+00:00
+fetched_at: 2026-10-23T12:56:05.310089+00:00
 ---
 
 # Monitor instance distribution in MIGs  |  Compute Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/quotas/
 title: Quotas and limits \u00a0|\u00a0 Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:42.886296+00:00
+fetched_at: 2026-10-23T13:08:52.154651+00:00
 ---
 
 # Quotas and limits  |  Firestore with MongoDB compatibility  |  Google Cloud Documentation

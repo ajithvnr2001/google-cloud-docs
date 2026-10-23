@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/1stgendocs/tutorials/pubsub-1st-gen/
 title: Cloud Pub/Sub Tutorial (1st gen) \u00a0|\u00a0 Cloud Run functions (1st gen) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:33.915388+00:00
+fetched_at: 2026-10-23T13:12:16.721816+00:00
 ---
 
 # Cloud Pub/Sub Tutorial (1st gen)  |  Cloud Run functions (1st gen)  |  Google Cloud Documentation

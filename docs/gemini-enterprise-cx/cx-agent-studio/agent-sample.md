@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/agent-sample/
 title: Sample agent applications \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:34.460734+00:00
+fetched_at: 2026-10-23T13:13:13.087430+00:00
 ---
 
 # Sample agent applications  |  CX Agent Studio  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/extended-session-length-for-workforce-identity-federation/
 title: Configure Extended Session Length for Workforce Identity Federation \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:51.009042+00:00
+fetched_at: 2026-10-23T13:18:26.359013+00:00
 ---
 
 # Configure Extended Session Length for Workforce Identity Federation  |  Access Context Manager  |  Google Cloud Documentation

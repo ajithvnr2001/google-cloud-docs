@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/create-database-server-client-library/
 title: Quickstart: Create a Firestore database by using a server client library \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:26.638131+00:00
+fetched_at: 2026-10-23T13:11:20.274349+00:00
 ---
 
 # Quickstart: Create a Firestore database by using a server client library  |  Firestore in Native mode  |  Google Cloud Documentation

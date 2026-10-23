@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/java/docs/observability/
 title: Enable telemetry signals in Cloud Client Libraries for Java \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:28.664506+00:00
+fetched_at: 2026-10-23T13:09:55.032902+00:00
 ---
 
 # Enable telemetry signals in Cloud Client Libraries for Java  |  Google Cloud Documentation

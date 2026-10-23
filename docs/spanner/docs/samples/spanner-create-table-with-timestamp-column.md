@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-create-table-with-timestamp-column/
 title: Create table with TIMESTAMP column \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:26.697658+00:00
+fetched_at: 2026-10-23T08:57:41.994253+00:00
 ---
 
 # Create table with TIMESTAMP column  |  Spanner  |  Google Cloud Documentation

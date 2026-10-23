@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-a4xmax-instances-in-bulk/
 title: Create AI-optimized A4X Max instances in bulk \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:53.547806+00:00
+fetched_at: 2026-10-23T13:18:09.826120+00:00
 ---
 
 # Create AI-optimized A4X Max instances in bulk  |  AI Hypercomputer  |  Google Cloud Documentation

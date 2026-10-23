@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-quickstart/
 title: Input a search term and pass it to an API \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:02:11.591633+00:00
+fetched_at: 2026-10-23T09:37:40.814881+00:00
 ---
 
 # Input a search term and pass it to an API  |  Workflows  |  Google Cloud Documentation

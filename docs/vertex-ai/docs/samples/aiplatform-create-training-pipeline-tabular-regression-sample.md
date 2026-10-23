@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-create-training-pipeline-tabular-regression-sample/
 title: Create a training pipeline for tabular regression \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:27:19.380586+00:00
+fetched_at: 2026-10-23T09:27:03.589353+00:00
 ---
 
 # Create a training pipeline for tabular regression  |  Vertex AI  |  Google Cloud Documentation

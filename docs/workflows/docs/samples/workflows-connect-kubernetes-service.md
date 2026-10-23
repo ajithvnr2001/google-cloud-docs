@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-connect-kubernetes-service/
 title: Deploy a Kubernetes application using Workflows connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:54:47.528290+00:00
+fetched_at: 2026-10-23T08:58:12.033506+00:00
 ---
 
 # Deploy a Kubernetes application using Workflows connectors  |  Google Cloud Documentation

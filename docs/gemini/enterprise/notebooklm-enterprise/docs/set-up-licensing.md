@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/set-up-licensing/
 title: Get licenses for Gemini Notebook Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:54.562398+00:00
+fetched_at: 2026-10-23T13:12:01.892892+00:00
 ---
 
 # Get licenses for Gemini Notebook Enterprise  |  Google Cloud Documentation

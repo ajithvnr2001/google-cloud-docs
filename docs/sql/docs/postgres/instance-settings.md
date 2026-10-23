@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/instance-settings/
 title: About instance settings \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:32:12.309161+00:00
+fetched_at: 2026-10-23T10:19:47.609481+00:00
 ---
 
 # About instance settings  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -182,7 +182,7 @@ Determines memory and virtual cores available for your Cloud SQL instance. You c
 
 If you require real-time processing, such as online transaction processing (OLTP), make sure that your instance has enough memory to contain the entire working set. However, there are other factors that can impact memory requirements, such as number of active connections, and internal overhead processes. Perform load testing to avoid performance issues in your production environment. When you configure your instance, select sufficient memory and vCPUs to handle your needs, and scale up your instance as your requirements increase. A machine configuration with insufficient vCPUs might lose its SLA coverage. For more information, see [Operational guidelines](https://docs.cloud.google.com/sql/docs/postgres/operational-guidelines). For more information, see [Choose a machine series](/sql/docs/postgres/machine-series-overview). **Note:** The `db-f1-micro` and `db-g1-small` machine types aren't included in the Cloud SQL SLA. These machine types are configured to use a shared-core CPU, and are designed to provide low-cost test and development instances only. Don't use them for production instances.
 
-Your machine type affects the cost of your instance. For more information, see [Instance Pricing](https://cloud.google.com/sql/pricing/#2nd-gen-instance-pricing). You can also see pricing for various scenarios with the [Pricing Calculator](https://cloud.google.com/products/calculator/).
+Your machine type affects the cost of your instance. For more information, see [Instance Pricing](https://cloud.google.com/sql/pricing#2nd-gen-instance-pricing). You can also see pricing for various scenarios with the [Pricing Calculator](https://cloud.google.com/products/calculator).
 
 Set password policy
     
@@ -523,6 +523,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

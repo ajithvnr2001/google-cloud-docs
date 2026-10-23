@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/terraform/
 title: Provision Knowledge Catalog resources with Terraform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:29:40.811729+00:00
+fetched_at: 2026-10-23T10:21:58.103183+00:00
 ---
 
 # Provision Knowledge Catalog resources with Terraform  |  Google Cloud Documentation
@@ -78,6 +78,7 @@ Knowledge Catalog |
   * [ google_dataplex_task_iam](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/dataplex_task_iam)
   * [ google_dataplex_zone](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/dataplex_zone)
   * [ google_dataplex_zone_iam](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/dataplex_zone_iam)
+  * [ google_data_lineage_config](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/data_lineage_config)
 
 | 
 
@@ -89,7 +90,6 @@ Knowledge Catalog |
   * [ google_dataplex_lake_iam_policy](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/dataplex_lake_iam_policy)
   * [ google_dataplex_task_iam_policy](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/dataplex_task_iam_policy)
   * [ google_dataplex_zone_iam_policy](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/dataplex_zone_iam_policy)
-  * [ google_data_lineage_config](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/data_lineage_config)
 
   
   
@@ -100,7 +100,7 @@ The following table lists Terraform-based how-to guides and tutorials for Knowle
 **Guide** | **Details**  
 ---|---  
 [ Manage data quality rules as code with Terraform](https://docs.cloud.google.com/knowledge-catalog/docs/manage-data-quality-rules-as-code) |  This tutorial explains how to manage Knowledge Catalog data quality rules as code with Terraform, Cloud Build, and GitHub.   
-[Codelab: Build the data foundation with Knowledge Catalog metadata](http://codelabs.developers.google.com/governance-context-part1) |  This codelab explains how to build the data foundation with Knowledge Catalog metadata.   
+[Codelab: Build the data foundation with Knowledge Catalog metadata](https://codelabs.developers.google.com/governance-context-part1) |  This codelab explains how to build the data foundation with Knowledge Catalog metadata.   
   
 ## Terraform modules and blueprints for Knowledge Catalog
 
@@ -125,6 +125,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

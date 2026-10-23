@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/overview/
 title: Application Integration overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:55.632556+00:00
+fetched_at: 2026-10-23T13:18:15.230313+00:00
 ---
 
 # Application Integration overview  |  Google Cloud Documentation

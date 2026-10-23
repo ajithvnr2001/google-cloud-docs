@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/alphaevolve/developer-guide/quantify-optimization-target/
 title: Quantify the optimization target \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:46.875274+00:00
+fetched_at: 2026-10-23T13:11:03.628270+00:00
 ---
 
 # Quantify the optimization target  |  Gemini Enterprise  |  Google Cloud Documentation

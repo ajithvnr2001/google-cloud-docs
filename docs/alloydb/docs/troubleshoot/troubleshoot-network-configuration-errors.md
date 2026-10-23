@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/troubleshoot/troubleshoot-network-configuration-errors/
 title: Troubleshoot network configuration errors \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:14.179218+00:00
+fetched_at: 2026-10-23T10:03:38.807721+00:00
 ---
 
 # Troubleshoot network configuration errors  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,11 +21,11 @@ Send feedback
 
 #  Troubleshoot network configuration errors Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page shows you how to resolve common network configuration issues in AlloyDB for PostgreSQL.
+To restore connectivity when cluster creation or network operations fail in AlloyDB for PostgreSQL, you can diagnose and resolve common Virtual Private Cloud peering, IP address range, and Private Service Connect configuration errors.
 
 ## NETWORK_NOT_PEERED
 
-This error occurs when you haven't created a Virtual Private Cloud (VPC) peering with Service Networking.
+This error occurs when you haven't created a Virtual Private Cloud peering with Service Networking.
 
 To resolve this error, set up peering between Service Networking and the specified Virtual Private Cloud. For more information, see [Enable private services access](https://docs.cloud.google.com/alloydb/docs/configure-connectivity).
 
@@ -83,6 +83,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

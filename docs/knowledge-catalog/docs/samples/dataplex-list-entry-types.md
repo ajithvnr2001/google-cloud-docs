@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/samples/dataplex-list-entry-types/
 title: List entry types \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:03:13.325508+00:00
+fetched_at: 2026-10-23T12:51:01.990738+00:00
 ---
 
 # List entry types  |  Knowledge Catalog  |  Google Cloud Documentation

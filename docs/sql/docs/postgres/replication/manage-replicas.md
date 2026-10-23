@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/replication/manage-replicas/
 title: Manage read replicas \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:56.973727+00:00
+fetched_at: 2026-10-23T10:18:53.294094+00:00
 ---
 
 # Manage read replicas  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -571,7 +571,7 @@ Confirm that the promoted instance is configured correctly. In particular, consi
 When you view a replica instance using the Google Cloud console or log into the instance using an administration client, you get details about replication, including status and metrics. When you use the [gcloud CLI](https://docs.cloud.google.com/sdk/gcloud), you get a brief summary of the replication configuration.
 
 Before checking the replication status for a Cloud SQL replica instance, use the   
-[`gcloud sql instances describe`](https://cloud.google.com/sdk/gcloud/reference/sql/instances/describe) command to display the status of the instance. As a result, you can see whether replication is enabled for the replica instance.
+[`gcloud sql instances describe`](https://docs.cloud.google.com/sdk/gcloud/reference/sql/instances/describe) command to display the status of the instance. As a result, you can see whether replication is enabled for the replica instance.
 
 The following metrics are available for replica instances. ([Learn more](https://docs.cloud.google.com/sql/docs/mysql/monitor-instance#available-metrics) about additional metrics available for all instances, including non-replica instances.)
 
@@ -735,6 +735,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

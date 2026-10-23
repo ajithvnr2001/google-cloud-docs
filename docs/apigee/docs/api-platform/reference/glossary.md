@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/glossary/
 title: Glossary \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:55.852711+00:00
+fetched_at: 2026-10-23T13:15:35.542482+00:00
 ---
 
 # Glossary  |  Apigee  |  Google Cloud Documentation

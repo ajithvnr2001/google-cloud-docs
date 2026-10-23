@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-ssh-keys/
 title: Set up SSH keys for a server \u00a0|\u00a0 Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:12.588427+00:00
+fetched_at: 2026-10-23T13:18:41.767561+00:00
 ---
 
 # Set up SSH keys for a server  |  Bare Metal Solution  |  Google Cloud Documentation

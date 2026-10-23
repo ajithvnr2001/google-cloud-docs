@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/functions/create-triggers/
 title: Create a trigger for Cloud Run functions \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:05.550719+00:00
+fetched_at: 2026-10-23T13:01:33.621391+00:00
 ---
 
 # Create a trigger for Cloud Run functions  |  Eventarc Standard  |  Google Cloud Documentation

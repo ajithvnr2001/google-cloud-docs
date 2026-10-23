@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/java/annotations/
 title: Cloud Endpoints Frameworks annotations and syntax \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:40.997290+00:00
+fetched_at: 2026-10-23T13:00:53.028538+00:00
 ---
 
 # Cloud Endpoints Frameworks annotations and syntax  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

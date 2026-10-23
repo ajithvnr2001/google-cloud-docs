@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/enable-policy-compliant-lakehouse-access/
 title: Enable policy-compliant lakehouse access with Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:17.266379+00:00
+fetched_at: 2026-10-23T10:21:34.458385+00:00
 ---
 
 # Enable policy-compliant lakehouse access with Knowledge Catalog  |  Google Cloud Documentation
@@ -51,7 +51,7 @@ This tutorial relies on two main concepts to create this unified architecture:
   * Create [Apache Iceberg tables managed by BigQuery](https://docs.cloud.google.com/bigquery/docs/biglake-iceberg-tables-in-bigquery). Lakehouse manages the Iceberg metadata.
   * Set up central security rules using [policy tags](https://docs.cloud.google.com/bigquery/docs/best-practices-policy-tags) to mask and protect sensitive columns.
   * Separate physical storage permissions from logical data queries using a [Cloud resource connection](https://docs.cloud.google.com/bigquery/docs/create-cloud-resource-connection).
-  * Route queries securely through [Managed Service for Apache Spark](https://docs.cloud.google.com/dataproc-serverless/docs) so that external engines can't bypass your security rules.
+  * Route queries securely through Managed Service for Apache Spark so that external engines can't bypass your security rules. For more information, see the [Managed Service for Apache Spark documentation](https://docs.cloud.google.com/managed-spark/docs).
   * Explore an interactive map of your data using [data lineage](https://docs.cloud.google.com/knowledge-catalog/docs/about-data-lineage).
 
 
@@ -362,7 +362,7 @@ Inside `2_create_masking.py`, the script looks up the ID for the policy tag you 
 
 ### Grant privileged access to your data
 
-Because of your deny-by-default setup, no one can read the tagged column. You need to explicitly grant access to authorized users. Give the **Manager** persona and your own account the Fine-Grained Reader role. This lets these specific users bypass the masking rules and read the unmasked data.
+Because of your deny-by-default setup, no one can read the tagged column. You need to explicitly grant access to authorized users. Give the **Manager** persona and your own account the **Fine-Grained Reader** (`roles/datacatalog.categoryFineGrainedReader`) role. This lets these specific users bypass the masking rules and read the unmasked data.
 
 Run the script to grant access:
     
@@ -434,7 +434,7 @@ The **Manager** persona has privileged, fine-grained reader access. They should 
     bq query --use_legacy_sql=false "SELECT * FROM \`${PROJECT_ID}.${DATASET_ID}.transactions\`"
     
 
-Since the manager has the Fine-Grained Reader role, the query displays the raw amount values:
+Since the manager has the **Fine-Grained Reader** (`roles/datacatalog.categoryFineGrainedReader`) role, the query displays the raw amount values:
     
     
     +----+----------+--------+------------------+
@@ -519,7 +519,7 @@ Submit a Spark job as the **Manager** persona. Use Managed Service for Apache Sp
         --format="value(name)"
     
 
-Review the job output logs in the terminal. Because the manager has the Fine-Grained Reader role, Spark successfully retrieves the unmasked amounts:
+Review the job output logs in the terminal. Because the manager has the **Fine-Grained Reader** (`roles/datacatalog.categoryFineGrainedReader`) role, Spark successfully retrieves the unmasked amounts:
     
     
     === 📊 Data Preview ===
@@ -572,7 +572,7 @@ Instead of writing complex logging code manually, Knowledge Catalog automaticall
 
 Check out the interactive map that Knowledge Catalog generated. It shows how raw data flows from the `transactions` table into the `transactions_summary` table. Since Knowledge Catalog gathers metadata as a dynamic context engine, this graph shows the reliable, real-time traceability that you need for a data audit.
 
-  1. In the Google Cloud Console, navigate to [**Knowledge Catalog > Search**](https://console.cloud.google.com/dataplex/dp-search-nl).
+  1. In the Google Cloud Console, navigate to [**Knowledge Catalog > Search**](https://console.cloud.google.com/dataplex/dp-search).
   2. Type `lakehouse_retail_demo.transactions_summary` in the search bar and click the table.
   3. Click the **Lineage** tab.
 
@@ -668,7 +668,7 @@ You successfully built a secure data lakehouse! Using Lakehouse to manage Iceber
   * **Retrieve data context for AI agents:** [Retrieve data context with the context API](https://docs.cloud.google.com/knowledge-catalog/docs/retrieve-data-context).
   * **Deep dive into data lineage:** [View data lineage information](https://docs.cloud.google.com/knowledge-catalog/docs/use-lineage).
   * **Explore advanced access control:** To implement more complex security scenarios, review the official documentation on [customizing Lakehouse with additional features](https://docs.cloud.google.com/biglake/docs/blms-features#set_access_control_policies).
-  * **Managed Service for Apache Spark:** Discover how to scale data pipelines without provisioning clusters on the [Serverless Spark documentation page](https://cloud.google.com/dataproc-serverless/docs).
+  * **Managed Service for Apache Spark:** Discover how to scale data pipelines without provisioning clusters in the [Managed Service for Apache Spark documentation](https://docs.cloud.google.com/managed-spark/docs).
   * **Try other use cases** : Try out other Knowledge Catalog [use cases](https://docs.cloud.google.com/knowledge-catalog/docs/use-cases). 
 
 

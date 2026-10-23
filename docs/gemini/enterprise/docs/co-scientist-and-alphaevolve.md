@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/co-scientist-and-alphaevolve/
 title: Accelerate research and development with Co-Scientist agent \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:38.140236+00:00
+fetched_at: 2026-10-23T13:13:53.778634+00:00
 ---
 
 # Accelerate research and development with Co-Scientist agent  |  Gemini Enterprise  |  Google Cloud Documentation

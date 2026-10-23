@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/control-packages/australia-data-boundary/
 title: Australia Data Boundary \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:11.684616+00:00
+fetched_at: 2026-10-23T13:19:39.293170+00:00
 ---
 
 # Australia Data Boundary  |  Assured Workloads  |  Google Cloud Documentation

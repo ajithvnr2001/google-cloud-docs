@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/deprecations/appstats-to-trace-migration/
 title: Migrating from Appstats to Cloud Trace \u00a0|\u00a0 App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:12.285880+00:00
+fetched_at: 2026-10-23T13:16:56.371093+00:00
 ---
 
 # Migrating from Appstats to Cloud Trace  |  App Engine  |  Google Cloud Documentation

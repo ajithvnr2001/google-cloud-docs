@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/setup-policies/
 title: Setting up the Policy API \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:48.516618+00:00
+fetched_at: 2026-10-23T13:10:25.381467+00:00
 ---
 
 # Setting up the Policy API  |  Cloud Identity  |  Google Cloud Documentation

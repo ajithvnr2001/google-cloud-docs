@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/update-deployment/
 title: Update a deployment \u00a0|\u00a0 Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:33.514366+00:00
+fetched_at: 2026-10-23T13:09:43.732401+00:00
 ---
 
 # Update a deployment  |  Infrastructure Manager  |  Google Cloud Documentation

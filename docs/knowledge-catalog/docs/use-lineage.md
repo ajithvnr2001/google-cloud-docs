@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/use-lineage/
 title: View data lineage for Google Cloud systems \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:37:39.404509+00:00
+fetched_at: 2026-10-23T10:22:03.045688+00:00
 ---
 
 # View data lineage for Google Cloud systems  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -40,10 +40,10 @@ To view data lineage, you need specific Identity and Access Management (IAM) per
 
 To get the permissions that you need to view data lineage, ask your administrator to grant you the following IAM roles: 
 
-  * [Data Lineage Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/datalineage#datalineage.viewer) (`roles/datalineage.viewer`) on the project where lineage is recorded, and the project where lineage is viewed
-  * View BigQuery table details: [BigQuery Metadata Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.metadataViewer) (`roles/bigquery.metadataViewer`) on the table's storage project 
-  * View BigQuery job details: [BigQuery Resource Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.resourceViewer) (`roles/bigquery.resourceViewer`) on the job's compute project 
-  * View details for other cataloged assets: [Dataplex Catalog Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) on the project where catalog entries are stored 
+  * All: [**Data Lineage Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/datalineage#datalineage.viewer) (`roles/datalineage.viewer`) on the project where lineage is recorded, and the project where lineage is viewed 
+  * View BigQuery table details: [**BigQuery Metadata Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.metadataViewer) (`roles/bigquery.metadataViewer`) on the table's storage project 
+  * View BigQuery job details: [**BigQuery Resource Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.resourceViewer) (`roles/bigquery.resourceViewer`) on the job's compute project 
+  * View details for other cataloged assets: [**Dataplex Catalog Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) on the project where catalog entries are stored 
 
 
 
@@ -72,9 +72,9 @@ For a detailed description of the graph elements (such as nodes, edges, process 
 
 **Caution:** Data lineage is enabled on a per-project basis, not a per-service basis. After you enable the Data Lineage API, lineage information is automatically reported for multiple Google Cloud services in the project, depending on their product-level lineage control. For more details, see [Data lineage considerations and limitations](https://docs.cloud.google.com/knowledge-catalog/docs/about-data-lineage#lineage-considerations). 
 
-Enable data lineage to begin automatically tracking lineage information for [supported systems](https://docs.cloud.google.com/knowledge-catalog/docs/about-data-lineage#lineage-supported-systems). By default, enabling the API activates lineage tracking for most supported services. To control Managed Service for Apache Spark lineage ingestion, see [Control lineage ingestion for a service](https://docs.cloud.google.com/knowledge-catalog/docs/control-lineage-ingestion).
+Enable data lineage to begin automatically tracking lineage information for supported systems. By default, enabling the API activates lineage tracking for most supported services. For more information, see [Automated data lineage tracking](https://docs.cloud.google.com/knowledge-catalog/docs/about-data-lineage#lineage-supported-systems) and [About data lineage ingestion control](https://docs.cloud.google.com/knowledge-catalog/docs/control-lineage-ingestion).
 
-The Data Lineage API is billed under the Knowledge Catalog Premium Processing SKU. For more information, see [Knowledge Catalog pricing](https://cloud.google.com/dataplex/pricing).
+The Data Lineage API is billed under the Knowledge Catalog Premium Processing SKU. For more information, see [Knowledge Catalog pricing](https://cloud.google.com/products/knowledge-catalog/pricing).
 
 You must enable the Data Lineage API in both the project where you view lineage and the projects where lineage is recorded. For more information, see [Project types](https://docs.cloud.google.com/knowledge-catalog/docs/troubleshooting-lineage#project_types).
 
@@ -97,13 +97,9 @@ You must enable the Data Lineage API in both the project where you view lineage 
 
 ## Control lineage ingestion for a service
 
-**Preview**
-
-This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
-
 You can selectively enable or disable automatic lineage tracking for specific services at the project, folder, or organization level.
 
-For details about how these configurations are applied hierarchically through the resource tree, see [Control lineage ingestion](https://docs.cloud.google.com/knowledge-catalog/docs/control-lineage-ingestion).
+For details about how these configurations are applied hierarchically through the resource tree, see [About data lineage ingestion control](https://docs.cloud.google.com/knowledge-catalog/docs/control-lineage-ingestion).
 
 ## View lineage
 
@@ -117,7 +113,7 @@ To track how data is transformed and moves across systems, you can view data lin
 
 You can access data lineage information in the Google Cloud console from various starting points:
 
-  * **Knowledge Catalog:** Go to the Knowledge Catalog **Search** page, select **Knowledge Catalog** as the search mode, search for the entry you want to view, and then click it. For more information, see [Search for resources in Knowledge Catalog](https://docs.cloud.google.com/knowledge-catalog/docs/search-assets).
+  * **Knowledge Catalog:** Go to the Knowledge Catalog **Search** page, select **Knowledge Catalog** as the search mode, search for the entry you want to view, and then click it. For more information, see [Search for data assets in Knowledge Catalog](https://docs.cloud.google.com/knowledge-catalog/docs/search-assets).
   * **BigQuery:** Go to the **BigQuery** page and open the table for which you want to see the data lineage.
   * **Vertex AI:** Go to the **Datasets** or **Model Registry** page, and click the dataset or model for which you want to see the data lineage.
 
@@ -131,11 +127,11 @@ The default **Graph** view opens, showing table-level lineage across systems and
 
   2. To manually explore the lineage graph, click **Expand** next to a node to load five more nodes at a time.
 
-For more information, see [Manually explore the lineage graph](https://docs.cloud.google.com/knowledge-catalog/docs/lineage-views#lineage-manual-exploration).
+For more information, see [Explore the lineage graph](https://docs.cloud.google.com/knowledge-catalog/docs/lineage-views#lineage-manual-exploration).
 
   3. Click a node in the **Graph** view.
 
-The **Details** panel opens with information about the asset, such as fully qualified name and type. For more information, see [Node details](https://docs.cloud.google.com/knowledge-catalog/docs/lineage-views#lineage-node-details).
+The **Details** panel opens with information about the asset, such as fully qualified name and type. For more information, see [View lineage node details](https://docs.cloud.google.com/knowledge-catalog/docs/lineage-views#lineage-node-details).
 
 **Note:** Systems like Vertex AI Pipelines generate lineage data for Vertex AI models and datasets. For these assets, you can click **Open in Vertex AI** in the **Details** panel to view the lineage graph details directly in Vertex AI.
   4. Click an edge with a process icon in the **Graph** view.
@@ -144,21 +140,22 @@ The **Query** panel opens. For more information, see [Inspect transformation log
 
      * To inspect transformation logic, click the **Details** tab.
      * To see audit and history of runs, click the **Runs** tab.
-**Note:** On the lineage graph, the ![Vertex AI lineage icon](https://docs.cloud.google.com/static/knowledge-catalog/images/vertex-lineage-icon.png) appears before Vertex AI processes (like components and templates). If a process is cataloged in Knowledge Catalog with a fully qualified domain name (FQN), you can click it to view its details, or click **Open in Vertex AI** in the **Details** panel to view the graph in Vertex AI. To view the lineage of deeper operations—like training data, test data, or hyperparameters applied—see [Track the lineage of pipeline artifacts](https://docs.cloud.google.com/vertex-ai/docs/pipelines/lineage).
+**Note:** On the lineage graph, the ![Vertex AI lineage
+icon](https://docs.cloud.google.com/static/knowledge-catalog/images/vertex-lineage-icon.png) appears before Vertex AI processes (like components and templates). If a process is cataloged in Knowledge Catalog with a fully qualified domain name (FQN), you can click it to view its details, or click **Open in Vertex AI** in the **Details** panel to view the graph in Vertex AI. To view the lineage of deeper operations—like training data, test data, or hyperparameters applied—see [Track the lineage of pipeline artifacts](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/pipelines/lineage).
   5. In the **Lineage explorer** panel, select filter criteria—for example, **Direction** , **Dependency type** , or **Time range** —and then click **Apply**.
 
-This opens a focused view within a specific region (Preview). This view automatically expands the graph up to three levels of nodes. For more information, see [Apply filters for a focused lineage view](https://docs.cloud.google.com/knowledge-catalog/docs/lineage-views#lineage-filtered-view).
+This opens a focused view within a specific region (Preview). This view automatically expands the graph up to three levels of nodes. For more information, see [Filter and highlight data lineage views](https://docs.cloud.google.com/knowledge-catalog/docs/lineage-views#lineage-filtered-view).
 
   6. In the focused **Graph** view, select a node, and then in the node's details panel, click **Visualize Path** to visualize the lineage path from the selected node back to the root entry (only in focused view).
 
-For more information, see [Lineage path visualization](https://docs.cloud.google.com/knowledge-catalog/docs/lineage-views#visualize-path).
+For more information, see [Visualize a data lineage path](https://docs.cloud.google.com/knowledge-catalog/docs/lineage-views#visualize-path).
 
   7. To view column-level lineage (only for BigQuery and Managed Service for Apache Spark jobs), do one of the following:
 
      * In a focused **Graph** view, click the column icon on a table. ![Icon used to switch to column-level lineage.](https://docs.cloud.google.com/static/knowledge-catalog/images/column-icon.png)Column icon
      * In the **Lineage explorer** panel, filter by column name, and click **Apply**.
 
-For more information, see [Column-level lineage](https://docs.cloud.google.com/knowledge-catalog/docs/lineage-views#column-level-lineage).
+For more information, see [When to use column-level lineage](https://docs.cloud.google.com/knowledge-catalog/docs/lineage-views#column-level-lineage).
 
   8. Click restart_alt **Reset**.
 
@@ -432,17 +429,17 @@ Replace the following:
 
 
 
-If you want to stop lineage tracking for specific services without disabling the API completely, see [Control lineage ingestion for a service](https://docs.cloud.google.com/knowledge-catalog/docs/control-lineage-ingestion).
+If you want to stop lineage tracking for specific services without disabling the API completely, see [Configure data lineage ingestion for a service](https://docs.cloud.google.com/knowledge-catalog/docs/configure-lineage-ingestion).
 
 ## What's next
 
-  * [Track data lineage for a BigQuery table's copy and query jobs](https://docs.cloud.google.com/knowledge-catalog/docs/track-lineage-quickstart).
-  * Learn about [data lineage information model](https://docs.cloud.google.com/knowledge-catalog/docs/about-data-lineage#information-model).
+  * [Track data lineage for a BigQuery table](https://docs.cloud.google.com/knowledge-catalog/docs/track-lineage-quickstart).
+  * Learn about the [data lineage information model](https://docs.cloud.google.com/knowledge-catalog/docs/about-data-lineage#information-model).
   * Learn about [data lineage considerations and limitations](https://docs.cloud.google.com/knowledge-catalog/docs/about-data-lineage#lineage-considerations).
-  * Learn about [data lineage audit logging](https://docs.cloud.google.com/knowledge-catalog/docs/lineage-audit-logging).
-  * Learn how to [troubleshoot data lineage](https://docs.cloud.google.com/knowledge-catalog/docs/troubleshooting-lineage).
-  * Learn how to [integrate with OpenLineage](https://docs.cloud.google.com/knowledge-catalog/docs/open-lineage).
-  * Learn how to [use data lineage with Managed Service for Apache Spark](https://docs.cloud.google.com/managed-spark/docs/guides/data-lineage).
+  * Learn about [Data Lineage API audit logging](https://docs.cloud.google.com/knowledge-catalog/docs/lineage-audit-logging).
+  * [Troubleshoot data lineage issues](https://docs.cloud.google.com/knowledge-catalog/docs/troubleshooting-lineage).
+  * [Integrate with OpenLineage](https://docs.cloud.google.com/knowledge-catalog/docs/open-lineage).
+  * [Use data lineage with Managed Service for Apache Spark](https://docs.cloud.google.com/managed-spark/docs/guides/data-lineage).
 
 
 
@@ -450,6 +447,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

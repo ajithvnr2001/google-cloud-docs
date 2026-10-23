@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-list-model-evaluation-slices-sample/
 title: List model evaluation slices \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:47.389711+00:00
+fetched_at: 2026-10-23T09:26:59.610568+00:00
 ---
 
 # List model evaluation slices  |  Vertex AI  |  Google Cloud Documentation

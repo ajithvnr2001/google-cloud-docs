@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/add-edit-controls/
 title: Add and edit controls \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:48.567201+00:00
+fetched_at: 2026-10-23T13:20:47.742039+00:00
 ---
 
 # Add and edit controls  |  Data Studio  |  Google Cloud Documentation

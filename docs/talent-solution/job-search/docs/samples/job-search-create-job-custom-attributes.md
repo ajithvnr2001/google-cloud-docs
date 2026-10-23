@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-search-create-job-custom-attributes/
 title: Create job with client using custom attributes (v4beta1) \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:17.362822+00:00
+fetched_at: 2026-10-23T09:34:40.556245+00:00
 ---
 
 # Create job with client using custom attributes (v4beta1)  |  Job Search  |  Google Cloud Documentation

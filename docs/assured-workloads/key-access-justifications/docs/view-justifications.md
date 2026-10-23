@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/key-access-justifications/docs/view-justifications/
 title: View and act on justifications \u00a0|\u00a0 Key Access Justifications \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:40.978107+00:00
+fetched_at: 2026-10-23T13:19:06.807484+00:00
 ---
 
 # View and act on justifications  |  Key Access Justifications  |  Google Cloud Documentation

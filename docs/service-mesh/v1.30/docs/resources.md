@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/service-mesh/v1.30/docs/resources/
 title: Resources \u00a0|\u00a0 Cloud Service Mesh \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:31:31.344439+00:00
+fetched_at: 2026-10-23T10:52:50.367307+00:00
 ---
 
 # Resources  |  Cloud Service Mesh  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/gke/route-trigger-network-connectivity/
 title: Route Network Connectivity events to GKE \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:50.719337+00:00
+fetched_at: 2026-10-23T13:00:56.654626+00:00
 ---
 
 # Route Network Connectivity events to GKE  |  Eventarc Standard  |  Google Cloud Documentation

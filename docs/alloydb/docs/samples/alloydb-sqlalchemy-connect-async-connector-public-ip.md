@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-sqlalchemy-connect-async-connector-public-ip/
 title: Create an asynchronous connection pool using a public IP address \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:27.349221+00:00
+fetched_at: 2026-10-23T10:43:24.889881+00:00
 ---
 
 # Create an asynchronous connection pool using a public IP address  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

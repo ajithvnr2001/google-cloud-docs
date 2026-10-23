@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/appidentity/
 title: App Identity API for legacy bundled services \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:16.481401+00:00
+fetched_at: 2026-10-23T13:18:26.414639+00:00
 ---
 
 # App Identity API for legacy bundled services  |  App Engine standard environment  |  Google Cloud Documentation

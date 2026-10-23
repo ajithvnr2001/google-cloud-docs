@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/schedule-cassandra-backup-gcs/
 title: Scheduling backups in Cloud Storage \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:47:50.083972+00:00
+fetched_at: 2026-10-23T13:14:51.349599+00:00
 ---
 
 # Scheduling backups in Cloud Storage  |  Apigee  |  Google Cloud Documentation

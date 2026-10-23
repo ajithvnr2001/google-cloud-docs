@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/supply-chain-security/
 title: Software supply chain security \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:05.870102+00:00
+fetched_at: 2026-10-23T13:19:19.199598+00:00
 ---
 
 # Software supply chain security  |  Artifact Analysis  |  Google Cloud Documentation

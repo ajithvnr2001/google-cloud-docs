@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/use-knowledge-graph-search/
 title: Knowledge Graph: Powering intelligent and context-aware search \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:43.009851+00:00
+fetched_at: 2026-10-23T13:11:07.090052+00:00
 ---
 
 # Knowledge Graph: Powering intelligent and context-aware search  |  Gemini Enterprise  |  Google Cloud Documentation

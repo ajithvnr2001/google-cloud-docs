@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-optimize/get-report-metadata/
 title: Get a report's metadata \u00a0|\u00a0 App Optimize \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:41.195924+00:00
+fetched_at: 2026-10-23T13:17:44.654978+00:00
 ---
 
 # Get a report's metadata  |  App Optimize  |  Google Cloud Documentation

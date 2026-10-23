@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/audit-logging/
 title: cloudaicompanion API audit logging \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:15.794314+00:00
+fetched_at: 2026-10-23T13:02:40.245478+00:00
 ---
 
 # cloudaicompanion API audit logging  |  Gemini for Google Cloud  |  Google Cloud Documentation

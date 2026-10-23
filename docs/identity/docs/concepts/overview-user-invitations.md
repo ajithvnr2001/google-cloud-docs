@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/concepts/overview-user-invitations/
 title: User Invitation API overview \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:19.596334+00:00
+fetched_at: 2026-10-23T13:10:20.240398+00:00
 ---
 
 # User Invitation API overview  |  Cloud Identity  |  Google Cloud Documentation

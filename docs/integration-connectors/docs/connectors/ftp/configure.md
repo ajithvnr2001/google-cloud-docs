@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/ftp/configure/
 title: FTP \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:14.024225+00:00
+fetched_at: 2026-10-23T13:08:47.704977+00:00
 ---
 
 # FTP  |  Integration Connectors  |  Google Cloud Documentation

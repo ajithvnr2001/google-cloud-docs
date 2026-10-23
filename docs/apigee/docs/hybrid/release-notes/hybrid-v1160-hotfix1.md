@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/release-notes/hybrid-v1160-hotfix1/
 title: Apigee hybrid 1.16.0-hotfix.1 release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:47:03.001215+00:00
+fetched_at: 2026-10-23T13:15:45.972374+00:00
 ---
 
 # Apigee hybrid 1.16.0-hotfix.1 release notes  |  Google Cloud Documentation

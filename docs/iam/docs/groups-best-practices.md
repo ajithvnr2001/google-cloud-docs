@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/groups-best-practices/
 title: Best practices for using Google groups \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:30:46.279890+00:00
+fetched_at: 2026-10-23T13:03:51.068989+00:00
 ---
 
 # Best practices for using Google groups  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

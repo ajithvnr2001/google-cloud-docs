@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/samples/securitycenter-list-notification-configs/
 title: List NotificationConfigs \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:50:06.127199+00:00
+fetched_at: 2026-10-23T10:52:15.990994+00:00
 ---
 
 # List NotificationConfigs  |  Security Command Center  |  Google Cloud Documentation
@@ -238,7 +238,7 @@ To authenticate to Security Command Center, set up Application Default Credentia
     # Your location. e.g. "global" or "us".
     # location = "global"
     
-    client = Google::Cloud::[SecurityCenter](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security_center-v2/latest/Google-Cloud-SecurityCenter.html).[security_center](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security_center/latest/Google-Cloud-SecurityCenter.html)
+    client = Google::Cloud::[SecurityCenter](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security_center/latest/Google-Cloud-SecurityCenter.html).[security_center](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security_center/latest/Google-Cloud-SecurityCenter.html)
     
     # You can also use a project or folder as a parent.
     parent = client.organization_location_path organization: org_id, location: location

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/python/create-multi-class-api/
 title: Creating an API implemented with multiple classes \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:35.653057+00:00
+fetched_at: 2026-10-23T13:00:59.155570+00:00
 ---
 
 # Creating an API implemented with multiple classes  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

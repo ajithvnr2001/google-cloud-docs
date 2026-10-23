@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/samples/securitycenter-group-all-assets/
 title: Group assets \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:56.193388+00:00
+fetched_at: 2026-10-23T11:33:13.036965+00:00
 ---
 
 # Group assets  |  Security Command Center  |  Google Cloud Documentation

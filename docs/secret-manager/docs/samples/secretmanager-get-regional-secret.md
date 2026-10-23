@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-get-regional-secret/
 title: Get regional secret \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:46.717946+00:00
+fetched_at: 2026-10-23T09:39:17.060139+00:00
 ---
 
 # Get regional secret  |  Secret Manager  |  Google Cloud Documentation

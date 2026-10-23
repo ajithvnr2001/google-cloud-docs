@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/lumapps/lumapps-configuration/
 title: LumApps configuration \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:27.120604+00:00
+fetched_at: 2026-10-23T13:08:53.796189+00:00
 ---
 
 # LumApps configuration  |  Gemini Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-create-regional-secret-with-annotations/
 title: Create a regional secret with annotations \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:42.078020+00:00
+fetched_at: 2026-10-23T09:41:09.314134+00:00
 ---
 
 # Create a regional secret with annotations  |  Secret Manager  |  Google Cloud Documentation

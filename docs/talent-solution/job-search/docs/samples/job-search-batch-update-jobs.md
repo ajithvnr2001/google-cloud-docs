@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-search-batch-update-jobs/
 title: Batch update jobs (v4beta1) \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:08.156441+00:00
+fetched_at: 2026-10-23T09:34:47.676905+00:00
 ---
 
 # Batch update jobs (v4beta1)  |  Job Search  |  Google Cloud Documentation

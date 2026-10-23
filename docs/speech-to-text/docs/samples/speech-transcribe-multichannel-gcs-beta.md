@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-transcribe-multichannel-gcs-beta/
 title: Transcribe a multi-channel file in Cloud Storage (beta) \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:35.201773+00:00
+fetched_at: 2026-10-23T08:37:39.445679+00:00
 ---
 
 # Transcribe a multi-channel file in Cloud Storage (beta)  |  Cloud Speech-to-Text  |  Google Cloud Documentation

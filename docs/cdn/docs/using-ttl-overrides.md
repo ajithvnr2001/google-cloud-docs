@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/using-ttl-overrides/
 title: Change TTL settings and overrides \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:52.354310+00:00
+fetched_at: 2026-10-23T13:20:28.798016+00:00
 ---
 
 # Change TTL settings and overrides  |  Cloud CDN  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/platform/pa-user/query-and-view-logs/
 title: Query and view logs \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:16:12.082263+00:00
+fetched_at: 2026-10-23T12:55:13.470230+00:00
 ---
 
 # Query and view logs  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation
@@ -23,15 +23,7 @@ Send feedback
 
 #  Query and view logs Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page provides detailed instructions on how to query and visualize your logs using the Grafana user interface to gain insights into your service events and activity.
-
-After [collecting logs](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/platform/pa-user/collect-logs) from your deployed workloads and services in Google Distributed Cloud (GDC) air-gapped appliance, you can start analyzing them. To analyze logs, you can visualize and filter them on informative Grafana panels or gRPC calls for programmatic access.
-
-You can access your logs in the following method:
-
-  * **Grafana panels** : Gain insights into your project's activity record through the Log panel of your Grafana instance. This panel lets you query and pinpoint specific logs, providing granular data observability tailored to your needs. Grafana provides a user-friendly interface for filtering and analyzing your workload data, creating customized dashboards and panels for comprehensive visualization.
-
-
+Log querying in Google Distributed Cloud (GDC) air-gapped appliance lets you inspect operational and audit events across your project workloads after [collecting logs](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/platform/pa-user/collect-logs). You can filter, visualize, and export log streams in the Grafana Log panel with Log Query Language (LogQL) expressions. For programmatic workflows, query your organization's Log Query API over HTTP or gRPC by following [standard API access methods](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/apis/apis-overview).
 
 ### Before you begin
 
@@ -398,6 +390,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

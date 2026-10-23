@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-create-training-pipeline-tabular-classification-sample/
 title: Create a training pipeline for tabular classification \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:27.448926+00:00
+fetched_at: 2026-10-23T09:27:03.141675+00:00
 ---
 
 # Create a training pipeline for tabular classification  |  Vertex AI  |  Google Cloud Documentation

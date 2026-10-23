@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/manage-requests/
 title: Manage change requests with governance workflows \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:59:27.343814+00:00
+fetched_at: 2026-10-23T12:50:56.808548+00:00
 ---
 
 # Manage change requests with governance workflows  |  Knowledge Catalog  |  Google Cloud Documentation

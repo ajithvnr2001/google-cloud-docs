@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/release-notes-2023/
 title: Release notes (Jan 2023 - Feb 2024) \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:56.671401+00:00
+fetched_at: 2026-10-23T13:20:50.293036+00:00
 ---
 
 # Release notes (Jan 2023 - Feb 2024)  |  Data Studio  |  Google Cloud Documentation

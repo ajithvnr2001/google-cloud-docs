@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/licenses-faqs/
 title: Frequently asked questions about Gemini Enterprise subscriptions and licenses \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:08.219637+00:00
+fetched_at: 2026-10-23T13:12:11.776781+00:00
 ---
 
 # Frequently asked questions about Gemini Enterprise subscriptions and licenses  |  Google Cloud Documentation

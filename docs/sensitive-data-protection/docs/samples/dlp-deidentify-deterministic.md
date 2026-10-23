@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-deidentify-deterministic/
 title: De-identify content through deterministic encryption \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:40:56.883685+00:00
+fetched_at: 2026-10-23T11:32:02.650163+00:00
 ---
 
 # De-identify content through deterministic encryption  |  Sensitive Data Protection  |  Google Cloud Documentation

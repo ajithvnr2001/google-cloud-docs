@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/architectures-high-availability-postgresql-clusters-compute-engine/
 title: Architectures for high availability of PostgreSQL clusters on Compute Engine \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:03.505473+00:00
+fetched_at: 2026-10-23T13:19:28.567327+00:00
 ---
 
 # Architectures for high availability of PostgreSQL clusters on Compute Engine  |  Cloud Architecture Center  |  Google Cloud Documentation

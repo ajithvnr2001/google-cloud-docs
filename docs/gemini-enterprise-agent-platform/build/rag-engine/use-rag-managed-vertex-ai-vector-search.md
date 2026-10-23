@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/rag-engine/use-rag-managed-vertex-ai-vector-search/
 title: Use Vector Search 2.0 with RAG \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:32.380145+00:00
+fetched_at: 2026-10-23T12:44:20.318357+00:00
 ---
 
 # Use Vector Search 2.0 with RAG  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -273,16 +273,16 @@ Replace the following variables:
 
     
     
-    from google.cloud import [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest)
+    from google.cloud import vectorsearch_v1
     
-    client = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[VectorSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.vector_search_service.VectorSearchServiceClient.html)()
+    client = vectorsearch_v1.[VectorSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.vector_search_service.VectorSearchServiceClient.html)()
     
-    index = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[Index](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.Index.html)(
+    index = vectorsearch_v1.[Index](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.Index.html)(
         index_field="text_embedding",
-        distance_metric=[vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DistanceMetric](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DistanceMetric.html).COSINE_DISTANCE,
+        distance_metric=vectorsearch_v1.[DistanceMetric](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DistanceMetric.html).COSINE_DISTANCE,
         filter_fields=["file_id"],
     )
-    request = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[CreateIndexRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.CreateIndexRequest.html)(
+    request = vectorsearch_v1.[CreateIndexRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.CreateIndexRequest.html)(
         parent="projects/PROJECT_ID/locations/us-central1/collections/vertex-rag-RAG_CORPUS_ID",
         index_id="vertex-rag-RAG_CORPUS_ID-index",
         index=index,
@@ -415,6 +415,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

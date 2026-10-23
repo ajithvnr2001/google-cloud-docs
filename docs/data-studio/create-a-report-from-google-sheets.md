@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/create-a-report-from-google-sheets/
 title: Create a report from Google Sheets \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:28.534101+00:00
+fetched_at: 2026-10-23T13:19:16.067507+00:00
 ---
 
 # Create a report from Google Sheets  |  Data Studio  |  Google Cloud Documentation

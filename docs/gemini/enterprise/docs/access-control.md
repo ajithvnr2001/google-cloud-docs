@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/access-control/
 title: IAM roles and permissions \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:44.469906+00:00
+fetched_at: 2026-10-23T13:12:59.865305+00:00
 ---
 
 # IAM roles and permissions  |  Gemini Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/gcp-tasks/configure-ml-prediction-task/
 title: AI Platform - Prediction task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:10.098891+00:00
+fetched_at: 2026-10-23T13:17:17.018271+00:00
 ---
 
 # AI Platform - Prediction task  |  Application Integration  |  Google Cloud Documentation

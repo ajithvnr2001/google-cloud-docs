@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/context-sets/
 title: Context sets overview \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:21:41.332896+00:00
+fetched_at: 2026-10-23T12:50:53.237477+00:00
 ---
 
 # Context sets overview  |  Knowledge Catalog  |  Google Cloud Documentation

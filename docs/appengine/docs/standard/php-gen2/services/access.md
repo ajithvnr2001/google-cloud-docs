@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/php-gen2/services/access/
 title: Access legacy bundled services for PHP \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:09.766193+00:00
+fetched_at: 2026-10-23T13:17:51.367355+00:00
 ---
 
 # Access legacy bundled services for PHP  |  App Engine standard environment  |  Google Cloud Documentation

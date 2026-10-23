@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-intelligence/docs/samples/video-streaming-object-tracking-beta/
 title: Track objects in a streaming video \u00a0|\u00a0 Video Intelligence API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:07.720757+00:00
+fetched_at: 2026-10-23T09:35:30.427500+00:00
 ---
 
 # Track objects in a streaming video  |  Video Intelligence API  |  Google Cloud Documentation

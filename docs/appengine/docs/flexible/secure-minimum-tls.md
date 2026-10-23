@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/secure-minimum-tls/
 title: Secure your app with minimum TLS (flexible environment) \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:34.512986+00:00
+fetched_at: 2026-10-23T13:17:24.536721+00:00
 ---
 
 # Secure your app with minimum TLS (flexible environment)  |  App Engine flexible environment  |  Google Cloud Documentation

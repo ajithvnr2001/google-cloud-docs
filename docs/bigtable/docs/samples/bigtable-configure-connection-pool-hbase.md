@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-configure-connection-pool-hbase/
 title: Configure a connection pool (HBase) \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:25.483661+00:00
+fetched_at: 2026-10-23T13:19:04.387741+00:00
 ---
 
 # Configure a connection pool (HBase)  |  Bigtable  |  Google Cloud Documentation

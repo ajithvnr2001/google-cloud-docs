@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/vpcsc-data-products/
 title: Use VPC Service Controls with data products \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:24.161193+00:00
+fetched_at: 2026-10-23T12:50:52.803807+00:00
 ---
 
 # Use VPC Service Controls with data products  |  Knowledge Catalog  |  Google Cloud Documentation

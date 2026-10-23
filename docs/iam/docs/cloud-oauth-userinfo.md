@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/cloud-oauth-userinfo/
 title: Retrieve user info with the Cloud OAuth API \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:31:00.399568+00:00
+fetched_at: 2026-10-23T13:02:03.299858+00:00
 ---
 
 # Retrieve user info with the Cloud OAuth API  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

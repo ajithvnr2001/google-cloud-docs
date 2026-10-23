@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-disable-regional-secret-version-with-etag/
 title: Disable regional secret version with Etag \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:29.659059+00:00
+fetched_at: 2026-10-23T09:40:29.156634+00:00
 ---
 
 # Disable regional secret version with Etag  |  Secret Manager  |  Google Cloud Documentation

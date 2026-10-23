@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/samples/cloud-sql-postgres-dotnet-ado-backoff/
 title: Implement exponential backoff when using ADO.NET \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:23.950724+00:00
+fetched_at: 2026-10-23T10:11:20.631466+00:00
 ---
 
 # Implement exponential backoff when using ADO.NET  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation

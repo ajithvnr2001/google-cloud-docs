@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/containers/docs/resources/
 title: Resources \u00a0|\u00a0 Migrate to Containers \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:17:43.204472+00:00
+fetched_at: 2026-10-23T10:46:32.022526+00:00
 ---
 
 # Resources  |  Migrate to Containers  |  Google Cloud Documentation

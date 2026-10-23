@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/custom-highlights-api/
 title: Analyze conversations using Custom Highlights \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:57.760286+00:00
+fetched_at: 2026-10-23T13:12:39.349268+00:00
 ---
 
 # Analyze conversations using Custom Highlights  |  Customer Experience Insights  |  Google Cloud Documentation

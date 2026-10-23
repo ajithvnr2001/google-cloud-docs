@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/event-processing/block-enrichment-flows/
 title: Manage enrichment blocks \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:30.614627+00:00
+fetched_at: 2026-10-23T13:20:32.686778+00:00
 ---
 
 # Manage enrichment blocks  |  Google Security Operations  |  Google Cloud Documentation

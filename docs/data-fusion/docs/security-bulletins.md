@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/security-bulletins/
 title: Security bulletins \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:57.165832+00:00
+fetched_at: 2026-10-23T13:20:05.962412+00:00
 ---
 
 # Security bulletins  |  Cloud Data Fusion  |  Google Cloud Documentation

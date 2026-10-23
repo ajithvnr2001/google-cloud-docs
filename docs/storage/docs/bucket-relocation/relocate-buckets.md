@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/bucket-relocation/relocate-buckets/
 title: Relocate buckets \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:29:18.373087+00:00
+fetched_at: 2026-10-23T13:08:25.465724+00:00
 ---
 
 # Relocate buckets  |  Cloud Storage  |  Google Cloud Documentation
@@ -21,7 +21,9 @@ Send feedback
 
 #  Relocate buckets Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes the process for relocating buckets from one location to another. For information about bucket relocation, see [Bucket relocation](https://docs.cloud.google.com/storage/docs/bucket-relocation/overview).
+You can relocate a bucket when you need to transfer your data from one Cloud Storage location to another. This process helps you satisfy data residency requirements, reduce network latency for workloads, or change location types.
+
+For an overview of how bucket relocation works, see [Bucket relocation](https://docs.cloud.google.com/storage/docs/bucket-relocation/overview).
 
 ## Before you begin
 
@@ -406,7 +408,7 @@ Field name | Description | Possible values
 `metadata.estimatedWriteDowntimeDuration` | The estimated write downtime duration; populated once the `finalizationState` is `READY`. | Minimum value is `7200s`.  
 `metadata.writeDowntimeExpireTime` | The time the write downtime expires. |   
 `name` | The unique identifier for this relocation operation.  
-Format: `projects/_/buckets/bucket-name/operations/operation-id` |   
+Format: `projects/_/buckets/BUCKET_NAME/operations/OPERATION_ID` |   
 `response` | The response of the operation. |   
 `response.@type` | The type of the response. |   
 `selfLink` | A link to this operation. |   
@@ -561,6 +563,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

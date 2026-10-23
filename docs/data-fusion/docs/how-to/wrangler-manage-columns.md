@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/wrangler-manage-columns/
 title: Rename, copy, delete, or keep columns \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:40.062033+00:00
+fetched_at: 2026-10-23T13:20:26.141927+00:00
 ---
 
 # Rename, copy, delete, or keep columns  |  Cloud Data Fusion  |  Google Cloud Documentation

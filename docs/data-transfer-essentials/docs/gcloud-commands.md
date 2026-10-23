@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-transfer-essentials/docs/gcloud-commands/
 title: gcloud CLI commands for Data Transfer Essentials \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:49.127756+00:00
+fetched_at: 2026-10-23T13:20:43.022818+00:00
 ---
 
 # gcloud CLI commands for Data Transfer Essentials  |  Google Cloud Documentation

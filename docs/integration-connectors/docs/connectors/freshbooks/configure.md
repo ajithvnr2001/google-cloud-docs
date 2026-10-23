@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/freshbooks/configure/
 title: Freshbooks \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:14.220932+00:00
+fetched_at: 2026-10-23T13:09:03.587024+00:00
 ---
 
 # Freshbooks  |  Integration Connectors  |  Google Cloud Documentation

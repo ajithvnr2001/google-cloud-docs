@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/choosing-hosting-option/
 title: Choosing a hosting option for a Looker (original) instance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T18:38:51.176319+00:00
+fetched_at: 2026-10-23T10:43:03.275297+00:00
 ---
 
 # Choosing a hosting option for a Looker (original) instance  |  Google Cloud Documentation

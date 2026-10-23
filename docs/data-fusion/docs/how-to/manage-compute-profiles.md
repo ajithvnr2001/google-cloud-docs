@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/manage-compute-profiles/
 title: Manage compute profiles \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:12.267900+00:00
+fetched_at: 2026-10-23T13:20:55.660825+00:00
 ---
 
 # Manage compute profiles  |  Cloud Data Fusion  |  Google Cloud Documentation

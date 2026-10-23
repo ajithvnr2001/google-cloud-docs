@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/
 title: All Secret Manager code samples \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:31.162657+00:00
+fetched_at: 2026-10-23T09:41:09.215744+00:00
 ---
 
 # All Secret Manager code samples  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/ai-commerce-search/supported-languages/
 title: Supported world languages \u00a0|\u00a0 AI Commerce Search in Gemini Enterprise for Customer Experience \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:34:38.713648+00:00
+fetched_at: 2026-10-23T13:11:49.397279+00:00
 ---
 
 # Supported world languages  |  AI Commerce Search in Gemini Enterprise for Customer Experience  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/kubernetes-network-policies/
 title: Configuring Kubernetes network policies \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:41.541259+00:00
+fetched_at: 2026-10-23T13:15:30.132391+00:00
 ---
 
 # Configuring Kubernetes network policies  |  Apigee  |  Google Cloud Documentation

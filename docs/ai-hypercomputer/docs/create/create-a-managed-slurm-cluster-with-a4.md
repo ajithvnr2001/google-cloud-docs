@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-a-managed-slurm-cluster-with-a4/
 title: Quickstart: Create a Slurm cluster \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:53.707058+00:00
+fetched_at: 2026-10-23T13:18:11.601928+00:00
 ---
 
 # Quickstart: Create a Slurm cluster  |  AI Hypercomputer  |  Google Cloud Documentation

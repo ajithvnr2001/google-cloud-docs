@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-transcribe-streaming-voice-activity-timeouts/
 title: Transcribe audio with voice activity timeouts \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:03.599183+00:00
+fetched_at: 2026-10-23T10:09:36.607868+00:00
 ---
 
 # Transcribe audio with voice activity timeouts  |  Cloud Speech-to-Text  |  Google Cloud Documentation

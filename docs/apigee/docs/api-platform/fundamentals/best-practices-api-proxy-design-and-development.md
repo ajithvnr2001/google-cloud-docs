@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/best-practices-api-proxy-design-and-development/
 title: Best practices for API proxy design and development with Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:21.759148+00:00
+fetched_at: 2026-10-23T13:14:39.687789+00:00
 ---
 
 # Best practices for API proxy design and development with Apigee  |  Google Cloud Documentation

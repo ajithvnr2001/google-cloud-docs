@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/create-templates/
 title: Create templates \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:00.338997+00:00
+fetched_at: 2026-10-23T13:18:04.829153+00:00
 ---
 
 # Create templates  |  Application Integration  |  Google Cloud Documentation

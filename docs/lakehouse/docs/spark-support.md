@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/lakehouse/docs/spark-support/
 title: Use Apache Spark with the Lakehouse runtime catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:50:06.256833+00:00
+fetched_at: 2026-10-23T10:42:55.245189+00:00
 ---
 
 # Use Apache Spark with the Lakehouse runtime catalog  |  Google Cloud Documentation

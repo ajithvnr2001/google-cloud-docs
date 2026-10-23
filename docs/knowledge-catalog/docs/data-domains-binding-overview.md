@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/data-domains-binding-overview/
 title: About resource binding and inclusion \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:19.915043+00:00
+fetched_at: 2026-10-23T12:51:03.272166+00:00
 ---
 
 # About resource binding and inclusion  |  Knowledge Catalog  |  Google Cloud Documentation

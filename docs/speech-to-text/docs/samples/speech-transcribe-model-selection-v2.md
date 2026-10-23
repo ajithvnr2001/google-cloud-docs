@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-transcribe-model-selection-v2/
 title: Transcribe audio with model selection (v2) \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:28:31.739358+00:00
+fetched_at: 2026-10-23T08:37:58.612880+00:00
 ---
 
 # Transcribe audio with model selection (v2)  |  Cloud Speech-to-Text  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/python/api_server/
 title: Creating a web server \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:36.213784+00:00
+fetched_at: 2026-10-23T13:01:11.959575+00:00
 ---
 
 # Creating a web server  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

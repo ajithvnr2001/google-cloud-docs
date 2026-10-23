@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/pay-as-you-go-updated-discontinue/
 title: Discontinue Apigee Pay-as-you-go pricing services \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:53.991115+00:00
+fetched_at: 2026-10-23T13:15:39.379206+00:00
 ---
 
 # Discontinue Apigee Pay-as-you-go pricing services  |  Google Cloud Documentation

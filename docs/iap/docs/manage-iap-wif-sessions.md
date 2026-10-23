@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/manage-iap-wif-sessions/
 title: Manage IAP with Workforce Identity Federation sessions \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:27:24.601906+00:00
+fetched_at: 2026-10-23T13:10:33.419363+00:00
 ---
 
 # Manage IAP with Workforce Identity Federation sessions  |  Identity-Aware Proxy  |  Google Cloud Documentation

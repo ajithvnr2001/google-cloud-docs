@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-create-update-secret-label/
 title: Create or update secret label \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:09.372252+00:00
+fetched_at: 2026-10-23T09:39:49.009281+00:00
 ---
 
 # Create or update secret label  |  Secret Manager  |  Google Cloud Documentation

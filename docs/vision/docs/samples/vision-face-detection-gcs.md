@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-face-detection-gcs/
 title: Detect faces in a file in Cloud Storage \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:08.673038+00:00
+fetched_at: 2026-10-23T09:37:00.920822+00:00
 ---
 
 # Detect faces in a file in Cloud Storage  |  Cloud Vision API  |  Google Cloud Documentation

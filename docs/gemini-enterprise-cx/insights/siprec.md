@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/siprec/
 title: Audio conversation data \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:51.723716+00:00
+fetched_at: 2026-10-23T13:11:31.618345+00:00
 ---
 
 # Audio conversation data  |  Customer Experience Insights  |  Google Cloud Documentation

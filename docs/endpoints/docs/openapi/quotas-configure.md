@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/quotas-configure/
 title: Configuring quotas \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:30.427060+00:00
+fetched_at: 2026-10-23T13:00:42.320055+00:00
 ---
 
 # Configuring quotas  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation

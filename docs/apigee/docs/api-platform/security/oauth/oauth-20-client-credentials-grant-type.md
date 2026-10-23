@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/security/oauth/oauth-20-client-credentials-grant-type/
 title: Implementing the client credentials grant type \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:50.365793+00:00
+fetched_at: 2026-10-23T13:19:13.449583+00:00
 ---
 
 # Implementing the client credentials grant type  |  Apigee  |  Google Cloud Documentation

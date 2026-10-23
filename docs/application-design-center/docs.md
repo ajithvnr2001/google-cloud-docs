@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/
 title: Application Design Center documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:14.258100+00:00
+fetched_at: 2026-10-23T13:18:49.319034+00:00
 ---
 
 # Application Design Center documentation  |  Google Cloud Documentation

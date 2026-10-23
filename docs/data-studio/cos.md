@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/cos/
 title: COS \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:29.350294+00:00
+fetched_at: 2026-10-23T13:20:32.746919+00:00
 ---
 
 # COS  |  Data Studio  |  Google Cloud Documentation

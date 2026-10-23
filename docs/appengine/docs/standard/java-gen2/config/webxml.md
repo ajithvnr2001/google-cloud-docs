@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/java-gen2/config/webxml/
 title: The deployment descriptor: web.xml \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:14.294540+00:00
+fetched_at: 2026-10-23T13:17:25.621207+00:00
 ---
 
 # The deployment descriptor: web.xml  |  App Engine standard environment  |  Google Cloud Documentation

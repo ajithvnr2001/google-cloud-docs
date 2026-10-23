@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/food-ai/apis/
 title: APIs and reference \u00a0|\u00a0 Food Ordering AI Agent \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:00.190101+00:00
+fetched_at: 2026-10-23T13:12:45.618426+00:00
 ---
 
 # APIs and reference  |  Food Ordering AI Agent  |  Google Cloud Documentation

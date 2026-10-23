@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/use-vpc-service-controls/
 title: Use VPC Service Controls with Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:27.387817+00:00
+fetched_at: 2026-10-23T13:19:59.256156+00:00
 ---
 
 # Use VPC Service Controls with Batch  |  Google Cloud Documentation

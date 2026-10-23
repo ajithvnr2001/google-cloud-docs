@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/run-hybrid-vector-similarity-search/
 title: Run a hybrid vector similarity search \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:26:00.546047+00:00
+fetched_at: 2026-10-23T13:08:31.399193+00:00
 ---
 
 # Run a hybrid vector similarity search  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -109,12 +109,12 @@ Replace the following:
 
     * **Cosine distance:** `cosine`
 
-  * `NUM_LEAVES_VALUE`: the number of partitions to apply to this index. Set to any value between 1 to 1048576. For more information about how to decide this value, see [Tune a `ScaNN` index](https://docs.cloud.google.com/alloydb/docs/ai/tune-indexes).
+  * `NUM_LEAVES_VALUE`: the number of partitions to apply to this index. Set to any value between 1 and 104,857,600 for PostgreSQL version 17 and higher, and between 1 and 30 million for PostgreSQL version 16 and lower. For more information about how to decide this value, see [Tune a `ScaNN` index](https://docs.cloud.google.com/alloydb/docs/ai/tune-indexes).
 
 
 
 
-To learn more about different ScaNN index configurations, see [Choose a ](https://docs.cloud.google.com/alloydb/docs/ai/create-scann-index).
+To learn more about different ScaNN index configurations, see [Create a ScaNN index](https://docs.cloud.google.com/alloydb/docs/ai/create-scann-index).
 
 **Note:** Although this is an example of a ScaNN vector index, you can also create [HNSW](https://docs.cloud.google.com/alloydb/docs/ai/create-hnsw-index), [IVF](https://docs.cloud.google.com/alloydb/docs/ai/create-ivf-index), and [IVFFLAT](https://docs.cloud.google.com/alloydb/docs/ai/create-ivfflat-index) indexes.
 
@@ -204,7 +204,7 @@ To learn about the parameters that the `hybrid_search` function accepts to help 
 
 `include_json_output` is an optional parameter. For more information, see [Hybrid search function parameters](https://docs.cloud.google.com/alloydb/docs/reference/ai/hybrid-search-function-parameters).
 
-**Note:** If you created a RUM index for full text search, then change the value of the `ranking` parameter to `<=>`.
+**Note:** If you created a RUM index for full text search, then change the value of the `ranking_function` parameter to `<=>`.
   2. Review the output.
 
 When `include_json_output` is `false`, the output contains the document ID and the final score.
@@ -356,7 +356,7 @@ If you're using the Model Garden, then specify `gemini-embedding-001` as the mod
 
   * `KEYWORD`: the keyword you want to search for.
 
-  * `COLUMN_NAME`: a column that stores contains the text data you want to search.
+  * `COLUMN_NAME`: a column that contains the text data you want to search.
 
 
 
@@ -405,7 +405,7 @@ Replace the following:
 
   * `MODEL_ID`: the ID of the model to query.
 
-If you are using the Vertex AI Model Garden, then specify `gemini-embedding-001` as the model ID. These are the cloud-based models that AlloyDB can use for text embeddings. For more information, see [Text embeddings](https://docs.cloud.google.com/vertex-ai/docs/generative-ai/model-reference/text-embeddings).
+If you are using the Agent Platform Model Garden, then specify `gemini-embedding-001` as the model ID. These are the cloud-based models that AlloyDB can use for text embeddings. For more information, see [Text embeddings](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/text-embeddings-api).
 
   * `TABLE`: the table containing your data.
 
@@ -470,6 +470,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

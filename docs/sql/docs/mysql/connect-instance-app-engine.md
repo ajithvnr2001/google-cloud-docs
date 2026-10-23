@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/connect-instance-app-engine/
 title: Connect to Cloud SQL for MySQL from App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:31:38.073720+00:00
+fetched_at: 2026-10-23T10:18:43.248240+00:00
 ---
 
 # Connect to Cloud SQL for MySQL from App Engine standard environment  |  Google Cloud Documentation
@@ -654,16 +654,16 @@ For Java users, the connector already provides a secure connection so that creat
     
     <runtime>java17</runtime>
       <env-variables>
-        <env-var name="INSTANCE_CONNECTION_NAME&quot; value="project-name:region-name:i>nstan<ce-name" /
-        env-var name=&quo>t;DB_<PORT" value="3306" /
-        env-var >name=<"DB_USER" value=&quot;quickstart-user>"<; /
-        env-var name="DB_PASS" value>=&q<uot;my-db-pass>w<ord" /
-        env->var< nam>e="DB_NAME&quot; value="quickstart-db" /
-      /env-variables
-    <vpc-a>cce<ss-connector
-     > nameprojec<ts/PROJE>CT_ID/lo<cations/us-central1/c>onnectors/quickstart-connector/name
-      egress-settingall-traffic/egress-setting
-    /vpc-access-connector
+        <env-var name="INSTANCE_CONNECTION_NAME" value="project-name:region-name:instance-name" />
+        <env-var name="DB_PORT" value="3306" />
+        <env-var name="DB_USER" value="quickstart-user" />
+        <env-var name="DB_PASS" value="my-db-password" />
+        <env-var name="DB_NAME" value="quickstart-db" />
+      </env-variables>
+    <vpc-access-connector>
+      <name>projects/PROJECT_ID/locations/us-central1/connectors/quickstart-connector</name>
+      <egress-setting>all-traffic</egress-setting>
+    </vpc-access-connector>
 
   7. Make the following variable replacements:
      * **project-name:region-name:instance-name** with your instance's **Connection name** that appears on the [Cloud SQL instances](https://console.cloud.google.com/sql) page in the Google Cloud console.
@@ -959,6 +959,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

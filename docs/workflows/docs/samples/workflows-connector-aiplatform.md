@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-connector-aiplatform/
 title: Connector for Vertex AI \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:12:26.022519+00:00
+fetched_at: 2026-10-23T08:56:57.885855+00:00
 ---
 
 # Connector for Vertex AI  |  Workflows  |  Google Cloud Documentation

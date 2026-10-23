@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/sources/
 title: Sources \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:42:02.626128+00:00
+fetched_at: 2026-10-23T10:03:30.439893+00:00
 ---
 
 # Sources  |  Datastream  |  Google Cloud Documentation
@@ -21,7 +21,9 @@ Send feedback
 
 #  Sources Stay organized with collections  Save and categorize content based on your preferences. 
 
-Datastream can pull changes to data from MySQL, Oracle, SQL Server, and PostgreSQL databases, whether they are hosted on-premises, in the cloud on a self-managed virtual machine, or using a fully-managed service like Cloud SQL, AlloyDB for PostgreSQL, or Amazon RDS. You can also replicate change events from Spanner, MongoDB, Microsoft Dataverse ([Preview](https://cloud.google.com/products/#product-launch-stages)), Salesforce, Salesforce Marketing Cloud ([Preview](https://cloud.google.com/products/#product-launch-stages)), ServiceNow ([Preview](https://cloud.google.com/products/#product-launch-stages)), and Workday ([Preview](https://cloud.google.com/products/#product-launch-stages)) sources.
+Datastream helps you replicate historical data and ongoing changes from operational databases and SaaS applications into your destination for analytics and data synchronization. You can stream data from MySQL, Oracle, PostgreSQL, SQL Server, MongoDB, and Spanner databases. Depending on the database, supported deployments include on-premises hosts, self-managed virtual machines, and managed services such as Cloud SQL, AlloyDB for PostgreSQL, and Amazon RDS.
+
+You can also replicate data from Salesforce and from [Preview](https://cloud.google.com/products#product-launch-stages) sources, including Microsoft Dataverse, Salesforce Marketing Cloud, ServiceNow, and Workday.
 
 ## What's next
 
@@ -40,6 +42,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

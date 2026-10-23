@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/local-development/vscode/tutorial-gemini/
 title: Tutorial: Use Gemini Code Assist to design, develop, and test APIs in Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:08.868460+00:00
+fetched_at: 2026-10-23T13:15:39.347215+00:00
 ---
 
 # Tutorial: Use Gemini Code Assist to design, develop, and test APIs in Apigee  |  Google Cloud Documentation

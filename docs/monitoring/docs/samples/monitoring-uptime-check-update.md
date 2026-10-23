@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/monitoring/docs/samples/monitoring-uptime-check-update/
 title: Update an uptime check \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:36:55.417488+00:00
+fetched_at: 2026-10-23T11:00:25.088796+00:00
 ---
 
 # Update an uptime check  |  Cloud Monitoring  |  Google Cloud Documentation
@@ -262,7 +262,7 @@ To authenticate to Monitoring, set up Application Default Credentials. For more 
     def update_uptime_check_config config_name:         nil,
                                    new_display_name:    nil,
                                    new_http_check_path: nil
-      client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-dashboard-v1/latest/Google-Cloud-Monitoring.html).[uptime_check_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
+      client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html).[uptime_check_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
       config = { name: config_name }
       field_mask = { paths: [] }
       unless new_display_name.to_s.empty?

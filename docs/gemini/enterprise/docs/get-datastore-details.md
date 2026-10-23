@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/get-datastore-details/
 title: Get data store and entity details \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:10.665899+00:00
+fetched_at: 2026-10-23T13:13:44.973218+00:00
 ---
 
 # Get data store and entity details  |  Gemini Enterprise  |  Google Cloud Documentation

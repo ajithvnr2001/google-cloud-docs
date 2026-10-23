@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tasks/docs/samples/cloud-tasks-func/
 title: Use task handler to trigger Cloud Functions \u00a0|\u00a0 Cloud Tasks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:29.457576+00:00
+fetched_at: 2026-10-23T08:58:45.356981+00:00
 ---
 
 # Use task handler to trigger Cloud Functions  |  Cloud Tasks  |  Google Cloud Documentation

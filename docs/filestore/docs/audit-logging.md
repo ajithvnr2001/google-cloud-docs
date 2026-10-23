@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/audit-logging/
 title: Filestore API audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:41.876302+00:00
+fetched_at: 2026-10-23T13:01:28.577034+00:00
 ---
 
 # Filestore API audit logging  |  Google Cloud Documentation

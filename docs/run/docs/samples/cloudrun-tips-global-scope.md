@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/samples/cloudrun-tips-global-scope/
 title: Using global scoped variables \u00a0|\u00a0 Cloud Run \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:02:02.997293+00:00
+fetched_at: 2026-10-23T09:45:23.876668+00:00
 ---
 
 # Using global scoped variables  |  Cloud Run  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/ai-commerce-search/
 title: AI Commerce Search introduction \u00a0|\u00a0 AI Commerce Search in Gemini Enterprise for Customer Experience \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:11.236540+00:00
+fetched_at: 2026-10-23T13:13:56.680195+00:00
 ---
 
 # AI Commerce Search introduction  |  AI Commerce Search in Gemini Enterprise for Customer Experience  |  Google Cloud Documentation

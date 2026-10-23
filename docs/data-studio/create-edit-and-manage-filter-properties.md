@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/create-edit-and-manage-filter-properties/
 title: Create, edit, and manage filter properties \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:26.924410+00:00
+fetched_at: 2026-10-23T13:19:15.645043+00:00
 ---
 
 # Create, edit, and manage filter properties  |  Data Studio  |  Google Cloud Documentation

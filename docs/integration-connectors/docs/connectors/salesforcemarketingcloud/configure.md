@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/salesforcemarketingcloud/configure/
 title: Salesforce Marketing Cloud \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:28.518509+00:00
+fetched_at: 2026-10-23T13:00:42.716444+00:00
 ---
 
 # Salesforce Marketing Cloud  |  Integration Connectors  |  Google Cloud Documentation
@@ -919,7 +919,7 @@ Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["
 
 
 
-[ ![Google Developers](https://www.gstatic.com/devrel-devsite/prod/v9ce9cb5b22b62a465ff52c45061a0a6a2d86a80b685e9aa8a182b203fdfbf420/clouddocs/images/lockup-google-for-developers.svg)](https://developers.google.com/)
+[ ![Google Developers](https://www.gstatic.com/devrel-devsite/prod/v5a0f9ff8b593048661361a49e11ab98a8b1ac025e19e60e6189f2b56796f8a43/clouddocs/images/lockup-google-for-developers.svg)](https://developers.google.com/)
 
   * [ Android ](https://developer.android.com/)
   * [ Chrome ](https://developer.chrome.com/)

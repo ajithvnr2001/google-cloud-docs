@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/use-parameters-in-a-custom-query/
 title: Use parameters in a custom query \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:52.359881+00:00
+fetched_at: 2026-10-23T13:20:28.334923+00:00
 ---
 
 # Use parameters in a custom query  |  Data Studio  |  Google Cloud Documentation

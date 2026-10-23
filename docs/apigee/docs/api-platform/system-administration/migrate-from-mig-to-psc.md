@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/migrate-from-mig-to-psc/
 title: Migrate northbound routing to Private Service Connect \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:36.871906+00:00
+fetched_at: 2026-10-23T13:20:42.522856+00:00
 ---
 
 # Migrate northbound routing to Private Service Connect  |  Apigee  |  Google Cloud Documentation

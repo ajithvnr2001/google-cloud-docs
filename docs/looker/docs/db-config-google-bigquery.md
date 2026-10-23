@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/db-config-google-bigquery/
 title: Google BigQuery \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:25:15.526344+00:00
+fetched_at: 2026-10-23T12:51:07.337960+00:00
 ---
 
 # Google BigQuery  |  Looker  |  Google Cloud Documentation
@@ -27,14 +27,30 @@ This page explains how to set up a connection in Looker to [Google BigQuery Stan
 
 The general steps for setting up a Google BigQuery Standard SQL or Google BigQuery Legacy SQL connection are as follows:
 
-  1. On your BigQuery database, configure the authentication that Looker will use to access your BigQuery database. Looker supports the following authentication options for BigQuery:
+  1. On your BigQuery database, configure the authentication method that Looker will use to access your BigQuery database. Looker supports the following authentication options for BigQuery:
+
+     * **Application Default Credentials** : Select this option to use [Application Default Credentials (ADC)](https://docs.cloud.google.com/docs/authentication/application-default-credentials) to authenticate into your database.
+
+To enable ADC, you must also set the following environment variables when you start your Looker instance.:
+
+       * `FF_SELF_HOSTED_DIALECT_ADC=true`
+       * `GOOGLE_CLOUD_UNIVERSE_DOMAIN="<google_cloud_universe_domain>"`
+
+where `<google_cloud_universe_domain>` is the universe domain of your Google Cloud instance, such as `apis-berlin-build0.goog` or `s3nsapis.fr`.
+
+Set this variable by using the following commands:
+
+`echo 'export FF_SELF_HOSTED_DIALECT_ADC=true' >> lookerstart.cfg`
+
+`echo 'export GOOGLE_CLOUD_UNIVERSE_DOMAIN="<google_cloud_universe_domain>"' >> lookerstart.cfg`
 
      * **Service account** : See the Authentication with BigQuery service accounts section on this page for information.
+
      * **OAuth** : See the Authentication with OAuth section on this page for information.
-**Note:** [Looker (Google Cloud core)](https://docs.cloud.google.com/looker/docs/looker-core-overview) instances also support [ADC](https://docs.cloud.google.com/looker/docs/looker-core-dialects#setup_data_from_gcp) authentication and [using instance default OAuth credentials](https://docs.cloud.google.com/looker/docs/looker-core-dialects#oauth-options). See the [Looker (Google Cloud core) documentation](https://docs.cloud.google.com/looker/docs/looker-core-dialects) for more information. Looker (Google Cloud core) instances can use [Quickstart Connect](https://docs.cloud.google.com/looker/docs/looker-core-bigquery-default-connection) to streamline connecting to your BigQuery database.
+
   2. On your BigQuery database, if you want to use [persistent derived tables (PDTs)](https://docs.cloud.google.com/looker/docs/derived-tables#persistent-derived-tables) on the connection, create a temporary dataset that Looker can use to create PDTs on your database. See the section Creating a temporary dataset for persistent derived tables on this page for the procedure.
 
-**Note:** If you're using OAuth and you want to enable PDTs on the connection, you need to create a BigQuery service account that's specifically for Looker to use for PDT processes on your BigQuery database. See the section Enabling PDTs for Looker connections to BigQuery with OAuth on this page for the procedure.
+**Note:** If you are using OAuth and you want to enable PDTs on the connection, you need to create a BigQuery service account specifically for Looker to use for PDT processes on your BigQuery database. See the section Enabling PDTs for Looker connections to BigQuery with OAuth on this page for the procedure.
   3. In Looker, set up the Looker connection to your BigQuery database. See the section Connecting Looker to BigQuery on this page for the procedure.
 
   4. In Looker, test the connection between Looker and your BigQuery database. See the section Testing the connection on this page for the procedure.
@@ -666,6 +682,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-15 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

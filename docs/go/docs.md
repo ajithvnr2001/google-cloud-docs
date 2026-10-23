@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/go/docs/
 title: Go documentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:02.718137+00:00
+fetched_at: 2026-10-23T13:13:56.932968+00:00
 ---
 
 # Go documentation  |  Google Cloud Documentation

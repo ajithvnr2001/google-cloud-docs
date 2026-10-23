@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/taskqueue/pull/
 title: Using Pull Queues \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:14.685489+00:00
+fetched_at: 2026-10-23T13:18:50.484886+00:00
 ---
 
 # Using Pull Queues  |  App Engine standard environment  |  Google Cloud Documentation

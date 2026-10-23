@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-jdbc-connection-with-query-options/
 title: JDBC connection with query options \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:57.100390+00:00
+fetched_at: 2026-10-23T10:32:42.175235+00:00
 ---
 
 # JDBC connection with query options  |  Spanner  |  Google Cloud Documentation

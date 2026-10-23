@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/samples/securitycenter-group-all-assets-with-filter/
 title: Group assets with filter \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:43.635703+00:00
+fetched_at: 2026-10-23T11:33:08.810550+00:00
 ---
 
 # Group assets with filter  |  Security Command Center  |  Google Cloud Documentation

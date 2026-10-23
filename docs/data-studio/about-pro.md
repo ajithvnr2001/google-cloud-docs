@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/about-pro/
 title: About Data Studio Pro \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:51.061971+00:00
+fetched_at: 2026-10-23T13:19:48.385439+00:00
 ---
 
 # About Data Studio Pro  |  Google Cloud Documentation

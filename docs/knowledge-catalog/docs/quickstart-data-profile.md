@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/quickstart-data-profile/
 title: Profile and validate data quality \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:15:51.652956+00:00
+fetched_at: 2026-10-23T10:21:53.988697+00:00
 ---
 
 # Profile and validate data quality  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -83,9 +83,9 @@ To enable APIs, you need the `serviceusage.services.enable` permission. If you c
 
 To get the permissions that you need to create and run data profile and data quality scans, and manage BigQuery resources, ask your administrator to grant you the following IAM roles on the project: 
 
-  * Create, run, and delete data scans: [Dataplex DataScan Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataScanEditor) (`roles/dataplex.dataScanEditor`) 
-  * Create, populate, and delete sample tables: [BigQuery Data Owner ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.dataOwner) (`roles/bigquery.dataOwner`) 
-  * Run SQL queries in BigQuery: [BigQuery Job User ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.jobUser) (`roles/bigquery.jobUser`) 
+  * Create, run, and delete data scans: [**Dataplex DataScan Editor** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataScanEditor) (`roles/dataplex.dataScanEditor`) 
+  * Create, populate, and delete sample tables: [**BigQuery Data Owner** ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.dataOwner) (`roles/bigquery.dataOwner`) 
+  * Run SQL queries in BigQuery: [**BigQuery Job User** ](https://docs.cloud.google.com/iam/docs/roles-permissions/bigquery#bigquery.jobUser) (`roles/bigquery.jobUser`) 
 
 
 
@@ -535,7 +535,7 @@ Replace `PROJECT_ID` with your Google Cloud project ID.
 ## What's next
 
   * [View and troubleshoot data quality scan results](https://docs.cloud.google.com/knowledge-catalog/docs/use-auto-data-quality#results)
-  * [Monitor data scans and set up alerts](https://docs.cloud.google.com/knowledge-catalog/docs/monitor-data-scans)
+  * [Monitor Knowledge Catalog metrics](https://docs.cloud.google.com/knowledge-catalog/docs/monitoring)
   * [Build a policy-as-code data quality workflow using the Antigravity CLI](https://docs.cloud.google.com/knowledge-catalog/docs/build-policy-as-code-data-quality-workflow)
   * [Manage data quality rules as code with Terraform](https://docs.cloud.google.com/knowledge-catalog/docs/manage-data-quality-rules-as-code)
   * [Reuse data quality rules across tables](https://docs.cloud.google.com/knowledge-catalog/docs/reuse-data-quality-rules)
@@ -547,6 +547,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

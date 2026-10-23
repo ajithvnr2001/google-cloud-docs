@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-inspect-file/
 title: Inspect a local file \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:50:15.713203+00:00
+fetched_at: 2026-10-23T11:31:58.810543+00:00
 ---
 
 # Inspect a local file  |  Sensitive Data Protection  |  Google Cloud Documentation
@@ -504,7 +504,7 @@ To authenticate to Sensitive Data Protection, set up Application Default Credent
     
     require "google/cloud/dlp"
     
-    dlp = Google::Cloud::[Dlp](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-dlp/latest/Google-Cloud-Dlp.html).[dlp_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-dlp/latest/Google-Cloud-Dlp.html)
+    dlp = Google::Cloud::[Dlp](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-dlp-v2/latest/Google-Cloud-Dlp.html).[dlp_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-dlp/latest/Google-Cloud-Dlp.html)
     inspect_config = {
       # The types of information to match
       info_types:     [{ name: "PERSON_NAME" }, { name: "PHONE_NUMBER" }],

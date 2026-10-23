@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/hub/docs/app-topology/run-queries/
 title: Run queries \u00a0|\u00a0 Cloud Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:28.358072+00:00
+fetched_at: 2026-10-23T12:55:33.363508+00:00
 ---
 
 # Run queries  |  Cloud Hub  |  Google Cloud Documentation
@@ -85,7 +85,7 @@ To enable APIs, you need the `serviceusage.services.enable` permission. If you c
 
 [Enable the APIs](https://console.cloud.google.com/apis/enableflow?apiid=cloudasset.googleapis.com,apptopology.googleapis.com,observability.googleapis.com&redirect=https%3A//console.cloud.google.com)
 
-  4. Optional: To view agent traffic, [instrument your AI applications](https://docs.cloud.google.com/stackdriver/docs/instrumentation/ai-agent-overview).
+  4. Optional: To view agent traffic, [instrument your AI applications](https://docs.cloud.google.com/stackdriver/docs/opentelemetry/ai-agent-developers).
 
   5. Optional: Set up Security Command Center for security and compliance data. [Activate Security Command Center](https://docs.cloud.google.com/security-command-center/docs/activate-scc-overview) at the organization level and [configure](https://docs.cloud.google.com/security-command-center/docs/how-to-configure-security-command-center) the features that you want to use. Querying data from Security Command Center is only available for [Premium and Enterprise tiers](https://docs.cloud.google.com/security-command-center/docs/service-tiers).
 
@@ -295,6 +295,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/alphaevolve/developer-guide/architecture-and-workflows/
 title: Logical flow and architecture of the Cloud AlphaEvolve agent \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:49.545040+00:00
+fetched_at: 2026-10-23T13:10:47.140560+00:00
 ---
 
 # Logical flow and architecture of the Cloud AlphaEvolve agent  |  Gemini Enterprise  |  Google Cloud Documentation

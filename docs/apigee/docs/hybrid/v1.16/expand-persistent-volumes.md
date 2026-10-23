@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/expand-persistent-volumes/
 title: Manage Cassandra persistent volume size \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:44.749203+00:00
+fetched_at: 2026-10-23T13:16:24.867587+00:00
 ---
 
 # Manage Cassandra persistent volume size  |  Apigee  |  Google Cloud Documentation

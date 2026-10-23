@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/how-tos/dicom-connect-pacs/
 title: Connect a PACS to the Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:54.251075+00:00
+fetched_at: 2026-10-23T13:01:18.102674+00:00
 ---
 
 # Connect a PACS to the Cloud Healthcare API  |  Google Cloud Documentation

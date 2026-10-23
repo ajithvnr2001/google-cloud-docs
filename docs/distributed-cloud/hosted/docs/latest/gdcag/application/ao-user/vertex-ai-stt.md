@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-stt/
 title: Learn about speech recognition features \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:25:29.264607+00:00
+fetched_at: 2026-10-23T12:45:06.395622+00:00
 ---
 
 # Learn about speech recognition features  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -76,25 +76,102 @@ Speech-to-Text must return a response before processing the next request. Speech
 
 ### Speech recognition requests
 
-A synchronous Speech-to-Text API request comprises a speech recognition configuration and audio data. The following example shows a request:
+A synchronous Speech-to-Text API request consists of a speech recognition configuration and audio data.
+
+**Note:** On Distributed Cloud, the Speech-to-Text endpoint exposes gRPC using the `google.cloud.speech.v1p1beta1.Speech` service (`from google.cloud import speech_v1p1beta1 as speech`).
+
+The following examples show how to send a synchronous speech recognition request:
+
+### Python
     
     
-    {
+    import google.auth
+    from google.auth.transport import requests
+    from google.api_core.client_options import ClientOptions
+    from google.cloud import speech_v1p1beta1 as speech
+    
+    audience = "https://ENDPOINT:443"
+    api_endpoint = "ENDPOINT:443"
+    
+    try:
+      creds, _ = google.auth.default()
+      creds = creds.with_gdch_audience(audience)
+      def_req = requests.Request()
+      creds.refresh(def_req)
+    except Exception as e:
+      print("Caught exception", e)
+      raise e
+    
+    client = speech.SpeechClient(
+        credentials=creds,
+        client_options=ClientOptions(api_endpoint=api_endpoint),
+    )
+    
+    with open("SPEECH_FILE", "rb") as audio_file:
+      content = audio_file.read()
+    
+    audio = speech.RecognitionAudio(content=content)
+    config = speech.RecognitionConfig(
+        encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
+        sample_rate_hertz=16000,
+        audio_channel_count=1,
+        language_code="en-US",
+    )
+    
+    response = client.recognize(
+        config=config,
+        audio=audio,
+        metadata=[("x-goog-user-project", "projects/PROJECT_ID")],
+    )
+    print(response)
+    
+
+Replace the following:
+
+  * `ENDPOINT`: the Speech-to-Text endpoint that you use for your organization. For more information, [view service status and endpoints](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-api-status).
+  * `SPEECH_FILE`: the path to the audio file that you want to transcribe.
+  * `PROJECT_ID`: your project ID.
+
+
+
+### curl (JSON)
+
+On Distributed Cloud, the Speech-to-Text API gateway serves gRPC using `speech_v1p1beta1` and doesn't enable HTTP/JSON REST transcoding by default. Use the preceding Python `speech_v1p1beta1` gRPC client on Distributed Cloud.
+
+Where HTTP/JSON transcoding is enabled, format the request as follows:
+    
+    
+    curl -X POST \
+      -H "Authorization: Bearer TOKEN" \
+      -H "Content-Type: application/json" \
+      -H "x-goog-user-project: projects/PROJECT_ID" \
+      --data '{
         "config": {
-            "encoding": "LINEAR16",
-            "sample_rate_hertz": 16000,
-            "language_code": "en-US",
+          "encoding": "FLAC",
+          "sampleRateHertz": 16000,
+          "languageCode": "en-US",
+          "audioChannelCount": 1
         },
         "audio": {
-            "content": "ZkxhQwAAACIQABAAAAUJABtAA+gA8AB+W8FZndQvQAyjv..."
+          "content": "ZkxhQwAAACIQABAAAAUJABtAA+gA8AB+W8FZndQvQAyjv..."
         }
-    }
+      }' \
+      "https://ENDPOINT:443/v1p1beta1/speech:recognize"
     
+
+Replace the following:
+
+  * `TOKEN`: [the authentication token](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-api-auth) that you obtained.
+  * `PROJECT_ID`: your project ID.
+  * `ENDPOINT`: the Speech-to-Text endpoint that you use for your organization. For more information, [view service status and endpoints](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-api-status).
+
+
 
 All Speech-to-Text synchronous recognition requests must include a speech recognition `config` field of type `RecognitionConfig`. A `RecognitionConfig` object contains the following required sub-fields:
 
-  * `encoding`: specifies the encoding scheme of the supplied audio. This field is of type `AudioEncoding`. If you have a choice in a codec, prefer a lossless encoding such as `FLAC` or `LINEAR16` for best performance. For a list of supported audio encoding formats, see Supported audio encodings for Speech-to-Text. The `encoding` field is optional for `FLAC` and `WAV` files, which include the encoding in the file header.
-  * `sample_rate_hertz`: specifies the sample rate of the supplied audio in Hertz. For more information on sample rates, see Sample rates. The `sample_rate_hertz` field is optional for `FLAC` and `WAV` files, which include the sample rate in the file header.
+  * `encoding`: specifies the encoding scheme of the supplied audio. This field is of type `AudioEncoding`. If you have a choice in a codec, prefer a lossless encoding such as `FLAC` or `LINEAR16` for best performance. For a list of supported audio encoding formats, see Supported audio encodings for Speech-to-Text.
+  * `sample_rate_hertz`: specifies the sample rate of the supplied audio in Hertz (`8000`-`48000`). For more information about sample rates, see Sample rates. The `sample_rate_hertz` field is required for `LINEAR16`, `FLAC`, and `MULAW` encodings (including WAV files).
+  * `audio_channel_count`: specifies the number of channels in the input audio data (`1`-`8`, such as `1` for mono audio). The `audio_channel_count` field is required for `LINEAR16`, `FLAC`, and `MULAW` audio.
   * `language_code`: contains the language and region to use for speech recognition of the supplied audio. The language code must be a [BCP-47](https://www.rfc-editor.org/info/bcp47) identifier. Language codes consist of primary language tags and secondary region subtags to indicate dialects. In the example, `en` is for English, and `US` is for the United States. For a list of supported languages, see [Supported languages](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-stt-supported-langs).
 
 
@@ -109,7 +186,7 @@ Provide audio to Speech-to-Text through the `audio` parameter of type [`Recognit
 
 #### Sample rates
 
-You specify the sample rate of your audio in the `sample_rate_hertz` field of the request configuration, and it must match the sample rate of the associated audio content. Speech-to-Text supports sample rates between 8000 Hz and 48000 Hz. You can specify the sample rate for a `FLAC` or `WAV` file in the file header instead of using the `sample_rate_hertz` field. However, the `sample_rate_hertz` field is required for all other audio formats.
+You specify the sample rate of your audio in the `sample_rate_hertz` field of the request configuration, and it must match the sample rate of the associated audio content. Speech-to-Text supports sample rates between 8000 Hz and 48000 Hz (`8000`-`48000`). The `sample_rate_hertz` field is required for `LINEAR16`, `FLAC`, and `MULAW` encodings (including WAV files).
 
 If you have a choice when encoding the source material, capture audio using a sample rate of 16000 Hz. Lower values might impair speech recognition accuracy, and higher levels have no appreciable effect on speech recognition quality.
 
@@ -125,13 +202,7 @@ The [Supported languages](https://docs.cloud.google.com/distributed-cloud/hosted
 
 When you send an audio transcription request to Speech-to-Text, you can process your audio files using a machine learning model trained to recognize speech audio from that particular source type.
 
-To specify a model for speech recognition, include the `model` field in the [`RecognitionConfig`](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/speech-to-text/rpc/google.cloud.speech.v1#recognitionconfig) object for your request, specifying the model you want to use.
-
-Speech-to-Text on Distributed Cloud supports the following model:
-
-  * `default`: transcribe audio that is not a specific audio model, such as long-form audio.
-
-
+To use the default speech recognition model on Distributed Cloud, either omit the `model` field in the [`RecognitionConfig`](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/speech-to-text/rpc/google.cloud.speech.v1#recognitionconfig) object or set `model` to `latest_long`. Don't set `model` to `default`.
 
 #### Embedded audio content
 
@@ -306,6 +377,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

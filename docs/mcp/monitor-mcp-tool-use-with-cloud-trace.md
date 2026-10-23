@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/mcp/monitor-mcp-tool-use-with-cloud-trace/
 title: Use Cloud Trace to monitor MCP tool use \u00a0|\u00a0 Google Cloud MCP servers \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:30:58.650171+00:00
+fetched_at: 2026-10-23T12:39:37.560958+00:00
 ---
 
 # Use Cloud Trace to monitor MCP tool use  |  Google Cloud MCP servers  |  Google Cloud Documentation
@@ -79,7 +79,7 @@ For more information, see [Trace context](https://docs.cloud.google.com/trace/do
 
 Some libraries that interact with MCP can be configured to enable tracing. For example, you can [instrument Agent Development Kit with OpenTelemetry](https://docs.cloud.google.com/stackdriver/docs/instrumentation/ai-agent-adk).
 
-For more information, read [Instrument generative AI applications](https://docs.cloud.google.com/stackdriver/docs/instrumentation/ai-agent-overview) and [Instrument for Cloud Trace](https://docs.cloud.google.com/trace/docs/setup).
+For more information, read [Observability for AI agent developers](https://docs.cloud.google.com/stackdriver/docs/opentelemetry/ai-agent-developers) and [Instrument for Cloud Trace](https://docs.cloud.google.com/trace/docs/setup).
 
 ## View traces and spans
 
@@ -131,6 +131,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

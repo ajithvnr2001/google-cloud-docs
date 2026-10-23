@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/prompt-sharing/
 title: Save and share prompts \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:26:23.361143+00:00
+fetched_at: 2026-10-23T12:39:34.537508+00:00
 ---
 
 # Save and share prompts  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -93,26 +93,26 @@ Note that deleting a saved prompt automatically removes access for anyone it was
 
 Overview 
 
-###  [ Agent Platform Studio capabilities ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/agent-studio/agent-studio-capabilities)
+###  [ Agent Studio capabilities ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/agent-studio/agent-studio-capabilities)
 
-Key features implemented within Agent Platform Studio that facilitate transforming innovative ideas into generative AI solutions. 
+Key features implemented within Agent Studio that facilitate transforming innovative ideas into generative AI solutions. 
 
 Guide 
 
 ###  [ Migrate from Google AI Studio to Agent Platform ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate/migrate-google-ai)
 
-Information on how to migrate your Google AI Studio projects to Agent Platform Studio. 
+Information on how to migrate your Google AI Studio projects to Agent Studio. 
 
 Tutorial 
 
-###  [ Deploy your Agent Platform Studio prompt as a web application ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/agent-studio/deploy-vais-prompt)
+###  [ Deploy your Agent Studio prompt as a web application ](https://docs.cloud.google.com/gemini-enterprise-agent-platform/agent-studio/deploy-vais-prompt)
 
-Learn how to use Agent Platform Studio to create a prompt with prompt variables; deploy your prompt as a web application; and deploy, monitor, and test your application. 
+Learn how to use Agent Studio to create a prompt with prompt variables; deploy your prompt as a web application; and deploy, monitor, and test your application. 
 
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

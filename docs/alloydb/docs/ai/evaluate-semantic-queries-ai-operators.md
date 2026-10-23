@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/evaluate-semantic-queries-ai-operators/
 title: Perform intelligent SQL queries using AI functions \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:32:21.994057+00:00
+fetched_at: 2026-10-23T13:08:36.345948+00:00
 ---
 
 # Perform intelligent SQL queries using AI functions  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -23,7 +23,7 @@ Send feedback
 
 AlloyDB AI functions integrate large language models (LLMs) such as Gemini directly with your AlloyDB for PostgreSQL data so that you can combine natural language with SQL queries. With built-in functions for semantic filtering (`ai.if`), semantic ranking (`ai.rank`), and text generation (`ai.generate`), your application can process data with AI models across both single-row lookups and large-scale database operations.
 
-**Note:** AlloyDB doesn't charge for AI function calls. However, when you call Gemini Enterprise Agent Platform, third-party, or self-hosted models and services (such as for hybrid search) from your database, the model or infrastructure provider charges you directly. For more information about Gemini Enterprise Agent Platform costs, see [Pricing](https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing).
+**Note:** AlloyDB doesn't charge for AI function calls. However, when you call Gemini Enterprise Agent Platform, third-party, or self-hosted models and services (such as for hybrid search) from your database, the model or infrastructure provider charges you directly. For more information about Gemini Enterprise Agent Platform costs, see [Pricing](https://docs.cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing).
 
 There are three categories of AI functions which differ based on how they handle input data and memory allocation: scalar, array-based, and cursor functions. Choosing the right AI function depends on the scale of your data and your performance requirements. Use the following table to learn about these functions and their use cases:
 
@@ -38,7 +38,7 @@ Cursor | Takes a cursor as input and returns a cursor as output. | Use for proce
   * [Verify that the `google_ml_integration` extension is installed](https://docs.cloud.google.com/alloydb/docs/ai/configure-vertex-ai#verify-installed-extension) and that you're using version 1.5.2 or later. To obtain further performance benefits with array-based functions, use version 1.5.4 or later.
   * [Verify that the `google_ml_integration.enable_ai_query_engine` flag is set to `on`](https://docs.cloud.google.com/alloydb/docs/instance-configure-database-flags).
   * [Integrate with Gemini Enterprise Agent Platform](https://docs.cloud.google.com/alloydb/docs/ai/configure-vertex-ai).
-  * Use a Gemini model that's supported in your region. [Gemini 2.5 Flash Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite) is the AI query engine's default model. If you don't specify a Gemini model in the query, the AI query engine default model is chosen for the queries.
+  * Use a Gemini model that's supported in your region. [Gemini 3.5 Flash-Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite) is the AI query engine's default model. If you don't specify a Gemini model in the query, the AI query engine uses the default model.
 
 
 
@@ -101,22 +101,22 @@ You can modify the value of the `google_ml_integration.enable_ai_query_engine` f
 
 ### Use a Gemini model that's supported in your region
 
-If your AlloyDB for PostgreSQL cluster is in a region where `gemini-2.5-flash-lite` isn't supported, you can use one of the other available Gemini models in your region using the `model_id parameter`.
+The AI query engine's default model is [`gemini-3.5-flash-lite`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite). If you don't specify a `model_id` in your AI functions, your queries use this model. To check model availability, see [Supported regions](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite#supported-regions). For pricing details, see [Agent Platform pricing](https://docs.cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing).
 
-**Note:** Verify model availability in your region. For more information, see [Gemini 2.5 Flash Lite](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/2-5-flash-lite).
+If your AlloyDB for PostgreSQL cluster is in a region where `gemini-3.5-flash-lite` isn't supported, you can specify another available Gemini model using the `model_id` parameter. For more information, see [Google model endpoint locations](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations#google-models).
 
 Alternatively, you can register a Gemini model endpoint and provide that model ID to the AI operators. For more information, see [Register and call remote AI models using model endpoint management](https://docs.cloud.google.com/alloydb/docs/ai/register-model-endpoint).
 
-The following example shows how to register another Gemini endpoint. In this example, this second Gemini endpoint is the global endpoint for `gemini-2.5-flash-lite`. You can use this registered model with AI operators by passing `model_id => 'gemini-2.5-flash-lite-global'` as an additional argument.
+The following example shows how to register another Gemini endpoint. In this example, this second Gemini endpoint is the global endpoint for `gemini-3.5-flash-lite`. You can use this registered model with AI operators by passing `model_id => 'gemini-3.5-flash-lite-global'` as an additional argument.
     
     
     CALL
       google_ml.create_model(
-        model_id => 'gemini-2.5-flash-lite-global',
+        model_id => 'gemini-3.5-flash-lite-global',
         model_type => 'llm',
         model_provider => 'google',
-        model_qualified_name => 'gemini-2.5-flash-lite',
-        model_request_url =>  'https://aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/global/publishers/google/models/gemini-2.5-flash-lite:generateContent',
+        model_qualified_name => 'gemini-3.5-flash-lite',
+        model_request_url =>  'https://aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/global/publishers/google/models/gemini-3.5-flash-lite:generateContent',
         model_auth_type => 'alloydb_service_agent_iam'
     );
     
@@ -137,7 +137,7 @@ Some Gemini models, such as `gemini-3.0-pro-preview`, are available only through
     );
     
 
-Replace `PROJECT_ID` with the ID of the project where the Agent Platform model is available. The AlloyDB service account must have the [Vertex AI User Role](https://docs.cloud.google.com/vertex-ai/docs/general/access-control#predefined-roles) in that project.
+Replace `PROJECT_ID` with the ID of the project where the Agent Platform model is available. The AlloyDB service account must have the [Agent Platform User role](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/access-control#predefined-roles) in that project.
 
 After registering the model, you can use it in AI functions as follows:
     
@@ -177,7 +177,7 @@ The following shows the same example using the model that you registered in Use 
     SELECT r.name, r.location_city
     FROM restaurant_reviews r
     WHERE
-      AI.IF(r.location_city || ' has a population of more than 100,000 AND the following is a positive review; Review: ' || r.review, model_id => 'gemini-2.5-flash-lite')
+      AI.IF(r.location_city || ' has a population of more than 100,000 AND the following is a positive review; Review: ' || r.review, model_id => 'gemini-3.5-flash-lite')
     GROUP BY r.name, r.location_city
     HAVING COUNT(*) > 500;
     
@@ -196,7 +196,7 @@ To perform a join operation, use the `ai.if`/`google_ml.if` operator with join. 
 
 ### Perform filtering using array-based functions
 
-The following example identifies restaurants with more than 10 positive reviews by using an AI model (`gemini-2.5-flash-lite`) to analyze review sentiment and filter the results. `ARRAY_AGG` is used to transform individual rows of data into structured arrays so they can be processed by the AI model in bulk rather than one row at a time.
+The following example identifies restaurants with more than 10 positive reviews by using an AI model (`gemini-3.5-flash-lite`) to analyze review sentiment and filter the results. `ARRAY_AGG` is used to transform individual rows of data into structured arrays so they can be processed by the AI model in bulk rather than one row at a time.
     
     
     WITH initial_arrays AS (
@@ -205,7 +205,7 @@ The following example identifies restaurants with more than 10 positive reviews 
         -- Assuming ai.if takes an array of prompts and returns a boolean array
         ai.if(
           prompts => ARRAY_AGG('Is the review positive: ' || r.review ORDER BY r.id),
-          model_id => 'gemini-2.5-flash-lite',
+          model_id => 'gemini-3.5-flash-lite',
           batch_size => 20
         ) AS truth_values
       FROM restaurant_reviews r
@@ -249,7 +249,7 @@ The following example shows how to filter a large set of restaurant reviews by s
         result_cursor := ai.if(
             'Is the given statement true? ',
             prompt_cursor,
-            model_id => 'gemini-2.5-flash-lite'
+            model_id => 'gemini-3.5-flash-lite'
         );
     
         -- 3. Fetch results from the output cursor and store them
@@ -310,7 +310,7 @@ The following query uses `UNNEST` and `ai.generate` to summarize multiple review
       UNNEST(
         ai.generate(
           prompts => ARRAY_AGG('Summarize the review in 20 words or less. Review: ' || review),
-          model_id => 'gemini-2.5-flash-lite'
+          model_id => 'gemini-3.5-flash-lite'
         )
       ) AS review_summary
     FROM user_reviews;
@@ -475,6 +475,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

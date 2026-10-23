@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/Shared.Types/GetIamPolicyRequest/
 title: GetIamPolicyRequest \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:06.017252+00:00
+fetched_at: 2026-10-23T13:02:47.688893+00:00
 ---
 
 # GetIamPolicyRequest  |  Data Agents  |  Google Cloud Documentation

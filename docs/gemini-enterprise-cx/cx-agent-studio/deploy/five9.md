@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/deploy/five9/
 title: Five9 \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:32.362507+00:00
+fetched_at: 2026-10-23T13:12:04.801982+00:00
 ---
 
 # Five9  |  CX Agent Studio  |  Google Cloud Documentation

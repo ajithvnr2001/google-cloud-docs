@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/feature-usage/
 title: View feature usage \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:12.074631+00:00
+fetched_at: 2026-10-23T12:55:10.593498+00:00
 ---
 
 # View feature usage  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -32,7 +32,7 @@ When you view feature usage in Gemini Enterprise, the usage details depend on yo
 
 ## Pooled quotas overview
 
-In Gemini Enterprise, for editions with license-based subscriptions (such as Gemini Enterprise Standard, Plus, Frontline, EDU, and Emerging Market editions), all users in a Google Cloud project share resource quotas. For more information about the quotas for each edition, see [Quotas and overages](https://docs.cloud.google.com/gemini/enterprise/docs/quotas-and-overages). To enable overages when your project reaches a pooled quota, see [Configure overages](https://docs.cloud.google.com/gemini/enterprise/docs/configure-overages).
+In Gemini Enterprise, for editions with license-based subscriptions (such as Gemini Enterprise Standard, Plus, Frontline, EDU, and Emerging Market editions), all users in a Google Cloud project share resource quotas. For more information about the quotas for each edition, see [Quotas and overages](https://docs.cloud.google.com/gemini/enterprise/docs/quotas-and-overages). To prevent any single user from exhausting an edition's shared pool, you can configure a single-user quota limit. To enable overages when your project reaches a pooled quota, see [Configure overages](https://docs.cloud.google.com/gemini/enterprise/docs/configure-overages).
 
 ### Quota reset times
 
@@ -119,6 +119,36 @@ The dashboard shows the features and usage details for your selected edition:
 
 
 
+## Configure a single-user quota limit
+
+For Gemini Enterprise Standard, Gemini Enterprise Plus, and Gemini Enterprise Standard Emerging Market subscriptions, you can limit how much of an edition's shared subscription quota pool any single user can consume. 
+
+**Note:** The user quota multiplier doesn't apply to AI developer tools, including Google Antigravity.
+
+For more information about how single-user quota limits work and which features are included, see [Single-user quota limits](https://docs.cloud.google.com/gemini/enterprise/docs/quotas-and-overages#single-user-quota-limits).
+
+To enable, update, or turn off a single-user quota limit for an edition and location, follow these steps:
+
+  1. In the Google Cloud console, go to the **Gemini Enterprise > Usage & Spending** page.
+
+[Go to Usage & Spending](https://console.cloud.google.com/gemini-enterprise/usage-and-spending)
+
+  2. Select the **Usage** tab.
+
+  3. Select the **location** of the licenses or subscription.
+
+  4. If your project has multiple active editions in that location, select the edition from the **Choose another tier** list.
+
+  5. In the **Feature usage** > **Limit any single-user's quota** section, choose one of the following actions:
+
+     * **To enable the limit:** Under **Status** , turn on the **Enabled** toggle, and in the **Multiplier** field, enter a whole number of 1 or greater (defaults to 10).
+     * **To update the limit:** In the **Multiplier** field, enter a new whole number of 1 or greater.
+     * **To turn off the limit:** Under **Status** , turn off the **Enabled** toggle so that it shows **Disabled**.
+  6. Click **Save changes**.
+
+
+
+
 ## What's next
 
   * Learn how to [configure overages and spend limits](https://docs.cloud.google.com/gemini/enterprise/docs/configure-overages).
@@ -130,6 +160,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

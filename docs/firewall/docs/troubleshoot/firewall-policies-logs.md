@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/troubleshoot/firewall-policies-logs/
 title: Troubleshoot firewall policy rules log issues \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:01.493367+00:00
+fetched_at: 2026-10-23T13:13:42.871822+00:00
 ---
 
 # Troubleshoot firewall policy rules log issues  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

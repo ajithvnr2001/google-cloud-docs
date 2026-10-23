@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/client-side-metrics/
 title: Use gRPC client-side metrics \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:25:00.709946+00:00
+fetched_at: 2026-10-23T13:08:41.851604+00:00
 ---
 
 # Use gRPC client-side metrics  |  Cloud Storage  |  Google Cloud Documentation
@@ -46,7 +46,7 @@ You can opt in to emit client-side metrics to Cloud Monitoring when using gRPC t
 
 ## Pricing
 
-Cloud Storage client-side metrics are non-chargeable, meaning you can emit, store, and access Cloud Storage client-side metrics without incurring [Cloud Monitoring charges](https://docs.cloud.google.com/stackdriver/pricing#monitoring-costs). For more information about pricing, refer to [Google Cloud Observability pricing](https://docs.cloud.google.com/stackdriver/pricing).
+Cloud Storage client-side metrics are non-chargeable, meaning you can emit, store, and access Cloud Storage client-side metrics without incurring [Cloud Monitoring charges](https://docs.cloud.google.com/monitoring/pricing#monitoring-costs). For more information about pricing, refer to [Google Cloud Observability pricing](https://docs.cloud.google.com/monitoring/pricing).
 
 ## Before you begin
 
@@ -298,7 +298,7 @@ If you're using [Bazel](https://github.com/googleapis/google-cloud-cpp/blob/main
 
 ## What's next
 
-  * Learn more about [observability in Google Cloud](https://docs.cloud.google.com/stackdriver/docs).
+  * Learn more about [observability in Google Cloud](https://docs.cloud.google.com/monitoring/docs).
 
   * Learn how to [add custom traces and metrics to your application](https://docs.cloud.google.com/stackdriver/docs/instrumentation/advanced-topics/custom-instrumentation).
 
@@ -309,6 +309,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/publish/drupal/open-source-drupal/
 title: Build your portal using Drupal 10 \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:47:56.450663+00:00
+fetched_at: 2026-10-23T13:14:28.818696+00:00
 ---
 
 # Build your portal using Drupal 10  |  Apigee  |  Google Cloud Documentation

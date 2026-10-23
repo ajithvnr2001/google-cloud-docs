@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/pam-permissions-and-setup/
 title: Privileged Access Manager permissions and setup \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:20.564755+00:00
+fetched_at: 2026-10-23T13:03:09.527995+00:00
 ---
 
 # Privileged Access Manager permissions and setup  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

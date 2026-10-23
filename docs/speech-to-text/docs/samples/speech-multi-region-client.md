@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-multi-region-client/
 title: Use a custom endpoint with the Speech-to-Text API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:28:50.058772+00:00
+fetched_at: 2026-10-23T08:37:09.891481+00:00
 ---
 
 # Use a custom endpoint with the Speech-to-Text API  |  Google Cloud Documentation

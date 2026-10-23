@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/event-processing/parser-extension-examples/
 title: Parser extension examples \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:30.012159+00:00
+fetched_at: 2026-10-23T13:19:53.030386+00:00
 ---
 
 # Parser extension examples  |  Google Security Operations  |  Google Cloud Documentation

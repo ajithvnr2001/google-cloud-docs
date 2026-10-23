@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/billing-questions/
 title: Billing questions \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:54.152611+00:00
+fetched_at: 2026-10-23T13:18:54.388311+00:00
 ---
 
 # Billing questions  |  AI Hypercomputer  |  Google Cloud Documentation

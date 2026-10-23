@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/write-mql-gemini/
 title: Write MQL with Gemini assistance \u00a0|\u00a0 Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:25.895123+00:00
+fetched_at: 2026-10-23T13:11:11.711286+00:00
 ---
 
 # Write MQL with Gemini assistance  |  Firestore with MongoDB compatibility  |  Google Cloud Documentation

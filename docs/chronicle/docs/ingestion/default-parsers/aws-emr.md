@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aws-emr/
 title: Collect AWS Elastic MapReduce logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:18.057212+00:00
+fetched_at: 2026-10-23T13:19:34.258462+00:00
 ---
 
 # Collect AWS Elastic MapReduce logs  |  Google Security Operations  |  Google Cloud Documentation

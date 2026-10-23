@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/overview-of-looker-connector-permissions/
 title: Overview of Looker connector permissions \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:01.504822+00:00
+fetched_at: 2026-10-23T13:19:42.703647+00:00
 ---
 
 # Overview of Looker connector permissions  |  Data Studio  |  Google Cloud Documentation

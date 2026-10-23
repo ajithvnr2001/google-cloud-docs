@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-mig-with-a3-high-mega/
 title: Create an AI-optimized A3 High or A3 Mega MIG \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:52.573164+00:00
+fetched_at: 2026-10-23T13:18:10.962818+00:00
 ---
 
 # Create an AI-optimized A3 High or A3 Mega MIG  |  AI Hypercomputer  |  Google Cloud Documentation

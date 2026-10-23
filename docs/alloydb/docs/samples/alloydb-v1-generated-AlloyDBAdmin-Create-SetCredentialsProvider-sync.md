@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-v1-generated-AlloyDBAdmin-Create-SetCredentialsProvider-sync/
 title: Create a client with custom credentials \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:25.370870+00:00
+fetched_at: 2026-10-23T10:43:04.879124+00:00
 ---
 
 # Create a client with custom credentials  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

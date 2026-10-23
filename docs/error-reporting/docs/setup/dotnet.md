@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/error-reporting/docs/setup/dotnet/
 title: Instrument C# apps for Error Reporting \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:25.552279+00:00
+fetched_at: 2026-10-23T13:13:51.677362+00:00
 ---
 
 # Instrument C# apps for Error Reporting  |  Google Cloud Documentation

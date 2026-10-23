@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/traces/
 title: Use client-side traces \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:29:22.274003+00:00
+fetched_at: 2026-10-23T13:08:27.767455+00:00
 ---
 
 # Use client-side traces  |  Cloud Storage  |  Google Cloud Documentation
@@ -81,7 +81,7 @@ To read more about traces and spans, see the [OpenTelemetry documentation about 
 
 ## Pricing
 
-Trace data is chargeable. Charges are based on the number of trace spans ingested and scanned by Cloud Trace. To learn more about chargeable trace spans and pricing examples, see [Cloud Trace costs](https://docs.cloud.google.com/stackdriver/pricing#trace-costs).
+Trace data is chargeable. Charges are based on the number of trace spans ingested and scanned by Cloud Trace. To learn more about chargeable trace spans and pricing examples, see [Cloud Trace costs](https://docs.cloud.google.com/trace/pricing#trace-costs).
 
 ## Before you begin
 
@@ -348,6 +348,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

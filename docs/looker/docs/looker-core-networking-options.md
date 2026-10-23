@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/looker-core-networking-options/
 title: Looker (Google Cloud core) networking options \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:09:38.655129+00:00
+fetched_at: 2026-10-23T12:45:30.392964+00:00
 ---
 
 # Looker (Google Cloud core) networking options  |  Google Cloud Documentation
@@ -201,7 +201,7 @@ Network requirements
 ---  
 **Feature** | **Public secure connections** | **Hybrid connections (PSA)** | **Private connections (PSA)** | **Hybrid connections (PSC)** | **Private connections (PSC)**  
 Requires IP range allocation for instance creation  | No  | Yes (`/22` per instance, per region)  | Yes (`/22` per instance, per region)  | No  | No   
-Cloud Armor  | Yes. Looker (Google Cloud core) uses default Cloud Armor rules, which are managed by Google. These rules are not configurable.  | Yes. Looker (Google Cloud core) uses default Cloud Armor rules, which are managed by Google. These rules are not configurable.  | No  | Yes. Looker (Google Cloud core) uses default Cloud Armor rules, which are managed by Google. These rules are not configurable.  | Supported with customer-managed regional external Application Load Balancer, Private Service Connect backend, and customer-managed Google Cloud Armor   
+Google Cloud Armor  | Yes. Looker (Google Cloud core) uses default Google Cloud Armor rules, which are managed by Google. These rules are not configurable.  | Yes. Looker (Google Cloud core) uses default Google Cloud Armor rules, which are managed by Google. These rules are not configurable.  | No  | Yes. Looker (Google Cloud core) uses default Google Cloud Armor rules, which are managed by Google. These rules are not configurable.  | Supported with customer-managed regional external Application Load Balancer, Private Service Connect backend, and customer-managed Google Cloud Armor   
 Custom domain  | Yes  | Supported as a public URL  | Yes  | Supported as a public URL  | Yes   
 Inbound access  
 **Feature** | **Public secure connections** | **Hybrid connections (PSA)** | **Private connections (PSA)** | **Hybrid connections (PSC)** | **Private connections (PSC)**  
@@ -229,7 +229,7 @@ BigQuery  | Yes  | Yes  | Yes  | Yes  | Yes
 Embed  | Yes  | Yes  | Yes  | Yes  | Yes   
 Marketplace  | Yes  | No  | No  | Yes  | Yes   
 Looker Action Hub  | Yes  | Yes  | No  | Yes  | No   
-Looker-managed MCP server  | Yes. During the [preview](https://cloud.google.com/products#product-launch-stages) launch, only public secure connections are officially supported.  | No  | No  | No  | No   
+Looker-managed MCP server  | Yes  | Yes  | Yes  | Yes  | Yes   
 Connected Sheets  | Yes  | Yes  | Yes  | Yes  | Yes   
 SMTP  | Yes  | Yes  | Yes  | Yes. Requires outbound connectivity.   
 Benefits  
@@ -324,6 +324,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

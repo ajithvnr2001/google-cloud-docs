@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/regionalization/
 title: Regionalization and data residency \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:45.088819+00:00
+fetched_at: 2026-10-23T13:12:20.723856+00:00
 ---
 
 # Regionalization and data residency  |  Agent Assist  |  Google Cloud Documentation

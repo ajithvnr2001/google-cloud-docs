@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/add-widget/
 title: Add the search widget to a web page \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:19.254812+00:00
+fetched_at: 2026-10-23T13:11:17.841328+00:00
 ---
 
 # Add the search widget to a web page  |  Agent Search  |  Google Cloud Documentation

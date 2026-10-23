@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/install-edge-profile/
 title: Deploy clusters on the edge \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:14:31.403102+00:00
+fetched_at: 2026-10-23T10:21:06.086599+00:00
 ---
 
 # Deploy clusters on the edge  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -22,17 +22,9 @@ Send feedback
 
 #  Deploy clusters on the edge Stay organized with collections  Save and categorize content based on your preferences. 
 
-This tutorial introduces a ready-to-use solution that uses Distributed Cloud software only for bare metal and [Config Sync](https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/overview) to deploy Kubernetes clusters on the edge at scale. This tutorial is for platform operators and developers. Before reading this document, ensure that you're familiar with the following technologies and concepts:
+Combining Distributed Cloud software only for bare metal with [Config Sync](https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/overview) lets you deploy and manage edge Kubernetes clusters at scale from a centralized location. Config Sync dynamically pulls configurations from GitHub and automatically applies these policies across your clusters. In this tutorial, designed for platform operators and developers, you use Compute Engine virtual machines (VMs) to emulate edge nodes running a sample point-of-sale workload.
 
-  * [Ansible playbooks](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html).
-  * Edge deployments and their challenges.
-  * How to work with a Google Cloud project.
-  * [Deploying a containerized web application](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/hello-app).
-  * `gcloud` and `kubectl` command-line interfaces.
-
-
-
-In this tutorial you use Compute Engine virtual machines (VMs) to emulate nodes deployed on the edge, and a sample point-of-sale application as the edge workload. Distributed Cloud software only and Config Sync provide centralized management and control for your edge cluster. Config Sync dynamically pulls new configs from GitHub and applies these policies and configs to your clusters.
+Before you begin, ensure that you are familiar with Google Cloud projects, `gcloud` and `kubectl` CLIs, edge deployment challenges, [Ansible playbooks](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html), and [deploying containerized web applications](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/hello-app).
 
 ## Edge deployment architecture
 
@@ -596,6 +588,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

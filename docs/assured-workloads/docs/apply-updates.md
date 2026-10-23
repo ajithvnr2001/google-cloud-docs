@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/apply-updates/
 title: Apply workload updates \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:12.516608+00:00
+fetched_at: 2026-10-23T13:20:32.101193+00:00
 ---
 
 # Apply workload updates  |  Assured Workloads  |  Google Cloud Documentation

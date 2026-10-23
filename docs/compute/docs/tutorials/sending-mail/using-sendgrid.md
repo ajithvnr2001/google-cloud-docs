@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/tutorials/sending-mail/using-sendgrid/
 title: Sending email with SendGrid \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:29:03.467541+00:00
+fetched_at: 2026-10-23T13:00:26.027798+00:00
 ---
 
 # Sending email with SendGrid  |  Compute Engine  |  Google Cloud Documentation

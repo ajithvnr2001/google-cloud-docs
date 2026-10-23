@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/user-events/
 title: About user events for custom apps \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:21.514519+00:00
+fetched_at: 2026-10-23T13:13:49.464499+00:00
 ---
 
 # About user events for custom apps  |  Agent Search  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/backups-limitations/
 title: Backup limitations \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:41.011071+00:00
+fetched_at: 2026-10-23T13:00:58.780607+00:00
 ---
 
 # Backup limitations  |  Filestore  |  Google Cloud Documentation

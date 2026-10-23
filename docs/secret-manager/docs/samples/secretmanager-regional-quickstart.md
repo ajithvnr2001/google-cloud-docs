@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-regional-quickstart/
 title: Regional quickstart \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:58.118530+00:00
+fetched_at: 2026-10-23T09:40:33.613113+00:00
 ---
 
 # Regional quickstart  |  Secret Manager  |  Google Cloud Documentation

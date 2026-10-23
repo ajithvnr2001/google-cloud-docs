@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/release-notes/
 title: Apigee all release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-23T06:00:14.827931+00:00
+fetched_at: 2026-10-23T12:26:49.067036+00:00
 ---
 
 # Apigee all release notes  |  Google Cloud Documentation
@@ -62,6 +62,60 @@ You can see the latest product updates for all of Google Cloud on the [ Google C
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/apigee-release-notes.xml) directly. 
 
+## October 22, 2026
+
+**Apigee X**
+
+Announcement
+
+On October 22, 2026, we released an updated version of Apigee (1-18-0-apigee-7).
+
+**Note:** Rollouts of this release began today and can take four or more business days to complete across all Google Cloud zones. Your instances might not have the features and fixes available until the rollout is complete.
+
+Security
+
+Bug ID | Description  
+---|---  
+**573663408** | **Security fix for Apigee.** Upgraded the ingress gateway to patch security vulnerabilities.  
+**N/A** | **Security fix for Apigee infrastructure.**  
+  
+Fixed
+
+Bug ID | Description  
+---|---  
+**568535165** | Skip main_task_wait_time and nio_task_wait_time metrics for the first 12 Prometheus scrapes during Message Processor startup warmup.  
+**573602919** | Fix generated OpenAPI specs' servers[] to carry the Apigee envgroup hostname instead of the backend target host.  
+**562964081** | The sgpUserIntentMatchingMode verdict-log field is now always present, including on dry-run policy records, and shows the mode used for the evaluation, including when sgpUserIntentMatching isn't set (CONSTRAINTS_AND_INTENT, or INTENT_ONLY when no policies match the tool call).  
+**524115876** | Fix an intermittent HTTP 400 error in the OASValidation policy's strict parameter validation that rejected valid requests.  
+**572025634** | Responses with a compressed text/event-stream body to a proxy with an EventFlow now skip EventFlow processing and pass through intact instead of returning a corrupted body.  
+**549078690** | If no SGP policy is attributed for a denial, a customer sees the generic fallback message. This fix short-circuits to show the rationale instead when no matched policy has a configured denial message.  
+**492041991** | VerifyAPIKey and VerifyAccessToken now set the apiproduct.operation.llmTokenQuota.* flow variables only from the LLM operation(s) that matched the request; they are no longer set from unmatched LLM operations or for requests that match no LLM operation.  
+**567244615** | Semantic Governance now evaluates LLM requests it previously skipped, such as OpenAI requests whose message content is an array of parts, which can produce new denials and judge-model usage. It considers every system message rather than only the last, and a non-streaming OpenAI or an Ollama tool call whose arguments are not valid JSON is now an evaluation error.  
+**567244615** | Semantic Governance no longer evaluates a request or response with a field it cannot read when a tool call is involved. It records verdict ERROR naming the field, with status MODEL_ERROR. The inline SemanticGovernance policy instead raises GovernedLLMResponseParseError or GovernedLLMProviderDetectionFailed (HTTP 500), in DRY_RUN too unless continueOnError is true. It also reads every text part of a Gemini system instruction and Gemini tool parameters given as parametersJsonSchema, and no longer loses the rest of a Claude or Gemini request when one field has an unexpected shape.  
+**560272924** | Added continuous-scan bidirectional gRPC streaming support for the SanitizeModelResponse policy over Server-Sent Events (SSE) streams, preserving native LLM provider SSE JSON envelopes and event framing.  
+**555332621** | Model Armor policies now honor HTTPClient.managementplane.skip.proxy: with it set, Model Armor callouts bypass the forward proxy like other googleapis traffic. Streaming (ContinuousScan) Model Armor traffic uses the forward proxy.  
+**158204922** | VerifyJWT now rejects a JWT whose header contains "b64":false, with fault steps.jwt.InvalidToken, as RFC 7797 section 7 requires. Previously, such a token could be accepted if KnownHeaders listed b64, IgnoreCriticalHeaders was true, or the header had no crit.  
+**158204922** | GenerateJWS supports RFC 7797 unencoded payloads. GenerateJWS now raises MissingPayload, InvalidPayload or FailedToResolveVariable for payload errors, where it previously raised GenerationFailed. KnownHeaders and CriticalHeaders in the JWS and JWT policies accept names separated by whitespace, such as one per line. A b64 header supplied through AdditionalHeaders is now rejected, with steps.jws.InvalidNameForAdditionalHeader for GenerateJWS and steps.jwt.InvalidNameForAdditionalHeader for GenerateJWT. A proxy that set b64 through an AdditionalHeaders variable produced an RFC 7797 JWS before this change, and must move to UnencodedPayload, with DetachContent for the detached form.  
+**158204922** | VerifyJWS verifies RFC 7797 unencoded-payload JWS (b64:false), attached or detached. b64 in crit no longer needs a KnownHeaders entry. VerifyJWS rejects b64:false unless crit lists b64, with the new fault steps.jws.UnencodedPayloadNotCritical; IgnoreCriticalHeaders does not change that. DecodeJWS reports the raw payload of such a JWS.  
+**559228730** | ext_proc: ImmediateResponse now carries any Content-Type (raw body bytes + preserved Content-Type); replies too large to buffer use StreamedImmediateResponse.  
+**544751120** | Semantic Governance Policies marked as dry run are now evaluated and logged without blocking the request. Each dry-run policy adds a second judge evaluation per tool-calling response, whose tokens are billed. Dry-run verdicts are written to the semantic-governance-policy log as separate records flagged sgpDryRunPolicyEvaluation=true; queries that count verdicts should add sgpDryRunPolicyEvaluation != true to exclude them.  
+**554114419** | Fixed: an AssignMessage/HTTPModifier/RaiseFault policy that creates a new request (createNew="true") in an HTTP/2 flow can now set the :path and :authority pseudo-headers instead of failing with an invalid-header error.  
+**567812025** | FILESYSTEM persistence mode makes the synchronizer skip Cassandra entirely (no connections, reads, writes, or datastore health probes).  
+**559009293** | Fixed elevated OAuth latency and Cassandra read load for AppGroup apps, including access token verification and token and authorization-code generation, by caching AppGroup lookups in the message processor runtime, matching Developer behavior.  
+**568860869** | Fixed `RegularExpressionProtection` patterns of the form `"._..._ "` whose middle section contains regular expression syntax (for example, `"._?Exception in thread._ "` or `"(?i)._< script._>.*"`) being matched as literal text instead of as regular expressions. Such patterns now raise `steps.regexprotection.ThreatDetected` for all matching input.  
+**564945600** | Enhance VerifyAPIKey policy to better handle leading spaces.  
+**502231886** | Fixed the default source templates for SanitizeUserPrompt and SanitizeModelResponse so a policy that omits the source element extracts content correctly when IgnoreUnresolvedVariables is false.  
+**562964081** | Semantic Governance now honors the `sgpUserIntentMatching` `AuthzExtension` metadata key (`ENABLED` or `DISABLED`) to toggle user-intent matching in policy evaluation; `DISABLED` evaluates against constraints only.  
+**565004219** | Fixed Semantic Governance Policy skipping evaluation for Anthropic requests that send `system` as a content-block array (the form ADK and LiteLlm emit). Affected agents are now evaluated, which may produce new denials and new judge-model usage on the consumer project.  
+**527517087** | SGP policy logs written to your project now identify their originating region. resource.type changes from "global" to "generic_node" and the region appears in resource.labels.location. Anything selecting these entries by resource.type="global" must be updated -- including log-based metrics, sinks, exclusion filters and alerts, which stop matching silently rather than erroring.  
+**575439485** | JavaCallout policies that run remotely (per-contract offload) can now pass every value type allowed by the GCP-2025-023 setVariable restriction between policies (collections, maps, arrays, primitive wrappers including Character, Date, BigDecimal, UUID, java.time, atomics, JDK enums, Optional), with their types preserved, instead of failing with steps.remotepolicy.NonSerializableVariable.  
+**575439485** | Remotely executed (per-contract offload) JavaCallout policies with continueOnError="true" now continue the flow when the callout faults, instead of returning HTTP 500.  
+**567244901** | In enforce mode, Semantic Governance now blocks a tool call when the governance check cannot be completed, instead of letting it through.  
+**573622417** | Fixed an issue where istio-ingressgateway forwarded the x-envoy-decorator-operation header to upstream runtime and target backends.  
+**571679067** | removes old version of ApigeeTelemetry CRD.  
+**571378258** | The Apigee Redis container is now built from the Valkey engine (BSD-3-Clause, Linux Foundation) at version 8.1.10. Wire protocol is unchanged (RESP2) and the redis-server/redis-cli binary names are preserved.  
+**N/A** | Updates to infrastructure and libraries.  
+  
 ## October 21, 2026
 
 **Apigee X**

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/build-etl-pipeline-alloydb-dataflow/
 title: Build realtime vector embedding pipeline for AlloyDB with Dataflow \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:27:17.023794+00:00
+fetched_at: 2026-10-23T13:08:35.789686+00:00
 ---
 
 # Build realtime vector embedding pipeline for AlloyDB with Dataflow  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -29,7 +29,7 @@ Integrating AlloyDB with [Dataflow](https://docs.cloud.google.com/dataflow/docs/
 
 Before you create the Dataflow pipeline using the Colab, complete these prerequisites:
 
-  * [Configure your environment](https://docs.cloud.google.com/dataflow/docs/quickstarts/create-pipeline-python#before-you-begin) to create a Dataflow pipeline.
+  * [Configure your environment](https://docs.cloud.google.com/dataflow/docs/guides/create-pipeline-python#before-you-begin) to create a Dataflow pipeline.
   * Enable the AlloyDB and other required APIs:
         
         gcloud services enable alloydb.googleapis.com cloudresourcemanager.googleapis.com \
@@ -103,7 +103,7 @@ For more information about creating the ingestion pipeline, see [Save our Pipeli
 
 You can run a Dataflow pipeline from the command line. Pass credentials, such as your project ID, AlloyDB connection details, Cloud Storage bucket location, execution environment details, network information, and the name of the ingestion pipeline (`basic_ingestion_pipeline.py`).
 
-In the [Vector Embedding Ingestion with Apache Beam and AlloyDB](https://colab.research.google.com/github/apache/beam/blob/master/examples/notebooks/beam-ml/alloydb_product_catalog_embeddings.ipynb) Colab, the AlloyDB for PostgreSQL instance and Dataflow jobs run in the same VPC network and subnetwork.
+In the [Vector Embedding Ingestion with Apache Beam and AlloyDB](https://colab.research.google.com/github/apache/beam/blob/master/examples/notebooks/beam-ml/alloydb_product_catalog_embeddings.ipynb) Colab, the AlloyDB instance and Dataflow jobs run in the same Virtual Private Cloud (VPC) network and subnetwork.
 
 For more information about running a pipeline in Dataflow, see [Run Pipeline on Dataflow](https://colab.research.google.com/github/apache/beam/blob/master/examples/notebooks/beam-ml/alloydb_product_catalog_embeddings.ipynb#scrollTo=Run_Pipeline_on_Dataflow).
 
@@ -117,7 +117,7 @@ Instead of processing a batch of data, this pipeline continuously reads incoming
 
 For more information, see [Streaming Embeddings Updates from Pub/Sub](https://colab.research.google.com/github/apache/beam/blob/master/examples/notebooks/beam-ml/alloydb_product_catalog_embeddings.ipynb#scrollTo=Streaming_Embeddings_Updates_from_PubSub).
 
-## Verify vector embeddings in AlloyDB for PostgreSQL
+## Verify vector embeddings in AlloyDB
 
 After the pipeline executes, verify that the pipeline wrote the embeddings to your AlloyDB database.
 
@@ -133,6 +133,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

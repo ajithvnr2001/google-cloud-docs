@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/samples/securitycenter-list-filtered-findings/
 title: List findings with filter \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:51:01.187307+00:00
+fetched_at: 2026-10-23T10:52:13.047336+00:00
 ---
 
 # List findings with filter  |  Security Command Center  |  Google Cloud Documentation

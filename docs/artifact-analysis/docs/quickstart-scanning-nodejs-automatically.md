@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/quickstart-scanning-nodejs-automatically/
 title: Quickstart: Scan Node.js packages automatically \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:09.154956+00:00
+fetched_at: 2026-10-23T13:18:49.073629+00:00
 ---
 
 # Quickstart: Scan Node.js packages automatically  |  Artifact Analysis  |  Google Cloud Documentation

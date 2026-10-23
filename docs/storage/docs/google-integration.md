@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/google-integration/
 title: Integration with Google Cloud services and tools \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:26:00.906516+00:00
+fetched_at: 2026-10-23T13:08:39.941360+00:00
 ---
 
 # Integration with Google Cloud services and tools  |  Cloud Storage  |  Google Cloud Documentation
@@ -101,7 +101,7 @@ Product | Links
   * [ Learn about the Cloud Storage connector](https://docs.cloud.google.com/dataproc/docs/concepts/connectors/cloud-storage)
 
   
-[ Development Tools](https://cloud.google.com/products/tools) | Add extensions to your development tools for fast access to your Cloud Storage buckets and objects: 
+[ Development Tools](https://docs.cloud.google.com/products/tools) | Add extensions to your development tools for fast access to your Cloud Storage buckets and objects: 
 
   * [ Browse resources in Cloud Storage with Cloud Code for IntelliJ](https://docs.cloud.google.com/code/docs/intellij/gcs)
 
@@ -166,6 +166,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/samples/cloud-sql-postgres-dotnet-ado-connect-tcp/
 title: Create a TCP connection by using ADO.NET \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:35.881272+00:00
+fetched_at: 2026-10-23T10:18:43.765004+00:00
 ---
 
 # Create a TCP connection by using ADO.NET  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation

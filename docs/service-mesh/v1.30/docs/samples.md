@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/service-mesh/v1.30/docs/samples/
 title: Samples \u00a0|\u00a0 Cloud Service Mesh \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:30:41.949588+00:00
+fetched_at: 2026-10-23T10:53:13.587512+00:00
 ---
 
 # Samples  |  Cloud Service Mesh  |  Google Cloud Documentation

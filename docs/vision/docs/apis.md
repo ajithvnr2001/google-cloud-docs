@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/apis/
 title: API Reference \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:25.257226+00:00
+fetched_at: 2026-10-23T09:36:39.851641+00:00
 ---
 
 # API Reference  |  Cloud Vision API  |  Google Cloud Documentation

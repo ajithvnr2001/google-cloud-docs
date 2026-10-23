@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/samples/cloud-sql-mysql-servlet-connect-tcp/
 title: Create a TCP connection by using Java \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:25.658731+00:00
+fetched_at: 2026-10-23T10:19:22.275821+00:00
 ---
 
 # Create a TCP connection by using Java  |  Cloud SQL for MySQL  |  Google Cloud Documentation

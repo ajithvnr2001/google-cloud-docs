@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/create-applications-from-templates/
 title: Create applications from published templates \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:16.592087+00:00
+fetched_at: 2026-10-23T13:17:02.010104+00:00
 ---
 
 # Create applications from published templates  |  App Hub  |  Google Cloud Documentation

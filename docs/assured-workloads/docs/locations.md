@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/locations/
 title: Assured Workloads locations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:08.175543+00:00
+fetched_at: 2026-10-23T13:19:39.818111+00:00
 ---
 
 # Assured Workloads locations  |  Google Cloud Documentation

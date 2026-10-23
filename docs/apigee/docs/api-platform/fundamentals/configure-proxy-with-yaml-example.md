@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/configure-proxy-with-yaml-example/
 title: Create an API proxy from a YAML template \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:22.160338+00:00
+fetched_at: 2026-10-23T13:15:45.449585+00:00
 ---
 
 # Create an API proxy from a YAML template  |  Apigee  |  Google Cloud Documentation

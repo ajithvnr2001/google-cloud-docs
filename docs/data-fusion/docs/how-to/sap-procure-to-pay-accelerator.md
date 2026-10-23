@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/sap-procure-to-pay-accelerator/
 title: SAP Procure to Pay accelerator \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:42.998068+00:00
+fetched_at: 2026-10-23T13:20:45.315957+00:00
 ---
 
 # SAP Procure to Pay accelerator  |  Cloud Data Fusion  |  Google Cloud Documentation

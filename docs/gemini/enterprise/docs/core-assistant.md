@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/core-assistant/
 title: Core Assistant agent \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:13.459520+00:00
+fetched_at: 2026-10-23T13:13:06.964989+00:00
 ---
 
 # Core Assistant agent  |  Gemini Enterprise  |  Google Cloud Documentation

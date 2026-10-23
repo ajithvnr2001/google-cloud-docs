@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/connectors/
 title: About metadata connectors \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:02:19.051619+00:00
+fetched_at: 2026-10-23T10:21:25.485656+00:00
 ---
 
 # About metadata connectors  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -87,7 +87,7 @@ The following terms are used in this documentation:
 
 There are no additional charges from Knowledge Catalog or BigQuery Data Transfer Service for importing metadata using connectors.
 
-Standard charges apply for other Knowledge Catalog usage (such as metadata storage). For more information, see [Knowledge Catalog pricing](https://docs.cloud.google.com/dataplex/pricing).
+Standard charges apply for other Knowledge Catalog usage (such as metadata storage). For more information, see [Knowledge Catalog pricing](https://cloud.google.com/products/knowledge-catalog/pricing).
 
 ## Limitations
 
@@ -112,6 +112,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

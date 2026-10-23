@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/samples/cloud-sql-sqlserver-dotnet-ado-lifetime/
 title: Set the connection duration when using ADO.NET \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:31:02.181771+00:00
+fetched_at: 2026-10-23T10:11:47.498212+00:00
 ---
 
 # Set the connection duration when using ADO.NET  |  Cloud SQL for SQL Server  |  Google Cloud Documentation

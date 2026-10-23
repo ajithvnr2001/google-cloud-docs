@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-control-delete-folder/
 title: Storage Control Delete Folder \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:31:39.833741+00:00
+fetched_at: 2026-10-23T09:36:56.149539+00:00
 ---
 
 # Storage Control Delete Folder  |  Google Cloud Documentation

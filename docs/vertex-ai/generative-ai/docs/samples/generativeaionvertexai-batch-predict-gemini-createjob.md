@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-batch-predict-gemini-createjob/
 title: Batch text prediction with Gemini model \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:11.671885+00:00
+fetched_at: 2026-10-23T09:37:53.329001+00:00
 ---
 
 # Batch text prediction with Gemini model  |  Generative AI on Vertex AI  |  Google Cloud Documentation

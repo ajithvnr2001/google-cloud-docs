@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/explore-oracle-partnership-offerings/
 title: Explore Oracle and Google Cloud partnership offerings \u00a0|\u00a0 Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:12.247010+00:00
+fetched_at: 2026-10-23T13:18:43.944217+00:00
 ---
 
 # Explore Oracle and Google Cloud partnership offerings  |  Bare Metal Solution  |  Google Cloud Documentation

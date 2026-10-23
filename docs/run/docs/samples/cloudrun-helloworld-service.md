@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/samples/cloudrun-helloworld-service/
 title: Hello World service \u00a0|\u00a0 Cloud Run \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:11:05.278336+00:00
+fetched_at: 2026-10-23T10:03:20.086963+00:00
 ---
 
 # Hello World service  |  Cloud Run  |  Google Cloud Documentation

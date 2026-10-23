@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/googlegenaisdk-textgen-with-multi-local-img/
 title: Generate text from multimodal prompt \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:06.169187+00:00
+fetched_at: 2026-10-23T08:57:04.746352+00:00
 ---
 
 # Generate text from multimodal prompt  |  Generative AI on Vertex AI  |  Google Cloud Documentation

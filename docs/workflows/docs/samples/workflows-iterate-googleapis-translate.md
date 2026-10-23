@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-iterate-googleapis-translate/
 title: Use Google Translate in a for-in loop \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:02:13.008875+00:00
+fetched_at: 2026-10-23T08:56:58.586310+00:00
 ---
 
 # Use Google Translate in a for-in loop  |  Workflows  |  Google Cloud Documentation

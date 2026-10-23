@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/data-domains-create/
 title: Create data domains \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:20.919944+00:00
+fetched_at: 2026-10-23T10:21:25.428262+00:00
 ---
 
 # Create data domains  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -35,7 +35,8 @@ Before creating data domains and assigning domain owners, ensure that you have t
 
   * The maximum nesting depth for domains and subdomains is five levels.
   * You can create up to 50 direct subdomains under a single data domain.
-  * Within a project, you can have up to 1,000 domains per region.
+  * Within a project, you can have up to 100 domains per region.
+  * Within an organization, you can have up to 1,000 domains per region.
 
 
 
@@ -53,7 +54,7 @@ To enable APIs, you need the `serviceusage.services.enable` permission. If you c
 
 To get the permissions that you need to create data domains and assign domain owners, ask your administrator to grant you the following IAM roles on the project: 
 
-  * Allows full management of the data domain, its bindings and IAM policies: [Dataplex Data Domain Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataDomainAdmin) (`roles/dataplex.dataDomainAdmin`) 
+  * Allows full management of the data domain, its bindings and IAM policies: [**Dataplex Data Domain Admin** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataDomainAdmin) (`roles/dataplex.dataDomainAdmin`) 
 
 
 
@@ -257,10 +258,10 @@ The following table lists the predefined IAM roles that you can grant to data do
 
 Role name | IAM role | Description  
 ---|---|---  
-Dataplex Data Domain Admin | `roles/dataplex.dataDomainAdmin` | Lets you create and manage data domains and subdomains along with their bindings. The Admin role also lets you manage all IAM roles and permissions for domains.  
-Dataplex Data Domain Configuration Viewer | `roles/dataplex.dataDomainViewer` | Lets you view the configuration of the data domain and the resource-domain bindings.  
-Dataplex Data Domain Configuration Editor | `roles/dataplex.dataDomainEditor` | Lets you edit existing domains as well as create and manage the resource-domain bindings. The Editor role also lets you manage metadata authorizations that allow the discovery of domain resources by the users.  
-Dataplex Data Domain Entry Reader | `roles/dataplex.dataDomainEntryReader` | Lets you discover and view the data domain, its subdomains, and the metadata of all its included resources.  
+**Dataplex Data Domain Admin** | `roles/dataplex.dataDomainAdmin` | Lets you create and manage data domains and subdomains along with their bindings. The Admin role also lets you manage all IAM roles and permissions for domains.  
+**Dataplex Data Domain Configuration Viewer** | `roles/dataplex.dataDomainViewer` | Lets you view the configuration of the data domain and the resource-domain bindings.  
+**Dataplex Data Domain Configuration Editor** | `roles/dataplex.dataDomainEditor` | Lets you edit existing domains as well as create and manage the resource-domain bindings. The Editor role also lets you manage metadata authorizations that allow the discovery of domain resources by the users.  
+**Dataplex Data Domain Entry Reader** | `roles/dataplex.dataDomainEntryReader` | Lets you discover and view the data domain, its subdomains, and the metadata of all its included resources.  
   
 When you grant the roles to domain owners or users, consider the following:
 

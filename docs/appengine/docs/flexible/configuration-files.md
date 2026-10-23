@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/configuration-files/
 title: Structuring web services in App Engine \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:10.740139+00:00
+fetched_at: 2026-10-23T13:16:57.187975+00:00
 ---
 
 # Structuring web services in App Engine  |  App Engine flexible environment  |  Google Cloud Documentation

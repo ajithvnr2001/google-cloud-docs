@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/parameter-manager/docs/apis/
 title: APIs and reference \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:09:40.017645+00:00
+fetched_at: 2026-10-23T09:57:43.646976+00:00
 ---
 
 # APIs and reference  |  Google Cloud Documentation

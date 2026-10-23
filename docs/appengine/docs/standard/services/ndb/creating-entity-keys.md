@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/ndb/creating-entity-keys/
 title: Creating and Using Entity Keys \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:03.451409+00:00
+fetched_at: 2026-10-23T13:17:41.426793+00:00
 ---
 
 # Creating and Using Entity Keys  |  App Engine standard environment  |  Google Cloud Documentation

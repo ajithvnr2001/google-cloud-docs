@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/monitoring/docs/samples/monitoring-alert-create-channel/
 title: Create a notification channel \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:13:27.143831+00:00
+fetched_at: 2026-10-23T10:54:12.290744+00:00
 ---
 
 # Create a notification channel  |  Cloud Monitoring  |  Google Cloud Documentation

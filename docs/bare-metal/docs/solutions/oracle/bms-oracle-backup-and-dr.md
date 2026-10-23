@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/solutions/oracle/bms-oracle-backup-and-dr/
 title: Solution Guide: Google Cloud Backup and DR for Oracle on Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:03.213886+00:00
+fetched_at: 2026-10-23T13:19:29.881834+00:00
 ---
 
 # Solution Guide: Google Cloud Backup and DR for Oracle on Bare Metal Solution  |  Google Cloud Documentation

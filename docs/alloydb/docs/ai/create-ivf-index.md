@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/create-ivf-index/
 title: Create an IVF index \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:30:18.653092+00:00
+fetched_at: 2026-10-23T13:08:34.545170+00:00
 ---
 
 # Create an IVF index  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -73,8 +73,9 @@ Replace the following:
 
 Set to either of the following:
 
-    * `SQ8`: Recommended. Faster query response but results in some recall loss, which doesn't impact production scenarios.
-    * `FLAT`: slower query response and higher memory usage, but can attain negligible recall loss.
+    * `SQ8`: Recommended. Faster query response and supports vectors with up to 8,000 dimensions, but results in some recall loss, which doesn't impact production scenarios.
+
+    * `FLAT`: slower query response, higher memory usage, and supports vectors with up to 2,000 dimensions, but can attain negligible recall loss.
 
 To create this index on an embedding column that uses the `real[]` data type instead of `vector`, cast the column into the `vector` data type:
 
@@ -83,7 +84,7 @@ To create this index on an embedding column that uses the `real[]` data type ins
     
     
     CREATE INDEX INDEX_NAME ON TABLE
-      USING ivf (CAST(EMBEDDING_COLUMN AS vector(DIMENSIONS)))'}} DISTANCE_FUNCTION)
+      USING ivf ((CAST(EMBEDDING_COLUMN AS vector(DIMENSIONS))) DISTANCE_FUNCTION)
       WITH (lists = LIST_COUNT, quantizer = 'SQ8');
     
 
@@ -107,8 +108,8 @@ To find the nearest semantic neighbors for an embedding vector, you can run the 
     
     
       SELECT * FROM TABLE
-        ORDER BY EMBEDDING_COLUMN DISTANCE_FUNCTION_QUERY ['EMBEDDING']
-        LIMIT ROW_COUNT
+        ORDER BY EMBEDDING_COLUMN DISTANCE_FUNCTION_QUERY 'EMBEDDING'
+        LIMIT ROW_COUNT;
     
 
 Replace the following:
@@ -154,6 +155,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

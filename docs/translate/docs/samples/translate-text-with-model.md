@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/translate/docs/samples/translate-text-with-model/
 title: Translate strings (Basic edition) \u00a0|\u00a0 Cloud Translation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:19.932066+00:00
+fetched_at: 2026-10-23T08:58:41.620840+00:00
 ---
 
 # Translate strings (Basic edition)  |  Cloud Translation  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/enterprise/knative-serving/docs/resources/
 title: Resources \u00a0|\u00a0 Knative serving \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:08:42.005491+00:00
+fetched_at: 2026-10-23T10:35:07.534354+00:00
 ---
 
 # Resources  |  Knative serving  |  Google Cloud Documentation

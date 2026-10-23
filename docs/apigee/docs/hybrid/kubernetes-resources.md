@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/kubernetes-resources/
 title: Kubernetes and custom resources used by Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:47:03.254720+00:00
+fetched_at: 2026-10-23T13:14:27.001641+00:00
 ---
 
 # Kubernetes and custom resources used by Apigee  |  Google Cloud Documentation

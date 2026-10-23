@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/jiracloud/configure/
 title: Jira Cloud \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:08.237102+00:00
+fetched_at: 2026-10-23T13:03:29.550999+00:00
 ---
 
 # Jira Cloud  |  Integration Connectors  |  Google Cloud Documentation

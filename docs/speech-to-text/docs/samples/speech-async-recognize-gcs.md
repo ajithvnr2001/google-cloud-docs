@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-async-recognize-gcs/
 title: Create an asynchronous speech file \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:28:49.188971+00:00
+fetched_at: 2026-10-23T08:37:01.382160+00:00
 ---
 
 # Create an asynchronous speech file  |  Cloud Speech-to-Text  |  Google Cloud Documentation

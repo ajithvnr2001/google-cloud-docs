@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/event-processing/udm-overview2/
 title: UDM overview \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:26.959612+00:00
+fetched_at: 2026-10-23T13:20:06.509459+00:00
 ---
 
 # UDM overview  |  Google Security Operations  |  Google Cloud Documentation

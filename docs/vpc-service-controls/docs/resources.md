@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vpc-service-controls/docs/resources/
 title: Resources \u00a0|\u00a0 VPC Service Controls \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:22.561168+00:00
+fetched_at: 2026-10-23T09:37:12.055706+00:00
 ---
 
 # Resources  |  VPC Service Controls  |  Google Cloud Documentation

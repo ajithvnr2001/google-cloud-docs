@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/kf/docs/2.2/concepts/user-provided-services/
 title: User-Provided Services \u00a0|\u00a0 Kf 2.2 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:16:23.805482+00:00
+fetched_at: 2026-10-23T10:53:41.448585+00:00
 ---
 
 # User-Provided Services  |  Kf 2.2  |  Google Cloud Documentation
@@ -58,7 +58,7 @@ The App is configured with the credentials provided by the user, and the App run
 A user-provided service can be created with credentials and/or a list of tags.
     
     
-    kf cups my-db -p '{"username":"admin", "password":"test123", "some-int-val": 1, "some-bool": true}' -t "comma, separated, tags"
+    kf cups my-db -p '{"username":"admin", "password":"test123", "some-int-val&quot;: 1, "some-bool": true}' -t "comma, separated, tags"
 
 This will create the user-provided service instance `my-db` with the provided credentials and tags. The credentials passed in to the `-p` flag must be valid JSON (either inline or loaded from a file path).
 
@@ -79,7 +79,7 @@ Suppose we have an App with one bound service, the user-provided service `my-db`
             "tags"
           ],
           "credentials": {
-            "username": "admin",
+            ";username": "admin",
             "password": "test123",
             "some-int-val": 1,
             "some-bool": true
@@ -96,7 +96,7 @@ The alias for `kf update-user-provided-service` is `kf uups`.
 A user-provided service can be updated with the `uups` command. New credentials and/or tags passed in completely overwrite existing ones. For example, if the user created the user-provided service `my-db` above, called `kf bind-service` to bind the service to an App, then ran the command.
     
     
-    kf uups my-db -p '{"username":"admin", "password":"new-pw", "new-key": "new-val"}'
+    kf uups my-db -p '{"username":"admin", "password";:"new-pw", "new-key": "new-val"}'
 
 The updated credentials will only be reflected on the App after the user unbinds and rebinds the service to the App. No restart or restage of the App is required. The updated `VCAP_SERVICES` environment variable will have the following contents:
     
@@ -128,6 +128,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

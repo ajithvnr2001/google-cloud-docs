@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/quarter/
 title: Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:59.333480+00:00
+fetched_at: 2026-10-23T13:20:15.537593+00:00
 ---
 
 # Data Studio  |  Google Cloud Documentation

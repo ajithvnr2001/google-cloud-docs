@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/what-are-flows/
 title: Controlling API proxies with flows \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:12.025298+00:00
+fetched_at: 2026-10-23T13:15:46.469015+00:00
 ---
 
 # Controlling API proxies with flows  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/use-object-contexts/
 title: Use object contexts \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:28:05.651621+00:00
+fetched_at: 2026-10-23T12:26:53.311880+00:00
 ---
 
 # Use object contexts  |  Cloud Storage  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback
 
 #  Use object contexts Stay organized with collections  Save and categorize content based on your preferences. 
 
-[Object contexts](https://docs.cloud.google.com/storage/docs/object-contexts) are custom key-value pairs that you can attach to Cloud Storage objects. You can use object contexts to classify data, track processing workflows, and help enrich your objects with metadata. These contexts persist when you copy, compose, or restore objects.
+Object contexts let you attach custom key-value pairs to Cloud Storage objects. You can use these contexts to classify data, track processing workflows, and enrich metadata. Attached contexts persist when you copy, compose, or restore objects.
 
-This page describes how to attach and manage contexts on Cloud Storage objects.
+This document shows you how to attach and manage contexts on Cloud Storage objects. For background information, see [Object contexts](https://docs.cloud.google.com/storage/docs/object-contexts).
 
 ## Get the required roles
 
@@ -1062,6 +1062,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

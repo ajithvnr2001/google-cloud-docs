@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/sunset/
 title: Gemini Code Assist Standard and Enterprise subscriptions \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:17.148591+00:00
+fetched_at: 2026-10-23T13:09:27.271506+00:00
 ---
 
 # Gemini Code Assist Standard and Enterprise subscriptions  |  Gemini for Google Cloud  |  Google Cloud Documentation

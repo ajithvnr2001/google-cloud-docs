@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/best-practices/flows/error-unknown-or-inaccessible-field/
 title: Error: Unknown or inaccessible field \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:31:39.596092+00:00
+fetched_at: 2026-10-23T12:51:39.000188+00:00
 ---
 
 # Error: Unknown or inaccessible field  |  Looker  |  Google Cloud Documentation
@@ -21,17 +21,7 @@ Send feedback
 
 #  Error: Unknown or inaccessible field Stay organized with collections  Save and categorize content based on your preferences. 
 
-When you are working on your LookML files and are satisfied with your updates, the next step to deploy your LookML changes is to run the [LookML Validator](https://docs.cloud.google.com/looker/docs/lookml-validation#validating_your_changes) to perform a full model validation. 
-
-Occasionally, you might see an error like the following: 
-
-![](https://docs.cloud.google.com/static/looker/docs/images/hc-error-unknown-inaccessible-field-2210.png)
-    
-    
-     Unknown or inaccessible field "user_order_facts.lifetime_orders" referenced in "users.lifetime_orders". Check for typos and missing joins.
-    
-
-In this example, the error refers to the `lifetime_orders` field in the `users` view. The error indicates that `users.lifetime_orders` cannot access the `user_order_facts.lifetime_orders` field that it references. 
+The [LookML Validator](https://docs.cloud.google.com/looker/docs/lookml-validation#validating_your_changes) in Looker lets you identify `Unknown or inaccessible field` errors during model validation before you deploy LookML changes. You can resolve these errors by defining missing fields, appending a specific `timeframe` to dimension group references, joining required views to your Explores, or excluding the field with the `fields` parameter.
 
 ## Debugging tree
 
@@ -40,6 +30,16 @@ Use the following decision tree to troubleshoot common Liquid issues:
 The following sections describe the scenarios in the tree in further detail.
 
 ## Why does this error occur?
+
+When you run the LookML Validator, you might see an error like the following: 
+
+![](https://docs.cloud.google.com/static/looker/docs/images/hc-error-unknown-inaccessible-field-2210.png)
+    
+    
+     Unknown or inaccessible field "user_order_facts.lifetime_orders" referenced in "users.lifetime_orders". Check for typos and missing joins.
+    
+
+In this example, the error refers to the `lifetime_orders` field in the `users` view. The error indicates that `users.lifetime_orders` cannot access the `user_order_facts.lifetime_orders` field that it references. 
 
 There are a few reasons this error can occur: 
 
@@ -200,6 +200,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

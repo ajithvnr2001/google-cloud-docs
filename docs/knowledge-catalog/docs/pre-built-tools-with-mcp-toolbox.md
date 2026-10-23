@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/pre-built-tools-with-mcp-toolbox/
 title: Use Knowledge Catalog with MCP, the Antigravity CLI, and other agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:32:17.942190+00:00
+fetched_at: 2026-10-23T10:21:52.933260+00:00
 ---
 
 # Use Knowledge Catalog with MCP, the Antigravity CLI, and other agents  |  Google Cloud Documentation
@@ -69,8 +69,8 @@ For more information about the Knowledge Catalog plugin, see the [Antigravity CL
 
 To get the permissions that you need to connect to Knowledge Catalog using MCP Toolbox or the Antigravity CLI plugin, ask your administrator to grant you the following IAM roles on your project: 
 
-  * To enable APIs: [Service Usage Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/serviceusage#serviceusage.serviceUsageAdmin) (`roles/serviceusage.serviceUsageAdmin`) 
-  * To use Knowledge Catalog skills: [Dataplex Catalog Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) 
+  * To enable APIs: [**Service Usage Admin** ](https://docs.cloud.google.com/iam/docs/roles-permissions/serviceusage#serviceusage.serviceUsageAdmin) (`roles/serviceusage.serviceUsageAdmin`) 
+  * To use Knowledge Catalog skills: [**Dataplex Catalog Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) 
 
 
 
@@ -263,27 +263,31 @@ Replace `PROJECT_ID` with the Google Cloud project ID.
 
 ### Codex
 
-  1. Install the Data Cloud Plugins marketplace:
-         
-         codex plugin marketplace add GoogleCloudPlatform/data-cloud-plugins
-         
+To use Knowledge Catalog in Codex, configure an MCP server connection in your Codex configuration to run MCP Toolbox:
 
-  2. Install the Knowledge Catalog plugin:
-         
-         codex plugin install dataplex@data-cloud-plugins
-         
-
-  3. Configure the environment variables to connect to your Knowledge Catalog project:
+  1. Set the environment variable to connect to your Knowledge Catalog project:
          
          export DATAPLEX_PROJECT=PROJECT_ID
          
 
 Replace `PROJECT_ID` with the Google Cloud project ID.
 
-  4. Optional. Update the marketplace:
+  2. In your Codex MCP configuration, add the server using MCP Toolbox:
          
-         codex plugin marketplace upgrade data-cloud-plugins
+         {
+           "mcpServers": {
+             "knowledgeCatalog": {
+               "command": "./PATH/TO/toolbox",
+               "args": ["--prebuilt","dataplex","--stdio"],
+               "env": {
+                 "DATAPLEX_PROJECT": "PROJECT_ID"
+               }
+             }
+           }
+         }
          
+
+Replace `PROJECT_ID` with the Google Cloud project ID.
 
 
 
@@ -459,6 +463,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/service-mesh/v1.29/docs/apis/
 title: APIs and references \u00a0|\u00a0 Cloud Service Mesh \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:09:18.398748+00:00
+fetched_at: 2026-10-23T10:53:15.044738+00:00
 ---
 
 # APIs and references  |  Cloud Service Mesh  |  Google Cloud Documentation

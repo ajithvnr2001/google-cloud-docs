@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/concepts/fhir-import/
 title: FHIR import options \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:56.080900+00:00
+fetched_at: 2026-10-23T13:01:20.595355+00:00
 ---
 
 # FHIR import options  |  Cloud Healthcare API  |  Google Cloud Documentation

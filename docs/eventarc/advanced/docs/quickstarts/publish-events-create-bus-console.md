@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/advanced/docs/quickstarts/publish-events-create-bus-console/
 title: Quickstart: Publish and receive events by creating a bus and enrollment (console) \u00a0|\u00a0 Eventarc Advanced \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:21.912008+00:00
+fetched_at: 2026-10-23T13:13:52.363903+00:00
 ---
 
 # Quickstart: Publish and receive events by creating a bus and enrollment (console)  |  Eventarc Advanced  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/cmek/
 title: About customer-managed encryption keys (CMEK) \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:00.033388+00:00
+fetched_at: 2026-10-23T10:11:51.269773+00:00
 ---
 
 # About customer-managed encryption keys (CMEK)  |  Cloud SQL for SQL Server  |  Google Cloud Documentation
@@ -44,7 +44,7 @@ To use CMEKs created by Cloud KMS Autokey to protect your Cloud SQL for SQL Serv
 
 ## Google-managed encryption versus customer-managed encryption
 
-The diagrams below show how [data-at-rest encryption](https://docs.cloud.google.com/security/encryption/default-encryption) works inside a Cloud SQL instance when using default Google encryption versus customer-managed encryption keys.
+The diagrams below show how [data-at-rest encryption](https://docs.cloud.google.com/docs/security/encryption/default-encryption) works inside a Cloud SQL instance when using default Google encryption versus customer-managed encryption keys.
 
 ### Without CMEK
 
@@ -155,7 +155,7 @@ The following restrictions apply when using customer-managed encryption keys:
 
 ## What's next
 
-  * Learn about [encryption at rest in Google Cloud](https://docs.cloud.google.com/security/encryption/default-encryption).
+  * Learn about [encryption at rest in Google Cloud](https://docs.cloud.google.com/docs/security/encryption/default-encryption).
   * Learn how to [create an instance with CMEK enabled](https://docs.cloud.google.com/sql/docs/sqlserver/configure-cmek).
   * Learn about [Cloud Key Management Service (Cloud KMS)](https://docs.cloud.google.com/kms/docs/key-management-service).
   * Learn about [Quotas for Cloud KMS resources](https://docs.cloud.google.com/kms/quotas#quotas_all).
@@ -169,6 +169,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

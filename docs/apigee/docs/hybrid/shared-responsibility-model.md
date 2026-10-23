@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/shared-responsibility-model/
 title: Apigee hybrid shared responsibility model \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:47:02.360764+00:00
+fetched_at: 2026-10-23T13:14:38.011193+00:00
 ---
 
 # Apigee hybrid shared responsibility model  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/introduction/
 title: Cloud Storage overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:20:45.386946+00:00
+fetched_at: 2026-10-23T13:08:38.874563+00:00
 ---
 
 # Cloud Storage overview  |  Google Cloud Documentation
@@ -175,7 +175,7 @@ Integration | Description
 ---|---  
 [Storage Transfer Service](https://docs.cloud.google.com/storage-transfer/docs/overview) | Managed, high-scale transfer of online data from Amazon S3, Microsoft Azure Blob Storage, HTTP sources, or on-premises storage.  
 [Transfer Appliance](https://docs.cloud.google.com/transfer-appliance/docs/4.0/overview) | Ruggedized hardware appliances that ship up to hundreds of petabytes of offline data to Google Cloud.  
-[Eventarc](https://docs.cloud.google.com/eventarc/docs/overview) and [Pub/Sub](https://docs.cloud.google.com/storage/docs/pubsub-notifications) | Emit real-time event notifications on object creation, deletion, or metadata updates to trigger Cloud Functions or Cloud Run services.  
+[Eventarc](https://docs.cloud.google.com/eventarc/docs/overview) and [Pub/Sub](https://docs.cloud.google.com/storage/docs/pubsub-notifications) | Emit real-time event notifications on object creation, deletion, or metadata updates to trigger Cloud Run functions or Cloud Run services.  
   
 ### Analyze and manage data storage
 
@@ -233,6 +233,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

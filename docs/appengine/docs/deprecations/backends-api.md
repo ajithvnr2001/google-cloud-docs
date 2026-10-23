@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/deprecations/backends-api/
 title: App Engine Backends API Shutdown \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:12.157246+00:00
+fetched_at: 2026-10-23T13:15:29.873253+00:00
 ---
 
 # App Engine Backends API Shutdown  |  Google Cloud Documentation

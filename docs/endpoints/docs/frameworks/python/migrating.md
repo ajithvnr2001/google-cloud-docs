@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/python/migrating/
 title: Migrating to Cloud Endpoints Frameworks version 2.0 \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:25.157417+00:00
+fetched_at: 2026-10-23T13:00:40.116090+00:00
 ---
 
 # Migrating to Cloud Endpoints Frameworks version 2.0  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

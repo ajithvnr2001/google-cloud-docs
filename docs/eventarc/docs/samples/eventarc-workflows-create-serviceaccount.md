@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/docs/samples/eventarc-workflows-create-serviceaccount/
 title: Create a trigger using Terraform (service account) \u00a0|\u00a0 Eventarc \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:06.776269+00:00
+fetched_at: 2026-10-23T13:00:47.011150+00:00
 ---
 
 # Create a trigger using Terraform (service account)  |  Eventarc  |  Google Cloud Documentation

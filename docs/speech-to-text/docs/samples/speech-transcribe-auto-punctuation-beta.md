@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-transcribe-auto-punctuation-beta/
 title: Transcribe a local file with auto punctuation (beta) \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:28:49.221501+00:00
+fetched_at: 2026-10-23T08:37:11.747726+00:00
 ---
 
 # Transcribe a local file with auto punctuation (beta)  |  Cloud Speech-to-Text  |  Google Cloud Documentation

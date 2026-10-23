@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/oracle-transfer/
 title: Import metadata from Oracle \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:03:24.125318+00:00
+fetched_at: 2026-10-23T10:21:23.939795+00:00
 ---
 
 # Import metadata from Oracle  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -36,7 +36,7 @@ This connector supports Oracle instances hosted on-premises, on Google Cloud, or
 Before you can import metadata from Oracle, complete the following tasks:
 
   1. Grant the required roles and permissions.
-  2. Enable the Knowledge Catalog and BigQuery Data Transfer Service APIs.
+  2. Enable the Dataplex API and BigQuery Data Transfer Service API.
   3. Meet the Oracle prerequisites.
   4. Meet the networking prerequisites.
 
@@ -48,19 +48,19 @@ To create and manage a Knowledge Catalog connector job, you need Identity and Ac
 
 To get the permissions that you need to configure an Oracle connector, ask your administrator to grant you the following IAM roles:
 
-  * To create and manage entry groups: [Dataplex Catalog Admin](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles#dataplex.catalogAdmin) (`roles/dataplex.catalogAdmin`), [Dataplex Catalog Editor](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles#dataplex.catalogEditor) (`roles/dataplex.catalogEditor`), or [Dataplex Entry Group Owner](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles#dataplex.entryGroupOwner) (`roles/dataplex.entryGroupOwner`) on the project.
-  * To create and manage BigQuery Data Transfer Service transfer jobs: [BigQuery Admin](https://docs.cloud.google.com/iam/docs/understanding-roles#bigquery.admin) (`roles/bigquery.admin`) on the project.
-  * To view logs in Cloud Logging: [Logs Viewer](https://docs.cloud.google.com/iam/docs/understanding-roles#logging.viewer) (`roles/logging.viewer`) on the project.
+  * To create and manage entry groups: [**Dataplex Catalog Admin**](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles#dataplex.catalogAdmin) (`roles/dataplex.catalogAdmin`), [**Dataplex Catalog Editor**](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles#dataplex.catalogEditor) (`roles/dataplex.catalogEditor`), or [**Dataplex Entry Group Owner**](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles#dataplex.entryGroupOwner) (`roles/dataplex.entryGroupOwner`) on the project.
+  * To create and manage BigQuery Data Transfer Service transfer jobs: [**BigQuery Admin**](https://docs.cloud.google.com/iam/docs/understanding-roles#bigquery.admin) (`roles/bigquery.admin`) on the project.
+  * To view logs in Cloud Logging: [**Logs Viewer**](https://docs.cloud.google.com/iam/docs/understanding-roles#logging.viewer) (`roles/logging.viewer`) on the project.
 
 
 
-Additionally, you must grant the BigQuery Data Transfer Service service agent (`service-PROJECT_NUMBER@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com`) the `dataplex.entryGroups.import` permission or the [Dataplex Entry Group Importer](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles#dataplex.entryGroupImporter) (`roles/dataplex.entryGroupImporter`) role. You can grant this role at either the project level or the entry group level.
+Additionally, you must grant the BigQuery Data Transfer Service service agent (`service-PROJECT_NUMBER@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com`) the `dataplex.entryGroups.import` permission or the [**Dataplex Entry Group Importer**](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles#dataplex.entryGroupImporter) (`roles/dataplex.entryGroupImporter`) role. You can grant this role at either the project level or the entry group level.
 
 For more information about granting roles, see [Manage access](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access).
 
 ### Enable APIs
 
-Enable the Knowledge Catalog and BigQuery Data Transfer Service APIs.
+Enable the Dataplex API and BigQuery Data Transfer Service API.
 
 [Enable the APIs](https://console.cloud.google.com/flows/enableapi?apiid=dataplex.googleapis.com,bigquerydatatransfer.googleapis.com)
 
@@ -135,7 +135,7 @@ Configure an Oracle connector using the Google Cloud console or the API.
   6. In the **Destination settings** section:
 
      * Click **Browse** and select an existing **Knowledge Catalog entry group** to store the imported metadata, or click **Create new entry group**.
-     * Choose whether to set permissions on the entry group now or later. We recommend setting permissions so that users can view the imported metadata. If you didn't grant the [Dataplex Entry Group Importer](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles#dataplex.entryGroupImporter) (`roles/dataplex.entryGroupImporter`) role or the `dataplex.entryGroups.import` permission to the BigQuery Data Transfer Service service agent (`service-PROJECT_NUMBER@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com`) at the project level, you must grant it at the entry group level.
+     * Choose whether to set permissions on the entry group now or later. We recommend setting permissions so that users can view the imported metadata. If you didn't grant the [**Dataplex Entry Group Importer**](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles#dataplex.entryGroupImporter) (`roles/dataplex.entryGroupImporter`) role or the `dataplex.entryGroups.import` permission to the BigQuery Data Transfer Service service agent (`service-PROJECT_NUMBER@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com`) at the project level, you must grant it at the entry group level.
   7. In the **Connector config name** section, for **Display name** , enter a name for the metadata import job.
 
   8. In the **Schedule options** section, configure the frequency for the metadata import job. If you select **On-demand** , the job runs only when you manually trigger it.
@@ -187,6 +187,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

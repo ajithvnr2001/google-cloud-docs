@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/backup/manage-backups/
 title: Manage backups \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:03.623189+00:00
+fetched_at: 2026-10-23T09:34:42.897890+00:00
 ---
 
 # Manage backups  |  Spanner  |  Google Cloud Documentation
@@ -385,9 +385,9 @@ The following code sample copies an existing backup. You can copy the backup int
     import com.google.cloud.spanner.[SpannerExceptionFactory](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.SpannerExceptionFactory.html);
     import com.google.cloud.spanner.[SpannerOptions](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.SpannerOptions.html);
     import com.google.cloud.spanner.[admin](https://docs.cloud.google.com/java/docs/reference/google-cloud-storage/latest/com.google.cloud.storage.StorageRoles.html#com_google_cloud_storage_StorageRoles_admin__).[database](https://docs.cloud.google.com/java/docs/reference/google-cloud-firestore/latest/com.google.cloud.firestore.PipelineSource.html#com_google_cloud_firestore_PipelineSource_database__).v1.[DatabaseAdminClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.admin.database.v1.DatabaseAdminClient.html);
-    import com.google.spanner.[admin](https://docs.cloud.google.com/java/docs/reference/google-cloud-storage/latest/com.google.cloud.storage.StorageRoles.html#com_google_cloud_storage_StorageRoles_admin__).[database](https://docs.cloud.google.com/java/docs/reference/google-cloud-firestore/latest/com.google.cloud.firestore.PipelineSource.html#com_google_cloud_firestore_PipelineSource_database__).v1.[Backup](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.database.v1.Backup.html);
-    import com.google.spanner.[admin](https://docs.cloud.google.com/java/docs/reference/google-cloud-storage/latest/com.google.cloud.storage.StorageRoles.html#com_google_cloud_storage_StorageRoles_admin__).[database](https://docs.cloud.google.com/java/docs/reference/google-cloud-firestore/latest/com.google.cloud.firestore.PipelineSource.html#com_google_cloud_firestore_PipelineSource_database__).v1.[BackupName](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.database.v1.BackupName.html);
-    import com.google.spanner.[admin](https://docs.cloud.google.com/java/docs/reference/google-cloud-storage/latest/com.google.cloud.storage.StorageRoles.html#com_google_cloud_storage_StorageRoles_admin__).[database](https://docs.cloud.google.com/java/docs/reference/google-cloud-firestore/latest/com.google.cloud.firestore.PipelineSource.html#com_google_cloud_firestore_PipelineSource_database__).v1.[InstanceName](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.database.v1.InstanceName.html);
+    import com.google.spanner.[admin](https://docs.cloud.google.com/java/docs/reference/google-cloud-storage/latest/com.google.cloud.storage.StorageRoles.html#com_google_cloud_storage_StorageRoles_admin__).[database](https://docs.cloud.google.com/java/docs/reference/google-cloud-firestore/latest/com.google.cloud.firestore.PipelineSource.html#com_google_cloud_firestore_PipelineSource_database__).v1.[Backup](https://docs.cloud.google.com/java/docs/reference/google-cloud-alloydb/latest/com.google.cloud.alloydb.v1.Backup.html);
+    import com.google.spanner.[admin](https://docs.cloud.google.com/java/docs/reference/google-cloud-storage/latest/com.google.cloud.storage.StorageRoles.html#com_google_cloud_storage_StorageRoles_admin__).[database](https://docs.cloud.google.com/java/docs/reference/google-cloud-firestore/latest/com.google.cloud.firestore.PipelineSource.html#com_google_cloud_firestore_PipelineSource_database__).v1.[BackupName](https://docs.cloud.google.com/java/docs/reference/google-cloud-alloydb/latest/com.google.cloud.alloydb.v1.BackupName.html);
+    import com.google.spanner.[admin](https://docs.cloud.google.com/java/docs/reference/google-cloud-storage/latest/com.google.cloud.storage.StorageRoles.html#com_google_cloud_storage_StorageRoles_admin__).[database](https://docs.cloud.google.com/java/docs/reference/google-cloud-firestore/latest/com.google.cloud.firestore.PipelineSource.html#com_google_cloud_firestore_PipelineSource_database__).v1.[InstanceName](https://docs.cloud.google.com/java/docs/reference/google-cloud-alloydb/latest/com.google.cloud.alloydb.v1.InstanceName.html);
     import java.time.Instant;
     import java.time.OffsetDateTime;
     import java.time.ZoneId;
@@ -425,14 +425,14 @@ The following code sample copies an existing backup. You can copy the backup int
     
         // Initiate the request which returns an OperationFuture.
         System.out.println("Copying backup [" + destinationBackupId + "]...");
-        [Backup](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.database.v1.Backup.html) destinationBackup;
+        [Backup](https://docs.cloud.google.com/java/docs/reference/google-cloud-alloydb/latest/com.google.cloud.alloydb.v1.Backup.html) destinationBackup;
         try {
           // Creates a copy of an existing backup.
           // Wait for the backup operation to complete.
           destinationBackup = databaseAdminClient.[copyBackupAsync](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.admin.database.v1.DatabaseAdminClient.html#com_google_cloud_spanner_admin_database_v1_DatabaseAdminClient_copyBackupAsync__org_jspecify_annotations_Nullable_com_google_spanner_admin_database_v1_InstanceName_java_lang_String__org_jspecify_annotations_Nullable_com_google_spanner_admin_database_v1_BackupName_com_google_protobuf_Timestamp_)(
               InstanceName.of(projectId, instanceId), destinationBackupId,
               BackupName.of(projectId, instanceId, sourceBackupId), expireTime.toProto()).get();
-          System.out.println("Copied backup [" + destinationBackup.[getName](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.database.v1.Backup.html#com_google_spanner_admin_database_v1_Backup_getName__)() + "]");
+          System.out.println("Copied backup [" + destinationBackup.[getName](https://docs.cloud.google.com/java/docs/reference/google-cloud-alloydb/latest/com.google.cloud.alloydb.v1.Backup.html#com_google_cloud_alloydb_v1_Backup_getName__)() + "]");
         } catch (ExecutionException e) {
           throw ([SpannerException](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.cloud.spanner.SpannerException.html)) e.getCause();
         } catch (InterruptedException e) {
@@ -443,11 +443,11 @@ The following code sample copies an existing backup. You can copy the backup int
         System.out.println(
             [String](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigtable/latest/com.google.cloud.bigtable.common.Type.String.html).format(
                 "Backup %s of size %d bytes was copied at %s for version of database at %s",
-                destinationBackup.[getName](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.database.v1.Backup.html#com_google_spanner_admin_database_v1_Backup_getName__)(),
-                destinationBackup.[getSizeBytes](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.database.v1.Backup.html#com_google_spanner_admin_database_v1_Backup_getSizeBytes__)(),
+                destinationBackup.[getName](https://docs.cloud.google.com/java/docs/reference/google-cloud-alloydb/latest/com.google.cloud.alloydb.v1.Backup.html#com_google_cloud_alloydb_v1_Backup_getName__)(),
+                destinationBackup.[getSizeBytes](https://docs.cloud.google.com/java/docs/reference/google-cloud-alloydb/latest/com.google.cloud.alloydb.v1.Backup.html#com_google_cloud_alloydb_v1_Backup_getSizeBytes__)(),
                 OffsetDateTime.ofInstant(
-                    Instant.ofEpochSecond(destinationBackup.[getCreateTime](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.database.v1.Backup.html#com_google_spanner_admin_database_v1_Backup_getCreateTime__)().getSeconds(),
-                        destinationBackup.[getCreateTime](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.database.v1.Backup.html#com_google_spanner_admin_database_v1_Backup_getCreateTime__)().getNanos()),
+                    Instant.ofEpochSecond(destinationBackup.[getCreateTime](https://docs.cloud.google.com/java/docs/reference/google-cloud-alloydb/latest/com.google.cloud.alloydb.v1.Backup.html#com_google_cloud_alloydb_v1_Backup_getCreateTime__)().getSeconds(),
+                        destinationBackup.[getCreateTime](https://docs.cloud.google.com/java/docs/reference/google-cloud-alloydb/latest/com.google.cloud.alloydb.v1.Backup.html#com_google_cloud_alloydb_v1_Backup_getCreateTime__)().getNanos()),
                     ZoneId.systemDefault()),
                 OffsetDateTime.ofInstant(
                     Instant.ofEpochSecond(destinationBackup.[getVersionTime](https://docs.cloud.google.com/java/docs/reference/google-cloud-spanner/latest/com.google.spanner.admin.database.v1.Backup.html#com_google_spanner_admin_database_v1_Backup_getVersionTime__)().getSeconds(),
@@ -3457,6 +3457,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

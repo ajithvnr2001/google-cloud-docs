@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/bucket-relocation/overview/
 title: Bucket relocation \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:31:40.087516+00:00
+fetched_at: 2026-10-23T12:26:51.023167+00:00
 ---
 
 # Bucket relocation  |  Cloud Storage  |  Google Cloud Documentation
@@ -23,9 +23,9 @@ Send feedback
 
 Bucket relocation is available only if you've configured [Storage Intelligence](https://docs.cloud.google.com/storage/docs/storage-intelligence/overview).
 
-This document describes how Cloud Storage bucket relocation helps you to relocate buckets serverlessly between geographic locations. Using bucket relocation, you can move an existing bucket from one location to another without changing the bucket's name or requiring manual transfer of data within the bucket.
+Cloud Storage bucket relocation lets you move an existing bucket between geographic locations without changing the bucket's name or manually transferring data. You can relocate buckets to meet data residency requirements, reduce network latency for workloads, or change location types with minimal downtime.
 
-Before you begin the relocation process, [plan your bucket relocation](https://docs.cloud.google.com/storage/docs/bucket-relocation/plan-bucket-relocation) to minimize disruption. For instructions about how to perform the relocation, see [relocate buckets](https://docs.cloud.google.com/storage/docs/bucket-relocation/relocate-buckets).
+Before you relocate a bucket, [plan your bucket relocation](https://docs.cloud.google.com/storage/docs/bucket-relocation/plan-bucket-relocation) to minimize disruption. For steps to relocate a bucket, see [Relocate buckets](https://docs.cloud.google.com/storage/docs/bucket-relocation/relocate-buckets).
 
 ## Benefits
 
@@ -150,6 +150,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

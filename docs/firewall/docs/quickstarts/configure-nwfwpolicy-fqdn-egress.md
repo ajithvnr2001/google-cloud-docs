@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/quickstarts/configure-nwfwpolicy-fqdn-egress/
 title: Configure a global network firewall policy to allow egress traffic to an FQDN \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:01.665590+00:00
+fetched_at: 2026-10-23T13:12:01.143491+00:00
 ---
 
 # Configure a global network firewall policy to allow egress traffic to an FQDN  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

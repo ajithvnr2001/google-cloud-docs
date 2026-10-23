@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/how-requests-are-handled/
 title: How requests are handled \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:27.691899+00:00
+fetched_at: 2026-10-23T13:16:42.052835+00:00
 ---
 
 # How requests are handled  |  App Engine standard environment  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/python3/building-app/adding-firebase/
 title: Add Firebase to your web service \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:09.513161+00:00
+fetched_at: 2026-10-23T13:17:54.255522+00:00
 ---
 
 # Add Firebase to your web service  |  App Engine standard environment  |  Google Cloud Documentation

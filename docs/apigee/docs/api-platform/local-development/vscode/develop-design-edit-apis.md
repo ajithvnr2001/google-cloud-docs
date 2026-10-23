@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/local-development/vscode/develop-design-edit-apis/
 title: Design and edit APIs \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:09.314186+00:00
+fetched_at: 2026-10-23T13:17:01.424432+00:00
 ---
 
 # Design and edit APIs  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/fault-injection-testing/locations/
 title: Fault Injection Testing locations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:52.180998+00:00
+fetched_at: 2026-10-23T13:10:55.789267+00:00
 ---
 
 # Fault Injection Testing locations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/vpc-sc/
 title: Configure perimeter security with VPC Service Controls \u00a0|\u00a0 Conversational Analytics API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:52.962083+00:00
+fetched_at: 2026-10-23T13:02:50.198947+00:00
 ---
 
 # Configure perimeter security with VPC Service Controls  |  Conversational Analytics API  |  Google Cloud Documentation

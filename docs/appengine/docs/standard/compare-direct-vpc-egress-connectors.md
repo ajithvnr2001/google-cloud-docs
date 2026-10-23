@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/compare-direct-vpc-egress-connectors/
 title: Compare Direct VPC egress and Serverless VPC Access connectors \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:29.541384+00:00
+fetched_at: 2026-10-23T13:17:08.269233+00:00
 ---
 
 # Compare Direct VPC egress and Serverless VPC Access connectors  |  App Engine standard environment  |  Google Cloud Documentation

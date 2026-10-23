@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/samples/functions-tips-lazy-globals/
 title: Lazy globals \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:06.190689+00:00
+fetched_at: 2026-10-23T13:11:38.808471+00:00
 ---
 
 # Lazy globals  |  Cloud Run functions  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-list-backups/
 title: List backups \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:26.373918+00:00
+fetched_at: 2026-10-23T10:32:16.741987+00:00
 ---
 
 # List backups  |  Spanner  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/how-licensing-works-for-cloud-identity/
 title: How licensing works for Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:51.462332+00:00
+fetched_at: 2026-10-23T13:10:19.646572+00:00
 ---
 
 # How licensing works for Cloud Identity  |  Google Cloud Documentation

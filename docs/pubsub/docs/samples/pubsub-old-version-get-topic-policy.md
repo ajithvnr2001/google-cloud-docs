@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-get-topic-policy/
 title: v1 Get topic policy (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:48.065339+00:00
+fetched_at: 2026-10-23T10:04:48.063013+00:00
 ---
 
 # v1 Get topic policy (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

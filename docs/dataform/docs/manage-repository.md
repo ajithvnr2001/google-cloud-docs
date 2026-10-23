@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataform/docs/manage-repository/
 title: Manage a repository \u00a0|\u00a0 Dataform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:41:43.928050+00:00
+fetched_at: 2026-10-23T13:08:28.318876+00:00
 ---
 
 # Manage a repository  |  Dataform  |  Google Cloud Documentation
@@ -85,7 +85,7 @@ The following code sample shows a sample `workflow_settings.yaml` file:
 
 In the preceding code sample, the key-value pairs are described as follows:
 
-  * `defaultProject`: your BigQuery Google Cloud project ID.
+  * `defaultProject` (optional): your BigQuery Google Cloud project ID. If you don't set the `defaultProject` parameter, Dataform uses the Google Cloud project in which the Dataform repository is located.
   * `defaultDataset`: the BigQuery dataset in which Dataform creates assets, called `dataform` by default.
   * `defaultLocation` (optional): your default BigQuery dataset location. Dataform uses this location to process your code and store the results. This processing location must match the location of your BigQuery datasets. However, it doesn't need to match the Dataform repository location.
 
@@ -148,7 +148,7 @@ The following code sample shows a sample `dataform.json` file:
 In the preceding code sample, the key-value pairs are described as follows:
 
   * `warehouse`: a pointer to BigQuery, where Dataform creates assets.
-  * `defaultDatabase`: your BigQuery Google Cloud project ID.
+  * `defaultDatabase` (optional): your BigQuery Google Cloud project ID. If you don't set the `defaultDatabase` parameter, Dataform uses the Google Cloud project in which the Dataform repository is located.
   * `defaultSchema`: the BigQuery dataset in which Dataform creates assets.
   * `defaultLocation` (optional): your default BigQuery dataset location. Dataform uses this location to process your code and store the results. This processing location must match the location of your BigQuery datasets. However, it doesn't need to match the Dataform repository location.
 
@@ -388,7 +388,7 @@ The following table shows mapping of workflow settings properties from the `data
 Property in `dataform.json` | Property in `workflow_settings.yaml` | Description  
 ---|---|---  
 `assertionSchema` | `defaultAssertionDataset` | Required. The default dataset for assertions.  
-`defaultDatabase` | `defaultProject` | Required. The default Google Cloud project name.  
+`defaultDatabase` | `defaultProject` | Optional. The default Google Cloud project name. If unset, Dataform uses the Google Cloud project in which the Dataform repository is located.  
 `defaultLocation` | `defaultLocation` | Optional. The default BigQuery location where Dataform creates tables. If unset, Dataform determines the location based on the datasets that your SQL query references. For more information, see [Specify locations](https://docs.cloud.google.com/bigquery/docs/locations#specify_locations).  
 `defaultSchema` | `defaultDataset` | Required. The default dataset.  
 `databaseSuffix` | `projectSuffix` | Optional. The suffix to append to all Google Cloud project references.  
@@ -797,6 +797,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

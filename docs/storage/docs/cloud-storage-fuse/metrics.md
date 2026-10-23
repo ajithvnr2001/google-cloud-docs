@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/cloud-storage-fuse/metrics/
 title: Cloud Storage FUSE metrics \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:28:00.978670+00:00
+fetched_at: 2026-10-23T13:08:29.848028+00:00
 ---
 
 # Cloud Storage FUSE metrics  |  Google Cloud Documentation
@@ -31,9 +31,9 @@ Cloud Storage FUSE metrics help you continuously monitor performance, identify p
 
 For diagnostic purposes, you can collect metrics in the background when you use Cloud Storage FUSE. Cloud Storage offers two ways for collecting, exporting, and analyzing metrics:
 
-  * [**Cloud Monitoring exporter**](https://docs.cloud.google.com/architecture/monitoring-metric-export): metrics are collected and exported directly from Cloud Storage FUSE to Cloud Monitoring. Exported metrics can then be viewed in the Google Cloud console.
+  * [Cloud Monitoring exporter](https://docs.cloud.google.com/architecture/monitoring-metric-export): metrics are collected and exported directly from Cloud Storage FUSE to Cloud Monitoring. Exported metrics can then be viewed in the Google Cloud console.
 
-  * [**Prometheus port**](https://prometheus.io/): metrics are exported in the Prometheus metrics text-based format at a specified Prometheus port such as `http://Host:prometheus-port/metrics` using the Prometheus open-source monitoring and alerting toolkit. Metrics can then be viewed as an output using a client URL such as `curl http://Host:prometheus-port/metrics`
+  * [Prometheus port](https://prometheus.io/): metrics are exported in the Prometheus metrics text-based format at a specified Prometheus port such as `http://HOST:PROMETHEUS_PORT/metrics` using the Prometheus open-source monitoring and alerting toolkit. Metrics can then be viewed as an output using a client URL such as `curl http://HOST:PROMETHEUS_PORT/metrics`
 
 
 **Note:** If you're using Google Kubernetes Engine (GKE), metrics are enabled by default starting in GKE version 1.33.0-gke.2248000. For more information, see [Cloud Storage FUSE metrics in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cloud-storage-fuse-csi-driver-perf#cloud-storage-fuse-metrics).
@@ -54,7 +54,7 @@ You might also be able to get the required permissions through [custom roles](ht
 
 ### Before you begin
 
-  1. Enable the [Cloud Monitoring API](https://cloud.google.com/monitoring/api/enable-api#enabling-api-v3).
+  1. Enable the [Cloud Monitoring API](https://docs.cloud.google.com/monitoring/api/enable-api#enabling-api-v3).
 
   2. Enable the Cloud Storage API.
 
@@ -216,6 +216,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/generate-manage-auto-embeddings-for-tables/
 title: Generate and manage auto vector embeddings for large tables \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:30:25.309565+00:00
+fetched_at: 2026-10-23T13:08:30.431773+00:00
 ---
 
 # Generate and manage auto vector embeddings for large tables  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -65,7 +65,7 @@ For more information, see [Request a quota adjustment](https://docs.cloud.google
 For Agent Platform embedding model limits and a complete list of quotas, see [Agent Platform quotas and limits](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/quotas).
 
 **Note:** Initial embedding generation for large tables (for example, millions of rows) might be throttled by default Agent Platform quotas, leading to low QPS and frequent retries. Increasing your quota upfront is the most effective way to ensure a fast, successful initialization.
-  * [Connect to your database using `psql`](https://docs.cloud.google.com/alloydb/docs/connect-psql) or AlloyDB for PostgreSQL Studio as the `postgres` user.
+  * [Connect to your database using `psql`](https://docs.cloud.google.com/alloydb/docs/connect-psql) or AlloyDB Studio as the `postgres` user.
 
   * Verify that the `google_ml_integration` extension is installed and its version is 1.5.6 or higher.
 
@@ -82,7 +82,7 @@ To let a user manage auto embedding generation, grant `INSERT`, `UPDATE`, and `D
 
 Replace the following:
 
-    * USER_NAME: the name of the user for whom the permissions are granted.
+    * `USER_NAME`: the name of the user for whom the permissions are granted.
   * Finish the initial setup described in [Generate text embeddings](https://docs.cloud.google.com/alloydb/docs/ai/work-with-embeddings?resource=google_ml#before-begin).
 
   * Verify that `AUTOCOMMIT` is set to `ON` in the PostgreSQL client that you use.
@@ -146,7 +146,7 @@ By default, AlloyDB uses batching to generate embeddings for multiple text input
 
 ### Hint batch size
 
-The `batch_size` parameter in `ai.initialize_embeddings` lets you guide AlloyDB's query optimizer by suggesting a preferred batch size for directly supported models. AlloyDB might dynamically reduce this size based on model limits or quotas, but your hint helps influence the query execution plan.
+The `batch_size` parameter in `ai.initialize_embeddings` lets you guide the AlloyDB query optimizer by suggesting a preferred batch size for directly supported models. AlloyDB might dynamically reduce this size based on model limits or quotas, but your hint helps influence the query execution plan.
     
     
     CALL ai.initialize_embeddings(
@@ -272,7 +272,7 @@ In `transactional` mode, the `ai.refresh_embeddings()` function is disabled beca
 
 This automated mode is useful for demos, small datasets, or tables where the volume of inserts and updates is low compared to the initial load, for example, a few hundred daily updates on a million-row table. It is appropriate when maintaining immediate data consistency is more important than the additional latency introduced during update operations.
 
-  * `manual`: This is the default mode. In this mode, a new boolean tracking column is added to your table to track stale embeddings. Calling the `ai.refresh_embeddings()` function performs a periodic incremental refresh by only generating embeddings for new or updated rows. We recommend this mode for users who require more control over performance, especially when handling a large number of inserts or updates after the initial load. It is useful for scenarios where minimizing write latency is a priority and where having temporarily stale or null embeddings is acceptable until a a periodic incremental refresh is triggered using `ai.refresh_embeddings`. To update stale or new rows, use the `ai.refresh_embeddings()` function as described in the Refresh all embeddings for a table section.
+  * `manual`: This is the default mode. In this mode, a new boolean tracking column is added to your table to track stale embeddings. Calling the `ai.refresh_embeddings()` function performs a periodic incremental refresh by only generating embeddings for new or updated rows. We recommend this mode for users who require more control over performance, especially when handling a large number of inserts or updates after the initial load. It is useful for scenarios where minimizing write latency is a priority and where having temporarily stale or null embeddings is acceptable until a periodic incremental refresh is triggered using `ai.refresh_embeddings`. To update stale or new rows, use the `ai.refresh_embeddings()` function as described in the Refresh all embeddings for a table section.
 
 
 
@@ -329,7 +329,7 @@ You can only initialize embeddings on the root partition of a table. This is a o
     
     
     CALL ai.initialize_embeddings(
-        model_id => 'text-embeddings-005',
+        model_id => 'text-embedding-005',
         table_name => 'documents', -- This is the root partitioned table
         content_column => 'content',
         embedding_column => 'content_embeddings'
@@ -486,7 +486,7 @@ For your own or externally supported models, you must define input and output tr
   * [Run vector similarity searches](https://docs.cloud.google.com/alloydb/docs/ai/run-vector-similarity-search).
   * [Learn how to build a smart shopping assistant with AlloyDB, pgvector, and model endpoint management](https://codelabs.developers.google.com/smart-shop-agent-alloydb#0).
   * [Create a ScaNN index](https://docs.cloud.google.com/alloydb/docs/ai/create-scann-index).
-  * Learn [an example embedding workflow](https://docs.cloud.google.com/alloydb/docs/ai/example-embeddings).
+  * [Perform a vector search](https://docs.cloud.google.com/alloydb/docs/ai/perform-vector-search).
 
 
 
@@ -494,6 +494,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/java/maven-endpoints-frameworks-plugin/
 title: Endpoints Framework Maven plugin \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:39.159227+00:00
+fetched_at: 2026-10-23T13:01:14.132661+00:00
 ---
 
 # Endpoints Framework Maven plugin  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

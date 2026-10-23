@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/boost-search-results/
 title: Boost search results \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:17.044399+00:00
+fetched_at: 2026-10-23T13:11:47.322757+00:00
 ---
 
 # Boost search results  |  Agent Search  |  Google Cloud Documentation

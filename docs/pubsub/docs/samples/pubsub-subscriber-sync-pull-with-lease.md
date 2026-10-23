@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-subscriber-sync-pull-with-lease/
 title: Subscribe with synchronous pull and lease management \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:09.651809+00:00
+fetched_at: 2026-10-23T10:04:02.771352+00:00
 ---
 
 # Subscribe with synchronous pull and lease management  |  Pub/Sub  |  Google Cloud Documentation

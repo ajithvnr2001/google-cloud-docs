@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/how-tos/consent-access-determination/
 title: Making access determinations \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:54.870216+00:00
+fetched_at: 2026-10-23T13:03:46.634281+00:00
 ---
 
 # Making access determinations  |  Cloud Healthcare API  |  Google Cloud Documentation

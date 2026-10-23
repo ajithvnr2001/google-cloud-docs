@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-v1-generated-AlloyDBAdmin-GetInstance-sync-flattened/
 title: Get instance details \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:27:39.915489+00:00
+fetched_at: 2026-10-23T10:35:28.917411+00:00
 ---
 
 # Get instance details  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

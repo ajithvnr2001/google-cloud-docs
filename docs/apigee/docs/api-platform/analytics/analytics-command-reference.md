@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/analytics/analytics-command-reference/
 title: Metrics API examples \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:04.677064+00:00
+fetched_at: 2026-10-23T13:15:00.802209+00:00
 ---
 
 # Metrics API examples  |  Apigee  |  Google Cloud Documentation

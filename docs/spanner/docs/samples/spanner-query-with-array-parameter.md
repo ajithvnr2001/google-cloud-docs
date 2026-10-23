@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-query-with-array-parameter/
 title: Query with ARRAY parameter \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:58.776859+00:00
+fetched_at: 2026-10-23T10:32:16.242415+00:00
 ---
 
 # Query with ARRAY parameter  |  Spanner  |  Google Cloud Documentation

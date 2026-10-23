@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/natural-language-queries/
 title: Filter with natural-language understanding \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:25.915915+00:00
+fetched_at: 2026-10-23T13:12:38.725913+00:00
 ---
 
 # Filter with natural-language understanding  |  Agent Search  |  Google Cloud Documentation

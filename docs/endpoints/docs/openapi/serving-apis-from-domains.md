@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/serving-apis-from-domains/
 title: Serving an API from your domain name \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:29.762497+00:00
+fetched_at: 2026-10-23T13:01:08.238731+00:00
 ---
 
 # Serving an API from your domain name  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation

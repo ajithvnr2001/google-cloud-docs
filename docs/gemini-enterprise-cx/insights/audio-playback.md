@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/audio-playback/
 title: Enable audio playback \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:27.562625+00:00
+fetched_at: 2026-10-23T13:13:24.144292+00:00
 ---
 
 # Enable audio playback  |  Customer Experience Insights  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/sample-terraform-template/
 title: Sample terraform templates \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:34.572894+00:00
+fetched_at: 2026-10-23T13:10:01.000486+00:00
 ---
 
 # Sample terraform templates  |  Integration Connectors  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/concepts/service-accounts/
 title: Service accounts in Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:59.270689+00:00
+fetched_at: 2026-10-23T13:19:39.411370+00:00
 ---
 
 # Service accounts in Cloud Data Fusion  |  Google Cloud Documentation

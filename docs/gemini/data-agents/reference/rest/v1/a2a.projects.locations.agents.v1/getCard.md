@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1/a2a.projects.locations.agents.v1/getCard/
 title: Method: a2a.projects.locations.agents.v1.getCard \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:02.033024+00:00
+fetched_at: 2026-10-23T13:03:16.311623+00:00
 ---
 
 # Method: a2a.projects.locations.agents.v1.getCard  |  Data Agents  |  Google Cloud Documentation

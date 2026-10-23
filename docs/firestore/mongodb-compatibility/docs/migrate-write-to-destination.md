@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/migrate-write-to-destination/
 title: Write data to the Firestore database \u00a0|\u00a0 Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:39.834467+00:00
+fetched_at: 2026-10-23T13:08:45.403121+00:00
 ---
 
 # Write data to the Firestore database  |  Firestore with MongoDB compatibility  |  Google Cloud Documentation

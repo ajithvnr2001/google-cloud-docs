@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/pipeline/functions/type_functions/
 title: Type Functions Reference \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:03.538427+00:00
+fetched_at: 2026-10-23T13:02:28.694176+00:00
 ---
 
 # Type Functions Reference  |  Firestore in Native mode  |  Google Cloud Documentation

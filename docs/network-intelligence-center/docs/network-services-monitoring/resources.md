@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-intelligence-center/docs/network-services-monitoring/resources/
 title: Resources \u00a0|\u00a0 Network Intelligence Center - Network Services Monitoring \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T17:08:52.060944+00:00
+fetched_at: 2026-10-23T12:38:05.824216+00:00
 ---
 
 # Resources  |  Network Intelligence Center - Network Services Monitoring  |  Google Cloud Documentation

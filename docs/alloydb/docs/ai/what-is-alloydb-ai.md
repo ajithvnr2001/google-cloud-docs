@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/what-is-alloydb-ai/
 title: What is AlloyDB AI \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:31:34.540528+00:00
+fetched_at: 2026-10-23T13:08:34.114624+00:00
 ---
 
 # What is AlloyDB AI  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -25,13 +25,13 @@ AlloyDB AI brings generative AI directly to your operational data in AlloyDB for
 
 [ Learn more about AlloyDB AI](https://docs.cloud.google.com/alloydb/docs/ai)
 
-![ search overview](https://docs.cloud.google.com/static/alloydb/images/ai-powered-search.png)
+![AlloyDB AI search overview](https://docs.cloud.google.com/static/alloydb/images/ai-powered-search.png)
 
 ###  [ AI search → ](https://docs.cloud.google.com/alloydb/docs/ai/vector-search-landing)
 
-Combine PostgreSQL vector search, keyword search, and reranking. Get 10x faster ScaNN search with Adaptive Filtering, and 4x faster HNSW with AlloyDB's Columnar Engine. 
+Combine PostgreSQL vector search, keyword search, and reranking. Get 10x faster ScaNN search with Adaptive Filtering, and 4x faster HNSW with the AlloyDB columnar engine. 
 
-![ functions overview](https://docs.cloud.google.com/static/alloydb/images/inference.png)
+![AlloyDB AI functions overview](https://docs.cloud.google.com/static/alloydb/images/inference.png)
 
 ###  [ AI functions → ](https://docs.cloud.google.com/alloydb/docs/ai/ai-query-engine-landing)
 
@@ -63,7 +63,7 @@ Run AI models directly within your SQL queries to analyze data, generate text, o
 
   * Embedding functions: Generate query embeddings for semantic search at runtime using the [`ai.embedding()`](https://docs.cloud.google.com/alloydb/docs/ai/work-with-embeddings) function, and bulk generate millions of embeddings in minutes using [`ai.initialize_embeddings()`](https://docs.cloud.google.com/alloydb/docs/ai/generate-manage-auto-embeddings-for-tables) and [`ai.refresh_embeddings()`](https://docs.cloud.google.com/alloydb/docs/ai/generate-manage-auto-embeddings-for-tables).
   * Task-specific functions: Run semantic evaluations using [`ai.if()`](https://docs.cloud.google.com/alloydb/docs/ai/evaluate-semantic-queries-ai-operators) and [`ai.rank()`](https://docs.cloud.google.com/alloydb/docs/ai/evaluate-semantic-queries-ai-operators), determine user sentiment using [`analyze_sentiment()`](https://docs.cloud.google.com/alloydb/docs/ai/analyze-sentiment), and summarize text using [`summarize()`](https://docs.cloud.google.com/alloydb/docs/ai/summarize-content).
-  * Smart batching: Optimize query performance and lower network latency using [Smart Batching for AI Functions](https://docs.cloud.google.com/alloydb/docs/ai/accelerate-ai-queries) to achieve up faster inference than row-at-a-time calls (supports [`ai.if()`](https://docs.cloud.google.com/alloydb/docs/ai/evaluate-semantic-queries-ai-operators) and [`ai.rank()`](https://docs.cloud.google.com/alloydb/docs/ai/evaluate-semantic-queries-ai-operators)).
+  * Smart batching: Optimize query performance and lower network latency using [Smart Batching for AI Functions](https://docs.cloud.google.com/alloydb/docs/ai/accelerate-ai-queries) to achieve faster inference than row-at-a-time calls (supports [`ai.if()`](https://docs.cloud.google.com/alloydb/docs/ai/evaluate-semantic-queries-ai-operators) and [`ai.rank()`](https://docs.cloud.google.com/alloydb/docs/ai/evaluate-semantic-queries-ai-operators)).
   * Proxy models: Train high-accuracy, local surrogate models using [Optimized Functions](https://docs.cloud.google.com/alloydb/docs/ai/accelerate-queries-optimized-functions) to run [`ai.if()`](https://docs.cloud.google.com/alloydb/docs/ai/evaluate-semantic-queries-ai-operators) evaluations faster and at a lower cost than remote LLM calls.
   * TimesFM forecasting: Predict future trends directly from your database tables using the built-in time-series forecasting function [`ai.forecast()`](https://docs.cloud.google.com/alloydb/docs/ai/perform-time-series-forecasting).
 
@@ -84,7 +84,7 @@ AlloyDB AI grounds your AI agents in real-time database records through built-in
 
 AlloyDB AI lets you build many types of generative AI applications directly on your database.
 
-![Search and database information retrieval](https://docs.cloud.google.com/static/alloydb/images/search-icon.svg) **Search and information retrieval** |  Retail search: Serve highly relevant product search results to your users with low latency by using the best of keyword lexical matching, semantic search, and intelligent reranking with AlloyDB's hybrid search capabilities. Clinical trial matching: Accelerate medical research and patient enrollment by matching patients to active clinical trials, blending structured medical metrics with unstructured doctor notes and clinical symptoms. Patent search: Streamline intellectual property research by combining exact patent classification code lookups with abstract conceptual similarity searches, and automatically summarize matched filings for legal teams.  
+![Search and database information retrieval](https://docs.cloud.google.com/static/alloydb/images/search-icon.svg) **Search and information retrieval** |  Retail search: Serve highly relevant product search results to your users with low latency by using the best of keyword lexical matching, semantic search, and intelligent reranking with the hybrid search capabilities in AlloyDB. Clinical trial matching: Accelerate medical research and patient enrollment by matching patients to active clinical trials, blending structured medical metrics with unstructured doctor notes and clinical symptoms. Patent search: Streamline intellectual property research by combining exact patent classification code lookups with abstract conceptual similarity searches, and automatically summarize matched filings for legal teams.  
 ---|---  
 ![Generative AI and database agents](https://docs.cloud.google.com/static/alloydb/images/smart-toy-icon.svg) **Generative AI and agents** |  Retrieval-augmented generation (RAG): Automate the embedding generation and indexing of unstructured documents directly within your database to build high-performance RAG knowledge bases. Intelligent customer support: Resolve customer queries using keyword and semantic search. Retrieve troubleshooting steps, and use agent tools to securely access purchase history for personalized support. Conversational BI and natural language to SQL reporting: Empower non-technical business users to run complex database queries using natural language, and dynamically translate plain-English questions into secure SQL queries.  
 ![Data analytics and database inference](https://docs.cloud.google.com/static/alloydb/images/speed-icon.svg) **Analytics and inference** |  Transaction enrichment and fraud detection: Parse and enrich raw, messy credit card transaction memos into clean, structured merchant and risk data in real time, and execute predictive checks directly in SQL. Manufacturing preventive maintenance: Predict and minimize machinery downtime by forecasting sensor failures directly on time-series telemetry data, and match equipment anomalies with repair tickets and equipment manuals using hybrid search. Automated feedback and sentiment analysis: Process and analyze raw customer reviews, survey answers, or call logs directly inside your SQL database using built-in AI functions to extract sentiment and generate summaries without external ETL pipelines.  
@@ -97,7 +97,7 @@ Learn how customers use AlloyDB AI to build generative AI applications.
 
 ###  [ ID.me scales and fights AI fraud ](https://cloud.google.com/blog/products/databases/id-me-scales-and-fights-ai-fraud-with-alloydb)
 
-Learn how ID.me uses AlloyDB AI and to scale digital identity for 160M members and detect AI-driven fraud in real-time. 
+Learn how ID.me uses AlloyDB AI and Gemini Enterprise Agent Platform to scale digital identity for 160M members and detect AI-driven fraud in real-time. 
 
 ![Nuro story thumbnail](https://docs.cloud.google.com/static/alloydb/images/nuro.jpg)
 
@@ -141,6 +141,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

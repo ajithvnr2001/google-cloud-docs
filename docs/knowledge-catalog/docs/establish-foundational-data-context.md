@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/establish-foundational-data-context/
 title: Establish foundational data context with Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:18.465006+00:00
+fetched_at: 2026-10-23T12:50:57.943942+00:00
 ---
 
 # Establish foundational data context with Knowledge Catalog  |  Google Cloud Documentation
@@ -42,14 +42,14 @@ In this tutorial, you learn how to:
 
 Before you begin, do the following:
 
-  * Select a [Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects) for this tutorial.
-  * Confirm that [billing is enabled](https://cloud.google.com/billing/docs/how-to/modify-project) for your project.
+  * Select a [Google Cloud project](https://docs.cloud.google.com/resource-manager/docs/creating-managing-projects) for this tutorial.
+  * Confirm that [billing is enabled](https://docs.cloud.google.com/billing/docs/how-to/modify-project) for your project.
 
 
 
 ## Set up your environment
 
-This tutorial uses [Cloud Shell](https://cloud.google.com/shell/docs/), a command-line environment that runs in the cloud.
+This tutorial uses [Cloud Shell](https://docs.cloud.google.com/shell/docs), a command-line environment that runs in the cloud.
 
   1. From the Google Cloud console, click **Activate Cloud Shell** in the top right toolbar. It takes a few moments to provision and connect to the environment.
 
@@ -209,7 +209,7 @@ To clarify what the `gmv` column in `retail_data.transactions` is, link it to yo
 
   1. In the Google Cloud console, go to the Knowledge Catalog **Search** page.
 
-[Go to Search](https://console.cloud.google.com/dataplex/dp-search-nl)
+[Go to Search](https://console.cloud.google.com/dataplex/dp-search)
 
   2. Click **Filters** to open the **Filters** panel.
 
@@ -256,7 +256,7 @@ You can now use Knowledge Catalog Search to find entries based on the business c
 
   1. In the Google Cloud console, go to the Knowledge Catalog **Search** page.
 
-[Go to Search](https://console.cloud.google.com/dataplex/dp-search-nl)
+[Go to Search](https://console.cloud.google.com/dataplex/dp-search)
 
   2. Click **Filters** to open the **Filters** panel.
 

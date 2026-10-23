@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-logo-detection/
 title: Detect logos in a local image file. \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:19.418817+00:00
+fetched_at: 2026-10-23T09:37:02.116405+00:00
 ---
 
 # Detect logos in a local image file.  |  Cloud Vision API  |  Google Cloud Documentation

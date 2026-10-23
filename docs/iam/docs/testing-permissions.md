@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/testing-permissions/
 title: Test permissions for custom user interfaces \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:01.717742+00:00
+fetched_at: 2026-10-23T13:09:23.720597+00:00
 ---
 
 # Test permissions for custom user interfaces  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

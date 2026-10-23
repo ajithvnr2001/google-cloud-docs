@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-lustre/docs/create-instance/
 title: Create a Managed Lustre instance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:40:44.416700+00:00
+fetched_at: 2026-10-23T12:51:05.394585+00:00
 ---
 
 # Create a Managed Lustre instance  |  Google Cloud Documentation
@@ -114,7 +114,7 @@ Optional flags are the following:
 
   * `--kms-key-name` specifies a customer-managed encryption key with which to encrypt this instance. See [Customer-managed encryption keys for Managed Lustre](https://docs.cloud.google.com/managed-lustre/docs/cmek) for details.
 
-  * `--maintenance-policy-weekly-windows` and `--maintenance-policy-exclusion-window` define maintenance policies for this instance. See [Maintenance events and policies](https://docs.cloud.google.com/managed-lustre/docs/maintenance) for details.
+  * `--maintenance-policy-weekly-windows` and `--maintenance-policy-exclusion-window` define maintenance policies for this instance. See [Configure maintenance policies](https://docs.cloud.google.com/managed-lustre/docs/maintenance-policies) for details.
 
   * `--async` (optional) runs the command asynchronously. Instead of waiting for instance creation to complete, Google Cloud CLI returns an operation ID that can be used to query the command's status.
 
@@ -211,7 +211,7 @@ The API supports additional optional fields for instances. See the [`Instance` r
 
   8. From the **Encryption** section, select either **Google-managed encryption key** or **Cloud Key Management Service key**. For information about the Cloud Key Management Service key option, see [Customer-managed encryption keys for Managed Lustre](https://docs.cloud.google.com/managed-lustre/docs/cmek).
 
-  9. Optional: To control when maintenance can occur on this instance, expand the **Maintenance policy** section and configure a maintenance window or exclusion window. See [Maintenance events and policies](https://docs.cloud.google.com/managed-lustre/docs/maintenance) for details.
+  9. Optional: To control when maintenance can occur on this instance, expand the **Maintenance policy** section and configure a maintenance window or exclusion window. See [Configure maintenance policies](https://docs.cloud.google.com/managed-lustre/docs/maintenance-policies) for details.
 
   10. Select the **Network** that you created in [Create a VPC network](https://docs.cloud.google.com/managed-lustre/docs/vpc).
 
@@ -338,6 +338,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

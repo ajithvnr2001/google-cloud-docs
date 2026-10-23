@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-destroy-regional-secret-version/
 title: Destroy regional secret version \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:23.832033+00:00
+fetched_at: 2026-10-23T09:40:20.359851+00:00
 ---
 
 # Destroy regional secret version  |  Secret Manager  |  Google Cloud Documentation

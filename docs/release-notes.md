@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/release-notes/
 title: Google Cloud release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-23T05:44:28.036696+00:00
+fetched_at: 2026-10-23T12:26:42.943925+00:00
 ---
 
 # Google Cloud release notes  |  Google Cloud Documentation
@@ -25,6 +25,66 @@ You can also see and filter all release notes in the [Google Cloud console](http
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/gcp-release-notes.xml) directly. 
 
 ## October 22, 2026
+
+**Apigee X**
+
+Announcement
+
+On October 22, 2026, we released an updated version of Apigee (1-18-0-apigee-7).
+
+**Note:** Rollouts of this release began today and can take four or more business days to complete across all Google Cloud zones. Your instances might not have the features and fixes available until the rollout is complete.
+
+Security
+
+Bug ID | Description  
+---|---  
+**573663408** | **Security fix for Apigee.** Upgraded the ingress gateway to patch security vulnerabilities.  
+**N/A** | **Security fix for Apigee infrastructure.**  
+  
+Fixed
+
+Bug ID | Description  
+---|---  
+**568535165** | Skip main_task_wait_time and nio_task_wait_time metrics for the first 12 Prometheus scrapes during Message Processor startup warmup.  
+**573602919** | Fix generated OpenAPI specs' servers[] to carry the Apigee envgroup hostname instead of the backend target host.  
+**562964081** | The sgpUserIntentMatchingMode verdict-log field is now always present, including on dry-run policy records, and shows the mode used for the evaluation, including when sgpUserIntentMatching isn't set (CONSTRAINTS_AND_INTENT, or INTENT_ONLY when no policies match the tool call).  
+**524115876** | Fix an intermittent HTTP 400 error in the OASValidation policy's strict parameter validation that rejected valid requests.  
+**572025634** | Responses with a compressed text/event-stream body to a proxy with an EventFlow now skip EventFlow processing and pass through intact instead of returning a corrupted body.  
+**549078690** | If no SGP policy is attributed for a denial, a customer sees the generic fallback message. This fix short-circuits to show the rationale instead when no matched policy has a configured denial message.  
+**492041991** | VerifyAPIKey and VerifyAccessToken now set the apiproduct.operation.llmTokenQuota.* flow variables only from the LLM operation(s) that matched the request; they are no longer set from unmatched LLM operations or for requests that match no LLM operation.  
+**567244615** | Semantic Governance now evaluates LLM requests it previously skipped, such as OpenAI requests whose message content is an array of parts, which can produce new denials and judge-model usage. It considers every system message rather than only the last, and a non-streaming OpenAI or an Ollama tool call whose arguments are not valid JSON is now an evaluation error.  
+**567244615** | Semantic Governance no longer evaluates a request or response with a field it cannot read when a tool call is involved. It records verdict ERROR naming the field, with status MODEL_ERROR. The inline SemanticGovernance policy instead raises GovernedLLMResponseParseError or GovernedLLMProviderDetectionFailed (HTTP 500), in DRY_RUN too unless continueOnError is true. It also reads every text part of a Gemini system instruction and Gemini tool parameters given as parametersJsonSchema, and no longer loses the rest of a Claude or Gemini request when one field has an unexpected shape.  
+**560272924** | Added continuous-scan bidirectional gRPC streaming support for the SanitizeModelResponse policy over Server-Sent Events (SSE) streams, preserving native LLM provider SSE JSON envelopes and event framing.  
+**555332621** | Model Armor policies now honor HTTPClient.managementplane.skip.proxy: with it set, Model Armor callouts bypass the forward proxy like other googleapis traffic. Streaming (ContinuousScan) Model Armor traffic uses the forward proxy.  
+**158204922** | VerifyJWT now rejects a JWT whose header contains "b64":false, with fault steps.jwt.InvalidToken, as RFC 7797 section 7 requires. Previously, such a token could be accepted if KnownHeaders listed b64, IgnoreCriticalHeaders was true, or the header had no crit.  
+**158204922** | GenerateJWS supports RFC 7797 unencoded payloads. GenerateJWS now raises MissingPayload, InvalidPayload or FailedToResolveVariable for payload errors, where it previously raised GenerationFailed. KnownHeaders and CriticalHeaders in the JWS and JWT policies accept names separated by whitespace, such as one per line. A b64 header supplied through AdditionalHeaders is now rejected, with steps.jws.InvalidNameForAdditionalHeader for GenerateJWS and steps.jwt.InvalidNameForAdditionalHeader for GenerateJWT. A proxy that set b64 through an AdditionalHeaders variable produced an RFC 7797 JWS before this change, and must move to UnencodedPayload, with DetachContent for the detached form.  
+**158204922** | VerifyJWS verifies RFC 7797 unencoded-payload JWS (b64:false), attached or detached. b64 in crit no longer needs a KnownHeaders entry. VerifyJWS rejects b64:false unless crit lists b64, with the new fault steps.jws.UnencodedPayloadNotCritical; IgnoreCriticalHeaders does not change that. DecodeJWS reports the raw payload of such a JWS.  
+**559228730** | ext_proc: ImmediateResponse now carries any Content-Type (raw body bytes + preserved Content-Type); replies too large to buffer use StreamedImmediateResponse.  
+**544751120** | Semantic Governance Policies marked as dry run are now evaluated and logged without blocking the request. Each dry-run policy adds a second judge evaluation per tool-calling response, whose tokens are billed. Dry-run verdicts are written to the semantic-governance-policy log as separate records flagged sgpDryRunPolicyEvaluation=true; queries that count verdicts should add sgpDryRunPolicyEvaluation != true to exclude them.  
+**554114419** | Fixed: an AssignMessage/HTTPModifier/RaiseFault policy that creates a new request (createNew="true") in an HTTP/2 flow can now set the :path and :authority pseudo-headers instead of failing with an invalid-header error.  
+**567812025** | FILESYSTEM persistence mode makes the synchronizer skip Cassandra entirely (no connections, reads, writes, or datastore health probes).  
+**559009293** | Fixed elevated OAuth latency and Cassandra read load for AppGroup apps, including access token verification and token and authorization-code generation, by caching AppGroup lookups in the message processor runtime, matching Developer behavior.  
+**568860869** | Fixed `RegularExpressionProtection` patterns of the form `"._..._ "` whose middle section contains regular expression syntax (for example, `"._?Exception in thread._ "` or `"(?i)._< script._>.*"`) being matched as literal text instead of as regular expressions. Such patterns now raise `steps.regexprotection.ThreatDetected` for all matching input.  
+**564945600** | Enhance VerifyAPIKey policy to better handle leading spaces.  
+**502231886** | Fixed the default source templates for SanitizeUserPrompt and SanitizeModelResponse so a policy that omits the source element extracts content correctly when IgnoreUnresolvedVariables is false.  
+**562964081** | Semantic Governance now honors the `sgpUserIntentMatching` `AuthzExtension` metadata key (`ENABLED` or `DISABLED`) to toggle user-intent matching in policy evaluation; `DISABLED` evaluates against constraints only.  
+**565004219** | Fixed Semantic Governance Policy skipping evaluation for Anthropic requests that send `system` as a content-block array (the form ADK and LiteLlm emit). Affected agents are now evaluated, which may produce new denials and new judge-model usage on the consumer project.  
+**527517087** | SGP policy logs written to your project now identify their originating region. resource.type changes from "global" to "generic_node" and the region appears in resource.labels.location. Anything selecting these entries by resource.type="global" must be updated -- including log-based metrics, sinks, exclusion filters and alerts, which stop matching silently rather than erroring.  
+**575439485** | JavaCallout policies that run remotely (per-contract offload) can now pass every value type allowed by the GCP-2025-023 setVariable restriction between policies (collections, maps, arrays, primitive wrappers including Character, Date, BigDecimal, UUID, java.time, atomics, JDK enums, Optional), with their types preserved, instead of failing with steps.remotepolicy.NonSerializableVariable.  
+**575439485** | Remotely executed (per-contract offload) JavaCallout policies with continueOnError="true" now continue the flow when the callout faults, instead of returning HTTP 500.  
+**567244901** | In enforce mode, Semantic Governance now blocks a tool call when the governance check cannot be completed, instead of letting it through.  
+**573622417** | Fixed an issue where istio-ingressgateway forwarded the x-envoy-decorator-operation header to upstream runtime and target backends.  
+**571679067** | removes old version of ApigeeTelemetry CRD.  
+**571378258** | The Apigee Redis container is now built from the Valkey engine (BSD-3-Clause, Linux Foundation) at version 8.1.10. Wire protocol is unchanged (RESP2) and the redis-server/redis-cli binary names are preserved.  
+**N/A** | Updates to infrastructure and libraries.  
+  
+**App Engine flexible environment PHP**
+
+Security
+
+All supported versions of [PHP 8.2](https://docs.cloud.google.com/appengine/docs/flexible/lifecycle/support-schedule#php) and later are patched. Take immediate protective action by redeploying your resources with updated dependencies.
+
+See [Responding to core PHP vulnerabilities](https://cloud.google.com/blog/products/identity-security/responding-to-core-php-vulnerabilities-cve-2026-109618-cve-2026-109619) for more information.
 
 **App Engine standard environment PHP**
 
@@ -70,7 +130,122 @@ You can view how a managed instance group (MIG) distributes its instances across
 
 For more information, see [Monitor instance distribution in MIGs](https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution).
 
+Feature
+
+**Generally available** : Resource-based committed use discounts (CUDs) are available for block storage resources like Google Cloud Hyperdisk Balanced and Google Cloud Hyperdisk Throughput Exapool capacity. You can purchase 1-year and 3-year block storage commitments for Hyperdisk Balanced and Hyperdisk Throughput Exapool capacity and receive discounted rates for the capacity units that you consume as part of applicable Google Cloud Hyperdisk Exapools. For more information, see [Block storage commitments](https://docs.cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts#block_storage_commitments) and [Purchase block storage commitments for Exapools](https://docs.cloud.google.com/compute/docs/committed-use-discounts/purchase-block-storage-commitments).
+
 **Container Optimized OS**
+
+Change
+
+### cos-133-19999-44-159 
+
+Kernel | Docker | Containerd | [GPU Drivers](https://cloud.google.com/container-optimized-os/docs/how-to/run-gpus)  
+---|---|---|---  
+[COS-6.18.55](https://cos.googlesource.com/third_party/kernel/+/90c4c51012dc5bb5d116a470e49476dd9dd3998c) | v29.4.3 | v2.4.1 | [See List](https://storage.googleapis.com/cos-tools/19999.44.159/lakitu/gpu_driver_versions.textproto)  
+  
+Feature
+
+Added KVM virtualization support for AMD CPUID faulting.
+
+Feature
+
+Added nvidia-container-toolkit to ARM images.
+
+Fixed
+
+Added support for net-fs/lustre-client-drivers v2.14.0_p262-r1.
+
+Fixed
+
+Updated cos-gpu-installer to v2.7.11 and toolbox to v20261020.
+
+Fixed
+
+Upgraded app-editors/vim to v9.2.1152, Upgraded app-editors/vim-core to v9.2.1152.
+
+Fixed
+
+Upgraded app-misc/ca-certificates to v20260816.3.125. This removes the certificates affected by the eMudhra intermediate certificate compromise.
+
+Fixed
+
+Upgraded dev-libs/nss to v3.131.1. This removes the certificates affected by the eMudhra intermediate certificate compromise.
+
+Security
+
+Fix CVE-2026-80256 in net-misc/curl.
+
+Security
+
+Fixed CVE-2026-33186 in cri-tools.
+
+Security
+
+Fixed CVE-2026-33186 in google-osconfig-agent.
+
+Security
+
+Fixed CVE-2026-39830 in cos-extensions.
+
+Security
+
+Fixed CVE-2026-39831 in node-problem-detector.
+
+Security
+
+Fixed CVE-2026-39832, CVE-2026-39833 in docker.
+
+Security
+
+Fixed CVE-2026-39832, CVE-2026-39834, CVE-2026-39830, CVE-2026-42508 in google-guest-agent.
+
+Security
+
+Fixed CVE-2026-39832, CVE-2026-46595 in kubernetes.
+
+Security
+
+Fixed CVE-2026-39833 in nvidia-container-toolkit.
+
+Security
+
+Fixed CVE-2026-42508 in guest-agent.
+
+Security
+
+Fixed CVE-2026-46595, CVE-2026-39832 in cri-tools.
+
+Security
+
+Fixed CVE-2026-5435 in sys-libs/glibc.
+
+Security
+
+Upgraded dev-lang/go to v1.26.10. This fixes CVE-2026-111943.
+
+Change
+
+Runtime sysctl changes: 
+
+  * Changed: fs.epoll.max_user_watches: 1807627 -> 1807671
+  * Changed: fs.fanotify.max_user_marks: 68378 -> 68382
+  * Changed: fs.inotify.max_user_watches: 64158 -> 64161
+  * Changed: kernel.threads-max: 63443 -> 63445
+  * Changed: net.ipv4.tcp_mem: 93969 125295 187938 -> 93972 125298 187944
+  * Changed: net.ipv4.udp_mem: 187941 250590 375882 -> 187947 250597 375894
+  * Changed: user.max_cgroup_namespaces: 31721 -> 31722
+  * Changed: user.max_fanotify_marks: 68378 -> 68382
+  * Changed: user.max_inotify_watches: 64158 -> 64161
+  * Changed: user.max_ipc_namespaces: 31721 -> 31722
+  * Changed: user.max_mnt_namespaces: 31721 -> 31722
+  * Changed: user.max_net_namespaces: 31721 -> 31722
+  * Changed: user.max_pid_namespaces: 31721 -> 31722
+  * Changed: user.max_time_namespaces: 31721 -> 31722
+  * Changed: user.max_user_namespaces: 31721 -> 31722
+  * Changed: user.max_uts_namespaces: 31721 -> 31722
+
+
 
 Change
 
@@ -284,6 +459,56 @@ This feature is generally available (GA). For more information, see:
   * [Single-user quota limits](https://docs.cloud.google.com/gemini/enterprise/docs/quotas-and-overages#single-user-quota-limits)
   * [Configure a single-user quota limit](https://docs.cloud.google.com/gemini/enterprise/docs/feature-usage#configure-single-user-quota-limit)
   * [Configure overages](https://docs.cloud.google.com/gemini/enterprise/docs/configure-overages#configure-single-user-quota-limit)
+
+
+
+**Google Cloud Contact Center as a Service**
+
+Announcement
+
+**Advanced reporting dashboards prerelease notes 6.24**
+
+Here are the pre-release notes for updates to the advanced reporting dashboards and other reporting in CCAI Platform. When we release these updates, we expect the new capabilities to be as shown here.
+
+**Important:** The next version of the advanced reporting dashboards could be greater than 6.24.
+
+Fixed
+
+This release addresses the following issues:
+
+  * Fixed an issue where call and chat type names were cut off in the **Dashboard Reports** selector on wide-screen displays.
+
+  * Fixed an issue where the **Individual Call History** and **Individual Chat History** reports, run for all agents, left out calls and chats that were never assigned to an agent (for example, abandoned, deflected, or expired calls) when only one agent or no agents had activity in the selected period. The **All Call History** and **All Chat History** files are now always included.
+
+  * Fixed an issue where the **Interactions Detail by Agent** report omitted outbound calls placed without a queue when generated for all agents.
+
+  * Fixed an issue where the **Real-time Queue Monitoring** and **Campaign** dashboards incorrectly displayed English queue names for French and Spanish interactions.
+
+  * Fixed an issue where "wrap-up" and "hold" metrics in advanced reporting were displayed with inconsistent and inaccurate French Canadian (`fr_CA`) translations.
+
+  * Fixed an issue where Spanish chat queues incorrectly displayed English names in **Real-time Queue Monitoring** and advanced reporting dashboards.
+
+  * Fixed an issue where call disposition fields appeared blank on dashboards when viewing date ranges between 46 and 365 days.
+
+
+
+
+**Google Distributed Cloud (software only) for VMware**
+
+Announcement
+
+Google Distributed Cloud (software only) for VMware 1.34.1000-gke.111 is now available for download. To upgrade, see [Upgrade clusters](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/upgrading). Google Distributed Cloud 1.34.1000-gke.111 runs on Kubernetes v1.34.7-gke.200.
+
+If you use a third-party storage vendor, check the listing of our previously-qualified [storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage).
+
+After a release, it takes approximately 7 to 14 days for the version to become available for use with GKE On-Prem API clients: the Google Cloud console, the gcloud CLI, and Terraform.
+
+Fixed
+
+The following issues were fixed in 1.34.1000-gke.111:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/vulnerabilities).
+  * Fixed an issue where updating or upgrading a cluster to an [advanced cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/concepts/advanced-clusters) failed to join control plane nodes if the cluster's certificate authorities (CAs) were previously rotated. For more information, see [Control plane nodes fail to join during an update or upgrade to an advanced cluster after CA rotation](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/troubleshooting/known-issues#advanced-cluster-upgrade-fails-after-ca-rotation). 
 
 
 
@@ -818,6 +1043,14 @@ This addresses the following vulnerabilities:
 
   
   
+**App Engine flexible environment PHP**
+
+Security
+
+This note is incorrect; follow guidance in the entry for October 22, 2026.
+
+Patch updates to [supported PHP runtimes](https://docs.cloud.google.com/appengine/docs/flexible/lifecycle/support-schedule#php) are available with deployments from source: `8.5.12`, `8.4.27`, `8.3.36`, and `8.2.35`. Take immediate action to protect your PHP workloads by redeploying your workloads with updated dependencies. If you use [custom runtimes](https://docs.cloud.google.com/appengine/docs/flexible/custom-runtimes), update your dependencies and redeploy. See [Responding to core PHP vulnerabilities](https://cloud.google.com/blog/products/identity-security/responding-to-core-php-vulnerabilities-cve-2026-109618-cve-2026-109619) for more information.
+
 **App Engine standard environment PHP**
 
 Security
@@ -1023,203 +1256,6 @@ Note: Instances that meet either of the following two criteria will **not** be u
 
 
 For more information on participating in scheduled maintenance windows, see [Maintenance overview](https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/maintenance) and [Manage Apigee instance maintenance windows](https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/maintenance-windows).
-
-**Cloud SDK**
-
-Breaking
-
-## 590.0.0 (2026-10-20)
-
-### Breaking Changes
-
-  * **(Google Cloud CLI)** Removed the `gcloud-man-pages` component. Use `--help` for full command documentation.
-  * **(App Engine)** Removed the `app-engine-grpc` component from the Google Cloud CLI.
-  * **(Cloud Build)** Removed the Cloud Build Local Builder component (`cloud-build-local`) from the Google Cloud CLI.
-
-
-
-### Google Cloud CLI
-
-  * Updated bundled Python on Linux and Windows, and in the Alpine-based Docker images, to pyOpenSSL 26.4.0 and cryptography 50.0.1. 32-bit Windows uses pyOpenSSL 26.2.0 and cryptography 48.0.1, the newest releases that support it.
-
-
-
-### AI
-
-  * Updated `gcloud beta ai endpoints deploy-model` to request automatic resources for Gemini deployments on GDC connected endpoints. 
-    * If no replica counts are specified, the minimum replica count defaults to 1 only for `gemini-2.5-flash`.
-    * Specifying flags that apply only to dedicated resources, such as `--machine-type` or `--accelerator`, now prints a warning and deploys with dedicated resources.
-
-
-
-### Agent Identity
-
-  * Added `gcloud beta agent-identity auth-providers resolve-authorization` command.
-
-
-
-### AlloyDB
-
-  * Added `--enable-public-dns` flag to `gcloud beta alloydb instances create|update`.
-
-
-
-### Apigee
-
-  * Fixed an issue where `gcloud apigee` commands would fail with an `UnauthorizedRequestError` for users who authenticate using Mutual TLS (mTLS).
-
-
-
-### App Engine
-
-  * Updated `gcloud beta app migrate-to-run` to default to the App Engine application's region instead of `us-central1` when neither `--region` nor the `run/region` property is set.
-
-
-
-### BigLake
-
-  * Promoted `--federated-catalog-identity-mode` for `gcloud biglake iceberg catalogs create` to GA.
-  * Promoted `--federated-catalog-identity-mode` for `gcloud biglake iceberg catalogs update` to GA.
-  * Promoted `--metadata-service-directory-name` for `gcloud biglake iceberg catalogs create` to GA.
-  * Promoted `--metadata-service-directory-name` for `gcloud biglake iceberg catalogs update` to GA.
-  * `federated` value for `--catalog-type` flag of `gcloud biglake iceberg catalogs create` is now supported.
-
-
-
-### Certificate Authority Service
-
-  * Added `--filter` flag to `gcloud privateca subordinates list`. The flag is able to allow filtering results based on specified boolean expression.
-
-
-
-### Cloud Bigtable
-
-  * Build with 1.26.4 to resolve CVE-2026-39820.
-
-
-
-### Cloud Bigtable Emulator
-
-  * Rebuild cbt-emulator for CVE-2026-39820.
-
-
-
-### Cloud Dataflow
-
-  * Promoted `gcloud dataflow config-store-settings` to GA.
-
-
-
-### Cloud Dataplex
-
-  * Fixed `gcloud dataplex dbt metadata-jobs create` so that dbt resources whose names contain a dot, such as tests on a model with a decimal version, are no longer rejected by the import job.
-  * Fixed `gcloud dataplex dbt metadata-jobs create` so that two dbt resources that map to the same Dataplex entry ID no longer fail the whole import job. The first is imported and a warning names the other.
-
-
-
-### Cloud IAM
-
-  * Added `--vendor-type` flag to `gcloud iam workforce-pools providers create-oidc`, `create-saml`, `update-oidc`, and `update-saml` commands.
-
-
-
-### Cloud Resource Manager
-
-  * Promoted `gcloud resource-manager capability-configs` to GA.
-  * Promoted `gcloud resource-manager boundary-configs` to GA.
-  * Promoted `gcloud resource-manager boundaries` to GA.
-
-
-
-### Cloud Run
-
-  * Added `--dry-run` flag to `gcloud beta run domain-mappings create` to validate a domain mapping, including whether the domain is available, without creating it.
-
-
-
-### Cloud SQL
-
-  * Added `POSTGRES_19` to `--database-version` flag of `gcloud sql instances create` and `gcloud sql instances patch`.
-  * Added `--no-replication-lag-max-seconds-for-recreate` flag to `gcloud beta sql instances patch` to disable recreating a lagging MySQL read replica.
-  * Updated 'cloud-sql-proxy' packaged component to use 2.26.2 of the Cloud SQL Proxy.
-
-
-
-### Cloud Spanner
-
-  * Improved error output when `gcloud spanner cli` runs an incompatible `spanner-cli` binary found on `PATH` instead of the `spanner-cli` component; users are now directed to install the component.
-
-
-
-### Cloud Workstations
-
-  * Added `enable-automatic-failover` to `--boost-config` flag in `gcloud beta workstations configs create` and `gcloud beta workstations configs update`.
-
-
-
-### Compute Engine
-
-  * Added `compute instance-templates export` command to all release tracks.
-  * Removed WORKLOAD_IDENTITY choise in `--identity-type` flag.
-  * Promoted `--instance-flexibility-policy` flag and min CPU platform and disk overrides to GA for `gcloud compute instance-groups managed create` and `update`.
-  * Added `compute instance-templates import` command to all release tracks.
-
-
-
-### Database Migration
-
-  * Added `--failback` flag to `gcloud database-migration migration-jobs promote` command to promote a migration job from destination back to source during the FAILBACK phase.
-
-
-
-### GKE Hub
-
-  * Promoted `--view`, `--memberships`, `--filter`, and `--sort-by` flags on `gcloud container fleet|hub config-management describe` command to `GA`.
-
-  * Updated `gcloud container fleet|hub memberships register` to allow skipping the Connect agent installation on non-GKE clusters via the `--no-install-connect-agent` flag.
-
-
-
-
-### Kubernetes Engine
-
-  * Added the `reservedSystemCpus` kubelet config option to the `gcloud container clusters create`, `gcloud container node-pools create`, and `gcloud container node-pools update` commands. This option specifies the list of CPUs reserved for host system services.
-  * Added `ltsc2025` option to `--windows-os-version` flag of `gcloud container node-pools create` and `gcloud container node-pools update` to create or update Windows node pools using the Windows Server 2025 (LTSC2025) image.
-  * Updated default kubectl to 1.35.9.
-  * Additional kubectl versions: 
-    * 1.31.14
-    * 1.32.13
-    * 1.33.13
-    * 1.34.12
-    * 1.35.9
-    * 1.36.5
-    * 1.37.1
-  * Allowed `--num-nodes=0` for `gcloud container clusters create` to create a cluster without a default node pool on GKE versions that support it. Flags that only configure the default node pool, such as `--machine-type` and `--enable-autoscaling`, can't be used with `--num-nodes=0`.
-
-
-
-### Network Connectivity
-
-  * Added `--purpose` flag to `gcloud network-connectivity internal-ranges create` to specify the purpose of the internal range.
-
-
-
-### Network Security
-
-  * Promoted `--wildfire-analysis-profile` flag of `gcloud network-security security-profile-groups create` and `gcloud network-security security-profile-groups update` commands to GA.
-  * Promoted `gcloud network-security security-profiles wildfire-analysis` command group and its `create`, `delete`, `describe`, `list` and `update` commands to GA.
-  * Promoted `add-submission-rule`, `delete-submission-rule`, `add-inline-cloud-analysis-rule` and `delete-inline-cloud-analysis-rule` commands of `gcloud network-security security-profiles wildfire-analysis` to GA.
-
-
-
-### Service Extensions
-
-  * Created a new set of commands for `gcloud service-extensions extension-bindings` (alpha and beta).
-  * Added `gcloud beta service-extensions cdn-edge-extensions` command group to manage `CdnEdgeExtension` resources.
-
-
-
-Subscribe to these release notes at <https://groups.google.com/forum/#!forum/google-cloud-sdk-announce>.
 
 **Cloud Workstations**
 
@@ -7624,6 +7660,12 @@ Feature
 App Engine permanently blocks insecure traffic with TLS version 1.1 and earlier. For `appspot.com` domains, this block occurs at the connection level. For custom domains, the connection might succeed, but the requests are blocked. For more information, see [Secure minimum TLS](https://docs.cloud.google.com/appengine/docs/flexible/secure-minimum-tls).
 
 **App Engine flexible environment Node.js**
+
+Feature
+
+App Engine permanently blocks insecure traffic with TLS version 1.1 and earlier. For `appspot.com` domains, this block occurs at the connection level. For custom domains, the connection might succeed, but the requests are blocked. For more information, see [Secure minimum TLS](https://docs.cloud.google.com/appengine/docs/flexible/secure-minimum-tls).
+
+**App Engine flexible environment PHP**
 
 Feature
 
@@ -18958,41 +19000,11 @@ Fraud Defense Mobile SDK v18.10.0-beta01 is available for iOS. This version incl
 
 ## August 24, 2026
 
-**Anthos Config Management**
-
-Change
-
-Addressed multiple Common Vulnerabilities and Exposures (CVEs) by updating dependencies.
-
-Feature
-
-You can now disable monitoring for specific custom `RootSync` or `RepoSync` objects by setting the `spec.monitoring.enabled` field to `false`. This disables metric telemetry collection and exporting for that reconciler, which can help reduce cluster resource consumption. For more information, see [Disable monitoring](https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/how-to/monitoring-config-sync#disable-monitoring).
-
-**Anti Money Laundering AI**
-
-Announcement
-
-New minor engine versions released for the commercial line of business within the `v004.009` and `v004.010` version lines (`aml-commercial.default.v004.009.202608-000` and `aml-commercial.default.v004.010.202608-000`). These versions extend support for the major engine version and include no significant changes compared to the previous minor versions.
-
-**Backup and DR**
-
-Feature
-
-Backup vault support for Filestore instances encrypted with customer-managed encryption keys (CMEK) is now generally available (GA). When you back up Filestore instances to a CMEK-enabled backup vault, the backups are encrypted using the backup vault CMEK key.
-
-For more information, see [Customer-managed encryption keys (CMEK)](https://docs.cloud.google.com/backup-disaster-recovery/docs/concepts/cmek), [Back up Filestore instances to a backup vault](https://docs.cloud.google.com/backup-disaster-recovery/docs/cloud-console/filestore/filestore-instance-backup), and [Restore a Filestore instance from a backup vault](https://docs.cloud.google.com/backup-disaster-recovery/docs/cloud-console/filestore/filestore-instance-restore).
-
 **BigQuery**
 
 Feature
 
 You can now [monitor](https://docs.cloud.google.com/bigquery/docs/create-data-agents#monitor_agents_and_conversations) the performance, adoption, latency, and costs of your data agents and their conversations by using Google Cloud Observability in BigQuery. This feature is in [Preview](https://cloud.google.com/products#product-launch-stages).
-
-**Cloud Build**
-
-Security
-
-An Incorrect Authorization vulnerability [CVE-2026-19410](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-19410), in GitHub Trigger Comment Control in Cloud Build, was fixed. No customer action is needed.
 
 **Cloud Key Management Service**
 
@@ -19001,324 +19013,6 @@ Feature
 Cloud KMS supports deleting key rings in General Availability.
 
 For more information about deleting Cloud KMS resources, see [Delete Cloud KMS resources](https://docs.cloud.google.com/kms/docs/delete-kms-resources).
-
-**Cloud Trace**
-
-Feature
-
-You can update the display name, description, and Cloud KMS key applied to a `_Trace` observability bucket.
-
-For more information, see [Update observability buckets](https://docs.cloud.google.com/trace/docs/update-observability-buckets).
-
-Feature
-
-You can manually create the `_Trace` observability bucket before your project receives trace data. When creating the bucket, you must specify a storage location. Google Cloud Observability applies the Cloud KMS key defined in your default settings unless you explicitly specify a different key in your create request.
-
-For more information, see the following documents:
-
-  * [Create observability buckets](https://docs.cloud.google.com/trace/docs/create-observability-buckets)
-  * [Set defaults for observability buckets](https://docs.cloud.google.com/stackdriver/docs/observability/set-defaults-for-observability-buckets)
-
-
-
-Feature
-
-The following remote MCP servers automatically generate a trace span for `tools/call` operations.
-
-  * Policy Troubleshooter
-  * Managed Service for Apache Airflow
-
-
-
-These spans can help you understand the behavior of your agentic applications. For more information, see [Investigate MCP calls using Trace](https://docs.cloud.google.com/trace/docs/trace-remote-mcp-server-calls).
-
-**Config Controller**
-
-Change
-
-Config Controller now uses the following versions of its included products:
-
-  * Config Connector v1.155.1, [release notes](https://docs.cloud.google.com/config-connector/docs/release-notes#August_20_2026)
-
-
-
-**Container Optimized OS**
-
-Change
-
-### cos-121-18867-528-78 
-
-Kernel | Docker | Containerd | [GPU Drivers](https://cloud.google.com/container-optimized-os/docs/how-to/run-gpus)  
----|---|---|---  
-[COS-6.6.143](https://cos.googlesource.com/third_party/kernel/+/4cc0f9832ba76d734091636ce815239edde4911b) | v27.5.1 | v2.0.10 | [See List](https://storage.googleapis.com/cos-tools/18867.528.78/lakitu/gpu_driver_versions.textproto)  
-  
-Fixed
-
-Added support for net-fs/lustre-client-drivers v2.14.0_p259.
-
-Fixed
-
-Upgraded app-admin/google-guest-configs to v20260804.00.
-
-Fixed
-
-Upgraded app-arch/zstd to v1.5.7-r1.
-
-Fixed
-
-Upgraded app-shells/dash to v0.5.13.5.
-
-Fixed
-
-Upgraded dev-libs/expat to v2.8.3.
-
-Fixed
-
-Upgraded dev-libs/libverto to v0.3.2-r1.
-
-Fixed
-
-Upgraded dev-libs/popt to v1.19-r1.
-
-Fixed
-
-Upgraded dev-libs/xxhash to v0.8.3-r2.
-
-Fixed
-
-Upgraded sys-apps/acl to v2.4.0-r2.
-
-Fixed
-
-Upgraded sys-apps/xemu to v0.0.10.
-
-Fixed
-
-Upgraded sys-process/lsof to v4.99.7.
-
-Security
-
-Fixed CVE-2026-68096 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68096 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68096 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68129 in the linux kernel
-
-Security
-
-Fixed CVE-2026-68146 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68149 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68171 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68299 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68329 in the Linux kernel.
-
-Security
-
-Fixed KCTF-0650f1c in the Linux Kernel.
-
-Change
-
-### cos-117-18613-675-64 
-
-Kernel | Docker | Containerd | [GPU Drivers](https://cloud.google.com/container-optimized-os/docs/how-to/run-gpus)  
----|---|---|---  
-[COS-6.6.143](https://cos.googlesource.com/third_party/kernel/+/2c8ba6aac7a4075ebfccf6c1fdb39ab4dc46d806) | v24.0.9 | v1.7.34 | [See List](https://storage.googleapis.com/cos-tools/18613.675.64/lakitu/gpu_driver_versions.textproto)  
-  
-Fixed
-
-Added support for net-fs/lustre-client-drivers v2.14.0_p259.
-
-Fixed
-
-Upgraded sys-apps/xemu to v0.0.10.
-
-Security
-
-Fixed CVE-2026-68096 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68096 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68096 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68116 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68129 in the linux kernel
-
-Security
-
-Fixed CVE-2026-68146 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68147 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68149 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68171 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68325 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68386 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68428 in the Linux kernel.
-
-Security
-
-Fixed KCTF-0650f1c in the Linux Kernel.
-
-Change
-
-### cos-129-19506-299-161 
-
-Kernel | Docker | Containerd | [GPU Drivers](https://cloud.google.com/container-optimized-os/docs/how-to/run-gpus)  
----|---|---|---  
-[COS-6.12.94](https://cos.googlesource.com/third_party/kernel/+/b6c0270f579107bbe932382609e40146cb7e8ea6) | v27.5.1 | v2.2.6 | [See List](https://storage.googleapis.com/cos-tools/19506.299.161/lakitu/gpu_driver_versions.textproto)  
-  
-Change
-
-Updated cos-gpu-installer to v2.7.7.
-
-Fixed
-
-Added support for net-fs/lustre-client-drivers v2.14.0_p259.
-
-Fixed
-
-Upgraded sys-apps/xemu to v0.0.10.
-
-Security
-
-Fixed CVE-2026-68096 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68096 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68096 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68129 in the linux kernel
-
-Security
-
-Fixed CVE-2026-68146 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68325 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68338 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68422 in the Linux kernel.
-
-Security
-
-Fixed KCTF-0650f1c in the Linux Kernel.
-
-Change
-
-### cos-125-19216-532-135 
-
-Kernel | Docker | Containerd | [GPU Drivers](https://cloud.google.com/container-optimized-os/docs/how-to/run-gpus)  
----|---|---|---  
-[COS-6.12.94](https://cos.googlesource.com/third_party/kernel/+/ee59a4a73fdc4a0b29499e5a8625446f6c566f1e) | v27.5.1 | v2.2.7 | [See List](https://storage.googleapis.com/cos-tools/19216.532.135/lakitu/gpu_driver_versions.textproto)  
-  
-Change
-
-Updated cos-gpu-installer to v2.7.7.
-
-Fixed
-
-Added support for net-fs/lustre-client-drivers v2.14.0_p259.
-
-Fixed
-
-Upgraded sys-apps/xemu to v0.0.10.
-
-Security
-
-Fixed CVE-2026-68093 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68096 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68096 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68096 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68129 in the linux kernel
-
-Security
-
-Fixed CVE-2026-68296 in the Linux kernel.
-
-Security
-
-Fixed CVE-2026-68386 in the Linux kernel.
-
-Security
-
-Fixed KCTF-0650f1c in the Linux Kernel.
-
-Change
-
-Runtime sysctl changes: 
-
-  * Changed: net.ipv4.udp_mem: 188034 250715 376068 -> 188034 250714 376068
-
-
 
 **Gemini Enterprise**
 
@@ -19376,19 +19070,6 @@ Key details:
 
 For details on configuring data processing pipelines and processors, see [Set up and manage data processing pipelines](https://docs.cloud.google.com/chronicle/docs/ingestion/data-processing-pipeline#configure-processors).
 
-Feature
-
-**[Spotlight Feature] Operations in Emerging Threats Center**
-
-Google SecOps now supports **Operations** in the **Emerging Threats Center** feed to provide rapid visibility into threat activity details involving the targeting of a single organization. Operations complement global Campaigns by providing granular threat intelligence derived from frontline investigations, such as Managed Threat Defense (MTD) engagements. For more information, see [Operations in Emerging Threats](https://docs.cloud.google.com/chronicle/docs/detection/emerging-threats#what_is_an_operation).
-
-Key capabilities include:
-
-  * **Focused threat insights** : Zero in on localized adversary activity and personalized attack vectors specific to individual missions.
-  * **Holistic threat mapping** : View Operations alongside global Campaigns to see the full scope of adversary tactics, techniques, and procedures (TTPs).
-
-
-
 **Google SecOps SIEM**
 
 Feature
@@ -19405,66 +19086,6 @@ Key details:
 
 
 For details on configuring data processing pipelines and processors, see [Set up and manage data processing pipelines](https://docs.cloud.google.com/chronicle/docs/ingestion/data-processing-pipeline#configure-processors).
-
-## August 23, 2026
-
-**Agent Platform Workbench**
-
-Change
-
-### 20260823-2330-rc0 Release
-
-Change
-
-### 20260823-2330-rc0 Release
-
-Change
-
-Installed latest packages from upstream dependencies.
-
-Change
-
-Installed latest packages from upstream dependencies.
-
-Change
-
-### 20260823-2230-rc0 Release
-
-Change
-
-### 20260823-2230-rc0 Release
-
-Change
-
-Installed latest packages from upstream dependencies.
-
-Change
-
-Installed latest packages from upstream dependencies.
-
-Change
-
-### 20260823-2130-rc0 Release
-
-Fixed
-
-Scheduled notebook executions now report their final status when the execution user's credentials stop working part way through a run, instead of continuing until the execution timeout.
-
-Change
-
-Installed latest packages from upstream dependencies.
-
-Change
-
-### M147 Release
-
-Fixed
-
-Scheduled notebook executions now report their final status when the execution user's credentials stop working part way through a run, instead of continuing until the execution timeout.
-
-Change
-
-Installed latest packages from upstream dependencies.
 
 Send feedback 
 

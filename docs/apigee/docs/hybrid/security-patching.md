@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/security-patching/
 title: Apigee hybrid security patching \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:47:02.320559+00:00
+fetched_at: 2026-10-23T13:14:42.605365+00:00
 ---
 
 # Apigee hybrid security patching  |  Google Cloud Documentation

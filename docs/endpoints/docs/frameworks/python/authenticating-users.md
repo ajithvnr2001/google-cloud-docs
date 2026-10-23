@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/python/authenticating-users/
 title: Authenticating users \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:35.895680+00:00
+fetched_at: 2026-10-23T13:00:53.231639+00:00
 ---
 
 # Authenticating users  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-spark/docs/samples/dataproc-create-cluster/
 title: Create cluster \u00a0|\u00a0 Managed Service for Apache Spark \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:46:59.089675+00:00
+fetched_at: 2026-10-23T10:45:02.527143+00:00
 ---
 
 # Create cluster  |  Managed Service for Apache Spark  |  Google Cloud Documentation

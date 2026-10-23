@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-intelligence/docs/samples/video-streaming-annotation-to-storage-beta/
 title: Annotate a streaming video in Cloud Storage \u00a0|\u00a0 Video Intelligence API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:26:53.238742+00:00
+fetched_at: 2026-10-23T09:35:39.213119+00:00
 ---
 
 # Annotate a streaming video in Cloud Storage  |  Video Intelligence API  |  Google Cloud Documentation

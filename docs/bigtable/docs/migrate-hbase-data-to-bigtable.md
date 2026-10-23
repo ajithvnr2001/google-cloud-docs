@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/migrate-hbase-data-to-bigtable/
 title: Migrate data from HBase to Bigtable offline \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:54:30.149484+00:00
+fetched_at: 2026-10-23T12:53:47.675879+00:00
 ---
 
 # Migrate data from HBase to Bigtable offline  |  Google Cloud Documentation
@@ -83,7 +83,7 @@ To migrate your data from HBase to Bigtable, you export an HBase snapshot for ea
          wget BIGTABLE_HBASE_TOOLS_URL
          
 
-Replace `BIGTABLE_HBASE_TOOLS_URL` with the URL of the latest `JAR with dependencies` available in the tool's [Maven repository](https://repo1.maven.org/maven2/com/google/cloud/bigtable/bigtable-hbase-1.x-tools/). The file name is similar to `https://repo1.maven.org/maven2/com/google/cloud/bigtable/bigtable-hbase-1.x-tools/1.24.0/bigtable-hbase-1.x-tools-1.24.0-jar-with-dependencies.jar`.
+Replace `BIGTABLE_HBASE_TOOLS_URL` with the URL of the latest `JAR with dependencies` available in the tool's [Maven repository](https://repo1.maven.org/maven2/com/google/cloud/bigtable/bigtable-hbase-1.x-tools/). The filename is similar to `https://repo1.maven.org/maven2/com/google/cloud/bigtable/bigtable-hbase-1.x-tools/2.20.2/bigtable-hbase-1.x-tools-2.20.2-jar-with-dependencies.jar`.
 
 To find the URL or to manually download the JAR, do the following:
 
@@ -96,7 +96,7 @@ To find the URL or to manually download the JAR, do the following:
          wget BIGTABLE_BEAM_IMPORT_URL
          
 
-Replace `BIGTABLE_BEAM_IMPORT_URL` with the URL of the latest `shaded JAR` available in the tool's [Maven repository](https://search.maven.org/artifact/com.google.cloud.bigtable/bigtable-beam-import). The file name is similar to `https://repo1.maven.org/maven2/com/google/cloud/bigtable/bigtable-beam-import/1.24.0/bigtable-beam-import-1.24.0-shaded.jar`.
+Replace `BIGTABLE_BEAM_IMPORT_URL` with the URL of the latest `shaded JAR` available in the tool's [Maven repository](https://search.maven.org/artifact/com.google.cloud.bigtable/bigtable-beam-import). The filename is similar to `https://repo1.maven.org/maven2/com/google/cloud/bigtable/bigtable-beam-import/2.20.2/bigtable-beam-import-2.20.2-shaded.jar`.
 
 To find the URL or to manually download the JAR, do the following:
 
@@ -138,8 +138,8 @@ Replace the following:
      * `INSTANCE_ID`: the identifier of the Bigtable instance that you are importing your data to
      * `REGION`: a region that contains one of the clusters in your Bigtable instance. Example: `northamerica-northeast2`
      * `CLUSTER_NUM_NODES`: the number of nodes in your Bigtable instance
-     * `TRANSLATE_JAR`: the name and version number of the `bigtable hbase tools` JAR file that you downloaded from Maven. The value should look something like `bigtable-hbase-1.x-tools-1.24.0-jar-with-dependencies.jar`.
-     * `IMPORT_JAR`: the name and version number of the `bigtable-beam-import` JAR file that you downloaded from Maven. The value should look something like `bigtable-beam-import-1.24.0-shaded.jar`.
+     * `TRANSLATE_JAR`: the name and version number of the `bigtable hbase tools` JAR file that you downloaded from Maven. The value is similar to `bigtable-hbase-1.x-tools-2.20.2-jar-with-dependencies.jar`.
+     * `IMPORT_JAR`: the name and version number of the `bigtable-beam-import` JAR file that you downloaded from Maven. The value is similar to `bigtable-beam-import-2.20.2-shaded.jar`.
      * `BUCKET_NAME`: the name of the Cloud Storage bucket where you are storing your snapshots
      * `ZOOKEEPER_QUORUM`: the zookeeper host that the tool will connect to, in the format `host1.myownpersonaldomain.com`
      * `MIGRATION_SOURCE_DIRECTORY`: the directory on your HBase host that holds the data that you want to migrate, in the format `hdfs://host1.myownpersonaldomain.com:8020/hbase`
@@ -209,7 +209,7 @@ Replace the following:
 
 The next step is to create a destination table in your Bigtable instance for each snapshot that you exported. Use an account that has `bigtable.tables.create` permission for the instance.
 
-This guide uses the [Bigtable Schema Translation tool](https://github.com/googleapis/java-bigtable-hbase/tree/master/bigtable-hbase-1.x-parent/bigtable-hbase-1.x-tools), which automatically creates the table for you. However, if you don't want your Bigtable schema to exactly match the HBase schema, you can [create a table](https://docs.cloud.google.com/bigtable/docs/managing-tables#creating_a_table) using the `cbt` command-line tool or the Google Cloud console.
+This guide uses the [Bigtable Schema Translation tool](https://github.com/googleapis/java-bigtable-hbase/tree/bigtable-1.x/bigtable-hbase-1.x-parent/bigtable-hbase-1.x-tools), which automatically creates the table for you. However, if you don't want your Bigtable schema to exactly match the HBase schema, you can [create a table](https://docs.cloud.google.com/bigtable/docs/managing-tables#creating_a_table) using the `cbt` command-line tool or the Google Cloud console.
 
 The Bigtable Schema Translation tool captures the schema of the HBase table, including the table name, column families, garbage collection policies, and splits. Then it creates a similar table in Bigtable.
 
@@ -331,6 +331,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

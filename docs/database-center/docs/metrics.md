@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/database-center/docs/metrics/
 title: Metrics and alerting policy filters \u00a0|\u00a0 Database Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:46.603612+00:00
+fetched_at: 2026-10-23T13:20:37.964484+00:00
 ---
 
 # Metrics and alerting policy filters  |  Database Center  |  Google Cloud Documentation

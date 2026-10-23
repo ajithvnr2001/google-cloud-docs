@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/vector-search-2/collections/collections/
 title: Collections \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:25:27.331564+00:00
+fetched_at: 2026-10-23T12:45:04.570125+00:00
 ---
 
 # Collections  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -245,10 +245,10 @@ You should receive a response similar to the following:
 ### Python
     
     
-    from google.cloud import [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest)
+    from google.cloud import vectorsearch_v1
     
     # Create the client
-    vector_search_service_client = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[VectorSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.vector_search_service.VectorSearchServiceClient.html)()
+    vector_search_service_client = vectorsearch_v1.[VectorSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.vector_search_service.VectorSearchServiceClient.html)()
     
     # The JSON schema for the data
     data_schema = {
@@ -269,11 +269,11 @@ You should receive a response similar to the following:
         "sparse_embedding": {"sparse_vector": {}},
     }
     
-    collection = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[Collection](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.Collection.html)(
+    collection = vectorsearch_v1.[Collection](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.Collection.html)(
         data_schema=data_schema,
         vector_schema=vector_schema,
     )
-    request = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[CreateCollectionRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.CreateCollectionRequest.html)(
+    request = vectorsearch_v1.[CreateCollectionRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.CreateCollectionRequest.html)(
         parent="projects/PROJECT_ID/locations/LOCATION",
         collection_id="COLLECTION_ID",
         collection=collection,
@@ -514,13 +514,13 @@ You should receive a response similar to the following:
 ### Python
     
     
-    from google.cloud import [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest)
+    from google.cloud import vectorsearch_v1
     
     # Create the client
-    vector_search_service_client = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[VectorSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.vector_search_service.VectorSearchServiceClient.html)()
+    vector_search_service_client = vectorsearch_v1.[VectorSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.vector_search_service.VectorSearchServiceClient.html)()
     
     # Initialize request
-    request = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[GetCollectionRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.GetCollectionRequest.html)(
+    request = vectorsearch_v1.[GetCollectionRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.GetCollectionRequest.html)(
         name="projects/PROJECT_ID/locations/LOCATION/collections/COLLECTION_ID",
     )
     
@@ -700,13 +700,13 @@ You should receive a response similar to the following:
 ### Python
     
     
-    from google.cloud import [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest)
+    from google.cloud import vectorsearch_v1
     
     # Create the client
-    vector_search_service_client = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[VectorSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.vector_search_service.VectorSearchServiceClient.html)()
+    vector_search_service_client = vectorsearch_v1.[VectorSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.vector_search_service.VectorSearchServiceClient.html)()
     
     # Initialize request argument
-    request = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[ListCollectionsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.ListCollectionsRequest.html)(
+    request = vectorsearch_v1.[ListCollectionsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.ListCollectionsRequest.html)(
         parent="projects/PROJECT_ID/locations/LOCATION",
     )
     
@@ -851,13 +851,13 @@ You should receive a response similar to the following:
 ### Python
     
     
-    from google.cloud import [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest)
+    from google.cloud import vectorsearch_v1
     
     # Create the client
-    vector_search_service_client = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[VectorSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.vector_search_service.VectorSearchServiceClient.html)()
+    vector_search_service_client = vectorsearch_v1.[VectorSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.vector_search_service.VectorSearchServiceClient.html)()
     
     # Initialize request
-    request = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DeleteCollectionRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DeleteCollectionRequest.html)(
+    request = vectorsearch_v1.[DeleteCollectionRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DeleteCollectionRequest.html)(
         name="projects/PROJECT_ID/locations/LOCATION/collections/COLLECTION_ID",
     )
     
@@ -881,6 +881,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

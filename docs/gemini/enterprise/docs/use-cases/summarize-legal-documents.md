@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/use-cases/summarize-legal-documents/
 title: Summarize a legal document \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:39.712417+00:00
+fetched_at: 2026-10-23T13:11:56.791079+00:00
 ---
 
 # Summarize a legal document  |  Gemini Enterprise  |  Google Cloud Documentation

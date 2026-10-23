@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/pay-as-you-go-updated-usage/
 title: View Pay-as-you-go and Subscription resource usage \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:53.287935+00:00
+fetched_at: 2026-10-23T13:16:15.126773+00:00
 ---
 
 # View Pay-as-you-go and Subscription resource usage  |  Apigee  |  Google Cloud Documentation

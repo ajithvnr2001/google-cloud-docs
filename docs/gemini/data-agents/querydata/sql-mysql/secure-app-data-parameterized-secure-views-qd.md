@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/querydata/sql-mysql/secure-app-data-parameterized-secure-views-qd/
 title: Secure and control access to application data \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:18.051426+00:00
+fetched_at: 2026-10-23T13:08:52.258814+00:00
 ---
 
 # Secure and control access to application data  |  Data Agents  |  Google Cloud Documentation

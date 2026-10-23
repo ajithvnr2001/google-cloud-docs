@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/enterprise-knowledge-graph/docs/data-faq/
 title: FAQs for the Pre-GA Enterprise Knowledge Graph API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:33.951312+00:00
+fetched_at: 2026-10-23T13:11:54.744855+00:00
 ---
 
 # FAQs for the Pre-GA Enterprise Knowledge Graph API  |  Google Cloud Documentation

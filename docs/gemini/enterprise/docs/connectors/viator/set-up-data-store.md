@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/viator/set-up-data-store/
 title: Set up a Viator data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:48.215099+00:00
+fetched_at: 2026-10-23T13:11:11.665825+00:00
 ---
 
 # Set up a Viator data store  |  Gemini Enterprise  |  Google Cloud Documentation

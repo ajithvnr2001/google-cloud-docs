@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/gke/route-trigger-batch/
 title: Route Batch events to GKE \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:03.178604+00:00
+fetched_at: 2026-10-23T13:00:32.745778+00:00
 ---
 
 # Route Batch events to GKE  |  Eventarc Standard  |  Google Cloud Documentation

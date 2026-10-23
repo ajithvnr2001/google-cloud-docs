@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/event-processing/request-log-type/
 title: Request prebuilt and create custom log types \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:27.827798+00:00
+fetched_at: 2026-10-23T13:20:35.275386+00:00
 ---
 
 # Request prebuilt and create custom log types  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/gchat/add-filters-to-gchat-data-store/
 title: Add filters to a Google Chat data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:28.240999+00:00
+fetched_at: 2026-10-23T13:03:46.548265+00:00
 ---
 
 # Add filters to a Google Chat data store  |  Gemini Enterprise  |  Google Cloud Documentation

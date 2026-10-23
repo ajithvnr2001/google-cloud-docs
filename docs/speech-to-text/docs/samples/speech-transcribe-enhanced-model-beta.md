@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-transcribe-enhanced-model-beta/
 title: Transcribe a local file using an enhanced speech recognition (beta) \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:55.633444+00:00
+fetched_at: 2026-10-23T08:37:59.187940+00:00
 ---
 
 # Transcribe a local file using an enhanced speech recognition (beta)  |  Cloud Speech-to-Text  |  Google Cloud Documentation

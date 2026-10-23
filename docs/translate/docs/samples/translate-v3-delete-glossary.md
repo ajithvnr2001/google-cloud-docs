@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/translate/docs/samples/translate-v3-delete-glossary/
 title: Delete a glossary (Advanced edition only) \u00a0|\u00a0 Cloud Translation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:20.306121+00:00
+fetched_at: 2026-10-23T08:58:34.441771+00:00
 ---
 
 # Delete a glossary (Advanced edition only)  |  Cloud Translation  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/service-tiers-enterprise/
 title: Filestore Multishares for GKE (Enterprise) service tier \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:55.082558+00:00
+fetched_at: 2026-10-23T13:02:14.605542+00:00
 ---
 
 # Filestore Multishares for GKE (Enterprise) service tier  |  Google Cloud Documentation

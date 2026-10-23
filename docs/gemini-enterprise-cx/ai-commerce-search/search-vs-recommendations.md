@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/ai-commerce-search/search-vs-recommendations/
 title: Search and browse \u00a0|\u00a0 AI Commerce Search in Gemini Enterprise for Customer Experience \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:34:39.249463+00:00
+fetched_at: 2026-10-23T13:12:19.943713+00:00
 ---
 
 # Search and browse  |  AI Commerce Search in Gemini Enterprise for Customer Experience  |  Google Cloud Documentation

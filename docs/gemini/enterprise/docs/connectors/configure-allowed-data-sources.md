@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/configure-allowed-data-sources/
 title: Configure allowed data sources \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:13.184831+00:00
+fetched_at: 2026-10-23T13:11:32.151178+00:00
 ---
 
 # Configure allowed data sources  |  Gemini Enterprise  |  Google Cloud Documentation

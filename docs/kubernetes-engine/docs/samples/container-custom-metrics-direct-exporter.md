@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/samples/container-custom-metrics-direct-exporter/
 title: Custom metrics exporter source code \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:09:30.362400+00:00
+fetched_at: 2026-10-23T10:24:14.686690+00:00
 ---
 
 # Custom metrics exporter source code  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation

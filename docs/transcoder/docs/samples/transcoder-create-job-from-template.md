@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/transcoder/docs/samples/transcoder-create-job-from-template/
 title: Create a job using a template \u00a0|\u00a0 Transcoder API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:42.212695+00:00
+fetched_at: 2026-10-23T09:36:01.975378+00:00
 ---
 
 # Create a job using a template  |  Transcoder API  |  Google Cloud Documentation

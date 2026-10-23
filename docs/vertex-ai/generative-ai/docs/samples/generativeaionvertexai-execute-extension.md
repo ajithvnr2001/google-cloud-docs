@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-execute-extension/
 title: Execute a Extension in Vertex AI \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:15.439492+00:00
+fetched_at: 2026-10-23T09:36:49.915135+00:00
 ---
 
 # Execute a Extension in Vertex AI  |  Generative AI on Vertex AI  |  Google Cloud Documentation

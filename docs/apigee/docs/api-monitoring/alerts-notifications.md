@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-monitoring/alerts-notifications/
 title: Setting up alerts and notifications \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:06.596410+00:00
+fetched_at: 2026-10-23T13:15:01.778600+00:00
 ---
 
 # Setting up alerts and notifications  |  Apigee  |  Google Cloud Documentation

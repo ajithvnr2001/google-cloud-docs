@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/get-started/basic-concepts/
 title: Apigee terminology \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:08.718827+00:00
+fetched_at: 2026-10-23T13:14:06.535297+00:00
 ---
 
 # Apigee terminology  |  Google Cloud Documentation

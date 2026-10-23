@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-stitcher/docs/samples/videostitcher-list-vod-configs/
 title: List VOD configs \u00a0|\u00a0 Video Stitcher API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:34.970944+00:00
+fetched_at: 2026-10-23T09:35:21.859624+00:00
 ---
 
 # List VOD configs  |  Video Stitcher API  |  Google Cloud Documentation

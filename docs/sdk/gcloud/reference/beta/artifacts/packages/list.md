@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sdk/gcloud/reference/beta/artifacts/packages/list/
 title: gcloud beta artifacts packages list \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:10:52.590921+00:00
+fetched_at: 2026-10-23T09:58:29.938196+00:00
 ---
 
 # gcloud beta artifacts packages list  |  Google Cloud SDK  |  Google Cloud Documentation

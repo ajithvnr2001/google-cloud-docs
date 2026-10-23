@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/how-to/
 title: How-to guides \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:40:18.849143+00:00
+fetched_at: 2026-10-23T11:32:34.836825+00:00
 ---
 
 # How-to guides  |  Secret Manager  |  Google Cloud Documentation

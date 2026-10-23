@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-search-get-company/
 title: Get company with client (v4beta1) \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:29.689118+00:00
+fetched_at: 2026-10-23T09:34:27.556530+00:00
 ---
 
 # Get company with client (v4beta1)  |  Job Search  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-redact-image-colored-infotypes/
 title: Redact data from an image with color-coded infoTypes \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:39:57.253064+00:00
+fetched_at: 2026-10-23T08:59:35.629830+00:00
 ---
 
 # Redact data from an image with color-coded infoTypes  |  Sensitive Data Protection  |  Google Cloud Documentation

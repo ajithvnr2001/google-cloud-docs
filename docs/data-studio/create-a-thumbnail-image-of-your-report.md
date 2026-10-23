@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/create-a-thumbnail-image-of-your-report/
 title: Create a thumbnail image of your report \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:28.017088+00:00
+fetched_at: 2026-10-23T13:19:39.738597+00:00
 ---
 
 # Create a thumbnail image of your report  |  Data Studio  |  Google Cloud Documentation

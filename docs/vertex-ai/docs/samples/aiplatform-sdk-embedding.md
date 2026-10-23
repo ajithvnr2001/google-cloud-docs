@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-sdk-embedding/
 title: Get text embeddings (Generative AI) \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:36.914110+00:00
+fetched_at: 2026-10-23T09:35:29.986698+00:00
 ---
 
 # Get text embeddings (Generative AI)  |  Vertex AI  |  Google Cloud Documentation
@@ -42,7 +42,7 @@ To authenticate to Vertex AI, set up Application Default Credentials. For more i
     import com.google.cloud.aiplatform.v1.[PredictionServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.PredictionServiceClient.html);
     import com.google.cloud.aiplatform.v1.[PredictionServiceSettings](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.PredictionServiceSettings.html);
     import com.google.protobuf.[Struct](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Struct.html);
-    import com.google.protobuf.[Value](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Value.html);
+    import com.google.protobuf.[Value](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.Value.html);
     import java.io.IOException;
     import java.util.ArrayList;
     import java.util.List;
@@ -92,7 +92,7 @@ To authenticate to Vertex AI, set up Application Default Credentials. For more i
                 [PredictRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.PredictRequest.html).newBuilder().setEndpoint(endpointName.[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.EndpointName.html#com_google_cloud_aiplatform_v1_EndpointName_toString__)());
             if (outputDimensionality.isPresent()) {
               request.setParameters(
-                  [Value](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Value.html).newBuilder()
+                  [Value](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.Value.html).newBuilder()
                       .setStructValue(
                           [Struct](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Struct.html).newBuilder()
                               .putFields(
@@ -100,7 +100,7 @@ To authenticate to Vertex AI, set up Application Default Credentials. For more i
                               .build()));
             }
             request.addInstances(
-                [Value](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Value.html).newBuilder()
+                [Value](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.Value.html).newBuilder()
                     .setStructValue(
                         [Struct](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Struct.html).newBuilder()
                             .putFields("content", valueOf(texts.get(i)))
@@ -108,9 +108,9 @@ To authenticate to Vertex AI, set up Application Default Credentials. For more i
                             .build()));
             [PredictResponse](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.PredictResponse.html) response = client.predict(request.build());
     
-            for ([Value](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Value.html) prediction : response.[getPredictionsList](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.PredictResponse.html#com_google_cloud_aiplatform_v1_PredictResponse_getPredictionsList__)()) {
-              [Value](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Value.html) embeddings = prediction.getStructValue().getFieldsOrThrow("embeddings");
-              [Value](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Value.html) values = embeddings.[getStructValue](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Value.html#com_google_protobuf_Value_getStructValue__)().getFieldsOrThrow("values");
+            for ([Value](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.Value.html) prediction : response.[getPredictionsList](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.PredictResponse.html#com_google_cloud_aiplatform_v1_PredictResponse_getPredictionsList__)()) {
+              [Value](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.Value.html) embeddings = prediction.getStructValue().getFieldsOrThrow("embeddings");
+              [Value](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.Value.html) values = embeddings.[getStructValue](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Value.html#com_google_protobuf_Value_getStructValue__)().getFieldsOrThrow("values");
               floats.add(
                   values.[getListValue](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Value.html#com_google_protobuf_Value_getListValue__)().getValuesList().stream()
                       .map(Value::getNumberValue)
@@ -122,12 +122,12 @@ To authenticate to Vertex AI, set up Application Default Credentials. For more i
         }
       }
     
-      private static [Value](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Value.html) valueOf(String s) {
-        return [Value](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Value.html).newBuilder().setStringValue(s).build();
+      private static [Value](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.Value.html) valueOf(String s) {
+        return [Value](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.Value.html).newBuilder().setStringValue(s).build();
       }
     
-      private static [Value](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Value.html) valueOf(int n) {
-        return [Value](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.Value.html).newBuilder().setNumberValue(n).build();
+      private static [Value](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.Value.html) valueOf(int n) {
+        return [Value](https://docs.cloud.google.com/java/docs/reference/google-cloud-aiplatform/latest/com.google.cloud.aiplatform.v1.Value.html).newBuilder().setNumberValue(n).build();
       }
     }
 

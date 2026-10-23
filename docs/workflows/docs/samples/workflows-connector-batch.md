@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-connector-batch/
 title: Connector for Batch \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:12:26.095130+00:00
+fetched_at: 2026-10-23T08:58:03.742951+00:00
 ---
 
 # Connector for Batch  |  Workflows  |  Google Cloud Documentation

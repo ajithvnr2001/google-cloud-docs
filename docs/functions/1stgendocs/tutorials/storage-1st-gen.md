@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/1stgendocs/tutorials/storage-1st-gen/
 title: Cloud Storage Tutorial (1st gen) \u00a0|\u00a0 Cloud Run functions (1st gen) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:34.382514+00:00
+fetched_at: 2026-10-23T13:10:04.253370+00:00
 ---
 
 # Cloud Storage Tutorial (1st gen)  |  Cloud Run functions (1st gen)  |  Google Cloud Documentation

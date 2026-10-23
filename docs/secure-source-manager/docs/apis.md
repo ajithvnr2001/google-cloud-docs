@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secure-source-manager/docs/apis/
 title: APIs and reference \u00a0|\u00a0 Secure Source Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:50:08.212335+00:00
+fetched_at: 2026-10-23T10:32:34.466492+00:00
 ---
 
 # APIs and reference  |  Secure Source Manager  |  Google Cloud Documentation

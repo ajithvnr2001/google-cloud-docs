@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/cmad-diagnosis-tool/
 title: Customer-managed Active Directory Diagnosis tool for Cloud SQL \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:52.165245+00:00
+fetched_at: 2026-10-23T10:11:33.316924+00:00
 ---
 
 # Customer-managed Active Directory Diagnosis tool for Cloud SQL  |  Cloud SQL for SQL Server  |  Google Cloud Documentation
@@ -67,9 +67,9 @@ The tool then performs a number of checks, as described in [Checks performed by 
 
 Check| Description | Notes and recommendation  
 ---|---|---  
-Available domain controllers  |  Issues a ping to the IP address of each domain controller on the on-premises domain to ensure they are reachable.  |  The remaining checks proceed on the IP addresses that were reachable. In case of failure of this check, ensure network connectivity to the remaining on-premises domain controllers. To learn more, see [ Creating the network infrastructure](https://cloud.google.com/architecture/deploy-fault-tolerant-active-directory-environment#creating_the_network_infrastructure.).   
+Available domain controllers  |  Issues a ping to the IP address of each domain controller on the on-premises domain to ensure they are reachable.  |  The remaining checks proceed on the IP addresses that were reachable. In case of failure of this check, ensure network connectivity to the remaining on-premises domain controllers. To learn more, see [ Creating the network infrastructure](https://docs.cloud.google.com/architecture/deploy-an-active-directory-forest-on-compute-engine#creating_the_network_infrastructure.).   
 Ports  |  Verifies that all the required TCP and UDP ports for AD are open on all the on-premises domain controllers.  |  This check returns a warning status for the RPC port range (49152-65535) because it does not have a consistent list of open ports. We recommend that you verify that there is a firewall rule set for allowing this range. To learn more, see [ Customer-managed Active Directory firewall rules](https://docs.cloud.google.com/sql/docs/sqlserver/configure-cmad#customer-managed-firewall-rules).   
-DC Replication  |  Looks for any AD replication failures between the on-premises domain controllers.  |  If the script is run on an on-premises domain joined VM, expect a failed status if Powershell is not run as an Active Directory domain user. In case of failure of this check, follow the steps given in [ Testing the installation](https://cloud.google.com/architecture/deploy-fault-tolerant-active-directory-environment#testing_the_installation).   
+DC Replication  |  Looks for any AD replication failures between the on-premises domain controllers.  |  If the script is run on an on-premises domain joined VM, expect a failed status if Powershell is not run as an Active Directory domain user. In case of failure of this check, follow the steps given in [ Testing the installation](https://docs.cloud.google.com/architecture/deploy-an-active-directory-forest-on-compute-engine#testing_the_installation).   
 Kerberos Service (SRV) records  |  Queries the local DNS for `_kerberos._tcp` and `_kerberos._udp` SRV records and verifies that the target hosts correctly match the provided domain name.   
   
 To learn more, see the [Microsoft documentation for SRV records](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created).  |  If this check fails, then verify that your Active Directory domain's DNS SRV records exist and are configured correctly.   
@@ -87,6 +87,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

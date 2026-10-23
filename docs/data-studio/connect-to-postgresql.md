@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/connect-to-postgresql/
 title: Connect to PostgreSQL \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:32.139982+00:00
+fetched_at: 2026-10-23T13:19:25.256119+00:00
 ---
 
 # Connect to PostgreSQL  |  Data Studio  |  Google Cloud Documentation

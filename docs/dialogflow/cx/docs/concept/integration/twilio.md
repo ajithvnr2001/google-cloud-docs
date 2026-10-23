@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/twilio/
 title: Twilio \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:34:00.939063+00:00
+fetched_at: 2026-10-23T10:54:28.032540+00:00
 ---
 
 # Twilio  |  Dialogflow CX  |  Google Cloud Documentation
@@ -56,20 +56,22 @@ The [pricing](https://cloud.google.com/products/conversational-agents/pricing) a
 
 ## Troubleshooting
 
-During configuration, it's possible that the Twilio web page might redirect you back to the Dialogflow CX console with the warning `Unable to authenticate with Dialogflow CX`. If this occurs, try the following actions to fix the issue:
+During configuration, the Twilio web page might redirect you back to the Dialogflow CX console with the warning: `Unable to authenticate with Dialogflow CX`.
 
-  * Make sure that you've logged into your Twilio account in addition to your Dialogflow account.
-  * A browser extension might be blocking the redirect. Open an incognito window, log into Dialogflow, and try the integration again. Make sure that the setting `Allow in Incognito` is turned off for all extensions.
-  * The Twilio page might have redirects turned on, which are automatically redirecting you back to Dialogflow. You can mitigate this by [changing the defaults for pop-ups & redirects settings](https://support.google.com/chrome/answer/95472) to block the redirects.
+If this occurs, try these steps:
+
+  * Make sure that you've signed in to your Twilio account in addition to your Dialogflow CX account.
+  * A browser extension might block the redirect. Open an incognito window, sign in to Dialogflow CX, and try the integration again. Make sure that the setting `Allow in Incognito` is turned off for all extensions.
+  * The Twilio page might have redirects turned on, which are automatically redirecting you back to Dialogflow CX. You can mitigate this by [changing the defaults for pop-ups & redirects settings](https://support.google.com/chrome/answer/95472) to block the redirects.
 
 
 
-If the issue still persists, reach out to [Twilio support](https://help.twilio.com/).
+If the issue persists, reach out to [Twilio support](https://help.twilio.com/).
 
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

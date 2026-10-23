@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-deidentify-exception-list/
 title: Create an exception list for de-identification \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:49:53.581482+00:00
+fetched_at: 2026-10-23T10:52:15.725277+00:00
 ---
 
 # Create an exception list for de-identification  |  Sensitive Data Protection  |  Google Cloud Documentation

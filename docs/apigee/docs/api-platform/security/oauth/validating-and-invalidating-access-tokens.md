@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/security/oauth/validating-and-invalidating-access-tokens/
 title: Revoking and approving tokens \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:46.194976+00:00
+fetched_at: 2026-10-23T13:20:42.082344+00:00
 ---
 
 # Revoking and approving tokens  |  Apigee  |  Google Cloud Documentation

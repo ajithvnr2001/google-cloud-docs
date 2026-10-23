@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/use-cases/asset-extension/
 title: Extend and revitalize assets \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:29.813356+00:00
+fetched_at: 2026-10-23T13:13:31.356646+00:00
 ---
 
 # Extend and revitalize assets  |  Gemini Enterprise  |  Google Cloud Documentation

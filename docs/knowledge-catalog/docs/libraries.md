@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/libraries/
 title: Client libraries \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:03:32.548737+00:00
+fetched_at: 2026-10-23T12:50:43.084238+00:00
 ---
 
 # Client libraries  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -30,7 +30,7 @@ The Knowledge Catalog client libraries provide programmatic access to Knowledge 
   * ### [ Dataplex Client library for Go open_in_new Dataplex Client library for Go  ](https://pkg.go.dev/cloud.google.com/go/dataplex)
   * ### [ Dataplex Client library for Java open_in_new Dataplex Client library for Java  ](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataplex/latest/overview)
   * ### [ Dataplex Client library for Node.js open_in_new Dataplex Client library for Node.js  ](https://docs.cloud.google.com/nodejs/docs/reference/dataplex/latest)
-  * ### [Dataplex Client library for PHP Dataplex Client library for PHP  ](https://cloud.google.com/php/docs/reference/cloud-dataplex/latest)
+  * ### [Dataplex Client library for PHP Dataplex Client library for PHP  ](https://docs.cloud.google.com/php/docs/reference/cloud-dataplex/latest)
   * ### [Dataplex Client library for Python Dataplex Client library for Python  ](https://docs.cloud.google.com/python/docs/reference/dataplex/latest)
   * ### [Dataplex Client library for Ruby Dataplex Client library for Ruby  ](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-dataplex/latest)
 

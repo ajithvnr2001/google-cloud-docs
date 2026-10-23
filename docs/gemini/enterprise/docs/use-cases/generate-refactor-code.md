@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/use-cases/generate-refactor-code/
 title: Generate and refactor code \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:41.640211+00:00
+fetched_at: 2026-10-23T13:11:21.161879+00:00
 ---
 
 # Generate and refactor code  |  Gemini Enterprise  |  Google Cloud Documentation

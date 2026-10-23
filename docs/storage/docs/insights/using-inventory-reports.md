@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/insights/using-inventory-reports/
 title: Use inventory reports \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:16.622364+00:00
+fetched_at: 2026-10-23T09:36:31.615710+00:00
 ---
 
 # Use inventory reports  |  Cloud Storage  |  Google Cloud Documentation

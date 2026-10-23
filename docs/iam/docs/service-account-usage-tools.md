@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/service-account-usage-tools/
 title: Tools to understand service account usage \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:04.122548+00:00
+fetched_at: 2026-10-23T13:09:35.560317+00:00
 ---
 
 # Tools to understand service account usage  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

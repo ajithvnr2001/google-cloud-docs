@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/logging/
 title: Logs and metrics for caching \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:53.280419+00:00
+fetched_at: 2026-10-23T13:19:06.587387+00:00
 ---
 
 # Logs and metrics for caching  |  Cloud CDN  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/monetization/steps/
 title: Steps to use Apigee monetization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:04.711599+00:00
+fetched_at: 2026-10-23T13:16:12.176912+00:00
 ---
 
 # Steps to use Apigee monetization  |  Google Cloud Documentation

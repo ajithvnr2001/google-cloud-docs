@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/authenticating-users-firebase/
 title: Using Firebase to authenticate users \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:13.830760+00:00
+fetched_at: 2026-10-23T13:01:42.584909+00:00
 ---
 
 # Using Firebase to authenticate users  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation

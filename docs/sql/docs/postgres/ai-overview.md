@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/ai-overview/
 title: Build generative AI applications using Cloud SQL \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:14.707179+00:00
+fetched_at: 2026-10-23T10:19:04.212714+00:00
 ---
 
 # Build generative AI applications using Cloud SQL  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -79,7 +79,7 @@ Data cache hit ratio | The ratio of data cache hit read operations to data cache
 
   * **[Query Insights](https://docs.cloud.google.com/sql/docs/postgres/using-query-insights)** : detect, diagnose, and prevent query performance problems. This is helpful to improve the performance of vector search in your generative AI applications.
 
-You can use the Cloud SQL Query Insights dashboard to observe the performance of top queries and analyze these queries by using visual query plans. You can also monitor performance at an application level and trace the source of a problematic query across the application stack to the database by using [SQLcommenter](https://cloud.google.com/blog/topics/developers-practitioners/introducing-sqlcommenter-open-source-orm-auto-instrumentation-library?e=48754805). This is an open-source, object-relational mapping (ORM), auto-instrumentation library.
+You can use the Cloud SQL Query Insights dashboard to observe the performance of top queries and analyze these queries by using visual query plans. You can also monitor performance at an application level and trace the source of a problematic query across the application stack to the database by using [SQLcommenter](https://cloud.google.com/blog/topics/developers-practitioners/introducing-sqlcommenter-open-source-orm-auto-instrumentation-library). This is an open-source, object-relational mapping (ORM), auto-instrumentation library.
 
 Query Insights can also help you integrate with your existing application monitoring (APM) tools so that you can troubleshoot query problems using tools with which you're familiar.
 
@@ -139,6 +139,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/descript/set-up-data-store/
 title: Set up a Descript data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:32.038948+00:00
+fetched_at: 2026-10-23T13:02:47.484375+00:00
 ---
 
 # Set up a Descript data store  |  Gemini Enterprise  |  Google Cloud Documentation

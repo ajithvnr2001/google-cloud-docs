@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/monitoring/
 title: Monitor Knowledge Catalog metrics \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:29:23.688162+00:00
+fetched_at: 2026-10-23T12:50:46.352031+00:00
 ---
 
 # Monitor Knowledge Catalog metrics  |  Google Cloud Documentation
@@ -23,7 +23,7 @@ Send feedback
 
 #  Monitor Knowledge Catalog metrics Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document explains how to use Cloud Monitoring to track Knowledge Catalog (formerly Dataplex Universal Catalog) service health, optimize performance, and gain visibility into your data platform. Proactive monitoring helps you ensure the reliability of data applications and make informed decisions about resource allocation and cost management.
+This document explains how to use Cloud Monitoring to track the health of Knowledge Catalog (formerly Dataplex Universal Catalog) services, optimize performance, and gain visibility into your data platform. Proactive monitoring helps you ensure the reliability of data applications and make informed decisions about resource allocation and cost management.
 
 To understand the costs, see [Monitoring pricing](https://cloud.google.com/stackdriver/pricing).
 
@@ -73,15 +73,15 @@ To display information about a metric, hold the pointer over the metric name.
 
 ### REST
 
-To capture and list metrics defined by a `filter` expression, Use the Monitoring [timeSeries.list](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) method.
+To capture and list metrics defined by a `filter` expression, use the Monitoring [timeSeries.list](https://docs.cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) method.
 
 To send an API request and display the response, on the API page, use the **Try this API** template.
 
 ## Knowledge Catalog service metrics in Monitoring
 
-Knowledge Catalog service metrics facilitates monitoring of service health.
+Knowledge Catalog service metrics help you monitor the health of your service.
 
-**Note:** Dataplex DataScan compute (such as auto data quality scans and data profiling scans) and data lineage Data Compute Units (DCUs) execute on serverless compute in Dataplex-managed infrastructure and do not emit real-time time-series metrics under `dataplex.googleapis.com/*` to Cloud Monitoring. Only lakes, zones, and assets emit time-series metrics to Cloud Monitoring. To monitor, track, and attribute Dataplex SKU consumption and DCU costs across projects and scans, query Cloud Billing export tables in BigQuery using Dataplex system labels. For details and example queries, see Monitor and attribute Dataplex DCU costs with Cloud Billing export. 
+**Note:** Knowledge Catalog DataScan compute (such as auto data quality scans and data profiling scans) and data lineage Data Compute Units (DCUs) execute on serverless compute in Google-managed infrastructure and don't emit real-time time-series metrics under `dataplex.googleapis.com/*` to Cloud Monitoring. Only lakes, zones, and assets emit time-series metrics to Cloud Monitoring. To monitor, track, and attribute Knowledge Catalog SKU consumption and DCU costs across projects and scans, query Cloud Billing export tables in BigQuery using Knowledge Catalog system labels. For details and example queries, see Monitor and attribute Knowledge Catalog DCU costs with Cloud Billing export. 
 
 The "metric type" strings in this table must be prefixed with `dataplex.googleapis.com/`. That prefix has been omitted from the entries in the table. When querying a label, use the `metric.labels.` prefix; for example, `metric.labels.LABEL="VALUE"`. 
 
@@ -151,11 +151,11 @@ Requires action
   
 Table generated at 2026-10-14 20:24:33 UTC.
 
-## Monitor and attribute Dataplex DCU costs with Cloud Billing export
+## Monitor and attribute Knowledge Catalog DCU costs with Cloud Billing export
 
-Because Knowledge Catalog data scans (including auto data quality and data profiling) and data lineage do not publish time-series metrics to Cloud Monitoring, you can use [Cloud Billing export to BigQuery](https://docs.cloud.google.com/billing/docs/how-to/export-data-bigquery) to track, monitor, and attribute Data Compute Unit (DCU) usage and costs across projects, scans, and data resources.
+Because Knowledge Catalog data scans (including auto data quality and data profiling) and data lineage don't publish time-series metrics to Cloud Monitoring, you can use [Cloud Billing export to BigQuery](https://docs.cloud.google.com/billing/docs/how-to/export-data-bigquery) to track, monitor, and attribute Data Compute Unit (DCU) usage and costs across projects, scans, and data resources.
 
-### Dataplex billing labels
+### Knowledge Catalog billing labels
 
 Knowledge Catalog automatically attaches system labels to billing records emitted for data scans and data lineage. You can query these labels in the `labels` array in your Cloud Billing export table:
 
@@ -167,9 +167,9 @@ Label key | Workload | Description
 `goog-dataplex-datascan-data-source-region` | Data Quality, Data Profiling | The Google Cloud region of the scanned data source.  
 `goog-dataplex-datascan-data-source-bigquery-dataset` | Data Quality, Data Profiling | The BigQuery dataset ID of the scanned table.  
 `goog-dataplex-datascan-data-source-bigquery-table` | Data Quality, Data Profiling | The BigQuery table ID scanned.  
-`goog-dataplex-datascan-data-source-dataplex-lake` | Data Quality, Data Profiling | The Dataplex lake ID (if applicable).  
-`goog-dataplex-datascan-data-source-dataplex-zone` | Data Quality, Data Profiling | The Dataplex data zone ID (if applicable).  
-`goog-dataplex-datascan-data-source-dataplex-entity` | Data Quality, Data Profiling | The Dataplex entity ID (if applicable).  
+`goog-dataplex-datascan-data-source-dataplex-lake` | Data Quality, Data Profiling | The Knowledge Catalog lake ID (if applicable).  
+`goog-dataplex-datascan-data-source-dataplex-zone` | Data Quality, Data Profiling | The Knowledge Catalog data zone ID (if applicable).  
+`goog-dataplex-datascan-data-source-dataplex-entity` | Data Quality, Data Profiling | The Knowledge Catalog entity ID (if applicable).  
 `goog-dataplex-datascan-data-source-biglake-catalog` | Data Quality, Data Profiling | The BigLake catalog ID (if applicable).  
 `goog-dataplex-datascan-data-source-biglake-namespace` | Data Quality, Data Profiling | The BigLake namespace (if applicable).  
 `goog-dataplex-datascan-data-source-biglake-table` | Data Quality, Data Profiling | The BigLake table ID (if applicable).  
@@ -187,7 +187,7 @@ Before running these queries, ensure that you have [enabled Cloud Billing export
 
 #### Query 1: Attribute DCU costs and usage by DataScan and target table
 
-This query aggregates Dataplex Processing and Premium Processing costs by DataScan ID and target BigQuery table over the last 30 days:
+This query aggregates Knowledge Catalog Processing and Premium Processing costs by DataScan ID and target BigQuery table over the last 30 days:
     
     
     SELECT
@@ -219,9 +219,9 @@ This query aggregates Dataplex Processing and Premium Processing costs by DataSc
     ORDER BY
       total_cost DESC;
 
-#### Query 2: Attribute Dataplex costs by workload type (Lineage vs DataScan)
+#### Query 2: Attribute Knowledge Catalog costs by workload type (Lineage versus DataScan)
 
-This query breaks down Dataplex SKU costs by workload category (such as Data Lineage versus DataScan) across all projects:
+This query breaks down Knowledge Catalog SKU costs by workload category (such as Data Lineage versus DataScan) across all projects:
     
     
     SELECT
@@ -323,6 +323,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-15 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-15 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

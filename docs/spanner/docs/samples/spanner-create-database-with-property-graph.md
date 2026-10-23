@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-create-database-with-property-graph/
 title: Create database with a property graph \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:42.329128+00:00
+fetched_at: 2026-10-23T08:57:42.352579+00:00
 ---
 
 # Create database with a property graph  |  Spanner  |  Google Cloud Documentation

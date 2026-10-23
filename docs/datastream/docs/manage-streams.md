@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/manage-streams/
 title: Manage streams \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-23T05:43:48.227830+00:00
+fetched_at: 2026-10-23T10:03:42.136228+00:00
 ---
 
 # Manage streams  |  Datastream  |  Google Cloud Documentation

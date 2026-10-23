@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-topology/overview/
 title: App Topology overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:39.501073+00:00
+fetched_at: 2026-10-23T13:18:41.398501+00:00
 ---
 
 # App Topology overview  |  Google Cloud Documentation

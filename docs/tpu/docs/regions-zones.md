@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tpu/docs/regions-zones/
 title: TPU regions and zones \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:22.610239+00:00
+fetched_at: 2026-10-23T12:36:17.224005+00:00
 ---
 
 # TPU regions and zones  |  Google Cloud Documentation
@@ -232,12 +232,18 @@ v2-8  | 8 |
   
 TPU types with higher numbers of chips or cores are available only in limited quantities. TPU types with lower chip or core counts are more likely to be available.
 
+**Note:** The [Cloud TPU pricing](https://cloud.google.com/tpu/pricing) page might display pricing for regions where public TPU zones aren't generally available. Use the tables on this page to verify which regions and zones currently support each TPU version.
+
 ## What's next
 
   * To see pricing for TPUs in each region, see [Cloud TPU pricing](https://cloud.google.com/tpu/pricing).
+
   * To learn how to work with TPUs, see [Get started](https://docs.cloud.google.com/tpu/docs/quick-starts).
+
   * To learn about TPU architecture, see [TPU Architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm).
+
   * To learn about the types of models that are well-suited to Cloud TPU, see [When to use TPUs](https://docs.cloud.google.com/tpu/docs/tpus#when_to_use_tpus).
+
 
 
 
@@ -245,6 +251,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/backups-best-practices/
 title: Best practices for creating backups \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:41.233667+00:00
+fetched_at: 2026-10-23T13:01:18.636404+00:00
 ---
 
 # Best practices for creating backups  |  Filestore  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/samples/cloud-sql-sqlserver-databasesql-connect-tcp/
 title: Create a TCP connection when using Go \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:32.432234+00:00
+fetched_at: 2026-10-23T10:19:11.481637+00:00
 ---
 
 # Create a TCP connection when using Go  |  Cloud SQL for SQL Server  |  Google Cloud Documentation

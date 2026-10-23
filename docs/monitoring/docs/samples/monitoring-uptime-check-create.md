@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/monitoring/docs/samples/monitoring-uptime-check-create/
 title: Create an uptime check \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:36:55.621405+00:00
+fetched_at: 2026-10-23T11:00:35.078388+00:00
 ---
 
 # Create an uptime check  |  Cloud Monitoring  |  Google Cloud Documentation
@@ -380,7 +380,7 @@ To authenticate to Monitoring, set up Application Default Credentials. For more 
     require "google/cloud/monitoring"
     
     def create_uptime_check_config project_id: nil, host_name: nil, display_name: nil
-      client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-dashboard-v1/latest/Google-Cloud-Monitoring.html).[uptime_check_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
+      client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html).[uptime_check_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
       project_name = client.project_path project: project_id
       config = {
         display_name:       display_name.nil? ? "New uptime check" : display_name,

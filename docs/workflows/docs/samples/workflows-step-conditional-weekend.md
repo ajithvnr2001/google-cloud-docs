@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-step-conditional-weekend/
 title: Conditional jump to a specific step \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:54:44.214095+00:00
+fetched_at: 2026-10-23T08:56:50.525477+00:00
 ---
 
 # Conditional jump to a specific step  |  Workflows  |  Google Cloud Documentation

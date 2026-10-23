@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/verticalpodautoscaler/
 title: Vertical Pod autoscaling \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:01:06.722266+00:00
+fetched_at: 2026-10-23T12:55:09.493130+00:00
 ---
 
 # Vertical Pod autoscaling  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -218,6 +218,7 @@ By default, vertical Pod autoscaling computes recommendations for both CPU and m
   * In GKE version 1.35.1 and earlier, vertical Pod autoscaling has a default setting of two minimum replicas for Deployments to replace Pods with revised resource values. In version 1.35.2 and later, the default is one minimum replica. In version 1.22 and later, you can override this setting by specifying a value for the `minReplicas` field in the [PodUpdatePolicy](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/verticalpodautoscaler#podupdatepolicy_v1_autoscalingk8sio) field.
   * If you use the `InPlaceOrRecreate` update mode of vertical Pod autoscaling and an in-place update isn't possible (for example, when upscaling the Pod beyond the node capacity), vertical Pod autoscaling evicts and re-creates the Pod to apply the recommendation. Eviction and re-creation occurs even for Pods that have a `resizePolicy` field set in their specification to avoid re-creations. This behavior occurs for Autopilot resize requests, including when applying [minimum resources and CPU:memory ratio constraints](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/autopilot-resource-requests).
   * Vertical Pod autoscaling requires a workload object that manages the Pods, such as a Deployment, StatefulSet, ReplicaSet, or ReplicationControllers. You can't use vertical Pod autoscaling with standalone Pods because a workload controller is required to manage the Pod re-creation process.
+  * Vertical Pod autoscaling generates recommendations for, and applies updates on, only container-level resource requests and limits (`spec.containers[].resources`). Vertical Pod autoscaling doesn't support [Pod-level resource specifications](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#pod-level-resource-specification) (`spec.resources`).
 
 
 
@@ -346,6 +347,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

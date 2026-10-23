@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/getting-support/
 title: Get support \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:55.227367+00:00
+fetched_at: 2026-10-23T13:18:37.147726+00:00
 ---
 
 # Get support  |  Cloud CDN  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/delete-job/
 title: Delete jobs \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:30.243526+00:00
+fetched_at: 2026-10-23T13:19:17.610191+00:00
 ---
 
 # Delete jobs  |  Batch  |  Google Cloud Documentation

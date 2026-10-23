@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/create-run-example-job/
 title: Quickstart: create and run an example job \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:33.166990+00:00
+fetched_at: 2026-10-23T13:19:20.990680+00:00
 ---
 
 # Quickstart: create and run an example job  |  Batch  |  Google Cloud Documentation

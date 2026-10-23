@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/configure-security-policies/
 title: Create and view Cloud Armor security policies \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:57.079246+00:00
+fetched_at: 2026-10-23T13:17:59.370089+00:00
 ---
 
 # Create and view Cloud Armor security policies  |  Google Cloud Armor  |  Google Cloud Documentation

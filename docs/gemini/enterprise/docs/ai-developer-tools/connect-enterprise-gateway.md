@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/ai-developer-tools/connect-enterprise-gateway/
 title: Connect Antigravity to an Enterprise Gateway \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:16.907696+00:00
+fetched_at: 2026-10-23T12:55:24.365101+00:00
 ---
 
 # Connect Antigravity to an Enterprise Gateway  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -27,7 +27,7 @@ This document shows developers using Gemini Enterprise how to connect Google Ant
 
 If your organization enforces strict network controls that block direct internet connections to Google services, Antigravity Enterprise Gateway routes your development requests through an enterprise gateway that your organization operates. This setup lets you use Antigravity without completing interactive browser sign-in. To learn more about Antigravity features, tools, and workflows, see the [Antigravity documentation](https://antigravity.google/docs).
 
-**Note:** Connecting to an enterprise gateway requires an active gateway deployed by your cloud or security team. If you don't have a gateway URL or API key, contact your administrator. For infrastructure setup instructions, refer your platform team to [Deploy Antigravity Enterprise Gateway](https://docs.cloud.google.com/gemini/enterprise/docs/ai-developer-tools/deploy-enterprise-gateway).**Important:** Antigravity Enterprise Gateway routes inference requests using a centralized Google Cloud service account and is billed on a **pay-as-you-go (PAYG) consumption basis** through the Gemini Enterprise Agent Platform. 
+**Note:** Connecting to an enterprise gateway requires an active gateway deployed by your cloud or security team. If you don't have a gateway URL or API key, contact your administrator. For infrastructure setup instructions, refer your platform team to [Configure an enterprise gateway for Google Antigravity](https://docs.cloud.google.com/gemini/enterprise/docs/ai-developer-tools/deploy-enterprise-gateway).**Important:** Antigravity Enterprise Gateway routes inference requests using a centralized Google Cloud service account and is billed on a **pay-as-you-go (PAYG) consumption basis** through the Gemini Enterprise Agent Platform. 
 
 This deployment model **doesn't use your Gemini Enterprise seat-based subscription quotas** (such as included Standard or Plus monthly allowances). You can't use a gateway and sign in with a Google Account at the same time. If you want to use your included subscription quota instead, disable the enterprise gateway and sign in with your Google Account.
 
@@ -283,6 +283,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

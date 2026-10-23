@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoint-verification/docs/view-inventory/
 title: Monitor device inventory \u00a0|\u00a0 Endpoint Verification \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:45.390665+00:00
+fetched_at: 2026-10-23T13:01:00.981836+00:00
 ---
 
 # Monitor device inventory  |  Endpoint Verification  |  Google Cloud Documentation

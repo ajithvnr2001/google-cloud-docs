@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/try/gce-vms-tf/
 title: Create a Google Distributed Cloud hybrid cluster on Compute Engine VMs using Terraform \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:21:38.742884+00:00
+fetched_at: 2026-10-23T10:23:31.587710+00:00
 ---
 
 # Create a Google Distributed Cloud hybrid cluster on Compute Engine VMs using Terraform  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -22,19 +22,11 @@ Send feedback
 
 #  Create a Google Distributed Cloud hybrid cluster on Compute Engine VMs using Terraform Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document shows you how to set up VMs on Compute Engine with Terraform so that you can install and try Google Distributed Cloud in high availability (HA) mode. For information about how to use the Google Cloud CLI for this, see [Try Google Distributed Cloud on Compute Engine VMs](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/try/gce-vms).
+Provisioning Compute Engine virtual machines (VMs) with Terraform lets you evaluate Google Distributed Cloud in high availability (HA) mode without physical hardware. In this tutorial, you use provided Terraform scripts to set up an emulated VM network, deploy a sample [hybrid cluster](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/install-prep#hybrid_cluster_deployment), and verify the installation.
 
-**Important:** This deployment is for evaluation purposes only. Don't run Google Distributed Cloud on Compute Engine VMs in production. To deploy Google Distributed Cloud in production, follow the steps in our [quickstart](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/quickstart).
+This deployment is for evaluation purposes only. Don't run Google Distributed Cloud on Compute Engine VMs in production. To deploy Google Distributed Cloud in production, follow the steps in [Create basic clusters](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/quickstart).
 
-You can try out Google Distributed Cloud quickly and without having to prepare any hardware. The provided Terraform scripts create a network of VMs on Compute Engine that can be used to run Google Distributed Cloud. In this tutorial we use the [hybrid cluster deployment](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/install-prep#hybrid_cluster_deployment) model.
-
-Complete the following steps to get a sample cluster running:
-
-  1. Execute the Terraform script to set up a network of VMs on Compute Engine
-  2. Deploy a hybrid cluster
-  3. Verify your cluster
-
-
+If you prefer to evaluate Google Distributed Cloud by using the Google Cloud CLI rather than Terraform, see [Try Google Distributed Cloud on Compute Engine VMs](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/try/gce-vms).
 
 ## Before you begin
 
@@ -259,6 +251,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

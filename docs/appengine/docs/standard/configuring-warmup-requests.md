@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/configuring-warmup-requests/
 title: Configuring warmup requests to improve performance \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:28.914561+00:00
+fetched_at: 2026-10-23T13:17:08.638480+00:00
 ---
 
 # Configuring warmup requests to improve performance  |  App Engine standard environment  |  Google Cloud Documentation

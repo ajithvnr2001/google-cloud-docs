@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/business-continuity/
 title: Business continuity planning and disaster recovery \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:56.575759+00:00
+fetched_at: 2026-10-23T13:17:02.181411+00:00
 ---
 
 # Business continuity planning and disaster recovery  |  Apigee  |  Google Cloud Documentation

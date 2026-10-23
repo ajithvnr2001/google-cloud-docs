@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-search-delete-company-beta/
 title: Delete company using client (v4beta1) \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:07.144877+00:00
+fetched_at: 2026-10-23T09:41:45.356188+00:00
 ---
 
 # Delete company using client (v4beta1)  |  Job Search  |  Google Cloud Documentation

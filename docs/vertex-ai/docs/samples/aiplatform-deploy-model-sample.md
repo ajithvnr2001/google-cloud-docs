@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-deploy-model-sample/
 title: Deploy a model \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:48.311850+00:00
+fetched_at: 2026-10-23T09:27:01.356581+00:00
 ---
 
 # Deploy a model  |  Vertex AI  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/monitoring/docs/samples/monitoring-uptime-check-list-configs/
 title: List uptime checks \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:36:55.498209+00:00
+fetched_at: 2026-10-23T12:35:32.894646+00:00
 ---
 
 # List uptime checks  |  Cloud Monitoring  |  Google Cloud Documentation
@@ -207,7 +207,7 @@ To authenticate to Monitoring, set up Application Default Credentials. For more 
     require "google/cloud/monitoring"
     
     def list_uptime_check_configs project_id
-      client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-dashboard-v1/latest/Google-Cloud-Monitoring.html).[uptime_check_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
+      client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html).[uptime_check_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
       project_name = client.project_path project: project_id
       configs = client.list_uptime_check_configs parent: project_name
     

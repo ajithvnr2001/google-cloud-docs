@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/getting-storage-layout/
 title: Get a bucket's storage layout \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:26:16.764984+00:00
+fetched_at: 2026-10-23T13:08:39.343479+00:00
 ---
 
 # Get a bucket's storage layout  |  Cloud Storage  |  Google Cloud Documentation
@@ -20,10 +20,6 @@ fetched_at: 2026-10-22T10:26:16.764984+00:00
 Send feedback 
 
 #  Get a bucket's storage layout Stay organized with collections  Save and categorize content based on your preferences. 
-
-**Preview**
-
-This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
 This page describes how to determine the storage layout of your bucket. Storage layout refers to how objects are organized within a bucket, either in a flat namespace or a [hierarchical namespace](https://docs.cloud.google.com/storage/docs/hns-overview). The layout is important for applications that interact with the bucket, as object access and manipulation methods vary depending on the layout. Storage layout also includes information about the bucket's location.
 
@@ -43,10 +39,10 @@ For instructions on granting roles on buckets, see [Use IAM with buckets.](https
 
 ### Command line
 
-Use the [`gcloud alpha storage buckets describe`](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/storage/buckets/describe) command with the `--format` flag:
+Use the [`gcloud storage buckets describe`](https://docs.cloud.google.com/sdk/gcloud/reference/storage/buckets/describe) command with the `--format` flag:
     
     
-    gcloud alpha storage buckets describe gs://BUCKET_NAME --raw --format="default(hierarchicalNamespace)"
+    gcloud storage buckets describe gs://BUCKET_NAME --raw --format="default(hierarchicalNamespace)"
 
 Where:
 
@@ -104,6 +100,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

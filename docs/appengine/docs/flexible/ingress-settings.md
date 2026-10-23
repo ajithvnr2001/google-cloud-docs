@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/ingress-settings/
 title: Ingress settings \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:09.545289+00:00
+fetched_at: 2026-10-23T13:16:57.839336+00:00
 ---
 
 # Ingress settings  |  App Engine flexible environment  |  Google Cloud Documentation

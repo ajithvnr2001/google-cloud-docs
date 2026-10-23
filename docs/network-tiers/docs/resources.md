@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-tiers/docs/resources/
 title: Resources \u00a0|\u00a0 Network Service Tiers \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T16:01:43.710812+00:00
+fetched_at: 2026-10-23T12:38:36.686956+00:00
 ---
 
 # Resources  |  Network Service Tiers  |  Google Cloud Documentation

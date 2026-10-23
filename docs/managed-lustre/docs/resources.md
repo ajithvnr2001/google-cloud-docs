@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-lustre/docs/resources/
 title: Resources \u00a0|\u00a0 Managed Lustre \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T12:34:47.941178+00:00
+fetched_at: 2026-10-23T12:41:28.021317+00:00
 ---
 
 # Resources  |  Managed Lustre  |  Google Cloud Documentation

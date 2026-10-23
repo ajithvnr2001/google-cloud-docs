@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/locations/
 title: Bucket locations \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:03:15.505879+00:00
+fetched_at: 2026-10-23T13:08:40.886419+00:00
 ---
 
 # Bucket locations  |  Cloud Storage  |  Google Cloud Documentation
@@ -41,7 +41,7 @@ This document describes the different locations where you can create buckets. Fo
       * Dual-region pairings can be _predefined_ or _configurable_.
     * A _multi-region_ is a large geographic area that contains two or more geographic regions, such as the United States (`US`).
 
-  * The location type determines how your data is [replicated](https://docs.cloud.google.com/storage/docs/availability-durability) and [priced](https://cloud.google.com/storage/pricing#storage-pricing).
+  * The location type determines how your data is [replicated](https://docs.cloud.google.com/storage/docs/availability-durability) and [priced](https://docs.cloud.google.com/storage/pricing#storage-pricing).
 
   * Cloud Storage stores object data in the selected location in accordance with the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms).
 
@@ -166,7 +166,7 @@ Requirements | Recommended bucket location | Workload examples
 
 Note that the performance of workloads that use data in a multi-region bucket might vary over time because storage and compute aren't colocated. When a multi-region workload has strict performance requirements, consider enabling [Rapid Cache](https://docs.cloud.google.com/storage/docs/rapid/rapid-cache).
 
-  * See the [data storage pricing table](https://cloud.google.com/storage/pricing#storage-pricing) for storage costs in each location.
+  * See the [data storage pricing table](https://docs.cloud.google.com/storage/pricing#storage-pricing) for storage costs in each location.
 
 
 
@@ -309,7 +309,7 @@ If the regions you want to pair are not available as a dual-region, consider cre
 
 When [creating a bucket](https://docs.cloud.google.com/storage/docs/creating-buckets) in a configurable dual-region, the pair of regions that you use to make the dual-region must use the same location code. This code is set for the `LOCATION` of the bucket and is also the location you specify when using [customer-managed encryption keys](https://docs.cloud.google.com/storage/docs/encryption/customer-managed-keys#restrictions) or the [resource locations constraint](https://docs.cloud.google.com/resource-manager/docs/organization-policy/defining-locations) with such dual-region buckets.
 
-**Note:** Unlike buckets in other locations, which bill [storage usage](https://cloud.google.com/storage/pricing#storage-pricing) against the SKUs associated with their location code, buckets in configurable dual-regions bill storage usage against SKUs in both of their underlying regions.
+**Note:** Unlike buckets in other locations, which bill [storage usage](https://docs.cloud.google.com/storage/pricing#storage-pricing) against the SKUs associated with their location code, buckets in configurable dual-regions bill storage usage against SKUs in both of their underlying regions.
 
 The following regions are available when creating a configurable dual-region bucket:
 
@@ -419,6 +419,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

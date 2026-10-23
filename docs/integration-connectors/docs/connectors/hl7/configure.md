@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/hl7/configure/
 title: HL7 \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:09.265622+00:00
+fetched_at: 2026-10-23T13:08:45.350617+00:00
 ---
 
 # HL7  |  Integration Connectors  |  Google Cloud Documentation

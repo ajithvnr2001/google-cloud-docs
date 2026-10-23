@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-v1-generated-AlloyDBAdmin-UpdateBackup-sync-flattened/
 title: Update a backup \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:27:57.936998+00:00
+fetched_at: 2026-10-23T10:42:47.859121+00:00
 ---
 
 # Update a backup  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

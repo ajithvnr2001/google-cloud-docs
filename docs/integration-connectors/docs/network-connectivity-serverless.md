@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/network-connectivity-serverless/
 title: Connectivity to services hosted in serverless environment \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:36.378864+00:00
+fetched_at: 2026-10-23T13:10:14.397809+00:00
 ---
 
 # Connectivity to services hosted in serverless environment  |  Integration Connectors  |  Google Cloud Documentation

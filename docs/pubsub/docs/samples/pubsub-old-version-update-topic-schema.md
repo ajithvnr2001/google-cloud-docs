@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-update-topic-schema/
 title: v1 Update the topic schema (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:52.305560+00:00
+fetched_at: 2026-10-23T10:04:51.078073+00:00
 ---
 
 # v1 Update the topic schema (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

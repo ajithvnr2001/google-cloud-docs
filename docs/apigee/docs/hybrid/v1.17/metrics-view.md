@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/metrics-view/
 title: View metrics \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:40.527305+00:00
+fetched_at: 2026-10-23T13:15:51.754777+00:00
 ---
 
 # View metrics  |  Apigee  |  Google Cloud Documentation

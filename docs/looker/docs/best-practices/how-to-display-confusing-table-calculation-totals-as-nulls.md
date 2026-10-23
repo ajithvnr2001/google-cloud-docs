@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/best-practices/how-to-display-confusing-table-calculation-totals-as-nulls/
 title: Display potentially confusing table calculation totals as nulls \u00a0|\u00a0 Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T07:16:26.905482+00:00
+fetched_at: 2026-10-23T12:51:39.987011+00:00
 ---
 
 # Display potentially confusing table calculation totals as nulls  |  Looker  |  Google Cloud Documentation
@@ -21,9 +21,7 @@ Send feedback
 
 #  Display potentially confusing table calculation totals as nulls Stay organized with collections  Save and categorize content based on your preferences. 
 
-> When you have the appropriate [permissions](https://docs.cloud.google.com/looker/docs/admin-panel-users-roles#create_table_calculations) to create table calculations, you can use [shortcut calculations](https://docs.cloud.google.com/looker/docs/table-calculations#quick_calculations), which let you perform common calculations on numeric fields that are in an Explore's data table without the need to use Looker [functions and operators](https://docs.cloud.google.com/looker/docs/functions-and-operators). 
-
-> You can also apply table calculations directly to the values in the **Total** row. 
+[Table calculations](https://docs.cloud.google.com/looker/docs/table-calculations) let you apply conditional logic to values in an Explore's **Total** row and replace potentially misleading totals with `null`. When an aggregation such as `mean`, `median`, or `percentile` produces a confusing summary value, you can use an `if()` and `is_null()` expression to display a null symbol instead. To build custom expressions with Looker [functions and operators](https://docs.cloud.google.com/looker/docs/functions-and-operators) or apply [shortcut calculations](https://docs.cloud.google.com/looker/docs/table-calculations#quick_calculations), you must have the [permissions](https://docs.cloud.google.com/looker/docs/admin-panel-users-roles#create_table_calculations) to create table calculations.
 
 ## Why calculations in the Total row may be confusing
 
@@ -64,6 +62,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2025-07-22 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2025-07-22 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/how-tos/consent-policies/
 title: Configuring consent policies using attributes \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:54.642140+00:00
+fetched_at: 2026-10-23T13:02:17.848470+00:00
 ---
 
 # Configuring consent policies using attributes  |  Cloud Healthcare API  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/qai-setup-guide/
 title: Get started with Quality AI \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:52.600539+00:00
+fetched_at: 2026-10-23T13:12:52.723504+00:00
 ---
 
 # Get started with Quality AI  |  Customer Experience Insights  |  Google Cloud Documentation

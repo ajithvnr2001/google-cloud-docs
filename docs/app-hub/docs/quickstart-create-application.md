@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/quickstart-create-application/
 title: Quickstart: Create an application from existing resources \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:15.145612+00:00
+fetched_at: 2026-10-23T13:14:36.454982+00:00
 ---
 
 # Quickstart: Create an application from existing resources  |  App Hub  |  Google Cloud Documentation

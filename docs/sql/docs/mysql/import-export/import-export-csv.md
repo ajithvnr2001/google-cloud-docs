@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/import-export/import-export-csv/
 title: Export and import using CSV files \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:59.185413+00:00
+fetched_at: 2026-10-23T10:19:37.178386+00:00
 ---
 
 # Export and import using CSV files  |  Cloud SQL for MySQL  |  Google Cloud Documentation
@@ -161,7 +161,7 @@ Before using any of the request data, make the following replacements:
      * bucket_name: The Cloud Storage bucket name
      * path_to_csv_file: The path to the CSV file
      * database_name: The name of a database inside the Cloud SQL instance
-     * offload: Enables serverless export. Set to `true` to use serverless export. **Note:** Serverless export costs extra. See the [pricing page](https://docs.cloud.google.com/sql/pricing#storage-networking-prices).
+     * offload: Enables serverless export. Set to `true` to use serverless export. **Note:** Serverless export costs extra. See the [pricing page](https://cloud.google.com/sql/pricing#storage-networking-prices).
      * select_query: SQL query for export (optional) **Note:** While in-transit, the query might be processed in intermediate locations other than the location of the target instance.
      * escape_character: The character that should appear before a data character that needs to be escaped. The value of this argument has to be a character in Hex ASCII Code. For example, "22" represents double quotes. (optional)
      * quote_character:The character that encloses values from columns that have a string data type. The value of this argument has to be a character in Hex ASCII Code. For example, "22" represents double quotes. (optional)
@@ -265,7 +265,7 @@ Before using any of the request data, make the following replacements:
      * bucket_name: The Cloud Storage bucket name
      * path_to_csv_file: The path to the CSV file
      * database_name: The name of a database inside the Cloud SQL instance
-     * offload: Enables serverless export. Set to `true` to use serverless export. **Note:** Serverless export costs extra. See the [pricing page](https://docs.cloud.google.com/sql/pricing#storage-networking-prices).
+     * offload: Enables serverless export. Set to `true` to use serverless export. **Note:** Serverless export costs extra. See the [pricing page](https://cloud.google.com/sql/pricing#storage-networking-prices).
      * select_query: SQL query for export (optional) **Note:** While in-transit, the query might be processed in intermediate locations other than the location of the target instance.
      * escape_character: The character that should appear before a data character that needs to be escaped. The value of this argument must be in [ASCII hex format](https://ascii.cl/). For example, "22" represents double quotes. (optional)
      * quote_character: The character that encloses values from columns that have a string data type. The value of this argument must be in [ASCII hex format](https://ascii.cl/). For example, "22" represents double quotes. (optional)
@@ -450,7 +450,7 @@ To create a table, use the [ `CREATE TABLE`](https://dev.mysql.com/doc/refman/8.
     1. [Create a bucket in Cloud Storage](https://docs.cloud.google.com/storage/docs/creating-buckets).
     2. [Upload the SQL dump file](https://docs.cloud.google.com/storage/docs/uploading-objects) to the Cloud Storage bucket.
 
-**Note:** The default behavior for Cloud SQL is to import columns in your CSV file in the same order as the table schema. If the order is different in your CSV file or if some columns are skipped, use [ importContext.csvImportOptions.columns[]](https://cloud.google.com/sdk/gcloud/reference/sql/import/csv#--columns) to import data from the CSV file. **Note:** You cannot import a CSV file that was created using one database engine into an instance created using another database engine.
+**Note:** The default behavior for Cloud SQL is to import columns in your CSV file in the same order as the table schema. If the order is different in your CSV file or if some columns are skipped, use [ importContext.csvImportOptions.columns[]](https://docs.cloud.google.com/sdk/gcloud/reference/sql/import/csv#--columns) to import data from the CSV file. **Note:** You cannot import a CSV file that was created using one database engine into an instance created using another database engine.
 
 ### CSV file format requirements 
 
@@ -768,6 +768,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/generate-sql-queries-natural-language/
 title: Generate SQL queries using natural language questions \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:27:15.063385+00:00
+fetched_at: 2026-10-23T13:08:38.728302+00:00
 ---
 
 # Generate SQL queries using natural language questions  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -52,7 +52,7 @@ To enable the `alloydb_ai_nl` extension, which is the AlloyDB for PostgreSQL nat
 
 Before you can install and use AlloyDB AI natural language, you must enable the extension by adding the `alloydb_ai_nl.enabled` flag.
 
-Since AlloyDB AI natural language objects created on the primary instance are propagated to read-only replicas and cross-region replicas, ensure that you enable the AlloyDB AI natural language flag on every instance of AlloyDB for PostgreSQL. For more information, see [Configure an instance's database flags](https://docs.cloud.google.com/alloydb/docs/instance-configure-database-flags).
+Since AlloyDB AI natural language objects created on the primary instance are propagated to read-only replicas and cross-region replicas, ensure that you enable the AlloyDB AI natural language flag on every instance of AlloyDB. For more information, see [Configure an instance's database flags](https://docs.cloud.google.com/alloydb/docs/instance-configure-database-flags).
 
 ### Create a cluster and enable Gemini Enterprise Agent Platform integration
 
@@ -69,7 +69,7 @@ To install the `alloydb_ai_nl` extension and grant access to other users, you mu
 
 
 
-For more information, see [Manage PostgreSQL users with standard authentication](https://docs.cloud.google.com/alloydb/docs/database-users/manage-roles#predefined-role).
+For more information, see [Manage PostgreSQL users with built-in authentication](https://docs.cloud.google.com/alloydb/docs/database-users/manage-roles).
 
 ## Prepare your environment
 
@@ -87,7 +87,7 @@ To install the `alloydb_ai_nl` extension, connect to the database and run the fo
 
 ### Upgrade the `alloydb_ai_nl` extension
 
-Make sure that you have the latest version of the `alloydb_ai_nl` extension. If you already installed the extension, check if there is a new extension version available, and upgrade the extension if you aren't using the latest version. For more information about the `alloydb_ai_nl` extension, see the [AlloyDB AI natural language overview](https://docs.cloud.google.com/alloydb/docs/ai/natural-language-overview).
+Make sure that you have the latest version of the `alloydb_ai_nl` extension. If you already installed the extension, check if there is a new extension version available, and upgrade the extension if you aren't using the latest version. For more information about the `alloydb_ai_nl` extension, see the [AlloyDB AI natural language overview](https://docs.cloud.google.com/alloydb/docs/ai/natural-language-landing).
 
   1. Determine if you need to upgrade the extension. If the `default_version` is later than the `installed_version`, upgrade the extension.
          
@@ -114,7 +114,7 @@ AlloyDB AI natural language uses `nl_config` to associate applications to certai
            );
          
 
-`gemini-2.0-flash:generateContent` is the model endpoint.
+`gemini-2.5-flash:generateContent` is the default model endpoint.
 
   2. Register a schema for a specified configuration using the following example:
          
@@ -131,7 +131,7 @@ AlloyDB AI natural language uses `nl_config` to associate applications to certai
 
 ## Add context
 
-_Context_ includes any kind of information that you can use to answer an end user question., such as the following:
+_Context_ includes any kind of information that you can use to answer an end user question, such as the following:
 
   * Schema structure and relationships
   * Summaries and descriptions of columns
@@ -313,7 +313,7 @@ This statement returns the following:
       ON T1.district_id = T3.district_id WHERE T3."A3" = $1
     
 
-#### Provide a customized parameterization
+### Provide a customized parameterization
 
 To provide a customized parameterization for a SQL statement using the manual interface of the `add_template` function, run the statement in the following example:
     
@@ -858,7 +858,7 @@ To get improved auto-generated queries, modify or add better context, query temp
 
 ## What's next
 
-  * Learn about [AlloyDB AI natural language use cases and key capabilities](https://docs.cloud.google.com/alloydb/docs/ai/natural-language-overview).
+  * Learn about [AlloyDB AI natural language use cases and key capabilities](https://docs.cloud.google.com/alloydb/docs/ai/natural-language-landing).
   * [Use AlloyDB AI natural language to generate SQL](https://docs.cloud.google.com/alloydb/docs/ai/use-natural-language-generate-sql-queries).
   * Learn how to [search your relational data stored in AlloyDB in Gemini Enterprise using AlloyDB AI natural language](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/connect-alloydb-data) ([Preview](https://cloud.google.com/products#product-launch-stages)).
   * [Manage application data security using AlloyDB parameterized secure views](https://docs.cloud.google.com/alloydb/docs/manage-application-data-security-parameterized-secure-views)
@@ -869,6 +869,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

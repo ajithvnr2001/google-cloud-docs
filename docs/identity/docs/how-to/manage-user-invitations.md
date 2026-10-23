@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/manage-user-invitations/
 title: Creating and managing user invitations \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:50.319629+00:00
+fetched_at: 2026-10-23T13:10:15.458428+00:00
 ---
 
 # Creating and managing user invitations  |  Cloud Identity  |  Google Cloud Documentation

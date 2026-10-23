@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/beyondtrust-beyondinsight/
 title: Collect BeyondTrust BeyondInsight logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:07.037947+00:00
+fetched_at: 2026-10-23T13:20:20.655757+00:00
 ---
 
 # Collect BeyondTrust BeyondInsight logs  |  Google Security Operations  |  Google Cloud Documentation

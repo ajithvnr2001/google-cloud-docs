@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/
 title: Data Agents overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:34.959549+00:00
+fetched_at: 2026-10-23T13:02:54.639003+00:00
 ---
 
 # Data Agents overview  |  Google Cloud Documentation

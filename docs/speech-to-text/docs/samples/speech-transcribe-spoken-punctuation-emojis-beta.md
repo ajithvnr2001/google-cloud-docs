@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-transcribe-spoken-punctuation-emojis-beta/
 title: Speech-to-Text with spoken punctuation and emojis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:30.436935+00:00
+fetched_at: 2026-10-23T10:32:28.232180+00:00
 ---
 
 # Speech-to-Text with spoken punctuation and emojis  |  Google Cloud Documentation

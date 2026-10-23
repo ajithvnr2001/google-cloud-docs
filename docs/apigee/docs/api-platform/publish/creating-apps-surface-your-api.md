@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/publish/creating-apps-surface-your-api/
 title: Controlling access to your APIs by registering apps \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:03.708680+00:00
+fetched_at: 2026-10-23T13:15:10.970384+00:00
 ---
 
 # Controlling access to your APIs by registering apps  |  Apigee  |  Google Cloud Documentation

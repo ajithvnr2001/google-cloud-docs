@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/jira-dc/jira-dc-configuration/
 title: Jira Data Center configuration \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:28.555222+00:00
+fetched_at: 2026-10-23T13:03:45.119824+00:00
 ---
 
 # Jira Data Center configuration  |  Gemini Enterprise  |  Google Cloud Documentation

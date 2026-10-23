@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/advanced-query-insights-overview/
 title: Advanced query insights features overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-23T06:00:07.943746+00:00
+fetched_at: 2026-10-23T13:08:33.673124+00:00
 ---
 
 # Advanced query insights features overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -68,7 +68,7 @@ Traces from advanced query insights features are stored in Cloud Trace and have 
 ## Limitations
 
   * The metrics exposed by advanced query insights features aren't available using the Cloud Monitoring API.
-  * Client IP address support isn't available.
+  * Client IP address support is in [Preview](https://cloud.google.com/products#product-launch-stages) and can only be configured using `gcloud beta`, Terraform, or the `v1beta` REST API.
   * You cannot enable advanced query insights features on secondary clusters.
   * AlloyDB stores query insights data for its primary and read pool instances for 30 days. Storing data for primary instances consumes about 180 GB and might increase based on the number of read pool nodes present in the cluster. The maximum consumed storage size is 700 GB.
   * You must [enable advanced query insights features](https://docs.cloud.google.com/alloydb/docs/using-advanced-query-insights#enable-advanced-features) on a primary instance before enabling them on a read pool instance.

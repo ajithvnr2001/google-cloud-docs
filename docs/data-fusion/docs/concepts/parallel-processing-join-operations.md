@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/concepts/parallel-processing-join-operations/
 title: Parallel processing for JOIN operations \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:45:00.080953+00:00
+fetched_at: 2026-10-23T13:19:45.312079+00:00
 ---
 
 # Parallel processing for JOIN operations  |  Cloud Data Fusion  |  Google Cloud Documentation

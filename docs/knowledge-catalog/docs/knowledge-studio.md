@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/knowledge-studio/
 title: Knowledge Studio overview \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:21:41.526797+00:00
+fetched_at: 2026-10-23T12:51:03.105351+00:00
 ---
 
 # Knowledge Studio overview  |  Knowledge Catalog  |  Google Cloud Documentation

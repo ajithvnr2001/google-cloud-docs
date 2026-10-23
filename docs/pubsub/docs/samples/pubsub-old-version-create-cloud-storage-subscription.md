@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-create-cloud-storage-subscription/
 title: v1 Create a Cloud Storage subscription (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:46.634150+00:00
+fetched_at: 2026-10-23T10:04:07.619730+00:00
 ---
 
 # v1 Create a Cloud Storage subscription (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

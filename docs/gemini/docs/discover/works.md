@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/discover/works/
 title: How Gemini works in Google Cloud \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:15.176550+00:00
+fetched_at: 2026-10-23T13:09:25.846709+00:00
 ---
 
 # How Gemini works in Google Cloud  |  Gemini for Google Cloud  |  Google Cloud Documentation

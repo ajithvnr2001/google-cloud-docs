@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/custom-calendars/
 title: Using custom calendars in Looker \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:10:15.716420+00:00
+fetched_at: 2026-10-23T10:19:13.343037+00:00
 ---
 
 # Using custom calendars in Looker  |  Google Cloud Documentation
@@ -54,6 +54,7 @@ The following is an example table schema for a calendar table named `fiscal_cale
 Column Name | Data Type | Description  
 ---|---|---  
 `reference_date` | `DATE` | The standard calendar date (such as '2023-01-01'). Used for joining. Should be a unique or primary key.  
+`fiscal_day_num` | `INTEGER` | The numeric custom date or ordinal day of the year (such as 1).  
 `fiscal_year` | `VARCHAR` | The fiscal year (such as 'FY2023').  
 `fiscal_year_num` | `INTEGER` | The numeric fiscal year (such as 2023).  
 `fiscal_quarter_of_year` | `VARCHAR` | The fiscal quarter (such as 'FQ1').  
@@ -69,12 +70,12 @@ Column Name | Data Type | Description
   
 To illustrate, here are some sample rows from the `fiscal_calendar_table` table:
 
-`reference_date` | `fiscal_year` | `fiscal_year_num` | `fiscal_period` | `fiscal_period_num` | `prev_week_num` | `prev_day_num`  
----|---|---|---|---|---|---  
-`2023-12-25` | `FY2024` | `2024` | `P01` | `1` | `51` | `358`  
-`2023-12-26` | `FY2024` | `2024` | `P01` | `1` | `51` | `359`  
-`2024-01-01` | `FY2024` | `2024` | `P02` | `2` | `52` | `364`  
-`2024-01-02` | `FY2024` | `2024` | `P02` | `2` | `52` | `1`  
+`reference_date` | `fiscal_day_num` | `fiscal_year` | `fiscal_year_num` | `fiscal_period` | `fiscal_period_num` | `prev_week_num` | `prev_day_num`  
+---|---|---|---|---|---|---|---  
+`2023-12-25` | `359` | `FY2024` | `2024` | `P01` | `1` | `51` | `358`  
+`2023-12-26` | `360` | `FY2024` | `2024` | `P01` | `1` | `51` | `359`  
+`2024-01-01` | `1` | `FY2024` | `2024` | `P02` | `2` | `52` | `364`  
+`2024-01-02` | `2` | `FY2024` | `2024` | `P02` | `2` | `52` | `1`  
   
 ### Define your custom calendar view in LookML
 
@@ -108,7 +109,7 @@ Here is an example view file called `fiscal_calendar.view.lkml` that models the 
         timeframe_ordinal_mapping: {
           custom_year: fiscal_year_num
           custom_quarter: fiscal_quarter_of_year_num
-          custom_date: fiscal_date_num
+          custom_date: fiscal_day_num
           custom_week: fiscal_week_of_year_num
           custom_period: fiscal_period_of_year_num
           custom_season: season_num
@@ -126,9 +127,14 @@ Here is an example view file called `fiscal_calendar.view.lkml` that models the 
       }
     
       dimension: fiscal_date {
-      type: string
-      sql: FORMAT_TIMESTAMP('%Y-%m-%d', ${TABLE}.reference_date) ;;
-    }
+        type: string
+        sql: FORMAT_TIMESTAMP('%Y-%m-%d', ${TABLE}.reference_date) ;;
+      }
+    
+      dimension: fiscal_day_num {
+        type: number
+        sql: ${TABLE}.fiscal_day_num ;;
+      }
     
       dimension: fiscal_year {
         type: string
@@ -278,6 +284,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

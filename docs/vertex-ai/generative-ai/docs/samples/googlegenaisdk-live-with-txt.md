@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/googlegenaisdk-live-with-txt/
 title: Generate text with Gemini Live API \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:04.662215+00:00
+fetched_at: 2026-10-23T08:57:56.610164+00:00
 ---
 
 # Generate text with Gemini Live API  |  Generative AI on Vertex AI  |  Google Cloud Documentation

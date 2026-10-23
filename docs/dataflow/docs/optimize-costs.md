@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/optimize-costs/
 title: Best practices for Dataflow cost optimization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:18.118999+00:00
+fetched_at: 2026-10-23T13:20:25.986864+00:00
 ---
 
 # Best practices for Dataflow cost optimization  |  Google Cloud Documentation

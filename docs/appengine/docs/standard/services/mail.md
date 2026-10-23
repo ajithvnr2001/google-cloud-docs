@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/mail/
 title: Mail API for legacy bundled services \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:15.200211+00:00
+fetched_at: 2026-10-23T13:18:01.585903+00:00
 ---
 
 # Mail API for legacy bundled services  |  App Engine standard environment  |  Google Cloud Documentation

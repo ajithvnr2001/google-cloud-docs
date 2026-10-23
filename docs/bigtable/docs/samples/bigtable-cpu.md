@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/samples/bigtable-cpu/
 title: CPU load measurement \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:24.206515+00:00
+fetched_at: 2026-10-23T13:20:08.146352+00:00
 ---
 
 # CPU load measurement  |  Bigtable  |  Google Cloud Documentation

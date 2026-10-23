@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/manage-data/transactions/
 title: Transactions and batched writes \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:23.783861+00:00
+fetched_at: 2026-10-23T13:13:59.537161+00:00
 ---
 
 # Transactions and batched writes  |  Firestore in Native mode  |  Google Cloud Documentation

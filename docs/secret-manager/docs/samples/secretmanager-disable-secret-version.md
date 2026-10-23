@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-disable-secret-version/
 title: Disable secret version \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:10.403125+00:00
+fetched_at: 2026-10-23T09:41:03.188115+00:00
 ---
 
 # Disable secret version  |  Secret Manager  |  Google Cloud Documentation

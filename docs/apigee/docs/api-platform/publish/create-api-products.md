@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/publish/create-api-products/
 title: Managing API products \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:03.286298+00:00
+fetched_at: 2026-10-23T13:16:38.116459+00:00
 ---
 
 # Managing API products  |  Apigee  |  Google Cloud Documentation

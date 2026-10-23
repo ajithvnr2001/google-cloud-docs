@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/samples/
 title: All Managed Service for Apache Kafka code samples \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:11:08.634374+00:00
+fetched_at: 2026-10-23T11:00:17.424706+00:00
 ---
 
 # All Managed Service for Apache Kafka code samples  |  Google Cloud Documentation

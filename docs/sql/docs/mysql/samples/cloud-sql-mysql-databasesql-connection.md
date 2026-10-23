@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/samples/cloud-sql-mysql-databasesql-connection/
 title: Run an SQL INSERT statement using Go \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:06.130128+00:00
+fetched_at: 2026-10-23T10:19:04.962498+00:00
 ---
 
 # Run an SQL INSERT statement using Go  |  Cloud SQL for MySQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/storage-intelligence/view-advisor/
 title: View Storage Intelligence advisor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:29:32.987236+00:00
+fetched_at: 2026-10-23T13:08:28.398875+00:00
 ---
 
 # View Storage Intelligence advisor  |  Google Cloud Documentation
@@ -112,7 +112,7 @@ To investigate findings for an organization or folder, do the following:
 
   3. In the **Top findings** section, locate the finding you want to investigate and click **View details**.
 
-The **View projects with ' finding-name'** side panel opens.
+The **View projects with ' FINDING_NAME'** side panel opens.
 
   4. In the **Projects with finding** table, review the list of projects where the finding is active:
 
@@ -217,6 +217,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

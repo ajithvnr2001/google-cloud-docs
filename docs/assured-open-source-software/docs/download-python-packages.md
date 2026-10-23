@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-open-source-software/docs/download-python-packages/
 title: Download Python packages using direct repository access for the free tier \u00a0|\u00a0 Assured Open Source Software \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:24.736602+00:00
+fetched_at: 2026-10-23T13:19:58.003677+00:00
 ---
 
 # Download Python packages using direct repository access for the free tier  |  Assured Open Source Software  |  Google Cloud Documentation

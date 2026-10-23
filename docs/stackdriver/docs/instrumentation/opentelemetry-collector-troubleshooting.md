@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/stackdriver/docs/instrumentation/opentelemetry-collector-troubleshooting/
 title: Troubleshoot the Google-Built OpenTelemetry Collector \u00a0|\u00a0 Google Cloud Observability \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:17:54.904714+00:00
+fetched_at: 2026-10-23T10:09:37.126579+00:00
 ---
 
 # Troubleshoot the Google-Built OpenTelemetry Collector  |  Google Cloud Observability  |  Google Cloud Documentation
@@ -28,7 +28,7 @@ This section describes strategies you can use to troubleshoot issues with data c
 
 ### Use the `debug` exporter
 
-The [`debug` exporter](https://github.com/open-telemetry/opentelemetry-collector/tree/v0.163.0/exporter/debugexporter) is the best way to view the data at the OpenTelemetry Collector level. The exporter takes whatever data it receives and writes it to stdout in a human-readable format. This is most useful when you need to verify that any transformations in your pipeline are producing the intended result.
+The [`debug` exporter](https://github.com/open-telemetry/opentelemetry-collector/tree/v0.163.1/exporter/debugexporter) is the best way to view the data at the OpenTelemetry Collector level. The exporter takes whatever data it receives and writes it to stdout in a human-readable format. This is most useful when you need to verify that any transformations in your pipeline are producing the intended result.
 
 The `debug` exporter is included in the Google-Built OpenTelemetry Collector. You can configure the `debug` exporter with `verbosity: detailed` to see the entire telemetry payload.
     
@@ -60,7 +60,7 @@ You can include the exporter in your pipeline:
 
 The [OTTL Playground](https://ottl.run/) is a community-developed tool that lets you interactively develop an OpenTelemetry Transformation Language pipeline. You start by providing OTLP JSON as input, write your pipeline using the same configuration as you would for your OpenTelemetry Collector, and visually inspect the results.
 
-The best way to get OTLP JSON from a pipeline is to put a [`file` exporter](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/v0.163.0/exporter/fileexporter) at the spot before where your transformation processor would be. Start by configuring a `file` exporter:
+The best way to get OTLP JSON from a pipeline is to put a [`file` exporter](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/v0.163.1/exporter/fileexporter) at the spot before where your transformation processor would be. Start by configuring a `file` exporter:
     
     
     exporters:
@@ -149,6 +149,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

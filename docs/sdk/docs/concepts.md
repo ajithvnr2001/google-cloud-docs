@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sdk/docs/concepts/
 title: Concepts \u00a0|\u00a0 Google Cloud SDK \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:30.550679+00:00
+fetched_at: 2026-10-23T08:36:38.265860+00:00
 ---
 
 # Concepts  |  Google Cloud SDK  |  Google Cloud Documentation

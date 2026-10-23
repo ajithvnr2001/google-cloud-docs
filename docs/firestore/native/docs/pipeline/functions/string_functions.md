@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/pipeline/functions/string_functions/
 title: String Functions Reference \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:05.722551+00:00
+fetched_at: 2026-10-23T13:03:25.243117+00:00
 ---
 
 # String Functions Reference  |  Firestore in Native mode  |  Google Cloud Documentation

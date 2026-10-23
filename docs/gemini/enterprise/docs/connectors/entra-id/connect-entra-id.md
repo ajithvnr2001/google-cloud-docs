@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/entra-id/connect-entra-id/
 title: Connect Microsoft Entra ID \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:30.628552+00:00
+fetched_at: 2026-10-23T12:50:33.712533+00:00
 ---
 
 # Connect Microsoft Entra ID  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -261,13 +261,13 @@ The workforce pool lets you to manage and authenticate users from external ident
 
   2. To configure your workforce pool and enable the web app for seamless user access, do the following:
 
-     1. Create workforce pool at the organization level in Google Cloud by following the appropriate setup manual:
+     1. Create a [workforce identity pool](https://docs.cloud.google.com/iam/docs/workforce-identity-federation#workforce-identity-pools) at the organization level in Google Cloud in the `global` location by following the appropriate setup manual:
 
         1. [Azure OIDC setup](https://docs.cloud.google.com/iam/docs/workforce-sign-in-azure-ad#create-oidc-provider)
         2. [Azure SAML setup](https://docs.cloud.google.com/iam/docs/workforce-sign-in-azure-ad#create-saml-provider)
         3. [Okta & OIDC setup](https://docs.cloud.google.com/iam/docs/workforce-sign-in-okta#create-oidc-provider)
         4. [Okta & SAML setup](https://docs.cloud.google.com/iam/docs/workforce-sign-in-okta#create-saml-provider)
-     2. Configure the workforce pool in **Gemini Enterprise** > **Settings** for the region where you create your app.
+     2. In **Gemini Enterprise** , navigate to **Settings** > **Authentication**. Select the region where you created your app (`global`, `us`, or `eu`), and configure the global workforce pool.
 
 
 
@@ -321,6 +321,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

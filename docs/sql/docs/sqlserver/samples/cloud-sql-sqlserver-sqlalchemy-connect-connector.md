@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/samples/cloud-sql-sqlserver-sqlalchemy-connect-connector/
 title: Create a connection using the Cloud SQL Python Connector \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:31:05.127535+00:00
+fetched_at: 2026-10-23T10:18:37.989193+00:00
 ---
 
 # Create a connection using the Cloud SQL Python Connector  |  Cloud SQL for SQL Server  |  Google Cloud Documentation

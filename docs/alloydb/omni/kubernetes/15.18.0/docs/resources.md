@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/kubernetes/15.18.0/docs/resources/
 title: Resources \u00a0|\u00a0 AlloyDB Omni using the container orchestrator: 15.18.0 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:25:40.573740+00:00
+fetched_at: 2026-10-23T12:54:55.680944+00:00
 ---
 
 # Resources  |  AlloyDB Omni using the container orchestrator: 15.18.0  |  Google Cloud Documentation

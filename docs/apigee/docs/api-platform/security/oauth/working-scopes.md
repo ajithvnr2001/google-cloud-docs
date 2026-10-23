@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/security/oauth/working-scopes/
 title: Working with OAuth2 scopes \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:45.146261+00:00
+fetched_at: 2026-10-23T13:20:45.841270+00:00
 ---
 
 # Working with OAuth2 scopes  |  Apigee  |  Google Cloud Documentation

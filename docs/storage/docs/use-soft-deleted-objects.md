@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/use-soft-deleted-objects/
 title: Use soft-deleted objects \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:50:13.658048+00:00
+fetched_at: 2026-10-23T09:37:44.931734+00:00
 ---
 
 # Use soft-deleted objects  |  Cloud Storage  |  Google Cloud Documentation

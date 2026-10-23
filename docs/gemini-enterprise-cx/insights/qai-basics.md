@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/qai-basics/
 title: Quality AI basics \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:52.947997+00:00
+fetched_at: 2026-10-23T13:11:52.509350+00:00
 ---
 
 # Quality AI basics  |  Customer Experience Insights  |  Google Cloud Documentation

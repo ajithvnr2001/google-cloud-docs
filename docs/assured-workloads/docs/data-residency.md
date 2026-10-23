@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/data-residency/
 title: Data residency \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:09.021049+00:00
+fetched_at: 2026-10-23T13:19:28.837821+00:00
 ---
 
 # Data residency  |  Assured Workloads  |  Google Cloud Documentation

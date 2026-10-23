@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/support/billing-questions/
 title: Billing questions \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:08.528555+00:00
+fetched_at: 2026-10-23T13:13:21.547710+00:00
 ---
 
 # Billing questions  |  CX Agent Studio  |  Google Cloud Documentation

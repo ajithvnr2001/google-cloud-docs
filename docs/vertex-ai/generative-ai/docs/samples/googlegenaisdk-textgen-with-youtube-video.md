@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/googlegenaisdk-textgen-with-youtube-video/
 title: Use Gemini to summarize YouTube videos \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:09.925316+00:00
+fetched_at: 2026-10-23T08:57:53.799015+00:00
 ---
 
 # Use Gemini to summarize YouTube videos  |  Generative AI on Vertex AI  |  Google Cloud Documentation

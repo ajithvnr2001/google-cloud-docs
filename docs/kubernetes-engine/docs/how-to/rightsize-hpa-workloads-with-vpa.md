@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/rightsize-hpa-workloads-with-vpa/
 title: Rightsize HPA workloads with VPA \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:31:59.485674+00:00
+fetched_at: 2026-10-23T12:55:09.363938+00:00
 ---
 
 # Rightsize HPA workloads with VPA  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -40,6 +40,7 @@ When configuring HPA rightsizing, consider the following requirements and limita
   * Rightsizing calculations apply only to CPU. If you include memory in your VPA configuration, VPA resizes memory requests and limits by using standard VPA logic.
   * You can configure HPA rightsizing for up to 60,000 total containers across all workloads in a single cluster.
   * A single VerticalPodAutoscaler can target up to 1,000 containers.
+  * VPA generates recommendations for, and applies updates on, only container-level resource requests and limits (`spec.containers[].resources`). Vertical Pod autoscaling doesn't support [Pod-level resource specifications](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#pod-level-resource-specification) (`spec.resources`).
 
 
 
@@ -395,6 +396,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

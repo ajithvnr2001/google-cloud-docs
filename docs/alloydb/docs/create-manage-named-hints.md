@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/create-manage-named-hints/
 title: Create and manage named hints \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:07:55.841115+00:00
+fetched_at: 2026-10-23T10:42:36.692479+00:00
 ---
 
 # Create and manage named hints  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,32 +21,31 @@ Send feedback
 
 #  Create and manage named hints Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to create and manage named hints in AlloyDB for PostgreSQL.
+To control how the AlloyDB for PostgreSQL query planner generates execution plans without modifying your application queries, you can create, verify, view, enable, disable, and delete _named hints_. Named hints associate a query with a set of hints that specify details of the preferred execution plan. When the query planner generates an execution plan for the associated query, it applies the hints and automatically reapplies them on subsequent executions of the query. For example, you can use named hints to force an index scan instead of a sequential scan on a table, or to enforce a specific join order across multiple tables.
 
-_named hints_ are an association between a query and a set of hints that let you specify the details of the query plan. A _hint_ specifies additional information about the preferred final execution plan for the query. For example, when you scan a table in the query, use an index scan instead of other types of scans, such as a sequential scan.
+Named hints in AlloyDB support all the hints from the [open source `pg_hint_plan` extension](https://github.com/ossc-db/pg_hint_plan/blob/master/docs/hint_list.md) and the following hints for the [columnar engine](https://docs.cloud.google.com/alloydb/docs/columnar-engine/about):
 
-To limit the final plan choice within the specification of the hints, the query planner first applies the hints to the query while generating its execution plan. The hints are then automatically applied whenever the query is subsequently issued. This approach lets you force different query plans from the planner. For example, you can use hints to force an index scan on certain tables or to force a specific join order among multiple tables.
+  * `ColumnarScan(table)`: forces a columnar scan on the table.
 
-The AlloyDB named hints supports all the hints from the [open source `pg_hint_plan` extension](https://github.com/ossc-db/pg_hint_plan/blob/master/docs/hint_list.md).
-
-Additionally, AlloyDB supports the following hints for the columnar engine:
-
-  * `ColumnarScan(table)`: Forces a columnar scan on the table.
-  * `NoColumnarScan(table)`: Disables columnar scan on the table.
+  * `NoColumnarScan(table)`: disables a columnar scan on the table.
 
 
 
-AlloyDB lets you create named hints for both parameterized queries and non-parameterized queries. In this page, non-parameterized queries are referred to as _parameter sensitive queries_.
 
-**Important:** Before using the named hints feature, consider the potential overhead it can add to the system performance. While named hints can resolve query plans with issues, they add extra time in query optimization to look up matching plans in the catalog and requests optimizer to apply multiple hints in the named hints. While the overheads are often negligible in complex queries, they might be significant in simple queries. For example, in our internal testing, the extra query compilation time exceeded 10% for short-planning (less than 1 millisecond) queries.
+AlloyDB lets you create named hints for both parameterized queries and non-parameterized queries, which this document refers to as _parameter-sensitive queries_.
+
+**Important:** Before using the named hints feature, consider the potential overhead it can add to the system performance. While named hints can resolve query plans with issues, they add extra time in query optimization to look up matching plans in the catalog and requests optimizer to apply multiple hints in the named hints. While the overheads are often negligible in complex queries, they might be significant in less complex queries. For example, in our internal testing, the extra query compilation time exceeded 10% for short-planning (less than 1 millisecond) queries.
 
 ## Workflow
 
 Using named hints involves the following steps:
 
   1. Identify the query for which you want to create named hints.
+
   2. Create named hints with hints to be applied when the query is next executed.
+
   3. Verify the application of the named hints.
+
 
 
 
@@ -150,7 +149,7 @@ You can use either the query ID or the query text—the `SQL_TEXT` parameter—t
 
   * `SQL_TEXT` (Optional): query text of the query for which you are creating the named hints.
 
-When you use the query text, the text must be the same as the intended query, except for the literal and constant values in the query. Any mismatch, including case difference, can result in the named hints not being applied. To learn how to create named hints for queries with literals and constants, see Create a parameter sensitive named hints.
+When you use the query text, the text must be the same as the intended query, except for the literal and constant values in the query. Any mismatch, including case difference, can result in the named hints not being applied. To learn how to create named hints for queries with literals and constants, see Create parameter-sensitive named hints.
 
   * `APPLICATION_NAME` (Optional): name of the session client application for which you want to use the named hints. An empty string lets you apply the named hints to the query regardless of the client application issuing the query.
 
@@ -338,6 +337,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

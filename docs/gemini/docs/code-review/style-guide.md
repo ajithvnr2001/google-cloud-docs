@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/code-review/style-guide/
 title: Code review style guide \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:14.781596+00:00
+fetched_at: 2026-10-23T13:03:05.797636+00:00
 ---
 
 # Code review style guide  |  Gemini for Google Cloud  |  Google Cloud Documentation

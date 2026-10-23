@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/cloud-storage-discovery/
 title: Discover and catalog Cloud Storage data \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:02:57.048145+00:00
+fetched_at: 2026-10-23T10:21:26.119604+00:00
 ---
 
 # Discover and catalog Cloud Storage data  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -164,9 +164,9 @@ To ensure that the Knowledge Catalog service account has the necessary permissio
 
 **Important:** You must grant these roles to the Knowledge Catalog service account, _not_ to your user account. Failure to grant the roles to the correct principal might result in permission errors. 
 
-  * [Dataplex Discovery Service Agent ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.discoveryServiceAgent) (`roles/dataplex.discoveryServiceAgent`) on the storage bucket
-  * [Dataplex Discovery Publishing Service Agent ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.discoveryPublishingServiceAgent) (`roles/dataplex.discoveryPublishingServiceAgent`) on the user project
-  * Create BigLake tables: [Dataplex Discovery BigLake Publishing Service Agent ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.discoveryBigLakePublishingServiceAgent) (`roles/dataplex.discoveryBigLakePublishingServiceAgent`) on the BigQuery connection 
+  * [**Dataplex Discovery Service Agent** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.discoveryServiceAgent) (`roles/dataplex.discoveryServiceAgent`) on the storage bucket
+  * [**Dataplex Discovery Publishing Service Agent** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.discoveryPublishingServiceAgent) (`roles/dataplex.discoveryPublishingServiceAgent`) on the user project
+  * Create BigLake tables: [**Dataplex Discovery BigLake Publishing Service Agent** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.discoveryBigLakePublishingServiceAgent) (`roles/dataplex.discoveryBigLakePublishingServiceAgent`) on the BigQuery connection 
 
 
 
@@ -193,7 +193,7 @@ Your administrator might also be able to give the Knowledge Catalog service acco
 
 ### Required roles for the BigQuery connection service account
 
-To ensure that the BigQuery Connection Service account has the necessary permissions to create a discovery scan, ask your administrator to grant the [Dataplex Discovery Service Agent ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.discoveryServiceAgent) (`roles/dataplex.discoveryServiceAgent`) IAM role to the BigQuery Connection Service account on the Cloud Storage bucket. **Important:** You must grant this role to the BigQuery Connection Service account, _not_ to your user account. Failure to grant the role to the correct principal might result in permission errors.  For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
+To ensure that the BigQuery Connection Service account has the necessary permissions to create a discovery scan, ask your administrator to grant the [**Dataplex Discovery Service Agent** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.discoveryServiceAgent) (`roles/dataplex.discoveryServiceAgent`) IAM role to the BigQuery Connection Service account on the Cloud Storage bucket. **Important:** You must grant this role to the BigQuery Connection Service account, _not_ to your user account. Failure to grant the role to the correct principal might result in permission errors.  For more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). 
 
 This predefined role contains the permissions required to create a discovery scan. To see the exact permissions that are required, expand the **Required permissions** section: 
 
@@ -218,10 +218,10 @@ Your administrator might also be able to give the BigQuery Connection Service ac
 
 To get the permissions that you need to create and manage data discovery scans, ask your administrator to grant you the following IAM roles on the Cloud Storage bucket: 
 
-  * Full access to DataScan resources: Dataplex DataScan Administrator (`roles/dataplex.dataScanAdmin`) - your project 
-  * Write access to DataScan resources: Dataplex DataScan Editor (`roles/dataplex.dataScanEditor`) - your project 
-  * Read access to DataScan resources, excluding the results: Dataplex DataScan Viewer (`roles/dataplex.dataScanViewer`) - your project 
-  * Read access to DataScan resources, including the results: Dataplex DataScan DataViewer (`roles/dataplex.dataScanDataViewer`) - your project 
+  * Full access to DataScan resources: **Dataplex DataScan Administrator** (`roles/dataplex.dataScanAdmin`) - your project 
+  * Write access to DataScan resources: **Dataplex DataScan Editor** (`roles/dataplex.dataScanEditor`) - your project 
+  * Read access to DataScan resources, excluding the results: **Dataplex DataScan Viewer** (`roles/dataplex.dataScanViewer`) - your project 
+  * Read access to DataScan resources, including the results: **Dataplex DataScan DataViewer** (`roles/dataplex.dataScanDataViewer`) - your project 
 
 
 
@@ -295,7 +295,7 @@ If you provide both include patterns and exclude patterns, the exclude patterns 
 
 You can create a new connection ID in the same location as the BigQuery dataset location, which is [compatible with the Cloud Storage bucket location](https://docs.cloud.google.com/bigquery/docs/external-tables#storage-location-considerations).
 
-If you don't provide a resource connection ID, the discovery scan creates [non-BigLake external tables](https://docs.cloud.google.com/bigquery/docs/external-data-sources#non-biglake-tables). To understand the differences between these external table types and why the discovery service might choose one over the other, see the [behavioral differences comparison](https://docs.cloud.google.com/bigquery/docs/external-data-sources#external_data_source_feature_comparison).
+If you don't provide a resource connection ID, the discovery scan creates [non-BigLake external tables](https://docs.cloud.google.com/bigquery/docs/external-tables). To understand the differences between these external table types and why the discovery service might choose one over the other, see the [behavioral differences comparison](https://docs.cloud.google.com/bigquery/docs/external-data-sources#external_data_source_feature_comparison).
 
   11. In the **Discovery frequency** section, configure when you want the discovery scan to run:
 
@@ -645,6 +645,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

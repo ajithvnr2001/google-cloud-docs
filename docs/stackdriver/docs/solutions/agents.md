@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/stackdriver/docs/solutions/agents/
 title: Legacy Monitoring and Logging agents end of support \u00a0|\u00a0 Google Cloud Observability \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:14.861881+00:00
+fetched_at: 2026-10-23T08:58:55.236293+00:00
 ---
 
 # Legacy Monitoring and Logging agents end of support  |  Google Cloud Observability  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-list-secrets/
 title: List secrets \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:49:23.820895+00:00
+fetched_at: 2026-10-23T09:40:05.693338+00:00
 ---
 
 # List secrets  |  Secret Manager  |  Google Cloud Documentation

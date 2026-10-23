@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/tool/salesforce/
 title: Salesforce tools \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:06.646165+00:00
+fetched_at: 2026-10-23T13:13:03.275918+00:00
 ---
 
 # Salesforce tools  |  CX Agent Studio  |  Google Cloud Documentation

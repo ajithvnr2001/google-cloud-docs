@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/looker-core-overview/
 title: Looker (Google Cloud core) overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:09:38.133074+00:00
+fetched_at: 2026-10-23T10:35:20.845388+00:00
 ---
 
 # Looker (Google Cloud core) overview  |  Google Cloud Documentation

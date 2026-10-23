@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/understand-reads-writes-scale/
 title: Understand reads and writes at scale \u00a0|\u00a0 Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:36.121519+00:00
+fetched_at: 2026-10-23T13:09:07.109373+00:00
 ---
 
 # Understand reads and writes at scale  |  Firestore with MongoDB compatibility  |  Google Cloud Documentation

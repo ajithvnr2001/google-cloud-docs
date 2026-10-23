@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/backup-chains/
 title: Backup chains \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:41.502715+00:00
+fetched_at: 2026-10-23T13:00:58.305471+00:00
 ---
 
 # Backup chains  |  Filestore  |  Google Cloud Documentation

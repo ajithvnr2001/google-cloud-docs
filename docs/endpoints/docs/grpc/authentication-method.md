@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/grpc/authentication-method/
 title: Choosing an Authentication Method \u00a0|\u00a0 Cloud Endpoints with gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:23.349728+00:00
+fetched_at: 2026-10-23T13:01:48.251664+00:00
 ---
 
 # Choosing an Authentication Method  |  Cloud Endpoints with gRPC  |  Google Cloud Documentation

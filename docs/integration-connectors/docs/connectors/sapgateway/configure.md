@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/sapgateway/configure/
 title: SAP Gateway \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:59.210354+00:00
+fetched_at: 2026-10-23T13:09:06.808659+00:00
 ---
 
 # SAP Gateway  |  Integration Connectors  |  Google Cloud Documentation

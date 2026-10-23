@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/artifact-registry-regulatory-compliance/
 title: Regulatory support in Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:04.455652+00:00
+fetched_at: 2026-10-23T13:17:23.952910+00:00
 ---
 
 # Regulatory support in Artifact Registry  |  Google Cloud Documentation

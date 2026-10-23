@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/product-search/docs/samples/vision-product-search-add-product-to-product-set/
 title: Add product to product set \u00a0|\u00a0 Vision API Product Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:10:11.847642+00:00
+fetched_at: 2026-10-23T08:57:32.843319+00:00
 ---
 
 # Add product to product set  |  Vision API Product Search  |  Google Cloud Documentation

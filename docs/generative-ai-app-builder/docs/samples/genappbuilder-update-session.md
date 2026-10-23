@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/samples/genappbuilder-update-session/
 title: Update a session \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:40.323631+00:00
+fetched_at: 2026-10-23T13:10:54.465239+00:00
 ---
 
 # Update a session  |  Agent Search  |  Google Cloud Documentation

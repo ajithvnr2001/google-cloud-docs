@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/stackdriver/docs/instrumentation/opentelemetry-collector-cos/
 title: Deploy the OpenTelemetry Collector on Container-Optimized OS \u00a0|\u00a0 Google Cloud Observability \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:16:38.945912+00:00
+fetched_at: 2026-10-23T10:10:54.404849+00:00
 ---
 
 # Deploy the OpenTelemetry Collector on Container-Optimized OS  |  Google Cloud Observability  |  Google Cloud Documentation
@@ -290,7 +290,7 @@ Run the Collector container with the following command:
         --network otel \
         --name opentelemetry-collector \
         -v /etc/config:/etc/config \
-        us-docker.pkg.dev/cloud-ops-agents-artifacts/google-cloud-opentelemetry-collector/otelcol-google:0.163.0 \
+        us-docker.pkg.dev/cloud-ops-agents-artifacts/google-cloud-opentelemetry-collector/otelcol-google:0.163.1 \
         --config=/etc/config/config.yaml
 
 The previous command does the following:
@@ -309,7 +309,7 @@ This section describes the provided configuration, the key components like expor
 
 ### Provided Collector configuration
 
-You can find the Collector configuration in the `google-built-opentelemetry-collector` directory on the [`opentelemetry-operations-collector` repository](https://github.com/GoogleCloudPlatform/opentelemetry-operations-collector/tree/v0.163.0/google-built-opentelemetry-collector/docs/examples/configuration/config-standard.yaml): 
+You can find the Collector configuration in the `google-built-opentelemetry-collector` directory on the [`opentelemetry-operations-collector` repository](https://github.com/GoogleCloudPlatform/opentelemetry-operations-collector/tree/v0.163.1/google-built-opentelemetry-collector/docs/examples/configuration/config-standard.yaml): 
     
     
     receivers:
@@ -536,13 +536,13 @@ The Collector configuration includes only the [`otlp` receiver](https://github.c
 
 ### Available components
 
-The Google-Built OpenTelemetry Collector contains the components that most users will need to enable a rich experience within Google Cloud Observability. For a complete list of available components, see [Components](https://github.com/GoogleCloudPlatform/opentelemetry-operations-collector/tree/v0.163.0/google-built-opentelemetry-collector/README.md#components) in the `opentelemetry-operations-collector` repository.
+The Google-Built OpenTelemetry Collector contains the components that most users will need to enable a rich experience within Google Cloud Observability. For a complete list of available components, see [Components](https://github.com/GoogleCloudPlatform/opentelemetry-operations-collector/tree/v0.163.1/google-built-opentelemetry-collector/README.md#components) in the `opentelemetry-operations-collector` repository.
 
 To request any changes or additions to the available components, [open a feature request](https://github.com/GoogleCloudPlatform/opentelemetry-operations-collector/issues). in the `opentelemetry-operations-collector` repository.
 
 ## Generate telemetry
 
-You can test your configuration by using the open-source [`telemetrygen` tool](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/v0.163.0/cmd/telemetrygen). The OpenTelemetry project provides a [container in the GitHub Container registry](https://github.com/open-telemetry/opentelemetry-collector-contrib/pkgs/container/opentelemetry-collector-contrib%2Ftelemetrygen).
+You can test your configuration by using the open-source [`telemetrygen` tool](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/v0.163.1/cmd/telemetrygen). The OpenTelemetry project provides a [container in the GitHub Container registry](https://github.com/open-telemetry/opentelemetry-collector-contrib/pkgs/container/opentelemetry-collector-contrib%2Ftelemetrygen).
 
 Before running the following commands, replace the following placeholders, if you changed the defaults used in the Docker commands in Deploy the Collector:
 
@@ -700,6 +700,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

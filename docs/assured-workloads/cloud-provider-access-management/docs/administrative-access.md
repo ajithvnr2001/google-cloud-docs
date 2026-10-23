@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/cloud-provider-access-management/docs/administrative-access/
 title: Overview of administrative access controls \u00a0|\u00a0 Cloud provider access management \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:14.083354+00:00
+fetched_at: 2026-10-23T13:19:38.685268+00:00
 ---
 
 # Overview of administrative access controls  |  Cloud provider access management  |  Google Cloud Documentation

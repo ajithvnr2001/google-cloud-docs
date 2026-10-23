@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/publish/drupal/get-support-cloud-marketplace/
 title: Support resources for the Apigee Developer Portal Kickstart solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:01.793148+00:00
+fetched_at: 2026-10-23T13:16:11.731822+00:00
 ---
 
 # Support resources for the Apigee Developer Portal Kickstart solution  |  Google Cloud Documentation

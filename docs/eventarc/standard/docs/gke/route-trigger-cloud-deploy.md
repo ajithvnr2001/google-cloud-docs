@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/gke/route-trigger-cloud-deploy/
 title: Route Cloud Deploy events to Google Kubernetes Engine (GKE) \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:02.274603+00:00
+fetched_at: 2026-10-23T13:00:32.906644+00:00
 ---
 
 # Route Cloud Deploy events to Google Kubernetes Engine (GKE)  |  Eventarc Standard  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/text-search/
 title: Use text searches \u00a0|\u00a0 Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:36.236113+00:00
+fetched_at: 2026-10-23T13:01:18.588943+00:00
 ---
 
 # Use text searches  |  Firestore with MongoDB compatibility  |  Google Cloud Documentation

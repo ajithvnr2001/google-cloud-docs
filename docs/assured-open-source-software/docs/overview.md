@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-open-source-software/docs/overview/
 title: Overview of Assured Open Source Software \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:25.028312+00:00
+fetched_at: 2026-10-23T13:19:34.289878+00:00
 ---
 
 # Overview of Assured Open Source Software  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/livestream/docs/samples/livestream-create-input/
 title: Create an input endpoint \u00a0|\u00a0 Live Stream API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:10:33.155809+00:00
+fetched_at: 2026-10-23T10:44:39.296219+00:00
 ---
 
 # Create an input endpoint  |  Live Stream API  |  Google Cloud Documentation

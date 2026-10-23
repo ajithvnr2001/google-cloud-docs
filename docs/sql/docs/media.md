@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/media/
 title: Media: Articles, Videos, and Podcasts \u00a0|\u00a0 Cloud SQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:24.703458+00:00
+fetched_at: 2026-10-23T10:11:54.266354+00:00
 ---
 
 # Media: Articles, Videos, and Podcasts  |  Cloud SQL  |  Google Cloud Documentation
@@ -37,7 +37,7 @@ This page provides links to articles, videos, and podcasts related to Cloud SQL.
   * [Cloud Functions Python overview and data processing example](https://link.medium.com/u28hIVSr14)
   * [Running the Cloud SQL Auth Proxy as a Windows Service](https://medium.com/google-cloud/running-the-cloud-sql-proxy-as-a-windows-service-2b7ef22afec8)
   * [ProxySQL behind A load balancer In Google Cloud](https://blog.pythian.com/proxysql-behind-load-balancer-google-cloud/)
-  * [Horizontally scaling MySQL database backend with Cloud SQL and ProxySQL](https://cloud.google.com/community/tutorials/horizontally-scale-mysql-database-backend-with-google-cloud-sql-and-proxysql)
+  * [Horizontally scaling MySQL database backend with Cloud SQL and ProxySQL](https://github.com/GoogleCloudPlatform/community/blob/master/archived/horizontally-scale-mysql-database-backend-with-google-cloud-sql-and-proxysql/index.md)
 
 
 
@@ -95,6 +95,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

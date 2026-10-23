@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/gcp-tasks/configure-translate-document-task/
 title: Translate - Document task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:08.920683+00:00
+fetched_at: 2026-10-23T13:17:31.101354+00:00
 ---
 
 # Translate - Document task  |  Application Integration  |  Google Cloud Documentation

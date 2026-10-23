@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-support/
 title: Get support \u00a0|\u00a0 Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:12.179453+00:00
+fetched_at: 2026-10-23T13:19:49.816200+00:00
 ---
 
 # Get support  |  Bare Metal Solution  |  Google Cloud Documentation

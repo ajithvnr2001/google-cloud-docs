@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/github/github-configuration/
 title: GitHub configuration \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:32.873491+00:00
+fetched_at: 2026-10-23T13:03:55.476904+00:00
 ---
 
 # GitHub configuration  |  Gemini Enterprise  |  Google Cloud Documentation

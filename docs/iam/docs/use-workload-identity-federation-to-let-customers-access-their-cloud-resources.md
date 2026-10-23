@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/use-workload-identity-federation-to-let-customers-access-their-cloud-resources/
 title: Let customers access their Google Cloud resources from your product or service \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:59.929180+00:00
+fetched_at: 2026-10-23T13:09:08.062317+00:00
 ---
 
 # Let customers access their Google Cloud resources from your product or service  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

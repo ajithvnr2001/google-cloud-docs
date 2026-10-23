@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/workflow-builder/share-chat-agent/
 title: Share a chat agent \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:36.388765+00:00
+fetched_at: 2026-10-23T13:11:08.560310+00:00
 ---
 
 # Share a chat agent  |  Gemini Enterprise  |  Google Cloud Documentation

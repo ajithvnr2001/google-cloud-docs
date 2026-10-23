@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/transcoder/docs/samples/transcoder-create-job-with-animated-overlay/
 title: Create a job with an animated overlay \u00a0|\u00a0 Transcoder API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:26:18.235451+00:00
+fetched_at: 2026-10-23T09:36:04.404362+00:00
 ---
 
 # Create a job with an animated overlay  |  Transcoder API  |  Google Cloud Documentation

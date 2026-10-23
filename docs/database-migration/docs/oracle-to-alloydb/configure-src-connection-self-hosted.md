@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/database-migration/docs/oracle-to-alloydb/configure-src-connection-self-hosted/
 title: Configure network connectivity to self-hosted Oracle sources \u00a0|\u00a0 Database Migration Service for heterogeneous Oracle to AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:31.660792+00:00
+fetched_at: 2026-10-23T13:20:51.807690+00:00
 ---
 
 # Configure network connectivity to self-hosted Oracle sources  |  Database Migration Service for heterogeneous Oracle to AlloyDB for PostgreSQL  |  Google Cloud Documentation

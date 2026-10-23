@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision-ai/docs/how-to/
 title: How-to Guides \u00a0|\u00a0 Agent Platform Vision \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:13.294698+00:00
+fetched_at: 2026-10-23T09:36:53.815107+00:00
 ---
 
 # How-to Guides  |  Agent Platform Vision  |  Google Cloud Documentation

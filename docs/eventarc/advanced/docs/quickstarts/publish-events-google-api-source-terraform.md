@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/advanced/docs/quickstarts/publish-events-google-api-source-terraform/
 title: Quickstart: Publish and receive events by creating a bus and enrollment (Terraform) \u00a0|\u00a0 Eventarc Advanced \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:21.196011+00:00
+fetched_at: 2026-10-23T13:13:40.797332+00:00
 ---
 
 # Quickstart: Publish and receive events by creating a bus and enrollment (Terraform)  |  Eventarc Advanced  |  Google Cloud Documentation

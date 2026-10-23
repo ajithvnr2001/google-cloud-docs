@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-rag-generate-content/
 title: Generate responses using the RAG file \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:34:56.101566+00:00
+fetched_at: 2026-10-23T09:37:09.229132+00:00
 ---
 
 # Generate responses using the RAG file  |  Generative AI on Vertex AI  |  Google Cloud Documentation

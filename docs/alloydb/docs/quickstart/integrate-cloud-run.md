@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/quickstart/integrate-cloud-run/
 title: Quickstart: Connect from Cloud Run \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:55.342936+00:00
+fetched_at: 2026-10-23T10:03:39.811427+00:00
 ---
 
 # Quickstart: Connect from Cloud Run  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Connect from Cloud Run
 
-This quickstart guides you through the process of deploying a sample application on a [Cloud Run](https://docs.cloud.google.com/run/docs) service by using the Google Cloud console and a client application. This sample application connects Cloud Run to AlloyDB for PostgreSQL.
+To connect a serverless application to AlloyDB for PostgreSQL, you can deploy a sample Go web application on a [Cloud Run](https://docs.cloud.google.com/run/docs) service in the Google Cloud console and configure it to communicate with your AlloyDB instance over a private Virtual Private Cloud (VPC) network.
 
 ## Sample application code
 
@@ -328,6 +328,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-gemini-controlled-generation-response-schema-4/
 title: Controlled generation JSON output with enum \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:11.695901+00:00
+fetched_at: 2026-10-23T09:36:56.948519+00:00
 ---
 
 # Controlled generation JSON output with enum  |  Generative AI on Vertex AI  |  Google Cloud Documentation

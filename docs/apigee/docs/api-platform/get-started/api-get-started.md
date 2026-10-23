@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/get-started/api-get-started/
 title: Getting started using the Apigee API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:10.539358+00:00
+fetched_at: 2026-10-23T13:14:08.506616+00:00
 ---
 
 # Getting started using the Apigee API  |  Google Cloud Documentation

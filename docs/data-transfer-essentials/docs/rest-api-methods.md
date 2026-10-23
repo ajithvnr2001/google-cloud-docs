@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-transfer-essentials/docs/rest-api-methods/
 title: REST API methods for Data Transfer Essentials \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:48.761217+00:00
+fetched_at: 2026-10-23T13:20:37.297208+00:00
 ---
 
 # REST API methods for Data Transfer Essentials  |  Google Cloud Documentation

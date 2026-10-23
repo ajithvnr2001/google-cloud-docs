@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/browse-generic-search/
 title: Get personalized browse results \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:17.100172+00:00
+fetched_at: 2026-10-23T13:13:31.929592+00:00
 ---
 
 # Get personalized browse results  |  Agent Search  |  Google Cloud Documentation

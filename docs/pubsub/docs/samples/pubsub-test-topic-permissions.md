@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-test-topic-permissions/
 title: Test permissions for topic \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:04.915784+00:00
+fetched_at: 2026-10-23T10:04:18.126769+00:00
 ---
 
 # Test permissions for topic  |  Pub/Sub  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/run/route-trigger-cloud-memorystore-for-memcached/
 title: Route Cloud Memorystore for Memcached events to Cloud Run \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:45.251675+00:00
+fetched_at: 2026-10-23T13:00:57.544508+00:00
 ---
 
 # Route Cloud Memorystore for Memcached events to Cloud Run  |  Eventarc Standard  |  Google Cloud Documentation

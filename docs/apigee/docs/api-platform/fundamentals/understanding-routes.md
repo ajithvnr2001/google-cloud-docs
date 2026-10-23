@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/understanding-routes/
 title: Understanding routes \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:13.702906+00:00
+fetched_at: 2026-10-23T13:14:42.519746+00:00
 ---
 
 # Understanding routes  |  Apigee  |  Google Cloud Documentation

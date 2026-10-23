@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/livestream/docs/samples/livestream-update-input/
 title: Update an input endpoint \u00a0|\u00a0 Live Stream API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:09:37.011309+00:00
+fetched_at: 2026-10-23T10:34:57.239365+00:00
 ---
 
 # Update an input endpoint  |  Live Stream API  |  Google Cloud Documentation

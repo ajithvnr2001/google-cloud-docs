@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/use-vector-assist/
 title: Use vector assist \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:30:35.308467+00:00
+fetched_at: 2026-10-23T13:08:31.741836+00:00
 ---
 
 # Use vector assist  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -76,9 +76,13 @@ For example, if you want to enable semantic search on a specific column in a tab
 Replace the following parameters:
 
   * `TABLE_NAME`: name of the table you want to use in your vector workload.
+
   * (Optional) `VECTOR_COLUMN_NAME`: column you want to perform a semantic search on. If you only have one column with vectors in your table, `vector_assist` can set this automatically. If there is more than one table with vectors, you must specify which column to use.
+
   * (Optional) `TARGET_RECALL`: target recall you want vector assist to meet. If specified, `vector_assist` experiments with different `ef_search` values, comparing the recall in exact, nearest-neighbor searches. `vector_assist` sets `ef_search` to the value that provides the closest target recall. The default value is `0.95`.
-  * (Optional) `TUNE_INDEX`: boolean that specifies whether vector assist tunes the vector indexes in your workload. The default value is `false`, which means that only the search-related parameters (`ef_search`) are tuned- build time parameters (`m`, `ef_construction`) don't get tuned.
+
+  * (Optional) `TUNE_INDEX`: boolean that specifies whether vector assist tunes the vector indexes in your workload. The default value is `false`, which means that only the search-related parameters (`ef_search`) are tuned—build time parameters (`m`, `ef_construction`) don't get tuned.
+
 
 
 
@@ -142,19 +146,24 @@ You can use vector assist to help you build optimized search queries for your de
     SELECT vector_assist.generate_query(
       spec_id => 'SPEC_ID',
       search_vector => 'SEARCH_VECTOR',
-      top_k => 'TOP_K',
+      top_k => TOP_K,
       target_recall => TARGET_RECALL,
-      filter_expression => 'FILTER_EXPRESSION'
+      filter_expressions => ARRAY['FILTER_EXPRESSION']
     );
     
 
 Replace the following parameters:
 
   * `SPEC_ID`: ID of the spec you want to use.
+
   * `SEARCH_VECTOR`: vector for your search query. For example, `[1, 2, 3]`.
+
   * (Optional) `TOP_K`: number of nearest neighbors to return. If not specified, the default value is `10`.
+
   * (Optional) `TARGET_RECALL`: target recall you want vector assist to meet. If specified, `vector_assist` experiments with different `ef_search` values, comparing the recall in exact, nearest-neighbor searches. `vector_assist` sets `ef_search` to the value that provides the closest target recall.
+
   * (Optional) `FILTER_EXPRESSION`: any filters for the search query. For example, filtering based on other columns.
+
 
 
 
@@ -164,19 +173,21 @@ The output of this function returns text that contains a SQL query. You can run 
 
 ## List your vector specs
 
-If you need to list an individual, or all of your existing, vector spec(s), run the `vector_assist.list_specs` function:
+If you need to list your existing vector specs for a table, run the `vector_assist.list_specs` function, or use `vector_assist.get_spec` to view a single vector spec by ID:
     
     
     SELECT vector_assist.list_specs(
-      spec_id => 'SPEC_ID',
-      table_name => 'TABLE_NAME'
+      table_name => 'TABLE_NAME',
+      column_name => 'COLUMN_NAME'
     );
     
 
 Replace the following parameters:
 
-  * (Optional) `SPEC_ID`: ID of the vector spec you want to use.
-  * `TABLE_NAME`: name of the table you used to define your vector spec.
+  * `TABLE_NAME`: name of the table that you used to define your vector spec.
+
+  * (Optional) `COLUMN_NAME`: name of the vector column in the table. If omitted, `vector_assist.list_specs` returns all vector specs defined on the specified table. To retrieve a specific vector spec by ID, call `SELECT vector_assist.get_spec(spec_id => 'SPEC_ID');`.
+
 
 
 
@@ -191,6 +202,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

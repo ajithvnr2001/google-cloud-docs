@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/livestream/docs/samples/livestream-delete-input/
 title: Delete an input endpoint \u00a0|\u00a0 Live Stream API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:09:37.096755+00:00
+fetched_at: 2026-10-23T10:44:36.758734+00:00
 ---
 
 # Delete an input endpoint  |  Live Stream API  |  Google Cloud Documentation

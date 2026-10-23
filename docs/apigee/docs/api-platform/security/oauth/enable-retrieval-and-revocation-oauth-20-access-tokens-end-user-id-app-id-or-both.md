@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/security/oauth/enable-retrieval-and-revocation-oauth-20-access-tokens-end-user-id-app-id-or-both/
 title: Revoke OAuth 2.0 access tokens by end user ID, app id, or both \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:51.225179+00:00
+fetched_at: 2026-10-23T13:19:14.303271+00:00
 ---
 
 # Revoke OAuth 2.0 access tokens by end user ID, app id, or both  |  Apigee  |  Google Cloud Documentation

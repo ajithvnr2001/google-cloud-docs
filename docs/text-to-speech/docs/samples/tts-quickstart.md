@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/text-to-speech/docs/samples/tts-quickstart/
 title: Synthesize from a string of text \u00a0|\u00a0 Cloud Text-to-Speech \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:39:23.842831+00:00
+fetched_at: 2026-10-23T08:36:45.368801+00:00
 ---
 
 # Synthesize from a string of text  |  Cloud Text-to-Speech  |  Google Cloud Documentation

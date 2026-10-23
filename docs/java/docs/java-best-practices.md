@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/java/docs/java-best-practices/
 title: Java best practices \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:29.390006+00:00
+fetched_at: 2026-10-23T13:09:56.676587+00:00
 ---
 
 # Java best practices  |  Google Cloud Documentation

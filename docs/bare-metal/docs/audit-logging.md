@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/audit-logging/
 title: Bare Metal Solution audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:14.753851+00:00
+fetched_at: 2026-10-23T13:19:04.063369+00:00
 ---
 
 # Bare Metal Solution audit logging  |  Google Cloud Documentation

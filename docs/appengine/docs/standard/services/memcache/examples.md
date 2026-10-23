@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/memcache/examples/
 title: Memcache Examples \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:03.789469+00:00
+fetched_at: 2026-10-23T13:17:24.373415+00:00
 ---
 
 # Memcache Examples  |  App Engine standard environment  |  Google Cloud Documentation

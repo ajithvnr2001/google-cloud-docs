@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/vulnerabilities/
 title: Vulnerability fixes \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:13:41.404635+00:00
+fetched_at: 2026-10-23T10:46:55.949970+00:00
 ---
 
 # Vulnerability fixes  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -62,10 +62,7 @@ High Severity |  [CVE-2026-97687](https://cve.mitre.org/cgi-bin/cvename.cgi?name
 Medium Severity |  [CVE-2026-97688](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-97688), [CVE-2026-56405](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56405), [CVE-2026-56412](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56412), [CVE-2026-50219](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-50219), [CVE-2026-56403](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56403), [CVE-2026-56404](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56404), [CVE-2026-34743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34743)  
 [1.36.200-gke.118](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/release-notes#October_21_2026):  
 Low Severity | N/A  
-  
-### 1.36
-
-| [1.36.100-gke.144](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/release-notes#October_07_2026):  
+[1.36.100-gke.144](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/release-notes#October_07_2026):  
 Critical Severity |  [CVE-2019-8457](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-8457), [CVE-2026-39832](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39832), [CVE-2026-39831](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39831), [CVE-2026-39830](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39830), [CVE-2026-46595](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-46595), [CVE-2026-39834](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39834), [CVE-2026-42508](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42508), [CVE-2026-39833](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39833), [CVE-2023-23914](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23914), [CVE-2025-14087](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-14087), [CVE-2026-33845](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33845), [CVE-2026-42010](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42010)  
 [1.36.100-gke.144](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/release-notes#October_07_2026):  
 High Severity |  [CVE-2026-14456](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-14456), [CVE-2025-6297](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-6297), [CVE-2026-39829](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-39829), [CVE-2026-46597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-46597), [CVE-2024-2961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2961), [CVE-2023-4911](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-4911), [CVE-2022-43551](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43551), [CVE-2026-5773](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-5773), [CVE-2022-42916](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42916), [CVE-2026-40355](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-40355), [CVE-2026-27135](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-27135), [CVE-2026-5260](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-5260), [CVE-2026-42011](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42011), [CVE-2024-8176](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-8176), [CVE-2025-13601](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-13601), [CVE-2026-33846](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33846), [CVE-2026-3833](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-3833), [CVE-2026-42013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42013), [CVE-2026-42009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42009), [CVE-2026-42012](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42012), [CVE-2026-40356](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-40356), [CVE-2025-68973](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-68973)  
@@ -151,7 +148,15 @@ Low Severity |  [CVE-2025-4948](https://cve.mitre.org/cgi-bin/cvename.cgi?name=C
   
 ### 1.34
 
-| [1.34.900-gke.135](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/release-notes#September_17_2026):  
+| [1.34.1000-gke.111](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/release-notes#October_22_2026):  
+Critical Severity | N/A  
+[1.34.1000-gke.111](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/release-notes#October_22_2026):  
+High Severity |  [CVE-2026-76957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-76957), [CVE-2026-34986](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34986)  
+[1.34.1000-gke.111](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/release-notes#October_22_2026):  
+Medium Severity | [CVE-2026-56404](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56404), [CVE-2026-56405](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56405), [CVE-2026-56403](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56403), [CVE-2026-50219](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-50219), [CVE-2026-56412](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56412)  
+[1.34.1000-gke.111](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/release-notes#October_22_2026):  
+Low Severity | N/A  
+[1.34.900-gke.135](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/release-notes#September_17_2026):  
 Critical Severity | N/A  
 [1.34.900-gke.135](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/release-notes#September_17_2026):  
 High Severity | [CVE-2023-5088](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5088), [CVE-2024-7409](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7409), [CVE-2023-3354](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3354)  
@@ -663,6 +668,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

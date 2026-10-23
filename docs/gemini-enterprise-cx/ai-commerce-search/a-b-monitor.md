@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/ai-commerce-search/a-b-monitor/
 title: Monitor and analyze A/B experiments \u00a0|\u00a0 AI Commerce Search in Gemini Enterprise for Customer Experience \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:50.434009+00:00
+fetched_at: 2026-10-23T13:13:00.715500+00:00
 ---
 
 # Monitor and analyze A/B experiments  |  AI Commerce Search in Gemini Enterprise for Customer Experience  |  Google Cloud Documentation

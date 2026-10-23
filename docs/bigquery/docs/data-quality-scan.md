@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/data-quality-scan/
 title: Scan for data quality issues \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:46:38.256666+00:00
+fetched_at: 2026-10-23T12:51:11.210727+00:00
 ---
 
 # Scan for data quality issues  |  BigQuery  |  Google Cloud Documentation
@@ -21,11 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Scan for data quality issues
 
-This document explains how to use BigQuery and Knowledge Catalog together to ensure that data meets your quality expectations. Knowledge Catalog automatic data quality lets you define and measure the quality of the data in your BigQuery tables. You can automate the scanning of data, validate data against defined rules, and log alerts if your data doesn't meet quality requirements.
+Knowledge Catalog automatic data quality lets you define and measure data quality in your BigQuery tables. You can automate data scans, validate data against defined rules, and log alerts if your data doesn't meet quality requirements.
 
-For more information about automatic data quality, see the [Auto data quality overview](https://docs.cloud.google.com/knowledge-catalog/docs/auto-data-quality-overview).
-
-**Tip:** The steps in this document show how to manage data quality scans across your project. You can also create and manage data quality scans when working with a specific table. For more information, see the Manage data quality scans for a specific table section of this document.
+You can manage data quality scans across your project, or manage data quality scans for a specific table. For more information about automatic data quality, see [Auto data quality overview](https://docs.cloud.google.com/knowledge-catalog/docs/auto-data-quality-overview).
 
 ## Before you begin
 
@@ -2212,6 +2210,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

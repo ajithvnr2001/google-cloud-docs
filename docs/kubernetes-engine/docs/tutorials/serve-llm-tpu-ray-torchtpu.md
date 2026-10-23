@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-llm-tpu-ray-torchtpu/
 title: Serve LLMs on multi-host TPUs with Ray and TorchTPU \u00a0|\u00a0 GKE AI/ML \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-20T19:30:34.161109+00:00
+fetched_at: 2026-10-23T10:25:44.100098+00:00
 ---
 
 # Serve LLMs on multi-host TPUs with Ray and TorchTPU  |  GKE AI/ML  |  Google Cloud Documentation
@@ -161,10 +161,16 @@ Build a container image that installs the `ray[default,serve]` package on top of
          
          FROM vllm/vllm-torchtpu:v0.29.0
          
-         # Install wget for KubeRay health probes and Ray Serve on top of the prebuilt vLLM-TorchTPU image
+         ENV HF_HOME=/dev/shm/huggingface
+         ENV RAY_SERVE_DEFAULT_HTTP_HOST=0.0.0.0
+         
+         # Install wget for KubeRay health probes and pin Ray Serve and transformers
+         # versions compatible with vLLM 0.29.0 and multi-host TPUs.
          RUN apt-get update && apt-get install -y --no-install-recommends wget \
              && rm -rf /var/lib/apt/lists/* \
-             && pip install --no-cache-dir "ray[default,serve]==2.58.0"
+             && pip install --no-cache-dir \
+                "ray[default,serve] @ https://s3-us-west-2.amazonaws.com/ray-wheels/master/6b2b414bb7a5b4e2705ed9f4fdab9787b92f3b08/ray-3.0.0.dev0-cp312-cp312-manylinux2014_x86_64.whl" \
+                "transformers>=5.18.0"
 
 Multi-host TPU serving with Ray Serve LLM requires Ray version 2.56.0 or later on TPU Trillium (v6e) and Ray version 2.58.0 or later for per-chiplet scheduling on Ironwood (TPU7x).
 
@@ -1078,6 +1084,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

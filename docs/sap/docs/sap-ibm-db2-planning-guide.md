@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sap/docs/sap-ibm-db2-planning-guide/
 title: IBM Db2 for SAP planning guide \u00a0|\u00a0 SAP on Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:12:39.298831+00:00
+fetched_at: 2026-10-23T10:01:49.051653+00:00
 ---
 
 # IBM Db2 for SAP planning guide  |  SAP on Google Cloud  |  Google Cloud Documentation
@@ -115,11 +115,11 @@ In many ways, running IBM Db2 with SAP on Google Cloud is similar to running it 
 
 For more information, see the appropriate [installation guide](https://help.sap.com/viewer/30839dda13b2485889466316ce5b39e9/CURRENT_VERSION/en-US/c8ed609927fa4e45988200b153ac63d1.html) for your SAP system with IBM Db2.
 
-### VM configuration
+### Compute instance configuration
 
 IBM Db2 is certified to run on all Compute Engine machine types, including custom types. In most cases, use a machine type with two or more virtual CPUs.
 
-For information about different Compute Engine machine types and their use cases, see [Machine Types](https://docs.cloud.google.com/compute/docs/machine-types) in the Compute Engine documentation.
+If you run IBM Db2 on the same Compute Engine instance as SAP NetWeaver or Application Server Central Services (ASCS), then you must use a machine type that is certified by SAP to run SAP NetWeaver. For information about the Compute Engine machine types that SAP has certified for use with SAP NetWeaver, go to [Certified solutions and machine types](https://docs.cloud.google.com/sap/docs/sap-certifications#certified-machine-types-and-solutions) and in the **Certified SAP solution** list, select **SAP NetWeaver**.
 
 #### CPU configuration
 
@@ -591,6 +591,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/service-directory/docs/samples/servicedirectory-resolve-service/
 title: Resolve service \u00a0|\u00a0 Service Directory \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:00.605723+00:00
+fetched_at: 2026-10-23T11:32:28.136133+00:00
 ---
 
 # Resolve service  |  Service Directory  |  Google Cloud Documentation

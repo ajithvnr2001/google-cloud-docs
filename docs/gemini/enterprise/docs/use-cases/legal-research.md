@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/use-cases/legal-research/
 title: Conduct legal research \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:41.240935+00:00
+fetched_at: 2026-10-23T13:11:56.242585+00:00
 ---
 
 # Conduct legal research  |  Gemini Enterprise  |  Google Cloud Documentation

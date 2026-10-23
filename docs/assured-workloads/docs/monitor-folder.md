@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/monitor-folder/
 title: Monitor an Assured Workloads folder for violations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:07.830815+00:00
+fetched_at: 2026-10-23T13:20:31.863139+00:00
 ---
 
 # Monitor an Assured Workloads folder for violations  |  Google Cloud Documentation

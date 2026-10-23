@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/build-policy-as-code-data-quality-workflow/
 title: Build a policy-as-code data quality workflow \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:01:53.571102+00:00
+fetched_at: 2026-10-23T12:50:52.648049+00:00
 ---
 
 # Build a policy-as-code data quality workflow  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -44,7 +44,7 @@ Before you begin, make sure you have a Google Cloud project with billing enabled
 
 ## Prepare your environment
 
-The following steps use [Cloud Shell](https://cloud.google.com/cloud-shell/), a command-line environment running in the cloud.
+The following steps use [Cloud Shell](https://docs.cloud.google.com/shell/docs), a command-line environment running in the cloud.
 
   1. In the Google Cloud console, click **Activate Cloud Shell** in the top right toolbar. The environment takes a few moments to provision and connect.
 
@@ -257,56 +257,74 @@ In your interactive Antigravity CLI session, enter the following structured prom
 The agent will analyze the JSON file and return a structured plan like the following:
     
     
-    Automated Data Quality Rule Configuration Plan                                                                                                          
-                                                                                                                                                               
-      Google Cloud Knowledge Catalog (Dataplex Data Quality)                                                                                                   
-      ──────                                                                                                                                                   
-      ## Executive Summary                                                                                                                                     
-      This analytical planning document outlines a step-by-step strategy for configuring automated data quality (DQ) rules in Google Cloud Knowledge Catalog (formerly Dataplex Data Quality) based on profiling statistics.
-      The dataset contains 26,489 rows representing GA4 event logs. Based on statistical metrics (null ratios, distinct value distributions, and data types), candidate columns are mapped to appropriate expectation rules.
-      ──────                                                                                                                                                   
-      ## 1. Data Profile Overview & Statistical Highlights                                                                                                     
-                                                                                                                                                               
+    Automated Data Quality Rule Configuration Plan
+    
+      Google Cloud Knowledge Catalog (Dataplex Data Quality)
+      ──────
+      ## Executive Summary
+      This analytical planning document outlines a step-by-step strategy for
+      configuring automated data quality (DQ) rules in Google Cloud
+      Knowledge Catalog (formerly Dataplex Data Quality) based on profiling
+      statistics.
+      The dataset contains 26,489 rows representing GA4 event logs. Based on
+      statistical metrics (null ratios, distinct value distributions, and data
+      types), candidate columns are mapped to appropriate expectation rules.
+      ──────
+      ## 1. Data Profile Overview & Statistical Highlights
+    
        Column Name     │ Data Type │ Null Ratio     │ Distinct Count │ Key Value Range / Categories
       ─────────────────┼───────────┼────────────────┼────────────────┼──────────────────────────────────────────────────
        event_date      │ STRING    │ 0.0% (0)       │ 1 (3.78e-05)   │ "20210131" (100%)
        event_timestamp │ INTEGER   │ 0.0% (0)       │ ~16,539 (0.62) │ Min: 1612051200657906, Max: 1612137595412363
        event_name      │ STRING    │ 0.0% (0)       │ 16 (0.0006)    │ page_view (35.8%), user_engagement (18.9%), etc.
-       user_pseudo_id  │ STRING    │ 0.0% (0)       │ ~2,545 (0.09)  │ 18–21 characters string identifiers
+       user_pseudo_id  │ STRING    │ 0.0% (0)       │ ~2,545 (0.09)  │ 18-21 characters string identifiers
        user_id         │ STRING    │ 100.0% (1.0)   │ 0 (0.0)        │ Entirely NULL
        device_category │ STRING    │ 0.0% (0)       │ 3 (0.0001)     │ desktop (57.5%), mobile (40.1%), tablet (2.4%)
        ...             │ ...       │ ...            │ ...            │ ...
-      ──────                                                                                                                                                   
-      ## 2. Rule Mapping Strategy & Analytical Justifications                                                                                                  
-                                                                                                                                                               
-      ### Step 1: Nullability Rules (nonNullExpectation)                                                                                                       
-      Propose nonNullExpectation for mandatory columns where the data profile demonstrates 0% null values.                                                     
-      • user_pseudo_id, event_timestamp, event_name, event_date, stream_id, platform, device_category (Metric Justification: nullRatio is 0.0%)
-                                                                                                                                                               
-      │ [!NOTE] Exclusions:                                                                                                                    
+      ──────
+      ## 2. Rule Mapping Strategy & Analytical Justifications
+    
+      ### Step 1: Nullability Rules (nonNullExpectation)
+      Propose nonNullExpectation for mandatory columns where the data profile
+      demonstrates 0% null values.
+      • user_pseudo_id, event_timestamp, event_name, event_date, stream_id,
+        platform, device_category (Metric Justification: nullRatio is 0.0%)
+    
+      │ [!NOTE] Exclusions:
       │ • user_id: Has a nullRatio of 100.0% (unauthenticated traffic).
-      │ • device_language: Has a nullRatio of 37.53%.                                                                                                          
-      ──────                                                                                                                                                   
-      ### Step 2: Categorical Value Set Validation (setExpectation)                                                                                            
-      Propose setExpectation for columns with a highly limited, stable set of categorical domain values.                                                       
-      • device_category: Distinct count is exactly 3. Allowed set: ['desktop', 'mobile', 'tablet']
-      • platform: Distinct count is 1. Allowed set expanded to: ['WEB', 'ANDROID', 'IOS'] to avoid over-fitting.
-      • geo_continent: Distinct count is 6. Allowed set: ['Americas', 'Asia', 'Europe', 'Africa', 'Oceania', 'Antarctica', '(not set)']
-                                                                                                                                                               
-      ──────                                                                                                                                                   
-      ### Step 3: Numeric & Timestamp Boundary Validation (rangeExpectation)                                                                                   
-      Propose rangeExpectation for numeric columns with consistent and predictable value boundaries.                                                           
-      • event_timestamp: rangeExpectation requiring event_timestamp > 0 (avoid dynamic microsecond range hardcoding)
-      • stream_id: rangeExpectation requiring positive integer stream IDs (stream_id > 0)
-                                                                                                                                                               
-      ──────                                                                                                                                                   
-      ## 3. Risk Warning: Volatile Metrics & Production False Positives                                                                                        
-      │ [!WARNING] Volatile Metrics Flagged for Risk Mitigation:                                                                                                      
-      1. Hardcoded Total Row Count (rowCount = 26,489) -> Daily event volume fluctuates. Use dynamic volume thresholds.
-      2. Hardcoded Partition Date (event_date = '20210131') -> Breaks on future runs. Validate against YYYYMMDD regex patterns.
-      3. Exact Timestamp Range Bounds -> Enforcing these microsecond limits on incoming live pipelines will reject all future data.
-      4. Single-Value Domain Restrictions -> Single profile sample might lack active streams. Set sets according to enterprise schema.
-      
+      │ • device_language: Has a nullRatio of 37.53%.
+      ──────
+      ### Step 2: Categorical Value Set Validation (setExpectation)
+      Propose setExpectation for columns with a highly limited, stable set of
+      categorical domain values.
+      • device_category: Distinct count is exactly 3. Allowed set:
+        ['desktop', 'mobile', 'tablet']
+      • platform: Distinct count is 1. Allowed set expanded to:
+        ['WEB', 'ANDROID', 'IOS'] to avoid over-fitting.
+      • geo_continent: Distinct count is 6. Allowed set:
+        ['Americas', 'Asia', 'Europe', 'Africa', 'Oceania', 'Antarctica', '(not set)']
+    
+      ──────
+      ### Step 3: Numeric & Timestamp Boundary Validation (rangeExpectation)
+      Propose rangeExpectation for numeric columns with consistent and predictable
+      value boundaries.
+      • event_timestamp: rangeExpectation requiring event_timestamp > 0 (avoid
+        dynamic microsecond range hardcoding)
+      • stream_id: rangeExpectation requiring positive integer stream IDs
+        (stream_id > 0)
+    
+      ──────
+      ## 3. Risk Warning: Volatile Metrics & Production False Positives
+      │ [!WARNING] Volatile Metrics Flagged for Risk Mitigation:
+      1. Hardcoded Total Row Count (rowCount = 26,489) -> Daily event volume
+         fluctuates. Use dynamic volume thresholds.
+      2. Hardcoded Partition Date (event_date = '20210131') -> Breaks on future
+         runs. Validate against YYYYMMDD regex patterns.
+      3. Exact Timestamp Range Bounds -> Enforcing these microsecond limits on
+         incoming live pipelines will reject all future data.
+      4. Single-Value Domain Restrictions -> Single profile sample might lack
+         active streams. Set sets according to enterprise schema.
+    
       ──────
       ## Summary Table of Proposed Rules
       
@@ -467,7 +485,7 @@ By pairing an Antigravity CLI agent with Knowledge Catalog, you establish a veri
   * Optimize your scans with filters and sampling to [reduce costs](https://docs.cloud.google.com/knowledge-catalog/docs/auto-data-quality-overview).
   * Automate your infrastructure by [provisioning Knowledge Catalog resources with Terraform](https://docs.cloud.google.com/knowledge-catalog/docs/terraform) to manage your data quality specifications and metadata enrichment at scale.
   * Learn more using the [Antigravity CLI quickstart](https://antigravity.google/product/antigravity-cli).
-  * Try other Knowledge Catalog [use cases](https://docs.cloud.google.com/knowledge-catalog/docs/use-cases)
+  * Try other Knowledge Catalog [use cases](https://docs.cloud.google.com/knowledge-catalog/docs/use-cases). 
 
 
 
@@ -475,6 +493,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

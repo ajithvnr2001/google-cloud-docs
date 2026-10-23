@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/sources-oracle/
 title: Stream data from Oracle databases \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-23T05:43:47.922778+00:00
+fetched_at: 2026-10-23T10:03:30.594272+00:00
 ---
 
 # Stream data from Oracle databases  |  Datastream  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Stream data from Oracle databases Stay organized with collections  Save and categorize content based on your preferences. 
 
-Datastream lets you stream historical data and ongoing changes from a source Oracle database for real-time analytics and database replication.
+Datastream lets you stream historical data and ongoing changes from a source Oracle database into your destination for real-time analytics and database synchronization.
 
 Before you configure an Oracle source, review the replication behavior, supported versions and database types, database setup, best practices, and known limitations in Datastream.
 

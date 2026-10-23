@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/simulator/
 title: Use the Agent Assist simulator \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:43.721348+00:00
+fetched_at: 2026-10-23T13:13:05.057436+00:00
 ---
 
 # Use the Agent Assist simulator  |  Google Cloud Documentation

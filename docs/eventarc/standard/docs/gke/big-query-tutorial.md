@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/gke/big-query-tutorial/
 title: Build a BigQuery processing pipeline for GKE with Eventarc \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:05.483980+00:00
+fetched_at: 2026-10-23T13:00:32.031022+00:00
 ---
 
 # Build a BigQuery processing pipeline for GKE with Eventarc  |  Eventarc Standard  |  Google Cloud Documentation

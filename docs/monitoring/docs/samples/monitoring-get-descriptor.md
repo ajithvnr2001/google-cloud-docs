@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/monitoring/docs/samples/monitoring-get-descriptor/
 title: Get a metric descriptor \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:36:53.471728+00:00
+fetched_at: 2026-10-23T11:00:40.126301+00:00
 ---
 
 # Get a metric descriptor  |  Cloud Monitoring  |  Google Cloud Documentation
@@ -220,7 +220,7 @@ To authenticate to Monitoring, set up Application Default Credentials. For more 
     # Example metric type
     # metric_type = "custom.googleapis.com/my_metric"
     
-    client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-dashboard-v1/latest/Google-Cloud-Monitoring.html).[metric_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
+    client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html).[metric_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
     metric_name = client.[metric_descriptor_path](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3-MetricService-Paths.html) project:           project_id,
                                                 metric_descriptor: metric_type
     

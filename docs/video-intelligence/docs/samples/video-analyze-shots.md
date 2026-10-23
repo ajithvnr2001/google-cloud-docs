@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-intelligence/docs/samples/video-analyze-shots/
 title: Detect shot changes in a local file \u00a0|\u00a0 Video Intelligence API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:54:39.967663+00:00
+fetched_at: 2026-10-23T09:37:47.496999+00:00
 ---
 
 # Detect shot changes in a local file  |  Video Intelligence API  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-a4xmax-instance/
 title: Create an AI-optimized instance with A4X Max \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:53.467961+00:00
+fetched_at: 2026-10-23T13:16:23.059022+00:00
 ---
 
 # Create an AI-optimized instance with A4X Max  |  AI Hypercomputer  |  Google Cloud Documentation

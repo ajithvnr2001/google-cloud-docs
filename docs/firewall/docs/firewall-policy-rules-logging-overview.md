@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/firewall-policy-rules-logging-overview/
 title: Firewall policy rules logging overview \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:46.987749+00:00
+fetched_at: 2026-10-23T13:12:33.207882+00:00
 ---
 
 # Firewall policy rules logging overview  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/ai-commerce-search/authentication/
 title: Authenticate to AI Commerce Search \u00a0|\u00a0 AI Commerce Search in Gemini Enterprise for Customer Experience \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:50.087246+00:00
+fetched_at: 2026-10-23T13:13:39.405250+00:00
 ---
 
 # Authenticate to AI Commerce Search  |  AI Commerce Search in Gemini Enterprise for Customer Experience  |  Google Cloud Documentation

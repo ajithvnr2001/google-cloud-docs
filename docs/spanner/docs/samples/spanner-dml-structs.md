@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-dml-structs/
 title: DML update data with STRUCT \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:26.298325+00:00
+fetched_at: 2026-10-23T10:09:28.728216+00:00
 ---
 
 # DML update data with STRUCT  |  Spanner  |  Google Cloud Documentation

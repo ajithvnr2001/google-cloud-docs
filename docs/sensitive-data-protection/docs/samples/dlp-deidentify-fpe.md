@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-deidentify-fpe/
 title: Format-preserving encryption (FPE) \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:49:52.681361+00:00
+fetched_at: 2026-10-23T10:52:56.651444+00:00
 ---
 
 # Format-preserving encryption (FPE)  |  Sensitive Data Protection  |  Google Cloud Documentation

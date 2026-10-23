@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/faq/
 title: Cloud SQL for PostgreSQL FAQ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:32.393239+00:00
+fetched_at: 2026-10-23T10:11:58.945868+00:00
 ---
 
 # Cloud SQL for PostgreSQL FAQ  |  Google Cloud Documentation
@@ -177,14 +177,14 @@ How is encryption managed for data at rest?
 
 Your data is encrypted using the 256-bit [Advanced Encryption Standard](https://wikipedia.org/wiki/Advanced_Encryption_Standard) (AES-256), or better, with symmetric keys: that is, the same key is used to encrypt the data when it is stored, and to decrypt it when it is used. These data keys are themselves encrypted using a key stored in a secure keystore, and changed regularly.
 
-For more details, see [Encryption at Rest in Google Cloud](https://cloud.google.com/security/encryption/default-encryption/).
+For more details, see [Encryption at Rest in Google Cloud](https://docs.cloud.google.com/docs/security/encryption/default-encryption).
 
 How is encryption managed for data in transit?
     
 
 Google encrypts and authenticates all data in transit at one or more network layers when data moves outside physical boundaries not controlled by Google or on behalf of Google. Data in transit inside a physical boundary controlled by or on behalf of Google is generally authenticated but might not be encrypted by default. If you connect to an instance using its public IP address, use SSL/TLS certificates, so the data is secure during transmission. You can choose which additional security measures to apply based on your threat model. For example, you can [configure SSL](https://docs.cloud.google.com/sql/docs/postgres/configure-ssl-instance) for intra-zone connections to Cloud SQL.
 
-For more details, see [Encryption in Transit in Google Cloud](https://cloud.google.com/security/encryption-in-transit/).
+For more details, see [Encryption in Transit in Google Cloud](https://docs.cloud.google.com/docs/security/encryption-in-transit).
 
 Back to top
 
@@ -343,7 +343,7 @@ Can my App Engine application in the US access my Cloud SQL instance in the EU (
 If you are connecting to a Cloud SQL instance, your App Engine application does not need to be in the same region. However, a larger distance between your Cloud SQL instance and your App Engine application causes greater latency for connections to the database.
 
 Which Google Cloud database service is right for me?
-    This depends on the requirements of your application. Google Cloud offers a number of options for storing, managing and retrieving your data. For more information, see [Google Cloud databases](https://cloud.google.com/products/databases/). 
+    This depends on the requirements of your application. Google Cloud offers a number of options for storing, managing and retrieving your data. For more information, see [Google Cloud databases](https://cloud.google.com/products/databases). 
 Do I need to install a local database server to use the App Engine Development Server?
     No. You can configure App Engine to use either Cloud SQL or a locally installed database server when running on the development server. 
 What languages can I use to access my instance?
@@ -372,6 +372,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/create-run-job-storage/
 title: Create and run a job that uses storage volumes \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:32.121194+00:00
+fetched_at: 2026-10-23T13:18:31.510018+00:00
 ---
 
 # Create and run a job that uses storage volumes  |  Batch  |  Google Cloud Documentation

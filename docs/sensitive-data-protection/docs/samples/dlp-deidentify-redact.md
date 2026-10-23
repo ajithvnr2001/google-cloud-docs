@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-deidentify-redact/
 title: De-identify data: Redacting with matched input values \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:50:31.731567+00:00
+fetched_at: 2026-10-23T11:33:39.715774+00:00
 ---
 
 # De-identify data: Redacting with matched input values  |  Sensitive Data Protection  |  Google Cloud Documentation

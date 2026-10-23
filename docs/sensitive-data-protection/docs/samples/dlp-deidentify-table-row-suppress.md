@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-deidentify-table-row-suppress/
 title: De-identify table data: Suppress a row based on the content of a column \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:38:45.271086+00:00
+fetched_at: 2026-10-23T10:52:13.253514+00:00
 ---
 
 # De-identify table data: Suppress a row based on the content of a column  |  Sensitive Data Protection  |  Google Cloud Documentation

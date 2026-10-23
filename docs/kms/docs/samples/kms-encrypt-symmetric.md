@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kms/docs/samples/kms-encrypt-symmetric/
 title: Encrypt with a symmetric key \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:46:57.087113+00:00
+fetched_at: 2026-10-23T10:32:50.765750+00:00
 ---
 
 # Encrypt with a symmetric key  |  Cloud Key Management Service  |  Google Cloud Documentation

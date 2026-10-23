@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/manage-private-connectivity-configurations/
 title: Manage private connectivity configurations \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:33:18.046323+00:00
+fetched_at: 2026-10-23T10:03:42.451468+00:00
 ---
 
 # Manage private connectivity configurations  |  Datastream  |  Google Cloud Documentation
@@ -21,13 +21,9 @@ Send feedback
 
 #  Manage private connectivity configurations Stay organized with collections  Save and categorize content based on your preferences. 
 
-In this page, you learn how to use the Datastream API to create, retrieve information about, and delete private connectivity configurations.
+You can use the Datastream API to create, retrieve, list, and delete private connectivity configurations. These configurations let Datastream communicate privately with data sources in Google Cloud or external sources connected through Cloud VPN or Cloud Interconnect. You can establish private connectivity using Virtual Private Cloud (VPC) Network Peering or a Private Service Connect interface.
 
-Private connectivity configurations contain information that Datastream uses to communicate with a data source over a private network (internally within Google Cloud, or with external sources connected over VPN or Interconnect). This communication happens through a Private Service Connect interface or a Virtual Private Cloud (VPC) peering connection.
-
-To use a private connection, any streams and connection profiles that use a private connectivity configuration must be in the same region.
-
-Recommended: Run the source database in a subnet in the same region as the private connectivity configuration. Otherwise, you'll have to manually add a firewall rule that enables communication between the regions.
+To use a private connection, your streams, connection profiles, and private connectivity configuration must be in the same region. To avoid manually adding cross-region firewall rules, run your source database in a subnet in that region.
 
 ## Create a private connectivity configuration using VPC peering
 
@@ -258,6 +254,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

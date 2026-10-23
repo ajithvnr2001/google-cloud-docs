@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-dataflow-txread/
 title: Dataflow read with transaction \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:32.384875+00:00
+fetched_at: 2026-10-23T10:31:21.271774+00:00
 ---
 
 # Dataflow read with transaction  |  Spanner  |  Google Cloud Documentation

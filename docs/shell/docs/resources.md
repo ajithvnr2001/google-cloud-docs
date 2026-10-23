@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/shell/docs/resources/
 title: Resources \u00a0|\u00a0 Cloud Shell \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:53:48.134472+00:00
+fetched_at: 2026-10-23T09:46:41.403792+00:00
 ---
 
 # Resources  |  Cloud Shell  |  Google Cloud Documentation

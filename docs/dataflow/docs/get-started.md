@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/get-started/
 title: Get started with Dataflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:18.305901+00:00
+fetched_at: 2026-10-23T13:20:25.623354+00:00
 ---
 
 # Get started with Dataflow  |  Google Cloud Documentation

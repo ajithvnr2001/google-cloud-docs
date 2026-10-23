@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/securing/gen-org-policy/
 title: Restrict new deployments by product version \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:04.399071+00:00
+fetched_at: 2026-10-23T13:10:58.641423+00:00
 ---
 
 # Restrict new deployments by product version  |  Cloud Run functions  |  Google Cloud Documentation

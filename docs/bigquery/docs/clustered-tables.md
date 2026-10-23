@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/clustered-tables/
 title: Introduction to clustered tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:00:05.597452+00:00
+fetched_at: 2026-10-23T12:55:32.921037+00:00
 ---
 
 # Introduction to clustered tables  |  BigQuery  |  Google Cloud Documentation
@@ -21,7 +21,11 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Introduction to clustered tables
 
-Clustered tables in BigQuery are tables that have a user-defined column sort order using _clustered columns_. Clustered tables can improve query performance and reduce query costs.
+Clustered tables in BigQuery sort data in storage blocks based on the values in user-defined clustered columns. Clustering can improve query performance and reduce costs, because queries that filter or aggregate by clustered columns scan only the relevant blocks, not the entire table or partition.
+
+Because the number of blocks to scan isn't known until a query runs, you don't receive an accurate cost estimate before execution. Clustering also doesn't guarantee a reduction in the slots required to query a table.
+
+## How clustering works
 
 In BigQuery, a _clustered column_ is a user-defined table property that sorts [storage blocks](https://docs.cloud.google.com/bigquery/docs/storage_overview#storage_layout) based on the values in the clustered columns. The storage blocks are adaptively sized based on the size of the table. Colocation occurs at the level of the storage blocks, and not at the level of individual rows; for more information on colocation in this context, see [Clustering](https://docs.cloud.google.com/bigquery/docs/migration/schema-data-overview#clustering).
 
@@ -30,10 +34,6 @@ A clustered table maintains the sort properties in the context of each operation
 When you cluster a table using multiple columns, the column order determines which columns take precedence when BigQuery sorts and groups the data into storage blocks, as seen in the following example. Table 1 shows the logical storage block layout of an unclustered table. In comparison, table 2 is only clustered by the `Country` column, whereas table 3 is clustered by multiple columns, `Country` and `Status`.
 
 ![BigQuery sorts data in clustered tables to improve query performance.](https://docs.cloud.google.com/static/bigquery/images/clustering-tables.png)
-
-When you query a clustered table, you don't receive an accurate query cost estimate before query execution because the number of storage blocks to be scanned is not known before query execution. The final cost is determined after query execution is complete and is based on the specific storage blocks that were scanned.
-
-Clustering doesn't guarantee a reduction in the slots required to query a table.
 
 ## When to use clustering
 
@@ -184,6 +184,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

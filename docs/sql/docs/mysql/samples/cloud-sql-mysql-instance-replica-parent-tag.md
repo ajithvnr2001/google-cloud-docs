@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/samples/cloud-sql-mysql-instance-replica-parent-tag/
 title: Create a replica Cloud SQL for MySQL instance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:37.539816+00:00
+fetched_at: 2026-10-23T10:11:36.333913+00:00
 ---
 
 # Create a replica Cloud SQL for MySQL instance  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/storage-intelligence/findings/optimize-coldline-archive-class-costs/
 title: Optimize usage for Coldline and Archive storage data \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:30:44.938899+00:00
+fetched_at: 2026-10-23T13:08:28.459550+00:00
 ---
 
 # Optimize usage for Coldline and Archive storage data  |  Cloud Storage  |  Google Cloud Documentation
@@ -41,7 +41,7 @@ Scenario | Recommended action | Details
 ---|---|---  
 Ongoing or persistent spikes in operations | Enable [Autoclass](https://docs.cloud.google.com/storage/docs/autoclass) | If you experience ongoing or persistent spikes in operations, enable Autoclass to automatically move frequently accessed objects to Standard storage. This action helps reduce retrieval fees and stabilize costs. **Note:** Enabling Autoclass incurs charges for Class A operations associated with object transitions. For details, see [Cloud Storage Pricing](https://docs.cloud.google.com/storage/pricing).  
 Accidental or unintended data scanning | Use [managed folders](https://docs.cloud.google.com/storage/docs/managed-folders) to narrow permissions | If overly permissive access, such as a misconfigured script, causes unexpected operations across buckets, use managed folders to apply granular access controls. Grant only the necessary permissions for your workloads.  
-Spikes in operations on a small subset of objects | Investigate with Storage Insights datasets | If spikes occur on a small subset of objects, export metadata to BigQuery to identify specific objects and operations that are contributing to the spike. For example, you can identify the most frequently accessed objects within a specific prefix. **Note:** Exporting data to BigQuery incurs costs. For details, see [BigQuery Pricing](https://cloud.google.com/bigquery/pricing).  
+Spikes in operations on a small subset of objects | Investigate with Storage Insights datasets | If spikes occur on a small subset of objects, export metadata to BigQuery to identify specific objects and operations that are contributing to the spike. For example, you can identify the most frequently accessed objects within a specific prefix. **Note:** Exporting data to BigQuery incurs costs. For details, see [BigQuery Pricing](https://docs.cloud.google.com/bigquery/pricing).  
 One-time or historical events causing spikes | Monitor Storage Intelligence advisor | If a one-time event such as a migration or audit causes the spike, no action is necessary. Continue to monitor Storage Intelligence advisor to detect future spikes.  
 
 
@@ -66,6 +66,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

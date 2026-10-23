@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/workflows/route-trigger-cloud-firestore/
 title: Route Cloud Firestore events to Workflows \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:57.811995+00:00
+fetched_at: 2026-10-23T13:11:33.122029+00:00
 ---
 
 # Route Cloud Firestore events to Workflows  |  Eventarc Standard  |  Google Cloud Documentation

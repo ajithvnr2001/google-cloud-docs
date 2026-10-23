@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-create-reasoning-engine-basic/
 title: Build, test, and deploy a custom app on Reasoning Engine \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:12.032291+00:00
+fetched_at: 2026-10-23T09:37:50.546680+00:00
 ---
 
 # Build, test, and deploy a custom app on Reasoning Engine  |  Generative AI on Vertex AI  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-subworkflow/
 title: Use a simple subworkflow \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:02:10.952929+00:00
+fetched_at: 2026-10-23T09:37:36.135056+00:00
 ---
 
 # Use a simple subworkflow  |  Workflows  |  Google Cloud Documentation

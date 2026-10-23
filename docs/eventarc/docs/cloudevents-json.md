@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/docs/cloudevents-json/
 title: CloudEvents - JSON event format \u00a0|\u00a0 Eventarc \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:19.363771+00:00
+fetched_at: 2026-10-23T13:13:47.257022+00:00
 ---
 
 # CloudEvents - JSON event format  |  Eventarc  |  Google Cloud Documentation

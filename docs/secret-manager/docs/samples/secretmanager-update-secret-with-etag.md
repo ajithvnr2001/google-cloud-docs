@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-update-secret-with-etag/
 title: Update a secret with ETags \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:54.234332+00:00
+fetched_at: 2026-10-23T09:40:30.487814+00:00
 ---
 
 # Update a secret with ETags  |  Secret Manager  |  Google Cloud Documentation

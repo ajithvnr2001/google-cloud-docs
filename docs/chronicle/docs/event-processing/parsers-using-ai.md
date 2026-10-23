@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/event-processing/parsers-using-ai/
 title: Create custom parsers and parser extensions with Gemini \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:24:35.221466+00:00
+fetched_at: 2026-10-23T13:00:28.114116+00:00
 ---
 
 # Create custom parsers and parser extensions with Gemini  |  Google Security Operations  |  Google Cloud Documentation

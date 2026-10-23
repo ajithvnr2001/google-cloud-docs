@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/concepts/managed-devices/
 title: Managed devices \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:20.231692+00:00
+fetched_at: 2026-10-23T13:10:25.722594+00:00
 ---
 
 # Managed devices  |  Cloud Identity  |  Google Cloud Documentation

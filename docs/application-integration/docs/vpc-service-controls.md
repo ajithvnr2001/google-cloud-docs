@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/vpc-service-controls/
 title: Set up VPC Service Controls for Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:04.898798+00:00
+fetched_at: 2026-10-23T13:18:18.214550+00:00
 ---
 
 # Set up VPC Service Controls for Application Integration  |  Google Cloud Documentation

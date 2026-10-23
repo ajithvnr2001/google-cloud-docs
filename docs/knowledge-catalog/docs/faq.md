@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/faq/
 title: Knowledge Catalog FAQ \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T11:26:15.275588+00:00
+fetched_at: 2026-10-23T12:50:52.750762+00:00
 ---
 
 # Knowledge Catalog FAQ  |  Google Cloud Documentation
@@ -33,13 +33,13 @@ Explore frequently asked questions about Knowledge Catalog features.
 
 ### What is Knowledge Catalog?
 
-Google Knowledge Catalog is an intelligent governance solution for data and AI assets in Google Cloud. It provides a centralized inventory where you can discover, manage, and govern your data across Google Cloud data sources like BigQuery, Cloud Storage, Pub/Sub, and Spanner.
+Knowledge Catalog is an intelligent governance solution for data and AI assets in Google Cloud. It provides a centralized inventory where you can discover, manage, and govern your data across Google Cloud data sources like BigQuery, Cloud Storage, Pub/Sub, and Spanner.
 
 Knowledge Catalog uses AI to automate data discovery, metadata enrichment, and data quality. Through its governed data catalog, Knowledge Catalog provides the essential grounding that AI agents need to generate high-quality content.
 
 ### What is Knowledge Catalog used for?
 
-Google Knowledge Catalog solves the "data cold start" problem—the time wasted trying to find, understand, and trust data before you can actually use it. Its primary uses include the following:
+Knowledge Catalog solves the "data cold start" problem—the time wasted trying to find, understand, and trust data before you can actually use it. Its primary uses include the following:
 
   * Accelerated data discovery: Instead of navigating complex organizational silos to locate data, you can use natural language search (for example, "Show me the most recent customer churn data") to find assets across Google Cloud resources instantly, which increases productivity for data consumers.
 
@@ -79,7 +79,7 @@ You can enable the API through the Google Cloud console when prompted, or by usi
 
 Active billing for data insights starts on October 27, 2026.
 
-**Note:** To prevent month-end processing, the billing rollout for data insights begins on November 2, 2027 and takes up to a week to be enabled in all regions.
+**Note:** To prevent month-end processing, the billing rollout for data insights begins on November 2, 2026, and takes up to a week to be enabled in all regions.
 
 ### How is data insights usage billed?
 
@@ -90,7 +90,7 @@ Usage is measured in data tokens. Data tokens represent the basic units of text 
 
 
 
-For more information, see [Data Cloud Agent pricing](https://cloud.google.com/products/data-agents/pricing?e=48754805).
+For more information, see [Data Cloud Agent pricing](https://cloud.google.com/products/data-agents/pricing).
 
 ### Do service accounts receive a free quota for data insights?
 
@@ -106,9 +106,11 @@ Google Cloud provides metering for data tokens. This metering lets administrator
 
 ## Billing and cost monitoring
 
-### How do I monitor and attribute Dataplex DCU costs for Data Quality, Data Profiling, and Data Lineage?
+Explore frequently asked questions about monitoring and attributing compute costs in Knowledge Catalog.
 
-Dataplex DataScan compute (Auto Data Quality and Data Profiling) and Data Lineage Data Compute Units (DCUs) run on serverless compute in Dataplex-managed infrastructure and don't publish time-series metrics under `dataplex.googleapis.com/*` to Cloud Monitoring.
+### How do I monitor and attribute Knowledge Catalog DCU costs for Data Quality, Data Profiling, and Data Lineage?
+
+Knowledge Catalog DataScan compute (Auto Data Quality and Data Profiling) and Data Lineage Data Compute Units (DCUs) run on serverless compute in Google-managed infrastructure and don't publish time-series metrics under `dataplex.googleapis.com/*` to Cloud Monitoring.
 
 To monitor, alert on, and attribute Knowledge Catalog DCU costs across projects and scans, export your Cloud Billing data to BigQuery and query system labels attached to Knowledge Catalog billing records:
 
@@ -123,6 +125,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

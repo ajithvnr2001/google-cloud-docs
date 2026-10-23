@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-document-text-tutorial-imports/
 title: Import libraries for document text detection \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:15.669090+00:00
+fetched_at: 2026-10-23T09:01:17.988927+00:00
 ---
 
 # Import libraries for document text detection  |  Cloud Vision API  |  Google Cloud Documentation

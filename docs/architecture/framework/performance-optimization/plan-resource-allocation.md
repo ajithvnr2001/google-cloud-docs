@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/performance-optimization/plan-resource-allocation/
 title: Plan resource allocation \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:07:55.408798+00:00
+fetched_at: 2026-10-23T10:43:22.422170+00:00
 ---
 
 # Plan resource allocation  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -19,7 +19,7 @@ Send feedback
 
 #  Plan resource allocation Stay organized with collections  Save and categorize content based on your preferences. 
 
-Last reviewed 2024-12-06 UTC
+Last reviewed 2026-10-22 UTC
 
 This principle in the performance optimization pillar of the [Google Cloud Well-Architected Framework](https://docs.cloud.google.com/architecture/framework) provides recommendations to help you plan resources for your workloads in Google Cloud. It emphasizes the importance of defining granular requirements before you design and develop applications for cloud deployment or migration.
 
@@ -56,7 +56,7 @@ To accommodate elastic scaling and to ensure that adequate resources are availab
 
 ### Educate and promote awareness
 
-Inform your users about the performance requirements and provide [educational resources](https://www.cloudskillsboost.google/course_templates/734) about effective performance management techniques.
+Inform your users about the performance requirements and provide [educational resources](https://www.skills.google/course_templates/734) about effective performance management techniques.
 
 To evaluate progress and to identify areas for improvement, regularly document the target performance and the actual performance. Load test your application to find potential breakpoints and to understand how you can scale the application.
 
@@ -74,6 +74,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2024-12-06 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2024-12-06 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

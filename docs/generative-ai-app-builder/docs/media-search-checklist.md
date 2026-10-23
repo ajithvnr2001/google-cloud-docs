@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/media-search-checklist/
 title: Media search checklist \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:27.641222+00:00
+fetched_at: 2026-10-23T13:13:14.767850+00:00
 ---
 
 # Media search checklist  |  Agent Search  |  Google Cloud Documentation

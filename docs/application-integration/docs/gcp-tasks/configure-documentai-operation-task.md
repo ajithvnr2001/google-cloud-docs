@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/gcp-tasks/configure-documentai-operation-task/
 title: Doc AI - Operation task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:11.640386+00:00
+fetched_at: 2026-10-23T13:18:10.237129+00:00
 ---
 
 # Doc AI - Operation task  |  Application Integration  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/service-tiers/
 title: About service tiers \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:54.004133+00:00
+fetched_at: 2026-10-23T13:01:45.080952+00:00
 ---
 
 # About service tiers  |  Filestore  |  Google Cloud Documentation

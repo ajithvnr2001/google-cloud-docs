@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-intelligence/docs/samples/video-object-tracking-gcs/
 title: Track objects in a video on Cloud Storage \u00a0|\u00a0 Video Intelligence API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:26:47.581129+00:00
+fetched_at: 2026-10-23T09:35:30.120277+00:00
 ---
 
 # Track objects in a video on Cloud Storage  |  Video Intelligence API  |  Google Cloud Documentation

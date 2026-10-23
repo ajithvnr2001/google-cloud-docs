@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/samples/cloud-sql-sqlserver-instance-replica-parent-tag/
 title: Create a Cloud SQL for SQL Server instance replica \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:53.439271+00:00
+fetched_at: 2026-10-23T10:19:09.564950+00:00
 ---
 
 # Create a Cloud SQL for SQL Server instance replica  |  Google Cloud Documentation

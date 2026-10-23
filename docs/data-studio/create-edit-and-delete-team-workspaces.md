@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/create-edit-and-delete-team-workspaces/
 title: Create, edit, and delete team workspaces \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:26.874287+00:00
+fetched_at: 2026-10-23T13:19:15.829349+00:00
 ---
 
 # Create, edit, and delete team workspaces  |  Data Studio  |  Google Cloud Documentation

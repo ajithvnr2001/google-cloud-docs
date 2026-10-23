@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/samples/cloud-sql-postgres-pdo-connect-unix/
 title: Create a socket connection by using PHP \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:53.478408+00:00
+fetched_at: 2026-10-23T10:12:16.388477+00:00
 ---
 
 # Create a socket connection by using PHP  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation

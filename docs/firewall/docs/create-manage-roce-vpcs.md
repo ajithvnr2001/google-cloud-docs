@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/create-manage-roce-vpcs/
 title: Create and manage firewall rules for RoCE VPC networks \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:08.394552+00:00
+fetched_at: 2026-10-23T13:02:38.802660+00:00
 ---
 
 # Create and manage firewall rules for RoCE VPC networks  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

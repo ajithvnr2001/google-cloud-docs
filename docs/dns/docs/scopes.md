@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/docs/scopes/
 title: Scopes and hierarchies \u00a0|\u00a0 Cloud DNS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:12:31.126019+00:00
+fetched_at: 2026-10-23T12:55:48.845339+00:00
 ---
 
 # Scopes and hierarchies  |  Cloud DNS  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/perform-time-series-forecasting/
 title: Perform time-series forecasting \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:33.185633+00:00
+fetched_at: 2026-10-23T13:08:35.045106+00:00
 ---
 
 # Perform time-series forecasting  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -37,11 +37,14 @@ This section provides instructions for registering the TimesFM model. For instru
 
 #### Use the TimesFM model
 
-[TimesFM](https://console.cloud.google.com/vertex-ai/publishers/google/model-garden/timesfm) models come in two versions:
+[TimesFM](https://console.cloud.google.com/vertex-ai/publishers/google/model-garden/timesfm) models come in the following versions:
 
   * TimesFM 1.0: the initial version of the TimesFM model.
+
   * TimesFM 2.0: this version contains a 500M parameter checkpoint with its inference code. It delivers better model performance compared to the 1.0 model.
+
   * TimesFM 2.5: this version contains a 200M parameter checkpoint with its inference code. It delivers better model performance compared to the 2.0 model.
+
 
 
 
@@ -49,7 +52,7 @@ All models are available in the Model Garden for rapid deployment.
 
 To use TimesFM models, you must first deploy the TimesFM model to a Gemini Enterprise Agent Platform endpoint and then register it in AlloyDB.
 
-##### Deploy the TimesFM model to an Agent Platform endpoint
+##### Deploy the TimesFM model to a Agent Platform endpoint
 
 You can deploy the model using a one-click deployment from the Google Cloud console, or manually using a Colaboratory notebook.
 
@@ -64,9 +67,9 @@ To deploy the TimesFM model using a one-click deployment, follow these steps:
   3. In the search results, click `TimesFM`.
   4. In the **TimesFM** page, complete the following steps:
 
-  5. Click **Deploy model**.
-  6. Select **Agent Platform**.
-  7. In the **Deploy on Agent Platform** pane, configure and deploy your model:
+     1. Click **Deploy model**.
+     2. Select **Agent Platform**.
+  5. In the **Deploy on Agent Platform** pane, configure and deploy your model:
 
      1. To use the latest version of the TimesFM model, in the **Resource ID** drop-down, select `google/timesfm-2.0`.
      2. To make it easier to identify the deployment later, enter the following: 
@@ -80,10 +83,10 @@ To deploy the TimesFM model using a one-click deployment, follow these steps:
 This creates an endpoint in the `aiplatform` domain that works with AlloyDB.
 
      5. To deploy the model to a managed endpoint, click **Deploy**. The deployment might take about 10–15 minutes.
-  8. After the TimesFM model is deployed, a link similar to `google_timesfm-VERSION-one-click-deploy` displays in **Endpoints**.
-  9. To get the model request URL, in **Endpoints** , click the deployment link.
-  10. On the endpoint details page, click **Sample request**.
-  11. In the **Sample request** pane, find and take note of the model request URL. You use this information in Register the TimesFM model in AlloyDB—for example, `https://us-central1-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/REGION/endpoints/ENDPOINT_ID:predict`.
+  6. After the TimesFM model is deployed, a link similar to `google_timesfm-VERSION-one-click-deploy` displays in **Endpoints**.
+  7. To get the model request URL, in **Endpoints** , click the deployment link.
+  8. On the endpoint details page, click **Sample request**.
+  9. In the **Sample request** pane, find and take note of the model request URL. You use this information in Register the TimesFM model in AlloyDB—for example, `https://us-central1-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/REGION/endpoints/ENDPOINT_ID:predict`.
 
 Make sure the request URL has `aiplatform.googleapis.com` in it.
 
@@ -106,11 +109,11 @@ To manually deploy the TimesFM model using a Colaboratory notebook, follow these
      1. To establish a connection to the runtime environment, click **Connect**.
      2. Optional: Complete the following steps if needed:
 
-        * In the **Prerequisites** section of **Setup Google Cloud project** , set the BUCKET_URI and REGION—for example, set the BUCKET_URI to `gs://your-unique-bucket-name` and the REGION to `us-central1`.
+        * In the **Prerequisites** section of **Setup Google Cloud project** , set the `BUCKET_URI` and `REGION`—for example, set the `BUCKET_URI` to `gs://your-unique-bucket-name` and the `REGION` to `us-central1`.
 
 **Note:** The bucket name must be globally unique. If you don't set a region, it's set automatically based on the Colab Enterprise environment. 
         * In the **accelerator_type** drop-down of **Deploy TimesFM to a Vertex AI Endpoint** , select a different accelerator type if needed.
-        * In **Step 3: Set the maximum forecast horizon** , fill out the **horizon** and **max_context** fields—for example, set horizon to `128` and max_context to `512`.
+        * In **Step 3: Set the maximum forecast horizon** , fill out the **horizon** and **max_context** fields—for example, set `horizon` to `128` and `max_context` to `512`.
      3. Deselect the `use_dedicated_endpoint` checkbox.
      4. Execute all cells in the Notebook.
 
@@ -125,7 +128,7 @@ The output of the notebook provides the endpoint details in the following format
           model_provider => 'google',
           model_request_url => 'https://REGION-aiplatform.googleapis.com/v1/projects/PROJECT_ID/locations/REGION/endpoints/ENDPOINT_ID:predict');
 
-You need this `model_request_url` in `the google_ml.create_model` call when you register the TimesFM model in AlloyDB, as described in the following section.
+You need this `model_request_url` in the `google_ml.create_model` call when you register the TimesFM model in AlloyDB, as described in the following section.
 
   8. To confirm that the `ai.forecast` function works as expected, run the following sample query:
          
@@ -157,7 +160,7 @@ You need this `model_request_url` in `the google_ml.create_model` call when you 
 
 
 
-##### Register the TimesFM model in AlloyDB
+#### Register the TimesFM model in AlloyDB
 
 To register the TimesFM model in AlloyDB, follow these steps:
 
@@ -191,9 +194,13 @@ The following is the sample output:
 Replace the following:
 
      * `MODEL_ID`: a unique identifier for the registered model you want to use for forecasting—for example, `vertex_timesfm`.
+
      * `MODEL_QUALIFIED_NAME`: a user-defined name for the model—for example, `timesfm_v2`.
+
      * `REGION`: the region where the instance is placed—for example, `us-central1`.
+
      * `PROJECT_ID`: the name of the project where the model is deployed—for example, `forecast_project`.
+
      * `ENDPOINT_ID`: the name of the model deployment—for example, `my-timesfm-endpoint`.
 
 The `model_request_url` is provided by Agent Platform after you deploy your model. Copy the entire URL from the **Sample request** pane in the Agent Platform console. It already contains the correct project and endpoint information.
@@ -257,6 +264,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

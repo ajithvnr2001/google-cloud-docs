@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/annotations/
 title: Annotations and labels \u00a0|\u00a0 Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:51.203729+00:00
+fetched_at: 2026-10-23T12:55:07.350750+00:00
 ---
 
 # Annotations and labels  |  Infrastructure Manager  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Annotations and labels Stay organized with collections  Save and categorize content based on your preferences. 
 
-You can use annotations and labels with Infrastructure Manager. They're not required. This document lists the resources to which you can attach labels and annotations, and describes how you can use them and where you can view them. To use annotations or labels with Infra Manager, use the `--annotation` and `--label` flags.
+Infrastructure Manager lets you attach optional metadata to deployments using annotations and labels. These key-value pairs help you organize, track, and filter your deployments across Google Cloud.
 
 ## What are annotations and labels?
 
@@ -67,6 +67,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

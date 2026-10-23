@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-stitcher/docs/samples/videostitcher-get-cdn-key/
 title: Get a CDN key \u00a0|\u00a0 Video Stitcher API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:18.172877+00:00
+fetched_at: 2026-10-23T09:36:13.334569+00:00
 ---
 
 # Get a CDN key  |  Video Stitcher API  |  Google Cloud Documentation

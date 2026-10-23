@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/upgrade-major-db-version-inplace/
 title: Upgrade the database major version in-place \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:44:48.521941+00:00
+fetched_at: 2026-10-23T10:18:49.688361+00:00
 ---
 
 # Upgrade the database major version in-place  |  Cloud SQL for MySQL  |  Google Cloud Documentation
@@ -585,7 +585,7 @@ Issue | Troubleshooting
 ---|---  
 Error message: `You can't cancel operation OPERATION_ID because this operation isn't in progress.` | You're trying to cancel a precheck operation that's completed, failed, or already cancelled. If the operation is running, you can cancel it.  
 Error message: `You can't cancel operation OPERATION_ID because Cloud SQL doesn't support the cancellation of an OPERATION_TYPE operation.` | This error usually occurs when you pass the wrong OPERATION_ID to the cancel command—specifically, the ID of an operation type that doesn't support cancellation. Verify that you're using the OPERATION_ID associated with the major version upgrade precheck you want to cancel.  
-Error message: `The OPERATION_TYPE operation isn't cancelled. Wait and retry in a few seconds.` | Cloud SQL can't cancel the precheck operation at this time. Try again in a few seconds. If the problem persists, contact [Cloud Customer Care](https://docs.cloud.google.com/support).  
+Error message: `The OPERATION_TYPE operation isn't cancelled. Wait and retry in a few seconds.` | Cloud SQL can't cancel the precheck operation at this time. Try again in a few seconds. If the problem persists, contact [Cloud Customer Care](https://cloud.google.com/support).  
   
 ## Perform the major version upgrade
 
@@ -1183,6 +1183,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

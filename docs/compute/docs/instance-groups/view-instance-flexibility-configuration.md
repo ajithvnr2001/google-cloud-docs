@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/view-instance-flexibility-configuration/
 title: View instance flexibility \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:40.412609+00:00
+fetched_at: 2026-10-23T13:00:27.227530+00:00
 ---
 
 # View instance flexibility  |  Compute Engine  |  Google Cloud Documentation

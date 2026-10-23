@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/go/docs/observability/
 title: Enable telemetry signals in Go client libraries \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:40.378658+00:00
+fetched_at: 2026-10-23T13:10:31.121627+00:00
 ---
 
 # Enable telemetry signals in Go client libraries  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-optimize/billing-questions/
 title: Billing questions \u00a0|\u00a0 App Optimize \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:41.906957+00:00
+fetched_at: 2026-10-23T13:17:34.420152+00:00
 ---
 
 # Billing questions  |  App Optimize  |  Google Cloud Documentation

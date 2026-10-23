@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/types-of-charts/
 title: Types of charts in Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:53.293916+00:00
+fetched_at: 2026-10-23T13:20:52.195647+00:00
 ---
 
 # Types of charts in Data Studio  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/samples/genappbuilder-poll-operation/
 title: Poll a long running operation \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:41.797601+00:00
+fetched_at: 2026-10-23T13:10:54.004627+00:00
 ---
 
 # Poll a long running operation  |  Agent Search  |  Google Cloud Documentation

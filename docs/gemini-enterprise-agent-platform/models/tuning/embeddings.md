@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/tuning/embeddings/
 title: Tune text embeddings \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:23:26.340474+00:00
+fetched_at: 2026-10-23T12:43:21.834385+00:00
 ---
 
 # Tune text embeddings  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -71,7 +71,7 @@ The training dataset consists of the following files, which need to be in Cloud 
 
   * **Corpus file** : The path is defined by parameter `corpus_path`. It's a JSONL file where each line has the fields `_id`, `title`, and `text` with string values. `_id` and `text` are required, while `title` is optional. Here is an example `corpus.jsonl` file:
         
-        {"_id": "doc1", "title": "Get an introduction to Agent Platform", "text": "Agent Platform Studio offers a Google Cloud console tool for rapidly prototyping and testing generative AI models. Learn how you can use Agent Platform Studio to test models using prompt samples, design and save prompts, tune a foundation model, and convert between speech and text."}
+        {"_id": "doc1", "title": "Get an introduction to Agent Platform", "text": "Agent Studio offers a Google Cloud console tool for rapidly prototyping and testing generative AI models. Learn how you can use Agent Studio to test models using prompt samples, design and save prompts, tune a foundation model, and convert between speech and text."}
         {"_id": "doc2", "title": "Use gen AI for summarization, classification, and extraction", "text": "Learn how to create text prompts for handling any number of tasks with Agent Platform's generative AI support. Some of the most common tasks are classification, summarization, and extraction. Agent Platform's PaLM API for text lets you design prompts with flexibility in terms of their structure and format."}
         {"_id": "doc3", "title": "Custom ML training overview and documentation", "text": "Get an overview of the custom training workflow in Agent Platform, the benefits of custom training, and the various training options that are available. This page also details every step involved in the ML training workflow from preparing data to inferences."}
         {"_id": "doc4", "text": "Text embeddings are useful for clustering, information retrieval, retrieval-augmented generation (RAG), and more."}
@@ -692,6 +692,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

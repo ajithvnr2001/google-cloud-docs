@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-connectivity/docs/resources/
 title: Resources \u00a0|\u00a0 Network Connectivity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:13:10.895454+00:00
+fetched_at: 2026-10-23T11:00:18.770692+00:00
 ---
 
 # Resources  |  Network Connectivity  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/siprec/
 title: Agent Assist integrations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:43.595364+00:00
+fetched_at: 2026-10-23T13:13:04.031160+00:00
 ---
 
 # Agent Assist integrations  |  Google Cloud Documentation

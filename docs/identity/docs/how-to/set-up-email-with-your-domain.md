@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/set-up-email-with-your-domain/
 title: Set up email with your domain \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:49.727131+00:00
+fetched_at: 2026-10-23T13:10:32.923488+00:00
 ---
 
 # Set up email with your domain  |  Cloud Identity  |  Google Cloud Documentation

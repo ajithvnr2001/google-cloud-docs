@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/support/
 title: Support \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:31:13.223597+00:00
+fetched_at: 2026-10-23T10:19:50.017327+00:00
 ---
 
 # Support  |  Cloud SQL for SQL Server  |  Google Cloud Documentation

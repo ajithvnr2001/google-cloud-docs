@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/time-and-date-conditions/
 title: Configuring time and day access conditions \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:48.917489+00:00
+fetched_at: 2026-10-23T13:19:04.984037+00:00
 ---
 
 # Configuring time and day access conditions  |  Access Context Manager  |  Google Cloud Documentation

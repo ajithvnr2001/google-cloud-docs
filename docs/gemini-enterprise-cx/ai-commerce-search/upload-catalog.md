@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/ai-commerce-search/upload-catalog/
 title: Import catalog information \u00a0|\u00a0 AI Commerce Search in Gemini Enterprise for Customer Experience \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:34:37.730562+00:00
+fetched_at: 2026-10-23T13:12:47.504347+00:00
 ---
 
 # Import catalog information  |  AI Commerce Search in Gemini Enterprise for Customer Experience  |  Google Cloud Documentation

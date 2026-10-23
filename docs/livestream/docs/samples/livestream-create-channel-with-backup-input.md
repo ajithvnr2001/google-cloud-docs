@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/livestream/docs/samples/livestream-create-channel-with-backup-input/
 title: Create a channel with a backup input \u00a0|\u00a0 Live Stream API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:09:36.432832+00:00
+fetched_at: 2026-10-23T10:44:39.523390+00:00
 ---
 
 # Create a channel with a backup input  |  Live Stream API  |  Google Cloud Documentation

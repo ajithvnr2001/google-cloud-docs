@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/solutions/oracle/bms-oracle-best-practices/
 title: Best practices for Oracle on Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:02.928046+00:00
+fetched_at: 2026-10-23T13:19:54.910520+00:00
 ---
 
 # Best practices for Oracle on Bare Metal Solution  |  Google Cloud Documentation

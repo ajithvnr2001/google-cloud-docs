@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/envoy-adapter/v2.0.x/operation/
 title: Operations guide \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:23.936318+00:00
+fetched_at: 2026-10-23T13:15:06.588035+00:00
 ---
 
 # Operations guide  |  Apigee  |  Google Cloud Documentation

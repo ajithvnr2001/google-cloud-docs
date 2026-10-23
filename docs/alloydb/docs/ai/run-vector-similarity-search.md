@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/run-vector-similarity-search/
 title: Run a vector similarity search \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:17.372818+00:00
+fetched_at: 2026-10-23T13:08:37.278649+00:00
 ---
 
 # Run a vector similarity search  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -35,8 +35,8 @@ To find the nearest semantic neighbors for an embedding vector, you can run the 
     
     
       SELECT * FROM TABLE
-        ORDER BY EMBEDDING_COLUMN DISTANCE_FUNCTION_QUERY ['EMBEDDING']
-        LIMIT ROW_COUNT
+        ORDER BY EMBEDDING_COLUMN DISTANCE_FUNCTION_QUERY 'EMBEDDING'
+        LIMIT ROW_COUNT;
     
 
 Replace the following:
@@ -68,7 +68,7 @@ For more information about other query examples, see [Querying](https://github.c
 
 **Note:** AlloyDB doesn't charge for AI function calls. However, when you call Gemini Enterprise Agent Platform, third-party, or self-hosted models and services (such as for hybrid search) from your database, the model or infrastructure provider charges you directly. For more information about Gemini Enterprise Agent Platform costs, see [Pricing](https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing).
 
-You can use also use the [`embedding()`](https://docs.cloud.google.com/alloydb/docs/ai/work-with-embeddings) function to translate the text into a vector, and to find the database rows with the most semantically similar embeddings. The stock `pgvector` PostgreSQL extension is customized for AlloyDB, and referred to as `vector`. You apply the vector to one of the `pgvector` nearest-neighbor operators, for example `<=>` for cosine distance.
+You can also use the [`embedding()`](https://docs.cloud.google.com/alloydb/docs/ai/work-with-embeddings) function to translate the text into a vector, and to find the database rows with the most semantically similar embeddings. The stock `pgvector` PostgreSQL extension is customized for AlloyDB, and referred to as `vector`. You apply the vector to one of the `pgvector` nearest-neighbor operators, for example `<=>` for cosine distance.
 
 Because `embedding()` returns a `real` array, you must explicitly cast the `embedding()` call to `vector` in order to use these values with `pgvector` operators.
     
@@ -76,9 +76,9 @@ Because `embedding()` returns a `real` array, you must explicitly cast the `embe
       CREATE EXTENSION IF NOT EXISTS vector;
     
       SELECT * FROM TABLE
-        ORDER BY EMBEDDING_COLUMN::vector
-        <=> google_ml.embedding('MODEL_IDVERSION_TAG', 'TEXT')
-        LIMIT ROW_COUNT
+        ORDER BY EMBEDDING_COLUMN
+        <=> google_ml.embedding('MODEL_IDVERSION_TAG', 'TEXT')::vector
+        LIMIT ROW_COUNT;
     
 
 Replace the following:
@@ -106,7 +106,7 @@ Google strongly recommends that you always specify the version tag. If you don't
 
 
 
-To accelerate your filtered KNN search, you can use the AlloyDB columnar engine. For more information, see [Accelerate your filtered vector search](https://docs.cloud.google.com/alloydb/docs/ai/perform-vector-search#accelerate-filtered-vector-search) ([Preview](https://cloud.google.com/products#product-launch-stages)) and [Configure the columnar engine](https://docs.cloud.google.com/alloydb/docs/columnar-engine/configure).
+To accelerate your filtered KNN search, you can use the AlloyDB columnar engine. For more information, see [Accelerate your filtered vector search](https://docs.cloud.google.com/alloydb/docs/ai/perform-vector-search#accelerate-filtered-vector-search) and [Configure the columnar engine](https://docs.cloud.google.com/alloydb/docs/columnar-engine/configure).
 
 ## What's next
 
@@ -122,6 +122,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

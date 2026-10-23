@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/authenticating-users-firebase/
 title: Using Firebase to authenticate users \u00a0|\u00a0 API Gateway \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:18.930275+00:00
+fetched_at: 2026-10-23T13:15:52.540373+00:00
 ---
 
 # Using Firebase to authenticate users  |  API Gateway  |  Google Cloud Documentation

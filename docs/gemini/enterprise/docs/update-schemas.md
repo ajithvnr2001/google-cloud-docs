@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/update-schemas/
 title: Update a schema \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:43.562202+00:00
+fetched_at: 2026-10-23T13:11:49.048991+00:00
 ---
 
 # Update a schema  |  Gemini Enterprise  |  Google Cloud Documentation

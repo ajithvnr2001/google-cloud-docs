@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/create-run-job-instance-flexibility/
 title: Improve obtainability by using instance flexibility \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:32.232732+00:00
+fetched_at: 2026-10-23T13:18:33.694947+00:00
 ---
 
 # Improve obtainability by using instance flexibility  |  Batch  |  Google Cloud Documentation

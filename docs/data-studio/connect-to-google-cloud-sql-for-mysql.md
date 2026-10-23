@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/connect-to-google-cloud-sql-for-mysql/
 title: Connect to Google Cloud SQL for MySQL \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:32.754078+00:00
+fetched_at: 2026-10-23T13:19:00.133631+00:00
 ---
 
 # Connect to Google Cloud SQL for MySQL  |  Data Studio  |  Google Cloud Documentation

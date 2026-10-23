@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/whitepapers/
 title: Whitepapers \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:09.493421+00:00
+fetched_at: 2026-10-23T09:34:43.254549+00:00
 ---
 
 # Whitepapers  |  Spanner  |  Google Cloud Documentation

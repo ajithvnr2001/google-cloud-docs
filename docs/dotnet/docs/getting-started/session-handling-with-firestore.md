@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dotnet/docs/getting-started/session-handling-with-firestore/
 title: Handling sessions with Firestore \u00a0|\u00a0 .NET \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:48.321825+00:00
+fetched_at: 2026-10-23T13:01:21.227341+00:00
 ---
 
 # Handling sessions with Firestore  |  .NET  |  Google Cloud Documentation

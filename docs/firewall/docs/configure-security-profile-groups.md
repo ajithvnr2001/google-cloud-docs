@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/configure-security-profile-groups/
 title: Create security profile groups \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:09.318336+00:00
+fetched_at: 2026-10-23T13:02:14.393580+00:00
 ---
 
 # Create security profile groups  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

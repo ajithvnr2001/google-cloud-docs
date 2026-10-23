@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-image-property-detection/
 title: Detect image properties in a local file \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:17.534389+00:00
+fetched_at: 2026-10-23T09:01:15.987033+00:00
 ---
 
 # Detect image properties in a local file  |  Cloud Vision API  |  Google Cloud Documentation

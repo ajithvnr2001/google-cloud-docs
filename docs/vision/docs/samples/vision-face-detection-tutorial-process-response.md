@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-face-detection-tutorial-process-response/
 title: Process the Cloud Vision API response \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:13.495411+00:00
+fetched_at: 2026-10-23T09:01:17.115313+00:00
 ---
 
 # Process the Cloud Vision API response  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/analytics/using-analytics-dashboards/
 title: Using the analytics dashboards \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:54.765915+00:00
+fetched_at: 2026-10-23T13:14:24.281874+00:00
 ---
 
 # Using the analytics dashboards  |  Apigee  |  Google Cloud Documentation

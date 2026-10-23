@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/nodejs/runtime/
 title: Node.js Runtime Environment \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:11.297589+00:00
+fetched_at: 2026-10-23T13:17:20.641771+00:00
 ---
 
 # Node.js Runtime Environment  |  App Engine standard environment  |  Google Cloud Documentation

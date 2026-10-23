@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-tiers/docs/how-to/
 title: How-to guides \u00a0|\u00a0 Network Service Tiers \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T22:03:25.730101+00:00
+fetched_at: 2026-10-23T12:38:36.868849+00:00
 ---
 
 # How-to guides  |  Network Service Tiers  |  Google Cloud Documentation

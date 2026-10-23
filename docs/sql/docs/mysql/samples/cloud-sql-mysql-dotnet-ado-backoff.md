@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/samples/cloud-sql-mysql-dotnet-ado-backoff/
 title: Implement exponential backoff when using ADO.NET \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:51.484524+00:00
+fetched_at: 2026-10-23T10:20:02.241011+00:00
 ---
 
 # Implement exponential backoff when using ADO.NET  |  Cloud SQL for MySQL  |  Google Cloud Documentation

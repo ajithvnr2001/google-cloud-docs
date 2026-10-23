@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/troubleshoot/database-inplace-major-version-upgrade-errors/
 title: Database in-place major version upgrade errors \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:25.507202+00:00
+fetched_at: 2026-10-23T10:03:39.274687+00:00
 ---
 
 # Database in-place major version upgrade errors  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,7 +21,11 @@ Send feedback
 
 #  Database in-place major version upgrade errors Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document describes errors that you might encounter when you perform a database in-place major version in AlloyDB for PostgreSQL. Recommended fixes are also provided. For more information, see [Troubleshoot an in-place major version upgrade](https://docs.cloud.google.com/alloydb/docs/troubleshoot/troubleshoot-database-inplace-major-version-upgrade).
+To resolve pre-upgrade check violations, extension incompatibilities, and resource limit errors when you perform an in-place major version upgrade in AlloyDB for PostgreSQL, apply the recommended fixes for the error messages that your upgrade operation returns. For general upgrade troubleshooting steps, see [Troubleshoot an in-place major version upgrade](https://docs.cloud.google.com/alloydb/docs/troubleshoot/troubleshoot-database-inplace-major-version-upgrade).
+
+## Common major version upgrade errors
+
+The following sections describe the error messages that can occur during a major version upgrade and how to resolve them.
 
 ### Error: Database: database_name. extension_violation: DEPRECATED, action_required: DELETE_EXTENSION
 
@@ -74,6 +78,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

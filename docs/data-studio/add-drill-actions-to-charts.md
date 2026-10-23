@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/add-drill-actions-to-charts/
 title: Add drill actions to charts \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:49.262707+00:00
+fetched_at: 2026-10-23T13:20:46.530015+00:00
 ---
 
 # Add drill actions to charts  |  Data Studio  |  Google Cloud Documentation

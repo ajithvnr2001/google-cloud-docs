@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/samples/cloudrun-multiple-regions-parent-tag/
 title: Configure multiple regions \u00a0|\u00a0 Cloud Run \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:10:49.150648+00:00
+fetched_at: 2026-10-23T10:01:27.135566+00:00
 ---
 
 # Configure multiple regions  |  Cloud Run  |  Google Cloud Documentation

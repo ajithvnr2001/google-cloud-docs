@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/java/docs/compile-native-images/
 title: Compile native images \u00a0|\u00a0 Java \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:29.531226+00:00
+fetched_at: 2026-10-23T13:10:22.047408+00:00
 ---
 
 # Compile native images  |  Java  |  Google Cloud Documentation

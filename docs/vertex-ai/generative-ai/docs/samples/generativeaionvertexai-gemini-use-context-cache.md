@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-gemini-use-context-cache/
 title: Generate text by using a context cache \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:11.910476+00:00
+fetched_at: 2026-10-23T09:36:28.150211+00:00
 ---
 
 # Generate text by using a context cache  |  Generative AI on Vertex AI  |  Google Cloud Documentation

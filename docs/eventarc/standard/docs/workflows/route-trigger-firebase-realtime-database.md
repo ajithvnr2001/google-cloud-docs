@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/workflows/route-trigger-firebase-realtime-database/
 title: Route Firebase Realtime Database events to Workflows \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:55.367565+00:00
+fetched_at: 2026-10-23T13:11:13.078249+00:00
 ---
 
 # Route Firebase Realtime Database events to Workflows  |  Eventarc Standard  |  Google Cloud Documentation

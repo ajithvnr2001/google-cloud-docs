@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/samples/functions-cloudevent-pubsub/
 title: Cloud Pub/Sub (2nd Gen) \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:24.431256+00:00
+fetched_at: 2026-10-23T13:08:52.345516+00:00
 ---
 
 # Cloud Pub/Sub (2nd Gen)  |  Cloud Run functions  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/scanning-types/
 title: Types of scanning \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:05.996809+00:00
+fetched_at: 2026-10-23T13:17:20.882913+00:00
 ---
 
 # Types of scanning  |  Artifact Analysis  |  Google Cloud Documentation

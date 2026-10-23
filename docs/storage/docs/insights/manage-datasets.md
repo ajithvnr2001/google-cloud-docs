@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/insights/manage-datasets/
 title: Manage Storage Insights dataset configurations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:30:25.518438+00:00
+fetched_at: 2026-10-23T12:26:51.295547+00:00
 ---
 
 # Manage Storage Insights dataset configurations  |  Google Cloud Documentation
@@ -21,7 +21,9 @@ Send feedback
 
 #  Manage Storage Insights dataset configurations Stay organized with collections  Save and categorize content based on your preferences. 
 
-Use [Storage Insights dataset](https://docs.cloud.google.com/storage/docs/insights/datasets) to define how to collect and analyze metadata about your Cloud Storage buckets and objects. By controlling the data source, scope, and retention settings, you gather resource metadata in BigQuery for analysis. This metadata helps you optimize storage costs, manage data lifecycle, and support compliance. This page describes how to manage dataset configurations as well as how to query and unlink your linked datasets.
+Storage Insights datasets let you collect metadata and activity data from your Cloud Storage buckets and objects, and then analyze that data in BigQuery. You can configure the data source, scope, and retention settings for a dataset to help optimize storage costs, manage data lifecycles, and support compliance.
+
+This document shows you how to view, update, and delete dataset configurations, and how to query or unlink linked BigQuery datasets. For background information, see [Storage Insights datasets](https://docs.cloud.google.com/storage/docs/insights/datasets).
 
 ## Get the required roles
 
@@ -232,7 +234,7 @@ Replace:
 
      * `DATASET_CONFIG_ID` with the name of the dataset configuration.
 
-     * `SERVICE_ACCOUNT` with the service account. For example, `test-service-account@test-project.`.
+     * `SERVICE_ACCOUNT` with the service account. For example, `test-service-account@test-project.iam.gserviceaccount.com`.
 
 
 
@@ -390,7 +392,7 @@ Replace:
 
      * `UPDATE_MASK` is the comma-separated list of field names that this request updates. The fields use the [fieldMask](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMask) format and are part of the [`DatasetConfig`](https://docs.cloud.google.com/storage/docs/insights/reference/rest/v1/projects.locations.datasetConfigs) resource.
 
-     * `SERVICE_ACCOUNT` with the service account. For example,`test-service-account@test-project.iam.gserviceaccount.com`.
+     * `SERVICE_ACCOUNT` with the service account. For example, `test-service-account@test-project.iam.gserviceaccount.com`.
 
 
 
@@ -476,6 +478,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

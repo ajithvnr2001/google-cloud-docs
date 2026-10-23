@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-translate-docs/
 title: Try translating formatted documents \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:25:24.013121+00:00
+fetched_at: 2026-10-23T12:55:30.299575+00:00
 ---
 
 # Try translating formatted documents  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -93,9 +93,9 @@ You can create the storage bucket by deploying a `Bucket` resource in the `dt-pr
                  defaultObjectRetentionDays: 90
          
 
-  3. Grant `read` and `write` permissions on the bucket to the service account (`ai-translation-system-sa`) used by the Vertex AI Translation service.
+  3. Grant `read` and `write` permissions on the bucket to the service accounts (`ai-translation-system-sa` and `g-vai-translation-sie-sa`) used by the Vertex AI Translation service.
 
-You can follow these steps to create the role and role binding using custom resources:
+Follow these steps to create the role and role binding using custom resources on the management API server:
 
      1. Create the role by deploying a `Role` resource in the `dt-project` namespace:
             
@@ -130,6 +130,10 @@ You can follow these steps to create the role and role binding using custom reso
                 -
                   kind: ServiceAccount
                   name: ai-translation-system-sa
+                  namespace: g-vai-translation-sie
+                -
+                  kind: ServiceAccount
+                  name: g-vai-translation-sie-sa
                   namespace: g-vai-translation-sie
             
 
@@ -409,7 +413,7 @@ Follow these steps to make a `curl` request:
            },
            "glossaries": {
              "TARGET_LANGUAGE": {
-               "glossary": "projects/GLOSSARY_PROJECT_ID"
+               "glossary": "projects/GLOSSARY_PROJECT_ID/glossaries/GLOSSARY_ID"
              },
              ...
            }
@@ -423,6 +427,7 @@ Replace the following:
      * `INPUT_FILE_PATH`: the storage bucket location and filename of one or more input documents.
      * `OUTPUT_FILE_PREFIX`: the storage bucket location where all output documents are stored.
      * `GLOSSARY_PROJECT_ID`: the project ID where the glossary is located.
+     * `GLOSSARY_ID`: the ID of the glossary.
   2. [Get an authentication token](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-api-auth).
 
   3. Make the request:
@@ -458,6 +463,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

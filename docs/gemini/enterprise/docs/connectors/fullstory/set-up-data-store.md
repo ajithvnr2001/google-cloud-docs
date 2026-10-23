@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/fullstory/set-up-data-store/
 title: Set up a Fullstory data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:29.247970+00:00
+fetched_at: 2026-10-23T13:02:28.515991+00:00
 ---
 
 # Set up a Fullstory data store  |  Gemini Enterprise  |  Google Cloud Documentation

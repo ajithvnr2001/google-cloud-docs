@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/querydata/spanner/manage-data-agents/
 title: Manage context sets in Spanner Studio \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:47.983278+00:00
+fetched_at: 2026-10-23T13:02:25.896605+00:00
 ---
 
 # Manage context sets in Spanner Studio  |  Data Agents  |  Google Cloud Documentation

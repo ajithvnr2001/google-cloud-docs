@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/external-data-sources/
 title: Introduction to external data sources \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:17:18.899945+00:00
+fetched_at: 2026-10-23T12:55:33.183270+00:00
 ---
 
 # Introduction to external data sources  |  BigQuery  |  Google Cloud Documentation
@@ -21,9 +21,11 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Introduction to external data sources
 
-This page provides an overview of querying data stored outside of BigQuery.
+External data sources let you query data directly from BigQuery, even though the data isn't stored in BigQuery storage. For example, you can analyze data in a different Google Cloud database, in files in Cloud Storage, or in another cloud product without first migrating it.
 
-An external data source is a data source that you can query directly from BigQuery, even though the data is not stored in BigQuery storage. For example, you might have data in a different Google Cloud database, in files in Cloud Storage, or in a different cloud product altogether that you would like to analyze in BigQuery, but that you aren't prepared to migrate.
+This document provides an overview of the ways to query external data, including BigLake tables, object tables, external tables, and federated queries, and describes common use cases.
+
+## Use cases
 
 Use cases for external data sources include the following:
 
@@ -113,6 +115,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

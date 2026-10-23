@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/apis/
 title: APIs and reference \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:01.601582+00:00
+fetched_at: 2026-10-23T13:19:53.936055+00:00
 ---
 
 # APIs and reference  |  Batch  |  Google Cloud Documentation

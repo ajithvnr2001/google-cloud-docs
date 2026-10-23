@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-gemini-chat-completions-non-streaming-image/
 title: Describe an image by using Gemini and the Chat Completions API \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:31.841668+00:00
+fetched_at: 2026-10-23T09:36:15.757253+00:00
 ---
 
 # Describe an image by using Gemini and the Chat Completions API  |  Generative AI on Vertex AI  |  Google Cloud Documentation

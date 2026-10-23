@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-import-data-image-object-detection-sample/
 title: Import data for image object detection \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:29:55.800380+00:00
+fetched_at: 2026-10-23T09:26:59.683201+00:00
 ---
 
 # Import data for image object detection  |  Vertex AI  |  Google Cloud Documentation

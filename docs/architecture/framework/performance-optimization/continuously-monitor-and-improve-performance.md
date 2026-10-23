@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/performance-optimization/continuously-monitor-and-improve-performance/
 title: Continuously monitor and improve performance \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:07:54.751989+00:00
+fetched_at: 2026-10-23T10:42:54.037960+00:00
 ---
 
 # Continuously monitor and improve performance  |  Cloud Architecture Center  |  Google Cloud Documentation
@@ -19,7 +19,7 @@ Send feedback
 
 #  Continuously monitor and improve performance Stay organized with collections  Save and categorize content based on your preferences. 
 
-Last reviewed 2024-12-06 UTC
+Last reviewed 2026-10-22 UTC
 
 This principle in the performance optimization pillar of the [Google Cloud Well-Architected Framework](https://docs.cloud.google.com/architecture/framework) provides recommendations to help you continuously monitor and improve performance.
 
@@ -41,7 +41,7 @@ Improving performance is an ongoing effort that requires a multi-faceted approac
 
 ## Recommendations
 
-To promote modular designs, consider the recommendations in the following sections.
+To continuously monitor and improve performance, consider the recommendations in the following sections.
 
 ### Define clear performance goals and metrics
 
@@ -83,6 +83,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2024-12-06 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2024-12-06 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

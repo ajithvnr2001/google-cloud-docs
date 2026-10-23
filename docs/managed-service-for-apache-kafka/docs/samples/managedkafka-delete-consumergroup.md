@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/samples/managedkafka-delete-consumergroup/
 title: Delete a Kafka consumer group \u00a0|\u00a0 Managed Service for Apache Kafka \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:10:59.321073+00:00
+fetched_at: 2026-10-23T12:37:08.142847+00:00
 ---
 
 # Delete a Kafka consumer group  |  Managed Service for Apache Kafka  |  Google Cloud Documentation

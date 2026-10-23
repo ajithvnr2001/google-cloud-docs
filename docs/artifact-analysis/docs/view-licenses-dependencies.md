@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-analysis/docs/view-licenses-dependencies/
 title: View licenses and dependencies \u00a0|\u00a0 Artifact Analysis \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:05.223502+00:00
+fetched_at: 2026-10-23T13:18:26.122011+00:00
 ---
 
 # View licenses and dependencies  |  Artifact Analysis  |  Google Cloud Documentation

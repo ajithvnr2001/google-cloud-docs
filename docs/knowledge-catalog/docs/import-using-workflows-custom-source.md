@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/import-using-workflows-custom-source/
 title: Import metadata from a custom source using Workflows \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:37:29.749061+00:00
+fetched_at: 2026-10-23T10:21:57.869640+00:00
 ---
 
 # Import metadata from a custom source using Workflows  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -87,17 +87,17 @@ You can use the Compute Engine default service account (`PROJECT_NUMBER-compute@
 
   4. Assign the following roles to the service account:
 
-     * **Logs Writer**
-     * **Dataplex Entry Group Owner**
-     * **Dataplex Metadata Job Owner**
-     * **Dataplex Catalog Editor**
-     * **Dataproc Editor**
-     * **Dataproc Worker**
-     * **Secret Manager Secret Accessor** \- on the secret that stores the credentials for your data source
-     * **Storage Object User** \- on the Cloud Storage bucket
-     * **Artifact Registry Reader** \- on the Artifact Registry repository that contains the connector image
-     * **Service Account User** \- if you use different service accounts, grant the service account running Workflows this role on the service account running the Managed Service for Apache Spark batch jobs
-     * **Workflows Invoker** \- if you want to schedule the pipeline
+     * **Logs Writer** (`roles/logging.logWriter`)
+     * **Dataplex Entry Group Owner** (`roles/dataplex.entryGroupOwner`)
+     * **Dataplex Metadata Job Owner** (`roles/dataplex.metadataJobOwner`)
+     * **Dataplex Catalog Editor** (`roles/dataplex.catalogEditor`)
+     * **Dataproc Editor** (`roles/dataproc.editor`)
+     * **Dataproc Worker** (`roles/dataproc.worker`)
+     * **Secret Manager Secret Accessor** (`roles/secretmanager.secretAccessor`) - on the secret that stores the credentials for your data source
+     * **Storage Object User** (`roles/storage.objectUser`) - on the Cloud Storage bucket
+     * **Artifact Registry Reader** (`roles/artifactregistry.reader`) - on the Artifact Registry repository that contains the connector image
+     * **Service Account User** (`roles/iam.serviceAccountUser`) - if you use different service accounts, grant the service account running Workflows this role on the service account running the Managed Service for Apache Spark batch jobs
+     * **Workflows Invoker** (`roles/workflows.invoker`) - if you want to schedule the pipeline
   5. Save your changes.
 
 
@@ -135,14 +135,14 @@ Replace the following:
          
          gcloud secrets add-iam-policy-binding SECRET_ID \
              --member="serviceAccount:SERVICE_ACCOUNT_ID" \
-             --role=roles/secretmanager.secretaccessor
+             --role=roles/secretmanager.secretAccessor
          gcloud projects add-iam-policy-binding PROJECT_ID \
              --member="serviceAccount:SERVICE_ACCOUNT_ID" \
              --role=roles/storage.objectUser \
              --condition=resource.name.startsWith('projects/_/buckets/BUCKET_ID')
          gcloud artifacts repositories add-iam-policy-binding REPOSITORY \
              --location=REPOSITORY_LOCATION \
-             --member=SERVICE_ACCOUNT_ID} \
+             --member="serviceAccount:SERVICE_ACCOUNT_ID" \
              --role=roles/artifactregistry.reader
          
 
@@ -152,20 +152,20 @@ Replace the following:
      * `BUCKET_ID`: the name of the Cloud Storage bucket.
      * `REPOSITORY`: the Artifact Registry repository that contains the connector image.
      * `REPOSITORY_LOCATION`: the Google Cloud location where the repository is hosted.
-  3. Grant the service account running Workflows the `roles/iam.serviceAccountUser` role on the service account running the Managed Service for Apache Spark batch jobs. You must grant this role even if you use the same service account for both Workflows and Managed Service for Apache Spark.
+  3. Grant the service account running Workflows the **Service Account User** (`roles/iam.serviceAccountUser`) role on the service account running the Managed Service for Apache Spark batch jobs. You must grant this role even if you use the same service account for both Workflows and Managed Service for Apache Spark.
          
          gcloud iam service-accounts add-iam-policy-binding \
              serviceAccount:SERVICE_ACCOUNT_ID \
-             --member='SERVICE_ACCOUNT_ID' \
+             --member="serviceAccount:SERVICE_ACCOUNT_ID" \
              --role='roles/iam.serviceAccountUser'
          
 
 If you use different service accounts, the value for the `--member` flag is the service account running the Managed Service for Apache Spark batch jobs.
 
-  4. If you want to schedule the pipeline, grant the service account the following role:
+  4. If you want to schedule the pipeline, grant the service account the **Workflows Invoker** (`roles/workflows.invoker`) role:
          
          gcloud projects add-iam-policy-binding PROJECT_ID \
-          --member="SERVICE_ACCOUNT_ID" \
+          --member="serviceAccount:SERVICE_ACCOUNT_ID" \
           --role=roles/workflows.invoker
          
 
@@ -1157,6 +1157,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

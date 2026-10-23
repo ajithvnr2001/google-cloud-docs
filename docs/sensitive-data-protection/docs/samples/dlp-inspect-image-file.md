@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-inspect-image-file/
 title: Inspect an image file for sensitive data \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:50:18.432508+00:00
+fetched_at: 2026-10-23T10:52:55.234808+00:00
 ---
 
 # Inspect an image file for sensitive data  |  Sensitive Data Protection  |  Google Cloud Documentation

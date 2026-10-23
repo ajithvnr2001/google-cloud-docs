@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/toxic-combinations-overview/
 title: Toxic combinations and chokepoints overview \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:42.927681+00:00
+fetched_at: 2026-10-23T12:50:43.019775+00:00
 ---
 
 # Toxic combinations and chokepoints overview  |  Security Command Center  |  Google Cloud Documentation
@@ -23,11 +23,9 @@ Send feedback
 
 Premium and Enterprise (Deprecated) [service tiers](https://docs.cloud.google.com/security-command-center/docs/service-tiers) The Security Command Center Enterprise service tier will shut down on May 21, 2027. If your organization uses the Enterprise service tier, then the organization will automatically move to the Premium service tier on or after May 21, 2027. Contact your account representative or a [Google Cloud sales specialist](https://cloud.google.com/contact) if you have questions. 
 
-_Toxic combinations_ are a group of security issues that, when they occur together in a particular pattern, creates a path to one or more of your high-value resources that a determined attacker could potentially use to compromise those resources.
+Risk Engine lets you detect _toxic combinations_ , which are security issue groups that create an attack path to high-value resources. It also identifies _chokepoints_ , which are shared resources where multiple attack paths converge, letting you remediate multiple toxic combinations in a single action.
 
-The Risk Engine detects toxic combinations during the [attack path simulations](https://docs.cloud.google.com/security-command-center/docs/attack-exposure-learn#attack_path_simulations) that it runs. For each toxic combination that Risk Engine detects, it generates a finding. Each toxic combination includes a unique attack exposure score, called a _toxic combination score_ , that measures the risk of the toxic combination to the high-value resource set in your cloud environment. Risk Engine also generates a visualization of the attack path that the toxic combination creates to the resources in your high-value resource set.
-
-_Chokepoints_ are similar to toxic combinations, but focus on common resources or resource groups where multiple attack paths converge. As a consequence, remediating a chokepoint can remediate multiple toxic combinations.
+Risk Engine detects toxic combinations during the [attack path simulations](https://docs.cloud.google.com/security-command-center/docs/attack-exposure-learn#attack_path_simulations) that it runs. For each toxic combination that Risk Engine detects, it generates a finding. Each toxic combination includes a unique attack exposure score, called a _toxic combination score_ , that measures the risk of the toxic combination to the high-value resource set in your cloud environment. Risk Engine also generates a visualization of the attack path that the toxic combination creates to the resources in your high-value resource set.
 
 Toxic combinations and chokepoints are detected for the following cloud service provider platforms:
 
@@ -198,6 +196,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/multi-value-http-headers/
 title: Antipattern: Access multi-value HTTP headers incorrectly in an API Proxy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:52.461697+00:00
+fetched_at: 2026-10-23T13:14:50.382768+00:00
 ---
 
 # Antipattern: Access multi-value HTTP headers incorrectly in an API Proxy  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/multi-region/
 title: Expanding Apigee to multiple regions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:37.264138+00:00
+fetched_at: 2026-10-23T13:18:48.346152+00:00
 ---
 
 # Expanding Apigee to multiple regions  |  Google Cloud Documentation

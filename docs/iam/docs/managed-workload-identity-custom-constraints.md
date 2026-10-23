@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/managed-workload-identity-custom-constraints/
 title: Use custom organization policies for Managed workload identities \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:30.176610+00:00
+fetched_at: 2026-10-23T13:03:55.656047+00:00
 ---
 
 # Use custom organization policies for Managed workload identities  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

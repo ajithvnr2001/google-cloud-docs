@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/run/route-trigger-eventarc/
 title: Route Eventarc events to Cloud Run \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:35.098490+00:00
+fetched_at: 2026-10-23T13:01:30.835400+00:00
 ---
 
 # Route Eventarc events to Cloud Run  |  Eventarc Standard  |  Google Cloud Documentation

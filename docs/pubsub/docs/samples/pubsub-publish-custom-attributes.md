@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-publish-custom-attributes/
 title: Publish with custom attributes \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:15.182764+00:00
+fetched_at: 2026-10-23T12:55:07.023138+00:00
 ---
 
 # Publish with custom attributes  |  Pub/Sub  |  Google Cloud Documentation
@@ -200,6 +200,79 @@ To authenticate to Pub/Sub, set up Application Default Credentials. For more inf
             // When finished with the publisher, shutdown to free up resources.
             publisher.[shutdown](https://docs.cloud.google.com/java/docs/reference/google-cloud-pubsub/latest/com.google.cloud.pubsub.v1.Publisher.html#com_google_cloud_pubsub_v1_Publisher_shutdown__)();
             publisher.[awaitTermination](https://docs.cloud.google.com/java/docs/reference/google-cloud-pubsub/latest/com.google.cloud.pubsub.v1.Publisher.html#com_google_cloud_pubsub_v1_Publisher_awaitTermination_long_java_util_concurrent_TimeUnit_)(1, TimeUnit.MINUTES);
+          }
+        }
+      }
+    }
+
+### Kotlin
+    
+    
+    import com.google.api.gax.rpc.ApiException
+    import com.google.api.gax.rpc.NotFoundException
+    import com.google.cloud.pubsub.v1.Publisher
+    import com.google.protobuf.ByteString
+    import com.google.pubsub.v1.PubsubMessage
+    import com.google.pubsub.v1.TopicName
+    import java.io.IOException
+    import java.util.concurrent.ExecutionException
+    import java.util.concurrent.TimeUnit
+    
+    /**
+     * Publishes a UTF-8 message payload with custom attributes to a Pub/Sub topic.
+     *
+     * @param projectId Google Cloud project identifier (for example, "example-project-id").
+     * @param topicId Target Pub/Sub topic identifier (for example, "example-topic-id").
+     */
+    fun publishMessage(projectId: String, topicId: String) {
+      val topicName = TopicName.of(projectId, topicId)
+      val payloadText = "Example Pub/Sub message payload"
+      val messageData = ByteString.copyFromUtf8(payloadText)
+      val messageAttributes =
+        mapOf("environment" to "production", "origin" to "example-kotlin-publisher")
+      val pubsubMessage =
+        PubsubMessage.newBuilder()
+          .setData(messageData)
+          .putAllAttributes(messageAttributes)
+          .build()
+    
+      var publisher: Publisher? = null
+      try {
+        publisher = Publisher.newBuilder(topicName).build()
+        println("Publishing message to topic '${topicName}'...")
+        val messageIdFuture = publisher.publish(pubsubMessage)
+        val messageId = messageIdFuture.get()
+    
+        println("Resource ID: $messageId")
+        println("Attributes: $messageAttributes")
+        println("Topic: $topicName")
+      } catch (err: ExecutionException) {
+        val message =
+          when (val cause = err.cause) {
+            is NotFoundException ->
+              "error: topic '$topicId' not found in project '$projectId': ${cause.message}"
+            is ApiException ->
+              "error: failed to publish message to topic '$topicId' in project '$projectId': ${cause.message}"
+            else ->
+              "error: execution failed while publishing to topic '$topicId' in project '$projectId': ${err.message}"
+          }
+        System.err.println(message)
+      } catch (err: InterruptedException) {
+        Thread.currentThread().interrupt()
+        System.err.println(
+          "error: interrupted while publishing to topic '$topicId' in project '$projectId': ${err.message}"
+        )
+      } catch (err: IOException) {
+        System.err.println(
+          "error: failed to initialize Publisher for topic '$topicId' in project '$projectId': ${err.message}"
+        )
+      } finally {
+        if (publisher != null) {
+          publisher.shutdown()
+          try {
+            publisher.awaitTermination(1, TimeUnit.MINUTES)
+          } catch (err: InterruptedException) {
+            Thread.currentThread().interrupt()
           }
         }
       }

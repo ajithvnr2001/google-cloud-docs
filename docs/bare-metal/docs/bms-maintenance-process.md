@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-maintenance-process/
 title: Bare Metal Solution maintenance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:14.036498+00:00
+fetched_at: 2026-10-23T13:18:49.015207+00:00
 ---
 
 # Bare Metal Solution maintenance  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/transactions/
 title: Multi-statement transactions \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:37:19.791980+00:00
+fetched_at: 2026-10-23T12:56:04.327422+00:00
 ---
 
 # Multi-statement transactions  |  BigQuery  |  Google Cloud Documentation

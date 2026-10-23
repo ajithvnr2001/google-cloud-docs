@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/antipatterns/invoking-management/
 title: Antipattern: Invoke Apigee API calls from an API proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:53.197517+00:00
+fetched_at: 2026-10-23T13:14:50.309707+00:00
 ---
 
 # Antipattern: Invoke Apigee API calls from an API proxy  |  Google Cloud Documentation

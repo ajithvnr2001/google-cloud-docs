@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/nextflow/
 title: Orchestrate jobs by running Nextflow pipelines on Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:27.874957+00:00
+fetched_at: 2026-10-23T13:18:54.169189+00:00
 ---
 
 # Orchestrate jobs by running Nextflow pipelines on Batch  |  Google Cloud Documentation

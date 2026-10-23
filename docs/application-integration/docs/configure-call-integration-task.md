@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure-call-integration-task/
 title: Call Integration task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:46.901307+00:00
+fetched_at: 2026-10-23T13:18:16.134841+00:00
 ---
 
 # Call Integration task  |  Application Integration  |  Google Cloud Documentation

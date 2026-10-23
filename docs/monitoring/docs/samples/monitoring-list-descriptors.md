@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/monitoring/docs/samples/monitoring-list-descriptors/
 title: List metric descriptors \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:36:54.201803+00:00
+fetched_at: 2026-10-23T12:35:33.021668+00:00
 ---
 
 # List metric descriptors  |  Cloud Monitoring  |  Google Cloud Documentation
@@ -201,7 +201,7 @@ To authenticate to Monitoring, set up Application Default Credentials. For more 
     # Your Google Cloud Platform project ID
     # project_id = "YOUR_PROJECT_ID"
     
-    client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-dashboard-v1/latest/Google-Cloud-Monitoring.html).[metric_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
+    client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html).[metric_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
     project_name = client.project_path project: project_id
     
     results = client.list_metric_descriptors name: project_name

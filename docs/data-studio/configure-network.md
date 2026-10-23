@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/configure-network/
 title: Configure network access for Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:34.329370+00:00
+fetched_at: 2026-10-23T13:19:26.884892+00:00
 ---
 
 # Configure network access for Data Studio  |  Google Cloud Documentation

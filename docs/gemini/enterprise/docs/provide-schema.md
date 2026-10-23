@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/provide-schema/
 title: Provide or auto-detect a schema \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:46.754817+00:00
+fetched_at: 2026-10-23T13:10:58.003255+00:00
 ---
 
 # Provide or auto-detect a schema  |  Gemini Enterprise  |  Google Cloud Documentation

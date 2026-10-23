@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/security/oauth/understanding-default-oauth-20-configuration/
 title: OAuth 2.0: Configuring a new API proxy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:45.778461+00:00
+fetched_at: 2026-10-23T13:18:45.889672+00:00
 ---
 
 # OAuth 2.0: Configuring a new API proxy  |  Apigee  |  Google Cloud Documentation

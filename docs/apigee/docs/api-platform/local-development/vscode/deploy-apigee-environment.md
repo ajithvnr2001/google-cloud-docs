@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/local-development/vscode/deploy-apigee-environment/
 title: Deploy an archive to an Apigee environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:07.106333+00:00
+fetched_at: 2026-10-23T13:14:36.989760+00:00
 ---
 
 # Deploy an archive to an Apigee environment  |  Google Cloud Documentation

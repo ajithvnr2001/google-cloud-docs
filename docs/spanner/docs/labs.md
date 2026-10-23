@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/labs/
 title: Spanner Codelabs \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:34.539093+00:00
+fetched_at: 2026-10-23T10:10:29.384367+00:00
 ---
 
 # Spanner Codelabs  |  Google Cloud Documentation

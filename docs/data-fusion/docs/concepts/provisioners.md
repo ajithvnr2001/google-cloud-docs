@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/concepts/provisioners/
 title: Provisioners in Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:59.791029+00:00
+fetched_at: 2026-10-23T13:20:45.892332+00:00
 ---
 
 # Provisioners in Cloud Data Fusion  |  Google Cloud Documentation

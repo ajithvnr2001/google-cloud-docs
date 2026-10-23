@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/docs/samples/eventarc-workflows-deploy/
 title: Create a trigger using Terraform (workflow) \u00a0|\u00a0 Eventarc \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:06.570270+00:00
+fetched_at: 2026-10-23T13:00:32.067549+00:00
 ---
 
 # Create a trigger using Terraform (workflow)  |  Eventarc  |  Google Cloud Documentation

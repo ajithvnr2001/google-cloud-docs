@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/monitor-frameworks/
 title: Monitor Assured Workloads frameworks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:07.924134+00:00
+fetched_at: 2026-10-23T13:19:22.158539+00:00
 ---
 
 # Monitor Assured Workloads frameworks  |  Google Cloud Documentation

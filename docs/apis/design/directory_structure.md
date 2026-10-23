@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apis/design/directory_structure/
 title: Directory structure \u00a0|\u00a0 Cloud API Design Guide \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:18.637712+00:00
+fetched_at: 2026-10-23T13:17:00.851619+00:00
 ---
 
 # Directory structure  |  Cloud API Design Guide  |  Google Cloud Documentation

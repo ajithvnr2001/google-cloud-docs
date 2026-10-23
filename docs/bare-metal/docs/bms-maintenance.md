@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-maintenance/
 title: Maintain the Bare Metal Solution environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:15.191012+00:00
+fetched_at: 2026-10-23T13:19:05.691836+00:00
 ---
 
 # Maintain the Bare Metal Solution environment  |  Google Cloud Documentation

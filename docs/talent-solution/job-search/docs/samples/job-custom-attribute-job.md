@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-custom-attribute-job/
 title: define field-value pairs \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:11.281574+00:00
+fetched_at: 2026-10-23T09:34:25.948976+00:00
 ---
 
 # define field-value pairs  |  Job Search  |  Google Cloud Documentation

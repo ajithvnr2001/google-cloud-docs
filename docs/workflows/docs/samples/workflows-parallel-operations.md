@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-parallel-operations/
 title: Perform operations in parallel using branches \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:02:11.477101+00:00
+fetched_at: 2026-10-23T09:37:40.427020+00:00
 ---
 
 # Perform operations in parallel using branches  |  Workflows  |  Google Cloud Documentation

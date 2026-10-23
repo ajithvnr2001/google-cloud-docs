@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/reliability-recommender/
 title: Reliability recommender \u00a0|\u00a0 Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:39.006556+00:00
+fetched_at: 2026-10-23T13:03:24.619996+00:00
 ---
 
 # Reliability recommender  |  Firestore with MongoDB compatibility  |  Google Cloud Documentation

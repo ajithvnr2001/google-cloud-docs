@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/list-get-allowlisted-domains/
 title: Listing and getting allowlisted domains \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:51.092230+00:00
+fetched_at: 2026-10-23T13:10:26.983348+00:00
 ---
 
 # Listing and getting allowlisted domains  |  Cloud Identity  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/manage-connector-jobs/
 title: Manage connector jobs \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T04:37:28.766459+00:00
+fetched_at: 2026-10-23T10:22:02.571881+00:00
 ---
 
 # Manage connector jobs  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -36,17 +36,17 @@ For more information about how connectors work, see [About metadata connectors](
 To manage connector jobs, you need the appropriate IAM roles. See [IAM roles](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles) for details.
 
   * To view jobs and run history: 
-    * [BigQuery User](https://docs.cloud.google.com/iam/docs/understanding-roles#bigquery.user) (`roles/bigquery.user`)
-    * Dataplex Viewer (`roles/dataplex.viewer`)
+    * [**BigQuery User**](https://docs.cloud.google.com/iam/docs/understanding-roles#bigquery.user) (`roles/bigquery.user`)
+    * **Dataplex Viewer** (`roles/dataplex.viewer`)
   * To edit, delete, or manually trigger jobs: 
-    * [BigQuery Admin](https://docs.cloud.google.com/iam/docs/understanding-roles#bigquery.admin) (`roles/bigquery.admin`)
-    * Dataplex Administrator (`roles/dataplex.admin`) or Dataplex Editor (`roles/dataplex.editor`)
+    * [**BigQuery Admin**](https://docs.cloud.google.com/iam/docs/understanding-roles#bigquery.admin) (`roles/bigquery.admin`)
+    * **Dataplex Administrator** (`roles/dataplex.admin`) or **Dataplex Editor** (`roles/dataplex.editor`)
 
 
 
 You need to [enable the BigQuery Data Transfer Service](https://docs.cloud.google.com/bigquery/docs/enable-transfer-service#enable-dts).
 
-Additionally, you must grant the BigQuery Data Transfer Service service agent (`service-PROJECT_NUMBER@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com`) the `dataplex.entryGroups.import` permission or the [Dataplex Entry Group Importer (`roles/dataplex.entryGroupImporter`)](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles#dataplex.entryGroupImporter) role. This can be granted either at the project level or at the entry group level.
+Additionally, you must grant the BigQuery Data Transfer Service service agent (`service-PROJECT_NUMBER@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com`) the `dataplex.entryGroups.import` permission or the [**Dataplex Entry Group Importer**](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles#dataplex.entryGroupImporter) (`roles/dataplex.entryGroupImporter`) role. This can be granted either at the project level or at the entry group level.
 
 ## View connector jobs
 
@@ -120,6 +120,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

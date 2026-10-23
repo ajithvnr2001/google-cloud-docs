@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/aaforsalesforce-voice-twilio/
 title: Agent Assist for Salesforce voice integration with Twilio Flex \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:02.859294+00:00
+fetched_at: 2026-10-23T13:13:53.742047+00:00
 ---
 
 # Agent Assist for Salesforce voice integration with Twilio Flex  |  Google Cloud Documentation

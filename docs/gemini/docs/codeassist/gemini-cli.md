@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli/
 title: Gemini CLI \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:12.202246+00:00
+fetched_at: 2026-10-23T13:03:51.134474+00:00
 ---
 
 # Gemini CLI  |  Gemini for Google Cloud  |  Google Cloud Documentation

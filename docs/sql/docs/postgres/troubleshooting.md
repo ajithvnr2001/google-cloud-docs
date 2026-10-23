@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/troubleshooting/
 title: Troubleshoot \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:00.173385+00:00
+fetched_at: 2026-10-23T10:19:03.409526+00:00
 ---
 
 # Troubleshoot  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -295,7 +295,7 @@ Issue | Troubleshooting
 ---|---  
 Error message: `Google ML integration API is supported only on Postgres version 12 or above.` | To enable the Vertex AI integration in Cloud SQL, you must have a Cloud SQL for PostgreSQL database, version 12 or later. To upgrade your database to this version, see [Upgrade the database major version in-place](https://docs.cloud.google.com/sql/docs/postgres/upgrade-major-db-version-inplace).  
 Error message: `Google ML Integration API is not supported on shared core instance. Please upsize your machine type.` | If you selected a shared core for the machine type of your instance, then you can't enable the Vertex AI integration in Cloud SQL. Upgrade your machine type to dedicated core. For more information, see [Machine Type](https://docs.cloud.google.com/sql/docs/postgres/instance-settings#machine-type-2ndgen).  
-Error message: `Google ML Integration is unsupported for this maintenance version. Please follow https://cloud.google.com/sql/docs/postgres/self-service-maintenance to update the maintenance version of the instance.` | To enable the Vertex AI integration in Cloud SQL, the maintenance version of your instance must be `R20240130` or later. To upgrade your instance to this version, see [Self-service maintenance](https://docs.cloud.google.com/sql/docs/postgres/self-service-maintenance).  
+Error message: `Google ML Integration is unsupported for this maintenance version. Please follow https://docs.cloud.google.com/sql/docs/postgres/self-service-maintenance to update the maintenance version of the instance.` | To enable the Vertex AI integration in Cloud SQL, the maintenance version of your instance must be `R20240130` or later. To upgrade your instance to this version, see [Self-service maintenance](https://docs.cloud.google.com/sql/docs/postgres/self-service-maintenance).  
 Error message: `**Cannot invoke ml_predict_row if 'cloudsql.enable_google_ml_integration' is off.**` | The `cloudsql.enable_google_ml_integration `database flag is turned off. Cloud SQL can't integrate with Vertex AI.  
   
 To turn this flag on, use the [`gcloud sql instances patch`](https://docs.cloud.google.com/sdk/gcloud/reference/sql/instances/patch) command:  
@@ -411,7 +411,7 @@ You want to stop a blocked background process. | The user needs to have the `pg_
 
 
   
-Instance is nearing 100% consumption of transaction IDs. | Your internal monitoring warns that the instance is nearing 100% consumption of transaction IDs. You want to avoid transaction wraparound, which can block writes. The autovacuum job might be blocked, or might not be reclaiming the transaction IDs fast enough to keep up with the workload. In order to avoid any outages due to transaction wraparound problem, you can review these [self-servicing tips](https://docs.cloud.google.com/sql/docs/postgres/txid-wraparound) for dealing with TXID wraparound. For general tuning advice, see [ Optimizing, monitoring, and troubleshooting vacuum operations in PostgreSQL](https://cloud.google.com/solutions/optimizing-monitoring-troubleshooting-vacuum-operations-postgresql.pdf).  
+Instance is nearing 100% consumption of transaction IDs. | Your internal monitoring warns that the instance is nearing 100% consumption of transaction IDs. You want to avoid transaction wraparound, which can block writes. The autovacuum job might be blocked, or might not be reclaiming the transaction IDs fast enough to keep up with the workload. In order to avoid any outages due to transaction wraparound problem, you can review these [self-servicing tips](https://docs.cloud.google.com/sql/docs/postgres/txid-wraparound) for dealing with TXID wraparound. For general tuning advice, see [ Optimizing, monitoring, and troubleshooting vacuum operations in PostgreSQL](https://docs.cloud.google.com/static/solutions/optimizing-monitoring-troubleshooting-vacuum-operations-postgresql.pdf).  
 Temporary storage increased automatic storage. | Automatic storage is enabled. Restart deletes the temporary files but not reduce the storage. Only [ customer support](https://docs.cloud.google.com/sql/docs/getting-support) can reset the instance size.  
 Data is being automatically deleted. | Most likely a script is running somewhere in your environment. Look in the logs around the time of the deletion and see if there's a rogue script running from a dashboard or another automated process.  
 The instance cannot be deleted. | You might see the error message `ERROR: (gcloud.sql.instances.delete) HTTP Error 409: The instance or operation is not in an appropriate state to handle the request`, or the instance may have a `INSTANCE_RISKY_FLAG_CONFIG` flag status. Some possible explanations include:
@@ -600,6 +600,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

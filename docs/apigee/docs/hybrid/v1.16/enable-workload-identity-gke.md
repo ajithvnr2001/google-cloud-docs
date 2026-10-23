@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/enable-workload-identity-gke/
 title: Enabling Workload Identity Federation for GKE \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:46.663543+00:00
+fetched_at: 2026-10-23T13:15:56.996444+00:00
 ---
 
 # Enabling Workload Identity Federation for GKE  |  Apigee  |  Google Cloud Documentation

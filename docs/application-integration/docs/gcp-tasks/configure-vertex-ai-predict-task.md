@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/gcp-tasks/configure-vertex-ai-predict-task/
 title: Vertex AI - Predict task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:09.119499+00:00
+fetched_at: 2026-10-23T13:18:34.471221+00:00
 ---
 
 # Vertex AI - Predict task  |  Application Integration  |  Google Cloud Documentation

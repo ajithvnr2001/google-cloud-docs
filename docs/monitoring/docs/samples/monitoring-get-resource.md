@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/monitoring/docs/samples/monitoring-get-resource/
 title: Get a monitored resource \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:36:55.209004+00:00
+fetched_at: 2026-10-23T11:00:45.893907+00:00
 ---
 
 # Get a monitored resource  |  Cloud Monitoring  |  Google Cloud Documentation
@@ -210,7 +210,7 @@ To authenticate to Monitoring, set up Application Default Credentials. For more 
     # The resource type
     # resource_type = "gce_instance"
     
-    client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-dashboard-v1/latest/Google-Cloud-Monitoring.html).[metric_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
+    client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html).[metric_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
     resource_path = client.[monitored_resource_descriptor_path](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-v3/latest/Google-Cloud-Monitoring-V3-MetricService-Paths.html)(
       project:                       project_id,
       monitored_resource_descriptor: resource_type

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/iceberg-external-tables/
 title: Create Apache Iceberg external tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:11:20.444195+00:00
+fetched_at: 2026-10-23T12:55:38.757732+00:00
 ---
 
 # Create Apache Iceberg external tables  |  BigQuery  |  Google Cloud Documentation
@@ -21,11 +21,7 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Create Apache Iceberg external tables
 
-Apache Iceberg external tables let you access [Apache Iceberg](https://iceberg.apache.org/docs/latest/) tables with finer-grained access control in a read-only format. These tables are no longer recommended for most use cases. Instead, see Recommended alternatives.
-
-Iceberg is an open source table format that supports petabyte scale data tables. The Iceberg open specification lets you run multiple query engines on a single copy of data stored in an object store. Apache Iceberg external tables (hereafter called _Iceberg external tables_) support [Iceberg version 2](https://iceberg.apache.org/spec/#version-2-row-level-deletes), including merge-on-read. Support for [Iceberg version 3](https://iceberg.apache.org/spec/#version-3-extended-types-and-capabilities), including binary deletion vectors, is in [Preview](https://cloud.google.com/products/#product-launch-stages). To provide feedback or ask questions that are related to this Preview feature, contact [biglake-help@google.com](mailto:biglake-help@google.com).
-
-As a BigQuery administrator, you can enforce row- and column-level access control including data masking on tables. For information about how to set up access control at the table level, see Set up access control policies. Table access policies are also enforced when you use the BigQuery Storage API as a data source for the table in Managed Service for Apache Spark and Serverless Spark.
+Apache Iceberg external tables let you access [Apache Iceberg](https://iceberg.apache.org/docs/latest/) tables in a read-only format with finer-grained access control, including row-level and column-level security and data masking. These tables are no longer recommended for most use cases. Instead, see Recommended alternatives.
 
 ## Recommended alternatives
 
@@ -35,6 +31,10 @@ Depending on where your data is stored, we recommend the following alternatives 
   * **Azure Blob Storage or Apache Iceberg tables not managed by a supported remote catalog for Lakehouse runtime catalog with cross-cloud data access**. Continue with Apache Iceberg external tables using Iceberg JSON metadata files.
 
 
+
+## Iceberg format and version support
+
+Iceberg is an open source table format that supports petabyte scale data tables. The Iceberg open specification lets you run multiple query engines on a single copy of data stored in an object store. Iceberg external tables support [Iceberg version 2](https://iceberg.apache.org/spec/#version-2-row-level-deletes), including merge-on-read. Support for [Iceberg version 3](https://iceberg.apache.org/spec/#version-3-extended-types-and-capabilities), including binary deletion vectors, is in [Preview](https://cloud.google.com/products/#product-launch-stages). To provide feedback or ask questions that are related to this Preview feature, contact [biglake-help@google.com](mailto:biglake-help@google.com).
 
 ## Before you begin
 
@@ -221,6 +221,8 @@ Replace `URI` with the latest Iceberg metadata file. For example, `gs://mybucket
 
 You can control access to Iceberg external tables through [column-level security](https://docs.cloud.google.com/bigquery/docs/column-level-security), [row-level security](https://docs.cloud.google.com/bigquery/docs/managing-row-level-security), and [data masking](https://docs.cloud.google.com/bigquery/docs/column-data-masking).
 
+As a BigQuery administrator, you can enforce row- and column-level access control including data masking on tables. Table access policies are also enforced when you use the BigQuery Storage API as a data source for the table in Managed Service for Apache Spark and Serverless Spark.
+
 ## Query Iceberg external tables
 
 For more information, see [Query Iceberg data](https://docs.cloud.google.com/bigquery/docs/query-iceberg-data).
@@ -405,6 +407,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/web-security-best-practices/
 title: Web security best practices \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:51.345156+00:00
+fetched_at: 2026-10-23T13:19:06.231395+00:00
 ---
 
 # Web security best practices  |  Cloud CDN  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/nested-repeated/
 title: Specify nested and repeated columns in table schemas \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:56:58.363387+00:00
+fetched_at: 2026-10-23T12:55:31.482023+00:00
 ---
 
 # Specify nested and repeated columns in table schemas  |  BigQuery  |  Google Cloud Documentation
@@ -21,7 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Specify nested and repeated columns in table schemas
 
-This page describes how to define a table schema with nested and repeated columns in BigQuery. For an overview of table schemas, see [Specify a schema](https://docs.cloud.google.com/bigquery/docs/schemas).
+Nested and repeated columns let you store related data, such as a book and its authors, in a single BigQuery table instead of in separate tables that you join. Because BigQuery performs best with denormalized data, these columns help you maintain relationships without the performance cost of a normalized schema.
+
+This document describes how to define nested and repeated columns in a table schema, insert and modify data in them, and decide when to use them. For an overview of table schemas, see [Specify a schema](https://docs.cloud.google.com/bigquery/docs/schemas).
 
 ## Define nested and repeated columns
 
@@ -613,6 +615,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

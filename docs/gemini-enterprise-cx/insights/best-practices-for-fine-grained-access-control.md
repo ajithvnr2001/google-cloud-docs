@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/best-practices-for-fine-grained-access-control/
 title: Best practices for fine-grained access control \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:27.117696+00:00
+fetched_at: 2026-10-23T13:13:23.138248+00:00
 ---
 
 # Best practices for fine-grained access control  |  Customer Experience Insights  |  Google Cloud Documentation

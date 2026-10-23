@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/set-up-secure-perimeter/
 title: Deploy resources in a service perimeter \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:53.316339+00:00
+fetched_at: 2026-10-23T13:17:58.140452+00:00
 ---
 
 # Deploy resources in a service perimeter  |  Application Design Center  |  Google Cloud Documentation

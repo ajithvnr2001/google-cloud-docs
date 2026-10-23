@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-qwen3-30b-a3b-rl-maxtext/
 title: Run multi-host RL training for Qwen3-30b-a3b on TPU v6e \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:10:20.078204+00:00
+fetched_at: 2026-10-23T10:21:25.762267+00:00
 ---
 
 # Run multi-host RL training for Qwen3-30b-a3b on TPU v6e  |  AI Hypercomputer  |  Google Cloud Documentation
@@ -74,7 +74,7 @@ When you finish the tasks that are described in this document, you can avoid con
 
 
 
-  * On the [Hugging Face website](https://huggingface.co/), accept the license agreement for the model that you plan to train. This tutorial uses the model `qwen3-30b-a3b`.
+  * Review the [`Qwen/Qwen3-30B-A3B-Instruct-2507` model card on Hugging Face](https://huggingface.co/Qwen/Qwen3-30B-A3B-Instruct-2507).
 
 
 
@@ -116,32 +116,47 @@ Set up your environment variables:
 
 Replace the following:
 
-  * YOUR_PROJECT_ID: the ID of your Google Cloud project.
-  * YOUR_REGION: the region where you want to deploy your cluster.
-  * YOUR_ZONE: the zone where you want to deploy your cluster.
-  * YOUR_CLUSTER_NAME: the name of your Google Kubernetes Engine cluster (up to 20 characters).
-  * YOUR_BUCKET_NAME: a globally unique name for a Cloud Storage bucket.
-  * YOUR_RESERVATION_NAME: the name of your reservation.
-  * YOUR_HF_TOKEN: your Hugging Face access token.
+  * `YOUR_PROJECT_ID`: the ID of your Google Cloud project.
+  * `YOUR_REGION`: the region where your TPU reservation is located and where you deploy your cluster.
+  * `YOUR_ZONE`: the zone where your TPU reservation is located and where you deploy your cluster.
+  * `YOUR_CLUSTER_NAME`: the name of your GKE cluster. The name must start with a lowercase letter, contain only lowercase letters, numbers, and hyphens, and be 20 characters or fewer.
+  * `YOUR_BUCKET_NAME`: a globally unique name for a Cloud Storage bucket.
+  * `YOUR_RESERVATION_NAME`: the name of your TPU v6e reservation.
+  * `YOUR_HF_TOKEN`: your Hugging Face access token.
 
 
 
 ## Install Cluster Toolkit dependencies
 
-To complete this tutorial from a Linux or macOS client or workstation, follow the relevant steps in [Install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies) in the Cluster Toolkit documentation.
+To complete this tutorial from a Linux or macOS client or workstation, install the following dependencies:
+
+  * Follow the relevant steps in [Install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies) in the Cluster Toolkit documentation.
+  * Install `kubectl` and the `gke-gcloud-auth-plugin` plugin. For instructions, see [Install `kubectl` and configure cluster access](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl).
+
+
 
 If you're using Cloud Shell, then you can skip this section.
 
 ## Install Cluster Toolkit
 
-Install the prebuilt bundle for Cluster Toolkit in your current working directory by following the instructions at [Install Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-environment#install-bundle).
-
-For example, you can download and extract the bundle into your current working directory as follows:
+Download and extract the prebuilt bundle for the specific version of Cluster Toolkit defined in `CLUSTER_TOOLKIT_VERSION` (`v1.103.0`) into your current working directory:
     
     
     wget -qO- "https://github.com/GoogleCloudPlatform/cluster-toolkit/releases/download/${CLUSTER_TOOLKIT_VERSION:?}/gcluster_bundle_linux_amd64.tgz" | tar -xz
 
-Extracting the bundle into your current working directory provides the `gcluster` binary and the `examples/` blueprints that you use in the steps that follow.
+**Note:** The [Install Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-environment#install-bundle) documentation describes how to download the latest release. However, because blueprint variables can differ across Cluster Toolkit versions, for this tutorial you must install the exact version specified in `CLUSTER_TOOLKIT_VERSION` (`v1.103.0`) rather than the latest release. Extracting the bundle into your current working directory provides the `gcluster` binary and the `examples/` blueprints that you use in the steps that follow.
+
+## Authenticate your environment
+
+Before running the deployment scripts, you must authenticate the Google Cloud CLI and set your Application Default Credentials (ADC). This ensures that Cluster Toolkit can provision resources and push images to Artifact Registry on your behalf:
+    
+    
+    gcloud auth login
+    gcloud auth application-default login
+    gcloud auth application-default set-quota-project "${PROJECT:?}"
+    
+    gcloud auth configure-docker gcr.io --quiet
+    gcloud auth configure-docker "${REGION:?}-docker.pkg.dev" --quiet
 
 ## Create your Cluster Toolkit cluster
 
@@ -155,19 +170,11 @@ To create and deploy a Cluster Toolkit cluster with 32 `v6e` TPU chips, complete
          
          cp examples/gke-tpu-v6e/gke-tpu-v6e-advanced.yaml .
 
-  3. By default, your cluster node pool service account doesn't have the required permissions to write to your Cloud Storage bucket. To allow the node pool service account to write to your Cloud Storage bucket, you must grant it the `Storage Admin` role. To grant this role, edit the file `gke-tpu-v6e-advanced.yaml` by updating the [`service-account` module](https://docs.cloud.google.com/cluster-toolkit/docs/modules/service-account) named `node_pool_service_account`:
+  3. By default, your cluster node pool service account doesn't have the required permissions to write checkpoints to your Cloud Storage bucket. To allow the node pool service account (`gke-np-sa`) to write to your Cloud Storage bucket, and to avoid regional machine-type stockouts, edit the file `gke-tpu-v6e-advanced.yaml` to grant your node pool service account the Storage Admin role (`roles/storage.admin`), switch the system node pool machine type to `e2-standard-8`, and pin the system node pool to your target zone:
          
-         - id: node_pool_service_account
-           source: modules/project/service-account
-           settings:
-             name: gke-np-sa
-             project_roles:
-             - logging.logWriter
-             - monitoring.metricWriter
-             - monitoring.viewer
-             - stackdriver.resourceMetadata.writer
-             - storage.admin
-             - artifactregistry.reader
+         sed -i "s/- storage.objectViewer/- storage.admin/" gke-tpu-v6e-advanced.yaml
+         sed -i "s/n2-standard-8/e2-standard-8/" gke-tpu-v6e-advanced.yaml
+         sed -i '/system_node_pool_machine_type/a \      system_node_pool_zones: [$(vars.zone)]' gke-tpu-v6e-advanced.yaml
 
   4. Use the [`gcluster deploy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-deploy) to deploy your Cluster Toolkit cluster by using the blueprint `gke-tpu-v6e-advanced.yaml` and passing the required variables by using the `--vars` flag:
          
@@ -181,13 +188,6 @@ To create and deploy a Cluster Toolkit cluster with 32 `v6e` TPU chips, complete
              --vars authorized_cidr="0.0.0.0/0" \
              --vars reservation="${RESERVATION:-}" \
              -l IGNORE --auto-approve -w
-
-  5. Configure Container Registry authentication and grant the Storage Admin role (`roles/storage.admin`) to your GKE service accounts:
-         
-         gcloud auth configure-docker gcr.io --quiet
-         gcloud auth configure-docker "${REGION:?}-docker.pkg.dev" --quiet
-         gcloud projects add-iam-policy-binding "${PROJECT:?}" --member="serviceAccount:${CLUSTER_NAME:?}-gke-wl-sa@${PROJECT}.iam.gserviceaccount.com" --role="roles/storage.admin" --quiet
-         gcloud projects add-iam-policy-binding "${PROJECT:?}" --member="serviceAccount:${CLUSTER_NAME:?}-gke-np-sa@${PROJECT}.iam.gserviceaccount.com" --role="roles/storage.admin" --quiet
 
 
 
@@ -226,7 +226,7 @@ To train the model in MaxText format, you must convert it from Hugging Face form
            hardware=cpu \
            --lazy_load_tensors=True"
 
-  3. Use the [`gcluster job logs` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-job-logs) to check the status of the conversion job:
+  3. Optional: To stream the conversion logs while the job is running, open a separate terminal in the working directory where you extracted `gcluster`, and run the [`gcluster job logs` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-job-logs):
          
          # Use the list command to check status
          ./gcluster job list
@@ -234,7 +234,7 @@ To train the model in MaxText format, you must convert it from Hugging Face form
          # Check progress of the job (--main-only targets the coordinator pod (Job Index 0, Pod Index 0) to avoid duplicate logs from other workers)
          ./gcluster job logs qwen-hf-to-mt --main-only -f
 
-  4. Verify that the converted model files are available in your Cloud Storage bucket:
+  4. In your original terminal, verify that the converted model files are available in your Cloud Storage bucket:
          
          gcloud storage ls "gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/max-text-format/"
 
@@ -310,71 +310,74 @@ After the conversion process has completed, start the RL training workload:
         vllm_hf_overrides='{\"architectures\": [\"MaxTextForCausalLM\"]}' \
         vllm_additional_config=\"{'maxtext_config': {'model_name': '${MODEL_NAME}', 'model_call_mode': 'inference', 'enable_dp_attention': false, 'allow_split_physical_axes': true, 'use_ragged_sort': false, 'ragged_gather_reduce_fallback': true, 'prefuse_moe_weights': true, 'weight_dtype': 'bfloat16'}}\""
 
-  * To check the status of the training job:
-        
-        # Use the list command to check status (initially shows "Suspended" briefly while the CPU node pool scales up)
-        ./gcluster job list
-        
-        # Ensure kubectl credentials are configured
-        gcloud container clusters get-credentials "${CLUSTER_NAME:?}" \
-            --location="${REGION:?}" \
-            --project="${PROJECT:?}"
-        
-        # Wait for the Pathways head pod to be ready before streaming logs
-        kubectl wait --for=condition=Ready pod \
-            -l jobset.sigs.k8s.io/replicatedjob-name=pathways-head \
-            --timeout=600s
-        
-        # Stream training logs (runs for 50 steps; wait for "Post RL Training: ... mean_reward=..." and job status Succeeded before converting to Hugging Face)
-        kubectl logs -f \
-            -l jobset.sigs.k8s.io/replicatedjob-name=pathways-head \
-            -c workload-container
+  1. Check the status, wait for the coordinator Pod to become ready, and stream the logs of the training job:
+         
+         # Use the list command to check status (initially shows "Suspended" briefly while the CPU node pool scales up)
+         ./gcluster job list
+         
+         # Ensure kubectl credentials are configured
+         gcloud container clusters get-credentials "${CLUSTER_NAME:?}" \
+             --location="${REGION:?}" \
+             --project="${PROJECT:?}"
+         
+         # Wait for the Pathways head pod to be ready before streaming logs
+         kubectl wait --for=condition=Ready pod \
+             -l jobset.sigs.k8s.io/replicatedjob-name=pathways-head \
+             --timeout=600s
+         
+         # Stream training logs (runs for 50 steps; wait for "Post RL Training: ... mean_reward=..." and job status Succeeded before converting to Hugging Face)
+         kubectl logs -f \
+             -l jobset.sigs.k8s.io/replicatedjob-name=pathways-head \
+             -c workload-container
 
-**Note:** Completed JobSets on GKE are automatically cleaned up after one hour by default (governed by the `--gke-ttl-after-finished=1h` setting in `gcluster job submit`). If your workload is no longer listed in the output of `./gcluster job list`, this cleanup is expected behavior and does not mean the job failed. All checkpoints and model weights remain safely persisted in your Cloud Storage bucket.
-  * To verify that the training checkpoints are generated in your Cloud Storage bucket:
-        
-        gcloud storage ls "gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/trained/rl/checkpoints/actor/"
+Immediately after submission, the output from the `./gcluster job list` command might briefly show `Suspended` while GKE scales up the Pathways coordinator CPU node pool (`cpu-np`). When the job begins, it outputs an initial pre-training evaluation at step 0 (`Pre RL Training: ... mean_reward=...`), pauses log output for several minutes during initial XLA compilation, and then trains for 50 steps, printing `Reshard finished` and rollout generations at each step without step numbers.
+
+Before you proceed to the next step, wait until the logs output `Post RL Training: ... mean_reward=...` and the output from the `./gcluster job list` command shows the status of `qwen-rl` as `Succeeded`.
+
+**Note:** Completed JobSets on GKE are automatically cleaned up after their configured time to live (TTL) expires, which is 24 hours (`--gke-ttl-after-finished="24h"`) for the preceding training job. Completed workloads aren't listed in the output of the `./gcluster job list` command after their TTL expires, but the checkpoints and model weights are stored in your Cloud Storage bucket.
+  2. Verify that the training checkpoints are generated in your Cloud Storage bucket:
+         
+         gcloud storage ls "gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/trained/rl/checkpoints/actor/"
 
 
 
 
 ## Convert the trained model back into Hugging Face format
 
-After the training workload has completed, convert the model back to Hugging Face format:
-    
-    
-    ./gcluster job submit \
-      --name="qwen-mt-to-hf" \
-      --num-slices=1 \
-      --image="${CLOUD_IMAGE_NAME:?}" \
-      --compute-type="${COMPUTE_TYPE:?}" \
-      --topology="${TOPOLOGY:?}" \
-      --await-job-completion \
-      --command="[ \"\$JOB_COMPLETION_INDEX\" != \"0\" ] || \
-      python3 -m maxtext.checkpoint_conversion.to_huggingface \
-      model_name=${MODEL_NAME:?} \
-      hf_access_token=${HF_TOKEN:?} \
-      load_parameters_path=gs://${GCS_BUCKET:?}/${MODEL_NAME}/trained/rl/checkpoints/actor/50/model_params/ \
-      base_output_directory=gs://${GCS_BUCKET}/${MODEL_NAME}/hf-trained/ \
-      skip_jax_distributed_system=true \
-      hardware=cpu \
-      scan_layers=True \
-      use_multimodal=False \
-      weight_dtype=bfloat16 \
-      --override_model_architecture"
+  1. After the training workload has completed, convert the model back to Hugging Face format:
+         
+         ./gcluster job submit \
+           --name="qwen-mt-to-hf" \
+           --num-slices=1 \
+           --image="${CLOUD_IMAGE_NAME:?}" \
+           --compute-type="${COMPUTE_TYPE:?}" \
+           --topology="${TOPOLOGY:?}" \
+           --await-job-completion \
+           --command="[ \"\$JOB_COMPLETION_INDEX\" != \"0\" ] || \
+           python3 -m maxtext.checkpoint_conversion.to_huggingface \
+           model_name=${MODEL_NAME:?} \
+           hf_access_token=${HF_TOKEN:?} \
+           load_parameters_path=gs://${GCS_BUCKET:?}/${MODEL_NAME}/trained/rl/checkpoints/actor/50/model_params/ \
+           base_output_directory=gs://${GCS_BUCKET}/${MODEL_NAME}/hf-trained/ \
+           skip_jax_distributed_system=true \
+           hardware=cpu \
+           scan_layers=True \
+           use_multimodal=False \
+           weight_dtype=bfloat16 \
+           --override_model_architecture"
 
-  * To check the status of the conversion job:
-        
-        # Use the list command to check status
-        ./gcluster job list
-        
-        # Check progress of the job (--main-only targets the coordinator pod (Job Index 0, Pod Index 0) to avoid duplicate logs from other workers)
-        ./gcluster job logs qwen-mt-to-hf --main-only -f
-        # The trained model is now available in gs://${GCS_BUCKET}/${MODEL_NAME}/hf-trained/
+  2. Optional: To monitor the live conversion logs while the preceding `--await-job-completion` command waits in your first terminal, open a separate terminal in the working directory where you extracted `gcluster`, and use the [`gcluster job logs` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-job-logs):
+         
+         # Use the list command to check status
+         ./gcluster job list
+         
+         # Check progress of the job (--main-only targets the coordinator pod (Job Index 0, Pod Index 0) to avoid duplicate logs from other workers)
+         ./gcluster job logs qwen-mt-to-hf --main-only -f
+         # The trained model is now available in gs://${GCS_BUCKET}/${MODEL_NAME}/hf-trained/
 
-  * To verify that the trained Hugging Face model weights and configuration files are present in your Cloud Storage bucket:
-        
-        gcloud storage ls -l --readable-sizes "gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/hf-trained/"
+  3. In your original terminal, verify that the trained Hugging Face model weights and configuration files are present in your Cloud Storage bucket:
+         
+         gcloud storage ls -l --readable-sizes "gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/hf-trained/"
 
 
 
@@ -384,7 +387,7 @@ After the training workload has completed, convert the model back to Hugging Fac
 To avoid incurring additional charges, use the [`gcluster destroy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-destroy) to delete the resources created during this tutorial:
     
     
-    ./gcluster destroy "${CLUSTER_NAME:?}"
+    ./gcluster destroy "${CLUSTER_NAME:?}" --auto-approve
     gcloud storage rm -r "gs://${GCS_BUCKET:?}"
     
     # To delete the local deployment folder and copied blueprint
@@ -402,6 +405,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

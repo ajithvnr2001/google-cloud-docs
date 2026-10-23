@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/docs/vpc-name-res-order/
 title: Name resolution order \u00a0|\u00a0 Cloud DNS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:12:29.855059+00:00
+fetched_at: 2026-10-23T12:55:52.087865+00:00
 ---
 
 # Name resolution order  |  Cloud DNS  |  Google Cloud Documentation

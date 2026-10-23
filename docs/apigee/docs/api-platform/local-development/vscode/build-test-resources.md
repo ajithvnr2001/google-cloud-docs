@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/local-development/vscode/build-test-resources/
 title: Build and export test resources \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:04.899318+00:00
+fetched_at: 2026-10-23T13:14:25.787735+00:00
 ---
 
 # Build and export test resources  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/monetization/capture-monetization-data/
 title: Capturing monetization data \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:08.843631+00:00
+fetched_at: 2026-10-23T13:15:36.959463+00:00
 ---
 
 # Capturing monetization data  |  Apigee  |  Google Cloud Documentation

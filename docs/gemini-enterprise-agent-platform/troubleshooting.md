@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/
 title: Troubleshoot Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:22:50.388497+00:00
+fetched_at: 2026-10-23T12:39:06.516661+00:00
 ---
 
 # Troubleshoot Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -58,7 +58,7 @@ Status code or message | Resolution
 `400`, `INVALID_ARGUMENT`, `REASONING_ENGINE_CONTAINER_FAILED_TO_START` | [Container failed to start](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-deployment#container-failed-to-start)  
 `failed to start and cannot serve traffic`, on your first custom container (BYOC) deployment in a region | [BYOC first-time creation error](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-creation#byoc-first-creation-error)  
 `failed to start and cannot serve traffic` or `Request is prohibited by organization's policy`, inside a VPC Service Controls perimeter | [VPC-SC violation errors](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-deployment#vpc-sc-violation-errors)  
-`429`, `RESOURCE_EXHAUSTED` | [Resource exhausted or rate limit errors](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-deployment#error-429)  
+`429`, `RESOURCE_EXHAUSTED` | [API rate limit or quota exceeded](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-deployment#error-429)  
 `429`, `RESOURCE_EXHAUSTED`, `at capacity` | [Region temporarily at capacity](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-deployment#region-capacity)  
 `429`, `RESOURCE_EXHAUSTED`, `max_instances` | [Maximum instances exceed regional limit](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-deployment#max-instances-limit)  
 `500` internal server error from a prebuilt template | [Prebuilt template errors](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-deployment#prebuilt-template-errors)  
@@ -66,6 +66,7 @@ Status code or message | Resolution
 `NotFound: 404 Can not copy from "gs://..."` | [Cloud Storage bucket subdirectory isn't created](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-deployment#storage-bucket-subdirectory-errors)  
 `iam.serviceAccounts.actAs` denied, metadata server unavailable | [Custom service account errors](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-deployment#custom-service-account-errors)  
 `400`, `INVALID_ARGUMENT`, `REASONING_ENGINE_SECRET_ACCESS_DENIED`, `referenced by spec.deployment_spec.secret_env` | [Secret Manager access errors](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-deployment#secret-access-errors)  
+`400`, `INVALID_ARGUMENT`, `REASONING_ENGINE_BUILD_FAILED` | [Container image build failed](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-deployment#build-failed)  
 `504`, `DEADLINE_EXCEEDED`, `REASONING_ENGINE_BUILD_TIMEOUT` | [Container image build timed out](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-deployment#build-timeout)  
 `504`, `DEADLINE_EXCEEDED`, `REASONING_ENGINE_CONTAINER_START_TIMEOUT` | [Container didn't start in time](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/agent-deployment#container-start-timeout)  
 `InvalidArgument: 400 Provided filter is not valid` | [Error when filtering the list of agents](https://docs.cloud.google.com/gemini-enterprise-agent-platform/troubleshooting/managing-deployed-agents#filter-agents-errors)  
@@ -109,6 +110,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/state-management/
 title: State management for data agents \u00a0|\u00a0 Conversational Analytics API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:53.671261+00:00
+fetched_at: 2026-10-23T13:08:58.728537+00:00
 ---
 
 # State management for data agents  |  Conversational Analytics API  |  Google Cloud Documentation

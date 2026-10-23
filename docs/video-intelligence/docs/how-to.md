@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-intelligence/docs/how-to/
 title: How-to Guides \u00a0|\u00a0 Video Intelligence API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:06:25.501706+00:00
+fetched_at: 2026-10-23T08:56:51.283954+00:00
 ---
 
 # How-to Guides  |  Video Intelligence API  |  Google Cloud Documentation

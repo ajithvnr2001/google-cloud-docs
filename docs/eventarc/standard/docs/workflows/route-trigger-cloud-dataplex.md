@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/workflows/route-trigger-cloud-dataplex/
 title: Route Knowledge Catalog (formerly Cloud Dataplex) events to Workflows \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:58.184780+00:00
+fetched_at: 2026-10-23T13:10:14.274223+00:00
 ---
 
 # Route Knowledge Catalog (formerly Cloud Dataplex) events to Workflows  |  Eventarc Standard  |  Google Cloud Documentation

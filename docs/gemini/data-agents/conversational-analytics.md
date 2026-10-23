@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/conversational-analytics/
 title: Conversational analytics overview \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:35.693021+00:00
+fetched_at: 2026-10-23T13:02:56.228184+00:00
 ---
 
 # Conversational analytics overview  |  Data Agents  |  Google Cloud Documentation

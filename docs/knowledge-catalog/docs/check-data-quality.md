@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/check-data-quality/
 title: Use data quality tasks \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:01:51.999141+00:00
+fetched_at: 2026-10-23T12:50:47.311476+00:00
 ---
 
 # Use data quality tasks  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -106,15 +106,15 @@ Knowledge Catalog uses this dataset, and it creates or reuses a table of your ch
 
 [Create a service account](https://docs.cloud.google.com/iam/docs/service-accounts-create) that has the following Identity and Access Management (IAM) roles and permissions:
 
-  * Read access to the Cloud Storage path containing the YAML specifications. You can use the [Storage Object Viewer role](https://cloud.google.com/storage/docs/access-control/iam-roles#standard-roles) (`roles/storage.objectViewer`) on the Cloud Storage bucket.
-  * Read access to BigQuery datasets with data to be validated. You can use the [BigQuery Data Viewer role](https://cloud.google.com/bigquery/docs/access-control#bigquery) (`roles/bigquery.dataViewer`).
-  * Write access to the BigQuery dataset to create a table (if necessary) and write the results to that table. You can use the [BigQuery Data Editor role](https://cloud.google.com/bigquery/docs/access-control#bigquery) (`roles/bigquery.dataEditor`) at the dataset level.
-  * [BigQuery Job User role](https://cloud.google.com/bigquery/docs/access-control#bigquery) (`roles/bigquery.jobUser`) at the project level in order to create BigQuery jobs in a project.
-  * The Dataplex Metadata Reader role (`roles/dataplex.metadataReader`) at the project or lake level.
-  * The [Service Usage Consumer role](https://cloud.google.com/service-usage/docs/access-control#predefined_roles) (`roles/serviceusage.serviceUsageConsumer`) at the project level.
-  * The [Dataproc Worker role](https://cloud.google.com/dataproc/docs/concepts/iam/iam#roles) (`roles/dataproc.worker`).
-  * The [`iam.serviceAccounts.actAs` permission](https://cloud.google.com/iam/docs/service-account-permissions#user-role) given to the user submitting the job.
-  * The [Service account user role](https://cloud.google.com/iam/docs/service-account-permissions#user-role) granted to the Knowledge Catalog lake service account. You can [view the Knowledge Catalog lake service account in the Google Cloud console](https://cloud.google.com/knowledge-catalog/docs/manage-lake#viewing-a-lake).
+  * Read access to the Cloud Storage path containing the YAML specifications. You can use the [**Storage Object Viewer**](https://docs.cloud.google.com/storage/docs/access-control/iam-roles#standard-roles) (`roles/storage.objectViewer`) role on the Cloud Storage bucket.
+  * Read access to BigQuery datasets with data to be validated. You can use the [**BigQuery Data Viewer**](https://docs.cloud.google.com/bigquery/docs/access-control#bigquery) (`roles/bigquery.dataViewer`) role.
+  * Write access to the BigQuery dataset to create a table (if necessary) and write the results to that table. You can use the [**BigQuery Data Editor**](https://docs.cloud.google.com/bigquery/docs/access-control#bigquery) (`roles/bigquery.dataEditor`) role at the dataset level.
+  * The [**BigQuery Job User**](https://docs.cloud.google.com/bigquery/docs/access-control#bigquery) (`roles/bigquery.jobUser`) role at the project level in order to create BigQuery jobs in a project.
+  * The **Dataplex Metadata Reader** (`roles/dataplex.metadataReader`) role at the project or lake level.
+  * The [**Service Usage Consumer**](https://docs.cloud.google.com/service-usage/docs/access-control#predefined_roles) (`roles/serviceusage.serviceUsageConsumer`) role at the project level.
+  * The [**Dataproc Worker**](https://docs.cloud.google.com/dataproc/docs/concepts/iam/iam#roles) (`roles/dataproc.worker`) role.
+  * The [`iam.serviceAccounts.actAs` permission](https://docs.cloud.google.com/iam/docs/service-account-permissions#user-role) given to the user submitting the job.
+  * The [**Service Account User**](https://docs.cloud.google.com/iam/docs/service-account-permissions#user-role) (`roles/iam.serviceAccountUser`) role granted to the Knowledge Catalog lake service account. You can [view the Knowledge Catalog lake service account in the Google Cloud console](https://docs.cloud.google.com/knowledge-catalog/docs/manage-lake#viewing-a-lake).
 
 
 
@@ -339,7 +339,7 @@ When you specify a column, the data quality task considers only rows with a `TIM
 
 ## Example specification files
 
-To use these samples, [create a BigQuery dataset](https://docs.cloud.google.com/bigquery/docs/datasets) named `sales`. Then, create a fact table named `sales_orders` and add sample data by [running a query](https://cloud.google.com/bigquery/docs/running-queries#queries) with the following GoogleSQL statements:
+To use these samples, [create a BigQuery dataset](https://docs.cloud.google.com/bigquery/docs/datasets) named `sales`. Then, create a fact table named `sales_orders` and add sample data by [running a query](https://docs.cloud.google.com/bigquery/docs/running-queries#queries) with the following GoogleSQL statements:
     
     
     CREATE OR REPLACE TABLE sales.sales_orders
@@ -852,6 +852,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

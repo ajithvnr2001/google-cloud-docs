@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/secure-minimum-tls/
 title: Secure your app with minimum TLS (standard environment) \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:25.885586+00:00
+fetched_at: 2026-10-23T13:15:42.007074+00:00
 ---
 
 # Secure your app with minimum TLS (standard environment)  |  App Engine standard environment  |  Google Cloud Documentation

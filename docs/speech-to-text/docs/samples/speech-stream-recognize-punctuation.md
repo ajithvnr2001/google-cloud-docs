@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-stream-recognize-punctuation/
 title: Streaming speech recognition with punctuation \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:28.907846+00:00
+fetched_at: 2026-10-23T08:37:59.258924+00:00
 ---
 
 # Streaming speech recognition with punctuation  |  Cloud Speech-to-Text  |  Google Cloud Documentation

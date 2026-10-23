@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/resources/release-notes-1161/
 title: Google Distributed Cloud air-gapped 1.16.1 release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:07:32.545331+00:00
+fetched_at: 2026-10-23T12:55:12.336434+00:00
 ---
 
 # Google Distributed Cloud air-gapped 1.16.1 release notes  |  Google Cloud Documentation
@@ -646,6 +646,8 @@ b/534561687 #}
   * A-series `a4-ultragpu-8g` VMs that use a guest OS with a 4.x kernel might take over 25 minutes to start. 
 
   * VM creation with types `a3-ultragpu-8g` and `a4-ultragpu-8g` on a newly reprovisioned server fails with errors. 
+
+  * The monthly `dbsadmin` password rotation of the VM metadata server database fails because Database Service no longer deletes the `db-pw-metadata-dbcluster` secret after applying the password. After the next restart of the `metadata-server-controller-manager` pods or the database, the metadata server can't connect to its database. 
 
 
 

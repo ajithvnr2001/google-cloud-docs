@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/aws-iam/
 title: Collect AWS IAM logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:18.222413+00:00
+fetched_at: 2026-10-23T13:17:46.809902+00:00
 ---
 
 # Collect AWS IAM logs  |  Google Security Operations  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-python-migration-client/
 title: Migrating to the Python client library v0.27: Migration client \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:03.125011+00:00
+fetched_at: 2026-10-23T08:37:48.008979+00:00
 ---
 
 # Migrating to the Python client library v0.27: Migration client  |  Cloud Speech-to-Text  |  Google Cloud Documentation

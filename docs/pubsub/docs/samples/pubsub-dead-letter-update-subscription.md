@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-dead-letter-update-subscription/
 title: Update `DeadLetterPolicy` on subscription \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:11.046334+00:00
+fetched_at: 2026-10-23T10:04:42.531552+00:00
 ---
 
 # Update `DeadLetterPolicy` on subscription  |  Pub/Sub  |  Google Cloud Documentation

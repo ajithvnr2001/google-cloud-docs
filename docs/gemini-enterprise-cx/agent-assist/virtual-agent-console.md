@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/virtual-agent-console/
 title: Implement virtual Agent Assist using the console \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:36.226059+00:00
+fetched_at: 2026-10-23T13:12:52.382180+00:00
 ---
 
 # Implement virtual Agent Assist using the console  |  Google Cloud Documentation

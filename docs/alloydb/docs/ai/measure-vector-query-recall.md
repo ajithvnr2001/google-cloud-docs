@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/measure-vector-query-recall/
 title: Measure vector query recall \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:48.450130+00:00
+fetched_at: 2026-10-23T13:08:35.636435+00:00
 ---
 
 # Measure vector query recall  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -71,7 +71,7 @@ You can find the recall for a vector query on a vector index for a given configu
 
 ### Find the recall for a vector query
 
-  1. Open a SQL editor in [AlloyDB Studio](https://docs.cloud.google.com/alloydb/docs/manage-data-using-studio) or open a [`psql` client](https://docs.cloud.google.com/alloydb/docs/connect-psql).
+  1. Open a SQL editor in [AlloyDB Studio](https://docs.cloud.google.com/alloydb/docs/quickstart/create-and-connect) or open a [`psql` client](https://docs.cloud.google.com/alloydb/docs/connect-psql).
   2. [Choose a vector index strategy](https://docs.cloud.google.com/alloydb/docs/ai/choose-index-strategy) and create a ScaNN, HNSW, or IVFFLAT index.
 
 **Note:** You can create indexes of different methods on a single vector column and compare the performance of your query using each of the created indexes. This is recommended for developmental workloads only.
@@ -105,9 +105,7 @@ The following table lists query time parameters for ScaNN, HNSW, and IVF/IVFFLAT
        * `hnsw.max_scan_tuples`
        * `hnsw.scan_mem_multiplier`  
 [IVF](https://github.com/pgvector/pgvector) | 
-       * `ivf.probes`
-       * `ivf.iterative_scan`
-       * `ivf.max_probes`  
+       * `ivf.probes`  
 [IVFFLAT](https://github.com/pgvector/pgvector) | 
        * `ivfflat.probes`
        * `ivfflat.iterative_scan`
@@ -164,6 +162,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

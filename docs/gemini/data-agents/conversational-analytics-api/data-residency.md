@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/data-residency/
 title: Data residency \u00a0|\u00a0 Conversational Analytics API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:01.199484+00:00
+fetched_at: 2026-10-23T13:11:10.150853+00:00
 ---
 
 # Data residency  |  Conversational Analytics API  |  Google Cloud Documentation

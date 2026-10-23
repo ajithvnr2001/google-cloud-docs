@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/filter-website-search/
 title: Filter website search \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:29.951810+00:00
+fetched_at: 2026-10-23T13:13:36.944303+00:00
 ---
 
 # Filter website search  |  Agent Search  |  Google Cloud Documentation

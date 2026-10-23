@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-set-custom-timeout-and-retry/
 title: Set custom timeout and retry \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:11.687269+00:00
+fetched_at: 2026-10-23T10:31:41.248165+00:00
 ---
 
 # Set custom timeout and retry  |  Spanner  |  Google Cloud Documentation

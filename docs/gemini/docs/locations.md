@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/locations/
 title: Gemini Code Assist serving locations \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:11.953761+00:00
+fetched_at: 2026-10-23T13:03:16.922041+00:00
 ---
 
 # Gemini Code Assist serving locations  |  Gemini for Google Cloud  |  Google Cloud Documentation

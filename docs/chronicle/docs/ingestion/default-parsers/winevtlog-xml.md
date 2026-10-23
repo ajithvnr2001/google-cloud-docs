@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/winevtlog-xml/
 title: Collect Windows Event logs (XML format) \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:34:12.365728+00:00
+fetched_at: 2026-10-23T12:56:03.825902+00:00
 ---
 
 # Collect Windows Event logs (XML format)  |  Google Security Operations  |  Google Cloud Documentation

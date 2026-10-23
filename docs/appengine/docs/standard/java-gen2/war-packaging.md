@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/java-gen2/war-packaging/
 title: Re-packaging a WAR file into a JAR file \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:12.697157+00:00
+fetched_at: 2026-10-23T13:17:24.036333+00:00
 ---
 
 # Re-packaging a WAR file into a JAR file  |  App Engine standard environment  |  Google Cloud Documentation

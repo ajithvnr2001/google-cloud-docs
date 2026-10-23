@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/manage-templates/
 title: Manage templates \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:57.070900+00:00
+fetched_at: 2026-10-23T13:18:06.920268+00:00
 ---
 
 # Manage templates  |  Application Integration  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secure-access-connect/docs/resources/
 title: Resources \u00a0|\u00a0 Secure Access Connect \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:08:41.708193+00:00
+fetched_at: 2026-10-23T09:45:22.323355+00:00
 ---
 
 # Resources  |  Secure Access Connect  |  Google Cloud Documentation

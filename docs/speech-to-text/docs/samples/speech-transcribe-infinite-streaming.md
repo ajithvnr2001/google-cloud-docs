@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-transcribe-infinite-streaming/
 title: Transcribe a streaming audio feed \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:55.139458+00:00
+fetched_at: 2026-10-23T08:37:11.473506+00:00
 ---
 
 # Transcribe a streaming audio feed  |  Cloud Speech-to-Text  |  Google Cloud Documentation

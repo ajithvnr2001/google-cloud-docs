@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-update-stored-infotype/
 title: Update a stored infoType \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:40:51.940172+00:00
+fetched_at: 2026-10-23T08:37:52.004290+00:00
 ---
 
 # Update a stored infoType  |  Sensitive Data Protection  |  Google Cloud Documentation

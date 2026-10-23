@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/use-agentregistry-mcp/
 title: Use the Agent Registry MCP server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:43:32.628794+00:00
+fetched_at: 2026-10-23T12:55:15.247722+00:00
 ---
 
 # Use the Agent Registry MCP server  |  Google Cloud Documentation
@@ -61,15 +61,19 @@ For information about other MCP servers and information about security and gover
 
 ## Before you begin
 
-Before you can use the Agent Registry MCP server, you must [set up Agent Registry](https://docs.cloud.google.com/agent-registry/setup). You also need [your project ID](https://support.google.com/googleapi/answer/7014113) to authenticate and perform discovery tasks.
+  1. [Set up Agent Registry](https://docs.cloud.google.com/agent-registry/setup).
+  2. Get [the project ID](https://support.google.com/googleapi/answer/7014113) for the [governance project](https://docs.cloud.google.com/agent-registry/overview#governance-project) where Agent Registry is enabled.
+
+
 
 ### Required roles
 
-To get the permissions that you need to use the Agent Registry MCP server, ask your administrator to grant you the following IAM roles on the project where you want to use the Agent Registry MCP server: 
+To get the permissions that you need to use the Agent Registry MCP server, ask your administrator to grant you the following IAM roles on the [governance project](https://docs.cloud.google.com/agent-registry/overview#governance-project) where Agent Registry is enabled: 
 
   * Make MCP tool calls: [MCP Tool User ](https://docs.cloud.google.com/iam/docs/roles-permissions/mcp#mcp.toolUser) (`roles/mcp.toolUser`) 
   * Discover resources: [Agent Registry API Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/agentregistry#agentregistry.viewer) (`roles/agentregistry.viewer`) 
   * Manage resources: [Agent Registry API Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/agentregistry#agentregistry.editor) (`roles/agentregistry.editor`) 
+  * Manage bindings: [Agent Registry API Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/agentregistry#agentregistry.admin) (`roles/agentregistry.admin`) 
 
 
 
@@ -82,6 +86,35 @@ These predefined roles contain the permissions required to use the Agent Registr
 The following permissions are required to use the Agent Registry MCP server:
 
   * Make MCP tool calls: `mcp.tools.call`
+  * Discover resources: 
+    * `agentregistry.agents.__`
+    * `agentregistry.bindings.fetchAvailable`
+    * `agentregistry.bindings.get`
+    * `agentregistry.bindings.list`
+    * `agentregistry.endpoints.`
+    * `agentregistry.locations.__`
+    * `agentregistry.mcpServers.`
+    * `agentregistry.operations.get`
+    * `agentregistry.operations.list`
+    * `agentregistry.publishers.*`
+    * `agentregistry.services.get`
+    * `agentregistry.services.list`
+    * `agentregistry.skillRevisions.get`
+    * `agentregistry.skillRevisions.list`
+    * `agentregistry.skills.get`
+    * `agentregistry.skills.list`
+    * `agentregistry.skills.search`
+  * Manage resources: 
+    * `agentregistry.operations.__`
+    * `agentregistry.services.`
+    * `agentregistry.skillRevisions.*`
+    * `agentregistry.skills.create`
+    * `agentregistry.skills.delete`
+    * `agentregistry.skills.update`
+  * Manage bindings: 
+    * `agentregistry.bindings.create`
+    * `agentregistry.bindings.delete`
+    * `agentregistry.bindings.update`
 
 
 
@@ -91,13 +124,13 @@ You might also be able to get these permissions with [custom roles](https://docs
 
 The Agent Registry remote MCP server uses the [OAuth 2.0](https://developers.google.com/identity/protocols/oauth2) protocol with [Identity and Access Management (IAM)](https://docs.cloud.google.com/iam/docs/overview) for authentication and authorization. All [Google Cloud identities](https://docs.cloud.google.com/docs/authentication/identity-products) are supported for authentication to MCP servers. 
 
-The Agent Registry MCP server requires a principal for Identity and Access Management (IAM) control and doesn't accept API keys. We recommend that you create a separate identity for agents that are using MCP tools so that you can control and monitor access to resources.
+The Agent Registry MCP server requires a principal for Identity and Access Management (IAM) control and doesn't accept API keys. As a best practice, create a separate identity for agents that are using MCP tools so that you can control and monitor access to resources.
 
 For more information about authentication, see [Authenticate to MCP servers](https://docs.cloud.google.com/mcp/authenticate-mcp).
 
 ## Agent Registry MCP OAuth scopes
 
-OAuth 2.0 uses scopes and credentials to determine if an authenticated principal is authorized to take a specific action on a resource. For more information about OAuth 2.0 scopes at Google, see [Using OAuth 2.0 to access Google APIs](https://developers.google.com/identity/protocols/oauth2).
+OAuth 2.0 uses scopes and credentials to determine whether an authenticated principal is authorized to take a specific action on a resource. For more information about OAuth 2.0 scopes at Google, see [Using OAuth 2.0 to access Google APIs](https://developers.google.com/identity/protocols/oauth2).
 
 Agent Registry has the following MCP tool OAuth scopes:
 
@@ -106,7 +139,7 @@ Scope URI for Google Cloud CLI | Description
 `https://www.googleapis.com/auth/cloud-platform` | Full access to all Google Cloud resources.  
 `https://www.googleapis.com/auth/agentregistry.read-write` | Read and write access to Agent Registry resources.  
   
-Additional scopes might be required on the resources accessed during a tool call. To view a list of roles and permissions required for Agent Registry, see [Agent Registry roles and permissions](https://docs.cloud.google.com/agent-registry/roles-permissions).
+Additional scopes might be required on the resources accessed during a tool call. To view a list of scopes required for Agent Registry, see [Agent Registry API](https://developers.google.com/identity/protocols/oauth2/scopes#agentregistry).
 
 ## Configure an MCP client to use the Agent Registry MCP server
 
@@ -116,7 +149,7 @@ AI applications and agents, such as Claude or Antigravity, can instantiate an MC
   * **Server URL** or **Endpoint** : `https://agentregistry.googleapis.com/mcp`
   * **Transport** : [Streamable HTTP](https://modelcontextprotocol.io/specification/latest/basic/transports/streamable-http)
   * **Authentication details** : depending on how you want to authenticate, you can enter your Google Cloud credentials, your OAuth Client ID and secret, or an agent identity and credentials. For more information about authentication, see [Authenticate to MCP servers](https://docs.cloud.google.com/mcp/authenticate-mcp).
-  * **OAuth scope** : The [OAuth 2.0 scope](https://developers.google.com/identity/protocols/oauth2/scopes) that you want to use when connecting to the Agent Registry MCP server.
+  * **OAuth scope** : the [OAuth 2.0 scope](https://developers.google.com/identity/protocols/oauth2/scopes) that you want to use when connecting to the Agent Registry MCP server.
 
 
 
@@ -133,26 +166,26 @@ For more general guidance, see the following resources:
 
 To view details of available MCP tools and their descriptions for the Agent Registry MCP server, see the [Agent Registry MCP reference](https://docs.cloud.google.com/agent-registry/reference/mcp).
 
-The Agent Registry API separates read and write operations. You query the read-only `Agent`, `McpServer`, or `Endpoint` resources to discover capabilities, but you must use the writable `Service` resource to create, update, and delete entries.
+Agent Registry separates discovery from manual registration and updates. You query the read-only `Agent`, `McpServer`, or `Endpoint` resources to discover capabilities, and you create, update, or delete `Service` resources to manage manually registered entries.
 
 ### Discovery tools
 
 The most common tools used by AI agents for dynamic discovery include:
 
-  * **`search_agents`** : Performs a keyword or prefix search to discover agents within a specific project and location based on natural language queries, specific [A2A skills](https://docs.cloud.google.com/agent-registry/concepts#a2a-skill), tags, or descriptions.
-  * **`search_mcp_servers`** : Performs a keyword or prefix search to discover MCP servers based on the specific tools they offer or their descriptions.
-  * **`get_agent`** , **`get_mcp_server`** , **`get_endpoint`** : Retrieves the full metadata and configuration details of specific resources using their unique resource names.
-  * **`get_service`** : Retrieves a specific `Service` resource to inspect the underlying registration specification used to manually onboard a resource.
-  * **`get_operation`** : Gets the latest state of a long-running operation.
-  * **`list_bindings`** , **`get_binding`** , **`fetch_available_bindings`** : Retrieves [binding](https://docs.cloud.google.com/agent-registry/concepts#binding) configurations that connect source agents to target resources or [auth providers](https://docs.cloud.google.com/agent-registry/concepts#auth-provider).
+  * **`search_agents`** : performs a keyword or prefix search to discover agents within a specific project and location based on natural language queries, specific [A2A skills](https://docs.cloud.google.com/agent-registry/skills-architecture#standalone-vs-a2a), tags, or descriptions.
+  * **`search_mcp_servers`** : performs a keyword or prefix search to discover MCP servers based on the specific tools they offer or their descriptions.
+  * **`get_agent`** , **`get_mcp_server`** , **`get_endpoint`** : retrieves the full metadata and configuration details of specific resources using their unique resource names.
+  * **`get_service`** : retrieves a specific `Service` resource to inspect the metadata and specification used to manually register an agentic component.
+  * **`get_operation`** : gets the latest state of a long-running operation.
+  * **`list_bindings`** , **`get_binding`** , **`fetch_available_bindings`** : retrieves [binding](https://docs.cloud.google.com/agent-registry/component-lifecycle-and-discovery#bindings) configurations that connect source agents to target resources or [auth providers](https://docs.cloud.google.com/agent-registry/component-lifecycle-and-discovery#auth-providers).
 
 
 
 Search tools are best suited for natural language queries. However, the MCP server also provides listing tools that return paginated lists of resources. These tools are useful to enumerate resources or filter by resource attributes rather than natural language searches:
 
-  * **`list_agents`** : Returns a paginated list of agents within a specified Google Cloud project and location.
-  * **`list_mcp_servers`** : Returns a paginated list of MCP servers within a specified Google Cloud project and location.
-  * **`list_endpoints`** , **`list_services`** : Returns a paginated list of registered endpoints and manually onboarded `Service` resources in a given project and location.
+  * **`list_agents`** : returns a paginated list of agents within a specified Google Cloud project and location.
+  * **`list_mcp_servers`** : returns a paginated list of MCP servers within a specified Google Cloud project and location.
+  * **`list_endpoints`** , **`list_services`** : returns a paginated list of registered endpoints and manually created `Service` resources in a given project and location.
 
 
 
@@ -160,10 +193,10 @@ Search tools are best suited for natural language queries. However, the MCP serv
 
 AI applications primarily use Agent Registry for discovery. However, the MCP server also exposes tools to programmatically manage registry entries:
 
-  * **`create_service`** : Manually registers a new custom [agentic component](https://docs.cloud.google.com/agent-registry/concepts#agentic-component), such as an agent, MCP server, or endpoint, by providing its JSON specification.
-  * **`update_service`** : Updates the specification or parameters of an existing `Service` resource, such as patching an uploaded Agent Card.
-  * **`delete_service`** : Deletes a `Service` resource, effectively deregistering the manually onboarded agent, MCP server, or endpoint from the registry.
-  * **`create_binding`** , **`update_binding`** , **`delete_binding`** : Programmatically manages connections and delegated access mappings between your agents and target MCP servers or endpoints.
+  * **`create_service`** : manually registers a new custom [agentic component](https://docs.cloud.google.com/agent-registry/component-lifecycle-and-discovery), such as an agent, MCP server, or endpoint, by creating a `Service` resource from its JSON specification.
+  * **`update_service`** : updates the metadata or specification of an existing `Service` resource, such as patching an uploaded Agent Card.
+  * **`delete_service`** : deletes a `Service` resource, removing the entry for the manually registered agent, MCP server, or endpoint from the registry.
+  * **`create_binding`** , **`update_binding`** , **`delete_binding`** : programmatically manages connections and delegated access mappings between your agents and target MCP servers or endpoints.
 
 
 
@@ -198,8 +231,8 @@ Use the [MCP inspector](https://modelcontextprotocol.io/docs/tools/inspector) to
 
 Replace the following:
 
-  * `TOOLSET_ENDPOINT`: The remainder of the MCP endpoint after the service name. For example, for Agent Registry, this might be `mcp/toolset-name`.
-  * `MCP_PROTOCOL_VERSION`: The MCP protocol version. For example, `2026-07-28`.
+  * `TOOLSET_ENDPOINT`: the remainder of the MCP endpoint after the service name. For example, for Agent Registry, this might be `mcp`.
+  * `MCP_PROTOCOL_VERSION`: the MCP protocol version, such as `2026-07-28`.
 
 
 
@@ -209,9 +242,9 @@ When you connect your AI application or agent to the Agent Registry MCP server, 
 
 The following are example prompts you can use with your connected AI application:
 
-  * **Discover an agent by A2A skill:** "Find an agent capable of booking corporate flights."
-  * **Discover MCP servers:** "What MCP servers are registered that offer BigQuery data tools?"
-  * **Retrieve specific resource details:** "Show me the metadata and configuration details for the agent named projects/123456789/locations/global/agents/travel-agent."
+  * **Discover an agent by A2A skill** : "Find an agent capable of booking corporate flights."
+  * **Discover MCP servers** : "What MCP servers are registered that offer BigQuery data tools?"
+  * **Retrieve specific resource details** : "Show me the metadata and configuration details for the agent named projects/123456789/locations/global/agents/travel-agent."
 
 
 
@@ -332,8 +365,8 @@ For more information, see [Control MCP use with Identity and Access Management](
 
 ## What's next
 
-  * Review the [Agent Registry MCP reference documentation](https://docs.cloud.google.com/agent-registry/reference/mcp)
-  * Learn more about [Google Cloud MCP servers](https://docs.cloud.google.com/mcp/overview)
+  * Review the [Agent Registry MCP reference documentation](https://docs.cloud.google.com/agent-registry/reference/mcp).
+  * Learn more about [Google Cloud MCP servers](https://docs.cloud.google.com/mcp/overview).
 
 
 
@@ -341,6 +374,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/network-access/
 title: Control Network Access to Gemini Code Assist with User Domain Restrictions \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:12.447050+00:00
+fetched_at: 2026-10-23T13:03:11.777744+00:00
 ---
 
 # Control Network Access to Gemini Code Assist with User Domain Restrictions  |  Gemini for Google Cloud  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-spark/docs/samples/dataproc-submit-hadoop-fs-job/
 title: Submit hadoop fs job \u00a0|\u00a0 Managed Service for Apache Spark \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:37:00.619039+00:00
+fetched_at: 2026-10-23T10:45:17.054944+00:00
 ---
 
 # Submit hadoop fs job  |  Managed Service for Apache Spark  |  Google Cloud Documentation
@@ -34,7 +34,7 @@ To authenticate to Managed Service for Apache Spark, set up Application Default 
     
     import com.google.api.gax.longrunning.[OperationFuture](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationFuture.html);
     import com.google.cloud.dataproc.v1.[HadoopJob](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.HadoopJob.html);
-    import com.google.cloud.dataproc.v1.[Job](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.Job.html);
+    import com.google.cloud.dataproc.v1.[Job](https://docs.cloud.google.com/java/docs/reference/google-cloud-storagebatchoperations/latest/com.google.cloud.storagebatchoperations.v1.Job.html);
     import com.google.cloud.dataproc.v1.[JobControllerClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.JobControllerClient.html);
     import com.google.cloud.dataproc.v1.[JobControllerSettings](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.JobControllerSettings.html);
     import com.google.cloud.dataproc.v1.[JobMetadata](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.JobMetadata.html);
@@ -89,13 +89,13 @@ To authenticate to Managed Service for Apache Spark, set up Application Default 
                   .addAllArgs(stringToList(hadoopFsQuery))
                   .build();
     
-          [Job](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.Job.html) job = [Job](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.Job.html).newBuilder().setPlacement(jobPlacement).setHadoopJob(hadoopJob).build();
+          [Job](https://docs.cloud.google.com/java/docs/reference/google-cloud-storagebatchoperations/latest/com.google.cloud.storagebatchoperations.v1.Job.html) job = [Job](https://docs.cloud.google.com/java/docs/reference/google-cloud-storagebatchoperations/latest/com.google.cloud.storagebatchoperations.v1.Job.html).newBuilder().setPlacement(jobPlacement).setHadoopJob(hadoopJob).build();
     
           // Submit an asynchronous request to execute the job.
           OperationFuture<Job, JobMetadata> submitJobAsOperationAsyncRequest =
               jobControllerClient.[submitJobAsOperationAsync](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.JobControllerClient.html#com_google_cloud_dataproc_v1_JobControllerClient_submitJobAsOperationAsync_com_google_cloud_dataproc_v1_SubmitJobRequest_)(projectId, region, job);
     
-          [Job](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataproc/latest/com.google.cloud.dataproc.v1.Job.html) response = submitJobAsOperationAsyncRequest.get();
+          [Job](https://docs.cloud.google.com/java/docs/reference/google-cloud-storagebatchoperations/latest/com.google.cloud.storagebatchoperations.v1.Job.html) response = submitJobAsOperationAsyncRequest.get();
     
           // Print output from Google Cloud Storage.
           Matcher matches =

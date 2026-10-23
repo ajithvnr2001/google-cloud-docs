@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-discovery-featured-jobs-search/
 title: Featured job search (v3) \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:28.489354+00:00
+fetched_at: 2026-10-23T09:34:27.302659+00:00
 ---
 
 # Featured job search (v3)  |  Job Search  |  Google Cloud Documentation

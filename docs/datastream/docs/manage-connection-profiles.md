@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/manage-connection-profiles/
 title: Manage connection profiles \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:25:54.481925+00:00
+fetched_at: 2026-10-23T10:03:43.298326+00:00
 ---
 
 # Manage connection profiles  |  Datastream  |  Google Cloud Documentation
@@ -21,19 +21,9 @@ Send feedback
 
 #  Manage connection profiles Stay organized with collections  Save and categorize content based on your preferences. 
 
-In this page, you learn how to use the Datastream API to:
+The Datastream API lets you programmatically create and manage connection profiles that store authentication and connectivity information for your sources and destinations. You can make REST API calls or use the Google Cloud CLI. For example, you can create profiles for Oracle, MySQL, PostgreSQL, SQL Server, Salesforce, and MongoDB sources and for BigQuery and Cloud Storage destinations.
 
-  * Create connection profiles for a source Oracle database, a source MySQL database, a source PostgreSQL database, a source Salesforce org, a BigQuery destination, and a Cloud Storage destination
-  * Retrieve information about, update, and delete connection profiles
-  * Discover the structure of source or destination connection profiles
-
-
-
-There are two ways that you can use the Datastream API. You can make REST API calls or you can use the Google Cloud CLI (CLI).
-
-For high-level information about using `gcloud` to manage Datastream connection profiles, click [Google Cloud SDK documentation](https://docs.cloud.google.com/sdk/gcloud/reference/datastream/connection-profiles).
-
-Refer to the [Using Datastream APIs](https://docs.cloud.google.com/datastream/docs/using-datastream-apis) tutorial to see an end-to-end walkthrough of how to use Datastream's APIs to create and manage connection profiles.
+You can also retrieve, list, update, or delete connection profiles and discover the structure of a source database. For command reference details, see [`gcloud datastream connection-profiles`](https://docs.cloud.google.com/sdk/gcloud/reference/datastream/connection-profiles). For an end-to-end walkthrough, see [Use Datastream APIs](https://docs.cloud.google.com/datastream/docs/using-datastream-apis).
 
 ## Create a connection profile for a source Oracle database
 
@@ -658,6 +648,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

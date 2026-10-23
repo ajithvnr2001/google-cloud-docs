@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/tags/
 title: Create and manage tags \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:54.285204+00:00
+fetched_at: 2026-10-23T13:15:57.544605+00:00
 ---
 
 # Create and manage tags  |  Google Cloud Armor  |  Google Cloud Documentation

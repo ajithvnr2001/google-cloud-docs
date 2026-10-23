@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/servicenow/third-party-config/
 title: ServiceNow configuration \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:58.337917+00:00
+fetched_at: 2026-10-23T13:11:42.209739+00:00
 ---
 
 # ServiceNow configuration  |  Gemini Enterprise  |  Google Cloud Documentation

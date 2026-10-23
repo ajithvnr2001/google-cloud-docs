@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/samples/securitycenter-update-finding-source-properties/
 title: Update finding source properties \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:49:56.194654+00:00
+fetched_at: 2026-10-23T11:32:10.918152+00:00
 ---
 
 # Update finding source properties  |  Security Command Center  |  Google Cloud Documentation

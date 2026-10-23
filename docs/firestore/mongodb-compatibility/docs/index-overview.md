@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/index-overview/
 title: Indexes overview \u00a0|\u00a0 Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:41.116651+00:00
+fetched_at: 2026-10-23T13:09:07.272855+00:00
 ---
 
 # Indexes overview  |  Firestore with MongoDB compatibility  |  Google Cloud Documentation

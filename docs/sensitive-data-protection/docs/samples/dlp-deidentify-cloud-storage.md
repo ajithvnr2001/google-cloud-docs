@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-deidentify-cloud-storage/
 title: Create de-identified copies of Cloud Storage files \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:40:58.123191+00:00
+fetched_at: 2026-10-23T08:37:23.356769+00:00
 ---
 
 # Create de-identified copies of Cloud Storage files  |  Sensitive Data Protection  |  Google Cloud Documentation

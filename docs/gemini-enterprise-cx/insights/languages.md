@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/languages/
 title: Language support \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:54.444736+00:00
+fetched_at: 2026-10-23T13:12:15.335759+00:00
 ---
 
 # Language support  |  Customer Experience Insights  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kms/docs/samples/kms-update-key-set-primary/
 title: Update the primary version of a key \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:46:51.417684+00:00
+fetched_at: 2026-10-23T10:25:45.287290+00:00
 ---
 
 # Update the primary version of a key  |  Cloud Key Management Service  |  Google Cloud Documentation

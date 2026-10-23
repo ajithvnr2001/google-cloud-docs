@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-list-info-types/
 title: List information types for a category \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:08:18.760340+00:00
+fetched_at: 2026-10-23T08:37:54.269933+00:00
 ---
 
 # List information types for a category  |  Sensitive Data Protection  |  Google Cloud Documentation

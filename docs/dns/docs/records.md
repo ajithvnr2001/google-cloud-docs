@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dns/docs/records/
 title: Add, update, and delete records \u00a0|\u00a0 Cloud DNS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:12:31.609548+00:00
+fetched_at: 2026-10-23T12:55:51.090695+00:00
 ---
 
 # Add, update, and delete records  |  Cloud DNS  |  Google Cloud Documentation

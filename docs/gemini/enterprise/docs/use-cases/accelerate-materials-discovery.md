@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/use-cases/accelerate-materials-discovery/
 title: Accelerate materials discovery \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:29.938650+00:00
+fetched_at: 2026-10-23T13:11:37.837474+00:00
 ---
 
 # Accelerate materials discovery  |  Gemini Enterprise  |  Google Cloud Documentation

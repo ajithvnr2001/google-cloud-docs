@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/glossary/
 title: Glossary \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:41.831566+00:00
+fetched_at: 2026-10-23T13:01:46.320328+00:00
 ---
 
 # Glossary  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

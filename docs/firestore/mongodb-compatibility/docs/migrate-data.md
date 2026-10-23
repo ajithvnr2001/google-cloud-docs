@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/migrate-data/
 title: Migrate to Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:40.556011+00:00
+fetched_at: 2026-10-23T13:03:55.991456+00:00
 ---
 
 # Migrate to Firestore with MongoDB compatibility  |  Google Cloud Documentation

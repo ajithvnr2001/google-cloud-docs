@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/release-notes/
 title: Cloud SQL for SQL Server release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:51:28.618432+00:00
+fetched_at: 2026-10-23T12:51:08.634727+00:00
 ---
 
 # Cloud SQL for SQL Server release notes  |  Google Cloud Documentation
@@ -250,7 +250,7 @@ Change
 
 The command for upgrading Cloud SQL instances to the new network architecture has been re-enabled.
 
-For more information, see [Upgrade an instance to the new network architecture](https://docs.cloud.google.com/sql/docs/sqlserver/upgrade-cloud-sql-instance-new-network-architecture).
+For more information, see [Upgrade an instance to the new network architecture](https://docs.cloud.google.com/sql/docs/sqlserver/upgrade-cloud-sql-instance-new-network-architecture) .
 
 ## May 11, 2026
 
@@ -262,13 +262,13 @@ This feature includes: * **Regional boundary restrictions** : Cloud SQL regional
 
 For more information, see [Cloud SQL regional endpoints](https://docs.cloud.google.com/sql/docs/sqlserver/admin-api/rep).
 
-This feature is in [Preview](https://cloud.google.com/products/#product-launch-stages).
+This feature is in [Preview](https://cloud.google.com/products#product-launch-stages).
 
 ## May 04, 2026
 
 Feature
 
-Cloud SQL for SQL Server now supports PolyBase ([GA](https://cloud.google.com/products/#product-launch-stages)).
+Cloud SQL for SQL Server now supports PolyBase ([GA](https://cloud.google.com/products#product-launch-stages)).
 
 With PolyBase, your Cloud SQL for SQL Server instance uses Transact-SQL (T-SQL) commands to directly query data stored in external data sources as if the data is stored in local tables. You don't need to install separate client connection software.
 
@@ -280,13 +280,13 @@ Feature
 
 If a specific active query is blocked or running much longer than expected, it can block other dependent queries. Cloud SQL for SQL Server offers an optional feature that lets you view and terminate blocking queries.
 
-For more information, see [Blocked active queries](https://docs.cloud.google.com/sql/docs/sqlserver/monitor-active-queries#blocked-active-queries) ([Preview](https://cloud.google.com/products/#product-launch-stages)).
+For more information, see [Blocked active queries](https://docs.cloud.google.com/sql/docs/sqlserver/monitor-active-queries#blocked-active-queries) ([Preview](https://cloud.google.com/products#product-launch-stages)).
 
 ## April 20, 2026
 
 Feature
 
-You can use the [Database Insights remote MCP server](https://docs.cloud.google.com/sql/docs/sqlserver/reference/mcp/databaseinsights/mcp) to analyze Cloud SQL for SQL Server's performance and system metrics. This feature is in [GA](https://cloud.google.com/products/#product-launch-stages).
+You can use the [Database Insights remote MCP server](https://docs.cloud.google.com/sql/docs/sqlserver/reference/mcp/databaseinsights/mcp) to analyze Cloud SQL for SQL Server's performance and system metrics. This feature is in [GA](https://cloud.google.com/products#product-launch-stages).
 
 ## April 18, 2026
 
@@ -300,7 +300,7 @@ For more information, see [Create a new instance with Knowledge Catalog integrat
 
 Feature
 
-You can now integrate Cloud SQL for SQL Server with Vertex AI and third-party models ([Preview](https://docs.cloud.google.com/products#product-launch-stages)).
+You can now integrate Cloud SQL for SQL Server with Vertex AI and third-party models ([Preview](https://cloud.google.com/products#product-launch-stages)).
 
 By integrating your Cloud SQL for SQL Server instance with Vertex AI, you can generate vector embeddings from models hosted in Vertex AI directly from your Cloud SQL instance.
 
@@ -320,7 +320,7 @@ Feature
 
 You can use [DNS automation](https://docs.cloud.google.com/sql/docs/sqlserver/about-private-service-connect#dns-automation) on Cloud SQL instances where Private Service Connect is enabled to provision and manage per-instance DNS records automatically. On Enterprise Plus edition instances where DNS automation is enabled, you can also enable a global write endpoint DNS that automatically resolves to your current primary instance.
 
-This feature is in [Preview](https://docs.cloud.google.com/products#product-launch-stages).
+This feature is in [Preview](https://cloud.google.com/products#product-launch-stages).
 
 Feature
 
@@ -338,15 +338,7 @@ If you ran an investigation prior to April 10, 2026, then the results of the inv
 
 Feature
 
-If the storage capacity of a Cloud SQL instance is larger than your application needs, then you can manually reduce, or shrink, your storage capacity to a smaller size.
-
-Depending on underlying disk size, storage shrink operations might incur considerable downtime. If your instance requires limited downtime, rather than using storage shrink capabilities, we recommend migrating your data to a new, smaller instance using Database Migration Service.
-
-For more information, see [About storage shrink](https://docs.cloud.google.com/sql/docs/sqlserver/about-storage-shrink).
-
-Feature
-
-Cloud SQL for SQL Server now supports SQL Server 2025 ([GA](https://cloud.google.com/products/#product-launch-stages)):
+Cloud SQL for SQL Server now supports SQL Server 2025 ([GA](https://cloud.google.com/products#product-launch-stages)):
 
   * SQL Server 2025 Standard
   * SQL Server 2025 Enterprise
@@ -358,7 +350,15 @@ For more information, see [Database versions and version policies](https://docs.
 
 Feature
 
-[Cloud SQL for SQL Server integration with Microsoft Entra ID](https://docs.cloud.google.com/sql/docs/sqlserver/integration-with-microsoft-entra-id) ([GA](https://cloud.google.com/products/#product-launch-stages)) provides centralized identity and access management (IAM) for your databases using your existing Microsoft Entra ID tenant.
+[Cloud SQL for SQL Server integration with Microsoft Entra ID](https://docs.cloud.google.com/sql/docs/sqlserver/integration-with-microsoft-entra-id) ([GA](https://cloud.google.com/products#product-launch-stages)) provides centralized identity and access management (IAM) for your databases using your existing Microsoft Entra ID tenant.
+
+Feature
+
+If the storage capacity of a Cloud SQL instance is larger than your application needs, then you can manually reduce, or shrink, your storage capacity to a smaller size.
+
+Depending on underlying disk size, storage shrink operations might incur considerable downtime. If your instance requires limited downtime, rather than using storage shrink capabilities, we recommend migrating your data to a new, smaller instance using Database Migration Service.
+
+For more information, see [About storage shrink](https://docs.cloud.google.com/sql/docs/sqlserver/about-storage-shrink).
 
 ## April 02, 2026
 
@@ -377,17 +377,9 @@ You can scale your read pool in several ways:
 
 
 
-For more information, see [About read pools](https://docs.cloud.google.com/sql/docs/sqlserver/about-read-pools).
+For more information, see [About read pools](https://docs.cloud.google.com/sql/docs/sqlserver/about-read-pools) .
 
 ## March 17, 2026
-
-Feature
-
-Cloud SQL supports cross-project PITR operations for instances protected by backup and DR ([GA](https://cloud.google.com/products/#product-launch-stages)).
-
-This feature lets you restore a Cloud SQL instance to a project other than the project where either the source instance or the backup vault is located.
-
-For more information, see [Perform a cross-project PITR](https://docs.cloud.google.com/sql/docs/sqlserver/backup-recovery/pitr#perform_a_cross-project_pitr).
 
 Change
 
@@ -398,7 +390,15 @@ Point-in-time recovery (PITR) default enablement behavior has changed:
 
 
 
-For more information, see [Configure point-in-time recovery (PITR)](https://docs.cloud.google.com/sql/docs/sqlserver/backup-recovery/configure-pitr).
+For more information, see [Configure point-in-time recovery (PITR)](https://docs.cloud.google.com/sql/docs/sqlserver/backup-recovery/configure-pitr) .
+
+Feature
+
+Cloud SQL supports cross-project PITR operations for instances protected by backup and DR ([GA](https://cloud.google.com/products#product-launch-stages)).
+
+This feature lets you restore a Cloud SQL instance to a project other than the project where either the source instance or the backup vault is located.
+
+For more information, see [Perform a cross-project PITR](https://docs.cloud.google.com/sql/docs/sqlserver/backup-recovery/pitr#perform_a_cross-project_pitr) .
 
 Feature
 
@@ -406,7 +406,7 @@ Feature
 
 This feature lets you store your backup data in multi-region storage locations, providing higher availability and protection against regional outages.
 
-For more information, see [Enhanced backups](https://docs.cloud.google.com/sql/docs/sqlserver/backup-recovery/backup-options#enhanced-backups).
+For more information, see [Enhanced backups](https://docs.cloud.google.com/sql/docs/sqlserver/backup-recovery/backup-options#enhanced-backups) .
 
 ## March 13, 2026
 
@@ -414,41 +414,41 @@ Feature
 
 You can now enable automatic server certificate rotation for your Cloud SQL instance. This feature is specifically designed for instances utilizing the Certificate Authority Service (CAS). Automatic server certificate rotation helps you maintain high security standards while removing the operational burden of manual rotation.
 
-For more information about enabling automatic server certificate rotation for your instance, see [Enable automatic server certificate rotation](https://docs.cloud.google.com/sql/docs/sqlserver/manage-ssl-instance#automatic-server-certificate-rotation-cas).
+For more information about enabling automatic server certificate rotation for your instance, see [Enable automatic server certificate rotation](https://docs.cloud.google.com/sql/docs/sqlserver/manage-ssl-instance#automatic-server-certificate-rotation-cas) .
 
 ## February 23, 2026
 
 Feature
 
-Gemini Cloud Assist investigation capabilities are now supported in Cloud SQL for SQL Server ([Preview](https://cloud.google.com/products/#product-launch-stages)).
+Gemini Cloud Assist investigation capabilities are now supported in Cloud SQL for SQL Server ([Preview](https://cloud.google.com/products#product-launch-stages)).
 
-For more information, see [Troubleshoot slow queries with AI assistance](https://docs.cloud.google.com/sql/docs/sqlserver/troubleshoot-slow-queries).
+For more information, see [Troubleshoot slow queries with AI assistance](https://docs.cloud.google.com/sql/docs/sqlserver/monitor-troubleshoot-with-ai#troubleshoot-slow-queries).
 
 ## February 18, 2026
-
-Change
-
-After March 17, 2026, when you enable the Cloud SQL Admin API (`sqladmin.googleapis.com`), the Cloud SQL remote MCP server is enabled automatically.
-
-The Cloud SQL remote MCP server is in [Preview](https://cloud.google.com/products/#product-launch-stages).
 
 Deprecated
 
 Control of MCP use with organization policies is deprecated. After March 17, 2026, organization policies that use the `gcp.managed.allowedMCPServices` constraint won't work, and you can control MCP use with IAM deny policies. For more information about controlling MCP use, see [Control MCP use with IAM](https://docs.cloud.google.com/mcp/control-mcp-use-iam).
 
+Change
+
+After March 17, 2026, when you enable the Cloud SQL Admin API (`sqladmin.googleapis.com`), the Cloud SQL remote MCP server is enabled automatically.
+
+The Cloud SQL remote MCP server is in [Preview](https://cloud.google.com/products#product-launch-stages).
+
 ## February 17, 2026
 
 Announcement
 
-New best practices are available for securing generative AI agents using Model Context Protocol (MCP) with Google Cloud databases. This guide covers key security measures like least privilege, native database controls, and secure agent design to help you build safer AI applications. For more information, see [Best practices for securing agent interactions with Model Context Protocol](https://docs.cloud.google.com/sql/docs/sqlserver/secure-agent-interactions-mcp).
+New best practices are available for securing generative AI agents using Model Context Protocol (MCP) with Google Cloud databases. This guide covers key security measures like least privilege, native database controls, and secure agent design to help you build safer AI applications. For more information, see [Best practices for securing agent interactions with Model Context Protocol](https://docs.cloud.google.com/sql/docs/sqlserver/secure-agent-interactions-mcp) .
 
 ## February 09, 2026
 
 Feature
 
-You can now use the [Cloud SQL remote MCP server](https://docs.cloud.google.com/sql/docs/sqlserver/use-cloudsql-mcp). The Cloud SQL remote MCP server lets you interact easily with Cloud SQL instances from LLMs, AI applications, and AI-enabled development platforms.
+You can now use the [Cloud SQL remote MCP server](https://docs.cloud.google.com/sql/docs/sqlserver/use-cloudsql-mcp) . The Cloud SQL remote MCP server lets you interact easily with Cloud SQL instances from LLMs, AI applications, and AI-enabled development platforms.
 
-This feature is in [Preview](https://cloud.google.com/products/#product-launch-stages).
+This feature is in [Preview](https://cloud.google.com/products#product-launch-stages).
 
 ## February 02, 2026
 
@@ -464,7 +464,7 @@ Feature
 
 Cloud SQL enhanced backups are now generally available ([GA](https://cloud.google.com/products#product-launch-stages)).
 
-With enhanced backups, backups are managed and stored in a centralized backup management project that leverages the [Backup and DR service](https://docs.cloud.google.com/backup-disaster-recovery), and provides enforced retention, granular scheduling, and longer retention.
+With enhanced backups, backups are managed and stored in a centralized backup management project that leverages the [Backup and DR service](https://docs.cloud.google.com/backup-disaster-recovery/docs), and provides enforced retention, granular scheduling, and longer retention.
 
 Enhanced backups now also support [point-in-time-recovery (PITR) after instance deletion](https://docs.cloud.google.com/sql/docs/sqlserver/backup-recovery/restore).
 
@@ -498,19 +498,19 @@ For more information about the N4 machine series and its availability, see [Mach
 
 Feature
 
-You can now use [advanced disaster recovery (DR)](https://cloud.google.com/sql/docs/sqlserver/intro-to-cloud-sql-disaster-recovery#advanced-dr) for your Private Service Connect (PSC) enabled Cloud SQL Enterprise Plus edition instances. With advanced DR, you can: 
+You can now use [advanced disaster recovery (DR)](https://docs.cloud.google.com/sql/docs/sqlserver/intro-to-cloud-sql-disaster-recovery#advanced-dr) for your Private Service Connect (PSC) enabled Cloud SQL Enterprise Plus edition instances. With advanced DR, you can: 
 
   * Designate a cross-region disaster recovery (DR) replica
   * Perform a cross-region replica failover for disaster recovery
   * Restore your original deployment by using zero-data loss switchover
 
-You can also use switchover to simulate disaster recovery without data loss. For more information, see [Use advanced disaster recovery (DR)](https://cloud.google.com/sql/docs/sqlserver/use-advanced-disaster-recovery). This feature is [generally available](https://cloud.google.com/products#product-launch-stages) (GA).
+You can also use switchover to simulate disaster recovery without data loss. For more information, see [Use advanced disaster recovery (DR)](https://docs.cloud.google.com/sql/docs/sqlserver/use-advanced-disaster-recovery). This feature is [generally available](https://cloud.google.com/products#product-launch-stages) (GA).
 
 ## September 29, 2025
 
 Feature
 
-You can now [use Gemini's capabilities to fix errors in a query within Cloud SQL Studio](https://cloud.google.com/sql/docs/sqlserver/write-sql-gemini#fix-query) ([Preview](https://cloud.google.com/products#product-launch-stages)).
+You can now [use Gemini's capabilities to fix errors in a query within Cloud SQL Studio](https://docs.cloud.google.com/sql/docs/sqlserver/write-sql-gemini#fix-query) ([Preview](https://cloud.google.com/products#product-launch-stages)).
 
 ## September 23, 2025
 
@@ -518,7 +518,7 @@ Feature
 
 You can now provision, manage and query your databases using the dedicated Gemini CLI extension for Cloud SQL for SQL Server. The extension provides full lifecycle control of your database—from provisioning instances, to exploring schemas and troubleshooting issues—from your command-line interface. 
 
-For more information, see [Use Cloud SQL for SQL Server with MCP, Gemini CLI, and other agents](https://cloud.google.com/sql/docs/sqlserver/pre-built-tools-with-mcp-toolbox).
+For more information, see [Use Cloud SQL for SQL Server with MCP, Gemini CLI, and other agents](https://docs.cloud.google.com/sql/docs/sqlserver/pre-built-tools-with-mcp-toolbox).
 
 Feature
 
@@ -544,7 +544,7 @@ You can also create a [custom organization policy](https://docs.cloud.google.com
 
 Feature
 
-[`Max degree of parallelism (MAXDOP)`](https://cloud.google.com/sql/docs/sqlserver/flags#max-degree-of-parallelism) is a Microsoft database flag available for use in Cloud SQL for SQL Server. This flag lets you limit the maximum number of threads used when running a single query in a parallel plan.
+[`Max degree of parallelism (MAXDOP)`](https://docs.cloud.google.com/sql/docs/sqlserver/flags#max-degree-of-parallelism) is a Microsoft database flag available for use in Cloud SQL for SQL Server. This flag lets you limit the maximum number of threads used when running a single query in a parallel plan.
 
 ## August 21, 2025
 
@@ -556,11 +556,11 @@ You can save and manage SQL queries in Cloud SQL Studio. This feature is in [Pre
 
 Feature
 
-Now you can create an IPv6 endpoint for Private Service Connect (PSC) connections. For more information, see [Connect to an instance using Private Service Connect](https://cloud.google.com/sql/docs/sqlserver/configure-private-service-connect#create-psc-endpoint).
+Now you can create an IPv6 endpoint for Private Service Connect (PSC) connections. For more information, see [Connect to an instance using Private Service Connect](https://docs.cloud.google.com/sql/docs/sqlserver/configure-private-service-connect#create-psc-endpoint).
 
 Feature
 
-Now you can use [Private Service Connect backends](https://cloud.google.com/sql/docs/sqlserver/about-private-service-connect#psc-backend), as an alternative to Private Service Connect endpoints, to access Cloud SQL instances.
+Now you can use [Private Service Connect backends](https://docs.cloud.google.com/sql/docs/sqlserver/about-private-service-connect#psc-backend), as an alternative to Private Service Connect endpoints, to access Cloud SQL instances.
 
 Deprecated
 
@@ -578,7 +578,7 @@ Feature
 
 Cloud SQL now offers planned maintenance and machine tier upgrades for your Cloud SQL Enterprise plus instances with near-zero downtime for eligible instances.
 
-For more information, see [Maintenance updates on Cloud SQL instances](https://cloud.google.com/sql/docs/sqlserver/maintenance#nearzero).
+For more information, see [Maintenance updates on Cloud SQL instances](https://docs.cloud.google.com/sql/docs/sqlserver/maintenance#nearzero).
 
 ## July 31, 2025
 
@@ -586,7 +586,7 @@ Feature
 
 Cloud SQL now offers two options of backup services to manage your instance's backups:
 
-  * **Enhanced backups** ([Preview](https://cloud.google.com/products#product-launch-stages)): backups are managed and stored in a centralized backup management project that leverages the [Backup and DR service](https://docs.cloud.google.com/backup-disaster-recovery), and provides enforced retention, granular scheduling, and longer retention. 
+  * **Enhanced backups** ([Preview](https://cloud.google.com/products#product-launch-stages)): backups are managed and stored in a centralized backup management project that leverages the [Backup and DR service](https://docs.cloud.google.com/backup-disaster-recovery), and provides enforced retention, granular scheduling, and longer retention.
 
   * **Standard backups** (existing option): backups are created, managed, and stored in the same project as your Cloud SQL instances. 
 
@@ -613,13 +613,13 @@ Database instances running with an allocation of memory that's either too low or
 
 The `max server memory (mb)` flag limits the amount of memory that Cloud SQL can allocate for its internal pools. You can manually set a value for this flag, or omit the flag and let Cloud SQL manage memory limits for you automatically.
 
-For more information, see [Optimize maximum server memory usage](https://cloud.google.com/sql/docs/sqlserver/recommender-maximum-server-memory).
+For more information, see [Optimize maximum server memory usage](https://docs.cloud.google.com/sql/docs/sqlserver/recommender-maximum-server-memory).
 
 ## May 23, 2025
 
 Change
 
-Cloud SQL for SQL Server now extends [query insights](https://cloud.google.com/sql/docs/sqlserver/using-query-insights#query-insights-for-enterprise-plus) and [index advisor](https://cloud.google.com/sql/docs/sqlserver/use-index-advisor#limitations) support to read replicas.
+Cloud SQL for SQL Server now extends [query insights](https://docs.cloud.google.com/sql/docs/sqlserver/using-query-insights#query-insights-for-enterprise-plus) and [index advisor](https://docs.cloud.google.com/sql/docs/sqlserver/use-index-advisor#limitations) support to read replicas.
 
 ## May 22, 2025
 
@@ -633,7 +633,7 @@ For more information, see [Configure both private services access and Private Se
 
 Feature
 
-Cloud SQL for SQL Server now supports [TLS connections](https://cloud.google.com/sql/docs/sqlserver/ad#active_directory_endpoints_and_tls_connections) to Active Directory endpoints without requiring server certificate trust or the use of IP addresses. Existing [server certificates](https://cloud.google.com/sql/docs/sqlserver/manage-ssl-instance) will need to be rotated to use this feature.
+Cloud SQL for SQL Server now supports [TLS connections](https://docs.cloud.google.com/sql/docs/sqlserver/ad#active_directory_endpoints_and_tls_connections) to Active Directory endpoints without requiring server certificate trust or the use of IP addresses. Existing [server certificates](https://docs.cloud.google.com/sql/docs/sqlserver/manage-ssl-instance) will need to be rotated to use this feature.
 
 ## May 08, 2025
 
@@ -690,19 +690,19 @@ For more information, see [Use query insights to improve query performance](http
 
 Feature
 
-Cloud SQL now supports the [Enterprise Plus recommender](https://cloud.google.com/sql/docs/sqlserver/recommender-enterprise-plus). Based on your application workloads and resource utilization, the recommender helps you optimize performance by identifying SQL Server instances that might see performance improvements when upgraded to Cloud SQL Enterprise Plus edition.
+Cloud SQL now supports the [Enterprise Plus recommender](https://docs.cloud.google.com/sql/docs/sqlserver/recommender-enterprise-plus). Based on your application workloads and resource utilization, the recommender helps you optimize performance by identifying SQL Server instances that might see performance improvements when upgraded to Cloud SQL Enterprise Plus edition.
 
 ## March 28, 2025
 
 Feature
 
-When you create a Cloud SQL for SQL Server instance, version [SQL Server 2022 Standard is now the default](https://cloud.google.com/sql/docs/sqlserver/instance-settings).
+When you create a Cloud SQL for SQL Server instance, version [SQL Server 2022 Standard is now the default](https://docs.cloud.google.com/sql/docs/sqlserver/instance-settings).
 
 ## March 24, 2025
 
 Feature
 
-You can [export the transaction logs for all Cloud SQL for SQL Server instances that have point-in-time recovery (PITR) enabled and their logs stored in Cloud Storage](https://cloud.google.com/sql/docs/sqlserver/import-export/import-export-bak#export-transaction-logs).
+You can [export the transaction logs for all Cloud SQL for SQL Server instances that have point-in-time recovery (PITR) enabled and their logs stored in Cloud Storage](https://docs.cloud.google.com/sql/docs/sqlserver/import-export/import-export-bak#export-transaction-logs).
 
 Feature
 
@@ -716,19 +716,19 @@ Cloud SQL for SQL Server supports transparent data encryption (TDE) to encrypt d
 
 TDE automatically encrypts data before it is written to storage, and automatically decrypts data when the data is read from storage.
 
-TDE provides another layer of encryption in addition to Google's default offering of encryption for data at rest and Google's optional offering of customer-managed encryption keys (CMEK). TDE helps you meet regulatory compliance requirements and supports import or export operations of TDE encrypted backups. For more information, see [About transparent data encryption](https://cloud.google.com/sql/docs/sqlserver/about-tde).
+TDE provides another layer of encryption in addition to Google's default offering of encryption for data at rest and Google's optional offering of customer-managed encryption keys (CMEK). TDE helps you meet regulatory compliance requirements and supports import or export operations of TDE encrypted backups. For more information, see [About transparent data encryption](https://docs.cloud.google.com/sql/docs/sqlserver/about-tde).
 
 ## March 14, 2025
 
 Feature
 
-You can [use PITR to restore a Cloud SQL for SQL Server instance that isn't available](https://cloud.google.com/sql/docs/sqlserver/backup-recovery/restore#pitr-instance-not-available).
+You can [use PITR to restore a Cloud SQL for SQL Server instance that isn't available](https://docs.cloud.google.com/sql/docs/sqlserver/backup-recovery/restore#pitr-instance-not-available).
 
 ## March 04, 2025
 
 Feature
 
-[Cloud SQL Enterprise edition](https://cloud.google.com/sql/docs/sqlserver/instance-settings) now supports the `europe-north2` (Stockholm) region.
+[Cloud SQL Enterprise edition](https://docs.cloud.google.com/sql/docs/sqlserver/instance-settings) now supports the `europe-north2` (Stockholm) region.
 
 ## February 20, 2025
 
@@ -837,7 +837,7 @@ You can now create custom organization policies for the [`BackupRun`](https://do
 
 Feature
 
-You can now have Cloud SQL create a Private Service Connect endpoint automatically instead of creating the endpoint manually after the instance is created. You use this endpoint to access a Cloud SQL instance through a VPC network. For more information, see [Connect to an instance using Private Service Connect](https://docs.cloud.google.com/sql/docs/sqlserver/configure-private-service-connect#create-endpoint-automatically). This feature is available in [Preview](https://cloud.google.com/products?e=48754805#product-launch-stages).
+You can now have Cloud SQL create a Private Service Connect endpoint automatically instead of creating the endpoint manually after the instance is created. You use this endpoint to access a Cloud SQL instance through a VPC network. For more information, see [Connect to an instance using Private Service Connect](https://docs.cloud.google.com/sql/docs/sqlserver/configure-private-service-connect#create-endpoint-automatically). This feature is available in [Preview](https://cloud.google.com/products#product-launch-stages).
 
 ## November 04, 2024
 
@@ -1002,7 +1002,7 @@ You can now use [Private Service Connect](https://docs.cloud.google.com/sql/docs
 
 Private Service Connect includes support for [cross-region read replicas](https://docs.cloud.google.com/sql/docs/sqlserver/replication/create-replica#create-read-replica-cloud-sql-instance-psc-enabled). You can also [choose an availability type](https://docs.cloud.google.com/sql/docs/sqlserver/configure-ha) (REGIONAL or ZONAL) for Private Service Connect-enabled instances. 
 
-All features are in [GA](https://cloud.google.com/products?hl=en#product-launch-stages).
+All features are in [GA](https://cloud.google.com/products#product-launch-stages).
 
 ## March 14, 2024
 
@@ -1136,7 +1136,7 @@ A vulnerability was recently discovered in Cloud SQL for SQL Server that allowed
 
 Google Cloud resolved the issue by patching the security vulnerability by March 1, 2023. Google Cloud didn't find any compromised customer instances.
 
-For instructions and more details, see the [Cloud SQL security bulletin](https://cloud.google.com/sql/docs/security-bulletins#gcp-2023-007).
+For instructions and more details, see the [Cloud SQL security bulletin](https://docs.cloud.google.com/sql/docs/security-bulletins#gcp-2023-007).
 
 ## May 16, 2023
 
@@ -1422,7 +1422,7 @@ Support for europe-west8 region (Milan).
 
 Feature
 
-Customer-managed encryption key (CMEK) organization policy constraints are now available in [Preview](https://cloud.google.com/products/#product-launch-stages).
+Customer-managed encryption key (CMEK) organization policy constraints are now available in [Preview](https://cloud.google.com/products#product-launch-stages).
 
   * `constraints/gcp.restrictNonCmekServices` allows you to control which resources require the use of CMEK.
   * `constraints/gcp.restrictCmekCryptoKeyProjects` allows you to control the projects from which a Cloud KMS key can be used to validate requests.
@@ -1789,6 +1789,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

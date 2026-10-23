@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/hub/docs/optimize/
 title: View resource costs and utilization \u00a0|\u00a0 Cloud Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:26.088974+00:00
+fetched_at: 2026-10-23T13:09:22.907633+00:00
 ---
 
 # View resource costs and utilization  |  Cloud Hub  |  Google Cloud Documentation

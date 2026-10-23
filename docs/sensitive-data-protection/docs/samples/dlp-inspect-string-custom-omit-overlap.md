@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-inspect-string-custom-omit-overlap/
 title: Inspect a string for sensitive data, omitting custom matches \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:49:55.514090+00:00
+fetched_at: 2026-10-23T11:32:42.440727+00:00
 ---
 
 # Inspect a string for sensitive data, omitting custom matches  |  Sensitive Data Protection  |  Google Cloud Documentation

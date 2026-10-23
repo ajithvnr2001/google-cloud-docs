@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-get-topic-policy/
 title: Get topic policy \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:12.283834+00:00
+fetched_at: 2026-10-23T10:04:28.698700+00:00
 ---
 
 # Get topic policy  |  Pub/Sub  |  Google Cloud Documentation

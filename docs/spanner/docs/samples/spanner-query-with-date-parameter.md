@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-query-with-date-parameter/
 title: Query with DATE parameter \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:24.026455+00:00
+fetched_at: 2026-10-23T10:10:10.819710+00:00
 ---
 
 # Query with DATE parameter  |  Spanner  |  Google Cloud Documentation

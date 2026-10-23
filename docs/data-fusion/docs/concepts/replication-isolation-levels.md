@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/concepts/replication-isolation-levels/
 title: Isolation levels in replication \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:59.157939+00:00
+fetched_at: 2026-10-23T13:20:44.943563+00:00
 ---
 
 # Isolation levels in replication  |  Cloud Data Fusion  |  Google Cloud Documentation

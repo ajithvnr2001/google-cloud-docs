@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/manage-frameworks/
 title: Manage frameworks in Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:07.979132+00:00
+fetched_at: 2026-10-23T13:19:25.633339+00:00
 ---
 
 # Manage frameworks in Assured Workloads  |  Google Cloud Documentation

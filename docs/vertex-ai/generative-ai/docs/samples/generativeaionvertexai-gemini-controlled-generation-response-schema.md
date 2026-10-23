@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-gemini-controlled-generation-response-schema/
 title: Specify a MIME response type for the Gemini API \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:24.887794+00:00
+fetched_at: 2026-10-23T09:36:27.360817+00:00
 ---
 
 # Specify a MIME response type for the Gemini API  |  Generative AI on Vertex AI  |  Google Cloud Documentation

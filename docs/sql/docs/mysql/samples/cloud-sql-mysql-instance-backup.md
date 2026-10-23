@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/samples/cloud-sql-mysql-instance-backup/
 title: Schedule automated backups for an instance \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:38.371607+00:00
+fetched_at: 2026-10-23T10:11:46.268506+00:00
 ---
 
 # Schedule automated backups for an instance  |  Cloud SQL for MySQL  |  Google Cloud Documentation

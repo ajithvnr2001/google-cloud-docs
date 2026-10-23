@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/quotas/
 title: Quotas and limits \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:12.585949+00:00
+fetched_at: 2026-10-23T13:13:28.644120+00:00
 ---
 
 # Quotas and limits  |  Agent Search  |  Google Cloud Documentation

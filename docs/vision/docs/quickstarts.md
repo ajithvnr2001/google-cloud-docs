@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/quickstarts/
 title: Basics and quickstarts \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:06:32.030593+00:00
+fetched_at: 2026-10-23T09:24:48.032998+00:00
 ---
 
 # Basics and quickstarts  |  Cloud Vision API  |  Google Cloud Documentation

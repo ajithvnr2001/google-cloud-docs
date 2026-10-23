@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/samples/cloud-sql-postgres-servlet-connect-connector/
 title: Create a connection using the Cloud SQL Java Connector \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:24.729446+00:00
+fetched_at: 2026-10-23T10:18:30.815799+00:00
 ---
 
 # Create a connection using the Cloud SQL Java Connector  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation

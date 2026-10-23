@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-list-regional-secrets-with-filter/
 title: List regional secrets with filter \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:56.614820+00:00
+fetched_at: 2026-10-23T09:40:29.558774+00:00
 ---
 
 # List regional secrets with filter  |  Secret Manager  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-static-website-upload-files-tf/
 title: Upload static website files to storage bucket \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:31:29.402126+00:00
+fetched_at: 2026-10-23T09:36:42.196804+00:00
 ---
 
 # Upload static website files to storage bucket  |  Cloud Storage  |  Google Cloud Documentation

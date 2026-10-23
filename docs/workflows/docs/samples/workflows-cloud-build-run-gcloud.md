@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-cloud-build-run-gcloud/
 title: Run gcloud commands in a workflow \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:54:45.430786+00:00
+fetched_at: 2026-10-23T08:58:07.391907+00:00
 ---
 
 # Run gcloud commands in a workflow  |  Workflows  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/create-a-confidential-vm-instance-with-gpu/
 title: Create a Confidential VM instance with GPU \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:11:02.755370+00:00
+fetched_at: 2026-10-23T12:36:41.585361+00:00
 ---
 
 # Create a Confidential VM instance with GPU  |  Google Cloud Documentation
@@ -33,7 +33,7 @@ Confidential VM instances with NVIDIA GPUs are available on the following machin
 Using NVIDIA RTX Pro 6000 GPUs with Confidential G4 VM instances automatically incurs a license fee for NVIDIA Confidential Computing software and services. For more details, see [Confidential Computing with GPUs pricing](https://docs.cloud.google.com/confidential-computing/confidential-vm/pricing?e=13802955#confidential-computing-with-gpus-pricing).
 
 
-
+**Note:** NVIDIA HGX B200 and NVIDIA GB300 NVL72 access is available to specific eligible customers. To check your eligibility and to request access to these systems, contact your dedicated account team.
 
 Before you create a Confidential VM instance with GPU, make sure you have enough GPU quota. For more information, see [Quotas](https://docs.cloud.google.com/confidential-computing/confidential-vm/quotas#gpu-quotas).
 
@@ -92,7 +92,7 @@ Provide the following values:
 
     * `g4-standard-48`
 
-  * `ZONE_NAME`: The [supported zone](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#supported-zones) to create the VM in.
+  * `ZONE_NAME`: The [supported zone](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#zones) to create the VM in.
 
   * `IMAGE_PROJECT`: The project that contains the [Confidential VM-supported operating system image for GPU](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#supported-images-gpu).
 
@@ -147,7 +147,7 @@ Provide the following values:
 
   * `PROJECT_ID`: Optional. The ID of the project to create the VM in.
 
-  * `ZONE`: The [supported zone](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#supported-zones) to create the VM in.
+  * `ZONE`: The [supported zone](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#zones) to create the VM in.
 
   * `INSTANCE_NAME`: The name of the new VM instance.
 
@@ -346,7 +346,7 @@ Provide the following values:
 
      * `INSTANCE_GROUP_NAME`: The name of the MIG.
 
-     * `ZONE_NAME`: The [supported zone](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#supported-zones) to get a list of VM instances from.
+     * `ZONE_NAME`: The [supported zone](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#zones) to get a list of VM instances from.
 
      * `PROJECT_ID`: Optional. The ID of the project to get a list of VM instances from.
 
@@ -482,6 +482,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

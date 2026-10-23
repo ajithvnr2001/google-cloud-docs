@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/reference/libraries/
 title: CX Agent Studio client libraries \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:09.087255+00:00
+fetched_at: 2026-10-23T13:13:38.134831+00:00
 ---
 
 # CX Agent Studio client libraries  |  Google Cloud Documentation

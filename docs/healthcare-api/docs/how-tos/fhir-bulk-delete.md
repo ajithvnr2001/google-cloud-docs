@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/how-tos/fhir-bulk-delete/
 title: Bulk-deleting FHIR resources \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:50.064398+00:00
+fetched_at: 2026-10-23T13:00:53.303686+00:00
 ---
 
 # Bulk-deleting FHIR resources  |  Cloud Healthcare API  |  Google Cloud Documentation

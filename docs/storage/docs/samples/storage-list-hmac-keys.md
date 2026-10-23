@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-list-hmac-keys/
 title: List HMAC keys \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:32:29.745870+00:00
+fetched_at: 2026-10-23T09:37:29.104420+00:00
 ---
 
 # List HMAC keys  |  Cloud Storage  |  Google Cloud Documentation
@@ -261,7 +261,7 @@ To authenticate to Cloud Storage, set up Application Default Credentials. For mo
     def list_hmac_keys
       require "google/cloud/storage"
     
-      storage = Google::Cloud::[Storage](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html)
+      storage = Google::Cloud::[Storage](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage-control-v2/latest/Google-Cloud-Storage.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html)
     
       # By default Storage#hmac_keys uses the Storage client project_id
       hmac_keys = storage.[hmac_keys](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage-Project.html)

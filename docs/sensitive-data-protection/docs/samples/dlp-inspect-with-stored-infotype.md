@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-inspect-with-stored-infotype/
 title: Scan content using a large custom dictionary detector \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:49:53.731392+00:00
+fetched_at: 2026-10-23T11:32:43.093406+00:00
 ---
 
 # Scan content using a large custom dictionary detector  |  Sensitive Data Protection  |  Google Cloud Documentation

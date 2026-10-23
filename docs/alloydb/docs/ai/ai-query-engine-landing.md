@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/ai-query-engine-landing/
 title: AI functions overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:30:37.231491+00:00
+fetched_at: 2026-10-23T13:08:31.042839+00:00
 ---
 
 # AI functions overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -13,7 +13,6 @@ fetched_at: 2026-10-22T09:30:37.231491+00:00
   * [ Documentation ](https://docs.cloud.google.com/docs)
   * [ Databases ](https://docs.cloud.google.com/docs/databases)
   * [ AlloyDB for PostgreSQL ](https://docs.cloud.google.com/alloydb/docs)
-  * [ Guides ](https://docs.cloud.google.com/alloydb/docs/overview)
 
 
 
@@ -39,9 +38,9 @@ Perform transformations for rows in your database. Using the `ai.generate()` ope
 
 ###  [ Embedding and prediction functions ](https://docs.cloud.google.com/alloydb/docs/ai/model-endpoint-overview)
 
-Use SQL functions like `google_ml.embedding()` to generate vector embeddings or `google_ml.predict_row(` to invoke predictions from any registered model, all within your database. 
+Use SQL functions like `google_ml.embedding()` to generate vector embeddings or `google_ml.predict_row()` to invoke predictions from any registered model, all within your database. 
 
-## How the AI functions works
+## How the AI functions work
 
 When you embed an AI operator like `ai.if()`, `ai.rank()`, or `ai.generate()` into your SQL query, the **AI functions** detect it. This engine, available using the `google_ml_integration` extension, orchestrates the entire process. It securely packages the relevant row data and calls a pre-registered ML model from providers, such as Gemini, OpenAI, or Anthropic. The ML model evaluates the data and returns a prediction—like `true/false` for a filter or a score for ranking. The AI functions seamlessly integrates this prediction back into your query's execution, returning a standard SQL result set. You get AI-powered insights without ever moving your data.
 
@@ -154,6 +153,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

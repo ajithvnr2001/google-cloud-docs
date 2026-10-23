@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-update-topic-type/
 title: Change the type of a topic \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:59:07.409394+00:00
+fetched_at: 2026-10-23T10:04:37.108055+00:00
 ---
 
 # Change the type of a topic  |  Pub/Sub  |  Google Cloud Documentation

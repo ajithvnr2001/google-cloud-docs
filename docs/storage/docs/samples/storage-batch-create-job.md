@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-batch-create-job/
 title: Storage Batch Create Job \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:31:05.803791+00:00
+fetched_at: 2026-10-23T09:36:53.784154+00:00
 ---
 
 # Storage Batch Create Job  |  Google Cloud Documentation
@@ -138,39 +138,39 @@ To authenticate to Cloud Storage, set up Application Default Credentials. For mo
     #   )
     #
     def create_job bucket_name:, prefix:, job_id:, project_id:
-      client = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations/latest/Google-Cloud-StorageBatchOperations.html).[storage_batch_operations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations/latest/Google-Cloud-StorageBatchOperations.html)
+      client = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations.html).[storage_batch_operations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations/latest/Google-Cloud-StorageBatchOperations.html)
     
       parent = "projects/#{project_id}/locations/global"
     
-      prefix_list = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::PrefixList.new(
+      prefix_list = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::PrefixList.new(
         included_object_prefixes: [prefix]
       )
     
-      bucket = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::BucketList::Bucket.new(
+      bucket = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::BucketList::Bucket.new(
         bucket: bucket_name,
         prefix_list: prefix_list
       )
     
-      bucket_list = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::BucketList.new(
+      bucket_list = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::BucketList.new(
         buckets: [bucket]
       )
     
       # Define the delete operation
-      delete_object = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::DeleteObject.new(
+      delete_object = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::DeleteObject.new(
         permanent_object_deletion_enabled: false
       )
     
       # Build the job
-      job = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::Job.new(
+      job = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::Job.new(
         bucket_list: bucket_list,
         delete_object: delete_object
       )
     
-      request = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::CreateJobRequest.new parent: parent, job_id: job_id, job: job
+      request = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::CreateJobRequest.new parent: parent, job_id: job_id, job: job
       create_job_operation = client.create_job request
     
       # To fetch job details using get_job to confirm creation
-      get_request = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::GetJobRequest.new name: "#{parent}/jobs/#{job_id}"
+      get_request = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::GetJobRequest.new name: "#{parent}/jobs/#{job_id}"
     
       begin
         ## Waiting for operation to complete

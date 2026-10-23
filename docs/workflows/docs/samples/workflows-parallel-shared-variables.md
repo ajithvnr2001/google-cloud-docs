@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-parallel-shared-variables/
 title: Demonstrate variable scope in a parallel step \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:54:41.958626+00:00
+fetched_at: 2026-10-23T08:56:50.905785+00:00
 ---
 
 # Demonstrate variable scope in a parallel step  |  Workflows  |  Google Cloud Documentation

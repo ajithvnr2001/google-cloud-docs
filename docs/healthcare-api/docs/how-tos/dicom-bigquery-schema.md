@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/how-tos/dicom-bigquery-schema/
 title: Understanding the BigQuery DICOM schema \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:54.321461+00:00
+fetched_at: 2026-10-23T13:01:21.379575+00:00
 ---
 
 # Understanding the BigQuery DICOM schema  |  Cloud Healthcare API  |  Google Cloud Documentation

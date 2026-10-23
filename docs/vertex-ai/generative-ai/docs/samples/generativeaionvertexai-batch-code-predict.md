@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-batch-code-predict/
 title: Batch code prediction with a pre-trained model \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:11.923012+00:00
+fetched_at: 2026-10-23T09:37:50.885791+00:00
 ---
 
 # Batch code prediction with a pre-trained model  |  Generative AI on Vertex AI  |  Google Cloud Documentation

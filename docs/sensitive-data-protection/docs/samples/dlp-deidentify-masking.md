@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-deidentify-masking/
 title: Character masking \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:50:36.021449+00:00
+fetched_at: 2026-10-23T11:34:21.143222+00:00
 ---
 
 # Character masking  |  Sensitive Data Protection  |  Google Cloud Documentation

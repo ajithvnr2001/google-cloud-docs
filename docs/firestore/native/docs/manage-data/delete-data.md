@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/manage-data/delete-data/
 title: Delete documents and fields \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:23.988126+00:00
+fetched_at: 2026-10-23T13:13:58.330988+00:00
 ---
 
 # Delete documents and fields  |  Firestore in Native mode  |  Google Cloud Documentation

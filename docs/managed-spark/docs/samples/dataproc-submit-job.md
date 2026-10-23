@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-spark/docs/samples/dataproc-submit-job/
 title: Submit job \u00a0|\u00a0 Managed Service for Apache Spark \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:36:53.579475+00:00
+fetched_at: 2026-10-23T10:45:02.639520+00:00
 ---
 
 # Submit job  |  Managed Service for Apache Spark  |  Google Cloud Documentation

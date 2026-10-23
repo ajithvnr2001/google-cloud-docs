@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/view-resources/
 title: View resources deployed \u00a0|\u00a0 Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:42.009645+00:00
+fetched_at: 2026-10-23T13:10:00.215082+00:00
 ---
 
 # View resources deployed  |  Infrastructure Manager  |  Google Cloud Documentation

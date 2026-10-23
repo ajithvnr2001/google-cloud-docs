@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-batch-annotate-files-gcs/
 title: Annotate a batch of files in Cloud Storage \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:09.367366+00:00
+fetched_at: 2026-10-23T08:56:45.867419+00:00
 ---
 
 # Annotate a batch of files in Cloud Storage  |  Cloud Vision API  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/setting-up-cdn-with-bucket/
 title: Set up a backend bucket \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:53.139048+00:00
+fetched_at: 2026-10-23T11:30:49.390101+00:00
 ---
 
 # Set up a backend bucket  |  Cloud CDN  |  Google Cloud Documentation
@@ -98,6 +98,60 @@ Replace `PROJECT_ID` with your Google Cloud project ID.
     
         export GOOGLE_CLOUD_PROJECT=PROJECT_ID
        
+
+## Reserve an external IP address
+
+Now that your Cloud Storage bucket is up and running, set up a [global static external IP address](https://docs.cloud.google.com/compute/docs/ip-addresses#externaladdresses) that your customers use to reach your load balancer.
+
+This step is optional, but recommended, because a static external IP address provides a single address to point your domain at.
+
+**Note:** You can skip this step and have Google Cloud associate an ephemeral IP address with your load balancer's forwarding rule. An ephemeral IP address remains constant while the forwarding rule exists. If you need to delete the forwarding rule and re-add it, the forwarding rule might receive a new IP address.
+
+###  Console 
+
+**Note:** For global external Application Load Balancers, the Google Cloud console isn't supported.
+
+  1. In the Google Cloud console, go to the **External IP addresses** page. 
+
+[Go to the External IP addresses page](https://console.cloud.google.com/addresses/list)
+
+  2. To reserve an IPv4 address, click **Reserve static address**.
+  3. Assign a **Name** of `example-ip`.
+  4. Set the **Network Service Tier** to **Premium**.
+  5. Set the **IP version** to **IPv4**.
+  6. Set the **Type** to **Global**.
+  7. Click **Reserve**.
+
+
+
+###  gcloud 
+    
+    
+    gcloud compute addresses create example-ip \
+        --network-tier=PREMIUM \
+        --ip-version=IPV4 \
+        --global
+    
+
+Note the IPv4 address that was reserved:
+    
+    
+    gcloud compute addresses describe example-ip \
+        --format="get(address)" \
+        --global
+    
+
+###  Terraform 
+
+To reserve an IP address, use the [`google_compute_global_address` resource](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_global_address).
+    
+    
+    # reserve IP address
+    resource "google_compute_global_address" "default" {
+      name = "example-ip"
+    }
+
+To learn how to apply or remove a Terraform configuration, see [Basic Terraform commands](https://docs.cloud.google.com/docs/terraform/basic-commands).
 
 ### Optional: Use BYOIP addresses
 
@@ -213,167 +267,6 @@ Alternatively, to upload an object, use the [`google_storage_bucket_object` reso
 To learn how to apply or remove a Terraform configuration, see [Basic Terraform commands](https://docs.cloud.google.com/docs/terraform/basic-commands).
 
 In the Google Cloud console, click **Refresh** to verify that the graphic file is copied.
-
-## Make your Cloud Storage bucket accessible
-
-You can make your Cloud Storage bucket publicly readable or restrict access to it.
-
-### Make your Cloud Storage bucket public
-
-This example makes your [Cloud Storage bucket publicly readable](https://docs.cloud.google.com/storage/docs/access-control/making-data-public#buckets). This is the recommended approach for public content. With this setting, anyone on the internet can view and list your objects and their metadata, excluding ACLs. To reduce the risk of unintended data exposure, you should typically dedicate specific Cloud Storage buckets for public objects.
-
-**Important:** When objects are served from a public Cloud Storage bucket, [by default](https://docs.cloud.google.com/storage/docs/metadata#caching_data) they have a `Cache-Control: public, max-age=3600` response header applied. This allows the objects to be cached when Cloud CDN is enabled.
-
-The following are alternatives to making an entire Cloud Storage bucket public:
-
-  * Use [managed folders](https://docs.cloud.google.com/storage/docs/managed-folders) to [make a portion of your bucket publicly readable](https://docs.cloud.google.com/storage/docs/access-control/making-data-public#managed-folders).
-
-  * [Make individual objects publicly readable](https://docs.cloud.google.com/storage/docs/access-control/create-manage-lists#set-an-acl). We don't recommend this approach, because it uses a legacy, Cloud Storage-specific permissioning system.
-
-  * Use [signed URLs](https://docs.cloud.google.com/cdn/docs/using-signed-urls).
-
-
-
-
-The following procedure grants all users access to view objects in your Cloud Storage bucket, making the bucket publicly readable.
-
-###  Console 
-
-**Note:** For global external Application Load Balancers, the Google Cloud console isn't supported.
-
-  1. In the Google Cloud console, open the **Cloud Storage Buckets** page. 
-
-[Open the Buckets page](https://console.cloud.google.com/storage/browser)
-
-  2. Navigate to the bucket and click the **Permissions** tab.
-  3. Click **Add principals**.
-  4. In **New principals** , enter `allUsers`.
-  5. For the role, select **Cloud Storage > Storage Object Viewer**.
-  6. Click **Save**.
-
-
-
-###  gcloud 
-    
-    
-    gcloud storage buckets add-iam-policy-binding gs://BUCKET_NAME --member=allUsers --role=roles/storage.objectViewer
-    
-
-###  Terraform 
-
-To make your Cloud Storage bucket public, use the [`google_storage_bucket_iam_member` resource](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket_iam#google_storage_bucket_iam_member).
-    
-    
-    # make bucket public
-    resource "google_storage_bucket_iam_member" "default" {
-      bucket = google_storage_bucket.default.name
-      role   = "roles/storage.objectViewer"
-      member = "allUsers"
-    }
-
-To learn how to apply or remove a Terraform configuration, see [Basic Terraform commands](https://docs.cloud.google.com/docs/terraform/basic-commands).
-
-### Make your Cloud Storage bucket private
-
-To enable access to your private buckets, grant the required IAM roles to the service account that performs cache fills.
-
-###  Console 
-
-  1. In the Google Cloud console, go to the **Buckets** page.
-
-[Go to Buckets](https://console.cloud.google.com/storage/browser)
-
-  2. Navigate to the bucket that you want to enable access to and click the **Permissions** tab.
-
-  3. In the **Permissions** section, on the **View by principals** tab, click person_add**Grant Access**.
-
-  4. In the **Add principals** section, in the **New principals** field, enter the email address of the calling service account: `**service- PROJECT_NUM@https-lb.iam.gserviceaccount.com**`.
-
-**Important:** This service account is only available for `PROJECT_NUM` after you have created at least one backend bucket resource in the project.
-  5. In the **Assign roles** section, in the **Select a role** field, select **Cloud Storage > Storage Object Viewer**. This role provides read-only access.
-
-**Caution:** Private bucket access is designed for read-only content delivery. It doesn't support methods that modify or delete data, such as `POST`, `PUT`, `PATCH`, or `DELETE`.**Important:** When setting permissions for private bucket access, select the Storage Object Viewer role (`roles/storage.objectViewer`) only.
-  6. Click **Save**.
-
-
-
-
-Additionally, so that all content served from the bucket is cached, [set the cache mode](https://docs.cloud.google.com/cdn/docs/using-cache-modes#cache-mode) to **Force cache all content** and [specify a maximum TTL value](https://docs.cloud.google.com/cdn/docs/using-ttl-overrides#default-ttl).
-
-###  gcloud 
-
-To grant Cloud CDN access to a bucket, grant the `objectViewer` role to the service account:
-    
-    
-      gcloud storage buckets add-iam-policy-binding gs://BUCKET_NAME \
-          --member=serviceAccount:service-PROJECT_NUM@https-lb.iam.gserviceaccount.com \
-          --role=roles/storage.objectViewer
-    
-
-Replace the following:
-
-  * `BUCKET_NAME`: the name of the Cloud Storage bucket to use
-  * `PROJECT_NUM`: the number of your Google Cloud project
-
-**Caution:** Private bucket access is designed for read-only content delivery. It doesn't support methods that modify or delete data, such as `POST`, `PUT`, `PATCH`, or `DELETE`.**Important:** When setting permissions for private bucket access, you must only select the Storage Object Viewer role (`roles/storage.objectViewer`).
-
-
-
-Additionally, so that all content served from the bucket is cached, [set the cache mode](https://docs.cloud.google.com/cdn/docs/using-cache-modes#cache-mode) to `force-cache-all` and [set a `max-ttl` value](https://docs.cloud.google.com/cdn/docs/using-ttl-overrides#max-ttl).
-
-## Reserve an external IP address
-
-Now that your Cloud Storage bucket is up and running, set up a [global static external IP address](https://docs.cloud.google.com/compute/docs/ip-addresses#externaladdresses) that your customers use to reach your load balancer.
-
-This step is optional, but recommended, because a static external IP address provides a single address to point your domain at.
-
-**Note:** You can skip this step and have Google Cloud associate an ephemeral IP address with your load balancer's forwarding rule. An ephemeral IP address remains constant while the forwarding rule exists. If you need to delete the forwarding rule and re-add it, the forwarding rule might receive a new IP address.
-
-###  Console 
-
-**Note:** For global external Application Load Balancers, the Google Cloud console isn't supported.
-
-  1. In the Google Cloud console, go to the **External IP addresses** page. 
-
-[Go to the External IP addresses page](https://console.cloud.google.com/addresses/list)
-
-  2. To reserve an IPv4 address, click **Reserve static address**.
-  3. Assign a **Name** of `example-ip`.
-  4. Set the **Network Service Tier** to **Premium**.
-  5. Set the **IP version** to **IPv4**.
-  6. Set the **Type** to **Global**.
-  7. Click **Reserve**.
-
-
-
-###  gcloud 
-    
-    
-    gcloud compute addresses create example-ip \
-        --network-tier=PREMIUM \
-        --ip-version=IPV4 \
-        --global
-    
-
-Note the IPv4 address that was reserved:
-    
-    
-    gcloud compute addresses describe example-ip \
-        --format="get(address)" \
-        --global
-    
-
-###  Terraform 
-
-To reserve an IP address, use the [`google_compute_global_address` resource](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_global_address).
-    
-    
-    # reserve IP address
-    resource "google_compute_global_address" "default" {
-      name = "example-ip"
-    }
-
-To learn how to apply or remove a Terraform configuration, see [Basic Terraform commands](https://docs.cloud.google.com/docs/terraform/basic-commands).
 
 ## Create the external Application Load Balancer
 
@@ -582,6 +475,113 @@ To configure the forwarding rule, use the [`google_compute_global_forwarding_rul
 
 To learn how to apply or remove a Terraform configuration, see [Basic Terraform commands](https://docs.cloud.google.com/docs/terraform/basic-commands).
 
+## Make your Cloud Storage bucket accessible
+
+You can make your Cloud Storage bucket publicly readable or restrict access to it.
+
+### Make your Cloud Storage bucket public
+
+This example makes your [Cloud Storage bucket publicly readable](https://docs.cloud.google.com/storage/docs/access-control/making-data-public#buckets). This is the recommended approach for public content. With this setting, anyone on the internet can view and list your objects and their metadata, excluding ACLs. To reduce the risk of unintended data exposure, you should typically dedicate specific Cloud Storage buckets for public objects.
+
+**Important:** When objects are served from a public Cloud Storage bucket, [by default](https://docs.cloud.google.com/storage/docs/metadata#caching_data) they have a `Cache-Control: public, max-age=3600` response header applied. This allows the objects to be cached when Cloud CDN is enabled.
+
+The following are alternatives to making an entire Cloud Storage bucket public:
+
+  * Use [managed folders](https://docs.cloud.google.com/storage/docs/managed-folders) to [make a portion of your bucket publicly readable](https://docs.cloud.google.com/storage/docs/access-control/making-data-public#managed-folders).
+
+  * [Make individual objects publicly readable](https://docs.cloud.google.com/storage/docs/access-control/create-manage-lists#set-an-acl). We don't recommend this approach, because it uses a legacy, Cloud Storage-specific permissioning system.
+
+  * Use [signed URLs](https://docs.cloud.google.com/cdn/docs/using-signed-urls).
+
+
+
+
+The following procedure grants all users access to view objects in your Cloud Storage bucket, making the bucket publicly readable.
+
+###  Console 
+
+**Note:** For global external Application Load Balancers, the Google Cloud console isn't supported.
+
+  1. In the Google Cloud console, open the **Cloud Storage Buckets** page. 
+
+[Open the Buckets page](https://console.cloud.google.com/storage/browser)
+
+  2. Navigate to the bucket and click the **Permissions** tab.
+  3. Click **Add principals**.
+  4. In **New principals** , enter `allUsers`.
+  5. For the role, select **Cloud Storage > Storage Object Viewer**.
+  6. Click **Save**.
+
+
+
+###  gcloud 
+    
+    
+    gcloud storage buckets add-iam-policy-binding gs://BUCKET_NAME --member=allUsers --role=roles/storage.objectViewer
+    
+
+###  Terraform 
+
+To make your Cloud Storage bucket public, use the [`google_storage_bucket_iam_member` resource](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket_iam#google_storage_bucket_iam_member).
+    
+    
+    # make bucket public
+    resource "google_storage_bucket_iam_member" "default" {
+      bucket = google_storage_bucket.default.name
+      role   = "roles/storage.objectViewer"
+      member = "allUsers"
+    }
+
+To learn how to apply or remove a Terraform configuration, see [Basic Terraform commands](https://docs.cloud.google.com/docs/terraform/basic-commands).
+
+### Make your Cloud Storage bucket private
+
+To enable access to your private buckets, grant the required IAM roles to the service account that performs cache fills.
+
+###  Console 
+
+  1. In the Google Cloud console, go to the **Buckets** page.
+
+[Go to Buckets](https://console.cloud.google.com/storage/browser)
+
+  2. Navigate to the bucket that you want to enable access to and click the **Permissions** tab.
+
+  3. In the **Permissions** section, on the **View by principals** tab, click person_add**Grant Access**.
+
+  4. In the **Add principals** section, in the **New principals** field, enter the email address of the calling service account: `**service- PROJECT_NUM@https-lb.iam.gserviceaccount.com**`.
+
+**Important:** This service account is only available for `PROJECT_NUM` after you have created at least one backend bucket resource in the project.
+  5. In the **Assign roles** section, in the **Select a role** field, select **Cloud Storage > Storage Object Viewer**. This role provides read-only access.
+
+**Caution:** Private bucket access is designed for read-only content delivery. It doesn't support methods that modify or delete data, such as `POST`, `PUT`, `PATCH`, or `DELETE`.**Important:** When setting permissions for private bucket access, select the Storage Object Viewer role (`roles/storage.objectViewer`) only.
+  6. Click **Save**.
+
+
+
+
+Additionally, so that all content served from the bucket is cached, [set the cache mode](https://docs.cloud.google.com/cdn/docs/using-cache-modes#cache-mode) to **Force cache all content** and [specify a maximum TTL value](https://docs.cloud.google.com/cdn/docs/using-ttl-overrides#default-ttl).
+
+###  gcloud 
+
+To grant Cloud CDN access to a bucket, grant the `objectViewer` role to the service account:
+    
+    
+      gcloud storage buckets add-iam-policy-binding gs://BUCKET_NAME \
+          --member=serviceAccount:service-PROJECT_NUM@https-lb.iam.gserviceaccount.com \
+          --role=roles/storage.objectViewer
+    
+
+Replace the following:
+
+  * `BUCKET_NAME`: the name of the Cloud Storage bucket to use
+  * `PROJECT_NUM`: the number of your Google Cloud project
+
+**Caution:** Private bucket access is designed for read-only content delivery. It doesn't support methods that modify or delete data, such as `POST`, `PUT`, `PATCH`, or `DELETE`.**Important:** When setting permissions for private bucket access, you must only select the Storage Object Viewer role (`roles/storage.objectViewer`).
+
+
+
+Additionally, so that all content served from the bucket is cached, [set the cache mode](https://docs.cloud.google.com/cdn/docs/using-cache-modes#cache-mode) to `force-cache-all` and [set a `max-ttl` value](https://docs.cloud.google.com/cdn/docs/using-ttl-overrides#max-ttl).
+
 ## Send traffic to your backend bucket
 
 After creating the global forwarding rule, it can take several minutes for your configuration to propagate worldwide. After several minutes have passed, you can start sending traffic to the load balancer's IP address.
@@ -765,6 +765,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

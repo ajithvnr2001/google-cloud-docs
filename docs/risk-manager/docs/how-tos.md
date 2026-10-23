@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/risk-manager/docs/how-tos/
 title: How-to guides \u00a0|\u00a0 Cyber Insurance Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:10:45.313811+00:00
+fetched_at: 2026-10-23T10:03:23.214746+00:00
 ---
 
 # How-to guides  |  Cyber Insurance Hub  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/order-bms-resources/
 title: Order Bare Metal Solution resources \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:11.847265+00:00
+fetched_at: 2026-10-23T13:18:43.992363+00:00
 ---
 
 # Order Bare Metal Solution resources  |  Google Cloud Documentation

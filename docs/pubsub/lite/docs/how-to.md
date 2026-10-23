@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/lite/docs/how-to/
 title: How-to guides \u00a0|\u00a0 Pub/Sub Lite \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T18:49:59.384770+00:00
+fetched_at: 2026-10-23T10:20:17.474783+00:00
 ---
 
 # How-to guides  |  Pub/Sub Lite  |  Google Cloud Documentation

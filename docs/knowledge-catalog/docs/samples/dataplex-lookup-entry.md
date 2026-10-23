@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/samples/dataplex-lookup-entry/
 title: Lookup entry \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:03:22.664134+00:00
+fetched_at: 2026-10-23T12:50:58.935023+00:00
 ---
 
 # Lookup entry  |  Knowledge Catalog  |  Google Cloud Documentation

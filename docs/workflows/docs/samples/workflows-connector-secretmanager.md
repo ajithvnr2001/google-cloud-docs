@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-connector-secretmanager/
 title: Connector for Secret Manager \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:12:23.129157+00:00
+fetched_at: 2026-10-23T08:57:09.312122+00:00
 ---
 
 # Connector for Secret Manager  |  Workflows  |  Google Cloud Documentation

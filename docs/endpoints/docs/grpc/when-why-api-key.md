@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/grpc/when-why-api-key/
 title: Why and when to use API keys \u00a0|\u00a0 Cloud Endpoints with gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:14.899176+00:00
+fetched_at: 2026-10-23T13:00:34.945599+00:00
 ---
 
 # Why and when to use API keys  |  Cloud Endpoints with gRPC  |  Google Cloud Documentation

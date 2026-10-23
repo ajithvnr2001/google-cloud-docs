@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/database-migration/docs/use-the-database-migration-service-api/
 title: Use the Database Migration Service API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:02.262719+00:00
+fetched_at: 2026-10-23T13:20:53.878522+00:00
 ---
 
 # Use the Database Migration Service API  |  Google Cloud Documentation

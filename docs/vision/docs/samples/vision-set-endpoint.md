@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-set-endpoint/
 title: Set endpoint \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:20.524455+00:00
+fetched_at: 2026-10-23T09:01:15.646550+00:00
 ---
 
 # Set endpoint  |  Cloud Vision API  |  Google Cloud Documentation

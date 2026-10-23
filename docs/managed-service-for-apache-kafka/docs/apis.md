@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/apis/
 title: APIs and references \u00a0|\u00a0 Managed Service for Apache Kafka \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:10:27.326064+00:00
+fetched_at: 2026-10-23T10:45:31.523875+00:00
 ---
 
 # APIs and references  |  Managed Service for Apache Kafka  |  Google Cloud Documentation

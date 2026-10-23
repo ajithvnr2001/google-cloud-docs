@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kms/docs/samples/kms-disable-key-version/
 title: Disable a key version \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:46:53.442876+00:00
+fetched_at: 2026-10-23T10:25:46.016731+00:00
 ---
 
 # Disable a key version  |  Cloud Key Management Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-create-secret-with-labels/
 title: Create secret with label \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:39.159385+00:00
+fetched_at: 2026-10-23T09:41:02.986111+00:00
 ---
 
 # Create secret with label  |  Secret Manager  |  Google Cloud Documentation

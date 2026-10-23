@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/scale/
 title: Scale capacity \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:55.041041+00:00
+fetched_at: 2026-10-23T13:01:25.794652+00:00
 ---
 
 # Scale capacity  |  Filestore  |  Google Cloud Documentation

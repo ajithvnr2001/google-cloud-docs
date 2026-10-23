@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/supported-features-40/
 title: Supported features: 4.0 \u00a0|\u00a0 Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:37.493031+00:00
+fetched_at: 2026-10-23T13:08:47.833455+00:00
 ---
 
 # Supported features: 4.0  |  Firestore with MongoDB compatibility  |  Google Cloud Documentation

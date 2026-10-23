@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/listen-pub-sub-topic-send-email/
 title: Listen to Cloud Pub/Sub topic and send an email \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:57.840941+00:00
+fetched_at: 2026-10-23T13:18:15.136856+00:00
 ---
 
 # Listen to Cloud Pub/Sub topic and send an email  |  Application Integration  |  Google Cloud Documentation

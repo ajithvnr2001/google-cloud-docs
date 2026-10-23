@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/change-dataproc-image/
 title: Change the Managed Service for Apache Spark image version in Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:57.226862+00:00
+fetched_at: 2026-10-23T13:20:09.073368+00:00
 ---
 
 # Change the Managed Service for Apache Spark image version in Cloud Data Fusion  |  Google Cloud Documentation

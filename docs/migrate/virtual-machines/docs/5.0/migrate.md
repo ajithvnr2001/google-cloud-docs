@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/virtual-machines/docs/5.0/migrate/
 title: How-to Guides \u00a0|\u00a0 Migrate to Virtual Machines \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T16:33:06.177578+00:00
+fetched_at: 2026-10-23T10:56:07.638374+00:00
 ---
 
 # How-to Guides  |  Migrate to Virtual Machines  |  Google Cloud Documentation

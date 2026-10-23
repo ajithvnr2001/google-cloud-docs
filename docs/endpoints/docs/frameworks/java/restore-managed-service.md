@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/java/restore-managed-service/
 title: Restoring a managed service \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:37.985372+00:00
+fetched_at: 2026-10-23T13:00:54.640281+00:00
 ---
 
 # Restoring a managed service  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

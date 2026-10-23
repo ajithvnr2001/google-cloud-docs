@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/docs/samples/functions-http-method/
 title: HTTP method types \u00a0|\u00a0 Cloud Run functions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:20.139061+00:00
+fetched_at: 2026-10-23T13:03:34.965903+00:00
 ---
 
 # HTTP method types  |  Cloud Run functions  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/cache-aware-costs/
 title: Enable cache-aware costs for index scan query plans \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:10:47.073054+00:00
+fetched_at: 2026-10-23T10:44:06.110422+00:00
 ---
 
 # Enable cache-aware costs for index scan query plans  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback
 
 #  Enable cache-aware costs for index scan query plans Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page documents cache awareness during index scans. When enabled, the AlloyDB for PostgreSQL query planner adjusts the estimated I/O cost of index scans based on how many index and table pages are already available in the shared buffer when execution starts. The final query plan is then selected based on the adjusted plan costs. This improves query performance and reduces database costs.
+To improve query performance and reduce database I/O costs, you can enable cache-aware index scan costing in AlloyDB for PostgreSQL. When you enable cache-aware index scan costing, the AlloyDB query planner adjusts the estimated I/O cost of index scans based on how many index and table pages are available in the shared buffer when execution starts, and selects the final query plan based on those adjusted costs.
 
-Once enabled, the cache awareness feature functions automatically and adjusts to the changing status of hitting the shared buffer. Additionally, cache awareness can work together with other query tuning practices, such as setting AlloyDB query planner's cost estimate to [`random_page_cost`](https://www.postgresql.org/docs/17/runtime-config-query.html#GUC-RANDOM-PAGE-COST).
+After you enable cache awareness, the feature functions automatically and adjusts when shared buffer hit rates change. Cache awareness can also work with other query tuning practices, such as setting the AlloyDB query planner cost estimate in [`random_page_cost`](https://www.postgresql.org/docs/17/runtime-config-query.html#GUC-RANDOM-PAGE-COST).
 
 **Tip:** We recommend that you enable cache awareness if you notice the query planner doesn't select better index scan based query plans.
 
@@ -74,6 +74,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

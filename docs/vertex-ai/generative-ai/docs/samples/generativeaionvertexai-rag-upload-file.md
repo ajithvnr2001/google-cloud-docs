@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-rag-upload-file/
 title: Upload a RAG file \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:42.627689+00:00
+fetched_at: 2026-10-23T09:36:28.540614+00:00
 ---
 
 # Upload a RAG file  |  Generative AI on Vertex AI  |  Google Cloud Documentation

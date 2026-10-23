@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/maintain-vector-indexes/
 title: Maintain vector indexes \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:24:54.980778+00:00
+fetched_at: 2026-10-23T13:08:36.021823+00:00
 ---
 
 # Maintain vector indexes  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -84,7 +84,7 @@ Replace the following variables:
 
 For more information on which index mode to use, see [Create a ScaNN index](https://docs.cloud.google.com/alloydb/docs/ai/create-scann-index).
 
-  * `NUM_PARTITIONS`: number of partitions to apply to this index. Set this to any value between `3` and `1048576`. For more information about how to decide this value, see [Tune a `ScaNN` index](https://docs.cloud.google.com/alloydb/docs/ai/tune-indexes).
+  * `NUM_PARTITIONS`: number of partitions to apply to this index. Set this to any value between 1 and 104,857,600 for PostgreSQL version 17 and higher, and between 1 and 30 million for PostgreSQL version 16 and lower. For more information about how to decide this value, see [Tune a `ScaNN` index](https://docs.cloud.google.com/alloydb/docs/ai/tune-indexes).
 
 
 
@@ -108,7 +108,7 @@ Replace the following variables:
 
 ### Increase automatic maintenance throughput
 
-To increase automatic maintenance throughput, configure the [`scann.max_background_workers`](https://docs.cloud.google.com/alloydb/docs/reference/alloydb-flags#scann.max_background_workers) database flag. Increasing the number of background workers increases the number of indexes processed per unit of time. It doesn't reduce the processing time for individual indexes. This value must be less than the [`max_worker_processes`](https://www.postgresql.org/docs/17//runtime-config-resource.html#GUC-MAX-WORKER-PROCESSES) value set for your database cluster.
+To increase automatic maintenance throughput, configure the [`scann.max_background_workers`](https://docs.cloud.google.com/alloydb/docs/reference/alloydb-flags#scann.max_background_workers) database flag. Increasing the number of background workers increases the number of indexes processed per unit of time. It doesn't reduce the processing time for individual indexes. This value must be less than the [`max_worker_processes`](https://www.postgresql.org/docs/17/runtime-config-resource.html#GUC-MAX-WORKER-PROCESSES) value set for your database cluster.
 
 For more information on configuring database flags, see [Configure an instance's database flags](https://docs.cloud.google.com/alloydb/docs/instance-configure-database-flags).
 
@@ -135,7 +135,9 @@ To set the `scann.pct_leaves_to_search`, run the following command:
 Replace the following variables:
 
   * `DB_NAME`: name of your database.
+
   * `PERCENTAGE_PARTITIONS_TO_SEARCH`: percentage of partitions to search.
+
 
 
 
@@ -156,7 +158,7 @@ To disable automatic maintenance for automatically-tuned ScaNN indexes, set the 
     
     CREATE INDEX similarity_index ON products
            USING scann (description_embedding cosine)
-    WITH (MODE = 'AUTOMATIC', **auto_maintenance = 'OFF'**);
+    WITH (mode = 'AUTO', **auto_maintenance = 'OFF'**);
     
 
 If you want to disable automatic maintenance on an existing automatically-tuned ScaNN index, see Configure automatic maintenance for existing indexes.
@@ -187,6 +189,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

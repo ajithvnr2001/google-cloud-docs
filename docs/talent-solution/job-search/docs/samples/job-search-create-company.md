@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-search-create-company/
 title: Create company with client (v4beta1) \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:23.945592+00:00
+fetched_at: 2026-10-23T09:41:45.985934+00:00
 ---
 
 # Create company with client (v4beta1)  |  Job Search  |  Google Cloud Documentation

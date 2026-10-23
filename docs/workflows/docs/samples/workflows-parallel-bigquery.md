@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-parallel-bigquery/
 title: Run multiple BigQuery query jobs in parallel \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:54:43.708998+00:00
+fetched_at: 2026-10-23T09:37:40.480941+00:00
 ---
 
 # Run multiple BigQuery query jobs in parallel  |  Workflows  |  Google Cloud Documentation

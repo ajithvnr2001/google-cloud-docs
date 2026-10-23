@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/choose-product/
 title: Gemini Notebook Enterprise, Gemini Enterprise, or both? \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:38.745408+00:00
+fetched_at: 2026-10-23T13:13:19.107987+00:00
 ---
 
 # Gemini Notebook Enterprise, Gemini Enterprise, or both?  |  Google Cloud Documentation

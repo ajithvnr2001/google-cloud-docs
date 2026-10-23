@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/tutorial-create-a-ratio-field-based-on-filtered-metrics/
 title: Tutorial: Create a ratio field based on filtered metrics \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:54.161733+00:00
+fetched_at: 2026-10-23T13:20:54.895929+00:00
 ---
 
 # Tutorial: Create a ratio field based on filtered metrics  |  Data Studio  |  Google Cloud Documentation

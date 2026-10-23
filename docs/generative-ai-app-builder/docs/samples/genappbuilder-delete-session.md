@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/samples/genappbuilder-delete-session/
 title: Delete a session \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:44.755982+00:00
+fetched_at: 2026-10-23T13:10:31.321282+00:00
 ---
 
 # Delete a session  |  Agent Search  |  Google Cloud Documentation

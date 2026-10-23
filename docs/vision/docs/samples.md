@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/
 title: All Vision code samples \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:10:16.945242+00:00
+fetched_at: 2026-10-23T08:58:38.207112+00:00
 ---
 
 # All Vision code samples  |  Cloud Vision API  |  Google Cloud Documentation

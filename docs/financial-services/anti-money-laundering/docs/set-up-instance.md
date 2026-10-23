@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/financial-services/anti-money-laundering/docs/set-up-instance/
 title: Create an AML AI instance \u00a0|\u00a0 Anti Money Laundering AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:13.790582+00:00
+fetched_at: 2026-10-23T13:02:30.941310+00:00
 ---
 
 # Create an AML AI instance  |  Anti Money Laundering AI  |  Google Cloud Documentation

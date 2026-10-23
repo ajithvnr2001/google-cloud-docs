@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/product-search/docs/samples/vision-product-search-create-reference-image/
 title: Create a reference image \u00a0|\u00a0 Vision API Product Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:10:11.680000+00:00
+fetched_at: 2026-10-23T08:57:49.655765+00:00
 ---
 
 # Create a reference image  |  Vision API Product Search  |  Google Cloud Documentation

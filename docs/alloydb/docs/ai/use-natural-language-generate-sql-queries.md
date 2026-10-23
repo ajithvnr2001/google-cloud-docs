@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/use-natural-language-generate-sql-queries/
 title: Use AlloyDB AI natural language to generate SQL \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:24:59.723629+00:00
+fetched_at: 2026-10-23T13:08:35.272154+00:00
 ---
 
 # Use AlloyDB AI natural language to generate SQL  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -48,8 +48,8 @@ The examples in this tutorial are intended for demonstration purposes only.
 
 In this document, you use the following billable components of Google Cloud: 
 
-  * [ AlloyDB for PostgreSQL](https://docs.cloud.google.com/alloydb/pricing)
-  * [ Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/pricing)
+  * [ AlloyDB for PostgreSQL](https://cloud.google.com/alloydb/pricing)
+  * [ Gemini Enterprise Agent Platform](https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing)
 
 
 
@@ -90,7 +90,7 @@ When you finish the tasks that are described in this document, you can avoid con
 
 ### Enable and install the required extension
 
-To install and use the `alloydb_ai_nl extension`, you must first enable the extension using the `alloydb_ai_nl.enabled` flag. For more information, see [Configure an instance's database flags](https://docs.cloud.google.com/alloydb/docs/instance-configure-database-flags).
+To install and use the `alloydb_ai_nl` extension, you must first enable the extension using the `alloydb_ai_nl.enabled` flag. For more information, see [Configure an instance's database flags](https://docs.cloud.google.com/alloydb/docs/instance-configure-database-flags).
 
 To install the `alloydb_ai_nl` extension, which is the AlloyDB AI natural language support API, run the following query:
     
@@ -98,7 +98,7 @@ To install the `alloydb_ai_nl` extension, which is the AlloyDB AI natural langua
     CREATE EXTENSION alloydb_ai_nl cascade;
     
 
-Since AlloyDB AI natural language objects created on the primary instance are propagated to read-only replicas and cross-region replicas, ensure that you enable the AlloyDB AI natural language flag on every instance of AlloyDB for PostgreSQL.
+Since AlloyDB AI natural language objects created on the primary instance are propagated to read-only replicas and cross-region replicas, ensure that you enable the AlloyDB AI natural language flag on every instance of AlloyDB.
 
 ### Upgrade the alloydb_ai_nl extension
 
@@ -248,7 +248,7 @@ The sample data shows how you can use AlloyDB AI natural language for developmen
              (4, 3, 1, 'Tote Bag', 'A large, unfastened bag with two parallel handles.', 69.99),
              (5, 3, 3, 'CymbalShoe', 'Footwear from Cymbal, designed for your life''s rhythm.', 89.99);
          
-         UPDATE nla_demo.products SET description_embedding = embedding('text-embedding-004', description);
+         UPDATE nla_demo.products SET description_embedding = embedding('text-embedding-005', description);
          
 
   6. Populate the `orders` table.
@@ -277,7 +277,7 @@ The sample data shows how you can use AlloyDB AI natural language for developmen
 
 ## Create a natural language configuration
 
-To use AlloyDB AI natural language, make sure that the [Agent Platform endpoint is configured](https://docs.cloud.google.com/alloydb/docs/ai/register-model-endpoint). Then you create a configuration and register a schema. `g_alloydb_ai_nl.g_create_configuration` creates the model.
+To use AlloyDB AI natural language, make sure that the [Agent Platform endpoint is configured](https://docs.cloud.google.com/alloydb/docs/ai/register-model-endpoint). Then you create a configuration and register a schema. `alloydb_ai_nl.g_create_configuration` creates the configuration.
 
   1. Create a natural language configuration.
          
@@ -532,7 +532,7 @@ You can define templates to improve the quality of the answers produced by the A
              nl_config_id => 'nla_demo_cfg',
              intent => 'List the first names and the last names of all customers who ordered Swimsuit.',
              sql => 'SELECT c.first_name, c.last_name FROM nla_demo.Customers c JOIN nla_demo.orders o ON c.customer_id = o.customer_id JOIN nla_demo.order_items oi ON o.order_id = oi.order_id JOIN nla_demo.products p ON oi.product_id = p.product_id  AND p.name = ''Swimsuit''',
-             sql_explanation => 'To answer this question, JOIN `nla_demo.Customers` with `nla_demo.orders` on having the same `customer_id`, and JOIN the result with nla_demo.order_items on having the same `order_id`. Then JOIN the result with `nla_demo.products` on having the same `product_id`, and filter rwos that with p.name = ''Swimsuit''. Return the `first_name` and the `last_name` of the customers with matching records.',
+             sql_explanation => 'To answer this question, JOIN `nla_demo.Customers` with `nla_demo.orders` on having the same `customer_id`, and JOIN the result with nla_demo.order_items on having the same `order_id`. Then JOIN the result with `nla_demo.products` on having the same `product_id`, and filter rows with p.name = ''Swimsuit''. Return the `first_name` and the `last_name` of the customers with matching records.',
              check_intent => TRUE
          );
          
@@ -572,9 +572,9 @@ In this template, the value corresponding to the `psql` attribute is the paramet
          SELECT alloydb_ai_nl.add_template(
           nl_config_id => 'nla_demo_cfg',
           intent => 'List 3 products most similar to a Swimwear.',
-          sql => $$SELECT name FROM nla_demo.products 
-                  ORDER BY description_embedding <=> embedding('text-embedding-004', 'Swimwear')::vector$$,
-          sql_explanation => $$To answer this question, ORDER products in `nla_demo.products` , based by their distance of the descrption_embedding of the product with the embedding of 'Swimwear'.$$,
+          sql => $$SELECT name FROM nla_demo.products
+                  ORDER BY description_embedding <=> embedding('text-embedding-005', 'Swimwear')::vector$$,
+          sql_explanation => $$To answer this question, ORDER products in `nla_demo.products`, based on the distance of the description_embedding of the product with the embedding of 'Swimwear'.$$,
           check_intent => TRUE
          );
          
@@ -582,13 +582,13 @@ In this template, the value corresponding to the `psql` attribute is the paramet
 The preceding template adds the following row to the view `alloydb_ai_nl.template_store_view`:
          
          nl      | List 3 products most similar to a Swimwear.
-         sql     | SELECT name FROM nla_demo.products                                                                
+         sql     | SELECT name FROM nla_demo.products
                  | ORDER BY description_embedding <=>
-                 | embedding('text-embedding-004', 'Swimwear')::vector
+                 | embedding('text-embedding-005', 'Swimwear')::vector
          intent  | List 3 products most similar to a Swimwear.
-         psql    | SELECT name FROM nla_demo.products                                                                
+         psql    | SELECT name FROM nla_demo.products
                  | ORDER BY description_embedding <=>
-                 | embedding('text-embedding-004', $1)::vector
+                 | embedding('text-embedding-005', $1)::vector
          pintent | List 3 products most similar to a $1.
          
 
@@ -711,7 +711,7 @@ The following SQL statement is returned:
          
          SELECT name FROM nla_demo.products
          ORDER BY description_embedding <=> embedding(
-             'text-embedding-004', 'Tote Bag')::vector
+             'text-embedding-005', 'Tote Bag')::vector
          LIMIT 2;
          
 
@@ -812,7 +812,7 @@ You can choose to keep the resources that you set up in Before you begin, and yo
 
 ## What's next
 
-  * Learn about [AlloyDB AI natural language use cases and key capabilities](https://docs.cloud.google.com/alloydb/docs/ai/natural-language-overview).
+  * Learn about [AlloyDB AI natural language use cases and key capabilities](https://docs.cloud.google.com/alloydb/docs/ai/natural-language-landing).
   * [Generate SQL queries that answer natural language questions](https://docs.cloud.google.com/alloydb/docs/ai/generate-sql-queries-natural-language).
 
 
@@ -821,6 +821,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

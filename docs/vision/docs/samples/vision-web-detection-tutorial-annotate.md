@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-web-detection-tutorial-annotate/
 title: Web detection: annotate \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:18.407033+00:00
+fetched_at: 2026-10-23T09:37:00.270964+00:00
 ---
 
 # Web detection: annotate  |  Cloud Vision API  |  Google Cloud Documentation

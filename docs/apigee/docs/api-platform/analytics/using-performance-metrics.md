@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/analytics/using-performance-metrics/
 title: Using performance metrics \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:56.960081+00:00
+fetched_at: 2026-10-23T13:14:49.146499+00:00
 ---
 
 # Using performance metrics  |  Apigee  |  Google Cloud Documentation

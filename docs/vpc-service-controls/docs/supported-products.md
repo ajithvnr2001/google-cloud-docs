@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vpc-service-controls/docs/supported-products/
 title: Supported products and limitations \u00a0|\u00a0 VPC Service Controls \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:31:58.441175+00:00
+fetched_at: 2026-10-23T12:55:08.223484+00:00
 ---
 
 # Supported products and limitations  |  VPC Service Controls  |  Google Cloud Documentation
@@ -334,13 +334,13 @@ apigeeconnect.googleapis.com`
 
   
   
-###  [Apigee API hub](https://docs.cloud.google.com/apigee/docs/apihub)
+###  [Apigee API hub](https://docs.cloud.google.com/apigee/docs/apihub/what-is-api-hub)
 
 |  |  **Status** |  **GA**. This product integration is fully supported by VPC Service Controls.   
 ---|---  
 **Protect with perimeters?** |  **Yes.** You can configure your perimeters to protect this service.   
 **Service name** |  `apihub.googleapis.com`  
-**Details** |  The API for Apigee API hub can be protected by VPC Service Controls and the product can be used normally inside service perimeters.  For more information about Apigee API hub, refer to the [product documentation](https://docs.cloud.google.com/apigee/docs/apihub).   
+**Details** |  The API for Apigee API hub can be protected by VPC Service Controls and the product can be used normally inside service perimeters.  For more information about Apigee API hub, refer to the [product documentation](https://docs.cloud.google.com/apigee/docs/apihub/what-is-api-hub).   
 **Limitations** |  All Apigee runtime projects associated with an API hub instance must reside within the same VPC Service Controls service perimeter as the API hub host project.   
   
 ###  [BigQuery sharing](https://docs.cloud.google.com/bigquery/docs/reference/analytics-hub/rest)
@@ -3188,7 +3188,7 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 
   *[VPC]: Virtual Private Cloud

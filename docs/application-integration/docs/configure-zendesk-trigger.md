@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure-zendesk-trigger/
 title: Zendesk trigger \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:02.121350+00:00
+fetched_at: 2026-10-23T13:18:16.075303+00:00
 ---
 
 # Zendesk trigger  |  Application Integration  |  Google Cloud Documentation

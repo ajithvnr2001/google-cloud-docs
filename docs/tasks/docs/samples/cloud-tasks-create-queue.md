@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tasks/docs/samples/cloud-tasks-create-queue/
 title: Create a queue \u00a0|\u00a0 Cloud Tasks \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:22.148642+00:00
+fetched_at: 2026-10-23T08:36:31.796936+00:00
 ---
 
 # Create a queue  |  Cloud Tasks  |  Google Cloud Documentation

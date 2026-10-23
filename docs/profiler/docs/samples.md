@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/profiler/docs/samples/
 title: All Profiler code samples \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:26:48.291683+00:00
+fetched_at: 2026-10-23T10:20:21.724259+00:00
 ---
 
 # All Profiler code samples  |  Google Cloud Documentation

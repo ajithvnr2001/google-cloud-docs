@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-delete-regional-secret/
 title: Delete regional secret \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:48:10.575558+00:00
+fetched_at: 2026-10-23T09:39:18.669656+00:00
 ---
 
 # Delete regional secret  |  Secret Manager  |  Google Cloud Documentation

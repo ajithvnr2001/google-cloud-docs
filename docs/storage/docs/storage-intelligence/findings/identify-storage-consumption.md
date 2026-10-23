@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/storage-intelligence/findings/identify-storage-consumption/
 title: Identify above trend storage consumption \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:28:47.247989+00:00
+fetched_at: 2026-10-23T13:08:29.031566+00:00
 ---
 
 # Identify above trend storage consumption  |  Cloud Storage  |  Google Cloud Documentation
@@ -43,7 +43,7 @@ Scenario | Recommended action | Details
 ---|---|---  
 Data is not needed after a specific period | Apply [lifecycle rules](https://docs.cloud.google.com/storage/docs/lifecycle) | If you no longer need data after a specific period or want to move data to a colder storage class, use Object Lifecycle Management rules to manage your storage consumption.  
 Data with changing access patterns | Enable [Autoclass](https://docs.cloud.google.com/storage/docs/autoclass) | Autoclass automatically transitions objects in your bucket to appropriate storage classes based on access patterns. It moves less frequently accessed data to colder storage classes and more frequently accessed data to warmer storage classes, which helps manage costs automatically. **Note:** Enabling Autoclass incurs charges for Class A operations associated with object transitions. For details, see [Cloud Storage Pricing](https://docs.cloud.google.com/storage/pricing).  
-Need object-level details to understand storage growth | Investigate with Storage Insights datasets | If you need granular information about storage growth, use Storage Insights datasets to export metadata to BigQuery. You can then query the dataset to identify the specific prefixes and objects that contribute to the growth. **Note:** Exporting data to BigQuery incurs costs. For details, see [BigQuery Pricing](https://cloud.google.com/bigquery/pricing).  
+Need object-level details to understand storage growth | Investigate with Storage Insights datasets | If you need granular information about storage growth, use Storage Insights datasets to export metadata to BigQuery. You can then query the dataset to identify the specific prefixes and objects that contribute to the growth. **Note:** Exporting data to BigQuery incurs costs. For details, see [BigQuery Pricing](https://docs.cloud.google.com/bigquery/pricing).  
 
 
 
@@ -67,6 +67,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-get-schema/
 title: v1 Get schema (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:50.637939+00:00
+fetched_at: 2026-10-23T10:04:32.083710+00:00
 ---
 
 # v1 Get schema (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

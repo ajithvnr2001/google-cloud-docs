@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/soar/reference/siemplify-module/
 title: Siemplify module \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:24:35.802730+00:00
+fetched_at: 2026-10-23T13:00:31.881033+00:00
 ---
 
 # Siemplify module  |  Google Security Operations  |  Google Cloud Documentation

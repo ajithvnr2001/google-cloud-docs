@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/import-user-events/
 title: Import historical user events \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:08.662520+00:00
+fetched_at: 2026-10-23T13:13:07.489584+00:00
 ---
 
 # Import historical user events  |  Gemini Enterprise  |  Google Cloud Documentation

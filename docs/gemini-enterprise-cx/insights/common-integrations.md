@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/common-integrations/
 title: Integrate conversation data \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:23.743889+00:00
+fetched_at: 2026-10-23T13:12:21.913770+00:00
 ---
 
 # Integrate conversation data  |  Customer Experience Insights  |  Google Cloud Documentation

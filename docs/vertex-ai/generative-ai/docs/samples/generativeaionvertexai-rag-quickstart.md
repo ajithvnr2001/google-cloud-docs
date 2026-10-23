@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-rag-quickstart/
 title: Use the quickstart to get familiar with RAG \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:12.581261+00:00
+fetched_at: 2026-10-23T09:36:41.061354+00:00
 ---
 
 # Use the quickstart to get familiar with RAG  |  Generative AI on Vertex AI  |  Google Cloud Documentation

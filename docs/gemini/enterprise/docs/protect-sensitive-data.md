@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/protect-sensitive-data/
 title: Protect sensitive data in sources \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:06.173577+00:00
+fetched_at: 2026-10-23T13:13:10.676541+00:00
 ---
 
 # Protect sensitive data in sources  |  Gemini Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/data-domains-use/
 title: Use data domains \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:18.070945+00:00
+fetched_at: 2026-10-23T12:50:49.476191+00:00
 ---
 
 # Use data domains  |  Knowledge Catalog  |  Google Cloud Documentation

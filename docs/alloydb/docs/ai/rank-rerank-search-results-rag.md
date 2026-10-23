@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/rank-rerank-search-results-rag/
 title: Rank search results \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:46.200429+00:00
+fetched_at: 2026-10-23T13:08:36.449622+00:00
 ---
 
 # Rank search results  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -32,11 +32,11 @@ AlloyDB provides two different ranking capabilities through the `ai.rank()` func
 
 
 
-To use instructions on this page, you must have an understanding of AlloyDB for PostgreSQL and be familiar with generative AI concepts.
+To use instructions on this page, you must have an understanding of AlloyDB and be familiar with generative AI concepts.
 
 AlloyDB reserves, and creates, the `ai` schema.
 
-**Note:** Agent Platform model support is governed by Agent Platform model versioning and lifecycle guidelines. For more information about stable versions, see [Model versions and lifecycle](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions).
+**Note:** Agent Platform model support is governed by Agent Platform model versioning and lifecycle guidelines. For more information about stable versions, see [Model versions and lifecycle](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions).
 
 ## Before you begin
 
@@ -216,7 +216,7 @@ For a list of the supported Agent Platform ranking models, see [Supported models
 
 ## Examples
 
-To rank search results using a Vertex AI ranking model, run the following query:
+To rank search results using a Agent Platform ranking model, run the following query:
     
     
     SELECT index, score
@@ -286,6 +286,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

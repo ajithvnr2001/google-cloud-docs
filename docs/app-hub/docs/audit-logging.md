@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/audit-logging/
 title: App Hub audit logs \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:17.296913+00:00
+fetched_at: 2026-10-23T13:15:07.573169+00:00
 ---
 
 # App Hub audit logs  |  Google Cloud Documentation

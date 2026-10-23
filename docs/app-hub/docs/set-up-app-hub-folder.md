@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/set-up-app-hub-folder/
 title: Set up a folder \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:14.162791+00:00
+fetched_at: 2026-10-23T13:16:35.241306+00:00
 ---
 
 # Set up a folder  |  App Hub  |  Google Cloud Documentation

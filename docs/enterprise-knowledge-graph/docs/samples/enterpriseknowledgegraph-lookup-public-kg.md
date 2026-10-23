@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/enterprise-knowledge-graph/docs/samples/enterpriseknowledgegraph-lookup-public-kg/
 title: Look up an entity (Basic) \u00a0|\u00a0 Enterprise Knowledge Graph \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:30.429902+00:00
+fetched_at: 2026-10-23T13:11:58.111826+00:00
 ---
 
 # Look up an entity (Basic)  |  Enterprise Knowledge Graph  |  Google Cloud Documentation

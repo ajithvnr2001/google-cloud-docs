@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/sapsuccessfactors/configure/
 title: SAP SuccessFactors \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:58.584803+00:00
+fetched_at: 2026-10-23T13:01:42.438288+00:00
 ---
 
 # SAP SuccessFactors  |  Integration Connectors  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/samples/logging-write-log-entry/
 title: Write structured logs \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:36:51.608913+00:00
+fetched_at: 2026-10-23T12:35:53.564042+00:00
 ---
 
 # Write structured logs  |  Cloud Logging  |  Google Cloud Documentation

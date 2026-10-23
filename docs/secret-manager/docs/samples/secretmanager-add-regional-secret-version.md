@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-add-regional-secret-version/
 title: Add regional secret version \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:45.868975+00:00
+fetched_at: 2026-10-23T09:07:57.923713+00:00
 ---
 
 # Add regional secret version  |  Secret Manager  |  Google Cloud Documentation

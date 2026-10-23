@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/authentication/
 title: Authenticate to Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:12.295152+00:00
+fetched_at: 2026-10-23T13:19:19.478350+00:00
 ---
 
 # Authenticate to Assured Workloads  |  Google Cloud Documentation

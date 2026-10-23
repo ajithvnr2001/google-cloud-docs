@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/summarization-with-custom-sections-best-practices/
 title: Best practices: Summarization with custom sections \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:41.244939+00:00
+fetched_at: 2026-10-23T13:12:41.838960+00:00
 ---
 
 # Best practices: Summarization with custom sections  |  Agent Assist  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apis/design/changelog/
 title: Changelog \u00a0|\u00a0 Cloud API Design Guide \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:18.977244+00:00
+fetched_at: 2026-10-23T13:15:08.847641+00:00
 ---
 
 # Changelog  |  Cloud API Design Guide  |  Google Cloud Documentation

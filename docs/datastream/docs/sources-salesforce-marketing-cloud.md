@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/sources-salesforce-marketing-cloud/
 title: Stream data from Salesforce Marketing Cloud \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:42:03.107133+00:00
+fetched_at: 2026-10-23T10:03:31.984040+00:00
 ---
 
 # Stream data from Salesforce Marketing Cloud  |  Datastream  |  Google Cloud Documentation
@@ -25,17 +25,9 @@ Send feedback
 
 This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
-Datastream supports replicating data from Salesforce Marketing Cloud (formerly known as ExactTarget). Salesforce Marketing Cloud is a digital marketing platform that includes tools for email marketing, social media marketing, and cross-channel campaign management.
+With Datastream, you can replicate historical data and incremental updates from Salesforce Marketing Cloud, formerly known as ExactTarget, for analytics and data integration. This digital marketing platform provides tools for email, social media, and cross-channel campaign management.
 
-This page contains information about:
-
-  * The key terms that you need to understand when replicating from Salesforce Marketing Cloud.
-  * The behavior of how Datastream handles data that's being pulled from a Salesforce Marketing Cloud source.
-  * The Salesforce Marketing Cloud versions that Datastream supports.
-  * The objects that Datastream replicates.
-  * Known limitations for using Salesforce Marketing Cloud as a source.
-
-
+To plan your Salesforce Marketing Cloud integration with Datastream, review the key terms, replication behavior, supported versions, replicated objects, and known limitations.
 
 ## Key terms
 
@@ -108,6 +100,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

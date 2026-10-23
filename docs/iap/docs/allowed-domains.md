@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/allowed-domains/
 title: Restrict resource access to specific domains \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:27:58.642454+00:00
+fetched_at: 2026-10-23T13:10:01.416616+00:00
 ---
 
 # Restrict resource access to specific domains  |  Identity-Aware Proxy  |  Google Cloud Documentation

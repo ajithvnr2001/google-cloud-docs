@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/data-agent-authored-context-databases/
 title: Define data agent context for database data sources \u00a0|\u00a0 Conversational Analytics API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:01.549468+00:00
+fetched_at: 2026-10-23T13:11:00.256185+00:00
 ---
 
 # Define data agent context for database data sources  |  Conversational Analytics API  |  Google Cloud Documentation

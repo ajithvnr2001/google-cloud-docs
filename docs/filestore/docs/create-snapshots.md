@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/create-snapshots/
 title: Create a snapshot to preserve the state of your data \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:38.160556+00:00
+fetched_at: 2026-10-23T13:02:11.760922+00:00
 ---
 
 # Create a snapshot to preserve the state of your data  |  Filestore  |  Google Cloud Documentation

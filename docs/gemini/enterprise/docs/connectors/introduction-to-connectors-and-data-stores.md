@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/introduction-to-connectors-and-data-stores/
 title: Introduction to connectors and data stores \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:08.275877+00:00
+fetched_at: 2026-10-23T13:11:29.460402+00:00
 ---
 
 # Introduction to connectors and data stores  |  Gemini Enterprise  |  Google Cloud Documentation

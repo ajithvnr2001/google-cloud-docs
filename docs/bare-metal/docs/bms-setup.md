@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-setup/
 title: Quickstart: Set up Google Cloud to work with your Bare Metal Solution environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:12.716922+00:00
+fetched_at: 2026-10-23T13:19:03.119972+00:00
 ---
 
 # Quickstart: Set up Google Cloud to work with your Bare Metal Solution environment  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/observability/
 title: About database observability \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:52:50.648313+00:00
+fetched_at: 2026-10-23T10:18:41.662392+00:00
 ---
 
 # About database observability  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -75,7 +75,7 @@ Query Insights dashboards help you identify query performance problems early and
 
 Query Insights provides application-centric monitoring that helps you diagnose performance problems for applications built using object-relational mappings (ORMs). You can tag queries with business logic that the query is associated with, such as payment, inventory, business analytics, or shipping. Query Insights can integrate with your existing APM tools, letting you monitor and troubleshoot query problems using your favorite tool.
 
-The Query Insights tool uses [sqlcommenter](https://google.github.io/sqlcommenter/spec/) to automatically instrument your ORMs. This instrumentation helps you identify the application code that's causing problems. Query Insights supports [OpenTelemetry](https://opentelemetry.io/) standards and makes the query metrics and traces data available for your APM tools through the [Google Cloud Observability](https://cloud.google.com/products/operations) API.
+The Query Insights tool uses [sqlcommenter](https://google.github.io/sqlcommenter/spec/) to automatically instrument your ORMs. This instrumentation helps you identify the application code that's causing problems. Query Insights supports [OpenTelemetry](https://opentelemetry.io/) standards and makes the query metrics and traces data available for your APM tools through the [Google Cloud Observability](https://cloud.google.com/products/observability) API.
 
 Query Insights integrates with [Cloud Monitoring](https://cloud.google.com/monitoring), letting you create custom dashboards and alerts on query metrics or tags and receive notifications using email, SMS, Slack, PagerDuty, and more.
 
@@ -114,6 +114,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

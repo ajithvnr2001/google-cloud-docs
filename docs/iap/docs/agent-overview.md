@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/agent-overview/
 title: IAP for agents overview \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:27:58.316684+00:00
+fetched_at: 2026-10-23T13:09:45.049150+00:00
 ---
 
 # IAP for agents overview  |  Identity-Aware Proxy  |  Google Cloud Documentation

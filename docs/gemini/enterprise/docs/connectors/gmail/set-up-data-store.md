@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/gmail/set-up-data-store/
 title: Set up a Gmail data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:31.541886+00:00
+fetched_at: 2026-10-23T13:03:14.665626+00:00
 ---
 
 # Set up a Gmail data store  |  Gemini Enterprise  |  Google Cloud Documentation

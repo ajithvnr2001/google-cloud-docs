@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/search/best-practices/
 title: Search best practices \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:02.493207+00:00
+fetched_at: 2026-10-23T13:17:51.526897+00:00
 ---
 
 # Search best practices  |  App Engine standard environment  |  Google Cloud Documentation

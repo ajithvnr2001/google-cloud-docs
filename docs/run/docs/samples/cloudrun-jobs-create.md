@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/samples/cloudrun-jobs-create/
 title: Create a Cloud Run Job \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:10:47.957259+00:00
+fetched_at: 2026-10-23T10:03:26.092469+00:00
 ---
 
 # Create a Cloud Run Job  |  Google Cloud Documentation

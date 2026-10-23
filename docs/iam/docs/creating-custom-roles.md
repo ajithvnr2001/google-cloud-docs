@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/creating-custom-roles/
 title: Create and manage custom roles \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:30:53.255012+00:00
+fetched_at: 2026-10-23T13:03:01.147624+00:00
 ---
 
 # Create and manage custom roles  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

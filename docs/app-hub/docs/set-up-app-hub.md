@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/set-up-app-hub/
 title: Choose your application setup model \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:13.770397+00:00
+fetched_at: 2026-10-23T13:17:03.071747+00:00
 ---
 
 # Choose your application setup model  |  App Hub  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/metadata-schemas/
 title: Extended metadata schemas \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:15.673609+00:00
+fetched_at: 2026-10-23T13:14:32.756654+00:00
 ---
 
 # Extended metadata schemas  |  App Hub  |  Google Cloud Documentation

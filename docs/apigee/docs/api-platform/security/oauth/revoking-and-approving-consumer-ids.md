@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/security/oauth/revoking-and-approving-consumer-ids/
 title: Revoking and approving developer app keys \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:49.721910+00:00
+fetched_at: 2026-10-23T13:20:44.160486+00:00
 ---
 
 # Revoking and approving developer app keys  |  Apigee  |  Google Cloud Documentation

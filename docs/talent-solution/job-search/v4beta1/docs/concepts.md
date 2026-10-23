@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/v4beta1/docs/concepts/
 title: Concepts (v4beta1) \u00a0|\u00a0 Cloud Talent Solution - Job Search v4beta1 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:25.389449+00:00
+fetched_at: 2026-10-23T09:35:13.582513+00:00
 ---
 
 # Concepts (v4beta1)  |  Cloud Talent Solution - Job Search v4beta1  |  Google Cloud Documentation

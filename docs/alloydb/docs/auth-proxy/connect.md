@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/auth-proxy/connect/
 title: Connect using the AlloyDB Auth Proxy \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:27:10.479849+00:00
+fetched_at: 2026-10-23T10:35:18.765184+00:00
 ---
 
 # Connect using the AlloyDB Auth Proxy  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -57,7 +57,7 @@ If you intend to connect to your cluster from outside the VPC, then the machine 
 
   1. Download the Auth Proxy client:
          
-         wget https://storage.googleapis.com/alloydb-auth-proxy/v1.14.2/alloydb-auth-proxy.linux.amd64 -O alloydb-auth-proxy
+         wget https://storage.googleapis.com/alloydb-auth-proxy/v1.17.2/alloydb-auth-proxy.linux.amd64 -O alloydb-auth-proxy
 
   2. Make the Auth Proxy client executable:
          
@@ -78,7 +78,7 @@ To persist these changes across sessions, add `export PATH="$HOME/.local/bin:$PA
 
   1. Download the Auth Proxy client:
          
-         wget https://storage.googleapis.com/alloydb-auth-proxy/v1.14.2/alloydb-auth-proxy.linux.386 -O alloydb-auth-proxy
+         wget https://storage.googleapis.com/alloydb-auth-proxy/v1.17.2/alloydb-auth-proxy.linux.386 -O alloydb-auth-proxy
 
   2. Make the Auth Proxy client executable:
          
@@ -99,7 +99,7 @@ To persist these changes across sessions, add `export PATH="$HOME/.local/bin:$PA
 
   1. Download the Auth Proxy client:
          
-         wget https://storage.googleapis.com/alloydb-auth-proxy/v1.14.2/alloydb-auth-proxy.linux.arm64 -O alloydb-auth-proxy
+         wget https://storage.googleapis.com/alloydb-auth-proxy/v1.17.2/alloydb-auth-proxy.linux.arm64 -O alloydb-auth-proxy
 
   2. Make the Auth Proxy client executable:
          
@@ -120,7 +120,7 @@ To persist these changes across sessions, add `export PATH="$HOME/.local/bin:$PA
 
   1. Download the Auth Proxy client:
          
-         wget https://storage.googleapis.com/alloydb-auth-proxy/v1.14.2/alloydb-auth-proxy.linux.arm -O alloydb-auth-proxy
+         wget https://storage.googleapis.com/alloydb-auth-proxy/v1.17.2/alloydb-auth-proxy.linux.arm -O alloydb-auth-proxy
 
   2. Make the Auth Proxy client executable:
          
@@ -143,7 +143,7 @@ To persist these changes across sessions, add `export PATH="$HOME/.local/bin:$PA
 
   1. Download the Auth Proxy client:
          
-         curl -o alloydb-auth-proxy https://storage.googleapis.com/alloydb-auth-proxy/v1.14.2/alloydb-auth-proxy.darwin.arm64
+         curl -o alloydb-auth-proxy https://storage.googleapis.com/alloydb-auth-proxy/v1.17.2/alloydb-auth-proxy.darwin.arm64
 
   2. Make the Auth Proxy client executable:
          
@@ -164,7 +164,7 @@ To persist these changes across sessions, add `export PATH="$HOME/.local/bin:$PA
 
   1. Download the Auth Proxy client:
          
-         curl -o alloydb-auth-proxy https://storage.googleapis.com/alloydb-auth-proxy/v1.14.2/alloydb-auth-proxy.darwin.amd64
+         curl -o alloydb-auth-proxy https://storage.googleapis.com/alloydb-auth-proxy/v1.17.2/alloydb-auth-proxy.darwin.amd64
 
   2. Make the Auth Proxy client executable:
          
@@ -185,7 +185,7 @@ To persist these changes across sessions, add `export PATH="$HOME/.local/bin:$PA
 
 ### 64-bit
 
-  1. Right-click <https://storage.googleapis.com/alloydb-auth-proxy/v1.14.2/alloydb-auth-proxy-x64.exe> and select **Save Link As** to download the Auth Proxy client. Rename the file to `alloydb-auth-proxy.exe`.
+  1. Right-click <https://storage.googleapis.com/alloydb-auth-proxy/v1.17.2/alloydb-auth-proxy-x64.exe> and select **Save Link As** to download the Auth Proxy client. Rename the file to `alloydb-auth-proxy.exe`.
 
   2. Add the Auth Proxy client to your PATH:
          
@@ -200,7 +200,7 @@ To persist these changes across sessions, add `export PATH="$HOME/.local/bin:$PA
 
 ### 32-bit
 
-  1. Right-click <https://storage.googleapis.com/alloydb-auth-proxy/v1.14.2/alloydb-auth-proxy-x86.exe> and select **Save Link As** to download the Auth Proxy client. Rename the file to `alloydb-auth-proxy.exe`.
+  1. Right-click <https://storage.googleapis.com/alloydb-auth-proxy/v1.17.2/alloydb-auth-proxy-x86.exe> and select **Save Link As** to download the Auth Proxy client. Rename the file to `alloydb-auth-proxy.exe`.
 
   2. Add the Auth Proxy client to your PATH:
          
@@ -770,6 +770,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

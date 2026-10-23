@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/monitoring/docs/samples/monitoring-uptime-check-list-ips/
 title: List uptime check IP addresses \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:36:55.092759+00:00
+fetched_at: 2026-10-23T12:35:35.530306+00:00
 ---
 
 # List uptime check IP addresses  |  Cloud Monitoring  |  Google Cloud Documentation
@@ -187,7 +187,7 @@ To authenticate to Monitoring, set up Application Default Credentials. For more 
     require "google/cloud/monitoring"
     
     def list_ips
-      client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-dashboard-v1/latest/Google-Cloud-Monitoring.html).[uptime_check_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
+      client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html).[uptime_check_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
     
       # Iterate over all results.
       client.list_uptime_check_ips({}).each do |element|

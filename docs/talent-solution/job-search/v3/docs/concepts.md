@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/v3/docs/concepts/
 title: Concepts v3 \u00a0|\u00a0 Cloud Talent Solution - Job Search v3 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:43.269906+00:00
+fetched_at: 2026-10-23T08:37:00.436950+00:00
 ---
 
 # Concepts v3  |  Cloud Talent Solution - Job Search v3  |  Google Cloud Documentation

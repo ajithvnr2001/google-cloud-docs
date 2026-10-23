@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/taskqueue/push/creating-push-tasks/
 title: Create Push Tasks \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:00.895083+00:00
+fetched_at: 2026-10-23T13:17:40.034081+00:00
 ---
 
 # Create Push Tasks  |  App Engine standard environment  |  Google Cloud Documentation

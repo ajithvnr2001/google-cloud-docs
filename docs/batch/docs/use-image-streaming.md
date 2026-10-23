@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/use-image-streaming/
 title: Use Image streaming to reduce container startup time \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:27.603404+00:00
+fetched_at: 2026-10-23T13:18:00.200399+00:00
 ---
 
 # Use Image streaming to reduce container startup time  |  Batch  |  Google Cloud Documentation

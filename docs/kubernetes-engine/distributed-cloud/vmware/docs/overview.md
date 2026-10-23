@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/overview/
 title: Google Distributed Cloud (software only) for VMware overview \u00a0|\u00a0 Google Distributed Cloud software only for VMware \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:21:57.786686+00:00
+fetched_at: 2026-10-23T10:21:49.131235+00:00
 ---
 
 # Google Distributed Cloud (software only) for VMware overview  |  Google Distributed Cloud software only for VMware  |  Google Cloud Documentation
@@ -107,6 +107,60 @@ You can find the complete documentation for an earlier version by adding the min
 
 Replace VERSION with a minor version from 1.0 to 1.16 and copy the URL to the address bar in your browser.
 
+## Where your data is stored
+
+When you run Distributed Cloud software only for VMware, your clusters, applications, and business data stay in your data center. By default,Google Distributed Cloud sends Google Cloud information about your clusters, such as their settings, health, and usage, but it doesn't send your application data.
+
+### Data that stays in your data center
+
+The following data stays in your data center:
+
+  * Containers, Pods, PersistentVolumes, and the data that your applications process.
+  * All Kubernetes objects are stored in your control plane and `etcd` database.
+  * The admin cluster's control plane stores self-signed `etcd` private keys, user cluster keys, and cluster certificate authorities (CAs).
+  * Application secrets, OAuth tokens, SSH private keys, container registry credentials, vCenter and F5 BIG-IP credentials, and service account key files, stored in `etcd` or on your administrator workstation. They aren't sent to the GKE On-Prem API and are removed from diagnostic snapshots.
+  * Your admin cluster, user cluster, and credentials configuration files are stored on your administrator workstation.
+  * Audit logs are written to disk on admin cluster control plane nodes and user clusters.
+  * You can choose to upload diagnostic snapshots to Cloud Storage.
+
+
+
+### Data that's sent to Google Cloud
+
+The following table shows what's sent, how it's used and stored, and whether you can turn it off:
+
+Data | What's sent | Use and storage | Default  
+---|---|---|---  
+**Connection and fleet registration**  
+(`gkehub.googleapis.com`, `gkeconnect.googleapis.com`) | 
+
+  * Cluster identity: Google Cloud project, fleet membership name, cluster UID, public keys, Kubernetes version, cluster size, and identity provider configuration.
+  * Kubernetes data requested from Google Cloud console or connect gateway.
+  * Your encrypted Kubernetes token in your user profile until you sign out from the Google Cloud console.
+
+| Manage clusters from the Google Cloud console, the connect gateway, and fleet with the Connect Agent. Your `kube-apiserver` authenticates, authorizes, and audit-logs each request. | **Required**  
+**Cluster settings and status**  
+(`gkeonprem.googleapis.com`) | 
+
+  * Name, UID, description, annotations, version, lifecycle state, and control plane VIP.
+  * Node pool names, node IP or DHCP settings, Pod and Service CIDRs, load balancer VIPs, load balancer settings.
+  * vCenter address, datacenter, cluster, resource pool, datastore, folder, and storage policy name, (not vCenter credentials).
+  * Email addresses of cluster administrators.
+
+| Lets you manage clusters with the Google Cloud console, the Google Cloud CLI, or Terraform. The GKE On-Prem API stores this data in the region set in `gkeOnPremAPI.location`. | **On** in version 1.16 and later, if the GKE On-Prem API is enabled in your Google Cloud project. To turn it off, set `gkeOnPremAPI.enabled` to `false`.  
+**Billing usage**  
+(`anthos.googleapis.com`) | vCPU capacity, node count, and license entitlement status. | Used for metering, billing, and license checks. | **Required**. Billing records are buffered during an outage and sent later.  
+**System health data**  
+(`logging.googleapis.com`, `monitoring.googleapis.com`, `opsconfigmonitoring.googleapis.com`) | 
+
+  * Metrics: CPU, memory, disk, and network use, `kubelet` metrics, and `kube-state-metrics` for nodes and system Pods.
+  * Container logs and health check results from all admin cluster components, and from the `kube-system`, `gke-system`, `gke-connect`, `istio-system`, and `config-management-system` user cluster namespaces.
+  * Metadata: names and labels of nodes, Pods, deployments, and services.
+
+| Used for Cloud Monitoring, Google Cloud console status views, and Customer Care troubleshooting. Stored in the Google Cloud project set in `stackdriver.projectID`. Metrics stored in `stackdriver.clusterLocation` region, and logs follow your Log Router settings. | **On** for system logs and metrics, which full Customer Care support and SLA coverage require. **Off** for application logs and metrics, unless you set `enableCloudLoggingForApplications` or `enableGMPForApplications` to `true` in the `Stackdriver` resource.  
+**Audit logs**  
+(`anthosaudit.googleapis.com`) | Admin Activity audit logs: who changed what through the `kube-apiserver`, and when. Entries include the time, cluster, host or VM, user or service account, RBAC role, operation, and result. Read requests aren't recorded. | Stored in Cloud Audit Logs in the Google Cloud project set in `cloudAuditLogging.projectID`, in the `_Required` bucket, and kept for 400 days. | **Optional**. To turn it on, fill in the `cloudAuditLogging` section. For admin clusters, you can turn it on only at creation. To turn it off for a user cluster, delete the section and update the cluster.  
+  
 ## What's next?
 
   * To start a minimal proof-of-concept installation, see [Set up minimal infrastructure](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/how-to/minimal-infrastructure).
@@ -118,6 +172,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

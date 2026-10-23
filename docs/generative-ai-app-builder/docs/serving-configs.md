@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/serving-configs/
 title: Create and manage media serving configs \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:22.295852+00:00
+fetched_at: 2026-10-23T13:13:49.892883+00:00
 ---
 
 # Create and manage media serving configs  |  Agent Search  |  Google Cloud Documentation

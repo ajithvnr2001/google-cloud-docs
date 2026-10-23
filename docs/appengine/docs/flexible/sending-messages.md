@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/sending-messages/
 title: Sending messages with third-party services \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:34.056956+00:00
+fetched_at: 2026-10-23T13:16:59.710484+00:00
 ---
 
 # Sending messages with third-party services  |  App Engine flexible environment  |  Google Cloud Documentation

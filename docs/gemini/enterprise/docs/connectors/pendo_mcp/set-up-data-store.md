@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/pendo_mcp/set-up-data-store/
 title: Set up a Pendo data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:59.972281+00:00
+fetched_at: 2026-10-23T13:12:09.199585+00:00
 ---
 
 # Set up a Pendo data store  |  Gemini Enterprise  |  Google Cloud Documentation

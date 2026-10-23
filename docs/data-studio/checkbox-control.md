@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/checkbox-control/
 title: Checkbox control \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:35.729744+00:00
+fetched_at: 2026-10-23T13:20:34.990524+00:00
 ---
 
 # Checkbox control  |  Data Studio  |  Google Cloud Documentation

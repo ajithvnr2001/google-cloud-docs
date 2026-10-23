@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/key-access-justifications/docs/set-default-policy/
 title: Set default Key Access Justifications policy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:41.493972+00:00
+fetched_at: 2026-10-23T13:18:57.626211+00:00
 ---
 
 # Set default Key Access Justifications policy  |  Google Cloud Documentation

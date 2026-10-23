@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/gke/route-trigger-firebase-test-lab/
 title: Route Firebase Test Lab events to GKE \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:51.478722+00:00
+fetched_at: 2026-10-23T13:00:46.555511+00:00
 ---
 
 # Route Firebase Test Lab events to GKE  |  Eventarc Standard  |  Google Cloud Documentation

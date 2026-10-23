@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/sap-order-to-cash-accelerator/
 title: SAP Order to Cash accelerator \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:43.464769+00:00
+fetched_at: 2026-10-23T13:20:22.831454+00:00
 ---
 
 # SAP Order to Cash accelerator  |  Cloud Data Fusion  |  Google Cloud Documentation

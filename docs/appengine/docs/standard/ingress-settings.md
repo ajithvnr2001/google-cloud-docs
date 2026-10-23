@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/ingress-settings/
 title: Ingress settings \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:27.771936+00:00
+fetched_at: 2026-10-23T13:14:15.076740+00:00
 ---
 
 # Ingress settings  |  App Engine standard environment  |  Google Cloud Documentation

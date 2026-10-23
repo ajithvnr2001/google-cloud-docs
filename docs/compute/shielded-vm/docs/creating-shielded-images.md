@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/shielded-vm/docs/creating-shielded-images/
 title: Creating custom shielded images \u00a0|\u00a0 Shielded VM \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:29:02.290986+00:00
+fetched_at: 2026-10-23T13:00:26.625380+00:00
 ---
 
 # Creating custom shielded images  |  Shielded VM  |  Google Cloud Documentation

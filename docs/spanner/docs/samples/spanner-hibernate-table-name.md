@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-hibernate-table-name/
 title: Hibernate table name \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:41.599258+00:00
+fetched_at: 2026-10-23T10:09:28.613423+00:00
 ---
 
 # Hibernate table name  |  Spanner  |  Google Cloud Documentation

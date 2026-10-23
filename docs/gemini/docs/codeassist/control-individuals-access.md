@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/control-individuals-access/
 title: Control access to Gemini Code Assist for individuals \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:12.980403+00:00
+fetched_at: 2026-10-23T13:02:42.236034+00:00
 ---
 
 # Control access to Gemini Code Assist for individuals  |  Gemini for Google Cloud  |  Google Cloud Documentation

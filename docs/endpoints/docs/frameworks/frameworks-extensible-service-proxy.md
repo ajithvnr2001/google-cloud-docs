@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/frameworks-extensible-service-proxy/
 title: Comparing Extensible Service Proxy and Cloud Endpoints Frameworks \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:43.545345+00:00
+fetched_at: 2026-10-23T13:01:36.454644+00:00
 ---
 
 # Comparing Extensible Service Proxy and Cloud Endpoints Frameworks  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

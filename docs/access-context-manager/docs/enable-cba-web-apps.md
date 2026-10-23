@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/enable-cba-web-apps/
 title: Enable certificate-based access for web applications \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:51.344889+00:00
+fetched_at: 2026-10-23T13:17:54.136322+00:00
 ---
 
 # Enable certificate-based access for web applications  |  Access Context Manager  |  Google Cloud Documentation

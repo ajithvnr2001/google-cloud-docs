@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/native/docs/pipeline/functions/comparison_functions/
 title: Comparison Functions Reference \u00a0|\u00a0 Firestore in Native mode \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:06.313505+00:00
+fetched_at: 2026-10-23T13:03:52.497823+00:00
 ---
 
 # Comparison Functions Reference  |  Firestore in Native mode  |  Google Cloud Documentation

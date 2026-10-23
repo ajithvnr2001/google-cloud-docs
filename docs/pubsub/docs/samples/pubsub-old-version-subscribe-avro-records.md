@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-subscribe-avro-records/
 title: v1 Receive messages of Avro schema type (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:59.579220+00:00
+fetched_at: 2026-10-23T10:04:35.651697+00:00
 ---
 
 # v1 Receive messages of Avro schema type (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

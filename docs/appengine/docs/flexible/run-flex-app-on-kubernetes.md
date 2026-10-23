@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/run-flex-app-on-kubernetes/
 title: Run App Engine apps on GKE \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:34.985973+00:00
+fetched_at: 2026-10-23T13:17:26.591932+00:00
 ---
 
 # Run App Engine apps on GKE  |  App Engine flexible environment  |  Google Cloud Documentation

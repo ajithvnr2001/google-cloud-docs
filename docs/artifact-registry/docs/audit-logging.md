@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/audit-logging/
 title: Artifact Registry audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:04.715556+00:00
+fetched_at: 2026-10-23T13:17:20.510848+00:00
 ---
 
 # Artifact Registry audit logging  |  Google Cloud Documentation

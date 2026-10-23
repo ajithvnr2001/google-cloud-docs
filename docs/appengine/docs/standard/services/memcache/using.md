@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/memcache/using/
 title: Using Memcache \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:04.493648+00:00
+fetched_at: 2026-10-23T13:17:09.888228+00:00
 ---
 
 # Using Memcache  |  App Engine standard environment  |  Google Cloud Documentation

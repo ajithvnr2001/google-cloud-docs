@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sap/docs/bq-connector/2.0/all-guides/
 title: Version 2.0: BigQuery Connector for SAP guides \u00a0|\u00a0 SAP on Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:11:45.948456+00:00
+fetched_at: 2026-10-23T09:58:48.788236+00:00
 ---
 
 # Version 2.0: BigQuery Connector for SAP guides  |  SAP on Google Cloud  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/locations/
 title: Infrastructure Manager locations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:42.895675+00:00
+fetched_at: 2026-10-23T13:09:59.907405+00:00
 ---
 
 # Infrastructure Manager locations  |  Google Cloud Documentation

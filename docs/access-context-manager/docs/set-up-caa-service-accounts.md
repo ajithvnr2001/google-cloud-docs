@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/set-up-caa-service-accounts/
 title: Configure Context-Aware Access for service accounts \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:49.993200+00:00
+fetched_at: 2026-10-23T13:19:04.231603+00:00
 ---
 
 # Configure Context-Aware Access for service accounts  |  Access Context Manager  |  Google Cloud Documentation

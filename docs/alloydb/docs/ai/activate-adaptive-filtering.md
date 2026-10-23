@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/activate-adaptive-filtering/
 title: Activate adaptive filtering in AlloyDB AI \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:27:42.296075+00:00
+fetched_at: 2026-10-23T13:08:33.425403+00:00
 ---
 
 # Activate adaptive filtering in AlloyDB AI  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -45,7 +45,7 @@ To enable adaptive filtering, you must set the [`scann.enable_preview_features`]
 Replace the following:
 
   * `INSTANCE_ID`: the ID of the instance where you want to enable adaptive filtering.
-  * `REGION`: the region where your instance is located for example, `us-central1`.
+  * `REGION`: the region where your instance is located—for example, `us-central1`.
   * `CLUSTER_ID`: the ID of the cluster where your instance is located.
   * `PROJECT_ID`: the ID of the project where your cluster is located.
 
@@ -64,6 +64,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/get-started-compute-engine-docker/
 title: Getting started with Cloud Endpoints for Compute Engine with ESP \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:33.212514+00:00
+fetched_at: 2026-10-23T13:00:42.960333+00:00
 ---
 
 # Getting started with Cloud Endpoints for Compute Engine with ESP  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation

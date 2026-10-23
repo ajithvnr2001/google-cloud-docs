@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/tutorials/configure-fwpolicy-deny-egress-geolocation/
 title: Configure global network firewall policy to deny egress connections to specific geolocations \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:01.144106+00:00
+fetched_at: 2026-10-23T13:13:18.727409+00:00
 ---
 
 # Configure global network firewall policy to deny egress connections to specific geolocations  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

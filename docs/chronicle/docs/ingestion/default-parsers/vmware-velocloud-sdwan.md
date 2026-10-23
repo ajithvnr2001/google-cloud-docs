@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/vmware-velocloud-sdwan/
 title: Collect VMware VeloCloud SD-WAN logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:34:24.568533+00:00
+fetched_at: 2026-10-23T12:55:54.793851+00:00
 ---
 
 # Collect VMware VeloCloud SD-WAN logs  |  Google Security Operations  |  Google Cloud Documentation

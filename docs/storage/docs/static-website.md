@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/static-website/
 title: Static website examples and tips \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:25:19.406145+00:00
+fetched_at: 2026-10-23T13:08:26.369946+00:00
 ---
 
 # Static website examples and tips  |  Cloud Storage  |  Google Cloud Documentation
@@ -143,7 +143,7 @@ Thus, API behavior for requests to Cloud Storage domains, such as `storage.googl
 
 ### Host static assets for a dynamic website
 
-You can use Cloud Storage to host static assets for a dynamic website that is hosted, for example, in [Google App Engine](https://docs.cloud.google.com/appengine) or in [Google Compute Engine](https://docs.cloud.google.com/compute). Some benefits of hosting your static assets, like images or JavaScript files, in a bucket include:
+You can use Cloud Storage to host static assets for a dynamic website that is hosted, for example, in [App Engine](https://docs.cloud.google.com/appengine) or in [Compute Engine](https://docs.cloud.google.com/compute). Some benefits of hosting your static assets, like images or JavaScript files, in a bucket include:
 
   * Cloud Storage behaves like a [Content Delivery Network (CDN)](https://wikipedia.org/wiki/Content_delivery_network) because publicly readable objects are cached in the Cloud Storage network by default.
 
@@ -197,6 +197,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

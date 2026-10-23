@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/db-audit/
 title: SQL Server database auditing \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:15.683201+00:00
+fetched_at: 2026-10-23T10:18:25.434916+00:00
 ---
 
 # SQL Server database auditing  |  Cloud SQL for SQL Server  |  Google Cloud Documentation
@@ -22,24 +22,15 @@ Send feedback
 
 #  SQL Server database auditing Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes database auditing in Cloud SQL using the functionality of SQL Server Audit.
+[MySQL](https://docs.cloud.google.com/sql/docs/mysql/db-audit "View this page for the MySQL database engine") | PostgreSQL | SQL Server
 
-**Note:** To audit a Cloud SQL instance's administrative and maintenance operations, see [Cloud Audit Logs](https://docs.cloud.google.com/sql/docs/sqlserver/audit-logging).
+SQL Server Audit in Cloud SQL for SQL Server lets you create server audit specifications to track and record server-level and database-level events. This auditing helps you monitor access to sensitive data, detect suspicious activity, and maintain regulatory compliance.
 
-## Overview
-
-In Cloud SQL, SQL Server Audit capabilities include the following:
-
-  * Creating server audit specifications
-  * Tracking and logging server-level and database-level events
-
-**Note:** Before using this feature, review the best practices. In many cases, you should [enable automatic storage increases](https://docs.cloud.google.com/sql/docs/sqlserver/instance-settings#automatic-storage-increase-2ndgen) for audit file storage. Disk space needs vary based on audit types and retention intervals.
-
-For additional information about the capabilities of SQL Server Audit, see [SQL Server Audit (Database Engine)](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-database-engine?view=sql-server-ver15).
+To audit administrative and maintenance operations on your Cloud SQL for SQL Server instance, see [Cloud Audit Logs](https://docs.cloud.google.com/sql/docs/sqlserver/audit-logging). For additional information about the capabilities of SQL Server Audit, see [SQL Server Audit (Database Engine)](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-database-engine?view=sql-server-ver15).
 
 ## Before you begin
 
-Before enabling database auditing, review the prerequisites in this section.
+Before you enable database auditing, review the best practices and the prerequisites in this section. In many cases, you might need to [enable automatic storage increases](https://docs.cloud.google.com/sql/docs/sqlserver/instance-settings#automatic-storage-increase-2ndgen) for audit file storage. Disk space needs vary based on audit types and retention intervals.
 
 ### Cloud Storage bucket for audit files
 
@@ -51,7 +42,7 @@ Alternatively, you can use a bucket location owned by another account. When you 
 
 ### Valid user for enabling auditing
 
-To enable auditing and to create audit specifications, the default `sqlserver` user must be available. When you created a Cloud SQL for SQL Server instance, the default `sqlserver` user was created for you.
+To enable auditing and to create audit specifications, the default `sqlserver` user must be available. When you created a Cloud SQL for SQL Server for SQL Server instance, the default `sqlserver` user was created for you.
 
 ## Enable auditing
 
@@ -281,6 +272,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

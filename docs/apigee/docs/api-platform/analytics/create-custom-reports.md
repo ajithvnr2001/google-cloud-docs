@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/analytics/create-custom-reports/
 title: Creating and managing custom reports \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:02.131382+00:00
+fetched_at: 2026-10-23T13:14:31.699478+00:00
 ---
 
 # Creating and managing custom reports  |  Apigee  |  Google Cloud Documentation

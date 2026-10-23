@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/backup-recovery/manage-standard-backups/
 title: Manage standard backups \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:28:59.515486+00:00
+fetched_at: 2026-10-23T10:18:17.660058+00:00
 ---
 
 # Manage standard backups  |  Cloud SQL for MySQL  |  Google Cloud Documentation
@@ -26,11 +26,9 @@ MySQL | [PostgreSQL](https://docs.cloud.google.com/sql/docs/postgres/backup-reco
 
 **Warning:** All data on an instance, including backups, is permanently lost when that instance is deleted. To preserve your data, you can either take a [final backup](https://docs.cloud.google.com/sql/docs/mysql/backup-recovery/backups#final-backups) of your instance at time of deletion, enable [retained backups](https://docs.cloud.google.com/sql/docs/mysql/backup-recovery/backups#retained-backups) for your instance before you delete it, or [export your data to Cloud Storage](https://docs.cloud.google.com/sql/docs/mysql/import-export) before you delete it.
 
-This page describes how to manage backups for your instance that uses the [standard backups](https://docs.cloud.google.com/sql/docs/mysql/backup-recovery/backup-options#standard-backups) option. This includes how to schedule and turn off automatic backups, create and manage on-demand backups, and view backups for your Cloud SQL instance. If your instance is using enhanced backups, see [Manage enhanced backups](https://docs.cloud.google.com/sql/docs/mysql/backup-recovery/manage-enhanced-backups).
+Cloud SQL [standard backups](https://docs.cloud.google.com/sql/docs/mysql/backup-recovery/backup-options#standard-backups) let you schedule automated backups, create on-demand backups, and view existing backups for your database instance. Regular backups help you protect your data against accidental loss or corruption and support disaster recovery. If your instance uses enhanced backups, then see [Manage enhanced backups](https://docs.cloud.google.com/sql/docs/mysql/backup-recovery/manage-enhanced-backups).
 
-For more information about how backups work, see [Cloud SQL backups overview](https://docs.cloud.google.com/sql/docs/mysql/backup-recovery/backups). For more information about the backup options available for your Cloud SQL instances, see [Choose your backup option](https://docs.cloud.google.com/sql/docs/mysql/backup-recovery/backup-options).
-
-**Note:** If your instance was created before the [enhanced backups launch](https://docs.cloud.google.com/sql/docs/mysql/release-notes#July_31_2025), then your instance is using the standard backups option. To upgrade your instance to the enhanced backups option, see [Enable enhanced backups](https://docs.cloud.google.com/sql/docs/mysql/backup-recovery/manage-enhanced-backups#enable).
+Instances created before the [availability of the enhanced backups option](https://docs.cloud.google.com/sql/docs/mysql/release-notes#July_31_2025) use standard backups by default. To upgrade your instance to use enhanced backups, see [Enable enhanced backups](https://docs.cloud.google.com/sql/docs/mysql/backup-recovery/manage-enhanced-backups#enable). For more information about how backups work and the available backup options, see [Cloud SQL backups overview](https://docs.cloud.google.com/sql/docs/mysql/backup-recovery/backups) and [Choose your backup option](https://docs.cloud.google.com/sql/docs/mysql/backup-recovery/backup-options).
 
 ## Create an on-demand backup
 
@@ -1487,7 +1485,7 @@ You should receive a JSON response similar to the following:
 
 When an instance is in a region that is having an outage, you can only view backups for that instance using a wildcard (`-`) with the `backupRuns.list` API. The wildcard returns all backups in the project. See [Restoring to a different instance](https://docs.cloud.google.com/sql/docs/mysql/backup-recovery/restoring#restorebackups-another-instance).
 
-When there's an outage in a region where an instance has customer-managed encryption keys (CMEK) enabled, you can't restore the backups for that instance to a different region. The reason is because Cloud SQL uses [regional Cloud KMS keys](https://cloud.google.com/sql/docs/mysql/configure-cmek#key) for encryption when CMEK is enabled on the instance. To restore backups for a CMEK instance, Cloud SQL must have access to the CMEK key. In a regional outage, there's no access to the Cloud KMS keys in that region.
+When there's an outage in a region where an instance has customer-managed encryption keys (CMEK) enabled, you can't restore the backups for that instance to a different region. The reason is because Cloud SQL uses [regional Cloud KMS keys](https://docs.cloud.google.com/sql/docs/mysql/configure-cmek#key) for encryption when CMEK is enabled on the instance. To restore backups for a CMEK instance, Cloud SQL must have access to the CMEK key. In a regional outage, there's no access to the Cloud KMS keys in that region.
 
 ### gcloud
 
@@ -2951,6 +2949,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apis/docs/capping-api-usage/
 title: Capping API usage \u00a0|\u00a0 Cloud APIs \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:19.058883+00:00
+fetched_at: 2026-10-23T13:15:09.281824+00:00
 ---
 
 # Capping API usage  |  Cloud APIs  |  Google Cloud Documentation

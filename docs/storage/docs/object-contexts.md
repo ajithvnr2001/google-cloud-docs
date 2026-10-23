@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/object-contexts/
 title: Object contexts \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:25:20.389007+00:00
+fetched_at: 2026-10-23T13:08:43.070973+00:00
 ---
 
 # Object contexts  |  Cloud Storage  |  Google Cloud Documentation
@@ -21,19 +21,19 @@ Send feedback
 
 #  Object contexts Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document describes how object contexts let you associate contextual information with your objects to help you manage and discover data.
+Object contexts let you associate custom key-value pairs with your Cloud Storage objects so you can categorize, track, and search your data.
 
-To learn how to attach and manage object contexts, see [Use object contexts](https://docs.cloud.google.com/storage/docs/use-object-contexts).
+For steps to attach and manage object contexts, see [Use object contexts](https://docs.cloud.google.com/storage/docs/use-object-contexts).
 
-## Overview
+## How object contexts work
 
-Object contexts let you associate key-value pairs with your Cloud Storage objects to categorize, track, and search your data. You can attach contexts when you create or update objects, or let Google services attach them automatically.
+You can attach contexts when you create or update objects, or you can let Google Cloud services attach them automatically.
 
 In the [`objects` resource](https://docs.cloud.google.com/storage/docs/json_api/v1/objects#resource), all object contexts appear under the [`contexts.custom`](https://docs.cloud.google.com/storage/docs/json_api/v1/objects#contexts.custom) field. Within `contexts.custom`, there are two types of contexts:
 
   * **Custom contexts without extended data** : Contexts that consist of a key, a string value, and timestamps. You can use these contexts to organize, filter, and track objects across your storage buckets.
 
-  * **Custom contexts with extended data** ([Preview](https://docs.cloud.google.com/products#product-launch-stages)): Contexts that consist of a key, a string value, timestamps, and an optional structured JSON payload. Google services attach these contexts during automated analysis, such as machine learning labeling.
+  * **Custom contexts with extended data** ([Preview](https://docs.cloud.google.com/products#product-launch-stages)): Contexts that consist of a key, a string value, timestamps, and an optional structured JSON payload. Google Cloud services attach these contexts during automated analysis, such as machine learning labeling.
 
 
 
@@ -161,6 +161,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

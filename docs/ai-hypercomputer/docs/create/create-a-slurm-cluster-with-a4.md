@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/create/create-a-slurm-cluster-with-a4/
 title: Create a self-managed Slurm cluster with an A4 VM \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:53.641350+00:00
+fetched_at: 2026-10-23T13:17:12.629263+00:00
 ---
 
 # Create a self-managed Slurm cluster with an A4 VM  |  AI Hypercomputer  |  Google Cloud Documentation

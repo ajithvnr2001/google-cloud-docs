@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/concepts/parallel-processing/
 title: Parallel processing \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:45:00.230706+00:00
+fetched_at: 2026-10-23T13:20:17.834618+00:00
 ---
 
 # Parallel processing  |  Cloud Data Fusion  |  Google Cloud Documentation

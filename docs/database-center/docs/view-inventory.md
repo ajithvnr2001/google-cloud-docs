@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/database-center/docs/view-inventory/
 title: View your fleet inventory \u00a0|\u00a0 Database Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:44.919951+00:00
+fetched_at: 2026-10-23T13:20:41.241375+00:00
 ---
 
 # View your fleet inventory  |  Database Center  |  Google Cloud Documentation

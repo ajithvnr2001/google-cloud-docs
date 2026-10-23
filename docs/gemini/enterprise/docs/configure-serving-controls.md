@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/configure-serving-controls/
 title: Configure serving controls \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:37.102522+00:00
+fetched_at: 2026-10-23T13:12:58.228998+00:00
 ---
 
 # Configure serving controls  |  Gemini Enterprise  |  Google Cloud Documentation

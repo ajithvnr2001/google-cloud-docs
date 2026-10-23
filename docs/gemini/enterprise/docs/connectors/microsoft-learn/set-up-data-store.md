@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/microsoft-learn/set-up-data-store/
 title: Set up a Microsoft Learn data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:26.460170+00:00
+fetched_at: 2026-10-23T13:08:43.805248+00:00
 ---
 
 # Set up a Microsoft Learn data store  |  Gemini Enterprise  |  Google Cloud Documentation

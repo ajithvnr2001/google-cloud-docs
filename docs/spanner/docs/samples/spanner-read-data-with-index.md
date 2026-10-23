@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-read-data-with-index/
 title: Read data with index \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:37.602258+00:00
+fetched_at: 2026-10-23T10:10:44.791872+00:00
 ---
 
 # Read data with index  |  Spanner  |  Google Cloud Documentation

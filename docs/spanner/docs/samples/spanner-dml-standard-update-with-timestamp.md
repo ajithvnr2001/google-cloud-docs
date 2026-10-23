@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-dml-standard-update-with-timestamp/
 title: DML update commit timestamp \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:35.105633+00:00
+fetched_at: 2026-10-23T10:09:27.069731+00:00
 ---
 
 # DML update commit timestamp  |  Spanner  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/relativity/set-up-data-store/
 title: Set up a Relativity data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:59.439285+00:00
+fetched_at: 2026-10-23T13:11:40.813947+00:00
 ---
 
 # Set up a Relativity data store  |  Gemini Enterprise  |  Google Cloud Documentation

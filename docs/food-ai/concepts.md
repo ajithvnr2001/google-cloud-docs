@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/food-ai/concepts/
 title: Food Ordering AI Agent concepts \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:00.034259+00:00
+fetched_at: 2026-10-23T13:13:14.713617+00:00
 ---
 
 # Food Ordering AI Agent concepts  |  Google Cloud Documentation

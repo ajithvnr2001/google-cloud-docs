@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/migrating/
 title: Migrate services from the standard environment to the flexible environment \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:35.360009+00:00
+fetched_at: 2026-10-23T13:17:24.651667+00:00
 ---
 
 # Migrate services from the standard environment to the flexible environment  |  App Engine flexible environment  |  Google Cloud Documentation

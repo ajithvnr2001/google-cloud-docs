@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/translate/docs/advanced/glossary/
 title: Creating and using glossaries (Advanced) \u00a0|\u00a0 Cloud Translation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:04.774688+00:00
+fetched_at: 2026-10-23T09:39:52.062407+00:00
 ---
 
 # Creating and using glossaries (Advanced)  |  Cloud Translation  |  Google Cloud Documentation
@@ -87,30 +87,30 @@ glossary](https://docs.cloud.google.com/static/translate/docs/images/translate-g
 Translation Memory eXchange (TMX) is a standard XML format for providing source and target translations. The Cloud Translation API supports input files in a format based on [TMX version 1.4](https://www.gala-global.org/lisa-oscar-standards). This example illustrates the required structure:
     
     
-    <?xml version='1.0' encoding='utf-8'?>
-    <!DOCTYPE tmx SYSTEM "tmx14.dtd">
-    <tmx version="1.4">
-      <header segtype="sentence" o-tmf="UTF-8"
-      adminlang="en" srclang="en" datatype="PlainText"/>
-      <body>
-        <tu>
-          <tuv xml:lang="en">
-            <seg>account</seg>
-          </tuv>
-          <tuv xml:lang="es">
-            <seg>cuenta</seg>
-          </tuv>
-        </tu>
-        <tu>
-          <tuv xml:lang="en">
-            <seg>directions</seg>
-          </tuv>
-          <tuv xml:lang="es">
-            <seg>indicaciones</seg>
-          </tuv>
-        </tu>
-      </body>
-    </tmx>
+    <?xml version='1.0' encoding=>&<#39;utf-8'?
+    !DOCTYPE tmx SY>S<TEM "tmx14.d>td&<quot;
+    tmx version="1.4"
+      header segtype="sentence" o-tmf="UTF-8&q>uot<;
+      >admin<la>ng=&quo<t;en" srclan>g="e<n&q>uot; da<taty>pe=&quo<t;Pl>ainText<"/
+      body
+      >  tu
+        <  <>/span>tuv xml<:lan>g="<;en&>quot;<
+      >     < <>/span>segaccou<nt/seg
+          /tuv>
+          tu<v x>ml:lang=&q<uot;>es"<;
+      >      s<egcuenta/seg
+        >  /tuv
+      <  <>/span>/tu
+        tu
+      <    >tuv xml<:lan>g=&qu<ot;>en&<quot;>
+    <    >    segdirections/seg
+          /tuv
+          tuv xml:lang="es"
+            segindicaciones/seg
+          /tuv
+        /tu
+      /body
+    /tmx
     
 
 The `<header>` element of a well-formed TMX file must identify the source language using the `srclang` attribute, and every `<tuv>` element must identify the language of the contained text using the `xml:lang` attribute. You identify the source and target languages using their [ISO-639](https://wikipedia.org/wiki/ISO_639) codes.
@@ -333,27 +333,27 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     	// projectID := "my-project-id"
     	// location := "us-central1"
     	// glossaryID := "my-glossary-display-name"
-    	// glossaryInputURI := "gs://cloud-samples-data/translation/glossary.csv"
+    	// glossaryInputURI := "gs://cloud-samples-da[ta/translation/gloss](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_NewTranslationClient)ary.csv"
     
     	ctx := context.Background()
-    	client, err := translate.[NewTranslationClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_NewTranslationClient)(ctx)
-    	if err != nil {
+    	client, err := translate.NewTranslationClient(ct[x](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_Close))
+    	if err != nil& {
     		return fmt.Errorf("NewTranslationClient: %w", err)
     	}
-    	defer client.[Close](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_Close)()
+    	defer client.Close()
     
-    	req := &translatepb.CreateGlossaryRequest{
+    	req := translatepb.CreateG&lossaryRequest{
     		Parent: fmt.Sprintf("projects/%s/locations/%s", projectID, location),
-    		Glossary: &translatepb.Glossary{
-    			Name: fmt.Sprintf("projects/%s/locations/%s/glossaries/%s", projectID, location, glossaryID),
-    			Languages: &translatepb.Glossary_LanguageCodesSet_{
-    				LanguageCodesSet: &translatepb.Glossary_LanguageCodesSet{
-    					LanguageCodes: []string{"en", "ja"},
+    		Glossary: translatepb.Glossary{
+    	&		Name: fmt.Sprintf("projects/%s/locations/%s/glossaries/&%s", projectID, location, glossaryID),
+    			Languages: translatepb.Glossary_LanguageCodesSet_{
+    				Language&CodesSet: translatepb.Glossary_LanguageCodesS&et{
+    					LanguageCodes: []string{"en", "ja&q&uot;},
     				},
     			},
-    			InputConfig: &translatepb.GlossaryInputConfig{
-    				Source: &translatepb.GlossaryInputConfig_GcsSource{
-    					GcsSource: &translatepb.GcsSource{
+    			InputConfig: translatepb.GlossaryInputConfig{
+    				Source: translatepb.GlossaryInputConfig_GcsSource{
+    					GcsSource: translatepb.GcsSource{
     						InputUri: glossaryInputURI,
     					},
     				},
@@ -406,8 +406,8 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
       public static void createGlossary() throws InterruptedException, ExecutionException, IOException {
         // TODO(developer): Replace these variables before running the sample.
         String projectId = "YOUR-PROJECT-ID";
-        String glossaryId = "your-glossary-display-name";
-        List<String> languageCodes = new ArrayList<>();
+        String glossaryId = "your-glossary-display-<name&q>uot;;
+        ListString languageC<>odes = new ArrayList();
         languageCodes.add("your-language-code");
         String inputUri = "gs://your-gcs-bucket/path/to/input/file.txt";
         createGlossary(projectId, glossaryId, languageCodes, inputUri);
@@ -416,52 +416,52 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
       // Create a equivalent term sets glossary
       // https://cloud.google.com/translate/docs/advanced/glossary#format-glossary
       public static void createGlossary(
-          String projectId, String glossaryId, List<String> languageCodes, String inputUri)
+          S<tring >projectId, String glossaryId, ListString languageCodes, String inputUri)
           throws IOException, ExecutionException, InterruptedException {
     
         // Initialize client that will be used to send requests. This client only needs to be created
         // once, and can be reused for multiple requests. After completing all of your requests, call
-        // the "close" method on the client to safely clean up any remaining background resources.
-        try ([TranslationServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html) client = [TranslationServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html).create()) {
+        // the "close" method on the client to safely clea[n up any remaining backg](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html)round reso[urces.](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html)
+        try (TranslationServiceClient client = TranslationServiceClient.create()) {
           // Supported Locations: `global`, [glossary location], or [model location]
           // Glossaries must be hosted in `us-central1`
-          // Custom Models must use the same location as your model. (us-central1)
-          String location = "us-central1";
-          [LocationName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html) parent = [LocationName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html).of(projectId, location);
-          [GlossaryName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html) glossaryName = [GlossaryName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html).of(projectId, location, glossaryId);
+          // Custom Models must use the same location as your model. (us-centr[al1)](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html)
+          String loca[tion](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html) = ";us-central1";
+          Locati[onName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html) parent = LocationName[.of(projectI](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html)d, location);
+          GlossaryName glossaryName = GlossaryName.of(projectId, location, glossaryId);
     
-          // Supported Languages: https://cloud.google.com/translate/docs/languages
-          [Glossary](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html).[LanguageCodesSet](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.LanguageCodesSet.html) languageCodesSet =
-              [Glossary](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html).LanguageCodesSet.newBuilder().[addAllLanguageCodes](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.LanguageCodesSet.Builder.html#com_google_cloud_translate_v3_Glossary_LanguageCodesSet_Builder_addAllLanguageCodes_java_lang_Iterable_java_lang_String__)(languageCodes).build();
+          // Supported Languag[es: http](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html)s[://cloud.google.](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.LanguageCodesSet.html)com/translate/docs/languages
+     [     ](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html)Glossary.LanguageCodesSet language[CodesSet](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.LanguageCodesSet.Builder.html#com_google_cloud_translate_v3_Glossary_LanguageCodesSet_Builder_addAllLanguageCodes_java_lang_Iterable_java_lang_String__) =
+              Glossary.LanguageCodesSet.newBuilder().addAllLanguageCodes(languageCodes).build();
     
-          // Configure the source of the file from a GCS bucket
-          [GcsSource](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GcsSource.html) gcsSource = [GcsSource](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GcsSource.html).newBuilder().setInputUri(inputUri).build();
-          [GlossaryInputConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryInputConfig.html) inputConfig =
-              [GlossaryInputConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryInputConfig.html).newBuilder().setGcsSource(gcsSource).build();
+          [// Config](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GcsSource.html)ure the sourc[e of the ](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GcsSource.html)file from a GCS bucket
+          GcsSource gcsSource = [GcsSource.newBuilde](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryInputConfig.html)r().setInputUri(inputUri)[.](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryInputConfig.html)build();
+          GlossaryInputConfig inputConfig =
+              GlossaryInput[Config](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html).newBuilder().setGcsSour[ce](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html)(gcsSource).build();
     
-          [Glossary](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html) glossary =
-              [Glossary](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html).newBuilder()
-                  .setName(glossaryName.[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html#com_google_cloud_translate_v3_GlossaryName_toString__)())
-                  .[setLanguageCodesSet](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.Builder.html#com_google_cloud_translate_v3_Glossary_Builder_setLanguageCodesSet_com_google_cloud_translate_v3_Glossary_LanguageCodesSet_)(languageCodesSet)
-                  .setInputConfig(inputConfig)
-                  .build();
+          Glossary glossary =
+            [  ](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html#com_google_cloud_translate_v3_GlossaryName_toString__)Glossary.newBuilder()
+       [           ](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.Builder.html#com_google_cloud_translate_v3_Glossary_Builder_setLanguageCodesSet_com_google_cloud_translate_v3_Glossary_LanguageCodesSet_).setName(glossaryName.toString())
+                  .setLanguageCodesSet(languageCodesSet)
+                  [.setInputConfig(input](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.CreateGlossaryRequest.html)Config)
+                 [ ](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.CreateGlossaryRequest.html).build();
     
-          [CreateGlossaryRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.CreateGlossaryRequest.html) request =
-              [CreateGlossaryRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.CreateGlossaryRequest.html).newBuilder()
-                  .setParent(parent.[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html#com_google_cloud_translate_v3_LocationName_toString__)())
+          CreateGlossaryRequest request =
+              CreateG[lossaryR](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html#com_google_cloud_translate_v3_LocationName_toString__)equest.newBuilder()
+                  .setParent(parent.toString())
                   .setGlossary(glossary)
                   .build();
     
-          // Start an asynchronous request
-          OperationFuture<Glossary, CreateGlossaryMetadata> future =
-              client.[createGlossaryAsync](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html#com_google_cloud_translate_v3_TranslationServiceClient_createGlossaryAsync__org_jspecify_annotations_Nullable_com_google_cloud_translate_v3_LocationName_com_google_cloud_translate_v3_Glossary_)(request);
+    <      // Start an asynchronous r>equest
+          OperationFutur[eGlossary](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html#com_google_cloud_translate_v3_TranslationServiceClient_createGlossaryAsync__org_jspecify_annotations_Nullable_com_google_cloud_translate_v3_LocationName_com_google_cloud_translate_v3_Glossary_), CreateGlossaryMetadata future =
+              client.createGlossaryAsync(request);
     
-          System.out.println("Waiting for operation to complete...");
-          [Glossary](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html) response = future.[get](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationFutureImpl.html#com_google_api_gax_longrunning_OperationFutureImpl_get__)();
-          System.out.println("Created Glossary.");
-          System.out.printf("Glossary name: %s\n", response.[getName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html#com_google_cloud_translate_v3_Glossary_getName__)());
-          System.out.printf("Entry count: %s\n", response.[getEntryCount](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html#com_google_cloud_translate_v3_Glossary_getEntryCount__)());
-          System.out.printf("Input URI: %s\n", response.[getInputConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html#com_google_cloud_translate_v3_Glossary_getInputConfig__)().getGcsSource().getInputUri());
+          System[.out.pri](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html)ntln("Waiting [for](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationFutureImpl.html#com_google_api_gax_longrunning_OperationFutureImpl_get__) operation to complete...");
+          Glossary response = future.get();
+          System.out.println("Cr[eated G](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html#com_google_cloud_translate_v3_Glossary_getName__)lossary.");
+          System.out.printf("Glossary nam[e: %s\n"](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html#com_google_cloud_translate_v3_Glossary_getEntryCount__), response.getName());
+          System.out.printf("Entr[y count: %s\n&](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html#com_google_cloud_translate_v3_Glossary_getInputConfig__)quot;, response.getEntryCount());
+          System.out.printf("Input URI: %s\n", response.getInputConfig().getGcsSource().getInputUri());
         }
       }
     }
@@ -481,10 +481,10 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     // const glossaryId = 'your-glossary-display-name';
     
     // Imports the Google Cloud Translation library
-    const {TranslationServiceClient} = require('[@google-cloud/translate](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)');
+    const {TranslationSe[rviceClient](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)} = require('@google-cloud/translate');
     
-    // Instantiates a client
-    const translationClient = new [TranslationServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)();
+    // Instantiates a clien[t](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)
+    const translationClient = new TranslationServiceClient();
     
     async function createGlossary() {
       // Construct glossary
@@ -512,8 +512,8 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
       // Wait for the operation to complete
       await operation.promise();
     
-      console.log('Created glossary:');
-      console.log(`InputUri ${[request](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/translate/v2.translate.html).glossary.inputConfig.gcsSource.inputUri}`);
+      cons[ole](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/translate/v2.translate.html).log('Created glossary:');
+      console.log(`InputUri ${request.glossary.inputConfig.gcsSource.inputUri}`);
     }
     
     createGlossary();
@@ -531,9 +531,9 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     def create_glossary(
         project_id: str = "YOUR_PROJECT_ID",
         input_uri: str = "YOUR_INPUT_URI",
-        glossary_id: str = "YOUR_GLOSSARY_ID",
+        glossary_id: str = "YOUR_GLOSSARY_ID">;,
         timeout: int = 180,
-    ) -> translate.Glossary:
+    ) - translate.Glossary:
         """
         Create a equivalent term sets glossary. Glossary can be words or
         short phrases (usually fewer than five words).
@@ -702,23 +702,23 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     	// location := "us-central1"
     	// sourceLang := "en"
     	// targetLang := "ja"
-    	// text := "Hello world"
+    	// text := "Hello world["](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_NewTranslationClient)
     	// glossaryID := "your-glossary-id"
     
     	ctx := context.Background()
-    	client, err := translate.[NewTranslationClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_NewTranslationClient)(ctx)
+    	client, err := translate.New[Trans](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_Close)lationClient&(ctx)
     	if err != nil {
     		return fmt.Errorf("NewTranslationClient: %w", err)
     	}
-    	defer client.[Close](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_Close)()
+    	defer client.Close()
     
-    	req := &translatepb.TranslateTextRequest{
+    	req := translatepb.TranslateTextRequest{
     		Parent:             fmt.Sprintf("projects/%s/locations/%s", projectID, location),
     		SourceLanguageCode: sourceLang,
     		TargetLanguageCode: targetLang,
-    		MimeType:           "text/plain", // Mime types: "text/plain", "text/html"
+    		M&imeType:           "text/plain", // Mime types: "text/plain", "text/html"
     		Contents:           []string{text},
-    		GlossaryConfig: &translatepb.TranslateTextGlossaryConfig{
+    		GlossaryConfig: translatepb.TranslateTextGlossaryConfig{
     			Glossary: fmt.Sprintf("projects/%s/locations/%s/glossaries/%s", projectID, location, glossaryID),
     		},
     	}
@@ -777,33 +777,33 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     
         // Initialize client that will be used to send requests. This client only needs to be created
         // once, and can be reused for multiple requests. After completing all of your requests, call
-        // the "close" method on the client to safely clean up any remaining background resources.
-        try ([TranslationServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html) client = [TranslationServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html).create()) {
+        // the "close" method on the client to s[afely clean up any remai](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html)ning backg[round resources.](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html)
+        try (TranslationServiceClient client = TranslationServiceClient.create()) {
           // Supported Locations: `global`, [glossary location], or [model location]
           // Glossaries must be hosted in `us-central1`
-          // Custom Models must use the same location as your model. (us-central1)
-          String location = "us-central1";
-          [LocationName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html) parent = [LocationName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html).of(projectId, location);
+          // Custom Models must use the same location as your model.[ (us-central](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html)1)
+          S[tring](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html) location = "us-central1";
+       [   ](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html)LocationName parent = Loc[ationName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html).of(projectId, location);
     
-          [GlossaryName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html) glossaryName = [GlossaryName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html).of(projectId, location, glossaryId);
-          [TranslateTextGlossaryConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslateTextGlossaryConfig.html) glossaryConfig =
-              [TranslateTextGlossaryConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslateTextGlossaryConfig.html).newBuilder().setGlossary(glossaryName.[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html#com_google_cloud_translate_v3_GlossaryName_toString__)()).build();
+          GlossaryName g[lossaryName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslateTextGlossaryConfig.html) = GlossaryName.of(projectId, location, glos[saryId](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslateTextGlossaryConfig.html));
+          TranslateTextGlossaryConfig glossaryConfig =
+          [    ](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html#com_google_cloud_translate_v3_GlossaryName_toString__)TranslateTextGlossaryConfig.newBuilder().setGlossary(glossaryName.toString()).build();
     
-          // Supported Mime Types: https://cloud.google.com/translate/docs/supported-formats
-          [TranslateTextRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslateTextRequest.html) request =
-              [TranslateTextRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslateTextRequest.html).newBuilder()
-                  .setParent(parent.[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html#com_google_cloud_translate_v3_LocationName_toString__)())
+          // Supported Mime T[ypes: https://cloud.](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslateTextRequest.html)google.com/translate/[docs/supported-forma](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslateTextRequest.html)ts
+          TranslateTextRequest request =
+          [    ](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html#com_google_cloud_translate_v3_LocationName_toString__)TranslateTextRequest.newBuilder()
+                  .setParent(parent.toString())
                   .setMimeType("text/plain")
                   .setSourceLanguageCode(sourceLanguage)
                   .setTargetLanguageCode(targetLanguage)
                   .addContents(text)
-                  .setGlossaryConfig(glossaryConfig)
+    [              .setGlo](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslateTextResponse.html)ssaryConfig(glossaryConfig)
                   .build();
     
-          [TranslateTextResponse](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslateTextResponse.html) response = client.translateText(request);
+          TranslateTextResponse response = client.translateText(requ[est](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Translation.html));
     
-          // Display the translation for each input text provided
-          for ([Translation](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Translation.html) translation : response.[getGlossaryTranslationsList](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslateTextResponse.html#com_google_cloud_translate_v3_TranslateTextResponse_getGlossaryTranslationsList__)()) {
+          // Display the transla[tion for each input text pr](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslateTextResponse.html#com_google_cloud_translate_v3_TranslateTextResponse_getGlossaryTranslationsList__)ovided
+          for (Translation translation : response.getGlossaryTranslationsList()) {
             System.out.printf("Translated text: %s\n", translation.getTranslatedText());
           }
         }
@@ -826,10 +826,10 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     // const text = 'text to translate';
     
     // Imports the Google Cloud Translation library
-    const {TranslationServiceClient} = require('[@google-cloud/translate](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)');
+    const {Trans[lationServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)} = require('@google-cloud/translate');
     
-    // Instantiates a client
-    const translationClient = new [TranslationServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)();
+    // Instantiates[ a client](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)
+    const translationClient = new TranslationServiceClient();
     async function translateTextWithGlossary() {
       const glossaryConfig = {
         glossary: `projects/${projectId}/locations/${location}/glossaries/${glossaryId}`,
@@ -867,8 +867,8 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     def translate_text_with_glossary(
         text: str = "YOUR_TEXT_TO_TRANSLATE",
         project_id: str = "YOUR_PROJECT_ID",
-        glossary_id: str = "YOUR_GLOSSARY_ID",
-    ) -> translate.TranslateTextResponse:
+        glossary_id: str = &qu>ot;YOUR_GLOSSARY_ID",
+    ) - translate.TranslateTextResponse:
         """Translates a given text using a glossary.
     
         Args:
@@ -877,19 +877,19 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
             glossary_id: The ID of the glossary to use.
     
         Returns:
-            The translated text."""
-        client = [translate](https://docs.cloud.google.com/python/docs/reference/translate/latest/google.cloud.translate_v2.client.Client.html).[TranslationServiceClient](https://docs.cloud.google.com/python/docs/reference/translate/latest/google.cloud.translate_v3.services.translation_service.TranslationServiceClient.html)()
+    [        T](https://docs.cloud.google.com/python/docs/reference/translate/latest/google.cloud.translate_v2.client.Client.html)h[e translated text."](https://docs.cloud.google.com/python/docs/reference/translate/latest/google.cloud.translate_v3.services.translation_service.TranslationServiceClient.html)""
+        client = translate.TranslationServiceClient()
         location = "us-central1"
-        parent = f"projects/{project_id}/locations/{location}"
+        p[arent<](https://docs.cloud.google.com/python/docs/reference/translate/latest/google.cloud.translate_v2.client.html)/span> =[ f"proje](https://docs.cloud.google.com/python/docs/reference/translate/latest/google.cloud.translate_v3.services.translation_service.TranslationServiceClient.html#google_cloud_translate_v3_services_translation_service_TranslationServiceClient_glossary_path)cts/{project_id}/locations/{location}"
     
-        glossary = [client](https://docs.cloud.google.com/python/docs/reference/translate/latest/google.cloud.translate_v2.client.html).[glossary_path](https://docs.cloud.google.com/python/docs/reference/translate/latest/google.cloud.translate_v3.services.translation_service.TranslationServiceClient.html#google_cloud_translate_v3_services_translation_service_TranslationServiceClient_glossary_path)(
-            project_id, "us-central1", glossary_id  # The location of the glossary
+        glossary = client.glossary_path(
+            project_id, "us[-central1](https://docs.cloud.google.com/python/docs/reference/translate/latest/google.cloud.translate_v2.client.Client.html)&[quot;](https://docs.cloud.google.com/python/docs/reference/translate/latest/google.cloud.translate_v3.types.TranslateTextGlossaryConfig.html), glossary_id  # The location of the glossary
         )
     
-        glossary_config = [translate](https://docs.cloud.google.com/python/docs/reference/translate/latest/google.cloud.translate_v2.client.Client.html).[TranslateTextGlossaryConfig](https://docs.cloud.google.com/python/docs/reference/translate/latest/google.cloud.translate_v3.types.TranslateTextGlossaryConfig.html)(glossary=glossary)
+        glossary_config = translate.TranslateTextGlossaryConfig(glossary=glossary)
     
-        # Supported language codes: https://cloud.google.com/translate/docs/languages
-        response = [client](https://docs.cloud.google.com/python/docs/reference/translate/latest/google.cloud.translate_v2.client.html).[translate_text](https://docs.cloud.google.com/python/docs/reference/translate/latest/google.cloud.translate_v3.services.translation_service.TranslationServiceClient.html#google_cloud_translate_v3_services_translation_service_TranslationServiceClient_translate_text)(
+        # S[upport](https://docs.cloud.google.com/python/docs/reference/translate/latest/google.cloud.translate_v2.client.html)e[d language cod](https://docs.cloud.google.com/python/docs/reference/translate/latest/google.cloud.translate_v3.services.translation_service.TranslationServiceClient.html#google_cloud_translate_v3_services_translation_service_TranslationServiceClient_translate_text)es: https://cloud.google.com/translate/docs/languages
+        response = client.translate_text(
             request={
                 "contents": [text],
                 "target_language_code": "ja",
@@ -1193,16 +1193,16 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     func getGlossary(w io.Writer, projectID string, location string, glossaryID string) error {
     	// projectID := "my-project-id"
     	// location := "us-central1"
-    	// glossaryID := "glossary-id"
+    	// glossaryID := ["glossary-id&qu](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_NewTranslationClient)ot;
     
     	ctx := context.Background()
-    	client, err := translate.[NewTranslationClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_NewTranslationClient)(ctx)
-    	if err != nil {
-    		return fmt.Errorf("NewTranslationClient: %w", err)
+    	client, err := translate.NewTranslationClient(ctx)
+    	if err[ != n](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_Close)il {
+    		retur&n fmt.Errorf("NewTranslationClient: %w", err)
     	}
-    	defer client.[Close](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_Close)()
+    	defer client.Close()
     
-    	req := &translatepb.GetGlossaryRequest{
+    	req := translatepb.GetGlossaryRequest{
     		Name: fmt.Sprintf("projects/%s/locations/%s/glossaries/%s", projectID, location, glossaryID),
     	}
     
@@ -1212,7 +1212,7 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     	}
     
     	fmt.Fprintf(w, "Glossary name: %v\n", resp.GetName())
-    	fmt.Fprintf(w, "Entry count: %v\n", resp.GetEntryCount())
+    	fmt.Fprintf(w, "Entry count: %v\n&quot;, resp.GetEntryCount())
     	fmt.Fprintf(w, "Input URI: %v\n", resp.GetInputConfig().GetGcsSource().GetInputUri())
     
     	return nil
@@ -1245,20 +1245,20 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
       public static void getGlossary(String projectId, String glossaryId) throws IOException {
         // Initialize client that will be used to send requests. This client only needs to be created
         // once, and can be reused for multiple requests. After completing all of your requests, call
-        // the "close" method on the client to safely clean up any remaining background resources.
-        try ([TranslationServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html) client = [TranslationServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html).create()) {
+        // the "close" method on the client to safely clean up any remaining b[ackground resources.](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html)
+        try (Tran[slationServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html) client = TranslationServiceClient.create()) {
           // Supported Locations: `global`, [glossary location], or [model location]
           // Glossaries must be hosted in `us-central1`
-          // Custom Models must use the same location as your model. (us-central1)
-          [GlossaryName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html) glossaryName = [GlossaryName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html).of(projectId, "us-central1", glossaryId);
-          [GetGlossaryRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GetGlossaryRequest.html) request =
-              [GetGlossaryRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GetGlossaryRequest.html).newBuilder().setName(glossaryName.[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html#com_google_cloud_translate_v3_GlossaryName_toString__)()).build();
+          // Custom Models must use the same location as yo[ur model. (u](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html)s-central1)
+        [  ](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html)GlossaryName glossaryName = GlossaryName.of(projectId, &quo[t;us-central1"](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GetGlossaryRequest.html);, glossaryId);
+         [ ](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GetGlossaryRequest.html)GetGlossaryRequest request =
+              GetGlossaryRe[quest](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html#com_google_cloud_translate_v3_GlossaryName_toString__).newBuilder().setName(g[lossaryN](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html)ame.toString()).build();
     
-          [Glossary](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html) response = client.getGlossary(request);
+          Glossary response = client.getGlossary(request);
     
-          System.out.printf("Glossary name: %s\n", response.[getName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html#com_google_cloud_translate_v3_Glossary_getName__)());
-          System.out.printf("Entry count: %s\n", response.[getEntryCount](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html#com_google_cloud_translate_v3_Glossary_getEntryCount__)());
-          System.out.printf("Input URI: %s\n", response.[getInputConfig](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html#com_google_cloud_translate_v3_Glossary_getInputConfig__)().getGcsSource().getInputUri());
+          System.out[.printf](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html#com_google_cloud_translate_v3_Glossary_getName__)("Glossary name: %s\n", response.getName());
+        [  ](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html#com_google_cloud_translate_v3_Glossary_getEntryCount__)System.out.printf("Entry count: %s\n", response.getEntryCo[unt](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html#com_google_cloud_translate_v3_Glossary_getInputConfig__)());
+          System.out.printf("Input URI: %s\n", response.getInputConfig().getGcsSource().getInputUri());
         }
       }
     }
@@ -1278,10 +1278,10 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     // const glossaryId = 'YOUR_GLOSSARY_ID';
     
     // Imports the Google Cloud Translation library
-    const {TranslationServiceClient} = require('[@google-cloud/translate](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)');
+    const {TranslationSe[rviceClient](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)} = require('@google-cloud/translate');
     
-    // Instantiates a client
-    const translationClient = new [TranslationServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)();
+    // Instantiates a clien[t](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)
+    const translationClient = new TranslationServiceClient();
     
     async function getGlossary() {
       // Construct request
@@ -1311,8 +1311,8 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     
     
     def get_glossary(
-        project_id: str = "YOUR_PROJECT_ID", glossary_id: str = "YOUR_GLOSSARY_ID"
-    ) -> translate.Glossary:
+        project_id: str = "YOUR_PROJECT_ID", glossary_id: str = "YOUR_G>LOSSARY_ID"
+    ) - translate.Glossary:
         """Get a particular glossary based on the glossary ID.
     
         Args:
@@ -1329,7 +1329,7 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
         response = client.get_glossary(name=name)
         print(f"Glossary name: {response.name}")
         print(f"Entry count: {response.entry_count}")
-        print(f"Input URI: {response.input_config.gcs_source.input_uri}")
+        print(f&quot;Input URI: {response.input_config.gcs_source.input_uri}")
     
         return response
     
@@ -1435,16 +1435,16 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     // listGlossaries gets the specified glossary.
     func listGlossaries(w io.Writer, projectID string, location string) error {
     	// projectID := "my-project-id"
-    	// location := "us-central1"
+    	// location := ["us-central1&qu](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_NewTranslationClient)ot;
     
     	ctx := context.Background()
-    	client, err := translate.[NewTranslationClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_NewTranslationClient)(ctx)
-    	if err != nil {
-    		return fmt.Errorf("NewTranslationClient: %w", err)
+    	client, err := translate.NewTranslationClient(ctx)
+    	if err[ != n](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_Close)il {
+    		retur&n fmt.Errorf("NewTranslationClient: %w", err)
     	}
-    	defer client.[Close](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_Close)()
+    	defer client.Close()
     
-    	req := &translatepb.ListGlossariesRequest{
+    	req := translatepb.ListGlossariesRequest{
     		Parent: fmt.Sprintf("projects/%s/locations/%s", projectID, location),
     	}
     
@@ -1500,16 +1500,16 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
       public static void listGlossaries(String projectId) throws IOException {
         // Initialize client that will be used to send requests. This client only needs to be created
         // once, and can be reused for multiple requests. After completing all of your requests, call
-        // the "close" method on the client to safely clean up any remaining background resources.
-        try ([TranslationServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html) client = [TranslationServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html).create()) {
+        // the "close" method on the client to safely clean up any remaining background [resources.](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html)
+        try (TranslationSer[viceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html) client = TranslationServiceClient.create()) {
           // Supported Locations: `global`, [glossary location], or [model location]
           // Glossaries must be hosted in `us-central1`
-          // Custom Models must use the same location as your model. (us-central1)
-          [LocationName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html) parent = [LocationName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html).of(projectId, "us-central1");
-          [ListGlossariesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.ListGlossariesRequest.html) request =
-              [ListGlossariesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.ListGlossariesRequest.html).newBuilder().setParent(parent.[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html#com_google_cloud_translate_v3_LocationName_toString__)()).build();
+          // Custom Models must use the same location as your model. [(us-central1](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html))
+          Lo[cationName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html) parent = LocationName.of(projectId, &q[uot;us-central1"](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.ListGlossariesRequest.html));
+          ListGlossari[esRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.ListGlossariesRequest.html) request =
+              ListGlossariesRequest.[newBuild](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.LocationName.html#com_google_cloud_translate_v3_LocationName_toString__)er().setParent(parent.toS[tring](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html)()).build();
     
-          for ([Glossary](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.Glossary.html) responseItem : client.listGlossaries(request).iterateAll()) {
+          for (Glossary responseItem : client.listGlossaries(request).iterateAll()) {
             System.out.printf("Glossary name: %s\n", responseItem.getName());
             System.out.printf("Entry count: %s\n", responseItem.getEntryCount());
             System.out.printf(
@@ -1533,10 +1533,10 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     // const location = 'global';
     
     // Imports the Google Cloud Translation library
-    const {TranslationServiceClient} = require('[@google-cloud/translate](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)');
+    const {TranslationServiceCli[ent](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)} = require('@google-cloud/translate');
     
     // Instantiates a client
-    const translationClient = new [TranslationServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)();
+    const [translationClient = new ](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)TranslationServiceClient();
     
     async function listGlossaries() {
       // Construct request
@@ -1569,7 +1569,7 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     from google.cloud import translate
     
     
-    def list_glossaries(project_id: str = "YOUR_PROJECT_ID") -> translate.Glossary:
+    def list_glossaries(project_id: str = "YOUR_PROJECT_I>D") - translate.Glossary:
         """List Glossaries.
     
         Args:
@@ -1788,16 +1788,16 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     func deleteGlossary(w io.Writer, projectID string, location string, glossaryID string) error {
     	// projectID := "my-project-id"
     	// location := "us-central1"
-    	// glossaryID := "glossary-id"
+    	// glossaryID := ["glossary-id&qu](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_NewTranslationClient)ot;
     
     	ctx := context.Background()
-    	client, err := translate.[NewTranslationClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_NewTranslationClient)(ctx)
-    	if err != nil {
-    		return fmt.Errorf("NewTranslationClient: %w", err)
+    	client, err := translate.NewTranslationClient(ctx)
+    	if err[ != n](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_Close)il {
+    		retur&n fmt.Errorf("NewTranslationClient: %w", err)
     	}
-    	defer client.[Close](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/translate/latest/apiv3.html#cloud_google_com_go_translate_apiv3_TranslationClient_Close)()
+    	defer client.Close()
     
-    	req := &translatepb.DeleteGlossaryRequest{
+    	req := translatepb.DeleteGlossaryRequest{
     		Name: fmt.Sprintf("projects/%s/locations/%s/glossaries/%s", projectID, location, glossaryID),
     	}
     
@@ -1850,22 +1850,22 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     
         // Initialize client that will be used to send requests. This client only needs to be created
         // once, and can be reused for multiple requests. After completing all of your requests, call
-        // the "close" method on the client to safely clean up any remaining background resources.
-        try ([TranslationServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html) client = [TranslationServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html).create()) {
+        // the "close" method on the client to safely clean up any remaining b[ackground resources.](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html)
+        try (Tran[slationServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html) client = TranslationServiceClient.create()) {
           // Supported Locations: `global`, [glossary location], or [model location]
           // Glossaries must be hosted in `us-central1`
-          // Custom Models must use the same location as your model. (us-central1)
-          [GlossaryName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html) glossaryName = [GlossaryName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html).of(projectId, "us-central1", glossaryId);
-          [DeleteGlossaryRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.DeleteGlossaryRequest.html) request =
-              [DeleteGlossaryRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.DeleteGlossaryRequest.html).newBuilder().setName(glossaryName.[toString](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html#com_google_cloud_translate_v3_GlossaryName_toString__)()).build();
+          // Custom Models must use the same location as yo[ur model. (u](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html)s-central1)
+        [  ](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html)GlossaryName glossaryName = GlossaryName.of(projectId, &quo[t;us-central1"](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.DeleteGlossaryRequest.html), glossaryId);
+          De[leteGlossaryRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.DeleteGlossaryRequest.html) request =
+              DeleteGlossaryRe[quest](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.GlossaryName.html#com_google_cloud_translate_v3_GlossaryName_toString__).newBuilder().setName(glossaryName.toString()).build();
     
-          // Start an asynchronous request
-          OperationFuture<DeleteGlossaryResponse, DeleteGlossaryMetadata> future =
-              client.[deleteGlossaryAsync](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html#com_google_cloud_translate_v3_TranslationServiceClient_deleteGlossaryAsync__org_jspecify_annotations_Nullable_com_google_cloud_translate_v3_GlossaryName_)(request);
+          // Start an as<ynchronous request
+          OperationFutureDelete>GlossaryResponse, DeleteGlo[ssaryMetadata](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.TranslationServiceClient.html#com_google_cloud_translate_v3_TranslationServiceClient_deleteGlossaryAsync__org_jspecify_annotations_Nullable_com_google_cloud_translate_v3_GlossaryName_) future =
+              client.deleteGlossaryAsync(request);
     
-          System.out.println("Waiting for operation to complete...");
-          [DeleteGlossaryResponse](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.DeleteGlossaryResponse.html) response = future.[get](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationFutureImpl.html#com_google_api_gax_longrunning_OperationFutureImpl_get__)();
-          System.out.format("Deleted Glossary: %s\n", response.[getName](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.DeleteGlossaryResponse.html#com_google_cloud_translate_v3_DeleteGlossaryResponse_getName__)());
+          System.out.println("W[aiting for operation t](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.DeleteGlossaryResponse.html)o complete..."[);
+    ](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationFutureImpl.html#com_google_api_gax_longrunning_OperationFutureImpl_get__)      DeleteGlossaryResponse response = future.get();
+          Sys[tem](https://docs.cloud.google.com/java/docs/reference/google-cloud-translate/latest/com.google.cloud.translate.v3.DeleteGlossaryResponse.html#com_google_cloud_translate_v3_DeleteGlossaryResponse_getName__).out.format("Deleted Glossary: %s\n", response.getName());
         }
       }
     }
@@ -1885,10 +1885,10 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     // const glossaryId = 'YOUR_GLOSSARY_ID';
     
     // Imports the Google Cloud Translation library
-    const {TranslationServiceClient} = require('[@google-cloud/translate](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)');
+    const {TranslationSe[rviceClient](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)} = require('@google-cloud/translate');
     
-    // Instantiates a client
-    const translationClient = new [TranslationServiceClient](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)();
+    // Instantiates a clien[t](https://docs.cloud.google.com/nodejs/docs/reference/translate/latest/overview.html)
+    const translationClient = new TranslationServiceClient();
     
     async function deleteGlossary() {
       // Construct request
@@ -1921,8 +1921,8 @@ To authenticate to Cloud Translation, set up Application Default Credentials. Fo
     def delete_glossary(
         project_id: str = "YOUR_PROJECT_ID",
         glossary_id: str = "YOUR_GLOSSARY_ID",
-        timeout: int = 180,
-    ) -> translate.Glossary:
+        tim>eout: int = 180,
+    ) - translate.Glossary:
         """Delete a specific glossary based on the glossary ID.
     
         Args:
@@ -2385,6 +2385,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

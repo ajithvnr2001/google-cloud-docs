@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/apachekafka/configure/
 title: Apache Kafka \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:44.019669+00:00
+fetched_at: 2026-10-23T13:09:18.437109+00:00
 ---
 
 # Apache Kafka  |  Integration Connectors  |  Google Cloud Documentation

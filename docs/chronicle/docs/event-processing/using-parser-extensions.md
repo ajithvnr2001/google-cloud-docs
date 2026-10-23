@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/event-processing/using-parser-extensions/
 title: Develop parser extensions \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:27.372490+00:00
+fetched_at: 2026-10-23T13:20:34.354569+00:00
 ---
 
 # Develop parser extensions  |  Google Security Operations  |  Google Cloud Documentation

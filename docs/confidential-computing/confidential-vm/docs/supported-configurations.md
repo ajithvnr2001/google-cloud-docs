@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations/
 title: Supported configurations \u00a0|\u00a0 Confidential VM \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:11:02.201412+00:00
+fetched_at: 2026-10-23T12:44:23.037102+00:00
 ---
 
 # Supported configurations  |  Confidential VM  |  Google Cloud Documentation
@@ -24,7 +24,7 @@ Send feedback
 
 To create a Confidential VM instance, you need a virtual machine that has the following properties:
 
-  * [A supported Compute Engine machine type, CPU, and zone](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#machine-type-cpu-zone)
+  * [A supported Compute Engine machine type, CPU, and zone](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#machine-types)
 
   * [A supported operating system](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations#operating-systems)
 
@@ -33,7 +33,7 @@ To create a Confidential VM instance, you need a virtual machine that has the fo
 
 You can configure your own Confidential VM instance manually, or accept the suggested settings when you enable the Confidential VM service in the Google Cloud console.
 
-## Limitations
+## Limitations and known issues
 
 The following limitations apply depending on how you've configured your Confidential VM instance.
 
@@ -86,11 +86,13 @@ The following limitations apply depending on how you've configured your Confiden
 
 ###  AMD SEV-SNP 
 
+  * The AMD Secure Processor is a shared resource available to all hosts on the physical server it's present in. A host can throttle guest access to the Secure Processor, and firmware updates to the Secure Processor (which are considered host events) can happen at any time.
+
   * Debian 12 doesn't have attestation support for AMD SEV-SNP due to the missing `/dev/sev-guest` package.
 
   * AMD SEV-SNP on N2D machine types has a maximum [vNIC queue count](https://docs.cloud.google.com/compute/docs/network-bandwidth#rx-tx) of `8`.
 
-  * VM instances don't support `kdump`. Instead, use the guest console logs.
+  * AMD SEV-SNP VM instances don't support `kdump`. Instead, use the guest console logs.
 
   * Confidential VM instances with AMD SEV-SNP don't support [reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-overview).
 
@@ -105,130 +107,136 @@ The following limitations apply depending on how you've configured your Confiden
 
   * [Local SSD](https://docs.cloud.google.com/compute/docs/machine-resource#lssd-types) is only supported on `c3-standard-*-lssd` machine types.
 
-  * VM instances take longer to shut down compared to standard VM instances. This delay increases with VM memory size.
+  * Intel TDX VM instances take longer to shut down compared to standard VM instances. This delay increases with VM memory size.
 
   * Only Balanced Persistent Disk volumes that use the NVMe interface are supported.
 
-  * VM instances can't be provisioned on sole-tenant node groups.
+  * Intel TDX VM instances can't be provisioned on sole-tenant node groups.
 
   * Due to additional security constraints, the CPUID instruction might return limited or no CPU architecture details. This might impact the performance of workloads that depend on those CPUID values.
 
-  * VM instances don't support `kdump`. Instead, use the guest console logs.
+  * Intel TDX VM instances don't support `kdump`. Instead, use the guest console logs.
 
   * Guest images without the [TDX halt fixes](https://lore.kernel.org/lkml/20250228014416.3925664-1-vannapurve@google.com/) might experience extended halt durations, resulting in performance degradation. To avoid the performance degradation, verify that these patches are installed in your guest kernel build.
 
-  * Confidential VM instances with Intel TDX don't support [reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-overview).
+  * Intel TDX VM instances don't support [reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-overview).
 
 
 
 
 ###  NVIDIA Confidential Computing 
 
-  * These VM instances don't support the creation of clusters for multi-node workloads.
+  * GPU attestation might fail, reporting a mismatched measurement record at index 9. Google and NVIDIA are working on a fix.
 
-  * These VM instances don't support [Hyperdisk Extreme](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-extreme).
+To work around the issue, perform a full [stop and restart of the Confidential VM](https://docs.cloud.google.com/compute/docs/instances/stop-start-instance). Rebooting the VM from the VM's guest OS does not fix the issue.
 
-  * VM instances running on the [A3 High machine type](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-vms) with NVIDIA H100 GPUs don't support [reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-overview).
+  * GPU-accelerated VM instances don't support the creation of clusters for multi-node workloads.
+
+  * GPU-accelerated VM instances don't support [Hyperdisk Extreme](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-extreme).
+
+  * GPU-accelerated VM instances running on the [A3 High machine type](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-vms) with NVIDIA H100 GPUs don't support [reservations](https://docs.cloud.google.com/compute/docs/instances/reservations-overview).
 
   * Machine type limitations apply. See the limitations for each machine type:
 
     * [A3 High](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-high-limitations)
+
     * [G4](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#g4-limitations)
 
 
 
-## Machine types, CPUs, and zones
 
-Confidential VM is supported on the following machine types and configurations. For information about the GPU quotas required to create instances with attached GPUs, see [Quotas](https://docs.cloud.google.com/confidential-computing/confidential-vm/quotas#gpu-quotas).
+## Machine types
 
-Machine type | CPU platform | Confidential Computing technology | Live migration support | GPU support  
+Confidential VM is supported on the following machine types.
+
+Machine type | CPU platform | GPU | Confidential Computing technology | Live migration support  
 ---|---|---|---|---  
 `a3-highgpu-1g` [ View machine type names](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#a3-standard-vms) | 
 
   * Intel Sapphire Rapids
 
-| 
+| NVIDIA H100 | 
 
   * Intel TDX [See limitations](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations?tab=intel-tdx#limitations)
   * NVIDIA [See limitations](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations?tab=nvidia-confidential-computing#limitations)
 
-| Not supported | Supported  
+| Not supported  
 C2D [ View machine type names](https://docs.cloud.google.com/compute/docs/compute-optimized-machines#c2d_machine_types) | 
 
   * AMD EPYC Milan
 
-| 
+| None | 
 
   * AMD SEV [See limitations](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations?tab=amd-sev#limitations)
 
-| Not supported | Not supported  
+| Not supported  
 `c3-standard-*` [ View machine type names](https://docs.cloud.google.com/compute/docs/general-purpose-machines#c3_machine_types) | 
 
   * Intel Sapphire Rapids
 
-| 
+| None | 
 
   * Intel TDX [See limitations](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations?tab=intel-tdx#limitations)
 
-| Not supported | Not supported  
+| Not supported  
 `c3-standard-*-lssd` [ View machine type names](https://docs.cloud.google.com/compute/docs/general-purpose-machines#c3-standard_1) | 
 
   * Intel Sapphire Rapids
 
-| 
+| None | 
 
   * Intel TDX [See limitations](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations?tab=intel-tdx#limitations)
 
-| Not supported | Not supported  
+| Not supported  
 C3D [ View machine type names](https://docs.cloud.google.com/compute/docs/general-purpose-machines#c3d_machine_types) | 
 
   * AMD EPYC Genoa
 
-| 
+| None | 
 
   * AMD SEV [See limitations](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations?tab=amd-sev#limitations)
 
-| Supported | Not supported  
+| Supported  
 `c4-standard-*` [ View machine type names](https://docs.cloud.google.com/compute/docs/general-purpose-machines#c4_machine_types) | 
 
   * Intel Granite Rapids
 
-| 
+| None | 
 
   * Intel TDX [See limitations](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations?tab=intel-tdx#limitations)
 
-| Not supported | Not supported  
+| Not supported  
 C4D [ View machine type names](https://docs.cloud.google.com/compute/docs/general-purpose-machines#c4d_machine_types) | 
 
   * AMD EPYC Turin
 
-| 
+| None | 
 
   * AMD SEV [See limitations](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations?tab=amd-sev#limitations)
 
-| Not supported | Not supported  
+| Not supported  
 `g4-standard-48` [ View machine type names](https://docs.cloud.google.com/compute/docs/accelerator-optimized-machines#g4-series) | 
 
   * AMD EPYC Turin
 
-| 
+| NVIDIA RTX Pro 6000 | 
 
   * AMD SEV [See limitations](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations?tab=amd-sev#limitations)
   * NVIDIA [ See limitations](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations?tab=nvidia-confidential-computing#limitations)
 
-| Not supported | Supported  
+| Not supported  
 N2D [ View machine type names](https://docs.cloud.google.com/compute/docs/general-purpose-machines#n2d_machine_types) | 
 
   * AMD EPYC Milan
 
-| 
+| None | 
 
   * AMD SEV on Milan [See limitations](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations?tab=amd-sev#limitations)
   * AMD SEV-SNP on Milan [See limitations](https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations?tab=amd-sev-snp#limitations)
 
-| Supported on AMD SEV VM instances only | Not supported  
+| Supported on AMD SEV VM instances only  
   
-### View supported zones
+## Zones
 
 You can view which zones support these machine types and Confidential Computing technology with one of the following methods.
 
@@ -565,35 +573,35 @@ To view details about a specific image, run the following command using details 
 
 ### Supported images for a Confidential VM instance with GPU
 
-For Confidential VM instances with attached NVIDIA GPUs, we recommend using the following operating system image projects and image families based on the machine type:
+For Confidential VM instances with attached NVIDIA GPUs, the requirements for operating system image projects and families are as follows:
 
   * **A3 High machine type** :
 
-    * **Container-Optimized OS** (`confidential-vm-images` project): `cos-tdx-113-lts`
+    * **Container-Optimized OS** (`confidential-vm-images` project): `cos-tdx-113-lts` and newer
 
-    * **Ubuntu** (`ubuntu-os-cloud` project): `ubuntu-2204-lts`
+    * **Ubuntu** (`ubuntu-os-cloud` project): `ubuntu-2204-lts` and newer
 
 While other images might be tagged as `TDX_CAPABLE`, we don't provide official support for them when used with GPUs.
 
   * **G4 machine type** :
 
-    * **Container-Optimized OS** (`cos-cloud` project): `cos-125-lts`
+    * **Container-Optimized OS** (`cos-cloud` project): `cos-125-lts` and newer
 
     * **Ubuntu** (`ubuntu-os-cloud` project):
 
-      * `ubuntu-2204-lts`
+      * `ubuntu-2204-lts` and newer
 
-      * `ubuntu-minimal-2204-lts`
+      * `ubuntu-2404-lts-amd64` and newer
 
-      * `ubuntu-2404-lts-amd64`
+      * `ubuntu-minimal-2204-lts` and newer
 
-      * `ubuntu-minimal-2404-lts-amd64`
+      * `ubuntu-minimal-2404-lts-amd64` and newer
 
     * **Ubuntu Pro** (`ubuntu-os-pro-cloud` project):
 
-      * `ubuntu-pro-2204-lts`
+      * `ubuntu-pro-2204-lts` and newer
 
-      * `ubuntu-pro-2404-lts-amd64`
+      * `ubuntu-pro-2404-lts-amd64` and newer
 
 
 
@@ -622,6 +630,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

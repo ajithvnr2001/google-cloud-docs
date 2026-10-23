@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-v1-generated-AlloyDBAdmin-PromoteCluster-sync-flattened/
 title: Promote a cluster \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:28:16.488794+00:00
+fetched_at: 2026-10-23T10:44:01.042648+00:00
 ---
 
 # Promote a cluster  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

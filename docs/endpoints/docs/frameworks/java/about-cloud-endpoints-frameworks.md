@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/frameworks/java/about-cloud-endpoints-frameworks/
 title: About Cloud Endpoints Frameworks for Java \u00a0|\u00a0 Cloud Endpoints Frameworks for App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:41.511746+00:00
+fetched_at: 2026-10-23T13:00:59.806439+00:00
 ---
 
 # About Cloud Endpoints Frameworks for Java  |  Cloud Endpoints Frameworks for App Engine  |  Google Cloud Documentation

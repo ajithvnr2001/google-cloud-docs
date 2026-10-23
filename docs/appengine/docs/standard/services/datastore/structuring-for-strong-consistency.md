@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/datastore/structuring-for-strong-consistency/
 title: Structuring data for strong consistency \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:05.202176+00:00
+fetched_at: 2026-10-23T13:17:20.792744+00:00
 ---
 
 # Structuring data for strong consistency  |  App Engine standard environment  |  Google Cloud Documentation

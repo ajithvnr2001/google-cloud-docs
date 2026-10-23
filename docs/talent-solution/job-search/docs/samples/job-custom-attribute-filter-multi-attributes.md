@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-custom-attribute-filter-multi-attributes/
 title: Custom Attribute Filter Multiple Attributes \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:18.364546+00:00
+fetched_at: 2026-10-23T09:41:11.618812+00:00
 ---
 
 # Custom Attribute Filter Multiple Attributes  |  Job Search  |  Google Cloud Documentation

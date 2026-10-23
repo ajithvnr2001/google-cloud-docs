@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/storage-size/
 title: Storage size calculations \u00a0|\u00a0 Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:37.940271+00:00
+fetched_at: 2026-10-23T13:03:24.471338+00:00
 ---
 
 # Storage size calculations  |  Firestore with MongoDB compatibility  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/hybrid-and-multi-cloud-monitoring-and-logging-patterns/
 title: Hybrid and multicloud monitoring and logging patterns \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:57.096640+00:00
+fetched_at: 2026-10-23T13:18:28.868649+00:00
 ---
 
 # Hybrid and multicloud monitoring and logging patterns  |  Cloud Architecture Center  |  Google Cloud Documentation

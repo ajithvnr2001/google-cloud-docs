@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/azuredevops/configure/
 title: Azure DevOps \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:43.841716+00:00
+fetched_at: 2026-10-23T13:03:34.775559+00:00
 ---
 
 # Azure DevOps  |  Integration Connectors  |  Google Cloud Documentation

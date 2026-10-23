@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/vector-search-landing/
 title: Vector indexing overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:27:11.267618+00:00
+fetched_at: 2026-10-23T13:08:35.336281+00:00
 ---
 
 # Vector indexing overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -27,7 +27,7 @@ AlloyDB AI extends the open-source `pgvector` extension, providing compatibility
 
 ## Build faster, smarter AI applications
 
-AlloyDB AI eliminates the complexity of managing a separate vector database. Keep operational data and embeddings in one place, and use built-in functions to generate batch embeddings ([Preview](https://cloud.google.com/products#product-launch-stages)) for large tables, scaling your AI pipeline from a single, secure source.
+AlloyDB AI eliminates the complexity of managing a separate vector database. Keep operational data and embeddings in one place, and use built-in functions to generate batch embeddings for large tables, scaling your AI pipeline from a single, secure source.
 
 ![RAG thumbnail](https://docs.cloud.google.com/static/alloydb/images/rag.png)
 
@@ -39,7 +39,7 @@ Enhance LLM responses by using vector search to find and retrieve the most relev
 
 ###  [ Semantic search ](https://docs.cloud.google.com/alloydb/docs/ai/run-vector-similarity-search)
 
-Enable concept-based search by converting your data into vector embeddings. AlloyDB AI's fast vector queries then find items based on their semantic meaning, not just keyword matches. 
+Enable concept-based search by converting your data into vector embeddings. Fast vector queries in AlloyDB AI then find items based on their semantic meaning, not just keyword matches. 
 
 ![Recommendation engine thumbnail](https://docs.cloud.google.com/static/alloydb/images/recommendation-engine.png)
 
@@ -67,17 +67,17 @@ Power real-time personalization by using ultra-fast vector search to identify si
 
 ## Learn more
 
-Explore our developer resources to build AI applications with AlloyDB's vector search capabilities.
+Explore our developer resources to build AI applications with AlloyDB vector search capabilities.
 
 Video 
 
 ###  [ AlloyDB AI: Hybrid search and multimodal capabilities ](https://www.youtube.com/watch?v=WYfHrwYaWjw)
 
-Enhance retail product discovery with AlloyDB's semantic, hybrid, and multimodal search. 
+Enhance retail product discovery with AlloyDB semantic, hybrid, and multimodal search. 
 
 Article 
 
-###  [ ScaNN for AlloyDB whitepaper ](https://docs.cloud.google.com/alloydb/docs/ai/generate-sql-queries-natural-language)
+###  [ ScaNN for AlloyDB whitepaper ](https://services.google.com/fh/files/misc/scann_for_alloydb_whitepaper.pdf)
 
 A technical whitepaper on the architecture, algorithms, and performance of the ScaNN index in AlloyDB. 
 
@@ -91,6 +91,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

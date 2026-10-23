@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/alloydb-ai-use-cases/
 title: Build generative AI applications \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:27:16.966938+00:00
+fetched_at: 2026-10-23T13:08:31.103567+00:00
 ---
 
 # Build generative AI applications  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -25,20 +25,20 @@ AlloyDB for PostgreSQL supports a wide range of generative AI use cases, includi
 
 Use case | Description  
 ---|---  
-Accelerate patent searches and search precision | These codelabs show you how to improve patent research by using vector search along with AlloyDB, the[ pgvector extension](https://docs.cloud.google.com/alloydb/docs/ai/work-with-embeddings), embeddings, Gemini 1.5 Pro and Java Agent Development Kit. 
+Accelerate patent searches and search precision | These codelabs show you how to improve patent research by using vector search along with AlloyDB, the [pgvector extension](https://docs.cloud.google.com/alloydb/docs/ai/work-with-embeddings), embeddings, Gemini, and Java Agent Development Kit (ADK). 
 
   * Codelab:[Build a patent search app using AlloyDB, vector search, and Gemini Enterprise Agent Platform (formerly Vertex AI)](https://codelabs.developers.google.com/patent-search-alloydb-gemini)
   * Codelab:[ Build a Patent Search App with AlloyDB, vector search, and Java Agent Development Kit](https://codelabs.developers.google.com/patent-search-java-adk)
 
   
-Generate multimodal Embeddings in AlloyDB | This codelab demonstrates how to use AlloyDB AI's capabilities for semantic search using multimodal embeddings.   
+Generate multimodal Embeddings in AlloyDB | This codelab demonstrates how to use the capabilities of AlloyDB AI for semantic search using multimodal embeddings.   
   
 Learn about how to perform different types of searches, including text-based semantic search, image search by image, and image search by text, as well as a hybrid approach that combines different search types. 
 
   * Codelab:[ Multimodal Embeddings in AlloyDB](https://codelabs.developers.google.com/alloydb-ai-mm-embeddings#0)
 
   
-Generate SQL using AlloyDB AI natural language | This codelab provides a step-by-step guide on how to use AlloyDB AI's natural language feature to generate SQL queries.   
+Generate SQL using AlloyDB AI natural language | This codelab provides a step-by-step guide on how to use the AlloyDB AI natural language feature to generate SQL queries.   
   
 The codelab uses a fictional ecommerce dataset to demonstrate how you can ask questions in natural language (English) and have AlloyDB AI translate them into SQL. 
 
@@ -47,7 +47,7 @@ The codelab uses a fictional ecommerce dataset to demonstrate how you can ask qu
   
 Apply semantic filters and rerank vector search results to improve search quality | This codelab shows you how to use AlloyDB AI features like AI[ Query Operators, model endpoint management](https://docs.cloud.google.com/alloydb/docs/ai/evaluate-semantic-queries-ai-operators), and[ vector search](https://docs.cloud.google.com/alloydb/docs/ai/perform-vector-search) to help you improve your search quality and use semantic filters.  
   
-Learn how to use AI Query operators for semantic filtering to unlock new experiences in SQL. Rank vector search results using LLMs and [ semantic ranking models](https://docs.cloud.google.com/generative-ai-app-builder/docs/ranking#models) to improve the accuracy of your vector search. This tutorial uses an Agent Platform semantic ranking model in AlloyDB and [Agent Platform generative AI models](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/overview). 
+Learn how to use AI Query operators for semantic filtering to unlock new experiences in SQL. Rank vector search results using LLMs and [ semantic ranking models](https://docs.cloud.google.com/generative-ai-app-builder/docs/ranking#models) to improve the accuracy of your vector search. This tutorial uses a Agent Platform semantic ranking model in AlloyDB and [Agent Platform generative AI models](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models). 
 
   * Codelab:[ AlloyDB AI Operators and Reranking](https://codelabs.developers.google.com/alloydb-ai-operators)
 
@@ -92,7 +92,7 @@ You use pgvector and generative AI model extensions in AlloyDB, a real-time Cosi
   * Codelab: [Toy Store Search App with Cloud Databases, Serverless Runtimes and Open Source Integrations](https://codelabs.developers.google.com/toy-store-app#0)
 
   
-Deploy AlloyDB Omni and a local AI model on Kubernetes | In this codelab you learn how to deploy AlloyDB Omni on GKE and use it with an open embedding model deployed in the same Kubernetes cluster.  
+Deploy AlloyDB Omni and a local AI model on Kubernetes | In this codelab you learn how to deploy AlloyDB Omni on Google Kubernetes Engine (GKE) and use it with an open embedding model deployed in the same Kubernetes cluster.  
 
 
   * Codelab: [Deploy AlloyDB Omni and local AI model on Kubernetes](https://codelabs.developers.google.com/alloydb-omni-gke-embeddings)
@@ -102,7 +102,7 @@ Deploy a RAG application with LangChain on Agent Platform | This tutorial shows 
   
 Learn how to use agents and vectors with [LangChain](https://python.langchain.com/docs/get_started/introduction) to perform a similarity search and retrieve related data to ground LLM responses. 
 
-  * Tutorial: [Deploying a RAG Application with AlloyDB to Agent Engine](https://github.com/GoogleCloudPlatform/generative-ai/blob/main/Gemini/agent-engine/tutorial_alloydb_rag_agent.ipynb)
+  * Tutorial: [Deploying a RAG Application with AlloyDB to Agent Engine](https://github.com/GoogleCloudPlatform/generative-ai/blob/main/gemini/agent-engine/tutorial_alloydb_rag_agent.ipynb)
 
   
 Integrate hybrid search and AI functions into your search application | This demo illustrates the AI capabilities of Google Cloud AlloyDB, integrating hybrid search including SQL, vector, and full-text search with AI functions, all applied to a sample ecommerce dataset from Cymbal Shops.  
@@ -126,12 +126,12 @@ Perform a multimodal hybrid product search | This notebook shows you how to perf
   
 Use a similarity search using a vector index to find relevant products  | This codelab shows you how to use AlloyDB AI features like [model endpoint management ](https://docs.cloud.google.com/alloydb/docs/ai/model-endpoint-overview)and [vector search](https://docs.cloud.google.com/alloydb/docs/ai/perform-vector-search) to help you find relevant products.  
   
-Learn how to generate embeddings using model endpoint management on your database data and use your operational data to perform vector similarity searches. This tutorial uses an Agent Platform embedding model in AlloyDB and [Agent Platform generative AI models](https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview). 
+Learn how to generate embeddings using model endpoint management on your database data and use your operational data to perform vector similarity searches. This tutorial uses a Agent Platform embedding model in AlloyDB and [Agent Platform generative AI models](https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview). 
 
   * Codelab: [Getting started with Vector Embeddings with AlloyDB AI](https://codelabs.developers.google.com/alloydb-ai-embedding)
 
   
-Use MCP Toolbox for Databases with AlloyDB AI to create conversational product searches  | Learn how to use the MCP Toolbox for Databases, AlloyDB AI, AlloyDB AI, and vector search to create a Shopping AI Agent designed to transform your retail experience. This tutorial demonstrates the agent's capabilities, from conversational product searches to placing orders.  
+Use MCP Toolbox for Databases with AlloyDB AI to create conversational product searches  | Learn how to use the MCP Toolbox for Databases, AlloyDB AI, and vector search to create a Shopping AI Agent designed to transform your retail experience. This tutorial demonstrates the agent's capabilities, from conversational product searches to placing orders.  
 
 
   * Codelab: [Build a Sports Shop Agent AI Assistant with ADK, MCP Toolbox and AlloyDB](https://codelabs.developers.google.com/codelabs/sports-agent-adk-mcp-alloydb)
@@ -150,6 +150,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/samples/cloud-sql-postgres-knex-connect-unix/
 title: Create a socket connection when using Node.js \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:34.467405+00:00
+fetched_at: 2026-10-23T10:19:49.507868+00:00
 ---
 
 # Create a socket connection when using Node.js  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation

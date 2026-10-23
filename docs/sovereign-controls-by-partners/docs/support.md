@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sovereign-controls-by-partners/docs/support/
 title: Support \u00a0|\u00a0 Sovereign Controls by Partners \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:04.586155+00:00
+fetched_at: 2026-10-23T10:31:56.194144+00:00
 ---
 
 # Support  |  Sovereign Controls by Partners  |  Google Cloud Documentation

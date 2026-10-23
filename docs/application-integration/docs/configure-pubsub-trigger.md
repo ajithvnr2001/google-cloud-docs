@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure-pubsub-trigger/
 title: Cloud Pub/Sub trigger \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:43.593518+00:00
+fetched_at: 2026-10-23T13:17:26.168982+00:00
 ---
 
 # Cloud Pub/Sub trigger  |  Application Integration  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/samples/cloudrun-service-configuration-memory-limits/
 title: Configure memory limits \u00a0|\u00a0 Cloud Run \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:15:37.667800+00:00
+fetched_at: 2026-10-23T09:43:00.985918+00:00
 ---
 
 # Configure memory limits  |  Cloud Run  |  Google Cloud Documentation

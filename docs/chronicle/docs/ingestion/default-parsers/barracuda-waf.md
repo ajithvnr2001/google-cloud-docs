@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/barracuda-waf/
 title: Collect Barracuda WAF logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:07.733777+00:00
+fetched_at: 2026-10-23T13:17:45.733507+00:00
 ---
 
 # Collect Barracuda WAF logs  |  Google Security Operations  |  Google Cloud Documentation

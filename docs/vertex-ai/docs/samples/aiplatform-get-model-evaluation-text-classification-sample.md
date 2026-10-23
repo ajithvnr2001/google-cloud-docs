@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-get-model-evaluation-text-classification-sample/
 title: Get a model evaluation for text classification \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:54.696323+00:00
+fetched_at: 2026-10-23T09:26:59.995497+00:00
 ---
 
 # Get a model evaluation for text classification  |  Vertex AI  |  Google Cloud Documentation

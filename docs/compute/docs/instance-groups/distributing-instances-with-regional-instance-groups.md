@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups/
 title: Create a MIG with VMs in multiple zones in a region \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:43.516417+00:00
+fetched_at: 2026-10-23T13:00:27.387338+00:00
 ---
 
 # Create a MIG with VMs in multiple zones in a region  |  Compute Engine  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/perform-vector-search/
 title: Perform a vector search \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:39.668656+00:00
+fetched_at: 2026-10-23T13:08:33.920351+00:00
 ---
 
 # Perform a vector search  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -107,7 +107,7 @@ If you have a private access connection, continue to the next step. Otherwise, c
 
   11. In **Instances in your cluster** , expand the **Connectivity** pane. Take note of the **Connection URI** because you use it in this tutorial.
 
-The connection URI is in the `projects/<var>PROJECT_ID</var>/locations/<var>REGION_ID</var>/clusters/my-cluster/instances/my-cluster-primary` format.
+The connection URI is in the `projects/PROJECT_ID/locations/REGION_ID/clusters/my-cluster/instances/my-cluster-primary` format.
 
 
 
@@ -259,7 +259,7 @@ To learn more about using ScaNN at scale, see [Getting started with Vector Embed
 
 
 
-## Create an manually-tuned ScaNN index on products table
+## Create a manually tuned ScaNN index on the product table
 
 **Important:** The examples in this tutorial are intended for demonstration purposes only. We recommend that you only create ScaNN indexes on tables that are larger than 10K.
 
@@ -350,9 +350,9 @@ To compare the execution time of a KNN vector search filtered by a `LIKE` predic
          LIMIT 100;
          
 
-  4. Enable columnar engine and vector support by running the following command in the Google Cloud CLI. To use the gcloud CLI, you can [install and initialize](https://docs.cloud.google.com/sdk/docs/install) the gcloud CLI.
+  4. Enable columnar engine and vector support by running the following command in the Google Cloud CLI. To use the gcloud CLI, you can [install and initialize](https://docs.cloud.google.com/sdk/docs/install-sdk) the gcloud CLI.
          
-         gcloud beta alloydb instances update INSTANCE_ID \
+         gcloud alloydb instances update INSTANCE_ID \
              --cluster=CLUSTER_ID \
              --region=REGION_ID \
              --project=PROJECT_ID \
@@ -425,6 +425,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

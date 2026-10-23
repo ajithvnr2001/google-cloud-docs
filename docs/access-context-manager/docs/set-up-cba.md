@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/access-context-manager/docs/set-up-cba/
 title: Quickstart: Set up certificate-based access \u00a0|\u00a0 Access Context Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:49.762528+00:00
+fetched_at: 2026-10-23T13:18:54.245035+00:00
 ---
 
 # Quickstart: Set up certificate-based access  |  Access Context Manager  |  Google Cloud Documentation

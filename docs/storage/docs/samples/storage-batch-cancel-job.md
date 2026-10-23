@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-batch-cancel-job/
 title: Storage Batch Cancel Job \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:31:46.444891+00:00
+fetched_at: 2026-10-23T09:36:20.937988+00:00
 ---
 
 # Storage Batch Cancel Job  |  Google Cloud Documentation
@@ -105,13 +105,13 @@ To authenticate to Cloud Storage, set up Application Default Credentials. For mo
     #   cancel_job project_id: "your-project-id", job_id: "your-job-id"
     #
     def cancel_job project_id:, job_id:
-      client = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations/latest/Google-Cloud-StorageBatchOperations.html).[storage_batch_operations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations/latest/Google-Cloud-StorageBatchOperations.html)
+      client = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations.html).[storage_batch_operations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations/latest/Google-Cloud-StorageBatchOperations.html)
       parent = "projects/#{project_id}/locations/global"
     
-      request = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::CancelJobRequest.new name: "#{parent}/jobs/#{job_id}"
+      request = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::CancelJobRequest.new name: "#{parent}/jobs/#{job_id}"
     
       # To fetch job details using get_job
-      get_request = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::GetJobRequest.new name: "#{parent}/jobs/#{job_id}"
+      get_request = Google::Cloud::[StorageBatchOperations](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations.html)::[V1](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage_batch_operations-v1/latest/Google-Cloud-StorageBatchOperations-V1.html)::GetJobRequest.new name: "#{parent}/jobs/#{job_id}"
     
       begin
         result = client.cancel_job request

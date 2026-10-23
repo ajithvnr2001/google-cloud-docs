@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/blockscout/set-up-data-store/
 title: Set up a Blockscout data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:35.475757+00:00
+fetched_at: 2026-10-23T13:02:27.910620+00:00
 ---
 
 # Set up a Blockscout data store  |  Gemini Enterprise  |  Google Cloud Documentation

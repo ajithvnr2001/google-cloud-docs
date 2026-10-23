@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tpu/docs/tpu7x/
 title: TPU7x (Ironwood) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:09.119923+00:00
+fetched_at: 2026-10-23T12:36:13.713538+00:00
 ---
 
 # TPU7x (Ironwood)  |  Google Cloud Documentation
@@ -56,9 +56,12 @@ The following diagram illustrates the architecture of Ironwood:
 
 TPU7x features a multi-tiered memory system, and managing data movement between these tiers is crucial for performance:
 
-  * **High-bandwidth memory (HBM)** : Each chip is equipped with 192 GB of HBM, with bandwidth of approximately 7.37 TB/s. The large HBM capacity enables large batch sizes, which can improve throughput. However, despite its size, HBM can still be a bottleneck, particularly for memory-bound vector operations or inefficient data access patterns.
+  * **High-bandwidth memory (HBM)** : Each chip is equipped with 192 GiB of HBM, with bandwidth of approximately 7.37 TB/s. The large HBM capacity enables large batch sizes, which can improve throughput. However, despite its size, HBM can still be a bottleneck, particularly for memory-bound vector operations or inefficient data access patterns.
+
   * **Vector memory (VMEM)** : VMEM is a smaller, on-chip SRAM (static random-access memory) with significantly higher bandwidth to the Matrix Multiply Unit (MXU) than HBM. This memory acts as a high-speed scratchpad for custom kernels. The size of this buffer is a tunable parameter. Optimizing the buffer size is critical for tuning custom Pallas kernels, as their block sizes are often constrained by the available VMEM.
-  * **Host memory and PCIe:** Each set of four TPU chips is connected to a CPU host using a PCIe network. While this connection has much lower bandwidth than HBM, the host's main memory can be used for offloading activations or optimizer states to free up HBM, a technique particularly useful for managing memory pressure in large models.
+
+  * **Host memory and PCIe** : Each set of four TPU chips is connected to a CPU host using a PCIe network. While this connection has much lower bandwidth than HBM, the host's main memory can be used for offloading activations or optimizer states to free up HBM, a technique particularly useful for managing memory pressure in large models.
+
 
 
 
@@ -70,7 +73,7 @@ The Ironwood programming model lets you access two TPU chiplets instead of a sin
 
 Ironwood TPUs are composed of two distinct chiplets, each with its own dedicated memory space. This is a departure from the unified memory space of the MegaCore architecture.
 
-  * **Chiplet composition** : Each chiplet is a self-contained unit with one TensorCore, two SparseCores, and 96 GB of high-bandwidth memory (HBM).
+  * **Chiplet composition** : Each chiplet is a self-contained unit with one TensorCore, two SparseCores, and 96 GiB of high-bandwidth memory (HBM).
 
   * **High-speed interconnect** : The two chiplets are connected by a die-to-die (D2D) interface that is six times faster than a 1D inter-chip interconnect (ICI) link. Inter-chiplet communication is managed using collective operations.
 
@@ -81,22 +84,22 @@ Ironwood TPUs are composed of two distinct chiplets, each with its own dedicated
 
 The programming model for Ironwood is similar to that of TPU generations earlier than v4, such as TPU v3. The new architecture is exposed in the following ways:
 
-  * **Two devices per chip:** Frameworks like JAX expose each Ironwood chip as two separate "devices," one for each chiplet.
+  * **Two devices per chip** : Frameworks like JAX expose each Ironwood chip as two separate "devices," one for each chiplet. For example, on a single 4-chip `tpu7x-standard-4t` VM, the `jax.devices()` function returns eight `TpuDevice` entries (two per chip).
 
-  * **Chiplet specification:** You can specify which chiplet to use for a computation. JAX adds a fourth dimension to the topology specification to distinguish between chiplets. This design lets you reuse existing software models with minimal changes.
-
-
+  * **Chiplet specification** : You can specify which chiplet to use for a computation. JAX adds a fourth dimension (`(x, y, z, chiplet)`) to the device coordinate specification, where the fourth coordinate (`0` or `1`) distinguishes between the two chiplets on a chip. This design lets you reuse existing software models with minimal changes.
 
 
-For more information about achieving optimal performance with the dual-chiplet architecture, see [Performance recommendations for Ironwood's dual-chiplet architecture](https://docs.cloud.google.com/tpu/docs/performance-guide#ironwood-dual-chiplet)
+
+
+For more information about achieving optimal performance with the dual-chiplet architecture, see [Performance recommendations for Ironwood's dual-chiplet architecture](https://docs.cloud.google.com/tpu/docs/performance-guide#ironwood-dual-chiplet).
 
 ## Supported configurations
 
 **Note:** Use the [TPU topology visualizer](https://tpu-visualizer.uc.r.appspot.com/) to view 3D renderings of different TPU configurations. 
 
-TPU7x chips have a direct connection to the nearest neighboring chips in 3 dimensions, resulting in a 3D mesh of networking connections. Slices larger than 64 chips are made up of one or more 4x4x4 "cubes" of chips.
+TPU7x chips have a direct connection to the nearest neighboring chips in 3 dimensions, resulting in a 3D mesh of networking connections. Slices of 64 or more chips are made up of one or more 4x4x4 "cubes" of chips connected in a 3D torus interconnect topology.
 
-TPU7x chips have a 3D torus interconnect topology. This topology allows slices to scale up to 9216 chips. It has bi-directional bandwidth of 200 GBps per axis for communication between chips within a pod.
+A TPU7x Pod scales up to 9,216 chips (144 cubes). Each of the six ICI links on a TPU7x chip provides 200 GBps of bidirectional bandwidth (400 GBps per axis and 1,200 GBps of total bidirectional ICI bandwidth per chip) for communication between chips within a Pod.
 
 The following table shows common 3D slice shapes that are supported for TPU7x:
 
@@ -112,7 +115,8 @@ Topology | TPU chips | Hosts | VMs | Cubes | Scope
 8x8x8 | 512 | 128 | 128 | 8 | Multi-host  
 8x8x16 | 1024 | 256 | 256 | 16 | Multi-host  
 8x16x16 | 2048 | 512 | 512 | 32 | Multi-host  
-**Note:** All TPU7x topologies use the `tpu7x-standard-4t` machine type.
+`A`x`B`x`C` (where `A`, `B`, and `C` are multiples of 4) | `A`*`B`*`C` (up to 9,216) | (`A`*`B`*`C`)/4 | (`A`*`B`*`C`)/4 | (`A`*`B`*`C`)/64 | Multi-host  
+**Note:** All TPU7x topologies use the `tpu7x-standard-4t` machine type. For slice shapes larger than 2,048 chips (`8x16x16`), contact your account team.
 
 ### TPU7x VM
 
@@ -186,6 +190,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

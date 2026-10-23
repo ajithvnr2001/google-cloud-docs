@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/gke/route-trigger-network-management/
 title: Route Network Management events to GKE \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:50.488438+00:00
+fetched_at: 2026-10-23T13:01:38.444729+00:00
 ---
 
 # Route Network Management events to GKE  |  Eventarc Standard  |  Google Cloud Documentation

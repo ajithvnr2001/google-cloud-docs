@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/configure-vertex-ai/
 title: Integrate with Agent Platform \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:46.496516+00:00
+fetched_at: 2026-10-23T13:08:37.807856+00:00
 ---
 
 # Integrate with Agent Platform  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -99,7 +99,7 @@ When you use AlloyDB with other Google Cloud services, AlloyDB uses an Identity 
 
 To enable database integration with Agent Platform, you grant the AlloyDB service agent the `Vertex AI User` role. This lets the AlloyDB service agent access Agent Platform on your behalf.
 
-**Note:** To grant IAM roles, you must have the `resourcemanager.projects.setiamPolicy` permission. The `Owner` and `Project IAM Admin` roles include this permission. The `AlloyDB Admin` role also includes the permissions required to grant the `Vertex AI User` role to the service agent. If you don't have the necessary permissions, contact your organization's administrator.
+**Note:** To grant IAM roles, you must have the `resourcemanager.projects.setiamPolicy` permission. The Owner and Project IAM Admin roles include this permission. The AlloyDB Admin role also includes the permissions required to grant the Vertex AI User role to the service agent. If you don't have the necessary permissions, contact your organization's administrator.
 
 Follow these steps to grant the AlloyDB service agent the `Vertex AI User` role:
 
@@ -126,7 +126,7 @@ Add Agent Platform permissions to the AlloyDB service agent for the project wher
          service-PROJECT_NUMBER@gcp-sa-alloydb.iam.gserviceaccount.com
              
 
-Replace PROJECT_NUMBER with the project number.
+Replace `PROJECT_NUMBER` with the project number.
 
   7. In the **Role** field, enter **Vertex AI User**.
 
@@ -149,8 +149,8 @@ To use the gcloud CLI, you can [install and initialize](https://docs.cloud.googl
 
 Replace the following:
 
-  * PROJECT_ID: The ID of the project that has the Agent Platform endpoint.
-  * PROJECT_NUMBER: The project number of the project that has AlloyDB clusters or instances.
+  * `PROJECT_ID`: the ID of the project that has the Agent Platform endpoint.
+  * `PROJECT_NUMBER`: the project number of the project that has AlloyDB clusters or instances.
 
 **Note:** The policy change takes effect within 60 seconds to 7 minutes.
 
@@ -217,6 +217,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

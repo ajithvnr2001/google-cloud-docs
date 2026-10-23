@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/logical-materialized-view-overview/
 title: Overview of logical and materialized views \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:25.126243+00:00
+fetched_at: 2026-10-23T12:55:40.714519+00:00
 ---
 
 # Overview of logical and materialized views  |  BigQuery  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Overview of logical and materialized views
 
-This document describes and compares logical and materialized views in BigQuery. In modern data warehousing, views serve as an important abstraction layer between raw data and business intelligence. Within BigQuery, architects typically choose between two types: logical (standard) views and materialized views. While these views share a common interface, their underlying mechanics, performance profiles, and cost implications differ.
+BigQuery supports two types of views, logical (standard) views and materialized views, that share a common query interface but differ in their underlying mechanics, performance, and cost. This document compares the characteristics, benefits, and limitations of each type to help you choose the right view for your workload.
 
 ## Logical views
 
@@ -108,6 +108,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

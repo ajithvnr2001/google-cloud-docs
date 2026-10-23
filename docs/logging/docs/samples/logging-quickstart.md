@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/samples/logging-quickstart/
 title: Logging quickstart \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:36:52.037789+00:00
+fetched_at: 2026-10-23T12:36:02.755101+00:00
 ---
 
 # Logging quickstart  |  Google Cloud Documentation
@@ -163,8 +163,8 @@ To authenticate to Logging, set up Application Default Credentials. For more inf
     import com.google.cloud.logging.[LogEntry](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.LogEntry.html);
     import com.google.cloud.logging.[Logging](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.Logging.html);
     import com.google.cloud.logging.[LoggingOptions](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.LoggingOptions.html);
-    import com.google.cloud.logging.[Payload](https://docs.cloud.google.com/java/docs/reference/google-cloud-apigee-connect/latest/com.google.cloud.apigeeconnect.v1.Payload.html).StringPayload;
-    import com.google.cloud.logging.[Severity](https://docs.cloud.google.com/java/docs/reference/google-cloud-apihub/latest/com.google.cloud.apihub.v1.Severity.html);
+    import com.google.cloud.logging.[Payload](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.Payload.html).StringPayload;
+    import com.google.cloud.logging.[Severity](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.Severity.html);
     import java.util.Collections;
     
     /**
@@ -188,7 +188,7 @@ To authenticate to Logging, set up Application Default Credentials. For more inf
     
           [LogEntry](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.LogEntry.html) entry =
               [LogEntry](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.LogEntry.html).newBuilder(StringPayload.of(textPayload))
-                  .setSeverity([Severity](https://docs.cloud.google.com/java/docs/reference/google-cloud-apihub/latest/com.google.cloud.apihub.v1.Severity.html).ERROR)
+                  .setSeverity([Severity](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.Severity.html).ERROR)
                   .setLogName(logName)
                   .setResource([MonitoredResource](https://docs.cloud.google.com/java/docs/reference/google-cloud-core/latest/com.google.cloud.MonitoredResource.html).newBuilder("global").build())
                   .build();

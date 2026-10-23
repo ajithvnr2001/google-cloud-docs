@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/configure-vpc-service-controls/
 title: Configure VPC Service Controls for Gemini \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:11.925481+00:00
+fetched_at: 2026-10-23T13:03:12.528790+00:00
 ---
 
 # Configure VPC Service Controls for Gemini  |  Gemini for Google Cloud  |  Google Cloud Documentation

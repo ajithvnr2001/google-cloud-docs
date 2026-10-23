@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/samples/cloudrun-egress-hello-world/
 title: Using egress and ingress settings to restrict access to services \u00a0|\u00a0 Cloud Run \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:10:56.137929+00:00
+fetched_at: 2026-10-23T10:03:22.628875+00:00
 ---
 
 # Using egress and ingress settings to restrict access to services  |  Cloud Run  |  Google Cloud Documentation

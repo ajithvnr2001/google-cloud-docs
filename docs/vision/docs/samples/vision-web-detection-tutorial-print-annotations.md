@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-web-detection-tutorial-print-annotations/
 title: Web detection: print annotations \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:15.708894+00:00
+fetched_at: 2026-10-23T09:37:23.346770+00:00
 ---
 
 # Web detection: print annotations  |  Cloud Vision API  |  Google Cloud Documentation

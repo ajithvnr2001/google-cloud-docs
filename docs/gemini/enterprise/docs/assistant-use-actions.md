@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/assistant-use-actions/
 title: Extend the assistant with actions \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:40.648038+00:00
+fetched_at: 2026-10-23T13:13:32.999107+00:00
 ---
 
 # Extend the assistant with actions  |  Gemini Enterprise  |  Google Cloud Documentation

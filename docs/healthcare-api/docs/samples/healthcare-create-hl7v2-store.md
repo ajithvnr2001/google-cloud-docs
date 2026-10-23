@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/samples/healthcare-create-hl7v2-store/
 title: Create HL7v2 store \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:33:12.943655+00:00
+fetched_at: 2026-10-23T13:09:09.969739+00:00
 ---
 
 # Create HL7v2 store  |  Cloud Healthcare API  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/access-control/
 title: Access control overview \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:50.636376+00:00
+fetched_at: 2026-10-23T13:17:10.672136+00:00
 ---
 
 # Access control overview  |  Application Integration  |  Google Cloud Documentation

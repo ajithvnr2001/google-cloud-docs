@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/configure-proxy-with-yaml/
 title: Configuring a proxy with YAML \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:20.195128+00:00
+fetched_at: 2026-10-23T13:14:17.927327+00:00
 ---
 
 # Configuring a proxy with YAML  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/fault-injection-testing/fault-reference/failover-cloud-sql/
 title: Failover Cloud SQL fault reference \u00a0|\u00a0 Fault Injection Testing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:43.307741+00:00
+fetched_at: 2026-10-23T13:01:27.739873+00:00
 ---
 
 # Failover Cloud SQL fault reference  |  Fault Injection Testing  |  Google Cloud Documentation

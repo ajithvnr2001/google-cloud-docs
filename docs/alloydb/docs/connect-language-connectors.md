@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/connect-language-connectors/
 title: Connect using the AlloyDB Language Connectors \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:08:49.173141+00:00
+fetched_at: 2026-10-23T10:43:42.957548+00:00
 ---
 
 # Connect using the AlloyDB Language Connectors  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -239,6 +239,7 @@ To use this snippet in the context of a web application, view [the README on Git
         password: str,
         db: str,
         refresh_strategy: str = "background",
+        ip_type: str = "PRIVATE",
     ) -> tuple[sqlalchemy.engine.Engine, Connector]:
         """Creates a connection pool for an AlloyDB instance and returns the pool
         and the connector. Callers are responsible for closing the pool and the
@@ -274,6 +275,8 @@ To use this snippet in the context of a web application, view [the README on Git
                 Refresh strategy for the AlloyDB Connector. Can be one of "lazy"
                 or "background". For serverless environments use "lazy" to avoid
                 errors resulting from CPU being throttled.
+            ip_type (str):
+                IP type used to connect. One of "PUBLIC", "PRIVATE" or "PSC".
         """
         connector = Connector(refresh_strategy=refresh_strategy)
     
@@ -286,6 +289,7 @@ To use this snippet in the context of a web application, view [the README on Git
                 user=user,
                 password=password,
                 db=db,
+                ip_type=ip_type,
             ),
         )
         engine.dialect.description_encoding = None
@@ -367,6 +371,7 @@ To use this snippet in the context of a web application, view [the README on Git
         password: str,
         db: str,
         refresh_strategy: str = "background",
+        ip_type: str = "PRIVATE",
     ) -> tuple[sqlalchemy.ext.asyncio.engine.AsyncEngine, AsyncConnector]:
         """Creates a connection pool for an AlloyDB instance and returns the pool
         and the connector. Callers are responsible for closing the pool and the
@@ -401,6 +406,8 @@ To use this snippet in the context of a web application, view [the README on Git
                 Refresh strategy for the AlloyDB Connector. Can be one of "lazy"
                 or "background". For serverless environments use "lazy" to avoid
                 errors resulting from CPU being throttled.
+            ip_type (str):
+                IP type used to connect. One of "PUBLIC", "PRIVATE" or "PSC".
         """
         connector = AsyncConnector(refresh_strategy=refresh_strategy)
     
@@ -413,6 +420,7 @@ To use this snippet in the context of a web application, view [the README on Git
                 user=user,
                 password=password,
                 db=db,
+                ip_type=ip_type,
             ),
             execution_options={"isolation_level": "AUTOCOMMIT"},
         )
@@ -699,6 +707,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

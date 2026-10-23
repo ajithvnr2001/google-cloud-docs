@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/ranking-overview/
 title: About retrieval and ranking \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:24.660252+00:00
+fetched_at: 2026-10-23T13:13:42.831260+00:00
 ---
 
 # About retrieval and ranking  |  Agent Search  |  Google Cloud Documentation

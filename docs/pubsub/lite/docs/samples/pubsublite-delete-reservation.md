@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/lite/docs/samples/pubsublite-delete-reservation/
 title: Delete Lite Reservation \u00a0|\u00a0 Pub/Sub Lite \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:15:09.686820+00:00
+fetched_at: 2026-10-23T10:20:15.796172+00:00
 ---
 
 # Delete Lite Reservation  |  Pub/Sub Lite  |  Google Cloud Documentation

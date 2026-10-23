@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/ingest-custom-sources/
 title: Manage entries and ingest custom sources \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:28.073301+00:00
+fetched_at: 2026-10-23T10:21:29.704480+00:00
 ---
 
 # Manage entries and ingest custom sources  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -118,14 +118,14 @@ Before you manage entries and ingest custom data sources, ensure that you have c
 
 To get the permissions that you need to create and manage entries, ask your administrator to grant you the following IAM roles on the resource: 
 
-  * Full set of permissions on entries, entry groups, and entry types: [Dataplex Catalog Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogAdmin) (`roles/dataplex.catalogAdmin`) 
-  * Create and manage metadata resources in Knowledge Catalog, including entries, entry groups, and entry types: [Dataplex Catalog Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogEditor) (`roles/dataplex.catalogEditor`) 
-  * Full access to entry-related operations: [Dataplex Entry and EntryLink Owner ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryOwner) (`roles/dataplex.entryOwner`) 
-  * View entries, entry groups, and entry types, and IAM policies associated with them: [Dataplex Catalog Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) 
-  * Use aspect types to create aspects of those types, when creating custom entries: [Dataplex Aspect Type User ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.aspectTypeUser) (`roles/dataplex.aspectTypeUser`) 
-  * Create and manage entry groups: [Dataplex Entry Group Owner ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryGroupOwner) (`roles/dataplex.entryGroupOwner`) 
-  * Create and manage entry types: [Dataplex Entry Type Owner ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryTypeOwner) (`roles/dataplex.entryTypeOwner`) 
-  * Use entry types to create and modify entries of those types: [Dataplex Entry Type User ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryTypeUser) (`roles/dataplex.entryTypeUser`) 
+  * Full set of permissions on entries, entry groups, and entry types: [**Dataplex Catalog Admin** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogAdmin) (`roles/dataplex.catalogAdmin`) 
+  * Create and manage metadata resources in Knowledge Catalog, including entries, entry groups, and entry types: [**Dataplex Catalog Editor** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogEditor) (`roles/dataplex.catalogEditor`) 
+  * Full access to entry-related operations: [**Dataplex Entry and EntryLink Owner** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryOwner) (`roles/dataplex.entryOwner`) 
+  * View entries, entry groups, and entry types, and IAM policies associated with them: [**Dataplex Catalog Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) 
+  * Use aspect types to create aspects of those types, when creating custom entries: [**Dataplex Aspect Type User** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.aspectTypeUser) (`roles/dataplex.aspectTypeUser`) 
+  * Create and manage entry groups: [**Dataplex Entry Group Owner** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryGroupOwner) (`roles/dataplex.entryGroupOwner`) 
+  * Create and manage entry types: [**Dataplex Entry Type Owner** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryTypeOwner) (`roles/dataplex.entryTypeOwner`) 
+  * Use entry types to create and modify entries of those types: [**Dataplex Entry Type User** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryTypeUser) (`roles/dataplex.entryTypeUser`) 
 
 
 
@@ -133,7 +133,7 @@ For more information about granting roles, see [Manage access to projects, folde
 
 You might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). 
 
-**Note:** When you use an entry type to create and modify entries of that type, if the entry type and the entry are in different projects, you must grant the Dataplex Entry Type User (`roles/dataplex.entryTypeUser`) IAM role on the project where the entry type is.
+**Note:** When you use an entry type to create and modify entries of that type, if the entry type and the entry are in different projects, you must grant the **Dataplex Entry Type User** (`roles/dataplex.entryTypeUser`) IAM role on the project where the entry type is.
 
 For more information, see [Knowledge Catalog IAM roles](https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles).
 
@@ -1092,7 +1092,7 @@ After you create a custom entry, you can add aspects to the entry. For more info
 
 ### BigQuery entry names
 
-When you interact with BigQuery resources through the Knowledge Catalog APIs, you must use specific formatting for the entry group ID and entry ID.
+When you interact with BigQuery resources through the Dataplex API, you must use specific formatting for the entry group ID and entry ID.
 
   * **Entry group ID** : `@bigquery`
   * **Entry ID** : `bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID`
@@ -3474,6 +3474,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

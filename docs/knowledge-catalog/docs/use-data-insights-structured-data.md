@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/use-data-insights-structured-data/
 title: Use data insights for structured data \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:37:01.078880+00:00
+fetched_at: 2026-10-23T12:41:06.299240+00:00
 ---
 
 # Use data insights for structured data  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -33,10 +33,10 @@ Before using data insights, ensure you have completed the following prerequisite
 
 To get the permissions that you need to use data insights, ask your administrator to grant you the following IAM roles: 
 
-  * Get read-only access to the generated insights: [Dataplex DataScan DataViewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataScanDataViewer) (`roles/dataplex.dataScanDataViewer`) on project containing the resource 
-  * Read Apache Iceberg, Apache Hive, or SAP BDC table data: [BigLake Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/biglake#biglake.viewer) (`roles/biglake.viewer`) on resource 
-  * Publish descriptions as aspects: [Dataplex Catalog Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogEditor) (`roles/dataplex.catalogEditor`) on resource 
-  * Publish queries as aspects: [Dataplex Entry and EntryLink Owner ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryOwner) (`roles/dataplex.entryOwner`) on resource 
+  * Get read-only access to the generated insights: [**Dataplex DataScan DataViewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataScanDataViewer) (`roles/dataplex.dataScanDataViewer`) on project containing the resource 
+  * Read Apache Iceberg, Apache Hive, or SAP BDC table data: [**BigLake Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/biglake#biglake.viewer) (`roles/biglake.viewer`) on resource 
+  * Publish descriptions as aspects: [**Dataplex Catalog Editor** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogEditor) (`roles/dataplex.catalogEditor`) on resource 
+  * Publish queries as aspects: [**Dataplex Entry and EntryLink Owner** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryOwner) (`roles/dataplex.entryOwner`) on resource 
 
 
 
@@ -119,7 +119,7 @@ To generate insights for these resources, complete the following steps:
 
   5. Choose a generation option:
 
-     * To generate and permanently attach insights to the asset as metadata aspects, click **Generate and publish**. This makes the insights indexable, searchable, and visible to other users in your organization within the Knowledge Catalog.
+     * To generate and permanently attach insights to the asset as metadata aspects, click **Generate and publish**. This makes the insights indexable, searchable, and visible to other users in your organization within Knowledge Catalog.
 
      * To generate and view insights temporarily during your current session, click **Generate without publishing**.
 
@@ -160,11 +160,11 @@ To view the generated insights for a resource, complete the following steps:
 
 ## Manage table insights
 
-After you generate and publish table insights, you can review and manage them as metadata aspects in the Knowledge Catalog. Table-level insights include table and column descriptions, and sample queries.
+After you generate and publish table insights, you can review and manage them as metadata aspects in Knowledge Catalog. Table-level insights include table and column descriptions, and sample queries.
 
 ### Update generated descriptions for a table
 
-You can update table and column descriptions using only the Dataplex API. To do this, use the [entries.patch](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries/patch) method.
+You can update table and column descriptions using only the Dataplex API. To do this, use the [`entries.patch` method](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries/patch).
 
 ### Update generated queries for a table
 
@@ -189,11 +189,11 @@ You can update the generated queries for a table using both Google Cloud console
 
 ### REST
 
-To update queries for a table, use the [entries.patch](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries/patch) method.
+To update queries for a table, use the [`entries.patch` method](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries/patch).
 
 ### Update generated relationships for a table
 
-You can update relationships using only the Dataplex API. To do this, use [entries.patch](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries/patch) method.
+You can update relationships using only the Dataplex API. To do this, use the [`entries.patch` method](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries/patch).
 
 ## Manage dataset insights
 
@@ -201,7 +201,7 @@ Dataset-level insights focus on high-level descriptions and dataset-wide queries
 
 ### Update generated descriptions for a dataset
 
-You can update the dataset descriptions using only the Dataplex API. To do this, use the [entries.patch](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries/patch) method.
+You can update the dataset descriptions using only the Dataplex API. To do this, use the [`entries.patch` method](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries/patch).
 
 ### Update generated queries for a dataset
 
@@ -226,7 +226,7 @@ You can update the generated queries for a dataset using both Google Cloud conso
 
 ### REST
 
-To update queries for a dataset, use the [entries.patch](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries/patch) method.
+To update queries for a dataset, use the [`entries.patch` method](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries/patch).
 
 ### Update generated entry links for a dataset
 
@@ -332,6 +332,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

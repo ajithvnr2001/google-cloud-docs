@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/use-cases/draft-legal-correspondence/
 title: Draft legal correspondence \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:28.948296+00:00
+fetched_at: 2026-10-23T13:11:24.992152+00:00
 ---
 
 # Draft legal correspondence  |  Gemini Enterprise  |  Google Cloud Documentation

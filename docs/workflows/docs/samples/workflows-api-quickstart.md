@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-api-quickstart/
 title: Use client libraries to execute a workflow \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:54:44.968048+00:00
+fetched_at: 2026-10-23T08:58:02.600310+00:00
 ---
 
 # Use client libraries to execute a workflow  |  Workflows  |  Google Cloud Documentation
@@ -284,7 +284,7 @@ To authenticate to Workflows, set up Application Default Credentials. For more i
     
     import time
     
-    from google.cloud import [workflows](https://docs.cloud.google.com/python/docs/reference/workflows/latest/google.cloud.workflows_v1.services.workflows.html)_v1
+    from google.cloud import [workflows](https://docs.cloud.google.com/python/docs/reference/workflows/latest)_v1
     from google.cloud.workflows import executions_v1
     
     from google.cloud.workflows.executions_v1.types import executions

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/financial-services/anti-money-laundering/docs/create-and-manage-backtest-results/
 title: Create and manage backtest results \u00a0|\u00a0 Anti Money Laundering AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:18.390240+00:00
+fetched_at: 2026-10-23T13:01:55.212493+00:00
 ---
 
 # Create and manage backtest results  |  Anti Money Laundering AI  |  Google Cloud Documentation

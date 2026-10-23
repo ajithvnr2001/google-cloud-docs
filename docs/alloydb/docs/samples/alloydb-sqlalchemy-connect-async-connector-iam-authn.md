@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-sqlalchemy-connect-async-connector-iam-authn/
 title: Create an asynchronous connection pool with IAM database authentication \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:27.401320+00:00
+fetched_at: 2026-10-23T10:42:41.276116+00:00
 ---
 
 # Create an asynchronous connection pool with IAM database authentication  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -35,7 +35,11 @@ To authenticate to AlloyDB, set up Application Default Credentials. For more inf
     
     
     async def create_sqlalchemy_engine(
-        inst_uri: str, user: str, db: str, refresh_strategy: str = "background"
+        inst_uri: str,
+        user: str,
+        db: str,
+        refresh_strategy: str = "background",
+        ip_type: str = "PRIVATE",
     ) -> tuple[sqlalchemy.ext.asyncio.engine.AsyncEngine, AsyncConnector]:
         """Creates a connection pool for an AlloyDB instance and returns the pool
         and the connector. Callers are responsible for closing the pool and the
@@ -69,6 +73,8 @@ To authenticate to AlloyDB, set up Application Default Credentials. For more inf
                 Refresh strategy for the AlloyDB Connector. Can be one of "lazy"
                 or "background". For serverless environments use "lazy" to avoid
                 errors resulting from CPU being throttled.
+            ip_type (str):
+                IP type used to connect. One of "PUBLIC", "PRIVATE" or "PSC".
         """
         connector = AsyncConnector(refresh_strategy=refresh_strategy)
     
@@ -81,6 +87,7 @@ To authenticate to AlloyDB, set up Application Default Credentials. For more inf
                 user=user,
                 db=db,
                 enable_iam_auth=True,
+                ip_type=ip_type,
             ),
             execution_options={"isolation_level": "AUTOCOMMIT"},
         )

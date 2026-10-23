@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/functions/1stgendocs/tutorials/use-cloud-spanner-1st-gen/
 title: Using Spanner with Cloud Run functions (1st gen) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:33.604607+00:00
+fetched_at: 2026-10-23T13:11:39.104458+00:00
 ---
 
 # Using Spanner with Cloud Run functions (1st gen)  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/mcp/configure-mcp/
 title: Create and configure an MCP connector \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:32.435387+00:00
+fetched_at: 2026-10-23T13:00:34.260585+00:00
 ---
 
 # Create and configure an MCP connector  |  Integration Connectors  |  Google Cloud Documentation

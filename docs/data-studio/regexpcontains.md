@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/regexpcontains/
 title: REGEXP_CONTAINS \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:58.372457+00:00
+fetched_at: 2026-10-23T13:19:45.118596+00:00
 ---
 
 # REGEXP_CONTAINS  |  Data Studio  |  Google Cloud Documentation

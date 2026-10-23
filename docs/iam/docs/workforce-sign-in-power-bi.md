@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/workforce-sign-in-power-bi/
 title: Access BigQuery data in Power BI with Workforce Identity Federation and Microsoft Entra \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:36.436283+00:00
+fetched_at: 2026-10-23T13:09:19.412944+00:00
 ---
 
 # Access BigQuery data in Power BI with Workforce Identity Federation and Microsoft Entra  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

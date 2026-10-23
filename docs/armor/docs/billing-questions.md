@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/billing-questions/
 title: Billing questions \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:58.277610+00:00
+fetched_at: 2026-10-23T13:18:35.060976+00:00
 ---
 
 # Billing questions  |  Google Cloud Armor  |  Google Cloud Documentation

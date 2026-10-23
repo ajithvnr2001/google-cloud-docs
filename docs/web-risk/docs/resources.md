@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/web-risk/docs/resources/
 title: Resources \u00a0|\u00a0 Web Risk \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:30:17.762330+00:00
+fetched_at: 2026-10-23T08:58:26.543145+00:00
 ---
 
 # Resources  |  Web Risk  |  Google Cloud Documentation

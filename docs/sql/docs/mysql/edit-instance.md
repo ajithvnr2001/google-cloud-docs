@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/edit-instance/
 title: Edit instances \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:28:38.151896+00:00
+fetched_at: 2026-10-23T10:19:04.486135+00:00
 ---
 
 # Edit instances  |  Cloud SQL for MySQL  |  Google Cloud Documentation
@@ -28,7 +28,7 @@ This page describes how to edit an existing Cloud SQL instance.
 
 After you create an instance, you can edit it while it's running to change its settings. For information about instance settings and how changing settings can impact an instance, see [Instance Settings](https://docs.cloud.google.com/sql/docs/mysql/instance-settings).
 
-**Note:** This procedure restarts the instance. See [How long are instances shut down during restart?](https://cloud.google.com/sql/docs/mysql/faq.md#shutdown)
+**Note:** This procedure restarts the instance. See [How long are instances shut down during restart?](https://docs.cloud.google.com/sql/docs/mysql/faq#shutdown)
 
 ## Edit an instance
 
@@ -736,6 +736,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/edit-custom-connector/
 title: Edit a custom connector \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:59.742097+00:00
+fetched_at: 2026-10-23T13:18:32.038761+00:00
 ---
 
 # Edit a custom connector  |  Application Integration  |  Google Cloud Documentation

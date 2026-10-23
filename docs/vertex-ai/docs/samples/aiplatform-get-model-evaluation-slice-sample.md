@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-get-model-evaluation-slice-sample/
 title: Get a model evaluation slice \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:00.432802+00:00
+fetched_at: 2026-10-23T09:27:00.067423+00:00
 ---
 
 # Get a model evaluation slice  |  Vertex AI  |  Google Cloud Documentation

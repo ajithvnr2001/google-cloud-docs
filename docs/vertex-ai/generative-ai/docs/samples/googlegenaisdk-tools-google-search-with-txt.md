@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/googlegenaisdk-tools-google-search-with-txt/
 title: Using Google Search Tool with Gemini Multimodal \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:03.645622+00:00
+fetched_at: 2026-10-23T08:57:38.144165+00:00
 ---
 
 # Using Google Search Tool with Gemini Multimodal  |  Generative AI on Vertex AI  |  Google Cloud Documentation

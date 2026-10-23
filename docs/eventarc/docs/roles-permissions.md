@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/docs/roles-permissions/
 title: Roles and permissions for Cloud Run targets \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:24.629059+00:00
+fetched_at: 2026-10-23T13:01:47.932776+00:00
 ---
 
 # Roles and permissions for Cloud Run targets  |  Eventarc Standard  |  Google Cloud Documentation

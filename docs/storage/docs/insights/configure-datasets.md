@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/insights/configure-datasets/
 title: Configure Storage Insights datasets \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:30:36.109883+00:00
+fetched_at: 2026-10-23T13:08:29.238477+00:00
 ---
 
 # Configure Storage Insights datasets  |  Google Cloud Documentation
@@ -21,7 +21,9 @@ Send feedback
 
 #  Configure Storage Insights datasets Stay organized with collections  Save and categorize content based on your preferences. 
 
-You can configure [Storage Insights datasets](https://docs.cloud.google.com/storage/docs/insights/datasets) to collect and analyze metadata and activity data from your Cloud Storage buckets and objects. Use the insights generated from these datasets to help identify opportunities for cost optimization, perform security audits, and support operational monitoring. This document shows you how to configure Storage Insights datasets.
+Storage Insights datasets let you collect metadata and activity data from your Cloud Storage buckets and objects, and then analyze that data in BigQuery. You can use these insights to optimize costs, conduct security audits, and support operational monitoring.
+
+This document shows you how to create a dataset configuration and link it to BigQuery for further analysis. For more information, see [Storage Insights datasets](https://docs.cloud.google.com/storage/docs/insights/datasets).
 
 ## Before you begin
 
@@ -349,7 +351,7 @@ Replace:
   * `PROJECT_ID`: the ID of the project that contains the Storage Insights dataset.
   * `INSIGHTS_DATASET`: the name of the Storage Insights dataset. For example, `storageinsights_dataset`.
 
-**Note:** `ObjectRef` queries might incur Cloud Storage operations costs, BigQuery functions costs, and BigQuery query costs. For more information, see [BigQuery pricing](https://cloud.google.com/bigquery/pricing) and [Cloud Storage pricing](https://cloud.google.com/storage/pricing).
+**Note:** `ObjectRef` queries might incur Cloud Storage operations costs, BigQuery functions costs, and BigQuery query costs. For more information, see [BigQuery pricing](https://docs.cloud.google.com/bigquery/pricing) and [Cloud Storage pricing](https://docs.cloud.google.com/storage/pricing).
 
 ### Analyze a Storage Insights dataset using a custom model
 
@@ -584,6 +586,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

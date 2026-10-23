@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/querydata/alloydb/context-sets-overview/
 title: Context sets overview \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:52.933831+00:00
+fetched_at: 2026-10-23T13:03:53.943099+00:00
 ---
 
 # Context sets overview  |  Data Agents  |  Google Cloud Documentation

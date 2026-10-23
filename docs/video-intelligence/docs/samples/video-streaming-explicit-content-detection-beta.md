@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-intelligence/docs/samples/video-streaming-explicit-content-detection-beta/
 title: Detect explicit content in a streaming video \u00a0|\u00a0 Video Intelligence API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:26:46.658369+00:00
+fetched_at: 2026-10-23T09:35:40.728179+00:00
 ---
 
 # Detect explicit content in a streaming video  |  Video Intelligence API  |  Google Cloud Documentation

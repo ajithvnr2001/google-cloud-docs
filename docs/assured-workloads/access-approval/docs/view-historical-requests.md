@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/access-approval/docs/view-historical-requests/
 title: Viewing historical Access Approval requests \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:20.130380+00:00
+fetched_at: 2026-10-23T13:19:12.986449+00:00
 ---
 
 # Viewing historical Access Approval requests  |  Google Cloud Documentation

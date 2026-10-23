@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/address-groups-using/
 title: Configure address groups \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:59.582001+00:00
+fetched_at: 2026-10-23T13:19:00.444148+00:00
 ---
 
 # Configure address groups  |  Google Cloud Armor  |  Google Cloud Documentation

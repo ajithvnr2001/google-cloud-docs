@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/full-text-search-overview/
 title: Full-text search overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:44.246810+00:00
+fetched_at: 2026-10-23T13:08:30.140104+00:00
 ---
 
 # Full-text search overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -23,7 +23,7 @@ Send feedback
 
 Full-text search (FTS) in AlloyDB for PostgreSQL lets you identify natural-language documents that satisfy a query. This approach is more effective than standard string matching because it accounts for linguistic nuances, such as ignoring common stop words like "the" and matching different forms of a word, such as "run," "running," or "ran."
 
-In addition to standard PostgreSQL GIN and GiST indexes, AlloyDB provides the `rum` extension for high-performance full-text search on PostgreSQL 17 and earlier, and Best Matching 25 (BM25) relevance ranking on PostgreSQL 17 and later.
+In addition to standard PostgreSQL GIN and GiST indexes, AlloyDB provides the `rum` extension for high-performance full-text search on all AlloyDB-supported PostgreSQL versions (PostgreSQL 14 and later), and Best Matching 25 (BM25) relevance ranking on PostgreSQL 17 and later.
 
 ## Core concepts of full-text search
 
@@ -51,7 +51,7 @@ AlloyDB supports all index types for full-text search that built-in PostgreSQL s
 
 To optimize search relevance and accuracy, you can also choose between the following:
 
-  * **RUM index:** Improves standard GIN indexes by storing positional information directly in the index, letting you perform faster phrase searches and relevance ranking without accessing the table data. This extension is supported on PostgreSQL 17 or lower. For more information, see [Create and manage a RUM index](https://docs.cloud.google.com/alloydb/docs/ai/create-rum-index).
+  * **RUM index:** Improves standard GIN indexes by storing positional information directly in the index, letting you perform faster phrase searches and relevance ranking without accessing the table data. This extension is supported on all AlloyDB-supported PostgreSQL versions (PostgreSQL 14 and later). For more information, see [Create and manage a RUM index](https://docs.cloud.google.com/alloydb/docs/ai/create-rum-index).
   * **BM25 index:** Implements the probabilistic Best Matching 25 algorithm to rank documents based on term frequency and length saturation, delivering industry-standard keyword match precision. This extension is supported on PostgreSQL 17 or higher. For more information, see [Create and manage a BM25 index](https://docs.cloud.google.com/alloydb/docs/ai/create-bm25-index).
 
 
@@ -76,6 +76,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

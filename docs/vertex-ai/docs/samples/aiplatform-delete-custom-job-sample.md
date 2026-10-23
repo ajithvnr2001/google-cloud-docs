@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-delete-custom-job-sample/
 title: Delete a custom job \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:34:50.369863+00:00
+fetched_at: 2026-10-23T09:27:02.072458+00:00
 ---
 
 # Delete a custom job  |  Vertex AI  |  Google Cloud Documentation

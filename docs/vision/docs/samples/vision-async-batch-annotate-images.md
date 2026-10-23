@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-async-batch-annotate-images/
 title: Annotate a batch of images asynchronously \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:06:30.978090+00:00
+fetched_at: 2026-10-23T09:24:47.556467+00:00
 ---
 
 # Annotate a batch of images asynchronously  |  Cloud Vision API  |  Google Cloud Documentation

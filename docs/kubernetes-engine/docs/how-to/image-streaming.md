@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/image-streaming/
 title: Use Image streaming to pull container images \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:01:09.972441+00:00
+fetched_at: 2026-10-23T13:08:25.290493+00:00
 ---
 
 # Use Image streaming to pull container images  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -74,6 +74,7 @@ You must meet the following requirements to use Image streaming in GKE Autopilot
   * If your workloads require a large proportion of the image to be available before code can execute, you might see a delay between the time that the `kubelet` starts the container and the time that the container actually starts to send logs.
   * You might not notice the benefits of Image streaming during the first pull of an eligible image. However, after Image streaming caches the image, future image pulls on any cluster benefit from Image streaming.
   * GKE Standard clusters use the cluster-level configuration to determine whether to enable Image streaming on new node pools created using [node pool auto-creation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning). However, you cannot use [workload separation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/workload-separation) to create node pools with Image streaming enabled when Image streaming is disabled at the cluster level.
+  * **Kubernetes user namespaces:** Pods configured with user namespaces (`spec.hostUsers: false`) might fail to start on GKE when Image streaming is enabled on large container images. This failure occurs because the default snapshotter doesn't support ID-mapped mounts for user ID (UID) and group ID (GID) remapping, causing container creation to time out during recursive file ownership changes. To work around this issue, create a new node pool by using the `--node-labels="cloud.google.com/gke-gcfs-v2-forbid=true"` flag. This flag disables the default snapshotter and uses the previous snapshotter behavior.
 
 
 
@@ -726,6 +727,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

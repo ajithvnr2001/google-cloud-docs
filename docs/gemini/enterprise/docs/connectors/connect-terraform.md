@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/connect-terraform/
 title: Create a data store using Terraform \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:09.001251+00:00
+fetched_at: 2026-10-23T13:11:19.046047+00:00
 ---
 
 # Create a data store using Terraform  |  Gemini Enterprise  |  Google Cloud Documentation

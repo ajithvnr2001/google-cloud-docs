@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/configure-identity-provider/
 title: Configure identity provider \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:37.207438+00:00
+fetched_at: 2026-10-23T13:08:43.489239+00:00
 ---
 
 # Configure identity provider  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -78,6 +78,8 @@ This section describes how to configure Workforce Identity Federation for third-
 **Important:** The workforce identity pool admin roles give the administrators powerful permissions. For more information, see [Workforce Identity Federation and pool administrators](https://docs.cloud.google.com/gemini/enterprise/docs/security-overview#pool-admins).
 
 ### Configure Workforce Identity Federation
+
+**Important:** [Workforce identity pools](https://docs.cloud.google.com/iam/docs/workforce-identity-federation#workforce-identity-pools) are configured at the Google Cloud organization level with a globally unique pool ID and only support the `global` location (`locations/global/workforcePools/WORKFORCE_POOL_ID`). When creating a workforce identity pool or provider using the Google Cloud CLI or REST API, you must always set the pool location to `global` (`--location=global`), even if your Gemini Enterprise app and data stores reside in the `eu` or `us` multi-region. Specifying a regional location such as `eu` when creating the pool fails with `INVALID_ARGUMENT: The location must be global.`
 
 For details on configuring Workforce Identity Federation with your third-party identity connector, see the following resources:
 
@@ -220,7 +222,7 @@ When connecting your data sources using a connector to create data stores, the f
 
   * 3000 readers are allowed per document. Each principal counts as a reader, where a principal can be a group or an individual user.
 
-  * You can select one identity provider type per location supported in Gemini Enterprise.
+  * You can select one identity provider type per location (`global`, `us`, or `eu`) supported in Gemini Enterprise. When using Workforce Identity Federation, the [workforce identity pool](https://docs.cloud.google.com/iam/docs/workforce-identity-federation#workforce-identity-pools) itself must be created in the `global` location (`locations/global/workforcePools/<var>WORKFORCE_POOL_ID</var>`) and can be associated with any supported Gemini Enterprise location.
 
   * If the identity provider settings are updated by changing the identity provider type or the workforce pool, existing data stores won't automatically update to the new settings. You must delete and recreate these data stores to apply the new identity settings.
 
@@ -256,10 +258,10 @@ To specify an identity provider for Gemini Enterprise and turn on data source ac
 
   2. Click **Settings** > **Authentication**.
 
-  3. Click **Add identity provider** for the location you want to update.
+  3. Click **Add identity provider** for the Gemini Enterprise location (`global`, `us`, or `eu`) that you want to update.
 
   4. Click **Add identity provider** and select your identity provider type.   
-If you select **3rd party identity** , you also need to select the workforce pool that applies for your data sources.
+If you select **3rd party identity** , select the workforce pool (located in `global`) that applies to your data sources.
 
   5. Click **Save changes**.
 
@@ -370,6 +372,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

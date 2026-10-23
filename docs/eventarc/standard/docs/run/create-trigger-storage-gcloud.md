@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/run/create-trigger-storage-gcloud/
 title: Quickstart: Receive direct events from Cloud Storage (gcloud CLI) \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:47.779050+00:00
+fetched_at: 2026-10-23T13:01:16.057783+00:00
 ---
 
 # Quickstart: Receive direct events from Cloud Storage (gcloud CLI)  |  Eventarc Standard  |  Google Cloud Documentation

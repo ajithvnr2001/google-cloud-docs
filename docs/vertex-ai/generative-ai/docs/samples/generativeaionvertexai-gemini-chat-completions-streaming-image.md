@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-gemini-chat-completions-streaming-image/
 title: Generate streaming text to describe an image by using the Chat Completions API \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:24.252892+00:00
+fetched_at: 2026-10-23T09:36:29.221475+00:00
 ---
 
 # Generate streaming text to describe an image by using the Chat Completions API  |  Generative AI on Vertex AI  |  Google Cloud Documentation

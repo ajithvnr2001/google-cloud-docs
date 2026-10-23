@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/local-development/vscode/tutorial-change-target-endpoint/
 title: Step 5: Change the target endpoint \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:01.052401+00:00
+fetched_at: 2026-10-23T13:14:29.251981+00:00
 ---
 
 # Step 5: Change the target endpoint  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-cancel-backup-create/
 title: Cancel backup create operation \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:50:00.698478+00:00
+fetched_at: 2026-10-23T08:57:41.532710+00:00
 ---
 
 # Cancel backup create operation  |  Spanner  |  Google Cloud Documentation

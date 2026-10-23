@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/troubleshoot/fix-foreign-keys/
 title: Find and fix foreign key violations \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:33:27.490618+00:00
+fetched_at: 2026-10-23T10:03:39.346931+00:00
 ---
 
 # Find and fix foreign key violations  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -20,6 +20,8 @@ fetched_at: 2026-10-22T09:33:27.490618+00:00
 Send feedback 
 
 #  Find and fix foreign key violations Stay organized with collections  Save and categorize content based on your preferences. 
+
+To restore referential integrity in your AlloyDB for PostgreSQL database after an index rebuild or data import, you can run a diagnostic SQL query to identify foreign key columns that reference missing primary keys and then delete or update the orphaned rows.
 
 To check for a foreign key where the corresponding primary key is missing, run the following command:
 
@@ -57,7 +59,7 @@ To check for a foreign key where the corresponding primary key is missing, run t
       \gexec
       
 
-The output of the script will be similar to the following. If there is no output, there are no violations and you have successfully rebuilt your index.
+The output of the script is similar to the following. If there is no output, there are no violations and you have rebuilt your index.
 
 ### Output
     
@@ -68,12 +70,12 @@ The output of the script will be similar to the following. If there is no output
       (1 row)
       
 
-In the above output, the first column shows the primary key columns, in this example, a column named `id`. The second column is the referencing column for the foreign key. This means there is a row, `pk_id=4`, for which a parent primary key doesn't exist. You can decide if these keys are valid and if they are not, you can delete them.
+In the preceding output, the first column shows the primary key columns, in this example, a column named `id`. The second column is the referencing column for the foreign key. This means there is a row, `pk_id=4`, for which a parent primary key doesn't exist. You can decide if these keys are valid and if they are not, you can delete them.
 
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

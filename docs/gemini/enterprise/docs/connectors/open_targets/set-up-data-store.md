@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/open_targets/set-up-data-store/
 title: Set up an Open Targets data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:38:00.928731+00:00
+fetched_at: 2026-10-23T13:11:34.266143+00:00
 ---
 
 # Set up an Open Targets data store  |  Gemini Enterprise  |  Google Cloud Documentation

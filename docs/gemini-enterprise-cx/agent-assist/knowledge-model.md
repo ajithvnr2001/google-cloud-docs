@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/knowledge-model/
 title: Train a custom knowledge suggestion model \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:54.041072+00:00
+fetched_at: 2026-10-23T13:12:44.895460+00:00
 ---
 
 # Train a custom knowledge suggestion model  |  Agent Assist  |  Google Cloud Documentation

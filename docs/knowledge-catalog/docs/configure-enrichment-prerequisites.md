@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/configure-enrichment-prerequisites/
 title: Configure prerequisites for enrichment tasks \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:21:41.049051+00:00
+fetched_at: 2026-10-23T12:50:58.826938+00:00
 ---
 
 # Configure prerequisites for enrichment tasks  |  Knowledge Catalog  |  Google Cloud Documentation

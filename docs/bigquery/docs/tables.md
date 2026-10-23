@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/tables/
 title: Create and use tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:11:56.563545+00:00
+fetched_at: 2026-10-23T12:55:41.583126+00:00
 ---
 
 # Create and use tables  |  BigQuery  |  Google Cloud Documentation
@@ -21,23 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Create and use tables
 
-This document describes how to create and use [standard (built-in) tables in BigQuery](https://docs.cloud.google.com/bigquery/docs/tables-intro#standard-tables). For information about creating other table types, see the following:
+Standard tables let you store data in BigQuery storage, where you can query it, control who can access it, and audit its history. This document describes how to create [standard (built-in) tables](https://docs.cloud.google.com/bigquery/docs/tables-intro#standard-tables), control access to them, and get information about them, such as table metadata and the tables in a dataset.
 
-  * [Create partitioned tables](https://docs.cloud.google.com/bigquery/docs/creating-partitioned-tables)
-  * [Creating and using clustered tables](https://docs.cloud.google.com/bigquery/docs/creating-clustered-tables)
-
-
-
-After creating a table, you can do the following:
-
-  * Control access to your table data.
-  * Get information about your tables.
-  * List the tables in a dataset.
-  * Get table metadata.
-
-
-
-For more information about managing tables including updating table properties, copying a table, and deleting a table, see [Managing tables](https://docs.cloud.google.com/bigquery/docs/managing-tables).
+To create other table types, see [Create partitioned tables](https://docs.cloud.google.com/bigquery/docs/creating-partitioned-tables) and [Create clustered tables](https://docs.cloud.google.com/bigquery/docs/creating-clustered-tables). To update table properties, copy tables, or delete tables, see [Manage tables](https://docs.cloud.google.com/bigquery/docs/managing-tables).
 
 ## Before you begin
 
@@ -2546,6 +2532,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/samples/cloud-sql-mysql-sqlalchemy-connect-unix/
 title: Create a socket connection by using Python \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:31:03.231159+00:00
+fetched_at: 2026-10-23T10:19:10.211773+00:00
 ---
 
 # Create a socket connection by using Python  |  Cloud SQL for MySQL  |  Google Cloud Documentation

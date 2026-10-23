@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/url-filtering-logs/
 title: URL filtering logs \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:41.523030+00:00
+fetched_at: 2026-10-23T13:12:51.292994+00:00
 ---
 
 # URL filtering logs  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

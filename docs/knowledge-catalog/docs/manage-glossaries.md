@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/manage-glossaries/
 title: Manage a business glossary \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:37:07.488184+00:00
+fetched_at: 2026-10-23T10:22:02.524411+00:00
 ---
 
 # Manage a business glossary  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -31,7 +31,7 @@ By creating a common language for data using Knowledge Catalog business glossary
 
   * Define a clear hierarchy of business categories and terms.
   * Link concepts using synonyms and show relationships between terms.
-  * Search for data resources based on business concepts, not just technical names.
+  * Search for data resources based on business concepts, not only technical names.
 
 
 
@@ -117,40 +117,23 @@ These predefined roles contain the permissions required to create and manage glo
 The following permissions are required to create and manage glossaries:
 
   * Create, read, update, and delete a business glossary, category, and terms in your project: 
-    * dataplex.glossaries.list
-    * dataplex.glossaries.create
-    * dataplex.glossaries.get
-    * dataplex.glossaries.update
-    * dataplex.glossaries.delete
-    * dataplex.glossaryCategories.create
-    * dataplex.glossaryCategories.list
-    * dataplex.glossaryCategories.get
-    * dataplex.glossaryCategories.update
-    * dataplex.glossaryCategories.delete
-    * dataplex.glossaryTerms.create
-    * dataplex.glossaryTerms.list
-    * dataplex.glossaryTerms.get
-    * dataplex.glossaryTerms.update
-    * dataplex.glossaryTerms.delete
-  * Create, lookup, and delete synonym term-to-term links in your project: 
-    * dataplex.entryLinks.create on the Knowledge Catalog entry group in the project in which either of the glossary terms is present. The link is created in the entry group for which the permission is given.
-    * dataplex.entryGroups.useSynonymEntryLink on the Knowledge Catalog entry group in the project in which either of the glossary terms is present. The link is created in the entry group for which the permission is given.
-    * dataplex.glossaryTerms.use on the glossaries whose terms need to be associated.
-    * dataplex.glossaryTerms.get on the term whose synonym links you are looking up. Knowledge Catalog redacts synonym terms in the response if you lack the dataplex.glossaryTerms.get permission for those terms.
-    * dataplex.entryLinks.delete on the Knowledge Catalog entry group in the project in which the link is present.
-  * Create, lookup, and delete related term-to-term links in your project: 
-    * dataplex.entryLinks.create on the Knowledge Catalog entry group in the project in which either of the glossary terms is present. The link is created in the entry group for which the permission is given.
-    * dataplex.entryGroups.useRelatedEntryLink on the Knowledge Catalog entry group in the project in which either of the glossary terms is present. The link is created in the entry group for which the permission is given.
-    * dataplex.entries.link on the Knowledge Catalog entry group in projects in which entries corresponding to glossary terms are present.
-    * dataplex.glossaryTerms.get on the term whose related links you are looking up. Knowledge Catalog redacts related terms in the response if you lack the dataplex.glossaryTerms.get permission for those terms.
-    * dataplex.entryLinks.delete on the Knowledge Catalog entry group in the project in which the link is present.
-  * Create, lookup, and delete links between terms and data assets or columns in your project: 
-    * dataplex.entryLinks.create on the system entry group corresponding to data assets or columns in the project. The link is created in the project for which the permission is given.
-    * dataplex.entryGroups.useDefinitionEntryLink on the system entry group corresponding to data assets or columns in the project. The link is created in the project for which permission is given.
-    * dataplex.entries.link on the system entry group corresponding to data assets or columns in the project. The link is created in the project for which the permission is given.
-    * dataplex.glossaryTerms.use on the glossary whose term needs to be associated.
-    * Source system read permission (for example, `bigquery.tables.get` or `dataplex.glossaryTerms.get`) on the entry whose links you are looking up. Knowledge Catalog redacts data assets in the response if you lack the source system read permission for those assets.
-    * dataplex.entryLinks.delete on the system entry group in which the link is present.
+    * `dataplex.glossaries.list` on unknown
+
+    * `dataplex.glossaries.create`
+    * `dataplex.glossaries.get`
+    * `dataplex.glossaries.update`
+    * `dataplex.glossaries.delete`
+    * `dataplex.glossaryCategories.create`
+    * `dataplex.glossaryCategories.list`
+    * `dataplex.glossaryCategories.get`
+    * `dataplex.glossaryCategories.update`
+    * `dataplex.glossaryCategories.delete`
+    * `dataplex.glossaryTerms.create`
+    * `dataplex.glossaryTerms.list`
+    * `dataplex.glossaryTerms.get`
+    * `dataplex.glossaryTerms.update`
+    * `dataplex.glossaryTerms.delete` on unknown
+      * Create, look up, and delete synonym term-to-term links in your project
 
 
 
@@ -1270,14 +1253,14 @@ Replace the following:
             --data @- << EOF
             {
             "aspects": {
-            "dataplex-types.global.overview": {
-               "aspect_type":"projects/dataplex-types/locations/global/aspectTypes/overview
+               "dataplex-types.global.overview": {
+                  "aspect_type":"projects/dataplex-types/locations/global/aspectTypes/overview
             ",
-               "data": {
-               "content": "OVERVIEW",
-               "links": []
-               },
-            }
+                  "data": {
+                  "content": "OVERVIEW",
+                  "links": []
+                  },
+               }
             }
             }
             EOF
@@ -1303,18 +1286,18 @@ Replace `OVERVIEW` with plaintext or HTML to describe your glossary category or 
             --data @- << EOF
             {
             "aspects": {
-            "dataplex-types.global.contacts": {
-               "aspect_type": "projects/dataplex-types/locations/global/aspectTypes/contacts",
-               "data": {
-               "identities": [
-                  {
-                     "role": "steward",
-                     "name": "CONTACT_NAME",
-                     "id": "CONTACT_EMAIL"
-                  }
-               ]
-               },
-            }
+               "dataplex-types.global.contacts": {
+                  "aspect_type": "projects/dataplex-types/locations/global/aspectTypes/contacts",
+                  "data": {
+                  "identities": [
+                     {
+                        "role": "steward",
+                        "name": "CONTACT_NAME",
+                        "id": "CONTACT_EMAIL"
+                     }
+                  ]
+                  },
+               }
             }
             }
             EOF
@@ -1352,9 +1335,9 @@ A business glossary can have a maximum of three nested category levels, excludin
     
     gcurl -X POST https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION_ID/glossaries/GLOSSARY_ID/categories?category_id=CATEGORY_ID --data @- << EOF
     {
-      "displayName": "CATEGORY_DISPLAY_NAME",
-      "description": "CATEGORY_DESCRIPTION",
-      "parent": "projects/PROJECT_ID/locations/LOCATION_ID/glossaries/GLOSSARY_ID/categories/PARENT_CATEGORY_ID"
+       "displayName": "CATEGORY_DISPLAY_NAME",
+       "description": "CATEGORY_DESCRIPTION",
+       "parent": "projects/PROJECT_ID/locations/LOCATION_ID/glossaries/GLOSSARY_ID/categories/PARENT_CATEGORY_ID"
     }
     EOF
 
@@ -1504,14 +1487,14 @@ Replace the following:
             --data @- << EOF
             {
             "aspects": {
-            "dataplex-types.global.overview": {
-               "aspect_type":"projects/dataplex-types/locations/global/aspectTypes/overview
+               "dataplex-types.global.overview": {
+                  "aspect_type":"projects/dataplex-types/locations/global/aspectTypes/overview
             ",
-               "data": {
-               "content": "OVERVIEW",
-               "links": []
-               },
-            }
+                  "data": {
+                  "content": "OVERVIEW",
+                  "links": []
+                  },
+               }
             }
             }
             EOF
@@ -1537,18 +1520,18 @@ Replace `OVERVIEW` with plaintext or HTML to describe your glossary category or 
             --data @- << EOF
             {
             "aspects": {
-            "dataplex-types.global.contacts": {
-               "aspect_type": "projects/dataplex-types/locations/global/aspectTypes/contacts",
-               "data": {
-               "identities": [
-                  {
-                     "role": "steward",
-                     "name": "CONTACT_NAME",
-                     "id": "CONTACT_EMAIL"
-                  }
-               ]
-               },
-            }
+               "dataplex-types.global.contacts": {
+                  "aspect_type": "projects/dataplex-types/locations/global/aspectTypes/contacts",
+                  "data": {
+                  "identities": [
+                     {
+                        "role": "steward",
+                        "name": "CONTACT_NAME",
+                        "id": "CONTACT_EMAIL"
+                     }
+                  ]
+                  },
+               }
             }
             }
             EOF
@@ -1619,14 +1602,14 @@ Replace the following:
             --data @- << EOF
             {
             "aspects": {
-            "dataplex-types.global.overview": {
-               "aspect_type":"projects/dataplex-types/locations/global/aspectTypes/overview
+               "dataplex-types.global.overview": {
+                  "aspect_type":"projects/dataplex-types/locations/global/aspectTypes/overview
             ",
-               "data": {
-               "content": "OVERVIEW",
-               "links": []
-               },
-            }
+                  "data": {
+                  "content": "OVERVIEW",
+                  "links": []
+                  },
+               }
             }
             }
             EOF
@@ -1652,18 +1635,18 @@ Replace `OVERVIEW` with plaintext or HTML to describe your glossary category or 
             --data @- << EOF
             {
             "aspects": {
-            "dataplex-types.global.contacts": {
-               "aspect_type": "projects/dataplex-types/locations/global/aspectTypes/contacts",
-               "data": {
-               "identities": [
-                  {
-                     "role": "steward",
-                     "name": "CONTACT_NAME",
-                     "id": "CONTACT_EMAIL"
-                  }
-               ]
-               },
-            }
+               "dataplex-types.global.contacts": {
+                  "aspect_type": "projects/dataplex-types/locations/global/aspectTypes/contacts",
+                  "data": {
+                  "identities": [
+                     {
+                        "role": "steward",
+                        "name": "CONTACT_NAME",
+                        "id": "CONTACT_EMAIL"
+                     }
+                  ]
+                  },
+               }
             }
             }
             EOF
@@ -1699,15 +1682,15 @@ Glossary terms are entries. To attach an aspect, patch the entry resource. The e
     
     gcurl -X PATCH https://dataplex.googleapis.com/v1/projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID/terms/TERM_ID?update_mask=aspects\&aspect_keys=ASPECT_PROJECT_ID.ASPECT_LOCATION_ID.ASPECT_TYPE_ID --data @- << EOF
     {
-     "aspects": {
-       "ASPECT_PROJECT_ID.ASPECT_LOCATION_ID.ASPECT_TYPE_ID": {
-         "aspect_type": "projects/ASPECT_PROJECT_ID/locations/ASPECT_LOCATION_ID/aspectTypes/ASPECT_TYPE_ID",
-         "data": {
-           "sensitivity": "HIGH",
-           "data_owner": "achalg@google.com"
-         }
-       }
-     }
+      "aspects": {
+        "ASPECT_PROJECT_ID.ASPECT_LOCATION_ID.ASPECT_TYPE_ID": {
+          "aspect_type": "projects/ASPECT_PROJECT_ID/locations/ASPECT_LOCATION_ID/aspectTypes/ASPECT_TYPE_ID",
+          "data": {
+            "sensitivity": "HIGH",
+            "data_owner": "achalg@google.com"
+          }
+        }
+      }
     }
     EOF
 
@@ -1791,8 +1774,8 @@ You can edit the name, description, overview, contacts, and parent for a term.
     
     gcurl -X PATCH https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION_ID/glossaries/GLOSSARY_ID/terms/TERM_ID?update_mask=displayName,description --data @- << EOF
     {
-      "displayName": "TERM_DISPLAY_NAME",
-      "description": "TERM_DESCRIPTION"
+       "displayName": "TERM_DISPLAY_NAME",
+       "description": "TERM_DESCRIPTION"
     }
     EOF
 
@@ -1852,15 +1835,15 @@ The term gets linked immediately when you select it.
     
     gcurl -X POST https://dataplex.googleapis.com/v1/projects/TERM1_PROJECT_ID/locations/TERM1_LOCATION_ID/entryGroups/@dataplex/entryLinks?entry_link_id=ENTRY_LINK_ID -d "$(cat<<EOF
     {
-      "entry_link_type": "projects/dataplex-types/locations/global/entryLinkTypes/synonym",
+       "entry_link_type": "projects/dataplex-types/locations/global/entryLinkTypes/synonym",
     "entry_references": [{
-         "name": "projects/TERM1_PROJECT_NUMBER/locations/TERM1_LOCATION_ID/entryGroups/@dataplex/entries/projects/TERM1_PROJECT_NUMBER/locations/TERM1_LOCATION_ID/glossaries/TERM1_GLOSSARY_ID/terms/TERM1_ID",
-         "type": "UNSPECIFIED"
-      }, {
-         "name": "projects/TERM2_PROJECT_NUMBER/locations/TERM2_LOCATION_ID/entryGroups/@dataplex/entries/projects/TERM2_PROJECT_NUMBER/locations/TERM2_LOCATION_ID/glossaries/TERM2_GLOSSARY_ID/terms/TERM2_ID",
-         "type": "UNSPECIFIED"
-      }
-      ]
+          "name": "projects/TERM1_PROJECT_NUMBER/locations/TERM1_LOCATION_ID/entryGroups/@dataplex/entries/projects/TERM1_PROJECT_NUMBER/locations/TERM1_LOCATION_ID/glossaries/TERM1_GLOSSARY_ID/terms/TERM1_ID",
+          "type": "UNSPECIFIED"
+       }, {
+          "name": "projects/TERM2_PROJECT_NUMBER/locations/TERM2_LOCATION_ID/entryGroups/@dataplex/entries/projects/TERM2_PROJECT_NUMBER/locations/TERM2_LOCATION_ID/glossaries/TERM2_GLOSSARY_ID/terms/TERM2_ID",
+          "type": "UNSPECIFIED"
+       }
+       ]
     
     }
     EOF
@@ -1908,15 +1891,15 @@ The term gets linked immediately when you select it.
     
     gcurl -X POST https://dataplex.googleapis.com/v1/projects/TERM1_PROJECT_ID/locations/TERM1_LOCATION_ID/entryGroups/@dataplex/entryLinks?entry_link_id=ENTRY_LINK_ID -d "$(cat<<EOF
     {
-      "entry_link_type": "projects/dataplex-types/locations/global/entryLinkTypes/related",
+       "entry_link_type": "projects/dataplex-types/locations/global/entryLinkTypes/related",
     "entry_references": [{
-         "name": "projects/TERM1_PROJECT_NUMBER/locations/TERM1_LOCATION_ID/entryGroups/@dataplex/entries/projects/TERM1_PROJECT_NUMBER/locations/TERM1_LOCATION_ID/glossaries/TERM1_GLOSSARY_ID/terms/TERM1_ID",
-         "type": "UNSPECIFIED"
-      }, {
-         "name": "projects/TERM2_PROJECT_NUMBER/locations/TERM2_LOCATION_ID/entryGroups/@dataplex/entries/projects/TERM2_PROJECT_NUMBER/locations/TERM2_LOCATION_ID/glossaries/TERM2_GLOSSARY_ID/terms/TERM2_ID",
-         "type": "UNSPECIFIED"
-      }
-      ]
+          "name": "projects/TERM1_PROJECT_NUMBER/locations/TERM1_LOCATION_ID/entryGroups/@dataplex/entries/projects/TERM1_PROJECT_NUMBER/locations/TERM1_LOCATION_ID/glossaries/TERM1_GLOSSARY_ID/terms/TERM1_ID",
+          "type": "UNSPECIFIED"
+       }, {
+          "name": "projects/TERM2_PROJECT_NUMBER/locations/TERM2_LOCATION_ID/entryGroups/@dataplex/entries/projects/TERM2_PROJECT_NUMBER/locations/TERM2_LOCATION_ID/glossaries/TERM2_GLOSSARY_ID/terms/TERM2_ID",
+          "type": "UNSPECIFIED"
+       }
+       ]
     
     }
     EOF
@@ -1936,7 +1919,7 @@ Replace the following:
 
 
 
-### Lookup synonym links for a term
+### Look up synonym links for a term
 
 ### REST
     
@@ -1956,7 +1939,7 @@ Replace the following:
 
 **Note:** To fetch subsequent pages, append `&page_token=PAGE_TOKEN` to the request. Replace `PAGE_TOKEN` with the value of the page token you received from the earlier `lookupEntryLinks` response.
 
-### Lookup related links for a term
+### Look up related links for a term
 
 ### REST
     
@@ -1995,7 +1978,7 @@ Replace the following:
 
 ### REST
 
-  1. Lookup entry links to find the entry link ID of the link you want to delete. For more information, see Lookup synonym links for a term or Lookup related links for a term.
+  1. Look up entry links to find the entry link ID of the link you want to delete. For more information, see Look up synonym links for a term or Look up related links for a term.
 
   2. Delete the link by sending the following `DELETE` request:
          
@@ -2076,15 +2059,15 @@ You can attach terms to data assets or data asset columns. For example, you can 
     
     gcurl -X POST https://dataplex.googleapis.com/v1/projects/PROJECT_NUMBER/locations/ENTRY_LOCATION_ID/entryGroups/ENTRY_GROUP_ID/entryLinks?entry_link_id=ENTRY_LINK_ID -d "$(cat<<EOF
     {
-      "entry_link_type": "projects/dataplex-types/locations/global/entryLinkTypes/definition",
-      "entry_references": [{
-         "name": "projects/PROJECT_NUMBER/locations/ENTRY_LOCATION_ID/entryGroups/ENTRY_GROUP_ID/entries/ENTRY_ID",
-         "type": "SOURCE"
-      }, {
-         "name": "projects/TERM_PROJECT_NUMBER/locations/TERM_LOCATION_ID/entryGroups/@dataplex/entries/projects/TERM_PROJECT_NUMBER/locations/TERM_LOCATION_ID/glossaries/TERM_GLOSSARY_ID/terms/TERM_ID",
-         "type": "TARGET"
-      }
-      ]
+       "entry_link_type": "projects/dataplex-types/locations/global/entryLinkTypes/definition",
+       "entry_references": [{
+          "name": "projects/PROJECT_NUMBER/locations/ENTRY_LOCATION_ID/entryGroups/ENTRY_GROUP_ID/entries/ENTRY_ID",
+          "type": "SOURCE"
+       }, {
+          "name": "projects/TERM_PROJECT_NUMBER/locations/TERM_LOCATION_ID/entryGroups/@dataplex/entries/projects/TERM_PROJECT_NUMBER/locations/TERM_LOCATION_ID/glossaries/TERM_GLOSSARY_ID/terms/TERM_ID",
+          "type": "TARGET"
+       }
+       ]
     }
     EOF
     )"
@@ -2123,18 +2106,18 @@ Replace the following:
     
     gcurl -X POST https://dataplex.googleapis.com/v1/projects/PROJECT_NUMBER/locations/ENTRY_LOCATION_ID/entryGroups/ENTRY_GROUP_ID/entryLinks?entry_link_id=ENTRY_LINK_ID -d "$(cat<<EOF
     {
-     "entry_link_type": "projects/dataplex-types/locations/global/entryLinkTypes/definition",
-     "entry_references": [
-       {
-         "name": "projects/PROJECT_NUMBER/locations/ENTRY_LOCATION_ID/entryGroups/ENTRY_GROUP_ID/entries/ENTRY_ID",
-         "path": "Schema.COLUMN_NAME",
-         "type": "SOURCE"
-       },
-       {
-         "name": "projects/TERM_PROJECT_NUMBER/locations/TERM_LOCATION_ID/entryGroups/@dataplex/entries/projects/TERM_PROJECT_NUMBER/locations/TERM_LOCATION_ID/glossaries/TERM_GLOSSARY_ID/terms/TERM_ID",
-         "type": "TARGET"
-       }
-     ]
+      "entry_link_type": "projects/dataplex-types/locations/global/entryLinkTypes/definition",
+      "entry_references": [
+        {
+          "name": "projects/PROJECT_NUMBER/locations/ENTRY_LOCATION_ID/entryGroups/ENTRY_GROUP_ID/entries/ENTRY_ID",
+          "path": "Schema.COLUMN_NAME",
+          "type": "SOURCE"
+        },
+        {
+          "name": "projects/TERM_PROJECT_NUMBER/locations/TERM_LOCATION_ID/entryGroups/@dataplex/entries/projects/TERM_PROJECT_NUMBER/locations/TERM_LOCATION_ID/glossaries/TERM_GLOSSARY_ID/terms/TERM_ID",
+          "type": "TARGET"
+        }
+      ]
     }
     EOF
     )"
@@ -2192,7 +2175,7 @@ You can enter partial strings to find matching assets.
 
 
 
-### Lookup data assets linked to a term
+### Look up data assets linked to a term
 
 ### REST
     
@@ -2210,11 +2193,11 @@ Replace the following:
   * `TERM_GLOSSARY_ID`: the ID of the glossary that contains the term.
   * `TERM_ID`: the ID of the term.
 
-**Note:** Columns linked to term are returned in the `path` field. 
+**Note:** Columns linked to the term are returned in the `path` field. 
 
 To fetch subsequent pages, append `&page_token=PAGE_TOKEN` to the request. Replace `PAGE_TOKEN` with the value of the page token you received from the earlier `lookupEntryLinks` response.
 
-### Lookup terms linked to a data asset
+### Look up terms linked to a data asset
 
 ### REST
     
@@ -2281,7 +2264,7 @@ To navigate across your business glossary content, use the glossary and terms tr
 
 ### REST
 
-To find glossaries, terms, and linked data assets by using the REST API, you need to [sign up for Preview](https://docs.cloud.google.com/knowledge-catalog/docs/semantic-search#sign-up).
+To find glossaries, terms, and linked data assets by using the REST API, see [`projects.locations.searchEntries`](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations/searchEntries).
 
 ## Search for data assets linked to terms
 
@@ -2304,7 +2287,7 @@ To find glossaries, terms, and linked data assets by using the REST API, you nee
 
 ### REST
 
-To find glossaries, terms, and linked data assets by using the REST API, you need to [sign up for Preview](https://docs.cloud.google.com/knowledge-catalog/docs/semantic-search#sign-up).
+To find glossaries, terms, and linked data assets by using the REST API, see [`projects.locations.searchEntries`](https://docs.cloud.google.com/knowledge-catalog/docs/reference/rest/v1/projects.locations/searchEntries).
 
 ## Import glossaries and links between terms and terms or data assets
 
@@ -2319,8 +2302,8 @@ To import glossaries and links from another cataloging tool or to update your gl
          gcurl -X POST https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION_ID/glossaries?glossary_id=GLOSSARY_ID -d "$(cat<<EOF
          
          {
-          "displayName": "DISPLAY_NAME",
-          "description": "DESCRIPTION"
+            "displayName": "DISPLAY_NAME",
+            "description": "DESCRIPTION"
          }
          EOF
          )"
@@ -2338,37 +2321,34 @@ Replace the following:
      * Sample format for terms and categories of a glossary
            
            {"entry":{"name":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID/categories/CATEGORY_ID","entryType":"projects/dataplex-types/locations/global/entryTypes/glossary-category","aspects":{"dataplex-types.global.glossary-category-aspect":{"data":{}},"dataplex-types.global.overview":{"data":{"content":"CONTENT"}},"dataplex-types.global.contacts":{"data":{"identities":[{role: "steward", name: "CONTACT_DISPLAY_NAME", id: "CONTACT_EMAIL"}]}}},"parentEntry":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID","entrySource":{"resource":"projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID/categories/CATEGORY_ID","displayName":"CATEGORY_NAME","description":"CATEGORY_DESCRIPTION","ancestors":[{"name":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID","type":"projects/dataplex-types/locations/global/entryTypes/glossary"}]}}}
-            {"entry":{"name":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID/terms/TERM1_ID","entryType":"projects/dataplex-types/locations/global/entryTypes/glossary-term","aspects":{"dataplex-types.global.glossary-term-aspect":{"data":{}},"dataplex-types.global.overview":{"data":{"content":"TERM1_CONTENT"}},"dataplex-types.global.contacts":{"data":{"identities":[{role: "steward", name: "CONTACT_DISPLAY_NAME", id: "CONTACT_EMAIL"}]}}},"parentEntry":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID","entrySource":{"resource":"projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID/terms/TERM1_ID","displayName":"TERM1_DISPLAY_NAME","description":"TERM1_DESCRIPTION","ancestors":[{"name":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID","type":"projects/dataplex-types/locations/global/entryTypes/glossary"},{"name":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID/categories/CATEGORY_ID","type":"projects/dataplex-types/locations/global/entryTypes/glossary-category"}]}}}
-            {"entry":{"name":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID/terms/TERM2_ID","entryType":"projects/dataplex-types/locations/global/entryTypes/glossary-term","aspects":{"dataplex-types.global.glossary-term-aspect":{"data":{}},"dataplex-types.global.overview":{"data":{"content":"TERM1_CONTENT"}},"dataplex-types.global.contacts":{"data":{"identities":[{role: "steward", name: "CONTACT_DISPLAY_NAME", id: "CONTACT_EMAIL"}]}}},"parentEntry":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID","entrySource":{"resource":"projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID/terms/TERM2_ID","displayName":"TERM2_DISPLAY_NAME","description":"TERM2_DESCRIPTION","ancestors":[{"name":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID","type":"projects/dataplex-types/locations/global/entryTypes/glossary"},{"name":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID/categories/CATEGORY_ID","type":"projects/dataplex-types/locations/global/entryTypes/glossary-category"}]}}}
-            
+           {"entry":{"name":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID/terms/TERM1_ID","entryType":"projects/dataplex-types/locations/global/entryTypes/glossary-term","aspects":{"dataplex-types.global.glossary-term-aspect":{"data":{}},"dataplex-types.global.overview":{"data":{"content":"TERM1_CONTENT"}},"dataplex-types.global.contacts":{"data":{"identities":[{role: "steward", name: "CONTACT_DISPLAY_NAME", id: "CONTACT_EMAIL"}]}}},"parentEntry":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID","entrySource":{"resource":"projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID/terms/TERM1_ID","displayName":"TERM1_DISPLAY_NAME","description":"TERM1_DESCRIPTION","ancestors":[{"name":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID","type":"projects/dataplex-types/locations/global/entryTypes/glossary"},{"name":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID/categories/CATEGORY_ID","type":"projects/dataplex-types/locations/global/entryTypes/glossary-category"}]}}}
+           {"entry":{"name":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID/terms/TERM2_ID","entryType":"projects/dataplex-types/locations/global/entryTypes/glossary-term","aspects":{"dataplex-types.global.glossary-term-aspect":{"data":{}},"dataplex-types.global.overview":{"data":{"content":"TERM1_CONTENT"}},"dataplex-types.global.contacts":{"data":{"identities":[{role: "steward", name: "CONTACT_DISPLAY_NAME", id: "CONTACT_EMAIL"}]}}},"parentEntry":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID","entrySource":{"resource":"projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID/terms/TERM2_ID","displayName":"TERM2_DISPLAY_NAME","description":"TERM2_DESCRIPTION","ancestors":[{"name":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID","type":"projects/dataplex-types/locations/global/entryTypes/glossary"},{"name":"projects/PROJECT_NUMBER/locations/LOCATION_ID/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/LOCATION_ID/glossaries/GLOSSARY_ID/categories/CATEGORY_ID","type":"projects/dataplex-types/locations/global/entryTypes/glossary-category"}]}}}
 
      * Sample format for links between terms
            
            {"entryLink":{"name":"projects/PROJECT_NUMBER/locations/global/entryGroups/@dataplex/entryLinks/el-import-0606e3f2-8206-4f3a-aba9-32c6196f6048","entryLinkType":"projects/dataplex-types/locations/global/entryLinkTypes/synonym","entryReferences":[{"name":"projects/PROJECT_NUMBER/locations/global/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/global/glossaries/import-glossary/terms/term-1"},{"name":"projects/PROJECT_NUMBER/locations/global/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/global/glossaries/import-glossary/terms/term-2"}]}}
-            {"entryLink":{"name":"projects/PROJECT_NUMBER/locations/global/entryGroups/@dataplex/entryLinks/el-import-2f7408e3-af3d-405d-81bb-861cf9ec5146","entryLinkType":"projects/dataplex-types/locations/global/entryLinkTypes/related","entryReferences":[{"name":"projects/PROJECT_NUMBER/locations/global/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/global/glossaries/import-glossary/terms/term-1"},{"name":"projects/PROJECT_NUMBER/locations/global/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/global/glossaries/import-glossary/terms/term-2"}]}}
-            
+           {"entryLink":{"name":"projects/PROJECT_NUMBER/locations/global/entryGroups/@dataplex/entryLinks/el-import-2f7408e3-af3d-405d-81bb-861cf9ec5146","entryLinkType":"projects/dataplex-types/locations/global/entryLinkTypes/related","entryReferences":[{"name":"projects/PROJECT_NUMBER/locations/global/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/global/glossaries/import-glossary/terms/term-1"},{"name":"projects/PROJECT_NUMBER/locations/global/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/global/glossaries/import-glossary/terms/term-2"}]}}
 
      * Sample format for links between terms and data assets
            
            projects/PROJECT_NUMBER/locations/us-central1/entryGroups/entry-group-1/entries/entry-1 and term projects/PROJECT_NUMBER/locations/global/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/global/glossaries/import-glossary/terms/term-1
-            {"entryLink":{"name":"projects/PROJECT_NUMBER/locations/global/entryGroups/@dataplex/entryLinks/el-import-0606e3f2-8206-4f3a-aba9-32c6196f6048","entryLinkType":"projects/dataplex-types/locations/global/entryLinkTypes/definition","entryReferences":[{"name":"projects/PROJECT_NUMBER/locations/global/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/global/glossaries/import-glossary/terms/term-1"},{"name":"projects/PROJECT_NUMBER/locations/us-central1/entryGroups/entry-group-1/entries/entry-1"}]}}
-            
+           {"entryLink":{"name":"projects/PROJECT_NUMBER/locations/global/entryGroups/@dataplex/entryLinks/el-import-0606e3f2-8206-4f3a-aba9-32c6196f6048","entryLinkType":"projects/dataplex-types/locations/global/entryLinkTypes/definition","entryReferences":[{"name":"projects/PROJECT_NUMBER/locations/global/entryGroups/@dataplex/entries/projects/PROJECT_NUMBER/locations/global/glossaries/import-glossary/terms/term-1"},{"name":"projects/PROJECT_NUMBER/locations/us-central1/entryGroups/entry-group-1/entries/entry-1"}]}}
     
     # Set GCURL alias
     alias gcurl='curl -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json"'
     
     gcurl https://DATAPLEX_API/metadataJobs?metadata_job_id=JOB_ID -d "$(cat<<EOF
     {
-      "type":"IMPORT",
-      "import_spec":{
-         "log_level":"DEBUG",
-         "source_storage_uri":"gs://STORAGE_BUCKET/",
-         "entry_sync_mode":"FULL",
-         "aspect_sync_mode":"INCREMENTAL",
-         "scope":{
-            "glossaries": "GLOSSARY_NAME"
-         }
-      }
+       "type":"IMPORT",
+       "import_spec":{
+          "log_level":"DEBUG",
+          "source_storage_uri":"gs://STORAGE_BUCKET/",
+          "entry_sync_mode":"FULL",
+          "aspect_sync_mode":"INCREMENTAL",
+          "scope":{
+             "glossaries": "GLOSSARY_NAME"
+          }
+       }
     }
     EOF
     )"
@@ -2389,24 +2369,24 @@ Replace `OPERATION_ID` with the ID of the operation.
          
          gcurl https://DATAPLEX_API/metadataJobs?metadata_job_id=JOB_ID -d "$(cat<<EOF
          {
-           "type":"IMPORT",
-           "import_spec":{
-              "log_level":"DEBUG",
-              "source_storage_uri":"gs://STORAGE_BUCKET/",
-              "entry_sync_mode":"FULL",
-              "aspect_sync_mode":"INCREMENTAL",
-              "scope":{
-                 "entry_groups":[  "projects/PROJECT_ID/locations/LOCATION_ID/entryGroups/@dataplex"
-                 ],
-                 "entry_link_types":[
-                    "projects/dataplex-types/locations/global/entryLinkTypes/synonym",
-                    "projects/dataplex-types/locations/global/entryLinkTypes/related"
-                 ],
-                 "referenced_entry_scopes":[
-                    "PROJECT_IDS"
-                 ]
-              }
-           }
+            "type":"IMPORT",
+            "import_spec":{
+               "log_level":"DEBUG",
+               "source_storage_uri":"gs://STORAGE_BUCKET/",
+               "entry_sync_mode":"FULL",
+               "aspect_sync_mode":"INCREMENTAL",
+               "scope":{
+                  "entry_groups":[  "projects/PROJECT_ID/locations/LOCATION_ID/entryGroups/@dataplex"
+                  ],
+                  "entry_link_types":[
+                     "projects/dataplex-types/locations/global/entryLinkTypes/synonym",
+                     "projects/dataplex-types/locations/global/entryLinkTypes/related"
+                  ],
+                  "referenced_entry_scopes":[
+                     "PROJECT_IDS"
+                  ]
+               }
+            }
          }
          EOF
          )"
@@ -2417,26 +2397,26 @@ Replace `DATAPLEX_API` with `dataplex.googleapis.com/v1/projects/PROJECT_ID/loca
 
 To create a link between glossary terms and data assets, run the import job for each entry group to which the entry for the data asset belongs. All definition entry links are created in this entry group.
 
-**Note:** Make sure the import file in the Cloud Storage bucket contain a file for links in one entry group. To create a link between a term and entry for the data asset in another entry group, provide a new file in the Cloud Storage bucket.
+**Note:** Make sure that the import file in the Cloud Storage bucket contains a file for links in one entry group. To create a link between a term and entry for the data asset in another entry group, provide a new file in the Cloud Storage bucket.
          
          gcurl https://DATAPLEX_API/metadataJobs?metadata_job_id=JOB_ID -d "$(cat<<EOF
          {
          "type":"IMPORT",
          "import_spec":{
-           "log_level":"DEBUG",
-           "source_storage_uri":"gs://STORAGE_BUCKET/",
-           "entry_sync_mode":"FULL",
-           "aspect_sync_mode":"INCREMENTAL",
-           "scope":{
-              "entry_groups":[  "projects/PROJECT_ID/locations/ENTRY_GROUP_LOCATION_ID/entryGroups/@dataplex"
-              ],
-              "entry_link_types":[
-                 "projects/dataplex-types/locations/global/entryLinkTypes/definition"
-              ],
-              "referenced_entry_scopes":[
-                 "PROJECT_IDS"
-              ]
-           }
+            "log_level":"DEBUG",
+            "source_storage_uri":"gs://STORAGE_BUCKET/",
+            "entry_sync_mode":"FULL",
+            "aspect_sync_mode":"INCREMENTAL",
+            "scope":{
+               "entry_groups":[  "projects/PROJECT_ID/locations/ENTRY_GROUP_LOCATION_ID/entryGroups/@dataplex"
+               ],
+               "entry_link_types":[
+                  "projects/dataplex-types/locations/global/entryLinkTypes/definition"
+               ],
+               "referenced_entry_scopes":[
+                  "PROJECT_IDS"
+               ]
+            }
          }
          }
          EOF
@@ -2449,7 +2429,7 @@ Replace `DATAPLEX_API` with `dataplex.googleapis.com/v1/projects/PROJECT_ID/loca
 
 ## Pricing
 
-Starting in July 2025, Knowledge Catalog business glossary will be billed the same as the metadata storage pricing. See [Knowledge Catalog metadata storage pricing](https://cloud.google.com/dataplex/pricing#metadata-storage).
+Starting in July 2025, Knowledge Catalog business glossary will be billed the same as the metadata storage pricing. See [Knowledge Catalog metadata storage pricing](https://cloud.google.com/products/knowledge-catalog/pricing#metadata-storage).
 
 ## What's next
 
@@ -2461,6 +2441,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

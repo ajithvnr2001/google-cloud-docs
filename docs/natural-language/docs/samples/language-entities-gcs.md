@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/docs/samples/language-entities-gcs/
 title: Analyze entities in a Cloud Storage file \u00a0|\u00a0 Cloud Natural Language API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:17:52.933234+00:00
+fetched_at: 2026-10-23T11:00:16.418659+00:00
 ---
 
 # Analyze entities in a Cloud Storage file  |  Cloud Natural Language API  |  Google Cloud Documentation

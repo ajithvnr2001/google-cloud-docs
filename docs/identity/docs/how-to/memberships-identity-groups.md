@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/memberships-identity-groups/
 title: Managing identity-mapped group memberships \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:50.362108+00:00
+fetched_at: 2026-10-23T13:10:34.183106+00:00
 ---
 
 # Managing identity-mapped group memberships  |  Cloud Identity  |  Google Cloud Documentation

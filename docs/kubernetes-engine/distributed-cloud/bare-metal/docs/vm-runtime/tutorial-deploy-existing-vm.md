@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/vm-runtime/tutorial-deploy-existing-vm/
 title: Tutorial: Deploy an existing VM in a cluster using VM Runtime on GDC \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:21:39.658872+00:00
+fetched_at: 2026-10-23T10:22:16.266761+00:00
 ---
 
 # Tutorial: Deploy an existing VM in a cluster using VM Runtime on GDC  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -22,11 +22,9 @@ Send feedback
 
 #  Tutorial: Deploy an existing VM in a cluster using VM Runtime on GDC Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document provides a step-by-step guide to deploy a virtual machine (VM) based workload into an installation of Distributed Cloud software only for bare metal using VM Runtime on GDC. The workload used in this guide is the sample [point of sale application](https://github.com/GoogleCloudPlatform/point-of-sale). This application represents a typical [point of sale terminal](https://en.wikipedia.org/wiki/Point_of_sale) that runs on on-premises hardware at a retail store.
+VM Runtime on GDC lets you deploy virtual machine (VM) workloads directly into an installation of Distributed Cloud software only for bare metal. In this tutorial, you migrate a sample [point of sale application](https://github.com/GoogleCloudPlatform/point-of-sale), which represents a retail [point of sale terminal](https://en.wikipedia.org/wiki/Point_of_sale), from a Compute Engine VM into a bare metal cluster and access its web frontend.
 
-In this document, you migrate this application from a VM into a cluster and access the application's web frontend. To migrate an existing VM into the cluster, first a disk image of that VM must be created. Then, the image must be hosted in a repository that the cluster can access. Finally, the URL of that image can be used to create the VM. VM Runtime on GDC expects the images to be in `qcow2` format. If you provide a different image type, it's automatically converted into the `qcow2` format. To avoid repetitive conversion and to enable reuse, you can [convert a virtual disk image](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/vm-runtime/convert-image) and host the `qcow2` image.
-
-This document uses a pre-prepared image of a Compute Engine VM instance where the workload runs as a [systemd](https://en.wikipedia.org/wiki/Systemd) service. You may follow these same steps to deploy your own application.
+The deployment uses a pre-prepared disk image where the workload runs as a [systemd](https://en.wikipedia.org/wiki/Systemd) service. You can also follow these steps to prepare and deploy your own VM-based applications.
 
 ## Objectives
 
@@ -103,7 +101,9 @@ The following example output shows that the `virtctl` plugin is available for us
 
 When you deploy a VM into an installation of Distributed Cloud software only for bare metal, VM Runtime on GDC expects a VM image. This image serves as the boot disk for the deployed VM.
 
-In this tutorial, you migrate a Compute Engine VM-based workload into a cluster. This Compute Engine VM was created, and the sample point of sale (PoS) application was configured to run as a systemd service. A [disk image of this VM along with the PoS application workload was created](https://docs.cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#create_image) in Google Cloud. This image was then [exported into a Cloud Storage bucket as a `qcow2` image](https://docs.cloud.google.com/compute/docs/images/export-image#exporting_an_image). You use this pre-prepared `qcow2` image in the following steps.
+To migrate an existing VM into the cluster, first a disk image of that VM must be created. Then, the image must be hosted in a repository that the cluster can access. Finally, the URL of that image can be used to create the VM. VM Runtime on GDC expects the images to be in `qcow2` format. If you provide a different image type, it's automatically converted into the `qcow2` format. To avoid repetitive conversion and to enable reuse, you can [convert a virtual disk image](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/vm-runtime/convert-image) and host the `qcow2` image.
+
+In the following steps, you use a pre-prepared `qcow2` image where the sample workload was [created as a VM disk image](https://docs.cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#create_image) in Google Cloud and [exported to a Cloud Storage bucket](https://docs.cloud.google.com/compute/docs/images/export-image#exporting_an_image).
 
 **Note:** Although we use a Compute Engine VM in this document, the steps to create a disk image of a VM vary depending on the environment or platform in which your existing VM is running. You can create a disk image of your existing VMs if you want to follow the steps in this document with your own custom image.
 
@@ -398,6 +398,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

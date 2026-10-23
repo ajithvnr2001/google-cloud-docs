@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/adaptive-protection-use-cases/
 title: Adaptive Protection use cases \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:59.463429+00:00
+fetched_at: 2026-10-23T13:16:52.862543+00:00
 ---
 
 # Adaptive Protection use cases  |  Google Cloud Armor  |  Google Cloud Documentation

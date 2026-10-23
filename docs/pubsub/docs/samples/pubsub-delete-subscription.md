@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-delete-subscription/
 title: Delete subscription \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:11.481394+00:00
+fetched_at: 2026-10-23T12:55:06.861517+00:00
 ---
 
 # Delete subscription  |  Pub/Sub  |  Google Cloud Documentation
@@ -142,6 +142,47 @@ To authenticate to Pub/Sub, set up Application Default Credentials. For more inf
             System.out.println(e.getMessage());
           }
         }
+      }
+    }
+
+### Kotlin
+    
+    
+    import com.google.api.gax.rpc.ApiException
+    import com.google.api.gax.rpc.NotFoundException
+    import com.google.cloud.pubsub.v1.SubscriptionAdminClient
+    import com.google.pubsub.v1.SubscriptionName
+    import java.io.IOException
+    
+    /**
+     * Deletes an existing Google Cloud Pub/Sub subscription.
+     *
+     * @param projectId Google Cloud project identifier (for example, "example-project-id").
+     * @param subscriptionId Pub/Sub subscription identifier to delete (for example, "example-subscription-id").
+     */
+    fun deleteSubscription(projectId: String, subscriptionId: String) {
+      val subscriptionName = SubscriptionName.of(projectId, subscriptionId)
+    
+      try {
+        SubscriptionAdminClient.create().use { subscriptionAdminClient ->
+          subscriptionAdminClient.deleteSubscription(subscriptionName)
+    
+          println("Resource ID: $subscriptionName")
+          println("Deleted: true")
+          println("Subscription ID: $subscriptionId")
+        }
+      } catch (err: NotFoundException) {
+        System.err.println(
+          "error: subscription '$subscriptionId' not found in project '$projectId': ${err.message}"
+        )
+      } catch (err: ApiException) {
+        System.err.println(
+          "error: failed to delete subscription '$subscriptionId' in project '$projectId': ${err.message}"
+        )
+      } catch (err: IOException) {
+        System.err.println(
+          "error: failed to initialize SubscriptionAdminClient for subscription '$subscriptionId' in project '$projectId': ${err.message}"
+        )
       }
     }
 

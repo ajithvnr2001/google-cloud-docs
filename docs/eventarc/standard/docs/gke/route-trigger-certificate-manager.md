@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/gke/route-trigger-certificate-manager/
 title: Route Certificate Manager events to GKE \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:02.767056+00:00
+fetched_at: 2026-10-23T13:00:46.665385+00:00
 ---
 
 # Route Certificate Manager events to GKE  |  Eventarc Standard  |  Google Cloud Documentation

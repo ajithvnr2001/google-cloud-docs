@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-subscribe-avro-records/
 title: Receive messages of Avro schema type \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:21:08.758345+00:00
+fetched_at: 2026-10-23T10:04:37.311128+00:00
 ---
 
 # Receive messages of Avro schema type  |  Pub/Sub  |  Google Cloud Documentation

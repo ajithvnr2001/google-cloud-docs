@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-open-source-software/docs/supported-packages/
 title: List of supported Java and Python packages for the Assured Open Source Software free tier \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:24.479696+00:00
+fetched_at: 2026-10-23T13:20:00.434443+00:00
 ---
 
 # List of supported Java and Python packages for the Assured Open Source Software free tier  |  Google Cloud Documentation

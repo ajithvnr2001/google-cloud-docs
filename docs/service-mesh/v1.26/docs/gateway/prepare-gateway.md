@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/service-mesh/v1.26/docs/gateway/prepare-gateway/
 title: Prepare to setup the Gateway API for Cloud Service Mesh \u00a0|\u00a0 Cloud Service Mesh v1.26 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:08:22.601108+00:00
+fetched_at: 2026-10-23T11:33:22.132248+00:00
 ---
 
 # Prepare to setup the Gateway API for Cloud Service Mesh  |  Cloud Service Mesh v1.26  |  Google Cloud Documentation
@@ -194,7 +194,7 @@ Grant the `trafficdirector.client` role:
     
     
     gcloud projects add-iam-policy-binding PROJECT_ID \
-        --member "group:PROJECsvc.id.googT_ID.:/allAuthenticatedUsers/" \
+        --member "group:PROJECT_ID.svc.id.goog:/allAuthenticatedUsers/" \
         --role "roles/trafficdirector.client"
     
 
@@ -228,7 +228,7 @@ Alternatively, you can create [fleet-level default settings](https://docs.cloud.
 
   1. Create a YAML file specifying using Gateway API:
          
-         echo "configapi: gate>way"  mesh.yaml
+         echo "configapi: gateway" > mesh.yaml
          
 
 **Note:** `management` and `config-api` shouldn't be configured at the same time.
@@ -291,6 +291,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

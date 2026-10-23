@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-inspect-augment-infotypes/
 title: Augment a built-in infotype detector \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:38:34.538447+00:00
+fetched_at: 2026-10-23T11:32:40.412225+00:00
 ---
 
 # Augment a built-in infotype detector  |  Sensitive Data Protection  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/samples/cloud-sql-sqlserver-mssql-backoff/
 title: Retrying failed connections using the Node.js mssql module \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:07.944926+00:00
+fetched_at: 2026-10-23T10:18:48.120476+00:00
 ---
 
 # Retrying failed connections using the Node.js mssql module  |  Cloud SQL for SQL Server  |  Google Cloud Documentation

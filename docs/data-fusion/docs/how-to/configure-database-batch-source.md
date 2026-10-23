@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/configure-database-batch-source/
 title: Database batch source \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:16.457550+00:00
+fetched_at: 2026-10-23T13:20:19.155719+00:00
 ---
 
 # Database batch source  |  Cloud Data Fusion  |  Google Cloud Documentation

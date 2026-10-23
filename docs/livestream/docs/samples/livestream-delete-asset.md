@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/livestream/docs/samples/livestream-delete-asset/
 title: Delete an asset \u00a0|\u00a0 Live Stream API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:10:33.928435+00:00
+fetched_at: 2026-10-23T10:44:56.251529+00:00
 ---
 
 # Delete an asset  |  Live Stream API  |  Google Cloud Documentation

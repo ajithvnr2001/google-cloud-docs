@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/grpc/running-esp-localdev/
 title: Running Extensible Service Proxy locally or on another platform \u00a0|\u00a0 Cloud Endpoints with gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:17.632144+00:00
+fetched_at: 2026-10-23T13:00:34.712628+00:00
 ---
 
 # Running Extensible Service Proxy locally or on another platform  |  Cloud Endpoints with gRPC  |  Google Cloud Documentation

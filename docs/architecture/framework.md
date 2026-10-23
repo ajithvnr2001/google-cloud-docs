@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/framework/
 title: Google Cloud Well-Architected Framework \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:06.140195+00:00
+fetched_at: 2026-10-23T13:18:23.524924+00:00
 ---
 
 # Google Cloud Well-Architected Framework  |  Cloud Architecture Center  |  Google Cloud Documentation

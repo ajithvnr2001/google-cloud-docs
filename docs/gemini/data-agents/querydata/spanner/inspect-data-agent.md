@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/querydata/spanner/inspect-data-agent/
 title: Test QueryData in Spanner Studio \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:47.697523+00:00
+fetched_at: 2026-10-23T13:03:54.026107+00:00
 ---
 
 # Test QueryData in Spanner Studio  |  Data Agents  |  Google Cloud Documentation

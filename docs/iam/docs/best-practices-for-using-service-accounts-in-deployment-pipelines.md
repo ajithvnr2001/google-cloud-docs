@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/best-practices-for-using-service-accounts-in-deployment-pipelines/
 title: Best practices for using service accounts in pipelines \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:31:01.014391+00:00
+fetched_at: 2026-10-23T13:02:55.992954+00:00
 ---
 
 # Best practices for using service accounts in pipelines  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

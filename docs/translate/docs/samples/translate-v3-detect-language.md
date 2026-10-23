@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/translate/docs/samples/translate-v3-detect-language/
 title: Detect the language (Advanced edition) \u00a0|\u00a0 Cloud Translation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:21.664436+00:00
+fetched_at: 2026-10-23T08:36:35.716016+00:00
 ---
 
 # Detect the language (Advanced edition)  |  Cloud Translation  |  Google Cloud Documentation

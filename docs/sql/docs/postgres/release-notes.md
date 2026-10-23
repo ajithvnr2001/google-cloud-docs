@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/release-notes/
 title: Cloud SQL for PostgreSQL release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:51:29.695379+00:00
+fetched_at: 2026-10-23T12:51:09.685842+00:00
 ---
 
 # Cloud SQL for PostgreSQL release notes  |  Google Cloud Documentation
@@ -241,7 +241,7 @@ For more information, see [Configure Private Service Connect](https://docs.cloud
 
 Feature
 
-Use assessments ([Preview](https://cloud.google.com/products/#product-launch-stages)) in [Database Center](https://docs.cloud.google.com/database-center/docs/overview) to assess and test the performance impact of database recommendations before you apply them to your production database fleet.
+Use assessments ([Preview](https://cloud.google.com/products#product-launch-stages)) in [Database Center](https://docs.cloud.google.com/database-center/docs/overview) to assess and test the performance impact of database recommendations before you apply them to your production database fleet.
 
 The assessments workflow performs these operations:
 
@@ -386,7 +386,7 @@ The new maintenance version is [`[PostgreSQL version].R20260319.07_04`](https://
 
 Feature
 
-QueryData adds support for parameterized secure views (PSVs) to help secure applications that use natural language queries. For more information, see [Secure and control access to application data](https://docs.cloud.google.com/sql/docs/postgres/secure-app-data-parameterized-secure-views-qd).
+QueryData adds support for parameterized secure views (PSVs) to help secure applications that use natural language queries. For more information, see [Secure and control access to application data](https://docs.cloud.google.com/gemini/data-agents/querydata/sql-postgres/secure-app-data-parameterized-secure-views-qd).
 
 This feature is in [Preview](https://cloud.google.com/products#product-launch-stages).
 
@@ -394,7 +394,7 @@ This feature is in [Preview](https://cloud.google.com/products#product-launch-st
 
 Feature
 
-You can publish a [Cloud SQL for PostgreSQL conversational analytics agent in Gemini Enterprise](https://docs.cloud.google.com/gemini/data-agents/conversational-analytics/sql-postgres/create-data-agents#publish-agent-gemini-enterprise). This feature is in [Preview](https://cloud.google.com/products/#product-launch-stages).
+You can publish a [Cloud SQL for PostgreSQL conversational analytics agent in Gemini Enterprise](https://docs.cloud.google.com/gemini/data-agents/conversational-analytics/sql-postgres/create-data-agents#publish-agent-gemini-enterprise). This feature is in [Preview](https://cloud.google.com/products#product-launch-stages).
 
 ## June 12, 2026
 
@@ -433,7 +433,7 @@ Change
 
 The command for upgrading Cloud SQL instances to the new network architecture has been re-enabled.
 
-For more information, see [Upgrade an instance to the new network architecture](https://docs.cloud.google.com/sql/docs/postgres/upgrade-cloud-sql-instance-new-network-architecture).
+For more information, see [Upgrade an instance to the new network architecture](https://docs.cloud.google.com/sql/docs/postgres/upgrade-cloud-sql-instance-new-network-architecture) .
 
 ## May 11, 2026
 
@@ -445,7 +445,7 @@ This feature includes: * **Regional boundary restrictions** : Cloud SQL regional
 
 For more information, see [Cloud SQL regional endpoints](https://docs.cloud.google.com/sql/docs/postgres/admin-api/rep).
 
-This feature is in [Preview](https://cloud.google.com/products/#product-launch-stages).
+This feature is in [Preview](https://cloud.google.com/products#product-launch-stages).
 
 ## April 30, 2026
 
@@ -484,7 +484,7 @@ For more information, see [Quick-start migrations overview](https://docs.cloud.g
 
 Feature
 
-You can use the [Database Insights remote MCP server](https://docs.cloud.google.com/sql/docs/postgres/reference/mcp/databaseinsights/mcp) to analyze Cloud SQL for PostgreSQL's performance and system metrics. This feature is in [GA](https://cloud.google.com/products/#product-launch-stages).
+You can use the [Database Insights remote MCP server](https://docs.cloud.google.com/sql/docs/postgres/reference/mcp/databaseinsights/mcp) to analyze Cloud SQL for PostgreSQL's performance and system metrics. This feature is in [GA](https://cloud.google.com/products#product-launch-stages).
 
 ## April 18, 2026
 
@@ -504,7 +504,7 @@ Feature
 
 You can use [DNS automation](https://docs.cloud.google.com/sql/docs/postgres/about-private-service-connect#dns-automation) on Cloud SQL instances where Private Service Connect is enabled to provision and manage per-instance DNS records automatically. On Enterprise Plus edition instances where DNS automation is enabled, you can also enable a global write endpoint DNS that automatically resolves to your current primary instance.
 
-This feature is in [Preview](https://docs.cloud.google.com/products#product-launch-stages).
+This feature is in [Preview](https://cloud.google.com/products#product-launch-stages).
 
 ## April 14, 2026
 
@@ -518,29 +518,37 @@ If you ran an investigation prior to April 10, 2026, then the results of the inv
 
 Feature
 
+The QueryData tool lets you to query the data in your database using conversational language and build data agents. For more information, see [QueryData tool overview](https://docs.cloud.google.com/gemini/data-agents/querydata/sql-postgres/data-agent-overview). This feature is available in ([Preview](https://cloud.google.com/products#product-launch-stages)).
+
+The preview release increases the accuracy of SQL generation with value search queries which match values and their context within a database. Value search queries trigger automatically.
+
+Feature
+
 If the storage capacity of a Cloud SQL instance is larger than your application needs, then you can manually reduce, or shrink, your storage capacity to a smaller size.
 
 Depending on underlying disk size, storage shrink operations might incur considerable downtime. If your instance requires limited downtime, rather than using storage shrink capabilities, we recommend migrating your data to a new, smaller instance using Database Migration Service.
 
 For more information, see [About storage shrink](https://docs.cloud.google.com/sql/docs/postgres/about-storage-shrink).
 
-Feature
-
-The QueryData tool lets you to query the data in your database using conversational language and build data agents. For more information, see [QueryData tool overview](https://docs.cloud.google.com/sql/docs/postgres/data-agent-overview). This feature is available in ([Preview](https://cloud.google.com/products#product-launch-stages)).
-
-The preview release increases the accuracy of SQL generation with value search queries which match values and their context within a database. Value search queries trigger automatically.
-
 ## March 30, 2026
 
 Feature
 
-Cloud SQL for PostgreSQL now offers conversational analytics, which lets users query their operational data using natural language. This feature is powered by the [Conversational Analytics API](https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/overview), which can help you translate complex human dialog into precise database queries to provide actionable insights. This feature is in [Preview](https://docs.cloud.google.com/products#product-launch-stages). For more information, see [Conversational analytics for Cloud SQL for PostgreSQL overview](https://docs.cloud.google.com/gemini/data-agents/conversational-analytics/sql-postgres).
+Cloud SQL for PostgreSQL now offers conversational analytics, which lets users query their operational data using natural language. This feature is powered by the [Conversational Analytics API](https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/overview), which can help you translate complex human dialog into precise database queries to provide actionable insights. This feature is in [Preview](https://cloud.google.com/products#product-launch-stages). For more information, see [Conversational analytics for Cloud SQL for PostgreSQL overview](https://docs.cloud.google.com/gemini/data-agents/conversational-analytics/sql-postgres).
 
 Breaking
 
-[Vector assist](https://docs.cloud.google.com/sql/docs/postgres/vector-assist-overview) ([Preview](https://docs.cloud.google.com/products#product-launch-stages)) is temporarily disabled for all Cloud SQL for PostgreSQL instances.
+[Vector assist](https://docs.cloud.google.com/sql/docs/postgres/vector-assist-overview) ([Preview](https://cloud.google.com/products#product-launch-stages)) is temporarily disabled for all Cloud SQL for PostgreSQL instances.
 
 ## March 17, 2026
+
+Feature
+
+[Multi-region backup vaults for Cloud SQL enhanced backups](https://docs.cloud.google.com/backup-disaster-recovery/docs/concepts/backup-vault#multi-regions) are generally available (GA).
+
+This feature lets you store your backup data in multi-region storage locations, providing higher availability and protection against regional outages.
+
+For more information, see [Enhanced backups](https://docs.cloud.google.com/sql/docs/postgres/backup-recovery/backup-options#enhanced-backups) .
 
 Feature
 
@@ -550,19 +558,11 @@ For more information, see [Cancel the major version upgrade](https://docs.cloud.
 
 Feature
 
-[Multi-region backup vaults for Cloud SQL enhanced backups](https://docs.cloud.google.com/backup-disaster-recovery/docs/concepts/backup-vault#multi-regions) are generally available (GA).
-
-This feature lets you store your backup data in multi-region storage locations, providing higher availability and protection against regional outages.
-
-For more information, see [Enhanced backups](https://docs.cloud.google.com/sql/docs/postgres/backup-recovery/backup-options#enhanced-backups).
-
-Feature
-
-Cloud SQL supports cross-project PITR operations for instances protected by backup and DR ([GA](https://cloud.google.com/products/#product-launch-stages)).
+Cloud SQL supports cross-project PITR operations for instances protected by backup and DR ([GA](https://cloud.google.com/products#product-launch-stages)).
 
 This feature lets you restore a Cloud SQL instance to a project other than the project where either the source instance or the backup vault is located.
 
-For more information, see [Perform a cross-project PITR](https://docs.cloud.google.com/sql/docs/postgres/backup-recovery/pitr#perform_a_cross-project_pitr).
+For more information, see [Perform a cross-project PITR](https://docs.cloud.google.com/sql/docs/postgres/backup-recovery/pitr#perform_a_cross-project_pitr) .
 
 ## March 13, 2026
 
@@ -570,7 +570,7 @@ Feature
 
 You can now enable automatic server certificate rotation for your Cloud SQL instance. This feature is specifically designed for instances utilizing the Certificate Authority Service (CAS). Automatic server certificate rotation helps you maintain high security standards while removing the operational burden of manual rotation.
 
-For more information about enabling automatic server certificate rotation for your instance, see [Enable automatic server certificate rotation](https://docs.cloud.google.com/sql/docs/postgres/manage-ssl-instance#automatic-server-certificate-rotation-cas).
+For more information about enabling automatic server certificate rotation for your instance, see [Enable automatic server certificate rotation](https://docs.cloud.google.com/sql/docs/postgres/manage-ssl-instance#automatic-server-certificate-rotation-cas) .
 
 ## March 09, 2026
 
@@ -588,9 +588,9 @@ It now takes less time to create a Cloud SQL instance when point-in-time recover
 
 Feature
 
-Gemini Cloud Assist investigation capabilities are now supported in Cloud SQL for PostgreSQL ([Preview](https://cloud.google.com/products/#product-launch-stages)).
+Gemini Cloud Assist investigation capabilities are now supported in Cloud SQL for PostgreSQL ([Preview](https://cloud.google.com/products#product-launch-stages)).
 
-For more information, see [Troubleshoot slow queries with AI assistance](https://docs.cloud.google.com/sql/docs/postgres/troubleshoot-slow-queries).
+For more information, see [Troubleshoot slow queries with AI assistance](https://docs.cloud.google.com/sql/docs/postgres/monitor-troubleshoot-with-ai#troubleshoot-slow-queries).
 
 ## February 19, 2026
 
@@ -600,29 +600,29 @@ Cloud SQL now provides brute-force detection and protection for your Cloud SQL i
 
 ## February 18, 2026
 
+Deprecated
+
+Control of MCP use with organization policies is deprecated. After March 17, 2026, organization policies that use the `gcp.managed.allowedMCPServices` constraint won't work, and you can control MCP use with IAM deny policies. For more information about controlling MCP use, see [Control MCP use with IAM](https://docs.cloud.google.com/mcp/control-mcp-use-iam).
+
 Change
 
 After March 17, 2026, when you enable the Cloud SQL Admin API (`sqladmin.googleapis.com`)`, the Cloud SQL remote MCP server is enabled automatically.
 
-The Cloud SQL remote MCP server is in [Preview](https://cloud.google.com/products/#product-launch-stages).
-
-Deprecated
-
-Control of MCP use with organization policies is deprecated. After March 17, 2026, organization policies that use the `gcp.managed.allowedMCPServices` constraint won't work, and you can control MCP use with IAM deny policies. For more information about controlling MCP use, see [Control MCP use with IAM](https://docs.cloud.google.com/mcp/control-mcp-use-iam).
+The Cloud SQL remote MCP server is in [Preview](https://cloud.google.com/products#product-launch-stages).
 
 ## February 17, 2026
 
 Announcement
 
-New best practices are available for securing generative AI agents using Model Context Protocol (MCP) with Google Cloud databases. This guide covers key security measures like least privilege, native database controls, and secure agent design to help you build safer AI applications. For more information, see [Best practices for securing agent interactions with Model Context Protocol](https://docs.cloud.google.com/sql/docs/postgres/secure-agent-interactions-mcp).
+New best practices are available for securing generative AI agents using Model Context Protocol (MCP) with Google Cloud databases. This guide covers key security measures like least privilege, native database controls, and secure agent design to help you build safer AI applications. For more information, see [Best practices for securing agent interactions with Model Context Protocol](https://docs.cloud.google.com/sql/docs/postgres/secure-agent-interactions-mcp) .
 
 ## February 09, 2026
 
 Feature
 
-You can now use the [Cloud SQL remote MCP server](https://docs.cloud.google.com/sql/docs/postgres/use-cloudsql-mcp). The Cloud SQL remote MCP server lets you interact easily with Cloud SQL instances from LLMs, AI applications, and AI-enabled development platforms.
+You can now use the [Cloud SQL remote MCP server](https://docs.cloud.google.com/sql/docs/postgres/use-cloudsql-mcp) . The Cloud SQL remote MCP server lets you interact easily with Cloud SQL instances from LLMs, AI applications, and AI-enabled development platforms.
 
-This feature is in [Preview](https://cloud.google.com/products/#product-launch-stages).
+This feature is in [Preview](https://cloud.google.com/products#product-launch-stages).
 
 ## February 02, 2026
 
@@ -636,7 +636,7 @@ For more information about the different server CA mode options, see [Certificat
 
 Feature
 
-You can now assign database roles to built-in database users and IAM database users when you create or update users. For more information about assigning roles, see [built-in database authentication](https://docs.cloud.google.com/sql/docs/postgres/create-manage-users#creating) or [IAM database authentication](https://docs.cloud.google.com/sql/docs/postgres/add-manage-iam-users#add-db-roles).
+You can now assign database roles to built-in database users and IAM database users when you create or update users. For more information about assigning roles, see [built-in database authentication](https://docs.cloud.google.com/sql/docs/postgres/create-manage-users#creating) or [IAM database authentication](https://docs.cloud.google.com/sql/docs/postgres/add-manage-iam-users#add-db-roles) .
 
 ## January 15, 2026
 
@@ -644,7 +644,7 @@ Feature
 
 Cloud SQL for PostgreSQL now supports fast clone operations within the same zone ([GA](https://cloud.google.com/products#product-launch-stages)).
 
-For more information, see [Clone an instance](https://docs.cloud.google.com/sql/docs/postgres/clone-instance).
+For more information, see [Clone an instance](https://docs.cloud.google.com/sql/docs/postgres/clone-instance) .
 
 ## December 17, 2025
 
@@ -658,7 +658,7 @@ Feature
 
 Cloud SQL enhanced backups are now generally available ([GA](https://cloud.google.com/products#product-launch-stages)).
 
-With enhanced backups, backups are managed and stored in a centralized backup management project that leverages the [Backup and DR service](https://docs.cloud.google.com/backup-disaster-recovery), and provides enforced retention, granular scheduling, and longer retention.
+With enhanced backups, backups are managed and stored in a centralized backup management project that leverages the [Backup and DR service](https://docs.cloud.google.com/backup-disaster-recovery/docs), and provides enforced retention, granular scheduling, and longer retention.
 
 Enhanced backups now also support [point-in-time-recovery (PITR) after instance deletion](https://docs.cloud.google.com/sql/docs/postgres/backup-recovery/restore).
 
@@ -730,7 +730,7 @@ Feature
 
 Cloud SQL now offers a free trial instance for both existing and new Google Cloud customers. A free trial instance lets you test advanced Cloud SQL capabilities and features for up to 30 days without any financial commitment.
 
-For information about a free trial instance, and its inclusions and conditions, see [Free trial instance overview](https://cloud.google.com/sql/docs/postgres/free-trial-instance).
+For information about a free trial instance, and its inclusions and conditions, see [Free trial instance overview](https://docs.cloud.google.com/sql/docs/postgres/free-trial-instance).
 
 ## November 14, 2025
 
@@ -800,7 +800,7 @@ For more information on checking your maintenance version, see [Self-service mai
 
 Feature
 
-Cloud SQL now proactively detects and works to cancel high memory usage connections to prevent out-of-memory (OOM) failures. For more information, see [Cancelled queries due to high memory usage](https://cloud.google.com/sql/docs/postgres/manage-memory-usage-best-practices#cancelled-query).
+Cloud SQL now proactively detects and works to cancel high memory usage connections to prevent out-of-memory (OOM) failures. For more information, see [Cancelled queries due to high memory usage](https://docs.cloud.google.com/sql/docs/postgres/manage-memory-usage-best-practices#cancelled-query).
 
 ## October 17, 2025
 
@@ -877,7 +877,7 @@ To create a new instance using PostgreSQL 18, see [Create instances](https://doc
 
 Feature
 
-You can now [use Gemini's capabilities to fix errors in a query within Cloud SQL Studio](https://cloud.google.com/sql/docs/postgres/write-sql-gemini#fix-query) ([Preview](https://cloud.google.com/products#product-launch-stages)).
+You can now [use Gemini's capabilities to fix errors in a query within Cloud SQL Studio](https://docs.cloud.google.com/sql/docs/postgres/write-sql-gemini#fix-query) ([Preview](https://cloud.google.com/products#product-launch-stages)).
 
 ## September 25, 2025
 
@@ -893,7 +893,7 @@ Feature
 
 You can now provision, manage and query your databases using the dedicated Gemini CLI extension for Cloud SQL for PostgreSQL. The extension provides full lifecycle control of your database—from provisioning instances, to exploring schemas and troubleshooting issues—from your command-line interface. 
 
-For more information, see [Use Cloud SQL for PostgreSQL with MCP, Gemini CLI, and other agents](https://cloud.google.com/sql/docs/postgres/pre-built-tools-with-mcp-toolbox).
+For more information, see [Use Cloud SQL for PostgreSQL with MCP, Gemini CLI, and other agents](https://docs.cloud.google.com/sql/docs/postgres/pre-built-tools-with-mcp-toolbox).
 
 Feature
 
@@ -936,7 +936,7 @@ Feature
 
 If a specific active query is blocked or running much longer than expected, it can block other dependent queries. Cloud SQL for PostgreSQL offers an optional feature that lets you terminate specific long-running or blocked active queries.
 
-For more information, see [Blocked active queries (Preview)](https://cloud.google.com/sql/docs/postgres/monitor-active-queries#blocked-active-queries).
+For more information, see [Blocked active queries (Preview)](https://docs.cloud.google.com/sql/docs/postgres/monitor-active-queries#blocked-active-queries).
 
 ## September 09, 2025
 
@@ -1005,11 +1005,11 @@ You can save and manage SQL queries in Cloud SQL Studio. This feature is in [Pre
 
 Feature
 
-Now you can use [Private Service Connect backends](https://cloud.google.com/sql/docs/postgres/about-private-service-connect#psc-backend), as an alternative to Private Service Connect endpoints, to access Cloud SQL instances.
+Now you can create an IPv6 endpoint for Private Service Connect (PSC) connections. For more information, see [Connect to an instance using Private Service Connect](https://docs.cloud.google.com/sql/docs/postgres/configure-private-service-connect#create-psc-endpoint).
 
 Feature
 
-Now you can create an IPv6 endpoint for Private Service Connect (PSC) connections. For more information, see [Connect to an instance using Private Service Connect](https://cloud.google.com/sql/docs/postgres/configure-private-service-connect#create-psc-endpoint).
+Now you can use [Private Service Connect backends](https://docs.cloud.google.com/sql/docs/postgres/about-private-service-connect#psc-backend), as an alternative to Private Service Connect endpoints, to access Cloud SQL instances.
 
 Deprecated
 
@@ -1025,7 +1025,7 @@ Cloud SQL now supports Private Service Connect (PSC) outbound connectivity. With
 
 Change
 
-Cloud SQL for Enterprise Plus edition supports quality enhancements for [AI-assisted troubleshooting](https://cloud.google.com/sql/docs/postgres/observe-troubleshoot-with-ai). With AI-assisted troubleshooting, you can resolve complex database performance issues like [slow queries](https://cloud.google.com/sql/docs/postgres/troubleshoot-slow-queries) and [high load](https://cloud.google.com/sql/docs/postgres/troubleshoot-high-database-load) for your instances in a guided manner. To use AI-assisted troubleshooting, you need [Gemini Cloud Assist](https://cloud.google.com/gemini/docs/cloud-assist/overview) and [query insights](https://cloud.google.com/sql/docs/postgres/using-query-insights#enable-insights) for Enterprise Plus edition.
+Cloud SQL for Enterprise Plus edition supports quality enhancements for [AI-assisted troubleshooting](https://docs.cloud.google.com/sql/docs/postgres/monitor-troubleshoot-with-ai). With AI-assisted troubleshooting, you can resolve complex database performance issues like [slow queries](https://docs.cloud.google.com/sql/docs/postgres/monitor-troubleshoot-with-ai#troubleshoot-slow-queries) and [high load](https://docs.cloud.google.com/sql/docs/postgres/monitor-troubleshoot-with-ai#troubleshoot-high-database-load) for your instances in a guided manner. To use AI-assisted troubleshooting, you need [Gemini Cloud Assist](https://docs.cloud.google.com/cloud-assist/overview) and [query insights](https://docs.cloud.google.com/sql/docs/postgres/using-query-insights#enable-insights) for Enterprise Plus edition.
 
 ## August 04, 2025
 
@@ -1043,7 +1043,7 @@ Feature
 
 Cloud SQL now offers two options of backup services to manage your instance's backups:
 
-  * **Enhanced backups** ([Preview](https://cloud.google.com/products#product-launch-stages)): backups are managed and stored in a centralized backup management project that leverages the [Backup and DR service](https://docs.cloud.google.com/backup-disaster-recovery), and provides enforced retention, granular scheduling, and longer retention. 
+  * **Enhanced backups** ([Preview](https://cloud.google.com/products#product-launch-stages)): backups are managed and stored in a centralized backup management project that leverages the [Backup and DR service](https://docs.cloud.google.com/backup-disaster-recovery), and provides enforced retention, granular scheduling, and longer retention.
 
   * **Standard backups** (existing option): backups are created, managed, and stored in the same project as your Cloud SQL instances. 
 
@@ -1232,7 +1232,7 @@ You can scale your read pool in several ways:
 
 
 
-For more information, see [About read pools](https://cloud.google.com/sql/docs/postgres/about-read-pools).
+For more information, see [About read pools](https://docs.cloud.google.com/sql/docs/postgres/about-read-pools).
 
 ## March 24, 2025
 
@@ -1244,7 +1244,7 @@ Cloud SQL now lets you retain existing backups after an instance is deleted. The
 
 Feature
 
-[Cloud SQL Enterprise edition](https://cloud.google.com/sql/docs/postgres/instance-settings) now supports the `europe-north2` (Stockholm) region.
+[Cloud SQL Enterprise edition](https://docs.cloud.google.com/sql/docs/postgres/instance-settings) now supports the `europe-north2` (Stockholm) region.
 
 ## March 03, 2025
 
@@ -1285,7 +1285,7 @@ You can now include replicas when you perform an in-place major version upgrade 
 
 Feature
 
-You can now [export or import all user databases in an instance](https://cloud.google.com/sql/docs/postgres/import-export/import-export-parallel#export-entire-instance) using a directory-formatted, parallel export or import operation.
+You can now [export or import all user databases in an instance](https://docs.cloud.google.com/sql/docs/postgres/import-export/import-export-parallel#export-entire-instance) using a directory-formatted, parallel export or import operation.
 
 ## February 20, 2025
 
@@ -1504,7 +1504,7 @@ For more information, see [Advanced disaster recovery (DR)](https://docs.cloud.g
 
 Feature
 
-The `pgvector` extension is now upgraded from version 0.7.4 to version 0.8.0. Use this extension to store and search for vector embeddings in PostgreSQL databases. For more information, see [Configure PostgreSQL extensions](https://cloud.google.com/sql/docs/postgres/extensions). 
+The `pgvector` extension is now upgraded from version 0.7.4 to version 0.8.0. Use this extension to store and search for vector embeddings in PostgreSQL databases. For more information, see [Configure PostgreSQL extensions](https://docs.cloud.google.com/sql/docs/postgres/extensions).
 
 To use this version of the extension, update your instance to one of the following:
 
@@ -1545,7 +1545,7 @@ You can now create custom organization policies for the [`BackupRun`](https://do
 
 Feature
 
-You can now have Cloud SQL create a Private Service Connect endpoint automatically instead of creating the endpoint manually after the instance is created. You use this endpoint to access a Cloud SQL instance through a VPC network. For more information, see [Connect to an instance using Private Service Connect](https://docs.cloud.google.com/sql/docs/postgres/configure-private-service-connect#create-endpoint-automatically). This feature is available in [Preview](https://cloud.google.com/products?e=48754805#product-launch-stages).
+You can now have Cloud SQL create a Private Service Connect endpoint automatically instead of creating the endpoint manually after the instance is created. You use this endpoint to access a Cloud SQL instance through a VPC network. For more information, see [Connect to an instance using Private Service Connect](https://docs.cloud.google.com/sql/docs/postgres/configure-private-service-connect#create-endpoint-automatically). This feature is available in [Preview](https://cloud.google.com/products#product-launch-stages).
 
 ## November 04, 2024
 
@@ -1731,7 +1731,7 @@ Feature
 
 Feature
 
-[Migrate to AlloyDB insight recommendations](https://docs.cloud.google.com/sql/docs/postgres/recommender-alloydb) are available in [Preview](https://cloud.google.com/products?e=48754805#product-launch-stages).
+[Migrate to AlloyDB insight recommendations](https://docs.cloud.google.com/sql/docs/postgres/recommender-alloydb) are available in [Preview](https://cloud.google.com/products#product-launch-stages).
 
 ## July 25, 2024
 
@@ -1949,7 +1949,7 @@ You can now integrate Cloud SQL and Vertex AI. This integration lets you apply l
 
 Feature
 
-Private Service Connect now includes support for [cross-region read replicas](https://docs.cloud.google.com/sql/docs/postgres/replication/create-replica#create-read-replica-cloud-sql-instance-psc-enabled). You can also [choose an availability type](https://docs.cloud.google.com/sql/docs/postgres/configure-ha) (REGIONAL or ZONAL) for Private Service Connect-enabled instances. Both features are in [GA](https://cloud.google.com/products?hl=en#product-launch-stages).
+Private Service Connect now includes support for [cross-region read replicas](https://docs.cloud.google.com/sql/docs/postgres/replication/create-replica#create-read-replica-cloud-sql-instance-psc-enabled). You can also [choose an availability type](https://docs.cloud.google.com/sql/docs/postgres/configure-ha) (REGIONAL or ZONAL) for Private Service Connect-enabled instances. Both features are in [GA](https://cloud.google.com/products#product-launch-stages).
 
 ## March 19, 2024
 
@@ -2088,7 +2088,7 @@ Feature
 
 Feature
 
-[Cloud SQL Enterprise Plus edition](https://cloud.google.com/sql/docs/editions-intro) now supports the following regions:
+[Cloud SQL Enterprise Plus edition](https://docs.cloud.google.com/sql/docs/mysql/editions-intro) now supports the following regions:
 
   * europe-west8 (Milan)
   * europe-west12 (Turin)
@@ -2106,7 +2106,7 @@ You can now use Database Migration Service to [migrate data](https://docs.cloud.
 
 Feature
 
-The following [flags](https://cloud.google.com/sql/docs/postgres/flags) are generally available:
+The following [flags](https://docs.cloud.google.com/sql/docs/postgres/flags) are generally available:
 
   * **autovacuum_vacuum_insert_scale_factor** : specify a fraction of the size of a database table to add to the `autovacuum_vacuum_insert_threshold` flag. Use this flag when you're deciding whether to run a [`VACUUM`](https://www.postgresql.org/docs/current/sql-vacuum.html). 
   * **autovacuum_vacuum_insert_threshold** : specify the minimum number of inserted records or rows (tuples) that you need to run a `VACUUM` in any database table.
@@ -2695,7 +2695,7 @@ Cloud SQL supports the preview version of the [high transaction ID utilization r
 
 Feature
 
-Cloud SQL for PostgreSQL now supports the `log_timezone` and `TimeZone` flags. For more information, see the [Configure database flags](https://cloud.google.com/sql/docs/postgres/flags) page.
+Cloud SQL for PostgreSQL now supports the `log_timezone` and `TimeZone` flags. For more information, see the [Configure database flags](https://docs.cloud.google.com/sql/docs/postgres/flags) page.
 
 ## October 04, 2022
 
@@ -2799,7 +2799,7 @@ If you use maintenance windows, then you might not yet have these versions. In t
 
 Feature
 
-Added information about checking the `LC_COLLATE` value for your databases before performing a major version upgrade of the databases for your Cloud SQL for PostgreSQL instance. For more information, refer to the [Cloud SQL](https://cloud.google.com/sql/docs/postgres/upgrade-major-db-version-inplace#prepare_for_a_major_version_upgrade) documentation.
+Added information about checking the `LC_COLLATE` value for your databases before performing a major version upgrade of the databases for your Cloud SQL for PostgreSQL instance. For more information, refer to the [Cloud SQL](https://docs.cloud.google.com/sql/docs/postgres/upgrade-major-db-version-inplace#prepare_for_a_major_version_upgrade) documentation.
 
 ## July 11, 2022
 
@@ -2959,7 +2959,7 @@ Support for europe-west8 region (Milan).
 
 Feature
 
-Customer-managed encryption key (CMEK) organization policy constraints are now available in [Preview](https://cloud.google.com/products/#product-launch-stages).
+Customer-managed encryption key (CMEK) organization policy constraints are now available in [Preview](https://cloud.google.com/products#product-launch-stages).
 
   * `constraints/gcp.restrictNonCmekServices` allows you to control which resources require the use of CMEK.
   * `constraints/gcp.restrictCmekCryptoKeyProjects` allows you to control the projects from which a Cloud KMS key can be used to validate requests.
@@ -3465,7 +3465,7 @@ PostgreSQL version 13 is now generally available. To start using PostgreSQL 13, 
 
 Feature
 
-Cloud SQL for PostgreSQL now offers IAM database authentication to help you better monitor and manage access for users and service accounts to databases. This feature allows users and service accounts to use IAM credentials to log into PostgreSQL instances. To learn more about how IAM database authentication works, see the [Overview of Cloud SQL IAM database authentication](https://docs.cloud.google.com/sql/docs/postgres/authentication). To configure an instance, see [Configuring instances for IAM database authentication](https://docs.cloud.google.com/sql/docs/postgres/create-edit-iam-instances). To create users or service accounts, see [Creating and managing users that use IAM database authentication](http://cloud.google.com/sql/docs/postgres/create-manage-iam-users).
+Cloud SQL for PostgreSQL now offers IAM database authentication to help you better monitor and manage access for users and service accounts to databases. This feature allows users and service accounts to use IAM credentials to log into PostgreSQL instances. To learn more about how IAM database authentication works, see the [Overview of Cloud SQL IAM database authentication](https://docs.cloud.google.com/sql/docs/postgres/authentication). To configure an instance, see [Configuring instances for IAM database authentication](https://docs.cloud.google.com/sql/docs/postgres/create-edit-iam-instances). To create users or service accounts, see [Creating and managing users that use IAM database authentication](https://docs.cloud.google.com/sql/docs/postgres/add-manage-iam-users).
 
 Feature
 
@@ -3855,6 +3855,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

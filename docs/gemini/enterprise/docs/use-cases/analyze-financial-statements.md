@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/use-cases/analyze-financial-statements/
 title: Analyze financial statements and calculate ratios \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:29.868016+00:00
+fetched_at: 2026-10-23T13:13:24.214666+00:00
 ---
 
 # Analyze financial statements and calculate ratios  |  Gemini Enterprise  |  Google Cloud Documentation

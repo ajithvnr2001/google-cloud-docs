@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/transcoder/docs/samples/transcoder-create-job-with-concatenated-inputs/
 title: Concatenate multiple input videos \u00a0|\u00a0 Transcoder API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:44.202114+00:00
+fetched_at: 2026-10-23T09:35:27.839834+00:00
 ---
 
 # Concatenate multiple input videos  |  Transcoder API  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/local-logging/
 title: Local logging \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:56.789592+00:00
+fetched_at: 2026-10-23T13:18:16.964551+00:00
 ---
 
 # Local logging  |  Application Integration  |  Google Cloud Documentation

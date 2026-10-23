@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoint-verification/docs/setting-up-device-approvals/
 title: Set up device approvals \u00a0|\u00a0 Endpoint Verification \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:46.157712+00:00
+fetched_at: 2026-10-23T13:01:26.871971+00:00
 ---
 
 # Set up device approvals  |  Endpoint Verification  |  Google Cloud Documentation

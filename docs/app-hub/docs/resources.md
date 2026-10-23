@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/resources/
 title: Resources \u00a0|\u00a0 App Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:14.978719+00:00
+fetched_at: 2026-10-23T13:14:34.869907+00:00
 ---
 
 # Resources  |  App Hub  |  Google Cloud Documentation

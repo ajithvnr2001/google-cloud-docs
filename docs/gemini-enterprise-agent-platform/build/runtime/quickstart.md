@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/runtime/quickstart/
 title: Quickstart: Develop and deploy agents on Agent Runtime \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:30.656769+00:00
+fetched_at: 2026-10-23T13:13:51.095613+00:00
 ---
 
 # Quickstart: Develop and deploy agents on Agent Runtime  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation

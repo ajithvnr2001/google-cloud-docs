@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-create-dataset-tabular-bigquery-sample/
 title: Create a dataset for tabular BigQuery \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:26.353802+00:00
+fetched_at: 2026-10-23T09:27:05.920635+00:00
 ---
 
 # Create a dataset for tabular BigQuery  |  Vertex AI  |  Google Cloud Documentation

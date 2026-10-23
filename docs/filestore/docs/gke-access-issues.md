@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/gke-access-issues/
 title: Troubleshoot file share access from GKE clusters \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:58.620528+00:00
+fetched_at: 2026-10-23T13:01:22.033381+00:00
 ---
 
 # Troubleshoot file share access from GKE clusters  |  Filestore  |  Google Cloud Documentation

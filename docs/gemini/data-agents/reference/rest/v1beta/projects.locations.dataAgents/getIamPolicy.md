@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1beta/projects.locations.dataAgents/getIamPolicy/
 title: Method: projects.locations.dataAgents.getIamPolicy \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:19.535344+00:00
+fetched_at: 2026-10-23T13:02:20.297122+00:00
 ---
 
 # Method: projects.locations.dataAgents.getIamPolicy  |  Data Agents  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/modify-a-stream/
 title: Modify a stream \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:16.094281+00:00
+fetched_at: 2026-10-23T10:03:42.371030+00:00
 ---
 
 # Modify a stream  |  Datastream  |  Google Cloud Documentation
@@ -21,14 +21,9 @@ Send feedback
 
 #  Modify a stream Stay organized with collections  Save and categorize content based on your preferences. 
 
-You can modify the following information about a stream:
+After you create a stream in Datastream, you can update its settings to match changes in your replication requirements. You can modify high-level stream details, such as the display name and labels, or update the source configuration to change replicated objects and backfill settings. For the destination configuration, you can adjust encryption, staleness limits, or output settings.
 
-  * High-level information, such as the display name and labels for the stream.
-  * Configuration information for the source database and the destination, such as the tables and schemas in the source database that Datastream will either transfer to the destination or will be restricted from transferring into the destination. Datastream uses this configuration information to transfer the correct data from the source database to the destination.
-
-**Note:** You can't change the source database type for an already created stream. To change the database type, you need to create a new stream. For more information, see [Create a stream](https://docs.cloud.google.com/datastream/docs/create-a-stream).
-
-
+You can't change the source database type for an existing stream. To use a different database type, you must [create a new stream](https://docs.cloud.google.com/datastream/docs/create-a-stream).
 
 ## Modify high-level information
 
@@ -130,6 +125,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

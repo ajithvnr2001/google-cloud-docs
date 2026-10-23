@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/deployments-revisions/
 title: Deployments, revisions, and previews overview \u00a0|\u00a0 Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:43.922685+00:00
+fetched_at: 2026-10-23T13:09:44.794473+00:00
 ---
 
 # Deployments, revisions, and previews overview  |  Infrastructure Manager  |  Google Cloud Documentation

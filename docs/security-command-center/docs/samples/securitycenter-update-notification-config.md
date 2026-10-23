@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/samples/securitycenter-update-notification-config/
 title: Update a NotificationConfig \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:49:56.916245+00:00
+fetched_at: 2026-10-23T11:31:39.712916+00:00
 ---
 
 # Update a NotificationConfig  |  Security Command Center  |  Google Cloud Documentation
@@ -341,7 +341,7 @@ To authenticate to Security Command Center, set up Application Default Credentia
     # Updated filter string for Notification config.
     # filter = "UPDATED_FILTER"
     
-    client = Google::Cloud::[SecurityCenter](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security_center-v2/latest/Google-Cloud-SecurityCenter.html).[security_center](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security_center/latest/Google-Cloud-SecurityCenter.html)
+    client = Google::Cloud::[SecurityCenter](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security_center/latest/Google-Cloud-SecurityCenter.html).[security_center](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-security_center/latest/Google-Cloud-SecurityCenter.html)
     
     # You can also use a project or folder as a parent.
     config_path = client.notification_config_path organization:        org_id,

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/patterns-for-connecting-other-csps-with-gcp/
 title: Patterns for connecting other cloud service providers with Google Cloud \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:30.584104+00:00
+fetched_at: 2026-10-23T13:17:44.751522+00:00
 ---
 
 # Patterns for connecting other cloud service providers with Google Cloud  |  Cloud Architecture Center  |  Google Cloud Documentation

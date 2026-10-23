@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/colab-data-apps/
 title: Use Data Apps in BigQuery and Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:58:30.954014+00:00
+fetched_at: 2026-10-23T12:55:14.632668+00:00
 ---
 
 # Use Data Apps in BigQuery and Data Studio  |  Google Cloud Documentation
@@ -27,9 +27,7 @@ This feature is subject to the "Pre-GA Offerings Terms" in the General Service T
 
 **Note:** To provide feedback or to ask questions, contact [colab-enterprise-feedback@google.com](mailto:colab-enterprise-feedback@google.com).
 
-Colab Data Apps let you transform your data analyses from Colaboratory notebooks into polished, interactive applications. Instead of sharing code or static reports, you can now build shareable experiences that include interactive visualizations, data tables, and machine learning inferences.
-
-Data Apps provide the following:
+Publishing Data Apps lets you transform your BigQuery notebook analyses into polished, interactive applications. Building these shareable experiences lets business users adjust parameters and explore insights through a link without needing to view code or set up a Google Cloud console environment. Data Apps offer the following benefits:
 
   * **Self-service insights**. Business users can adjust parameters such as date ranges or filters to see the data that they need without editing code.
   * **No setup for app viewers**. Consumers access your app using a URL. They don't need to navigate the Google Cloud console or run notebooks.
@@ -275,6 +273,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

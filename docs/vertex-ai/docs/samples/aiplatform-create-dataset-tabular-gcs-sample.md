@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-create-dataset-tabular-gcs-sample/
 title: Create a dataset for tabular Cloud Storage \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:14.400189+00:00
+fetched_at: 2026-10-23T09:27:04.585044+00:00
 ---
 
 # Create a dataset for tabular Cloud Storage  |  Vertex AI  |  Google Cloud Documentation

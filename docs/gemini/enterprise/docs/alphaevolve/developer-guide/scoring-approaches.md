@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/alphaevolve/developer-guide/scoring-approaches/
 title: Scoring approaches \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:46.635737+00:00
+fetched_at: 2026-10-23T13:11:49.428381+00:00
 ---
 
 # Scoring approaches  |  Gemini Enterprise  |  Google Cloud Documentation

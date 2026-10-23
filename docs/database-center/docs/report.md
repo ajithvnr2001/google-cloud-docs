@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/database-center/docs/report/
 title: Create reports for your dashboard views \u00a0|\u00a0 Database Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:45.682228+00:00
+fetched_at: 2026-10-23T13:20:39.902908+00:00
 ---
 
 # Create reports for your dashboard views  |  Database Center  |  Google Cloud Documentation

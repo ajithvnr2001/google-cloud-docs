@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/docs/codeassist/auth_failure_gemini/
 title: Gemini Code Assist sign-in failed \u00a0|\u00a0 Gemini for Google Cloud \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:14.996301+00:00
+fetched_at: 2026-10-23T13:02:39.209144+00:00
 ---
 
 # Gemini Code Assist sign-in failed  |  Gemini for Google Cloud  |  Google Cloud Documentation

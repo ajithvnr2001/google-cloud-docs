@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/version-and-upgrade-support/
 title: Version and upgrade support \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:22:34.719076+00:00
+fetched_at: 2026-10-23T10:25:11.942410+00:00
 ---
 
 # Version and upgrade support  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -87,7 +87,7 @@ Version | Config Sync | Policy Controller | Cloud Service Mesh
 1.30  
 1.29  
 1.28  
-1.34 | 1.34.900-gke.135 | 1.34 | 1.24  
+1.34 | 1.34.1000-gke.111 | 1.34 | 1.24  
 1.23  
 1.22 | 1.24  
 1.23  
@@ -114,7 +114,7 @@ Version | Config Sync | Policy Controller | Cloud Service Mesh
 1.30  
 1.29  
 1.28  
-1.34 | 1.34.900-gke.135 | 1.34 | 1.24  
+1.34 | 1.34.1000-gke.111 | 1.34 | 1.24  
 1.23  
 1.22 | 1.24  
 1.23  
@@ -240,6 +240,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/regionalization/
 title: Regionalization \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:52.419675+00:00
+fetched_at: 2026-10-23T13:11:54.957955+00:00
 ---
 
 # Regionalization  |  Customer Experience Insights  |  Google Cloud Documentation

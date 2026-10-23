@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/live-a2a-translation-overview/
 title: Live A2A translation overview \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:53.901408+00:00
+fetched_at: 2026-10-23T13:11:59.913229+00:00
 ---
 
 # Live A2A translation overview  |  Agent Assist  |  Google Cloud Documentation

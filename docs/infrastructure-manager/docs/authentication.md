@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/authentication/
 title: Authenticate to Infra Manager \u00a0|\u00a0 Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:44.900347+00:00
+fetched_at: 2026-10-23T13:10:13.515153+00:00
 ---
 
 # Authenticate to Infra Manager  |  Infrastructure Manager  |  Google Cloud Documentation

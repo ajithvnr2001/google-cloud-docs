@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/confidential-computing/confidential-vm/docs/confidential-vm-overview/
 title: Confidential VM overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:11:00.725612+00:00
+fetched_at: 2026-10-23T12:44:21.087662+00:00
 ---
 
 # Confidential VM overview  |  Google Cloud Documentation
@@ -75,6 +75,8 @@ For details on which machine series, GPU models, and CPU platforms support NVIDI
 
 Read the [NVIDIA H100 Tensor Core GPU Architecture](https://resources.nvidia.com/en-us-hopper-architecture/nvidia-h100-tensor-c) and the [RTX PRO 6000 Blackwell GPU Architecture](https://docs.nvidia.com/nvidia-secure-ai-with-blackwell-and-hopper-gpus-whitepaper.pdf) whitepapers.
 
+**Note:** NVIDIA HGX B200 and NVIDIA GB300 NVL72 access is available to specific eligible customers. To check your eligibility and to request access to these systems, contact your dedicated account team.
+
 ## Confidential VM services
 
 In addition to Compute Engine, the following Google Cloud services make use of Confidential VM:
@@ -98,6 +100,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

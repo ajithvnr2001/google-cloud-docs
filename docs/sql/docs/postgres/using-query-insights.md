@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/using-query-insights/
 title: Use query insights to improve query performance \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:13.409419+00:00
+fetched_at: 2026-10-23T10:11:50.537718+00:00
 ---
 
 # Use query insights to improve query performance  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -88,7 +88,7 @@ There's no additional cost for query insights on Cloud SQL Enterprise edition or
 
 ### Storage requirements
 
-Query insights for Cloud SQL Enterprise edition doesn't occupy any storage space in your Cloud SQL instance storage space. Metrics are stored in Cloud Monitoring. For API requests, see Cloud Monitoring [Pricing](https://cloud.google.com/stackdriver/pricing). Cloud Monitoring has a tier that you can use at no additional cost.
+Query insights for Cloud SQL Enterprise edition doesn't occupy any storage space in your Cloud SQL instance storage space. Metrics are stored in Cloud Monitoring. For API requests, see Cloud Monitoring [Pricing](https://cloud.google.com/products/observability/pricing). Cloud Monitoring has a tier that you can use at no additional cost.
 
 Query insights for Cloud SQL Enterprise Plus edition stores metrics data on the same disk attached to your Cloud SQL instance and requires that you keep the automatic storage increases setting enabled.
 
@@ -1070,6 +1070,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

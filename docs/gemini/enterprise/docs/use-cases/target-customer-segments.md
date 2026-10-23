@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/use-cases/target-customer-segments/
 title: Create target customer segments \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:39.615523+00:00
+fetched_at: 2026-10-23T13:11:51.839363+00:00
 ---
 
 # Create target customer segments  |  Gemini Enterprise  |  Google Cloud Documentation

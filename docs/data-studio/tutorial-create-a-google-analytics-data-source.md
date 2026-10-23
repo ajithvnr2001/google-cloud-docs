@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/tutorial-create-a-google-analytics-data-source/
 title: Tutorial: Create a Google Analytics data source \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:54.049382+00:00
+fetched_at: 2026-10-23T13:20:40.577043+00:00
 ---
 
 # Tutorial: Create a Google Analytics data source  |  Data Studio  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-open-source-software/docs/virtual-repository-access/
 title: Access Assured OSS packages using a virtual repository \u00a0|\u00a0 Assured Open Source Software \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:23.009318+00:00
+fetched_at: 2026-10-23T13:20:16.526579+00:00
 ---
 
 # Access Assured OSS packages using a virtual repository  |  Assured Open Source Software  |  Google Cloud Documentation

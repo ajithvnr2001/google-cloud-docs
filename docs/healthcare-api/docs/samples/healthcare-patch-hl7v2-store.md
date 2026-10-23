@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/healthcare-api/docs/samples/healthcare-patch-hl7v2-store/
 title: Patch HL7v2 store \u00a0|\u00a0 Cloud Healthcare API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:33.875951+00:00
+fetched_at: 2026-10-23T13:09:32.226359+00:00
 ---
 
 # Patch HL7v2 store  |  Cloud Healthcare API  |  Google Cloud Documentation

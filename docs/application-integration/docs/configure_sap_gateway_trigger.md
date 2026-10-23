@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure_sap_gateway_trigger/
 title: SAP Gateway trigger \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:01.380319+00:00
+fetched_at: 2026-10-23T13:18:32.734231+00:00
 ---
 
 # SAP Gateway trigger  |  Application Integration  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/api-development-lifecycle/
 title: API development lifecycle \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:20.614563+00:00
+fetched_at: 2026-10-23T13:14:07.700054+00:00
 ---
 
 # API development lifecycle  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/network-architecture/
 title: Designing networks for migrating enterprise workloads: Architectural approaches \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:32.542357+00:00
+fetched_at: 2026-10-23T13:15:27.581735+00:00
 ---
 
 # Designing networks for migrating enterprise workloads: Architectural approaches  |  Cloud Architecture Center  |  Google Cloud Documentation

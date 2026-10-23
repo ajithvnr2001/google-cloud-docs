@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/view-openapi-spec/
 title: View OpenAPI Specification for your integration \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:04.701374+00:00
+fetched_at: 2026-10-23T13:17:54.328621+00:00
 ---
 
 # View OpenAPI Specification for your integration  |  Application Integration  |  Google Cloud Documentation

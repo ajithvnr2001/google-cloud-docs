@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/linux/18.1.1/docs/create-tde-cluster/
 title: Create a TDE-enabled cluster \u00a0|\u00a0 AlloyDB Omni using RPM: 18.1.1 \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:51:47.453736+00:00
+fetched_at: 2026-10-23T10:03:51.093655+00:00
 ---
 
 # Create a TDE-enabled cluster  |  AlloyDB Omni using RPM: 18.1.1  |  Google Cloud Documentation
@@ -52,7 +52,7 @@ Select a documentation version: 18.1.1keyboard_arrow_down
 
 To create a TDE-enabled cluster, you must pass the necessary Key Management Service (KMS) configuration and authentication credentials during the initialization of the database. The only supported authentication type is `jwt`.
 
-  1. [Install AlloyDB Omni using RPM](https://docs.cloud.google.com/alloydb/omni/linux/18-next/docs/deploy-vm) to prepare your environment and install the AlloyDB Omni RPM package.
+  1. [Install AlloyDB Omni using RPM](https://docs.cloud.google.com/alloydb/omni/linux/18.1.1/docs/deploy-vm) to prepare your environment and install the AlloyDB Omni RPM package.
 
 **Note:** Don't initialize the database yet.
   2. Initialize the database.
@@ -125,7 +125,7 @@ Replace the following:
         * `DATA_DIR`: the local directory to mount as the data volume for AlloyDB Omni—for example, `/local/data`.
         * `KEK_DIR`: the directory where the local file-based KEK is stored—for example, `/tmp/alloydb/kms`.
 
-  3. After the database is initialized, follow the instructions in [Install AlloyDB Omni using RPM](https://docs.cloud.google.com/alloydb/omni/linux/18-next/docs/deploy-vm) to prepare the database, set up the host, and start the `systemd` service. 
+  3. After the database is initialized, follow the instructions in [Install AlloyDB Omni using RPM](https://docs.cloud.google.com/alloydb/omni/linux/18.1.1/docs/deploy-vm) to prepare the database, set up the host, and start the `systemd` service. 
 
 
 
@@ -174,6 +174,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

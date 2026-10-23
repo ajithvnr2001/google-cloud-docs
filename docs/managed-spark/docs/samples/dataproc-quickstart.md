@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-spark/docs/samples/dataproc-quickstart/
 title: Quickstart \u00a0|\u00a0 Managed Service for Apache Spark \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-18T05:42:35.918639+00:00
+fetched_at: 2026-10-23T10:45:15.379684+00:00
 ---
 
 # Quickstart  |  Managed Service for Apache Spark  |  Google Cloud Documentation

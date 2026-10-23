@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/restrict-customer-personnel-access/
 title: Supporting compliance by restricting customer personnel data access \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:04.894472+00:00
+fetched_at: 2026-10-23T13:19:21.026318+00:00
 ---
 
 # Supporting compliance by restricting customer personnel data access  |  Assured Workloads  |  Google Cloud Documentation

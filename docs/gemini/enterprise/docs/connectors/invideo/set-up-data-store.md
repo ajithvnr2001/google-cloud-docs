@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/invideo/set-up-data-store/
 title: Set up an Invideo data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:29.035339+00:00
+fetched_at: 2026-10-23T13:03:28.585053+00:00
 ---
 
 # Set up an Invideo data store  |  Gemini Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/salesforce/salesforce-configuration/
 title: Salesforce configuration \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:59.011979+00:00
+fetched_at: 2026-10-23T13:11:56.043864+00:00
 ---
 
 # Salesforce configuration  |  Gemini Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/samples/securitycenter-get-org-settings/
 title: Get organization settings \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:56.248969+00:00
+fetched_at: 2026-10-23T08:57:48.225134+00:00
 ---
 
 # Get organization settings  |  Security Command Center  |  Google Cloud Documentation

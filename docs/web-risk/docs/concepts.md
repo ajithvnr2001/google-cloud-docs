@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/web-risk/docs/concepts/
 title: Concepts \u00a0|\u00a0 Web Risk \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:03.786239+00:00
+fetched_at: 2026-10-23T08:58:14.519427+00:00
 ---
 
 # Concepts  |  Web Risk  |  Google Cloud Documentation

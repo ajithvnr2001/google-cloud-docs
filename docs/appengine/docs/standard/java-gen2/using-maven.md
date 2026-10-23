@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/java-gen2/using-maven/
 title: Using Apache Maven and the App Engine Plugin \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:12.995684+00:00
+fetched_at: 2026-10-23T13:17:40.174609+00:00
 ---
 
 # Using Apache Maven and the App Engine Plugin  |  App Engine standard environment  |  Google Cloud Documentation

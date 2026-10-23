@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/enterprise-knowledge-graph/docs/quotas/
 title: Quotas and limits \u00a0|\u00a0 Enterprise Knowledge Graph \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:31.761109+00:00
+fetched_at: 2026-10-23T13:11:35.877527+00:00
 ---
 
 # Quotas and limits  |  Enterprise Knowledge Graph  |  Google Cloud Documentation

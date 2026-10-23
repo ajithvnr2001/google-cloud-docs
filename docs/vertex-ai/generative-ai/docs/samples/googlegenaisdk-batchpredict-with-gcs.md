@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/googlegenaisdk-batchpredict-with-gcs/
 title: Batch text prediction with Gemini model using Google Cloud Storage \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:36.225629+00:00
+fetched_at: 2026-10-23T09:37:07.948038+00:00
 ---
 
 # Batch text prediction with Gemini model using Google Cloud Storage  |  Generative AI on Vertex AI  |  Google Cloud Documentation

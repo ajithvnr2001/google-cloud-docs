@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-inspect-phone-number/
 title: Inspect data for phone numbers \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:50:14.097035+00:00
+fetched_at: 2026-10-23T10:52:11.821386+00:00
 ---
 
 # Inspect data for phone numbers  |  Sensitive Data Protection  |  Google Cloud Documentation

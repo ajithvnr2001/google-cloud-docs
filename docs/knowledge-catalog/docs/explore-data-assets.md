@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/explore-data-assets/
 title: Explore data assets in Knowledge Studio \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:21:44.023127+00:00
+fetched_at: 2026-10-23T12:51:03.227156+00:00
 ---
 
 # Explore data assets in Knowledge Studio  |  Knowledge Catalog  |  Google Cloud Documentation

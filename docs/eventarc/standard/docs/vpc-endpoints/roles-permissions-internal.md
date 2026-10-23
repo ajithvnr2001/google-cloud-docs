@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/vpc-endpoints/roles-permissions-internal/
 title: Roles and permissions for an internal HTTP endpoint in a VPC network \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:29.817075+00:00
+fetched_at: 2026-10-23T13:01:17.038008+00:00
 ---
 
 # Roles and permissions for an internal HTTP endpoint in a VPC network  |  Eventarc Standard  |  Google Cloud Documentation

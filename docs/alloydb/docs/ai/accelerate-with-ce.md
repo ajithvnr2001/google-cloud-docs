@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/accelerate-with-ce/
 title: Accelerate vector search with the columnar engine \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:27:41.627300+00:00
+fetched_at: 2026-10-23T13:08:30.834973+00:00
 ---
 
 # Accelerate vector search with the columnar engine  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -46,7 +46,7 @@ Replace the following:
 
 For more information on setting flags, see [Configure database flags](https://docs.cloud.google.com/alloydb/docs/instance-configure-database-flags).
 
-  * [Create a ScaNN index (Preview)](https://docs.cloud.google.com/alloydb/docs/ai/create-scann-index) or [Create an HNSW index](https://docs.cloud.google.com/alloydb/docs/ai/create-hnsw-index) in your database.
+  * [Create a ScaNN index](https://docs.cloud.google.com/alloydb/docs/ai/create-scann-index) or [Create an HNSW index](https://docs.cloud.google.com/alloydb/docs/ai/create-hnsw-index) in your database.
 
 
 
@@ -184,8 +184,8 @@ Refreshing columnar engine accelerated HNSW indexes can temporarily consume memo
 ## What's next
 
   * [Create an HNSW index](https://docs.cloud.google.com/alloydb/docs/ai/create-hnsw-index)
-  * [Create a ScaNN index (Preview)](https://docs.cloud.google.com/alloydb/docs/ai/create-scann-index)
-  * [Columnar engine overview](https://docs.cloud.google.com/alloydb/docs/ai/columnar-engine-overview)
+  * [Create a ScaNN index](https://docs.cloud.google.com/alloydb/docs/ai/create-scann-index)
+  * [About the AlloyDB columnar engine](https://docs.cloud.google.com/alloydb/docs/columnar-engine/about)
   * [Manage ScaNN indexes in the columnar engine (Preview)](https://docs.cloud.google.com/alloydb/docs/columnar-engine/manage-content-manually)
   * [Perform vector search](https://docs.cloud.google.com/alloydb/docs/ai/perform-vector-search#accelerate-filtered-vector-search)
 
@@ -195,6 +195,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

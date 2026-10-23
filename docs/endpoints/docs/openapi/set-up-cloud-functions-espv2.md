@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/set-up-cloud-functions-espv2/
 title: Quickstart: Set up Endpoints OpenAPI for Cloud Run functions with ESPv2 \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:29.276473+00:00
+fetched_at: 2026-10-23T13:00:47.299527+00:00
 ---
 
 # Quickstart: Set up Endpoints OpenAPI for Cloud Run functions with ESPv2  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation

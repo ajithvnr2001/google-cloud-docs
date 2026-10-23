@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/confluence-dc/confluence-datacenter-configuration/
 title: Confluence Data Center configuration \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:33.883748+00:00
+fetched_at: 2026-10-23T13:09:00.528114+00:00
 ---
 
 # Confluence Data Center configuration  |  Gemini Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-predict-image-object-detection-sample/
 title: Predict for image object detection \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:29:54.275475+00:00
+fetched_at: 2026-10-23T09:26:58.029169+00:00
 ---
 
 # Predict for image object detection  |  Vertex AI  |  Google Cloud Documentation

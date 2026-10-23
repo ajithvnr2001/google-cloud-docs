@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/service-extensions/extension-processor-quickstart/
 title: Get started with the Apigee Extension Processor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:44.017132+00:00
+fetched_at: 2026-10-23T13:19:12.032171+00:00
 ---
 
 # Get started with the Apigee Extension Processor  |  Google Cloud Documentation

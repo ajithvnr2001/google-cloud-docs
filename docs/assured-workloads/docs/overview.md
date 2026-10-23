@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/overview/
 title: Overview of Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:05.281672+00:00
+fetched_at: 2026-10-23T13:20:12.146635+00:00
 ---
 
 # Overview of Assured Workloads  |  Google Cloud Documentation

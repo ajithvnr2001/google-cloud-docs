@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/manage-data-products/
 title: Manage data products \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:49:28.453134+00:00
+fetched_at: 2026-10-23T12:50:51.535926+00:00
 ---
 
 # Manage data products  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -29,7 +29,7 @@ This document is intended for data product owners. For more information about th
 
 ## Before you begin
 
-  1. Enable the Dataplex, BigQuery APIs, if any are not already enabled. 
+  1. Enable the Knowledge Catalog, BigQuery APIs, if any are not already enabled. 
 
 **Roles required to enable APIs**
 
@@ -44,11 +44,11 @@ To enable APIs, you need the `serviceusage.services.enable` permission. If you c
 
 To get the permissions that you need to manage data products, ask your administrator to grant you the following IAM roles on the project: 
 
-  * Full permissions to create, update, delete, and manage permissions for data products: [Dataplex Data Products Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataProductsAdmin) (`roles/dataplex.dataProductsAdmin`) 
-  * Update and manage existing data products: [Dataplex Data Products Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataProductsEditor) (`roles/dataplex.dataProductsEditor`) 
-  * Add aspects such as `schema`, `overview`, and `contacts`: [Dataplex Entry and EntryLink Owner ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryOwner) (`roles/dataplex.entryOwner`) 
-  * Search for and add assets: [Dataplex Catalog Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) 
-  * Edit system aspect types such as documentation and contract aspect of refresh cadence: [Dataplex Catalog Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogEditor) (`roles/dataplex.catalogEditor`) 
+  * Full permissions to create, update, delete, and manage permissions for data products: [**Dataplex Data Products Admin** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataProductsAdmin) (`roles/dataplex.dataProductsAdmin`) 
+  * Update and manage existing data products: [**Dataplex Data Products Editor** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.dataProductsEditor) (`roles/dataplex.dataProductsEditor`) 
+  * Add aspects such as `schema`, `overview`, and `contacts`: [**Dataplex Entry and EntryLink Owner** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryOwner) (`roles/dataplex.entryOwner`) 
+  * Search for and add assets: [**Dataplex Catalog Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) 
+  * Edit system aspect types such as documentation and contract aspect of refresh cadence: [**Dataplex Catalog Editor** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.catalogEditor) (`roles/dataplex.catalogEditor`) 
 
 
 
@@ -78,9 +78,9 @@ If you delete and then recreate a BigQuery model using the same name, Knowledge 
 
 To enable potential consumers to search for, view, and request access to a data product, data product owners must ensure the product is discoverable by granting the appropriate IAM roles on the data product resource:
 
-  * Search for, view, and request access to data products: Dataplex Data Product Consumer (`dataplex.dataProductsConsumer`)
+  * Search for, view, and request access to data products: **Dataplex Data Products Consumer** (`roles/dataplex.dataProductsConsumer`)
 
-  * View data product definitions and metadata (read-only access): Dataplex Data Product Viewer (`dataplex.dataProductsViewer`)
+  * View data product definitions and metadata (read-only access): **Dataplex Data Products Viewer** (`roles/dataplex.dataProductsViewer`)
 
 
 
@@ -507,7 +507,7 @@ For example, to update the description of a data product, send the following `PA
     -H "Authorization: Bearer $(gcloud auth print-access-token)" \
     -H "Content-Type: application/json" \
     -d '{"description": "NEW_DESCRIPTION"}' \
-    https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/ LOCATION/dataProducts/DATA_PRODUCT_ID?update_mask="description"
+    https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/dataProducts/DATA_PRODUCT_ID?update_mask="description"
     
 
 Replace the following:
@@ -1330,7 +1330,7 @@ Replace the following:
 
            * Google Group: Data product consumers who request access for themselves are added as members to the mapped Google Group.
 
-           * Service account: Data product consumers who request access for their service accounts are granted the Service Account Token Creator (`roles/iam.serviceAccountTokenCreator`) IAM role to impersonate the data producer service account mapped to the access group.
+           * Service account: Data product consumers who request access for their service accounts are granted the **Service Account Token Creator** (`roles/iam.serviceAccountTokenCreator`) IAM role to impersonate the data producer service account mapped to the access group.
 
 **Note:** You can add a maximum of three access groups per data product.
         4. Optional: In the **Default role** field, select a default IAM role to automatically grant across all supported assets in the data product. If IAM roles are already assigned directly to specific assets, adding a default role doesn't override those direct permissions.
@@ -1515,59 +1515,71 @@ To authenticate to Knowledge Catalog, set up Application Default Credentials. Fo
 
 #### Update access groups
 
-### Java
+### Go
 
-Before trying this sample, follow the Java setup instructions in the [Knowledge Catalog quickstart using client libraries](https://docs.cloud.google.com/knowledge-catalog/docs/reference/libraries). For more information, see the [Knowledge Catalog Java API reference documentation](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataplex/latest/overview). 
+Before trying this sample, follow the Go setup instructions in the [Knowledge Catalog quickstart using client libraries](https://docs.cloud.google.com/knowledge-catalog/docs/reference/libraries). For more information, see the [Knowledge Catalog Go API reference documentation](https://pkg.go.dev/cloud.google.com/go/dataplex). 
 
 To authenticate to Knowledge Catalog, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). 
     
     
-    /*
-     * Copyright 2026 Google LLC
-     *
-     * Licensed under the Apache License, Version 2.0 (the "License");
-     * you may not use this file except in compliance with the License.
-     * You may obtain a copy of the License at
-     *
-     *      https://www.apache.org/licenses/LICENSE-2.0
-     *
-     * Unless required by applicable law or agreed to in writing, software
-     * distributed under the License is distributed on an "AS IS" BASIS,
-     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     * See the License for the specific language governing permissions and
-     * limitations under the License.
-     */
+    // Copyright 2026 Google LLC
+    //
+    // Licensed under the Apache License, Version 2.0 (the "License");
+    // you may not use this file except in compliance with the License.
+    // You may obtain a copy of the License at
+    //
+    //     https://www.apache.org/licenses/LICENSE-2.0
+    //
+    // Unless required by applicable law or agreed to in writing, software
+    // distributed under the License is distributed on an "AS IS" BASIS,
+    // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    // See the License for the specific language governing permissions and
+    // limitations under the License.
     
-    package com.google.cloud.dataplex.v1.samples;
+    // Code generated by protoc-gen-go_gapic. DO NOT EDIT.
     
-    import com.google.cloud.dataplex.v1.[DataProduct](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataplex/latest/com.google.cloud.dataplex.v1.DataProduct.html);
-    import com.google.cloud.dataplex.v1.[DataProductServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataplex/latest/com.google.cloud.dataplex.v1.DataProductServiceClient.html);
-    import com.google.cloud.dataplex.v1.[UpdateDataProductRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataplex/latest/com.google.cloud.dataplex.v1.UpdateDataProductRequest.html);
-    import com.google.protobuf.[FieldMask](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.FieldMask.html);
     
-    public class SyncUpdateDataProduct {
+    //go:build examples
     
-      public static void main(String[] args) throws Exception {
-        syncUpdateDataProduct();
-      }
+    package main
     
-      public static void syncUpdateDataProduct() throws Exception {
-        // This snippet has been automatically generated and should be regarded as a code template only.
-        // It will require modifications to work:
-        // - It may require correct/in-range values for request initialization.
-        // - It may require specifying regional endpoints when creating the service client as shown in
-        // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
-        try ([DataProductServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataplex/latest/com.google.cloud.dataplex.v1.DataProductServiceClient.html) dataProductServiceClient = [DataProductServiceClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataplex/latest/com.google.cloud.dataplex.v1.DataProductServiceClient.html).create()) {
-          [UpdateDataProductRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataplex/latest/com.google.cloud.dataplex.v1.UpdateDataProductRequest.html) request =
-              [UpdateDataProductRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataplex/latest/com.google.cloud.dataplex.v1.UpdateDataProductRequest.html).newBuilder()
-                  .setDataProduct([DataProduct](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataplex/latest/com.google.cloud.dataplex.v1.DataProduct.html).newBuilder().build())
-                  .setUpdateMask([FieldMask](https://docs.cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.FieldMask.html).newBuilder().build())
-                  .setValidateOnly(true)
-                  .build();
-          [DataProduct](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataplex/latest/com.google.cloud.dataplex.v1.DataProduct.html) response = dataProductServiceClient.[updateDataProductAsync](https://docs.cloud.google.com/java/docs/reference/google-cloud-dataplex/latest/com.google.cloud.dataplex.v1.DataProductServiceClient.html#com_google_cloud_dataplex_v1_DataProductServiceClient_updateDataProductAsync_com_google_cloud_dataplex_v1_DataProduct_com_google_protobuf_FieldMask_)(request).get();
-        }
-      }
+    import (
+    	"context"
+    
+    	dataplex "cloud.google.com/go/dataplex/apiv1"
+    	dataplexpb "cloud.google.com/go/dataplex/apiv1/dataplexpb"
+    )
+    
+    func main() {
+    	ctx := context.Background()
+    	// This snippet has been automatically generated and should be regarded as a code template only.
+    	// It will require modifications to work:
+    	// - It may require correct/in-range values for request initialization.
+    	// - It may require specifying regional endpoints when creating the service client as shown in:
+    	//   https://pkg.go.dev/cloud.google.com/go#hdr-Client_Options
+    	c, err := dataplex.[NewDataProductClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/dataplex/latest/apiv1.html#cloud_google_com_go_dataplex_apiv1_DataProductClient_NewDataProductClient)(ctx)
+    	if err != nil {
+    		// TODO: Handle error.
+    	}
+    	defer c.Close()
+    
+    	req := &dataplexpb.UpdateDataProductRequest{
+    		// TODO: Fill request struct fields.
+    		// See https://pkg.go.dev/cloud.google.com/go/dataplex/apiv1/dataplexpb#UpdateDataProductRequest.
+    	}
+    	op, err := c.UpdateDataProduct(ctx, req)
+    	if err != nil {
+    		// TODO: Handle error.
+    	}
+    
+    	resp, err := op.Wait(ctx)
+    	if err != nil {
+    		// TODO: Handle error.
+    	}
+    	// TODO: Use resp.
+    	_ = resp
     }
+    
     
 
 #### Update asset permissions
@@ -2441,7 +2453,7 @@ For example, send the following `DELETE` request:
     curl -X DELETE \
     -H "Authorization: Bearer $(gcloud auth print-access-token)" \
     -H "Content-Type: application/json" \
-    https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/ LOCATION/dataProducts/DATA_PRODUCT_ID
+    https://dataplex.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/dataProducts/DATA_PRODUCT_ID
     
 
 Replace the following:

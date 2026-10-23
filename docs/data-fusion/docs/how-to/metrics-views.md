@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/metrics-views/
 title: Monitor Cloud Data Fusion system, instance, and pipeline health \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:11.266199+00:00
+fetched_at: 2026-10-23T13:19:40.112230+00:00
 ---
 
 # Monitor Cloud Data Fusion system, instance, and pipeline health  |  Google Cloud Documentation

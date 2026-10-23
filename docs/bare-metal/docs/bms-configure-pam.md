@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-configure-pam/
 title: Configure Privileged Access Manager for evict operation \u00a0|\u00a0 Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:14.276682+00:00
+fetched_at: 2026-10-23T13:18:42.085893+00:00
 ---
 
 # Configure Privileged Access Manager for evict operation  |  Bare Metal Solution  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigtable/docs/write-sql-gemini/
 title: Write SQL with Gemini assistance \u00a0|\u00a0 Bigtable \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:50:30.901899+00:00
+fetched_at: 2026-10-23T12:55:10.173503+00:00
 ---
 
 # Write SQL with Gemini assistance  |  Bigtable  |  Google Cloud Documentation
@@ -29,7 +29,7 @@ This document describes how you can get AI-powered assistance with generating SQ
 
 Learn [how and when Gemini for Google Cloud uses your data](https://docs.cloud.google.com/gemini/docs/discover/data-governance).
 
-This document is intended for database administrators and data engineers who are familiar with Bigtable, SQL, and data analysis. If you're new to Bigtable, see [Quickstart: Create a Bigtable instance by using the Google Cloud console](https://docs.cloud.google.com/bigtable/docs/creating-instance-console).
+This document is intended for database administrators and data engineers who are familiar with Bigtable, SQL, and data analysis. If you're new to Bigtable, see [Bigtable overview](https://docs.cloud.google.com/bigtable/docs/overview).
 
 ## Limitations
 
@@ -130,6 +130,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

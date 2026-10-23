@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/gcal/config/
 title: Configure OAuth for Google Calendar \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:29.460948+00:00
+fetched_at: 2026-10-23T13:03:39.915306+00:00
 ---
 
 # Configure OAuth for Google Calendar  |  Gemini Enterprise  |  Google Cloud Documentation

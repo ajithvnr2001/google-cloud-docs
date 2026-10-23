@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/migrate-org-security-policies-terraform-resources/
 title: Migrate Terraform resources from organizationSecurityPolicies to firewallPolicies \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:44.137719+00:00
+fetched_at: 2026-10-23T13:12:30.972701+00:00
 ---
 
 # Migrate Terraform resources from organizationSecurityPolicies to firewallPolicies  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

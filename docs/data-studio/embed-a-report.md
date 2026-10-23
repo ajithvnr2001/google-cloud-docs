@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/embed-a-report/
 title: Embed a report \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:21.668630+00:00
+fetched_at: 2026-10-23T13:20:48.966888+00:00
 ---
 
 # Embed a report  |  Data Studio  |  Google Cloud Documentation

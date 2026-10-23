@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/configure-report-components/
 title: Configure report components \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:34.415447+00:00
+fetched_at: 2026-10-23T13:20:37.747135+00:00
 ---
 
 # Configure report components  |  Data Studio  |  Google Cloud Documentation

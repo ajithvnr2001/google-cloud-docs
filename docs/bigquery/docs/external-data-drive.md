@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/external-data-drive/
 title: Create Google Drive external tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:50:26.538657+00:00
+fetched_at: 2026-10-23T12:55:33.067288+00:00
 ---
 
 # Create Google Drive external tables  |  BigQuery  |  Google Cloud Documentation
@@ -21,22 +21,13 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Create Google Drive external tables
 
-This document describes how to create an external table over data stored in Google Drive.
+Google Drive external tables let you query data in Drive files—such as CSV, newline-delimited JSON, Avro, and Google Sheets files— directly from BigQuery without loading the data into BigQuery storage. You can create external tables over both personal and shared Drive files.
 
-BigQuery supports external tables over both personal Drive files and shared files. For more information on Drive, see [Drive training and help](https://support.google.com/a/users/answer/9282958).
-
-You can create external tables over files in Drive that have the following formats:
-
-  * Comma-separated values (CSV)
-  * Newline-delimited JSON
-  * Avro
-  * Google Sheets
-
-
+This document describes how to create and query Drive external tables.
 
 ## Before you begin
 
-Before you create an external table, gather some information and make sure you have permission to create the table.
+Before you create an external table, ensure that you have the required permissions to create the table. For more information on Drive, see [Drive training and help](https://support.google.com/a/users/answer/9282958).
 
 ### Retrieve Drive URIs
 
@@ -460,6 +451,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

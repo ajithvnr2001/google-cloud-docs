@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/about-advanced-features/
 title: About advanced features \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:20.317444+00:00
+fetched_at: 2026-10-23T13:11:18.516815+00:00
 ---
 
 # About advanced features  |  Agent Search  |  Google Cloud Documentation

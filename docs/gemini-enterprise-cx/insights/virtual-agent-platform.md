@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/virtual-agent-platform/
 title: Virtual agent platform \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:50.094517+00:00
+fetched_at: 2026-10-23T13:12:16.532387+00:00
 ---
 
 # Virtual agent platform  |  Customer Experience Insights  |  Google Cloud Documentation

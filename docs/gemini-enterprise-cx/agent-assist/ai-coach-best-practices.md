@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/ai-coach-best-practices/
 title: AI coach: Best practices \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:02.469359+00:00
+fetched_at: 2026-10-23T13:13:49.043408+00:00
 ---
 
 # AI coach: Best practices  |  Agent Assist  |  Google Cloud Documentation

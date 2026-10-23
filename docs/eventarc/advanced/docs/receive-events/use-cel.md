@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/advanced/docs/receive-events/use-cel/
 title: Use Common Expression Language \u00a0|\u00a0 Eventarc Advanced \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:20.352057+00:00
+fetched_at: 2026-10-23T13:13:46.550576+00:00
 ---
 
 # Use Common Expression Language  |  Eventarc Advanced  |  Google Cloud Documentation

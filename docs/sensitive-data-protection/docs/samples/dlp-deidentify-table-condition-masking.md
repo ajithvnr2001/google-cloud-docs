@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-deidentify-table-condition-masking/
 title: De-identify table data using masking and conditional logic \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:50:34.757681+00:00
+fetched_at: 2026-10-23T11:31:59.349944+00:00
 ---
 
 # De-identify table data using masking and conditional logic  |  Sensitive Data Protection  |  Google Cloud Documentation

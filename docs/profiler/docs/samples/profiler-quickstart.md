@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/profiler/docs/samples/profiler-quickstart/
 title: Go quickstart \u00a0|\u00a0 Cloud Profiler \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:26:50.608453+00:00
+fetched_at: 2026-10-23T10:20:23.519160+00:00
 ---
 
 # Go quickstart  |  Cloud Profiler  |  Google Cloud Documentation

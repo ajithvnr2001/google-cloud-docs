@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/cloud-iap-for-on-prem-apps-overview/
 title: Overview of IAP for on-premises apps \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:27:56.952144+00:00
+fetched_at: 2026-10-23T13:10:13.330720+00:00
 ---
 
 # Overview of IAP for on-premises apps  |  Identity-Aware Proxy  |  Google Cloud Documentation

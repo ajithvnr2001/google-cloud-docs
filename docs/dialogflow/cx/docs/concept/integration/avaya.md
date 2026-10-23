@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dialogflow/cx/docs/concept/integration/avaya/
 title: Avaya \u00a0|\u00a0 Dialogflow CX \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:44:02.732777+00:00
+fetched_at: 2026-10-23T10:54:28.914654+00:00
 ---
 
 # Avaya  |  Dialogflow CX  |  Google Cloud Documentation
@@ -48,7 +48,7 @@ For more information on this integration, see the [Avaya documentation](https://
 
 This integration supports phone numbers in the following countries:
 
-**Note:** Some countries might have unique requirements that Avaya will guide you through. 
+**Note:** Some countries might have unique requirements that Avaya helps you navigate.
 
   * Argentina
   * Austria
@@ -114,12 +114,12 @@ The [pricing](https://cloud.google.com/products/conversational-agents/pricing) a
 
 ## Language support
 
-If your agent's default language isn't English, you must configure the language with Avaya's system. Avaya's [InboundXML](https://docs.avayacloud.com/aspx/inboundxml#overview) configuration has a [Gather](https://docs.avayacloud.com/aspx/inboundxml#gather) element. Set the `language` attribute of this element to your agent's default language. The list of language codes supported by Avaya is provided in the documentation for `Gather`.
+If your agent's default language isn't English, you'll need to configure the language with Avaya's system. Avaya's [InboundXML](https://docs.avayacloud.com/aspx/inboundxml#overview) configuration has a [Gather](https://docs.avayacloud.com/aspx/inboundxml#gather) element. Set the `language` attribute of this element to your agent's default language. The list of language codes supported by Avaya is provided in the documentation for `Gather`.
 
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

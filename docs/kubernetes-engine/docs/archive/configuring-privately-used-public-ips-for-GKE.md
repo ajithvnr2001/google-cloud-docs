@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/archive/configuring-privately-used-public-ips-for-GKE/
 title: Configuring privately used public IPs for GKE \u00a0|\u00a0 Kubernetes Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:25:52.277107+00:00
+fetched_at: 2026-10-23T12:42:57.300840+00:00
 ---
 
 # Configuring privately used public IPs for GKE  |  Kubernetes Engine  |  Google Cloud Documentation

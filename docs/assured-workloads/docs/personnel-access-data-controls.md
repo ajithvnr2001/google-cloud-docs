@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/personnel-access-data-controls/
 title: Personnel data access and support controls \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:05.232688+00:00
+fetched_at: 2026-10-23T13:20:31.758088+00:00
 ---
 
 # Personnel data access and support controls  |  Assured Workloads  |  Google Cloud Documentation

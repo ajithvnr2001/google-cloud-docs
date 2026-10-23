@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/flexible/understanding-firewalls/
 title: Understanding the App Engine firewall \u00a0|\u00a0 App Engine flexible environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:32.689294+00:00
+fetched_at: 2026-10-23T13:16:59.007078+00:00
 ---
 
 # Understanding the App Engine firewall  |  App Engine flexible environment  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/structure-api-proxies/
 title: Key points of API proxy development \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:12.814107+00:00
+fetched_at: 2026-10-23T13:15:19.809012+00:00
 ---
 
 # Key points of API proxy development  |  Apigee  |  Google Cloud Documentation

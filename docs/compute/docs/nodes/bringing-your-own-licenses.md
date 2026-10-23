@@ -1,11 +1,11 @@
 ---
 url: https://docs.cloud.google.com/compute/docs/nodes/bringing-your-own-licenses/
-title: Bringing your own licenses \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
+title: Bring your own licenses \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:07:39.835516+00:00
+fetched_at: 2026-10-23T12:55:21.072327+00:00
 ---
 
-# Bringing your own licenses  |  Compute Engine  |  Google Cloud Documentation
+# Bring your own licenses  |  Compute Engine  |  Google Cloud Documentation
 
 > Source: https://docs.cloud.google.com/compute/docs/nodes/bringing-your-own-licenses/
 
@@ -19,7 +19,7 @@ fetched_at: 2026-10-22T09:07:39.835516+00:00
 
 Send feedback 
 
-#  Bringing your own licenses Stay organized with collections  Save and categorize content based on your preferences. 
+#  Bring your own licenses Stay organized with collections  Save and categorize content based on your preferences. 
 
 Linux  Windows 
 
@@ -94,7 +94,7 @@ For more information, see [Authenticate for using REST](https://docs.cloud.googl
 
 
 
-## Importing and creating an image from an offline virtual disk
+## Import and create an image from an offline virtual disk
 
 To provision VMs with your existing licenses, you must bring your own media. Images based on a premium image are not eligible for BYOL because premium images require pay-as-you-go licenses from Google. For information about premium images, see [Operating system details](https://docs.cloud.google.com/compute/docs/images/os-details).
 
@@ -170,7 +170,7 @@ Replace the following:
 
 
 
-## Activating licenses
+## Activate licenses
 
 After verifying that you are importing a [compatible OS](https://docs.cloud.google.com/sdk/gcloud/reference/compute/images/import#--os), you are responsible for checking that your licensing agreements permit you to bring your own licenses and that you are permitted to use the guest OS image and license import environment provided by Google. You are also responsible for preparing your guest OS image for import according to your licensing agreements.
 
@@ -178,7 +178,7 @@ To activate a license, use [startup scripts](https://docs.cloud.google.com/compu
 
 After importing your image and activating the license, provision a VM based on the imported image onto a sole-tenant node.
 
-## Creating sole-tenant nodes
+## Create sole-tenant nodes
 
 To run VMs with your existing licenses on dedicated hardware, you must do the following:
 
@@ -194,7 +194,7 @@ For more information, see [Host maintenance policies](https://docs.cloud.google.
 
 
 
-## Provisioning a sole-tenant VM
+## Provision a sole-tenant VM
 
 Provision a VM on the node group and specify its host maintenance policy. Be aware of the following requirements:
 
@@ -342,6 +342,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/reading-from-postgresql/
 title: Read from a PostgreSQL database \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:10.761587+00:00
+fetched_at: 2026-10-23T13:20:21.143090+00:00
 ---
 
 # Read from a PostgreSQL database  |  Cloud Data Fusion  |  Google Cloud Documentation

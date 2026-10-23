@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/reference/rest/v1alpha/projects.locations.dataAgents/updateSync/
 title: Method: projects.locations.dataAgents.updateSync \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:50.270205+00:00
+fetched_at: 2026-10-23T13:02:04.704489+00:00
 ---
 
 # Method: projects.locations.dataAgents.updateSync  |  Data Agents  |  Google Cloud Documentation

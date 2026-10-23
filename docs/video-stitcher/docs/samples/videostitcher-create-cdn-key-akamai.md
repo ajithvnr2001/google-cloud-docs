@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-stitcher/docs/samples/videostitcher-create-cdn-key-akamai/
 title: Create a new Akamai CDN key \u00a0|\u00a0 Video Stitcher API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:06:14.575779+00:00
+fetched_at: 2026-10-23T09:37:01.035421+00:00
 ---
 
 # Create a new Akamai CDN key  |  Video Stitcher API  |  Google Cloud Documentation

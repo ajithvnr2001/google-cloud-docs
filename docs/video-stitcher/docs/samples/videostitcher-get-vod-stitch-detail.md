@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-stitcher/docs/samples/videostitcher-get-vod-stitch-detail/
 title: Get VOD ad tag stitch details \u00a0|\u00a0 Video Stitcher API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:28.123751+00:00
+fetched_at: 2026-10-23T09:36:37.809144+00:00
 ---
 
 # Get VOD ad tag stitch details  |  Video Stitcher API  |  Google Cloud Documentation

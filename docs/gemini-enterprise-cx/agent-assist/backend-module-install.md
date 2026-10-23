@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/backend-module-install/
 title: Integrate backend modules with your system \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:01.921473+00:00
+fetched_at: 2026-10-23T13:13:55.024507+00:00
 ---
 
 # Integrate backend modules with your system  |  Agent Assist  |  Google Cloud Documentation

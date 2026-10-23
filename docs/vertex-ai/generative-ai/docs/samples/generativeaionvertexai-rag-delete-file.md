@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-rag-delete-file/
 title: Delete a RAG file from an index \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:23.248370+00:00
+fetched_at: 2026-10-23T09:36:39.985890+00:00
 ---
 
 # Delete a RAG file from an index  |  Generative AI on Vertex AI  |  Google Cloud Documentation

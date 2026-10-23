@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/local-development/vscode/tutorial-create-proxy/
 title: Step 2: Create an API proxy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:47:59.698485+00:00
+fetched_at: 2026-10-23T13:14:25.038160+00:00
 ---
 
 # Step 2: Create an API proxy  |  Apigee  |  Google Cloud Documentation

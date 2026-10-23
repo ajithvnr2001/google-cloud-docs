@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/samples/speech-transcribe-sync/
 title: Synchronously transcribe a local file \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:28:27.868634+00:00
+fetched_at: 2026-10-23T10:32:28.634231+00:00
 ---
 
 # Synchronously transcribe a local file  |  Cloud Speech-to-Text  |  Google Cloud Documentation

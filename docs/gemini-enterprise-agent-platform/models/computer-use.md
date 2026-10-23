@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computer-use/
 title: Computer use \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:29:06.083176+00:00
+fetched_at: 2026-10-23T12:38:29.153000+00:00
 ---
 
 # Computer use  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -650,124 +650,6 @@ The following example requires [python-genai](https://googleapis.github.io/pytho
     )
     
 
-## Gemini 3 Flash and mobile use
-
-The following example for Gemini 3 Flash demonstrates how to define custom functions (such as `open_app`, `long_press_at`, and `go_home`), combine them with computer use, and exclude unnecessary browser-specific functions. By registering these custom functions, the model can intelligently call them alongside standard UI actions to complete tasks in non-browser environments.
-
-**Caution:** The following example is deprecated and supported only when using Gemini 3 Flash.
-    
-    
-    from typing import Optional, Dict, Any
-    
-    from google import genai
-    from google.genai import types
-    from google.genai.types import Content, Part
-    
-    
-    client = genai.Client()
-    
-    def open_app(app_name: str, intent: Optional[str] = None) -> Dict[str, Any]:
-        """Opens an app by name.
-    
-        Args:
-            app_name: Name of the app to open (any string).
-            intent: Optional deep-link or action to pass when launching, if the app supports it.
-    
-        Returns:
-            JSON payload acknowledging the request (app name and optional intent).
-        """
-        return {"status": "requested_open", "app_name": app_name, "intent": intent}
-    
-    
-    def long_press_at(x: int, y: int, duration_ms: int = 500) -> Dict[str, int]:
-        """Long-press at a specific screen coordinate.
-    
-        Args:
-            x: X coordinate (absolute), scaled to the device screen width (pixels).
-            y: Y coordinate (absolute), scaled to the device screen height (pixels).
-            duration_ms: Press duration in milliseconds. Defaults to 500.
-    
-        Returns:
-            Object with the coordinates pressed and the duration used.
-        """
-        return {"x": x, "y": y, "duration_ms": duration_ms}
-    
-    
-    def go_home() -> Dict[str, str]:
-        """Navigates to the device home screen.
-    
-        Returns:
-            A small acknowledgment payload.
-        """
-        return {"status": "home_requested"}
-    
-    
-    #  Build function declarations
-    CUSTOM_FUNCTION_DECLARATIONS = [
-        types.FunctionDeclaration.from_callable(client=client, callable=open_app),
-        types.FunctionDeclaration.from_callable(client=client, callable=long_press_at),
-        types.FunctionDeclaration.from_callable(client=client, callable=go_home),
-    ]
-    
-    # Exclude browser functions
-    
-    EXCLUDED_PREDEFINED_FUNCTIONS = [
-        "open_web_browser",
-        "search",
-        "navigate",
-        "hover_at",
-        "scroll_document",
-        "go_forward",
-        "key_combination",
-        "drag_and_drop",
-    ]
-    
-    # Utility function to construct a GenerateContentConfig
-    
-    def make_generate_content_config() -> genai.types.GenerateContentConfig:
-        """Return a fixed GenerateContentConfig with Computer Use + custom functions."""
-        return genai.types.GenerateContentConfig(
-            tools=[
-                types.Tool(
-                    computer_use=types.ComputerUse(
-                        environment=types.Environment.ENVIRONMENT_BROWSER,
-                        excluded_predefined_functions=EXCLUDED_PREDEFINED_FUNCTIONS,
-                    )
-                ),
-                types.Tool(function_declarations=CUSTOM_FUNCTION_DECLARATIONS),
-            ]
-        )
-    
-    
-    # Create the content with user message
-    contents: list[Content] = [
-        Content(
-            role="user",
-            parts=[
-                # text instruction
-                Part(text="Open Chrome, then long-press at 200,400."),
-                # optional screenshot attachment
-                Part.from_bytes(
-                    data=screenshot_image_bytes,
-                    mime_type="image/png",
-                ),
-            ],
-        )
-    ]
-    
-    # Build your fixed config (from helper)
-    config = make_generate_content_config()
-    
-    # Generate content with the configured settings
-    response = client.models.generate_content(
-            model="gemini-3-flash-preview",
-            contents=contents,
-            config=generate_content_config,
-        )
-    
-        print(response)
-    
-
 ## Supported actions
 
 The computer use tool enables the model to request the following actions using a `FunctionCall`. Your client-side code must implement the execution logic for these actions. See the reference implementation for examples. The following table are supported actions for the browser environment. Gemini 3 Flash and Gemini 3.5 Flash have different `FunctionCall` name sets.
@@ -1201,10 +1083,128 @@ To address these risks, you should implement the following safety measures and b
 
 Computer use is priced at the same rates as [Gemini](https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing) and uses the same SKUs. To split computer use costs, use custom metadata labels. For more information about using custom metadata labels for cost monitoring, see [Custom metadata labels](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/add-labels-to-api-calls).
 
+## Gemini 3 Flash and mobile use
+
+The following example for Gemini 3 Flash demonstrates how to define custom functions (such as `open_app`, `long_press_at`, and `go_home`), combine them with computer use, and exclude unnecessary browser-specific functions. By registering these custom functions, the model can intelligently call them alongside standard UI actions to complete tasks in non-browser environments.
+
+**Caution:** The following example is deprecated and supported only when using Gemini 3 Flash.
+    
+    
+    from typing import Optional, Dict, Any
+    
+    from google import genai
+    from google.genai import types
+    from google.genai.types import Content, Part
+    
+    
+    client = genai.Client()
+    
+    def open_app(app_name: str, intent: Optional[str] = None) -> Dict[str, Any]:
+        """Opens an app by name.
+    
+        Args:
+            app_name: Name of the app to open (any string).
+            intent: Optional deep-link or action to pass when launching, if the app supports it.
+    
+        Returns:
+            JSON payload acknowledging the request (app name and optional intent).
+        """
+        return {"status": "requested_open", "app_name": app_name, "intent": intent}
+    
+    
+    def long_press_at(x: int, y: int, duration_ms: int = 500) -> Dict[str, int]:
+        """Long-press at a specific screen coordinate.
+    
+        Args:
+            x: X coordinate (absolute), scaled to the device screen width (pixels).
+            y: Y coordinate (absolute), scaled to the device screen height (pixels).
+            duration_ms: Press duration in milliseconds. Defaults to 500.
+    
+        Returns:
+            Object with the coordinates pressed and the duration used.
+        """
+        return {"x": x, "y": y, "duration_ms": duration_ms}
+    
+    
+    def go_home() -> Dict[str, str]:
+        """Navigates to the device home screen.
+    
+        Returns:
+            A small acknowledgment payload.
+        """
+        return {"status": "home_requested"}
+    
+    
+    #  Build function declarations
+    CUSTOM_FUNCTION_DECLARATIONS = [
+        types.FunctionDeclaration.from_callable(client=client, callable=open_app),
+        types.FunctionDeclaration.from_callable(client=client, callable=long_press_at),
+        types.FunctionDeclaration.from_callable(client=client, callable=go_home),
+    ]
+    
+    # Exclude browser functions
+    
+    EXCLUDED_PREDEFINED_FUNCTIONS = [
+        "open_web_browser",
+        "search",
+        "navigate",
+        "hover_at",
+        "scroll_document",
+        "go_forward",
+        "key_combination",
+        "drag_and_drop",
+    ]
+    
+    # Utility function to construct a GenerateContentConfig
+    
+    def make_generate_content_config() -> genai.types.GenerateContentConfig:
+        """Return a fixed GenerateContentConfig with Computer Use + custom functions."""
+        return genai.types.GenerateContentConfig(
+            tools=[
+                types.Tool(
+                    computer_use=types.ComputerUse(
+                        environment=types.Environment.ENVIRONMENT_BROWSER,
+                        excluded_predefined_functions=EXCLUDED_PREDEFINED_FUNCTIONS,
+                    )
+                ),
+                types.Tool(function_declarations=CUSTOM_FUNCTION_DECLARATIONS),
+            ]
+        )
+    
+    
+    # Create the content with user message
+    contents: list[Content] = [
+        Content(
+            role="user",
+            parts=[
+                # text instruction
+                Part(text="Open Chrome, then long-press at 200,400."),
+                # optional screenshot attachment
+                Part.from_bytes(
+                    data=screenshot_image_bytes,
+                    mime_type="image/png",
+                ),
+            ],
+        )
+    ]
+    
+    # Build your fixed config (from helper)
+    config = make_generate_content_config()
+    
+    # Generate content with the configured settings
+    response = client.models.generate_content(
+            model="gemini-3-flash-preview",
+            contents=contents,
+            config=generate_content_config,
+        )
+    
+        print(response)
+    
+
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/dataflow/docs/concepts/about-bottleneck-detector/
 title: About the Dataflow bottleneck detector \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:22.894492+00:00
+fetched_at: 2026-10-23T13:20:25.668689+00:00
 ---
 
 # About the Dataflow bottleneck detector  |  Google Cloud Documentation

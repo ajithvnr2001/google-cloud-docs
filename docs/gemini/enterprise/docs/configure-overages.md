@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/configure-overages/
 title: Configure overages \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:36.611933+00:00
+fetched_at: 2026-10-23T12:55:10.377106+00:00
 ---
 
 # Configure overages  |  Gemini Enterprise  |  Google Cloud Documentation
@@ -131,9 +131,20 @@ To turn off overages for an edition, follow these steps:
 
 
 
+## Configure a single-user quota limit
+
+To prevent any individual user from exhausting an edition's included subscription quota pool before other users can access it, you can configure a single-user quota limit in the **Feature usage** > **Limit any single-user's quota** section on the **Usage & Spending > Usage** tab.
+
+Single-user quota limits apply only while your edition's subscription quota pool has remaining capacity; they don't limit pay-as-you-go overage usage after the subscription pool is depleted. For more information, see the following:
+
+  * [How single-user quota limits interact with overages](https://docs.cloud.google.com/gemini/enterprise/docs/quotas-and-overages#single-user-limits-and-overages)
+  * [Configure a single-user quota limit](https://docs.cloud.google.com/gemini/enterprise/docs/feature-usage#configure-single-user-quota-limit)
+
+
+
 ## What's next
 
-  * Learn how to [view feature usage](https://docs.cloud.google.com/gemini/enterprise/docs/feature-usage).
+  * Learn how to [view feature usage and configure single-user quota limits](https://docs.cloud.google.com/gemini/enterprise/docs/feature-usage).
   * Learn how to [view costs](https://docs.cloud.google.com/gemini/enterprise/docs/view-costs).
 
 
@@ -142,6 +153,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

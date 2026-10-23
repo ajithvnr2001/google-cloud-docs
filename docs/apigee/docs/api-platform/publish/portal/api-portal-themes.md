@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/publish/portal/api-portal-themes/
 title: Customizing your theme \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:47:56.046925+00:00
+fetched_at: 2026-10-23T13:14:33.330506+00:00
 ---
 
 # Customizing your theme  |  Apigee  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-redact-image-all-infotypes/
 title: Redact sensitive data from an image using default infoTypes \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:39:54.058063+00:00
+fetched_at: 2026-10-23T08:37:24.081712+00:00
 ---
 
 # Redact sensitive data from an image using default infoTypes  |  Sensitive Data Protection  |  Google Cloud Documentation

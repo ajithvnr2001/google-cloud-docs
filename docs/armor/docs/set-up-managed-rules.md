@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/set-up-managed-rules/
 title: Set up managed rules \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:54.217006+00:00
+fetched_at: 2026-10-23T13:15:58.756973+00:00
 ---
 
 # Set up managed rules  |  Google Cloud Armor  |  Google Cloud Documentation

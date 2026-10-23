@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/dbt-transfer/
 title: Import metadata from dbt Core \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:02:08.129412+00:00
+fetched_at: 2026-10-23T10:22:00.755997+00:00
 ---
 
 # Import metadata from dbt Core  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -42,11 +42,11 @@ When you run the dbt integration, you capture the following metadata:
 ## Limitations
 
   * Supports dbt Core v1 (validated against versions 1.11 and 1.12), dbt Core v2, and dbt Fusion.
-  * gcloud CLI version 586.0.0 and later support the dbt and BigQuery integration. To install or update the CLI, see [Install the Google Cloud CLI](https://docs.cloud.google.com/sdk/docs/install).
+  * gcloud CLI version 586.0.0 and later support the dbt and Knowledge Catalog integration. To install or update the CLI, see [Install the Google Cloud CLI](https://docs.cloud.google.com/sdk/docs/install).
   * There is no direct connection to dbt Cloud. To import metadata from a dbt Cloud job, get the job's artifacts first. See Import metadata from dbt Cloud runs.
   * Very large or deeply nested schemas are truncated: a single aspect can't exceed the per-aspect size cap, so deeply nested schemas might lose trailing fields.
   * `--aspects-only` can add and refresh metadata, but can't remove it. Deleting a dbt resource requires a full run.
-  * This integration supports only dbt lineage events on BigQuery resources in the [Data Lineage](https://docs.cloud.google.com/knowledge-catalog/docs/about-data-lineage) API and graph. dbt entries (sources, seeds, models) for external third-party sources aren't captured in data lineage. 
+  * This integration supports only dbt lineage events on BigQuery resources in the [Data Lineage API](https://docs.cloud.google.com/knowledge-catalog/docs/about-data-lineage) and graph. dbt entries (sources, seeds, models) for external third-party sources aren't captured in data lineage. 
     * To ingest all dbt lineage events in Data Lineage API, [use the OpenLineage dbt integration](https://pypi.org/project/openlineage-dbt/). Then, integrate OpenLineage with [Knowledge Catalog](https://docs.cloud.google.com/knowledge-catalog/docs/open-lineage) to import and visualize data lineage from dbt.
 
 
@@ -56,7 +56,7 @@ When you run the dbt integration, you capture the following metadata:
 Before you can import metadata from dbt Core and MetricFlow, complete the following tasks:
 
   1. Grant the required roles and permissions.
-  2. Enable the Knowledge Catalog API.
+  2. Enable the Dataplex API.
   3. Meet the dbt prerequisites.
   4. Create the destination [entry group](https://docs.cloud.google.com/knowledge-catalog/docs/ingest-custom-sources#create-entry-group) if it does not already exist.
   5. Understand the Cloud Storage roles.
@@ -142,7 +142,7 @@ For more information about granting roles, see [Manage access](https://docs.clou
 
 ### Enable APIs
 
-Enable the Knowledge Catalog API.
+Enable the Dataplex API.
 
 [Enable the API](https://console.cloud.google.com/flows/enableapi?apiid=dataplex.googleapis.com)
 
@@ -276,7 +276,7 @@ Instead of polling the API, you can configure a dbt Cloud webhook to trigger an 
      * **Jobs** : select the dbt Cloud deployment jobs that you want to monitor.
      * **Endpoint** : enter the HTTPS URL of a service that you run (for example, a Cloud Run service or Cloud Run function).
   2. Save the webhook secret token that dbt Cloud displays. Your service uses this secret to verify the `Authorization` header, which contains an HMAC-SHA256 signature of the request body.
-  3. In your service, read `data.runId` from the JSON payload, download the run's artifacts using the Administrative API as described earlier, and run the `gcloud alpha dataplex dbt metadata-jobs create` command.
+  3. In your service, read `data.runId` from the JSON payload, download the run's artifacts using the Administrative API as described earlier, and run the `gcloud dataplex dbt metadata-jobs create` command.
 
 
 
@@ -324,7 +324,7 @@ To create a dbt metadata job, complete the following steps:
   2. Ensure you have an output staging Cloud Storage bucket configured with the appropriate permissions for both the caller and the Knowledge Catalog service agent.
   3. From Cloud Shell, a local terminal, or an automated workflow tool, execute the `gcloud` command:
          
-         gcloud alpha dataplex dbt metadata-jobs create my-dbt-import \
+         gcloud dataplex dbt metadata-jobs create my-dbt-import \
              --project=my-project \
              --location=us-central1 \
              --artifacts-path=. \
@@ -581,6 +581,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

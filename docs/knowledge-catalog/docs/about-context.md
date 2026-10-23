@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/about-context/
 title: About data context in Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:58:25.719419+00:00
+fetched_at: 2026-10-23T12:51:01.543921+00:00
 ---
 
 # About data context in Knowledge Catalog  |  Google Cloud Documentation

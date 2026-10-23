@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/cx-agent-studio/evaluation-batch-upload/
 title: Evaluation batch upload \u00a0|\u00a0 CX Agent Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:31.495100+00:00
+fetched_at: 2026-10-23T13:13:45.517695+00:00
 ---
 
 # Evaluation batch upload  |  CX Agent Studio  |  Google Cloud Documentation

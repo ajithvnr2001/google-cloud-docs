@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/pub-sub/
 title: Enable Cloud Pub/Sub notifications for CCAI Agent Assist events \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:51.029428+00:00
+fetched_at: 2026-10-23T13:12:26.358748+00:00
 ---
 
 # Enable Cloud Pub/Sub notifications for CCAI Agent Assist events  |  Google Cloud Documentation

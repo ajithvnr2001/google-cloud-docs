@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/security/oauth/sending-access-token/
 title: Sending an access token \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:47.504910+00:00
+fetched_at: 2026-10-23T13:20:13.138010+00:00
 ---
 
 # Sending an access token  |  Apigee  |  Google Cloud Documentation

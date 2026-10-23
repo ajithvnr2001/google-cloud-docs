@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-list-schema-revisions/
 title: v1 List the revisions for a schema (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:42.160022+00:00
+fetched_at: 2026-10-23T10:04:45.131091+00:00
 ---
 
 # v1 List the revisions for a schema (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

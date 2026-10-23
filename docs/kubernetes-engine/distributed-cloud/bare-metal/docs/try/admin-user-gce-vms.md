@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/try/admin-user-gce-vms/
 title: Create demo Google Distributed Cloud admin and user clusters on Compute Engine VMs \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:21:53.300254+00:00
+fetched_at: 2026-10-23T10:23:28.464786+00:00
 ---
 
 # Create demo Google Distributed Cloud admin and user clusters on Compute Engine VMs  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -22,16 +22,9 @@ Send feedback
 
 #  Create demo Google Distributed Cloud admin and user clusters on Compute Engine VMs Stay organized with collections  Save and categorize content based on your preferences. 
 
-Learn about Distributed Cloud software only for bare metal by creating demo clusters on Compute Engine Virtual Machines (VMs). In this tutorial, you run a script that does the following:
+Distributed Cloud software only for bare metal lets you evaluate cluster deployment and operations by creating demo clusters on Compute Engine virtual machines (VMs). In this tutorial, you run a script that provisions five Compute Engine VMs and sets up a VPC network to provide cluster connectivity. After the script finishes, you use `bmctl`, the Google Cloud console, the Google Cloud CLI, or Terraform to create an admin cluster and an accompanying user cluster that can host workloads.
 
-  * Provisions five Compute Engine VMs for installing your demo clusters
-  * Sets up a VPC network to provide cluster connectivity
-
-
-
-After the script provisions the necessary resources, you use one of the following clients to create an admin cluster and an accompanying user cluster that can host workloads: `bmctl`, Google Cloud console, Google Cloud CLI, or Terraform. Completing this tutorial can take 40 minutes to an hour.
-
-The demo clusters you create in this guide help you evaluate the process for provisioning and operating Google Distributed Cloud clusters, but they aren't intended for use in production.
+Completing these steps can take 40 minutes to an hour. This deployment is for evaluation purposes only. Don't run these demo clusters in production. To deploy Google Distributed Cloud in production, follow the steps in [Create basic clusters](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/quickstart).
 
 **Note:** Distributed Cloud software only for bare metal was formerly known as Google Distributed Cloud Virtual, which was previously known as Anthos clusters on bare metal.
 
@@ -1544,6 +1537,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

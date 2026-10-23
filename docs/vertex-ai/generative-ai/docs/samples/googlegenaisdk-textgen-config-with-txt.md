@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/googlegenaisdk-textgen-config-with-txt/
 title: Configurations to generate content with Multimodal AI Model \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:09.370378+00:00
+fetched_at: 2026-10-23T08:57:25.349564+00:00
 ---
 
 # Configurations to generate content with Multimodal AI Model  |  Generative AI on Vertex AI  |  Google Cloud Documentation

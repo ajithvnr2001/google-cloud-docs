@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/avg/
 title: AVG \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:45.906541+00:00
+fetched_at: 2026-10-23T13:19:50.477993+00:00
 ---
 
 # AVG  |  Data Studio  |  Google Cloud Documentation

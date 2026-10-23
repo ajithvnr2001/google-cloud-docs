@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/troubleshoot/read-pools/
 title: Troubleshoot read pool queries \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:19.728084+00:00
+fetched_at: 2026-10-23T10:03:39.079452+00:00
 ---
 
 # Troubleshoot read pool queries  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,13 +21,13 @@ Send feedback
 
 #  Troubleshoot read pool queries Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes techniques for investigating and debugging queries that AlloyDB for PostgreSQL sends to a read pool instance:
+To investigate and debug queries that AlloyDB for PostgreSQL routes to a read pool instance, you can use the following diagnostic techniques:
 
-  * Seeing a detailed list of a read pool's constituent nodes, including their IP addresses.
-  * Connecting directly to a node, for debugging purposes.
-  * Examining AlloyDB logs to determine which particular node is handling any one query sent to a read pool.
-  * Querying the logs for all recent activity from a given read pool node.
-  * Viewing Google Cloud metrics associated with a read pool node.
+  * View a detailed list of a read pool's constituent nodes, including their IP addresses.
+  * Connect directly to an individual read pool node for debugging.
+  * Examine AlloyDB logs to identify which node is handling a specific query.
+  * Query the logs for all recent activity from a specific read pool node.
+  * View Google Cloud metrics associated with a read pool node.
 
 
 
@@ -201,6 +201,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

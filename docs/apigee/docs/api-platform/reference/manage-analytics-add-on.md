@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/manage-analytics-add-on/
 title: Manage the Apigee API Analytics add-on \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:54.918851+00:00
+fetched_at: 2026-10-23T13:16:10.282834+00:00
 ---
 
 # Manage the Apigee API Analytics add-on  |  Google Cloud Documentation

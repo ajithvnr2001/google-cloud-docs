@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/information-schema-jobs-by-organization/
 title: JOBS_BY_ORGANIZATION view \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:34:52.337595+00:00
+fetched_at: 2026-10-23T12:55:37.042683+00:00
 ---
 
 # JOBS_BY_ORGANIZATION view  |  BigQuery  |  Google Cloud Documentation
@@ -45,6 +45,7 @@ The `INFORMATION_SCHEMA.JOBS_BY_ORGANIZATION` view has the following schema:
 ---|---|---  
 `bi_engine_statistics` | `RECORD` |  If the project is configured to use the [BI Engine](https://cloud.google.com/bigquery/docs/bi-engine-intro), then this field contains [BiEngineStatistics](https://cloud.google.com/bigquery/docs/reference/rest/v2/Job#bienginestatistics). Otherwise `NULL`.   
 `cache_hit` | `BOOLEAN` | Whether the query results of this job were from a cache. If you have a [multi-query statement job](https://docs.cloud.google.com/bigquery/docs/multi-statement-queries), `cache_hit` for your parent query is `NULL`.   
+`copy_job_statistics` | `RECORD` |  [Statistics for a copy job.](https://docs.cloud.google.com/bigquery/docs/reference/rest/v2/Job#CopyJobStatistics)  
 `creation_time` | `TIMESTAMP` |  (_Partitioning column_) Creation time of this job. Partitioning is based on the UTC time of this timestamp.  
 `destination_table` | `RECORD` |  Destination [table](https://cloud.google.com/bigquery/docs/reference/rest/v2/TableReference) for results, if any.   
 `end_time` | `TIMESTAMP` | The end time of this job, in milliseconds since the epoch. This field represents the time when the job enters the `DONE` state.  
@@ -289,6 +290,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

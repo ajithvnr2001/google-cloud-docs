@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/tools_data_store/
 title: Set up OpenAPI tools to access Datastore \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:40.298509+00:00
+fetched_at: 2026-10-23T13:13:02.669992+00:00
 ---
 
 # Set up OpenAPI tools to access Datastore  |  Agent Assist  |  Google Cloud Documentation

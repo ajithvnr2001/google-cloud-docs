@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.16/sa-about/
 title: About service accounts \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:47:47.934793+00:00
+fetched_at: 2026-10-23T13:15:28.040248+00:00
 ---
 
 # About service accounts  |  Apigee  |  Google Cloud Documentation

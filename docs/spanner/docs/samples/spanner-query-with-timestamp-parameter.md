@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-query-with-timestamp-parameter/
 title: Query with TIMESTAMP parameter \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:39.021141+00:00
+fetched_at: 2026-10-23T10:10:48.616761+00:00
 ---
 
 # Query with TIMESTAMP parameter  |  Spanner  |  Google Cloud Documentation

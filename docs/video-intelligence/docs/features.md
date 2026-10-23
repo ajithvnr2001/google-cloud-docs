@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-intelligence/docs/features/
 title: Features \u00a0|\u00a0 Video Intelligence API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:54:38.590596+00:00
+fetched_at: 2026-10-23T09:37:48.297861+00:00
 ---
 
 # Features  |  Video Intelligence API  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/error-reporting/docs/notifications/
 title: Configure and manage notifications \u00a0|\u00a0 Error Reporting \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:27.584133+00:00
+fetched_at: 2026-10-23T13:11:19.356672+00:00
 ---
 
 # Configure and manage notifications  |  Error Reporting  |  Google Cloud Documentation

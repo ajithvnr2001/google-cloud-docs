@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/design-composite-templates/
 title: Design composite templates \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:56.680719+00:00
+fetched_at: 2026-10-23T13:18:22.750217+00:00
 ---
 
 # Design composite templates  |  Application Design Center  |  Google Cloud Documentation

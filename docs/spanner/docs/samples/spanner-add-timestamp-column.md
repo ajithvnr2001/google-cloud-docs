@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-add-timestamp-column/
 title: Add TIMESTAMP column \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:49:35.657545+00:00
+fetched_at: 2026-10-23T10:31:19.899026+00:00
 ---
 
 # Add TIMESTAMP column  |  Spanner  |  Google Cloud Documentation

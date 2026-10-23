@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/apis/
 title: APIs & Reference \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:28:27.343789+00:00
+fetched_at: 2026-10-23T10:11:44.711414+00:00
 ---
 
 # APIs & Reference  |  Cloud SQL for SQL Server  |  Google Cloud Documentation

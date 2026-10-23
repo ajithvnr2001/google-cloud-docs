@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-expression/
 title: Use an expression to assign a variable value \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:12:20.904213+00:00
+fetched_at: 2026-10-23T08:56:55.555700+00:00
 ---
 
 # Use an expression to assign a variable value  |  Workflows  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/audit-logging/
 title: Data Studio Pro audit logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:46.590145+00:00
+fetched_at: 2026-10-23T13:20:10.431329+00:00
 ---
 
 # Data Studio Pro audit logging  |  Google Cloud Documentation

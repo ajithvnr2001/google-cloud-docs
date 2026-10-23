@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/evaluate-search-quality/
 title: Evaluate search quality \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:11.703195+00:00
+fetched_at: 2026-10-23T13:12:09.651003+00:00
 ---
 
 # Evaluate search quality  |  Gemini Enterprise  |  Google Cloud Documentation

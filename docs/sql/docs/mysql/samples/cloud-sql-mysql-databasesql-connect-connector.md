@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/samples/cloud-sql-mysql-databasesql-connect-connector/
 title: Create a connection using the Cloud SQL Go Connector \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:52.719048+00:00
+fetched_at: 2026-10-23T10:12:12.392626+00:00
 ---
 
 # Create a connection using the Cloud SQL Go Connector  |  Cloud SQL for MySQL  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-yaml-configuration-reference/
 title: API proxy YAML configuration reference \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:56.715303+00:00
+fetched_at: 2026-10-23T13:16:39.562806+00:00
 ---
 
 # API proxy YAML configuration reference  |  Apigee  |  Google Cloud Documentation

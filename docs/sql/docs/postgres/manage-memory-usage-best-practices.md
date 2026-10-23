@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/manage-memory-usage-best-practices/
 title: Best practices for managing memory usage \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:51.465609+00:00
+fetched_at: 2026-10-23T10:19:36.743579+00:00
 ---
 
 # Best practices for managing memory usage  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -70,7 +70,7 @@ For the complete list of memory components in PostgreSQL, see the [PostgreSQL do
 
 [Monitor your instance's memory](https://docs.cloud.google.com/sql/docs/postgres/monitor-instance) in [Cloud Monitoring](https://docs.cloud.google.com/sql/docs/postgres/monitor-instance#cloud-monitoring) regularly and keep it below the memory limit. A good practice is to [set an alert](https://docs.cloud.google.com/monitoring/alerts/using-alerting-ui#create-policy) in Cloud Monitoring to alert when the usage exceeds 90% of the limit for 6 hours. This alert can warn you when your memory usage is close to the limit constantly.
 
-Additionally, monitor for out-of-memory incidents. To do that, set up a [log-based metric](https://cloud.google.com/logging/docs/logs-based-metrics) for the `server process .* was terminated by signal 9: Killed` message in Cloud Monitoring to count the out-of-memory events, and then alert each time such an event happens.
+Additionally, monitor for out-of-memory incidents. To do that, set up a [log-based metric](https://docs.cloud.google.com/logging/docs/logs-based-metrics) for the `server process .* was terminated by signal 9: Killed` message in Cloud Monitoring to count the out-of-memory events, and then alert each time such an event happens.
 
 If your instance operates constantly above 90% of the memory's limit or an out-of-memory event occurs, you can increase the instance's memory. Alternatively, you can reduce the memory usage by limiting the number of database connections or lowering database flags such as `shared_buffers`, `work_mem`, or `max_connections`. Lowering these flags can limit the performance of your instance.
 
@@ -123,6 +123,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

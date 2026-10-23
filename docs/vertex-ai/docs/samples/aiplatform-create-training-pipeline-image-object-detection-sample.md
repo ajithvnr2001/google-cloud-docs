@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-create-training-pipeline-image-object-detection-sample/
 title: Create a training pipeline for image object detection \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:13.879796+00:00
+fetched_at: 2026-10-23T09:27:03.321324+00:00
 ---
 
 # Create a training pipeline for image object detection  |  Vertex AI  |  Google Cloud Documentation

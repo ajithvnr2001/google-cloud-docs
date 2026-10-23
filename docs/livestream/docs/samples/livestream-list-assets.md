@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/livestream/docs/samples/livestream-list-assets/
 title: List assets \u00a0|\u00a0 Live Stream API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:10:34.014761+00:00
+fetched_at: 2026-10-23T10:34:58.830703+00:00
 ---
 
 # List assets  |  Live Stream API  |  Google Cloud Documentation

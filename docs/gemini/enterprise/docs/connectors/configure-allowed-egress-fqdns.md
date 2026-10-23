@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/configure-allowed-egress-fqdns/
 title: Configure allowed egress fully qualified domain names for data stores \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:13.528494+00:00
+fetched_at: 2026-10-23T13:11:02.311712+00:00
 ---
 
 # Configure allowed egress fully qualified domain names for data stores  |  Gemini Enterprise  |  Google Cloud Documentation

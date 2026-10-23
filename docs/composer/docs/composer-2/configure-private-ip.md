@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/composer/docs/composer-2/configure-private-ip/
 title: Configure private IP networking \u00a0|\u00a0 Managed Service for Apache Airflow \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:42.537214+00:00
+fetched_at: 2026-10-23T13:00:29.612962+00:00
 ---
 
 # Configure private IP networking  |  Managed Service for Apache Airflow  |  Google Cloud Documentation

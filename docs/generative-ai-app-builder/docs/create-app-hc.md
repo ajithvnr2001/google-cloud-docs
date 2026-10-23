@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/create-app-hc/
 title: Create a healthcare search app \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:14.662262+00:00
+fetched_at: 2026-10-23T13:10:27.739212+00:00
 ---
 
 # Create a healthcare search app  |  Agent Search  |  Google Cloud Documentation

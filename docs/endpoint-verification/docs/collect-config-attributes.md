@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoint-verification/docs/collect-config-attributes/
 title: Enable collection of configurable device attributes \u00a0|\u00a0 Endpoint Verification \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:48.259443+00:00
+fetched_at: 2026-10-23T13:01:07.383729+00:00
 ---
 
 # Enable collection of configurable device attributes  |  Endpoint Verification  |  Google Cloud Documentation

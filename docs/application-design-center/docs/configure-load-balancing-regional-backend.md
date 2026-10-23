@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/configure-load-balancing-regional-backend/
 title: Configure a regional Cloud Load Balancing backend service \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:57.911779+00:00
+fetched_at: 2026-10-23T12:55:20.412625+00:00
 ---
 
 # Configure a regional Cloud Load Balancing backend service  |  Application Design Center  |  Google Cloud Documentation
@@ -20,20 +20,7 @@ Send feedback
 
 #  Configure a regional Cloud Load Balancing backend service Stay organized with collections  Save and categorize content based on your preferences. 
 
-You create a load balancer in your application by configuring and connecting distinct Cloud Load Balancing frontend and backend components. The separate components help you apply distinct controls for external and internal traffic, and prevent direct access to data.
-
-The regional Cloud Load Balancing backend component helps you manage load balancer traffic distribution settings, including the protocol used to connect to backends, session settings, health checks, and timeouts. These settings provide fine-grained control over how your load balancer behaves. You can configure the following backends:
-
-  * Serverless NEG: A list of serverless Cloud Run or Cloud Run functions applications as backends.
-
-  * Managed Instance Group (MIG): A list of Compute Engine instance groups as backends.
-
-
-
-
-For more information, see [Backend services overview](https://docs.cloud.google.com/load-balancing/docs/backend-service).
-
-This document describes the connections and parameters you can configure when using App Design Center to create a regional Cloud Load Balancing backend service. The configuration parameters are based on the [terraform-google-regional-lb-http](https://github.com/GoogleCloudPlatform/terraform-google-regional-lb-http/tree/main/modules/backend) Terraform module.
+You create a load balancer in your application by configuring and connecting distinct Cloud Load Balancing frontend and backend components, which help you apply separate controls for external and internal traffic and prevent direct access to data. In App Design Center, the regional Cloud Load Balancing [backend service](https://docs.cloud.google.com/load-balancing/docs/backend-service) component provides fine-grained control over traffic distribution settings—including protocols, session affinity, health checks, and timeouts—for serverless network endpoint groups (NEGs) and Compute Engine managed instance groups (MIGs), with connections and configuration parameters based on the [terraform-google-regional-lb-http](https://github.com/GoogleCloudPlatform/terraform-google-regional-lb-http/tree/main/modules/backend) Terraform module.
 
 ## Component connections
 
@@ -135,6 +122,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

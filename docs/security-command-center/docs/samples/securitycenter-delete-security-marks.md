@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/samples/securitycenter-delete-security-marks/
 title: Delete security marks \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:42.284501+00:00
+fetched_at: 2026-10-23T08:58:08.227967+00:00
 ---
 
 # Delete security marks  |  Security Command Center  |  Google Cloud Documentation

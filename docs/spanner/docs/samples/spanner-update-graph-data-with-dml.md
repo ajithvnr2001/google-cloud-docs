@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-update-graph-data-with-dml/
 title: Update graph data with DML \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:59.468922+00:00
+fetched_at: 2026-10-23T10:31:43.124049+00:00
 ---
 
 # Update graph data with DML  |  Spanner  |  Google Cloud Documentation

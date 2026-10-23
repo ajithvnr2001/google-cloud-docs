@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/using-query-insights/
 title: Improve query performance using query insights \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:07.887361+00:00
+fetched_at: 2026-10-23T10:03:31.938826+00:00
 ---
 
 # Improve query performance using query insights  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Improve query performance using query insights Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to use the query insights dashboard to detect and analyze performance problems. For an overview of this feature, see [Query insights overview](https://docs.cloud.google.com/alloydb/docs/query-insights-overview).
+To detect and analyze query performance bottlenecks, inspect query plans, and trace high-latency requests across your AlloyDB for PostgreSQL instances, you can use the **Query insights** dashboard. For an overview of this feature, see [Query insights overview](https://docs.cloud.google.com/alloydb/docs/query-insights-overview).
 
 You can use Gemini Cloud Assist to help you monitor and troubleshoot your AlloyDB resources. For more information, see [Monitor and troubleshoot with Gemini assistance](https://docs.cloud.google.com/alloydb/docs/monitor-troubleshoot-with-gemini).
 
@@ -220,10 +220,10 @@ Before you use any of the request data, make the following replacements:
 
 
 
-To modify your instance configuration, use the following [`PATCH`](https://docs.cloud.google.com/alloydb/docs/reference/rest/v1beta/projects.locations.clusters.instances/patch) request:
+To modify your instance configuration, use the following [`PATCH`](https://docs.cloud.google.com/alloydb/docs/reference/rest/v1/projects.locations.clusters.instances/patch) request:
     
     
-    PATCH https://alloydb.googleapis.com/v1beta/{instance.name=projects/PROJECT_ID/locations/LOCATION_ID/clusters/CLUSTER_ID/instances/INSTANCE_ID?updateMask=observabilityConfig.enabled}
+    PATCH https://alloydb.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION_ID/clusters/CLUSTER_ID/instances/INSTANCE_ID?updateMask=observabilityConfig.enabled
     
 
 The request JSON body that configures all observability fields looks as follows:
@@ -552,6 +552,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

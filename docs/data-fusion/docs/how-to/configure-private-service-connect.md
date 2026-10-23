@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/configure-private-service-connect/
 title: Create a private instance with Private Service Connect \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:16.616514+00:00
+fetched_at: 2026-10-23T13:19:44.987705+00:00
 ---
 
 # Create a private instance with Private Service Connect  |  Cloud Data Fusion  |  Google Cloud Documentation

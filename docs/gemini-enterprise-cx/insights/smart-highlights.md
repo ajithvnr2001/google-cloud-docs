@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/smart-highlights/
 title: Smart highlights \u00a0|\u00a0 Customer Experience Insights \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:51.643277+00:00
+fetched_at: 2026-10-23T13:11:31.499716+00:00
 ---
 
 # Smart highlights  |  Customer Experience Insights  |  Google Cloud Documentation

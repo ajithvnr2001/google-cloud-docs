@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/googlegenaisdk-textgen-with-video/
 title: Summarize a video file with audio with Gemini Multimodal \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:29:59.092550+00:00
+fetched_at: 2026-10-23T08:57:23.633160+00:00
 ---
 
 # Summarize a video file with audio with Gemini Multimodal  |  Generative AI on Vertex AI  |  Google Cloud Documentation

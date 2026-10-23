@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/enable-service/
 title: Enable or disable Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:12.918576+00:00
+fetched_at: 2026-10-23T13:20:55.703742+00:00
 ---
 
 # Enable or disable Cloud Data Fusion  |  Google Cloud Documentation

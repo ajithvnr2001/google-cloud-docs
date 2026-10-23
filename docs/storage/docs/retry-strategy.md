@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/retry-strategy/
 title: Retry strategy \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:31:36.074645+00:00
+fetched_at: 2026-10-23T09:51:53.349576+00:00
 ---
 
 # Retry strategy  |  Cloud Storage  |  Google Cloud Documentation
@@ -21,11 +21,11 @@ Send feedback
 
 #  Retry strategy Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how Cloud Storage tools retry failed requests and how to customize the behavior of retries. It also describes considerations for retrying requests.
+Cloud Storage tools provide retry mechanisms that help your applications automatically recover from failed requests that are due to transient errors. You can use the default retry behavior or customize the settings to implement your own retry strategy.
 
-## Overview
+## Overview of retries
 
-There are two factors that determine whether or not a request is safe to retry:
+The following factors determine whether it's safe to retry a request:
 
   * The _response_ that you receive from the request.
 
@@ -36,7 +36,7 @@ There are two factors that determine whether or not a request is safe to retry:
 
 ### Response
 
-The response that you receive from your request indicates whether or not it's useful to retry the request. Responses related to transient problems are generally retryable. On the other hand, response related to permanent errors indicate you need to make changes, such as authorization or configuration changes, before it's useful to try the request again. The following responses indicate transient problems that are useful to retry:
+The response that you receive from your request indicates whether it's useful to retry the request. Responses that are related to transient problems are generally retryable. On the other hand, responses that are related to permanent errors indicate that you need to make changes, such as authorization or configuration changes, before it's useful to try the request again. The following responses indicate transient problems that are useful to retry:
 
   * HTTP `408`, `429`, and `5xx` response codes.
   * Socket timeouts and TCP disconnects.
@@ -168,7 +168,7 @@ By default, operations support retries for the following errors:
     * `503 Service Unavailable`
     * `504 Gateway Timeout`
   * Errors that implement the `Temporary()` interface and give a value of `err.Temporary() == true`
-  * Any of the above errors that have been wrapped using [Go 1.13 error wrapping](https://go.dev/blog/go1.13-errors)
+  * Any of the previous errors that have been wrapped using [Go 1.13 error wrapping](https://go.dev/blog/go1.13-errors)
 
 
 
@@ -814,7 +814,7 @@ See the following code sample to learn how to customize your retry behavior.
 
 ### Ruby
 
-When you initialize the storage client, all retry configurations are set to the values shown in the table above. To modify the default retry behavior, pass retry configurations while initializing the storage client.
+When you initialize the storage client, all retry configurations are set to the values shown in the previous table. To modify the default retry behavior, pass retry configurations while initializing the storage client.
 
 To override the number of retries for a particular operation, pass `retries` in the `options` parameter of the operation.
     
@@ -829,7 +829,7 @@ To override the number of retries for a particular operation, pass `retries` in 
       require "google/cloud/storage"
     
       # Creates a client
-      storage = Google::Cloud::[Storage](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html)(
+      storage = Google::Cloud::[Storage](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage-control-v2/latest/Google-Cloud-Storage.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html)(
     
         # The maximum number of automatic retries attempted before returning
         # the error.
@@ -881,35 +881,35 @@ An [exponential backoff algorithm](https://en.wikipedia.org/wiki/Exponential_bac
 
 ## Retry anti-patterns
 
-It is recommended to use or customize the built-in retry mechanisms where applicable; see [customizing retries](https://docs.cloud.google.com/storage/docs/retry-strategy#customize-retries). Whether you are using the default retry mechanisms, customizing them, or implementing your own retry logic, it's crucial to avoid the following common [anti-patterns](https://en.wikipedia.org/wiki/Anti-pattern) as they can exacerbate issues rather than resolve them.
+We recommend that you use or customize the built-in retry mechanisms where applicable; see [customizing retries](https://docs.cloud.google.com/storage/docs/retry-strategy#customize-retries). Regardless of whether you use the default retry mechanisms, customize them, or implement your own retry logic, you should avoid the following common [anti-patterns](https://en.wikipedia.org/wiki/Anti-pattern) because they can exacerbate issues rather than resolve them.
 
-#### Retrying without backoff
+### Retrying without backoff
 
-Retrying requests immediately or with very short delays can lead to cascading failures which are failures that might trigger other failures.
+Not recommended: Retrying requests immediately or with very short delays can lead to cascading failures, which are failures that might trigger other failures.
 
 **How to avoid this** : Implement exponential backoff with jitter. This strategy progressively increases the wait time between retries and adds a random element to prevent retries from overwhelming the service.
 
-#### Unconditionally retrying non-idempotent operations
+### Unconditionally retrying non-idempotent operations
 
-Repeatedly executing operations that are not idempotent can lead to unintended side effects, such as unintended overwrites or deletions of data.
+Not recommended: Repeatedly executing operations that are not idempotent can lead to unintended side effects, such as unintended overwrites or deletions of data.
 
-**How to avoid this** : Thoroughly understand the idempotency characteristics of each operation as detailed in the [idempotency of operations](https://docs.cloud.google.com/storage/docs/retry-strategy#idempotency-operations) section. For non-idempotent operations, ensure your retry logic can handle potential duplicates or avoid retrying them altogether. Be cautious with retries that may lead to race conditions.
+**How to avoid this** : Thoroughly understand the idempotency characteristics of each operation as detailed in the [idempotency of operations](https://docs.cloud.google.com/storage/docs/retry-strategy#idempotency-operations) section. For non-idempotent operations, ensure your retry logic can handle potential duplicates or avoid retrying them altogether. Be cautious with retries that might lead to race conditions.
 
-#### Retrying unretryable errors
+### Retrying unretryable errors
 
-Treating all errors as able to be tried again can be problematic. Some errors for example, authorization failures or invalid requests are persistent and retrying them without addressing the underlying cause won't be successful and may result in applications getting caught in an infinite loop.
+Not recommended: Treating all errors as able to be tried again can be problematic. Some errors, such as authorization failures or invalid requests, are persistent. Retrying the request without addressing the underlying cause won't be successful and might result in applications getting caught in an infinite loop.
 
 **How to avoid this** : Categorize errors into transient (retryable) and permanent (non-retryable). Only retry transient errors like `408`, `429`, and `5xx` HTTP codes, or specific connection issues. For permanent errors, log them and handle the underlying cause appropriately.
 
-#### Ignoring retry limits
+### Ignoring retry limits
 
-Retrying indefinitely can lead to resource exhaustion in your application or continuously send requests to a service that won't recover without intervention.
+Not recommended: Retrying indefinitely can lead to resource exhaustion in your application or continuously send requests to a service that won't recover without intervention.
 
 **How to avoid this** : Tailor retry limits to the nature of your workload. For latency sensitive workloads, consider setting a total maximum retry duration to ensure a timely response or failure. For batch workloads, which might tolerate longer retry periods for transient server side errors, consider setting a higher total retry limit.
 
-#### Unnecessarily layering retries
+### Unnecessarily layering retries
 
-Adding custom application level retry logic on top of the existing retry mechanisms can lead to an excessive number of retry attempts. For example, if your application retries an operation three times, and the underlying client library also retries it three times for each of your application's attempts, you could end up with nine retry attempts. Sending high amounts of retries for errors that cannot be retried might lead to request throttling, limiting the throughput of all workloads. High numbers of retries might also increase latency of requests without improving the success rate.
+Not recommended: Adding custom application level retry logic on top of the existing retry mechanisms can lead to an excessive number of retry attempts. For example, if your application retries an operation three times, and the underlying client library also retries it three times for each of your application's attempts, you could end up with nine retry attempts. Sending high amounts of retries for errors that cannot be retried might lead to request throttling, limiting the throughput of all workloads. High numbers of retries might also increase latency of requests without improving the success rate.
 
 **How to avoid this** : We recommend using and configuring the built-in retry mechanisms. If you must implement application-level retries, like for specific business logic that spans multiple operations, do so with a clear understanding of the underlying retry behavior. Consider disabling or significantly limiting retries in one of the layers to prevent multiplicative effects.
 
@@ -923,6 +923,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

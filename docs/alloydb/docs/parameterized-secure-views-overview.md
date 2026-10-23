@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/parameterized-secure-views-overview/
 title: Parameterized secure views overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:44.714888+00:00
+fetched_at: 2026-10-23T10:03:41.609169+00:00
 ---
 
 # Parameterized secure views overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,13 +21,11 @@ Send feedback
 
 #  Parameterized secure views overview Stay organized with collections  Save and categorize content based on your preferences. 
 
-**Preview**
+**Preview — Parameterized secure views**
 
 This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
-This page describes parameterized secure views in AlloyDB for PostgreSQL, which provide application data security and row access control using SQL views and help ensure that application users can view only the data that they're supposed to access.
-
-Parameterized secure views are an extension of [PostgreSQL secure views](https://www.postgresql.org/docs/current/tutorial-views.html), which let you use application-specific named view parameters in view definitions. This capability provides an interface that takes a query and values for the named parameters. The interface executes the query with those values, which are used throughout the execution of the query.
+Parameterized secure views in AlloyDB for PostgreSQL let you enforce application-level row access control so that users can view only the data that they're authorized to access. Built as an extension of [PostgreSQL secure views](https://www.postgresql.org/docs/current/tutorial-views.html), these views let you include application-specific named parameters in view definitions and pass parameter values that apply throughout query execution.
 
 The following is an example of a parameterized secure view:
     
@@ -38,26 +36,26 @@ The following is an example of a parameterized secure view:
            WHERE customer_id = $@app_end_userid;
     
 
-You can query parameterized secure views using the `execute_parameterized_query` stored procedure, or by running the `EXECUTE .. WITH VIEW PARAMETERS` statement. For more information, see [Manage application data security using AlloyDB parameterized secure views](https://docs.cloud.google.com/alloydb/docs/manage-application-data-security-parameterized-secure-views).
+You can query parameterized secure views by using the `execute_parameterized_query` function, or by running the `EXECUTE .. WITH VIEW PARAMETERS` statement. For more information, see [Manage application data security using AlloyDB parameterized secure views](https://docs.cloud.google.com/alloydb/docs/manage-application-data-security-parameterized-secure-views).
 
 ## Benefits of parameterized secure views
 
 Parameterized secure views are well suited for managing data security at the database level, especially when you're dealing with ad hoc queries from untrusted sources, such as those translated from natural language. These views offer a flexible way to implement fine-grained access control.
 
-For example, consider an application that tracks customers' checked-in luggage. A customer with user ID 12345 asks, "Where is my bag?" In this scenario, parameterized secure views ensure the following:
-
-The query only returns rows accessible to the user who submitted the query—for example, rows linked to user ID 12345.
+For example, consider an application that tracks customers' checked-in luggage. A customer with user ID 12345 asks, "Where is my bag?" In this scenario, parameterized secure views ensure that the query returns only rows accessible to the user who submitted the query—for example, rows linked to user ID 12345.
 
 ### Security risk mitigation
 
 Parameterized secure views help mitigate security risks when end users run untrusted queries—like natural language queries—on your database. These risks include the following:
 
-  * **Malicious prompts:** Users might try to manipulate the underlying model to access all application data.
-  * **Broadly-scoped SQL queries:** Large language models (LLMs) might generate SQL queries that expose sensitive data, even from well-intentioned user queries.
+  * **Malicious prompts** : users might try to manipulate the underlying model to access all application data.
+
+  * **Broadly scoped SQL queries** : large language models (LLMs) might generate SQL queries that expose sensitive data, even from well-intentioned user queries.
 
 
 
-By using parameterized secure views, you can restrict the range of rows available to individual application users. This control ensures data security, regardless of how users phrase their queries.
+
+By using parameterized secure views, you can restrict the range of rows available to individual application users. This control helps protect application data, regardless of how users phrase their queries.
 
 ### Data access management
 
@@ -65,7 +63,7 @@ Parameterized secure views address common challenges in managing data access for
 
   * **Simplified user management:** With parameterized secure views, you can use a single database role to serve all end users, instead of using methods that might require you to create a separate database user or role for each end user. Parameterized secure views help simplify user and connection management for applications where each end user needs access only to their data.
 
-For example, in an airline application where customers should only see their own bookings, you can define a single parameterized secure view that is parameterized by the end user identifier. This view allows a single database role –with access to the view, not the underlying table– to serve all users, which simplifies user management and database connections.
+For example, in an airline application where customers should only see their own bookings, you can define a single parameterized secure view that is parameterized by the end user identifier. This view allows a single database role—with access to the view, not the underlying table—to serve all users, which simplifies user management and database connections.
 
   * **Streamlined security enforcement:** Parameterized secure views inherently incorporate access controls. When a view is queried, the defined security parameters are consistently enforced, regardless of the user accessing the view. This approach contrasts with situations where underlying security policies on base tables might not automatically apply to views without extra configuration.
 
@@ -78,9 +76,9 @@ For more information about existing security mechanisms in PostgreSQL, such as R
 
 Parameterized secure views give application developers data security and row access control using the following methods:
 
-  * Views created using the [`WITH (security barrier)`](https://www.postgresql.org/docs/current/rules-privileges.html) option provide row-level security by preventing maliciously chosen functions and operators from being passed values from rows until after the view has done its work. For more information about the `WITH (security barrier)` clause, see [Rules and Privileges](https://www.postgresql.org/docs/current/rules-privileges.html).
+  * Views created using the [`WITH (security_barrier)`](https://www.postgresql.org/docs/current/rules-privileges.html) option provide row-level security by preventing maliciously chosen functions and operators from being passed values from rows until after the view has done its work. For more information about the `WITH (security_barrier)` clause, see [Rules and Privileges](https://www.postgresql.org/docs/current/rules-privileges.html).
   * Parameterization using named view parameters allows a restricted view of the database parameterized by values provided by the application based on application-level security, such as end user authentication.
-  * Enforcement of additional restrictions on queries accessing parameterized views is useful for applications that execute untrusted queries from end users—like those generated by an AI natural language-to-SQL generation. This prevents escaping the security envelope provided by parameterized secure views and managing resource usage. For more information, see [Enforced restrictions on queries](https://docs.cloud.google.com/alloydb/docs/manage-application-data-security-parameterized-secure-views#restrictions).
+  * Enforcement of additional restrictions on queries accessing parameterized views is useful for applications that execute untrusted queries from end users—like those generated by AI natural language-to-SQL generation. This enforcement prevents queries from escaping the security envelope provided by parameterized secure views and helps manage resource usage. For more information about query restrictions, see [Enforced restrictions on queries](https://docs.cloud.google.com/alloydb/docs/manage-application-data-security-parameterized-secure-views#restrictions).
 
 
 
@@ -104,6 +102,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/agentic-retrieval-stream-answer/
 title: Stream answers using agentic retrieval \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:19.165144+00:00
+fetched_at: 2026-10-23T13:11:19.507324+00:00
 ---
 
 # Stream answers using agentic retrieval  |  Agent Search  |  Google Cloud Documentation

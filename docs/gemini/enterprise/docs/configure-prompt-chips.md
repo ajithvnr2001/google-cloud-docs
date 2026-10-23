@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/configure-prompt-chips/
 title: Configure prompt chips \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:36.401095+00:00
+fetched_at: 2026-10-23T13:13:09.785951+00:00
 ---
 
 # Configure prompt chips  |  Gemini Enterprise  |  Google Cloud Documentation

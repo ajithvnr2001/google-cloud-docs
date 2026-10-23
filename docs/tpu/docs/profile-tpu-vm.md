@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tpu/docs/profile-tpu-vm/
 title: Profile your model on Cloud TPU VMs \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:54:29.705974+00:00
+fetched_at: 2026-10-23T12:36:17.932364+00:00
 ---
 
 # Profile your model on Cloud TPU VMs  |  Google Cloud Documentation
@@ -41,6 +41,7 @@ To enable on-demand profile capture, you still need to start the XProf server wi
 You can find out how to enable programmatic and on-demand capture for different frameworks at:
 
   * [JAX](https://docs.jax.dev/en/latest/profiling.html)
+  * [PyTorch](https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/)
   * [Tensorflow](https://www.tensorflow.org/guide/profiler)
 
 
@@ -166,6 +167,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-intelligence/docs/samples/video-detect-logo-gcs/
 title: Recognize logos in a Cloud Storage file \u00a0|\u00a0 Video Intelligence API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:54:38.777639+00:00
+fetched_at: 2026-10-23T09:37:40.105259+00:00
 ---
 
 # Recognize logos in a Cloud Storage file  |  Video Intelligence API  |  Google Cloud Documentation

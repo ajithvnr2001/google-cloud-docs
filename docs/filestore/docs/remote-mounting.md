@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/remote-mounting/
 title: Mounting file shares on remote clients \u00a0|\u00a0 Filestore \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:55.695176+00:00
+fetched_at: 2026-10-23T13:01:15.630200+00:00
 ---
 
 # Mounting file shares on remote clients  |  Filestore  |  Google Cloud Documentation

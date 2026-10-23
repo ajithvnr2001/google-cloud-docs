@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/stackdriver/docs/instrumentation/google-built-otel/
 title: Overview of the Google-Built OpenTelemetry Collector \u00a0|\u00a0 Google Cloud Observability \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:18:43.995478+00:00
+fetched_at: 2026-10-23T10:52:44.833395+00:00
 ---
 
 # Overview of the Google-Built OpenTelemetry Collector  |  Google Cloud Observability  |  Google Cloud Documentation
@@ -20,7 +20,7 @@ Send feedback
 
 #  Overview of the Google-Built OpenTelemetry Collector Stay organized with collections  Save and categorize content based on your preferences. 
 
-The [Google-Built OpenTelemetry Collector](https://github.com/GoogleCloudPlatform/opentelemetry-operations-collector/tree/v0.163.0/google-built-opentelemetry-collector) is Google's open-source build of the [OpenTelemetry Collector](https://opentelemetry.io), built from upstream components using a secure supply chain on Google infrastructure. OpenTelemetry, which is part of the [Cloud Native Computing Foundation](https://www.cncf.io), provides open source APIs, libraries, and SDKs to collect distributed [OpenTelemetry Protocol (OTLP)](https://opentelemetry.io/docs/specs/otlp/) traces, metrics, and logs for application monitoring.
+The [Google-Built OpenTelemetry Collector](https://github.com/GoogleCloudPlatform/opentelemetry-operations-collector/tree/v0.163.1/google-built-opentelemetry-collector) is Google's open-source build of the [OpenTelemetry Collector](https://opentelemetry.io), built from upstream components using a secure supply chain on Google infrastructure. OpenTelemetry, which is part of the [Cloud Native Computing Foundation](https://www.cncf.io), provides open source APIs, libraries, and SDKs to collect distributed [OpenTelemetry Protocol (OTLP)](https://opentelemetry.io/docs/specs/otlp/) traces, metrics, and logs for application monitoring.
 
 The Google-Built OpenTelemetry Collector lets you send correlated OTLP traces, metrics, and logs to [Google Cloud Observability](https://docs.cloud.google.com/stackdriver/docs) and other backends from applications instrumented by using [OpenTelemetry SDKs](https://opentelemetry.io/docs/concepts/instrumentation). The Collector also captures metadata for Google Cloud resources, so you can correlate application performance data with infrastructure telemetry data. Using the Google-built Collector with Google Cloud Observability provides insights to improve the performance of your applications and infrastructure. For more information about the Collector, see Description of the Google-Built OpenTelemetry Collector.
 
@@ -109,8 +109,11 @@ For information about using this provider, see [Manage secrets in Collector conf
 
 ## Release notes
 
-The Google-Built OpenTelemetry Collector is versioned in sync with the upstream OpenTelemetry Collector. The current version is **v0.163.0** ; the corresponding Docker image, stored in Artifact Registry, is **us-docker.pkg.dev/cloud-ops-agents-artifacts/google-cloud-opentelemetry-collector/otelcol-google:0.163.0**. For each new version, the changes that are most relevant to Google Cloud users are included on this page.
+The Google-Built OpenTelemetry Collector is versioned in sync with the upstream OpenTelemetry Collector. The current version is **v0.163.1** ; the corresponding Docker image, stored in Artifact Registry, is **us-docker.pkg.dev/cloud-ops-agents-artifacts/google-cloud-opentelemetry-collector/otelcol-google:0.163.1**. For each new version, the changes that are most relevant to Google Cloud users are included on this page.
 
+  * 0.163.1:
+
+    * Google-Built OpenTelemetry Collector: Patch [DLA-4845-1](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1151413) and [CVE-2026-111943](https://www.cve.org/CVERecord?id=CVE-2026-111943)
   * 0.163.0:
 
     * Google-Built OpenTelemetry Collector: Update to OpenTelemetry Collector Core and OpenTelemetry Collector Contrib version v0.163.0.
@@ -415,9 +418,9 @@ By default, the OpenTelemetry demo uses the upstream OpenTelemetry Collector. To
          image: "otel/opentelemetry-collector-contrib:0.108.0"
          
 
-Replace the value of the `image:` field with `us-docker.pkg.dev/cloud-ops-agents-artifacts/google-cloud-opentelemetry-collector/otelcol-google:0.163.0`, so that the line looks like the following, and then save the file:
+Replace the value of the `image:` field with `us-docker.pkg.dev/cloud-ops-agents-artifacts/google-cloud-opentelemetry-collector/otelcol-google:0.163.1`, so that the line looks like the following, and then save the file:
          
-         image: "us-docker.pkg.dev/cloud-ops-agents-artifacts/google-cloud-opentelemetry-collector/otelcol-google:0.163.0"
+         image: "us-docker.pkg.dev/cloud-ops-agents-artifacts/google-cloud-opentelemetry-collector/otelcol-google:0.163.1"
          
 
 
@@ -526,6 +529,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

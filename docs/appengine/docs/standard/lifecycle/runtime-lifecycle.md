@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/lifecycle/runtime-lifecycle/
 title: Runtime lifecycle \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:12.448509+00:00
+fetched_at: 2026-10-23T13:17:18.176300+00:00
 ---
 
 # Runtime lifecycle  |  App Engine standard environment  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/load-balancer-howto/
 title: Setting up an external Application Load Balancer \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:27:24.860212+00:00
+fetched_at: 2026-10-23T13:09:47.517417+00:00
 ---
 
 # Setting up an external Application Load Balancer  |  Identity-Aware Proxy  |  Google Cloud Documentation

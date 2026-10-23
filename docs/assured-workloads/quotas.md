@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/quotas/
 title: Quotas and limits \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:19.663526+00:00
+fetched_at: 2026-10-23T13:19:31.547275+00:00
 ---
 
 # Quotas and limits  |  Assured Workloads  |  Google Cloud Documentation

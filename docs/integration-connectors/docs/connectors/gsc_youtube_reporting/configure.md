@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/gsc_youtube_reporting/configure/
 title: Youtube Reporting \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:09.401313+00:00
+fetched_at: 2026-10-23T13:03:26.846816+00:00
 ---
 
 # Youtube Reporting  |  Integration Connectors  |  Google Cloud Documentation

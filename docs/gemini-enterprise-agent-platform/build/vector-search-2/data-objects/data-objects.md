@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/vector-search-2/data-objects/data-objects/
 title: Data Objects \u00a0|\u00a0 Gemini Enterprise Agent Platform \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:22:47.030616+00:00
+fetched_at: 2026-10-23T12:40:30.200471+00:00
 ---
 
 # Data Objects  |  Gemini Enterprise Agent Platform  |  Google Cloud Documentation
@@ -385,13 +385,13 @@ You should receive a response similar to the following:
 ### Python
     
     
-    from google.cloud import [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest)
+    from google.cloud import vectorsearch_v1
     
     # Create the client
-    data_object_service_client = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DataObjectServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_service.DataObjectServiceClient.html)()
+    data_object_service_client = vectorsearch_v1.[DataObjectServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_service.DataObjectServiceClient.html)()
     
     # Initialize request
-    data_object = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DataObject](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DataObject.html)(
+    data_object = vectorsearch_v1.[DataObject](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DataObject.html)(
         data={
             "title": "The Shawshank Redemption",
             "genre": "Drama",
@@ -413,7 +413,7 @@ You should receive a response similar to the following:
             },
         },
     )
-    request = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[CreateDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.CreateDataObjectRequest.html)(
+    request = vectorsearch_v1.[CreateDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.CreateDataObjectRequest.html)(
         parent="projects/PROJECT_ID/locations/LOCATION/collections/COLLECTION_ID",
         data_object_id="DATA_OBJECT_ID",
         data_object=data_object,
@@ -630,29 +630,29 @@ Execute the following command:
 ### Python
     
     
-    from google.cloud import [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest)
+    from google.cloud import vectorsearch_v1
     
     # Create the client
-    data_object_service_client = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DataObjectServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_service.DataObjectServiceClient.html)()
+    data_object_service_client = vectorsearch_v1.[DataObjectServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_service.DataObjectServiceClient.html)()
     
     parent = "projects/PROJECT_ID/locations/LOCATION/collections/COLLECTION_ID"
     
     # Build per-DataObject create requests.
     requests = [
-        [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[CreateDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.CreateDataObjectRequest.html)(
+        vectorsearch_v1.[CreateDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.CreateDataObjectRequest.html)(
             parent=parent,
             data_object_id="movie-1",
-            data_object=[vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DataObject](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DataObject.html)(
+            data_object=vectorsearch_v1.[DataObject](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DataObject.html)(
                 data={"title": "The Shawshank Redemption", "year": 1994},
                 vectors={
                     "plot_embedding": {"dense": {"values": [0.47, 0.09, 0.87]}},
                 },
             ),
         ),
-        [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[CreateDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.CreateDataObjectRequest.html)(
+        vectorsearch_v1.[CreateDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.CreateDataObjectRequest.html)(
             parent=parent,
             data_object_id="movie-2",
-            data_object=[vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DataObject](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DataObject.html)(
+            data_object=vectorsearch_v1.[DataObject](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DataObject.html)(
                 data={"title": "The Godfather", "year": 1972},
                 vectors={
                     "plot_embedding": {"dense": {"values": [0.12, 0.55, 0.31]}},
@@ -661,7 +661,7 @@ Execute the following command:
         ),
     ]
     
-    request = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[BatchCreateDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.BatchCreateDataObjectsRequest.html)(
+    request = vectorsearch_v1.[BatchCreateDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.BatchCreateDataObjectsRequest.html)(
         parent=parent,
         requests=requests,
     )
@@ -883,13 +883,13 @@ You should receive a response similar to the following:
 ### Python
     
     
-    from google.cloud import [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest)
+    from google.cloud import vectorsearch_v1
     
     # Create the client
-    data_object_service_client = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DataObjectServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_service.DataObjectServiceClient.html)()
+    data_object_service_client = vectorsearch_v1.[DataObjectServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_service.DataObjectServiceClient.html)()
     
     # Initialize request
-    request = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[GetDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.GetDataObjectRequest.html)(
+    request = vectorsearch_v1.[GetDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.GetDataObjectRequest.html)(
         name="projects/PROJECT_ID/locations/LOCATION/collections/COLLECTION_ID/dataObjects/DATA_OBJECT_ID",
     )
     
@@ -1049,13 +1049,13 @@ You should receive a response similar to the following:
 ### Python
     
     
-    from google.cloud import [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest)
+    from google.cloud import vectorsearch_v1
     
     # Create the client
-    data_object_service_client = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DataObjectServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_service.DataObjectServiceClient.html)()
+    data_object_service_client = vectorsearch_v1.[DataObjectServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_service.DataObjectServiceClient.html)()
     
     # Initialize request
-    data_object = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DataObject](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DataObject.html)(
+    data_object = vectorsearch_v1.[DataObject](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DataObject.html)(
         name="projects/PROJECT_ID/locations/LOCATION/collections/COLLECTION_ID/dataObjects/DATA_OBJECT_ID",
         data={"title": "The Shawshank Redemption (updated)"},
         vectors={
@@ -1064,7 +1064,7 @@ You should receive a response similar to the following:
             },
         },
     )
-    request = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[UpdateDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.UpdateDataObjectRequest.html)(
+    request = vectorsearch_v1.[UpdateDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.UpdateDataObjectRequest.html)(
         data_object=data_object,
     )
     
@@ -1230,11 +1230,11 @@ Execute the following command:
 ### Python
     
     
-    from google.cloud import [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest)
+    from google.cloud import vectorsearch_v1
     from google.protobuf import field_mask_pb2
     
     # Create the client
-    data_object_service_client = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DataObjectServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_service.DataObjectServiceClient.html)()
+    data_object_service_client = vectorsearch_v1.[DataObjectServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_service.DataObjectServiceClient.html)()
     
     parent = "projects/PROJECT_ID/locations/LOCATION/collections/COLLECTION_ID"
     
@@ -1242,15 +1242,15 @@ Execute the following command:
     # name) and an update_mask listing the fields to overwrite. Fields not
     # listed in the mask are left unchanged.
     requests = [
-        [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[UpdateDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.UpdateDataObjectRequest.html)(
-            data_object=[vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DataObject](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DataObject.html)(
+        vectorsearch_v1.[UpdateDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.UpdateDataObjectRequest.html)(
+            data_object=vectorsearch_v1.[DataObject](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DataObject.html)(
                 name=f"{parent}/dataObjects/movie-1",
                 data={"genre": "Thriller"},
             ),
             update_mask=field_mask_pb2.FieldMask(paths=["data.genre"]),
         ),
-        [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[UpdateDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.UpdateDataObjectRequest.html)(
-            data_object=[vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DataObject](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DataObject.html)(
+        vectorsearch_v1.[UpdateDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.UpdateDataObjectRequest.html)(
+            data_object=vectorsearch_v1.[DataObject](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DataObject.html)(
                 name=f"{parent}/dataObjects/movie-2",
                 vectors={
                     "plot_embedding": {"dense": {"values": [0.21, 0.34, 0.55]}},
@@ -1260,7 +1260,7 @@ Execute the following command:
         ),
     ]
     
-    request = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[BatchUpdateDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.BatchUpdateDataObjectsRequest.html)(
+    request = vectorsearch_v1.[BatchUpdateDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.BatchUpdateDataObjectsRequest.html)(
         parent=parent,
         requests=requests,
     )
@@ -1393,13 +1393,13 @@ Execute the following command:
 ### Python
     
     
-    from google.cloud import [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest)
+    from google.cloud import vectorsearch_v1
     
     # Create the client
-    vector_search_service_client = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[VectorSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.vector_search_service.VectorSearchServiceClient.html)()
+    vector_search_service_client = vectorsearch_v1.[VectorSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.vector_search_service.VectorSearchServiceClient.html)()
     
     # Initialize request
-    request = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[ImportDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.ImportDataObjectsRequest.html)(
+    request = vectorsearch_v1.[ImportDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.ImportDataObjectsRequest.html)(
         name="projects/PROJECT_ID/locations/LOCATION/collections/COLLECTION_ID",
         gcs_import={
           "contents_uri": "gs://your-bucket/path/to/your-data/",
@@ -1694,17 +1694,17 @@ Execute the following command:
 ### Python
     
     
-    from google.cloud import [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest)
+    from google.cloud import vectorsearch_v1
     
     # Create the client
-    vector_search_service_client = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[VectorSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.vector_search_service.VectorSearchServiceClient.html)()
+    vector_search_service_client = vectorsearch_v1.[VectorSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.vector_search_service.VectorSearchServiceClient.html)()
     
     # Initialize request
-    request = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[ExportDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.ExportDataObjectsRequest.html)(
+    request = vectorsearch_v1.[ExportDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.ExportDataObjectsRequest.html)(
         name="projects/PROJECT_ID/locations/LOCATION/collections/COLLECTION_ID",
         gcs_destination={
             "export_uri": "gs://your-bucket/path/to/export-dir/",
-            "format": [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[ExportDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.ExportDataObjectsRequest.html).[GcsExportDestination](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.ExportDataObjectsRequest.GcsExportDestination.html).[Format](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.ExportDataObjectsRequest.GcsExportDestination.Format.html).JSONL,
+            "format": vectorsearch_v1.[ExportDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.ExportDataObjectsRequest.html).[GcsExportDestination](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.ExportDataObjectsRequest.GcsExportDestination.html).[Format](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.ExportDataObjectsRequest.GcsExportDestination.Format.html).JSONL,
         },
     )
     
@@ -1822,13 +1822,13 @@ You should receive a response similar to the following:
 ### Python
     
     
-    from google.cloud import [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest)
+    from google.cloud import vectorsearch_v1
     
     # Create the client
-    data_object_service_client = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DataObjectServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_service.DataObjectServiceClient.html)()
+    data_object_service_client = vectorsearch_v1.[DataObjectServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_service.DataObjectServiceClient.html)()
     
     # Initialize request
-    request = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DeleteDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DeleteDataObjectRequest.html)(
+    request = vectorsearch_v1.[DeleteDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DeleteDataObjectRequest.html)(
         name="projects/PROJECT_ID/locations/LOCATION/collections/COLLECTION_ID/dataObjects/DATA_OBJECT_ID",
     )
     
@@ -1957,23 +1957,23 @@ Execute the following command:
 ### Python
     
     
-    from google.cloud import [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest)
+    from google.cloud import vectorsearch_v1
     
     # Create the client
-    data_object_service_client = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DataObjectServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_service.DataObjectServiceClient.html)()
+    data_object_service_client = vectorsearch_v1.[DataObjectServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_service.DataObjectServiceClient.html)()
     
     parent = "projects/PROJECT_ID/locations/LOCATION/collections/COLLECTION_ID"
     
     requests = [
-        [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DeleteDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DeleteDataObjectRequest.html)(
+        vectorsearch_v1.[DeleteDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DeleteDataObjectRequest.html)(
             name=f"{parent}/dataObjects/movie-1",
         ),
-        [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DeleteDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DeleteDataObjectRequest.html)(
+        vectorsearch_v1.[DeleteDataObjectRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.DeleteDataObjectRequest.html)(
             name=f"{parent}/dataObjects/movie-2",
         ),
     ]
     
-    request = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[BatchDeleteDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.BatchDeleteDataObjectsRequest.html)(
+    request = vectorsearch_v1.[BatchDeleteDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.BatchDeleteDataObjectsRequest.html)(
         parent=parent,
         requests=requests,
     )
@@ -2101,12 +2101,12 @@ Execute the following command:
 ### Python
     
     
-    from google.cloud import [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest)
+    from google.cloud import vectorsearch_v1
     from google.protobuf import struct_pb2
     from google.protobuf import json_format
     
     # Create the client
-    search_client = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[DataObjectSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_search_service.DataObjectSearchServiceClient.html)()
+    search_client = vectorsearch_v1.[DataObjectSearchServiceClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.services.data_object_search_service.DataObjectSearchServiceClient.html)()
     
     parent = "projects/PROJECT_ID/locations/LOCATION/collections/COLLECTION_ID"
     
@@ -2115,9 +2115,9 @@ Execute the following command:
         {"genre": {"$eq": "sci-fi"}}, struct_pb2.Struct()
     )
     
-    request = [vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[AggregateDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.AggregateDataObjectsRequest.html)(
+    request = vectorsearch_v1.[AggregateDataObjectsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.AggregateDataObjectsRequest.html)(
         parent=parent,
-        aggregate=[vectorsearch_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest).[AggregationMethod](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.AggregationMethod.html).COUNT,
+        aggregate=vectorsearch_v1.[AggregationMethod](https://docs.cloud.google.com/python/docs/reference/google-cloud-vectorsearch/latest/google.cloud.vectorsearch_v1.types.AggregationMethod.html).COUNT,
         filter=filter_struct,
     )
     
@@ -2141,6 +2141,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

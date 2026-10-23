@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/spanner/docs/samples/spanner-jdbc-create-table/
 title: JDBC create table \u00a0|\u00a0 Spanner \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:08.997337+00:00
+fetched_at: 2026-10-23T10:32:43.177209+00:00
 ---
 
 # JDBC create table  |  Spanner  |  Google Cloud Documentation

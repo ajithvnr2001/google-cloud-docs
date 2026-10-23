@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-connect-functions/
 title: Use OIDC to authenticate when making a request to Cloud Functions \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:00:47.240321+00:00
+fetched_at: 2026-10-23T08:58:12.992546+00:00
 ---
 
 # Use OIDC to authenticate when making a request to Cloud Functions  |  Workflows  |  Google Cloud Documentation

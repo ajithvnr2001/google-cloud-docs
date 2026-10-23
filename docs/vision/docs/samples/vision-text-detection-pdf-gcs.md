@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-text-detection-pdf-gcs/
 title: Detect text in a PDF file in Cloud Storage \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:10.161577+00:00
+fetched_at: 2026-10-23T09:01:15.120710+00:00
 ---
 
 # Detect text in a PDF file in Cloud Storage  |  Cloud Vision API  |  Google Cloud Documentation

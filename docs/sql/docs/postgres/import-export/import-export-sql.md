@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/import-export/import-export-sql/
 title: Export and import using SQL dump files \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:48.384172+00:00
+fetched_at: 2026-10-23T10:11:53.706347+00:00
 ---
 
 # Export and import using SQL dump files  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -71,7 +71,7 @@ For help with IAM roles, see [Identity and Access Management](https://docs.cloud
 
 When you use Cloud SQL to perform an export, whether from the Google Cloud console, the [gcloud CLI](https://docs.cloud.google.com/sdk/gcloud), or the API, you are using the [`pg_dump`](https://www.postgresql.org/docs/current/static/app-pgdump.html) utility, with the options required to ensure that the resulting export file is valid for import back into Cloud SQL. 
 
-If you plan to import your data into Cloud SQL, you must follow the instructions provided in [Exporting data from an external database server](https://cloud.google.com/sql/docs/postgres/import-export/import-export-dmp#external-server) so that your SQL dump file is formatted correctly for Cloud SQL.
+If you plan to import your data into Cloud SQL, you must follow the instructions provided in [Exporting data from an external database server](https://docs.cloud.google.com/sql/docs/postgres/import-export/import-export-dmp#external-server) so that your SQL dump file is formatted correctly for Cloud SQL.
 
 **Note:** If your data contains large objects (blobs), the export can consume a large amount of memory, impacting instance performance. For help, see [Known Issues](https://docs.cloud.google.com/sql/docs/postgres/known-issues#import-export).
 
@@ -145,7 +145,7 @@ Before using any of the request data, make the following replacements:
 
 To use these features, set the values of these parameters to `TRUE`. Otherwise, set their values to `FALSE`. 
 
-Serverless exports costs extra. See the [pricing page](https://docs.cloud.google.com/sql/pricing#storage-networking-prices).
+Serverless exports costs extra. See the [pricing page](https://cloud.google.com/sql/pricing#storage-networking-prices).
 
 HTTP method and URL: 
     
@@ -245,7 +245,7 @@ Before using any of the request data, make the following replacements:
 
 To use these features, set the values of these parameters to `TRUE`. Otherwise, set their values to `FALSE`. 
 
-Serverless exports costs extra. See the [pricing page](https://docs.cloud.google.com/sql/pricing#storage-networking-prices).
+Serverless exports costs extra. See the [pricing page](https://cloud.google.com/sql/pricing#storage-networking-prices).
 
 HTTP method and URL: 
     
@@ -614,6 +614,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/envoy-adapter/v2.0.x/concepts/
 title: Apigee Adapter for Envoy overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:26.682780+00:00
+fetched_at: 2026-10-23T13:14:05.742966+00:00
 ---
 
 # Apigee Adapter for Envoy overview  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/connectors/saphybrisc4c/configure/
 title: SAP Hybris C4C \u00a0|\u00a0 Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:58.688189+00:00
+fetched_at: 2026-10-23T13:01:03.425959+00:00
 ---
 
 # SAP Hybris C4C  |  Integration Connectors  |  Google Cloud Documentation

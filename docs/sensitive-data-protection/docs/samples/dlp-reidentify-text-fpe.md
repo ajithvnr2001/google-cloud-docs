@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-reidentify-text-fpe/
 title: Re-identify text data with FPE \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:40:31.359749+00:00
+fetched_at: 2026-10-23T08:38:23.326854+00:00
 ---
 
 # Re-identify text data with FPE  |  Sensitive Data Protection  |  Google Cloud Documentation

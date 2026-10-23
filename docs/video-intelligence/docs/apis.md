@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-intelligence/docs/apis/
 title: APIs & References \u00a0|\u00a0 Video Intelligence API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:03.842579+00:00
+fetched_at: 2026-10-23T08:57:26.251260+00:00
 ---
 
 # APIs & References  |  Video Intelligence API  |  Google Cloud Documentation

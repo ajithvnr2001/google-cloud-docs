@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/views/
 title: Create logical views \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:45:35.712648+00:00
+fetched_at: 2026-10-23T12:55:42.257621+00:00
 ---
 
 # Create logical views  |  BigQuery  |  Google Cloud Documentation
@@ -21,17 +21,7 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Create logical views
 
-This document describes how to create logical views in BigQuery.
-
-You can create a logical view in the following ways:
-
-  * Using the Google Cloud console.
-  * Using the bq command-line tool's `bq mk` command.
-  * Calling the [`tables.insert`](https://docs.cloud.google.com/bigquery/docs/reference/v2/tables/insert) API method.
-  * Using the client libraries.
-  * Submitting a [`CREATE VIEW`](https://docs.cloud.google.com/bigquery/docs/data-definition-language#create_view_statement) data definition language (DDL) statement.
-
-
+Logical views let you save a SQL query as a virtual table, which helps you reuse query logic and simplify access to your data. This document describes how to create logical views, including view naming rules and limitations.
 
 ## View limitations
 
@@ -510,6 +500,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

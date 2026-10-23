@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ruby/docs/reference/
 title: Ruby Cloud Client Libraries \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:15:05.947118+00:00
+fetched_at: 2026-10-23T12:52:26.467488+00:00
 ---
 
 # Ruby Cloud Client Libraries  |  Google Cloud Documentation
@@ -528,6 +528,7 @@ Merchant API for Shopping |  [ google-shopping-merchant-accounts ](https://rubyd
 [ google-shopping-merchant-reports-v1 ](https://rubydoc.info/gems/google-shopping-merchant-reports-v1)   
 [ google-shopping-merchant-reports-v1beta ](https://rubydoc.info/gems/google-shopping-merchant-reports-v1beta)   
 [ google-shopping-merchant-reviews ](https://rubydoc.info/gems/google-shopping-merchant-reviews)   
+[ google-shopping-merchant-reviews-v1 ](https://rubydoc.info/gems/google-shopping-merchant-reviews-v1)   
 [ google-shopping-merchant-reviews-v1beta ](https://rubydoc.info/gems/google-shopping-merchant-reviews-v1beta)   
   
 Migrate to Virtual Machines |  [ google-cloud-vm_migration ](https://cloud.google.com/ruby/docs/reference/google-cloud-vm_migration/latest)   

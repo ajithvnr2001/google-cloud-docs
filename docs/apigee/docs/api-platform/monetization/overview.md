@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/monetization/overview/
 title: Overview of Apigee monetization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:04.987224+00:00
+fetched_at: 2026-10-23T13:16:10.731431+00:00
 ---
 
 # Overview of Apigee monetization  |  Google Cloud Documentation

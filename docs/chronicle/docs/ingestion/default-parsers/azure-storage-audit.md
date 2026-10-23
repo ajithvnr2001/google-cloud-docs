@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/ingestion/default-parsers/azure-storage-audit/
 title: Collect Azure Storage Audit logs \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:09.113028+00:00
+fetched_at: 2026-10-23T13:17:48.049958+00:00
 ---
 
 # Collect Azure Storage Audit logs  |  Google Security Operations  |  Google Cloud Documentation

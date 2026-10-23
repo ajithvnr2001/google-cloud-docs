@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/cancel-job/
 title: Cancel jobs \u00a0|\u00a0 Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:33.290146+00:00
+fetched_at: 2026-10-23T13:17:58.713346+00:00
 ---
 
 # Cancel jobs  |  Batch  |  Google Cloud Documentation

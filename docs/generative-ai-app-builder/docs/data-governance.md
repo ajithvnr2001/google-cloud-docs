@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/data-governance/
 title: Data governance and generative AI \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:32.856437+00:00
+fetched_at: 2026-10-23T13:13:18.767231+00:00
 ---
 
 # Data governance and generative AI  |  Agent Search  |  Google Cloud Documentation

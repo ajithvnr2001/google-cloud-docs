@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/querydata/alloydb/secure-app-data-parameterized-secure-views/
 title: Secure and control access to application data using parameterized secure views \u00a0|\u00a0 Data Agents \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:51.656186+00:00
+fetched_at: 2026-10-23T13:02:47.645179+00:00
 ---
 
 # Secure and control access to application data using parameterized secure views  |  Data Agents  |  Google Cloud Documentation

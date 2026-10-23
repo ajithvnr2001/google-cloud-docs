@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/access-traces-and-spans/
 title: Access traces and spans \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:43.496149+00:00
+fetched_at: 2026-10-23T13:13:08.332349+00:00
 ---
 
 # Access traces and spans  |  Gemini Enterprise  |  Google Cloud Documentation

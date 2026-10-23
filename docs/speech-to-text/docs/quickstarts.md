@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/speech-to-text/docs/quickstarts/
 title: Quickstarts \u00a0|\u00a0 Cloud Speech-to-Text \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:31:34.029133+00:00
+fetched_at: 2026-10-23T09:51:47.706171+00:00
 ---
 
 # Quickstarts  |  Cloud Speech-to-Text  |  Google Cloud Documentation

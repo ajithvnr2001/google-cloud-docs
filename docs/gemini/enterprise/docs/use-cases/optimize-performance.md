@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/use-cases/optimize-performance/
 title: Optimize performance \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:40.762898+00:00
+fetched_at: 2026-10-23T13:11:50.959398+00:00
 ---
 
 # Optimize performance  |  Gemini Enterprise  |  Google Cloud Documentation

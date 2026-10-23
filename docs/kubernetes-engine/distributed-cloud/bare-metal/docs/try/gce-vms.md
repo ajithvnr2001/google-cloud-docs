@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/try/gce-vms/
 title: Create a hybrid cluster on Compute Engine VMs \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:22:00.387064+00:00
+fetched_at: 2026-10-23T10:23:05.828764+00:00
 ---
 
 # Create a hybrid cluster on Compute Engine VMs  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -22,21 +22,11 @@ Send feedback
 
 #  Create a hybrid cluster on Compute Engine VMs Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page shows you how to set up a hybrid cluster in high availability (HA) mode using Virtual Machines (VMs) running on Compute Engine.
+Setting up Google Distributed Cloud software-only on Compute Engine virtual machines (VMs) lets you deploy a hybrid cluster in high availability (HA) mode without dedicated hardware. This configuration provides a functional test environment to explore cluster management and workload deployment.
 
-**Important:** This deployment is for evaluation purposes only. Don't run Google Distributed Cloud software-only on Compute Engine VMs in production. For production, follow the steps in our [Quickstart](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/quickstart) to install Google Distributed Cloud software-only on your hardware.
+This deployment is for evaluation purposes only. Don't run Google Distributed Cloud software-only on Compute Engine VMs in production. To deploy Google Distributed Cloud in production, follow the steps in [Create basic clusters](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/quickstart).
 
-You can try out Google Distributed Cloud software-only quickly and without having to prepare any hardware. Completing the steps on this page provides you with a working test environment that runs on Compute Engine.
-
-To try Google Distributed Cloud software-only on Compute Engine VMs, complete the following steps:
-
-  1. Create six VMs in Compute Engine
-  2. Create a `vxlan` network between all VMs with L2 connectivity
-  3. Install prerequisites for Google Distributed Cloud
-  4. Deploy a hybrid cluster
-  5. Verify your cluster
-
-
+In this tutorial, you configure six Compute Engine VMs, establish Layer 2 connectivity over a `vxlan` overlay network, install the required prerequisites, and deploy and verify your hybrid cluster.
 
 ## Before you begin
 
@@ -574,6 +564,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

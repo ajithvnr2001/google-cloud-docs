@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/python3/building-app/personalizing-data-for-authenticated-users/
 title: Personalize data for authenticated users \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:09.063275+00:00
+fetched_at: 2026-10-23T13:17:45.392945+00:00
 ---
 
 # Personalize data for authenticated users  |  App Engine standard environment  |  Google Cloud Documentation

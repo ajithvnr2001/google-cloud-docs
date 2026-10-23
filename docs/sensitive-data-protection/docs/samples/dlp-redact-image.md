@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-redact-image/
 title: Redact an image \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:39:53.744280+00:00
+fetched_at: 2026-10-23T08:37:50.713867+00:00
 ---
 
 # Redact an image  |  Sensitive Data Protection  |  Google Cloud Documentation

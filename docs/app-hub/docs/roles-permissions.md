@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/roles-permissions/
 title: App Hub IAM roles and permissions \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:14.227426+00:00
+fetched_at: 2026-10-23T13:15:59.870197+00:00
 ---
 
 # App Hub IAM roles and permissions  |  Google Cloud Documentation

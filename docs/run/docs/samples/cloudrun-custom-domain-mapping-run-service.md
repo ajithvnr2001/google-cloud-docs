@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/run/docs/samples/cloudrun-custom-domain-mapping-run-service/
 title: Create a Cloud Run service for a custom domain \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T00:11:42.326749+00:00
+fetched_at: 2026-10-23T09:58:27.242778+00:00
 ---
 
 # Create a Cloud Run service for a custom domain  |  Google Cloud Documentation

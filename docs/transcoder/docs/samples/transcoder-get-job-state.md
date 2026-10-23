@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/transcoder/docs/samples/transcoder-get-job-state/
 title: Get the job state \u00a0|\u00a0 Transcoder API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:52.917274+00:00
+fetched_at: 2026-10-23T09:34:57.138492+00:00
 ---
 
 # Get the job state  |  Transcoder API  |  Google Cloud Documentation

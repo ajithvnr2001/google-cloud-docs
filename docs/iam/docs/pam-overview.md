@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/pam-overview/
 title: Privileged Access Manager overview \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:20.625388+00:00
+fetched_at: 2026-10-23T13:03:09.360559+00:00
 ---
 
 # Privileged Access Manager overview  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

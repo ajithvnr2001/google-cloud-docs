@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/connect-instance-compute-engine/
 title: Quickstart: Connect to Cloud SQL for SQL Server from a Compute Engine VM instance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:44:45.535161+00:00
+fetched_at: 2026-10-23T10:19:52.697303+00:00
 ---
 
 # Quickstart: Connect to Cloud SQL for SQL Server from a Compute Engine VM instance  |  Google Cloud Documentation
@@ -775,7 +775,7 @@ On the Compute Engine VM instance in the open terminal, run the following comman
 
 
 
-On your local computer, set up [port forwarding over SSH](https://cloud.google.com/solutions/connecting-securely#port-forwarding-over-ssh) by performing the instructions in next quickstart step. This enables you to use a browser on your local computer to view the app running on your Compute Engine VM instance. 
+On your local computer, set up [port forwarding over SSH](https://docs.cloud.google.com/solutions/connecting-securely#port-forwarding-over-ssh) by performing the instructions in next quickstart step. This enables you to use a browser on your local computer to view the app running on your Compute Engine VM instance. 
 
 **Note:** This quickstart step requires the [gcloud CLI](https://docs.cloud.google.com/sdk/gcloud), which provides command-line access to your Google Cloud resources using `gcloud CLI` commands. If you don't have the [gcloud CLI](https://docs.cloud.google.com/sdk/gcloud) installed on your local computer, then [install the ](https://docs.cloud.google.com/sdk/docs/install)[gcloud CLI](https://docs.cloud.google.com/sdk/gcloud) to proceed.
 
@@ -1150,7 +1150,7 @@ On the Compute Engine VM instance in the open terminal, run the following comman
 
 
 
-On your local computer, set up [port forwarding over SSH](https://cloud.google.com/solutions/connecting-securely#port-forwarding-over-ssh) by performing the instructions in next quickstart step. This enables you to use a browser on your local computer to view the app running on your Compute Engine VM instance. 
+On your local computer, set up [port forwarding over SSH](https://docs.cloud.google.com/solutions/connecting-securely#port-forwarding-over-ssh) by performing the instructions in next quickstart step. This enables you to use a browser on your local computer to view the app running on your Compute Engine VM instance. 
 
 **Note:** This quickstart step requires the [gcloud CLI](https://docs.cloud.google.com/sdk/gcloud), which provides command-line access to your Google Cloud resources using `gcloud CLI` commands. If you don't have the [gcloud CLI](https://docs.cloud.google.com/sdk/gcloud) installed on your local computer, then [install the ](https://docs.cloud.google.com/sdk/docs/install)[gcloud CLI](https://docs.cloud.google.com/sdk/gcloud) to proceed.
 
@@ -1446,6 +1446,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

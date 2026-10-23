@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/
 title: All Generative AI on Vertex AI code samples \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:16.324498+00:00
+fetched_at: 2026-10-23T08:58:41.995166+00:00
 ---
 
 # All Generative AI on Vertex AI code samples  |  Google Cloud Documentation

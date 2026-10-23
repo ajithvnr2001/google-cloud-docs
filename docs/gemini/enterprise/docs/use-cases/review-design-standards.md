@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/use-cases/review-design-standards/
 title: Review design standards \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:40.149882+00:00
+fetched_at: 2026-10-23T13:11:52.032548+00:00
 ---
 
 # Review design standards  |  Gemini Enterprise  |  Google Cloud Documentation

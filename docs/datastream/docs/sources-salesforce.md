@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/sources-salesforce/
 title: Stream data from Salesforce organizations \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:42:02.700890+00:00
+fetched_at: 2026-10-23T10:03:31.478386+00:00
 ---
 
 # Stream data from Salesforce organizations  |  Datastream  |  Google Cloud Documentation
@@ -21,16 +21,9 @@ Send feedback
 
 #  Stream data from Salesforce organizations Stay organized with collections  Save and categorize content based on your preferences. 
 
-Datastream supports replicating change events from a Salesforce instance, often referred to as a _Salesforce organization_ , or a _Salesforce org_. Salesforce is a cloud-based CRM platform, and you can replicate data from it just as you would from other sources that Datastream supports.
+You can connect Datastream to a Salesforce instance to replicate historical data and change events for analytics and data integration. Salesforce is a cloud-based customer relationship management platform where each instance is often referred to as a _Salesforce organization_ or _Salesforce org_.
 
-This page contains information about:
-
-  * The key terms that you need to understand when replicating from Salesforce.
-  * The behavior of how Datastream handles data that's being pulled from a source Salesforce org.
-  * The versions and editions of Salesforce that Datastream supports.
-  * Known limitations for using Salesforce as a source.
-
-
+When setting up a Salesforce source in Datastream, review the key terms, replication behavior, supported editions and API versions, best practices, and known limitations.
 
 ## Key terms
 
@@ -118,6 +111,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

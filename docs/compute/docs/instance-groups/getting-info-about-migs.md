@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/instance-groups/getting-info-about-migs/
 title: View information about MIGs and managed instances \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:42.911677+00:00
+fetched_at: 2026-10-23T13:00:28.821174+00:00
 ---
 
 # View information about MIGs and managed instances  |  Compute Engine  |  Google Cloud Documentation

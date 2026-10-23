@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/openapi/versioning-an-api/
 title: Versioning an API \u00a0|\u00a0 Cloud Endpoints with OpenAPI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:26.970726+00:00
+fetched_at: 2026-10-23T13:02:04.661641+00:00
 ---
 
 # Versioning an API  |  Cloud Endpoints with OpenAPI  |  Google Cloud Documentation

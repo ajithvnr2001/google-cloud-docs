@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/security/oauth/oauth2-videos/
 title: OAuth Videos \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:48.982038+00:00
+fetched_at: 2026-10-23T13:20:43.557719+00:00
 ---
 
 # OAuth Videos  |  Apigee  |  Google Cloud Documentation

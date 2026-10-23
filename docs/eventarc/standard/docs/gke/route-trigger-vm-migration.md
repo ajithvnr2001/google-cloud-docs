@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/gke/route-trigger-vm-migration/
 title: Route VM Migration events to GKE \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:49.555578+00:00
+fetched_at: 2026-10-23T13:01:17.152327+00:00
 ---
 
 # Route VM Migration events to GKE  |  Eventarc Standard  |  Google Cloud Documentation

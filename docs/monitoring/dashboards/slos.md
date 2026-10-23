@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/monitoring/dashboards/slos/
 title: Display SLOs on a custom dashboard \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:16:28.564497+00:00
+fetched_at: 2026-10-23T12:50:44.276671+00:00
 ---
 
 # Display SLOs on a custom dashboard  |  Cloud Monitoring  |  Google Cloud Documentation
@@ -23,11 +23,7 @@ Send feedback
 
 Service-level objective (SLO) charts on a custom dashboard in Cloud Monitoring let you monitor the health, compliance, and remaining error budget of your services in a single view. Each chart summarizes how a service performs against a configured target so you can track SLO status across a set of services.
 
-Before you can add an SLO chart, you must configure your services and SLOs; for more information, see [SLO monitoring](https://docs.cloud.google.com/stackdriver/docs/solutions/slo-monitoring). The following screenshot illustrates a chart that displays the remaining error budget for an SLO:
-
-![Example of an SLO chart that shows the remaining error budget for an SLO.](https://docs.cloud.google.com/static/monitoring/images/slo-chart-errbudget.png)
-
-This document describes how to add SLO charts by using the Google Cloud console. To configure them by using the Cloud Monitoring API, see [Create and manage dashboards by API](https://docs.cloud.google.com/monitoring/dashboards/api-dashboard) and [Dashboard with an SLO widget](https://docs.cloud.google.com/monitoring/dashboards/api-examples#dashboard_with_slo).
+You can add SLO charts in the Google Cloud console by following the steps in this document. To configure them with the Cloud Monitoring API instead, see [Create and manage dashboards by API](https://docs.cloud.google.com/monitoring/dashboards/api-dashboard) and [Dashboard with an SLO widget](https://docs.cloud.google.com/monitoring/dashboards/api-examples#dashboard_with_slo).
 
 ## Before you begin
 
@@ -41,10 +37,16 @@ For more information about roles, see [Control access with Identity and Access M
 
   * You can put up to 100 widgets on a dashboard.
 
+  * Configure your services and SLOs; for more information, see [SLO monitoring](https://docs.cloud.google.com/stackdriver/docs/solutions/slo-monitoring).
+
 
 
 
 ## Display SLOs on a dashboard
+
+The following screenshot illustrates a chart that displays the remaining error budget for an SLO:
+
+![Example of an SLO chart that shows the remaining error budget for an SLO.](https://docs.cloud.google.com/static/monitoring/images/slo-chart-errbudget.png)
 
 To add an SLO chart to a dashboard, do the following:
 
@@ -96,6 +98,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/database-migration/docs/known-limitations/
 title: Known limitations \u00a0|\u00a0 Database Migration Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:07.865611+00:00
+fetched_at: 2026-10-23T13:20:51.642746+00:00
 ---
 
 # Known limitations  |  Database Migration Service  |  Google Cloud Documentation

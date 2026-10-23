@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sensitive-data-protection/docs/samples/dlp-inspect-string-with-exclusion-regex/
 title: Inspect a string, excluding REGEX matches \u00a0|\u00a0 Sensitive Data Protection \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:49:54.693183+00:00
+fetched_at: 2026-10-23T10:52:53.964891+00:00
 ---
 
 # Inspect a string, excluding REGEX matches  |  Sensitive Data Protection  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/create-scann-index/
 title: Create a ScaNN index \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:13.193116+00:00
+fetched_at: 2026-10-23T13:08:32.948607+00:00
 ---
 
 # Create a ScaNN index  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -33,7 +33,7 @@ Before you can start creating indexes, you must complete the following prerequis
 
   * [Embedding vectors are added to a table](https://docs.cloud.google.com/alloydb/docs/ai/store-embeddings) in your AlloyDB database.
 
-If you try to generate a ScaNN index on an empty or partitioned table, then you might encounter some issues. For more information about the errors generated, see [Troubleshoot ScaNN index errors](https://docs.cloud.google.com/alloydb/docs/troubleshoot/troubleshoot-scann-indexes). To create an index on an empty or small table, see [Deferred index creation for empty or nearly empty tables](https://docs.cloud.google.com/alloydb/docs/ai/create-scann-index#deferred-index-creation-for-empty-or-nearly-empty-tables).
+If you try to generate a ScaNN index on an empty or partitioned table, then you might encounter some issues. For more information about the errors generated, see [Troubleshoot ScaNN index errors](https://docs.cloud.google.com/alloydb/docs/troubleshoot/troubleshoot-scann-indexes). To create an index on an empty or small table, see [Deferred index creation for empty or nearly empty tables](https://docs.cloud.google.com/alloydb/docs/ai/create-scann-index#deferred-index-creation-for-empty-tables-insufficient-rows).
 
   * [`vector`](https://docs.cloud.google.com/alloydb/docs/reference/extensions#pgvector) and [`alloydb_scann`](https://docs.cloud.google.com/alloydb/docs/reference/extensions#alloydb_scann) extensions are installed:
         
@@ -53,7 +53,7 @@ For more information on configuring database flags, see [Configure database flag
           SET scann.max_allowed_num_levels = 3;
           
 
-To set the flag at the instance level, run [`gcloud alloydb alloydb instances update`](https://docs.cloud.google.com/sdk/gcloud/reference/alloydb/instances/update) using the `--database-flags` field.
+To set the flag at the instance level, run [`gcloud alloydb instances update`](https://docs.cloud.google.com/sdk/gcloud/reference/alloydb/instances/update) using the `--database-flags` field.
 
 
 
@@ -167,8 +167,8 @@ To manually create a ScaNN index for a column containing stored vector embedding
     * [Preview](https://cloud.google.com/products#product-launch-stages) `AH`: Asymmetric hashing (AH) is up to 4x compressed when compared with `SQ8`. For potentially better query performance when the columnar engine is [enabled](https://docs.cloud.google.com/alloydb/docs/columnar-engine/configure#enable) and the index and table data are populated into the columnar engine, consider this for potentially better query performance. For more information, see [Best practices for tuning ScaNN](https://docs.cloud.google.com/alloydb/docs/ai/best-practices-tuning-scann). 
     * `FLAT`: provides the highest recall, 99% or higher, at the cost of search performance. 
   * (Optional) `AUTO_MAINTENANCE`: controls whether automatic maintenance on the index is enabled or disabled. For more information on automatic maintenance, see [Maintain vector indexes](https://docs.cloud.google.com/alloydb/docs/ai/maintain-vector-indexes#maintain-index-automatically). 
-    * (Default) `ON`: AlloyDB performs automatic maintenance on the index. 
-    * `OFF`: AlloyDB doesn't perform automatic maintenance on the index. 
+    * `ON`: AlloyDB performs automatic maintenance on the index. 
+    * (Default) `OFF`: AlloyDB doesn't perform automatic maintenance on the index. 
 
 
 
@@ -196,8 +196,8 @@ To manually create a ScaNN index for a column containing stored vector embedding
     * [Preview](https://cloud.google.com/products#product-launch-stages) `AH`: Asymmetric hashing (AH) is up to 4x compressed when compared with `SQ8`. For potentially better query performance when the columnar engine is [enabled](https://docs.cloud.google.com/alloydb/docs/columnar-engine/configure#enable) and the index and table data are populated into the columnar engine, consider this for potentially better query performance. For more information, see [Best practices for tuning ScaNN](https://docs.cloud.google.com/alloydb/docs/ai/best-practices-tuning-scann). 
     * `FLAT`: provides the highest recall, 99% or higher, at the cost of search performance. 
   * (Optional) `AUTO_MAINTENANCE`: controls whether automatic maintenance on the index is enabled or disabled. For more information on automatic maintenance, see [Maintain vector indexes](https://docs.cloud.google.com/alloydb/docs/ai/maintain-vector-indexes#maintain-index-automatically). 
-    * (Default) `ON`: AlloyDB performs automatic maintenance on the index. 
-    * `OFF`: AlloyDB doesn't perform automatic maintenance on the index. 
+    * `ON`: AlloyDB performs automatic maintenance on the index. 
+    * (Default) `OFF`: AlloyDB doesn't perform automatic maintenance on the index. 
   * `max_num_levels = 2`: the maximum number of centroid levels of the K-means clustering tree. Set this parameter to `2` to create a three-level index. 
 
 
@@ -230,8 +230,8 @@ This feature is subject to the "Pre-GA Offerings Terms" in the General Service T
     * [Preview](https://cloud.google.com/products#product-launch-stages) `AH`: Asymmetric hashing (AH) is up to 4x compressed when compared with `SQ8`. For potentially better query performance when the columnar engine is [enabled](https://docs.cloud.google.com/alloydb/docs/columnar-engine/configure#enable) and the index and table data are populated into the columnar engine, consider this for potentially better query performance. For more information, see [Best practices for tuning ScaNN](https://docs.cloud.google.com/alloydb/docs/ai/best-practices-tuning-scann). 
     * `FLAT`: provides the highest recall, 99% or higher, at the cost of search performance. 
   * (Optional) `AUTO_MAINTENANCE`: controls whether automatic maintenance on the index is enabled or disabled. For more information on automatic maintenance, see [Maintain vector indexes](https://docs.cloud.google.com/alloydb/docs/ai/maintain-vector-indexes#maintain-index-automatically). 
-    * (Default) `ON`: AlloyDB performs automatic maintenance on the index. 
-    * `OFF`: AlloyDB doesn't perform automatic maintenance on the index. 
+    * `ON`: AlloyDB performs automatic maintenance on the index. 
+    * (Default) `OFF`: AlloyDB doesn't perform automatic maintenance on the index. 
   * `max_num_levels = 3`: the maximum number of centroid levels of the K-means clustering tree. Set this parameter to `3` to create a four-level index. 
 
 
@@ -249,7 +249,7 @@ Replace the following variables:
 
      * `INDEX_NAME`: name of the index that you want to convert. For example, `my_scann_index`. Index names are shared across your database. Verify that each index name is unique to each table in your database.
 
-     * `PARAMETER_NAME`: comma-separated list containing the names of the query parameters you want to reset. For example, `num_leaves, quantization`.
+     * `PARAMETER_NAME`: comma-separated list containing the names of the query parameters you want to reset. For example, `num_leaves, quantizer`.
 
 Note that you must reset all other query parameters before resetting `num_leaves`.
 
@@ -350,10 +350,14 @@ To configure their usage, use the `gcloud` CLI:
 
 Replace the following:
 
-     * `INSTANCE_ID`: The ID of the instance.
-     * `REGION_ID`: The region where the instance is placed—for example, `us-central1`.
-     * `CLUSTER_ID`: The ID of the cluster where the instance is placed.
-     * `PROJECT_ID`: The ID of the project where the cluster is placed.
+     * `INSTANCE_ID`: the ID of the instance.
+
+     * `REGION_ID`: the region where the instance is placed—for example, `us-central1`.
+
+     * `CLUSTER_ID`: the ID of the cluster where the instance is placed.
+
+     * `PROJECT_ID`: the ID of the project where the cluster is placed.
+
   2. Create a ScaNN index:
 
      * To create an automatically-tuned index, explicitly specify `WITH (MODE='AUTO')` in the `CREATE INDEX` statement:
@@ -407,7 +411,9 @@ To force index creation, complete the following steps:
 Replace the following variables:
 
      * `USERNAME`: name of the user you want to grant `SUPERUSER` privileges to.
+
      * `PASSWORD`: user's password.
+
 
 
 
@@ -468,9 +474,13 @@ Replace the following variables:
 ## What's next
 
   * [Run vector similarity searches](https://docs.cloud.google.com/alloydb/docs/ai/run-vector-similarity-search)
+
   * [Tune vector query performance](https://docs.cloud.google.com/alloydb/docs/ai/tune-indexes)
+
   * [Vector index metrics](https://docs.cloud.google.com/alloydb/docs/reference/vector-index-metrics)
+
   * [Learn how to build a smart shopping assistant with AlloyDB, pgvector, and model endpoint management](https://codelabs.developers.google.com/smart-shop-agent-alloydb#0).
+
 
 
 
@@ -478,6 +488,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

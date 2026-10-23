@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/monitoring/docs/samples/monitoring-list-resources/
 title: List monitored resources \u00a0|\u00a0 Cloud Monitoring \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:36:54.554715+00:00
+fetched_at: 2026-10-23T11:00:06.222038+00:00
 ---
 
 # List monitored resources  |  Cloud Monitoring  |  Google Cloud Documentation
@@ -222,7 +222,7 @@ To authenticate to Monitoring, set up Application Default Credentials. For more 
     # Your Google Cloud Platform project ID
     # project_id = "YOUR_PROJECT_ID"
     
-    client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring-dashboard-v1/latest/Google-Cloud-Monitoring.html).[metric_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
+    client = Google::Cloud::[Monitoring](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html).[metric_service](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-monitoring/latest/Google-Cloud-Monitoring.html)
     project_name = client.project_path project: project_id
     
     results = client.list_monitored_resource_descriptors name: project_name

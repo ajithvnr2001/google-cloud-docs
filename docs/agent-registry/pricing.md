@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/agent-registry/pricing/
 title: Agent Registry pricing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:21.343032+00:00
+fetched_at: 2026-10-23T12:55:13.540913+00:00
 ---
 
 # Agent Registry pricing  |  Google Cloud Documentation
@@ -21,11 +21,11 @@ Send feedback
 
 #  Agent Registry pricing Stay organized with collections  Save and categorize content based on your preferences. 
 
-This document explains the pricing details for Agent Registry. You can register, catalog, and discover resources in Agent Registry at no charge, and you pay only for optional value-added security features that you use.
+You can register, store, and discover resources in Agent Registry at no charge, and you pay only for optional security features such as skill vulnerability scanning.
 
 ## Pricing overview
 
-Agent Registry provides baseline catalog registration, storage, and discovery at no charge. There are no charges for registering, storing, updating, or searching [agents](https://docs.cloud.google.com/agent-registry/concepts#agent), [MCP servers](https://docs.cloud.google.com/agent-registry/concepts#server), [endpoints](https://docs.cloud.google.com/agent-registry/concepts#endpoint), [skills](https://docs.cloud.google.com/agent-registry/concepts#skill), or [skill revisions](https://docs.cloud.google.com/agent-registry/concepts#skill-revision) in Agent Registry.
+Agent Registry provides baseline registration, storage, and discovery at no charge. There are no charges for registering, storing, updating, or searching agents, MCP servers, endpoints, [skills](https://docs.cloud.google.com/agent-registry/skills-architecture), or [skill revisions](https://docs.cloud.google.com/agent-registry/skills-architecture#skill-revision) in Agent Registry.
 
 Consumption charges apply only when you use skill vulnerability scanning to scan new skill revisions for security risks, such as prompt injection or data exfiltration patterns.
 
@@ -33,8 +33,8 @@ The following table summarizes the pricing for Agent Registry features in US dol
 
 Feature | Billing metric | Price (USD) | Effective date  
 ---|---|---|---  
-Catalog storage for agents, MCP servers, endpoints, skills, and skill revisions | `agentregistry.googleapis.com/object_storage` | Included at no charge ($0.00) | Always  
-Catalog discovery, search, and Agent Registry API operations | None | Included at no charge ($0.00) | Always  
+Registry storage for agents, MCP servers, endpoints, skills, and skill revisions | `agentregistry.googleapis.com/object_storage` | Included at no charge ($0.00) | Always  
+Registry discovery, search, and Agent Registry API operations | None | Included at no charge ($0.00) | Always  
 Skill vulnerability scanning | `agentregistry.googleapis.com/token_usage` | Included at no charge ($0.00) | Through December 31, 2026  
 $8.00 per 1 million input tokens | January 1, 2027  
   
@@ -44,12 +44,12 @@ Skill vulnerability scanning inspects uploaded skill packages for security vulne
 
 ### Pricing updates and billing schedule
 
-Storing, managing, and discovering skills in Agent Registry is included at no charge ($0.00). You aren't charged for skill storage or catalog operations. You're billed only when Agent Registry scans a new skill revision for vulnerabilities.
+Storing, managing, and discovering skills in Agent Registry is included at no charge ($0.00). You aren't charged for skill storage or registry operations. You're billed only when Agent Registry scans a new skill revision for vulnerabilities.
 
 The following schedule applies to billing for skills in Agent Registry:
 
-  * **Through December 31, 2026** : Skill vulnerability scanning in Agent Registry continues to be available at no charge ($0.00).
-  * **January 1, 2027** : Consumption billing ($8.00 per 1 million input tokens) takes effect for skill vulnerability scanning in Agent Registry.
+  * **Through December 31, 2026** : skill vulnerability scanning in Agent Registry continues to be available at no charge ($0.00).
+  * **January 1, 2027** : consumption billing ($8.00 per 1 million input tokens) takes effect for skill vulnerability scanning in Agent Registry.
 
 
 
@@ -65,15 +65,15 @@ Agent Registry triggers an asynchronous vulnerability scan only when all of the 
 There are no scanning charges for the following resources and operations:
 
   * **Existing skill revisions** : Agent Registry doesn't retroactively scan existing skill revisions. You are billed only when you upload a new skill revision.
-  * **Skills with scanning disabled** : No scanning charges apply when a skill's `scanningConfig.policy` field is set to `DISABLED`.
-  * **Google-created skills** : Pre-registered skills from [Google publishers](https://docs.cloud.google.com/agent-registry/concepts#publisher) don't incur scanning charges in your project.
-  * **Metadata updates and payload downloads** : Updating skill metadata, changing a skill's lifecycle state or default revision pointer, searching skills, or downloading skill revision payloads doesn't trigger a scan and incurs no charges.
+  * **Skills with scanning disabled** : no scanning charges apply when a skill's `scanningConfig.policy` field is set to `DISABLED`.
+  * **Google-managed skills** : pre-registered skills from [Google-managed publishers](https://docs.cloud.google.com/agent-registry/skills-architecture#publishers) don't incur scanning charges in your project.
+  * **Metadata updates and payload downloads** : updating skill metadata, changing a skill's lifecycle state or default revision pointer, searching skills, or downloading skill revision payloads doesn't trigger a scan and incurs no charges.
 
 
 
 ### Token usage for skill scanning
 
-Agent Registry measures skill vulnerability scanning charges strictly on the input tokens in your uploaded skill package, including the `SKILL.md` instruction file, code scripts, and text assets inside the ZIP archive.
+Agent Registry measures skill vulnerability scanning charges strictly on the input tokens in your uploaded skill package, including the `SKILL.md` instruction file, optional scripts, and text assets inside the ZIP archive.
 
 You aren't billed for internal security system prompts, multi-model evaluation passes, intermediate model reasoning tokens, or output tokens generated by the vulnerability scanner.
 
@@ -97,31 +97,32 @@ You can configure the scanning policy using the Google Cloud CLI or the Agent Re
 
 ###  gcloud 
 
-To create a skill with vulnerability scanning disabled, include the `--scanning-policy=disabled` flag:
+To create a skill with vulnerability scanning disabled, run the [`gcloud alpha agent-registry skills create`](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/agent-registry/skills/create) command with the `--scanning-policy=disabled` flag:
     
     
     gcloud alpha agent-registry skills create SKILL_ID \
-      --project=PROJECT_ID \
-      --location=LOCATION \
-      --display-name="DISPLAY_NAME" \
-      --description="DESCRIPTION" \
-      --scanning-policy=disabled \
-      --payload="LOCAL_ZIP_PATH"
+        --project=PROJECT_ID \
+        --location=LOCATION \
+        --display-name="DISPLAY_NAME" \
+        --description="DESCRIPTION" \
+        --target-state=disabled \
+        --scanning-policy=disabled \
+        --payload="LOCAL_ZIP_PATH"
     
 
-To disable vulnerability scanning on an existing skill before uploading new revisions, run the `skills update` command with the `--scanning-policy=disabled` flag:
+To disable vulnerability scanning on an existing skill before uploading new revisions, run the [`gcloud alpha agent-registry skills update`](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/agent-registry/skills/update) command with the `--scanning-policy=disabled` flag:
     
     
     gcloud alpha agent-registry skills update private-SKILL_ID \
-      --project=PROJECT_ID \
-      --location=LOCATION \
-      --scanning-policy=disabled
+        --project=PROJECT_ID \
+        --location=LOCATION \
+        --scanning-policy=disabled
     
 
 Replace the following:
 
   * `SKILL_ID`: the ID of the skill.
-  * `PROJECT_ID`: your Google Cloud project ID.
+  * `PROJECT_ID`: the project ID of your Google Cloud [governance project](https://docs.cloud.google.com/agent-registry/overview#governance-project).
   * `LOCATION`: the registry location, such as `global`.
   * `DISPLAY_NAME`: a display name for the skill.
   * `DESCRIPTION`: a description of the skill.
@@ -135,19 +136,19 @@ To disable vulnerability scanning on an existing skill using the REST API, set `
     
     
     curl -X PATCH \
-          -H "Authorization: Bearer $(gcloud auth print-access-token)" \
-          -H "Content-Type: application/json" \
-          -d '{
-            "scanningConfig": {
-              "policy": "DISABLED"
-            }
-          }' \
-          "https://agentregistry.googleapis.com/v1alpha/projects/PROJECT_ID/locations/LOCATION/skills/private-SKILL_ID?updateMask=scanningConfig"
+        -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+        -H "Content-Type: application/json" \
+        -d '{
+          "scanningConfig": {
+            "policy": "DISABLED"
+          }
+        }' \
+        "https://agentregistry.googleapis.com/v1alpha/projects/PROJECT_ID/locations/LOCATION/skills/private-SKILL_ID?updateMask=scanningConfig"
     
 
 Replace the following:
 
-  * `PROJECT_ID`: your Google Cloud project ID.
+  * `PROJECT_ID`: the project ID of your Google Cloud governance project.
   * `LOCATION`: the registry location, such as `global`.
   * `SKILL_ID`: the ID of the skill.
 
@@ -157,10 +158,10 @@ Allowed values for `scanningConfig.policy` are `ENABLED_BLOCKING`, `ENABLED_NONB
 
 ## Costs for other Google Cloud services
 
-Catalog storage and discovery in Agent Registry are included at no charge, but you might incur separate charges when you use other Google Cloud services with Agent Registry:
+Registry storage and discovery in Agent Registry are included at no charge, but you might incur separate charges when you use other Google Cloud services with Agent Registry:
 
-  * **Cloud Storage** : If you import skill ZIP archives from a Cloud Storage bucket, standard [Cloud Storage pricing](https://docs.cloud.google.com/storage/pricing) applies to objects stored in your bucket.
-  * **Agent and tool runtimes** : Hosting and executing agents or MCP servers on runtimes such as Agent Runtime on Gemini Enterprise Agent Platform, Cloud Run, or Google Kubernetes Engine (GKE) incurs standard compute and runtime charges for those services.
+  * **Cloud Storage** : if you import skill ZIP archives from a Cloud Storage bucket, standard [Cloud Storage pricing](https://docs.cloud.google.com/storage/pricing) applies to objects stored in your bucket.
+  * **Agent and tool runtimes** : hosting and executing agents or MCP servers on runtimes such as Agent Runtime on Gemini Enterprise Agent Platform, Cloud Run, or Google Kubernetes Engine (GKE) incurs standard compute and runtime charges for those services.
 
 
 
@@ -176,6 +177,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

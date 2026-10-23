@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/filestore/docs/multishares/
 title: Filestore multishares for GKE \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:56.775859+00:00
+fetched_at: 2026-10-23T13:02:01.859415+00:00
 ---
 
 # Filestore multishares for GKE  |  Google Cloud Documentation

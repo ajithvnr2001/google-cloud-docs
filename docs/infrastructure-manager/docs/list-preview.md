@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/infrastructure-manager/docs/list-preview/
 title: View and list previews \u00a0|\u00a0 Infrastructure Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:43.231425+00:00
+fetched_at: 2026-10-23T12:55:07.052970+00:00
 ---
 
 # View and list previews  |  Infrastructure Manager  |  Google Cloud Documentation
@@ -21,7 +21,9 @@ Send feedback
 
 #  View and list previews Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to list existing previews, and view the status of a preview.
+Infrastructure Manager previews let you verify proposed configuration changes and monitor execution states before you deploy resources. Use previews to validate operations and identify configuration issues prior to applying them.
+
+If you have not created a preview, see [Preview a deployment](https://docs.cloud.google.com/infrastructure-manager/docs/preview-deployment).
 
 If you have not created a preview, see [Preview a deployment](https://docs.cloud.google.com/infrastructure-manager/docs/preview-deployment).
 
@@ -76,6 +78,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

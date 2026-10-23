@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/services/datastore/query-cursors/
 title: Query Cursors \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:06.029635+00:00
+fetched_at: 2026-10-23T13:17:09.826274+00:00
 ---
 
 # Query Cursors  |  App Engine standard environment  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/samples/cloud-sql-sqlserver-sqlalchemy-backoff/
 title: Retrying failed connections using SQLAlchemy \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:38.284332+00:00
+fetched_at: 2026-10-23T10:11:54.890336+00:00
 ---
 
 # Retrying failed connections using SQLAlchemy  |  Cloud SQL for SQL Server  |  Google Cloud Documentation

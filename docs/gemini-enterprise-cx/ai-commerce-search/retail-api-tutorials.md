@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/ai-commerce-search/retail-api-tutorials/
 title: Interactive tutorials \u00a0|\u00a0 AI Commerce Search in Gemini Enterprise for Customer Experience \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:34:39.331399+00:00
+fetched_at: 2026-10-23T13:11:47.141552+00:00
 ---
 
 # Interactive tutorials  |  AI Commerce Search in Gemini Enterprise for Customer Experience  |  Google Cloud Documentation

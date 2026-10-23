@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-gemini-controlled-generation-response-mime-type/
 title: Controlled generation JSON output \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:31.490441+00:00
+fetched_at: 2026-10-23T09:36:19.170726+00:00
 ---
 
 # Controlled generation JSON output  |  Generative AI on Vertex AI  |  Google Cloud Documentation

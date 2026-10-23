@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/linear/data-store/
 title: Set up a Linear data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:28.363199+00:00
+fetched_at: 2026-10-23T13:03:55.385936+00:00
 ---
 
 # Set up a Linear data store  |  Gemini Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/virtual-machines/docs/5.0/discover/migrating-vms-migrate-for-compute-engine-best-practices/
 title: Migrate to Virtual Machines best practices \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:15:38.099690+00:00
+fetched_at: 2026-10-23T10:56:12.823742+00:00
 ---
 
 # Migrate to Virtual Machines best practices  |  Google Cloud Documentation

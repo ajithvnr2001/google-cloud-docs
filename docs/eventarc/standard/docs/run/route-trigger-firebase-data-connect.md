@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/standard/docs/run/route-trigger-firebase-data-connect/
 title: Route Firebase Data Connect events to Cloud Run \u00a0|\u00a0 Eventarc Standard \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:35.007969+00:00
+fetched_at: 2026-10-23T13:02:20.097125+00:00
 ---
 
 # Route Firebase Data Connect events to Cloud Run  |  Eventarc Standard  |  Google Cloud Documentation

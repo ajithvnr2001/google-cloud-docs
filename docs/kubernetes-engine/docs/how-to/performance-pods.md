@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/performance-pods/
 title: Optimize Autopilot Pod performance by choosing a machine series \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-16T09:32:13.751851+00:00
+fetched_at: 2026-10-23T12:51:07.586096+00:00
 ---
 
 # Optimize Autopilot Pod performance by choosing a machine series  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -196,7 +196,9 @@ To compare these machine series and their use cases, see [Machine series compari
 
 ### Limitations
 
-Bare metal machine types (such as `c3-standard-192-metal` and `c4a-standard-72-metal`) aren't supported when using the predefined Performance ComputeClass. To use bare metal machine shapes with Autopilot and node pool auto-creation, specify the exact machine type using a [custom ComputeClass](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes#machinetype-rule).
+  * The predefined Performance ComputeClass doesn't support bare metal machine types, such as `c3-standard-192-metal`, `c4a-standard-72-metal`, and `c4d-standard-384-metal`. To use these machine types with Autopilot or node pool auto-creation, specify the exact machine type in a [custom ComputeClass](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes#machinetype-rule).
+
+
 
 ### Version requirements
 
@@ -208,6 +210,7 @@ See the following version requirements for specific machine series:
     * GKE version 1.33.13-gke.1079000 and later
     * GKE version 1.34.1-gke.2037000 and later
   * **C3 and C4A bare metal types** : GKE version 1.35.3-gke.1389000 and later (using a [custom ComputeClass](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes#machinetype-rule)).
+  * **C4D bare metal types** : GKE version 1.37.0-gke.4713000 and later (using a [custom ComputeClass](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-custom-compute-classes#machinetype-rule)).
   * **Z4D** : GKE version 1.36.3-gke.1244000 and later.
 
 
@@ -259,6 +262,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

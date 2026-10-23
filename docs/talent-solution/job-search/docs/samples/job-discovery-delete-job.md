@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-discovery-delete-job/
 title: Delete job (v3) \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:17.867957+00:00
+fetched_at: 2026-10-23T09:34:25.886368+00:00
 ---
 
 # Delete job (v3)  |  Job Search  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/filter-examples/
 title: Filter examples \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:19.353350+00:00
+fetched_at: 2026-10-23T13:20:23.961535+00:00
 ---
 
 # Filter examples  |  Data Studio  |  Google Cloud Documentation

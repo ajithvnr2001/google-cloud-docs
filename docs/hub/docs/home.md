@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/hub/docs/home/
 title: View top items on the Home page \u00a0|\u00a0 Cloud Hub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:27.168367+00:00
+fetched_at: 2026-10-23T13:09:49.528578+00:00
 ---
 
 # View top items on the Home page  |  Cloud Hub  |  Google Cloud Documentation

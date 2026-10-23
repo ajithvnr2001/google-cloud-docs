@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/web-risk/docs/how-to/
 title: How-to guides \u00a0|\u00a0 Web Risk \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:10.237667+00:00
+fetched_at: 2026-10-23T08:57:57.583668+00:00
 ---
 
 # How-to guides  |  Web Risk  |  Google Cloud Documentation

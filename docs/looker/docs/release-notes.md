@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/looker/docs/release-notes/
 title: Looker release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:44:41.091394+00:00
+fetched_at: 2026-10-23T12:50:45.494731+00:00
 ---
 
 # Looker release notes  |  Google Cloud Documentation
@@ -26,6 +26,77 @@ This page documents production updates for both Looker (original) and Looker (Go
 You can see the latest product updates for all of Google Cloud on the [ Google Cloud](https://docs.cloud.google.com/release-notes) page, browse and filter all release notes in the [Google Cloud console](https://console.cloud.google.com/release-notes), or programmatically access release notes in [BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_cloud_release_notes&t=release_notes&page=table). 
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/looker-release-notes.xml) directly. 
+
+## October 22, 2026
+
+Announcement
+
+**Looker 26.22** will roll out to Looker (original) instances on the following schedule:
+
+  * Expected Looker (original) deployment start: **Monday, October 26, 2026**
+  * Expected Looker (original) final deployment and download available: **Monday, November 9, 2026**
+
+
+
+The Looker 26.22 rollout for Looker (Google Cloud core) will be announced separately.
+
+Looker 26.22 is expected to include the following changes, features, and fixes.
+
+Looker (Google Cloud core) only changes
+
+Fixed
+
+An issue has been fixed where adding a new series to a categorical chart, such as adding a new pivot value, could cause category bars to appear ungrouped. This feature now performs as expected.
+
+Fixed
+
+An issue has been fixed where table column options menus and search boxes appeared behind drill dialogs, which prevented users from interacting with them. This feature now performs as expected.
+
+Looker (Google Cloud core) and Looker (original) changes
+
+Fixed
+
+An issue has been fixed in the TypeScript and JavaScript SDKs where calling methods that have only optional parameters without passing an empty object could result in compilation or runtime errors. This feature now performs as expected.
+
+Fixed
+
+An issue has been fixed where configuring a LookML model could trigger unnecessary derived table rebuilds. This feature now performs as expected.
+
+Fixed
+
+An issue has been fixed where the **Show filters** option was displayed on dashboard tiles that failed to load data in view mode. This feature now performs as expected.
+
+Fixed
+
+An issue has been fixed where drilling into results that were filtered by string dimensions that contained backslashes returned zero rows. This feature now performs as expected.
+
+Fixed
+
+An issue has been fixed where pivoted queries in SQL Runner could fail to render or re-pivot unexpectedly. This feature now performs as expected.
+
+Fixed
+
+An issue has been fixed where the **View (Expanded / Full Screen)** option appeared in the tile action menu on embedded dashboards in view mode. This feature now performs as expected.
+
+Fixed
+
+An issue has been fixed where custom visualization tiles were truncated in dashboard PDF exports when the **Expand tables to show all rows** option was enabled. This feature now performs as expected.
+
+Fixed
+
+Table row group subtotals are now displayed only for sum and count measures. For other measure types (such as `averages` and `count distinct`) and table calculations, subtotals are now left blank rather than displaying an inaccurate summed value.
+
+Fixed
+
+The System Activity `query_metrics` Explore now records connection acquisition time (`acquire_connection`) for queries that are canceled while waiting in the connection pool.
+
+Fixed
+
+Conversational Analytics `DELETE` endpoints now return `HTTP 404 Not Found` instead of `HTTP 204 No Content` when you attempt to delete nonexistent resources.
+
+Fixed
+
+The System Activity `query_metrics` Explore has been updated to accurately record model initialization time for models that are loaded from cache.
 
 ## October 21, 2026
 
@@ -9992,6 +10063,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

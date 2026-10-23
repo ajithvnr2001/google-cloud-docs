@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/service-extensions/extension-processor-overview/
 title: Apigee Extension Processor overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:42.090549+00:00
+fetched_at: 2026-10-23T13:20:44.678624+00:00
 ---
 
 # Apigee Extension Processor overview  |  Google Cloud Documentation

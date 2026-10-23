@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/quickstart-stt/
 title: Transcribe audio \u00a0|\u00a0 Google Distributed Cloud air-gapped \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:30:19.320980+00:00
+fetched_at: 2026-10-23T12:45:07.975476+00:00
 ---
 
 # Transcribe audio  |  Google Distributed Cloud air-gapped  |  Google Cloud Documentation
@@ -67,7 +67,7 @@ Follow these steps to use the Speech-to-Text service from a Python script to tra
          
          import base64
          
-         from google.cloud import speech_v1p1beta1
+         from google.cloud import speech_v1p1beta1 as speech
          import google.auth
          from google.auth.transport import requests
          from google.api_core.client_options import ClientOptions
@@ -77,7 +77,7 @@ Follow these steps to use the Speech-to-Text service from a Python script to tra
          
          def get_client(creds):
            opts = ClientOptions(api_endpoint=api_endpoint)
-           return speech_v1p1beta1.[SpeechClient](https://docs.cloud.google.com/python/docs/reference/speech/latest/google.cloud.speech_v1p1beta1.services.speech.SpeechClient.html)(credentials=creds, client_options=opts)
+           return speech.SpeechClient(credentials=creds, client_options=opts)
          
          def main():
            creds = None
@@ -86,8 +86,6 @@ Follow these steps to use the Speech-to-Text service from a Python script to tra
              creds = creds.with_gdch_audience(audience)
              req = requests.Request()
              creds.refresh(req)
-             print("Got token: ")
-             print(creds.token)
            except Exception as e:
              print("Caught exception" + str(e))
              raise e
@@ -98,13 +96,15 @@ Follow these steps to use the Speech-to-Text service from a Python script to tra
          
            content="BASE64_ENCODED_AUDIO"
          
-           audio = speech_v1p1beta1.[RecognitionAudio](https://docs.cloud.google.com/python/docs/reference/speech/latest/google.cloud.speech_v1p1beta1.types.RecognitionAudio.html)()
-           audio.content = base64.standard_b64decode(content)
-           config = speech_v1p1beta1.[RecognitionConfig](https://docs.cloud.google.com/python/docs/reference/speech/latest/google.cloud.speech_v1p1beta1.types.RecognitionConfig.html)()
-           config.encoding= speech_v1p1beta1.[RecognitionConfig](https://docs.cloud.google.com/python/docs/reference/speech/latest/google.cloud.speech_v1p1beta1.types.RecognitionConfig.html).[AudioEncoding](https://docs.cloud.google.com/python/docs/reference/speech/latest/google.cloud.speech_v1p1beta1.types.RecognitionConfig.AudioEncoding.html).ENCODING
-           config.sample_rate_hertz=RATE_HERTZ
-           config.language_code="LANGUAGE_CODE"
-           config.audio_channel_count=CHANNEL_COUNT
+           audio = speech.RecognitionAudio(
+               content=base64.standard_b64decode(content)
+           )
+           config = speech.RecognitionConfig(
+               encoding=speech.RecognitionConfig.AudioEncoding.ENCODING,
+               sample_rate_hertz=RATE_HERTZ,
+               audio_channel_count=CHANNEL_COUNT,
+               language_code="LANGUAGE_CODE",
+           )
          
            metadata = [("x-goog-user-project", "projects/PROJECT_ID")]
            resp = tc.recognize(config=config, audio=audio, metadata=metadata)
@@ -121,9 +121,9 @@ Replace the following:
      * `PROJECT_ID`: your project ID.
      * `BASE64_ENCODED_AUDIO`: the audio data bytes encoded in a Base64 representation. This string begins with characters that look similar to `ZkxhQwAAACIQABAAAAUJABtAA+gA8AB+W8FZndQvQAyjv`. For more information, see [`RecognitionAudio`](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/speech-to-text/rpc/google.cloud.speech.v1#recognitionaudio).
      * `ENCODING`: the encoding of the audio data sent in the request, such as `LINEAR16`. For more information, see [`AudioEncoding`](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/speech-to-text/rpc/google.cloud.speech.v1#audioencoding).
-     * `RATE_HERTZ`: sample rate in Hertz of the audio data sent in the request, such as `16000`. For more information, see [`RecognitionConfig`](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/speech-to-text/rpc/google.cloud.speech.v1#recognitionconfig).
-     * `LANGUAGE_CODE`: the language of the supplied audio as a BCP-47 language tag. See the list of [supported languages](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-stt-supported-langs) and their respective language codes.
-     * `CHANNEL_COUNT`: the number of channels in the input audio data, such as `1`. For more information, see [`RecognitionConfig`](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/speech-to-text/rpc/google.cloud.speech.v1#recognitionconfig).
+     * `RATE_HERTZ`: the sample rate in Hertz (`8000`-`48000`) of the audio data sent in the request, such as `16000`. Required for `LINEAR16`, `FLAC`, and `MULAW` encodings (including WAV files). For more information, see [`RecognitionConfig`](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/speech-to-text/rpc/google.cloud.speech.v1#recognitionconfig).
+     * `LANGUAGE_CODE`: the language of the supplied audio as a BCP-47 language tag, such as `en-US`. See the list of [supported languages](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/application/ao-user/vertex-ai-stt-supported-langs) and their respective language codes.
+     * `CHANNEL_COUNT`: the number of channels in the input audio data (`1`-`8`), such as `1` for mono audio. Setting `audio_channel_count` is required for `LINEAR16`, `FLAC`, and `MULAW` encodings. For more information, see [`RecognitionConfig`](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/apis/vertex-ai/speech-to-text/rpc/google.cloud.speech.v1#recognitionconfig).
   5. Save the Python script.
 
   6. Run the Python script to transcribe audio:
@@ -140,6 +140,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

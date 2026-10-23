@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/create-identity-groups/
 title: Creating and searching for identity-mapped groups \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:15.616087+00:00
+fetched_at: 2026-10-23T13:10:16.595278+00:00
 ---
 
 # Creating and searching for identity-mapped groups  |  Cloud Identity  |  Google Cloud Documentation

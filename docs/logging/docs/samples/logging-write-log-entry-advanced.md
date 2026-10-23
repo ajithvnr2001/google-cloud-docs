@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/samples/logging-write-log-entry-advanced/
 title: Write request logs \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:36:52.426770+00:00
+fetched_at: 2026-10-23T12:35:43.780731+00:00
 ---
 
 # Write request logs  |  Cloud Logging  |  Google Cloud Documentation
@@ -82,12 +82,12 @@ To authenticate to Logging, set up Application Default Credentials. For more inf
     
     
     import com.google.cloud.[MonitoredResource](https://docs.cloud.google.com/java/docs/reference/google-cloud-core/latest/com.google.cloud.MonitoredResource.html);
-    import com.google.cloud.logging.[HttpRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-apigee-connect/latest/com.google.cloud.apigeeconnect.v1.HttpRequest.html);
+    import com.google.cloud.logging.[HttpRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.HttpRequest.html);
     import com.google.cloud.logging.[LogEntry](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.LogEntry.html);
     import com.google.cloud.logging.[Logging](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.Logging.html);
     import com.google.cloud.logging.[LoggingOptions](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.LoggingOptions.html);
-    import com.google.cloud.logging.[Payload](https://docs.cloud.google.com/java/docs/reference/google-cloud-apigee-connect/latest/com.google.cloud.apigeeconnect.v1.Payload.html);
-    import com.google.cloud.logging.[Severity](https://docs.cloud.google.com/java/docs/reference/google-cloud-apihub/latest/com.google.cloud.apihub.v1.Severity.html);
+    import com.google.cloud.logging.[Payload](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.Payload.html);
+    import com.google.cloud.logging.[Severity](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.Severity.html);
     import java.util.Collections;
     
     /** Write LogEntry with HTTP request using the Cloud Logging API. */
@@ -97,23 +97,23 @@ To authenticate to Logging, set up Application Default Credentials. For more inf
         // TODO(developer): Replace these variables before running the sample.
         [String](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigtable/latest/com.google.cloud.bigtable.common.Type.String.html) logName = "log-name"; // i.e "my-log"
         [String](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigtable/latest/com.google.cloud.bigtable.common.Type.String.html) payLoad = "payload"; // i.e "Hello world!"
-        [HttpRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-apigee-connect/latest/com.google.cloud.apigeeconnect.v1.HttpRequest.html) httpRequest =
-            [HttpRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-apigee-connect/latest/com.google.cloud.apigeeconnect.v1.HttpRequest.html).newBuilder()
+        [HttpRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.HttpRequest.html) httpRequest =
+            [HttpRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.HttpRequest.html).newBuilder()
                 .setRequestUrl("www.example.com")
-                .setRequestMethod([HttpRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-apigee-connect/latest/com.google.cloud.apigeeconnect.v1.HttpRequest.html).RequestMethod.GET) // Supported method GET,POST,PUT,HEAD
+                .setRequestMethod([HttpRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.HttpRequest.html).RequestMethod.GET) // Supported method GET,POST,PUT,HEAD
                 .setStatus(200)
                 .build();
         createLogEntryRequest(logName, payLoad, httpRequest);
       }
     
-      public static void createLogEntryRequest([String](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigtable/latest/com.google.cloud.bigtable.common.Type.String.html) logName, [String](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigtable/latest/com.google.cloud.bigtable.common.Type.String.html) payLoad, [HttpRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-apigee-connect/latest/com.google.cloud.apigeeconnect.v1.HttpRequest.html) httpRequest)
+      public static void createLogEntryRequest([String](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigtable/latest/com.google.cloud.bigtable.common.Type.String.html) logName, [String](https://docs.cloud.google.com/java/docs/reference/google-cloud-bigtable/latest/com.google.cloud.bigtable.common.Type.String.html) payLoad, [HttpRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.HttpRequest.html) httpRequest)
           throws Exception {
         // Instantiates a logging client
         try ([Logging](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.Logging.html) logging = [LoggingOptions](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.LoggingOptions.html).getDefaultInstance().getService()) {
           // create an instance of LogEntry with HTTP request
           [LogEntry](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.LogEntry.html) logEntry =
-              [LogEntry](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.LogEntry.html).newBuilder([Payload](https://docs.cloud.google.com/java/docs/reference/google-cloud-apigee-connect/latest/com.google.cloud.apigeeconnect.v1.Payload.html).StringPayload.of(payLoad))
-                  .setSeverity([Severity](https://docs.cloud.google.com/java/docs/reference/google-cloud-apihub/latest/com.google.cloud.apihub.v1.Severity.html).ERROR)
+              [LogEntry](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.LogEntry.html).newBuilder([Payload](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.Payload.html).StringPayload.of(payLoad))
+                  .setSeverity([Severity](https://docs.cloud.google.com/java/docs/reference/google-cloud-logging/latest/com.google.cloud.logging.Severity.html).ERROR)
                   .setLogName(logName)
                   .setHttpRequest(httpRequest)
                   .setResource([MonitoredResource](https://docs.cloud.google.com/java/docs/reference/google-cloud-core/latest/com.google.cloud.MonitoredResource.html).newBuilder("global").build())

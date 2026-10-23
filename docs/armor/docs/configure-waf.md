@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/configure-waf/
 title: Set up preconfigured WAF rules \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:57.027635+00:00
+fetched_at: 2026-10-23T13:17:22.445110+00:00
 ---
 
 # Set up preconfigured WAF rules  |  Google Cloud Armor  |  Google Cloud Documentation

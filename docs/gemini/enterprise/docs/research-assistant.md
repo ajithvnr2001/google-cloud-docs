@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/research-assistant/
 title: Get reports with Deep Research \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:44.550852+00:00
+fetched_at: 2026-10-23T13:11:22.994454+00:00
 ---
 
 # Get reports with Deep Research  |  Gemini Enterprise  |  Google Cloud Documentation

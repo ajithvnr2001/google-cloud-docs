@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/samples/alloydb-v1-generated-AlloyDBAdmin-ImportCluster-sync-flattened/
 title: Import data into a cluster \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:26:06.508426+00:00
+fetched_at: 2026-10-23T10:43:12.588257+00:00
 ---
 
 # Import data into a cluster  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation

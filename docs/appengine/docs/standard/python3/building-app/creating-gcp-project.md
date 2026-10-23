@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/python3/building-app/creating-gcp-project/
 title: Create your project \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:09.350277+00:00
+fetched_at: 2026-10-23T13:17:51.977419+00:00
 ---
 
 # Create your project  |  App Engine standard environment  |  Google Cloud Documentation

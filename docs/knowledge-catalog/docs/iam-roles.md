@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/iam-roles/
 title: Knowledge Catalog IAM roles \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:44.090566+00:00
+fetched_at: 2026-10-23T10:22:03.626020+00:00
 ---
 
 # Knowledge Catalog IAM roles  |  Google Cloud Documentation
@@ -36,15 +36,15 @@ For a detailed description of IAM and its features, see the [Identity and Access
 **Note:** Some Knowledge Catalog features depend on other Google Cloud services. For example, Knowledge Catalog connectors use BigQuery Data Transfer Service to import metadata. To view and manage connector configurations, you need the following roles:
 
   * To view connector configurations and run history: 
-    * BigQuery User (`roles/bigquery.user`)
+    * **BigQuery User** (`roles/bigquery.user`)
     * **Dataplex Viewer** (`roles/dataplex.viewer`)
   * To create, edit, delete, or manually run connector configurations: 
-    * BigQuery Admin (`roles/bigquery.admin`)
-    * Dataplex Administrator (`roles/dataplex.admin`) or **Dataplex Editor** (`roles/dataplex.editor`)
+    * **BigQuery Admin** (`roles/bigquery.admin`)
+    * **Dataplex Administrator** (`roles/dataplex.admin`) or **Dataplex Editor** (`roles/dataplex.editor`)
 
 
 
-Additionally, you must grant the BigQuery Data Transfer Service service agent (`service-PROJECT_NUMBER@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com`) the `dataplex.entryGroups.import` permission or the Dataplex Entry Group Importer (`roles/dataplex.entryGroupImporter`) role. This can be granted either at the project level or at the entry group level.
+Additionally, you must grant the BigQuery Data Transfer Service service agent (`service-PROJECT_NUMBER@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com`) the `dataplex.entryGroups.import` permission or the **Dataplex Entry Group Importer** (`roles/dataplex.entryGroupImporter`) role. This can be granted either at the project level or at the entry group level.
 
 See [About Knowledge Catalog Connectors](https://docs.cloud.google.com/knowledge-catalog/docs/connectors).
 
@@ -52,7 +52,7 @@ Make sure you granted access to the Knowledge Catalog entries before using them.
 
 ## About Knowledge Catalog roles
 
-Knowledge Catalog IAM roles are a bundle of one or more permissions. You grant roles to principals to let them perform actions on the Knowledge Catalog resources in your project. For example, the Dataplex Viewer role contains the `dataplex.*.get` and `dataplex.*.list` permissions, which let users get and list Knowledge Catalog resources in a project. For more information, see [Knowledge Catalog permissions](https://docs.cloud.google.com/knowledge-catalog/docs/iam-permissions).
+Knowledge Catalog IAM roles are a bundle of one or more permissions. You grant roles to principals to let them perform actions on the Knowledge Catalog resources in your project. For example, the **Dataplex Viewer** (`roles/dataplex.viewer`) role contains the `dataplex.*.get` and `dataplex.*.list` permissions, which let users get and list Knowledge Catalog resources in a project. For more information, see [Knowledge Catalog permissions](https://docs.cloud.google.com/knowledge-catalog/docs/iam-permissions).
 
 You can apply Knowledge Catalog roles to any resources in the service hierarchy, including the following:
 
@@ -1550,7 +1550,7 @@ The **Dataplex Entry and EntryLink Owner** (`roles/dataplex.entryOwner`) role in
 
 ## Predefined roles for data lineage
 
-To access the lineage for any Knowledge Catalog entry, you need a viewer role on the corresponding [system resource](https://docs.cloud.google.com/knowledge-catalog/docs/search-assets#required-roles) or the [Dataplex Catalog Viewer role](https://docs.cloud.google.com/iam/docs/understanding-roles#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) on the project that stores the Knowledge Catalog entry. This section describes the roles required to work with lineage.
+To access the lineage for any Knowledge Catalog entry, you need a viewer role on the corresponding [system resource](https://docs.cloud.google.com/knowledge-catalog/docs/search-assets#required-roles) or the [**Dataplex Catalog Viewer**](https://docs.cloud.google.com/iam/docs/understanding-roles#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) role on the project that stores the Knowledge Catalog entry. This section describes the roles required to work with lineage.
 
 Role | Permissions  
 ---|---  
@@ -1638,9 +1638,9 @@ Role | Permissions
   
 ### Lineage viewer role
 
-The [Data Lineage Viewer role](https://docs.cloud.google.com/iam/docs/understanding-roles#data-lineage-roles) (`roles/datalineage.viewer`) lets you view Knowledge Catalog lineage in the Google Cloud console and read lineage information using the [Data Lineage API](https://docs.cloud.google.com/knowledge-catalog/docs/reference/data-lineage/rest). The runs and events for a given process are all stored in the same project as the process. In the case of [automated lineage](https://docs.cloud.google.com/knowledge-catalog/docs/use-lineage), the process, runs, and events are stored in the project in which the job that generated the lineage was running. For example, this could be the project in which a BigQuery job was running.
+The [**Data Lineage Viewer**](https://docs.cloud.google.com/iam/docs/understanding-roles#data-lineage-roles) (`roles/datalineage.viewer`) role lets you view Knowledge Catalog lineage in the Google Cloud console and read lineage information using the [Data Lineage API](https://docs.cloud.google.com/knowledge-catalog/docs/reference/data-lineage/rest). The runs and events for a given process are all stored in the same project as the process. In the case of [automated lineage](https://docs.cloud.google.com/knowledge-catalog/docs/use-lineage), the process, runs, and events are stored in the project in which the job that generated the lineage was running. For example, this could be the project in which a BigQuery job was running.
 
-To view lineage between assets, you need the [Data Lineage Viewer role](https://docs.cloud.google.com/iam/docs/understanding-roles#data-lineage-roles) (`roles/datalineage.viewer`) on both the project in which you're viewing lineage and the projects in which lineage is recorded. Specifically, you need the role on the following projects:
+To view lineage between assets, you need the [**Data Lineage Viewer**](https://docs.cloud.google.com/iam/docs/understanding-roles#data-lineage-roles) (`roles/datalineage.viewer`) role on both the project in which you're viewing lineage and the projects in which lineage is recorded. Specifically, you need the role on the following projects:
 
   * The **project in which you're viewing lineage** (known as [active project](https://docs.cloud.google.com/knowledge-catalog/docs/troubleshooting-lineage#active-project)), that is, the project in the drop-down at the top of the Google Cloud console or the project from which API calls are made. This is typically the project containing the resources you create in Knowledge Catalog or access in other Google Cloud systems with the API.
   * The **projects in which lineage is recorded** (known as [compute project](https://docs.cloud.google.com/knowledge-catalog/docs/troubleshooting-lineage#compute-project)). Lineage is stored in the project where the corresponding process executed, as described earlier. This project can be different from the project storing the asset that you're viewing lineage for.
@@ -1649,13 +1649,13 @@ To view lineage between assets, you need the [Data Lineage Viewer role](https://
 
 To view asset metadata, you need the same roles used for accessing metadata entries in Knowledge Catalog.
 
-Depending on the use case, grant the [Data Lineage Viewer role](https://docs.cloud.google.com/iam/docs/understanding-roles#data-lineage-roles) (`roles/datalineage.viewer`) on the folder or organization level to ensure access to the lineage (see [Grant or revoke a single role](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access#single-role)).
+Depending on the use case, grant the [**Data Lineage Viewer**](https://docs.cloud.google.com/iam/docs/understanding-roles#data-lineage-roles) (`roles/datalineage.viewer`) role on the folder or organization level to ensure access to the lineage (see [Grant or revoke a single role](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access#single-role)).
 
 **Note:** To see the SQL statement for a BigQuery process, you must have the `bigquery.jobs.get` permission for the corresponding job. To see the SQL statement for a BigQuery view definition, you must have the `bigquery.tables.get` permission for the corresponding view.
 
 ### Roles to view asset metadata when viewing lineage
 
-To view metadata about an asset stored in Knowledge Catalog, you must have a viewer role on the corresponding [system resource](https://docs.cloud.google.com/knowledge-catalog/docs/search-assets#required-roles) or the [Dataplex Catalog Viewer role](https://docs.cloud.google.com/iam/docs/understanding-roles#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) on the project storing the Knowledge Catalog entry. You might have access to assets on the lineage graph or list through appropriate viewer roles but no access to the lineage between them. This occurs if you don't have the [Data Lineage Viewer role](https://docs.cloud.google.com/iam/docs/understanding-roles#data-lineage-roles) (`roles/datalineage.viewer`) on the project where the lineage was recorded. In this case, the Data Lineage API and Google Cloud console don't show the lineage or return an error. This prevents leaking information about the existence of lineage. Therefore, the absence of lineage for an asset doesn't mean that no lineage exists, but rather that you might not have permissions to view it.
+To view metadata about an asset stored in Knowledge Catalog, you must have a viewer role on the corresponding [system resource](https://docs.cloud.google.com/knowledge-catalog/docs/search-assets#required-roles) or the [**Dataplex Catalog Viewer**](https://docs.cloud.google.com/iam/docs/understanding-roles#dataplex.catalogViewer) (`roles/dataplex.catalogViewer`) role on the project storing the Knowledge Catalog entry. You might have access to assets on the lineage graph or list through appropriate viewer roles but no access to the lineage between them. This occurs if you don't have the [**Data Lineage Viewer**](https://docs.cloud.google.com/iam/docs/understanding-roles#data-lineage-roles) (`roles/datalineage.viewer`) role on the project where the lineage was recorded. In this case, the Data Lineage API and Google Cloud console don't show the lineage or return an error. This prevents leaking information about the existence of lineage. Therefore, the absence of lineage for an asset doesn't mean that no lineage exists, but rather that you might not have permissions to view it.
 
 **Note:** If an asset is located in an organization that you're not a member of, data lineage might not be able to retrieve the metadata for that asset.
 

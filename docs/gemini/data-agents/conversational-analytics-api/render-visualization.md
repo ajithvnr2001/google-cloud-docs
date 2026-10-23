@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/data-agents/conversational-analytics-api/render-visualization/
 title: Render an agent response as a visualization \u00a0|\u00a0 Conversational Analytics API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:53.760552+00:00
+fetched_at: 2026-10-23T13:02:22.562264+00:00
 ---
 
 # Render an agent response as a visualization  |  Conversational Analytics API  |  Google Cloud Documentation

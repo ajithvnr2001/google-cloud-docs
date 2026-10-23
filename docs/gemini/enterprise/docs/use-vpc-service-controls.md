@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/use-vpc-service-controls/
 title: Secure your app with VPC Service Controls \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:42.697102+00:00
+fetched_at: 2026-10-23T13:10:57.781712+00:00
 ---
 
 # Secure your app with VPC Service Controls  |  Gemini Enterprise  |  Google Cloud Documentation

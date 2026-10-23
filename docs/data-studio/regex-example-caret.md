@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/regex-example-caret/
 title: Caret (^) \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:58.300809+00:00
+fetched_at: 2026-10-23T13:20:49.983399+00:00
 ---
 
 # Caret (^)  |  Data Studio  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sovereign-controls-by-partners/docs/resources/
 title: Resources \u00a0|\u00a0 Sovereign Controls by Partners \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T05:09:51.188048+00:00
+fetched_at: 2026-10-23T10:31:56.685601+00:00
 ---
 
 # Resources  |  Sovereign Controls by Partners  |  Google Cloud Documentation

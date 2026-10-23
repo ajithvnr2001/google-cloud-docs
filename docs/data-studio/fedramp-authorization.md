@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/fedramp-authorization/
 title: Data Studio FedRAMP authorization \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:19.866531+00:00
+fetched_at: 2026-10-23T13:20:26.256509+00:00
 ---
 
 # Data Studio FedRAMP authorization  |  Google Cloud Documentation

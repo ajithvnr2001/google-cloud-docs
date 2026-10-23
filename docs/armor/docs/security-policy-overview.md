@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/security-policy-overview/
 title: Security policy overview \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:54.857910+00:00
+fetched_at: 2026-10-23T13:18:33.632271+00:00
 ---
 
 # Security policy overview  |  Google Cloud Armor  |  Google Cloud Documentation

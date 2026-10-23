@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/audit-logging/
 title: Cloud NGFW audit logging \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:11.490986+00:00
+fetched_at: 2026-10-23T13:00:59.768502+00:00
 ---
 
 # Cloud NGFW audit logging  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

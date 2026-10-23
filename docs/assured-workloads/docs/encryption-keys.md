@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/docs/encryption-keys/
 title: Data encryption and encryption keys \u00a0|\u00a0 Assured Workloads \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:08.820576+00:00
+fetched_at: 2026-10-23T13:20:29.617625+00:00
 ---
 
 # Data encryption and encryption keys  |  Assured Workloads  |  Google Cloud Documentation

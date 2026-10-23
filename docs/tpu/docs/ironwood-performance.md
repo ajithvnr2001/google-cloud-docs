@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/tpu/docs/ironwood-performance/
 title: TPU7x (Ironwood) performance optimizations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:26:18.872327+00:00
+fetched_at: 2026-10-23T12:36:21.513971+00:00
 ---
 
 # TPU7x (Ironwood) performance optimizations  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # TPU7x (Ironwood) performance optimizations
 
-This guide describes several methods to optimize performance with TPU7x (Ironwood) by efficiently managing data movement between its multi-tiered memory system. This includes techniques like low-precision training, sharding, communication optimization, activation rematerialization, scoped virtual memory tuning, and custom accelerator kernels.
+This guide describes several methods to optimize performance with TPU7x (Ironwood) by efficiently managing data movement between its multi-tiered memory system. This includes techniques like low-precision training, sharding, communication optimization, activation rematerialization, scoped vector memory (VMEM) tuning, and custom accelerator kernels.
 
 To optimize performance with TPU7x, you must first be familiar with the Ironwood architecture, specifically the memory hierarchy and interconnect topology. For more information, see [TPU7x (Ironwood)](https://docs.cloud.google.com/tpu/docs/tpu7x).
 
@@ -33,7 +33,7 @@ TPU7x supports built-in hardware acceleration for FP8 data types, offering a pea
 
 Using FP8 offers the following performance benefits:
 
-  * **Reduced high-bandwidth memory (HBM) pressure** : A smaller memory footprint allows larger models, or models with larger KV caches during inference, to fit entirely within the 192 GB of HBM. This avoids costly offloading to slower host memory.
+  * **Reduced high-bandwidth memory (HBM) pressure** : A smaller memory footprint allows larger models, or models with larger KV caches during inference, to fit entirely within the 192 GiB of HBM. This avoids costly offloading to slower host memory.
   * **Increased effective batch size** : By reducing the memory required for activations, FP8 enables the use of larger batch sizes. This improves data parallelism and can lead to higher throughput and better utilization of the compute units.
   * **Lower memory bandwidth requirements** : Moving half the amount of data for each operation reduces the demand on the HBM-to-MXU data path. On systems where data movement is a common bottleneck, this helps keep the MXUs saturated with work.
 
@@ -136,6 +136,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

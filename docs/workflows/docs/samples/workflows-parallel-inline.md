@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-parallel-inline/
 title: Perform a parallel step with the secondary workflow inlined \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:02:11.759790+00:00
+fetched_at: 2026-10-23T09:37:35.637211+00:00
 ---
 
 # Perform a parallel step with the secondary workflow inlined  |  Workflows  |  Google Cloud Documentation

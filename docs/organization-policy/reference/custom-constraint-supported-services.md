@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/organization-policy/reference/custom-constraint-supported-services/
 title: Services that support custom constraints \u00a0|\u00a0 Organization Policy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-18T05:42:30.717668+00:00
+fetched_at: 2026-10-23T10:32:50.665100+00:00
 ---
 
 # Services that support custom constraints  |  Organization Policy  |  Google Cloud Documentation
@@ -308,9 +308,11 @@ Managed Service for Apache Spark  |  ` [ dataproc.googleapis.com/Batch ](https:/
 ` [ dataproc.googleapis.com/SessionTemplate ](https://docs.cloud.google.com/dataproc-serverless/docs/guides/dataproc-serverless-custom-constraints) ` |  Preview   
 Memorystore  |  ` [ redis.googleapis.com/Instance ](https://docs.cloud.google.com/memorystore/docs/redis/custom-constraints) ` |  GA   
 Memorystore for Redis Cluster  |  ` [ redis.googleapis.com/Cluster ](https://docs.cloud.google.com/memorystore/docs/cluster/custom-constraints) ` |  GA   
+Model Armor  |  ` [ modelarmor.googleapis.com/Template ](https://docs.cloud.google.com/model-armor/access-control/custom-constraints) ` |  GA   
 Network Connectivity  |  ` [ networkconnectivity.googleapis.com/Group ](https://docs.cloud.google.com/network-connectivity/docs/network-connectivity-center/how-to/org-policy-constraints) ` |  GA   
 ` [ networkconnectivity.googleapis.com/Hub ](https://docs.cloud.google.com/network-connectivity/docs/network-connectivity-center/how-to/org-policy-constraints) ` |  GA   
 ` [ networkconnectivity.googleapis.com/InternalRange ](https://docs.cloud.google.com/vpc/docs/custom-constraints) ` |  GA   
+` [ networkconnectivity.googleapis.com/PolicyBasedRoute ](https://docs.cloud.google.com/vpc/docs/custom-constraints) ` |  GA   
 ` [ networkconnectivity.googleapis.com/RegionalEndpoint ](https://docs.cloud.google.com/vpc/docs/custom-constraints) ` |  GA   
 ` [ networkconnectivity.googleapis.com/Spoke ](https://docs.cloud.google.com/network-connectivity/docs/network-connectivity-center/how-to/org-policy-constraints) ` |  GA   
 Private Service Connect  |  ` [ compute.googleapis.com/NetworkAttachment ](https://docs.cloud.google.com/compute/docs/access/custom-constraints) ` |  GA   
@@ -373,6 +375,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-rag-get-corpus/
 title: Get information about an index \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:42.173474+00:00
+fetched_at: 2026-10-23T09:36:58.263624+00:00
 ---
 
 # Get information about an index  |  Generative AI on Vertex AI  |  Google Cloud Documentation

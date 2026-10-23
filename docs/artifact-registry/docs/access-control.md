@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/artifact-registry/docs/access-control/
 title: Access control with IAM \u00a0|\u00a0 Artifact Registry \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:04.264369+00:00
+fetched_at: 2026-10-23T13:18:49.452826+00:00
 ---
 
 # Access control with IAM  |  Artifact Registry  |  Google Cloud Documentation

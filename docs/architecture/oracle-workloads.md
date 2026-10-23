@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/oracle-workloads/
 title: Oracle workloads in Google Cloud \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:31.814144+00:00
+fetched_at: 2026-10-23T13:14:03.406731+00:00
 ---
 
 # Oracle workloads in Google Cloud  |  Cloud Architecture Center  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/linear/config/
 title: Linear configuration \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:27.405912+00:00
+fetched_at: 2026-10-23T13:03:08.059949+00:00
 ---
 
 # Linear configuration  |  Gemini Enterprise  |  Google Cloud Documentation

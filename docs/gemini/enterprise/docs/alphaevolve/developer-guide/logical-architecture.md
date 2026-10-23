@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/alphaevolve/developer-guide/logical-architecture/
 title: Logical architecture of an evaluation harness for AlphaEvolve \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:47.446530+00:00
+fetched_at: 2026-10-23T13:11:49.795889+00:00
 ---
 
 # Logical architecture of an evaluation harness for AlphaEvolve  |  Gemini Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/choose-role-type/
 title: Choose which type of role to use \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:31:00.297889+00:00
+fetched_at: 2026-10-23T13:01:13.642180+00:00
 ---
 
 # Choose which type of role to use  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/batch/docs/control-access-vm-os-images/
 title: Control access to VM OS images for Batch \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:33.205360+00:00
+fetched_at: 2026-10-23T13:18:33.749487+00:00
 ---
 
 # Control access to VM OS images for Batch  |  Google Cloud Documentation

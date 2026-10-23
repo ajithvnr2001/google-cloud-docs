@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/diagnose-issues/
 title: Diagnose issues \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:54.320052+00:00
+fetched_at: 2026-10-23T10:18:29.074221+00:00
 ---
 
 # Diagnose issues  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation
@@ -103,7 +103,7 @@ Learn more about:
   * [Persistent disks and performance](https://docs.cloud.google.com/compute/docs/disks/performance#size_price_performance).
   * [Performance and throttling metrics](https://docs.cloud.google.com/compute/docs/disks/performance#review_performance_and_throttling_metrics).
   * [Optimizing disk performance](https://docs.cloud.google.com/compute/docs/disks/performance#optimize_disk_performance).
-  * [Other factors that affect performance](https://cloud.google.com/compute/docs/disks/optimizing-pd-performance#performance_factors).
+  * [Other factors that affect performance](https://docs.cloud.google.com/compute/docs/disks/optimizing-pd-performance#performance_factors).
 
 
 
@@ -113,7 +113,7 @@ Database tables consume system resources. A large number can affect instance per
 
 ### Enable query logs
 
-You can log slow queries for Cloud SQL for PostgreSQL by setting [log_min_duration_statement](https://cloud.google.com/sql/docs/postgres/flags#list-flags-postgres) flag. The queries that ran for at least the specified amount of time will be logged. If this value is specified without units, it is taken as milliseconds. Navigate to Operations Logging to view the logs. 
+You can log slow queries for Cloud SQL for PostgreSQL by setting [log_min_duration_statement](https://docs.cloud.google.com/sql/docs/postgres/flags#list-flags-postgres) flag. The queries that ran for at least the specified amount of time will be logged. If this value is specified without units, it is taken as milliseconds. Navigate to Operations Logging to view the logs. 
 
 ### General performance tips
 
@@ -183,6 +183,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

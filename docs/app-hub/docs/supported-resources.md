@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/app-hub/docs/supported-resources/
 title: App Hub supported resources \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:45:13.659904+00:00
+fetched_at: 2026-10-23T13:16:37.097469+00:00
 ---
 
 # App Hub supported resources  |  Google Cloud Documentation

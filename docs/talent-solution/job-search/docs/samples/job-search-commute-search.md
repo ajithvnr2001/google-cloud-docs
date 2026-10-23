@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-search-commute-search/
 title: Search jobs by commute distance (v4beta1) \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:16.986519+00:00
+fetched_at: 2026-10-23T09:41:45.912660+00:00
 ---
 
 # Search jobs by commute distance (v4beta1)  |  Job Search  |  Google Cloud Documentation

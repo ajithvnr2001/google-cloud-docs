@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/extended-events/
 title: Analyze database performance with Extended Events \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:32.206656+00:00
+fetched_at: 2026-10-23T10:19:31.016152+00:00
 ---
 
 # Analyze database performance with Extended Events  |  Cloud SQL for SQL Server  |  Google Cloud Documentation
@@ -102,7 +102,7 @@ To read XEvent output files from a Cloud Storage bucket, download the files from
 
 
 
-Then, transfer the XEvent output files from the bucket to a location accessible to that instance, such as its local disk. Next, to return information from the XEvent output file, run the [`sys.fn_xe_file_target_read_file`](https://learn.microsoft.com/en-us/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql?view=sql-server-ver16) function with an account that has the `VIEW SERVER STATE` permission on the server. For more information about permissions, see [Permissions](https://learn.microsoft.com/en-us/sql/relational-databases/security/permissions-database-engine?view=sql-server-ver16#sql-server-permissions.).
+Then, transfer the XEvent output files from the bucket to a location accessible to that instance, such as its local disk. Next, to return information from the XEvent output file, run the [`sys.fn_xe_file_target_read_file`](https://learn.microsoft.com/en-us/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql?view=sql-server-ver16) function with an account that has the `VIEW SERVER STATE` permission on the server. For more information about permissions, see [Permissions](https://learn.microsoft.com/en-us/sql/relational-databases/security/permissions-database-engine?view=sql-server-ver16#sql-server-permissions).
 
 ## Grant permissions to upload files to a Cloud Storage bucket
 
@@ -130,7 +130,7 @@ To grant permissions to upload XEvent files to a Cloud Storage bucket, complete 
 
 ## Monitoring metrics
 
-You can monitor the following xevent-related operations as part of the [Cloud SQL metrics](https://docs.cloud.google.com/sql/docs/sqlserver/admin-api/metrics), available through [Metrics Explorer](https://cloud.google.com/monitoring/charts/metrics-explorer):
+You can monitor the following xevent-related operations as part of the [Cloud SQL metrics](https://docs.cloud.google.com/sql/docs/sqlserver/admin-api/metrics), available through [Metrics Explorer](https://docs.cloud.google.com/monitoring/charts/metrics-explorer):
 
   * **database/sqlserver/xevents_upload_count** : indicates the total of the successful and failed xevent file upload attempts. Check this metric to monitor if your uploads were successful.
   * **database/sqlserver/xevents_size.** : indicates how much disk space is used by xevent files stored on the instance, in bytes.
@@ -178,6 +178,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

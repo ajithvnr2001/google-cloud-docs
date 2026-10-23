@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/prepare-for-maintenance/
 title: Prepare for a maintenance event \u00a0|\u00a0 Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:11.227709+00:00
+fetched_at: 2026-10-23T13:19:03.458960+00:00
 ---
 
 # Prepare for a maintenance event  |  Bare Metal Solution  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/samples/cloud-sql-mysql-sqlalchemy-connect-tcp/
 title: Create a TCP connection by using Python \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:31:14.693619+00:00
+fetched_at: 2026-10-23T10:19:26.561660+00:00
 ---
 
 # Create a TCP connection by using Python  |  Cloud SQL for MySQL  |  Google Cloud Documentation

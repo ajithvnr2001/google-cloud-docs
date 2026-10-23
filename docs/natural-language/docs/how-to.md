@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/natural-language/docs/how-to/
 title: How-to Guides \u00a0|\u00a0 Cloud Natural Language API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:17:51.243853+00:00
+fetched_at: 2026-10-23T12:38:04.258758+00:00
 ---
 
 # How-to Guides  |  Cloud Natural Language API  |  Google Cloud Documentation

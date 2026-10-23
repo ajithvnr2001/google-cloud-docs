@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kms/docs/samples/kms-create-key-labels/
 title: Create a key with labels \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:46:58.155684+00:00
+fetched_at: 2026-10-23T12:38:45.612049+00:00
 ---
 
 # Create a key with labels  |  Cloud Key Management Service  |  Google Cloud Documentation

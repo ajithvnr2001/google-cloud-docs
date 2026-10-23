@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/add-text-images-lines-and-shapes-to-your-reports/
 title: Add text, images, lines, and shapes to your reports \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:47.818379+00:00
+fetched_at: 2026-10-23T13:20:10.897492+00:00
 ---
 
 # Add text, images, lines, and shapes to your reports  |  Data Studio  |  Google Cloud Documentation

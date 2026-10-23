@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-design-center/docs/configure-cloud-sql-postgresql/
 title: Configure a Cloud SQL (PostgreSQL) instance \u00a0|\u00a0 Application Design Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:43:58.904295+00:00
+fetched_at: 2026-10-23T13:17:40.383579+00:00
 ---
 
 # Configure a Cloud SQL (PostgreSQL) instance  |  Application Design Center  |  Google Cloud Documentation

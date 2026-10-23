@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/appengine/docs/standard/nodejs/building-app/writing-web-service/
 title: Write your web service with Node.js \u00a0|\u00a0 App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:11.829444+00:00
+fetched_at: 2026-10-23T13:17:22.175567+00:00
 ---
 
 # Write your web service with Node.js  |  App Engine standard environment  |  Google Cloud Documentation

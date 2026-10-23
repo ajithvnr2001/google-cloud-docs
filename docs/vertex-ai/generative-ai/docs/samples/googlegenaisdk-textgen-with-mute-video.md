@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/googlegenaisdk-textgen-with-mute-video/
 title: Generate text from a video \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:08.550622+00:00
+fetched_at: 2026-10-23T08:57:38.724872+00:00
 ---
 
 # Generate text from a video  |  Generative AI on Vertex AI  |  Google Cloud Documentation

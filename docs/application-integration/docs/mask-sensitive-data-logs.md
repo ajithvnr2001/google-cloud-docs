@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/mask-sensitive-data-logs/
 title: Mask sensitive data in logs \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:56.080473+00:00
+fetched_at: 2026-10-23T13:18:39.498821+00:00
 ---
 
 # Mask sensitive data in logs  |  Application Integration  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/register-and-manage-marketplace-agents/
 title: Add and manage A2A agents from Google Cloud Marketplace \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:49:44.723394+00:00
+fetched_at: 2026-10-23T13:11:52.743764+00:00
 ---
 
 # Add and manage A2A agents from Google Cloud Marketplace  |  Gemini Enterprise  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/add-pages-and-report-navigation/
 title: Add pages and report navigation \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:48.364954+00:00
+fetched_at: 2026-10-23T13:20:07.461752+00:00
 ---
 
 # Add pages and report navigation  |  Data Studio  |  Google Cloud Documentation

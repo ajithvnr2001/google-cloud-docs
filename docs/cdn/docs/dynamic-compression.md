@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/dynamic-compression/
 title: Enable dynamic compression \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:55.196631+00:00
+fetched_at: 2026-10-23T13:19:06.536371+00:00
 ---
 
 # Enable dynamic compression  |  Cloud CDN  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-cancel-data-labeling-job-sample/
 title: Cancel a data labeling job \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:13.089590+00:00
+fetched_at: 2026-10-23T09:37:30.808852+00:00
 ---
 
 # Cancel a data labeling job  |  Vertex AI  |  Google Cloud Documentation

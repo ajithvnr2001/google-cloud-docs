@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-label-detection/
 title: Detect labels in a local file \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:14.255553+00:00
+fetched_at: 2026-10-23T09:37:00.210995+00:00
 ---
 
 # Detect labels in a local file  |  Cloud Vision API  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/work-with-embeddings/
 title: Generate text embeddings \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:25:16.688006+00:00
+fetched_at: 2026-10-23T13:08:34.714739+00:00
 ---
 
 # Generate text embeddings  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -65,7 +65,8 @@ google_ml schema public schema
 
 To let AlloyDB generate embeddings, do the following:
 
-  * [Connect to your database using `psql`](https://docs.cloud.google.com/alloydb/docs/connect-psql) or AlloyDB for PostgreSQL Studio as the `postgres` user.
+  * [Connect to your database using `psql`](https://docs.cloud.google.com/alloydb/docs/connect-psql) or AlloyDB Studio as the `postgres` user.
+
   * [Verify that the `google_ml_integration` extension is installed](https://docs.cloud.google.com/alloydb/docs/ai/configure-vertex-ai#verify-installed-extension).
 
 To check your extension version with the following command:
@@ -88,15 +89,16 @@ If you use `psql`, connect to the database that you want to grant permissions to
 
 Replace the following:
 
-    * DB_NAME: the name of the database that you want to grant permissions to.
-    * USER_NAME: the name of the user that you want to grant permissions to.
+    * `DB_NAME`: the name of the database that you want to grant permissions to.
 
-If you use AlloyDB for PostgreSQL Studio, select the name of the database that you want to grant permissions to in the **Database** list. Grant the `EXECUTE` permission on the `google_ml.embedding` function to the user:
+    * `USER_NAME`: the name of the user that you want to grant permissions to.
+
+If you use AlloyDB Studio, select the name of the database that you want to grant permissions to in the **Database** list. Grant the `EXECUTE` permission on the `google_ml.embedding` function to the user:
     
     GRANT EXECUTE ON FUNCTION google_ml.embedding TO "USER_NAME";
     
 
-Replace USER_NAME with the name of the user to whom you want to grant permissions.
+Replace `USER_NAME` with the name of the user to whom you want to grant permissions.
 
 
 
@@ -117,7 +119,9 @@ To call the model and generate embeddings, run the following query:
 Replace the following:
 
   * `MODEL_ID`: the qualified model ID-for example, `gemini-embedding-001`.
+
   * `CONTENT`: the text to translate into a vector embedding.
+
 
 **Note:** If you want to generate and manage vector embeddings for a large table column, you can use auto vector embeddings. For more information, see [Generate and manage auto vector embeddings for large tables](https://docs.cloud.google.com/alloydb/docs/ai/generate-manage-auto-embeddings-for-tables).
 
@@ -190,10 +194,15 @@ To generate embeddings for a registered `text-embedding-3-small` or `text-embedd
 ## What's next
 
   * [Run vector similarity searches](https://docs.cloud.google.com/alloydb/docs/ai/run-vector-similarity-search).
+
   * [Learn how to build a smart shopping assistant with AlloyDB, pgvector, and model endpoint management](https://codelabs.developers.google.com/smart-shop-agent-alloydb#0).
+
   * [Create indexes and query vectors](https://docs.cloud.google.com/alloydb/docs/ai/create-scann-index).
-  * Learn [an example embedding workflow](https://docs.cloud.google.com/alloydb/docs/ai/example-embeddings).
+
+  * [Perform a vector search](https://docs.cloud.google.com/alloydb/docs/ai/perform-vector-search).
+
   * Learn about the [model endpoint management reference](https://docs.cloud.google.com/alloydb/docs/reference/model-endpoint).
+
 
 
 
@@ -201,6 +210,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

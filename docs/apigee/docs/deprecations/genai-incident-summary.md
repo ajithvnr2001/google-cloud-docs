@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/deprecations/genai-incident-summary/
 title: GenAI Incident Summary (Preview) deprecation \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:47:02.945516+00:00
+fetched_at: 2026-10-23T13:16:26.983715+00:00
 ---
 
 # GenAI Incident Summary (Preview) deprecation  |  Apigee  |  Google Cloud Documentation

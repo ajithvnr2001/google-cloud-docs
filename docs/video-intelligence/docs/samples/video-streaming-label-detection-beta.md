@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-intelligence/docs/samples/video-streaming-label-detection-beta/
 title: Annotate a streaming video \u00a0|\u00a0 Video Intelligence API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:26:58.195499+00:00
+fetched_at: 2026-10-23T09:35:09.781124+00:00
 ---
 
 # Annotate a streaming video  |  Video Intelligence API  |  Google Cloud Documentation

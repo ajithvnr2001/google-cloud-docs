@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/create-role-based-access-control/
 title: Use role-based access control \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:13.651413+00:00
+fetched_at: 2026-10-23T13:20:55.357194+00:00
 ---
 
 # Use role-based access control  |  Cloud Data Fusion  |  Google Cloud Documentation

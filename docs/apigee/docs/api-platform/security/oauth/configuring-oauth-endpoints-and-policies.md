@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/security/oauth/configuring-oauth-endpoints-and-policies/
 title: Understanding OAuth endpoints \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:52.027429+00:00
+fetched_at: 2026-10-23T13:19:41.539162+00:00
 ---
 
 # Understanding OAuth endpoints  |  Apigee  |  Google Cloud Documentation

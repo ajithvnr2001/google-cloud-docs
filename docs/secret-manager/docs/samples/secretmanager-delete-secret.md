@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/secret-manager/docs/samples/secretmanager-delete-secret/
 title: Delete secret \u00a0|\u00a0 Secret Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:28.211060+00:00
+fetched_at: 2026-10-23T09:06:51.909333+00:00
 ---
 
 # Delete secret  |  Secret Manager  |  Google Cloud Documentation

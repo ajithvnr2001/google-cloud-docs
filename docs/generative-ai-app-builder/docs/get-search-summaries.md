@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/get-search-summaries/
 title: Get search summaries \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:29.456865+00:00
+fetched_at: 2026-10-23T13:12:58.518353+00:00
 ---
 
 # Get search summaries  |  Agent Search  |  Google Cloud Documentation

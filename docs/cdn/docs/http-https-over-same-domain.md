@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/cdn/docs/http-https-over-same-domain/
 title: Deliver secure and non-secure content over the same hostname \u00a0|\u00a0 Cloud CDN \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:54.879659+00:00
+fetched_at: 2026-10-23T13:19:05.927555+00:00
 ---
 
 # Deliver secure and non-secure content over the same hostname  |  Cloud CDN  |  Google Cloud Documentation

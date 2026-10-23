@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/samples/generativeaionvertexai-create-evaluation-task/
 title: Evaluate text generation models using Vertex AI Gen AI evaluation service \u00a0|\u00a0 Generative AI on Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:30:13.243972+00:00
+fetched_at: 2026-10-23T09:37:55.206355+00:00
 ---
 
 # Evaluate text generation models using Vertex AI Gen AI evaluation service  |  Generative AI on Vertex AI  |  Google Cloud Documentation
@@ -128,12 +128,12 @@ To authenticate to Vertex AI, set up Application Default Credentials. For more i
     
     import pandas as pd
     
-    import [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest)
+    import [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest)
     from vertexai.preview.evaluation import EvalTask, MetricPromptTemplateExamples
     
     # TODO(developer): Update and un-comment below line
     # PROJECT_ID = "your-project-id"
-    [vertexai](https://docs.cloud.google.com/python/docs/reference/vertexai/latest).init(project=PROJECT_ID, location="us-central1")
+    [vertexai](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest).init(project=PROJECT_ID, location="us-central1")
     
     eval_dataset = pd.DataFrame(
         {
@@ -174,15 +174,15 @@ To authenticate to Vertex AI, set up Application Default Credentials. For more i
     prompt_template = (
         "Instruction: {instruction}. Article: {context}. Summary: {response}"
     )
-    result = eval_task.[evaluate](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.evals.Evals.html#vertexai__genai_evals_Evals_evaluate)(prompt_template=prompt_template)
+    result = eval_task.[evaluate](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.evals.Evals.html#vertexai__genai_evals_Evals_evaluate)(prompt_template=prompt_template)
     
     print("Summary Metrics:\n")
     
-    for key, value in [result](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.CheckQueryJobResultDict.html#vertexai__genai_types_CheckQueryJobResultDict_result).summary_metrics.items():
+    for key, value in [result](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.CheckQueryJobResultDict.html#vertexai__genai_types_CheckQueryJobResultDict_result).summary_metrics.items():
         print(f"{key}: \t{value}")
     
     print("\n\nMetrics Table:\n")
-    print([result](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai._genai.types.CheckQueryJobResultDict.html#vertexai__genai_types_CheckQueryJobResultDict_result).metrics_table)
+    print([result](https://docs.cloud.google.com/python/docs/reference/agentplatform/latest/vertexai._genai.types.CheckQueryJobResultDict.html#vertexai__genai_types_CheckQueryJobResultDict_result).metrics_table)
     # Example response:
     # Summary Metrics:
     # row_count:      2

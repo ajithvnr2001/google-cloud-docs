@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/integration-connectors/docs/vpcsc-connectors/
 title: Set up VPC Service Controls for Integration Connectors \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:33.785883+00:00
+fetched_at: 2026-10-23T13:08:59.270733+00:00
 ---
 
 # Set up VPC Service Controls for Integration Connectors  |  Google Cloud Documentation

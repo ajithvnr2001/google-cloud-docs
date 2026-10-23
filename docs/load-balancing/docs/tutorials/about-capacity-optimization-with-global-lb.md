@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/load-balancing/docs/tutorials/about-capacity-optimization-with-global-lb/
 title: Application capacity optimizations with global load balancing \u00a0|\u00a0 Cloud Load Balancing \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:11:41.828086+00:00
+fetched_at: 2026-10-23T10:44:47.333413+00:00
 ---
 
 # Application capacity optimizations with global load balancing  |  Cloud Load Balancing  |  Google Cloud Documentation

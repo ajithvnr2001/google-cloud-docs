@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-control-managed-folder-list/
 title: Storage Control List Managed Folders \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:30:30.905284+00:00
+fetched_at: 2026-10-23T09:35:13.529235+00:00
 ---
 
 # Storage Control List Managed Folders  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/availability-durability/
 title: Data availability and durability \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:30:34.439122+00:00
+fetched_at: 2026-10-23T13:08:42.934002+00:00
 ---
 
 # Data availability and durability  |  Cloud Storage  |  Google Cloud Documentation
@@ -78,7 +78,7 @@ The following sections cover how Cloud Storage redundantly stores data, the defa
 
 ## Redundancy across regions
 
-While traditional storage models often rely on an active-passive approach with "primary" and "secondary" geographic locations, Cloud Storage dual-regions and multi-regions provide an active-active architecture based on a single bucket with redundancy across regions. This simplifies the [disaster recovery](https://cloud.google.com/learn/what-is-disaster-recovery) process by eliminating the need for users to replicate data from one bucket to another or manually failover to a secondary bucket in the case of primary region downtime.
+While traditional storage models often rely on an active-passive approach with "primary" and "secondary" geographic locations, Cloud Storage dual-regions and multi-regions provide an active-active architecture based on a single bucket with redundancy across regions. This simplifies the [disaster recovery](https://docs.cloud.google.com/learn/what-is-disaster-recovery) process by eliminating the need for users to replicate data from one bucket to another or manually failover to a secondary bucket in the case of primary region downtime.
 
 Cloud Storage always understands the current state of a bucket and transparently serves objects from an available region as required. As a result, dual-region and multi-region buckets are designed to have a [recovery time objective (RTO)](https://docs.cloud.google.com/architecture/dr-scenarios-planning-guide#basics_of_dr_planning) of zero, and temporary regional failures are normally invisible to users; in the case of a regional outage, dual-region and multi-region buckets automatically continue serving all data that has been replicated across regions.
 
@@ -94,7 +94,7 @@ Turbo replication provides faster redundancy across regions for data in your dua
 
 Note that even for default replication, most objects finish replication within minutes.
 
-While redundancy across regions and turbo replication help support [business continuity and disaster recovery (BCDR)](https://cloud.google.com/learn/what-is-disaster-recovery) efforts, administrators should plan and implement a full BCDR architecture that's appropriate for their workload.
+While redundancy across regions and turbo replication help support [business continuity and disaster recovery (BCDR)](https://docs.cloud.google.com/learn/what-is-disaster-recovery) efforts, administrators should plan and implement a full BCDR architecture that's appropriate for their workload.
 
 For more information, see the [Step-by-step guide to designing disaster recovery for applications in Google Cloud](https://docs.cloud.google.com/architecture/disaster-recovery#step-by-step_guide_to_designing_disaster_recovery_for_applications_in).
 
@@ -183,6 +183,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

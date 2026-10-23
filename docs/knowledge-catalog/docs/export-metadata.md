@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/export-metadata/
 title: Export metadata \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:24.459154+00:00
+fetched_at: 2026-10-23T10:22:02.875148+00:00
 ---
 
 # Export metadata  |  Knowledge Catalog  |  Google Cloud Documentation
@@ -60,10 +60,10 @@ Before you export metadata, complete the tasks in this section.
 To get the permissions that you need to manage metadata export jobs, ask your administrator to grant you the following IAM roles: 
 
   * Create metadata export jobs: 
-    * [Dataplex Entry Group Exporter ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryGroupExporter) (`roles/dataplex.entryGroupExporter`) on the organization, the projects, or the entry groups to export
-    * [Dataplex Metadata Job Owner ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.metadataJobOwner) (`roles/dataplex.metadataJobOwner`) on the project that you run the metadata job in
-  * Access the exported results: [Storage Object Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/storage#storage.objectViewer) (`roles/storage.objectViewer`) on the project or the bucket 
-  * View metadata jobs: [Dataplex Metadata Job Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.metadataJobViewer) (`roles/dataplex.metadataJobViewer`) on the project 
+    * [**Dataplex Entry Group Exporter** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.entryGroupExporter) (`roles/dataplex.entryGroupExporter`) on the organization, the projects, or the entry groups to export
+    * [**Dataplex Metadata Job Owner** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.metadataJobOwner) (`roles/dataplex.metadataJobOwner`) on the project that you run the metadata job in
+  * Access the exported results: [**Storage Object Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/storage#storage.objectViewer) (`roles/storage.objectViewer`) on the project or the bucket 
+  * View metadata jobs: [**Dataplex Metadata Job Viewer** ](https://docs.cloud.google.com/iam/docs/roles-permissions/dataplex#dataplex.metadataJobViewer) (`roles/dataplex.metadataJobViewer`) on the project 
 
 
 
@@ -417,7 +417,7 @@ Knowledge Catalog saves the export result files to a Cloud Storage bucket as obj
 The object path for each output file is constructed by using the bucket name and custom prefix that you specified in the export job, followed by a system-generated path. The system-generated path is designed for integration with BigQuery. The object path uses the following format:
     
     
-    gs://BUCKET/PREFIX/year=YYYY/month=MM/day=DD/consumer_project=JOB_PROJECT/job=METADATA_JOB_ID/project=METADATA_SOURCE_PROJECT/entry_group=ENTRY_GROUP/FILE_NUMBER.jsonl
+    gs://BUCKET/PREFIX/year=YYYY/month=MM/day=DD/consumer_project=JOB_PROJECT/job=METADATA_JOB_ID/project=METADATA_SOURCE_PROJECT/entrygroup=ENTRY_GROUP/FILE_NUMBER.jsonl
     
 
 Note the following:
@@ -599,6 +599,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

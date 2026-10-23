@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/ai-hypercomputer/docs/design-with-gemini/
 title: Design AI infrastructure with Compute Advisor \u00a0|\u00a0 AI Hypercomputer \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:48.937683+00:00
+fetched_at: 2026-10-23T13:19:46.014629+00:00
 ---
 
 # Design AI infrastructure with Compute Advisor  |  AI Hypercomputer  |  Google Cloud Documentation

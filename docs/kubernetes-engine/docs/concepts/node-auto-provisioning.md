@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/node-auto-provisioning/
 title: About node pool auto-creation \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:23:01.168210+00:00
+fetched_at: 2026-10-23T12:51:07.473372+00:00
 ---
 
 # About node pool auto-creation  |  Google Kubernetes Engine (GKE)  |  Google Cloud Documentation
@@ -278,7 +278,8 @@ Machine series | Supported GKE versions
   * `c4a-standard-96-metal`: Not supported
 
   
-[C4D machine series](https://docs.cloud.google.com/compute/docs/general-purpose-machines#c4d_machine_types) | 1.32.3-gke.1717000 and later  
+[C4D machine series](https://docs.cloud.google.com/compute/docs/general-purpose-machines#c4d_machine_types) (VMs) | 1.32.3-gke.1717000 and later  
+[C4D bare metal instances](https://docs.cloud.google.com/compute/docs/instances/bare-metal-instances#c4d-metal) | 1.37.0-gke.4713000 and later  
 [C4N machine series](https://docs.cloud.google.com/compute/docs/network-optimized-machines#c4n_series) | 1.36.0-gke.3009002 and later  
 [N4 machine series](https://docs.cloud.google.com/compute/docs/general-purpose-machines#n4_series) | 1.29.3 and later  
 [N4A machine series](https://docs.cloud.google.com/compute/docs/general-purpose-machines#n4a_series) | 1.34.1-gke.3403001 and later  
@@ -478,6 +479,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-16 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-16 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

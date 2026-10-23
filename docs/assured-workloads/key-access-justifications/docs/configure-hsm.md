@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/key-access-justifications/docs/configure-hsm/
 title: Configure Key Access Justifications with Cloud HSM \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:42.169697+00:00
+fetched_at: 2026-10-23T13:19:16.146638+00:00
 ---
 
 # Configure Key Access Justifications with Cloud HSM  |  Google Cloud Documentation

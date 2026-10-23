@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/local-development/vscode/tutorial-attach-policy/
 title: Step 6: Attach a policy \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:00.141772+00:00
+fetched_at: 2026-10-23T13:14:11.670886+00:00
 ---
 
 # Step 6: Attach a policy  |  Apigee  |  Google Cloud Documentation

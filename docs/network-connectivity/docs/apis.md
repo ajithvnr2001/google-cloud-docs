@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/network-connectivity/docs/apis/
 title: APIs and reference \u00a0|\u00a0 Network Connectivity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:13:55.399441+00:00
+fetched_at: 2026-10-23T12:10:51.899762+00:00
 ---
 
 # APIs and reference  |  Network Connectivity  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/audit-logging/examples-oauth-clients/
 title: Example logs for Workforce Identity Federation OAuth application integration \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:40.328576+00:00
+fetched_at: 2026-10-23T13:09:55.579883+00:00
 ---
 
 # Example logs for Workforce Identity Federation OAuth application integration  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

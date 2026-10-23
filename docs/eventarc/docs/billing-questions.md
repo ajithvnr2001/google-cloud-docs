@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/eventarc/docs/billing-questions/
 title: Billing questions \u00a0|\u00a0 Eventarc \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:19.604328+00:00
+fetched_at: 2026-10-23T13:13:21.112077+00:00
 ---
 
 # Billing questions  |  Eventarc  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/environments-overview/
 title: About environments and environment groups \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:48:19.427414+00:00
+fetched_at: 2026-10-23T13:14:15.010995+00:00
 ---
 
 # About environments and environment groups  |  Apigee  |  Google Cloud Documentation

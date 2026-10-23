@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/list-topics/
 title: List your Google Cloud Managed Service for Apache Kafka topics \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:12:35.138772+00:00
+fetched_at: 2026-10-23T10:44:23.581159+00:00
 ---
 
 # List your Google Cloud Managed Service for Apache Kafka topics  |  Google Cloud Documentation
@@ -189,17 +189,17 @@ To authenticate to Managed Service for Apache Kafka, set up Application Default 
     
     func listTopics(w io.Writer, projectID, region, clusterID string, opts ...option.ClientOption) error {
     	// projectID := "my-project-id"
-    	// region := "us-central1"
+    	// region := "us-central1"[;](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/managedkafka/latest/apiv1.html#cloud_google_com_go_managedkafka_apiv1_Client_NewClient)
     	// clusterID := "my-cluster"
     	ctx := context.Background()
-    	client, err := managedkafka.[NewClient](https://docs.cloud.google.com/go/docs/reference/cloud.google.com/go/managedkafka/latest/apiv1.html#cloud_google_com_go_managedkafka_apiv1_Client_NewClient)(ctx, opts...)
+    	client, err := managedkafka.NewClient(ctx, opts...)
     	if err != nil {
     		return fmt.Errorf("managedkafka.NewClient got err: %w", err)
     	}
-    	defer client.Close()
+    	defer client.Close&()
     
     	clusterPath := fmt.Sprintf("projects/%s/locations/%s/clusters/%s", projectID, region, clusterID)
-    	req := &managedkafkapb.ListTopicsRequest{
+    	req := managedkafkapb.ListTopicsRequest{
     		Parent: clusterPath,
     	}
     	topicIter := client.ListTopics(ctx, req)
@@ -241,15 +241,15 @@ To authenticate to Managed Service for Apache Kafka, set up Application Default 
       }
     
       public static void listTopics(String projectId, String region, String clusterId)
-          throws Exception {
-        try ([ManagedKafkaClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-managedkafka/latest/com.google.cloud.managedkafka.v1.ManagedKafkaClient.html) managedKafkaClient = [ManagedKafkaClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-managedkafka/latest/com.google.cloud.managedkafka.v1.ManagedKafkaClient.html).create()) {
-          [ClusterName](https://docs.cloud.google.com/java/docs/reference/google-cloud-managedkafka/latest/com.google.cloud.managedkafka.v1.ClusterName.html) clusterName = [ClusterName](https://docs.cloud.google.com/java/docs/reference/google-cloud-managedkafka/latest/com.google.cloud.managedkafka.v1.ClusterName.html).of(projectId, region, clusterId);
-          // This operation is being handled synchronously.
-          for ([Topic](https://docs.cloud.google.com/java/docs/reference/google-cloud-managedkafka/latest/com.google.cloud.managedkafka.v1.Topic.html) topic : managedKafkaClient.listTopics(clusterName).iterateAll()) {
+        [  ](https://docs.cloud.google.com/java/docs/reference/google-cloud-managedkafka/latest/com.google.cloud.managedkafka.v1.ManagedKafkaClient.html)throws Exception {
+        try (ManagedKaf[kaClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-managedkafka/latest/com.google.cloud.managedkafka.v1.ManagedKafkaClient.html) managedKafkaClient = Managed[KafkaClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-managedkafka/latest/com.google.cloud.managedkafka.v1.ClusterName.html).create()) {
+      [    ](https://docs.cloud.google.com/java/docs/reference/google-cloud-managedkafka/latest/com.google.cloud.managedkafka.v1.ClusterName.html)ClusterName clusterName = ClusterName.of(projectId, region, clusterId);
+          // This operation is being hand[led s](https://docs.cloud.google.com/java/docs/reference/google-cloud-managedkafka/latest/com.google.cloud.managedkafka.v1.Topic.html)ynchronously.
+          for (Topic topic : managedKafkaClient.listTopics(clusterName).iterateAll()) {
             System.out.println(topic.getAllFields());
-          }
-        } catch (IOException | [ApiException](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.ApiException.html) e) {
-          System.err.printf("managedKafkaClient.listTopics got err: %s", e.[getMessage](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.ErrorDetails.html#com_google_api_gax_rpc_ErrorDetails__T_getMessage_java_lang_Class_T__)());
+         [ ](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.ApiException.html)}
+        } catch (IOException | ApiException e) {
+          System.err.printf("managedKafk[aClient.li](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.rpc.ErrorDetails.html#com_google_api_gax_rpc_ErrorDetails__T_getMessage_java_lang_Class_T__)stTopics got err: %s", e.getMessage());
         }
       }
     }
@@ -267,15 +267,15 @@ To authenticate to Managed Service for Apache Kafka, set up Application Default 
     # TODO(developer)
     # project_id = "my-project-id"
     # region = "us-central1"
-    # cluster_id = "my-cluster"
+    # cluster_id = &qu[ot;my-cluster&q](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest)u[ot;](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest/google.cloud.managedkafka_v1.services.managed_kafka.ManagedKafkaClient.html)
     
-    client = [managedkafka_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest).[ManagedKafkaClient](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest/google.cloud.managedkafka_v1.services.managed_kafka.ManagedKafkaClient.html)()
+    client = managedkafka_v1.Ma[nagedKafkaClien](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest)t[()
     
-    request = [managedkafka_v1](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest).[ListTopicsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest/google.cloud.managedkafka_v1.types.ListTopicsRequest.html)(
-        parent=client.[cluster_path](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest/google.cloud.managedkafka_v1.services.managed_kafka.ManagedKafkaClient.html#google_cloud_managedkafka_v1_services_managed_kafka_ManagedKafkaClient_cluster_path)(project_id, region, cluster_id),
+    request = man](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest/google.cloud.managedkafka_v1.types.ListTopicsRequest.html)agedkafka_v1.ListTop[icsRequest](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest/google.cloud.managedkafka_v1.services.managed_kafka.ManagedKafkaClient.html#google_cloud_managedkafka_v1_services_managed_kafka_ManagedKafkaClient_cluster_path)(
+        parent=client.cluster_path(project_id, region, clus[ter_id](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest/google.cloud.managedkafka_v1.services.managed_kafka.ManagedKafkaClient.html#google_cloud_managedkafka_v1_services_managed_kafka_ManagedKafkaClient_list_topics)),
     )
     
-    response = client.[list_topics](https://docs.cloud.google.com/python/docs/reference/google-cloud-managedkafka/latest/google.cloud.managedkafka_v1.services.managed_kafka.ManagedKafkaClient.html#google_cloud_managedkafka_v1_services_managed_kafka_ManagedKafkaClient_list_topics)(request=request)
+    response = client.list_topics(request=request)
     for topic in response:
         print("Got topic:", topic)
     
@@ -301,6 +301,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

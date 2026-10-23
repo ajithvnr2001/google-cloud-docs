@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/assured-workloads/access-approval/docs/key-access-justifications/
 title: Introduction to Key Access Justifications \u00a0|\u00a0 Access Approval \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:22.091188+00:00
+fetched_at: 2026-10-23T13:19:25.950027+00:00
 ---
 
 # Introduction to Key Access Justifications  |  Access Approval  |  Google Cloud Documentation

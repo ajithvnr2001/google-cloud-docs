@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kms/docs/samples/kms-iam-get-policy/
 title: Get the IAM policy for a resource \u00a0|\u00a0 Cloud Key Management Service \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-19T05:47:00.780448+00:00
+fetched_at: 2026-10-23T10:25:47.483490+00:00
 ---
 
 # Get the IAM policy for a resource  |  Cloud Key Management Service  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/security-command-center/docs/samples/securitycenter-get-source-iam/
 title: Get IAM policies \u00a0|\u00a0 Security Command Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:47:44.377124+00:00
+fetched_at: 2026-10-23T11:33:09.387749+00:00
 ---
 
 # Get IAM policies  |  Security Command Center  |  Google Cloud Documentation

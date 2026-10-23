@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/automate-salesforce-opportunity-to-bigquery-order/
 title: Automate Salesforce opportunity to BigQuery order \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:49.210375+00:00
+fetched_at: 2026-10-23T13:17:41.148772+00:00
 ---
 
 # Automate Salesforce opportunity to BigQuery order  |  Application Integration  |  Google Cloud Documentation

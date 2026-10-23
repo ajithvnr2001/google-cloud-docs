@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/connect-docker/
 title: Connecting SQL Server client using the Cloud SQL Auth Proxy Docker image \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:55.672227+00:00
+fetched_at: 2026-10-23T10:11:44.654534+00:00
 ---
 
 # Connecting SQL Server client using the Cloud SQL Auth Proxy Docker image  |  Cloud SQL for SQL Server  |  Google Cloud Documentation
@@ -92,7 +92,7 @@ If you are using a [ container-optimized](https://docs.cloud.google.com/compute/
 
   5. Install the Cloud SQL Auth Proxy Docker image from the [Google Container Registry](https://docs.cloud.google.com/container-registry). 
          
-         docker pull gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.26.2
+         docker pull gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.26.3
 
   6. If you are running the Cloud SQL Auth Proxy Docker image on a local machine (not a Compute Engine instance), or your Compute Engine instance does not have the proper scopes, create a Google Cloud Platform service account. If you are connecting from Compute Engine, make sure your VM has the proper `scope` to connect using the Cloud SQL Admin API. 
 
@@ -140,7 +140,7 @@ For example: `myproject:us-central1:myinstance`.
          docker run -d   
            -v PATH_TO_KEY_FILE:/path/to/service-account-key.json   
            -p 127.0.0.1:1433:1433   
-           gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.26.2   
+           gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.26.3   
            --address 0.0.0.0 --port 1433   
            --credentials-file /path/to/service-account-key.json INSTANCE_CONNECTION_NAME
 
@@ -186,6 +186,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

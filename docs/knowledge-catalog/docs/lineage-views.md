@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/lineage-views/
 title: About data lineage visualization in Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:03:32.614730+00:00
+fetched_at: 2026-10-23T10:22:00.818141+00:00
 ---
 
 # About data lineage visualization in Knowledge Catalog  |  Google Cloud Documentation
@@ -48,7 +48,7 @@ Table-level lineage provides a high-level overview of your data pipelines by sho
 
 ### When to use column-level lineage
 
-**Note:** Column-level lineage is supported only for BigQuery and Managed Service for Apache Spark (Managed Service for Apache Spark) jobs. Custom data sources and custom OpenLineage events support table-level lineage only.
+**Note:** Column-level lineage is supported only for BigQuery and Managed Service for Apache Spark jobs. Custom data sources and custom OpenLineage events support table-level lineage only.
 
 Column-level lineage provides a more granular view by tracking the flow of data between individual columns. In this view, the links within a lineage event represent the relationship between a source column and a target column. Each of these column-level links has a dependency type that describes the transformation:
 
@@ -302,7 +302,7 @@ Expand the following sections to see the columns available in the column-level l
 
   * Learn about [lineage sources](https://docs.cloud.google.com/knowledge-catalog/docs/about-data-lineage#lineage-sources).
 
-  * Learn how to [track data lineage for a BigQuery table copy and query jobs](https://docs.cloud.google.com/knowledge-catalog/docs/track-lineage).
+  * Learn how to [track data lineage for a BigQuery table copy and query jobs](https://docs.cloud.google.com/knowledge-catalog/docs/track-lineage-quickstart).
 
   * Learn how to [use data lineage with Google Cloud systems](https://docs.cloud.google.com/knowledge-catalog/docs/use-lineage).
 
@@ -313,6 +313,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

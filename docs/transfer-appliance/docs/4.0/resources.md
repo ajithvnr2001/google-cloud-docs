@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/transfer-appliance/docs/4.0/resources/
 title: Resources \u00a0|\u00a0 Transfer Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:52.185001+00:00
+fetched_at: 2026-10-23T09:35:39.667943+00:00
 ---
 
 # Resources  |  Transfer Appliance  |  Google Cloud Documentation

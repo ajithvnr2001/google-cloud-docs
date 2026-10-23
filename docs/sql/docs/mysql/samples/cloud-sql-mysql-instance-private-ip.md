@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/samples/cloud-sql-mysql-instance-private-ip/
 title: Create MySQL Private IP \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:24.777981+00:00
+fetched_at: 2026-10-23T10:18:49.365192+00:00
 ---
 
 # Create MySQL Private IP  |  Cloud SQL for MySQL  |  Google Cloud Documentation

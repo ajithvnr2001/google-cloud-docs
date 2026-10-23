@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/talent-solution/job-search/docs/samples/job-search-delete-job/
 title: Delete job using client (v4beta1) \u00a0|\u00a0 Job Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:53:43.006726+00:00
+fetched_at: 2026-10-23T09:34:28.567628+00:00
 ---
 
 # Delete job using client (v4beta1)  |  Job Search  |  Google Cloud Documentation

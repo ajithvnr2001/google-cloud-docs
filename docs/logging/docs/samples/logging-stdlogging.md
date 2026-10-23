@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/samples/logging-stdlogging/
 title: Write standard logs \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:10:10.623583+00:00
+fetched_at: 2026-10-23T12:36:46.234796+00:00
 ---
 
 # Write standard logs  |  Cloud Logging  |  Google Cloud Documentation

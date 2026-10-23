@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/docs/how-to/secure-traffic-management/
 title: Secure traffic for GKE Ingress \u00a0|\u00a0 GKE networking \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:31:57.293078+00:00
+fetched_at: 2026-10-23T10:03:40.267211+00:00
 ---
 
 # Secure traffic for GKE Ingress  |  GKE networking  |  Google Cloud Documentation
@@ -36,8 +36,8 @@ To accept HTTPS requests from your clients, the load balancer must have a certif
 
 To configure one or more Google-managed SSL certificates and associate them with an Ingress, you need to:
 
-  * Create one or more `ManagedCertificate` objects in the same namespace as the Ingress. You can specify up to 15 certificates for the load balancer
-  * Associate the `ManagedCertificate` objects to an Ingress by adding the `networking.gke.io/managed-certificates` annotation to the Ingress. This annotation is a comma-separated list of `ManagedCertificate` objects.
+  * Create one or more ManagedCertificate objects in the same namespace as the Ingress. You can specify up to 15 certificates for the load balancer
+  * Associate the ManagedCertificate objects to an Ingress by adding the `networking.gke.io/managed-certificates` annotation to the Ingress. This annotation is a comma-separated list of ManagedCertificate objects.
 
 **Note:** Using Google-managed SSL certificates with Ingress doesn't affect how you configure [Ingress traffic rules](https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-rules).
 
@@ -56,7 +56,7 @@ This section describes the limitations of Google-managed certificates. If you re
   * GKE Ingress does not support certificates managed by Certificate Manager. To use certificates managed by Certificate Manager, use the [Gateway API](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/gateway-api).
 
 
-**Warning:** The load balancer's target proxy created by ingress resource can reference up to 15 Compute Engine SSL certificates. The Ingress annotation `ingress.gcp.kubernetes.io/pre-shared-cert` includes all SSL certificates `managed-certificates` and `self-managed` that are provisioned with the load balancer's target proxy.
+**Warning:** The load balancer's target proxy created by Ingress resource can reference up to 15 Compute Engine SSL certificates. The Ingress annotation `ingress.gcp.kubernetes.io/pre-shared-cert` includes all SSL certificates `managed-certificates` and `self-managed` that are provisioned with the load balancer's target proxy.
 
 #### Prerequisites
 
@@ -67,7 +67,7 @@ This section describes the limitations of Google-managed certificates. If you re
 
   * Your Ingress manifest must include the `kubernetes.io/ingress.class: "gce"` annotation. The `ingressClassName` field is not supported.
 
-  * You must apply `Ingress` and `ManagedCertificate` resources in the same project and namespace.
+  * You must apply Ingress and ManagedCertificate resources in the same project and namespace.
 
   * Create a [reserved (static) external IP address](https://docs.cloud.google.com/vpc/docs/reserve-static-external-ip-address). Reserving a static IP address helps ensure that it remains yours, even if you delete the Ingress. If you don't reserve an IP address, it might change, requiring you to reconfigure your domain's DNS records. Use Google Cloud CLI or the Google Cloud console to create a reserved IP address.
 
@@ -128,9 +128,9 @@ To deploy this manifest, download it to your machine as `compute-address.yaml`, 
 
 #### Setting up a Google-managed certificate
 
-  1. Create a `ManagedCertificate` object. This resource specifies the domains for the SSL certificate. Wildcard domains are not supported.
+  1. Create a ManagedCertificate object. This resource specifies the domains for the SSL certificate. Wildcard domains are not supported.
 
-The following manifest describes a `ManagedCertificate` object. Save the manifest as `managed-cert.yaml`.
+The following manifest describes a ManagedCertificate object. Save the manifest as `managed-cert.yaml`.
          
          apiVersion: networking.gke.io/v1
          kind: ManagedCertificate
@@ -151,12 +151,12 @@ The following manifest describes a `ManagedCertificate` object. Save the manifes
 
 Replace the following:
 
-     * `FIRST_CERT_NAME`: the name of your first `ManagedCertificate` object.
+     * `FIRST_CERT_NAME`: the name of your first ManagedCertificate object.
      * `FIRST_DOMAIN`: the first domain that you own.
-     * `SECOND_CERT_NAME`: the name of the second `ManagedCertificate` object.
+     * `SECOND_CERT_NAME`: the name of the second ManagedCertificate object.
      * `SECOND_DOMAIN`: the second domain that you own.
 
-The names of the `ManagedCertificate` objects are different from the names of the actual certificates that they create. You only need to know the names of the `ManagedCertificate` objects to use them in your Ingress.
+The names of the ManagedCertificate objects are different from the names of the actual certificates that they create. You only need to know the names of the ManagedCertificate objects to use them in your Ingress.
 
   2. Apply the manifest to your cluster:
          
@@ -165,7 +165,7 @@ The names of the `ManagedCertificate` objects are different from the names of th
 
   3. Follow the instructions to [create a Deployment and a Service](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/load-balance-ingress#create-deployment) to expose your application to the internet.
 
-  4. For this `ManagedCertificate` object to become `Active`, attach it to your Ingress by using the `networking.gke.io/managed-certificates` annotation, as in the following example. The `ManagedCertificate` does not have to already be `Active` for you to attach it to an Ingress.
+  4. For this ManagedCertificate object to become `Active`, attach it to your Ingress by using the `networking.gke.io/managed-certificates` annotation, as in the following example. The ManagedCertificate does not have to already be `Active` for you to attach it to an Ingress. If you are migrating an existing Ingress from self-managed certificates, follow the steps in Migrating to Google-managed certificates from self-managed certificates instead.
          
          apiVersion: networking.k8s.io/v1
           kind: Ingress
@@ -239,26 +239,89 @@ The value of the `Status.CertificateStatus` field indicates the certificate is p
 
 #### Migrating to Google-managed certificates from self-managed certificates
 
-When you migrate an Ingress from using self-managed SSL certificates to Google-managed SSL certificates, don't delete any self-managed SSL certificates before the Google-managed SSL certificates are active. After the Google-managed SSL certificates are successfully provisioned, they automatically become active. When the Google-managed SSL certificates are active, you can delete your self-managed SSL certificates.
+When you migrate an Ingress from using self-managed SSL certificates to Google-managed SSL certificates, don't remove your self-managed SSL certificates before the Google-managed SSL certificates are active.
 
-Use these instructions for migrating from self-managed to Google-managed SSL certificates.
+To migrate from self-managed to Google-managed SSL certificates without disrupting traffic, follow these steps:
 
-  1. Add a new Google-managed certificate to the Ingress, as described in the preceding section.
-  2. Wait until the status of the Google-managed certificate resource is `Active`. Check the status of the certificate with the following command:
+  1. Create a ManagedCertificate resource and apply it to your cluster, as described in Setting up a Google-managed certificate.
+
+  2. Update your Ingress manifest to add the `networking.gke.io/managed-certificates` annotation pointing to your new ManagedCertificate resource. Keep your existing self-managed certificate in the `ingress.gcp.kubernetes.io/pre-shared-cert` annotation, like in the following example:
          
-         kubectl describe managedcertificate managed-cert
+         metadata:
+           annotations:
+             ingress.gcp.kubernetes.io/pre-shared-cert: "EXISTING_SELF_MANAGED_CERT_NAME"
+             networking.gke.io/managed-certificates: "NEW_MANAGED_CERT_NAME"
          
 
-  3. When the status is `Active`, update the Ingress to remove the references to the self-managed certificate.
+Replace the following:
+
+     * `EXISTING_SELF_MANAGED_CERT_NAME`: the name of your existing self-managed SSL certificate resource.
+     * `NEW_MANAGED_CERT_NAME`: the name of your new ManagedCertificate object.
+**Warning:** Don't delete the `ingress.gcp.kubernetes.io/pre-shared-cert` annotation from your Ingress manifest. The GKE ManagedCertificate controller uses this annotation on the Ingress resource to attach Google-managed certificates to the load balancer. Deleting the annotation removes all certificates from the load balancer and can cause a service disruption while the controller reconciles the state.
+  3. Apply the updated Ingress manifest:
+         
+         kubectl apply -f INGRESS_MANIFEST.yaml
+         
+
+Replace `INGRESS_MANIFEST` with the name of your Ingress manifest file.
+
+The ManagedCertificate controller creates the Compute Engine SSL certificate resource (with a generated name starting with `mcrt-`) after you create the ManagedCertificate resource. Applying the Ingress manifest triggers a synchronization, which adds that generated `mcrt-` certificate name to the `ingress.gcp.kubernetes.io/pre-shared-cert` annotation on the live Ingress so that the Ingress controller attaches it to the load balancer's target proxy. While Google Cloud provisions the new certificate, the load balancer continues to serve traffic by using the existing active self-managed certificate that you defined in the `ingress.gcp.kubernetes.io/pre-shared-cert` annotation.
+
+  4. Wait until the status of the ManagedCertificate resource is `Active`, which can take up to 60 minutes. After provisioning finishes, both the self-managed certificate and the Google-managed certificate are active on the load balancer. Check the status and retrieve the generated `mcrt-` certificate ID by describing the ManagedCertificate resource:
+         
+         kubectl describe managedcertificate NEW_MANAGED_CERT_NAME
+         
+
+The output is similar to the following:
+         
+         Name:         NEW_MANAGED_CERT_NAME
+         Namespace:    default
+         (...)
+         Spec:
+           Domains:
+             DOMAIN
+         Status:
+           Certificate Name:    MCRT_CERT_ID
+           Certificate Status:  Active
+           Domain Status:
+             Domain:  DOMAIN
+             Status:  Active
+         
+
+Note the value of the `Certificate Name` field in the `Status` section (for example, `mcrt-a1b2c3d4-e5f6-7890-abcd-ef1234567890`).
+
+  5. In your Ingress manifest, replace the self-managed certificate ID that's in the `ingress.gcp.kubernetes.io/pre-shared-cert` annotation with the ID of the Google-managed certificate:
+         
+         metadata:
+           annotations:
+             ingress.gcp.kubernetes.io/pre-shared-cert: "MCRT_CERT_ID"
+             networking.gke.io/managed-certificates: "NEW_MANAGED_CERT_NAME"
+         
+
+Replace `MCRT_CERT_ID` with the `Certificate Name` value (starting with `mcrt-`) from the preceding step.
+
+  6. Apply the updated Ingress manifest:
+         
+         kubectl apply -f INGRESS_MANIFEST.yaml
+         
+
+Applying this change detaches the old self-managed certificate from the load balancer while keeping the active Google-managed certificate (`MCRT_CERT_ID`) attached in the `ingress.gcp.kubernetes.io/pre-shared-cert` annotation. This change switches all traffic to the Google-managed certificate without interruption.
+
+  7. After the old self-managed certificate is detached from the load balancer, you can safely delete it if it's no longer needed, because pre-shared Compute Engine SSL certificate resources aren't managed or garbage-collected by the Ingress controller:
+         
+         gcloud compute ssl-certificates delete EXISTING_SELF_MANAGED_CERT_NAME
+         
 
 
 
+
+To avoid annotation reconciliation issues and get built-in support for wildcard certificates, migrate from Ingress to the [GKE Gateway API](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/gateway-api) combined with Certificate Manager.
 
 #### Removing a Google-managed certificate
 
-To remove a Google-managed certificate from your cluster you must delete the `ManagedCertificate` object and remove the Ingress annotation that references it.
+To remove a Google-managed certificate from your cluster you must delete the ManagedCertificate object and remove the Ingress annotation that references it.
 
-  1. Delete the `ManagedCertificate` object:
+  1. Delete the ManagedCertificate object:
          
          kubectl delete -f managed-cert.yaml
          
@@ -448,7 +511,7 @@ To use multiple pre-shared certificates, follow these steps:
 
 ### Use Kubernetes Secrets
 
-To provide an HTTP(S) load balancer with a certificates and keys that you created yourself, create one or more Kubernetes Secret objects. Each Secret holds a certificate and key. You add the Secrets to the `tls` field of your `Ingress` manifest. The load balancer uses Server Name Indication (SNI) to determine which certificate to present to the client, based on the domain name in the TLS handshake.
+To provide an HTTP(S) load balancer with a certificates and keys that you created yourself, create one or more Kubernetes Secret objects. Each Secret holds a certificate and key. You add the Secrets to the `tls` field of your Ingress manifest. The load balancer uses Server Name Indication (SNI) to determine which certificate to present to the client, based on the domain name in the TLS handshake.
 
 To use multiple certificates, follow these steps:
 
@@ -605,6 +668,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/answer/
 title: Get answers and follow-ups (Legacy) \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:42.413552+00:00
+fetched_at: 2026-10-23T13:13:20.758328+00:00
 ---
 
 # Get answers and follow-ups (Legacy)  |  Gemini Enterprise  |  Google Cloud Documentation

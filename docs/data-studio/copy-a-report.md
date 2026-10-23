@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/copy-a-report/
 title: Copy a report \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:30.360880+00:00
+fetched_at: 2026-10-23T13:20:13.769888+00:00
 ---
 
 # Copy a report  |  Data Studio  |  Google Cloud Documentation

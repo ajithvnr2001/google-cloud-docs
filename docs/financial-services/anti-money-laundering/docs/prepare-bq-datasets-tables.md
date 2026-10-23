@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/financial-services/anti-money-laundering/docs/prepare-bq-datasets-tables/
 title: Prepare BigQuery datasets and tables \u00a0|\u00a0 Anti Money Laundering AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:52:14.465206+00:00
+fetched_at: 2026-10-23T13:02:29.637234+00:00
 ---
 
 # Prepare BigQuery datasets and tables  |  Anti Money Laundering AI  |  Google Cloud Documentation

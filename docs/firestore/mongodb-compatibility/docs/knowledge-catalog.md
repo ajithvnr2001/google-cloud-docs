@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/knowledge-catalog/
 title: View Knowledge Catalog insights \u00a0|\u00a0 Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:41.576198+00:00
+fetched_at: 2026-10-23T13:02:05.452513+00:00
 ---
 
 # View Knowledge Catalog insights  |  Firestore with MongoDB compatibility  |  Google Cloud Documentation

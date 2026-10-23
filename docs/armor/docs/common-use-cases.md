@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/common-use-cases/
 title: Use cases for security policies \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:57.967229+00:00
+fetched_at: 2026-10-23T13:16:54.841473+00:00
 ---
 
 # Use cases for security policies  |  Google Cloud Armor  |  Google Cloud Documentation

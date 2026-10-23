@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/monitor-a-stream/
 title: Monitor a stream \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:33.750738+00:00
+fetched_at: 2026-10-23T10:03:43.068367+00:00
 ---
 
 # Monitor a stream  |  Datastream  |  Google Cloud Documentation
@@ -21,26 +21,11 @@ Send feedback
 
 #  Monitor a stream Stay organized with collections  Save and categorize content based on your preferences. 
 
-You can use Datastream to monitor data and events that are processed by a stream. This information appears in the following graphs:
+You can use Datastream to monitor the data and events that a stream processes and configure alerting policies to track replication health. In Datastream, an _event_ represents a single change in the source, such as a new row added to a database table. To monitor stream errors, see [Troubleshoot a stream](https://docs.cloud.google.com/datastream/docs/troubleshoot-a-stream).
 
-  * Throughput: The rate at which Datastream processes data or events. This rate can be:
+Datastream displays stream performance in graphs for throughput, unsupported events, data freshness, system latency, and total latency. **Throughput** shows the rate at which a stream transfers data, in megabytes, or processes events. **Unsupported events** tracks the number of source events that Datastream can't process.
 
-    * The amount of data (in MB) that Datastream transfers from the source to the destination.
-    * The number of events that are associated with the data being transferred. An **event** is a single change in the source, such as a new row added to a table in a database.
-
-You can also monitor any errors associated with a stream. See [Troubleshoot a stream](https://docs.cloud.google.com/datastream/docs/troubleshoot-a-stream).
-  * Unsupported events: The number of events that can't be processed from the source to the destination.
-
-  * Data freshness: The time difference between when data is written to the source and when Datastream reads the event from the source. It is calculated as the time elapsed between the source timestamp and the read timestamp for the _oldest_ event being processed. If there are no new events to read from the source, the freshness is set to 0.
-
-If there are events in the source that Datastream hasn't yet read, they aren't taken into account when Datastream calculates the data freshness metric. For example, if there is a spike in activity on source, it is reflected in the freshness metric only after Datastream starts reading the events causing the spike.
-
-  * System latency: The time that Datastream takes to process an event. This interval is calculated as the time between when Datastream reads the event and when the event is written to the destination.
-
-  * Total latency: The time difference between when data is written to the source and the corresponding events are written to the destination. This represents the total end-to-end delay that you observe between the source and destination.
-
-
-
+**Data freshness** measures the time between when data is written to the source and when Datastream reads the oldest event being processed. This metric is `0` when there are no new events to read, and it reflects activity spikes only after Datastream starts reading those events. **System latency** tracks the time between when Datastream reads an event and writes it to the destination. **Total latency** represents the end-to-end delay from when data is written to the source to when the corresponding events reach the destination.
 
 ## Monitor data or events processed
 
@@ -92,6 +77,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

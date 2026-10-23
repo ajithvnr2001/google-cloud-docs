@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firestore/mongodb-compatibility/docs/query-insights/
 title: Analyze query performance statistics \u00a0|\u00a0 Firestore with MongoDB compatibility \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:38.723601+00:00
+fetched_at: 2026-10-23T13:09:05.424236+00:00
 ---
 
 # Analyze query performance statistics  |  Firestore with MongoDB compatibility  |  Google Cloud Documentation

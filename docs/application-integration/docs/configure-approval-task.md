@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/configure-approval-task/
 title: Approval Task \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:38:47.041962+00:00
+fetched_at: 2026-10-23T13:17:27.110415+00:00
 ---
 
 # Approval Task  |  Application Integration  |  Google Cloud Documentation

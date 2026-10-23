@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/connect-instance-app-engine/
 title: Connect to Cloud SQL for SQL Server from App Engine standard environment \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:50:14.419418+00:00
+fetched_at: 2026-10-23T10:11:25.725521+00:00
 ---
 
 # Connect to Cloud SQL for SQL Server from App Engine standard environment  |  Google Cloud Documentation
@@ -101,7 +101,7 @@ This command enables the following APIs:
 
 Take the following steps to set up a Cloud SQL instance that you connect to over public IP:
 
-App Engine standard environment does not support connecting to Cloud SQL for SQL Server over public IP using Unix sockets but connections are possible using the [Go, Java and Python connectors](https://docs.cloud.google.com/sql/docs/sqlserver/connect-connectors).
+App Engine standard environment doesn't support connecting to Cloud SQL for SQL Server over public IP using Unix sockets, but connections are possible using the [Cloud SQL Language Connectors](https://docs.cloud.google.com/sql/docs/sqlserver/connect-connectors).
 
 ### Console
 
@@ -765,6 +765,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

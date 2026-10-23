@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-generate-signed-url-v4/
 title: Create a GET-signed URL for an object using Cloud Storage libraries (V4) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:30:42.164919+00:00
+fetched_at: 2026-10-23T09:37:18.210273+00:00
 ---
 
 # Create a GET-signed URL for an object using Cloud Storage libraries (V4)  |  Google Cloud Documentation
@@ -323,7 +323,7 @@ To authenticate to Cloud Storage, set up Application Default Credentials. For mo
     
       require "google/cloud/storage"
     
-      storage = Google::Cloud::[Storage](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html)
+      storage = Google::Cloud::[Storage](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage-control-v2/latest/Google-Cloud-Storage.html).[new](https://docs.cloud.google.com/ruby/docs/reference/google-cloud-storage/latest/Google-Cloud-Storage.html)
       storage_expiry_time = 5 * 60 # 5 minutes
     
       url = storage.signed_url bucket_name, file_name, method: "GET",

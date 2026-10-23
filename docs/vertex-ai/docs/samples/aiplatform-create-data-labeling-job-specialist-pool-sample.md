@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-create-data-labeling-job-specialist-pool-sample/
 title: Create a data labeling job for specialist pool \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:28:51.268748+00:00
+fetched_at: 2026-10-23T09:27:04.668953+00:00
 ---
 
 # Create a data labeling job for specialist pool  |  Vertex AI  |  Google Cloud Documentation

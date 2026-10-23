@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vertex-ai/docs/samples/aiplatform-sdk-extraction/
 title: Extract information from text (Generative AI) \u00a0|\u00a0 Vertex AI \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:29:56.970509+00:00
+fetched_at: 2026-10-23T09:37:32.152084+00:00
 ---
 
 # Extract information from text (Generative AI)  |  Vertex AI  |  Google Cloud Documentation

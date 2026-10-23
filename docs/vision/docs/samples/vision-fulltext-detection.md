@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-fulltext-detection/
 title: Detect text in a local file \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:21.204680+00:00
+fetched_at: 2026-10-23T08:57:20.370682+00:00
 ---
 
 # Detect text in a local file  |  Cloud Vision API  |  Google Cloud Documentation

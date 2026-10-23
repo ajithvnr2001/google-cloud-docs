@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/generative-ai-app-builder/docs/configure-widget-facets/
 title: Configure facets for the search widget \u00a0|\u00a0 Agent Search \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:14.592653+00:00
+fetched_at: 2026-10-23T13:12:05.490589+00:00
 ---
 
 # Configure facets for the search widget  |  Agent Search  |  Google Cloud Documentation

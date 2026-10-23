@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/samples/cloud-sql-sqlserver-activerecord-connection/
 title: Create an ActiveRecord connection using Ruby \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:54.862025+00:00
+fetched_at: 2026-10-23T10:19:49.715964+00:00
 ---
 
 # Create an ActiveRecord connection using Ruby  |  Cloud SQL for SQL Server  |  Google Cloud Documentation

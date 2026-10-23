@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iap/docs/authenticate-users-external-identities/
 title: Quickstart: Authenticate users with external identities \u00a0|\u00a0 Identity-Aware Proxy \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:27:57.751577+00:00
+fetched_at: 2026-10-23T13:09:44.510894+00:00
 ---
 
 # Quickstart: Authenticate users with external identities  |  Identity-Aware Proxy  |  Google Cloud Documentation

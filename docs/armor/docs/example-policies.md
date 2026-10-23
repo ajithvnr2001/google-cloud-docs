@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/example-policies/
 title: Example security policies \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:56.397123+00:00
+fetched_at: 2026-10-23T13:17:58.566305+00:00
 ---
 
 # Example security policies  |  Google Cloud Armor  |  Google Cloud Documentation

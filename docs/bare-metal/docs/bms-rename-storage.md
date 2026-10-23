@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/bms-rename-storage/
 title: Rename a storage volume \u00a0|\u00a0 Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:13.051032+00:00
+fetched_at: 2026-10-23T13:19:23.264242+00:00
 ---
 
 # Rename a storage volume  |  Bare Metal Solution  |  Google Cloud Documentation

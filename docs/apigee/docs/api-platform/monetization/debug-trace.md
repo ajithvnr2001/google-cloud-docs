@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/monetization/debug-trace/
 title: Debugging monetization using the Debug tool \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:09.671686+00:00
+fetched_at: 2026-10-23T13:16:52.829467+00:00
 ---
 
 # Debugging monetization using the Debug tool  |  Apigee  |  Google Cloud Documentation

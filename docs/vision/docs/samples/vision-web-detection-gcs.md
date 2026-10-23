@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/vision/docs/samples/vision-web-detection-gcs/
 title: Detect web annotations in a Cloud Storage file \u00a0|\u00a0 Cloud Vision API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:27:19.843561+00:00
+fetched_at: 2026-10-23T08:57:17.404867+00:00
 ---
 
 # Detect web annotations in a Cloud Storage file  |  Cloud Vision API  |  Google Cloud Documentation

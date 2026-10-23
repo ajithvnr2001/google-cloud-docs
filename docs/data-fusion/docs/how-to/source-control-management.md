@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-fusion/docs/how-to/source-control-management/
 title: Manage pipelines using Source Control Management \u00a0|\u00a0 Cloud Data Fusion \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:42.413711+00:00
+fetched_at: 2026-10-23T13:20:44.841669+00:00
 ---
 
 # Manage pipelines using Source Control Management  |  Cloud Data Fusion  |  Google Cloud Documentation

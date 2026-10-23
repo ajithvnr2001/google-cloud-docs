@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/courtroom5/set-up-data-store/
 title: Set up a Courtroom5 data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:50:33.141558+00:00
+fetched_at: 2026-10-23T13:03:19.952231+00:00
 ---
 
 # Set up a Courtroom5 data store  |  Gemini Enterprise  |  Google Cloud Documentation

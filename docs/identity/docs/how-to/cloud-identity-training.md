@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/cloud-identity-training/
 title: Cloud Identity training \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:17.523419+00:00
+fetched_at: 2026-10-23T13:10:44.110779+00:00
 ---
 
 # Cloud Identity training  |  Google Cloud Documentation

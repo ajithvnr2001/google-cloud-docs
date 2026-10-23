@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/quickstart/
 title: Create basic clusters \u00a0|\u00a0 Google Distributed Cloud software only for bare metal \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:14:57.115625+00:00
+fetched_at: 2026-10-23T11:49:49.100962+00:00
 ---
 
 # Create basic clusters  |  Google Distributed Cloud software only for bare metal  |  Google Cloud Documentation
@@ -22,11 +22,9 @@ Send feedback
 
 #  Create basic clusters Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page is the second part of a two-part guide that shows you how to use Distributed Cloud software only to create a small proof-of-concept installation of GKE clusters on your bare metal hardware. In this second part, you create an admin cluster and a user cluster, building on the setup and planning from the first part, [Set up minimal infrastructure](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/minimal-infrastructure). You can then go on to [Create a Service and an Ingress](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/how-to/create-service-ingress).
+Distributed Cloud software only lets you evaluate GKE clusters on bare metal hardware by creating a proof-of-concept admin cluster and user cluster. As the second part of a two-part tutorial, this document builds on the configuration in [Set up minimal infrastructure](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/minimal-infrastructure). After deployment, you can proceed to [Create a Service and an Ingress](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/how-to/create-service-ingress).
 
-This guide is for Admins and architects and Operators who set up, monitor, and manage the infrastructure lifecycle. To learn more about common roles and tasks, see [Common GKE user roles and tasks](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/concepts/roles-tasks).
-
-The installation you set up using this guide might not be suitable for your production needs. For more information about production installations, see [Choose a deployment model](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/install-prep).
+This document is intended for Admins and architects and Operators who set up, monitor, and manage the infrastructure lifecycle. Don't use a minimal proof-of-concept cluster on a production environment. To evaluate production architectures, see [Choose a deployment model](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/installing/install-prep).
 
 **Note:** Distributed Cloud software only for bare metal was formerly known as Google Distributed Cloud Virtual, which was previously known as Anthos clusters on bare metal.
 
@@ -775,6 +773,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

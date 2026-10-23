@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/logging/docs/samples/logging-delete-sink/
 title: Delete a sink \u00a0|\u00a0 Cloud Logging \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:36:52.206710+00:00
+fetched_at: 2026-10-23T12:36:47.345450+00:00
 ---
 
 # Delete a sink  |  Cloud Logging  |  Google Cloud Documentation

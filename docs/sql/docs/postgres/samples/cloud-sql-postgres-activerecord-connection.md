@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/postgres/samples/cloud-sql-postgres-activerecord-connection/
 title: Use ActiveRecord to manage connections \u00a0|\u00a0 Cloud SQL for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:30:42.306524+00:00
+fetched_at: 2026-10-23T10:19:44.732339+00:00
 ---
 
 # Use ActiveRecord to manage connections  |  Cloud SQL for PostgreSQL  |  Google Cloud Documentation

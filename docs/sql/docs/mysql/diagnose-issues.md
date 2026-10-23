@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/mysql/diagnose-issues/
 title: Diagnose issues \u00a0|\u00a0 Cloud SQL for MySQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:28:52.627380+00:00
+fetched_at: 2026-10-23T10:19:54.514791+00:00
 ---
 
 # Diagnose issues  |  Cloud SQL for MySQL  |  Google Cloud Documentation
@@ -164,17 +164,17 @@ Learn more about:
   * [Persistent disks and performance](https://docs.cloud.google.com/compute/docs/disks/performance#size_price_performance).
   * [Performance and throttling metrics](https://docs.cloud.google.com/compute/docs/disks/performance#review_performance_and_throttling_metrics).
   * [Optimizing disk performance](https://docs.cloud.google.com/compute/docs/disks/performance#optimize_disk_performance).
-  * [Other factors that affect performance](https://cloud.google.com/compute/docs/disks/optimizing-pd-performance#performance_factors).
+  * [Other factors that affect performance](https://docs.cloud.google.com/compute/docs/disks/optimizing-pd-performance#performance_factors).
 
 
 
 ### Enable query logs
 
-To tune the performance of your queries, you can configure Cloud SQL to log slow queries by [adding the database flags](https://docs.cloud.google.com/sql/docs/mysql/flags) `--log_output='FILE'` and `--slow_query_log=on` to your instance. This makes the log output available using the [Logs Viewer in the Google Cloud console](https://docs.cloud.google.com/logging/docs/view/logs_viewer). Note that [Google Cloud Observability logging charges](https://docs.cloud.google.com/stackdriver/pricing) apply. 
+To tune the performance of your queries, you can configure Cloud SQL to log slow queries by [adding the database flags](https://docs.cloud.google.com/sql/docs/mysql/flags) `--log_output='FILE'` and `--slow_query_log=on` to your instance. This makes the log output available using the [Logs Viewer in the Google Cloud console](https://docs.cloud.google.com/logging/docs/view/logs_viewer). Note that [Google Cloud Observability logging charges](https://cloud.google.com/products/observability/pricing) apply. 
 
 Do not set log_output to `TABLE`. Doing so can cause connection issues as described in [Tips for working with flags](https://docs.cloud.google.com/sql/docs/mysql/flags#tips-general-log).
 
-You can refer to [this tutorial](https://cloud.google.com/community/tutorials/stackdriver-monitor-slow-query-mysql) for instructions to log and monitor Cloud SQL for MySQL slow queries using [Cloud Logging and Monitoring](https://cloud.google.com/monitoring).
+You can refer to [this tutorial](https://docs.cloud.google.com/architecture/security-log-analytics) for instructions to log and monitor Cloud SQL for MySQL slow queries using [Cloud Logging and Monitoring](https://cloud.google.com/monitoring).
 
 ### Enable lock monitoring
 
@@ -284,6 +284,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

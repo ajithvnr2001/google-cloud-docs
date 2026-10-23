@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/hide-report-components/
 title: Hide report components for viewers \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:44:17.922304+00:00
+fetched_at: 2026-10-23T13:20:48.752225+00:00
 ---
 
 # Hide report components for viewers  |  Data Studio  |  Google Cloud Documentation

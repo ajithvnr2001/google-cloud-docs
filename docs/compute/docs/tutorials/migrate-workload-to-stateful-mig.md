@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/tutorials/migrate-workload-to-stateful-mig/
 title: Migrate an existing workload to a stateful managed instance group \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:29:04.061235+00:00
+fetched_at: 2026-10-23T12:57:02.641762+00:00
 ---
 
 # Migrate an existing workload to a stateful managed instance group  |  Compute Engine  |  Google Cloud Documentation

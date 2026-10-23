@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/samples/dataplex-delete-entry/
 title: Delete entry \u00a0|\u00a0 Knowledge Catalog \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:03:18.882981+00:00
+fetched_at: 2026-10-23T12:51:01.761920+00:00
 ---
 
 # Delete entry  |  Knowledge Catalog  |  Google Cloud Documentation

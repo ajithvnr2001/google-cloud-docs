@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/sources-sqlserver/
 title: Stream data from SQL Server databases \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:42:02.764566+00:00
+fetched_at: 2026-10-23T10:03:30.987678+00:00
 ---
 
 # Stream data from SQL Server databases  |  Datastream  |  Google Cloud Documentation
@@ -21,14 +21,9 @@ Send feedback
 
 #  Stream data from SQL Server databases Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page contains information about:
+To keep your analytics and downstream databases synchronized, you can use Datastream to replicate historical data and ongoing changes from a SQL Server database.
 
-  * The behavior of how Datastream handles data that's being pulled from a source SQL Server database.
-  * The change data capture (CDC) methods that Datastream supports.
-  * The versions of SQL Server databases that Datastream supports.
-  * Known limitations for using SQL Server database as a source.
-
-
+For SQL Server sources in Datastream, review the replication behavior and change data capture (CDC) methods, supported versions and editions, and known limitations.
 
 ## Behavior
 
@@ -217,6 +212,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

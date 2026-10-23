@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-stitcher/docs/samples/videostitcher-list-live-configs/
 title: List live configs \u00a0|\u00a0 Video Stitcher API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:01:17.975229+00:00
+fetched_at: 2026-10-23T09:36:16.124427+00:00
 ---
 
 # List live configs  |  Video Stitcher API  |  Google Cloud Documentation

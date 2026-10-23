@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/food-ai/billing-questions/
 title: Billing questions \u00a0|\u00a0 Food Ordering AI Agent \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:00.071751+00:00
+fetched_at: 2026-10-23T13:12:05.608855+00:00
 ---
 
 # Billing questions  |  Food Ordering AI Agent  |  Google Cloud Documentation

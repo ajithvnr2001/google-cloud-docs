@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/connectors/midpage/set-up-data-store/
 title: Set up a Midpage data store \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:51:26.053324+00:00
+fetched_at: 2026-10-23T13:08:45.104678+00:00
 ---
 
 # Set up a Midpage data store  |  Gemini Enterprise  |  Google Cloud Documentation

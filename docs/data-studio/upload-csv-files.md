@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/upload-csv-files/
 title: Upload CSV files to Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:53.066113+00:00
+fetched_at: 2026-10-23T13:20:52.743553+00:00
 ---
 
 # Upload CSV files to Data Studio  |  Google Cloud Documentation

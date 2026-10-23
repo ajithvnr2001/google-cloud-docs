@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/eks/how-to/
 title: EKS how-to guides \u00a0|\u00a0 GKE attached clusters \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-15T16:19:19.617600+00:00
+fetched_at: 2026-10-23T12:42:30.720675+00:00
 ---
 
 # EKS how-to guides  |  GKE attached clusters  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/insights/python-library-for-developers/
 title: Customer Experience Insights devkit \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:35:53.504588+00:00
+fetched_at: 2026-10-23T13:11:54.129282+00:00
 ---
 
 # Customer Experience Insights devkit  |  Google Cloud Documentation

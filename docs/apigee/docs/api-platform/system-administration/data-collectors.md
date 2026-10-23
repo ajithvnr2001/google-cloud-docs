@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/api-platform/system-administration/data-collectors/
 title: Managing Data Collectors \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:35:39.622488+00:00
+fetched_at: 2026-10-23T13:18:51.371202+00:00
 ---
 
 # Managing Data Collectors  |  Apigee  |  Google Cloud Documentation

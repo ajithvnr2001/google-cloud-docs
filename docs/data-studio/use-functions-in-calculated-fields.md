@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/data-studio/use-functions-in-calculated-fields/
 title: Use functions in calculated fields \u00a0|\u00a0 Data Studio \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:43:52.424151+00:00
+fetched_at: 2026-10-23T13:20:37.592337+00:00
 ---
 
 # Use functions in calculated fields  |  Data Studio  |  Google Cloud Documentation

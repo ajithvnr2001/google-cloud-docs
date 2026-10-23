@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/workflows/docs/samples/workflows-iterate-list/
 title: Use a for-in loop to iterate through a list \u00a0|\u00a0 Workflows \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T01:00:56.966509+00:00
+fetched_at: 2026-10-23T09:37:41.023572+00:00
 ---
 
 # Use a for-in loop to iterate through a list  |  Workflows  |  Google Cloud Documentation

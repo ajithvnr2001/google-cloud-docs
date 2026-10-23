@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini-enterprise-cx/agent-assist/ui-modules-companion-agent/
 title: Companion agent UI module \u00a0|\u00a0 Agent Assist \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:39.062872+00:00
+fetched_at: 2026-10-23T13:12:39.138893+00:00
 ---
 
 # Companion agent UI module  |  Agent Assist  |  Google Cloud Documentation

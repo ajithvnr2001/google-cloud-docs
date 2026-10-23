@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/firewall/docs/quickstarts/configure-hfwpolicy-allow-egress-vpc/
 title: Configure a hierarchical firewall policy to allow egress traffic from a specific VPC network \u00a0|\u00a0 Cloud Next Generation Firewall \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:36:02.120672+00:00
+fetched_at: 2026-10-23T13:12:05.350035+00:00
 ---
 
 # Configure a hierarchical firewall policy to allow egress traffic from a specific VPC network  |  Cloud Next Generation Firewall  |  Google Cloud Documentation

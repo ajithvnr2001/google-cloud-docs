@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bigquery/docs/creating-clustered-tables/
 title: Create clustered tables \u00a0|\u00a0 BigQuery \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:47:16.611303+00:00
+fetched_at: 2026-10-23T12:55:39.980394+00:00
 ---
 
 # Create clustered tables  |  BigQuery  |  Google Cloud Documentation
@@ -21,16 +21,9 @@ Send feedback  Stay organized with collections  Save and categorize content base
 
 # Create clustered tables
 
-You can reduce the amount of data processed by a query by using clustered tables in BigQuery.
+Clustered tables in BigQuery let you reduce the amount of data that your queries process. Because table data is sorted by the values of the clustering columns, queries that filter on those columns scan only the relevant blocks.
 
-With clustered tables, table data is organized based on the values of specified columns, also called the _clustering columns_. BigQuery sorts the data by the clustered columns, then stores the rows that have similar values in the same or nearby physical blocks. When a query filters on a clustered column, BigQuery efficiently scans only the relevant blocks and skips the data that doesn't match the filter.
-
-For more information, see the following:
-
-  * To learn more about clustered tables in BigQuery, see [Introduction to clustered tables](https://docs.cloud.google.com/bigquery/docs/clustered-tables).
-  * To learn about working with and controlling access to clustered tables, see [Manage clustered tables](https://docs.cloud.google.com/bigquery/docs/manage-clustered-tables).
-
-
+This document describes how to create a clustered table as an empty table with a schema definition, from a query result, or when you load data. To learn more, see [Introduction to clustered tables](https://docs.cloud.google.com/bigquery/docs/clustered-tables) and [Manage clustered tables](https://docs.cloud.google.com/bigquery/docs/manage-clustered-tables).
 
 ## Before you begin
 
@@ -826,6 +819,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

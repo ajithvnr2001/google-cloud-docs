@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/apigee/docs/hybrid/v1.17/storing-secrets-in-vault/
 title: Storing data in an external secret manager \u00a0|\u00a0 Apigee \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:46:27.389346+00:00
+fetched_at: 2026-10-23T13:16:22.745445+00:00
 ---
 
 # Storing data in an external secret manager  |  Apigee  |  Google Cloud Documentation

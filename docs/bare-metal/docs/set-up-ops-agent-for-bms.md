@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/bare-metal/docs/set-up-ops-agent-for-bms/
 title: Set up Ops Agent for Bare Metal Solution \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:11.103221+00:00
+fetched_at: 2026-10-23T13:18:49.554747+00:00
 ---
 
 # Set up Ops Agent for Bare Metal Solution  |  Google Cloud Documentation

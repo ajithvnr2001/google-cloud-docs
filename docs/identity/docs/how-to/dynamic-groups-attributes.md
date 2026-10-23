@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/dynamic-groups-attributes/
 title: Valid user fields for dynamic group queries \u00a0|\u00a0 Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:51.929438+00:00
+fetched_at: 2026-10-23T13:10:17.668276+00:00
 ---
 
 # Valid user fields for dynamic group queries  |  Cloud Identity  |  Google Cloud Documentation

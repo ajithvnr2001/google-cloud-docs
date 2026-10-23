@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/storage/docs/samples/storage-create-pubsub-notifications-tf/
 title: Create a Pub/Sub notification on a Bucket \u00a0|\u00a0 Cloud Storage \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:30:52.309003+00:00
+fetched_at: 2026-10-23T09:37:30.876345+00:00
 ---
 
 # Create a Pub/Sub notification on a Bucket  |  Cloud Storage  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/armor/docs/configure-bot-management/
 title: Configure bot management \u00a0|\u00a0 Google Cloud Armor \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:57.491161+00:00
+fetched_at: 2026-10-23T13:15:58.634640+00:00
 ---
 
 # Configure bot management  |  Google Cloud Armor  |  Google Cloud Documentation

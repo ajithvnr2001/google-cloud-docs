@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/chronicle/docs/investigation/udm-search/
 title: Understand search \u00a0|\u00a0 Google Security Operations \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:56:29.899026+00:00
+fetched_at: 2026-10-23T12:55:44.672744+00:00
 ---
 
 # Understand search  |  Google Security Operations  |  Google Cloud Documentation
@@ -53,6 +53,7 @@ For the following advanced search features, your user account or Identity and Ac
   * Viewing log parsers and schema needs `chronicle.parsers.list` and `chronicle.parsers.get`.
   * Searching Case History needs `chronicle.cases.get` and `chronicle.cases.list`.
   * SQL search (specifically automatic query suggestions in the query editor) needs `chronicle.queries.suggestSql` when using custom IAM roles.
+  * Historical usage ranking for UDM field auto-suggestions in the query editor needs `chronicle.instances.suggestQueryFields` when using custom IAM roles.
   * Creating, sharing, modifying, and managing saved custom column sets across your organization needs all five of the following permissions: `chronicle.googleapis.com/savedColumnSets.create`, `chronicle.googleapis.com/savedColumnSets.update`, `chronicle.googleapis.com/savedColumnSets.delete`, `chronicle.googleapis.com/savedColumnSets.list`, and `chronicle.googleapis.com/savedColumnSets.get`.
 
 
@@ -254,13 +255,24 @@ As you type, a list appears with field suggestions matching your text, which inc
 
 #### Understand suggestion ranking
 
-The query editor organizes suggestions into three categories to help you find fields quickly:
+The query editor organizes suggestions into three distinct categories, in the following order, to help you find relevant UDM fields:
 
-  1. **Recently used fields** : The top seven suggestions are based on fields you have used recently that match your typed field. This list is saved in your browser session history across the **SIEM Search** , **Rules & Detections**, and **Dashboards** pages. Clearing your cache or switching browsers resets this history.
-  2. **Immediate children** : The next set of suggestions displays only the first-level children of the current field.
-  3. **Global matches** : The final section displays all matching fields alphabetically.
+  1. **Recently and frequently used fields** : Displays up to the top seven matching fields based on your active browser session and 30-day query usage history across the **SIEM Search** , **Rules & Detections**, and **Dashboards** pages. Suggestions in this category are prioritized in the following order:
+
+     * **Recent browser history** : Fields you recently entered or selected in the query editor (up to the 100 most recent valid UDM fields). Matching fields appear first, ordered by how recently you used them. This list is saved in your browser's local storage across logins. Clearing your browser cache or switching browsers resets this history.
+     * **Historical usage (past 30 days)** : Fields extracted from queries you and your organization ran over the past 30 days (including UDM searches, dashboard queries, rule tests, and retrohunts). This usage data refreshes every 8 hours, is out of scope for data RBAC filtering because it serves derived UDM schema field names rather than log events, and isolates custom labels and extracted fields (`additional.*`, `extracted.*`) to your tenant. Historical usage follows a strict two-tier hierarchy:
+
+       1. **User-level usage** : Fields you used most frequently over the past 30 days, sorted by usage count in descending order.
+       2. **Tenant-level usage** : Fields used most frequently by all users across your tenant over the past 30 days, sorted by usage count in descending order. If a field already appears in your user-level usage list, its user-level rank takes precedence.
+
+When filtering historical usage suggestions as you enter text, the editor ranks matching fields by match quality before breaking ties using the usage hierarchy: 1\. **Exact match** : Matches the entire UDM field name (for example, `ip`). 2\. **Exact token match** : Matches a complete segment of the field name (for example, `principal.ip` or `target.ip` when you enter `ip`). 3\. **Prefix match** : Matches the beginning of the field name. 4\. **Token prefix match** : Matches the beginning of a segment within the field name. 5\. **Substring match** : Appears anywhere within the field name (for example, `principal.hostname` when you enter `ip`, because `principal` contains `ip`).
+
+  2. **Immediate children** : Displays the first-level child nodes of the current field path in alphabetical order, excluding fields already listed in the top usage suggestions.
+
+  3. **Global matches** : Displays all remaining matching UDM fields in alphabetical order.
 
 
+**Note:** Predefined Google SecOps [roles](https://docs.cloud.google.com/chronicle/docs/reference/feature-rbac-permissions-roles#search) (`Admin`, `Editor`, `Viewer`, `Limited Viewer`, and `Restricted Data Access Viewer`) include the `chronicle.instances.suggestQueryFields` permission required to retrieve 30-day historical usage suggestions. If you use a custom IAM role, add `chronicle.instances.suggestQueryFields` to the role; without this permission, the query editor falls back to ranking suggestions using only recent browser history.**Note:** Fields from data tables aren't included in usage-based or recency ranking because data tables don't have a fixed UDM schema. Instead, data table fields appear in alphabetical order in the **Global matches** section.
 
 #### Manage auto-suggestion settings
 
@@ -273,9 +285,9 @@ To globally manage how Google SecOps displays automatic suggestions, do the foll
   3. To control the auto-suggestions shown in the query editor, adjust the following settings:
 
      * **Enable suggestions while typing** : Enables auto-suggestion.
-     * **Rank recently used fields first** : Displays your most recently used fields at the top of the list
+     * **Rank recently used fields first** : Displays your most recently and frequently used fields (based on browser session history, user-level usage, and tenant-level usage) at the top of the list.
      * **Suggest immediate child fields** : Completes nested fields incrementally, one child node at a time.
-     * **Suggest all available paths** : Displays the full, expanded paths for all nested field suggestions
+     * **Suggest all available paths** : Displays the full, expanded paths for all nested field suggestions.
   4. Click **Save**.
 
 
@@ -1740,6 +1752,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/text-to-speech/docs/samples/tts-synthesize-ssml/
 title: Synthesize SSML \u00a0|\u00a0 Cloud Text-to-Speech \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T02:39:23.650122+00:00
+fetched_at: 2026-10-23T08:36:42.969351+00:00
 ---
 
 # Synthesize SSML  |  Cloud Text-to-Speech  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/knowledge-catalog/docs/logging/
 title: Monitor Knowledge Catalog logs \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T12:25:41.989794+00:00
+fetched_at: 2026-10-23T12:50:52.279354+00:00
 ---
 
 # Monitor Knowledge Catalog logs  |  Google Cloud Documentation
@@ -25,7 +25,7 @@ Send feedback
 
 This document explains how to access, query, and interpret Knowledge Catalog (formerly Dataplex Universal Catalog) logs using Cloud Logging. Accessing Knowledge Catalog job and service logs lets you troubleshoot issues and monitor data management activities, including AI-powered data discovery and data quality scanning.
 
-**Note:** For administrative actions and data access logs, see the [Audit Logging](https://docs.cloud.google.com/knowledge-catalog/docs/audit-logging) page.
+**Note:** For administrative actions and data access logs, see the [Knowledge Catalog audit logging](https://docs.cloud.google.com/knowledge-catalog/docs/audit-logging) page.
 
 By centralizing logs in Logging, you can analyze job performance, set up alerts for failures or anomalies, and route logs to other Google Cloud services like BigQuery for long-term retention and analysis.
 
@@ -72,7 +72,7 @@ To access Logging, use the Logs Explorer in the Google Cloud console, the [`gclo
 
 ### Required IAM permissions
 
-To view and query logs, you must have the Logs Viewer (`roles/logging.viewer`) role, or equivalent permissions on the project.
+To view and query logs, you must have the **Logs Viewer** (`roles/logging.viewer`) role, or equivalent permissions on the project.
 
 ### View logs in the Google Cloud console
 
@@ -103,7 +103,7 @@ You can use the [logging query language](https://docs.cloud.google.com/logging/d
 
 #### Example: Read data scan events
 
-To read event log entries for data quality or data profile scans, use the [`gcloud logging read` command](https://cloud.google.com/sdk/gcloud/reference/logging/read) with the following query:
+To read event log entries for data quality or data profile scans, use the [`gcloud logging read` command](https://docs.cloud.google.com/sdk/gcloud/reference/logging/read) with the following query:
     
     
     gcloud logging read \
@@ -116,7 +116,7 @@ To read event log entries for data quality or data profile scans, use the [`gclo
 
 #### Example: Read process log entries
 
-To read process log entries, use the [`gcloud logging read` command](https://cloud.google.com/sdk/gcloud/reference/logging/read) with the following query:
+To read process log entries, use the [`gcloud logging read` command](https://docs.cloud.google.com/sdk/gcloud/reference/logging/read) with the following query:
     
     
     gcloud logging read \
@@ -134,7 +134,7 @@ The following examples show the JSON payload structures for different types of K
 
 ### Data scan event logs
 
-In Knowledge Catalog, data scans encompass [data quality scans](https://docs.cloud.google.com/knowledge-catalog/docs/auto-data-quality-overview), [data profile scans](https://docs.cloud.google.com/knowledge-catalog/docs/data-profiling-overview), and [data insights scans](https://docs.cloud.google.com/knowledge-catalog/docs/data-insights-structured-data). When you run a data scan job, Knowledge Catalog produces a `data_scan` event log in Logging that summarizes the overall job execution. For succeeded data insights scans (`jsonPayload.type="DATA_DOCUMENTATION"`), the event log also includes a `billableTokenUsage` block. For information about querying and charting data insights token consumption, see [Monitor data insights token usage](https://docs.cloud.google.com/knowledge-catalog/docs/monitor-insights-token-usage).
+In Knowledge Catalog, data scans encompass [data quality scans](https://docs.cloud.google.com/knowledge-catalog/docs/auto-data-quality-overview), [data profile scans](https://docs.cloud.google.com/knowledge-catalog/docs/data-profiling-overview), and [data insights scans](https://docs.cloud.google.com/knowledge-catalog/docs/data-insights-structured-data). When you run a data scan job, Knowledge Catalog writes a `data_scan` event log to Logging that summarizes the overall job execution. For succeeded data insights scans (`jsonPayload.type="DATA_DOCUMENTATION"`), the event log also includes a `billableTokenUsage` block. For information about querying and charting data insights token consumption, see [Monitor data insights token usage](https://docs.cloud.google.com/knowledge-catalog/docs/monitor-insights-token-usage).
 
 The following example shows an event log payload for a data quality scan:
     
@@ -295,7 +295,7 @@ The following example shows a process log payload:
 
 You can set up log-based alerts to get notified whenever specific Knowledge Catalog events occur (such as a failed data quality scan).
 
-To create log-based alerts, you must have the Logs Configuration Writer (`roles/logging.configWriter`) and Monitoring AlertPolicy Editor (`roles/monitoring.alertPolicyEditor`) roles, or equivalent permissions.
+To create log-based alerts, you must have the **Logs Configuration Writer** (`roles/logging.configWriter`) and **Monitoring AlertPolicy Editor** (`roles/monitoring.alertPolicyEditor`) roles, or equivalent permissions.
 
   1. Run a query in the **Logs Explorer** that targets the failure condition (for example: `resource.type="dataplex.googleapis.com/DataScan" AND NOT jsonPayload.dataQuality.passed=true`).
   2. Above the query results pane, click **Create alert**.
@@ -305,7 +305,7 @@ To create log-based alerts, you must have the Logs Configuration Writer (`roles/
 
 
 
-For more detailed information, see [Create log-based alerts](https://cloud.google.com/logging/docs/alerting/log-based-alerts).
+For more detailed information, see [Create log-based alerts](https://docs.cloud.google.com/logging/docs/alerting/log-based-alerts).
 
 ## What's next
 
@@ -319,6 +319,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-14 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-14 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

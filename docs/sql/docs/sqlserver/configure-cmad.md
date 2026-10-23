@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/configure-cmad/
 title: Use customer-managed Microsoft Active Directory (CMAD) \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:29:20.057701+00:00
+fetched_at: 2026-10-23T10:18:58.311285+00:00
 ---
 
 # Use customer-managed Microsoft Active Directory (CMAD)  |  Cloud SQL for SQL Server  |  Google Cloud Documentation
@@ -762,7 +762,7 @@ The following actions might resolve this issue:
 
     * If an IP address is used to connect users from a managed domain, follow the instructions in [Microsoft documentation](https://docs.microsoft.com/en-us/windows-server/security/kerberos/configuring-kerberos-over-ip).
     * Avoid using any proxies, and always use the same DNS name to connect to Cloud SQL for SQL Server, as you see the name in the Google Cloud console.
-  * If an instance has ongoing problems with Windows Authentication (whether or not the instance was recently updated), try unjoining it from the domain and then rejoining it. To do so, use the [update procedure](https://docs.cloud.google.com/sql/docs/sqlserver/update-an-instance-with-windows-authentication) to unjoin and then to rejoin the domain. Doing so doesn't remove any existing Windows-authenticated users or logins that exist in your databases. However, removing Windows Authentication causes an instance to [restart](https://docs.cloud.google.com/sql/faq#shutdown).
+  * If an instance has ongoing problems with Windows Authentication (whether or not the instance was recently updated), try unjoining it from the domain and then rejoining it. To do so, use the [update procedure](https://docs.cloud.google.com/sql/docs/sqlserver/update-an-instance-with-windows-authentication) to unjoin and then to rejoin the domain. Doing so doesn't remove any existing Windows-authenticated users or logins that exist in your databases. However, removing Windows Authentication causes an instance to [restart](https://docs.cloud.google.com/sql/docs/sqlserver/faq#shutdown).
   * [Use the customer-managed Active Directory Diagnosis tool](https://docs.cloud.google.com/sql/docs/sqlserver/cmad-diagnosis-tool) to troubleshoot Active Directory setup issues with your customer-managed domain.
 
 
@@ -774,8 +774,8 @@ The following table lists common error messages and ways to help address them:
 For this error... | The issue might be... | Try this...  
 ---|---|---  
 `Per-product, per-project Service Account (P4 SA) not found for project.` | The service account name is incorrect. | On the [ Service Accounts page](https://console.cloud.google.com/iam-admin/serviceaccounts), make sure you created a service account for the correct user project.  
-`The operation completed but an update to Active Directory failed. You may experience issues with Windows Authentication on this instance, please see https://cloud.google.com/sql/docs/sqlserver/configure-cmad for tips.` | The required updates couldn't be performed on the CMAD domain. | If you experience issues with Windows Authentication, you can try unjoining the CMAD domain and then rejoining it. To do so, use the update procedure to unjoin and then to rejoin the domain. Doing so doesn't remove any existing Windows-authenticated users or logins that exist in your databases. However, removing Windows Authentication causes an instance to [restart](https://docs.cloud.google.com/sql/faq#shutdown).  
-`This instance would need new network architecture to support Active Directory. See https://cloud.google.com/sql/docs/sqlserver/configure-cmad."` | This instance doesn't use the new network architecture. | [Upgrade the instance to the new network architecture.](https://docs.cloud.google.com/sql/docs/sqlserver/upgrade-cloud-sql-instance-new-network-architecture)  
+`The operation completed but an update to Active Directory failed. You may experience issues with Windows Authentication on this instance, please see https://docs.cloud.google.com/sql/docs/sqlserver/configure-cmad for tips.` | The required updates couldn't be performed on the CMAD domain. | If you experience issues with Windows Authentication, you can try unjoining the CMAD domain and then rejoining it. To do so, use the update procedure to unjoin and then to rejoin the domain. Doing so doesn't remove any existing Windows-authenticated users or logins that exist in your databases. However, removing Windows Authentication causes an instance to [restart](https://docs.cloud.google.com/sql/docs/sqlserver/faq#shutdown).  
+`This instance would need new network architecture to support Active Directory. See https://docs.cloud.google.com/sql/docs/sqlserver/configure-cmad."` | This instance doesn't use the new network architecture. | [Upgrade the instance to the new network architecture.](https://docs.cloud.google.com/sql/docs/sqlserver/upgrade-cloud-sql-instance-new-network-architecture)  
 `Admin credential secret name / Organizational unit / DNS Server names is required or Invalid Admin credential secret name / OrganizationalUnit / DNS Server names provided.` | Admin credentials, Organization unit, and DNS Servers are required parameters. | Retry your request with these parameters specified.  
 `Integration failed due to insufficient permissions. The Service Agent for this project must be granted the secretmanager.secrets.getIamPolicy and secretmanager.secrets.setIamPolicy permissions on the provided admin credential key in Secret Manager.` | The Service Agent for this project lacks necessary permissions. | Create a custom role with `secretmanager.secrets.getIamPolicy` and `secretmanager.secrets.setIamPolicy` permissions and assign it to the service agent for this project. For more information, see [Secret Manager roles and permissions](https://docs.cloud.google.com/iam/docs/roles-permissions/secretmanager).  
   
@@ -790,6 +790,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/iam/docs/managed-workload-identity/
 title: Managed workload identities overview \u00a0|\u00a0 Identity and Access Management (IAM) \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:29:29.553154+00:00
+fetched_at: 2026-10-23T13:02:09.294363+00:00
 ---
 
 # Managed workload identities overview  |  Identity and Access Management (IAM)  |  Google Cloud Documentation

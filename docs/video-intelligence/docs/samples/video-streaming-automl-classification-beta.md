@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/video-intelligence/docs/samples/video-streaming-automl-classification-beta/
 title: Annotate streaming video with AutoML model \u00a0|\u00a0 Video Intelligence API \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T03:26:47.469206+00:00
+fetched_at: 2026-10-23T09:36:07.094420+00:00
 ---
 
 # Annotate streaming video with AutoML model  |  Video Intelligence API  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/migrate/virtual-machines/docs/5.0/resources/
 title: Resources \u00a0|\u00a0 Migrate to Virtual Machines \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:17:16.613372+00:00
+fetched_at: 2026-10-23T10:56:01.340817+00:00
 ---
 
 # Resources  |  Migrate to Virtual Machines  |  Google Cloud Documentation

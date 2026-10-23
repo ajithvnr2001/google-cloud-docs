@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/endpoints/docs/grpc/restricting-api-access-with-api-keys/
 title: Restricting API access with API keys \u00a0|\u00a0 Cloud Endpoints with gRPC \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:53:18.379602+00:00
+fetched_at: 2026-10-23T13:00:51.845566+00:00
 ---
 
 # Restricting API access with API keys  |  Cloud Endpoints with gRPC  |  Google Cloud Documentation

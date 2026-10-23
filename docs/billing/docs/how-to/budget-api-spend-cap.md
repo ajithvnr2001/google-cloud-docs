@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/billing/docs/how-to/budget-api-spend-cap/
 title: Using the Cloud Billing Budget API for spend cap budgets \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:01:18.761769+00:00
+fetched_at: 2026-10-23T12:44:49.838952+00:00
 ---
 
 # Using the Cloud Billing Budget API for spend cap budgets  |  Google Cloud Documentation
@@ -80,7 +80,7 @@ When [`spendCap`](https://docs.cloud.google.com/billing/docs/reference/budget/re
 
   * **Automatic pause of usage and cost accrual when the spend cap is triggered** : In the specified project, when your _gross, estimated_ usage costs for the specific service exceed your budget target amount, the spend cap is triggered and enforced for the remainder of the budget period. On the budget, the [`outputState`](https://docs.cloud.google.com/billing/docs/reference/budget/rest/v1/billingAccounts.budgets#spendcap) parameter is set to `ENFORCED`. While a spend cap is enforced, the following applies:
 
-    * All _new_ usage for the specific service in the specified project is paused, including on-demand, pay-as-you-go usage and usage covered by commitments such as [Committed use discounts (CUDs)](https://docs.cloud.google.com/docs/cuds) and [Provisioned Throughput (PT)](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/provisioned-throughput).
+    * All _new_ usage for the specific service in the specified project is paused, including on-demand, pay-as-you-go usage and usage covered by commitments such as [Committed use discounts (CUDs)](https://docs.cloud.google.com/docs/cuds).
     * Any _in-flight_ requests of the specified service are processed to completion, with charges accruing as applicable.
     * Spend caps don't pause any on-going, fixed usage associated with _persistent_ resources (such as compute and storage services), which remain active and continue to accrue charges.
     * **Important:** While it's in an enforced state, you can't edit the settings of a spend cap budget or delete the budget. Before editing or deleting an enforced budget, you must first manually lift the spend cap.
@@ -753,6 +753,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

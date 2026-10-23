@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/docs/samples/pubsub-old-version-test-topic-permissions/
 title: v1 Test permissions for topic (DEPRECATED) \u00a0|\u00a0 Pub/Sub \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:59:00.672451+00:00
+fetched_at: 2026-10-23T10:04:40.851058+00:00
 ---
 
 # v1 Test permissions for topic (DEPRECATED)  |  Pub/Sub  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/sql/docs/sqlserver/locations/
 title: Manage instance locations \u00a0|\u00a0 Cloud SQL for SQL Server \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T04:28:53.695229+00:00
+fetched_at: 2026-10-23T10:19:37.596138+00:00
 ---
 
 # Manage instance locations  |  Cloud SQL for SQL Server  |  Google Cloud Documentation
@@ -98,10 +98,12 @@ Regional locations are specific geographic locations within a multi-region locat
 
 Multi-Region Name | Multi-Region Description  
 ---|---  
-`asia` | Data centers in Asia  
-`eu` | Data centers in the European Union  
+`asia` | Data centers in Asia, excluding Hong Kong and Indonesia  
+`eu` | Data centers within [member states](https://europa.eu/european-union/about-eu/countries_en) of the European Union*  
 `us` | Data centers in the United States  
   
+* Backup data stored in the `eu` multi-region is not stored in the `europe-west2` (London) or `europe-west6` (Zürich) regions.
+
 ## Zones
 
 Zones are sub-locations in a region where you can create zonal resources such as Cloud SQL instances. For example, a zone named `us-central1-a` indicates a zone within the `us-central1` region. A zone is independent of other zones in the same region.
@@ -119,7 +121,7 @@ For more information about zones, see [Geography and regions](https://docs.cloud
 ## What's next
 
   * Get more information about [building applications to meet your latency, availability, and durability requirements](https://docs.cloud.google.com/docs/geography-and-regions).
-  * View all the [Google Cloud services available in locations worldwide](https://docs.cloud.google.com/about/locations).
+  * View all the [Google Cloud services available in locations worldwide](https://cloud.google.com/about/locations).
 
 
 
@@ -127,6 +129,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

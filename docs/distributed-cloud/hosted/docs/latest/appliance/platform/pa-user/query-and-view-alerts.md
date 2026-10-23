@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/platform/pa-user/query-and-view-alerts/
 title: Query and view open alerts \u00a0|\u00a0 Google Distributed Cloud Hosted Appliance \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:16:11.841749+00:00
+fetched_at: 2026-10-23T12:55:12.933434+00:00
 ---
 
 # Query and view open alerts  |  Google Distributed Cloud Hosted Appliance  |  Google Cloud Documentation
@@ -23,16 +23,7 @@ Send feedback
 
 #  Query and view open alerts Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page provides detailed instructions on how to query and visualize open alerts using both the GDC console and the `curl` tool for the Cortex endpoint to gain issue awareness and resolve problems.
-
-After [creating alert rules](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/platform/pa-user/create-alert-rules) based on logs and metrics from Google Distributed Cloud (GDC) air-gapped appliance environments, you can start monitoring open alerts from your project. You can visualize and filter alerts that your system events trigger on the GDC console or access them directly from Cortex using the `curl` tool for flexible scripting and automation.
-
-You can access open alerts in one of the following two methods:
-
-  * **GDC console** : Visualize alerting data in integrated panels containing information like the number of alerts for a specific data source, the severity level, duration, status, message, and labels. The GDC console provides a user-friendly interface for filtering and analyzing alerts from your system components.
-  * **Cortex Alertmanager endpoint** : For more advanced use cases, query your project's Cortex instance directly using the `curl` tool on a command line. Cortex stores your project's Alertmanager alerts and provides an HTTP endpoint for programmatic access. This access lets you export data, automate tasks, configure cron jobs, and build custom integrations.
-
-
+Alert monitoring in Google Distributed Cloud (GDC) air-gapped appliance lets you track and troubleshoot active notifications across your project after [creating alert rules](https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/appliance/platform/pa-user/create-alert-rules). You can inspect alert severity, duration, status, and labels in the GDC console. For scripting, cron jobs, and custom integrations, query your project's Cortex Alertmanager HTTP endpoint with `curl`.
 
 ## Before you begin
 
@@ -550,6 +541,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

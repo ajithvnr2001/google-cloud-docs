@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/architecture/database-migration-concepts-principles-part-2/
 title: Database migration: Concepts and principles (Part 2) \u00a0|\u00a0 Cloud Architecture Center \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:01.017220+00:00
+fetched_at: 2026-10-23T13:19:28.908601+00:00
 ---
 
 # Database migration: Concepts and principles (Part 2)  |  Cloud Architecture Center  |  Google Cloud Documentation

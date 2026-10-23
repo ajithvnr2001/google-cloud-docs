@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/ai/model-endpoint-overview/
 title: Register and call remote AI models in AlloyDB overview \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:25:14.640768+00:00
+fetched_at: 2026-10-23T13:08:37.158516+00:00
 ---
 
 # Register and call remote AI models in AlloyDB overview  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -23,7 +23,7 @@ Send feedback
 
 Model endpoint management in AlloyDB for PostgreSQL lets you register remote AI models, manage model metadata in your database cluster, and invoke predictions or generate embeddings by using SQL queries. Understanding model endpoint management schemas, supported model providers, authentication methods, and SQL function types helps you integrate foundation models and custom endpoints with your database workloads.
 
-To register remote model endpoints with AlloyDB Omni, see [Register and call remote AI models in AlloyDB Omni](https://docs.cloud.google.com/alloydb/omni/docs/model-endpoint-overview).
+To register remote model endpoints with AlloyDB Omni, see [Register and call remote AI models in AlloyDB Omni](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/ai/model-endpoint-overview).
 
 ## Overview
 
@@ -36,11 +36,11 @@ AI functions includes a suite of functions that build on model endpoint manageme
 Some of the example model types that you can register using model endpoint management are as follows:
 
   * [Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview) text embedding and generic models
-  * [Agent Platform Multimodal model](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/multimodal-embeddings-api)
-  * [Agent Platform ranking models](https://docs.cloud.google.com/generative-ai-app-builder/docs/ranking) ([Preview](https://cloud.google.com/products#product-launch-stages))
+  * [Agent Platform Multimodal model](https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/multimodal-embeddings-api)
+  * [Agent Platform ranking models](https://docs.cloud.google.com/generative-ai-app-builder/docs/ranking)
   * Embedding models provided by third-party providers, such as Hugging Face or OpenAI
   * Custom-hosted text embedding models, including self-hosted models or models available through private endpoints
-  * Generic models with a JSON-based API—for example, `facebook/bart-large-mnli` model hosted on Hugging Face, `gemini-pro` model from the Model Garden, or `claude` models by Anthropic
+  * Generic models with a JSON-based API—for example, `facebook/bart-large-mnli` model hosted on Hugging Face, `gemini-3.5-flash-lite` model from the Model Garden, or `claude` models by Anthropic
 
 **Note:** Agent Platform model support is governed by Agent Platform model versioning and lifecycle guidelines. For more information about stable versions, see [Model versions and lifecycle](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions).
 
@@ -74,7 +74,7 @@ You can use the model endpoint ID to query models to do the following:
 
   * Generate multimodal embeddings to translate multimodal data such as text, images, and videos to embeddings. ([Preview](https://cloud.google.com/products#product-launch-stages))
 
-  * Rank or score a list of items in a query based on a criteria stated using natural language. ([Preview](https://cloud.google.com/products#product-launch-stages))
+  * Rank or score a list of items in a query based on a criteria stated using natural language.
 
   * Invoke predictions using SQL.
 
@@ -99,7 +99,7 @@ For more information about model provider, see [Model provider](https://docs.clo
 
 ### Model type
 
-_Model type_ indicates the type of the AI model. The extension supports text embedding as well as any generic model type. The supported model type you can set when registering a model endpoint are `text-embedding` and `generic`.
+_Model type_ indicates the type of the AI model. The extension supports text embedding, multimodal embedding, large language model (LLM), reranking, time-series forecasting, and generic model types. The supported model types you can set when registering a model endpoint are `text_embedding`, `generic`, `llm`, `reranking`, `multimodal_embedding`, and `ts_forecasting`.
 
 Setting model type is optional when registering generic model endpoints as `generic` is the default model type.
 
@@ -125,7 +125,7 @@ For more information about operator functions, see [Operator functions](https://
 
 ### Transform functions
 
-Transform functions modify the input to a format that the model understands, and converts the model response to the format that the prediction function expects. The transform functions are used when registering the `text-embedding` model endpoint without built-in support. The signature of the transform functions depends on the input expected by the model.
+Transform functions modify the input to a format that the model understands, and converts the model response to the format that the prediction function expects. The transform functions are used when registering the `text_embedding` model endpoint without built-in support. The signature of the transform functions depends on the input expected by the model.
 
 For more information about transform functions, see [Transform functions](https://docs.cloud.google.com/alloydb/docs/reference/model-endpoint#transform-function).
 
@@ -147,6 +147,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

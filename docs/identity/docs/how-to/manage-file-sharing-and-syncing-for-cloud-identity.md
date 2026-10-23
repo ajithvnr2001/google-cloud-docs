@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/identity/docs/how-to/manage-file-sharing-and-syncing-for-cloud-identity/
 title: Manage file sharing and syncing for Cloud Identity \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:28:50.826947+00:00
+fetched_at: 2026-10-23T13:10:33.210231+00:00
 ---
 
 # Manage file sharing and syncing for Cloud Identity  |  Google Cloud Documentation

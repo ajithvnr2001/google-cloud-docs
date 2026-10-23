@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/application-integration/docs/share-templates/
 title: Share templates \u00a0|\u00a0 Application Integration \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:39:07.043426+00:00
+fetched_at: 2026-10-23T13:17:51.581613+00:00
 ---
 
 # Share templates  |  Application Integration  |  Google Cloud Documentation

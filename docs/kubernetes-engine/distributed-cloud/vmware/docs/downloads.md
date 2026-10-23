@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/vmware/docs/downloads/
 title: Google Distributed Cloud for VMware downloads \u00a0|\u00a0 Google Distributed Cloud software only for VMware \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:24:22.370651+00:00
+fetched_at: 2026-10-23T12:37:50.459515+00:00
 ---
 
 # Google Distributed Cloud for VMware downloads  |  Google Distributed Cloud software only for VMware  |  Google Cloud Documentation
@@ -57,7 +57,7 @@ Replace `VERSION` with the version of Google Distributed Cloud you want to insta
 
   * 1.36.200-gke.118
   * 1.35.600-gke.141
-  * 1.34.900-gke.135
+  * 1.34.1000-gke.111
 
 
 
@@ -104,7 +104,7 @@ Replace `VERSION` with the version of Google Distributed Cloud you want to insta
 
   * 1.36.200-gke.118
   * 1.35.600-gke.141
-  * 1.34.900-gke.135
+  * 1.34.1000-gke.111
 
 
 
@@ -148,7 +148,7 @@ Replace `VERSION` with the version of Google Distributed Cloud you want to insta
 
   * 1.36.200-gke.118
   * 1.35.600-gke.141
-  * 1.34.900-gke.135
+  * 1.34.1000-gke.111
 
 
 
@@ -183,7 +183,7 @@ Replace `VERSION` with the version of Google Distributed Cloud you want to insta
 
   * 1.36.200-gke.118
   * 1.35.600-gke.141
-  * 1.34.900-gke.135
+  * 1.34.1000-gke.111
 
 
 
@@ -208,6 +208,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-22 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 

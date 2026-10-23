@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/api-gateway/docs/get-started-app-engine/
 title: Getting started with API Gateway and App Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:17.007160+00:00
+fetched_at: 2026-10-23T13:15:52.043943+00:00
 ---
 
 # Getting started with API Gateway and App Engine  |  Google Cloud Documentation

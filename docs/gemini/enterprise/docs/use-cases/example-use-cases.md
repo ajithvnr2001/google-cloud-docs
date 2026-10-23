@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/gemini/enterprise/docs/use-cases/example-use-cases/
 title: Example use cases \u00a0|\u00a0 Gemini Enterprise \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:37:27.870243+00:00
+fetched_at: 2026-10-23T13:11:39.219590+00:00
 ---
 
 # Example use cases  |  Gemini Enterprise  |  Google Cloud Documentation
