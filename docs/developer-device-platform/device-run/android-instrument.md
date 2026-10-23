@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/developer-device-platform/device-run/android-instrument/
 title: Developer Device Platform Device Run for Android Instrumentation \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:38:37.193466+00:00
+fetched_at: 2026-10-23T05:44:49.772851+00:00
 ---
 
 # Developer Device Platform Device Run for Android Instrumentation  |  Google Cloud Documentation
@@ -27,7 +27,7 @@ This product or feature is subject to the "Pre-GA Offerings Terms" in the Genera
 
 This guide describes how to run an Android instrumentation test using the `gcloud beta device-run` CLI and find your results in Google Cloud console. It assumes you have a Google Cloud account and project.
 
-If you are migrating from [Firebase Test Lab](https://firebase.google.com/docs/test-lab) to Developer Device Platform, see our [migration guide](https://docs.cloud.google.com/developer-device-platform/device-run/migrate), [command and flag translation](https://docs.cloud.google.com/developer-device-platform/device-run/migrate/flag-command-translation), and [migration skill](https://docs.cloud.google.com/developer-device-platform/device-run/migrate/migration-skill) for AI agents.
+If you are migrating from [Firebase Test Lab](https://firebase.google.com/docs/test-lab) to Developer Device Platform, see our [migration guide](https://docs.cloud.google.com/developer-device-platform/migrate), [command and flag translation](https://docs.cloud.google.com/developer-device-platform/migrate/flag-command-translation), and [migration skill](https://docs.cloud.google.com/developer-device-platform/migrate/migration-skill) for AI agents.
 
 To use this Google Cloud CLI, you will need to provide your Google Cloud project ID. See [`gcloud beta device-run`](https://docs.cloud.google.com/sdk/gcloud/reference/beta/device-run) for a summary of commands.
 
@@ -392,6 +392,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-22 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

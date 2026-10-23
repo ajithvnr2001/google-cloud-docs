@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/resource-manager/docs/quickstarts/
 title: Quickstarts \u00a0|\u00a0 Resource Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:04.703701+00:00
+fetched_at: 2026-10-23T05:44:13.365006+00:00
 ---
 
 # Quickstarts  |  Resource Manager  |  Google Cloud Documentation

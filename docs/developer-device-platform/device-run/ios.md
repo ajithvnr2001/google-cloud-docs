@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/developer-device-platform/device-run/ios/
 title: Developer Device Platform Device Run for iOS \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:32:32.531872+00:00
+fetched_at: 2026-10-23T05:44:49.712841+00:00
 ---
 
 # Developer Device Platform Device Run for iOS  |  Google Cloud Documentation
@@ -27,7 +27,7 @@ This product or feature is subject to the "Pre-GA Offerings Terms" in the Genera
 
 This guide describes how to run an iOS XCTest using the `gcloud alpha device-run` CLI and find your results in the Google Cloud console. It assumes you have a Google Cloud account and project.
 
-If you are migrating from [Firebase Test Lab](https://firebase.google.com/docs/test-lab) to Developer Device Platform, see our [migration guide](https://docs.cloud.google.com/developer-device-platform/device-run/migrate), [command and flag translation](https://docs.cloud.google.com/developer-device-platform/device-run/migrate/flag-command-translation), and [migration skill](https://docs.cloud.google.com/developer-device-platform/device-run/migrate/migration-skill) for AI agents.
+If you are migrating from [Firebase Test Lab](https://firebase.google.com/docs/test-lab) to Developer Device Platform, see our [migration guide](https://docs.cloud.google.com/developer-device-platform/migrate), [command and flag translation](https://docs.cloud.google.com/developer-device-platform/migrate/flag-command-translation), and [migration skill](https://docs.cloud.google.com/developer-device-platform/migrate/migration-skill) for AI agents.
 
 To use the `device-run` CLI, you will need to provide your Google Cloud project ID. See [`gcloud alpha device-run`](https://docs.cloud.google.com/sdk/gcloud/reference/alpha/device-run) for a summary of commands.
 
@@ -203,7 +203,7 @@ See the [Device Catalog](https://docs.cloud.google.com/developer-device-platform
 
 Before running your tests, you must compile them, ensure they are signed, verify the code signatures, and package the resulting artifacts into a ZIP file containing your `.xctestrun` configuration and the application test bundles.
 
-**Tip:** **Migrating from Firebase Test Lab?** Device Run accepts the same test package as Firebase Test Lab: the `Debug-iphoneos/` directory and the `.xctestrun` file from `Build/Products`, as described in Run an XCTest. If you already have a build and packaging pipeline for Firebase Test Lab, you can reuse it unchanged and pass the resulting `.zip` to `--test`. For the rest of the migration, see the iOS section of [Flag and command translation](https://docs.cloud.google.com/developer-device-platform/device-run/migrate/flag-command-translation#ios-flags).
+**Tip:** **Migrating from Firebase Test Lab?** Device Run accepts the same test package as Firebase Test Lab: the `Debug-iphoneos/` directory and the `.xctestrun` file from `Build/Products`, as described in Run an XCTest. If you already have a build and packaging pipeline for Firebase Test Lab, you can reuse it unchanged and pass the resulting `.zip` to `--test`. For the rest of the migration, see the iOS section of [Flag and command translation](https://docs.cloud.google.com/developer-device-platform/migrate/flag-command-translation#ios-flags).
 
 ### 1\. Build your tests for physical iOS devices
 
@@ -320,6 +320,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

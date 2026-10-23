@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/columnar-engine/monitor-tune/
 title: Monitor the columnar engine \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:10.873570+00:00
+fetched_at: 2026-10-23T06:00:10.100724+00:00
 ---
 
 # Monitor the columnar engine  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -36,6 +36,9 @@ You can verify the usage of the columnar engine by using the `EXPLAIN` statement
         FROM lineitem
        WHERE l_shipdate <= date '1992-08-06'
     ;
+    
+    
+    
                                      QUERY PLAN
     -----------------------------------------------------------------------------
      Append (actual rows=3941797 loops=1)
@@ -75,6 +78,9 @@ With joins, columnar scan operators can also use the `Late Materialization` mode
              AND l_shipmode in ('AIR', 'FOB')
              AND l_receiptdate >= date '1995-01-01'
     ;
+    
+    
+    
                                      QUERY PLAN
     -----------------------------------------------------------------------------
      Hash Join (actual rows=9865288 loops=1)
@@ -115,6 +121,9 @@ You can verify the new vectorized join operator by using `EXPLAIN` statement to 
         WHERE l_shipdate <= date '2022-08-06'
         AND  l_orderkey = o_orderkey
         AND  o_orderdate <= date '2025-03-07';
+    
+    
+    
                                           QUERY PLAN
     ---------------------------------------------------------------------------------------
      Vectorized Hash Join (actual rows=3934686 loops=1)
@@ -158,6 +167,9 @@ The following example output of the command prints out a `Columnar Check` messag
     EXPLAIN (COLUMNAR_ENGINE, COSTS OFF)
     SELECT * FROM sample_small_table
     WHERE col1 > 10000;
+    
+    
+    
                   QUERY PLAN
     --------------------------------------
      Seq Scan on sample_small_table
@@ -178,6 +190,9 @@ The following example shows additional details being printed that are specific t
     
     
     EXPLAIN (ANALYZE, COLUMNAR_ENGINE, COSTS OFF, TIMING OFF, SUMMARY OFF, VERBOSE) SELECT SUM(c1) FROM counter_table WHERE c2 > 0 and c2 < 80000;
+    
+    
+    
                                              QUERY PLAN
     ---------------------------------------------------------------------------------------------
      Aggregate (actual rows=1 loops=1)
@@ -204,6 +219,8 @@ You can view information about the tables or the materialized views with columns
     
     
     SELECT * FROM g_columnar_relations;
+    
+    
     
     -[ RECORD 1 ]------------------+---------------------
     database_name                  | postgres
@@ -310,29 +327,29 @@ The following table describes the fields of the `g_columnar_indexes` view.
 
 Field | Data type | Description  
 ---|---|---  
-database_name | NAME |   
-schema_name | NAME | Name of the schema to which index belongs  
-index_name | NAME | Name of the index  
-status | NAME | Status of the index in the columnar engine  
-size | BIGINT | Size of the index in the columnar engine  
-total_partition_count | BIGINT | Total number of index's partitions in columnar engine  
-non_leaf_partition_count | BIGINT | Total number of index's non-leaf partitions in columnar engine  
-leaf_partition_count | BIGINT | Total number of index's leaf partitions in columnar engine  
-invalid_block_count | BIGINT | Total number of invalid blocks in columnar engine for the index  
-block_count_in_cc | BIGINT | Total number of index's blocks in columnar engine  
-total_block_count | BIGINT | Total number of index's blocks  
-creation_time | BIGINT | Index creation time in columnar engine  
-auto_refresh_trigger_count | BIGINT | Total number of auto refreshes triggered since the postgres startup.  
-auto_refresh_failure_count | BIGINT | Total number of auto refresh failures since the postgres startup  
-auto_refresh_trigger_timestamp | BIGINT | Timestamp of the most recent auto refresh that was triggered  
-auto_refresh_start_timestamp | BIGINT | Timestamp of the most recent auto refresh that was started  
-auto_refresh_end_timestamp | BIGINT | Timestamp of the most recent auto refresh that was completed.  
-auto_refresh_recent_status | TEXT | Status of the most recent auto refresh  
+`database_name` | `NAME` | Name of the database in which the index resides  
+`schema_name` | `NAME` | Name of the schema to which the index belongs  
+`index_name` | `NAME` | Name of the index  
+`status` | `NAME` | Status of the index in the columnar engine  
+`size` | `BIGINT` | Size of the index in the columnar engine  
+`total_partition_count` | `BIGINT` | Total number of the index's partitions in the columnar engine  
+`non_leaf_partition_count` | `BIGINT` | Total number of the index's non-leaf partitions in the columnar engine  
+`leaf_partition_count` | `BIGINT` | Total number of the index's leaf partitions in the columnar engine  
+`invalid_block_count` | `BIGINT` | Total number of invalid blocks in the columnar engine for the index  
+`block_count_in_cc` | `BIGINT` | Total number of the index's blocks in the columnar engine  
+`total_block_count` | `BIGINT` | Total number of the index's blocks  
+`creation_time` | `BIGINT` | Index creation time in the columnar engine  
+`auto_refresh_trigger_count` | `BIGINT` | Total number of auto refreshes triggered since the PostgreSQL startup  
+`auto_refresh_failure_count` | `BIGINT` | Total number of auto refresh failures since the PostgreSQL startup  
+`auto_refresh_trigger_timestamp` | `BIGINT` | Timestamp of the most recent auto refresh that was triggered  
+`auto_refresh_start_timestamp` | `BIGINT` | Timestamp of the most recent auto refresh that was started  
+`auto_refresh_end_timestamp` | `BIGINT` | Timestamp of the most recent auto refresh that was completed  
+`auto_refresh_recent_status` | `TEXT` | Status of the most recent auto refresh  
   
 Send feedback 
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

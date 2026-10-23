@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/resource-manager/docs/access-control-org/
 title: Access control for organization resources with IAM \u00a0|\u00a0 Resource Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:18.886577+00:00
+fetched_at: 2026-10-23T05:55:58.377408+00:00
 ---
 
 # Access control for organization resources with IAM  |  Resource Manager  |  Google Cloud Documentation
@@ -21,13 +21,9 @@ Send feedback
 
 #  Access control for organization resources with IAM Stay organized with collections  Save and categorize content based on your preferences. 
 
-Google Cloud offers [Identity and Access Management (IAM)](https://docs.cloud.google.com/iam/docs/overview), which lets you give more granular access to specific Google Cloud resources and prevents unwanted access to other resources. IAM lets you adopt the [security principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege), so you grant only the necessary access to your resources.
+[Identity and Access Management (IAM)](https://docs.cloud.google.com/iam/docs/overview) lets you provide granular access to specific Google Cloud resources while preventing unwanted access to other resources. By applying the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege), you grant only the permissions necessary for your workloads.
 
-IAM lets you control **who (users)** has **what access (roles)** to **which resources** by setting allow policies. Allow policies grant specific roles to a user to give the user certain permissions.
-
-This page explains the IAM roles that are available on the organization resource, and how to create and manage allow policies for organization resources using the Cloud Resource Manager API. For more information, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access).
-
-**Note:** You can also use deny policies to prevent principals from using specific IAM permissions. For more information, see [Deny policies](https://docs.cloud.google.com/iam/docs/deny-overview). 
+IAM controls _who (users)_ has _what access (roles)_ to _which resources_ through allow policies, which bind specific roles to users. To manage access across your resource hierarchy, you can configure organization-level IAM roles and allow policies by using the Cloud Resource Manager API. You can also define [deny policies](https://docs.cloud.google.com/iam/docs/deny-overview) to prevent principals from using specific permissions. For more information, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access).
 
 ## Permissions and roles
 
@@ -550,6 +546,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

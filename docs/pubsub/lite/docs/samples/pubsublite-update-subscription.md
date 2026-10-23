@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/lite/docs/samples/pubsublite-update-subscription/
 title: Update Lite subscription \u00a0|\u00a0 Pub/Sub Lite \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:15:06.618856+00:00
+fetched_at: 2026-10-23T05:44:21.229732+00:00
 ---
 
 # Update Lite subscription  |  Pub/Sub Lite  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/columnar-engine/manage-content-manually/
 title: Manage column store content manually \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:21.920900+00:00
+fetched_at: 2026-10-23T06:00:15.849740+00:00
 ---
 
 # Manage column store content manually  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,13 +21,13 @@ Send feedback
 
 #  Manage column store content manually Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to manually manage the content of the columnar engine to accelerate query performance. It explains how to add and remove tables, materialized views, and ScaNN indexes.
+This page describes how to manually manage the content of the columnar engine to accelerate query performance. It explains how to add and remove tables, materialized views, and vector indexes.
 
-## Manage tables, materialized views, and ScaNN indexes
+## Manage tables, materialized views, and vector indexes
 
 Based on your workload, you can manually add columns to the column store or drop some or all of the columns of a table or a materialized view from the column store. Query evaluation automatically uses the stored columnar data to answer queries.
 
-Similarly, you can manually add a ScaNN index to the columnar engine to speed up vector search. This allows for efficient nearest neighbor searches on large datasets of vector embeddings.
+Similarly, you can manually add HNSW or ScaNN vector indexes to the columnar engine to speed up vector search. Columnar engine acceleration for HNSW indexes is generally available (GA), while acceleration for ScaNN indexes is in [Preview](https://cloud.google.com/products#product-launch-stages). This allows for efficient nearest neighbor searches on large datasets of vector embeddings.
 
 When choosing which tables, materialized views and columns to add to the column store, consider both the size of the column store and the shape of the workload. Good candidates for selection include large tables or views that are frequently scanned. Within these tables or views, identify any large non-unique indexes used by the OLAP workload. You can add these indexes' columns to the column store and potentially drop the indexes, thereby eliminating the performance cost associated with their maintenance on the primary instance.
 
@@ -89,11 +89,11 @@ To add all of one table's or one materialized view's columns, omit the column li
 
 For more information on setting the database flags on an instance, see [Configure an instance's database flags](https://docs.cloud.google.com/alloydb/docs/instance-configure-database-flags).
 
-#### Google Cloud CLI CLI syntax when using `google_columnar_engine.relations`
+#### gcloud CLI syntax when using `google_columnar_engine.relations`
 
-If you use the Google Cloud CLI to set the `google_columnar_engine.relations` flag, then you must use [alternate delimiter syntax](https://cloud.google.com/sdk/gcloud/reference/topic/escaping) to separate the database flags that you set. This is because the column list is comma-separated, requiring you to use a non-comma character when specifying flags within the same command-line argument.
+If you use the Google Cloud CLI to set the `google_columnar_engine.relations` flag, then you must use [alternate delimiter syntax](https://docs.cloud.google.com/sdk/gcloud/reference/topic/escaping) to separate the database flags that you set. This is because the column list is comma-separated, requiring you to use a non-comma character when specifying flags within the same command-line argument.
 
-The following example demonstrates using the gcloud CLI to add two columns in the `public` schema to the column store. The example sets a separate flag to enable the columnar engine, because using [the `gcloud alloydb instance update` command](https://docs.cloud.google.com/sdk/gcloud/reference/alloydb/instances/update) to set any database flag must also set all other database flags that you want to have non-default values, even if they're already set.
+The following example demonstrates using the gcloud CLI to add two columns in the `public` schema to the column store. The example sets a separate flag to enable the columnar engine, because using [the `gcloud alloydb instances update` command](https://docs.cloud.google.com/sdk/gcloud/reference/alloydb/instances/update) to set any database flag must also set all other database flags that you want to have non-default values, even if they're already set.
 
 **Caution:** Running this example unsets all database flags from the instance except for the flags that it specifies.
     
@@ -105,6 +105,17 @@ The following example demonstrates using the gcloud CLI to add two columns in th
     [:FLAG_3=VALUE_3 ...] \
         --region=REGION_ID \
         --cluster=CLUSTER_ID
+
+Replace the following:
+
+  * `INSTANCE_NAME`: the name of the instance.
+  * `DATABASE_NAME`: the database containing the columns to add to the column store.
+  * `TABLE_NAME`: the table or materialized view name.
+  * `COLUMN_1, COLUMN_2`: the columns to add to the column store.
+  * `REGION_ID`: the region of your instance.
+  * `CLUSTER_ID`: the cluster ID.
+
+
 
 ### Drop columns using flags
 
@@ -131,7 +142,8 @@ Run the `google_columnar_engine_estimate` SQL function to estimate the total amo
     );
     
 
-Replace the following: 
+Replace the following:
+
   * `TABLE_NAME`: a string containing the name of the table or the materialized view. If the table or the view is in a schema other than public, specify the name of the schema, a dot, and the name of the table or the view; for example, `'myschema.mytable'`.
   * `COLUMN_LIST`: a string containing a comma-separated, case-sensitive list of the names of the columns you want to add. If you want to add all of the table's or the materialized view's columns to the column store, omit this parameter.
 
@@ -143,7 +155,7 @@ Run the `google_columnar_engine_add` SQL function to add columns to the column s
 
 This method adds the specified columns to the column store and manages the columns in the connected node only. The new columns don't persist within the store across instance restarts.
 
-This method doesn't change the `google_columnar_engine.relations` database flag. [Auto columnarization](https://docs.cloud.google.com/alloydb/docs/columnar-engine/manage-content-recommendations) does not consider columns added by this SQL function.
+This method doesn't change the `google_columnar_engine.relations` database flag. [Auto-columnarization](https://docs.cloud.google.com/alloydb/docs/columnar-engine/manage-content-recommendations) does not consider columns added by this SQL function.
 
 ### psql Client
     
@@ -154,9 +166,10 @@ This method doesn't change the `google_columnar_engine.relations` database flag.
     );
     
 
-Replace the following: 
-  * 'TABLE_NAME': A string containing the name of the table or the materialized view. If the table or the view is in a schema other than `public`, specify the name of the schema, a dot, and the name of the table or the view; for example, `'myschema.mytable'`.
-  * 'COLUMN_LIST': A string containing a comma-separated, case-sensitive list of the names of the columns you want to add. If you want to add all of the table's or the materialized view's columns to the column store, omit this parameter.
+Replace the following:
+
+  * `TABLE_NAME`: a string containing the name of the table or the materialized view. If the table or the view is in a schema other than `public`, specify the name of the schema, a dot, and the name of the table or the view; for example, `'myschema.mytable'`.
+  * `COLUMN_LIST`: a string containing a comma-separated, case-sensitive list of the names of the columns you want to add. If you want to add all of the table's or the materialized view's columns to the column store, omit this parameter.
 
 
 
@@ -173,46 +186,42 @@ Run the `google_columnar_engine_drop` SQL function as follows:
     );
     
 
-Replace the following: 
+Replace the following:
 
-  * 'TABLE_NAME': A string containing the name of the table or the materialized view. If the table or the view is in a schema other than `public`, specify the name of the schema, a dot, and the name of the table or the view; for example, `'myschema.mytable'`.
-  * 'COLUMN_LIST': A string containing a comma-separated, case-sensitive list of the names of the columns you want to add. If you want to add all of the table's or the materialized view's columns to the column store, omit this parameter.
+  * `TABLE_NAME`: a string containing the name of the table or the materialized view. If the table or the view is in a schema other than `public`, specify the name of the schema, a dot, and the name of the table or the view; for example, `'myschema.mytable'`.
+  * `COLUMN_LIST`: a string containing a comma-separated, case-sensitive list of the names of the columns that you want to drop. If you want to drop all of the table's or the materialized view's columns from the column store, omit this parameter.
 
 
 
 You can use the `google_columnar_engine_drop` function to remove columns added by editing the `google_columnar_engine.relations` database flag. However, when you do so, those columns are added back to the columnar store when the instance restarts.
 
-## Manage ScaNN indexes in the columnar engine
+## Manage vector indexes in the columnar engine
 
-**Preview**
+To accelerate vector search, you can load vector indexes to the columnar engine's index cache. Columnar engine acceleration for HNSW indexes is generally available (GA), while acceleration for ScaNN indexes is in [Preview](https://cloud.google.com/products#product-launch-stages).
 
-This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
+### Add, remove, and verify vector indexes using SQL functions
 
-To accelerate vector search, you can load ScaNN indexes to the columnar engine's index cache.
+You can manually add, remove, and verify vector indexes from the index cache using SQL functions. Adding an index to the cache can accelerate vector search queries.
 
-### Add, remove, and verify ScaNN indexes using SQL functions
-
-You can manually add, remove, and verify ScaNN indexes from the index cache using SQL functions. Adding an index to the cache can accelerate vector search queries.
-
-#### Add a ScaNN index
+#### Add a vector index
 
 To add a specific index to the columnar engine's index cache, use the following SQL function:
     
     
-    SELECT google_columnar_engine_add_index(index => 'SCANN_INDEX_NAME');
+    SELECT google_columnar_engine_add_index(index => 'INDEX_NAME');
     
 
-Replace `SCANN_INDEX_NAME` with the name of the ScaNN index that you want to add to the columnar engine's index cache.
+Replace `INDEX_NAME` with the name of the HNSW or ScaNN vector index that you want to add to the columnar engine's index cache.
 
-#### Remove a ScaNN index
+#### Remove a vector index
 
-To drop a specific ScaNN index from the columnar engine, use the following SQL function:
+To drop a specific vector index from the columnar engine, use the following SQL function:
     
     
-    SELECT google_columnar_engine_drop_index(index => 'SCANN_INDEX_NAME');
+    SELECT google_columnar_engine_drop_index(index => 'INDEX_NAME');
     
 
-Replace `SCANN_INDEX_NAME` with the name of the ScaNN index that you want to remove.
+Replace `INDEX_NAME` with the name of the vector index that you want to remove.
 
 #### Verify columnar engine usage
 
@@ -246,6 +255,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

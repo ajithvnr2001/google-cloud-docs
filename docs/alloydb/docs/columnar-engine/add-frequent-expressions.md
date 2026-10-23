@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/columnar-engine/add-frequent-expressions/
 title: Optimize queries with virtual columns for expressions \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:11.199313+00:00
+fetched_at: 2026-10-23T06:00:00.623045+00:00
 ---
 
 # Optimize queries with virtual columns for expressions  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -57,19 +57,18 @@ AlloyDB supports `->` and `->>` operators on JSON and JSONB columns in the ([Pre
 
 ## Enable virtual columns for expressions
 
-You can enable support for virtual columns for expressions for an instance using the [gcloud beta alloydb instances update](https://docs.cloud.google.com/sdk/gcloud/reference/beta/alloydb/instances/update) command.
+Support for virtual columns for expressions is enabled by default (`google_columnar_engine.enable_virtual_columns_scan=on`). If this flag was previously disabled, you can enable it for an instance using the [`gcloud alloydb instances update`](https://docs.cloud.google.com/sdk/gcloud/reference/alloydb/instances/update) command.
 
 To use the gcloud CLI, you can [install and initialize](https://docs.cloud.google.com/sdk/docs/install-sdk) the Google Cloud CLI, or you can use [Cloud Shell](https://docs.cloud.google.com/shell/docs/using-cloud-shell).
 
 **Note:** You don't need to restart the database after you enable the `google_columnar_engine.enable_virtual_columns_scan` flag.
     
     
-        gcloud beta alloydb instances update INSTANCE_ID \
-            --region=REGION_ID \
-            --cluster=CLUSTER_ID \
-            --project=PROJECT_ID \
-            --update-mode=INPLACE \
-            --add-database-flags="google_columnar_engine.enable_virtual_columns_scan=on"
+    gcloud alloydb instances update INSTANCE_ID \
+        --region=REGION_ID \
+        --cluster=CLUSTER_ID \
+        --project=PROJECT_ID \
+        --database-flags="google_columnar_engine.enable_virtual_columns_scan=on"
 
 Replace the following:
 
@@ -105,7 +104,7 @@ Replace the following:
   * `DB.SCHEMA`: the database schema where your table is stored.
   * `TABLE_NAME`: the name of the table where your column is stored.
   * `COLUMN_NAME`: the name of the columns that include the expressions.
-  * `EXP1, EXP2, EXP3` with a comma-separated list of expressions The JSON Extract expressions supported are `->` and `->>`.
+  * `EXP1, EXP2, EXP3`: a comma-separated list of expressions. The JSON extract expressions supported are `->` and `->>`.
 
 For example, to add `user ->> 'email'` and `user ->> 'name'` expressions for the `employee` table in the `public` schema, use the following query:
         
@@ -176,7 +175,9 @@ To add this example frequent expression to the columnar engine, follow these ste
          );
          
 
-  7. Run a query that uses the frequent expression and observe the time the query takes to complete.
+  7. Disable the virtual columns for expressions feature to establish a performance baseline, then run a query that uses the frequent expression and observe the time the query takes to complete.
+         
+         SET google_columnar_engine.enable_virtual_columns_scan=off;
          
          SELECT username
          FROM users
@@ -208,10 +209,9 @@ To find all expressions added for a specific table, query the `g_columnar_virtua
         SELECT * FROM g_columnar_virtual_columns;
     
 
-The output looks similar to the following, where the `description` field shows the all expressions added for a table (relation).
+The output is similar to the following, where the `description` field shows all expressions added for a table (relation):
     
     
-    SELECT * FROM g_columnar_virtual_columns;
     category           | expression
     database_name      | testdb
     schemas            | {public}
@@ -240,6 +240,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

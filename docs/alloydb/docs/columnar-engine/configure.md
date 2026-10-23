@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/columnar-engine/configure/
 title: Configure the columnar engine \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:36:55.667364+00:00
+fetched_at: 2026-10-23T06:00:01.179809+00:00
 ---
 
 # Configure the columnar engine  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -23,7 +23,7 @@ Send feedback
 
 This page describes how to enable or disable the columnar engine on an AlloyDB for PostgreSQL instance. It also covers how to configure an appropriate initial size for its column store, as well as memory and storage cache settings for optimal performance.
 
-To use the columnar engine when using AlloyDB Omni, see [Enable the columnar engine in AlloyDB Omni](https://docs.cloud.google.com/alloydb/docs/omni/columnar-engine/configure).
+To use the columnar engine when using AlloyDB Omni, see [Enable the columnar engine in AlloyDB Omni](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/columnar-engine/configure).
 
 Each of these actions involves changing the value of a database flag on one of your AlloyDB instances. For more information about setting database flags, see [Configure an instance's database flags](https://docs.cloud.google.com/alloydb/docs/instance-configure-database-flags). 
 
@@ -35,7 +35,7 @@ To use columnar engine on an instance, set the instance's [`google_columnar_engi
 
 After you set this flag, the instance automatically restarts. 
 
-For more information about setting database flags in AlloyDB, see [Configure an instance's database flags](https://cloud.google.com/alloydb/docs/instance-configure-database-flags).
+For more information about setting database flags in AlloyDB, see [Configure an instance's database flags](https://docs.cloud.google.com/alloydb/docs/instance-configure-database-flags).
 
 ## Configure the size of the column store
 
@@ -47,21 +47,17 @@ Memory and storage cache together represent the overall capacity of the columnar
 
 If the column store becomes larger than the allocated portion of your instance's memory, AlloyDB automatically uses the instance's underlying cache layer to store the additional columnar data. 
 
-In AlloyDB, you can load both relations, materialized views, and ScaNN indexes into the columnar engine to accelerate query performance.
+In AlloyDB, you can load relations, materialized views, and vector indexes into the columnar engine to accelerate query performance.
 
-By default, AlloyDB allocates 30% of the instance's memory to the column store, and automatically adjusts the total allocation if you resize the instance. You can modify the instance's memory to a recommended maximum of 50%, although 70% is allowed. To find the recommended columnar engine memory size for your instance, see [Recommend column store memory size](https://docs.cloud.google.com/alloydb/docs/columnar-engine/manage-content-recommendations#recommend-populate). 
+By default, AlloyDB allocates 30% of the instance's memory to the column store. For a 1-vCPU instance, the default allocation is 10%. AlloyDB automatically adjusts the total allocation if you resize the instance. You can modify the instance's memory to a recommended maximum of 50%, although 70% is allowed. For a 1-vCPU instance, the maximum allowed is 20%. Regardless of the instance size, the minimum allocation is 128 MB. To find the recommended columnar engine memory size for your instance, see [Recommend column store memory size](https://docs.cloud.google.com/alloydb/docs/columnar-engine/manage-content-recommendations#recommend-populate). 
 
 You can also set the allocation to a fixed and specific size using the [`google_columnar_engine.memory_size_in_mb`](https://docs.cloud.google.com/alloydb/docs/reference/columnar-engine-flags#memory-size-in-mb) flag. To have AlloyDB return to the default allocation, [remove the flag from the instance](https://docs.cloud.google.com/alloydb/docs/instance-configure-database-flags).
 
 For more information on setting or deleting flags, see [Configure an instance's database flags](https://docs.cloud.google.com/alloydb/docs/instance-configure-database-flags). 
 
-### Configure the loading of ScaNN indexes into the columnar engine
+### Configure the loading of vector indexes into the columnar engine
 
-**Preview**
-
-This feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
-
-The columnar engine accelerates vector search when ScaNN indexes are populated into it.
+The columnar engine accelerates vector search when HNSW or ScaNN vector indexes are populated into it. Columnar engine acceleration for HNSW indexes is generally available (GA), while acceleration for ScaNN indexes is in [Preview](https://cloud.google.com/products#product-launch-stages).
 
 To enable the columnar index cache, set the [`google_columnar_engine.enable_index_caching`](https://docs.cloud.google.com/alloydb/docs/reference/columnar-engine-flags#enable_index_caching) flag to `on`.
 
@@ -137,7 +133,7 @@ By default, when you enable the columnar engine, it is set to automatically refr
 
 For workloads with a high rate of data modifications such as frequent `INSERT`, `UPDATE`, or `DELETE` operations, you may manually refresh the columnar store after these changes to keep the index up-to-date.
 
-To manually refresh the column engine, run the following SQL query:
+To manually refresh the columnar engine, run the following SQL query:
     
     
     SELECT google_columnar_engine_refresh('TABLE_NAME');
@@ -147,9 +143,9 @@ Replace `TABLE_NAME` with the name of the table or the materialized view you wan
 
 ## Disable the columnar engine
 
-To disable the columbar engine on an instance, set the `google_columnar_engine.enabled` flag to `off`.
+To disable the columnar engine on an instance, set the `google_columnar_engine.enabled` flag to `off`.
 
-For more information about setting database flags in AlloyDB, see [Configure an instance's database flags](https://cloud.google.com/alloydb/docs/instance-configure-database-flags). 
+For more information about setting database flags in AlloyDB, see [Configure an instance's database flags](https://docs.cloud.google.com/alloydb/docs/instance-configure-database-flags). 
 
 After you set this flag, the instance automatically restarts. 
 
@@ -166,7 +162,7 @@ If columns don't populate in the columnar engine, then one of the following situ
 
 To find the cause of this issue, try the following:
 
-  * Review your instance's [audit logs](https://docs.cloud.google.com/alloydb/docs/audit-logging#viewing_logs). 
+  * Review your instance's [audit logs](https://docs.cloud.google.com/alloydb/docs/audit-logging#service_name). 
 
   * [Confirm](https://docs.cloud.google.com/alloydb/docs/columnar-engine/monitor-tune#relations-view) that the tables or materialized views in your query are in the columnar engine.
 
@@ -190,6 +186,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

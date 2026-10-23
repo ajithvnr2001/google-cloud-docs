@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/columnar-engine/maintain-content-freshness/
 title: Maintain freshness of in-memory column store data \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:44:10.046235+00:00
+fetched_at: 2026-10-23T06:00:07.210184+00:00
 ---
 
 # Maintain freshness of in-memory column store data  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -25,9 +25,9 @@ This page describes how to maintain the freshness of data in the columnar engine
 
 As table rows are added, deleted, or updated, the columnar engine doesn't immediately update data in the column store. Instead, it marks affected content in the column store as invalid, and queries are planned and executed using both column-oriented data from the column store and row-oriented data from the row cache and database storage.
 
-Over time, as more and more data blocks become invalid, query performance improvements provided by the columnar engine are reduced to the point where the columnar data needs to be refreshed to regain query performance improvements. When this _refresh threshold_ is reached, the columnar engine uses a background job to refresh the invalid data in the column store. By default, the columnar engine uses a refresh threshold of 50, indicating that given content in the column store gets marked for refresh when 50% of its content has become invalid. You can change this refresh threshold to adjust the overhead of the automatic refresh and potentially gain better ongoing query performance for your application workload.
+Over time, as more and more data blocks become invalid, query performance improvements provided by the columnar engine are reduced to the point where the columnar data needs to be refreshed to regain query performance improvements. When this _refresh threshold_ is reached, the columnar engine uses a background job to refresh the invalid data in the column store. By default, the columnar engine uses a refresh threshold of 25, indicating that given content in the column store gets marked for refresh when 25% of its content has become invalid. You can change this refresh threshold to adjust the overhead of the automatic refresh and potentially gain better ongoing query performance for your application workload.
 
-Additionally, you can manually refresh tables and ScaNN indexes that are loaded in the columnar engine at any time. Usually, you perform a manual refresh when you want changes to a table to be reflected in the column store as soon as possible after making the changes.
+Additionally, you can manually refresh tables and HNSW and ScaNN vector indexes that are loaded in the columnar engine at any time. Usually, you perform a manual refresh when you want changes to a table to be reflected in the column store as soon as possible after making the changes.
 
 ## Check invalid data percentage
 
@@ -48,9 +48,9 @@ To check the invalidation percentage for a specific table, add a `WHERE` clause 
         ELSE 0.0
       END AS invalid_block_percentage
     FROM
-      g_columnar_relations;
+      g_columnar_relations
     WHERE
-     relation_name =  TABLE_NAME
+     relation_name = 'TABLE_NAME';
     
 
 Replace `TABLE_NAME` with a string containing the name of the table or the materialized view. If the resource is in a schema other than `public`, specify the name of the schema using the format `SCHEMA_NAME.TABLE_NAME`—for example, `myschema.mytable`.
@@ -64,10 +64,12 @@ To check the invalidation percentage for a specific index, add a `WHERE` clause 
         ELSE 0.0
       END AS invalid_block_percentage
     FROM
-      g_columnar_indexes;
+      g_columnar_indexes
     WHERE
-      index_name = INDEX_NAME
+      index_name = 'INDEX_NAME';
     
+
+Replace `INDEX_NAME` with a string containing the name of the vector index.
 
 ## Change the refresh threshold of the columnar engine
 
@@ -82,7 +84,7 @@ To change the refresh threshold of the columnar engine, you must modify the valu
   2. Click the name of the cluster that contains the instance you want to configure.
   3. In the **Instances in your cluster** section, find the instance and click **Edit**.
   4. In the **Flags** section, either add a new flag or modify the existing `google_columnar_engine.refresh_threshold_percentage` flag.
-  5. Set the value to an integer between `1` and `100`. This value represents the percentage of invalid data that triggers a refresh.
+  5. Set the value to an integer between `0` and `100` (or `-1` to disable automatic refresh). This value represents the percentage of invalid data that triggers a refresh.
   6. Click **Done**.
 
 
@@ -100,12 +102,12 @@ To change the refresh threshold of the columnar engine, run the following comman
         --region=REGION_ID \
         --project=PROJECT_ID
 
-**Note:** The `gcloud alloydb alloydb instances update` command overwrites all existing flags if they are not included in the `--database-flags` list. When adding or changing a flag, you must specify all flags you want to retain. For example, if your instance already has `flag1=A` and you run the previous command, it only contains `google_columnar_engine.refresh_threshold_percentage=THRESHOLD` set afterward. To keep the old flag and add the new one, you must include both: `--database-flags=flag1=A,google_columnar_engine.refresh_threshold_percentage=THRESHOLD`. 
+**Note:** The `gcloud alloydb instances update` command overwrites all existing flags if they are not included in the `--database-flags` list. When adding or changing a flag, you must specify all flags you want to retain. For example, if your instance already has `flag1=A` and you run the previous command, it only contains `google_columnar_engine.refresh_threshold_percentage=THRESHOLD` set afterward. To keep the old flag and add the new one, you must include both: `--database-flags=flag1=A,google_columnar_engine.refresh_threshold_percentage=THRESHOLD`. 
 
 Replace the following:
 
   * INSTANCE_ID: the ID of the instance.
-  * THRESHOLD: an integer value between `1` and `100`. This value specifies the percentage of data blocks in content that must become invalid for the content to be marked for refresh.
+  * THRESHOLD: an integer value between `0` and `100` (or `-1` to disable automatic refresh). This value specifies the percentage of data blocks in content that must become invalid for the content to be marked for refresh.
   * CLUSTER_ID: the ID of the cluster where the instance is located.
   * REGION_ID: the region of the cluster.
   * PROJECT_ID: the ID of the project.
@@ -121,7 +123,7 @@ You can manually refresh tables and vector indexes in the columnar engine at any
 To refresh a table's data in the columnar engine, execute the `google_columnar_engine_refresh` function.
     
     
-    SELECT google_columnar_engine_refresh(TABLE_NAME);
+    SELECT google_columnar_engine_refresh('TABLE_NAME');
     
 
 Replace `TABLE_NAME` with a string containing the name of the table or the materialized view. If the resource is in a schema other than `public`, specify the name of the schema using the format `SCHEMA_NAME.TABLE_NAME`—for example, `myschema.mytable`.
@@ -129,7 +131,7 @@ Replace `TABLE_NAME` with a string containing the name of the table or the mater
 Similarly, to manually refresh a vector index in the columnar engine, execute the `google_columnar_engine_refresh_index` function.
     
     
-    SELECT google_columnar_engine_refresh_index(index => INDEX_NAME);
+    SELECT google_columnar_engine_refresh_index(index => 'INDEX_NAME');
     
 
 Replace `INDEX_NAME` with a string containing the name of the index to refresh.
@@ -138,6 +140,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

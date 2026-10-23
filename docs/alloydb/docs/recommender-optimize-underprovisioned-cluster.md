@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/recommender-optimize-underprovisioned-cluster/
 title: Optimize underprovisioned clusters \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:33.106110+00:00
+fetched_at: 2026-10-23T05:59:59.767917+00:00
 ---
 
 # Optimize underprovisioned clusters  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,24 +21,24 @@ Send feedback
 
 #  Optimize underprovisioned clusters Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to optimize the performance of your AlloyDB for PostgreSQL clusters by using the underprovisioned cluster [recommender](https://docs.cloud.google.com/recommender/docs/overview). The recommender helps you detect clusters that have high CPU and memory utilization and provides recommendations for improving your cluster configuration.
+To prevent performance bottlenecks caused by high CPU or memory utilization, you can use the AlloyDB for PostgreSQL underprovisioned cluster [recommender](https://docs.cloud.google.com/recommender/docs/whatis-activeassist). The recommender detects clusters with elevated resource utilization and provides recommendations to rightsize your cluster configuration.
 
 ## How the underprovisioned cluster recommender works
 
-When there is high CPU and or memory utilization detected, you see a recommendation to increase the size of the affected instance in the cluster to reduce CPU or memory utilization at peak. Recommendations are generated daily.
+When there is high CPU or memory utilization detected, you see a recommendation to increase the size of the affected instance in the cluster to reduce CPU or memory utilization at peak. Recommendations are generated daily.
 
 ## Before you begin
 
 Before you can view recommendations and insights, do the following:
 
-  * Ensure that you [enable the Recommender API](https://docs.cloud.google.com/recommender/docs/enabling).
+  * Ensure that you [enable the Recommender API](https://docs.cloud.google.com/recommender/docs/enable-api).
 
   * To get the permissions to view and work with insights and recommendations, ensure that you have the required [Identity and Access Management (IAM) roles](https://docs.cloud.google.com/alloydb/docs/reference/iam-roles-permissions). 
 
 Tasks | Roles  
 ---|---  
-View recommendations |  `recommender.alloydbViewer` or `alloydb.viewer`  
-Apply recommendations |  `recommender.alloydbAdmin` or `alloydb.admin`  
+View recommendations |  `roles/recommender.alloydbViewer` or `roles/alloydb.viewer`  
+Apply recommendations |  `roles/recommender.alloydbAdmin` or `roles/alloydb.admin`  
   
 See [Grant access to other users](https://docs.cloud.google.com/alloydb/docs/user-grant-access) for more information.
 
@@ -47,7 +47,7 @@ See [Grant access to other users](https://docs.cloud.google.com/alloydb/docs/use
 
 ## List underprovisioned cluster recommendations
 
-You can list recommendations for underprovisioned clusters using the Google Cloud console, `gcloud CLI`, or the Recommender API.
+You can list recommendations for underprovisioned clusters using the Google Cloud console, gcloud CLI, or the Recommender API.
 
 ###  Console 
 
@@ -57,7 +57,7 @@ To list recommendations about underprovisioned clusters, complete the following 
 
 [Go to Clusters](https://console.cloud.google.com/alloydb/clusters)
 
-For more information, see [Find recommendations with Recommendation Hub](https://docs.cloud.google.com/recommender/docs/recommendation-hub/identify-configuration-problems).
+For more information, see [Find recommendations with Active Assist](https://docs.cloud.google.com/recommender/docs/quickstart-active-assist).
 
   2. In the **Resources** list table, find the cluster and click **View issues** in the **Issues** column.
 
@@ -80,14 +80,14 @@ To list recommendations about underprovisioned clusters using gcloud CLI, run th
 
 Replace the following:
 
-  * `PROJECT_ID`: Your project ID.
-  * `LOCATION`: A region where your clusters are located, such as `us-central1`.
+  * `PROJECT_ID`: your project ID.
+  * `LOCATION`: a region where your clusters are located, such as `us-central1`.
 
 
 
 ###  API 
 
-To list recommendations for underprovisioned clusters using the [Recommendations API](https://docs.cloud.google.com/recommender/docs/using-api), call the [`recommendations.list`](https://docs.cloud.google.com/recommender/docs/reference/rest/v1/projects.locations.recommenders.recommendations/list) method as follows:
+To list recommendations for underprovisioned clusters using the [Recommender API](https://docs.cloud.google.com/recommender/docs/use-api), call the [`recommendations.list`](https://docs.cloud.google.com/recommender/docs/reference/rest/v1/projects.locations.recommenders.recommendations/list) method as follows:
     
     
     GET https://recommender.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/recommenders/google.alloydb.cluster.PerformanceRecommender/recommendations?filter=recommenderSubtype=INCREASE_PRIMARY_INSTANCE_SIZE
@@ -95,14 +95,14 @@ To list recommendations for underprovisioned clusters using the [Recommendations
 
 Replace the following:
 
-  * `PROJECT_ID`: Your project ID.
-  * `LOCATION`: A region where your clusters are located, such as `us-central1`.
+  * `PROJECT_ID`: your project ID.
+  * `LOCATION`: a region where your clusters are located, such as `us-central1`.
 
 
 
 ## View insights and detailed recommendations
 
-You can view insights and detailed recommendations about underprovisioned clusters that require optimization using the Google Cloud console, `gcloud CLI`, or the Recommender API.
+You can view insights and detailed recommendations about underprovisioned clusters that require optimization using the Google Cloud console, gcloud CLI, or the Recommender API.
 
 ###  Console 
 
@@ -125,14 +125,15 @@ Run the [`gcloud recommender insights list`](https://docs.cloud.google.com/sdk/g
     gcloud recommender insights list \
     --project=PROJECT_ID \
     --location=LOCATION \
-    --insight-type=google.alloydb.cluster.PerformanceInsight
+    --insight-type=google.alloydb.cluster.PerformanceInsight \
     --filter=insightSubtype=INSIGHT_SUBTYPE
+    
 
 Replace the following:
 
-  * PROJECT_ID: Your project ID.
-  * LOCATION : A region where your clusters are located, such as `us-central1`.
-  * INSIGHT_SUBTYPE: set this parameter to one of the following: 
+  * `PROJECT_ID`: your project ID.
+  * `LOCATION`: a region where your clusters are located, such as `us-central1`.
+  * `INSIGHT_SUBTYPE`: set this parameter to one of the following: 
     * `HIGH_INSTANCE_CPU_UTILIZATION`: display insights about CPU usage
     * `HIGH_INSTANCE_MEMORY_UTILIZATION`: display insights about memory
 
@@ -147,9 +148,9 @@ Call the [`insights.list`](https://docs.cloud.google.com/recommender/docs/refere
 
 Replace the following:
 
-  * PROJECT_ID: Your project ID.
-  * LOCATION: A region where your clusters are located, for example, `us-central1`.
-  * INSIGHT_SUBTYPE: set this parameter to one of the following: 
+  * `PROJECT_ID`: your project ID.
+  * `LOCATION`: a region where your clusters are located, for example, `us-central1`.
+  * `INSIGHT_SUBTYPE`: set this parameter to one of the following: 
     * `HIGH_INSTANCE_CPU_UTILIZATION`: display insights about CPU usage
     * `HIGH_INSTANCE_MEMORY_UTILIZATION`: display insights about memory
 
@@ -171,7 +172,7 @@ Subtype: `INCREASE_PRIMARY_INSTANCE_SIZE`
 Evaluate the recommendations carefully and do the following in the Google Cloud console to implement the recommendation:
 
   1. Click **Edit** on your cluster.
-  2. In the **Edit primary instance** window, switch to a machine type with more vCPUs and more memory. You don't need to rightsize the cluster exactly as recommended. Use your judgement and resize based on how you intend to provision the cluster.
+  2. In the **Edit primary instance** window, switch to a machine type with more vCPUs and more memory. You don't need to rightsize the cluster exactly as recommended. Use your judgment and resize based on how you intend to provision the cluster.
 
   3. Click **Update instance**.
 
@@ -189,6 +190,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

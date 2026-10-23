@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/monitor-active-queries/
 title: Monitor active queries \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:37:42.864745+00:00
+fetched_at: 2026-10-23T06:00:07.286489+00:00
 ---
 
 # Monitor active queries  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback
 
 #  Monitor active queries Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to monitor and troubleshoot the queries that are active in your database. Active queries are long-running queries on your database that can affect performance. Monitoring these queries can help identify causes of system latency and high CPU usage.
+To identify the causes of system latency and high CPU usage in AlloyDB for PostgreSQL, you can monitor and troubleshoot active, long-running queries in your database.
 
-You can view active queries on the query insights dashboard. These queries are displayed by the transaction start time. If there is a large number of queries running, the results may be limited to a subset of total queries due to the memory constraints the system enforces on the data collection.
+You can view active queries on the **Query insights** page in the Google Cloud console, ordered by transaction start time. If a large number of queries are running, the page might display a subset of total queries due to memory limits on data collection.
 
 ## Before you begin
 
@@ -48,15 +48,15 @@ To start viewing active queries, you must enable [advanced query insights featur
 
 
 
-You can use Gemini Cloud Assist assistance to help you monitor and troubleshoot your AlloyDB for PostgreSQL resources. For more information, see [Monitor and troubleshoot with Gemini assistance](https://docs.cloud.google.com/alloydb/docs/monitor-troubleshoot-with-gemini).
+You can use Gemini Cloud Assist assistance to help you monitor and troubleshoot your AlloyDB resources. For more information, see [Monitor and troubleshoot with AI assistance](https://docs.cloud.google.com/alloydb/docs/monitor-troubleshoot-with-ai).
 
 ## View active queries
 
 To view your active queries, do the following:
 
-  1. Create a custom role and add the [`databaseinsights.monitoringViewer`](https://docs.cloud.google.com/iam/docs/roles-permissions/databaseinsights#databaseinsights.monitoringViewer) Identity and Access Management (IAM) permission.
+  1. Ask your administrator to grant you the Database Insights Monitoring Viewer (`roles/databaseinsights.monitoringViewer`) role, or create a custom role with the `databaseinsights.activeQueries.fetch` IAM permission.
 
-  2. Add this role for each user that is viewing active queries.
+  2. Grant this role to each user who is viewing active queries.
 
   3. In the Google Cloud console, open the **AlloyDB** page.
 
@@ -111,9 +111,9 @@ Process ID | Process ID is the unique identifier of the database connection.
 Node ID | Node ID is the unique identifier of the [read pool](https://docs.cloud.google.com/alloydb/docs/instance-read-pool-create) instance node that a query runs on.  
 Query | Normalized SQL query text.  
 Status | The current status of the connection. Status values include `active` and `idle in transaction`.  
-Session duration | The duration of current session (in seconds).  
-Transaction duration | The duration of current transaction (in seconds).  
-Query duration | The duration of current active Query (in seconds). Query duration of queries in the `idle in transaction` state are `0` as they are not actively running.  
+Session duration | The duration of the current session (in seconds).  
+Transaction duration | The duration of the current transaction (in seconds).  
+Query duration | The duration of the current active query (in seconds). The query duration of queries in the `idle in transaction` state is `0` because the queries aren't actively running.  
 Wait event type | The occurring wait event type during query execution.  
 Wait event | The occurring wait event during query execution.  
 Database | Database name on which this connection is running.  
@@ -130,7 +130,7 @@ To analyze static data, disable **Auto-refresh** and use the **Filter** field of
 
 ## Terminate a query or transaction
 
-To terminate a query or a transaction, you must have the [`databaseinsights.operationsAdmin`](https://docs.cloud.google.com/iam/docs/roles-permissions/databaseinsights#databaseinsights.operationsAdmin) role. For more information, see [IAM basic and predefined roles reference](https://docs.cloud.google.com/iam/docs/understanding-roles).
+To terminate a query or a transaction, you must have the [`roles/databaseinsights.operationsAdmin`](https://docs.cloud.google.com/iam/docs/roles-permissions/databaseinsights#databaseinsights.operationsAdmin) role. For more information, see [IAM basic and predefined roles reference](https://docs.cloud.google.com/iam/docs/understanding-roles).
 
 A transaction can contain multiple queries. To identify which of the queries are active at the moment, see the **Query** column in the **Longest running transaction** table.
 
@@ -141,7 +141,7 @@ To terminate a query or transaction, complete the following steps:
   3. Click **Terminate connection**.
   4. In the **Terminate connection** window, click **Confirm**.
 
-The page refreshes after initiating termination. If termination fails, it is silent and the query continues showing up in the Active Query list. If termination is successful, the query no longer displays in the list.
+The page refreshes after initiating termination. If termination fails, it is silent and the query continues showing up in the active queries list. If termination is successful, the query no longer displays in the list.
 
 
 **Warning:** Data inconsistency issues might arise when you forcefully terminate backend processes in the middle of a transaction.
@@ -157,6 +157,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

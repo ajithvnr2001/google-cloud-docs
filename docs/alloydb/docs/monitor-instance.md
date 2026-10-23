@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/monitor-instance/
 title: Monitor instances \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:34:44.927197+00:00
+fetched_at: 2026-10-23T06:00:09.197252+00:00
 ---
 
 # Monitor instances  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,15 +21,15 @@ Send feedback
 
 #  Monitor instances Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes how to monitor AlloyDB instances using the following methods:
+To track resource utilization, query throughput, replication lag, and system events across your AlloyDB for PostgreSQL clusters, you can monitor your instances by using the following methods:
 
-  * Monitor an instance using the AlloyDB System insights dashboard.
-  * Monitor an instance using the Cloud Monitoring dashboard.
-  * View metrics on the AlloyDB cluster Overview page.
+  * Monitor an instance by using the AlloyDB **System insights** dashboard.
+  * Monitor an instance by using the **Cloud Monitoring** dashboard.
+  * View metrics on the AlloyDB cluster **Overview** page.
 
 
 
-You can use Gemini Cloud Assist to help you monitor and troubleshoot your AlloyDB resources. For more information, see [Monitor and troubleshoot with Gemini assistance](https://docs.cloud.google.com/alloydb/docs/monitor-troubleshoot-with-gemini).
+You can use Gemini Cloud Assist to help you monitor and troubleshoot your AlloyDB resources. For more information, see [Monitor and troubleshoot with AI assistance](https://docs.cloud.google.com/alloydb/docs/monitor-troubleshoot-with-ai).
 
 ## Before you begin
 
@@ -44,10 +44,10 @@ To use AlloyDB System insights, you need permissions to do the following:
 
 
 
-To get these permissions, ask your administrator to grant you one of the following roles:
+To get these permissions, ask your administrator to grant you the following roles:
 
-  * Basic viewer (`roles/viewer`)
-  * Database Insights viewer (`roles/databaseinsights.eventsViewer`)
+  * To view the built-in System insights dashboard: AlloyDB Viewer (`roles/alloydb.viewer`) or Database Insights Events Viewer (`roles/databaseinsights.eventsViewer`).
+  * To query AlloyDB metrics in Metrics Explorer or Cloud Monitoring dashboards: Monitoring Viewer (`roles/monitoring.viewer`).
 
 
 
@@ -252,7 +252,7 @@ Cloud Monitoring offers predefined dashboards for several Google Cloud products.
 
 ### Set up alerts
 
-You can use Cloud Monitoring to [set up alerts](https://docs.cloud.google.com/monitoring/alerts/using-alerting-ui#viewing_policies) for a project or a specified instance.
+You can use Cloud Monitoring to [set up alerts](https://docs.cloud.google.com/monitoring/alerts/manage-alerts#manage-policies) for a project or a specified instance.
 
 For example, you can set up an alert for a message to be sent to specific email IDs when the **Memory usage** metric for a AlloyDB instance exceeds the threshold of 80%.
 
@@ -267,8 +267,8 @@ Select another metric from the **Chart** drop-down list. The chart shows the dat
 ## What's next
 
   * View the list of [AlloyDB metrics](https://docs.cloud.google.com/monitoring/api/metrics_gcp_a_b#gcp-alloydb).
-  * View [System Insights reference](https://docs.cloud.google.com/alloydb/docs/reference/system-insights-metrics).
-  * [Use Query Insights](https://docs.cloud.google.com/alloydb/docs/using-query-insights) to improve query performance.
+  * View [System insights reference](https://docs.cloud.google.com/alloydb/docs/reference/system-insights-metrics).
+  * [Use Query insights](https://docs.cloud.google.com/alloydb/docs/using-query-insights) to improve query performance.
   * Learn more about [Cloud Logging](https://docs.cloud.google.com/logging/docs/overview) and [Cloud Monitoring](https://docs.cloud.google.com/monitoring/docs/monitoring-overview).
   * [Monitor active queries](https://docs.cloud.google.com/alloydb/docs/monitor-active-queries) to identify causes of system latency and high CPU usage.
 
@@ -278,6 +278,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

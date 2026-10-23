@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recommender/docs/how-to/
 title: How-to guides \u00a0|\u00a0 Recommender \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T23:25:00.991695+00:00
+fetched_at: 2026-10-23T05:44:05.843935+00:00
 ---
 
 # How-to guides  |  Recommender  |  Google Cloud Documentation

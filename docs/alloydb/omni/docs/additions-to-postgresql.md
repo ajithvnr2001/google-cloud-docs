@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/docs/additions-to-postgresql/
 title: AlloyDB Omni additions to standard PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:10:57.431942+00:00
+fetched_at: 2026-10-23T06:00:03.596893+00:00
 ---
 
 # AlloyDB Omni additions to standard PostgreSQL  |  Google Cloud Documentation
@@ -21,9 +21,9 @@ Send feedback
 
 #  AlloyDB Omni additions to standard PostgreSQL Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page compares [AlloyDB Omni](https://docs.cloud.google.com/alloydb/omni/docs/overview) with standard community [PostgreSQL](https://www.postgresql.org/) in self-managed environments, and it highlights technical, operational, and functionality differences, which are most evident when you deploy AlloyDB Omni with Kubernetes operators. For more information, see the [AlloyDB Omni overview](https://docs.cloud.google.com/alloydb/omni/docs/overview).
+To evaluate whether [AlloyDB Omni](https://docs.cloud.google.com/alloydb/omni/docs/overview) fits your self-managed database requirements, you can compare its performance, vector search, automated management, high availability (HA), and licensing capabilities with standard community [PostgreSQL](https://www.postgresql.org/). These technical, operational, and feature differences are most evident when you deploy AlloyDB Omni with Kubernetes operators. For more information, see the [AlloyDB Omni overview](https://docs.cloud.google.com/alloydb/omni/docs/overview).
 
-A _self-managed database_ —which can be on-premises, in other clouds, on developer laptops, or on edge locations—means that the user must provision and manage the underlying infrastructure, such as the hardware, operating system (OS), and networking.
+A _self-managed database_ —which can be on-premises, in other clouds, on developer laptops, or on edge locations—means that you provision and manage the underlying infrastructure, such as the hardware, operating system (OS), and networking.
 
 AlloyDB Omni is a high-performance, operationally efficient database that offers the following features:
 
@@ -98,6 +98,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

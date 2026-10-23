@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/sources-oracle/
 title: Stream data from Oracle databases \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:42:03.425430+00:00
+fetched_at: 2026-10-23T05:43:47.922778+00:00
 ---
 
 # Stream data from Oracle databases  |  Datastream  |  Google Cloud Documentation
@@ -21,14 +21,9 @@ Send feedback
 
 #  Stream data from Oracle databases Stay organized with collections  Save and categorize content based on your preferences. 
 
-This section contains information about:
+Datastream lets you stream historical data and ongoing changes from a source Oracle database for real-time analytics and database replication.
 
-  * The behavior of how Datastream handles data that's being pulled from a source Oracle database
-  * The versions of Oracle database that Datastream supports
-  * An overview of how to setup a source Oracle database so that data can be streamed from it to a destination
-  * Known limitations for using Oracle database as a source
-
-
+Before you configure an Oracle source, review the replication behavior, supported versions and database types, database setup, best practices, and known limitations in Datastream.
 
 ## Behavior
 
@@ -273,6 +268,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

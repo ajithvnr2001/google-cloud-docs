@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/recommender-enable-ha/
 title: Improve instance reliability by enabling high availability \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:27:16.702254+00:00
+fetched_at: 2026-10-23T06:00:10.384762+00:00
 ---
 
 # Improve instance reliability by enabling high availability  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Improve instance reliability by enabling high availability Stay organized with collections  Save and categorize content based on your preferences. 
 
-The AlloyDB enable-high-availability [recommender](https://docs.cloud.google.com/recommender/docs/overview) proactively generates recommendations that help you bring your important instances within a service-level agreement (SLA) by providing data redundancy. This might be helpful during a zonal outage or when an instance runs out of memory.
+The AlloyDB enable-high-availability [recommender](https://docs.cloud.google.com/recommender/docs/whatis-activeassist) proactively generates recommendations that help you bring your important instances within a service-level agreement (SLA) by providing data redundancy. This might be helpful during a zonal outage or when an instance runs out of memory.
 
 This page describes the AlloyDB enable-high-availability recommender, how this recommender works, and how to use it.
 
@@ -35,20 +35,20 @@ The AlloyDB enable-high-availability recommender analyzes the instance metadata.
 
 ## Pricing
 
-The AlloyDB enable-high-availability recommender is available free of cost to all Google Cloud customers. For more information, see [Recommender pricing](https://cloud.google.com/recommender/pricing).
+The AlloyDB enable-high-availability recommender is available free of cost to all Google Cloud customers. For more information, see [Recommender pricing](https://docs.cloud.google.com/recommender/docs/pricing).
 
 ## Before you begin
 
 Before you can view recommendations and insights, you must do the following:
 
-  * Ensure that you [enable the Recommender API](https://docs.cloud.google.com/recommender/docs/enabling).
+  * Ensure that you [enable the Recommender API](https://docs.cloud.google.com/recommender/docs/enable-api).
 
   * To get the permissions to view and work with insights and recommendations, ensure that you have the required [Identity and Access Management (IAM) roles](https://docs.cloud.google.com/alloydb/docs/reference/iam-roles-permissions). 
 
 Tasks | Roles  
 ---|---  
-View recommendations |  One of these roles: `recommender.alloydbViewer` or `alloydb.viewer`.   
-Apply recommendations |  One of these roles: `recommender.alloydbAdmin` or `alloydb.admin`.   
+View recommendations |  One of these roles: `roles/recommender.alloydbViewer` or `roles/alloydb.viewer`.   
+Apply recommendations |  One of these roles: `roles/recommender.alloydbAdmin` or `roles/alloydb.admin`.   
 
 
 
@@ -56,7 +56,7 @@ See [Grant access to other users](https://docs.cloud.google.com/alloydb/docs/use
 
 ## List enable-high-availability recommendations
 
-You can list the enable-high-availability recommendations using the Google Cloud console, `gcloud CLI`, or the Recommender API.
+You can list the enable-high-availability recommendations using the Google Cloud console, gcloud CLI, or the Recommender API.
 
 ###  Console 
 
@@ -66,7 +66,7 @@ To list enable-high-availability recommendations by using the Google Cloud conso
 
 [Go to Clusters](https://console.cloud.google.com/alloydb/clusters)
 
-For more information, see [Getting started with Recommendation Hub](https://docs.cloud.google.com/recommender/docs/recommendation-hub/identify-configuration-problems).
+For more information, see [Getting started with Active Assist](https://docs.cloud.google.com/recommender/docs/quickstart-active-assist).
 
   2. In the **Resources** list table, find the cluster and click **View issues** in the **Issues** column.
 
@@ -96,7 +96,7 @@ Replace the following:
 
 ###  API 
 
-To list enable-high-availability recommendations using the [Recommendations API](https://docs.cloud.google.com/recommender/docs/using-api), call the [`recommendations.list`](https://docs.cloud.google.com/recommender/docs/reference/rest/v1/projects.locations.recommenders.recommendations/list) method as follows:
+To list enable-high-availability recommendations using the [Recommender API](https://docs.cloud.google.com/recommender/docs/use-api), call the [`recommendations.list`](https://docs.cloud.google.com/recommender/docs/reference/rest/v1/projects.locations.recommenders.recommendations/list) method as follows:
     
     
     GET https://recommender.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/recommenders/google.alloydb.cluster.ReliabilityRecommender/recommendations?filter=recommenderSubtype=ENABLE_INSTANCE_HIGH_AVAILABILITY
@@ -111,7 +111,7 @@ Replace the following:
 
 ## View insights and detailed recommendations
 
-You can view insights and detailed recommendations about instances that require enabling high availability using the Google Cloud console, `gcloud CLI`, or the Recommender API.
+You can view insights and detailed recommendations about instances that require enabling high availability using the Google Cloud console, gcloud CLI, or the Recommender API.
 
 To view insights and detailed recommendations, follow these steps:
 
@@ -130,28 +130,27 @@ Run the [`gcloud recommender insights list`](https://docs.cloud.google.com/sdk/g
     --project=PROJECT_ID \
     --location=LOCATION \
     --insight-type=google.alloydb.cluster.ReliabilityInsight \
-    
     --filter=insightSubtype=INSTANCE_HIGH_AVAILABILITY_NOT_ENABLED
     
 
 Replace the following:
 
-  * `PROJECT_ID`: Your project ID.
-  * `LOCATION`: A region where your instances are located, such as `us-central1`.
+  * `PROJECT_ID`: your project ID.
+  * `LOCATION`: a region where your instances are located, such as `us-central1`.
 
 
 
 ###  API 
 
-Call the [`insights.list`](https://docs.cloud.google.com/recommender/docs/reference/rest/v1beta1/projects.locations.insightTypes.insights/list) method as follows:
+Call the [`insights.list`](https://docs.cloud.google.com/recommender/docs/reference/rest/v1/projects.locations.insightTypes.insights/list) method as follows:
     
     
     GET https://recommender.googleapis.com/v1/projects/PROJECT_ID/locations/LOCATION/insightTypes/google.alloydb.cluster.ReliabilityInsight/insights?filter=insightSubtype=INSTANCE_HIGH_AVAILABILITY_NOT_ENABLED
 
 Replace the following:
 
-  * PROJECT_ID: Your project ID.
-  * LOCATION: A region where your instances are located, such as `us-central1`.
+  * `PROJECT_ID`: your project ID.
+  * `LOCATION`: a region where your instances are located, such as `us-central1`.
 
 
 
@@ -171,7 +170,7 @@ To implement the recommendation, do the following:
 
 ###  gcloud CLI 
 
-To implement the recommendation, follow the instructions in [Upgrade a basic instance to an HA instance](https://docs.cloud.google.com/alloydb/docs/basic-instance#gcloud_2).
+To implement the recommendation, follow the instructions in [Upgrade a basic instance to an HA instance](https://docs.cloud.google.com/alloydb/docs/basic-instance#upgrade).
 
 **Note:** You must carefully evaluate before you update the instance. Applying recommendations impacts your pricing.
 
@@ -185,6 +184,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

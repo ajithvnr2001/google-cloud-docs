@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/docs/overview/
 title: AlloyDB Omni overview \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:11:10.968290+00:00
+fetched_at: 2026-10-23T05:59:57.553017+00:00
 ---
 
 # AlloyDB Omni overview  |  Google Cloud Documentation
@@ -79,7 +79,7 @@ You can install AlloyDB Omni using one of the following deployment options:
 
 ![Deployment options for AlloyDB Omni](https://docs.cloud.google.com/static/alloydb/omni/docs/images/alloydb-omni-deployment-options.png)
 
-  * AlloyDB Omni using containers: a [standalone database container](https://docs.cloud.google.com/alloydb/omni/containers/17-next/docs/overview). Run AlloyDB Omni on a Linux system with SSD storage and at least 8GB of memory per CPU.
+  * AlloyDB Omni using containers: a [standalone database container](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/overview). Run AlloyDB Omni on a Linux system with SSD storage and at least 8GB of memory per CPU.
 
   * [AlloyDB Omni using the container orchestrator](https://docs.cloud.google.com/alloydb/omni/kubernetes/current/docs/overview): part of a container in a Kubernetes environment. The AlloyDB Omni Kubernetes operator is an extension to the Kubernetes API that lets you run AlloyDB Omni in most CNCF-compliant Kubernetes environments.
 
@@ -87,7 +87,7 @@ The AlloyDB Omni operator simplifies basic database operations, which lets you a
 
   * [AlloyDB Omni using RPM](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/overview): a standalone package that runs directly in a VM or bare metal. AlloyDB Omni using RPM runs as a set of integrated software components directly on the host operating system. It uses the standard Linux file system for storage, letting you use your existing storage infrastructure and management practices.
 
-  * [AlloyDB Omni using the RPM orchestrator](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/overview) ([Preview](https://docs.cloud.google.com/products#product-launch-stages)): a Red Hat Package Manager (RPM) deployment for VMs or bare-metal servers. This option includes an orchestration platform that automates deployment and management in non-Kubernetes environments. It extends cloud-like flexibility to your choice of infrastructure, without requiring containerization layers like Docker.
+  * [AlloyDB Omni using the RPM orchestrator](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/overview): a Red Hat Package Manager (RPM) deployment for VMs or bare-metal servers. This option includes an orchestration platform that automates deployment and management in non-Kubernetes environments. It extends cloud-like flexibility to your choice of infrastructure, without requiring containerization layers like Docker.
 
 
 
@@ -126,7 +126,7 @@ The RPM deployment option is a standalone Red Hat Package Manager (RPM) installa
 
 #### The RPM orchestrator
 
-The RPM orchestrator deployment option ([Preview](https://docs.cloud.google.com/products#product-launch-stages)) uses the same RPM packages as AlloyDB Omni using RPM, but adds an orchestration platform to automate management in non-Kubernetes environments.
+The RPM orchestrator deployment option uses the same RPM packages as AlloyDB Omni using RPM, but adds an orchestration platform to automate management in non-Kubernetes environments.
 
   * Cloud-like flexibility: extends automation to on-premises infrastructure, handling bootstrapping, failover, and lifecycle management.
   * Automation frameworks: integrates with popular tools like Ansible, allowing teams to use existing skill sets. You can also use purpose-built command line tools.
@@ -253,6 +253,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

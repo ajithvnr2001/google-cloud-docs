@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recaptcha/docs/samples/recaptcha-enterprise-create-site-key/
 title: Create a reCAPTCHA site key \u00a0|\u00a0 Google Cloud Fraud Defense \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:16.435662+00:00
+fetched_at: 2026-10-23T05:44:17.296354+00:00
 ---
 
 # Create a reCAPTCHA site key  |  Google Cloud Fraud Defense  |  Google Cloud Documentation

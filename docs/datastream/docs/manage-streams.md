@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/datastream/docs/manage-streams/
 title: Manage streams \u00a0|\u00a0 Datastream \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T08:26:04.390542+00:00
+fetched_at: 2026-10-23T05:43:48.227830+00:00
 ---
 
 # Manage streams  |  Datastream  |  Google Cloud Documentation
@@ -21,22 +21,9 @@ Send feedback
 
 #  Manage streams Stay organized with collections  Save and categorize content based on your preferences. 
 
-In this page, you learn how to use the Datastream API to:
+The Datastream API lets you automate your data replication workflows through REST API calls or the Google Cloud CLI. You can create, validate, modify, and delete streams, or retrieve and list streams and stream objects.
 
-  * Create streams
-  * Get information about streams and stream objects
-  * Update streams by starting, pausing, resuming, and modifying them, as well as by initiating and stopping backfill for stream objects
-  * Recover permanently failed streams
-  * Enable streaming of large objects for Oracle streams
-  * Delete streams
-
-
-
-There are two ways that you can use the Datastream API. You can make REST API calls or you can use the Google Cloud CLI (CLI).
-
-For high-level information about using `Google Cloud CLI` to manage Datastream streams, see [gcloud CLI Datastream streams](https://docs.cloud.google.com/sdk/gcloud/reference/datastream/streams).
-
-Refer to the [Using Datastream APIs](https://docs.cloud.google.com/datastream/docs/using-datastream-apis) tutorial to see an end-to-end walkthrough of how to use Datastream's APIs to create and manage streams.
+You can also start, pause, resume, or recover streams, manage object backfill, adjust task concurrency, and stream large Oracle objects. For command reference details, see [`gcloud datastream streams`](https://docs.cloud.google.com/sdk/gcloud/reference/datastream/streams). For an end-to-end walkthrough, see [Use Datastream APIs](https://docs.cloud.google.com/datastream/docs/using-datastream-apis).
 
 ## Create a stream
 
@@ -1556,6 +1543,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

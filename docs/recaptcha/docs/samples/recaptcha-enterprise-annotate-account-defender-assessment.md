@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recaptcha/docs/samples/recaptcha-enterprise-annotate-account-defender-assessment/
 title: Annotate assessment with account-related metadata \u00a0|\u00a0 Google Cloud Fraud Defense \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:04.567403+00:00
+fetched_at: 2026-10-23T05:44:15.669334+00:00
 ---
 
 # Annotate assessment with account-related metadata  |  Google Cloud Fraud Defense  |  Google Cloud Documentation

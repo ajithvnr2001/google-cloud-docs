@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/resource-manager/docs/project-liens/
 title: Protect projects with liens \u00a0|\u00a0 Resource Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:57:51.483534+00:00
+fetched_at: 2026-10-23T05:55:58.149379+00:00
 ---
 
 # Protect projects with liens  |  Resource Manager  |  Google Cloud Documentation
@@ -25,11 +25,9 @@ Send feedback
 
 This product or feature is subject to the "Pre-GA Offerings Terms" in the General Service Terms section of the [Service Specific Terms](https://docs.cloud.google.com/terms/service-terms#1). Pre-GA products and features are available "as is" and might have limited support. For more information, see the [launch stage descriptions](https://cloud.google.com/products/#product-launch-stages). 
 
-This document is for [Project owners](https://docs.cloud.google.com/resource-manager/docs/access-control-proj#permissions_and_roles) and [Organization administrators](https://docs.cloud.google.com/resource-manager/docs/access-control-org#permissions_and_roles) who want to protect projects from deletion.
+You can use Google Cloud project liens to protect critical projects from being accidentally or maliciously deleted. A lien blocks anyone from deleting a project until an [Organization Administrator](https://docs.cloud.google.com/resource-manager/docs/access-control-org#permissions_and_roles) or [Project Owner](https://docs.cloud.google.com/resource-manager/docs/access-control-proj#permissions_and_roles) removes the lien.
 
-You can place a lien upon a project to block the project's deletion until you remove the lien. This can be useful to protect projects of particular importance.
-
-Liens can also be placed upon a project automatically. For example, if you allow Identity and Access Management (IAM) service accounts from one project to be [attached to resources in other projects](https://docs.cloud.google.com/iam/docs/attach-service-accounts#attaching-different-project), a lien is placed upon the project where the service accounts are located.
+Google Cloud can also automatically apply liens to protect your resources. For example, if you [attach a service account](https://docs.cloud.google.com/iam/docs/attach-service-accounts#attaching-different-project) from one project to a resource in a different project, Google Cloud places a lien on the project that owns the Identity and Access Management (IAM) service account to prevent broken dependencies.
 
 ## Before you begin
 
@@ -103,6 +101,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

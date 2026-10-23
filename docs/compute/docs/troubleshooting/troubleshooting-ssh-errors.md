@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/compute/docs/troubleshooting/troubleshooting-ssh-errors/
 title: Troubleshooting SSH errors \u00a0|\u00a0 Compute Engine \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:09:50.191045+00:00
+fetched_at: 2026-10-23T05:44:44.305656+00:00
 ---
 
 # Troubleshooting SSH errors  |  Compute Engine  |  Google Cloud Documentation
@@ -386,7 +386,17 @@ The following errors might occur when you connect to your VM from the Google Clo
         
 
 
+**Note:** Because the `ssh` client returns exit code `255` for any connection or authentication error that occurs, the gcloud CLI error alone doesn't identify a specific cause. The `ssh` client also returns this exit code when the VM closes an active session, for example, when you restart the VM from within the session. If the error appears only after you restart or shut down the VM from within the session, you can ignore it.
 
+To see the underlying `ssh` error, such as a connection timeout, a refused connection, or `Permission denied (publickey)`, run the `gcloud compute ssh` command with verbose `ssh` output:
+    
+    
+    gcloud compute ssh VM_NAME --ssh-flag="-vvv"
+    
+
+Replace `VM_NAME` with the name of the VM.
+
+You can also run the SSH troubleshooting tool to check for common causes of failed connections.
 
 These errors can occur for several reasons. The following are some of the most common causes of the errors:
 
@@ -534,8 +544,72 @@ To resolve this issue, connect to the VM using the serial console and update the
 
 After correcting the network configuration and restarting your networking stack, verify that `ip addr show` lists a valid internal IP address assigned to your interface. SSH access should now function normally.
 
+  * **The gcloud CLI is authenticated with an account that doesn't have permission to connect to the VM.** If the active account in the gcloud CLI isn't the account that you expect, or if the account doesn't have the required IAM roles, the gcloud CLI can't add your SSH key to the VM and the connection fails.
+
+To resolve this issue, do the following:
+
+    1. Check which account is active in the gcloud CLI:
+           
+           gcloud auth list
+           
+
+    2. If the active account isn't the account that you want to use, sign in with the correct account:
+           
+           gcloud auth login ACCOUNT
+           
+
+Replace `ACCOUNT` with the email address of a user account that has permission to connect to the VM.
+
+    3. Verify that the account has the required roles. For VMs that use metadata-based SSH keys, you need the [Compute Instance Admin (v1) role (`roles/compute.instanceAdmin.v1`)](https://docs.cloud.google.com/compute/docs/access/iam#compute.instanceAdmin.v1). If the VM runs as a service account, you also need the [Service Account User role (`roles/iam.serviceAccountUser`)](https://docs.cloud.google.com/iam/docs/service-accounts#user-role). For VMs that use OS Login, see [Assign OS Login IAM roles](https://docs.cloud.google.com/compute/docs/oslogin/set-up-oslogin#configure_users).
+
+    4. Retry the connection.
+
+  * **The SSH key pair that the gcloud CLI uses is missing, corrupted, or doesn't match the public key on the VM.** The gcloud CLI stores its SSH key pair in the `~/.ssh/google_compute_engine` and `~/.ssh/google_compute_engine.pub` files on your workstation. If you lose the private key, or if the key pair doesn't match the public key that's stored in metadata or in your OS Login profile, then the VM rejects the connection.
+
+To check whether the issue is specific to your workstation, connect to the VM by using [SSH-in-browser](https://docs.cloud.google.com/compute/docs/connect/ssh-in-browser). If SSH-in-browser connects successfully, then the issue is likely with the key files or the gcloud CLI configuration on your workstation.
+
+To resolve this issue, generate a new key pair by doing the following:
+
+    1. Rename the existing key files so that the gcloud CLI doesn't use them:
+           
+           mv ~/.ssh/google_compute_engine ~/.ssh/google_compute_engine.old
+           mv ~/.ssh/google_compute_engine.pub ~/.ssh/google_compute_engine.pub.old
+           
+
+On Windows, also rename the `google_compute_engine.ppk` file in the same directory.
+
+    2. Connect to the VM by using the gcloud CLI:
+           
+           gcloud compute ssh VM_NAME
+           
+
+Replace `VM_NAME` with the name of the VM.
+
+The gcloud CLI creates a new key pair and adds the public key to the VM's metadata or to your OS Login profile.
+
+  * **The VM is out of disk space or memory, or the guest environment isn't running.** Any of these conditions can prevent the VM from adding your SSH key or from accepting new connections.
+
+To resolve this issue, do the following:
+
+    * Check whether the boot disk is full. For more information, see [Troubleshooting full disks and disk resizing](https://docs.cloud.google.com/compute/docs/troubleshooting/troubleshooting-disk-full-resize).
+    * Check whether the VM ran out of memory by searching the serial port output for out-of-memory errors. In Cloud Shell or a terminal where the gcloud CLI is installed, run the following command:
+    
+    gcloud compute instances get-serial-port-output VM_NAME \
+        | grep -i -e "out of memory" -e "oom"
+    
+
+    * Verify that the guest environment is installed and running. For more information, see [Validating the guest environment](https://docs.cloud.google.com/compute/docs/images/install-guest-environment#wgei).
 
 
+
+If the error persists, review the SSH authentication logs on the VM. These logs are in the `/var/log/auth.log` file on Debian and Ubuntu, and in the `/var/log/secure` file on RHEL, CentOS, and Rocky Linux. If you can't connect to the VM by using SSH, you can review the logs without stopping the VM by doing one of the following:
+
+  * Sign in to the VM by using the interactive serial console.
+  * Inspect a copy of the boot disk that you create from a snapshot.
+
+
+
+If you can't use either option, stop the VM, attach its boot disk to another VM, and review the logs from that VM. For more information, see the steps to diagnose an unknown SSH daemon issue in Unexpected error.
 
 #### Unexpected error
 
@@ -1181,6 +1255,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

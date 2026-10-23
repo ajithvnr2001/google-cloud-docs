@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/recaptcha/docs/samples/recaptcha-enterprise-update-site-key/
 title: Update a site key \u00a0|\u00a0 Google Cloud Fraud Defense \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:17.294508+00:00
+fetched_at: 2026-10-23T05:44:08.743982+00:00
 ---
 
 # Update a site key  |  Google Cloud Fraud Defense  |  Google Cloud Documentation

@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/release-notes/
 title: Google Cloud release notes \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T05:50:13.155591+00:00
+fetched_at: 2026-10-23T05:44:28.036696+00:00
 ---
 
 # Google Cloud release notes  |  Google Cloud Documentation
@@ -24,17 +24,805 @@ You can also see and filter all release notes in the [Google Cloud console](http
 
 To get the latest product updates delivered to you, add the URL of this page to your [feed reader](https://wikipedia.org/wiki/Comparison_of_feed_aggregators), or add the [feed URL](https://docs.cloud.google.com/feeds/gcp-release-notes.xml) directly. 
 
-## October 21, 2026
-
-**App Engine flexible environment PHP**
-
-Feature
-
-Patch updates to [supported PHP runtimes](https://docs.cloud.google.com/appengine/docs/flexible/lifecycle/support-schedule#php) are available with deployments from source: `8.5.12`, `8.4.27`, `8.3.36`, and `8.2.35`. Take immediate action to protect your PHP workloads by redeploying your workloads with updated dependencies. If you use [custom runtimes](https://docs.cloud.google.com/appengine/docs/flexible/custom-runtimes), update your dependencies and redeploy. See [Responding to core PHP vulnerabilities](https://cloud.google.com/blog/products/identity-security/responding-to-core-php-vulnerabilities-cve-2026-109618-cve-2026-109619) for more information.
+## October 22, 2026
 
 **App Engine standard environment PHP**
 
+Security
+
+All supported versions of [PHP 8.2](https://docs.cloud.google.com/appengine/docs/standard/lifecycle/support-schedule#php) and later are patched. Take immediate protective action by redeploying your resources with updated dependencies.
+
+See [Responding to core PHP vulnerabilities](https://cloud.google.com/blog/products/identity-security/responding-to-core-php-vulnerabilities-cve-2026-109618-cve-2026-109619) for more information.
+
+**BigQuery**
+
 Feature
+
+The [`AI.TRANSLATE` function](https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/bigqueryml-syntax-ai-translate) lets you translate text strings between languages. `AI.TRANSLATE` supports standard Neural Machine Translation (NMT) workloads and Translation LLM (TLLM) capabilities.
+
+This function is [generally available](https://cloud.google.com/products#product-launch-stages) (GA).
+
+**Cloud Run**
+
+Feature
+
+You can configure [Direct VPC ingress for Cloud Run instances](https://docs.cloud.google.com/run/docs/configuring/vpc-direct-vpc#direct-vpc-instance) ([Preview](https://cloud.google.com/products#product-launch-stages)). Direct VPC ingress lets Cloud Run instances on a VPC network use their own ephemeral private IP address to communicate with each other and with other resources on the VPC network.
+
+Security
+
+All supported versions of [PHP 8.2](https://docs.cloud.google.com/run/docs/runtime-support#php) and later are patched. Take immediate protective action by redeploying your resources with updated dependencies.
+
+See [Responding to core PHP vulnerabilities](https://cloud.google.com/blog/products/identity-security/responding-to-core-php-vulnerabilities-cve-2026-109618-cve-2026-109619) for more information.
+
+**Cloud Run functions**
+
+Security
+
+All supported versions of [PHP 8.2](https://docs.cloud.google.com/functions/docs/runtime-support#php) and later are patched. Take immediate protective action by redeploying your resources with updated dependencies.
+
+See [Responding to core PHP vulnerabilities](https://cloud.google.com/blog/products/identity-security/responding-to-core-php-vulnerabilities-cve-2026-109618-cve-2026-109619) for more information.
+
+**Compute Engine**
+
+Feature
+
+You can view how a managed instance group (MIG) distributes its instances across zones and machine types, directly from the MIG's **Monitoring** tab in the Google Cloud console.
+
+For more information, see [Monitor instance distribution in MIGs](https://docs.cloud.google.com/compute/docs/instance-groups/monitor-instance-distribution).
+
+**Container Optimized OS**
+
+Change
+
+### cos-125-19216-760-8 
+
+Kernel | Docker | Containerd | [GPU Drivers](https://cloud.google.com/container-optimized-os/docs/how-to/run-gpus)  
+---|---|---|---  
+[COS-6.12.113](https://cos.googlesource.com/third_party/kernel/+/bac32aa947d1d7d52552c51d3bd2f355ecc21464) | v27.5.1 | v2.2.7 | [See List](https://storage.googleapis.com/cos-tools/19216.760.8/lakitu/gpu_driver_versions.textproto)  
+  
+Announcement
+
+This is an [LTS Refresh release.](https://docs.cloud.google.com/container-optimized-os/docs/concepts/versioning#lts_refresh_releases)
+
+Fixed
+
+Updated cos-gpu-installer to v2.7.11 and toolbox to v20261020.
+
+Fixed
+
+Upgraded app-misc/ca-certificates to v20260816.3.125. This removes the certificates affected by the eMudhra intermediate certificate compromise.
+
+Fixed
+
+Upgraded dev-libs/nss to v3.131.1. This removes the certificates affected by the eMudhra intermediate certificate compromise.
+
+Security
+
+Fixed CVE-2026-111943 in dev-lang/go.
+
+Security
+
+Fixed CVE-2026-39831 in guest-agent.
+
+Security
+
+Fixed CVE-2026-39831 in node-problem-detector.
+
+Security
+
+Fixed CVE-2026-39832, CVE-2026-39831 in cos-extensions.
+
+Security
+
+Fixed CVE-2026-39833 in nvidia-container-toolkit.
+
+Security
+
+Fixed CVE-2026-39833, CVE-2024-28180, CVE-2025-11065, CVE-2026-25680, CVE-2025-47914, GHSA-w67g-5rqw-f597, CVE-2026-84304, GHSA-fv92-fjc5-jj9h, CVE-2023-47108, CVE-2024-51744, CVE-2026-35469, CVE-2025-65637, CVE-2025-30204, CVE-2024-45337, CVE-2025-52565, CVE-2026-42508, CVE-2026-46598, CVE-2023-45142, CVE-2024-45310, CVE-2026-39830, CVE-2026-41579, CVE-2026-46595, CVE-2024-24786, CVE-2026-39832, CVE-2026-10722, CVE-2026-39831, CVE-2025-22869 in kubernetes.
+
+Security
+
+Fixed CVE-2026-42508, CVE-2026-46595 in cri-tools.
+
+Security
+
+Fixed CVE-2026-46595 in google-guest-agent.
+
+Security
+
+Fixed CVE-2026-46595, CVE-2026-42508 in google-osconfig-agent.
+
+Change
+
+### cos-121-18867-652-7 
+
+Kernel | Docker | Containerd | [GPU Drivers](https://cloud.google.com/container-optimized-os/docs/how-to/run-gpus)  
+---|---|---|---  
+[COS-6.6.159](https://cos.googlesource.com/third_party/kernel/+/f32de83646bdc7b4c004477f6c4977ebd5b03cd7) | v27.5.1 | v2.0.10 | [See List](https://storage.googleapis.com/cos-tools/18867.652.7/lakitu/gpu_driver_versions.textproto)  
+  
+Announcement
+
+This is an [LTS Refresh release.](https://docs.cloud.google.com/container-optimized-os/docs/concepts/versioning#lts_refresh_releases)
+
+Fixed
+
+Updated cos-gpu-installer to v2.7.11 and toolbox to v20261020.
+
+Fixed
+
+Upgraded app-misc/ca-certificates to v20260816.3.125. This removes the certificates affected by the eMudhra intermediate certificate compromise.
+
+Fixed
+
+Upgraded dev-libs/nss to v3.131.1. This removes the certificates affected by the eMudhra intermediate certificate compromise.
+
+Security
+
+Fixed CVE-2026-111943 in dev-lang/go.
+
+Security
+
+Fixed CVE-2026-39830 in google-osconfig-agent.
+
+Security
+
+Fixed CVE-2026-39831 in node-problem-detector.
+
+Security
+
+Fixed CVE-2026-39832 in cos-extensions.
+
+Security
+
+Fixed CVE-2026-39833 in nvidia-container-toolkit.
+
+Security
+
+Fixed CVE-2026-39833, CVE-2024-28180, CVE-2025-11065, CVE-2026-25680, CVE-2025-47914, GHSA-w67g-5rqw-f597, CVE-2026-84304, GHSA-fv92-fjc5-jj9h, CVE-2023-47108, CVE-2024-51744, CVE-2026-35469, CVE-2025-65637, CVE-2025-30204, CVE-2024-45337, CVE-2025-52565, CVE-2026-42508, CVE-2026-46598, CVE-2023-45142, CVE-2024-45310, CVE-2026-39830, CVE-2026-41579, CVE-2026-46595, CVE-2024-24786, CVE-2026-39832, CVE-2026-10722, CVE-2026-39831, CVE-2025-22869 in kubernetes.
+
+Security
+
+Fixed CVE-2026-42508, CVE-2026-46595 in cri-tools.
+
+Security
+
+Fixed CVE-2026-42508, CVE-2026-46595, CVE-2026-39831, CVE-2026-39830 in containerd.
+
+Security
+
+Fixed CVE-2026-46595 in guest-agent.
+
+Change
+
+### cos-129-19506-578-9 
+
+Kernel | Docker | Containerd | [GPU Drivers](https://cloud.google.com/container-optimized-os/docs/how-to/run-gpus)  
+---|---|---|---  
+[COS-6.12.113](https://cos.googlesource.com/third_party/kernel/+/38d8fc183d307b8c9fd3db3d33f44d32f55ae31e) | v27.5.1 | v2.2.7 | [See List](https://storage.googleapis.com/cos-tools/19506.578.9/lakitu/gpu_driver_versions.textproto)  
+  
+Announcement
+
+This is an [LTS Refresh release.](https://docs.cloud.google.com/container-optimized-os/docs/concepts/versioning#lts_refresh_releases)
+
+Fixed
+
+Updated cos-gpu-installer to v2.7.11 and toolbox to v20261020.
+
+Fixed
+
+Upgraded app-misc/ca-certificates to v20260816.3.125. This removes the certificates affected by the eMudhra intermediate certificate compromise.
+
+Fixed
+
+Upgraded dev-libs/nss to v3.131.1. This removes the certificates affected by the eMudhra intermediate certificate compromise.
+
+Security
+
+Fixed CVE-2026-111943 in dev-lang/go.
+
+Security
+
+Fixed CVE-2026-33186 in cri-tools.
+
+Security
+
+Fixed CVE-2026-39831 in node-problem-detector.
+
+Security
+
+Fixed CVE-2026-39833 in nvidia-container-toolkit.
+
+Security
+
+Fixed CVE-2026-46595, CVE-2026-39832 in cri-tools.
+
+Change
+
+Runtime sysctl changes: 
+
+  * Changed: fs.epoll.max_user_watches: 1808517 -> 1808562
+  * Changed: fs.fanotify.max_user_marks: 68412 -> 68416
+  * Changed: fs.inotify.max_user_watches: 64189 -> 64192
+  * Changed: kernel.threads-max: 63178 -> 63183
+  * Changed: net.ipv4.tcp_mem: 94017 125357 188034 -> 94020 125361 188040
+  * Changed: net.ipv4.udp_mem: 188034 250715 376068 -> 188040 250722 376080
+  * Changed: user.max_cgroup_namespaces: 31589 -> 31591
+  * Changed: user.max_fanotify_marks: 68412 -> 68416
+  * Changed: user.max_inotify_watches: 64189 -> 64192
+  * Changed: user.max_ipc_namespaces: 31589 -> 31591
+  * Changed: user.max_mnt_namespaces: 31589 -> 31591
+  * Changed: user.max_net_namespaces: 31589 -> 31591
+  * Changed: user.max_pid_namespaces: 31589 -> 31591
+  * Changed: user.max_time_namespaces: 31589 -> 31591
+  * Changed: user.max_user_namespaces: 31589 -> 31591
+  * Changed: user.max_uts_namespaces: 31589 -> 31591
+
+
+
+**Data Studio**
+
+Feature
+
+You can connect Data Studio to a BigQuery Graph or query a graph by using a custom SQL query in the BigQuery connector, which imports graph measures as metrics that you can use in your reports. For more information, see [Connect to Google BigQuery](https://docs.cloud.google.com/data-studio/connect-to-google-bigquery#connect-to-a-bigquery-table-or-view).
+
+**Firestore**
+
+Feature
+
+[Data modification language (DML) operations](https://docs.cloud.google.com/firestore/native/docs/pipeline/dml) are generally available ([GA](https://cloud.google.com/products#product-launch-stages)). Added support for [`insert`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/output/insert) and [`upsert`](https://docs.cloud.google.com/firestore/native/docs/pipeline/stages/output/upsert).
+
+**Gemini Enterprise**
+
+Feature
+
+**Gemini Enterprise: Single-user quota limits**
+
+Gemini Enterprise administrators can configure single-user quota limits on the **Usage & Spending > Usage** page in the Google Cloud console to prevent an individual user from using all of an edition's shared subscription quota pool. You can enable a single-user quota limit and set a quota multiplier for each edition and location across the Gemini Enterprise Standard, Gemini Enterprise Plus, and Gemini Enterprise Standard Emerging Market editions.
+
+This feature is generally available (GA). For more information, see:
+
+  * [Single-user quota limits](https://docs.cloud.google.com/gemini/enterprise/docs/quotas-and-overages#single-user-quota-limits)
+  * [Configure a single-user quota limit](https://docs.cloud.google.com/gemini/enterprise/docs/feature-usage#configure-single-user-quota-limit)
+  * [Configure overages](https://docs.cloud.google.com/gemini/enterprise/docs/configure-overages#configure-single-user-quota-limit)
+
+
+
+**Google Distributed Cloud (software only) for bare metal**
+
+Announcement
+
+Google Distributed Cloud (software only) for bare metal 1.34.1000-gke.111 is now available for download. To upgrade, see [Upgrade clusters](https://docs.cloud.google.com/release-notes/how-to/upgrade). Google Distributed Cloud for bare metal 1.34.1000-gke.111 runs on Kubernetes v1.34.7-gke.200.
+
+After a release, it takes approximately 7 to 14 days for the version to become available for installations or upgrades with the GKE On-Prem API clients: the Google Cloud console, the gcloud CLI, and Terraform.
+
+If you use a third-party storage vendor, check the listing of our previously-qualified [storage partners](https://docs.cloud.google.com/kubernetes-engine/enterprise/docs/resources/partner-storage).
+
+Feature
+
+The following features were introduced in 1.34.1000-gke.111:
+
+  * Fixed an issue in clusters using bundled BGP load balancing where control plane upgrades or configuration updates could cause up to 20 seconds of API server connection failures while a control plane node restarted. After the fix, failover to a healthy control plane node completes in approximately 4 seconds. 
+  * Fixed an issue where the `NodePool` controller prematurely updated `Status.ManagedFields` on partial reconciliation failures, causing removed taints and labels to remain stranded on affected nodes. 
+
+
+
+Fixed
+
+The following issues were fixed in 1.34.1000-gke.111:
+
+  * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/vulnerabilities).
+  * Fixed `BareMetalMachine` conditions during maintenance mode transitions. 
+  * Fixed an issue where updating control plane configurations caused multiple API servers to restart simultaneously, leading to transient control plane unavailability. 
+
+
+
+**Looker**
+
+Announcement
+
+**Looker 26.22** will roll out to Looker (original) instances on the following schedule:
+
+  * Expected Looker (original) deployment start: **Monday, October 26, 2026**
+  * Expected Looker (original) final deployment and download available: **Monday, November 9, 2026**
+
+
+
+The Looker 26.22 rollout for Looker (Google Cloud core) will be announced separately.
+
+Looker 26.22 is expected to include the following changes, features, and fixes.
+
+Fixed
+
+An issue has been fixed where table column options menus and search boxes appeared behind drill dialogs, which prevented users from interacting with them. This feature now performs as expected.
+
+Fixed
+
+An issue has been fixed where configuring a LookML model could trigger unnecessary derived table rebuilds. This feature now performs as expected.
+
+Fixed
+
+An issue has been fixed where the **Show filters** option was displayed on dashboard tiles that failed to load data in view mode. This feature now performs as expected.
+
+Fixed
+
+An issue has been fixed where drilling into results that were filtered by string dimensions that contained backslashes returned zero rows. This feature now performs as expected.
+
+Fixed
+
+An issue has been fixed where pivoted queries in SQL Runner could fail to render or re-pivot unexpectedly. This feature now performs as expected.
+
+Fixed
+
+An issue has been fixed where the **View (Expanded / Full Screen)** option appeared in the tile action menu on embedded dashboards in view mode. This feature now performs as expected.
+
+Fixed
+
+An issue has been fixed where custom visualization tiles were truncated in dashboard PDF exports when the **Expand tables to show all rows** option was enabled. This feature now performs as expected.
+
+Fixed
+
+Table row group subtotals are now displayed only for sum and count measures. For other measure types (such as `averages` and `count distinct`) and table calculations, subtotals are now left blank rather than displaying an inaccurate summed value.
+
+Fixed
+
+The System Activity `query_metrics` Explore now records connection acquisition time (`acquire_connection`) for queries that are canceled while waiting in the connection pool.
+
+Fixed
+
+Conversational Analytics `DELETE` endpoints now return `HTTP 404 Not Found` instead of `HTTP 204 No Content` when you attempt to delete nonexistent resources.
+
+Fixed
+
+The System Activity `query_metrics` Explore has been updated to accurately record model initialization time for models that are loaded from cache.
+
+Fixed
+
+An issue has been fixed where adding a new series to a categorical chart, such as adding a new pivot value, could cause category bars to appear ungrouped. This feature now performs as expected.
+
+Fixed
+
+An issue has been fixed in the TypeScript and JavaScript SDKs where calling methods that have only optional parameters without passing an empty object could result in compilation or runtime errors. This feature now performs as expected.
+
+## October 21, 2026
+
+**Apigee X**
+
+Announcement
+
+**Apigee Emulator**
+
+### Apigee Emulator v2.0.2
+
+On October 21, 2026, we released Apigee Emulator version 2.0.2.
+
+This release upgrades the Apigee Emulator runtime to Java 21 (Eclipse Temurin JRE 21) to align local proxy development and policy execution with the production Apigee runtime, while keeping the embedded Apache Cassandra datastore pinned to Java 8. It also addresses 46 security vulnerabilities across Netty, Jackson, Apache Log4j, BouncyCastle, Apache CXF, Eclipse Jetty, and the embedded Cassandra Go standard library health-check binary.
+
+The emulator image is available at [Artifact Registry](https://console.cloud.google.com/artifacts/docker/apigee-release/us/gcr.io/hybrid%2Fapigee-emulator).
+
+To upgrade, update the emulator version in your Cloud Code for VS Code settings to `2.0.2`. See [Manage the Apigee Emulator](https://docs.cloud.google.com/apigee/docs/api-platform/local-development/vscode/manage-apigee-emulator#choose_the_emulator_version) for details.
+
+Feature
+
+**Apigee Emulator**
+
+#### Changed in this release
+
+  * Upgraded the Apigee Emulator runtime JVM to Eclipse Temurin JRE 21 (`21.0.12.1.0+1-0`, from JRE 11 `11.0.31+11`), adding JVM 21 compatibility flags (`-Djava.security.manager=allow` and `--add-opens` module flags) for `JavaCallout`, JavaScript (Rhino), and Python (Jython) policies while keeping the embedded Apache Cassandra `4.0.19` datastore pinned to Eclipse Temurin JRE 8.
+  * Upgraded Netty to `4.1.137.Final` (from `4.1.135.Final`) and updated `netty-tcnative-boringssl-static` and `netty-tcnative-classes` to `2.0.81.Final` (from `2.0.77.Final`).
+  * Upgraded Jackson (`jackson-core`, `jackson-databind`, and `jackson-dataformat-yaml`) to `2.21.7` (from `2.18.6` and `2.19.2`) and `jackson-annotations` to `2.21`.
+  * Upgraded shaded Apache Log4j (`log4j-api` and `log4j-core`) in `ConfigUtil.jar` to `2.25.5` (from `2.17.1` and `2.25.4`).
+  * Upgraded BouncyCastle (`bcprov-jdk18on`, `bcpkix-jdk18on`, and `bcutil-jdk18on`) to `1.85` (from `1.84`).
+  * Upgraded Apache CXF (`cxf-*`) to `3.6.12` (from `3.5.11`).
+  * Upgraded gRPC to `1.82.3` (from `1.62.2`), Protobuf (`protobuf-java` and `protobuf-java-util`) to `4.33.6` (from `3.25.5`), and Guava to `33.5.0-jre` (from `33.4.8-jre`).
+  * Removed unused `org.eclipse.jetty:jetty-*` (`9.4.58.v20250814`) and `commons-collections:commons-collections` (`3.2.2`) JARs from the emulator distribution.
+  * Refreshed the Cassandra base image to pick up Go standard library `1.27.0` (from `1.25.11`) in the embedded `/opt/apigee/ready` health-check binary.
+
+
+
+Security
+
+**Apigee Emulator**
+
+#### Security
+
+This release addresses 46 security vulnerabilities across Netty, the embedded Go standard library, Jackson, Apache Log4j, Eclipse Jetty, BouncyCastle, and Apache CXF:
+
+CVE / Advisory | Component  
+---|---  
+[CVE-2026-75595](https://nvd.nist.gov/vuln/detail/CVE-2026-75595) | Netty (`netty-handler`)  
+[CVE-2026-75596](https://nvd.nist.gov/vuln/detail/CVE-2026-75596) | Netty (`netty-handler`)  
+[CVE-2026-59901](https://nvd.nist.gov/vuln/detail/CVE-2026-59901) | Netty (`netty-codec`)  
+[CVE-2026-55831](https://nvd.nist.gov/vuln/detail/CVE-2026-55831) | Netty (`netty-codec-http`)  
+[CVE-2026-55833](https://nvd.nist.gov/vuln/detail/CVE-2026-55833) | Netty (`netty-codec-http`)  
+[CVE-2026-56745](https://nvd.nist.gov/vuln/detail/CVE-2026-56745) | Netty (`netty-codec-http`)  
+[CVE-2026-56746](https://nvd.nist.gov/vuln/detail/CVE-2026-56746) | Netty (`netty-codec-http`)  
+[CVE-2026-59898](https://nvd.nist.gov/vuln/detail/CVE-2026-59898) | Netty (`netty-codec-http`)  
+[CVE-2026-59899](https://nvd.nist.gov/vuln/detail/CVE-2026-59899) | Netty (`netty-codec-http`)  
+[CVE-2026-59903](https://nvd.nist.gov/vuln/detail/CVE-2026-59903) | Netty (`netty-codec-http`)  
+[CVE-2026-59921](https://nvd.nist.gov/vuln/detail/CVE-2026-59921) | Netty (`netty-codec-http`)  
+[CVE-2026-56819](https://nvd.nist.gov/vuln/detail/CVE-2026-56819) | Netty (`netty-codec-http2`)  
+[CVE-2026-59900](https://nvd.nist.gov/vuln/detail/CVE-2026-59900) | Netty (`netty-codec-http2`)  
+[CVE-2026-73508](https://nvd.nist.gov/vuln/detail/CVE-2026-73508) | Netty (`netty-codec-dns`)  
+[CVE-2026-39821](https://nvd.nist.gov/vuln/detail/CVE-2026-39821) | Go standard library  
+[CVE-2026-33818](https://nvd.nist.gov/vuln/detail/CVE-2026-33818) | Go standard library  
+[CVE-2026-39822](https://nvd.nist.gov/vuln/detail/CVE-2026-39822) | Go standard library  
+[CVE-2026-42505](https://nvd.nist.gov/vuln/detail/CVE-2026-42505) | Go standard library  
+[CVE-2026-56853](https://nvd.nist.gov/vuln/detail/CVE-2026-56853) | Go standard library  
+[CVE-2026-56858](https://nvd.nist.gov/vuln/detail/CVE-2026-56858) | Go standard library  
+[CVE-2026-56859](https://nvd.nist.gov/vuln/detail/CVE-2026-56859) | Go standard library  
+[CVE-2026-56860](https://nvd.nist.gov/vuln/detail/CVE-2026-56860) | Go standard library  
+[CVE-2026-56862](https://nvd.nist.gov/vuln/detail/CVE-2026-56862) | Go standard library  
+[CVE-2026-56864](https://nvd.nist.gov/vuln/detail/CVE-2026-56864) | Go standard library  
+[CVE-2026-56865](https://nvd.nist.gov/vuln/detail/CVE-2026-56865) | Go standard library  
+[CVE-2026-68494](https://nvd.nist.gov/vuln/detail/CVE-2026-68494) | Jackson (`jackson-core`)  
+[CVE-2026-18401](https://nvd.nist.gov/vuln/detail/CVE-2026-18401) | Jackson (`jackson-core`)  
+[CVE-2026-54512](https://nvd.nist.gov/vuln/detail/CVE-2026-54512) | Jackson (`jackson-databind`)  
+[CVE-2026-54513](https://nvd.nist.gov/vuln/detail/CVE-2026-54513) | Jackson (`jackson-databind`)  
+[CVE-2026-54514](https://nvd.nist.gov/vuln/detail/CVE-2026-54514) | Jackson (`jackson-databind`)  
+[CVE-2026-54515](https://nvd.nist.gov/vuln/detail/CVE-2026-54515) | Jackson (`jackson-databind`)  
+[CVE-2026-59888](https://nvd.nist.gov/vuln/detail/CVE-2026-59888) | Jackson (`jackson-databind`)  
+[CVE-2026-59889](https://nvd.nist.gov/vuln/detail/CVE-2026-59889) | Jackson (`jackson-databind`)  
+[CVE-2026-77310](https://nvd.nist.gov/vuln/detail/CVE-2026-77310) | Jackson (`jackson-databind`)  
+[GHSA-mhm7-754m-9p8w](https://github.com/advisories/GHSA-mhm7-754m-9p8w) | Jackson (`jackson-databind`)  
+[CVE-2025-68161](https://nvd.nist.gov/vuln/detail/CVE-2025-68161) | Apache Log4j (`log4j-core`)  
+[CVE-2026-34477](https://nvd.nist.gov/vuln/detail/CVE-2026-34477) | Apache Log4j (`log4j-core`)  
+[CVE-2026-34480](https://nvd.nist.gov/vuln/detail/CVE-2026-34480) | Apache Log4j (`log4j-core`)  
+[CVE-2026-49844](https://nvd.nist.gov/vuln/detail/CVE-2026-49844) | Apache Log4j (`log4j-api`)  
+[CVE-2026-10050](https://nvd.nist.gov/vuln/detail/CVE-2026-10050) | Eclipse Jetty (`jetty-security`)  
+[CVE-2026-2332](https://nvd.nist.gov/vuln/detail/CVE-2026-2332) | Eclipse Jetty (`jetty-http`)  
+[CVE-2024-6763](https://nvd.nist.gov/vuln/detail/CVE-2024-6763) | Eclipse Jetty (`jetty-http`)  
+[CVE-2026-6790](https://nvd.nist.gov/vuln/detail/CVE-2026-6790) | Eclipse Jetty (`jetty-server`)  
+[CVE-2026-8763](https://nvd.nist.gov/vuln/detail/CVE-2026-8763) | BouncyCastle (`bcprov-jdk18on`)  
+[CVE-2026-13506](https://nvd.nist.gov/vuln/detail/CVE-2026-13506) | BouncyCastle (`bcprov-jdk18on`)  
+[CVE-2026-50645](https://nvd.nist.gov/vuln/detail/CVE-2026-50645) | Apache CXF (`cxf-core`)  
+  
+**Apigee hybrid**
+
+Announcement
+
+### v1.15.9
+
+On October 21, 2026 we released an updated version of the Apigee hybrid software, v1.15.9.
+
+  * For information on upgrading, see [Upgrading Apigee hybrid to version v1.15.9](https://docs.cloud.google.com/apigee/docs/hybrid/v1.15/upgrade).
+  * For information on new installations, see [The big picture](https://docs.cloud.google.com/apigee/docs/hybrid/v1.15/big-picture).
+
+**Note:** This is a patch release: The container images used in patch releases are integrated with the Apigee hybrid Helm charts. Upgrading to a patch via the Helm chart automatically updates the images. No manual image changes are typically needed. For information on container image support in Apigee hybrid releases, see [Apigee release process](https://docs.cloud.google.com/apigee/docs/release/apigee-release-process#apigee-hybrid-container-images).
+
+Fixed
+
+#### Fixed in this release
+
+Bug ID | Description  
+---|---  
+**573622417** | **Fixed an issue where`apigee-ingressgateway` forwarded the `x-envoy-decorator-operation` header to upstream runtime and target backends.**  
+**571378258** | **The`apigee-redis` container now uses the Valkey engine (version 8.1.10). The RESP2 wire protocol and `redis-server` and `redis-cli` binary names are unchanged.**  
+**568860869** | **Fixed an issue in the`RegularExpressionProtection` policy where patterns starting and ending with `.*` whose middle section contained regular expression syntax were matched as literal text instead of regular expressions.**  
+**565072374** | **Fixed an issue where`VerifyJWT` policies using a JWKS `uriRef` could return `steps.jwt.NoMatchingPublicKey` on the first request after the 5-minute JWKS cache TTL expired when the identity provider rotated keys. The cache now refreshes synchronously upon expiration.**  
+**535395491** | **Extension Processor (`ext_proc`) denials now return the status and body that the policy or FaultRule produced, instead of always returning HTTP `500`.**  
+**524115876** | **Fixed an intermittent HTTP`400` error in the `OASValidation` policy's strict parameter validation that rejected valid requests under load.**  
+**519729209** | **Fixed a SAML XML Signature Wrapping vulnerability in the`ValidateSAMLAssertion` policy.**  
+**502231886** | **Fixed an issue where the`SanitizeUserPrompt` and `SanitizeModelResponse` policies failed to extract content using default source templates when the `<Source>` element was omitted and `<IgnoreUnresolvedVariables>` was set to `false`.**  
+**432315283** | **Fixed an issue where changes to a multi-certificate truststore's trust anchors required a Message Processor restart when`features.truststore.multi_cert_bundle.enabled` was toggled at runtime; the outbound `SSLContext` now rebuilds automatically.**  
+**428750492** | **Removed the`required` validation constraint on the `strategy` and `stages` fields in the `ApigeeDeployment` CRD.**  
+  
+Security
+
+Bug ID | Description  
+---|---  
+**N/A** | **Security fixes for`apigee-asm-ingress`.**   
+This addresses the following vulnerabilities: 
+
+  * [CVE-2026-56857](https://nvd.nist.gov/vuln/detail/CVE-2026-56857)
+  * [CVE-2026-56866](https://nvd.nist.gov/vuln/detail/CVE-2026-56866)
+  * [CVE-2026-78659](https://nvd.nist.gov/vuln/detail/CVE-2026-78659)
+  * [CVE-2026-78660](https://nvd.nist.gov/vuln/detail/CVE-2026-78660)
+  * [CVE-2026-78663](https://nvd.nist.gov/vuln/detail/CVE-2026-78663)
+  * [CVE-2026-78667](https://nvd.nist.gov/vuln/detail/CVE-2026-78667)
+  * [CVE-2026-78669](https://nvd.nist.gov/vuln/detail/CVE-2026-78669)
+  * [CVE-2026-81870](https://nvd.nist.gov/vuln/detail/CVE-2026-81870)
+  * [CVE-2026-84303](https://nvd.nist.gov/vuln/detail/CVE-2026-84303)
+  * [CVE-2026-84304](https://nvd.nist.gov/vuln/detail/CVE-2026-84304)
+  * [CVE-2026-84445](https://nvd.nist.gov/vuln/detail/CVE-2026-84445)
+  * [CVE-2026-94439](https://nvd.nist.gov/vuln/detail/CVE-2026-94439)
+  * [CVE-2026-94440](https://nvd.nist.gov/vuln/detail/CVE-2026-94440)
+  * [CVE-2026-94444](https://nvd.nist.gov/vuln/detail/CVE-2026-94444)
+  * [CVE-2026-94447](https://nvd.nist.gov/vuln/detail/CVE-2026-94447)
+  * [CVE-2026-94448](https://nvd.nist.gov/vuln/detail/CVE-2026-94448)
+  * [CVE-2026-97030](https://nvd.nist.gov/vuln/detail/CVE-2026-97030)
+  * [CVE-2026-97031](https://nvd.nist.gov/vuln/detail/CVE-2026-97031)
+  * [CVE-2026-97032](https://nvd.nist.gov/vuln/detail/CVE-2026-97032)
+
+  
+**N/A** | **Security fixes for`apigee-asm-istiod`.**   
+This addresses the following vulnerabilities: 
+
+  * [CVE-2026-56857](https://nvd.nist.gov/vuln/detail/CVE-2026-56857)
+  * [CVE-2026-56866](https://nvd.nist.gov/vuln/detail/CVE-2026-56866)
+  * [CVE-2026-78659](https://nvd.nist.gov/vuln/detail/CVE-2026-78659)
+  * [CVE-2026-78660](https://nvd.nist.gov/vuln/detail/CVE-2026-78660)
+  * [CVE-2026-78663](https://nvd.nist.gov/vuln/detail/CVE-2026-78663)
+  * [CVE-2026-78667](https://nvd.nist.gov/vuln/detail/CVE-2026-78667)
+  * [CVE-2026-78669](https://nvd.nist.gov/vuln/detail/CVE-2026-78669)
+  * [CVE-2026-81870](https://nvd.nist.gov/vuln/detail/CVE-2026-81870)
+  * [CVE-2026-84303](https://nvd.nist.gov/vuln/detail/CVE-2026-84303)
+  * [CVE-2026-84304](https://nvd.nist.gov/vuln/detail/CVE-2026-84304)
+  * [CVE-2026-84445](https://nvd.nist.gov/vuln/detail/CVE-2026-84445)
+  * [CVE-2026-94439](https://nvd.nist.gov/vuln/detail/CVE-2026-94439)
+  * [CVE-2026-94440](https://nvd.nist.gov/vuln/detail/CVE-2026-94440)
+  * [CVE-2026-94444](https://nvd.nist.gov/vuln/detail/CVE-2026-94444)
+  * [CVE-2026-94447](https://nvd.nist.gov/vuln/detail/CVE-2026-94447)
+  * [CVE-2026-94448](https://nvd.nist.gov/vuln/detail/CVE-2026-94448)
+  * [CVE-2026-97030](https://nvd.nist.gov/vuln/detail/CVE-2026-97030)
+  * [CVE-2026-97031](https://nvd.nist.gov/vuln/detail/CVE-2026-97031)
+  * [CVE-2026-97032](https://nvd.nist.gov/vuln/detail/CVE-2026-97032)
+
+  
+**N/A** | **Security fixes for`apigee-connect-agent`.**   
+This addresses the following vulnerabilities: 
+
+  * [CVE-2026-56857](https://nvd.nist.gov/vuln/detail/CVE-2026-56857)
+  * [CVE-2026-56866](https://nvd.nist.gov/vuln/detail/CVE-2026-56866)
+  * [CVE-2026-78659](https://nvd.nist.gov/vuln/detail/CVE-2026-78659)
+  * [CVE-2026-78660](https://nvd.nist.gov/vuln/detail/CVE-2026-78660)
+  * [CVE-2026-78663](https://nvd.nist.gov/vuln/detail/CVE-2026-78663)
+  * [CVE-2026-78667](https://nvd.nist.gov/vuln/detail/CVE-2026-78667)
+  * [CVE-2026-78669](https://nvd.nist.gov/vuln/detail/CVE-2026-78669)
+  * [CVE-2026-94439](https://nvd.nist.gov/vuln/detail/CVE-2026-94439)
+  * [CVE-2026-94440](https://nvd.nist.gov/vuln/detail/CVE-2026-94440)
+  * [CVE-2026-94444](https://nvd.nist.gov/vuln/detail/CVE-2026-94444)
+  * [CVE-2026-94447](https://nvd.nist.gov/vuln/detail/CVE-2026-94447)
+  * [CVE-2026-94448](https://nvd.nist.gov/vuln/detail/CVE-2026-94448)
+  * [CVE-2026-97030](https://nvd.nist.gov/vuln/detail/CVE-2026-97030)
+  * [CVE-2026-97031](https://nvd.nist.gov/vuln/detail/CVE-2026-97031)
+  * [CVE-2026-97032](https://nvd.nist.gov/vuln/detail/CVE-2026-97032)
+
+  
+**N/A** | **Security fixes for`apigee-fluent-bit`.**   
+This addresses the following vulnerabilities: 
+
+  * [CVE-2026-35189](https://nvd.nist.gov/vuln/detail/CVE-2026-35189)
+  * [CVE-2026-35191](https://nvd.nist.gov/vuln/detail/CVE-2026-35191)
+  * [CVE-2026-42772](https://nvd.nist.gov/vuln/detail/CVE-2026-42772)
+  * [CVE-2026-5450](https://nvd.nist.gov/vuln/detail/CVE-2026-5450)
+  * [CVE-2026-54872](https://nvd.nist.gov/vuln/detail/CVE-2026-54872)
+  * [CVE-2026-54873](https://nvd.nist.gov/vuln/detail/CVE-2026-54873)
+  * [CVE-2026-54875](https://nvd.nist.gov/vuln/detail/CVE-2026-54875)
+  * [CVE-2026-58050](https://nvd.nist.gov/vuln/detail/CVE-2026-58050)
+  * [CVE-2026-58051](https://nvd.nist.gov/vuln/detail/CVE-2026-58051)
+  * [CVE-2026-5928](https://nvd.nist.gov/vuln/detail/CVE-2026-5928)
+  * [CVE-2026-66032](https://nvd.nist.gov/vuln/detail/CVE-2026-66032)
+  * [CVE-2026-66033](https://nvd.nist.gov/vuln/detail/CVE-2026-66033)
+  * [CVE-2026-66034](https://nvd.nist.gov/vuln/detail/CVE-2026-66034)
+  * [CVE-2026-66035](https://nvd.nist.gov/vuln/detail/CVE-2026-66035)
+  * [CVE-2026-72897](https://nvd.nist.gov/vuln/detail/CVE-2026-72897)
+  * [CVE-2026-75804](https://nvd.nist.gov/vuln/detail/CVE-2026-75804)
+  * [CVE-2026-75805](https://nvd.nist.gov/vuln/detail/CVE-2026-75805)
+  * [CVE-2026-75806](https://nvd.nist.gov/vuln/detail/CVE-2026-75806)
+  * [CVE-2026-77696](https://nvd.nist.gov/vuln/detail/CVE-2026-77696)
+  * [CVE-2026-84782](https://nvd.nist.gov/vuln/detail/CVE-2026-84782)
+  * [CVE-2026-84784](https://nvd.nist.gov/vuln/detail/CVE-2026-84784)
+
+  
+**N/A** | **Security fixes for`apigee-hybrid-cassandra-client`.**   
+This addresses the following vulnerabilities: 
+
+  * [CVE-2026-56857](https://nvd.nist.gov/vuln/detail/CVE-2026-56857)
+  * [CVE-2026-56866](https://nvd.nist.gov/vuln/detail/CVE-2026-56866)
+  * [CVE-2026-78659](https://nvd.nist.gov/vuln/detail/CVE-2026-78659)
+  * [CVE-2026-78660](https://nvd.nist.gov/vuln/detail/CVE-2026-78660)
+  * [CVE-2026-78663](https://nvd.nist.gov/vuln/detail/CVE-2026-78663)
+  * [CVE-2026-78667](https://nvd.nist.gov/vuln/detail/CVE-2026-78667)
+  * [CVE-2026-78669](https://nvd.nist.gov/vuln/detail/CVE-2026-78669)
+  * [CVE-2026-94439](https://nvd.nist.gov/vuln/detail/CVE-2026-94439)
+  * [CVE-2026-94440](https://nvd.nist.gov/vuln/detail/CVE-2026-94440)
+  * [CVE-2026-94444](https://nvd.nist.gov/vuln/detail/CVE-2026-94444)
+  * [CVE-2026-94447](https://nvd.nist.gov/vuln/detail/CVE-2026-94447)
+  * [CVE-2026-94448](https://nvd.nist.gov/vuln/detail/CVE-2026-94448)
+  * [CVE-2026-97030](https://nvd.nist.gov/vuln/detail/CVE-2026-97030)
+  * [CVE-2026-97031](https://nvd.nist.gov/vuln/detail/CVE-2026-97031)
+  * [CVE-2026-97032](https://nvd.nist.gov/vuln/detail/CVE-2026-97032)
+
+  
+**N/A** | **Security fixes for`apigee-kube-rbac-proxy`.**   
+This addresses the following vulnerabilities: 
+
+  * [CVE-2026-33818](https://nvd.nist.gov/vuln/detail/CVE-2026-33818)
+  * [CVE-2026-39821](https://nvd.nist.gov/vuln/detail/CVE-2026-39821)
+  * [CVE-2026-46600](https://nvd.nist.gov/vuln/detail/CVE-2026-46600)
+  * [CVE-2026-56853](https://nvd.nist.gov/vuln/detail/CVE-2026-56853)
+  * [CVE-2026-56858](https://nvd.nist.gov/vuln/detail/CVE-2026-56858)
+  * [CVE-2026-56859](https://nvd.nist.gov/vuln/detail/CVE-2026-56859)
+  * [CVE-2026-56860](https://nvd.nist.gov/vuln/detail/CVE-2026-56860)
+  * [CVE-2026-56862](https://nvd.nist.gov/vuln/detail/CVE-2026-56862)
+  * [CVE-2026-56864](https://nvd.nist.gov/vuln/detail/CVE-2026-56864)
+  * [CVE-2026-56865](https://nvd.nist.gov/vuln/detail/CVE-2026-56865)
+  * [CVE-2026-81870](https://nvd.nist.gov/vuln/detail/CVE-2026-81870)
+  * [CVE-2026-84303](https://nvd.nist.gov/vuln/detail/CVE-2026-84303)
+  * [CVE-2026-84304](https://nvd.nist.gov/vuln/detail/CVE-2026-84304)
+  * [CVE-2026-84445](https://nvd.nist.gov/vuln/detail/CVE-2026-84445)
+
+  
+**N/A** | **Security fixes for`apigee-mart-server`.**   
+This addresses the following vulnerabilities: 
+
+  * [CVE-2024-6763](https://nvd.nist.gov/vuln/detail/CVE-2024-6763)
+  * [CVE-2025-46392](https://nvd.nist.gov/vuln/detail/CVE-2025-46392)
+  * [CVE-2026-10050](https://nvd.nist.gov/vuln/detail/CVE-2026-10050)
+  * [CVE-2026-19032](https://nvd.nist.gov/vuln/detail/CVE-2026-19032)
+  * [CVE-2026-2332](https://nvd.nist.gov/vuln/detail/CVE-2026-2332)
+  * [CVE-2026-49844](https://nvd.nist.gov/vuln/detail/CVE-2026-49844)
+  * [CVE-2026-50645](https://nvd.nist.gov/vuln/detail/CVE-2026-50645)
+  * [CVE-2026-6790](https://nvd.nist.gov/vuln/detail/CVE-2026-6790)
+  * [CVE-2026-68497](https://nvd.nist.gov/vuln/detail/CVE-2026-68497)
+  * [CVE-2026-83557](https://nvd.nist.gov/vuln/detail/CVE-2026-83557)
+  * [CVE-2026-89407](https://nvd.nist.gov/vuln/detail/CVE-2026-89407)
+  * [CVE-2026-89425](https://nvd.nist.gov/vuln/detail/CVE-2026-89425)
+  * [CVE-2026-91776](https://nvd.nist.gov/vuln/detail/CVE-2026-91776)
+  * [CVE-2026-91777](https://nvd.nist.gov/vuln/detail/CVE-2026-91777)
+
+  
+**N/A** | **Security fixes for`apigee-mint-task-scheduler`.**   
+This addresses the following vulnerabilities: 
+
+  * [CVE-2024-6763](https://nvd.nist.gov/vuln/detail/CVE-2024-6763)
+  * [CVE-2025-46392](https://nvd.nist.gov/vuln/detail/CVE-2025-46392)
+  * [CVE-2026-10050](https://nvd.nist.gov/vuln/detail/CVE-2026-10050)
+  * [CVE-2026-19032](https://nvd.nist.gov/vuln/detail/CVE-2026-19032)
+  * [CVE-2026-2332](https://nvd.nist.gov/vuln/detail/CVE-2026-2332)
+  * [CVE-2026-49844](https://nvd.nist.gov/vuln/detail/CVE-2026-49844)
+  * [CVE-2026-50645](https://nvd.nist.gov/vuln/detail/CVE-2026-50645)
+  * [CVE-2026-6790](https://nvd.nist.gov/vuln/detail/CVE-2026-6790)
+  * [CVE-2026-68497](https://nvd.nist.gov/vuln/detail/CVE-2026-68497)
+  * [CVE-2026-83557](https://nvd.nist.gov/vuln/detail/CVE-2026-83557)
+  * [CVE-2026-89407](https://nvd.nist.gov/vuln/detail/CVE-2026-89407)
+  * [CVE-2026-89425](https://nvd.nist.gov/vuln/detail/CVE-2026-89425)
+  * [CVE-2026-91776](https://nvd.nist.gov/vuln/detail/CVE-2026-91776)
+  * [CVE-2026-91777](https://nvd.nist.gov/vuln/detail/CVE-2026-91777)
+
+  
+**N/A** | **Security fixes for`apigee-operators`.**   
+This addresses the following vulnerabilities: 
+
+  * [CVE-2026-56857](https://nvd.nist.gov/vuln/detail/CVE-2026-56857)
+  * [CVE-2026-56866](https://nvd.nist.gov/vuln/detail/CVE-2026-56866)
+  * [CVE-2026-78659](https://nvd.nist.gov/vuln/detail/CVE-2026-78659)
+  * [CVE-2026-78660](https://nvd.nist.gov/vuln/detail/CVE-2026-78660)
+  * [CVE-2026-78663](https://nvd.nist.gov/vuln/detail/CVE-2026-78663)
+  * [CVE-2026-78667](https://nvd.nist.gov/vuln/detail/CVE-2026-78667)
+  * [CVE-2026-78669](https://nvd.nist.gov/vuln/detail/CVE-2026-78669)
+  * [CVE-2026-94439](https://nvd.nist.gov/vuln/detail/CVE-2026-94439)
+  * [CVE-2026-94440](https://nvd.nist.gov/vuln/detail/CVE-2026-94440)
+  * [CVE-2026-94444](https://nvd.nist.gov/vuln/detail/CVE-2026-94444)
+  * [CVE-2026-94447](https://nvd.nist.gov/vuln/detail/CVE-2026-94447)
+  * [CVE-2026-94448](https://nvd.nist.gov/vuln/detail/CVE-2026-94448)
+  * [CVE-2026-97030](https://nvd.nist.gov/vuln/detail/CVE-2026-97030)
+  * [CVE-2026-97031](https://nvd.nist.gov/vuln/detail/CVE-2026-97031)
+  * [CVE-2026-97032](https://nvd.nist.gov/vuln/detail/CVE-2026-97032)
+
+  
+**N/A** | **Security fixes for`apigee-prom-prometheus`.**   
+This addresses the following vulnerabilities: 
+
+  * [CVE-2026-84303](https://nvd.nist.gov/vuln/detail/CVE-2026-84303)
+  * [CVE-2026-84304](https://nvd.nist.gov/vuln/detail/CVE-2026-84304)
+
+  
+**N/A** | **Security fixes for`apigee-prometheus-adapter`.**   
+This addresses the following vulnerabilities: 
+
+  * [CVE-2026-56857](https://nvd.nist.gov/vuln/detail/CVE-2026-56857)
+  * [CVE-2026-56866](https://nvd.nist.gov/vuln/detail/CVE-2026-56866)
+  * [CVE-2026-78659](https://nvd.nist.gov/vuln/detail/CVE-2026-78659)
+  * [CVE-2026-78660](https://nvd.nist.gov/vuln/detail/CVE-2026-78660)
+  * [CVE-2026-78663](https://nvd.nist.gov/vuln/detail/CVE-2026-78663)
+  * [CVE-2026-78667](https://nvd.nist.gov/vuln/detail/CVE-2026-78667)
+  * [CVE-2026-78669](https://nvd.nist.gov/vuln/detail/CVE-2026-78669)
+  * [CVE-2026-94439](https://nvd.nist.gov/vuln/detail/CVE-2026-94439)
+  * [CVE-2026-94440](https://nvd.nist.gov/vuln/detail/CVE-2026-94440)
+  * [CVE-2026-94444](https://nvd.nist.gov/vuln/detail/CVE-2026-94444)
+  * [CVE-2026-94447](https://nvd.nist.gov/vuln/detail/CVE-2026-94447)
+  * [CVE-2026-94448](https://nvd.nist.gov/vuln/detail/CVE-2026-94448)
+  * [CVE-2026-97030](https://nvd.nist.gov/vuln/detail/CVE-2026-97030)
+  * [CVE-2026-97031](https://nvd.nist.gov/vuln/detail/CVE-2026-97031)
+  * [CVE-2026-97032](https://nvd.nist.gov/vuln/detail/CVE-2026-97032)
+
+  
+**N/A** | **Security fixes for`apigee-redis`.**   
+This addresses the following vulnerabilities: 
+
+  * [CVE-2026-56857](https://nvd.nist.gov/vuln/detail/CVE-2026-56857)
+  * [CVE-2026-56866](https://nvd.nist.gov/vuln/detail/CVE-2026-56866)
+  * [CVE-2026-78659](https://nvd.nist.gov/vuln/detail/CVE-2026-78659)
+  * [CVE-2026-78660](https://nvd.nist.gov/vuln/detail/CVE-2026-78660)
+  * [CVE-2026-78663](https://nvd.nist.gov/vuln/detail/CVE-2026-78663)
+  * [CVE-2026-78667](https://nvd.nist.gov/vuln/detail/CVE-2026-78667)
+  * [CVE-2026-78669](https://nvd.nist.gov/vuln/detail/CVE-2026-78669)
+  * [CVE-2026-94439](https://nvd.nist.gov/vuln/detail/CVE-2026-94439)
+  * [CVE-2026-94440](https://nvd.nist.gov/vuln/detail/CVE-2026-94440)
+  * [CVE-2026-94444](https://nvd.nist.gov/vuln/detail/CVE-2026-94444)
+  * [CVE-2026-94447](https://nvd.nist.gov/vuln/detail/CVE-2026-94447)
+  * [CVE-2026-94448](https://nvd.nist.gov/vuln/detail/CVE-2026-94448)
+  * [CVE-2026-97030](https://nvd.nist.gov/vuln/detail/CVE-2026-97030)
+  * [CVE-2026-97031](https://nvd.nist.gov/vuln/detail/CVE-2026-97031)
+  * [CVE-2026-97032](https://nvd.nist.gov/vuln/detail/CVE-2026-97032)
+
+  
+**N/A** | **Security fixes for`apigee-runtime`.**   
+This addresses the following vulnerabilities: 
+
+  * [CVE-2025-46392](https://nvd.nist.gov/vuln/detail/CVE-2025-46392)
+  * [CVE-2026-19032](https://nvd.nist.gov/vuln/detail/CVE-2026-19032)
+  * [CVE-2026-49844](https://nvd.nist.gov/vuln/detail/CVE-2026-49844)
+  * [CVE-2026-50645](https://nvd.nist.gov/vuln/detail/CVE-2026-50645)
+  * [CVE-2026-68497](https://nvd.nist.gov/vuln/detail/CVE-2026-68497)
+  * [CVE-2026-83557](https://nvd.nist.gov/vuln/detail/CVE-2026-83557)
+  * [CVE-2026-89407](https://nvd.nist.gov/vuln/detail/CVE-2026-89407)
+  * [CVE-2026-89425](https://nvd.nist.gov/vuln/detail/CVE-2026-89425)
+  * [CVE-2026-91776](https://nvd.nist.gov/vuln/detail/CVE-2026-91776)
+  * [CVE-2026-91777](https://nvd.nist.gov/vuln/detail/CVE-2026-91777)
+
+  
+**N/A** | **Security fixes for`apigee-synchronizer`.**   
+This addresses the following vulnerabilities: 
+
+  * [CVE-2026-19032](https://nvd.nist.gov/vuln/detail/CVE-2026-19032)
+  * [CVE-2026-49844](https://nvd.nist.gov/vuln/detail/CVE-2026-49844)
+  * [CVE-2026-50645](https://nvd.nist.gov/vuln/detail/CVE-2026-50645)
+  * [CVE-2026-68497](https://nvd.nist.gov/vuln/detail/CVE-2026-68497)
+  * [CVE-2026-83557](https://nvd.nist.gov/vuln/detail/CVE-2026-83557)
+  * [CVE-2026-89407](https://nvd.nist.gov/vuln/detail/CVE-2026-89407)
+  * [CVE-2026-89425](https://nvd.nist.gov/vuln/detail/CVE-2026-89425)
+  * [CVE-2026-91776](https://nvd.nist.gov/vuln/detail/CVE-2026-91776)
+  * [CVE-2026-91777](https://nvd.nist.gov/vuln/detail/CVE-2026-91777)
+
+  
+**N/A** | **Security fixes for`apigee-udca`.**   
+This addresses the following vulnerabilities: 
+
+  * [CVE-2026-56857](https://nvd.nist.gov/vuln/detail/CVE-2026-56857)
+  * [CVE-2026-56866](https://nvd.nist.gov/vuln/detail/CVE-2026-56866)
+  * [CVE-2026-78659](https://nvd.nist.gov/vuln/detail/CVE-2026-78659)
+  * [CVE-2026-78660](https://nvd.nist.gov/vuln/detail/CVE-2026-78660)
+  * [CVE-2026-78663](https://nvd.nist.gov/vuln/detail/CVE-2026-78663)
+  * [CVE-2026-78667](https://nvd.nist.gov/vuln/detail/CVE-2026-78667)
+  * [CVE-2026-78669](https://nvd.nist.gov/vuln/detail/CVE-2026-78669)
+  * [CVE-2026-94439](https://nvd.nist.gov/vuln/detail/CVE-2026-94439)
+  * [CVE-2026-94440](https://nvd.nist.gov/vuln/detail/CVE-2026-94440)
+  * [CVE-2026-94444](https://nvd.nist.gov/vuln/detail/CVE-2026-94444)
+  * [CVE-2026-94447](https://nvd.nist.gov/vuln/detail/CVE-2026-94447)
+  * [CVE-2026-94448](https://nvd.nist.gov/vuln/detail/CVE-2026-94448)
+  * [CVE-2026-97030](https://nvd.nist.gov/vuln/detail/CVE-2026-97030)
+  * [CVE-2026-97031](https://nvd.nist.gov/vuln/detail/CVE-2026-97031)
+  * [CVE-2026-97032](https://nvd.nist.gov/vuln/detail/CVE-2026-97032)
+
+  
+**N/A** | **Security fixes for`apigee-watcher`.**   
+This addresses the following vulnerabilities: 
+
+  * [CVE-2026-56857](https://nvd.nist.gov/vuln/detail/CVE-2026-56857)
+  * [CVE-2026-56866](https://nvd.nist.gov/vuln/detail/CVE-2026-56866)
+  * [CVE-2026-78659](https://nvd.nist.gov/vuln/detail/CVE-2026-78659)
+  * [CVE-2026-78660](https://nvd.nist.gov/vuln/detail/CVE-2026-78660)
+  * [CVE-2026-78663](https://nvd.nist.gov/vuln/detail/CVE-2026-78663)
+  * [CVE-2026-78667](https://nvd.nist.gov/vuln/detail/CVE-2026-78667)
+  * [CVE-2026-78669](https://nvd.nist.gov/vuln/detail/CVE-2026-78669)
+  * [CVE-2026-94439](https://nvd.nist.gov/vuln/detail/CVE-2026-94439)
+  * [CVE-2026-94440](https://nvd.nist.gov/vuln/detail/CVE-2026-94440)
+  * [CVE-2026-94444](https://nvd.nist.gov/vuln/detail/CVE-2026-94444)
+  * [CVE-2026-94447](https://nvd.nist.gov/vuln/detail/CVE-2026-94447)
+  * [CVE-2026-94448](https://nvd.nist.gov/vuln/detail/CVE-2026-94448)
+  * [CVE-2026-97030](https://nvd.nist.gov/vuln/detail/CVE-2026-97030)
+  * [CVE-2026-97031](https://nvd.nist.gov/vuln/detail/CVE-2026-97031)
+  * [CVE-2026-97032](https://nvd.nist.gov/vuln/detail/CVE-2026-97032)
+
+  
+  
+**App Engine standard environment PHP**
+
+Security
+
+This note is incorrect; follow guidance in the entry for October 22, 2026.
 
 Patch updates to [supported PHP runtimes](https://docs.cloud.google.com/appengine/docs/standard/lifecycle/support-schedule#php) are available with deployments from source: `8.5.12`, `8.4.27`, `8.3.36`, and `8.2.35`. PHP workloads have automatically been patched. See [Responding to core PHP vulnerabilities](https://cloud.google.com/blog/products/identity-security/responding-to-core-php-vulnerabilities-cve-2026-109618-cve-2026-109619) for more information.
 
@@ -74,13 +862,17 @@ For more information about these dimensions, see the following:
 
 **Cloud Run**
 
-Feature
+Security
+
+This note is incorrect; follow guidance in the entry for October 22, 2026.
 
 Patch updates to [supported PHP runtimes](https://docs.cloud.google.com/run/docs/runtime-support#php) are available for Cloud Run resources [deployed from source code](https://docs.cloud.google.com/run/docs/deploying-source-code): `8.5.12`, `8.4.27`, `8.3.36`, and `8.2.35`. Take immediate action to protect your workloads by redeploying your Cloud Run resources with updated dependencies. Cloud Run resources with [automatic base image updates](https://docs.cloud.google.com/run/docs/configuring/services/automatic-base-image-updates) enabled have already been patched. See [Responding to core PHP vulnerabilities](https://cloud.google.com/blog/products/identity-security/responding-to-core-php-vulnerabilities-cve-2026-109618-cve-2026-109619) for more information.
 
 **Cloud Run functions**
 
-Feature
+Security
+
+This note is incorrect; follow guidance in the entry for October 22, 2026.
 
 Patch updates to [supported PHP runtimes](https://docs.cloud.google.com/functions/docs/runtime-support#php) are available with deployments from source: `8.5.12`, `8.4.27`, `8.3.36`, and `8.2.35`. Functions with automatic base image updates enabled have already been patched. If you have disabled automatic base image updates, take immediate action to protect your workloads by redeploying your workloads with updated dependencies and redeploying. See [Responding to core PHP vulnerabilities](https://cloud.google.com/blog/products/identity-security/responding-to-core-php-vulnerabilities-cve-2026-109618-cve-2026-109619) for more information.
 
@@ -154,6 +946,48 @@ The following issues were fixed in 1.36.200-gke.118:
 
   * Fixed vulnerabilities listed in [Vulnerability fixes](https://docs.cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/vulnerabilities).
   * Fixed `BareMetalMachine` conditions during maintenance mode transitions. 
+
+
+
+**Google SecOps Marketplace**
+
+Feature
+
+**Google Threat Intelligence** : Version 22.0
+
+  * The following new connector has been added:
+
+    * **Google Threat Intelligence - GTI Alerts Connector**
+
+
+
+Change
+
+**Siemplify** : Version 114.0
+
+  * Added support for lazy case loading so that case data is no longer attached to the remote agent task when enabled by the platform in the following action:
+
+    * **Run Remote**
+
+
+
+Change
+
+**Palo Alto Cortex XDR** : Version 34.0
+
+  * Added the **Entities To Ignore** parameter to exclude alerts containing specified IP addresses, CIDR ranges, domains, file hashes, hostnames, or usernames in the following connector:
+
+    * **Palo Alto Cortex XDR - Incidents Connector**
+
+
+
+Change
+
+**Google Threat Intelligence** : Version 22.0
+
+  * Improved private submission handling when retrieving comments in the following action:
+
+    * **Submit File**
 
 
 
@@ -2096,29 +2930,6 @@ Change
 
 Change
 
-**Google Threat Intelligence** : Version 21.0
-
-  * Improved issue ingestion to adaptively scan the configured `Max Hours Backwards` time range and skip periods without new issues in the following connector:
-
-    * **Google Threat Intelligence - ASM Issues Connector**
-  * Added the **Anonymize Credential** parameter to optionally mask compromised passwords with asterisks in ingested alerts and events in the following connector:
-
-    * **Google Threat Intelligence - DTM Alerts Connector**
-
-
-
-Change
-
-**Email Utilities** : Version 17.0
-
-  * Resolved an issue causing entities to not be created when `Create Observed Entities` was configured for specific entity types in the following action:
-
-    * **Parse Case Wall Email**
-
-
-
-Change
-
 **Microsoft Graph Mail** : Version 49.0
 
   * Updated the **Folder Name** parameter to be optional, allowing searches across the entire mailbox when no folder is specified in the following action:
@@ -2155,6 +2966,29 @@ Change
   * Fixed an issue where environment extraction only checked the first event in multi-event alerts in the following connector:
 
     * **Chronicle Alerts Connector**
+
+
+
+Change
+
+**Email Utilities** : Version 17.0
+
+  * Resolved an issue causing entities to not be created when **Create Observed Entities** was configured for specific entity types in the following action:
+
+    * **Parse Case Wall Email**
+
+
+
+Change
+
+**Google Threat Intelligence** : Version 21.0
+
+  * Improved issue ingestion to adaptively scan the configured **Max Hours Backwards** time range and skip periods without new issues in the following connector:
+
+    * **Google Threat Intelligence - ASM Issues Connector**
+  * Added the **Anonymize Credential** parameter to optionally mask compromised passwords with asterisks in ingested alerts and events in the following connector:
+
+    * **Google Threat Intelligence - DTM Alerts Connector**
 
 
 
@@ -2215,6 +3049,12 @@ Installed latest packages from upstream dependencies.
 Change
 
 Installed latest packages from upstream dependencies.
+
+**Application Design Center**
+
+Feature
+
+You can import existing multi-product Google Cloud Terraform configurations into an Application Design Center application template as is, without splitting them into components or publishing them to a catalog first. From a template revision, you can create, assess, and deploy applications directly, or publish the revision to your catalog to reuse it in other templates ([Preview](https://cloud.google.com/products#product-launch-stages)). For more information, see [Import existing Terraform](https://docs.cloud.google.com/application-design-center/docs/import-terraform).
 
 **BigQuery**
 
@@ -6784,12 +7624,6 @@ Feature
 App Engine permanently blocks insecure traffic with TLS version 1.1 and earlier. For `appspot.com` domains, this block occurs at the connection level. For custom domains, the connection might succeed, but the requests are blocked. For more information, see [Secure minimum TLS](https://docs.cloud.google.com/appengine/docs/flexible/secure-minimum-tls).
 
 **App Engine flexible environment Node.js**
-
-Feature
-
-App Engine permanently blocks insecure traffic with TLS version 1.1 and earlier. For `appspot.com` domains, this block occurs at the connection level. For custom domains, the connection might succeed, but the requests are blocked. For more information, see [Secure minimum TLS](https://docs.cloud.google.com/appengine/docs/flexible/secure-minimum-tls).
-
-**App Engine flexible environment PHP**
 
 Feature
 
@@ -17936,7 +18770,7 @@ Feature
 
 Feature
 
-Use assessments ([Preview](https://cloud.google.com/products/#product-launch-stages)) in [Database Center](https://docs.cloud.google.com/database-center/docs/overview) to assess and test the performance impact of database recommendations before you apply them to your production database fleet.
+Use assessments ([Preview](https://cloud.google.com/products#product-launch-stages)) in [Database Center](https://docs.cloud.google.com/database-center/docs/overview) to assess and test the performance impact of database recommendations before you apply them to your production database fleet.
 
 The assessments workflow performs these operations:
 
@@ -18636,6 +19470,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-22 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

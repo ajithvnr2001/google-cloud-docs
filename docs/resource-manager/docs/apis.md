@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/resource-manager/docs/apis/
 title: APIs and reference \u00a0|\u00a0 Resource Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-16T10:28:51.403849+00:00
+fetched_at: 2026-10-23T05:44:03.854795+00:00
 ---
 
 # APIs and reference  |  Resource Manager  |  Google Cloud Documentation

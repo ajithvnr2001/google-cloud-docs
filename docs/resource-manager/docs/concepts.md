@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/resource-manager/docs/concepts/
 title: Concepts \u00a0|\u00a0 Resource Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T21:23:59.759157+00:00
+fetched_at: 2026-10-23T05:43:51.175120+00:00
 ---
 
 # Concepts  |  Resource Manager  |  Google Cloud Documentation

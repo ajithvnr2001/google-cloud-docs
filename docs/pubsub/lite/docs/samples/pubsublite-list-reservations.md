@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/pubsub/lite/docs/samples/pubsublite-list-reservations/
 title: List Lite Reservations \u00a0|\u00a0 Pub/Sub Lite \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T15:15:08.136674+00:00
+fetched_at: 2026-10-23T05:44:23.643591+00:00
 ---
 
 # List Lite Reservations  |  Pub/Sub Lite  |  Google Cloud Documentation

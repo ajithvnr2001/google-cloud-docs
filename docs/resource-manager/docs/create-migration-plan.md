@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/resource-manager/docs/create-migration-plan/
 title: Create a migration plan \u00a0|\u00a0 Resource Manager \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T14:58:00.122667+00:00
+fetched_at: 2026-10-23T05:55:58.662475+00:00
 ---
 
 # Create a migration plan  |  Resource Manager  |  Google Cloud Documentation
@@ -21,13 +21,9 @@ Send feedback
 
 #  Create a migration plan Stay organized with collections  Save and categorize content based on your preferences. 
 
-For a project migration, it is necessary to evaluate how the migration will impact the services running inside the project. The Resource Manager API treats the project resource and all services running underneath it as a single unit, meaning that no configuration changes will be applied inside the project.
+A project migration plan lets you evaluate organization readiness and prevent service disruptions before you move a project between organization resources. An inventory of active services and dependencies also helps you anticipate how the destination resource hierarchy affects your workloads.
 
-While the migration won't make direct configuration changes to the project, the change in the resource hierarchy is likely to have an impact on the function of the project and its running services. Allow, deny, or organization policies that are inherited rather than directly attached to the project won't migrate with the project during migration. The organization policies and service accounts that are attached directly to the resource will be migrated. This may cause unintended behavior after the migration is complete.
-
-Migrating your project might also result in [organization policy violations](https://docs.cloud.google.com/resource-manager/docs/organization-policy/overview#violations), depending on the destination organization resource's organization policies.
-
-Before migrating your project between organization resources, you should consider creating a migration plan to determine the readiness of both your organization resource and the projects you want to migrate. In this migration plan, take inventory of each of the services that your project is running, and any other services that may be impacted by the migration, or by the resource hierarchy in the destination for your project.
+During a move, the Cloud Resource Manager API treats the project and its underlying services as a single unit without internal configuration changes. However, inherited allow, deny, and organization policies don't migrate with the project, while directly attached policies and service accounts persist. This hierarchy change can cause unexpected behavior or trigger [organization policy violations](https://docs.cloud.google.com/resource-manager/docs/organization-policy/overview#violations) in the destination organization.
 
 ### Inventory overview
 
@@ -97,6 +93,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-13 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-13 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

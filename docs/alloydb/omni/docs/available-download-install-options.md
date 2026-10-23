@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/omni/docs/available-download-install-options/
 title: Available AlloyDB Omni download and installation options \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T10:26:02.725159+00:00
+fetched_at: 2026-10-23T05:59:59.822272+00:00
 ---
 
 # Available AlloyDB Omni download and installation options  |  Google Cloud Documentation
@@ -21,7 +21,7 @@ Send feedback
 
 #  Available AlloyDB Omni download and installation options Stay organized with collections  Save and categorize content based on your preferences. 
 
-This page describes options for downloading and installing AlloyDB Omni.
+To download and install AlloyDB Omni in your preferred environment, you can select from container images, Kubernetes operators, and Red Hat Package Manager (RPM) packages across local machines, virtual machines (VMs), bare metal servers, and Kubernetes clusters.
 
 In the Google Cloud console, you can explore available deployment options, access learning resources, and manage production subscriptions on the **AlloyDB Omni** landing page:
 
@@ -57,10 +57,10 @@ The following table lists the available installation media, download locations, 
   
 **OpenShift Certified Operator** | [OpenShift Certified Catalog](https://catalog.redhat.com/en/software/container-stacks/detail/6837eb3b9137db6941d32436#overview) | OpenShift environment  
 **OpenShift Operator with OLM Bundle** | [Openshift Container Platform Web Console](https://docs.redhat.com/en/documentation/openshift_container_platform/4.18/html/web_console/web-console) | OpenShift environment  
-**Kubernetes operator with OLM bundle** | [Artifacthub.io](https://operatorhub.io/operator/alloydb-omni-operator) | Bring-your-own Kubernetes container environment—for example, on-premises, public clouds, Google Kubernetes Engine, Amazon EKS, and Azure AKS.  
+**Kubernetes operator with OLM bundle** | [OperatorHub.io](https://operatorhub.io/operator/alloydb-omni-operator) | Bring-your-own Kubernetes container environment—for example, on-premises, public clouds, Google Kubernetes Engine, Amazon EKS, and Azure AKS.  
 **Kubernetes Operator with Helm Chart** | [Install AlloyDB Omni using the container orchestrator](https://docs.cloud.google.com/alloydb/omni/docs/deploy-kubernetes) | Bring-your-own Kubernetes container environment—for example, on-premises, public clouds, GKE, Amazon EKS, and Azure AKS.  
 **Red Hat Package Manager (RPM)** |  [Sign up to request access](https://forms.gle/zxuHekMtV67Bw9Av9). | Run in a non-containerized VM or bare metal environment. You can install directly on Red Hat Enterprise Linux (RHEL) 9 or Rocky Linux 9. For more information, see [AlloyDB Omni using RPM overview](https://docs.cloud.google.com/alloydb/omni/linux/current/docs/overview).  
-**The RPM orchestrator** in [Preview](https://cloud.google.com/products#product-launch-stages) | [Sign up to request access](https://forms.gle/zxuHekMtV67Bw9Av9) | Use this deployment option if your organization has significant investments in virtual machine (VM) infrastructure and established operational practices built around tools like Ansible. For more information, see the [RPM orchestrator deployment overview](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/18-next/docs/overview). To unlock additional features, including support for PostgreSQL version 18, sign up using the [AlloyDB Omni incentives form](https://docs.google.com/forms/d/e/1FAIpQLSep1HzCiseWXq_0oTPs9wOTVWQuH2yAK225SbggvvuqWzMPjQ/viewform).  
+**The RPM orchestrator** | [Sign up to request access](https://forms.gle/zxuHekMtV67Bw9Av9) | Use this deployment option if your organization has significant investments in virtual machine (VM) infrastructure and established operational practices built around tools like Ansible. For more information, see the [RPM orchestrator deployment overview](https://docs.cloud.google.com/alloydb/omni/redhat-orchestrator/current/docs/overview). To unlock additional features, including support for PostgreSQL version 18, sign up using the [AlloyDB Omni incentives form](https://docs.google.com/forms/d/e/1FAIpQLSep1HzCiseWXq_0oTPs9wOTVWQuH2yAK225SbggvvuqWzMPjQ/viewform).  
 **The web UI (Docker image)** |  Container registry: `ALLOYDB_OMNI_UI_IMAGE_TAG` For installation guides, see:
 
   * [Install the web UI using containers](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/install-web-ui)
@@ -91,6 +91,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-21 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-21 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 

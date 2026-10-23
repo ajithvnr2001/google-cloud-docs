@@ -2,7 +2,7 @@
 url: https://docs.cloud.google.com/alloydb/docs/columnar-engine/about/
 title: About the AlloyDB columnar engine \u00a0|\u00a0 AlloyDB for PostgreSQL \u00a0|\u00a0 Google Cloud Documentation
 method: scrapling+scrapegraph
-fetched_at: 2026-10-22T09:27:01.877658+00:00
+fetched_at: 2026-10-23T06:00:16.232642+00:00
 ---
 
 # About the AlloyDB columnar engine  |  AlloyDB for PostgreSQL  |  Google Cloud Documentation
@@ -38,7 +38,7 @@ You can also use [auto-columnarization](https://docs.cloud.google.com/alloydb/do
 
 To use the columnar engine with a specific query, all columns in that query fragments, such as joins and scans, must be in the column store.
 
-By default, the columnar engine is set to use 30% of your instance's memory. Depending on your workload, memory usage, and if you have a read pool configured, you may choose to reduce the columnar engine memory allocation on your primary instance and allocate more memory to the read pool instance. To view and monitor memory usage by the columnar engine, see [View column store memory usage](https://docs.cloud.google.com/alloydb/docs/columnar-engine/monitor-tune#usage). To modify the memory size used by the column store, see [Configure the size of the column store](https://docs.cloud.google.com/alloydb/docs/columnar-engine/configure#configure). To find the recommended columnar engine memory size for your instance, see [Recommend column store memory size](https://docs.cloud.google.com/alloydb/docs/columnar-engine/manage-content-recommendations#recommend-populate).
+By default, the columnar engine is set to use 30% of your instance's memory (or 10% on a 1-vCPU instance). Depending on your workload, memory usage, and if you have a read pool configured, you may choose to reduce the columnar engine memory allocation on your primary instance and allocate more memory to the read pool instance. To view and monitor memory usage by the columnar engine, see [View column store memory usage](https://docs.cloud.google.com/alloydb/docs/columnar-engine/monitor-tune#usage). To modify the memory size used by the column store, see [Configure the size of the column store](https://docs.cloud.google.com/alloydb/docs/columnar-engine/configure#configure). To find the recommended columnar engine memory size for your instance, see [Recommend column store memory size](https://docs.cloud.google.com/alloydb/docs/columnar-engine/manage-content-recommendations#recommend-populate).
 
 ## Query types that benefit from the columnar engine
 
@@ -73,7 +73,7 @@ For more information on which queries work best with the columnar engine, whethe
 
 To use the columnar engine in an AlloyDB instance, you perform these high-level steps:
 
-  1. [Enable the engine](https://docs.cloud.google.com/alloydb/docs/columnar-engine/enable) on the instance.
+  1. [Enable the engine](https://docs.cloud.google.com/alloydb/docs/columnar-engine/configure#enable) on the instance.
 
 Enabling the engine is a one-time operation and requires a restart.
 
@@ -168,7 +168,7 @@ You can compare the `invalid_block_count` and `total_block_count` columns in [g_
 
   * [Configure the columnar engine](https://docs.cloud.google.com/alloydb/docs/columnar-engine/configure).
 
-  * [Configure the columnar engine on AlloyDB Omni](https://docs.cloud.google.com/alloydb/docs/omni/columnar-engine/configure).
+  * [Configure the columnar engine on AlloyDB Omni](https://docs.cloud.google.com/alloydb/omni/containers/current/docs/columnar-engine/configure).
 
   * Learn how to [accelerate analytical queries using the AlloyDB columnar engine](https://www.cloudskillsboost.google/paths/22/course_templates/642/labs/501234).
 
@@ -179,6 +179,6 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-10-20 UTC.
+Last updated 2026-10-23 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-20 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-23 UTC."],[],[]] 
